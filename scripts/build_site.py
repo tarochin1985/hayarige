@@ -137,8 +137,12 @@ def main():
     # 急上昇が出せない間は「今日いちばん多くの配信者が触ったゲーム」を代わりに出す
     spread = sorted(rows, key=lambda r: (-r["channels"], -r["videos"]))[:3]
 
+    column = read_json(DATA / "columns" / f"{today()}.json", None)
+
     payload = {
+        "mode": "day",
         "date": today(),
+        "column": column,
         "generated": datetime.now(JST).strftime("%Y-%m-%d %H:%M"),
         "days": [d[5:].replace("-", "/") for d in day_names],
         "totals": {"videos": len(today_videos), "games": len(rows),
@@ -151,12 +155,42 @@ def main():
     }
     write_json(SITE / "data.json", payload)
 
-    tpl = (SITE / "template.html").read_text(encoding="utf-8")
     import json
-    (SITE / "index.html").write_text(
-        tpl.replace("__DATA__", json.dumps(payload, ensure_ascii=False)), encoding="utf-8")
+    tpl = (SITE / "template.html").read_text(encoding="utf-8")
+
+    def render(path, data, depth):
+        """depth はサイト直下から何階層下か。リンクの相対パスに使う。"""
+        d = dict(data, paths={"home": "../" * depth or "./",
+                              "archive": ("../" * depth or "./") + "archive/"})
+        p = SITE / path
+        p.parent.mkdir(parents=True, exist_ok=True)
+        p.write_text(tpl.replace("__DATA__", json.dumps(d, ensure_ascii=False)),
+                     encoding="utf-8")
+
+    render("index.html", payload, 0)
+    # その日の記録を、消えない住所に残す
+    render(f"d/{today()}/index.html", dict(payload, view="archive"), 2)
+
+    # ---- アーカイブ一覧を更新する ----
+    idx_path = DATA / "archive_index.json"
+    entries = {e["date"]: e for e in (read_json(idx_path, []) or [])}
+    entries[today()] = {
+        "date": today(),
+        "videos": payload["totals"]["videos"],
+        "channels": payload["totals"]["channels"],
+        "games": payload["totals"]["games"],
+        "top": [{"game": r["game"], "videos": r["videos"], "channels": r["channels"]}
+                for r in rows[:5]],
+        "column": {"game": column["game"], "headline": column["headline"]} if column else None,
+    }
+    archive = sorted(entries.values(), key=lambda e: e["date"], reverse=True)
+    write_json(idx_path, archive)
+    render("archive/index.html",
+           {"mode": "archive", "date": today(), "archive": archive}, 1)
+
     log(f"サイトを書き出しました: {len(rows)} タイトル / 急上昇 {len(rising)} 件 "
         f"/ 確認待ち {len(unknown)} 件")
+    log(f"アーカイブ: {len(archive)} 日分（site/d/{today()}/ に本日分を保存）")
 
 
 if __name__ == "__main__":
