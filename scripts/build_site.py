@@ -31,7 +31,8 @@ def series_sig(title: str) -> str:
 
 def tally(videos, idx):
     games = defaultdict(lambda: {"videos": 0, "sigs": set(), "channels": set(),
-                                 "views": 0, "streams": [], "orgs": defaultdict(int)})
+                                 "views": 0, "streams": [], "titles": [],
+                                 "orgs": defaultdict(int)})
     unknown = []
     for v in videos:
         g, how = M.extract(v["title"], idx, fallback=True)
@@ -41,6 +42,7 @@ def tally(videos, idx):
             e["sigs"].add(series_sig(v["title"]))
             e["channels"].add(v["channel_id"])
             e["views"] += v.get("views", 0)
+            e["titles"].append(v["title"])
             e["orgs"][v.get("affiliation") or "個人・その他"] += 1
             if len(e["streams"]) < 12:
                 e["streams"].append({"t": v["title"], "c": v["channel"],
@@ -52,9 +54,21 @@ def tally(videos, idx):
     return games, unknown
 
 
+def choose_name(canonical, jp, titles, override):
+    """英語名と日本語名のどちらで表示するかを、実際の配信タイトルから決める。
+    配信者が『APEX』と書くならAPEX、『日本事故物件監視協会』と書くならそちら。"""
+    if canonical in override:
+        return override[canonical]
+    if not jp or jp == canonical:
+        return canonical
+    blob = " ".join(M.compact(t) for t in titles)
+    return jp if blob.count(M.compact(jp)) >= blob.count(M.compact(canonical)) else canonical
+
+
 def main():
     idx = M.build_index()
     disp = M.load_display()
+    override = read_json(DATA / "display_names.json", {}) or {}
     days = load_days()
     day_names = [d for d, _ in days]
     today_videos = days[-1][1]
@@ -72,7 +86,8 @@ def main():
 
     rows = []
     for name, e in games.items():
-        rows.append({"game": disp.get(name, name), "canonical": name, "videos": len(e["sigs"]), "raw": e["videos"],
+        rows.append({"game": choose_name(name, disp.get(name), e["titles"], override),
+                     "canonical": name, "videos": len(e["sigs"]), "raw": e["videos"],
                      "channels": len(e["channels"]), "views": e["views"],
                      "streams": sorted(e["streams"], key=lambda s: -s["v"])[:8],
                      "orgs": dict(sorted(e["orgs"].items(), key=lambda x: -x[1])),
