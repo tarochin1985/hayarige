@@ -205,7 +205,7 @@ footer{font-size:11.5px;color:var(--ink-3);text-align:center;border-top:1px soli
 </div>
 
 <script>
-const DATA = {"mode": "admin", "date": "2026-08-27", "generated": "2026-08-27 01:51", "unknown": [{"title": "【特別歌枠/Karaoke】今年も開催！乙夏祭り2026｜OTSUKA MATSURI !! (SPECIAL SUMMER FESTIVAL)【JP VTuber / 配信中】", "guess": "特別歌枠/karaoke", "channel": "Otsuka Ray ch.乙夏れい", "u": "https://www.youtube.com/watch?v=4UnTHLt16hQ", "n": 1}], "paths": {"home": "../", "archive": "../archive/"}};
+const DATA = {"mode": "admin", "date": "2026-08-27", "generated": "2026-08-27 02:14", "unknown": [{"title": "【 バイオハザード６ 】フレわたバイオ６の夏！わちゃわちゃ劇場がんばいお！！！#3【角巻わため/ホロライブ４期生】※ネタバレあり", "guess": "バイオハザード6", "channel": "Watame Ch. 角巻わため", "u": "https://www.youtube.com/watch?v=EOarF-MFfME", "n": 1}, {"title": "【 Fallout4 #19 】※ネタバレ有 とうとう本編を進めていきましょう👣【 蛇宵ティア / ななしいんく 】", "guess": "fallout4 #19", "channel": "蛇宵ティア / Tier Channel【ななしいんく】", "u": "https://www.youtube.com/watch?v=_1JNOGkRyK4", "n": 1}, {"title": "【 ダービースタリオン #2 】馬主として愛馬と向き合おう🏇【 蛇宵ティア / ななしいんく 】", "guess": "ダービースタリオン #2", "channel": "蛇宵ティア / Tier Channel【ななしいんく】", "u": "https://www.youtube.com/watch?v=1M9C57xZKLA", "n": 1}], "paths": {"home": "../", "archive": "../archive/"}};
 const $ = s => document.querySelector(s);
 const esc = s => String(s ?? '').replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
 const cssv = n => getComputedStyle(document.documentElement).getPropertyValue(n).trim();
@@ -291,18 +291,23 @@ function render(){
   }
   $('#s-date').textContent = (DATA.date || '').replace(/-/g, '.');
   $('#s-meta').textContent = `配信 ${t.videos||0}本 / ゲーム ${t.games||0}種 / ${t.channels||0}ch`;
-  $('#f-gen').textContent = '最終更新 ' + (DATA.generated || '');
+  $('#f-gen').textContent = DATA.generated ? '最終更新 ' + DATA.generated : '';
+
+  // 過去の日のページでは「今日」と書かない
+  const DAY = isArchive ? 'この日' : '今日';
+  const dayk = isArchive ? 'この日' : 'きょう';
 
   const mo = DATA.momentum || {ready: true};
   if (!mo.ready) {
     // データが足りないうちは倍率を出さない。代わりに「広がり」を出す。
-    $('#hot-title').textContent = '今日いちばん広がったゲーム';
-    $('#hot-note').textContent =
-      `多くの配信者が同じ日に触ったタイトル（急上昇の判定はデータがあと${Math.max(0,(mo.need||4)-(mo.days||0))}日分で始まります）`;
+    $('#hot-title').textContent = DAY + 'いちばん広がったゲーム';
+    const left = Math.max(0, (mo.need || 4) - (mo.days || 0));
+    $('#hot-note').textContent = '多くの配信者が同じ日に触ったタイトル'
+      + (isArchive ? '' : `（急上昇の判定はデータがあと${left}日分で始まります）`);
     $('#hot').innerHTML = (DATA.spread || []).map(r => `<article class="hotcard">
         <div class="n">${esc(r.game)}</div>
         <div class="x"><b>${r.channels}</b><span>チャンネルが配信</span></div>
-        <div class="f"><span>きょう ${r.videos}件</span><span>${man(r.views)}回 視聴</span></div>
+        <div class="f"><span>${dayk} ${r.videos}件</span><span>${man(r.views)}回 視聴</span></div>
       </article>`).join('') || '<div class="empty">データがまだありません。</div>';
   } else {
     $('#hot').innerHTML = (DATA.rising || []).length
@@ -310,7 +315,7 @@ function render(){
           <div class="n">${esc(r.game)}</div>
           <div class="x"><b>×${(r.growth||1).toFixed(1)}</b><span>直近の平均とくらべて</span></div>
           ${spark(r.spark, 200, 34, HOT)}
-          <div class="f"><span>きょう ${r.videos}件</span><span>${r.channels}チャンネル</span></div>
+          <div class="f"><span>${dayk} ${r.videos}件</span><span>${r.channels}チャンネル</span></div>
         </article>`).join('')
       : '<div class="empty">今日は目立った急上昇はありませんでした。</div>';
   }
