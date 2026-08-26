@@ -7,13 +7,15 @@ on:
     - cron: "0 22 * * *"      # UTC 22:00 = 日本時間 翌7:00
   workflow_dispatch:
 
+# 前の実行が詰まっていたら、新しい実行が引き継いで打ち切る
 concurrency:
   group: daily
-  cancel-in-progress: false
+  cancel-in-progress: true
 
 jobs:
   update:
     runs-on: ubuntu-latest
+    timeout-minutes: 25      # これを超えたら自動で止まる
     permissions:
       contents: write
     steps:
