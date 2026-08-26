@@ -6,24 +6,47 @@
 「バイオハザード」と「Resident Evil」が同じゲームだと分かるのはこの情報のおかげ。
 """
 import time
-from common import IGDB, DATA, log, write_json
+from common import IGDB, DATA, log, die, write_json
 
 # 上位から何本取るか。5万本もあれば配信されるゲームはほぼ網羅できる。
 CAP = 50000
 PAGE = 500
 
 FIELDS = ("fields name,alternative_names.name,first_release_date,"
-          "total_rating_count,category;")
-# category=0 は本編のみ（DLCや移植版を除く）。version_parent=null は復刻版を除く。
-WHERE = "where category = 0 & version_parent = null;"
+          "total_rating_count;")
 SORT = "sort total_rating_count desc;"
+
+# 本編だけに絞る条件。IGDBは項目名を変えることがあるので、
+# 使えるものが見つかるまで順に試す。最後は絞り込みなし。
+WHERE_CANDIDATES = [
+    "where game_type = 0 & version_parent = null;",
+    "where category = 0 & version_parent = null;",
+    "where version_parent = null;",
+    "",
+]
+
+
+def pick_where(ig):
+    for w in WHERE_CANDIDATES:
+        res = ig.query("games", f"{FIELDS} {w} {SORT} limit 1;".encode())
+        if isinstance(res, list) and res:
+            log(f"絞り込み条件: {w or '（なし）'}")
+            return w
+        if isinstance(res, dict) and "__error__" in res:
+            log(f"  この条件は使えませんでした: {w}")
+    return None
 
 
 def main():
     ig = IGDB()
+    where = pick_where(ig)
+    if where is None:
+        die("IGDBからゲーム一覧を取得できませんでした。",
+            "しばらく待ってから再実行してください。続く場合は報告してください。")
+
     games, offset = [], 0
     while offset < CAP:
-        body = f"{FIELDS} {WHERE} {SORT} limit {PAGE}; offset {offset};".encode()
+        body = f"{FIELDS} {where} {SORT} limit {PAGE}; offset {offset};".encode()
         res = ig.query("games", body)
         if isinstance(res, dict) and "__error__" in res:
             log(f"IGDBエラー（ここまでの分で続行します）: {res['__error__'][:200]}")

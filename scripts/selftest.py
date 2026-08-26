@@ -38,14 +38,20 @@ except Exception as e:
 print("\n【2/3】Twitchのキー（ゲーム辞書用）を確認します …")
 try:
     ig = IGDB()
-    res = ig.query("games", b'fields name; where name = "ELDEN RING"; limit 1;')
+    # 評価件数の多いゲームを1本だけ取る。名前で探すと大文字小文字の違いで
+    # 空振りするので、こちらのほうが確実。
+    res = ig.query("games",
+                   b"fields name,total_rating_count; "
+                   b"where total_rating_count != null; "
+                   b"sort total_rating_count desc; limit 1;")
     if isinstance(res, list) and res:
-        print(f"  ✅ 成功　テスト取得: {res[0].get('name')}")
+        print(f"  ✅ 成功　テスト取得: {res[0].get('name')}"
+              f"（評価 {res[0].get('total_rating_count')} 件）")
     elif isinstance(res, dict) and "__error__" in res:
         print(f"  ❌ 失敗: {res['__error__'][:300]}")
         ok = False
     else:
-        print(f"  △ 接続はできましたが、結果が空でした: {str(res)[:200]}")
+        print(f"  ❌ 認証は通りましたが、データが返りませんでした: {str(res)[:200]}")
         ok = False
 except SystemExit:
     raise
