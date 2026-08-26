@@ -130,13 +130,22 @@ def load_display():
 
 
 # ------------------------------------------------------------------ 判定
+# 配信タイトルの慣習では、ゲーム名はいちばん最初の括弧に入る。
+# あとに出てくる『』は、DLC名・チャプター名・曲名・企画名であることが多い。
+# 例: 【デッドバイデイライト】新チャプター『Chorus of Sin』 → ゲームはDbDのほう
+LEAD_RE = re.compile(r"^[\s　#＃0-9]*[【『〖「《≪]")
+
+
 def segments(title: str):
+    """(中身, 括弧の強さ, 冒頭の括弧か) を返す。"""
+    m0 = LEAD_RE.match(title)
+    lead_at = m0.end() - 1 if m0 else -1
     out = []
     for op, cl, pri in BRACKETS:
         pat = re.escape(op) + r"([^" + re.escape(op + cl) + r"]{1,60})" + re.escape(cl)
         for m in re.finditer(pat, title):
-            out.append((m.group(1).strip(), pri))
-    out.append((title, 0))
+            out.append((m.group(1).strip(), pri, m.start() == lead_at))
+    out.append((title, 0, False))
     return out
 
 
@@ -173,14 +182,17 @@ def leading_bracket(title: str, ng):
 def extract(title: str, idx: Index, fallback=False):
     """(ゲーム名, 判定方法) を返す。判定できなければ (None, 'none')。"""
     cands = []
-    for seg, pri in segments(title):
+    for seg, pri, lead in segments(title):
         c = compact(seg)
         if pri > 0 and looks_like_noise(c, idx.ng):
             continue
         hit = idx.find(seg, strict=(pri == 0))
         if hit:
             g, ln, exact = hit
-            cands.append((pri * 100 + ln + (50 if exact else 0), g))
+            # 冒頭の括弧を最優先にする。ゲーム名でない冒頭括弧（【ホロライブ】等）は
+            # そもそもここに来ないので、この加点で誤判定が増えることはない。
+            cands.append((pri * 100 + (150 if lead else 0)
+                          + ln + (50 if exact else 0), g))
     if cands:
         cands.sort(reverse=True)
         return cands[0][1], "dict"

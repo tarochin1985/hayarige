@@ -73,31 +73,9 @@ def choose_name(canonical, jp, titles, override):
     return jp if blob.count(M.compact(jp)) >= blob.count(M.compact(canonical)) else canonical
 
 
-def main():
-    idx = M.build_index()
-    disp = M.load_display()
-    override = read_json(DATA / "display_names.json", {}) or {}
-    days = load_days()
-    day_names = [d for d, _, _ in days]
-    have = [d for d, _, ok in days if ok]
-    today_videos = days[-1][1]
-    log(f"直近{DAYS}日: " + " ".join(f"{d[5:]}={len(v) if ok else '-'}"
-                                    for d, v, ok in days))
-    log(f"実データのある日数: {len(have)} / 急上昇の表示には {MIN_HISTORY} 日必要")
-
-    # 日ごとのゲーム別本数（推移と急上昇に使う）
-    hist = {}
-    for day, vids, ok in days:
-        if not ok:
-            continue
-        g, _ = tally(vids, idx)
-        hist[day] = {k: len(v["sigs"]) for k, v in g.items()}
-    momentum_ready = len(have) >= MIN_HISTORY
-
-    games, unknown = tally(today_videos, idx)
-    if not games:
-        log("今日のデータからゲームを検出できませんでした。処理を続けます。")
-
+def compute_rows(videos, idx, disp, override, hist, day_names, momentum_ready):
+    """その日の動画リストから、ランキングの行を作る。"""
+    games, unknown = tally(videos, idx)
     rows = []
     for name, e in games.items():
         rows.append({"game": choose_name(name, disp.get(name), e["titles"], override),
@@ -130,6 +108,34 @@ def main():
         rows.sort(key=lambda r: -r["score"])
         for i, r in enumerate(rows, 1):
             r["rank"] = i
+    return rows, unknown
+
+
+def main():
+    idx = M.build_index()
+    disp = M.load_display()
+    override = read_json(DATA / "display_names.json", {}) or {}
+    days = load_days()
+    day_names = [d for d, _, _ in days]
+    have = [d for d, _, ok in days if ok]
+    today_videos = days[-1][1]
+    log(f"直近{DAYS}日: " + " ".join(f"{d[5:]}={len(v) if ok else '-'}"
+                                    for d, v, ok in days))
+    log(f"実データのある日数: {len(have)} / 急上昇の表示には {MIN_HISTORY} 日必要")
+
+    # 日ごとのゲーム別本数（推移と急上昇に使う）
+    hist = {}
+    for day, vids, ok in days:
+        if not ok:
+            continue
+        g, _ = tally(vids, idx)
+        hist[day] = {k: len(v["sigs"]) for k, v in g.items()}
+    momentum_ready = len(have) >= MIN_HISTORY
+
+    rows, unknown = compute_rows(today_videos, idx, disp, override,
+                                 hist, day_names, momentum_ready)
+    if not rows:
+        log("今日のデータからゲームを検出できませんでした。処理を続けます。")
 
     rising = sorted([r for r in rows if r["videos"] >= MIN_FOR_MOMENTUM
                      and (r["growth"] or 0) > 1.25],
@@ -201,6 +207,45 @@ def main():
                 for r in rows[:5]],
         "column": {"game": column["game"], "headline": column["headline"]} if column else None,
     }
+    # アーカイブの仕組みを入れる前に集めた日を、あとから記録に足す。
+    # 更新が1日こけたときの穴埋めにもなる。
+    # 直近1週間は毎回作り直す（デザインを直したときに反映されるように）。
+    # それより古い日は、ページが無いときだけ作る。毎日全部作り直すと、
+    # 記録がたまるほど処理時間が伸びてしまうため。
+    recent = {d for d, _, _ in days}
+    added = 0
+    for f in sorted((DATA / "daily").glob("*.json")):
+        day = f.stem
+        if day == today():
+            continue
+        fresh = day in recent or not (SITE / "d" / day / "index.html").exists()
+        if day in entries and not fresh:
+            continue
+        vids = (read_json(f, None) or {}).get("videos", [])
+        if not vids:
+            continue
+        past_rows, _ = compute_rows(vids, idx, disp, override, {}, [], False)
+        if not past_rows:
+            continue
+        col = read_json(DATA / "columns" / f"{day}.json", None)
+        entries[day] = {
+            "date": day, "videos": len(vids), "games": len(past_rows),
+            "channels": len({v["channel_id"] for v in vids}),
+            "top": [{"game": r["game"], "videos": r["videos"], "channels": r["channels"]}
+                    for r in past_rows[:5]],
+            "column": {"game": col["game"], "headline": col["headline"]} if col else None,
+        }
+        render(f"d/{day}/index.html",
+               {"mode": "day", "view": "archive", "date": day, "column": col,
+                "generated": "", "days": [], "rising": [], "spread": past_rows[:3],
+                "momentum": {"ready": False, "days": 0, "need": MIN_HISTORY},
+                "totals": {"videos": entries[day]["videos"], "games": len(past_rows),
+                           "channels": entries[day]["channels"]},
+                "ranking": past_rows[:30]}, 2)
+        added += 1
+    if added:
+        log(f"過去 {added} 日分のページを作り直しました")
+
     archive = sorted(entries.values(), key=lambda e: e["date"], reverse=True)
     write_json(idx_path, archive)
     render("archive/index.html",

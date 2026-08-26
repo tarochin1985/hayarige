@@ -291,18 +291,23 @@ function render(){
   }
   $('#s-date').textContent = (DATA.date || '').replace(/-/g, '.');
   $('#s-meta').textContent = `配信 ${t.videos||0}本 / ゲーム ${t.games||0}種 / ${t.channels||0}ch`;
-  $('#f-gen').textContent = '最終更新 ' + (DATA.generated || '');
+  $('#f-gen').textContent = DATA.generated ? '最終更新 ' + DATA.generated : '';
+
+  // 過去の日のページでは「今日」と書かない
+  const DAY = isArchive ? 'この日' : '今日';
+  const dayk = isArchive ? 'この日' : 'きょう';
 
   const mo = DATA.momentum || {ready: true};
   if (!mo.ready) {
     // データが足りないうちは倍率を出さない。代わりに「広がり」を出す。
-    $('#hot-title').textContent = '今日いちばん広がったゲーム';
-    $('#hot-note').textContent =
-      `多くの配信者が同じ日に触ったタイトル（急上昇の判定はデータがあと${Math.max(0,(mo.need||4)-(mo.days||0))}日分で始まります）`;
+    $('#hot-title').textContent = DAY + 'いちばん広がったゲーム';
+    const left = Math.max(0, (mo.need || 4) - (mo.days || 0));
+    $('#hot-note').textContent = '多くの配信者が同じ日に触ったタイトル'
+      + (isArchive ? '' : `（急上昇の判定はデータがあと${left}日分で始まります）`);
     $('#hot').innerHTML = (DATA.spread || []).map(r => `<article class="hotcard">
         <div class="n">${esc(r.game)}</div>
         <div class="x"><b>${r.channels}</b><span>チャンネルが配信</span></div>
-        <div class="f"><span>きょう ${r.videos}件</span><span>${man(r.views)}回 視聴</span></div>
+        <div class="f"><span>${dayk} ${r.videos}件</span><span>${man(r.views)}回 視聴</span></div>
       </article>`).join('') || '<div class="empty">データがまだありません。</div>';
   } else {
     $('#hot').innerHTML = (DATA.rising || []).length
@@ -310,7 +315,7 @@ function render(){
           <div class="n">${esc(r.game)}</div>
           <div class="x"><b>×${(r.growth||1).toFixed(1)}</b><span>直近の平均とくらべて</span></div>
           ${spark(r.spark, 200, 34, HOT)}
-          <div class="f"><span>きょう ${r.videos}件</span><span>${r.channels}チャンネル</span></div>
+          <div class="f"><span>${dayk} ${r.videos}件</span><span>${r.channels}チャンネル</span></div>
         </article>`).join('')
       : '<div class="empty">今日は目立った急上昇はありませんでした。</div>';
   }
