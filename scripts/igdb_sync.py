@@ -13,7 +13,12 @@ CAP = 50000
 PAGE = 500
 
 FIELDS = ("fields name,alternative_names.name,alternative_names.comment,"
-          "first_release_date,total_rating_count;")
+          "first_release_date,total_rating_count,platforms;")
+
+# 対応機種の判定に使うIGDBのID。
+# PC・Mac・Linux・スマホ以外が入っていれば「据置/携帯ゲーム機で売っている」と見なす。
+PC_IDS = {6, 14, 3}            # Windows / Mac / Linux
+MOBILE_IDS = {39, 34}          # iOS / Android
 SORT = "sort total_rating_count desc;"
 
 # 本編だけに絞る条件。IGDBは項目名を変えることがあるので、
@@ -92,6 +97,15 @@ def main():
         jp = japanese_title(alt_list, name)
         if jp:
             rec["jp"] = jp
+        # どの店へのリンクを出すかの判断材料。"p" は pc / console の組み合わせ。
+        pf = set(g.get("platforms") or [])
+        tags = []
+        if pf & PC_IDS:
+            tags.append("pc")
+        if pf - PC_IDS - MOBILE_IDS:
+            tags.append("console")
+        if tags:
+            rec["p"] = tags
         out.append(rec)
 
     write_json(DATA / "igdb_games.json", out)

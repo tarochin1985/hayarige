@@ -73,8 +73,32 @@ def choose_name(canonical, jp, titles, override):
     return jp if blob.count(M.compact(jp)) >= blob.count(M.compact(canonical)) else canonical
 
 
-def compute_rows(videos, idx, disp, override, hist, day_names, momentum_ready):
+def store_links(name, plat, cfg):
+    """そのゲームを「実際に売っている店」へのリンクだけを作る。
+
+    PCでしか出ていないゲームにAmazonのリンクを出しても、攻略本やTシャツが
+    並ぶだけで読者の役に立たないし、成果にもならない。IGDBの対応機種を見て
+    出し分ける。対応機種が分からないとき（辞書が古いとき）は両方出す。
+    """
+    tag = (cfg.get("amazon_tag") or "").strip()
+    dept = (cfg.get("amazon_department") or "").strip()
+    on_pc = (not plat) or ("pc" in plat)
+    on_console = (not plat) or ("console" in plat)
+
+    steam = ("https://store.steampowered.com/search/?term=" + quote(name)) if on_pc else None
+    amazon = None
+    if tag and on_console:
+        amazon = "https://www.amazon.co.jp/s?k=" + quote(name)
+        if dept:
+            amazon += "&i=" + quote(dept)
+        amazon += "&tag=" + quote(tag)
+    return steam, amazon
+
+
+def compute_rows(videos, idx, disp, override, hist, day_names, momentum_ready,
+                 plats=None, cfg=None):
     """その日の動画リストから、ランキングの行を作る。"""
+    plats, cfg = plats or {}, cfg or {}
     games, unknown = tally(videos, idx)
     rows = []
     for name, e in games.items():
@@ -103,8 +127,8 @@ def compute_rows(videos, idx, disp, override, hist, day_names, momentum_ready):
                 r["growth"] = round(r["videos"] / max(0.8, sum(past) / len(past)), 2)
             else:
                 r["growth"] = None
-            r["steam"] = "https://store.steampowered.com/search/?term=" + quote(r["game"])
-            r["amazon"] = "https://www.amazon.co.jp/s?k=" + quote(r["game"])
+            r["steam"], r["amazon"] = store_links(
+                r["game"], plats.get(r["canonical"]), cfg)
         rows.sort(key=lambda r: -r["score"])
         for i, r in enumerate(rows, 1):
             r["rank"] = i
@@ -114,7 +138,15 @@ def compute_rows(videos, idx, disp, override, hist, day_names, momentum_ready):
 def main():
     idx = M.build_index()
     disp = M.load_display()
+    plats = M.load_platforms()
+    cfg = read_json(DATA / "site_config.json", {}) or {}
     override = read_json(DATA / "display_names.json", {}) or {}
+    if not cfg.get("amazon_tag"):
+        log("AmazonアソシエイトIDが未設定です（data/site_config.json）。"
+            "Amazonのリンクは出しません。")
+    if not plats:
+        log("対応機種の情報がありません。ワークフロー2をゲーム辞書ありで動かすと、"
+            "PC専用ゲームにAmazonリンクを出さないようになります。")
     days = load_days()
     day_names = [d for d, _, _ in days]
     have = [d for d, _, ok in days if ok]
@@ -133,7 +165,7 @@ def main():
     momentum_ready = len(have) >= MIN_HISTORY
 
     rows, unknown = compute_rows(today_videos, idx, disp, override,
-                                 hist, day_names, momentum_ready)
+                                 hist, day_names, momentum_ready, plats, cfg)
     if not rows:
         log("今日のデータからゲームを検出できませんでした。処理を続けます。")
 
@@ -224,7 +256,8 @@ def main():
         vids = (read_json(f, None) or {}).get("videos", [])
         if not vids:
             continue
-        past_rows, _ = compute_rows(vids, idx, disp, override, {}, [], False)
+        past_rows, _ = compute_rows(vids, idx, disp, override, {}, [], False,
+                                    plats, cfg)
         if not past_rows:
             continue
         col = read_json(DATA / "columns" / f"{day}.json", None)

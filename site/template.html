@@ -228,6 +228,14 @@ function spark(v, w, h, color){
 
 let orgFilter = null;
 
+// 実際にそのゲームを売っている店だけボタンを出す（無い店のボタンは出さない）
+function buy(r){
+  const b = [];
+  if (r.steam)  b.push(`<a href="${esc(r.steam)}" target="_blank" rel="noopener sponsored">Steam</a>`);
+  if (r.amazon) b.push(`<a href="${esc(r.amazon)}" target="_blank" rel="noopener sponsored nofollow">Amazon</a>`);
+  return b.join('') || '<span style="color:var(--ink-3);font-size:10px">—</span>';
+}
+
 function renderArchive(){
   const P = DATA.paths || {home: './', archive: './archive/'};
   ['#hot-sec', '#rank-sec', '#q-sec', '#pick-sec'].forEach(s => { const e = $(s); if (e) e.style.display = 'none'; });
@@ -281,11 +289,16 @@ function render(){
   const col = DATA.column;
   $('#pick-sec').style.display = col ? '' : 'none';
   if (col) {
+    // コラムで取り上げたゲームの購入導線は、ランキング側の判定を使い回す
+    const cr = (DATA.ranking || []).find(r => r.game === col.game);
+    const cbuy = cr && (cr.steam || cr.amazon)
+      ? `<div class="buy" style="margin-top:2px">${buy(cr)}</div>` : '';
     $('#pick').innerHTML = `
       <span class="badge">PICK UP</span>
       <div class="g">${esc(col.game)}</div>
       <div class="hl">${esc(col.headline)}</div>
       <p>${esc(col.body)}</p>
+      ${cbuy}
       ${(col.people || []).length ? `<div class="who">${col.people.map(p => `<span>${esc(p)}</span>`).join('')}</div>` : ''}
       ${(col.sources || []).length ? `<div class="src">${col.sources.map(x => `<a href="${esc(x.u)}" target="_blank" rel="noopener">${esc(x.t)}</a>`).join('')}</div>` : ''}`;
   }
@@ -343,7 +356,7 @@ function render(){
       <td class="brk">${r.videos}件 · ${r.channels}ch · ${man(r.views)}回</td>
       <td>${spark(r.spark, 78, 24, AC)}</td>
       <td>${mv}</td>
-      <td><span class="buy"><a href="${esc(r.steam)}" target="_blank" rel="noopener sponsored">Steam</a><a href="${esc(r.amazon)}" target="_blank" rel="noopener sponsored">Amazon</a></span></td></tr>
+      <td><span class="buy">${buy(r)}</span></td></tr>
     <tr class="detail"><td colspan="7">${streams ? `<div class="streams">${streams}</div>` : '<span style="color:var(--ink-3);font-size:12.5px">配信の情報がありません</span>'}</td></tr>`;
   }).join('') || '<tr><td colspan="7" style="padding:26px;text-align:center;color:var(--ink-3)">データがまだありません</td></tr>';
 

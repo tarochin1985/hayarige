@@ -119,6 +119,16 @@ def build_index() -> Index:
     return idx
 
 
+def load_platforms():
+    """ゲーム名 → 対応機種のざっくり分類（pc / console）。
+    どの店へのリンクを出すかを決めるのに使う。辞書が古い場合は空になる。"""
+    out = {}
+    for g in read_json(DATA / "igdb_games.json", []) or []:
+        if g.get("p"):
+            out[g["name"]] = g["p"]
+    return out
+
+
 def load_display():
     """表示用の名前。日本語タイトルがあればそちらを使う。"""
     disp = {}
