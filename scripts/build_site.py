@@ -54,6 +54,7 @@ def tally(videos, idx):
 
 def main():
     idx = M.build_index()
+    disp = M.load_display()
     days = load_days()
     day_names = [d for d, _ in days]
     today_videos = days[-1][1]
@@ -71,7 +72,7 @@ def main():
 
     rows = []
     for name, e in games.items():
-        rows.append({"game": name, "videos": len(e["sigs"]), "raw": e["videos"],
+        rows.append({"game": disp.get(name, name), "canonical": name, "videos": len(e["sigs"]), "raw": e["videos"],
                      "channels": len(e["channels"]), "views": e["views"],
                      "streams": sorted(e["streams"], key=lambda s: -s["v"])[:8],
                      "orgs": dict(sorted(e["orgs"].items(), key=lambda x: -x[1])),

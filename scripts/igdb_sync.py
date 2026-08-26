@@ -5,15 +5,15 @@
 日本語の別名（alternative_names）も一緒に取るのが肝心。
 「バイオハザード」と「Resident Evil」が同じゲームだと分かるのはこの情報のおかげ。
 """
-import time
+import re, time
 from common import IGDB, DATA, log, die, write_json
 
 # 上位から何本取るか。5万本もあれば配信されるゲームはほぼ網羅できる。
 CAP = 50000
 PAGE = 500
 
-FIELDS = ("fields name,alternative_names.name,first_release_date,"
-          "total_rating_count;")
+FIELDS = ("fields name,alternative_names.name,alternative_names.comment,"
+          "first_release_date,total_rating_count;")
 SORT = "sort total_rating_count desc;"
 
 # 本編だけに絞る条件。IGDBは項目名を変えることがあるので、
@@ -59,16 +59,40 @@ def main():
             log(f"  {offset} 本まで取得")
         time.sleep(0.28)          # 1秒あたり4回までの制限を守る
 
+    KANA = re.compile(r"[ぁ-んァ-ヴー]")
+    CJK = re.compile(r"[぀-ヿ一-鿿]")
+
+    def japanese_title(alt_list, name):
+        """日本語のタイトルを選ぶ。IGDBの注記に Japan とあるものを最優先。"""
+        cands = []
+        for a in alt_list:
+            nm = (a.get("name") or "").strip()
+            if not nm or nm == name or not CJK.search(nm):
+                continue
+            note = (a.get("comment") or "").lower()
+            score = 0
+            if "japan" in note:
+                score += 10
+            if KANA.search(nm):          # かなを含めば中国語ではない
+                score += 5
+            cands.append((score, len(nm), nm))
+        cands = [c for c in cands if c[0] > 0]
+        return max(cands)[2] if cands else None
+
     out = []
     for g in games:
         name = (g.get("name") or "").strip()
         if not name:
             continue
-        alts = [a.get("name", "").strip()
-                for a in (g.get("alternative_names") or [])]
-        out.append({"name": name,
-                    "alias": [a for a in alts if a and a != name],
-                    "pop": g.get("total_rating_count", 0)})
+        alt_list = g.get("alternative_names") or []
+        alts = [a.get("name", "").strip() for a in alt_list]
+        rec = {"name": name,
+               "alias": [a for a in alts if a and a != name],
+               "pop": g.get("total_rating_count", 0)}
+        jp = japanese_title(alt_list, name)
+        if jp:
+            rec["jp"] = jp
+        out.append(rec)
 
     write_json(DATA / "igdb_games.json", out)
     log(f"IGDB辞書を作成しました: {len(out)} タイトル → data/igdb_games.json")
