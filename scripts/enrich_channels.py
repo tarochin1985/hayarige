@@ -12,7 +12,7 @@
 import csv, re
 from datetime import datetime, timedelta
 from common import (YouTube, QuotaExhausted, DATA, JST, log, die,
-                    read_json, write_json, today)
+                    read_json, write_json, today, is_countable)
 import match as M
 
 CH_TSV = DATA / "channels.tsv"
@@ -22,14 +22,32 @@ PROBE = 20                      # ゲーム率を見るために調べる直近�
 
 
 def load_seed():
-    rows = []
+    rows, seen = [], set()
     with open(CH_TSV, encoding="utf-8") as f:
         for r in csv.DictReader(f, delimiter="\t"):
-            if r.get("name", "").strip():
-                rows.append({"name": r["name"].strip(),
-                             "channel_id": (r.get("channel_id") or "").strip(),
-                             "affiliation": (r.get("affiliation") or "").strip()})
+            name = r.get("name", "").strip()
+            cid = (r.get("channel_id") or "").strip()
+            if not name or (cid and cid in seen):
+                continue
+            if cid:
+                seen.add(cid)
+            rows.append({"name": name, "channel_id": cid,
+                         "affiliation": (r.get("affiliation") or "").strip()})
     return rows
+
+
+def dedupe(rows):
+    """名前から解決した結果、同じチャンネルに行き着くことがあるので後からも重複を消す。"""
+    out, seen = [], set()
+    for r in rows:
+        cid = r.get("channel_id")
+        if cid and cid in seen:
+            log(f"  重複のため除外: {r['name']}")
+            continue
+        if cid:
+            seen.add(cid)
+        out.append(r)
+    return out
 
 
 def handle_guess(name):
@@ -71,7 +89,7 @@ def main():
         except Exception as e:
             log(f"  失敗 {c['name']}: {e}")
 
-    targets = [c for c in seed if c["channel_id"]]
+    targets = dedupe([c for c in seed if c["channel_id"]])
     log(f"ID確定 {len(targets)} 件 ／ 使用クォータ {yt.used}")
 
     # ---- 2. 基本情報をまとめて取得（50件ずつ・1ユニット） ------------------
@@ -108,10 +126,11 @@ def main():
 
         # 前回すでに調べていて、登録者数がほぼ同じなら再調査を省く
         p = prev.get(c["channel_id"])
-        if p and p.get("game_ratio") is not None and \
+        if p and p.get("long_videos") is not None and \
            abs(p.get("subscribers", 0) - rec["subscribers"]) < rec["subscribers"] * 0.02:
             rec.update(last_upload=p.get("last_upload"),
                        game_ratio=p.get("game_ratio"),
+                       long_videos=p.get("long_videos"),
                        sample=p.get("sample"), status=p.get("status", ""))
             out.append(rec)
             continue
@@ -123,12 +142,16 @@ def main():
                 vr = yt.videos(vids[:50])
                 titles, latest = [], None
                 for v in vr.get("items", []):
-                    titles.append(v["snippet"]["title"])
                     pub = v["snippet"]["publishedAt"]
                     latest = max(latest, pub) if latest else pub
+                    dur = (v.get("contentDetails") or {}).get("duration", "")
+                    # Shortsと切り抜きは「配信」ではないので率の計算から外す
+                    if is_countable(v["snippet"]["title"], dur):
+                        titles.append(v["snippet"]["title"])
                 hit = sum(1 for t in titles if M.extract(t, idx, fallback=False)[0])
                 rec["last_upload"] = (latest or "")[:10]
                 rec["game_ratio"] = round(hit / len(titles), 2) if titles else 0.0
+                rec["long_videos"] = len(titles)
                 rec["sample"] = titles[0][:60] if titles else ""
             else:
                 rec.update(last_upload="", game_ratio=0.0, sample="")
@@ -146,12 +169,12 @@ def main():
         if rec.get("status") in (None, ""):
             if old:
                 rec["auto"] = "外す（1年以上更新なし）"
-            elif rec.get("game_ratio", 0) < 0.15:
-                rec["auto"] = "外す（ゲーム動画がほぼ無い）"
-            elif rec.get("game_ratio", 0) >= 0.4 and rec.get("subscribers", 0) >= 1000:
-                rec["auto"] = "残す"
+            elif rec.get("long_videos", 0) == 0:
+                rec["auto"] = "要確認（長尺動画なし）"
+            elif rec.get("game_ratio", 0) < 0.05:
+                rec["auto"] = "外す（ゲーム動画なし）"
             else:
-                rec["auto"] = "要確認"
+                rec["auto"] = "残す"
         out.append(rec)
         if n % 50 == 0:
             log(f"  {n}/{len(targets)} 件 ／ 使用クォータ {yt.used}")

@@ -4,7 +4,7 @@
 
 このファイルは直接実行しません。他のスクリプトから読み込まれます。
 """
-import json, os, sys, time
+import json, os, re, sys, time
 from datetime import datetime, timezone, timedelta
 from pathlib import Path
 from urllib import request, parse, error
@@ -33,6 +33,28 @@ def die(msg: str, hint: str = ""):
         print(f"対処: {hint}", flush=True)
     print("=" * 60 + "\n", flush=True)
     sys.exit(1)
+
+
+def iso_seconds(dur: str) -> int:
+    """ISO8601の長さ（PT1H2M3S）を秒に直す。Shortsを見分けるのに使う。"""
+    if not dur:
+        return 0
+    m = re.match(r"P(?:(\d+)D)?T?(?:(\d+)H)?(?:(\d+)M)?(?:(\d+)S)?", dur)
+    if not m:
+        return 0
+    d, h, mi, sec = (int(x) if x else 0 for x in m.groups())
+    return ((d * 24 + h) * 60 + mi) * 60 + sec
+
+
+SKIP_WORDS = ("切り抜き", "#shorts", "＃shorts")
+
+
+def is_countable(title: str, duration: str) -> bool:
+    """配信・動画として数える対象か。Shortsと切り抜きは除く。"""
+    if iso_seconds(duration) and iso_seconds(duration) <= 90:
+        return False
+    low = title.lower()
+    return not any(w.lower() in low for w in SKIP_WORDS)
 
 
 def read_json(path, default=None):
@@ -124,7 +146,7 @@ class YouTube:
     def videos(self, ids):
         """動画の詳細。50件まとめて1ユニット。"""
         return self.call("videos", 1,
-                         part="snippet,statistics,liveStreamingDetails",
+                         part="snippet,statistics,contentDetails,liveStreamingDetails",
                          id=",".join(ids), maxResults=50)
 
     def search_channel(self, q):

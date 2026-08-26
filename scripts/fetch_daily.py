@@ -8,7 +8,7 @@
 """
 from datetime import datetime, timedelta
 from common import (YouTube, QuotaExhausted, DATA, JST, log,
-                    read_json, write_json, today)
+                    read_json, write_json, today, is_countable)
 
 DAILY_TOP = 400          # 毎日見るチャンネル数（登録者順）
 LOOKBACK_HOURS = 48      # 何時間前までの動画を対象にするか
@@ -78,7 +78,7 @@ def main():
     log(f"新着候補 {len(new_ids)} 本 ／ 使用クォータ {yt.used}")
 
     cutoff = (datetime.now(JST) - timedelta(hours=LOOKBACK_HOURS)).isoformat()
-    videos = []
+    videos, skipped = [], 0
     for i in range(0, len(new_ids), 50):
         try:
             r = yt.videos(new_ids[i:i + 50])
@@ -88,6 +88,11 @@ def main():
         for v in r.get("items", []):
             pub = v["snippet"]["publishedAt"]
             if pub < cutoff:
+                continue
+            dur = (v.get("contentDetails") or {}).get("duration", "")
+            # Shortsと切り抜きはランキングに数えない
+            if not is_countable(v["snippet"]["title"], dur):
+                skipped += 1
                 continue
             c = owner.get(v["id"], {})
             live = v.get("liveStreamingDetails") or {}
@@ -106,7 +111,7 @@ def main():
     write_json(DATA / "daily" / f"{today()}.json",
                {"date": today(), "quota_used": yt.used,
                 "channels_checked": len(targets), "videos": videos})
-    log(f"保存しました: data/daily/{today()}.json （{len(videos)} 本）")
+    log(f"保存しました: data/daily/{today()}.json （{len(videos)} 本 ／ Shorts・切り抜き {skipped} 本を除外）")
     log(f"本日の使用クォータ: {yt.used}")
 
 
