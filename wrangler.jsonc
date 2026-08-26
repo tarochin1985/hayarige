@@ -1,0 +1,9 @@
+{
+  // Cloudflare に「site フォルダの中身をそのまま公開して」と伝えるための設定。
+  // これが無いと npx wrangler deploy が何を配ればいいのか分からず失敗します。
+  "name": "hayarige",
+  "compatibility_date": "2026-08-01",
+  "assets": {
+    "directory": "./site"
+  }
+}
