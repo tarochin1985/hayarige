@@ -5,7 +5,7 @@
 出力: site/index.html と site/data.json
 """
 import math, re
-from collections import defaultdict
+from collections import defaultdict, Counter
 from datetime import datetime, timedelta
 from urllib.parse import quote
 from common import DATA, SITE, JST, log, read_json, write_json, today
@@ -151,7 +151,9 @@ def main():
         "spread": spread,
         "momentum": {"ready": momentum_ready, "days": len(have), "need": MIN_HISTORY},
         "ranking": rows[:30],
-        "unknown": unknown[:20],
+        # 判定できなかったタイトルは公開ページには出さない。
+        # ランキングに混ぜない方針は変えず、辞書を育てるための材料として
+        # site/admin/ 側にだけ置く。
     }
     write_json(SITE / "data.json", payload)
 
@@ -170,6 +172,22 @@ def main():
     render("index.html", payload, 0)
     # その日の記録を、消えない住所に残す
     render(f"d/{today()}/index.html", dict(payload, view="archive"), 2)
+
+    # ---- 管理用ページ（トップからはリンクしない） ----
+    # よく出るタイトルを data/aliases.json に足していくための作業台。
+    unk_counts = Counter(u["title"] for u in unknown)
+    seen, unk_rows = set(), []
+    for u in unknown:
+        key = M.compact(u["title"])[:24]
+        if key in seen:
+            continue
+        seen.add(key)
+        unk_rows.append(dict(u, n=unk_counts[u["title"]]))
+    unk_rows.sort(key=lambda u: -u["n"])
+    admin = {"mode": "admin", "date": today(),
+             "generated": payload["generated"], "unknown": unk_rows}
+    render("admin/index.html", admin, 1)
+    write_json(SITE / "admin" / "unknown.json", admin)
 
     # ---- アーカイブ一覧を更新する ----
     idx_path = DATA / "archive_index.json"
