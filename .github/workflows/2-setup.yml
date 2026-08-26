@@ -1,6 +1,7 @@
-yaml
 name: 2. チャンネル情報を集める（初回・月1回）
 
+# ゲーム辞書の作成と、チャンネルの登録者数・最終投稿日・ゲーム動画率の取得。
+# 初回に1回、そのあとは月1回くらい動かせば十分です。
 on:
   workflow_dispatch:
     inputs:
@@ -21,21 +22,25 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: "3.11"
+
       - name: ゲーム辞書をIGDBから作る
         if: ${{ inputs.igdb == 'yes' }}
         env:
           TWITCH_CLIENT_ID: ${{ secrets.TWITCH_CLIENT_ID }}
           TWITCH_CLIENT_SECRET: ${{ secrets.TWITCH_CLIENT_SECRET }}
         run: python scripts/igdb_sync.py
+
       - name: チャンネル情報を集める
         env:
           YOUTUBE_API_KEY: ${{ secrets.YOUTUBE_API_KEY }}
         run: python scripts/enrich_channels.py
+
       - name: 結果をダウンロードできるようにする
         uses: actions/upload-artifact@v4
         with:
           name: channels_review
           path: data/channels_review.csv
+
       - name: 結果を保存
         run: |
           git config user.name "hayarige-bot"

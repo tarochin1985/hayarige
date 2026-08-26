@@ -1,9 +1,10 @@
-yaml
 name: 3. 毎日の更新
 
+# 毎朝、日本時間7時ごろに自動で動きます（GitHubの混雑で数十分ずれることがあります）。
+# 手動で動かしたいときは Actions タブから「Run workflow」。
 on:
   schedule:
-    - cron: "0 22 * * *"
+    - cron: "0 22 * * *"      # UTC 22:00 = 日本時間 翌7:00
   workflow_dispatch:
 
 concurrency:
@@ -20,12 +21,15 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: "3.11"
+
       - name: 新着の配信を集める
         env:
           YOUTUBE_API_KEY: ${{ secrets.YOUTUBE_API_KEY }}
         run: python scripts/fetch_daily.py
+
       - name: 集計してサイトを作る
         run: python scripts/build_site.py
+
       - name: 保存して公開
         run: |
           git config user.name "hayarige-bot"

@@ -1,6 +1,6 @@
-yaml
 name: 1. まず動作確認（セルフテスト）
 
+# 手動でだけ動かします。Actionsタブから「Run workflow」を押してください。
 on:
   workflow_dispatch:
 
