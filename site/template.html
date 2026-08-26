@@ -123,8 +123,8 @@ footer{font-size:11.5px;color:var(--ink-3);text-align:center;border-top:1px soli
 
   <section>
     <div class="head">
-      <h2><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="var(--hot)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2L4 14h7l-1 8 9-12h-7l1-8z"/></svg>今このゲームがアツい！</h2>
-      <span class="note">週の前半とくらべて配信がグッと増えたタイトル</span>
+      <h2><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="var(--hot)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2L4 14h7l-1 8 9-12h-7l1-8z"/></svg><span id="hot-title">今このゲームがアツい！</span></h2>
+      <span class="note" id="hot-note">直近の平均とくらべて配信がグッと増えたタイトル</span>
     </div>
     <div class="hot-grid" id="hot"></div>
   </section>
@@ -165,6 +165,8 @@ const man = n => n >= 10000 ? (n/10000).toFixed(n >= 100000 ? 0 : 1) + '万' : (
 
 function spark(v, w, h, color){
   if (!v || !v.length) return '';
+  v = v.filter(n => n !== null && n !== undefined);
+  if (v.length < 2) return '';
   const mx = Math.max(...v, 1), dx = w / Math.max(1, v.length - 1);
   const y = n => h - 3 - n / mx * (h - 6);
   const p = v.map((n, i) => [i * dx, y(n)]);
@@ -184,14 +186,27 @@ function render(){
   $('#s-meta').textContent = `配信 ${t.videos||0}本 / ゲーム ${t.games||0}種 / ${t.channels||0}ch`;
   $('#f-gen').textContent = '最終更新 ' + (DATA.generated || '');
 
-  $('#hot').innerHTML = (DATA.rising || []).length
-    ? DATA.rising.map(r => `<article class="hotcard">
+  const mo = DATA.momentum || {ready: true};
+  if (!mo.ready) {
+    // データが足りないうちは倍率を出さない。代わりに「広がり」を出す。
+    $('#hot-title').textContent = '今日いちばん広がったゲーム';
+    $('#hot-note').textContent =
+      `多くの配信者が同じ日に触ったタイトル（急上昇の判定はデータがあと${Math.max(0,(mo.need||4)-(mo.days||0))}日分で始まります）`;
+    $('#hot').innerHTML = (DATA.spread || []).map(r => `<article class="hotcard">
         <div class="n">${esc(r.game)}</div>
-        <div class="x"><b>×${(r.growth||1).toFixed(1)}</b><span>週の前半とくらべて</span></div>
-        ${spark(r.spark, 200, 34, HOT)}
-        <div class="f"><span>きょう ${r.videos}件</span><span>${r.channels}チャンネル</span></div>
-      </article>`).join('')
-    : '<div class="empty">今日は目立った急上昇はありませんでした。</div>';
+        <div class="x"><b>${r.channels}</b><span>チャンネルが配信</span></div>
+        <div class="f"><span>きょう ${r.videos}件</span><span>${man(r.views)}回 視聴</span></div>
+      </article>`).join('') || '<div class="empty">データがまだありません。</div>';
+  } else {
+    $('#hot').innerHTML = (DATA.rising || []).length
+      ? DATA.rising.map(r => `<article class="hotcard">
+          <div class="n">${esc(r.game)}</div>
+          <div class="x"><b>×${(r.growth||1).toFixed(1)}</b><span>直近の平均とくらべて</span></div>
+          ${spark(r.spark, 200, 34, HOT)}
+          <div class="f"><span>きょう ${r.videos}件</span><span>${r.channels}チャンネル</span></div>
+        </article>`).join('')
+      : '<div class="empty">今日は目立った急上昇はありませんでした。</div>';
+  }
 
   const orgs = {};
   (DATA.ranking || []).forEach(r => Object.entries(r.orgs || {}).forEach(([k, v]) => orgs[k] = (orgs[k]||0) + v));
@@ -203,7 +218,7 @@ function render(){
   const top = Math.max(1, ...list.map(r => r.score || 0));
   $('#rows').innerHTML = list.map((r, i) => {
     const mv = r.videos < 3 ? '<span class="mv fl">—</span>'
-      : r.growth >= 1.25 ? `<span class="mv up">▲ ×${r.growth.toFixed(1)}</span>`
+      : (r.growth && r.growth >= 1.25) ? `<span class="mv up">▲ ×${r.growth.toFixed(1)}</span>`
       : '<span class="mv fl">—</span>';
     const orgTxt = Object.entries(r.orgs || {}).slice(0, 2).map(([k, v]) => `${k} ${v}`).join(' · ');
     const streams = (r.streams || []).map(s => `<a class="stream" href="${esc(s.u)}" target="_blank" rel="noopener">
