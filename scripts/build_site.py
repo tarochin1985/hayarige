@@ -13,14 +13,22 @@ import match as M
 
 DAYS = 7
 MIN_FOR_MOMENTUM = 3          # 急上昇の対象にする最低本数（少数のブレを弾く）
+MIN_HISTORY = 4               # 急上昇を出すのに必要な「実データのある日数」
 W = {"videos": 0.30, "channels": 0.35, "views": 0.35}
 
 
 def load_days(n=DAYS):
+    """(日付, 動画リスト, その日のデータがあるか) を古い順に返す。
+
+    集計を始めたばかりの頃は過去のファイルが存在しない。それを「0本の日」と
+    数えてしまうと、どのゲームも『昨日の30倍！』という嘘の急上昇になる。
+    データが無い日は無い日として区別する。
+    """
     out = []
     for d in range(n - 1, -1, -1):
         day = (datetime.now(JST) - timedelta(days=d)).strftime("%Y-%m-%d")
-        out.append((day, (read_json(DATA / "daily" / f"{day}.json", {}) or {}).get("videos", [])))
+        rec = read_json(DATA / "daily" / f"{day}.json", None)
+        out.append((day, (rec or {}).get("videos", []), rec is not None))
     return out
 
 
@@ -70,15 +78,21 @@ def main():
     disp = M.load_display()
     override = read_json(DATA / "display_names.json", {}) or {}
     days = load_days()
-    day_names = [d for d, _ in days]
+    day_names = [d for d, _, _ in days]
+    have = [d for d, _, ok in days if ok]
     today_videos = days[-1][1]
-    log(f"直近{DAYS}日: " + " ".join(f"{d[5:]}={len(v)}" for d, v in days))
+    log(f"直近{DAYS}日: " + " ".join(f"{d[5:]}={len(v) if ok else '-'}"
+                                    for d, v, ok in days))
+    log(f"実データのある日数: {len(have)} / 急上昇の表示には {MIN_HISTORY} 日必要")
 
     # 日ごとのゲーム別本数（推移と急上昇に使う）
     hist = {}
-    for day, vids in days:
+    for day, vids, ok in days:
+        if not ok:
+            continue
         g, _ = tally(vids, idx)
         hist[day] = {k: len(v["sigs"]) for k, v in g.items()}
+    momentum_ready = len(have) >= MIN_HISTORY
 
     games, unknown = tally(today_videos, idx)
     if not games:
@@ -91,7 +105,8 @@ def main():
                      "channels": len(e["channels"]), "views": e["views"],
                      "streams": sorted(e["streams"], key=lambda s: -s["v"])[:8],
                      "orgs": dict(sorted(e["orgs"].items(), key=lambda x: -x[1])),
-                     "spark": [hist.get(d, {}).get(name, 0) for d in day_names]})
+                     "spark": [hist[d].get(name, 0) if d in hist else None
+                               for d in day_names]})
     if rows:
         mx_v = max(r["videos"] for r in rows) or 1
         mx_c = max(r["channels"] for r in rows) or 1
@@ -103,16 +118,24 @@ def main():
             r["p_views"] = round((math.log10(1 + r["views"]) - lo) / max(1e-9, hi - lo) * 100)
             r["score"] = round(r["p_videos"] * W["videos"] + r["p_channels"] * W["channels"]
                                + r["p_views"] * W["views"], 1)
-            early = sum(r["spark"][:3]) / 3
-            r["growth"] = round(r["videos"] / max(0.8, early), 2)
+            # 急上昇は「実データのある過去の日」とだけ比べる
+            past = [v for d, v in zip(day_names, r["spark"])
+                    if d in hist and d != day_names[-1] and v is not None]
+            if momentum_ready and past:
+                r["growth"] = round(r["videos"] / max(0.8, sum(past) / len(past)), 2)
+            else:
+                r["growth"] = None
             r["steam"] = "https://store.steampowered.com/search/?term=" + quote(r["game"])
             r["amazon"] = "https://www.amazon.co.jp/s?k=" + quote(r["game"])
         rows.sort(key=lambda r: -r["score"])
         for i, r in enumerate(rows, 1):
             r["rank"] = i
 
-    rising = sorted([r for r in rows if r["videos"] >= MIN_FOR_MOMENTUM and r["growth"] > 1.25],
-                    key=lambda r: -r["growth"])[:3]
+    rising = sorted([r for r in rows if r["videos"] >= MIN_FOR_MOMENTUM
+                     and (r["growth"] or 0) > 1.25],
+                    key=lambda r: -r["growth"])[:3] if momentum_ready else []
+    # 急上昇が出せない間は「今日いちばん多くの配信者が触ったゲーム」を代わりに出す
+    spread = sorted(rows, key=lambda r: (-r["channels"], -r["videos"]))[:3]
 
     payload = {
         "date": today(),
@@ -121,6 +144,8 @@ def main():
         "totals": {"videos": len(today_videos), "games": len(rows),
                    "channels": len({v["channel_id"] for v in today_videos})},
         "rising": rising,
+        "spread": spread,
+        "momentum": {"ready": momentum_ready, "days": len(have), "need": MIN_HISTORY},
         "ranking": rows[:30],
         "unknown": unknown[:20],
     }
