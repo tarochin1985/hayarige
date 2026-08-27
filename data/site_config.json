@@ -1,6 +1,6 @@
 {
- "_説明": "AmazonアソシエイトID。空にするとAmazonリンクは出ません（タグ無しのリンクは1円にもならないため）。",
+ "_説明": "AmazonアソシエイトID。コラム内の購入リンクに使います。",
  "amazon_tag": "tarochin-22",
- "_検索の絞り込み": "Amazon検索の売り場指定。videogames は amazon.co.jp で効かず、URLごと作り直されてIDが落ちたため空にしています。",
- "amazon_department": ""
+ "_ランキング表のAmazon": "true にするとランキング表にもAmazon検索リンクが出ます。既定は false。ゲーム名の検索では攻略本やグッズが並んでしまい、読者の役に立たないためです。商品ページを特定できるようになったら true に。",
+ "amazon_in_ranking": false
 }

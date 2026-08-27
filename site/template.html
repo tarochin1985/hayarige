@@ -178,7 +178,7 @@ footer{font-size:11.5px;color:var(--ink-3);text-align:center;border-top:1px soli
     <div class="filters" id="filters"></div>
     <div class="tw">
       <table>
-        <thead><tr><th>順位</th><th>ゲーム</th><th>総合ポイント</th><th>内訳</th><th>7日推移</th><th>勢い</th><th>買う</th></tr></thead>
+        <thead><tr><th>順位</th><th>ゲーム</th><th>総合ポイント</th><th>内訳</th><th>7日推移</th><th>勢い</th><th>ストア</th></tr></thead>
         <tbody id="rows"></tbody>
       </table>
     </div>
@@ -188,6 +188,12 @@ footer{font-size:11.5px;color:var(--ink-3);text-align:center;border-top:1px soli
     <div class="head"><h2>これまでの記録</h2>
       <span class="note">毎日のランキングとコラムは、すべて残しています</span></div>
     <div class="arch" id="arch"></div>
+  </section>
+
+  <section id="lead-sec" style="display:none">
+    <div class="head"><h2>コラムの種</h2>
+      <span class="note">集めたデータから拾った「何か起きていそうな気配」。ここから一次ソースを当たる</span></div>
+    <div class="memo" id="leads"></div>
   </section>
 
   <!-- 管理用。公開ページには出しません（site/admin/ でだけ表示されます） -->
@@ -261,6 +267,21 @@ function renderAdmin(){
   document.head.appendChild(m);          // 検索結果には出さない
   ['#hot-sec', '#rank-sec', '#pick-sec', '#arch-sec'].forEach(s => { const e = $(s); if (e) e.style.display = 'none'; });
   $('#q-sec').style.display = '';
+  $('#lead-sec').style.display = '';
+
+  const L = DATA.leads || {};
+  const row = (label, body) =>
+    `<div class="qrow"><span class="g">${esc(label)}</span><span class="t">${body}</span></div>`;
+  const parts = [];
+  (L.events || []).forEach(e => parts.push(row('同じタグ',
+    `<b>${esc(e.tag)}</b> — ${e.channels.length}人：${e.channels.map(esc).join('、')}`)));
+  (L.newcomers || []).forEach(n => parts.push(row('新顔',
+    `<b>${esc(n.game)}</b> — 直近では出ていなかったのに ${n.channels}人が配信`)));
+  (L.wide || []).forEach(w => parts.push(row('広がり',
+    `<b>${esc(w.game)}</b> — ${w.channels}チャンネル / ${w.videos}件`)));
+  (DATA.recent_columns || []).forEach(c => parts.push(row('既出',
+    `${esc(c.date)}　${esc(c.game)}｜${esc(c.headline)}`)));
+  $('#leads').innerHTML = parts.join('') || '<div class="empty">今日は目立った動きがありません。</div>';
   const q = DATA.unknown || [];
   $('#s-date').textContent = '管理用';
   $('#s-meta').textContent = `${esc(DATA.date)} ／ 確認待ち ${q.length}件`;
@@ -291,8 +312,14 @@ function render(){
   if (col) {
     // コラムで取り上げたゲームの購入導線は、ランキング側の判定を使い回す
     const cr = (DATA.ranking || []).find(r => r.game === col.game);
-    const cbuy = cr && (cr.steam || cr.amazon)
-      ? `<div class="buy" style="margin-top:2px">${buy(cr)}</div>` : '';
+    // コラムには、人が実際に商品ページを確かめたリンクだけを置く
+    const links = [];
+    if (col.buy && col.buy.u)
+      links.push(`<a href="${esc(col.buy.u)}" target="_blank" rel="noopener sponsored nofollow">${esc(col.buy.t || '購入')}</a>`);
+    if (cr && cr.steam)
+      links.push(`<a href="${esc(cr.steam)}" target="_blank" rel="noopener sponsored">Steam</a>`);
+    const cbuy = links.length
+      ? `<div class="buy" style="margin-top:2px">${links.join('')}</div>` : '';
     $('#pick').innerHTML = `
       <span class="badge">PICK UP</span>
       <div class="g">${esc(col.game)}</div>

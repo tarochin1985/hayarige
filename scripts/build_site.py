@@ -10,6 +10,7 @@ from datetime import datetime, timedelta, timezone
 from urllib.parse import quote, quote_plus
 from common import DATA, SITE, JST, log, read_json, write_json, today
 import match as M
+from check_column import load_valid
 
 DAYS = 7
 MIN_FOR_MOMENTUM = 3          # 急上昇の対象にする最低本数（少数のブレを弾く）
@@ -87,6 +88,50 @@ def by_calendar_day(videos):
     return out
 
 
+# ------------------------------------------------------------------ コラムの種
+HASHTAG = re.compile(r"[#＃]([^\s#＃【】『』「」\[\]（）()]{2,40})")
+# 汎用タグだけを外す。部分一致にすると #ぶいすぽマイクラ夏祭り2026 まで
+# 落ちてしまうので、完全一致でのみ判定する。
+TAG_NG = {M.compact(t) for t in
+          ("shorts", "short", "live", "配信", "生配信", "雑談", "歌枠", "karaoke",
+           "vtuber", "新人vtuber", "初見歓迎", "参加型", "個人勢",
+           "ホロライブ", "にじさんじ", "ぶいすぽ", "ぶいすぽっ", "ななしいんく")}
+
+
+def find_leads(videos, rows, hist, day_names):
+    """「今日は何か起きたか」を、自分たちが集めたデータだけから拾う。
+
+    まとめサイトを見に行く前の段階。ここに出たものを人が一次ソースで
+    確かめてからコラムにする。ここ自体は記事ではないので公開しない。
+    """
+    # 1. 同じハッシュタグを、別々の配信者が使っている＝企画・大会の気配
+    tags = defaultdict(set)
+    for v in videos:
+        for m in HASHTAG.finditer(v["title"]):
+            t = M.compact(m.group(1))
+            if len(t) >= 4 and t not in TAG_NG:
+                tags[m.group(1)].add(v["channel"])
+    events = [{"tag": "#" + k, "channels": sorted(c)}
+              for k, c in tags.items() if len(c) >= 3]
+    events.sort(key=lambda e: -len(e["channels"]))
+
+    # 2. 直近の他の日には出ていなかったのに、今日は複数人が触っている
+    past = [d for d in day_names[:-1] if d in hist]
+    newcomers = []
+    for r in rows[:25]:
+        if r["channels"] < 2:
+            continue
+        if past and all(hist[d].get(r["canonical"], 0) == 0 for d in past):
+            newcomers.append({"game": r["game"], "channels": r["channels"],
+                              "videos": r["videos"]})
+
+    # 3. 単純に、多くの配信者が同じ日に触ったもの
+    wide = [{"game": r["game"], "channels": r["channels"], "videos": r["videos"]}
+            for r in rows[:10] if r["channels"] >= 4]
+
+    return {"events": events[:8], "newcomers": newcomers[:8], "wide": wide[:8]}
+
+
 def series_sig(title: str) -> str:
     """連番シリーズをまとめるための署名。1人の連投で順位が動かないようにする。"""
     return M.compact(re.sub(r"[0-9#＃]+", "", title))[:16]
@@ -128,27 +173,34 @@ def choose_name(canonical, jp, titles, override):
     return jp if blob.count(M.compact(jp)) >= blob.count(M.compact(canonical)) else canonical
 
 
+def amazon_tagged(url, tag):
+    """Amazonの商品URLにアソシエイトIDを付ける。既に付いていればそのまま。"""
+    if not url or not tag or "amazon.co.jp" not in url:
+        return url
+    return url if "tag=" in url else url + ("&" if "?" in url else "?") + "tag=" + quote_plus(tag)
+
+
 def store_links(name, plat, cfg):
     """そのゲームを「実際に売っている店」へのリンクだけを作る。
 
-    PCでしか出ていないゲームにAmazonのリンクを出しても、攻略本やTシャツが
-    並ぶだけで読者の役に立たないし、成果にもならない。IGDBの対応機種を見て
-    出し分ける。対応機種が分からないとき（辞書が古いとき）は両方出す。
+    Amazonはランキング表には出さない（既定）。ゲーム名でキーワード検索を
+    投げるしかなく、その結果が攻略本・フィギュア・パーカーだらけになる。
+    Amazonは商品ページを特定するAPI（PA-API）を持っているが、それは
+    「過去30日以内に発送済みの売上がある」ことが利用条件なので、
+    アクセスが無い時期は使えない。当てにできる土台ではない。
+
+    読者に間違ったリンクを見せる損のほうが、2%の紹介料より大きい。
+    出すのは、人が実際に商品ページを確かめたコラムの中だけにする。
     """
-    tag = (cfg.get("amazon_tag") or "").strip()
-    dept = (cfg.get("amazon_department") or "").strip()
     on_pc = (not plat) or ("pc" in plat)
     on_console = (not plat) or ("console" in plat)
 
     steam = ("https://store.steampowered.com/search/?term=" + quote(name)) if on_pc else None
     amazon = None
-    if tag and on_console:
-        # 検索語は + 区切り。%20 で送るとAmazon側がURLを作り直し、
-        # そのときに tag= ごと落とされることがある（実際に落ちた）。
-        amazon = "https://www.amazon.co.jp/s?k=" + quote_plus(name)
-        if dept:
-            amazon += "&i=" + quote_plus(dept)
-        amazon += "&tag=" + quote_plus(tag)
+    tag = (cfg.get("amazon_tag") or "").strip()
+    if tag and on_console and cfg.get("amazon_in_ranking"):
+        amazon = ("https://www.amazon.co.jp/s?k=" + quote_plus(name)
+                  + "&tag=" + quote_plus(tag))
     return steam, amazon
 
 
@@ -234,7 +286,12 @@ def main():
     # 急上昇が出せない間は「今日いちばん多くの配信者が触ったゲーム」を代わりに出す
     spread = sorted(rows, key=lambda r: (-r["channels"], -r["videos"]))[:3]
 
-    column = read_json(DATA / "columns" / f"{today()}.json", None)
+    # 検証を通らないコラムは載せない。無理に載せるより、無いほうがいい。
+    column = load_valid(DATA / "columns" / f"{today()}.json", log)
+    if column and column.get("buy"):
+        column["buy"] = dict(column["buy"],
+                             u=amazon_tagged(column["buy"].get("u", ""),
+                                             (cfg.get("amazon_tag") or "").strip()))
 
     payload = {
         "mode": "day",
@@ -282,8 +339,16 @@ def main():
         seen.add(key)
         unk_rows.append(dict(u, n=unk_counts[u["title"]]))
     unk_rows.sort(key=lambda u: -u["n"])
+    leads = find_leads(today_videos, rows, hist, day_names)
+    recent_cols = []
+    for f in sorted((DATA / "columns").glob("*.json"))[-14:]:
+        c = read_json(f, None) or {}
+        if c.get("game"):
+            recent_cols.append({"date": f.stem, "game": c["game"],
+                                "headline": c.get("headline", "")})
     admin = {"mode": "admin", "date": today(),
-             "generated": payload["generated"], "unknown": unk_rows}
+             "generated": payload["generated"], "unknown": unk_rows,
+             "leads": leads, "recent_columns": recent_cols[::-1]}
     render("admin/index.html", admin, 1)
     write_json(SITE / "admin" / "unknown.json", admin)
 
