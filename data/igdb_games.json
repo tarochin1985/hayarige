@@ -1018,7 +1018,7 @@
    "COD MW2",
    "iw4sp.exe"
   ],
-  "pop": 1568,
+  "pop": 1569,
   "p": [
    "pc",
    "console"
@@ -1219,7 +1219,7 @@
    "Call of Duty: Black Ops - Mac Edition",
    "BlackOps.exe"
   ],
-  "pop": 1343,
+  "pop": 1344,
   "p": [
    "pc",
    "console"
@@ -1247,7 +1247,7 @@
    "SotC",
    "Wanda and the Colossus"
   ],
-  "pop": 1327,
+  "pop": 1326,
   "p": [
    "console"
   ]
@@ -1961,7 +1961,7 @@
    "星際大戰 絕地：組織殞落",
    "STAR WARS Jedi: Fallen Order™"
   ],
-  "pop": 1041,
+  "pop": 1042,
   "p": [
    "pc",
    "console"
@@ -2042,7 +2042,7 @@
    "NFS: Most Wanted",
    "Need for Speed: Most Wanted (2005)"
   ],
-  "pop": 1012,
+  "pop": 1013,
   "p": [
    "pc",
    "console"
@@ -2233,7 +2233,7 @@
    "Black Ops II",
    "Call of Duty: Black Ops 2"
   ],
-  "pop": 931,
+  "pop": 932,
   "p": [
    "pc",
    "console"
@@ -3008,7 +3008,7 @@
    "异形：隔离",
    "AI.exe"
   ],
-  "pop": 727,
+  "pop": 728,
   "p": [
    "pc",
    "console"
@@ -3202,18 +3202,6 @@
   ]
  },
  {
-  "name": "Metro Exodus",
-  "alias": [
-   "Metro 3",
-   "MetroExodus.exe"
-  ],
-  "pop": 686,
-  "p": [
-   "pc",
-   "console"
-  ]
- },
- {
   "name": "Hogwarts Legacy",
   "alias": [
    "霍格華茲的傳承",
@@ -3223,7 +3211,19 @@
    "Заветът на Хогуортс",
    "Dziedzictwo Hogwartu"
   ],
-  "pop": 684,
+  "pop": 686,
+  "p": [
+   "pc",
+   "console"
+  ]
+ },
+ {
+  "name": "Metro Exodus",
+  "alias": [
+   "Metro 3",
+   "MetroExodus.exe"
+  ],
+  "pop": 686,
   "p": [
    "pc",
    "console"
@@ -5648,7 +5648,7 @@
   "alias": [
    "Torment"
   ],
-  "pop": 423,
+  "pop": 422,
   "p": [
    "pc"
   ]
@@ -5900,7 +5900,7 @@
   "alias": [
    "니드포스피드 핫 퍼슈트"
   ],
-  "pop": 403,
+  "pop": 404,
   "p": [
    "pc",
    "console"
@@ -6594,8 +6594,9 @@
   "name": "Tom Clancy's Splinter Cell: Blacklist",
   "alias": [
    "SC Blacklist",
+   "Blacklist_Launcher.exe",
    "Splinter Cell: Blacklist",
-   "Blacklist_Launcher.exe"
+   "Splinter Cell Blacklist"
   ],
   "pop": 352,
   "p": [
@@ -8944,20 +8945,6 @@
   ]
  },
  {
-  "name": "Sid Meier's Civilization",
-  "alias": [
-   "Civ 1",
-   "Civ",
-   "Civilization",
-   "Sid Meier's Civilization: Shin Sekai Nadaibunmei"
-  ],
-  "pop": 265,
-  "p": [
-   "pc",
-   "console"
-  ]
- },
- {
   "name": "Pokémon Sun",
   "alias": [
    "Pokémon Sol",
@@ -8978,6 +8965,20 @@
   "alias": [
    "[PROTOTYPE2]",
    "[PROTOTYPE 2]"
+  ],
+  "pop": 264,
+  "p": [
+   "pc",
+   "console"
+  ]
+ },
+ {
+  "name": "Sid Meier's Civilization",
+  "alias": [
+   "Civ 1",
+   "Civ",
+   "Civilization",
+   "Sid Meier's Civilization: Shin Sekai Nadaibunmei"
   ],
   "pop": 264,
   "p": [
@@ -9868,6 +9869,19 @@
   ]
  },
  {
+  "name": "Hitman 3",
+  "alias": [
+   "HITMAN III",
+   "HITMAN 3",
+   "Launcher.exe"
+  ],
+  "pop": 237,
+  "p": [
+   "pc",
+   "console"
+  ]
+ },
+ {
   "name": "Pokémon Shield",
   "alias": [
    "Pokémon Bouclier",
@@ -9916,19 +9930,6 @@
    "Need for Speed: Porsche"
   ],
   "pop": 237,
-  "p": [
-   "pc",
-   "console"
-  ]
- },
- {
-  "name": "Hitman 3",
-  "alias": [
-   "HITMAN III",
-   "HITMAN 3",
-   "Launcher.exe"
-  ],
-  "pop": 236,
   "p": [
    "pc",
    "console"
@@ -12305,6 +12306,19 @@
   ]
  },
  {
+  "name": "Serious Sam II",
+  "alias": [
+   "Serious Sam 2",
+   "Serious Sam 2",
+   "Крутой Сэм II"
+  ],
+  "pop": 191,
+  "p": [
+   "pc",
+   "console"
+  ]
+ },
+ {
   "name": "Circle of Blood",
   "alias": [
    "断剑：圣殿骑士的阴影",
@@ -12398,19 +12412,6 @@
   ],
   "pop": 190,
   "p": [
-   "console"
-  ]
- },
- {
-  "name": "Serious Sam II",
-  "alias": [
-   "Serious Sam 2",
-   "Serious Sam 2",
-   "Крутой Сэм II"
-  ],
-  "pop": 190,
-  "p": [
-   "pc",
    "console"
   ]
  },
@@ -13318,6 +13319,18 @@
   ]
  },
  {
+  "name": "007 First Light",
+  "alias": [
+   "Project 007",
+   "007 初露锋芒"
+  ],
+  "pop": 175,
+  "p": [
+   "pc",
+   "console"
+  ]
+ },
+ {
   "name": "Crypt of the NecroDancer",
   "alias": [
    "クリプト・オブ・ネクロダンサー",
@@ -13353,18 +13366,6 @@
    "THUG 2"
   ],
   "pop": 175,
-  "p": [
-   "pc",
-   "console"
-  ]
- },
- {
-  "name": "007 First Light",
-  "alias": [
-   "Project 007",
-   "007 初露锋芒"
-  ],
-  "pop": 174,
   "p": [
    "pc",
    "console"
@@ -13437,6 +13438,23 @@
   ]
  },
  {
+  "name": "Neighbours from Hell",
+  "alias": [
+   "Neighbors from Hell",
+   "Как достать соседа",
+   "Съседи от Ада",
+   "Un Voisin d'Enfer !",
+   "Neighbours From Hell: Revenge Is A Sweet Game",
+   "Как Достать Соседа: Сладкая Месть",
+   "game.exe"
+  ],
+  "pop": 173,
+  "p": [
+   "pc",
+   "console"
+  ]
+ },
+ {
   "name": "Warcraft: Orcs & Humans",
   "alias": [
    "WC1",
@@ -13489,23 +13507,6 @@
   "alias": [
    "SCD",
    "Sonic the Hedgehog CD"
-  ],
-  "pop": 172,
-  "p": [
-   "pc",
-   "console"
-  ]
- },
- {
-  "name": "Neighbours from Hell",
-  "alias": [
-   "Neighbors from Hell",
-   "Как достать соседа",
-   "Съседи от Ада",
-   "Un Voisin d'Enfer !",
-   "Neighbours From Hell: Revenge Is A Sweet Game",
-   "Как Достать Соседа: Сладкая Месть",
-   "game.exe"
   ],
   "pop": 172,
   "p": [
@@ -16428,6 +16429,18 @@
   ]
  },
  {
+  "name": "Pragmata",
+  "alias": [
+   "PRAGMATA",
+   "PRAGMATA.exe"
+  ],
+  "pop": 134,
+  "p": [
+   "pc",
+   "console"
+  ]
+ },
+ {
   "name": "Call of the Sea",
   "alias": [
    "COTS.exe"
@@ -16490,18 +16503,6 @@
   ],
   "pop": 133,
   "p": [
-   "console"
-  ]
- },
- {
-  "name": "Pragmata",
-  "alias": [
-   "PRAGMATA",
-   "PRAGMATA.exe"
-  ],
-  "pop": 133,
-  "p": [
-   "pc",
    "console"
   ]
  },
@@ -16733,6 +16734,17 @@
   ]
  },
  {
+  "name": "Teamfight Tactics",
+  "alias": [
+   "TFT",
+   "云顶之弈"
+  ],
+  "pop": 131,
+  "p": [
+   "pc"
+  ]
+ },
+ {
   "name": "Age of Empires IV",
   "alias": [
    "Age of Empires 4",
@@ -16859,17 +16871,6 @@
   "p": [
    "pc",
    "console"
-  ]
- },
- {
-  "name": "Teamfight Tactics",
-  "alias": [
-   "TFT",
-   "云顶之弈"
-  ],
-  "pop": 130,
-  "p": [
-   "pc"
   ]
  },
  {
@@ -20913,6 +20914,17 @@
   ]
  },
  {
+  "name": "Onimusha: Warlords",
+  "alias": [
+   "Genma Onimusha"
+  ],
+  "pop": 102,
+  "p": [
+   "pc",
+   "console"
+  ]
+ },
+ {
   "name": "Pitfall!",
   "alias": [
    "Aventuras em Tongo Bongo",
@@ -21064,17 +21076,6 @@
   "alias": [
    "Lara Croft GO",
    "Lara Croft GO.exe"
-  ],
-  "pop": 101,
-  "p": [
-   "pc",
-   "console"
-  ]
- },
- {
-  "name": "Onimusha: Warlords",
-  "alias": [
-   "Genma Onimusha"
   ],
   "pop": 101,
   "p": [
@@ -22519,6 +22520,17 @@
   ]
  },
  {
+  "name": "Magicka 2",
+  "alias": [
+   "Magicka2.exe"
+  ],
+  "pop": 93,
+  "p": [
+   "pc",
+   "console"
+  ]
+ },
+ {
   "name": "Cut the Rope",
   "alias": [
    "Cut the Rope HD"
@@ -22788,17 +22800,6 @@
   ],
   "pop": 92,
   "jp": "トラックマニア　ターボ",
-  "p": [
-   "pc",
-   "console"
-  ]
- },
- {
-  "name": "Magicka 2",
-  "alias": [
-   "Magicka2.exe"
-  ],
-  "pop": 92,
   "p": [
    "pc",
    "console"
@@ -25286,6 +25287,16 @@
   ]
  },
  {
+  "name": "Marbles on Stream",
+  "alias": [
+   "MarblesOnStream.exe"
+  ],
+  "pop": 79,
+  "p": [
+   "pc"
+  ]
+ },
+ {
   "name": "Bad North",
   "alias": [],
   "pop": 79,
@@ -25450,19 +25461,20 @@
   ]
  },
  {
-  "name": "Meccha Chameleon",
+  "name": "Dark Cloud",
   "alias": [
-   "MECCHA CHAMELEON"
+   "ダーククラウド"
   ],
-  "pop": 78,
+  "pop": 79,
+  "jp": "ダーククラウド",
   "p": [
-   "pc"
+   "console"
   ]
  },
  {
-  "name": "Marbles on Stream",
+  "name": "Meccha Chameleon",
   "alias": [
-   "MarblesOnStream.exe"
+   "MECCHA CHAMELEON"
   ],
   "pop": 78,
   "p": [
@@ -25618,17 +25630,6 @@
   ]
  },
  {
-  "name": "Dark Cloud",
-  "alias": [
-   "ダーククラウド"
-  ],
-  "pop": 78,
-  "jp": "ダーククラウド",
-  "p": [
-   "console"
-  ]
- },
- {
   "name": "Donkey Kong Junior",
   "alias": [
    "Donkey Kong Jr",
@@ -25742,6 +25743,19 @@
   "pop": 77,
   "jp": "ザ・キング・オブ・ファイターズ '98 ドリームマッチネバーエンズ",
   "p": [
+   "console"
+  ]
+ },
+ {
+  "name": "AER: Memories of Old",
+  "alias": [
+   "AER",
+   "AER – Memories of Old",
+   "AER.exe"
+  ],
+  "pop": 77,
+  "p": [
+   "pc",
    "console"
   ]
  },
@@ -26027,19 +26041,6 @@
    "FGO"
   ],
   "pop": 76
- },
- {
-  "name": "AER: Memories of Old",
-  "alias": [
-   "AER",
-   "AER – Memories of Old",
-   "AER.exe"
-  ],
-  "pop": 76,
-  "p": [
-   "pc",
-   "console"
-  ]
  },
  {
   "name": "ReCore",
@@ -26996,6 +26997,16 @@
   ]
  },
  {
+  "name": "Mario Party Superstars",
+  "alias": [
+   "마파슈"
+  ],
+  "pop": 72,
+  "p": [
+   "console"
+  ]
+ },
+ {
   "name": "Warhammer 40,000: Darktide",
   "alias": [
    "launcher\\launcher.exe"
@@ -27300,16 +27311,6 @@
    "TOA"
   ],
   "pop": 72,
-  "p": [
-   "console"
-  ]
- },
- {
-  "name": "Mario Party Superstars",
-  "alias": [
-   "마파슈"
-  ],
-  "pop": 71,
   "p": [
    "console"
   ]
@@ -34250,7 +34251,6 @@
  {
   "name": "Do Not Feed the Monkeys",
   "alias": [
-   "dnftm.exe",
    "dnftm.exe"
   ],
   "pop": 51,
@@ -37194,6 +37194,21 @@
   ]
  },
  {
+  "name": "The King of Fighters '99: Millennium Battle",
+  "alias": [
+   "KOF '99",
+   "KOF99",
+   "The King of Fighters 199",
+   "The King of Fighters VI",
+   "The King of Fighters 6",
+   "拳皇99"
+  ],
+  "pop": 46,
+  "p": [
+   "console"
+  ]
+ },
+ {
   "name": "Legend of Mana",
   "alias": [
    "Seiken Densetsu Rejendo obu Mana",
@@ -37801,21 +37816,6 @@
   "pop": 45,
   "p": [
    "pc"
-  ]
- },
- {
-  "name": "The King of Fighters '99: Millennium Battle",
-  "alias": [
-   "KOF '99",
-   "KOF99",
-   "The King of Fighters 199",
-   "The King of Fighters VI",
-   "The King of Fighters 6",
-   "拳皇99"
-  ],
-  "pop": 45,
-  "p": [
-   "console"
   ]
  },
  {
@@ -45622,7 +45622,6 @@
   "name": "Knock-knock",
   "alias": [
    "Тук-тук-тук",
-   "knock.exe",
    "knock.exe"
   ],
   "pop": 35,
@@ -46263,6 +46262,17 @@
   "pop": 34,
   "p": [
    "pc"
+  ]
+ },
+ {
+  "name": "198X",
+  "alias": [
+   "198X.exe"
+  ],
+  "pop": 34,
+  "p": [
+   "pc",
+   "console"
   ]
  },
  {
@@ -47287,17 +47297,6 @@
   "pop": 33,
   "p": [
    "pc"
-  ]
- },
- {
-  "name": "198X",
-  "alias": [
-   "198X.exe"
-  ],
-  "pop": 33,
-  "p": [
-   "pc",
-   "console"
   ]
  },
  {
@@ -51323,6 +51322,21 @@
   ]
  },
  {
+  "name": "Dragon Ball Z: Super Butouden",
+  "alias": [
+   "Dragon Ball Z",
+   "Dragon Ball Z: Super Fight Story",
+   "Dragon Ball Z: Super Butoden",
+   "Dragon Ball Z: Super Butou-den",
+   "Dragon ball Z",
+   "七龍珠Z 超武鬥傳"
+  ],
+  "pop": 30,
+  "p": [
+   "console"
+  ]
+ },
+ {
   "name": "Project Gotham Racing 4",
   "alias": [
    "PGR4"
@@ -52474,21 +52488,6 @@
   "pop": 29,
   "p": [
    "pc"
-  ]
- },
- {
-  "name": "Dragon Ball Z: Super Butouden",
-  "alias": [
-   "Dragon Ball Z",
-   "Dragon Ball Z: Super Fight Story",
-   "Dragon Ball Z: Super Butoden",
-   "Dragon Ball Z: Super Butou-den",
-   "Dragon ball Z",
-   "七龍珠Z 超武鬥傳"
-  ],
-  "pop": 29,
-  "p": [
-   "console"
   ]
  },
  {
@@ -57593,7 +57592,6 @@
   "alias": [
    "ELEX 2",
    "ELEX II",
-   "ELEX2.exe",
    "ELEX2.exe"
   ],
   "pop": 25,
@@ -59107,7 +59105,6 @@
  {
   "name": "Shadows: Awakening",
   "alias": [
-   "shadows.exe",
    "shadows.exe"
   ],
   "pop": 24,
@@ -63557,6 +63554,17 @@
   ]
  },
  {
+  "name": "Pac-Land",
+  "alias": [
+   "パックランド"
+  ],
+  "pop": 22,
+  "jp": "パックランド",
+  "p": [
+   "console"
+  ]
+ },
+ {
   "name": "Forgotten Worlds",
   "alias": [
    "Lost Worlds",
@@ -65652,17 +65660,6 @@
   ]
  },
  {
-  "name": "Pac-Land",
-  "alias": [
-   "パックランド"
-  ],
-  "pop": 21,
-  "jp": "パックランド",
-  "p": [
-   "console"
-  ]
- },
- {
   "name": "The Impossible Game",
   "alias": [
    "ImpossibleGame.exe"
@@ -65933,6 +65930,17 @@
   "pop": 21,
   "p": [
    "pc",
+   "console"
+  ]
+ },
+ {
+  "name": "Spider-Man and the X-Men in Arcade's Revenge",
+  "alias": [
+   "Spider-Man and X-Men - Arcade's Revenge",
+   "Homem-Aranha X-Men: a vingança de Arcade!"
+  ],
+  "pop": 21,
+  "p": [
    "console"
   ]
  },
@@ -67455,6 +67463,17 @@
   ]
  },
  {
+  "name": "Adam's Venture: Origins",
+  "alias": [
+   "AV_Origins.exe"
+  ],
+  "pop": 20,
+  "p": [
+   "pc",
+   "console"
+  ]
+ },
+ {
   "name": "Zombie Shooter",
   "alias": [
    "좀비슈터"
@@ -68328,17 +68347,6 @@
    "Ultimate Qix",
    "QIX Neo",
    "Ultimate QIX"
-  ],
-  "pop": 20,
-  "p": [
-   "console"
-  ]
- },
- {
-  "name": "Spider-Man and the X-Men in Arcade's Revenge",
-  "alias": [
-   "Spider-Man and X-Men - Arcade's Revenge",
-   "Homem-Aranha X-Men: a vingança de Arcade!"
   ],
   "pop": 20,
   "p": [
@@ -70214,17 +70222,6 @@
  {
   "name": "Transformers: Rise of the Dark Spark",
   "alias": [],
-  "pop": 19,
-  "p": [
-   "pc",
-   "console"
-  ]
- },
- {
-  "name": "Adam's Venture: Origins",
-  "alias": [
-   "AV_Origins.exe"
-  ],
   "pop": 19,
   "p": [
    "pc",
@@ -85444,8 +85441,7 @@
    "Black Mirror 4",
    "Black Mirror IV",
    "BlackMirror.exe",
-   "Черно Огледало",
-   "BlackMirror.exe"
+   "Черно Огледало"
   ],
   "pop": 14,
   "p": [
@@ -88762,6 +88758,17 @@
   ]
  },
  {
+  "name": "Burnhouse Lane",
+  "alias": [
+   "BurnhouseLane.exe"
+  ],
+  "pop": 13,
+  "p": [
+   "pc",
+   "console"
+  ]
+ },
+ {
   "name": "MLB The Show 22",
   "alias": [
    "MLB 더 쇼 22"
@@ -89671,7 +89678,6 @@
  {
   "name": "Megaton Rainfall",
   "alias": [
-   "MegatonRainfall.exe",
    "MegatonRainfall.exe"
   ],
   "pop": 13,
@@ -89684,7 +89690,6 @@
   "name": "Hobo: Tough Life",
   "alias": [
    "ホーボー: タフライフ",
-   "HoboRPG.exe",
    "HoboRPG.exe"
   ],
   "pop": 13,
@@ -93119,17 +93124,6 @@
   ]
  },
  {
-  "name": "Burnhouse Lane",
-  "alias": [
-   "BurnhouseLane.exe"
-  ],
-  "pop": 12,
-  "p": [
-   "pc",
-   "console"
-  ]
- },
- {
   "name": "The One Who Pulls Out the Sword Will Be Crowned King",
   "alias": [
    "The one who pulls out the sword will be crowned king.exe"
@@ -95641,7 +95635,6 @@
   "alias": [
    "Arslan Senki x Musou",
    "ARSLAN: THE WARRIORS OF LEGEND",
-   "Config.exe",
    "Config.exe"
   ],
   "pop": 12,
@@ -99198,7 +99191,6 @@
  {
   "name": "Darkestville Castle",
   "alias": [
-   "DarkestVille Castle.exe",
    "DarkestVille Castle.exe"
   ],
   "pop": 11,
@@ -101051,7 +101043,6 @@
   "name": "Shift Happens",
   "alias": [
    "シフトゥハプンエス",
-   "Shift Happens.exe",
    "Shift Happens.exe"
   ],
   "pop": 11,
@@ -108688,6 +108679,14 @@
   ]
  },
  {
+  "name": "NASCAR 08",
+  "alias": [],
+  "pop": 10,
+  "p": [
+   "console"
+  ]
+ },
+ {
   "name": "Guitar Hero: On Tour - Decades",
   "alias": [
    "GH:OTD",
@@ -112371,7 +112370,6 @@
   "name": "Mineko's Night Market",
   "alias": [
    "Minekos Night Market",
-   "Mineko's Night Market.exe",
    "Mineko's Night Market.exe"
   ],
   "pop": 9,
@@ -115117,6 +115115,18 @@
   ]
  },
  {
+  "name": "APB",
+  "alias": [
+   "A.P.B.",
+   "APB All-Points Bulletin",
+   "All Points Bulletin"
+  ],
+  "pop": 9,
+  "p": [
+   "console"
+  ]
+ },
+ {
   "name": "7th Dragon III Code: VFD",
   "alias": [
    "セブンスドラゴンⅢ code:VFD"
@@ -116111,14 +116121,6 @@
   "alias": [
    "NBA 라이브 10"
   ],
-  "pop": 9,
-  "p": [
-   "console"
-  ]
- },
- {
-  "name": "NASCAR 08",
-  "alias": [],
   "pop": 9,
   "p": [
    "console"
@@ -121100,7 +121102,6 @@
  {
   "name": "Bio Inc. Redemption",
   "alias": [
-   "BioIncRedemption.exe",
    "BioIncRedemption.exe"
   ],
   "pop": 8,
@@ -123530,18 +123531,6 @@
  {
   "name": "BattleTech: The Crescent Hawk's Inception",
   "alias": [],
-  "pop": 8,
-  "p": [
-   "console"
-  ]
- },
- {
-  "name": "APB",
-  "alias": [
-   "A.P.B.",
-   "APB All-Points Bulletin",
-   "All Points Bulletin"
-  ],
   "pop": 8,
   "p": [
    "console"
@@ -130082,8 +130071,7 @@
   "name": "Tank Mechanic Simulator",
   "alias": [
    "TankMechanicSimulator.exe",
-   "Tank Mechanic Simulator: Reinforced",
-   "TankMechanicSimulator.exe"
+   "Tank Mechanic Simulator: Reinforced"
   ],
   "pop": 7,
   "p": [
@@ -142613,6 +142601,14 @@
   ]
  },
  {
+  "name": "I, Robot",
+  "alias": [],
+  "pop": 6,
+  "p": [
+   "console"
+  ]
+ },
+ {
   "name": "RPG Maker MV",
   "alias": [
    "RPG Tsukuru MV",
@@ -151009,6 +151005,16 @@
   ]
  },
  {
+  "name": "Nameless Cat",
+  "alias": [
+   "無名的貓"
+  ],
+  "pop": 5,
+  "p": [
+   "pc"
+  ]
+ },
+ {
   "name": "Pong Quest",
   "alias": [
    "PONG Quest"
@@ -151221,6 +151227,18 @@
   "name": "Hand Simulator: Survival",
   "alias": [
    "Hand Simulator Survival.exe"
+  ],
+  "pop": 5,
+  "p": [
+   "pc"
+  ]
+ },
+ {
+  "name": "Look Inside",
+  "alias": [
+   "Look INside",
+   "KIN",
+   "looK INside.exe"
   ],
   "pop": 5,
   "p": [
@@ -157350,14 +157368,6 @@
   ]
  },
  {
-  "name": "I, Robot",
-  "alias": [],
-  "pop": 5,
-  "p": [
-   "console"
-  ]
- },
- {
   "name": "Cloak & Dagger",
   "alias": [
    "Agent X"
@@ -159054,7 +159064,6 @@
   "name": "Rogue Stormers",
   "alias": [
    "Dieselstörmers",
-   "roguestormers.exe",
    "roguestormers.exe"
   ],
   "pop": 5,
@@ -164231,18 +164240,6 @@
   ]
  },
  {
-  "name": "Look Inside",
-  "alias": [
-   "Look INside",
-   "KIN",
-   "looK INside.exe"
-  ],
-  "pop": 4,
-  "p": [
-   "pc"
-  ]
- },
- {
   "name": "Inunaki Tunnel",
   "alias": [
    "Inunaki Tunnel | 犬鳴トンネル"
@@ -167294,6 +167291,20 @@
   "pop": 4,
   "p": [
    "pc"
+  ]
+ },
+ {
+  "name": "A Hole New World",
+  "alias": [
+   "ア・ホール・ニュー・ワールド",
+   "A Hole New World（ア・ホール・ニュー・ワールド）",
+   "ahnw.exe"
+  ],
+  "pop": 4,
+  "jp": "A Hole New World（ア・ホール・ニュー・ワールド）",
+  "p": [
+   "pc",
+   "console"
   ]
  },
  {
@@ -178607,20 +178618,6 @@
   "pop": 3,
   "p": [
    "pc"
-  ]
- },
- {
-  "name": "A Hole New World",
-  "alias": [
-   "ア・ホール・ニュー・ワールド",
-   "A Hole New World（ア・ホール・ニュー・ワールド）",
-   "ahnw.exe"
-  ],
-  "pop": 3,
-  "jp": "A Hole New World（ア・ホール・ニュー・ワールド）",
-  "p": [
-   "pc",
-   "console"
   ]
  },
  {
@@ -233359,7 +233356,6 @@
   "name": "In-Vert",
   "alias": [
    "IN-VERT",
-   "INVERT.exe",
    "INVERT.exe"
   ],
   "pop": 1,
@@ -234314,7 +234310,6 @@
  {
   "name": "Epitasis",
   "alias": [
-   "epitasis.exe",
    "epitasis.exe"
   ],
   "pop": 1,
@@ -234429,7 +234424,6 @@
  {
   "name": "Neon City Riders",
   "alias": [
-   "neon_city_riders.exe",
    "neon_city_riders.exe"
   ],
   "pop": 1,
@@ -246221,7 +246215,6 @@
  {
   "name": "Zombo Buster Rising",
   "alias": [
-   "zbr.exe",
    "zbr.exe"
   ],
   "pop": 1,
@@ -257872,10 +257865,7 @@
  {
   "name": "Iron Maiden: Legacy of the Beast",
   "alias": [],
-  "pop": 1,
-  "p": [
-   "console"
-  ]
+  "pop": 1
  },
  {
   "name": "Narco Terror",
@@ -271512,7 +271502,9 @@
  {
   "name": "Alternate DiMansion Diary",
   "alias": [
-   "Game.exe"
+   "Game.exe",
+   "异次元屋敷怪异录",
+   "異次元屋敷怪異錄"
   ],
   "pop": 0,
   "p": [
@@ -305621,7 +305613,6 @@
   "name": "Tyd wag vir Niemand",
   "alias": [
    "時間は誰も待っていない",
-   "Tyd_wag_vir_Niemand.exe",
    "Tyd_wag_vir_Niemand.exe"
   ],
   "pop": 0,
@@ -307641,7 +307632,6 @@
  {
   "name": "Canadian Football 2017",
   "alias": [
-   "CFB2017.exe",
    "CFB2017.exe"
   ],
   "pop": 0,
@@ -341746,10 +341736,317 @@
   ]
  },
  {
+  "name": "Emory Cole & The Secret at Greymar Point",
+  "alias": [],
+  "pop": 0
+ },
+ {
+  "name": "Alexus 2040",
+  "alias": [],
+  "pop": 0
+ },
+ {
+  "name": "Pattern Pulse",
+  "alias": [],
+  "pop": 0
+ },
+ {
+  "name": "Gob",
+  "alias": [],
+  "pop": 0
+ },
+ {
+  "name": "Space Base",
+  "alias": [],
+  "pop": 0
+ },
+ {
+  "name": "Day and Night",
+  "alias": [],
+  "pop": 0
+ },
+ {
+  "name": "Ghost Case",
+  "alias": [
+   "ghostcase.exe"
+  ],
+  "pop": 0
+ },
+ {
+  "name": "Disrupt",
+  "alias": [],
+  "pop": 0
+ },
+ {
+  "name": "Meow Star Archives",
+  "alias": [
+   "喵星档案",
+   "喵星檔案"
+  ],
+  "pop": 0,
+  "p": [
+   "pc"
+  ]
+ },
+ {
+  "name": "Police Officer",
+  "alias": [],
+  "pop": 0,
+  "p": [
+   "pc"
+  ]
+ },
+ {
+  "name": "Eldritch Wildlife Tours",
+  "alias": [],
+  "pop": 0,
+  "p": [
+   "pc"
+  ]
+ },
+ {
+  "name": "Exogear",
+  "alias": [],
+  "pop": 0,
+  "p": [
+   "pc"
+  ]
+ },
+ {
+  "name": "Echoland",
+  "alias": [
+   "ECHOLAND"
+  ],
+  "pop": 0,
+  "p": [
+   "pc"
+  ]
+ },
+ {
+  "name": "Blargle and the Quest for the Nothing Burger",
+  "alias": [],
+  "pop": 0
+ },
+ {
+  "name": "Idol Shell",
+  "alias": [],
+  "pop": 0
+ },
+ {
+  "name": "Dusteroids",
+  "alias": [],
+  "pop": 0
+ },
+ {
+  "name": "The History of Everything",
+  "alias": [],
+  "pop": 0,
+  "p": [
+   "pc"
+  ]
+ },
+ {
+  "name": "Pastimes",
+  "alias": [],
+  "pop": 0,
+  "p": [
+   "pc"
+  ]
+ },
+ {
+  "name": "International Obsession",
+  "alias": [],
+  "pop": 0,
+  "p": [
+   "pc"
+  ]
+ },
+ {
+  "name": "Sven Rescues a Princess",
+  "alias": [],
+  "pop": 0,
+  "p": [
+   "pc"
+  ]
+ },
+ {
+  "name": "Derby Dynasty: Horse Racing RPG",
+  "alias": [],
+  "pop": 0,
+  "p": [
+   "pc"
+  ]
+ },
+ {
+  "name": "Nicotine Merchant Simulator",
+  "alias": [],
+  "pop": 0,
+  "p": [
+   "pc"
+  ]
+ },
+ {
+  "name": "The Things We Don't See: 10 Interactive Stories of Horror, Mystery, and the Unknown",
+  "alias": [],
+  "pop": 0,
+  "p": [
+   "pc"
+  ]
+ },
+ {
+  "name": "Mercyrail: Havenbound",
+  "alias": [],
+  "pop": 0,
+  "p": [
+   "pc"
+  ]
+ },
+ {
+  "name": "Black Walls",
+  "alias": [
+   "BLACK WALLS"
+  ],
+  "pop": 0,
+  "p": [
+   "pc"
+  ]
+ },
+ {
+  "name": "Baitcore",
+  "alias": [],
+  "pop": 0,
+  "p": [
+   "pc"
+  ]
+ },
+ {
+  "name": "Half Hour RPG",
+  "alias": [],
+  "pop": 0,
+  "p": [
+   "pc"
+  ]
+ },
+ {
+  "name": "Apart",
+  "alias": [
+   "APART"
+  ],
+  "pop": 0,
+  "p": [
+   "pc"
+  ]
+ },
+ {
+  "name": "Prospera",
+  "alias": [],
+  "pop": 0,
+  "p": [
+   "pc"
+  ]
+ },
+ {
+  "name": "Spiritbound: The Goddess's Quest",
+  "alias": [
+   "女神的恶灵退治",
+   "女神的惡靈退治",
+   "悪霊退散!おねが～い!女神様"
+  ],
+  "pop": 0,
+  "jp": "悪霊退散!おねが～い!女神様",
+  "p": [
+   "pc"
+  ]
+ },
+ {
+  "name": "Matelotes",
+  "alias": [],
+  "pop": 0,
+  "p": [
+   "pc"
+  ]
+ },
+ {
+  "name": "Escape from Playtime",
+  "alias": [],
+  "pop": 0,
+  "p": [
+   "pc"
+  ]
+ },
+ {
+  "name": "Boitatá: Wilderness Reborn",
+  "alias": [],
+  "pop": 0,
+  "p": [
+   "pc"
+  ]
+ },
+ {
+  "name": "Cutout",
+  "alias": [],
+  "pop": 0,
+  "p": [
+   "pc"
+  ]
+ },
+ {
+  "name": "Manga Club Advisor wants to support Saeki Sasara",
+  "alias": [
+   "漫研社顧問想要支持佐伯沙羅",
+   "漫研社顾问想要支持佐伯沙罗"
+  ],
+  "pop": 0,
+  "p": [
+   "pc"
+  ]
+ },
+ {
+  "name": "Dungeons & Dragons: Long Rest Tavern",
+  "alias": [],
+  "pop": 0,
+  "p": [
+   "pc"
+  ]
+ },
+ {
+  "name": "Warchaic",
+  "alias": [],
+  "pop": 0,
+  "p": [
+   "pc"
+  ]
+ },
+ {
+  "name": "Last Ditch Effort",
+  "alias": [],
+  "pop": 0,
+  "p": [
+   "pc"
+  ]
+ },
+ {
+  "name": "Machina Blue",
+  "alias": [],
+  "pop": 0,
+  "p": [
+   "pc"
+  ]
+ },
+ {
   "name": "Kingdom III: Rising Realms",
   "alias": [
    "Kingdom 3: Rising Realms"
   ],
+  "pop": 0,
+  "p": [
+   "pc",
+   "console"
+  ]
+ },
+ {
+  "name": "Creatures Like Us",
+  "alias": [],
   "pop": 0,
   "p": [
    "pc"
@@ -341760,7 +342057,8 @@
   "alias": [],
   "pop": 0,
   "p": [
-   "pc"
+   "pc",
+   "console"
   ]
  },
  {
@@ -341789,6 +342087,14 @@
  },
  {
   "name": "Sweetheart",
+  "alias": [],
+  "pop": 0,
+  "p": [
+   "pc"
+  ]
+ },
+ {
+  "name": "Groovekeeper: Sort the Record Shop",
   "alias": [],
   "pop": 0,
   "p": [
@@ -341850,7 +342156,8 @@
   "alias": [],
   "pop": 0,
   "p": [
-   "pc"
+   "pc",
+   "console"
   ]
  },
  {
@@ -341898,7 +342205,8 @@
   "alias": [],
   "pop": 0,
   "p": [
-   "pc"
+   "pc",
+   "console"
   ]
  },
  {
@@ -341939,6 +342247,30 @@
  },
  {
   "name": "Bandocracy",
+  "alias": [],
+  "pop": 0,
+  "p": [
+   "pc"
+  ]
+ },
+ {
+  "name": "Seven Blasphemies",
+  "alias": [],
+  "pop": 0,
+  "p": [
+   "pc"
+  ]
+ },
+ {
+  "name": "Strange Zoo",
+  "alias": [],
+  "pop": 0,
+  "p": [
+   "pc"
+  ]
+ },
+ {
+  "name": "Elsewar",
   "alias": [],
   "pop": 0,
   "p": [
@@ -342195,6 +342527,14 @@
   ]
  },
  {
+  "name": "Moo Who",
+  "alias": [],
+  "pop": 0,
+  "p": [
+   "pc"
+  ]
+ },
+ {
   "name": "Ripgraze",
   "alias": [
    "RIPGRAZE"
@@ -342207,6 +342547,16 @@
  {
   "name": "Fathomless",
   "alias": [],
+  "pop": 0,
+  "p": [
+   "pc"
+  ]
+ },
+ {
+  "name": "Taro Is Back",
+  "alias": [
+   "TARO IS BACK"
+  ],
   "pop": 0,
   "p": [
    "pc"
@@ -342257,6 +342607,98 @@
  {
   "name": "Dorc",
   "alias": [],
+  "pop": 0,
+  "p": [
+   "pc"
+  ]
+ },
+ {
+  "name": "Inseco",
+  "alias": [],
+  "pop": 0,
+  "p": [
+   "pc"
+  ]
+ },
+ {
+  "name": "Fuwa! Fuwa! Omurice Simulator Roguelite",
+  "alias": [],
+  "pop": 0,
+  "p": [
+   "pc"
+  ]
+ },
+ {
+  "name": "Unicycle Journey",
+  "alias": [],
+  "pop": 0,
+  "p": [
+   "pc"
+  ]
+ },
+ {
+  "name": "Minato",
+  "alias": [],
+  "pop": 0,
+  "p": [
+   "pc"
+  ]
+ },
+ {
+  "name": "Queen Of The Sands",
+  "alias": [
+   "QueenOfTheSands"
+  ],
+  "pop": 0,
+  "p": [
+   "pc"
+  ]
+ },
+ {
+  "name": "Relicfall",
+  "alias": [],
+  "pop": 0,
+  "p": [
+   "pc"
+  ]
+ },
+ {
+  "name": "Message From Aliens",
+  "alias": [],
+  "pop": 0,
+  "p": [
+   "pc"
+  ]
+ },
+ {
+  "name": "Crime Simulator: Playgrounds",
+  "alias": [],
+  "pop": 0,
+  "p": [
+   "pc"
+  ]
+ },
+ {
+  "name": "Pokémon Plasma",
+  "alias": [],
+  "pop": 0,
+  "p": [
+   "pc"
+  ]
+ },
+ {
+  "name": "Doors Closed",
+  "alias": [],
+  "pop": 0,
+  "p": [
+   "pc"
+  ]
+ },
+ {
+  "name": "Rotting Grief",
+  "alias": [
+   "Rotting Grief.exe"
+  ],
   "pop": 0,
   "p": [
    "pc"
@@ -342330,6 +342772,22 @@
   "pop": 0,
   "p": [
    "console"
+  ]
+ },
+ {
+  "name": "HopScout",
+  "alias": [],
+  "pop": 0,
+  "p": [
+   "pc"
+  ]
+ },
+ {
+  "name": "Breakout Garage",
+  "alias": [],
+  "pop": 0,
+  "p": [
+   "pc"
   ]
  },
  {
@@ -343155,7 +343613,7 @@
   ]
  },
  {
-  "name": "Pokémon Survivors Burst",
+  "name": "Pokémon Survivor Burst",
   "alias": [],
   "pop": 0,
   "p": [
@@ -348699,6 +349157,11 @@
   ]
  },
  {
+  "name": "Swervle",
+  "alias": [],
+  "pop": 0
+ },
+ {
   "name": "Moonleap 2600",
   "alias": [
    "Moonleap Atari 2600"
@@ -353435,7 +353898,9 @@
  },
  {
   "name": "Imperial Knights",
-  "alias": [],
+  "alias": [
+   "帝国骑士"
+  ],
   "pop": 0,
   "p": [
    "pc"
@@ -396201,7 +396666,8 @@
   "alias": [],
   "pop": 0,
   "p": [
-   "pc"
+   "pc",
+   "console"
   ]
  },
  {
@@ -428485,7 +428951,9 @@
  },
  {
   "name": "DoDonPachi Resurrection Reignite",
-  "alias": [],
+  "alias": [
+   "default.exe"
+  ],
   "pop": 0,
   "p": [
    "pc"
@@ -442410,7 +442878,8 @@
   ],
   "pop": 0,
   "p": [
-   "pc"
+   "pc",
+   "console"
   ]
  },
  {
@@ -459277,6 +459746,15 @@
   ]
  },
  {
+  "name": "Metal Gear Solid: Master Collection Vol. 2 Bonus Content",
+  "alias": [],
+  "pop": 0,
+  "p": [
+   "pc",
+   "console"
+  ]
+ },
+ {
   "name": "Overwatch Rush",
   "alias": [],
   "pop": 0
@@ -473961,7 +474439,9 @@
  },
  {
   "name": "SCP: The Beginning",
-  "alias": [],
+  "alias": [
+   "SCP.exe"
+  ],
   "pop": 0,
   "p": [
    "pc"
@@ -478541,587 +479021,6 @@
   ],
   "pop": 0,
   "jp": "リッターオルデン",
-  "p": [
-   "pc"
-  ]
- },
- {
-  "name": "Dolls Made Here",
-  "alias": [],
-  "pop": 0,
-  "p": [
-   "pc"
-  ]
- },
- {
-  "name": "Cuberio",
-  "alias": [
-   "CUBERIO",
-   "CUBERIO.exe"
-  ],
-  "pop": 0,
-  "p": [
-   "pc"
-  ]
- },
- {
-  "name": "Don’t Turn off the Light",
-  "alias": [
-   "PhantomHunt.exe"
-  ],
-  "pop": 0,
-  "p": [
-   "pc"
-  ]
- },
- {
-  "name": "Aelwater",
-  "alias": [],
-  "pop": 0,
-  "p": [
-   "pc"
-  ]
- },
- {
-  "name": "Smart Farm",
-  "alias": [
-   "SmartFarm.exe"
-  ],
-  "pop": 0,
-  "p": [
-   "pc"
-  ]
- },
- {
-  "name": "Max's Adventures: Summer Edition",
-  "alias": [],
-  "pop": 0,
-  "p": [
-   "pc"
-  ]
- },
- {
-  "name": "Paws Coven",
-  "alias": [],
-  "pop": 0,
-  "p": [
-   "pc"
-  ]
- },
- {
-  "name": "Bullet Chain: Vessels",
-  "alias": [
-   "BULLET CHAIN - Vessels"
-  ],
-  "pop": 0,
-  "p": [
-   "pc"
-  ]
- },
- {
-  "name": "The White Lamb: No Shelter",
-  "alias": [],
-  "pop": 0,
-  "p": [
-   "pc"
-  ]
- },
- {
-  "name": "KunKunNest",
-  "alias": [
-   "Kun Kuns Hühnerstall",
-   "Le poulailler de Kunkun",
-   "La stanza di Kun Kun",
-   "La nido de Kun Kun",
-   "坤坤的雞窩",
-   "Курятник Кунькуня",
-   "O Galinheiro do Kun Kun",
-   "Kun Kun's vogelnest",
-   "Nido de curte al Kun Kun",
-   "Kun Kuns nyska",
-   "Kun Kun'ün horoz kovancığı",
-   "坤坤的鸡窝",
-   "kukuho jeho kuří hnízdo",
-   "Kun Kuns hønsekage",
-   "Kun Kunin munapää",
-   "το κουν-κουν πουλινίκι",
-   "Kun Kun tyúkáshája",
-   "Nest Kunkun",
-   "Kun Kuns hønehus",
-   "gniazdo Kun Kuna"
-  ],
-  "pop": 0,
-  "p": [
-   "pc"
-  ]
- },
- {
-  "name": "Dead Bit",
-  "alias": [
-   "Dead Bit.exe"
-  ],
-  "pop": 0,
-  "p": [
-   "pc"
-  ]
- },
- {
-  "name": "Peasant or Rebel?",
-  "alias": [],
-  "pop": 0,
-  "p": [
-   "pc"
-  ]
- },
- {
-  "name": "Endstation",
-  "alias": [
-   "ENDSTATION",
-   "ENDSTATION.exe"
-  ],
-  "pop": 0,
-  "p": [
-   "pc"
-  ]
- },
- {
-  "name": "Intersectio",
-  "alias": [],
-  "pop": 0,
-  "p": [
-   "pc"
-  ]
- },
- {
-  "name": "Scrub Dudes",
-  "alias": [
-   "Scrub Dudes.exe"
-  ],
-  "pop": 0,
-  "p": [
-   "pc"
-  ]
- },
- {
-  "name": "Oceanarium Fishing",
-  "alias": [],
-  "pop": 0,
-  "p": [
-   "pc"
-  ]
- },
- {
-  "name": "Hydra Heli 2",
-  "alias": [
-   "Hydra Heli 2.exe"
-  ],
-  "pop": 0,
-  "p": [
-   "pc"
-  ]
- },
- {
-  "name": "Anomaly Corp.",
-  "alias": [],
-  "pop": 0,
-  "p": [
-   "pc"
-  ]
- },
- {
-  "name": "Deluge: Raintime",
-  "alias": [],
-  "pop": 0,
-  "p": [
-   "pc"
-  ]
- },
- {
-  "name": "Chronicles Meteorfall",
-  "alias": [],
-  "pop": 0,
-  "p": [
-   "pc"
-  ]
- },
- {
-  "name": "Linkling",
-  "alias": [],
-  "pop": 0,
-  "p": [
-   "pc"
-  ]
- },
- {
-  "name": "Romeow: Home Sweet Home",
-  "alias": [],
-  "pop": 0,
-  "p": [
-   "pc"
-  ]
- },
- {
-  "name": "CyberGhitch",
-  "alias": [
-   "CyberGhitch.exe"
-  ],
-  "pop": 0,
-  "p": [
-   "pc"
-  ]
- },
- {
-  "name": "Idle Quest Simulator",
-  "alias": [
-   "Idle Quest Simulator.exe"
-  ],
-  "pop": 0,
-  "p": [
-   "pc"
-  ]
- },
- {
-  "name": "Invocation: Ghost Photography",
-  "alias": [],
-  "pop": 0,
-  "p": [
-   "pc"
-  ]
- },
- {
-  "name": "Sector 13: Haunted Woods",
-  "alias": [],
-  "pop": 0,
-  "p": [
-   "pc"
-  ]
- },
- {
-  "name": "Guinea Pig Runaway Together",
-  "alias": [
-   "Guinea Pig Runaway"
-  ],
-  "pop": 0,
-  "p": [
-   "pc"
-  ]
- },
- {
-  "name": "Grid",
-  "alias": [
-   "GRID/"
-  ],
-  "pop": 0,
-  "p": [
-   "pc"
-  ]
- },
- {
-  "name": "Crazy Hotel Together",
-  "alias": [
-   "HotHell.exe"
-  ],
-  "pop": 0,
-  "p": [
-   "pc"
-  ]
- },
- {
-  "name": "Bartender Life Simulator",
-  "alias": [],
-  "pop": 0,
-  "p": [
-   "pc"
-  ]
- },
- {
-  "name": "Mega Trons Survivors",
-  "alias": [
-   "MegaTronsSurvivors.exe"
-  ],
-  "pop": 0,
-  "p": [
-   "pc"
-  ]
- },
- {
-  "name": "Everfall 2: Idle Dungeon RPG",
-  "alias": [
-   "Everfall 2 Idle Dungeon RPG.exe"
-  ],
-  "pop": 0,
-  "p": [
-   "pc"
-  ]
- },
- {
-  "name": "Avernoth",
-  "alias": [],
-  "pop": 0,
-  "p": [
-   "pc"
-  ]
- },
- {
-  "name": "Please Don't Shoot the Humans",
-  "alias": [],
-  "pop": 0,
-  "p": [
-   "pc"
-  ]
- },
- {
-  "name": "Gorotsuki Paradise",
-  "alias": [
-   "Gorotsuki Paradise.exe"
-  ],
-  "pop": 0,
-  "p": [
-   "pc"
-  ]
- },
- {
-  "name": "Cloud Shadow",
-  "alias": [
-   "CloudShadow.exe"
-  ],
-  "pop": 0,
-  "p": [
-   "pc"
-  ]
- },
- {
-  "name": "Project Liminal 2",
-  "alias": [
-   "Project Liminal 2.exe"
-  ],
-  "pop": 0,
-  "p": [
-   "pc"
-  ]
- },
- {
-  "name": "Duat Wayfarer",
-  "alias": [],
-  "pop": 0,
-  "p": [
-   "pc"
-  ]
- },
- {
-  "name": "Mewlin the Clicker",
-  "alias": [
-   "Mewlin The Clicker.exe"
-  ],
-  "pop": 0,
-  "p": [
-   "pc"
-  ]
- },
- {
-  "name": "VitvitDriver 3D",
-  "alias": [
-   "vitvitDRIVER 3D"
-  ],
-  "pop": 0,
-  "p": [
-   "pc"
-  ]
- },
- {
-  "name": "The Housekeeper",
-  "alias": [],
-  "pop": 0,
-  "p": [
-   "pc"
-  ]
- },
- {
-  "name": "Dark Edge",
-  "alias": [
-   "DARK EDGE",
-   "DARK_EDGE.exe"
-  ],
-  "pop": 0,
-  "p": [
-   "pc"
-  ]
- },
- {
-  "name": "Find Cats 6",
-  "alias": [
-   "Find Cats 6 像素猫.exe"
-  ],
-  "pop": 0,
-  "p": [
-   "pc"
-  ]
- },
- {
-  "name": "More Love Yuri",
-  "alias": [
-   "MoreLoveYuri.exe"
-  ],
-  "pop": 0,
-  "p": [
-   "pc"
-  ]
- },
- {
-  "name": "Picto-Cross: 1 Nonogram per Day",
-  "alias": [],
-  "pop": 0,
-  "p": [
-   "pc"
-  ]
- },
- {
-  "name": "E-Shop Tycoon",
-  "alias": [
-   "EShopTycoon.exe"
-  ],
-  "pop": 0,
-  "p": [
-   "pc"
-  ]
- },
- {
-  "name": "Trox: The Reversal",
-  "alias": [
-   "TROX: The Reversal"
-  ],
-  "pop": 0,
-  "p": [
-   "pc",
-   "console"
-  ]
- },
- {
-  "name": "Dark Fantasia",
-  "alias": [],
-  "pop": 0,
-  "p": [
-   "pc"
-  ]
- },
- {
-  "name": "Memory Maze",
-  "alias": [],
-  "pop": 0,
-  "p": [
-   "pc"
-  ]
- },
- {
-  "name": "Quest-Top",
-  "alias": [],
-  "pop": 0,
-  "p": [
-   "pc"
-  ]
- },
- {
-  "name": "BattleBoat X",
-  "alias": [],
-  "pop": 0,
-  "p": [
-   "pc"
-  ]
- },
- {
-  "name": "Keep It Contained",
-  "alias": [],
-  "pop": 0,
-  "p": [
-   "pc"
-  ]
- },
- {
-  "name": "Reign",
-  "alias": [
-   "REIGN"
-  ],
-  "pop": 0,
-  "p": [
-   "pc"
-  ]
- },
- {
-  "name": "Dilemma",
-  "alias": [],
-  "pop": 0,
-  "p": [
-   "pc"
-  ]
- },
- {
-  "name": "Spellfall: Last Mage Standing",
-  "alias": [
-   "Spellfall"
-  ],
-  "pop": 0,
-  "p": [
-   "pc"
-  ]
- },
- {
-  "name": "Rogualik",
-  "alias": [],
-  "pop": 0,
-  "p": [
-   "pc"
-  ]
- },
- {
-  "name": "Nulla Via",
-  "alias": [
-   "NullaVia.exe"
-  ],
-  "pop": 0,
-  "p": [
-   "pc"
-  ]
- },
- {
-  "name": "Mega Kaiju Boom Ball",
-  "alias": [],
-  "pop": 0,
-  "p": [
-   "pc"
-  ]
- },
- {
-  "name": "SokoGhost: Unfinished Business",
-  "alias": [
-   "SokoGhost.exe"
-  ],
-  "pop": 0,
-  "p": [
-   "pc"
-  ]
- },
- {
-  "name": "Proceed to ICU",
-  "alias": [],
-  "pop": 0,
-  "p": [
-   "pc"
-  ]
- },
- {
-  "name": "APlaceDominatedByFire",
-  "alias": [],
-  "pop": 0,
-  "p": [
-   "pc"
-  ]
- },
- {
-  "name": "Weather Dragger",
-  "alias": [
-   "weather-dragger.exe"
-  ],
-  "pop": 0,
   "p": [
    "pc"
   ]
