@@ -80,8 +80,13 @@ def judge(rec, cutoff_day, min_subs):
     そのため前回の結果を使い回したチャンネルは判定が空のままになり、
     ゲームを配信していないチャンネルまで毎日見に行っていた。
     """
-    if rec.get("status"):
-        return rec.get("auto") or ""
+    st = str(rec.get("status") or "")
+    if st:
+        if "未調査" in st:
+            return ""                      # まだ調べていないだけ。次回調べる
+        # プレイリストが404など、そもそも取得できないチャンネル。
+        # 空のままだと毎日見に行って毎日失敗するので、外しておく。
+        return "外す（取得できず）"
     name = (rec.get("title") or rec.get("name") or "").lower()
     if any(w in name for w in NOT_STREAMER):
         return "外す（切り抜き）"
