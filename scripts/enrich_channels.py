@@ -21,18 +21,31 @@ OUT_CSV = DATA / "channels_review.csv"
 PROBE = 20                      # ゲーム率を見るために調べる直近動画の本数
 
 
+EXTRA_TSV = DATA / "channels_extra.tsv"
+
+
 def load_seed():
+    """channels.tsv と channels_extra.tsv を読む。
+
+    extra のほうは手で足したいチャンネル用。探索が channels.tsv に
+    追記していくので、そちらを上書きせずに足せるようにしてある。
+    handle 列（@なんとか）があれば、ID解決が1ポイントで済む。
+    """
     rows, seen = [], set()
-    with open(CH_TSV, encoding="utf-8") as f:
-        for r in csv.DictReader(f, delimiter="\t"):
-            name = r.get("name", "").strip()
-            cid = (r.get("channel_id") or "").strip()
-            if not name or (cid and cid in seen):
-                continue
-            if cid:
-                seen.add(cid)
-            rows.append({"name": name, "channel_id": cid,
-                         "affiliation": (r.get("affiliation") or "").strip()})
+    for path in (CH_TSV, EXTRA_TSV):
+        if not path.exists():
+            continue
+        with open(path, encoding="utf-8") as f:
+            for r in csv.DictReader(f, delimiter="\t"):
+                name = (r.get("name") or "").strip()
+                cid = (r.get("channel_id") or "").strip()
+                if not name or (cid and cid in seen):
+                    continue
+                if cid:
+                    seen.add(cid)
+                rows.append({"name": name, "channel_id": cid,
+                             "handle": (r.get("handle") or "").strip().lstrip("@"),
+                             "affiliation": (r.get("affiliation") or "").strip()})
     return rows
 
 
@@ -56,6 +69,34 @@ def handle_guess(name):
     return s if re.fullmatch(r"[A-Za-z0-9_.\-]{3,30}", s) else None
 
 
+# 名前でわかる「配信チャンネルではないもの」
+NOT_STREAMER = ("切り抜き", "きりぬき", "clips", "clip ")
+
+
+def judge(rec, cutoff_day, min_subs):
+    """このチャンネルを毎日見に行くかどうかの目安。
+
+    以前はここを、実際に調べ直したチャンネルにしか適用していなかった。
+    そのため前回の結果を使い回したチャンネルは判定が空のままになり、
+    ゲームを配信していないチャンネルまで毎日見に行っていた。
+    """
+    if rec.get("status"):
+        return rec.get("auto") or ""
+    name = (rec.get("title") or rec.get("name") or "").lower()
+    if any(w in name for w in NOT_STREAMER):
+        return "外す（切り抜き）"
+    if (rec.get("subscribers") or 0) < min_subs:
+        return "外す（登録者が少ない）"
+    lu = rec.get("last_upload") or ""
+    if lu and lu < cutoff_day:
+        return "外す（1年以上更新なし）"
+    if (rec.get("long_videos") or 0) == 0:
+        return "要確認（長尺動画なし）"
+    if (rec.get("game_ratio") or 0) < 0.05:
+        return "外す（ゲーム動画なし）"
+    return "残す"
+
+
 def main():
     yt = YouTube()
     seed = load_seed()
@@ -68,13 +109,21 @@ def main():
     log(f"IDが未取得のチャンネル: {len(missing)} 件")
     for c in missing:
         try:
-            h = handle_guess(c["name"])
+            given = bool(c.get("handle"))
+            h = c.get("handle") or handle_guess(c["name"])
             if h:
                 r = yt.channels(handle=h)
                 if r.get("items"):
                     c["channel_id"] = r["items"][0]["id"]
                     log(f"  ハンドルで解決: {c['name']}")
                     continue
+            if given:
+                # ハンドルを明示したのに見つからなかった場合、名前で検索し直さない。
+                # 名前検索は1件目を無条件に採用するので、同名の切り抜きや別人を
+                # 拾ってしまう。取り違えるくらいなら、登録しないほうがいい。
+                log(f"  ハンドルが見つかりません（名前検索はしません）: "
+                    f"{c['name']} @{c['handle']}")
+                continue
             r = yt.search_channel(c["name"])
             items = r.get("items", [])
             if items:
@@ -111,7 +160,10 @@ def main():
         die("ゲーム名辞書がほとんど空です。ゲーム動画率を正しく測れません。",
             "『2. チャンネル情報を集める』を、"
             "『ゲーム辞書も作り直す』を yes にして実行し直してください。")
-    cutoff = datetime.now(JST) - timedelta(days=365)
+    cutoff_day = (datetime.now(JST) - timedelta(days=365)).strftime("%Y-%m-%d")
+    cfg = read_json(DATA / "site_config.json", {}) or {}
+    min_subs = int(cfg.get("min_subscribers") or 0)
+    log(f"登録者数の下限: {min_subs:,} 人（data/site_config.json の min_subscribers）")
     out = []
     for n, c in enumerate(targets, 1):
         it = info.get(c["channel_id"])
@@ -132,6 +184,7 @@ def main():
                        game_ratio=p.get("game_ratio"),
                        long_videos=p.get("long_videos"),
                        sample=p.get("sample"), status=p.get("status", ""))
+            rec["auto"] = judge(rec, cutoff_day, min_subs)
             out.append(rec)
             continue
 
@@ -164,17 +217,7 @@ def main():
         except Exception as e:
             rec.update(status=f"エラー: {e}"[:80])
 
-        # 自動判定の目安
-        old = rec.get("last_upload", "") and rec["last_upload"] < cutoff.strftime("%Y-%m-%d")
-        if rec.get("status") in (None, ""):
-            if old:
-                rec["auto"] = "外す（1年以上更新なし）"
-            elif rec.get("long_videos", 0) == 0:
-                rec["auto"] = "要確認（長尺動画なし）"
-            elif rec.get("game_ratio", 0) < 0.05:
-                rec["auto"] = "外す（ゲーム動画なし）"
-            else:
-                rec["auto"] = "残す"
+        rec["auto"] = judge(rec, cutoff_day, min_subs)
         out.append(rec)
         if n % 50 == 0:
             log(f"  {n}/{len(targets)} 件 ／ 使用クォータ {yt.used}")

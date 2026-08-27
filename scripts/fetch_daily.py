@@ -6,11 +6,15 @@
   - 活発な上位チャンネルは毎日、それ以外は曜日で分けて週1回
   - 新着一覧は1チャンネル1ユニット、動画の詳細は50本で1ユニット
 """
+import os
 from datetime import datetime, timedelta, timezone
 from common import (YouTube, QuotaExhausted, DATA, JST, log,
                     read_json, write_json, today, is_countable)
 
-DAILY_TOP = 400          # 毎日見るチャンネル数（登録者順）
+# 毎回見るチャンネル数（登録者順）。ここに入らなかったチャンネルは曜日で分けて週1回。
+# 1回の消費は「チャンネル数 × 1.2」ポイント。1日4回なので、
+# 800なら約3,800／日（上限9,000）。1,800あたりが4回運用の上限。
+DAILY_TOP = int(os.environ.get("DAILY_TOP", "800"))
 LOOKBACK_HOURS = 48      # 何時間前までの動画を対象にするか
 
 
