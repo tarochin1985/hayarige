@@ -1,7 +1,7 @@
 {
  "mode": "admin",
  "date": "2026-08-27",
- "generated": "2026-08-27 20:05",
+ "generated": "2026-08-27 20:22",
  "unknown": [
   {
    "title": "【その８】チルラジオ配信 #狐族密会　「 頑張ったから褒めてくれ」【ホロライブ/白上フブキ/尾丸ポルカ】",
@@ -438,13 +438,6 @@
    "n": 1
   },
   {
-   "title": "【スーパーマリオ64】絶対に発狂しない！はじめてのマリオ64！【＃雪白キャル / #ミクスト】",
-   "guess": "スーパーマリオ64",
-   "channel": "雪白キャル / Qalu Channel【ミクスト】",
-   "u": "https://www.youtube.com/watch?v=01cOtbTA1_E",
-   "n": 1
-  },
-  {
    "title": "【スパイダーマン】親愛なる隣人、地球意思のミリしらスパイディ～【ぞ】【篝蛇いおラー】",
    "guess": "スパイダーマン",
    "channel": "篝蛇いおラー【Kagachi ioLer】",
@@ -487,6 +480,13 @@
    "n": 1
   },
   {
+   "title": "【目標：ダイヤⅡ】そろそろしっかりランク盛らないといけない【P4 564RP~】",
+   "guess": "目標:ダイヤii",
+   "channel": "ビット -BitChannel-",
+   "u": "https://www.youtube.com/watch?v=HfIkg7P-vzE",
+   "n": 1
+  },
+  {
    "title": "【とよとろカスタム】キャリーされて賞品で牛タンを手に入れる配信【w/ねむ3、りとるん3】",
    "guess": "とよとろカスタム",
    "channel": "ビット -BitChannel-",
@@ -519,13 +519,6 @@
    "guess": "立ったままできる",
    "channel": "ACHRORA - mekPark",
    "u": "https://www.youtube.com/watch?v=j28lEdTtPec",
-   "n": 1
-  },
-  {
-   "title": "【真剣投票】次は何を開放する？ひなみの生誕祭の振り返りもするよ🎂【#8月のあくろら定例会議】#ACHRORA",
-   "guess": "真剣投票",
-   "channel": "ACHRORA - mekPark",
-   "u": "https://www.youtube.com/watch?v=aWoYag4w0MA",
    "n": 1
   },
   {
@@ -596,6 +589,13 @@
    "guess": "pr ナンジャタウンコラボ",
    "channel": "きらり☆ももんが",
    "u": "https://www.youtube.com/watch?v=gJghXAcZaT8",
+   "n": 1
+  },
+  {
+   "title": "【DEADCAM】⚠悲鳴注意⚠ここから本番。クリアまで駆け抜ける！【初見歓迎】【ユノ・ミハナダ / MEWLIVE】[JP/EN]",
+   "guess": "deadcam",
+   "channel": "ユノ・ミハナダ / Yuno Mihanada",
+   "u": "https://www.youtube.com/watch?v=7Jqot3gKSxk",
    "n": 1
   },
   {
@@ -801,14 +801,6 @@
     ]
    },
    {
-    "tag": "#ぶいすぽ歌枠リレー",
-    "channels": [
-     "橘ひなの / Hinano Tachibana",
-     "英リサ.Hanabusa Lisa",
-     "蝶屋はなび / Choya Hanabi"
-    ]
-   },
-   {
     "tag": "#おなつ休みARK",
     "channels": [
      "八神ツクモ / Yagami Tsukumo",
@@ -822,6 +814,14 @@
      "ゾンちゅう〜ゾンビJKはゲーム配信中〜",
      "家入ポポ / Popo Channel【ななしいんく】",
      "蛇宵ティア / Tier Channel【ななしいんく】"
+    ]
+   },
+   {
+    "tag": "#ストグラSeason2",
+    "channels": [
+     "はたさこ / hatasako_flag",
+     "クラウン【探検家の記録】",
+     "柚原いづみ / Izumi Channel 【ななしいんく】"
     ]
    }
   ],
@@ -837,6 +837,11 @@
     "videos": 3
    },
    {
+    "game": "Snowed Under",
+    "channels": 6,
+    "videos": 6
+   },
+   {
     "game": "Lunch Lady",
     "channels": 4,
     "videos": 4
@@ -845,8 +850,8 @@
   "wide": [
    {
     "game": "Minecraft",
-    "channels": 30,
-    "videos": 36
+    "channels": 32,
+    "videos": 38
    },
    {
     "game": "実況パワフルプロ野球2026",
@@ -870,26 +875,26 @@
    },
    {
     "game": "Apex Legends",
-    "channels": 11,
-    "videos": 12
+    "channels": 12,
+    "videos": 14
+   },
+   {
+    "game": "ほの暮しの庭",
+    "channels": 10,
+    "videos": 10
    },
    {
     "game": "Among Us",
     "channels": 11,
     "videos": 13
-   },
-   {
-    "game": "ぷよぷよテトリス2",
-    "channels": 8,
-    "videos": 8
    }
   ]
  },
  "recent_columns": [
   {
    "date": "2026-08-27",
-   "game": "Minecraft",
-   "headline": "ぶいすぽっ！のメンバーが、マイクラの中に夏祭りの会場を建てている"
+   "game": "ぷよぷよテトリス2",
+   "headline": "ホロライブの大会を控えて、メンバーがぷよぷよを教え合っている"
   }
  ]
 }
