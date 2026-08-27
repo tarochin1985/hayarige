@@ -351,6 +351,12 @@ def main():
              "leads": leads, "recent_columns": recent_cols[::-1]}
     render("admin/index.html", admin, 1)
     write_json(SITE / "admin" / "unknown.json", admin)
+    # robots.txt で /admin/ を検索避けしているが、それだと外から読む手段まで
+    # 塞がってしまう。中身は公開データの集計でしかないので、機械で読む用は
+    # 直下にも置く（トップからはリンクしない）。
+    write_json(SITE / "leads.json",
+               {"date": today(), "generated": payload["generated"],
+                "leads": leads, "recent_columns": recent_cols[::-1]})
 
     # ---- アーカイブ一覧を更新する ----
     idx_path = DATA / "archive_index.json"
