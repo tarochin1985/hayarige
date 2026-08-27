@@ -154,6 +154,15 @@ class YouTube:
         return self.call("search", 100, part="snippet", type="channel", q=q, maxResults=3)
 
 
+    def search_videos(self, q, published_after=None, order="viewCount", n=50):
+        """キーワードで動画を探し、その配信者を見つけるために使う。1回100ユニット。"""
+        kw = dict(part="snippet", type="video", q=q, maxResults=n,
+                  regionCode="JP", relevanceLanguage="ja", order=order)
+        if published_after:
+            kw["publishedAfter"] = published_after
+        return self.call("search", 100, **kw)
+
+
 class QuotaExhausted(Exception):
     pass
 
