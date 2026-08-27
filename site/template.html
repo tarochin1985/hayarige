@@ -303,12 +303,13 @@ function render(){
       ${(col.sources || []).length ? `<div class="src">${col.sources.map(x => `<a href="${esc(x.u)}" target="_blank" rel="noopener">${esc(x.t)}</a>`).join('')}</div>` : ''}`;
   }
   $('#s-date').textContent = (DATA.date || '').replace(/-/g, '.');
-  $('#s-meta').textContent = `配信 ${t.videos||0}本 / ゲーム ${t.games||0}種 / ${t.channels||0}ch`;
+  $('#s-meta').textContent = (DATA.range && !isArchive ? DATA.range + ' ・ ' : '')
+    + `配信 ${t.videos||0}本 / ゲーム ${t.games||0}種 / ${t.channels||0}ch`;
   $('#f-gen').textContent = DATA.generated ? '最終更新 ' + DATA.generated : '';
 
   // 過去の日のページでは「今日」と書かない
-  const DAY = isArchive ? 'この日' : '今日';
-  const dayk = isArchive ? 'この日' : 'きょう';
+  const DAY = isArchive ? 'この日' : 'この24時間で';
+  const dayk = isArchive ? 'この日' : '24時間で';
 
   const mo = DATA.momentum || {ready: true};
   if (!mo.ready) {

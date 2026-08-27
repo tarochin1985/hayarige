@@ -9,6 +9,7 @@ import re, unicodedata
 from common import DATA, read_json
 
 STRIP = r"[\s・:：\-–—ー_'’‘\"“”,、.。!！?？~〜/／|｜&＆#＃*＊+＋%％@＠^…♪♡★☆→←※=＝]"
+KATAKANA = re.compile(r"[ァ-ヴーｦ-ﾟ・]")
 DERIV = ("風", "物語", "パロディ", "もどき", "っぽい")   # 「マイクラ風ゲーム」を弾く
 
 BRACKETS = [("『", "』", 3), ("〖", "〗", 2), ("【", "】", 2),
@@ -89,6 +90,12 @@ class Index:
                         continue
                 else:
                     if c[i + len(alias):i + len(alias) + 2].startswith(DERIV):
+                        continue
+                    # カタカナ語の途中を切り出さない。
+                    # 『リヴリーアイランド』の後ろ半分だけ見て「アイランド」に
+                    # してしまう事故を防ぐ。直前がカタカナなら、それは
+                    # ひと続きの単語の一部。
+                    if i > 0 and KATAKANA.match(c[i - 1]) and KATAKANA.match(alias[0]):
                         continue
                 if strict and not curated:
                     # 括弧の外では、短い名前や無名のゲームは採用しない。

@@ -6,7 +6,7 @@
   - 活発な上位チャンネルは毎日、それ以外は曜日で分けて週1回
   - 新着一覧は1チャンネル1ユニット、動画の詳細は50本で1ユニット
 """
-from datetime import datetime, timedelta
+from datetime import datetime, timedelta, timezone
 from common import (YouTube, QuotaExhausted, DATA, JST, log,
                     read_json, write_json, today, is_countable)
 
@@ -46,12 +46,12 @@ def main():
         log("対象チャンネルがありません。先に enrich_channels.py を実行してください。")
         return
 
-    seen = set()
-    for d in range(1, 4):                          # 直近3日分は取得済み扱い
-        day = (datetime.now(JST) - timedelta(days=d)).strftime("%Y-%m-%d")
-        for v in (read_json(DATA / "daily" / f"{day}.json", {}) or {}).get("videos", []):
-            seen.add(v["id"])
-
+    # 以前は「一度見た動画は二度と取らない」ようにしていたが、これをやめた。
+    # 理由が2つある。
+    #   1. その日のファイルが「前回の実行から今までに増えた分」だけになり、
+    #      実行した時刻によって『1日の本数』が激しく変わってしまっていた。
+    #   2. 配信直後に取った再生数のまま固定され、伸びが反映されなかった。
+    # 動画の詳細取得は50本で1ポイントしか使わないので、毎回取り直しても安い。
     new_ids, owner = [], {}
     for n, c in enumerate(targets, 1):
         pl = c.get("uploads_playlist")
@@ -68,16 +68,19 @@ def main():
             continue
         for it in r.get("items", []):
             vid = it["contentDetails"]["videoId"]
-            if vid in seen:
+            if vid in owner:
                 continue
             new_ids.append(vid)
             owner[vid] = c
         if n % 100 == 0:
             log(f"  {n}/{len(targets)} 件 ／ 使用クォータ {yt.used}")
 
-    log(f"新着候補 {len(new_ids)} 本 ／ 使用クォータ {yt.used}")
+    log(f"詳細を取る候補 {len(new_ids)} 本 ／ 使用クォータ {yt.used}")
 
-    cutoff = (datetime.now(JST) - timedelta(hours=LOOKBACK_HOURS)).isoformat()
+    # YouTubeが返す publishedAt は "2026-08-27T01:00:00Z" というUTC表記。
+    # 比べる相手も同じ形にしないと、9時間ずれた範囲で切ってしまう。
+    cutoff = (datetime.now(timezone.utc) - timedelta(hours=LOOKBACK_HOURS)
+              ).strftime("%Y-%m-%dT%H:%M:%SZ")
     videos, skipped = [], 0
     for i in range(0, len(new_ids), 50):
         try:

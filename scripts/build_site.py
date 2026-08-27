@@ -6,8 +6,8 @@
 """
 import math, re
 from collections import defaultdict, Counter
-from datetime import datetime, timedelta
-from urllib.parse import quote
+from datetime import datetime, timedelta, timezone
+from urllib.parse import quote, quote_plus
 from common import DATA, SITE, JST, log, read_json, write_json, today
 import match as M
 
@@ -17,18 +17,73 @@ MIN_HISTORY = 4               # 急上昇を出すのに必要な「実データ
 W = {"videos": 0.30, "channels": 0.35, "views": 0.35}
 
 
-def load_days(n=DAYS):
-    """(日付, 動画リスト, その日のデータがあるか) を古い順に返す。
+def load_all(days_back=30):
+    """収集ファイルを全部読んで、動画IDで重複を除いた1本のリストにする。
 
-    集計を始めたばかりの頃は過去のファイルが存在しない。それを「0本の日」と
-    数えてしまうと、どのゲームも『昨日の30倍！』という嘘の急上昇になる。
-    データが無い日は無い日として区別する。
+    収集は毎回「直近48時間」を取り直すので、同じ動画が複数のファイルに入る。
+    再生数はいちばん大きい（＝いちばん新しく取った）ものを採用する。
+
+    戻り値は (動画リスト, 収集した日のリスト)。
     """
+    best, runs = {}, []
+    for f in sorted((DATA / "daily").glob("*.json")):
+        if not re.fullmatch(r"\d{4}-\d{2}-\d{2}", f.stem):
+            continue                      # .gitkeep.json などの置き石は読まない
+        rec = read_json(f, None)
+        if rec is None:
+            continue
+        runs.append(f.stem)
+        for v in rec.get("videos", []):
+            cur = best.get(v["id"])
+            if cur is None or v.get("views", 0) >= cur.get("views", 0):
+                best[v["id"]] = v
+    return list(best.values()), sorted(runs)
+
+
+def pub_utc(v):
+    """"2026-08-27T01:00:00Z" を datetime に。壊れていたら None。"""
+    s = (v.get("published") or "").replace("Z", "+00:00")
+    try:
+        return datetime.fromisoformat(s)
+    except ValueError:
+        return None
+
+
+def windows(videos, runs, n=DAYS):
+    """直近24時間ずつに区切って (ラベル, 動画リスト, データがあるか) を古い順に返す。
+
+    以前は「収集ファイル1個＝1日」として数えていたが、これは間違いだった。
+    実行が朝7時なら朝までの分しか入らず、夜中に回せば丸1日分入る。
+    同じ『1日』のはずが実行時刻で3倍も変わってしまう。
+    時計で24時間ずつ切れば、いつ実行しても同じ意味の数字になる。
+    """
+    now = datetime.now(timezone.utc)
+    stamped = [(p, v) for v in videos if (p := pub_utc(v))]
+    # どこまで遡ってデータがあると言えるか。最初に収集した日の前日まで。
+    # （収集は48時間ぶんを取るが、控えめに24時間ぶんだけ数える）
+    covered_from = None
+    if runs:
+        first = datetime.strptime(runs[0], "%Y-%m-%d").replace(tzinfo=JST)
+        covered_from = first - timedelta(hours=24)
+
     out = []
-    for d in range(n - 1, -1, -1):
-        day = (datetime.now(JST) - timedelta(days=d)).strftime("%Y-%m-%d")
-        rec = read_json(DATA / "daily" / f"{day}.json", None)
-        out.append((day, (rec or {}).get("videos", []), rec is not None))
+    for k in range(n - 1, -1, -1):
+        hi = now - timedelta(hours=24 * k)
+        lo = hi - timedelta(hours=24)
+        sel = [v for p, v in stamped if lo <= p < hi]
+        ok = covered_from is not None and lo >= covered_from
+        label = hi.astimezone(JST).strftime("%m/%d")
+        out.append((label, sel, ok))
+    return out
+
+
+def by_calendar_day(videos):
+    """日本時間の日付ごとに仕分ける。アーカイブ（その日の記録）に使う。"""
+    out = defaultdict(list)
+    for v in videos:
+        p = pub_utc(v)
+        if p:
+            out[p.astimezone(JST).strftime("%Y-%m-%d")].append(v)
     return out
 
 
@@ -88,10 +143,12 @@ def store_links(name, plat, cfg):
     steam = ("https://store.steampowered.com/search/?term=" + quote(name)) if on_pc else None
     amazon = None
     if tag and on_console:
-        amazon = "https://www.amazon.co.jp/s?k=" + quote(name)
+        # 検索語は + 区切り。%20 で送るとAmazon側がURLを作り直し、
+        # そのときに tag= ごと落とされることがある（実際に落ちた）。
+        amazon = "https://www.amazon.co.jp/s?k=" + quote_plus(name)
         if dept:
-            amazon += "&i=" + quote(dept)
-        amazon += "&tag=" + quote(tag)
+            amazon += "&i=" + quote_plus(dept)
+        amazon += "&tag=" + quote_plus(tag)
     return steam, amazon
 
 
@@ -147,15 +204,17 @@ def main():
     if not plats:
         log("対応機種の情報がありません。ワークフロー2をゲーム辞書ありで動かすと、"
             "PC専用ゲームにAmazonリンクを出さないようになります。")
-    days = load_days()
+    all_videos, runs = load_all()
+    days = windows(all_videos, runs)
     day_names = [d for d, _, _ in days]
     have = [d for d, _, ok in days if ok]
     today_videos = days[-1][1]
-    log(f"直近{DAYS}日: " + " ".join(f"{d[5:]}={len(v) if ok else '-'}"
+    log(f"収集ファイル {len(runs)} 個 / 重複を除いた動画 {len(all_videos)} 本")
+    log("直近7×24時間: " + " ".join(f"{d}={len(v) if ok else '-'}"
                                     for d, v, ok in days))
-    log(f"実データのある日数: {len(have)} / 急上昇の表示には {MIN_HISTORY} 日必要")
+    log(f"データのある区間: {len(have)} / 急上昇の表示には {MIN_HISTORY} 区間必要")
 
-    # 日ごとのゲーム別本数（推移と急上昇に使う）
+    # 区間ごとのゲーム別本数（推移と急上昇に使う）
     hist = {}
     for day, vids, ok in days:
         if not ok:
@@ -182,7 +241,8 @@ def main():
         "date": today(),
         "column": column,
         "generated": datetime.now(JST).strftime("%Y-%m-%d %H:%M"),
-        "days": [d[5:].replace("-", "/") for d in day_names],
+        "range": "直近24時間",
+        "days": list(day_names),
         "totals": {"videos": len(today_videos), "games": len(rows),
                    "channels": len({v["channel_id"] for v in today_videos})},
         "rising": rising,
@@ -244,16 +304,20 @@ def main():
     # 直近1週間は毎回作り直す（デザインを直したときに反映されるように）。
     # それより古い日は、ページが無いときだけ作る。毎日全部作り直すと、
     # 記録がたまるほど処理時間が伸びてしまうため。
-    recent = {d for d, _, _ in days}
+    buckets = by_calendar_day(all_videos)
+    recent = sorted(buckets)[-7:]
+    # 収集を始める前の日は「その日の記録」として不完全なので載せない。
+    # 収集は48時間ぶんを取るが、控えめに1日ぶんだけ信用する。
+    cover_from = ((datetime.strptime(runs[0], "%Y-%m-%d") - timedelta(days=1))
+                  .strftime("%Y-%m-%d") if runs else "9999-12-31")
     added = 0
-    for f in sorted((DATA / "daily").glob("*.json")):
-        day = f.stem
-        if day == today():
+    for day in sorted(buckets):
+        if day == today() or day < cover_from:
             continue
         fresh = day in recent or not (SITE / "d" / day / "index.html").exists()
         if day in entries and not fresh:
             continue
-        vids = (read_json(f, None) or {}).get("videos", [])
+        vids = buckets[day]
         if not vids:
             continue
         past_rows, _ = compute_rows(vids, idx, disp, override, {}, [], False,
