@@ -56,7 +56,9 @@ jobs:
       - name: 結果をダウンロードできるようにする
         uses: actions/upload-artifact@v4
         with:
-          name: channels_review
+          # 実行番号を付ける。付けないと古い実行の結果と見分けがつかず、
+          # 前回のファイルを開いて「変わっていない」と誤解する事故が起きる。
+          name: channels_review_${{ github.run_number }}
           path: |
             data/channels_review.csv
             data/channels_discovered.csv
