@@ -11,6 +11,16 @@ on:
         default: "yes"
         type: choice
         options: ["yes", "no"]
+      discover:
+        description: "新しい配信チャンネルを探す（増やしたいときだけ yes）"
+        required: true
+        default: "no"
+        type: choice
+        options: ["no", "yes"]
+      searches:
+        description: "探すときの検索回数（1回100ポイント／1日の上限9000）"
+        required: false
+        default: "40"
 
 jobs:
   setup:
@@ -31,6 +41,13 @@ jobs:
           TWITCH_CLIENT_SECRET: ${{ secrets.TWITCH_CLIENT_SECRET }}
         run: python scripts/igdb_sync.py
 
+      - name: 新しいチャンネルを探す
+        if: ${{ inputs.discover == 'yes' }}
+        env:
+          YOUTUBE_API_KEY: ${{ secrets.YOUTUBE_API_KEY }}
+          MAX_SEARCHES: ${{ inputs.searches }}
+        run: python scripts/discover_channels.py
+
       - name: チャンネル情報を集める
         env:
           YOUTUBE_API_KEY: ${{ secrets.YOUTUBE_API_KEY }}
@@ -40,7 +57,9 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: channels_review
-          path: data/channels_review.csv
+          path: |
+            data/channels_review.csv
+            data/channels_discovered.csv
 
       - name: 結果を保存
         run: |
