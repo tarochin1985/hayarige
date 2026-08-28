@@ -88,10 +88,18 @@ tbody tr.main:nth-of-type(-n+6) .rk{color:var(--hot)}
 .brk{font-family:"Roboto Mono",monospace;font-size:11.5px;color:var(--ink-3);white-space:nowrap}
 .mv{font-family:"Roboto Mono",monospace;font-size:12px;font-weight:700;white-space:nowrap}
 .mv.up{color:var(--hot)}.mv.fl{color:var(--ink-3);font-weight:400}
-.buy{display:flex;gap:5px}
-.buy a{font-family:"Roboto Mono",monospace;font-size:10px;font-weight:700;text-decoration:none;
- color:var(--ink-2);background:var(--card-2);border:1px solid var(--line);border-radius:5px;padding:3px 7px;white-space:nowrap}
-.buy a:hover{background:var(--accent);border-color:var(--accent);color:#fff}
+/* 購入ボタン。出典や配信者名のタグと同じ見た目だと埋もれてしまうので、
+   タグ（薄い枠）ではなく塗りのボタンにして、店ごとに色を変える。 */
+.buy{display:flex;gap:8px;flex-wrap:wrap}
+.buy a{display:inline-flex;align-items:center;gap:5px;text-decoration:none;
+ font-family:"Zen Kaku Gothic New",sans-serif;font-size:12px;font-weight:700;
+ border-radius:7px;padding:5px 11px;white-space:nowrap;
+ transition:transform .12s ease,box-shadow .12s ease,filter .12s ease}
+.buy a svg{width:13px;height:13px;flex:none}
+.buy a.st{background:var(--tipbg);color:#EAF3F2}
+.buy a.az{background:var(--hot);color:#fff}
+.buy a:hover{transform:translateY(-1px);filter:brightness(1.12);
+ box-shadow:0 4px 12px -5px rgba(17,27,29,.55)}
 tr.detail{display:none}
 tr.detail.open{display:table-row}
 tr.detail td{background:var(--card-2);padding:14px 18px}
@@ -294,10 +302,12 @@ function spark(v, w, h, color){
 let orgFilter = null;
 
 // 実際にそのゲームを売っている店だけボタンを出す（無い店のボタンは出さない）
+  // 購入ボタンの先頭に付ける小さなカート。店へのリンクだと一目で分かるように。
+  const CART = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="20" r="1.4"/><circle cx="18" cy="20" r="1.4"/><path d="M2 3h3l2.4 12.1a1.6 1.6 0 0 0 1.6 1.3h8.4a1.6 1.6 0 0 0 1.6-1.3L21 7H6"/></svg>';
 function buy(r){
   const b = [];
-  if (r.steam)  b.push(`<a href="${esc(r.steam)}" target="_blank" rel="noopener sponsored">Steam</a>`);
-  if (r.amazon) b.push(`<a href="${esc(r.amazon)}" target="_blank" rel="noopener sponsored nofollow">Amazon</a>`);
+  if (r.steam)  b.push(`<a class="st" href="${esc(r.steam)}" target="_blank" rel="noopener sponsored">${CART}Steam</a>`);
+  if (r.amazon) b.push(`<a class="az" href="${esc(r.amazon)}" target="_blank" rel="noopener sponsored nofollow">${CART}Amazon</a>`);
   return b.join('') || '<span style="color:var(--ink-3);font-size:10px">—</span>';
 }
 
@@ -374,9 +384,9 @@ function render(){
     // コラムには、人が実際に商品ページを確かめたリンクだけを置く
     const links = [];
     if (col.buy && col.buy.u)
-      links.push(`<a href="${esc(col.buy.u)}" target="_blank" rel="noopener sponsored nofollow">${esc(col.buy.t || '購入')}</a>`);
+      links.push(`<a class="az" href="${esc(col.buy.u)}" target="_blank" rel="noopener sponsored nofollow">${CART}${esc(col.buy.t || '購入')}</a>`);
     if (cr && cr.steam)
-      links.push(`<a href="${esc(cr.steam)}" target="_blank" rel="noopener sponsored">Steam</a>`);
+      links.push(`<a class="st" href="${esc(cr.steam)}" target="_blank" rel="noopener sponsored">${CART}Steam</a>`);
     const cbuy = links.length
       ? `<div class="buy" style="margin-top:2px">${links.join('')}</div>` : '';
     const hero = cr && cr.streams && cr.streams[0] && cr.streams[0].th ? cr.streams[0].th : '';
