@@ -7,6 +7,8 @@
 <meta property="og:title" content="ハヤリゲー ｜ 次、何のゲーム配信する？">
 <meta property="og:description" content="VTuber・ゲーム実況者がいま配信しているゲームを毎日自動集計。">
 <meta property="og:type" content="website">
+<link rel="icon" href="../icon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="../icon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+New:wght@500;700;900&family=Noto+Sans+JP:wght@400;500;700&family=Roboto+Mono:wght@400;500;700&display=swap">
@@ -42,10 +44,10 @@ a{color:inherit}
 .mono{font-family:"Roboto Mono",monospace;font-variant-numeric:tabular-nums}
 .top{display:flex;flex-wrap:wrap;align-items:center;gap:14px 22px}
 .logo{display:flex;align-items:center;gap:11px}
-.mark{width:38px;height:38px;border-radius:11px;flex:none;display:grid;place-items:center;color:#fff;
- background:linear-gradient(145deg,var(--accent-2),var(--accent))}
+.mark{width:46px;height:46px;flex:none;object-fit:contain}
 .logo h1{font-size:27px;font-weight:900;line-height:1}
-.logo .tag{font-size:12px;color:var(--ink-3);margin-top:3px}
+.logo .tag{font-size:12.5px;font-weight:700;color:var(--ink-2);margin-top:4px;line-height:1.5}
+.logo .tag2{display:block;font-size:11.5px;font-weight:400;color:var(--ink-3);margin-top:1px}
 .when{margin-left:auto;font-family:"Roboto Mono",monospace;font-size:11.5px;color:var(--ink-3);text-align:right;line-height:1.5}
 .when b{display:block;font-size:14px;color:var(--ink)}
 .head{display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin-bottom:13px}
@@ -107,6 +109,67 @@ tr.detail td{background:var(--card-2);padding:14px 18px}
 .qrow .t{flex:1;color:var(--ink-2);line-height:1.6}
 .qrow .g{flex:none;font-family:"Roboto Mono",monospace;font-size:10.5px;font-weight:700;
  background:var(--wash);color:var(--accent);padding:3px 8px;border-radius:4px;white-space:nowrap}
+
+/* ---- 上位3件のカード ---- */
+.pick{position:relative}
+.pick.has-img{display:grid;grid-template-columns:1fr 268px;column-gap:22px;align-items:start}
+.ptxt{grid-column:1;grid-row:1;display:flex;flex-direction:column;gap:9px;min-width:0}
+.heroimg{grid-column:2;grid-row:1;width:100%;aspect-ratio:16/9;object-fit:cover;
+ border-radius:10px;background:var(--line-soft)}
+@media (max-width:760px){
+  .pick.has-img{grid-template-columns:1fr;gap:12px}
+  .heroimg{grid-column:1;grid-row:1}
+  .ptxt{grid-column:1;grid-row:2}}
+.cards{display:grid;grid-template-columns:1.35fr 1fr 1fr;gap:13px;margin-bottom:16px}
+.gcard{display:flex;flex-direction:column;background:var(--card);border:1px solid var(--line);
+ border-radius:13px;overflow:hidden;box-shadow:var(--sh);cursor:pointer;text-align:left;
+ font:inherit;color:inherit;padding:0;position:relative}
+.gcard:hover{border-color:var(--accent)}
+.gcard .th{position:relative;display:block;background:var(--line-soft)}
+.gcard .th img{width:100%;aspect-ratio:16/9;object-fit:cover;display:block}
+.gcard .rank{position:absolute;left:9px;top:9px;width:29px;height:29px;border-radius:9px;display:grid;
+ place-items:center;font-family:"Roboto Mono",monospace;font-weight:700;font-size:15px;color:#fff;
+ background:rgba(11,27,29,.72)}
+.gcard:first-child .rank{background:var(--hot)}
+.gcard .open{position:absolute;right:9px;bottom:9px;display:flex;align-items:center;gap:4px;
+ font-size:11px;font-weight:700;color:#fff;background:rgba(11,27,29,.72);border-radius:20px;padding:4px 10px}
+.gcard .gm{padding:11px 13px 13px;display:flex;flex-direction:column;gap:5px}
+.gcard .gm b{font-family:"Zen Kaku Gothic New",sans-serif;font-size:15.5px;font-weight:700;line-height:1.35}
+.gcard:first-child .gm b{font-size:19px}
+.nums{font-family:"Roboto Mono",monospace;font-size:11.5px;color:var(--ink-3)}
+.nums i{font-style:normal;font-weight:700;font-size:15px;color:var(--accent);margin-right:1px}
+.gcard .tp{font-size:11px;color:var(--ink-3);line-height:1.55;
+ display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+
+/* ---- 4位以下の一覧 ---- */
+.list{background:var(--card);border:1px solid var(--line);border-radius:13px;
+ box-shadow:var(--sh);overflow:hidden}
+.lrow{display:flex;align-items:center;gap:13px;width:100%;padding:9px 14px;
+ border-bottom:1px solid var(--line-soft);background:none;border-left:0;border-right:0;border-top:0;
+ font:inherit;color:inherit;cursor:pointer;text-align:left}
+.lrow:last-of-type{border-bottom:none}
+.lrow:hover{background:var(--card-2)}
+.lrow .rk2{font-family:"Roboto Mono",monospace;font-weight:700;font-size:14px;color:var(--ink-3);
+ width:26px;text-align:right;flex:none}
+.lrow img{width:62px;height:35px;object-fit:cover;border-radius:6px;flex:none;background:var(--line-soft)}
+.lrow .nm2{flex:1;min-width:0}
+.lrow .nm2 b{display:block;font-family:"Zen Kaku Gothic New",sans-serif;font-size:14px;font-weight:700;
+ line-height:1.35;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.lrow .nm2 span{display:block;font-family:"Roboto Mono",monospace;font-size:10.5px;color:var(--ink-3)}
+.lrow .bar2{flex:none;width:120px;height:7px;background:var(--line-soft);border-radius:4px;overflow:hidden}
+.lrow .bar2 i{display:block;height:100%;border-radius:4px;
+ background:linear-gradient(90deg,var(--accent),var(--accent-2))}
+.chev{flex:none;width:22px;height:22px;color:var(--ink-3);transition:transform .18s}
+.open-x .chev{transform:rotate(180deg);color:var(--accent)}
+.panel{display:none;padding:13px 15px;background:var(--card-2);border-bottom:1px solid var(--line-soft)}
+.panel.on{display:block}
+.hint{display:inline-flex;align-items:center;gap:5px;font-size:11.5px;font-weight:700;color:var(--accent);
+ background:var(--wash);border-radius:20px;padding:3px 11px}
+@media (max-width:720px){
+  .cards{grid-template-columns:1fr}
+  .gcard:first-child .gm b{font-size:17px}
+  .lrow .bar2{display:none}
+}
 footer{font-size:11.5px;color:var(--ink-3);text-align:center;border-top:1px solid var(--line);padding-top:20px;line-height:1.9}
 .nav{display:flex;gap:8px;margin-left:auto;align-items:center}
 .nav a{font-size:12.5px;font-weight:700;text-decoration:none;color:var(--ink-2);
@@ -148,8 +211,8 @@ footer{font-size:11.5px;color:var(--ink-3);text-align:center;border-top:1px soli
 <div class="wrap">
   <header class="top">
     <div class="logo">
-      <span class="mark"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 17l5-6 4 4 6-8"/><path d="M15 7h4v4"/></svg></span>
-      <div><h1>ハヤリゲー</h1><div class="tag">次、何のゲーム配信する？</div></div>
+      <img class="mark" src="../logo.svg" alt="" width="46" height="46">
+      <div><h1>ハヤリゲー</h1><div class="tag">次、何のゲーム配信する？<span class="tag2">VTuber・ゲーム実況者が、いま配信しているゲーム</span></div></div>
     </div>
     <div class="when"><b id="s-date">–</b><span id="s-meta">–</span></div>
   </header>
@@ -173,15 +236,11 @@ footer{font-size:11.5px;color:var(--ink-3);text-align:center;border-top:1px soli
   <section id="rank-sec">
     <div class="head">
       <h2>みんなが遊んでるゲーム</h2>
-      <span class="note">行をクリックすると、そのゲームの直近の配信が開きます</span>
+      <span class="note">カードや行を押すと、そのゲームの配信一覧が開きます</span>
     </div>
     <div class="filters" id="filters"></div>
-    <div class="tw">
-      <table>
-        <thead><tr><th>順位</th><th>ゲーム</th><th>総合ポイント</th><th>内訳</th><th>7日推移</th><th>勢い</th><th>ストア</th></tr></thead>
-        <tbody id="rows"></tbody>
-      </table>
-    </div>
+    <div class="cards" id="cards"></div>
+    <div class="list" id="rows"></div>
   </section>
 
   <section id="arch-sec" style="display:none">
@@ -211,7 +270,7 @@ footer{font-size:11.5px;color:var(--ink-3);text-align:center;border-top:1px soli
 </div>
 
 <script>
-const DATA = {"mode": "archive", "date": "2026-08-28", "archive": [{"date": "2026-08-28", "videos": 558, "channels": 384, "games": 112, "top": [{"game": "Minecraft", "videos": 37, "channels": 38}, {"game": "実況パワフルプロ野球2026", "videos": 11, "channels": 11}, {"game": "Apex Legends", "videos": 12, "channels": 11}, {"game": "ストリートファイター6", "videos": 11, "channels": 9}, {"game": "Grand Theft Auto V", "videos": 12, "channels": 10}], "column": {"game": "Minecraft", "headline": "無関係な3つのマイクラ企画が重なり、夏休みの最後にマイクラが跳ねた"}}, {"date": "2026-08-27", "videos": 550, "games": 114, "channels": 382, "top": [{"game": "Minecraft", "videos": 33, "channels": 29}, {"game": "ストリートファイター6", "videos": 15, "channels": 12}, {"game": "実況パワフルプロ野球2026", "videos": 11, "channels": 11}, {"game": "League of Legends", "videos": 11, "channels": 11}, {"game": "Apex Legends", "videos": 11, "channels": 10}], "column": {"game": "ぷよぷよテトリス2", "headline": "ホロライブの大会を控えて、メンバーがぷよぷよを教え合っている"}}, {"date": "2026-08-26", "videos": 490, "games": 109, "channels": 354, "top": [{"game": "Minecraft", "videos": 25, "channels": 22}, {"game": "ストリートファイター6", "videos": 17, "channels": 13}, {"game": "Apex Legends", "videos": 11, "channels": 11}, {"game": "ほの暮しの庭", "videos": 10, "channels": 10}, {"game": "VALORANT", "videos": 10, "channels": 9}], "column": null}, {"date": "2026-08-25", "videos": 146, "games": 48, "channels": 138, "top": [{"game": "Apex Legends", "videos": 8, "channels": 8}, {"game": "Minecraft", "videos": 6, "channels": 6}, {"game": "実況パワフルプロ野球2026", "videos": 4, "channels": 4}, {"game": "VALORANT", "videos": 4, "channels": 4}, {"game": "ぷよぷよテトリス2", "videos": 3, "channels": 3}], "column": null}], "paths": {"home": "../", "archive": "../archive/"}};
+const DATA = {"mode": "archive", "date": "2026-08-28", "archive": [{"date": "2026-08-28", "videos": 565, "channels": 385, "games": 117, "top": [{"game": "Minecraft", "videos": 36, "channels": 38}, {"game": "Apex Legends", "videos": 15, "channels": 14}, {"game": "実況パワフルプロ野球2026", "videos": 12, "channels": 12}, {"game": "7 Days to Die", "videos": 8, "channels": 8}, {"game": "Grand Theft Auto V", "videos": 11, "channels": 10}], "column": {"game": "Minecraft", "headline": "無関係な3つのマイクラ企画が重なり、夏休みの最後にマイクラが跳ねた"}}, {"date": "2026-08-27", "videos": 548, "games": 113, "channels": 382, "top": [{"game": "Minecraft", "videos": 33, "channels": 29}, {"game": "ストリートファイター6", "videos": 15, "channels": 12}, {"game": "実況パワフルプロ野球2026", "videos": 11, "channels": 11}, {"game": "League of Legends", "videos": 11, "channels": 11}, {"game": "Apex Legends", "videos": 11, "channels": 10}], "column": {"game": "ぷよぷよテトリス2", "headline": "ホロライブの大会を控えて、メンバーがぷよぷよを教え合っている"}}, {"date": "2026-08-26", "videos": 489, "games": 109, "channels": 353, "top": [{"game": "Minecraft", "videos": 25, "channels": 22}, {"game": "ストリートファイター6", "videos": 17, "channels": 13}, {"game": "Apex Legends", "videos": 11, "channels": 11}, {"game": "ほの暮しの庭", "videos": 10, "channels": 10}, {"game": "VALORANT", "videos": 10, "channels": 9}], "column": null}, {"date": "2026-08-25", "videos": 146, "games": 48, "channels": 138, "top": [{"game": "Apex Legends", "videos": 8, "channels": 8}, {"game": "Minecraft", "videos": 6, "channels": 6}, {"game": "実況パワフルプロ野球2026", "videos": 4, "channels": 4}, {"game": "VALORANT", "videos": 4, "channels": 4}, {"game": "ぷよぷよテトリス2", "videos": 3, "channels": 3}], "column": null}], "paths": {"home": "../", "archive": "../archive/"}};
 const $ = s => document.querySelector(s);
 const esc = s => String(s ?? '').replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
 const cssv = n => getComputedStyle(document.documentElement).getPropertyValue(n).trim();
@@ -320,14 +379,19 @@ function render(){
       links.push(`<a href="${esc(cr.steam)}" target="_blank" rel="noopener sponsored">Steam</a>`);
     const cbuy = links.length
       ? `<div class="buy" style="margin-top:2px">${links.join('')}</div>` : '';
+    const hero = cr && cr.streams && cr.streams[0] && cr.streams[0].th ? cr.streams[0].th : '';
+    $('#pick').classList.toggle('has-img', !!hero);
     $('#pick').innerHTML = `
-      <span class="badge">PICK UP</span>
-      <div class="g">${esc(col.game)}</div>
-      <div class="hl">${esc(col.headline)}</div>
-      <p>${esc(col.body)}</p>
-      ${cbuy}
-      ${(col.people || []).length ? `<div class="who">${col.people.map(p => `<span>${esc(p)}</span>`).join('')}</div>` : ''}
-      ${(col.sources || []).length ? `<div class="src">${col.sources.map(x => `<a href="${esc(x.u)}" target="_blank" rel="noopener">${esc(x.t)}</a>`).join('')}</div>` : ''}`;
+      ${hero ? `<img class="heroimg" src="${esc(hero)}" alt="" loading="lazy">` : ''}
+      <div class="ptxt">
+        <span class="badge">PICK UP</span>
+        <div class="g">${esc(col.game)}</div>
+        <div class="hl">${esc(col.headline)}</div>
+        <p>${esc(col.body)}</p>
+        ${cbuy}
+        ${(col.people || []).length ? `<div class="who">${col.people.map(p => `<span>${esc(p)}</span>`).join('')}</div>` : ''}
+        ${(col.sources || []).length ? `<div class="src">${col.sources.map(x => `<a href="${esc(x.u)}" target="_blank" rel="noopener">${esc(x.t)}</a>`).join('')}</div>` : ''}
+      </div>`;
   }
   $('#s-date').textContent = (DATA.date || '').replace(/-/g, '.');
   $('#s-meta').textContent = (DATA.range && !isArchive ? DATA.range + ' ・ ' : '')
@@ -339,6 +403,9 @@ function render(){
   const dayk = isArchive ? 'この日' : '24時間で';
 
   const mo = DATA.momentum || {ready: true};
+  // 倍率が出せない間の「広がり」は、下の上位3カードと同じ中身になってしまう。
+  // 二度同じものを見せても意味がないので、出せるようになるまで隠す。
+  $('#hot-sec').style.display = mo.ready ? '' : 'none';
   if (!mo.ready) {
     // データが足りないうちは倍率を出さない。代わりに「広がり」を出す。
     $('#hot-title').textContent = DAY + 'いちばん広がったゲーム';
@@ -369,24 +436,58 @@ function render(){
 
   const list = (DATA.ranking || []).filter(r => !orgFilter || (r.orgs && r.orgs[orgFilter]));
   const top = Math.max(1, ...list.map(r => r.score || 0));
-  $('#rows').innerHTML = list.map((r, i) => {
-    const mv = r.videos < 3 ? '<span class="mv fl">—</span>'
-      : (r.growth && r.growth >= 1.25) ? `<span class="mv up">▲ ×${r.growth.toFixed(1)}</span>`
-      : '<span class="mv fl">—</span>';
-    const orgTxt = Object.entries(r.orgs || {}).slice(0, 2).map(([k, v]) => `${k} ${v}`).join(' · ');
-    const streams = (r.streams || []).map(s => `<a class="stream" href="${esc(s.u)}" target="_blank" rel="noopener">
-        ${s.th ? `<img src="${esc(s.th)}" alt="" loading="lazy">` : ''}
-        <span><span class="t">${esc(s.t)}</span><span class="c">${esc(s.c)} ・ ${man(s.v)}回</span></span></a>`).join('');
-    return `<tr class="main" data-i="${i}">
-      <td class="rk">${i + 1}</td>
-      <td><span class="gname">${esc(r.game)}</span><span class="chs">${esc(orgTxt)}</span></td>
-      <td class="ptcell"><div class="pt"><span class="track"><span class="fill" style="width:${Math.max(4,(r.score||0)/top*100)}%"></span></span><span class="v">${Math.round(r.score||0)}</span></div></td>
-      <td class="brk">${r.videos}件 · ${r.channels}ch · ${man(r.views)}回</td>
-      <td>${spark(r.spark, 78, 24, AC)}</td>
-      <td>${mv}</td>
-      <td><span class="buy">${buy(r)}</span></td></tr>
-    <tr class="detail"><td colspan="7">${streams ? `<div class="streams">${streams}</div>` : '<span style="color:var(--ink-3);font-size:12.5px">配信の情報がありません</span>'}</td></tr>`;
-  }).join('') || '<tr><td colspan="7" style="padding:26px;text-align:center;color:var(--ink-3)">データがまだありません</td></tr>';
+  const CHEV = '<svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg>';
+  const PLUS = '<svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><path d="M6 9l6 6 6-6"/></svg>';
+
+  // 配信一覧のパネル。カードでも行でも中身は同じ
+  const panel = r => {
+    const st = (r.streams || []).map(s => `<a class="stream" href="${esc(s.u)}" target="_blank" rel="noopener">
+      ${s.th ? `<img src="${esc(s.th)}" alt="" loading="lazy">` : ''}
+      <span><span class="t">${esc(s.t)}</span><span class="c">${esc(s.c)} ・ ${man(s.v)}回</span></span></a>`).join('');
+    const mv = (r.growth && r.growth >= 1.25 && r.videos >= 3)
+      ? `<span class="mv up">▲ ×${r.growth.toFixed(1)}</span>` : '';
+    return `<div class="panel" data-p="${esc(r.game)}">
+      <div style="display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin-bottom:10px">
+        <span class="buy">${buy(r)}</span>${mv}
+        ${(() => { const sp = spark(r.spark, 90, 22, AC);
+          return sp ? `<span style="font-size:11.5px;color:var(--ink-3)">7日の推移</span>${sp}` : ''; })()}
+      </div>
+      ${st ? `<div class="streams">${st}</div>`
+           : '<span style="color:var(--ink-3);font-size:12.5px">配信の情報がありません</span>'}</div>`;
+  };
+  const thumb = r => (r.streams && r.streams[0] && r.streams[0].th) || '';
+  const topLine = r => {
+    const s0 = (r.streams || [])[0];
+    return s0 ? `${esc(s0.c)}「${esc(s0.t)}」` : '';
+  };
+
+  // 上位3件はカード
+  $('#cards').innerHTML = list.slice(0, 3).map((r, i) => {
+    const th = thumb(r);
+    return `<button type="button" class="gcard" data-g="${esc(r.game)}">
+      <span class="th">${th ? `<img src="${esc(th)}" alt="" loading="lazy">`
+        : '<span style="display:block;aspect-ratio:16/9"></span>'}
+        <span class="rank">${i + 1}</span>
+        <span class="open">${PLUS}配信一覧</span></span>
+      <span class="gm"><b>${esc(r.game)}</b>
+        <span class="nums"><i>${r.videos}</i>件 <i>${r.channels}</i>ch <i>${man(r.views)}</i>回</span>
+        <span class="tp">${topLine(r)}</span></span></button>`;
+  }).join('');
+
+  // 4位以下は一覧
+  $('#rows').innerHTML = list.slice(3).map((r, i) => {
+    const th = thumb(r);
+    return `<button type="button" class="lrow" data-g="${esc(r.game)}">
+      <span class="rk2">${i + 4}</span>
+      ${th ? `<img src="${esc(th)}" alt="" loading="lazy">` : '<img alt="">'}
+      <span class="nm2"><b>${esc(r.game)}</b><span>${r.videos}件 ・ ${r.channels}ch ・ ${man(r.views)}回</span></span>
+      <span class="bar2"><i style="width:${Math.max(6,(r.score||0)/top*100)}%"></i></span>
+      ${CHEV}</button>${panel(r)}`;
+  }).join('') || '<div class="empty" style="border:0">データがまだありません。</div>';
+
+  // カードを押したときのパネルは、カード群のすぐ下にまとめて置く
+  $('#cards').insertAdjacentHTML('afterend',
+    '<div id="cardpanels">' + list.slice(0, 3).map(panel).join('') + '</div>');
 
   // 「これ、なんのゲーム？」は公開ページには出しません（site/admin/ 側で表示）
 }
@@ -394,8 +495,14 @@ function render(){
 document.addEventListener('click', e => {
   const b = e.target.closest('#filters button');
   if (b){ orgFilter = b.dataset.org === 'すべて' ? null : b.dataset.org; render(); return; }
-  const tr = e.target.closest('tr.main');
-  if (tr && !e.target.closest('a')) tr.nextElementSibling.classList.toggle('open');
+  const hit = e.target.closest('.gcard, .lrow');
+  if (!hit || e.target.closest('a')) return;
+  const name = hit.dataset.g;
+  const pane = [...document.querySelectorAll('.panel')].find(p => p.dataset.p === name);
+  if (!pane) return;
+  const on = pane.classList.toggle('on');
+  hit.classList.toggle('open-x', on);
+  hit.setAttribute('aria-expanded', on);
 });
 render();
 matchMedia('(prefers-color-scheme: dark)').addEventListener('change', render);

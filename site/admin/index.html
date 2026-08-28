@@ -7,6 +7,8 @@
 <meta property="og:title" content="ハヤリゲー ｜ 次、何のゲーム配信する？">
 <meta property="og:description" content="VTuber・ゲーム実況者がいま配信しているゲームを毎日自動集計。">
 <meta property="og:type" content="website">
+<link rel="icon" href="../icon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="../icon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+New:wght@500;700;900&family=Noto+Sans+JP:wght@400;500;700&family=Roboto+Mono:wght@400;500;700&display=swap">
@@ -42,10 +44,10 @@ a{color:inherit}
 .mono{font-family:"Roboto Mono",monospace;font-variant-numeric:tabular-nums}
 .top{display:flex;flex-wrap:wrap;align-items:center;gap:14px 22px}
 .logo{display:flex;align-items:center;gap:11px}
-.mark{width:38px;height:38px;border-radius:11px;flex:none;display:grid;place-items:center;color:#fff;
- background:linear-gradient(145deg,var(--accent-2),var(--accent))}
+.mark{width:46px;height:46px;flex:none;object-fit:contain}
 .logo h1{font-size:27px;font-weight:900;line-height:1}
-.logo .tag{font-size:12px;color:var(--ink-3);margin-top:3px}
+.logo .tag{font-size:12.5px;font-weight:700;color:var(--ink-2);margin-top:4px;line-height:1.5}
+.logo .tag2{display:block;font-size:11.5px;font-weight:400;color:var(--ink-3);margin-top:1px}
 .when{margin-left:auto;font-family:"Roboto Mono",monospace;font-size:11.5px;color:var(--ink-3);text-align:right;line-height:1.5}
 .when b{display:block;font-size:14px;color:var(--ink)}
 .head{display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin-bottom:13px}
@@ -107,6 +109,67 @@ tr.detail td{background:var(--card-2);padding:14px 18px}
 .qrow .t{flex:1;color:var(--ink-2);line-height:1.6}
 .qrow .g{flex:none;font-family:"Roboto Mono",monospace;font-size:10.5px;font-weight:700;
  background:var(--wash);color:var(--accent);padding:3px 8px;border-radius:4px;white-space:nowrap}
+
+/* ---- 上位3件のカード ---- */
+.pick{position:relative}
+.pick.has-img{display:grid;grid-template-columns:1fr 268px;column-gap:22px;align-items:start}
+.ptxt{grid-column:1;grid-row:1;display:flex;flex-direction:column;gap:9px;min-width:0}
+.heroimg{grid-column:2;grid-row:1;width:100%;aspect-ratio:16/9;object-fit:cover;
+ border-radius:10px;background:var(--line-soft)}
+@media (max-width:760px){
+  .pick.has-img{grid-template-columns:1fr;gap:12px}
+  .heroimg{grid-column:1;grid-row:1}
+  .ptxt{grid-column:1;grid-row:2}}
+.cards{display:grid;grid-template-columns:1.35fr 1fr 1fr;gap:13px;margin-bottom:16px}
+.gcard{display:flex;flex-direction:column;background:var(--card);border:1px solid var(--line);
+ border-radius:13px;overflow:hidden;box-shadow:var(--sh);cursor:pointer;text-align:left;
+ font:inherit;color:inherit;padding:0;position:relative}
+.gcard:hover{border-color:var(--accent)}
+.gcard .th{position:relative;display:block;background:var(--line-soft)}
+.gcard .th img{width:100%;aspect-ratio:16/9;object-fit:cover;display:block}
+.gcard .rank{position:absolute;left:9px;top:9px;width:29px;height:29px;border-radius:9px;display:grid;
+ place-items:center;font-family:"Roboto Mono",monospace;font-weight:700;font-size:15px;color:#fff;
+ background:rgba(11,27,29,.72)}
+.gcard:first-child .rank{background:var(--hot)}
+.gcard .open{position:absolute;right:9px;bottom:9px;display:flex;align-items:center;gap:4px;
+ font-size:11px;font-weight:700;color:#fff;background:rgba(11,27,29,.72);border-radius:20px;padding:4px 10px}
+.gcard .gm{padding:11px 13px 13px;display:flex;flex-direction:column;gap:5px}
+.gcard .gm b{font-family:"Zen Kaku Gothic New",sans-serif;font-size:15.5px;font-weight:700;line-height:1.35}
+.gcard:first-child .gm b{font-size:19px}
+.nums{font-family:"Roboto Mono",monospace;font-size:11.5px;color:var(--ink-3)}
+.nums i{font-style:normal;font-weight:700;font-size:15px;color:var(--accent);margin-right:1px}
+.gcard .tp{font-size:11px;color:var(--ink-3);line-height:1.55;
+ display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+
+/* ---- 4位以下の一覧 ---- */
+.list{background:var(--card);border:1px solid var(--line);border-radius:13px;
+ box-shadow:var(--sh);overflow:hidden}
+.lrow{display:flex;align-items:center;gap:13px;width:100%;padding:9px 14px;
+ border-bottom:1px solid var(--line-soft);background:none;border-left:0;border-right:0;border-top:0;
+ font:inherit;color:inherit;cursor:pointer;text-align:left}
+.lrow:last-of-type{border-bottom:none}
+.lrow:hover{background:var(--card-2)}
+.lrow .rk2{font-family:"Roboto Mono",monospace;font-weight:700;font-size:14px;color:var(--ink-3);
+ width:26px;text-align:right;flex:none}
+.lrow img{width:62px;height:35px;object-fit:cover;border-radius:6px;flex:none;background:var(--line-soft)}
+.lrow .nm2{flex:1;min-width:0}
+.lrow .nm2 b{display:block;font-family:"Zen Kaku Gothic New",sans-serif;font-size:14px;font-weight:700;
+ line-height:1.35;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.lrow .nm2 span{display:block;font-family:"Roboto Mono",monospace;font-size:10.5px;color:var(--ink-3)}
+.lrow .bar2{flex:none;width:120px;height:7px;background:var(--line-soft);border-radius:4px;overflow:hidden}
+.lrow .bar2 i{display:block;height:100%;border-radius:4px;
+ background:linear-gradient(90deg,var(--accent),var(--accent-2))}
+.chev{flex:none;width:22px;height:22px;color:var(--ink-3);transition:transform .18s}
+.open-x .chev{transform:rotate(180deg);color:var(--accent)}
+.panel{display:none;padding:13px 15px;background:var(--card-2);border-bottom:1px solid var(--line-soft)}
+.panel.on{display:block}
+.hint{display:inline-flex;align-items:center;gap:5px;font-size:11.5px;font-weight:700;color:var(--accent);
+ background:var(--wash);border-radius:20px;padding:3px 11px}
+@media (max-width:720px){
+  .cards{grid-template-columns:1fr}
+  .gcard:first-child .gm b{font-size:17px}
+  .lrow .bar2{display:none}
+}
 footer{font-size:11.5px;color:var(--ink-3);text-align:center;border-top:1px solid var(--line);padding-top:20px;line-height:1.9}
 .nav{display:flex;gap:8px;margin-left:auto;align-items:center}
 .nav a{font-size:12.5px;font-weight:700;text-decoration:none;color:var(--ink-2);
@@ -148,8 +211,8 @@ footer{font-size:11.5px;color:var(--ink-3);text-align:center;border-top:1px soli
 <div class="wrap">
   <header class="top">
     <div class="logo">
-      <span class="mark"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 17l5-6 4 4 6-8"/><path d="M15 7h4v4"/></svg></span>
-      <div><h1>ハヤリゲー</h1><div class="tag">次、何のゲーム配信する？</div></div>
+      <img class="mark" src="../logo.svg" alt="" width="46" height="46">
+      <div><h1>ハヤリゲー</h1><div class="tag">次、何のゲーム配信する？<span class="tag2">VTuber・ゲーム実況者が、いま配信しているゲーム</span></div></div>
     </div>
     <div class="when"><b id="s-date">–</b><span id="s-meta">–</span></div>
   </header>
@@ -173,15 +236,11 @@ footer{font-size:11.5px;color:var(--ink-3);text-align:center;border-top:1px soli
   <section id="rank-sec">
     <div class="head">
       <h2>みんなが遊んでるゲーム</h2>
-      <span class="note">行をクリックすると、そのゲームの直近の配信が開きます</span>
+      <span class="note">カードや行を押すと、そのゲームの配信一覧が開きます</span>
     </div>
     <div class="filters" id="filters"></div>
-    <div class="tw">
-      <table>
-        <thead><tr><th>順位</th><th>ゲーム</th><th>総合ポイント</th><th>内訳</th><th>7日推移</th><th>勢い</th><th>ストア</th></tr></thead>
-        <tbody id="rows"></tbody>
-      </table>
-    </div>
+    <div class="cards" id="cards"></div>
+    <div class="list" id="rows"></div>
   </section>
 
   <section id="arch-sec" style="display:none">
@@ -211,7 +270,7 @@ footer{font-size:11.5px;color:var(--ink-3);text-align:center;border-top:1px soli
 </div>
 
 <script>
-const DATA = {"mode": "admin", "date": "2026-08-28", "generated": "2026-08-28 13:43", "unknown": [{"title": "【ARK/ASA】アプデ後のアストレオスの情報収集【ローカル】", "guess": "ark/asa", "channel": "ダナ", "u": "https://www.youtube.com/watch?v=f_zoycEsozY", "n": 3}, {"title": "『東京サマーセッション』Cover 花芽なずな/花芽すみれ/白波らむね/猫汰つな/紫宮るな/如月れん/ ぶいすぽ 【歌ってみた】", "guess": "東京サマーセッション", "channel": "花芽なずな / Nazuna Kaga", "u": "https://www.youtube.com/watch?v=Wj6MOlxGKEY", "n": 1}, {"title": "【 ２日目 】７個ゾロ目リベンジ企画！！🎲１日１時間振ったら何日目で出る！？【 うる虎がーる / あおぎり高校】", "guess": "2日目", "channel": "うる虎がーる / あおぎり高校", "u": "https://www.youtube.com/watch?v=RVPAHDSIde0", "n": 1}, {"title": "【 バイオハザード６ 】フレわたバイオ６の夏！わちゃわちゃ劇場がんばいお！！！#3【角巻わため/ホロライブ４期生】※ネタバレあり", "guess": "バイオハザード6", "channel": "Watame Ch. 角巻わため", "u": "https://www.youtube.com/watch?v=EOarF-MFfME", "n": 1}, {"title": "【ぷちホロの村】DLCで水着！？全員脱がすしかねぇ！【#ksonONAIR】", "guess": "ぷちホロの村", "channel": "kson ONAIR", "u": "https://www.youtube.com/watch?v=mFLBJCAXuIo", "n": 1}, {"title": "【ポルカの伝説】ちょっと変わった趣味ってあるやん？", "guess": "ポルカの伝説", "channel": "Polka Ch. 尾丸ポルカ", "u": "https://www.youtube.com/watch?v=ILR7rhrS4XQ", "n": 1}, {"title": "【重大告知】NEW EP「CHECK！」リリース決定！！【ホロライブ/ときのそら】", "guess": "重大告知", "channel": "SoraCh. ときのそらチャンネル", "u": "https://www.youtube.com/watch?v=vCujoDbc7F4", "n": 1}, {"title": "【魔法少女ノ魔女裁判】#13 次こそ平和を願ってもいいですか ※ネタバレあり【にじさんじ/アンジュ・カトリーナ】", "guess": "魔法少女ノ魔女裁判", "channel": "アンジュ・カトリーナ - Ange Katrina -", "u": "https://www.youtube.com/watch?v=fr06DqVLnIs", "n": 1}, {"title": "【機動転生】賀東招二先生最新作発売記念！わしらが先生とぶっちゃけトーク！【PR】", "guess": "機動転生", "channel": "マフィア梶田と中村悠一の「わしゃがなTV」", "u": "https://www.youtube.com/watch?v=hWKHyJXBqqA", "n": 1}, {"title": "『餓狼伝説 City of the Wolves』 ｜ ダック・キング", "guess": "餓狼伝説 city of the wolves", "channel": "PlayStation Japan", "u": "https://www.youtube.com/watch?v=04izfhOQLSE", "n": 1}, {"title": "【LIVE ver.】Princess Viral from YouTube Music Weekend 12.0", "guess": "live ver.", "channel": "音ノ乃のの / NononoNono", "u": "https://www.youtube.com/watch?v=88dUBcRyO8w", "n": 1}, {"title": "〖 第１回 〗 🍼 #りりかる〇〇ラジオ SP 🥩〖にじさんじ￤魔界ノりりむ〗", "guess": "第1回", "channel": "魔界ノりりむ", "u": "https://www.youtube.com/watch?v=36DPtyFqEd8", "n": 1}, {"title": "【ロックマンX2】全然記憶にないから多分初見のロックマンX2後半戦やっていくぅ！【#とまライブ】", "guess": "ロックマンx2", "channel": "Tomari Mari channel / 兎鞠まりちゃんねる", "u": "https://www.youtube.com/watch?v=d5yvGd602Jk", "n": 1}, {"title": "【メンバー限定配信】来月はぱちにいく【神楽めあ】", "guess": "メンバー限定配信", "channel": "神楽めあ / KaguraMea", "u": "https://www.youtube.com/watch?v=8GExOQ7uVC8", "n": 1}, {"title": "【ラブ上等】人に火をつけた男は売名に成功…更生の意味を考えさせられる法務省ポスター騒動について思うこと【かなえ先生の雑談】", "guess": "ラブ上等", "channel": "犯罪学教室のかなえ先生 V Criminologist", "u": "https://www.youtube.com/watch?v=88v9SRXQ-yA", "n": 1}, {"title": "【妖怪ウォッチ1】完全初見で妖怪ウォッチするぞ！ #1 ※ネタバレあり【叢雲カゲツ/にじさんじ】", "guess": "妖怪ウォッチ1", "channel": "叢雲カゲツ / Murakumo Kagetsu【にじさんじ】", "u": "https://www.youtube.com/watch?v=Ip_L1aXCcPo", "n": 1}, {"title": "【リ・ストーリー: 思い出修理屋】平成一桁ガチジジイがsteamで圧倒的好評の神ゲーやる【天開司/Vtuber】", "guess": "リ・ストーリー: 思い出修理屋", "channel": "バーチャル債務者youtuber天開司", "u": "https://www.youtube.com/watch?v=-kUMqB9ZuIs", "n": 1}, {"title": "【初見反応】モンハン完全新規古龍『光稜龍ルガ・エアルダ』が思ってたより可愛くて笑ってしまう抹茶＆『新融光種』に『新キャラ』で挑む！【MHO/モンスターハンターアウトランダーズ】", "guess": "初見反応", "channel": "ガンサーの抹茶", "u": "https://www.youtube.com/watch?v=TWdyFdRNP2k", "n": 1}, {"title": "【 昼雑 】寝れない人間の昼雑ですよ～～～～！！！！【にじさんじ/獅子堂あかり】", "guess": "昼雑", "channel": "獅子堂 あかり / Shishido Akari【にじさんじ】", "u": "https://www.youtube.com/watch?v=2z7JF7sHQC4", "n": 1}, {"title": "【裏ライブ】お久しぶりです。一体何をしていたのかお話します。", "guess": "裏ライブ", "channel": "最強ゼルダGamesいかぼうず", "u": "https://www.youtube.com/watch?v=NDCG0ARE5sI", "n": 1}, {"title": "【遅刻した日の】爆速モーニングルーティン【 あおぎり高校 / #山黒音玄 】", "guess": "遅刻した日の", "channel": "ねくろちゃん -Yamaguro Nekuro- /あおぎり高校", "u": "https://www.youtube.com/watch?v=R9VoSufkZSg", "n": 1}, {"title": "【 リズム天国 ミラクルスターズ 】リズム天国最新作！ウラステージに挑戦💃【七瀬すず菜/にじさんじ】", "guess": "リズム天国 ミラクルスターズ", "channel": "七瀬 すず菜 / Nanase Suzuna【にじさんじ】", "u": "https://www.youtube.com/watch?v=dV7YFbGSgFY", "n": 1}, {"title": "【日本語勉強】Japanese Study【NIJISANJI EN | Vezalius Bandage】", "guess": "日本語勉強", "channel": "Vezalius Bandage 【NIJISANJI EN】", "u": "https://www.youtube.com/watch?v=4yIajRE8Vmo", "n": 1}, {"title": "【PSストアセール】PS5gamescomセールが来たぞ！買うべきゲームはあるのか！？", "guess": "psストアセール", "channel": "けいじチャンネル", "u": "https://www.youtube.com/watch?v=Va_YCJJWTKE", "n": 1}, {"title": "【閲覧＆音量注意】全員酔っ払いで人狼はできるのか？ #ななし酔っ払い人狼【宗谷いちか/ななしいんく】", "guess": "閲覧&音量注意", "channel": " 宗谷いちか / Ichika Channel【ななしいんく】", "u": "https://www.youtube.com/watch?v=Ru10hUSFkq0", "n": 1}, {"title": "【人狼13人村】潜伏狂人でご主人だと信じた人を守り続けた結果！！ｗ", "guess": "人狼13人村", "channel": "プテラたかはし", "u": "https://www.youtube.com/watch?v=nlW6ZfJ9r2Y", "n": 1}, {"title": "【朝枠】おあよ？【甘音あむ / ネオポルテ】", "guess": "朝枠", "channel": "甘音あむ / Amane Amu", "u": "https://www.youtube.com/watch?v=4HJDWH6cVRA", "n": 1}, {"title": "【目標：ダイヤⅡ】そろそろしっかりランク盛らないといけない【P4 564RP~】", "guess": "目標:ダイヤii", "channel": "ビット -BitChannel-", "u": "https://www.youtube.com/watch?v=HfIkg7P-vzE", "n": 1}, {"title": "【VALO】大会に向けてスクリム！！", "guess": "valo", "channel": "音大生の頂点", "u": "https://www.youtube.com/watch?v=oT-aBQZQL8M", "n": 1}, {"title": "【整音無し/asmr】鼓膜が震えるあまぁい耳ふぅ耳はぁASMR💤【戸鎖くくり/個人勢Vtuber】", "guess": "整音無し/asmr", "channel": "kukuri ch * 戸鎖 くくり *", "u": "https://www.youtube.com/watch?v=QXsJMhX01ps", "n": 1}, {"title": "【人狼】もう、その椅子から降りろ…【#おさかなじんろう 】", "guess": "人狼", "channel": "羊飼いK", "u": "https://www.youtube.com/watch?v=-vwQqwf4d_c", "n": 1}, {"title": "【ノロイカゴ ゲゲゲの夜】ゲゲゲの鬼太郎のホラゲ!?協力して妖怪から逃げきれ!!【海汐もるふ/星屑ぷらね】", "guess": "ノロイカゴ ゲゲゲの夜", "channel": "Molf Ch. 海汐もるふ", "u": "https://www.youtube.com/watch?v=7ScDa7mR6hY", "n": 1}, {"title": "【 ペーパーマリオRPG 】#5 次のスターストーンの場所は！？🌟【 季咲あんこ / ななしいんく 】", "guess": "ペーパーマリオrpg", "channel": "季咲あんこ / Anko Channel【ななしいんく】", "u": "https://www.youtube.com/watch?v=ByeNkDqeeJE", "n": 1}, {"title": "【 きんようびの朝枠 】8月さいご～～！？のきんようび🐋🏝【 季咲あんこ / ななしいんく 】", "guess": "きんようびの朝枠", "channel": "季咲あんこ / Anko Channel【ななしいんく】", "u": "https://www.youtube.com/watch?v=hPKciL3bmZM", "n": 1}, {"title": "【凶寓】「今年一怖い」と話題になったホラーゲーム、そんなにヤバいの？【八神ツクモ/ネオポルテ】", "guess": "凶寓", "channel": "八神ツクモ / Yagami Tsukumo", "u": "https://www.youtube.com/watch?v=hPFwBEaXjEc", "n": 1}, {"title": "【めっちゃカメレオン】鬼のがすきなめずらしいタイプです！！！！！【日向奈央、音門るき、キョンシーのCiちゃん、辛咲こまど】", "guess": "めっちゃカメレオン", "channel": "Amoko Ch. 甘乃あもこ", "u": "https://www.youtube.com/watch?v=pFf46mOa7U8", "n": 1}, {"title": "【ノロイカゴ-ゲゲゲの夜-】ガチで怖いらしい!!もるふちゃんと恐怖体験していくよッ👻【星屑ぷらね/すぺしゃりて】#ノロイカゴ #ゲゲゲの夜 #すぺしゃりて", "guess": "ノロイカゴ-ゲゲゲの夜-", "channel": "星屑ぷらね / Planei Hoshikuzu", "u": "https://www.youtube.com/watch?v=4mOPKoNJ8ls", "n": 1}, {"title": "【バイオハザード　PS1】クリスさんなにしてたか気になる！！ #3【Vtuber きらり☆ももんが】", "guess": "バイオハザード ps1", "channel": "きらり☆ももんが", "u": "https://www.youtube.com/watch?v=fAioE0TUNjE", "n": 1}, {"title": "【PR　ナンジャタウンコラボ】もんがちゃんガチャをもんがちゃんが引くよ！！【Vtuber きらり☆ももんが】", "guess": "pr ナンジャタウンコラボ", "channel": "きらり☆ももんが", "u": "https://www.youtube.com/watch?v=gJghXAcZaT8", "n": 1}, {"title": "【DEADCAM】⚠悲鳴注意⚠ここから本番。クリアまで駆け抜ける！【初見歓迎】【ユノ・ミハナダ / MEWLIVE】[JP/EN]", "guess": "deadcam", "channel": "ユノ・ミハナダ / Yuno Mihanada", "u": "https://www.youtube.com/watch?v=7Jqot3gKSxk", "n": 1}, {"title": "【最終回(仮)】さようなら、ありがとう。すべての丹下琴絵【休暇もらいます】", "guess": "最終回(仮)", "channel": "丹下琴絵・tange kotoe CHANNEL", "u": "https://www.youtube.com/watch?v=3c7GozJ6l4Y", "n": 1}, {"title": "【挑戦企画】大好きなリンゴジュースで利きリンゴジュースやってみた！", "guess": "挑戦企画", "channel": "生田衣梨奈チャンネル", "u": "https://www.youtube.com/watch?v=dp8_pZ0S0Sg", "n": 1}, {"title": "【2ヶ月後相場】一番くじ NARUTO ナルト  疾風伝 風影奪還編 フィギュア 相場  暁", "guess": "2ヶ月後相場", "channel": "つむぎのフィギュア紹介ch", "u": "https://www.youtube.com/watch?v=w70yBWyNKxU", "n": 1}, {"title": "【6日目相場】一番くじ ドラゴンボールGT  相場 フィギュア 超サイヤ人4", "guess": "6日目相場", "channel": "つむぎのフィギュア紹介ch", "u": "https://www.youtube.com/watch?v=B9jXPcm9qPI", "n": 1}, {"title": "【ダンガンロンパ】完全初見！知らない間に何が起こってる？＃11【個人勢Vtuber/楚桜ゆのあ】", "guess": "ダンガンロンパ", "channel": "sozakura yunoa / 楚桜ゆのあ ch.", "u": "https://www.youtube.com/watch?v=BzCh1_QfP_k", "n": 1}, {"title": "【競馬同時視聴】ブリーダーズゴールドカップ2026【 鳩乃はろん / #新人VTuber】", "guess": "競馬同時視聴", "channel": "鳩乃はろん / Hatono Haron / 新人VTuber", "u": "https://www.youtube.com/watch?v=A73tgr78VpU", "n": 1}, {"title": "【逆転検事】#2 御剣怜侍が主人公の逆転裁判を初見プレイ～第2話～【男性Vtuber実況】", "guess": "逆転検事", "channel": "虚無人-創作者Vtuber-", "u": "https://www.youtube.com/watch?v=DmzKxyBNDUU", "n": 1}, {"title": "【ぽこあポケモン】さすがに建築します。#24【猫転はちなな】", "guess": "ぽこあポケモン", "channel": "はちななch", "u": "https://www.youtube.com/watch?v=L0DPJl1_OG8", "n": 1}, {"title": "【神回】20ターンの間1秒も目を離せないマリオパーティ。【マリオパーティジャンボリー】実況プレイ", "guess": "神回", "channel": "もこうの実況", "u": "https://www.youtube.com/watch?v=uW_sA38fdjI", "n": 1}, {"title": "【絨毯を洗うゲーム】朝活【不破湊/にじさんじ】", "guess": "絨毯を洗うゲーム", "channel": "不破 湊 / Fuwa Minato【にじさんじ】", "u": "https://www.youtube.com/watch?v=DJA4rFWVVHY", "n": 1}, {"title": "#01 【バイオハザード6】フレわたのわちゃわちゃ劇場ジェイク&シェリー編【不知火フレア/ホロライブ", "guess": "バイオハザード6", "channel": "Flare Ch. 不知火フレア", "u": "https://www.youtube.com/watch?v=nMHfsj73uCQ", "n": 1}, {"title": "【青鬼】完全初見！青鬼さん、はじめまして。【にじさんじ/町田ちま】", "guess": "青鬼", "channel": "町田ちま【にじさんじ】", "u": "https://www.youtube.com/watch?v=NNTvvTuinHo", "n": 1}, {"title": "【トリッカル】このゲームで最も評価が高いと噂のイベントストーリーが来たので初見で読みます。ｽﾋﾟｷは多分出ません。【にじさんじ/社築】", "guess": "トリッカル", "channel": "社築", "u": "https://www.youtube.com/watch?v=IE29djR3KTU", "n": 1}, {"title": "『鬼武者 Way of the Sword』× MAN WITH A MISSION「一閃」プロモーション映像（剣戟アクション編）", "guess": "鬼武者 way of the sword", "channel": "PlayStation Japan", "u": "https://www.youtube.com/watch?v=nMBxk51DwmE", "n": 1}, {"title": "#8【くっちゃべり】2026年8月26日【雑談】", "guess": "くっちゃべり", "channel": "SANNINSHOW", "u": "https://www.youtube.com/watch?v=jSlMpO1Ysb8", "n": 1}, {"title": "【南アジア】一度食べたら戻れない！？スリランカにある中毒性がヤバいカレー店へ潜入します！！", "guess": "南アジア", "channel": "ぽんぽこちゃんねる", "u": "https://www.youtube.com/watch?v=xmQJD04Dg4g", "n": 1}, {"title": "【遊戯王マスターデュエル】巳剣ホルス勉強会（視聴者参加型）【にじさんじ / 葉加瀬冬雪】", "guess": "遊戯王マスターデュエル", "channel": "葉加瀬 冬雪 / Hakase Fuyuki", "u": "https://www.youtube.com/watch?v=Rc0nzcJ05Ew", "n": 1}, {"title": "【火山の娘】緋八マナ、父として初めての子育てに挑戦！【にじさんじ/緋八マナ】", "guess": "火山の娘", "channel": "緋八マナ / Hibachi Mana【にじさんじ】", "u": "https://www.youtube.com/watch?v=bnGhb0yE_3g", "n": 1}, {"title": "【お祝い】チャンネル登録者40万人突破祝杯ですわぁ～！【柘榴シロ】", "guess": "お祝い", "channel": "柘榴シロ@Zakuro shiro", "u": "https://www.youtube.com/watch?v=LxFcv_sTXUA", "n": 1}, {"title": "【Naturecan】スイカにラムネ！？夏におすすめプロテインが爽快すぎて驚いた！【コラボセット販売】新人VTuber悠針れい #ゆうばりタイム", "guess": "naturecan", "channel": "Rei Ch. 悠針れい", "u": "https://www.youtube.com/watch?v=aeEZQoRggWI", "n": 1}, {"title": "【リズム天国 ミラクルスターズ】#2 サカキのリズムを知ってるかいほほほーい【榊ネス/にじさんじ】", "guess": "リズム天国 ミラクルスターズ", "channel": "榊ネス / Sakaki Ness【にじさんじ】", "u": "https://www.youtube.com/watch?v=QCjpzW8kdFw", "n": 1}, {"title": "【いっせいトライアル 最終日】「牧物」シリーズ最新作を遊んでみる！【牧場物語 Let's！風のグランドバザール】", "guess": "いっせいトライアル 最終日", "channel": "ヒラ", "u": "https://www.youtube.com/watch?v=GMDHqhksjRQ", "n": 1}, {"title": "【いっせいトライアル #3】「牧物」シリーズ最新作を遊んでみる！【牧場物語 Let's！風のグランドバザール】", "guess": "いっせいトライアル #3", "channel": "ヒラ", "u": "https://www.youtube.com/watch?v=GkgmKXqMZGc", "n": 1}, {"title": "【現在123連勝】100連勝のその先へ！7年目夏！【白球のキセキ】【プロスピ2026】【アカgames】", "guess": "現在123連勝", "channel": "アカgames", "u": "https://www.youtube.com/watch?v=jLUHYaVZT0o", "n": 1}, {"title": "『イーグレットツー ミニ』新作追加タイトル発表&新情報SP【ファミ通LIVE:三宅⿇理恵】", "guess": "イーグレットツー ミニ", "channel": "ファミ通TUBE", "u": "https://www.youtube.com/watch?v=7LA-A3T9NYM", "n": 1}, {"title": "【新参歓迎】俺は視聴者のことをよくわかっているのか⁉　視聴者参加型で「ito」やってみよう【なな湖】", "guess": "新参歓迎", "channel": "【琵琶ちゃぷ】なな湖なな湖", "u": "https://www.youtube.com/watch?v=U8kx2ZTJgZo", "n": 1}, {"title": "【ツイッチダイジェスト】おゆゆが出してるお店「メルトチューン」におえちゃんと乗り込んでみた結果！！！【withゆゆうた・おえちゃん】", "guess": "ツイッチダイジェスト", "channel": "つわはす", "u": "https://www.youtube.com/watch?v=ZkQhVPYWrI4", "n": 1}, {"title": "【 ３日目 】７個ゾロ目リベンジ企画！！🎲１日１時間振ったら何日目で出る！？【 うる虎がーる / あおぎり高校】", "guess": "3日目", "channel": "うる虎がーる / あおぎり高校", "u": "https://www.youtube.com/watch?v=Vy2pSHOXuXk", "n": 1}, {"title": "【睡眠導入配信】第２２回　Sleep-sheep　#シャルのひつじ【島村シャルロット / ななしいんく】", "guess": "睡眠導入配信", "channel": "島村シャルロット / Charlotte Channel【ななしいんく】", "u": "https://www.youtube.com/watch?v=oR-WoLDzDqk", "n": 1}, {"title": "【神シリーズ】全人類見るべき最高レベルの神試合！マクロ良し、連携良し、フィジカル良しの誰が見ても満足度★5のGen.G vs NSの激戦【VCT Pacific 2026 : STAGE 2】", "guess": "神シリーズ", "channel": "一ノ瀬とおる", "u": "https://www.youtube.com/watch?v=iiDdLznDFY0", "n": 1}, {"title": "【 ホラゲー/ 雪葬 】チラズアート最新作❕呪われた村で雪にまみれるヒトコワホラー👻❄【緑青くれは / ななしいんく】", "guess": "ホラゲー/ 雪葬", "channel": "緑青くれは / Kureha Channel【ななしいんく】", "u": "https://www.youtube.com/watch?v=zShQICauEKg", "n": 1}, {"title": "【緊急】ぽかぽか時間をお休みしてしまった件について【謝罪会見】#由比河ひなみ #ひなみ通信", "guess": "緊急", "channel": "ACHRORA - mekPark", "u": "https://www.youtube.com/watch?v=T0BD0bxsECQ", "n": 1}, {"title": "【配信振り返り】生誕祭準備の裏で…コラボ祭りが開催されていました🥳【#ひなみ通信】", "guess": "配信振り返り", "channel": "ACHRORA - mekPark", "u": "https://www.youtube.com/watch?v=WJzT4PsnmQo", "n": 1}, {"title": "【毎朝これ！】残り4回。全身がほぐれるかも！？ストレッチ【#あさやなストレッチ夏】＃墨汐さやな ＃さやな時間", "guess": "毎朝これ!", "channel": "ACHRORA - mekPark", "u": "https://www.youtube.com/watch?v=Xi7K5mdnXCY", "n": 1}, {"title": "【BASE FOOD】※手元カメラ注意※みんなが気になってる完全栄養食とやら食べてみるぞ【方言Vtuber/りとるん】", "guess": "base food", "channel": "Ritorun Ch.りとるん", "u": "https://www.youtube.com/watch?v=v5j-JXSHLTM", "n": 1}, {"title": "【温泉で使ったタオルと洗い方について】なな湖への対抗心は好意？　マシュマロ返信のコーナー その79", "guess": "温泉で使ったタオルと洗い方について", "channel": "怪傑がみちゃんねる", "u": "https://www.youtube.com/watch?v=OysI6iS44Hs", "n": 1}, {"title": "【黄泉に落ちても麻雀】地獄麻雀では何をやってもよい", "guess": "黄泉に落ちても麻雀", "channel": "たろちんDB", "u": "https://www.youtube.com/watch?v=T1M0eZLDRAo", "n": 1}, {"title": "【龍が如8外伝】完全初見！ お宝争奪戦が始まりそうな予感💥 ※ネタバレ注意【#07】【#新人Vtuber】【#ゾンビ天使すみ】", "guess": "龍が如8外伝", "channel": "ゾンビ天使 すみ", "u": "https://www.youtube.com/watch?v=CiyWAZCNfLY", "n": 1}, {"title": "#8【侍道4】打倒、バグ使い鬼怒川！今日こそ大団円ルートへ【ゲーム実況】", "guess": "侍道4", "channel": "SignDuck / サインダック", "u": "https://www.youtube.com/watch?v=cImhZOmQUq0", "n": 1}, {"title": "【カラオケ】　エラchの初(?)歌配信　 #歌枠", "guess": "カラオケ", "channel": "エラch", "u": "https://www.youtube.com/watch?v=1bTtouO0NrE", "n": 1}], "leads": {"events": [{"tag": "#ぶいすぽマイクラ夏祭り2026", "channels": ["一ノ瀬うるは", "兎咲ミミ / Tosaki Mimi", "夜乃くろむ / Yano Kuromu", "小雀とと / Toto Kogara", "甘結もか / Amayui Moka", "紫宮るな /shinomiya runa", "花芽すみれ / Kaga Sumire", "英リサ.Hanabusa Lisa", "藍沢エマ / Aizawa Ema", "蝶屋はなび / Choya Hanabi", "銀城サイネ / Ginjo Saine", "龍巻ちせ / Tatsumaki Chise"]}, {"tag": "#にじメンマイクラ", "channels": ["オリバー・エバンス / Oliver Evans 【にじさんじ】", "ベルモンド・バンデラス", "伏見ガク【にじさんじ所属】", "夢追翔のJUKE BOX", "弦月 藤士郎 / Genzuki Tojiro【にじさんじ】", "緋八マナ / Hibachi Mana【にじさんじ】", "魁星 / Kaisei【にじさんじ】"]}, {"tag": "#ななし夏休み歌枠リレー", "channels": ["アズリ / Azri【ななしいんく】", "堰代ミコ / Mico Channel【ななしいんく】", "月野木ちろる / Tirol Channel 【ななしいんく】", "瀬島るい / Rui Channel 【ななしいんく】", "緑青くれは / Kureha Channel【ななしいんく】", "茜音カンナ / Canna Channel【ななしいんく】"]}, {"tag": "#ストグラ", "channels": ["Amoko Ch. 甘乃あもこ", "クラウン【探検家の記録】", "ノビーの遊び部屋", "柚原いづみ / Izumi Channel 【ななしいんく】", "闇乃あびす / Abyss"]}, {"tag": "#ホロ7大豆劇場", "channels": ["Chihaya Ch. 輪堂 千速 - FLOW GLOW", "Riona Ch. 響咲リオナ - FLOW GLOW", "Towa Ch. 常闇トワ", "フブキCh。白上フブキ"]}, {"tag": "#ストグラSeason2", "channels": ["はたさこ / hatasako_flag", "クラウン【探検家の記録】", "柚原いづみ / Izumi Channel 【ななしいんく】", "赤髪のとものゲーム実況チャンネル!!"]}, {"tag": "#マイクラなつにっき", "channels": ["bintroll", "たけぉ", "幽音しの Shino Channel - ななしいんく"]}], "newcomers": [{"game": "Overwatch", "channels": 4, "videos": 4}, {"game": "Resonance", "channels": 2, "videos": 2}, {"game": "Call of Duty: Modern Warfare 4", "channels": 2, "videos": 2}], "wide": [{"game": "Minecraft", "channels": 38, "videos": 37}, {"game": "実況パワフルプロ野球2026", "channels": 11, "videos": 11}, {"game": "Apex Legends", "channels": 11, "videos": 12}, {"game": "ストリートファイター6", "channels": 9, "videos": 11}, {"game": "Grand Theft Auto V", "channels": 10, "videos": 12}, {"game": "7 Days to Die", "channels": 8, "videos": 8}, {"game": "Escape from Tarkov", "channels": 10, "videos": 7}, {"game": "ぷよぷよテトリス2", "channels": 6, "videos": 6}]}, "recent_columns": [{"date": "2026-08-28", "game": "Minecraft", "headline": "無関係な3つのマイクラ企画が重なり、夏休みの最後にマイクラが跳ねた"}, {"date": "2026-08-27", "game": "ぷよぷよテトリス2", "headline": "ホロライブの大会を控えて、メンバーがぷよぷよを教え合っている"}], "paths": {"home": "../", "archive": "../archive/"}};
+const DATA = {"mode": "admin", "date": "2026-08-28", "generated": "2026-08-28 16:38", "unknown": [{"title": "【ARK/ASA】アプデ後のアストレオスの情報収集【ローカル】", "guess": "ark/asa", "channel": "ダナ", "u": "https://www.youtube.com/watch?v=f_zoycEsozY", "n": 3}, {"title": "『東京サマーセッション』Cover 花芽なずな/花芽すみれ/白波らむね/猫汰つな/紫宮るな/如月れん/ ぶいすぽ 【歌ってみた】", "guess": "東京サマーセッション", "channel": "花芽なずな / Nazuna Kaga", "u": "https://www.youtube.com/watch?v=Wj6MOlxGKEY", "n": 1}, {"title": "【 ２日目 】７個ゾロ目リベンジ企画！！🎲１日１時間振ったら何日目で出る！？【 うる虎がーる / あおぎり高校】", "guess": "2日目", "channel": "うる虎がーる / あおぎり高校", "u": "https://www.youtube.com/watch?v=RVPAHDSIde0", "n": 1}, {"title": "【 バイオハザード６ 】フレわたバイオ６の夏！わちゃわちゃ劇場がんばいお！！！#3【角巻わため/ホロライブ４期生】※ネタバレあり", "guess": "バイオハザード6", "channel": "Watame Ch. 角巻わため", "u": "https://www.youtube.com/watch?v=EOarF-MFfME", "n": 1}, {"title": "【ぷちホロの村】DLCで水着！？全員脱がすしかねぇ！【#ksonONAIR】", "guess": "ぷちホロの村", "channel": "kson ONAIR", "u": "https://www.youtube.com/watch?v=mFLBJCAXuIo", "n": 1}, {"title": "【ポルカの伝説】ちょっと変わった趣味ってあるやん？", "guess": "ポルカの伝説", "channel": "Polka Ch. 尾丸ポルカ", "u": "https://www.youtube.com/watch?v=ILR7rhrS4XQ", "n": 1}, {"title": "【重大告知】NEW EP「CHECK！」リリース決定！！【ホロライブ/ときのそら】", "guess": "重大告知", "channel": "SoraCh. ときのそらチャンネル", "u": "https://www.youtube.com/watch?v=vCujoDbc7F4", "n": 1}, {"title": "【魔法少女ノ魔女裁判】#13 次こそ平和を願ってもいいですか ※ネタバレあり【にじさんじ/アンジュ・カトリーナ】", "guess": "魔法少女ノ魔女裁判", "channel": "アンジュ・カトリーナ - Ange Katrina -", "u": "https://www.youtube.com/watch?v=fr06DqVLnIs", "n": 1}, {"title": "【機動転生】賀東招二先生最新作発売記念！わしらが先生とぶっちゃけトーク！【PR】", "guess": "機動転生", "channel": "マフィア梶田と中村悠一の「わしゃがなTV」", "u": "https://www.youtube.com/watch?v=hWKHyJXBqqA", "n": 1}, {"title": "『餓狼伝説 City of the Wolves』 ｜ ダック・キング", "guess": "餓狼伝説 city of the wolves", "channel": "PlayStation Japan", "u": "https://www.youtube.com/watch?v=04izfhOQLSE", "n": 1}, {"title": "【LIVE ver.】Princess Viral from YouTube Music Weekend 12.0", "guess": "live ver.", "channel": "音ノ乃のの / NononoNono", "u": "https://www.youtube.com/watch?v=88dUBcRyO8w", "n": 1}, {"title": "〖 第１回 〗 🍼 #りりかる〇〇ラジオ SP 🥩〖にじさんじ￤魔界ノりりむ〗", "guess": "第1回", "channel": "魔界ノりりむ", "u": "https://www.youtube.com/watch?v=36DPtyFqEd8", "n": 1}, {"title": "【ロックマンX2】全然記憶にないから多分初見のロックマンX2後半戦やっていくぅ！【#とまライブ】", "guess": "ロックマンx2", "channel": "Tomari Mari channel / 兎鞠まりちゃんねる", "u": "https://www.youtube.com/watch?v=d5yvGd602Jk", "n": 1}, {"title": "【メンバー限定配信】来月はぱちにいく【神楽めあ】", "guess": "メンバー限定配信", "channel": "神楽めあ / KaguraMea", "u": "https://www.youtube.com/watch?v=8GExOQ7uVC8", "n": 1}, {"title": "【ラブ上等】人に火をつけた男は売名に成功…更生の意味を考えさせられる法務省ポスター騒動について思うこと【かなえ先生の雑談】", "guess": "ラブ上等", "channel": "犯罪学教室のかなえ先生 V Criminologist", "u": "https://www.youtube.com/watch?v=88v9SRXQ-yA", "n": 1}, {"title": "【妖怪ウォッチ1】完全初見で妖怪ウォッチするぞ！ #1 ※ネタバレあり【叢雲カゲツ/にじさんじ】", "guess": "妖怪ウォッチ1", "channel": "叢雲カゲツ / Murakumo Kagetsu【にじさんじ】", "u": "https://www.youtube.com/watch?v=Ip_L1aXCcPo", "n": 1}, {"title": "【リ・ストーリー: 思い出修理屋】平成一桁ガチジジイがsteamで圧倒的好評の神ゲーやる【天開司/Vtuber】", "guess": "リ・ストーリー: 思い出修理屋", "channel": "バーチャル債務者youtuber天開司", "u": "https://www.youtube.com/watch?v=-kUMqB9ZuIs", "n": 1}, {"title": "【初見反応】モンハン完全新規古龍『光稜龍ルガ・エアルダ』が思ってたより可愛くて笑ってしまう抹茶＆『新融光種』に『新キャラ』で挑む！【MHO/モンスターハンターアウトランダーズ】", "guess": "初見反応", "channel": "ガンサーの抹茶", "u": "https://www.youtube.com/watch?v=TWdyFdRNP2k", "n": 1}, {"title": "【裏ライブ】お久しぶりです。一体何をしていたのかお話します。", "guess": "裏ライブ", "channel": "最強ゼルダGamesいかぼうず", "u": "https://www.youtube.com/watch?v=NDCG0ARE5sI", "n": 1}, {"title": "【遅刻した日の】爆速モーニングルーティン【 あおぎり高校 / #山黒音玄 】", "guess": "遅刻した日の", "channel": "ねくろちゃん -Yamaguro Nekuro- /あおぎり高校", "u": "https://www.youtube.com/watch?v=R9VoSufkZSg", "n": 1}, {"title": "【 リズム天国 ミラクルスターズ 】リズム天国最新作！ウラステージに挑戦💃【七瀬すず菜/にじさんじ】", "guess": "リズム天国 ミラクルスターズ", "channel": "七瀬 すず菜 / Nanase Suzuna【にじさんじ】", "u": "https://www.youtube.com/watch?v=dV7YFbGSgFY", "n": 1}, {"title": "【日本語勉強】Japanese Study【NIJISANJI EN | Vezalius Bandage】", "guess": "日本語勉強", "channel": "Vezalius Bandage 【NIJISANJI EN】", "u": "https://www.youtube.com/watch?v=4yIajRE8Vmo", "n": 1}, {"title": "【PSストアセール】PS5gamescomセールが来たぞ！買うべきゲームはあるのか！？", "guess": "psストアセール", "channel": "けいじチャンネル", "u": "https://www.youtube.com/watch?v=Va_YCJJWTKE", "n": 1}, {"title": "【閲覧＆音量注意】全員酔っ払いで人狼はできるのか？ #ななし酔っ払い人狼【宗谷いちか/ななしいんく】", "guess": "閲覧&音量注意", "channel": " 宗谷いちか / Ichika Channel【ななしいんく】", "u": "https://www.youtube.com/watch?v=Ru10hUSFkq0", "n": 1}, {"title": "【人狼13人村】潜伏狂人でご主人だと信じた人を守り続けた結果！！ｗ", "guess": "人狼13人村", "channel": "プテラたかはし", "u": "https://www.youtube.com/watch?v=nlW6ZfJ9r2Y", "n": 1}, {"title": "【朝枠】おあよ？【甘音あむ / ネオポルテ】", "guess": "朝枠", "channel": "甘音あむ / Amane Amu", "u": "https://www.youtube.com/watch?v=4HJDWH6cVRA", "n": 1}, {"title": "【目標：ダイヤⅡ】そろそろしっかりランク盛らないといけない【P4 564RP~】", "guess": "目標:ダイヤii", "channel": "ビット -BitChannel-", "u": "https://www.youtube.com/watch?v=HfIkg7P-vzE", "n": 1}, {"title": "【VALO】大会に向けてスクリム！！", "guess": "valo", "channel": "音大生の頂点", "u": "https://www.youtube.com/watch?v=oT-aBQZQL8M", "n": 1}, {"title": "【整音無し/asmr】鼓膜が震えるあまぁい耳ふぅ耳はぁASMR💤【戸鎖くくり/個人勢Vtuber】", "guess": "整音無し/asmr", "channel": "kukuri ch * 戸鎖 くくり *", "u": "https://www.youtube.com/watch?v=QXsJMhX01ps", "n": 1}, {"title": "【人狼】もう、その椅子から降りろ…【#おさかなじんろう 】", "guess": "人狼", "channel": "羊飼いK", "u": "https://www.youtube.com/watch?v=-vwQqwf4d_c", "n": 1}, {"title": "【 ペーパーマリオRPG 】#5 次のスターストーンの場所は！？🌟【 季咲あんこ / ななしいんく 】", "guess": "ペーパーマリオrpg", "channel": "季咲あんこ / Anko Channel【ななしいんく】", "u": "https://www.youtube.com/watch?v=ByeNkDqeeJE", "n": 1}, {"title": "【 きんようびの朝枠 】8月さいご～～！？のきんようび🐋🏝【 季咲あんこ / ななしいんく 】", "guess": "きんようびの朝枠", "channel": "季咲あんこ / Anko Channel【ななしいんく】", "u": "https://www.youtube.com/watch?v=hPKciL3bmZM", "n": 1}, {"title": "【凶寓】「今年一怖い」と話題になったホラーゲーム、そんなにヤバいの？【八神ツクモ/ネオポルテ】", "guess": "凶寓", "channel": "八神ツクモ / Yagami Tsukumo", "u": "https://www.youtube.com/watch?v=hPFwBEaXjEc", "n": 1}, {"title": "【めっちゃカメレオン】鬼のがすきなめずらしいタイプです！！！！！【日向奈央、音門るき、キョンシーのCiちゃん、辛咲こまど】", "guess": "めっちゃカメレオン", "channel": "Amoko Ch. 甘乃あもこ", "u": "https://www.youtube.com/watch?v=pFf46mOa7U8", "n": 1}, {"title": "【ノロイカゴ-ゲゲゲの夜-】ガチで怖いらしい!!もるふちゃんと恐怖体験していくよッ👻【星屑ぷらね/すぺしゃりて】#ノロイカゴ #ゲゲゲの夜 #すぺしゃりて", "guess": "ノロイカゴ-ゲゲゲの夜-", "channel": "星屑ぷらね / Planei Hoshikuzu", "u": "https://www.youtube.com/watch?v=4mOPKoNJ8ls", "n": 1}, {"title": "【バイオハザード　PS1】クリスさんなにしてたか気になる！！ #3【Vtuber きらり☆ももんが】", "guess": "バイオハザード ps1", "channel": "きらり☆ももんが", "u": "https://www.youtube.com/watch?v=fAioE0TUNjE", "n": 1}, {"title": "【DEADCAM】⚠悲鳴注意⚠ここから本番。クリアまで駆け抜ける！【初見歓迎】【ユノ・ミハナダ / MEWLIVE】[JP/EN]", "guess": "deadcam", "channel": "ユノ・ミハナダ / Yuno Mihanada", "u": "https://www.youtube.com/watch?v=7Jqot3gKSxk", "n": 1}, {"title": "【最終回(仮)】さようなら、ありがとう。すべての丹下琴絵【休暇もらいます】", "guess": "最終回(仮)", "channel": "丹下琴絵・tange kotoe CHANNEL", "u": "https://www.youtube.com/watch?v=3c7GozJ6l4Y", "n": 1}, {"title": "【KAZUMA KANEKO's ツクヨミ】初見プレイ生配信 #16  ※ネタバレやアドバイスはご遠慮はご遠慮ください！", "guess": "kazuma kaneko's ツクヨミ", "channel": "川西ゆうこのチャンネル", "u": "https://www.youtube.com/watch?v=NH62sCZTTww", "n": 1}, {"title": "【挑戦企画】大好きなリンゴジュースで利きリンゴジュースやってみた！", "guess": "挑戦企画", "channel": "生田衣梨奈チャンネル", "u": "https://www.youtube.com/watch?v=dp8_pZ0S0Sg", "n": 1}, {"title": "【2ヶ月後相場】一番くじ NARUTO ナルト  疾風伝 風影奪還編 フィギュア 相場  暁", "guess": "2ヶ月後相場", "channel": "つむぎのフィギュア紹介ch", "u": "https://www.youtube.com/watch?v=w70yBWyNKxU", "n": 1}, {"title": "【6日目相場】一番くじ ドラゴンボールGT  相場 フィギュア 超サイヤ人4", "guess": "6日目相場", "channel": "つむぎのフィギュア紹介ch", "u": "https://www.youtube.com/watch?v=B9jXPcm9qPI", "n": 1}, {"title": "【ダンガンロンパ】完全初見！知らない間に何が起こってる？＃11【個人勢Vtuber/楚桜ゆのあ】", "guess": "ダンガンロンパ", "channel": "sozakura yunoa / 楚桜ゆのあ ch.", "u": "https://www.youtube.com/watch?v=BzCh1_QfP_k", "n": 1}, {"title": "【競馬同時視聴】ブリーダーズゴールドカップ2026【 鳩乃はろん / #新人VTuber】", "guess": "競馬同時視聴", "channel": "鳩乃はろん / Hatono Haron / 新人VTuber", "u": "https://www.youtube.com/watch?v=A73tgr78VpU", "n": 1}, {"title": "【逆転検事】#2 御剣怜侍が主人公の逆転裁判を初見プレイ～第2話～【男性Vtuber実況】", "guess": "逆転検事", "channel": "虚無人-創作者Vtuber-", "u": "https://www.youtube.com/watch?v=DmzKxyBNDUU", "n": 1}, {"title": "【ぽこあポケモン】さすがに建築します。#24【猫転はちなな】", "guess": "ぽこあポケモン", "channel": "はちななch", "u": "https://www.youtube.com/watch?v=L0DPJl1_OG8", "n": 1}, {"title": "【 はいしんよてち！ 】【ホロライブ/さくらみこ】", "guess": "はいしんよてち!", "channel": "Miko Ch. さくらみこ", "u": "https://www.youtube.com/watch?v=_gFulU0JSGk", "n": 1}, {"title": "【神回】20ターンの間1秒も目を離せないマリオパーティ。【マリオパーティジャンボリー】実況プレイ", "guess": "神回", "channel": "もこうの実況", "u": "https://www.youtube.com/watch?v=uW_sA38fdjI", "n": 1}, {"title": "【絨毯を洗うゲーム】朝活【不破湊/にじさんじ】", "guess": "絨毯を洗うゲーム", "channel": "不破 湊 / Fuwa Minato【にじさんじ】", "u": "https://www.youtube.com/watch?v=DJA4rFWVVHY", "n": 1}, {"title": "#01 【バイオハザード6】フレわたのわちゃわちゃ劇場ジェイク&シェリー編【不知火フレア/ホロライブ", "guess": "バイオハザード6", "channel": "Flare Ch. 不知火フレア", "u": "https://www.youtube.com/watch?v=nMHfsj73uCQ", "n": 1}, {"title": "【📸実写カメラ♡】チャイナ服×〇〇解禁！！！つ、ついにお姉さんからアレの解禁です！！！", "guess": "実写カメラ", "channel": "みけねこch", "u": "https://www.youtube.com/watch?v=-YcPdd7Go-Q", "n": 1}, {"title": "【青鬼】完全初見！青鬼さん、はじめまして。【にじさんじ/町田ちま】", "guess": "青鬼", "channel": "町田ちま【にじさんじ】", "u": "https://www.youtube.com/watch?v=NNTvvTuinHo", "n": 1}, {"title": "【トリッカル】このゲームで最も評価が高いと噂のイベントストーリーが来たので初見で読みます。ｽﾋﾟｷは多分出ません。【にじさんじ/社築】", "guess": "トリッカル", "channel": "社築", "u": "https://www.youtube.com/watch?v=IE29djR3KTU", "n": 1}, {"title": "『鬼武者 Way of the Sword』× MAN WITH A MISSION「一閃」プロモーション映像（剣戟アクション編）", "guess": "鬼武者 way of the sword", "channel": "PlayStation Japan", "u": "https://www.youtube.com/watch?v=nMBxk51DwmE", "n": 1}, {"title": "#8【くっちゃべり】2026年8月26日【雑談】", "guess": "くっちゃべり", "channel": "SANNINSHOW", "u": "https://www.youtube.com/watch?v=jSlMpO1Ysb8", "n": 1}, {"title": "【南アジア】一度食べたら戻れない！？スリランカにある中毒性がヤバいカレー店へ潜入します！！", "guess": "南アジア", "channel": "ぽんぽこちゃんねる", "u": "https://www.youtube.com/watch?v=xmQJD04Dg4g", "n": 1}, {"title": "【遊戯王マスターデュエル】巳剣ホルス勉強会（視聴者参加型）【にじさんじ / 葉加瀬冬雪】", "guess": "遊戯王マスターデュエル", "channel": "葉加瀬 冬雪 / Hakase Fuyuki", "u": "https://www.youtube.com/watch?v=Rc0nzcJ05Ew", "n": 1}, {"title": "【火山の娘】緋八マナ、父として初めての子育てに挑戦！【にじさんじ/緋八マナ】", "guess": "火山の娘", "channel": "緋八マナ / Hibachi Mana【にじさんじ】", "u": "https://www.youtube.com/watch?v=bnGhb0yE_3g", "n": 1}, {"title": "【グランツーリスモ7】ひさびさにコーナー攻めるぜ！！！【シェリン/にじさんじ】", "guess": "グランツーリスモ7", "channel": "シェリン・バーガンディ -Shellin Burgundy- 【にじさんじ】", "u": "https://www.youtube.com/watch?v=gZ34937tsVI", "n": 1}, {"title": "【お祝い】チャンネル登録者40万人突破祝杯ですわぁ～！【柘榴シロ】", "guess": "お祝い", "channel": "柘榴シロ@Zakuro shiro", "u": "https://www.youtube.com/watch?v=LxFcv_sTXUA", "n": 1}, {"title": "【Naturecan】スイカにラムネ！？夏におすすめプロテインが爽快すぎて驚いた！【コラボセット販売】新人VTuber悠針れい #ゆうばりタイム", "guess": "naturecan", "channel": "Rei Ch. 悠針れい", "u": "https://www.youtube.com/watch?v=aeEZQoRggWI", "n": 1}, {"title": "【リズム天国 ミラクルスターズ】#2 サカキのリズムを知ってるかいほほほーい【榊ネス/にじさんじ】", "guess": "リズム天国 ミラクルスターズ", "channel": "榊ネス / Sakaki Ness【にじさんじ】", "u": "https://www.youtube.com/watch?v=QCjpzW8kdFw", "n": 1}, {"title": "【いっせいトライアル 最終日】「牧物」シリーズ最新作を遊んでみる！【牧場物語 Let's！風のグランドバザール】", "guess": "いっせいトライアル 最終日", "channel": "ヒラ", "u": "https://www.youtube.com/watch?v=GMDHqhksjRQ", "n": 1}, {"title": "【いっせいトライアル #3】「牧物」シリーズ最新作を遊んでみる！【牧場物語 Let's！風のグランドバザール】", "guess": "いっせいトライアル #3", "channel": "ヒラ", "u": "https://www.youtube.com/watch?v=GkgmKXqMZGc", "n": 1}, {"title": "【現在123連勝】100連勝のその先へ！7年目夏！【白球のキセキ】【プロスピ2026】【アカgames】", "guess": "現在123連勝", "channel": "アカgames", "u": "https://www.youtube.com/watch?v=jLUHYaVZT0o", "n": 1}, {"title": "『イーグレットツー ミニ』新作追加タイトル発表&新情報SP【ファミ通LIVE:三宅⿇理恵】", "guess": "イーグレットツー ミニ", "channel": "ファミ通TUBE", "u": "https://www.youtube.com/watch?v=7LA-A3T9NYM", "n": 1}, {"title": "【リズム天国 ミラクルスターズ】めげない！！しょげない！！クリアまで！！【杏戸ゆげ/ななしいんく】", "guess": "リズム天国 ミラクルスターズ", "channel": "杏戸ゆげ / Uge Channel【ななしいんく】", "u": "https://www.youtube.com/watch?v=CgaOiuQUHSA", "n": 1}, {"title": "【新参歓迎】俺は視聴者のことをよくわかっているのか⁉　視聴者参加型で「ito」やってみよう【なな湖】", "guess": "新参歓迎", "channel": "【琵琶ちゃぷ】なな湖なな湖", "u": "https://www.youtube.com/watch?v=U8kx2ZTJgZo", "n": 1}, {"title": "【ツイッチダイジェスト】おゆゆが出してるお店「メルトチューン」におえちゃんと乗り込んでみた結果！！！【withゆゆうた・おえちゃん】", "guess": "ツイッチダイジェスト", "channel": "つわはす", "u": "https://www.youtube.com/watch?v=ZkQhVPYWrI4", "n": 1}, {"title": "【 ３日目 】７個ゾロ目リベンジ企画！！🎲１日１時間振ったら何日目で出る！？【 うる虎がーる / あおぎり高校】", "guess": "3日目", "channel": "うる虎がーる / あおぎり高校", "u": "https://www.youtube.com/watch?v=Vy2pSHOXuXk", "n": 1}, {"title": "【睡眠導入配信】第２２回　Sleep-sheep　#シャルのひつじ【島村シャルロット / ななしいんく】", "guess": "睡眠導入配信", "channel": "島村シャルロット / Charlotte Channel【ななしいんく】", "u": "https://www.youtube.com/watch?v=oR-WoLDzDqk", "n": 1}, {"title": "【ホラー】『再生してはいけない動画』を再生したインフルエンサーが失踪した事件 生配信【たろうくんはいってきました】", "guess": "ホラー", "channel": "サンキュームービー", "u": "https://www.youtube.com/watch?v=SgfzFCStNvw", "n": 1}, {"title": "【神シリーズ】全人類見るべき最高レベルの神試合！マクロ良し、連携良し、フィジカル良しの誰が見ても満足度★5のGen.G vs NSの激戦【VCT Pacific 2026 : STAGE 2】", "guess": "神シリーズ", "channel": "一ノ瀬とおる", "u": "https://www.youtube.com/watch?v=iiDdLznDFY0", "n": 1}, {"title": "【 ホラゲー/ 雪葬 】チラズアート最新作❕呪われた村で雪にまみれるヒトコワホラー👻❄【緑青くれは / ななしいんく】", "guess": "ホラゲー/ 雪葬", "channel": "緑青くれは / Kureha Channel【ななしいんく】", "u": "https://www.youtube.com/watch?v=zShQICauEKg", "n": 1}, {"title": "【緊急】ぽかぽか時間をお休みしてしまった件について【謝罪会見】#由比河ひなみ #ひなみ通信", "guess": "緊急", "channel": "ACHRORA - mekPark", "u": "https://www.youtube.com/watch?v=T0BD0bxsECQ", "n": 1}, {"title": "【配信振り返り】生誕祭準備の裏で…コラボ祭りが開催されていました🥳【#ひなみ通信】", "guess": "配信振り返り", "channel": "ACHRORA - mekPark", "u": "https://www.youtube.com/watch?v=WJzT4PsnmQo", "n": 1}, {"title": "【毎朝これ！】残り4回。全身がほぐれるかも！？ストレッチ【#あさやなストレッチ夏】＃墨汐さやな ＃さやな時間", "guess": "毎朝これ!", "channel": "ACHRORA - mekPark", "u": "https://www.youtube.com/watch?v=Xi7K5mdnXCY", "n": 1}, {"title": "【BASE FOOD】※手元カメラ注意※みんなが気になってる完全栄養食とやら食べてみるぞ【方言Vtuber/りとるん】", "guess": "base food", "channel": "Ritorun Ch.りとるん", "u": "https://www.youtube.com/watch?v=v5j-JXSHLTM", "n": 1}, {"title": "【温泉で使ったタオルと洗い方について】なな湖への対抗心は好意？　マシュマロ返信のコーナー その79", "guess": "温泉で使ったタオルと洗い方について", "channel": "怪傑がみちゃんねる", "u": "https://www.youtube.com/watch?v=OysI6iS44Hs", "n": 1}, {"title": "【 花火デート 】最後に僕と夏の思い出作ろう！【 シェアドリ / 白述ノワ 】", "guess": "花火デート", "channel": "白述ノワ / Noir Siranobe", "u": "https://www.youtube.com/watch?v=pm0cI50sbtY", "n": 1}, {"title": "【黄泉に落ちても麻雀】地獄麻雀では何をやってもよい", "guess": "黄泉に落ちても麻雀", "channel": "たろちんDB", "u": "https://www.youtube.com/watch?v=T1M0eZLDRAo", "n": 1}, {"title": "【飲酒雑談】8月末！すべり込む夏の晩酌！！【個人勢Vtuber/楚桜ゆのあ】", "guess": "飲酒雑談", "channel": "sozakura yunoa / 楚桜ゆのあ ch.", "u": "https://www.youtube.com/watch?v=6trXOhcFpDU", "n": 1}, {"title": "【ファンタジーライフi】完全初見🔰探索！バカデッカーナ大陸✨ストーリー攻略中！", "guess": "ファンタジーライフi", "channel": "桃之もれん Momono Moren Ch", "u": "https://www.youtube.com/watch?v=CPlj6NR2L9c", "n": 1}, {"title": "【龍が如8外伝】完全初見！ お宝争奪戦が始まりそうな予感💥 ※ネタバレ注意【#07】【#新人Vtuber】【#ゾンビ天使すみ】", "guess": "龍が如8外伝", "channel": "ゾンビ天使 すみ", "u": "https://www.youtube.com/watch?v=CiyWAZCNfLY", "n": 1}, {"title": "#8【侍道4】打倒、バグ使い鬼怒川！今日こそ大団円ルートへ【ゲーム実況】", "guess": "侍道4", "channel": "SignDuck / サインダック", "u": "https://www.youtube.com/watch?v=cImhZOmQUq0", "n": 1}, {"title": "【カラオケ】　エラchの初(?)歌配信　 #歌枠", "guess": "カラオケ", "channel": "エラch", "u": "https://www.youtube.com/watch?v=1bTtouO0NrE", "n": 1}], "leads": {"events": [{"tag": "#ぶいすぽマイクラ夏祭り2026", "channels": ["一ノ瀬うるは", "兎咲ミミ / Tosaki Mimi", "夜乃くろむ / Yano Kuromu", "小雀とと / Toto Kogara", "甘結もか / Amayui Moka", "紫宮るな /shinomiya runa", "花芽すみれ / Kaga Sumire", "英リサ.Hanabusa Lisa", "藍沢エマ / Aizawa Ema", "蝶屋はなび / Choya Hanabi", "銀城サイネ / Ginjo Saine", "龍巻ちせ / Tatsumaki Chise"]}, {"tag": "#にじメンマイクラ", "channels": ["オリバー・エバンス / Oliver Evans 【にじさんじ】", "ベルモンド・バンデラス", "九里詠太 / Kuri Eita【にじさんじ】", "伏見ガク【にじさんじ所属】", "夢追翔のJUKE BOX", "緋八マナ / Hibachi Mana【にじさんじ】", "魁星 / Kaisei【にじさんじ】"]}, {"tag": "#ななし夏休み歌枠リレー", "channels": ["アズリ / Azri【ななしいんく】", "堰代ミコ / Mico Channel【ななしいんく】", "月野木ちろる / Tirol Channel 【ななしいんく】", "瀬島るい / Rui Channel 【ななしいんく】", "緑青くれは / Kureha Channel【ななしいんく】", "茜音カンナ / Canna Channel【ななしいんく】"]}, {"tag": "#ストグラ", "channels": ["Amoko Ch. 甘乃あもこ", "クラウン【探検家の記録】", "ノビーの遊び部屋", "柚原いづみ / Izumi Channel 【ななしいんく】", "闇乃あびす / Abyss"]}, {"tag": "#ホロ7大豆劇場", "channels": ["Chihaya Ch. 輪堂 千速 - FLOW GLOW", "Riona Ch. 響咲リオナ - FLOW GLOW", "Towa Ch. 常闇トワ", "フブキCh。白上フブキ"]}, {"tag": "#ストグラSeason2", "channels": ["はたさこ / hatasako_flag", "クラウン【探検家の記録】", "柚原いづみ / Izumi Channel 【ななしいんく】", "赤髪のとものゲーム実況チャンネル!!"]}, {"tag": "#あおぎり高校", "channels": ["うらめちゃんねる /あおぎり高校", "こまるCh. - Komaru Kurikoma -/あおぎり高校", "ちよみch. 千代浦蝶美 /あおぎり高校"]}, {"tag": "#マイクラなつにっき", "channels": ["bintroll", "たけぉ", "幽音しの Shino Channel - ななしいんく"]}], "newcomers": [{"game": "Overwatch", "channels": 4, "videos": 4}, {"game": "Resonance", "channels": 2, "videos": 2}, {"game": "Call of Duty: Modern Warfare 4", "channels": 2, "videos": 2}], "wide": [{"game": "Minecraft", "channels": 38, "videos": 36}, {"game": "Apex Legends", "channels": 14, "videos": 15}, {"game": "実況パワフルプロ野球2026", "channels": 12, "videos": 12}, {"game": "7 Days to Die", "channels": 8, "videos": 8}, {"game": "Grand Theft Auto V", "channels": 10, "videos": 11}, {"game": "ぷよぷよテトリス2", "channels": 7, "videos": 7}, {"game": "Escape from Tarkov", "channels": 10, "videos": 7}, {"game": "VALORANT", "channels": 8, "videos": 9}]}, "recent_columns": [{"date": "2026-08-28", "game": "Minecraft", "headline": "無関係な3つのマイクラ企画が重なり、夏休みの最後にマイクラが跳ねた"}, {"date": "2026-08-27", "game": "ぷよぷよテトリス2", "headline": "ホロライブの大会を控えて、メンバーがぷよぷよを教え合っている"}], "paths": {"home": "../", "archive": "../archive/"}};
 const $ = s => document.querySelector(s);
 const esc = s => String(s ?? '').replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
 const cssv = n => getComputedStyle(document.documentElement).getPropertyValue(n).trim();
@@ -320,14 +379,19 @@ function render(){
       links.push(`<a href="${esc(cr.steam)}" target="_blank" rel="noopener sponsored">Steam</a>`);
     const cbuy = links.length
       ? `<div class="buy" style="margin-top:2px">${links.join('')}</div>` : '';
+    const hero = cr && cr.streams && cr.streams[0] && cr.streams[0].th ? cr.streams[0].th : '';
+    $('#pick').classList.toggle('has-img', !!hero);
     $('#pick').innerHTML = `
-      <span class="badge">PICK UP</span>
-      <div class="g">${esc(col.game)}</div>
-      <div class="hl">${esc(col.headline)}</div>
-      <p>${esc(col.body)}</p>
-      ${cbuy}
-      ${(col.people || []).length ? `<div class="who">${col.people.map(p => `<span>${esc(p)}</span>`).join('')}</div>` : ''}
-      ${(col.sources || []).length ? `<div class="src">${col.sources.map(x => `<a href="${esc(x.u)}" target="_blank" rel="noopener">${esc(x.t)}</a>`).join('')}</div>` : ''}`;
+      ${hero ? `<img class="heroimg" src="${esc(hero)}" alt="" loading="lazy">` : ''}
+      <div class="ptxt">
+        <span class="badge">PICK UP</span>
+        <div class="g">${esc(col.game)}</div>
+        <div class="hl">${esc(col.headline)}</div>
+        <p>${esc(col.body)}</p>
+        ${cbuy}
+        ${(col.people || []).length ? `<div class="who">${col.people.map(p => `<span>${esc(p)}</span>`).join('')}</div>` : ''}
+        ${(col.sources || []).length ? `<div class="src">${col.sources.map(x => `<a href="${esc(x.u)}" target="_blank" rel="noopener">${esc(x.t)}</a>`).join('')}</div>` : ''}
+      </div>`;
   }
   $('#s-date').textContent = (DATA.date || '').replace(/-/g, '.');
   $('#s-meta').textContent = (DATA.range && !isArchive ? DATA.range + ' ・ ' : '')
@@ -339,6 +403,9 @@ function render(){
   const dayk = isArchive ? 'この日' : '24時間で';
 
   const mo = DATA.momentum || {ready: true};
+  // 倍率が出せない間の「広がり」は、下の上位3カードと同じ中身になってしまう。
+  // 二度同じものを見せても意味がないので、出せるようになるまで隠す。
+  $('#hot-sec').style.display = mo.ready ? '' : 'none';
   if (!mo.ready) {
     // データが足りないうちは倍率を出さない。代わりに「広がり」を出す。
     $('#hot-title').textContent = DAY + 'いちばん広がったゲーム';
@@ -369,24 +436,58 @@ function render(){
 
   const list = (DATA.ranking || []).filter(r => !orgFilter || (r.orgs && r.orgs[orgFilter]));
   const top = Math.max(1, ...list.map(r => r.score || 0));
-  $('#rows').innerHTML = list.map((r, i) => {
-    const mv = r.videos < 3 ? '<span class="mv fl">—</span>'
-      : (r.growth && r.growth >= 1.25) ? `<span class="mv up">▲ ×${r.growth.toFixed(1)}</span>`
-      : '<span class="mv fl">—</span>';
-    const orgTxt = Object.entries(r.orgs || {}).slice(0, 2).map(([k, v]) => `${k} ${v}`).join(' · ');
-    const streams = (r.streams || []).map(s => `<a class="stream" href="${esc(s.u)}" target="_blank" rel="noopener">
-        ${s.th ? `<img src="${esc(s.th)}" alt="" loading="lazy">` : ''}
-        <span><span class="t">${esc(s.t)}</span><span class="c">${esc(s.c)} ・ ${man(s.v)}回</span></span></a>`).join('');
-    return `<tr class="main" data-i="${i}">
-      <td class="rk">${i + 1}</td>
-      <td><span class="gname">${esc(r.game)}</span><span class="chs">${esc(orgTxt)}</span></td>
-      <td class="ptcell"><div class="pt"><span class="track"><span class="fill" style="width:${Math.max(4,(r.score||0)/top*100)}%"></span></span><span class="v">${Math.round(r.score||0)}</span></div></td>
-      <td class="brk">${r.videos}件 · ${r.channels}ch · ${man(r.views)}回</td>
-      <td>${spark(r.spark, 78, 24, AC)}</td>
-      <td>${mv}</td>
-      <td><span class="buy">${buy(r)}</span></td></tr>
-    <tr class="detail"><td colspan="7">${streams ? `<div class="streams">${streams}</div>` : '<span style="color:var(--ink-3);font-size:12.5px">配信の情報がありません</span>'}</td></tr>`;
-  }).join('') || '<tr><td colspan="7" style="padding:26px;text-align:center;color:var(--ink-3)">データがまだありません</td></tr>';
+  const CHEV = '<svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg>';
+  const PLUS = '<svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><path d="M6 9l6 6 6-6"/></svg>';
+
+  // 配信一覧のパネル。カードでも行でも中身は同じ
+  const panel = r => {
+    const st = (r.streams || []).map(s => `<a class="stream" href="${esc(s.u)}" target="_blank" rel="noopener">
+      ${s.th ? `<img src="${esc(s.th)}" alt="" loading="lazy">` : ''}
+      <span><span class="t">${esc(s.t)}</span><span class="c">${esc(s.c)} ・ ${man(s.v)}回</span></span></a>`).join('');
+    const mv = (r.growth && r.growth >= 1.25 && r.videos >= 3)
+      ? `<span class="mv up">▲ ×${r.growth.toFixed(1)}</span>` : '';
+    return `<div class="panel" data-p="${esc(r.game)}">
+      <div style="display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin-bottom:10px">
+        <span class="buy">${buy(r)}</span>${mv}
+        ${(() => { const sp = spark(r.spark, 90, 22, AC);
+          return sp ? `<span style="font-size:11.5px;color:var(--ink-3)">7日の推移</span>${sp}` : ''; })()}
+      </div>
+      ${st ? `<div class="streams">${st}</div>`
+           : '<span style="color:var(--ink-3);font-size:12.5px">配信の情報がありません</span>'}</div>`;
+  };
+  const thumb = r => (r.streams && r.streams[0] && r.streams[0].th) || '';
+  const topLine = r => {
+    const s0 = (r.streams || [])[0];
+    return s0 ? `${esc(s0.c)}「${esc(s0.t)}」` : '';
+  };
+
+  // 上位3件はカード
+  $('#cards').innerHTML = list.slice(0, 3).map((r, i) => {
+    const th = thumb(r);
+    return `<button type="button" class="gcard" data-g="${esc(r.game)}">
+      <span class="th">${th ? `<img src="${esc(th)}" alt="" loading="lazy">`
+        : '<span style="display:block;aspect-ratio:16/9"></span>'}
+        <span class="rank">${i + 1}</span>
+        <span class="open">${PLUS}配信一覧</span></span>
+      <span class="gm"><b>${esc(r.game)}</b>
+        <span class="nums"><i>${r.videos}</i>件 <i>${r.channels}</i>ch <i>${man(r.views)}</i>回</span>
+        <span class="tp">${topLine(r)}</span></span></button>`;
+  }).join('');
+
+  // 4位以下は一覧
+  $('#rows').innerHTML = list.slice(3).map((r, i) => {
+    const th = thumb(r);
+    return `<button type="button" class="lrow" data-g="${esc(r.game)}">
+      <span class="rk2">${i + 4}</span>
+      ${th ? `<img src="${esc(th)}" alt="" loading="lazy">` : '<img alt="">'}
+      <span class="nm2"><b>${esc(r.game)}</b><span>${r.videos}件 ・ ${r.channels}ch ・ ${man(r.views)}回</span></span>
+      <span class="bar2"><i style="width:${Math.max(6,(r.score||0)/top*100)}%"></i></span>
+      ${CHEV}</button>${panel(r)}`;
+  }).join('') || '<div class="empty" style="border:0">データがまだありません。</div>';
+
+  // カードを押したときのパネルは、カード群のすぐ下にまとめて置く
+  $('#cards').insertAdjacentHTML('afterend',
+    '<div id="cardpanels">' + list.slice(0, 3).map(panel).join('') + '</div>');
 
   // 「これ、なんのゲーム？」は公開ページには出しません（site/admin/ 側で表示）
 }
@@ -394,8 +495,14 @@ function render(){
 document.addEventListener('click', e => {
   const b = e.target.closest('#filters button');
   if (b){ orgFilter = b.dataset.org === 'すべて' ? null : b.dataset.org; render(); return; }
-  const tr = e.target.closest('tr.main');
-  if (tr && !e.target.closest('a')) tr.nextElementSibling.classList.toggle('open');
+  const hit = e.target.closest('.gcard, .lrow');
+  if (!hit || e.target.closest('a')) return;
+  const name = hit.dataset.g;
+  const pane = [...document.querySelectorAll('.panel')].find(p => p.dataset.p === name);
+  if (!pane) return;
+  const on = pane.classList.toggle('on');
+  hit.classList.toggle('open-x', on);
+  hit.setAttribute('aria-expanded', on);
 });
 render();
 matchMedia('(prefers-color-scheme: dark)').addEventListener('change', render);
