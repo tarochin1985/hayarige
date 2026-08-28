@@ -13,7 +13,7 @@ CAP = 50000
 PAGE = 500
 
 FIELDS = ("fields name,alternative_names.name,alternative_names.comment,"
-          "first_release_date,total_rating_count,platforms;")
+          "first_release_date,total_rating_count,platforms,genres.name;")
 
 # 対応機種の判定に使うIGDBのID。
 # PC・Mac・Linux・スマホ以外が入っていれば「据置/携帯ゲーム機で売っている」と見なす。
@@ -106,6 +106,10 @@ def main():
             tags.append("console")
         if tags:
             rec["p"] = tags
+        # ジャンル。登録チャンネルがどのジャンルに偏っているかを見るのに使う。
+        gs = [x.get("name") for x in (g.get("genres") or []) if x.get("name")]
+        if gs:
+            rec["g"] = gs
         out.append(rec)
 
     write_json(DATA / "igdb_games.json", out)

@@ -13,8 +13,10 @@ from common import (YouTube, QuotaExhausted, DATA, JST, log,
 
 # 毎回見るチャンネル数（登録者順）。ここに入らなかったチャンネルは曜日で分けて週1回。
 # 1回の消費は「チャンネル数 × 1.2」ポイント。1日4回なので、
-# 800なら約3,800／日（上限9,000）。1,800あたりが4回運用の上限。
-DAILY_TOP = int(os.environ.get("DAILY_TOP", "800"))
+#   （DAILY_TOP + (登録数 - DAILY_TOP) / 7） × 1.2 × 4 が1日の消費。
+# 1,200なら、登録2,000件でも約6,300／日で上限9,000に収まる。
+# 登録数を増やしていくときは、ここを上げないと大半が週1回しか見られなくなる。
+DAILY_TOP = int(os.environ.get("DAILY_TOP", "1200"))
 LOOKBACK_HOURS = 48      # 何時間前までの動画を対象にするか
 
 

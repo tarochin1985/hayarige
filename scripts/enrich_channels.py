@@ -9,6 +9,7 @@
 
 これが終われば、リストの選別が数字を見るだけで済むようになる。
 """
+import collections
 import csv, re
 from datetime import datetime, timedelta
 from common import (YouTube, QuotaExhausted, DATA, JST, log, die,
@@ -72,8 +73,39 @@ def handle_guess(name):
 # 名前でわかる「配信チャンネルではないもの」
 NOT_STREAMER = ("切り抜き", "きりぬき", "clips", "clip ")
 
+# ひらがな・カタカナ。漢字だけだと中国語と見分けがつかないので、かなで見る。
+KANA = re.compile(r"[ぁ-んァ-ヴｦ-ﾟ]")
 
-def judge(rec, cutoff_day, min_subs):
+# IGDBのジャンル名は英語なので、CSVに出すときは日本語にする。
+GENRE_JA = {
+    "Shooter": "シューター", "Fighting": "格闘", "Role-playing (RPG)": "RPG",
+    "Adventure": "アドベンチャー", "Platform": "アクション（横スクロール）",
+    "Puzzle": "パズル", "Simulator": "シミュレーション", "Strategy": "ストラテジー",
+    "Sport": "スポーツ", "Racing": "レース", "Music": "音ゲー",
+    "Point-and-click": "ポイントクリック", "Indie": "インディー",
+    "Arcade": "アーケード", "Visual Novel": "ノベル",
+    "Card & Board Game": "カード・ボード", "MOBA": "MOBA",
+    "Hack and slash/Beat 'em up": "アクション（ハクスラ）",
+    "Real Time Strategy (RTS)": "RTS", "Turn-based strategy (TBS)": "TBS",
+    "Tactical": "タクティカル", "Quiz/Trivia": "クイズ", "Pinball": "ピンボール",
+}
+# これしか付いていないことが多く、ジャンルとしての情報量が薄いもの。
+# 他のジャンルがあればそちらを主ジャンルにする。
+WEAK_GENRE = ("Indie", "Arcade")
+
+
+def main_genre(names, genres):
+    """そのチャンネルがよく配信しているゲームのジャンル。"""
+    c = collections.Counter()
+    for n in names:
+        for g in genres.get(n, ()):
+            c[g] += (1 if g in WEAK_GENRE else 3)
+    if not c:
+        return ""
+    return GENRE_JA.get(c.most_common(1)[0][0], c.most_common(1)[0][0])
+
+
+def judge(rec, cutoff_day, min_subs, min_jp=0.5):
     """このチャンネルを毎日見に行くかどうかの目安。
 
     以前はここを、実際に調べ直したチャンネルにしか適用していなかった。
@@ -99,6 +131,13 @@ def judge(rec, cutoff_day, min_subs):
         return "要確認（長尺動画なし）"
     if (rec.get("game_ratio") or 0) < 0.05:
         return "外す（ゲーム動画なし）"
+    # このサイトは「日本語圏の視聴者が見ている配信」の流行を出すもの。
+    # 英語圏のチャンネルが混ざると、日本語圏の実感とずれたランキングになる。
+    # 所属では判断しない（ホロENのように日本の事務所でも英語配信がある）。
+    # 直近のタイトルにかなが出てくる割合で見る。
+    jp = rec.get("jp_ratio")
+    if jp is not None and jp < min_jp:
+        return "外す（日本語の配信ではない）"
     return "残す"
 
 
@@ -168,7 +207,13 @@ def main():
     cutoff_day = (datetime.now(JST) - timedelta(days=365)).strftime("%Y-%m-%d")
     cfg = read_json(DATA / "site_config.json", {}) or {}
     min_subs = int(cfg.get("min_subscribers") or 0)
+    min_jp = float(cfg.get("min_japanese_ratio", 0.5))
+    genres = M.load_genres()
     log(f"登録者数の下限: {min_subs:,} 人（data/site_config.json の min_subscribers）")
+    log(f"日本語率の下限: {min_jp:.0%}（同 min_japanese_ratio）")
+    if not genres:
+        log("※ ゲーム辞書にジャンル情報がありません。ジャンル別の集計は空になります。"
+            "『1. ゲーム辞書を作る』を回すと付きます。")
     out = []
     for n, c in enumerate(targets, 1):
         it = info.get(c["channel_id"])
@@ -181,15 +226,18 @@ def main():
         rec["subscribers"] = int(it["statistics"].get("subscriberCount", 0) or 0)
         uploads = it["contentDetails"]["relatedPlaylists"].get("uploads")
 
-        # 前回すでに調べていて、登録者数がほぼ同じなら再調査を省く
+        # 前回すでに調べていて、登録者数がほぼ同じなら再調査を省く。
+        # ただし日本語率をまだ測っていないチャンネルは、省かずに調べ直す。
+        # 省いてしまうと、既に入っている英語圏のチャンネルがいつまでも残る。
         p = prev.get(c["channel_id"])
-        if p and p.get("long_videos") is not None and \
+        if p and p.get("long_videos") is not None and p.get("jp_ratio") is not None and \
            abs(p.get("subscribers", 0) - rec["subscribers"]) < rec["subscribers"] * 0.02:
             rec.update(last_upload=p.get("last_upload"),
                        game_ratio=p.get("game_ratio"),
                        long_videos=p.get("long_videos"),
+                       jp_ratio=p.get("jp_ratio"), genre=p.get("genre", ""),
                        sample=p.get("sample"), status=p.get("status", ""))
-            rec["auto"] = judge(rec, cutoff_day, min_subs)
+            rec["auto"] = judge(rec, cutoff_day, min_subs, min_jp)
             out.append(rec)
             continue
 
@@ -206,13 +254,18 @@ def main():
                     # Shortsと切り抜きは「配信」ではないので率の計算から外す
                     if is_countable(v["snippet"]["title"], dur):
                         titles.append(v["snippet"]["title"])
-                hit = sum(1 for t in titles if M.extract(t, idx, fallback=False)[0])
+                games = [g for g in (M.extract(t, idx, fallback=False)[0]
+                                     for t in titles) if g]
                 rec["last_upload"] = (latest or "")[:10]
-                rec["game_ratio"] = round(hit / len(titles), 2) if titles else 0.0
+                rec["game_ratio"] = round(len(games) / len(titles), 2) if titles else 0.0
                 rec["long_videos"] = len(titles)
+                rec["jp_ratio"] = (round(sum(1 for t in titles if KANA.search(t))
+                                         / len(titles), 2) if titles else 0.0)
+                rec["genre"] = main_genre(games, genres)
                 rec["sample"] = titles[0][:60] if titles else ""
             else:
-                rec.update(last_upload="", game_ratio=0.0, sample="")
+                rec.update(last_upload="", game_ratio=0.0, jp_ratio=0.0,
+                           genre="", sample="")
         except QuotaExhausted:
             log(f"クォータ上限のため {n} 件目で調査を打ち切ります")
             rec.update(status="未調査")
@@ -222,7 +275,7 @@ def main():
         except Exception as e:
             rec.update(status=f"エラー: {e}"[:80])
 
-        rec["auto"] = judge(rec, cutoff_day, min_subs)
+        rec["auto"] = judge(rec, cutoff_day, min_subs, min_jp)
         out.append(rec)
         if n % 50 == 0:
             log(f"  {n}/{len(targets)} 件 ／ 使用クォータ {yt.used}")
@@ -232,23 +285,54 @@ def main():
     with open(OUT_CSV, "w", encoding="utf-8-sig", newline="") as f:
         w = csv.writer(f)
         w.writerow(["No.", "チャンネル名", "所属", "登録者数", "最終投稿日",
-                    "ゲーム動画率", "自動判定", "あなたの判定", "チャンネルURL", "直近タイトル例"])
+                    "ゲーム動画率", "日本語率", "主なジャンル",
+                    "自動判定", "あなたの判定", "チャンネルURL", "直近タイトル例"])
         for i, c in enumerate(sorted(out, key=lambda x: -(x.get("subscribers") or 0)), 1):
             w.writerow([i, c.get("title") or c["name"], c.get("affiliation", ""),
                         c.get("subscribers", ""), c.get("last_upload", ""),
-                        c.get("game_ratio", ""), c.get("auto", c.get("status", "")), "",
+                        c.get("game_ratio", ""), c.get("jp_ratio", ""),
+                        c.get("genre", ""),
+                        c.get("auto", c.get("status", "")), "",
                         f"https://www.youtube.com/channel/{c['channel_id']}"
                         if c.get("channel_id") else "",
                         c.get("sample", "")])
 
-    keep = sum(1 for c in out if c.get("auto") == "残す")
+    kept = [c for c in out if c.get("auto") == "残す"]
     drop = sum(1 for c in out if str(c.get("auto", "")).startswith("外す"))
     check = sum(1 for c in out if c.get("auto") == "要確認")
     log("")
     log(f"完了。使用クォータ {yt.used} / {9000}")
-    log(f"  自動で『残す』 : {keep} 件")
+    log(f"  自動で『残す』 : {len(kept)} 件")
     log(f"  自動で『外す』 : {drop} 件")
     log(f"  目視が必要     : {check} 件  ← あなたが見るのはここだけです")
+
+    reasons = collections.Counter(c["auto"] for c in out
+                                  if str(c.get("auto", "")).startswith("外す"))
+    for r, n in reasons.most_common():
+        log(f"    {r}: {n} 件")
+
+    # 言語で外したものは、間違いがあれば気づけるように名前を出しておく。
+    # 残したい場合は data/channels_manual.json に {"チャンネルID": "残す"} を書く。
+    lang_out = sorted((c for c in out if c.get("auto") == "外す（日本語の配信ではない）"),
+                      key=lambda c: -(c.get("subscribers") or 0))
+    if lang_out:
+        log("")
+        log(f"日本語の配信ではないと判定したチャンネル（{len(lang_out)} 件）:")
+        for c in lang_out[:40]:
+            log(f"    かな率 {c.get('jp_ratio')}  {c.get('subscribers', 0):>9,}人  "
+                f"{c.get('title') or c['name']}")
+        if len(lang_out) > 40:
+            log(f"    …ほか {len(lang_out) - 40} 件（全部は channels_review.csv に出ています）")
+        log("    残したいものがあれば data/channels_manual.json に")
+        log('    {"チャンネルID": "残す"} と書けば、この判定より優先されます。')
+
+    # ジャンルの偏りを見るための集計。特定のジャンルの配信者を数人足しただけで
+    # ランキングが動いてしまう状態かどうかは、ここを見ると分かる。
+    gs = collections.Counter(c.get("genre") or "（不明）" for c in kept)
+    log("")
+    log("残したチャンネルのジャンル内訳:")
+    for g, n in gs.most_common():
+        log(f"    {g:<20} {n:4} 件  ({n / max(1, len(kept)):.0%})")
     log(f"→ data/channels_review.csv を確認してください")
 
 

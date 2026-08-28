@@ -26,6 +26,34 @@ def compact(s: str) -> str:
     return re.sub(STRIP, "", norm(s))
 
 
+SEP_RE = re.compile(STRIP)
+
+
+def compact_map(s: str):
+    """詰めた文字列と、「元の文でその文字の直前に区切りがあったか」の印。
+
+    詰めてしまうと『協会3 -Japan Stigmatized Property-』が
+    『…協会3japanstigmatized…』になり、japan の直前が数字に見える。
+    そのせいで単語の切れ目と判定できず、手で登録したエイリアスが
+    丸ごと素通りしていた（同じゲームが2行に割れる原因）。
+    区切りの位置を別に覚えておけば、詰めた形のまま正しく判定できる。
+    """
+    n = norm(s)
+    out, sep, pending = [], [], True      # 文頭は区切り扱い
+    for ch in n:
+        if SEP_RE.match(ch):
+            pending = True
+            continue
+        out.append(ch)
+        sep.append(pending)
+        pending = False
+    return "".join(out), sep
+
+
+def _lat(ch: str) -> bool:
+    return ch.isascii() and ch.isalnum()
+
+
 def spaced(s: str) -> str:
     return re.sub(r"\s+", " ", re.sub(STRIP, " ", norm(s))).strip()
 
@@ -63,14 +91,12 @@ class Index:
         strict=True は「括弧の外」で照合するとき。タイトル全文から拾うと
         『hololive』の中の live のような誤爆が起きるので条件を厳しくする。
         """
-        c = compact(text)
+        c, sep = compact_map(text)
         if not c:
             return None
         if c in self.exact:
             g, p = self.exact[c]
             return (g, len(c), True)
-        sp = spaced(text)
-        nospace = re.sub(r"\s+", "", sp)
         best = None
         for i in range(len(c) - 1):
             for alias, alias_sp, game, pop in self.bucket.get(c[i:i + 2], ()):
@@ -80,13 +106,13 @@ class Index:
                     continue
                 curated = pop >= 10 ** 8      # 手で登録したエイリアスは信用する
                 if is_latin(alias):
-                    pat = r"(?<![a-z0-9])" + re.escape(alias) + r"(?![a-z0-9])"
-                    # 空白を入れた形でも「単語の切れ目」を必ず要求する。
+                    # 前後が「単語の切れ目」であることを必ず求める。
                     # ここを素通りさせていたため surviv → ARK Survival、
                     # live → hololive、lowglow → FLOWGLOW を拾っていた。
-                    sp_ok = len(alias_sp) >= 4 and re.search(
-                        r"(?<![a-z0-9])" + re.escape(alias_sp) + r"(?![a-z0-9])", sp)
-                    if not (re.search(pat, c) or re.search(pat, nospace) or sp_ok):
+                    # 元の文で区切られていた場所（sep）も切れ目として認める。
+                    j = i + len(alias)
+                    if not ((i == 0 or sep[i] or not _lat(c[i - 1]))
+                            and (j >= len(c) or sep[j] or not _lat(c[j]))):
                         continue
                 else:
                     if c[i + len(alias):i + len(alias) + 2].startswith(DERIV):
@@ -111,11 +137,19 @@ class Index:
 def build_index() -> Index:
     idx = Index()
     banned = {n.lower() for n in (read_json(DATA / "game_blocklist.json", []) or [])}
+    # 「ゲーム名としては正しいが、配信タイトルの中では普通の言葉」という
+    # 別名を落とす。例: ZeroRanger の別名「FINALBOSS」。
+    # ゲームそのものを消したいときは game_blocklist.json のほう。
+    bad_alias = {compact(a) for a in
+                 (read_json(DATA / "alias_blocklist.json", []) or [])}
     for g in read_json(DATA / "igdb_games.json", []) or []:
         if g["name"].lower() in banned:
             continue
-        idx.add(g["name"], g["name"], g.get("pop", 0))
+        if compact(g["name"]) not in bad_alias:
+            idx.add(g["name"], g["name"], g.get("pop", 0))
         for a in g.get("alias", []):
+            if compact(a) in bad_alias:
+                continue
             idx.add(a, g["name"], g.get("pop", 0))
     # 手で足したエイリアス（略称・愛称）は人気度を最大にして優先する
     for game, aliases in (read_json(DATA / "aliases.json", {}) or {}).items():
@@ -133,6 +167,16 @@ def load_platforms():
     for g in read_json(DATA / "igdb_games.json", []) or []:
         if g.get("p"):
             out[g["name"]] = g["p"]
+    return out
+
+
+def load_genres():
+    """ゲーム名 → ジャンル。チャンネルの偏りを見るのに使う。
+    辞書にジャンルが入っていない（古い）場合は空になる。"""
+    out = {}
+    for g in read_json(DATA / "igdb_games.json", []) or []:
+        if g.get("g"):
+            out[g["name"]] = g["g"]
     return out
 
 
