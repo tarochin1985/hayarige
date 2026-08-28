@@ -1,6 +1,6 @@
 {
  "date": "2026-08-28",
- "generated": "2026-08-28 16:38",
+ "generated": "2026-08-28 18:05",
  "leads": {
   "events": [
    {
@@ -35,12 +35,12 @@
    {
     "tag": "#ななし夏休み歌枠リレー",
     "channels": [
+     "ここ・じぇす汰 / Coco･Jester【ななしいんく】",
      "アズリ / Azri【ななしいんく】",
      "堰代ミコ / Mico Channel【ななしいんく】",
      "月野木ちろる / Tirol Channel 【ななしいんく】",
      "瀬島るい / Rui Channel 【ななしいんく】",
-     "緑青くれは / Kureha Channel【ななしいんく】",
-     "茜音カンナ / Canna Channel【ななしいんく】"
+     "緑青くれは / Kureha Channel【ななしいんく】"
     ]
    },
    {
@@ -72,19 +72,19 @@
     ]
    },
    {
-    "tag": "#あおぎり高校",
-    "channels": [
-     "うらめちゃんねる /あおぎり高校",
-     "こまるCh. - Komaru Kurikoma -/あおぎり高校",
-     "ちよみch. 千代浦蝶美 /あおぎり高校"
-    ]
-   },
-   {
     "tag": "#マイクラなつにっき",
     "channels": [
      "bintroll",
      "たけぉ",
      "幽音しの Shino Channel - ななしいんく"
+    ]
+   },
+   {
+    "tag": "#ゲーム実況",
+    "channels": [
+     "ぱんちき🥖🦃",
+     "ふぇに男",
+     "エラch"
     ]
    }
   ],
@@ -93,38 +93,33 @@
     "game": "Overwatch",
     "channels": 4,
     "videos": 4
-   },
-   {
-    "game": "Resonance",
-    "channels": 2,
-    "videos": 2
-   },
-   {
-    "game": "Call of Duty: Modern Warfare 4",
-    "channels": 2,
-    "videos": 2
    }
   ],
   "wide": [
    {
     "game": "Minecraft",
-    "channels": 38,
-    "videos": 36
+    "channels": 40,
+    "videos": 38
    },
    {
     "game": "Apex Legends",
-    "channels": 14,
-    "videos": 15
+    "channels": 15,
+    "videos": 16
    },
    {
     "game": "実況パワフルプロ野球2026",
     "channels": 12,
-    "videos": 12
+    "videos": 14
+   },
+   {
+    "game": "ぷよぷよテトリス2",
+    "channels": 9,
+    "videos": 9
    },
    {
     "game": "7 Days to Die",
-    "channels": 8,
-    "videos": 8
+    "channels": 9,
+    "videos": 9
    },
    {
     "game": "Grand Theft Auto V",
@@ -132,18 +127,13 @@
     "videos": 11
    },
    {
-    "game": "ぷよぷよテトリス2",
-    "channels": 7,
-    "videos": 7
-   },
-   {
-    "game": "Escape from Tarkov",
-    "channels": 10,
-    "videos": 7
+    "game": "ストリートファイター6",
+    "channels": 9,
+    "videos": 10
    },
    {
     "game": "VALORANT",
-    "channels": 8,
+    "channels": 7,
     "videos": 9
    }
   ]
