@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- タブのアイコン用。白い角丸の中央に、余白をとって配置 -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <defs><style>
+    .teal { fill: #0B6B70; }
+    .orange { fill: #B4551C; }
+    .cutout { fill: #FFFFFF; }
+    .bg { fill: #FFFFFF; }
+  </style></defs>
+  <rect class="bg" width="512" height="512" rx="100"/>
+  <g transform="translate(256,256) scale(0.87) translate(-268.75,-225.7)">
+<g id="logo-symbol" transform="translate(16, 20)">
+    <path class="teal" d="M 190,110 C 208,110 222,122 227,138 L 255,215 C 262,236 256,258 240,274 L 140,374 C 122,392 92,392 74,374 L 64,364 C 46,346 46,316 64,298 L 162,200 C 167,195 170,187 170,179 L 170,130 C 170,119 179,110 190,110 Z"/>
+    <g transform="translate(130, 316) rotate(-45)">
+      <path class="cutout" d="M -8,-24 H 8 V -8 H 24 V 8 H 8 V 24 H -8 V 8 H -24 V -8 H -8 Z"/>
+    </g>
+    <path class="orange" d="M 292,230 L 366,310 C 382,327 381,354 364,370 L 354,380 C 337,396 310,395 294,378 L 220,298 L 258,258 L 298,302 C 320,250 332,190 335,125 L 285,125 L 370,20 L 455,125 L 405,125 C 400,180 380,230 350,265 C 382,255 410,230 430,195 C 420,245 385,285 340,300 L 292,230 Z"/>
+    <g transform="translate(332, 344) rotate(-45)">
+      <circle class="cutout" cx="-13" cy="0" r="8"/>
+      <circle class="cutout" cx="13" cy="0" r="8"/>
+    </g>
+  </g>
+  </g>
+</svg>

@@ -321,7 +321,9 @@ def main():
                               "archive": ("../" * depth or "./") + "archive/"})
         p = SITE / path
         p.parent.mkdir(parents=True, exist_ok=True)
-        p.write_text(tpl.replace("__DATA__", json.dumps(d, ensure_ascii=False)),
+        home = "../" * depth or "./"
+        p.write_text(tpl.replace("__DATA__", json.dumps(d, ensure_ascii=False))
+                        .replace("__HOME__", home),
                      encoding="utf-8")
 
     render("index.html", payload, 0)
