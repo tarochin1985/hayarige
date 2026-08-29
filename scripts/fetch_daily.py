@@ -12,11 +12,14 @@ from common import (YouTube, QuotaExhausted, DATA, JST, log,
                     read_json, write_json, today, is_countable)
 
 # 毎回見るチャンネル数（登録者順）。ここに入らなかったチャンネルは曜日で分けて週1回。
-# 1回の消費は「チャンネル数 × 1.2」ポイント。1日4回なので、
-#   （DAILY_TOP + (登録数 - DAILY_TOP) / 7） × 1.2 × 4 が1日の消費。
-# 1,200なら、登録2,000件でも約6,300／日で上限9,000に収まる。
-# 登録数を増やしていくときは、ここを上げないと大半が週1回しか見られなくなる。
-DAILY_TOP = int(os.environ.get("DAILY_TOP", "1200"))
+# 1回の消費は「チャンネル数 × 1.2」ポイント。1日の実行回数を R とすると、
+#   （DAILY_TOP + (登録数 - DAILY_TOP) / 7） × 1.2 × R が1日の消費。
+#
+# 2026-08-29に1日4回から2回に減らした（.github/workflows/3-daily.yml に経緯）。
+# 回数が減った分ここを上げられる。2,000なら、登録2,500件・2回/日で
+# 約5,000ポイント。残りをチャンネル探索（2番）に回せる。
+# ここを上げないと、増やしたチャンネルの大半が週1回しか見られない。
+DAILY_TOP = int(os.environ.get("DAILY_TOP", "2000"))
 LOOKBACK_HOURS = 48      # 何時間前までの動画を対象にするか
 
 
