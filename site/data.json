@@ -1,8 +1,38 @@
 {
  "mode": "day",
  "date": "2026-08-29",
- "column": null,
- "generated": "2026-08-29 09:40",
+ "column": {
+  "game": "みんなのGOLF",
+  "headline": "ストリーマー大会「VCC GOLF」の動画が出そろい、みんなのGOLFが6位に入った",
+  "body": "8月26日にVAULTROOMが主催したストリーマー大会「VCC GOLF」の関連動画が続き、みんなのGOLFが前日の13位から6位に上がりました。大会は「みんなのGOLF WORLD」を使った3人1チーム・全8チームのストローク戦です。この24時間では、GONの「ゲーム最強の俺らなら初ゴルフでも大会で優勝出来る説」が15万回再生を超えたほか、Sasatikkは釈迦・かるびと、SPYGEAは柊ツルギと同じ組で回った視点の動画を出しています。ふだんはFPSが中心の顔ぶれですが、3本ともタイトルに【VCC GOLF】を掲げています。",
+  "people": [
+   "GON",
+   "Sasatikk",
+   "SPYGEA",
+   "釈迦",
+   "かるび",
+   "柊ツルギ"
+  ],
+  "sources": [
+   {
+    "t": "VAULTROOM 公式X — 8/26 20:00頃 VCC GOLF 開催いたします（みんなのGOLF WORLD・全8チームのストローク戦）",
+    "u": "https://x.com/room_vault/status/2091849489124569376"
+   },
+   {
+    "t": "GON — 【検証】ゲーム最強の俺らなら初ゴルフでも大会で優勝出来る説【VCC GOLF】",
+    "u": "https://www.youtube.com/watch?v=E0xx3FWCpk0"
+   },
+   {
+    "t": "sasatikk — 釈迦・かるびと初のみんゴル!!悪天候すぎる大荒れのVCC GOLFに挑むSasatikk【VCC GOLF】",
+    "u": "https://www.youtube.com/watch?v=qYIcHsMEw6Y"
+   }
+  ],
+  "buy": {
+   "t": "Switch版を見る",
+   "u": "https://www.amazon.co.jp/dp/B0FBRXNG7Y?tag=tarochin-22"
+  }
+ },
+ "generated": "2026-08-29 09:51",
  "range": "直近24時間",
  "days": [
   "08/23",
@@ -14,9 +44,9 @@
   "08/29"
  ],
  "totals": {
-  "videos": 251,
+  "videos": 242,
   "games": 70,
-  "channels": 213
+  "channels": 205
  },
  "rising": [
   {
@@ -63,14 +93,14 @@
     0,
     3
    ],
-   "p_videos": 21,
-   "p_channels": 23,
-   "p_views": 64,
-   "score": 36.8,
+   "p_videos": 25,
+   "p_channels": 27,
+   "p_views": 68,
+   "score": 40.8,
    "growth": 3.0,
    "steam": "https://store.steampowered.com/search/?term=%E3%81%BC%E3%81%8F%E3%81%AE%E3%81%AA%E3%81%A4%E3%82%84%E3%81%99%E3%81%BF2",
    "amazon": null,
-   "rank": 18
+   "rank": 17
   },
   {
    "game": "hololive Dreams",
@@ -115,14 +145,14 @@
     1,
     3
    ],
-   "p_videos": 21,
-   "p_channels": 23,
-   "p_views": 80,
-   "score": 42.3,
+   "p_videos": 25,
+   "p_channels": 27,
+   "p_views": 85,
+   "score": 46.7,
    "growth": 1.8,
    "steam": "https://store.steampowered.com/search/?term=hololive%20Dreams",
    "amazon": null,
-   "rank": 12
+   "rank": 10
   },
   {
    "game": "キャプテン翼",
@@ -166,10 +196,10 @@
     3,
     3
    ],
-   "p_videos": 21,
-   "p_channels": 23,
-   "p_views": 79,
-   "score": 42.0,
+   "p_videos": 25,
+   "p_channels": 27,
+   "p_views": 83,
+   "score": 46.0,
    "growth": 1.8,
    "steam": null,
    "amazon": null,
@@ -180,10 +210,10 @@
   {
    "game": "Minecraft",
    "canonical": "Minecraft",
-   "videos": 14,
-   "raw": 14,
-   "channels": 13,
-   "views": 539707,
+   "videos": 12,
+   "raw": 12,
+   "channels": 11,
+   "views": 347303,
    "streams": [
     {
      "t": "人がどんどん消えていく団地【マインクラフト】",
@@ -200,18 +230,18 @@
      "v": 94539
     },
     {
-     "t": "#にじメンマイクラ 10話 スパートをかける | Minecraft【にじさんじ/夢追翔】",
-     "c": "夢追翔のJUKE BOX",
-     "u": "https://www.youtube.com/watch?v=B_RLC5EX-oY",
-     "th": "https://i.ytimg.com/vi/B_RLC5EX-oY/mqdefault_live.jpg",
-     "v": 49928
-    },
-    {
      "t": "2度目の挑戦で初デスした結果、今まで沼っていた2人から一斉にマシンガン煽りを食らうSHAKA【Minecraft】",
      "c": "SHAKAch",
      "u": "https://www.youtube.com/watch?v=x9aFGnCqJz8",
      "th": "https://i.ytimg.com/vi/x9aFGnCqJz8/mqdefault.jpg",
      "v": 47774
+    },
+    {
+     "t": "【Minecraft】レア魚を集めよう　#マイクラなつにっき",
+     "c": "たけぉ",
+     "u": "https://www.youtube.com/watch?v=cbbZNxmeTF0",
+     "th": "https://i.ytimg.com/vi/cbbZNxmeTF0/mqdefault.jpg",
+     "v": 9510
     },
     {
      "t": "超魚釣りDAY！？雑談しながらまったりと。【#マイクラなつにっき】",
@@ -243,11 +273,10 @@
     }
    ],
    "orgs": {
-    "個人・その他": 9,
+    "個人・その他": 8,
     "追加指定": 2,
     "実況者": 1,
-    "ストリーマー": 1,
-    "にじさんじ": 1
+    "ストリーマー": 1
    },
    "spark": [
     null,
@@ -255,14 +284,14 @@
     null,
     21,
     22,
-    34,
-    14
+    35,
+    12
    ],
    "p_videos": 100,
    "p_channels": 100,
-   "p_views": 98,
-   "score": 99.3,
-   "growth": 0.55,
+   "p_views": 100,
+   "score": 100.0,
+   "growth": 0.46,
    "steam": "https://store.steampowered.com/search/?term=Minecraft",
    "amazon": null,
    "rank": 1
@@ -347,10 +376,10 @@
     11,
     8
    ],
-   "p_videos": 57,
-   "p_channels": 62,
-   "p_views": 88,
-   "score": 69.6,
+   "p_videos": 67,
+   "p_channels": 73,
+   "p_views": 93,
+   "score": 78.2,
    "growth": 0.71,
    "steam": "https://store.steampowered.com/search/?term=Apex%20Legends",
    "amazon": null,
@@ -435,10 +464,10 @@
     8,
     8
    ],
-   "p_videos": 57,
-   "p_channels": 62,
-   "p_views": 86,
-   "score": 68.9,
+   "p_videos": 67,
+   "p_channels": 73,
+   "p_views": 91,
+   "score": 77.5,
    "growth": 1.0,
    "steam": "https://store.steampowered.com/search/?term=VALORANT",
    "amazon": null,
@@ -454,10 +483,10 @@
   {
    "game": "Minecraft",
    "canonical": "Minecraft",
-   "videos": 14,
-   "raw": 14,
-   "channels": 13,
-   "views": 539707,
+   "videos": 12,
+   "raw": 12,
+   "channels": 11,
+   "views": 347303,
    "streams": [
     {
      "t": "人がどんどん消えていく団地【マインクラフト】",
@@ -474,18 +503,18 @@
      "v": 94539
     },
     {
-     "t": "#にじメンマイクラ 10話 スパートをかける | Minecraft【にじさんじ/夢追翔】",
-     "c": "夢追翔のJUKE BOX",
-     "u": "https://www.youtube.com/watch?v=B_RLC5EX-oY",
-     "th": "https://i.ytimg.com/vi/B_RLC5EX-oY/mqdefault_live.jpg",
-     "v": 49928
-    },
-    {
      "t": "2度目の挑戦で初デスした結果、今まで沼っていた2人から一斉にマシンガン煽りを食らうSHAKA【Minecraft】",
      "c": "SHAKAch",
      "u": "https://www.youtube.com/watch?v=x9aFGnCqJz8",
      "th": "https://i.ytimg.com/vi/x9aFGnCqJz8/mqdefault.jpg",
      "v": 47774
+    },
+    {
+     "t": "【Minecraft】レア魚を集めよう　#マイクラなつにっき",
+     "c": "たけぉ",
+     "u": "https://www.youtube.com/watch?v=cbbZNxmeTF0",
+     "th": "https://i.ytimg.com/vi/cbbZNxmeTF0/mqdefault.jpg",
+     "v": 9510
     },
     {
      "t": "超魚釣りDAY！？雑談しながらまったりと。【#マイクラなつにっき】",
@@ -517,11 +546,10 @@
     }
    ],
    "orgs": {
-    "個人・その他": 9,
+    "個人・その他": 8,
     "追加指定": 2,
     "実況者": 1,
-    "ストリーマー": 1,
-    "にじさんじ": 1
+    "ストリーマー": 1
    },
    "spark": [
     null,
@@ -529,14 +557,14 @@
     null,
     21,
     22,
-    34,
-    14
+    35,
+    12
    ],
    "p_videos": 100,
    "p_channels": 100,
-   "p_views": 98,
-   "score": 99.3,
-   "growth": 0.55,
+   "p_views": 100,
+   "score": 100.0,
+   "growth": 0.46,
    "steam": "https://store.steampowered.com/search/?term=Minecraft",
    "amazon": null,
    "rank": 1
@@ -621,10 +649,10 @@
     11,
     8
    ],
-   "p_videos": 57,
-   "p_channels": 62,
-   "p_views": 88,
-   "score": 69.6,
+   "p_videos": 67,
+   "p_channels": 73,
+   "p_views": 93,
+   "score": 78.2,
    "growth": 0.71,
    "steam": "https://store.steampowered.com/search/?term=Apex%20Legends",
    "amazon": null,
@@ -709,88 +737,14 @@
     8,
     8
    ],
-   "p_videos": 57,
-   "p_channels": 62,
-   "p_views": 86,
-   "score": 68.9,
+   "p_videos": 67,
+   "p_channels": 73,
+   "p_views": 91,
+   "score": 77.5,
    "growth": 1.0,
    "steam": "https://store.steampowered.com/search/?term=VALORANT",
    "amazon": null,
    "rank": 3
-  },
-  {
-   "game": "ぷよぷよテトリス2",
-   "canonical": "ぷよぷよテトリス2",
-   "videos": 6,
-   "raw": 6,
-   "channels": 6,
-   "views": 735952,
-   "streams": [
-    {
-     "t": "【凸待ち】ぷよテト対戦凸待ち！！！！！！！！！！！！！ぺこ！【ホロライブ/兎田ぺこら】",
-     "c": "Pekora Ch. 兎田ぺこら",
-     "u": "https://www.youtube.com/watch?v=Ra1YllAVpU8",
-     "th": "https://i.ytimg.com/vi/Ra1YllAVpU8/mqdefault.jpg",
-     "v": 712770
-    },
-    {
-     "t": "【 ぷよテト 】マリちゃんぷよぷよ教えてください！【#綺々羅々ヴィヴィ #hololiveDEV_IS #FLOWGLOW #宝鐘マリン 】",
-     "c": "Vivi Ch. 綺々羅々ヴィヴィ - FLOW GLOW",
-     "u": "https://www.youtube.com/watch?v=pbT0fC7s7NM",
-     "th": "https://i.ytimg.com/vi/pbT0fC7s7NM/mqdefault_live.jpg",
-     "v": 23178
-    },
-    {
-     "t": "3000↑てとぼ　何気に三日以上配信しないの久々では？【ぷよぷよテトリス2】",
-     "c": "ぴっこ",
-     "u": "https://www.youtube.com/watch?v=fej6y-0T-XI",
-     "th": "https://i.ytimg.com/vi/fej6y-0T-XI/mqdefault_live.jpg",
-     "v": 4
-    },
-    {
-     "t": "【ぷよテト】マリン船長！プロの技教えてください！！！！【一条莉々華/hololive DEV_IS ReGLOSS】",
-     "c": "Ririka Ch. 一条莉々華 ‐ ReGLOSS",
-     "u": "https://www.youtube.com/watch?v=olcTzXMmCj4",
-     "th": "https://i.ytimg.com/vi/olcTzXMmCj4/mqdefault_live.jpg",
-     "v": 0
-    },
-    {
-     "t": "最強帯レート戦【ぷよぷよテトリス2】",
-     "c": "たいようあめみや",
-     "u": "https://www.youtube.com/watch?v=Hj_xP_YiuTY",
-     "th": "https://i.ytimg.com/vi/Hj_xP_YiuTY/mqdefault_live.jpg",
-     "v": 0
-    },
-    {
-     "t": "【ぷよテト２】最強AI（25％+ハンデあり）との対決！！【個人勢Vtuber】#縦型配信",
-     "c": "もみじビーム",
-     "u": "https://www.youtube.com/watch?v=YYHKp2EVdSE",
-     "th": "https://i.ytimg.com/vi/YYHKp2EVdSE/mqdefault_live.jpg",
-     "v": 0
-    }
-   ],
-   "orgs": {
-    "個人・その他": 3,
-    "hololive DEV_IS": 2,
-    "ホロライブ": 1
-   },
-   "spark": [
-    null,
-    null,
-    null,
-    4,
-    5,
-    7,
-    6
-   ],
-   "p_videos": 43,
-   "p_channels": 46,
-   "p_views": 100,
-   "score": 64.0,
-   "growth": 1.12,
-   "steam": "https://store.steampowered.com/search/?term=%E3%81%B7%E3%82%88%E3%81%B7%E3%82%88%E3%83%86%E3%83%88%E3%83%AA%E3%82%B92",
-   "amazon": null,
-   "rank": 4
   },
   {
    "game": "ストリートファイター6",
@@ -849,12 +803,78 @@
     13,
     5
    ],
-   "p_videos": 36,
-   "p_channels": 38,
-   "p_views": 89,
-   "score": 55.2,
+   "p_videos": 42,
+   "p_channels": 45,
+   "p_views": 94,
+   "score": 61.2,
    "growth": 0.43,
    "steam": "https://store.steampowered.com/search/?term=%E3%82%B9%E3%83%88%E3%83%AA%E3%83%BC%E3%83%88%E3%83%95%E3%82%A1%E3%82%A4%E3%82%BF%E3%83%BC6",
+   "amazon": null,
+   "rank": 4
+  },
+  {
+   "game": "ぷよぷよテトリス2",
+   "canonical": "ぷよぷよテトリス2",
+   "videos": 5,
+   "raw": 5,
+   "channels": 5,
+   "views": 23182,
+   "streams": [
+    {
+     "t": "【 ぷよテト 】マリちゃんぷよぷよ教えてください！【#綺々羅々ヴィヴィ #hololiveDEV_IS #FLOWGLOW #宝鐘マリン 】",
+     "c": "Vivi Ch. 綺々羅々ヴィヴィ - FLOW GLOW",
+     "u": "https://www.youtube.com/watch?v=pbT0fC7s7NM",
+     "th": "https://i.ytimg.com/vi/pbT0fC7s7NM/mqdefault_live.jpg",
+     "v": 23178
+    },
+    {
+     "t": "3000↑てとぼ　何気に三日以上配信しないの久々では？【ぷよぷよテトリス2】",
+     "c": "ぴっこ",
+     "u": "https://www.youtube.com/watch?v=fej6y-0T-XI",
+     "th": "https://i.ytimg.com/vi/fej6y-0T-XI/mqdefault_live.jpg",
+     "v": 4
+    },
+    {
+     "t": "【ぷよテト】マリン船長！プロの技教えてください！！！！【一条莉々華/hololive DEV_IS ReGLOSS】",
+     "c": "Ririka Ch. 一条莉々華 ‐ ReGLOSS",
+     "u": "https://www.youtube.com/watch?v=olcTzXMmCj4",
+     "th": "https://i.ytimg.com/vi/olcTzXMmCj4/mqdefault_live.jpg",
+     "v": 0
+    },
+    {
+     "t": "最強帯レート戦【ぷよぷよテトリス2】",
+     "c": "たいようあめみや",
+     "u": "https://www.youtube.com/watch?v=Hj_xP_YiuTY",
+     "th": "https://i.ytimg.com/vi/Hj_xP_YiuTY/mqdefault_live.jpg",
+     "v": 0
+    },
+    {
+     "t": "【ぷよテト２】最強AI（25％+ハンデあり）との対決！！【個人勢Vtuber】#縦型配信",
+     "c": "もみじビーム",
+     "u": "https://www.youtube.com/watch?v=YYHKp2EVdSE",
+     "th": "https://i.ytimg.com/vi/YYHKp2EVdSE/mqdefault_live.jpg",
+     "v": 0
+    }
+   ],
+   "orgs": {
+    "個人・その他": 3,
+    "hololive DEV_IS": 2
+   },
+   "spark": [
+    null,
+    null,
+    null,
+    4,
+    5,
+    7,
+    5
+   ],
+   "p_videos": 42,
+   "p_channels": 45,
+   "p_views": 79,
+   "score": 56.0,
+   "growth": 0.94,
+   "steam": "https://store.steampowered.com/search/?term=%E3%81%B7%E3%82%88%E3%81%B7%E3%82%88%E3%83%86%E3%83%88%E3%83%AA%E3%82%B92",
    "amazon": null,
    "rank": 5
   },
@@ -908,10 +928,10 @@
     5,
     4
    ],
-   "p_videos": 29,
-   "p_channels": 31,
-   "p_views": 90,
-   "score": 51.0,
+   "p_videos": 33,
+   "p_channels": 36,
+   "p_views": 95,
+   "score": 55.8,
    "growth": 1.0,
    "steam": "https://store.steampowered.com/search/?term=%E3%81%BF%E3%82%93%E3%81%AA%E3%81%AEGOLF",
    "amazon": null,
@@ -966,132 +986,14 @@
     2,
     4
    ],
-   "p_videos": 29,
-   "p_channels": 31,
-   "p_views": 83,
-   "score": 48.6,
+   "p_videos": 33,
+   "p_channels": 36,
+   "p_views": 88,
+   "score": 53.3,
    "growth": 1.71,
    "steam": "https://store.steampowered.com/search/?term=Palworld",
    "amazon": null,
    "rank": 7
-  },
-  {
-   "game": "ほの暮しの庭",
-   "canonical": "ほの暮しの庭",
-   "videos": 4,
-   "raw": 5,
-   "channels": 4,
-   "views": 69077,
-   "streams": [
-    {
-     "t": "【ほの暮しの庭】chill生活1年目冬〜  #11【にじさんじ/鷹宮リオン】",
-     "c": "鷹宮リオン / Rion Takamiya",
-     "u": "https://www.youtube.com/watch?v=lHSw2WmI9zk",
-     "th": "https://i.ytimg.com/vi/lHSw2WmI9zk/mqdefault.jpg",
-     "v": 34080
-    },
-    {
-     "t": "【ほの暮しの庭】石切場を許さない　※ネタバレあり【北小路ヒスイ/にじさんじ】",
-     "c": "北小路ヒスイ / Kitakoji Hisui 【にじさんじ】",
-     "u": "https://www.youtube.com/watch?v=MXIAISDSGn0",
-     "th": "https://i.ytimg.com/vi/MXIAISDSGn0/mqdefault.jpg",
-     "v": 25976
-    },
-    {
-     "t": "【 ほの暮しの庭 】夏は里帰り🌱バケモン村に冬が到来！！！！！！！ 【椎名唯華/にじさんじ】",
-     "c": "椎名唯華 / Shiina Yuika",
-     "u": "https://www.youtube.com/watch?v=p6t0CzTps1o",
-     "th": "https://i.ytimg.com/vi/p6t0CzTps1o/mqdefault_live.jpg",
-     "v": 8627
-    },
-    {
-     "t": "【実況】因習村でスローライフ！ほの暮しの庭をツッコミ実況Part44【PS5】",
-     "c": "しゅーや",
-     "u": "https://www.youtube.com/watch?v=l8wer-S39w4",
-     "th": "https://i.ytimg.com/vi/l8wer-S39w4/mqdefault.jpg",
-     "v": 346
-    },
-    {
-     "t": "【実況】因習村でスローライフ！ほの暮しの庭をツッコミ実況Part45【PS5】",
-     "c": "しゅーや",
-     "u": "https://www.youtube.com/watch?v=kE8NMI4J5Oc",
-     "th": "https://i.ytimg.com/vi/kE8NMI4J5Oc/mqdefault.jpg",
-     "v": 48
-    }
-   ],
-   "orgs": {
-    "にじさんじ": 3,
-    "実況者": 2
-   },
-   "spark": [
-    null,
-    null,
-    null,
-    7,
-    11,
-    8,
-    4
-   ],
-   "p_videos": 29,
-   "p_channels": 31,
-   "p_views": 82,
-   "score": 48.2,
-   "growth": 0.46,
-   "steam": "https://store.steampowered.com/search/?term=%E3%81%BB%E3%81%AE%E6%9A%AE%E3%81%97%E3%81%AE%E5%BA%AD",
-   "amazon": null,
-   "rank": 8
-  },
-  {
-   "game": "Escape from Tarkov",
-   "canonical": "Escape from Tarkov",
-   "videos": 3,
-   "raw": 3,
-   "channels": 3,
-   "views": 322921,
-   "streams": [
-    {
-     "t": "【Escape from Tarkov】3人でPvEモード！【弟者,兄者,メロ】",
-     "c": "兄者弟者",
-     "u": "https://www.youtube.com/watch?v=NHdGVzECQBA",
-     "th": "https://i.ytimg.com/vi/NHdGVzECQBA/mqdefault.jpg",
-     "v": 244713
-    },
-    {
-     "t": "ぶいすぽの中で誰とタコパしたいかで大盛り上がりの3人ｗｗｗｗ【タルコフ】",
-     "c": "柊ツルギ / Hiiragi Tsurugi",
-     "u": "https://www.youtube.com/watch?v=kE2KcYoZlMU",
-     "th": "https://i.ytimg.com/vi/kE2KcYoZlMU/mqdefault.jpg",
-     "v": 49757
-    },
-    {
-     "t": "【 タルコフ 】ソロタルコフがんばってみる！６さい【 絲依とい / ネオポルテ 】",
-     "c": "絲依とい / Itoi Toi",
-     "u": "https://www.youtube.com/watch?v=0QsIUbM1d-4",
-     "th": "https://i.ytimg.com/vi/0QsIUbM1d-4/mqdefault.jpg",
-     "v": 28451
-    }
-   ],
-   "orgs": {
-    "Neo-Porte": 2,
-    "実況グループ": 1
-   },
-   "spark": [
-    null,
-    null,
-    null,
-    3,
-    5,
-    6,
-    3
-   ],
-   "p_videos": 21,
-   "p_channels": 23,
-   "p_views": 94,
-   "score": 47.2,
-   "growth": 0.64,
-   "steam": "https://store.steampowered.com/search/?term=Escape%20from%20Tarkov",
-   "amazon": null,
-   "rank": 9
   },
   {
    "game": "League of Legends",
@@ -1143,14 +1045,14 @@
     9,
     4
    ],
-   "p_videos": 29,
-   "p_channels": 31,
-   "p_views": 72,
-   "score": 44.8,
+   "p_videos": 33,
+   "p_channels": 36,
+   "p_views": 76,
+   "score": 49.1,
    "growth": 0.52,
    "steam": "https://store.steampowered.com/search/?term=League%20of%20Legends",
    "amazon": null,
-   "rank": 10
+   "rank": 8
   },
   {
    "game": "実況パワフルプロ野球2026",
@@ -1201,14 +1103,14 @@
     12,
     4
    ],
-   "p_videos": 29,
-   "p_channels": 31,
-   "p_views": 66,
-   "score": 42.6,
+   "p_videos": 33,
+   "p_channels": 36,
+   "p_views": 70,
+   "score": 47.0,
    "growth": 0.43,
    "steam": "https://store.steampowered.com/search/?term=%E5%AE%9F%E6%B3%81%E3%83%91%E3%83%AF%E3%83%95%E3%83%AB%E3%83%97%E3%83%AD%E9%87%8E%E7%90%832026",
    "amazon": null,
-   "rank": 11
+   "rank": 9
   },
   {
    "game": "hololive Dreams",
@@ -1253,65 +1155,73 @@
     1,
     3
    ],
-   "p_videos": 21,
-   "p_channels": 23,
-   "p_views": 80,
-   "score": 42.3,
+   "p_videos": 25,
+   "p_channels": 27,
+   "p_views": 85,
+   "score": 46.7,
    "growth": 1.8,
    "steam": "https://store.steampowered.com/search/?term=hololive%20Dreams",
    "amazon": null,
-   "rank": 12
+   "rank": 10
   },
   {
-   "game": "キャプテン翼",
-   "canonical": "Captain Tsubasa",
+   "game": "ほの暮しの庭",
+   "canonical": "ほの暮しの庭",
    "videos": 3,
-   "raw": 3,
+   "raw": 4,
    "channels": 3,
-   "views": 40491,
+   "views": 43101,
    "streams": [
     {
-     "t": "【キャプテン翼２ WORLD FIGHTERS／PS5】新作キャプ翼遊ぶ！！！【紅羽ミトラ/Vtuber】",
-     "c": "Mitora ch.紅羽ミトラ",
-     "u": "https://www.youtube.com/watch?v=S6uuAGrTHcE",
-     "th": "https://i.ytimg.com/vi/S6uuAGrTHcE/mqdefault.jpg",
-     "v": 32757
+     "t": "【ほの暮しの庭】chill生活1年目冬〜  #11【にじさんじ/鷹宮リオン】",
+     "c": "鷹宮リオン / Rion Takamiya",
+     "u": "https://www.youtube.com/watch?v=lHSw2WmI9zk",
+     "th": "https://i.ytimg.com/vi/lHSw2WmI9zk/mqdefault.jpg",
+     "v": 34080
     },
     {
-     "t": "『キャプテン翼2 WORLD FIGHTERS』キャプテン翼好きよ、集え！ 電撃杯で一番強いサッカー小僧を決めよう！ フェイバリット必殺シュートを語り合う！【MC：吉宮るり】",
-     "c": "電撃オンライン",
-     "u": "https://www.youtube.com/watch?v=3VG4_ySyFAk",
-     "th": "https://i.ytimg.com/vi/3VG4_ySyFAk/mqdefault.jpg",
-     "v": 7734
+     "t": "【 ほの暮しの庭 】夏は里帰り🌱バケモン村に冬が到来！！！！！！！ 【椎名唯華/にじさんじ】",
+     "c": "椎名唯華 / Shiina Yuika",
+     "u": "https://www.youtube.com/watch?v=p6t0CzTps1o",
+     "th": "https://i.ytimg.com/vi/p6t0CzTps1o/mqdefault_live.jpg",
+     "v": 8627
     },
     {
-     "t": "【キャプテン翼2 WORLD FIGHTERS】子供の頃から原作キャプテン翼の大ファンだった実況者がワールドユースで世界一を目指す初見実況プレイ！ Part 3",
-     "c": "キリヤのゲーム実況ch",
-     "u": "https://www.youtube.com/watch?v=bnVSKoBN8vk",
-     "th": "https://i.ytimg.com/vi/bnVSKoBN8vk/mqdefault_live.jpg",
-     "v": 0
+     "t": "【実況】因習村でスローライフ！ほの暮しの庭をツッコミ実況Part44【PS5】",
+     "c": "しゅーや",
+     "u": "https://www.youtube.com/watch?v=l8wer-S39w4",
+     "th": "https://i.ytimg.com/vi/l8wer-S39w4/mqdefault.jpg",
+     "v": 346
+    },
+    {
+     "t": "【実況】因習村でスローライフ！ほの暮しの庭をツッコミ実況Part45【PS5】",
+     "c": "しゅーや",
+     "u": "https://www.youtube.com/watch?v=kE8NMI4J5Oc",
+     "th": "https://i.ytimg.com/vi/kE8NMI4J5Oc/mqdefault.jpg",
+     "v": 48
     }
    ],
    "orgs": {
-    "個人・その他": 3
+    "にじさんじ": 2,
+    "実況者": 2
    },
    "spark": [
     null,
     null,
     null,
-    1,
-    1,
-    3,
+    7,
+    11,
+    9,
     3
    ],
-   "p_videos": 21,
-   "p_channels": 23,
-   "p_views": 79,
-   "score": 42.0,
-   "growth": 1.8,
-   "steam": null,
+   "p_videos": 25,
+   "p_channels": 27,
+   "p_views": 84,
+   "score": 46.3,
+   "growth": 0.33,
+   "steam": "https://store.steampowered.com/search/?term=%E3%81%BB%E3%81%AE%E6%9A%AE%E3%81%97%E3%81%AE%E5%BA%AD",
    "amazon": null,
-   "rank": 13
+   "rank": 11
   },
   {
    "game": "Grand Theft Auto V",
@@ -1363,14 +1273,65 @@
     12,
     4
    ],
-   "p_videos": 29,
-   "p_channels": 31,
-   "p_views": 64,
-   "score": 41.9,
+   "p_videos": 33,
+   "p_channels": 36,
+   "p_views": 68,
+   "score": 46.3,
    "growth": 0.57,
    "steam": "https://store.steampowered.com/search/?term=Grand%20Theft%20Auto%20V",
    "amazon": null,
-   "rank": 14
+   "rank": 12
+  },
+  {
+   "game": "キャプテン翼",
+   "canonical": "Captain Tsubasa",
+   "videos": 3,
+   "raw": 3,
+   "channels": 3,
+   "views": 40491,
+   "streams": [
+    {
+     "t": "【キャプテン翼２ WORLD FIGHTERS／PS5】新作キャプ翼遊ぶ！！！【紅羽ミトラ/Vtuber】",
+     "c": "Mitora ch.紅羽ミトラ",
+     "u": "https://www.youtube.com/watch?v=S6uuAGrTHcE",
+     "th": "https://i.ytimg.com/vi/S6uuAGrTHcE/mqdefault.jpg",
+     "v": 32757
+    },
+    {
+     "t": "『キャプテン翼2 WORLD FIGHTERS』キャプテン翼好きよ、集え！ 電撃杯で一番強いサッカー小僧を決めよう！ フェイバリット必殺シュートを語り合う！【MC：吉宮るり】",
+     "c": "電撃オンライン",
+     "u": "https://www.youtube.com/watch?v=3VG4_ySyFAk",
+     "th": "https://i.ytimg.com/vi/3VG4_ySyFAk/mqdefault.jpg",
+     "v": 7734
+    },
+    {
+     "t": "【キャプテン翼2 WORLD FIGHTERS】子供の頃から原作キャプテン翼の大ファンだった実況者がワールドユースで世界一を目指す初見実況プレイ！ Part 3",
+     "c": "キリヤのゲーム実況ch",
+     "u": "https://www.youtube.com/watch?v=bnVSKoBN8vk",
+     "th": "https://i.ytimg.com/vi/bnVSKoBN8vk/mqdefault_live.jpg",
+     "v": 0
+    }
+   ],
+   "orgs": {
+    "個人・その他": 3
+   },
+   "spark": [
+    null,
+    null,
+    null,
+    1,
+    1,
+    3,
+    3
+   ],
+   "p_videos": 25,
+   "p_channels": 27,
+   "p_views": 83,
+   "score": 46.0,
+   "growth": 1.8,
+   "steam": null,
+   "amazon": null,
+   "rank": 13
   },
   {
    "game": "パズル&ドラゴンズ",
@@ -1428,58 +1389,58 @@
     7,
     5
    ],
-   "p_videos": 36,
-   "p_channels": 8,
-   "p_views": 79,
-   "score": 41.2,
+   "p_videos": 42,
+   "p_channels": 9,
+   "p_views": 84,
+   "score": 45.1,
    "growth": 1.36,
    "steam": "https://store.steampowered.com/search/?term=%E3%83%91%E3%82%BA%E3%83%AB%26%E3%83%89%E3%83%A9%E3%82%B4%E3%83%B3%E3%82%BA",
    "amazon": null,
-   "rank": 15
+   "rank": 14
   },
   {
-   "game": "Moo Who",
-   "canonical": "Moo Who",
+   "game": "Escape from Tarkov",
+   "canonical": "Escape from Tarkov",
    "videos": 2,
    "raw": 2,
    "channels": 2,
-   "views": 201302,
+   "views": 78208,
    "streams": [
     {
-     "t": "【Moo Who?】 動物声真似でかくれんぼ！？声真似なら任せてください!! #ホロMOO【ホロライブ/白上フブキ】",
-     "c": "フブキCh。白上フブキ",
-     "u": "https://www.youtube.com/watch?v=8HgqcpLTnfI",
-     "th": "https://i.ytimg.com/vi/8HgqcpLTnfI/mqdefault.jpg",
-     "v": 201302
+     "t": "ぶいすぽの中で誰とタコパしたいかで大盛り上がりの3人ｗｗｗｗ【タルコフ】",
+     "c": "柊ツルギ / Hiiragi Tsurugi",
+     "u": "https://www.youtube.com/watch?v=kE2KcYoZlMU",
+     "th": "https://i.ytimg.com/vi/kE2KcYoZlMU/mqdefault.jpg",
+     "v": 49757
     },
     {
-     "t": "【Moo Who?】牛を見分けるだけの簡単なお仕事です🐄【ホロライブ / AZKi】",
-     "c": "AZKi Channel",
-     "u": "https://www.youtube.com/watch?v=lx74wSwrsfw",
-     "th": "https://i.ytimg.com/vi/lx74wSwrsfw/mqdefault_live.jpg",
-     "v": 0
+     "t": "【 タルコフ 】ソロタルコフがんばってみる！６さい【 絲依とい / ネオポルテ 】",
+     "c": "絲依とい / Itoi Toi",
+     "u": "https://www.youtube.com/watch?v=0QsIUbM1d-4",
+     "th": "https://i.ytimg.com/vi/0QsIUbM1d-4/mqdefault.jpg",
+     "v": 28451
     }
    ],
    "orgs": {
-    "ホロライブ": 2
+    "Neo-Porte": 2
    },
    "spark": [
     null,
     null,
     null,
-    0,
-    0,
     3,
+    5,
+    6,
     2
    ],
-   "p_videos": 14,
-   "p_channels": 15,
-   "p_views": 90,
-   "score": 40.9,
-   "growth": 2.0,
-   "steam": "https://store.steampowered.com/search/?term=Moo%20Who",
+   "p_videos": 17,
+   "p_channels": 18,
+   "p_views": 88,
+   "score": 42.2,
+   "growth": 0.43,
+   "steam": "https://store.steampowered.com/search/?term=Escape%20from%20Tarkov",
    "amazon": null,
-   "rank": 16
+   "rank": 15
   },
   {
    "game": "7 Days to Die",
@@ -1517,14 +1478,14 @@
     7,
     2
    ],
-   "p_videos": 14,
-   "p_channels": 15,
-   "p_views": 82,
-   "score": 38.1,
+   "p_videos": 17,
+   "p_channels": 18,
+   "p_views": 87,
+   "score": 41.8,
    "growth": 0.46,
    "steam": "https://store.steampowered.com/search/?term=7%20Days%20to%20Die",
    "amazon": null,
-   "rank": 17
+   "rank": 16
   },
   {
    "game": "ぼくのなつやすみ2",
@@ -1570,12 +1531,57 @@
     0,
     3
    ],
-   "p_videos": 21,
-   "p_channels": 23,
-   "p_views": 64,
-   "score": 36.8,
+   "p_videos": 25,
+   "p_channels": 27,
+   "p_views": 68,
+   "score": 40.8,
    "growth": 3.0,
    "steam": "https://store.steampowered.com/search/?term=%E3%81%BC%E3%81%8F%E3%81%AE%E3%81%AA%E3%81%A4%E3%82%84%E3%81%99%E3%81%BF2",
+   "amazon": null,
+   "rank": 17
+  },
+  {
+   "game": "Among Us",
+   "canonical": "Among Us",
+   "videos": 2,
+   "raw": 2,
+   "channels": 2,
+   "views": 22010,
+   "streams": [
+    {
+     "t": "インポスターの前に３死体が現れたｗｗｗｗｗ【AmongUs / 宇宙人狼】",
+     "c": "中野あるま / Alma Nakano",
+     "u": "https://www.youtube.com/watch?v=-cN15JIGi6Y",
+     "th": "https://i.ytimg.com/vi/-cN15JIGi6Y/mqdefault.jpg",
+     "v": 22010
+    },
+    {
+     "t": "#amongus 3D　【  お・・・お友達、できるかな！？  】 #あおぎり高校  #栗駒こまる  #vtuber",
+     "c": "こまるCh. - Komaru Kurikoma -/あおぎり高校",
+     "u": "https://www.youtube.com/watch?v=PWkrVwSFN_s",
+     "th": "https://i.ytimg.com/vi/PWkrVwSFN_s/mqdefault_live.jpg",
+     "v": 0
+    }
+   ],
+   "orgs": {
+    "あおぎり高校": 1,
+    "高田村": 1
+   },
+   "spark": [
+    null,
+    null,
+    null,
+    2,
+    13,
+    3,
+    2
+   ],
+   "p_videos": 17,
+   "p_channels": 18,
+   "p_views": 78,
+   "score": 38.7,
+   "growth": 0.33,
+   "steam": "https://store.steampowered.com/search/?term=Among%20Us",
    "amazon": null,
    "rank": 18
   },
@@ -1614,96 +1620,14 @@
     0,
     2
    ],
-   "p_videos": 14,
-   "p_channels": 8,
-   "p_views": 81,
-   "score": 35.3,
+   "p_videos": 17,
+   "p_channels": 9,
+   "p_views": 86,
+   "score": 38.3,
    "growth": 2.0,
    "steam": "https://store.steampowered.com/search/?term=Breach",
    "amazon": null,
    "rank": 19
-  },
-  {
-   "game": "Among Us",
-   "canonical": "Among Us",
-   "videos": 2,
-   "raw": 2,
-   "channels": 2,
-   "views": 22010,
-   "streams": [
-    {
-     "t": "インポスターの前に３死体が現れたｗｗｗｗｗ【AmongUs / 宇宙人狼】",
-     "c": "中野あるま / Alma Nakano",
-     "u": "https://www.youtube.com/watch?v=-cN15JIGi6Y",
-     "th": "https://i.ytimg.com/vi/-cN15JIGi6Y/mqdefault.jpg",
-     "v": 22010
-    },
-    {
-     "t": "#amongus 3D　【  お・・・お友達、できるかな！？  】 #あおぎり高校  #栗駒こまる  #vtuber",
-     "c": "こまるCh. - Komaru Kurikoma -/あおぎり高校",
-     "u": "https://www.youtube.com/watch?v=PWkrVwSFN_s",
-     "th": "https://i.ytimg.com/vi/PWkrVwSFN_s/mqdefault_live.jpg",
-     "v": 0
-    }
-   ],
-   "orgs": {
-    "あおぎり高校": 1,
-    "高田村": 1
-   },
-   "spark": [
-    null,
-    null,
-    null,
-    2,
-    13,
-    3,
-    2
-   ],
-   "p_videos": 14,
-   "p_channels": 15,
-   "p_views": 74,
-   "score": 35.3,
-   "growth": 0.33,
-   "steam": "https://store.steampowered.com/search/?term=Among%20Us",
-   "amazon": null,
-   "rank": 20
-  },
-  {
-   "game": "ゼルダの伝説 ムジュラの仮面",
-   "canonical": "ゼルダの伝説 ムジュラの仮面",
-   "videos": 1,
-   "raw": 1,
-   "channels": 1,
-   "views": 90262,
-   "streams": [
-    {
-     "t": "＃06【ゼルダの伝説 ムジュラの仮面】完全初見プレイ♦海エリア♦グレートベイの神殿【アルス・アルマル/にじさんじ】",
-     "c": "アルス・アルマル -ars almal- 【にじさんじ】",
-     "u": "https://www.youtube.com/watch?v=sIPFabb4OrQ",
-     "th": "https://i.ytimg.com/vi/sIPFabb4OrQ/mqdefault.jpg",
-     "v": 90262
-    }
-   ],
-   "orgs": {
-    "にじさんじ": 1
-   },
-   "spark": [
-    null,
-    null,
-    null,
-    0,
-    1,
-    0,
-    1
-   ],
-   "p_videos": 7,
-   "p_channels": 8,
-   "p_views": 84,
-   "score": 34.3,
-   "growth": 1.25,
-   "steam": "https://store.steampowered.com/search/?term=%E3%82%BC%E3%83%AB%E3%83%80%E3%81%AE%E4%BC%9D%E8%AA%AC%20%E3%83%A0%E3%82%B8%E3%83%A5%E3%83%A9%E3%81%AE%E4%BB%AE%E9%9D%A2",
-   "amazon": null,
-   "rank": 21
   },
   {
    "game": "Overwatch 2",
@@ -1741,14 +1665,51 @@
     4,
     2
    ],
-   "p_videos": 14,
-   "p_channels": 15,
-   "p_views": 69,
-   "score": 33.6,
+   "p_videos": 17,
+   "p_channels": 18,
+   "p_views": 73,
+   "score": 36.9,
    "growth": 1.0,
    "steam": "https://store.steampowered.com/search/?term=Overwatch%202",
    "amazon": null,
-   "rank": 22
+   "rank": 20
+  },
+  {
+   "game": "ゼルダの伝説 ムジュラの仮面",
+   "canonical": "ゼルダの伝説 ムジュラの仮面",
+   "videos": 1,
+   "raw": 1,
+   "channels": 1,
+   "views": 90262,
+   "streams": [
+    {
+     "t": "＃06【ゼルダの伝説 ムジュラの仮面】完全初見プレイ♦海エリア♦グレートベイの神殿【アルス・アルマル/にじさんじ】",
+     "c": "アルス・アルマル -ars almal- 【にじさんじ】",
+     "u": "https://www.youtube.com/watch?v=sIPFabb4OrQ",
+     "th": "https://i.ytimg.com/vi/sIPFabb4OrQ/mqdefault.jpg",
+     "v": 90262
+    }
+   ],
+   "orgs": {
+    "にじさんじ": 1
+   },
+   "spark": [
+    null,
+    null,
+    null,
+    0,
+    1,
+    0,
+    1
+   ],
+   "p_videos": 8,
+   "p_channels": 9,
+   "p_views": 89,
+   "score": 36.7,
+   "growth": 1.25,
+   "steam": "https://store.steampowered.com/search/?term=%E3%82%BC%E3%83%AB%E3%83%80%E3%81%AE%E4%BC%9D%E8%AA%AC%20%E3%83%A0%E3%82%B8%E3%83%A5%E3%83%A9%E3%81%AE%E4%BB%AE%E9%9D%A2",
+   "amazon": null,
+   "rank": 21
   },
   {
    "game": "Dead by Daylight",
@@ -1785,51 +1746,14 @@
     7,
     2
    ],
-   "p_videos": 14,
-   "p_channels": 15,
-   "p_views": 68,
-   "score": 33.2,
+   "p_videos": 17,
+   "p_channels": 18,
+   "p_views": 72,
+   "score": 36.6,
    "growth": 0.35,
    "steam": "https://store.steampowered.com/search/?term=Dead%20by%20Daylight",
    "amazon": null,
-   "rank": 23
-  },
-  {
-   "game": "How to Fish",
-   "canonical": "How to Fish",
-   "videos": 1,
-   "raw": 1,
-   "channels": 1,
-   "views": 44776,
-   "streams": [
-    {
-     "t": "【超話題】2日で100万本売れた釣りゲーの『最強ボス』が強すぎるwww【How to Fish】",
-     "c": "ボドカ / Riddle - ゲーム実況",
-     "u": "https://www.youtube.com/watch?v=I-3svBFB4i0",
-     "th": "https://i.ytimg.com/vi/I-3svBFB4i0/mqdefault.jpg",
-     "v": 44776
-    }
-   ],
-   "orgs": {
-    "ストリーマー": 1
-   },
-   "spark": [
-    null,
-    null,
-    null,
-    1,
-    4,
-    3,
-    1
-   ],
-   "p_videos": 7,
-   "p_channels": 8,
-   "p_views": 79,
-   "score": 32.5,
-   "growth": 0.38,
-   "steam": "https://store.steampowered.com/search/?term=How%20to%20Fish",
-   "amazon": null,
-   "rank": 24
+   "rank": 22
   },
   {
    "game": "スプラトゥーン3",
@@ -1874,88 +1798,14 @@
     2,
     3
    ],
-   "p_videos": 21,
-   "p_channels": 23,
-   "p_views": 52,
-   "score": 32.5,
+   "p_videos": 25,
+   "p_channels": 27,
+   "p_views": 55,
+   "score": 36.2,
    "growth": 1.12,
    "steam": "https://store.steampowered.com/search/?term=%E3%82%B9%E3%83%97%E3%83%A9%E3%83%88%E3%82%A5%E3%83%BC%E3%83%B33",
    "amazon": null,
-   "rank": 25
-  },
-  {
-   "game": "龍が如く",
-   "canonical": "Yakuza",
-   "videos": 1,
-   "raw": 1,
-   "channels": 1,
-   "views": 32507,
-   "streams": [
-    {
-     "t": "俺たちの家の話が全国で報道されている…！？【龍が如く 極３】＃１０",
-     "c": "牛沢",
-     "u": "https://www.youtube.com/watch?v=g-GFY4TUPi8",
-     "th": "https://i.ytimg.com/vi/g-GFY4TUPi8/mqdefault.jpg",
-     "v": 32507
-    }
-   ],
-   "orgs": {
-    "実況者": 1
-   },
-   "spark": [
-    null,
-    null,
-    null,
-    0,
-    0,
-    1,
-    1
-   ],
-   "p_videos": 7,
-   "p_channels": 8,
-   "p_views": 77,
-   "score": 31.9,
-   "growth": 1.25,
-   "steam": null,
-   "amazon": null,
-   "rank": 26
-  },
-  {
-   "game": "モンスターストライク",
-   "canonical": "モンスターストライク",
-   "videos": 1,
-   "raw": 1,
-   "channels": 1,
-   "views": 31144,
-   "streams": [
-    {
-     "t": "【モンストLIVE】果たして号外発表はあるのか!? 朝活成功男がお送りする『ブルーロック』コラボ究極クエスト『殺し屋 烏旅人』でメダル周回&魂気集めながらまったり雑談配信【運営さん、信じてるからな】",
-     "c": "ぼた餅",
-     "u": "https://www.youtube.com/watch?v=fF8TcUTUEhI",
-     "th": "https://i.ytimg.com/vi/fF8TcUTUEhI/mqdefault.jpg",
-     "v": 31144
-    }
-   ],
-   "orgs": {
-    "個人・その他": 1
-   },
-   "spark": [
-    null,
-    null,
-    null,
-    1,
-    0,
-    2,
-    1
-   ],
-   "p_videos": 7,
-   "p_channels": 8,
-   "p_views": 77,
-   "score": 31.9,
-   "growth": 1.0,
-   "steam": "https://store.steampowered.com/search/?term=%E3%83%A2%E3%83%B3%E3%82%B9%E3%82%BF%E3%83%BC%E3%82%B9%E3%83%88%E3%83%A9%E3%82%A4%E3%82%AF",
-   "amazon": null,
-   "rank": 27
+   "rank": 23
   },
   {
    "game": "ペルソナ5 ザ・ロイヤル",
@@ -1993,14 +1843,125 @@
     1,
     2
    ],
-   "p_videos": 14,
-   "p_channels": 15,
-   "p_views": 64,
-   "score": 31.8,
+   "p_videos": 17,
+   "p_channels": 18,
+   "p_views": 68,
+   "score": 35.2,
    "growth": 1.2,
    "steam": "https://store.steampowered.com/search/?term=%E3%83%9A%E3%83%AB%E3%82%BD%E3%83%8A5%20%E3%82%B6%E3%83%BB%E3%83%AD%E3%82%A4%E3%83%A4%E3%83%AB",
    "amazon": null,
-   "rank": 28
+   "rank": 24
+  },
+  {
+   "game": "How to Fish",
+   "canonical": "How to Fish",
+   "videos": 1,
+   "raw": 1,
+   "channels": 1,
+   "views": 44776,
+   "streams": [
+    {
+     "t": "【超話題】2日で100万本売れた釣りゲーの『最強ボス』が強すぎるwww【How to Fish】",
+     "c": "ボドカ / Riddle - ゲーム実況",
+     "u": "https://www.youtube.com/watch?v=I-3svBFB4i0",
+     "th": "https://i.ytimg.com/vi/I-3svBFB4i0/mqdefault.jpg",
+     "v": 44776
+    }
+   ],
+   "orgs": {
+    "ストリーマー": 1
+   },
+   "spark": [
+    null,
+    null,
+    null,
+    1,
+    4,
+    3,
+    1
+   ],
+   "p_videos": 8,
+   "p_channels": 9,
+   "p_views": 84,
+   "score": 34.9,
+   "growth": 0.38,
+   "steam": "https://store.steampowered.com/search/?term=How%20to%20Fish",
+   "amazon": null,
+   "rank": 25
+  },
+  {
+   "game": "龍が如く",
+   "canonical": "Yakuza",
+   "videos": 1,
+   "raw": 1,
+   "channels": 1,
+   "views": 32507,
+   "streams": [
+    {
+     "t": "俺たちの家の話が全国で報道されている…！？【龍が如く 極３】＃１０",
+     "c": "牛沢",
+     "u": "https://www.youtube.com/watch?v=g-GFY4TUPi8",
+     "th": "https://i.ytimg.com/vi/g-GFY4TUPi8/mqdefault.jpg",
+     "v": 32507
+    }
+   ],
+   "orgs": {
+    "実況者": 1
+   },
+   "spark": [
+    null,
+    null,
+    null,
+    0,
+    0,
+    1,
+    1
+   ],
+   "p_videos": 8,
+   "p_channels": 9,
+   "p_views": 81,
+   "score": 33.9,
+   "growth": 1.25,
+   "steam": null,
+   "amazon": null,
+   "rank": 26
+  },
+  {
+   "game": "モンスターストライク",
+   "canonical": "モンスターストライク",
+   "videos": 1,
+   "raw": 1,
+   "channels": 1,
+   "views": 31144,
+   "streams": [
+    {
+     "t": "【モンストLIVE】果たして号外発表はあるのか!? 朝活成功男がお送りする『ブルーロック』コラボ究極クエスト『殺し屋 烏旅人』でメダル周回&魂気集めながらまったり雑談配信【運営さん、信じてるからな】",
+     "c": "ぼた餅",
+     "u": "https://www.youtube.com/watch?v=fF8TcUTUEhI",
+     "th": "https://i.ytimg.com/vi/fF8TcUTUEhI/mqdefault.jpg",
+     "v": 31144
+    }
+   ],
+   "orgs": {
+    "個人・その他": 1
+   },
+   "spark": [
+    null,
+    null,
+    null,
+    1,
+    0,
+    2,
+    1
+   ],
+   "p_videos": 8,
+   "p_channels": 9,
+   "p_views": 81,
+   "score": 33.9,
+   "growth": 1.0,
+   "steam": "https://store.steampowered.com/search/?term=%E3%83%A2%E3%83%B3%E3%82%B9%E3%82%BF%E3%83%BC%E3%82%B9%E3%83%88%E3%83%A9%E3%82%A4%E3%82%AF",
+   "amazon": null,
+   "rank": 27
   },
   {
    "game": "ARK: Survival Ascended",
@@ -2030,14 +1991,14 @@
     1,
     1
    ],
-   "p_videos": 7,
-   "p_channels": 8,
-   "p_views": 73,
-   "score": 30.4,
+   "p_videos": 8,
+   "p_channels": 9,
+   "p_views": 78,
+   "score": 32.8,
    "growth": 0.33,
    "steam": "https://store.steampowered.com/search/?term=ARK%3A%20Survival%20Ascended",
    "amazon": null,
-   "rank": 29
+   "rank": 28
   },
   {
    "game": "ペルソナ５スクランブル ザ ファントムストライカーズ",
@@ -2067,12 +2028,49 @@
     0,
     1
    ],
-   "p_videos": 7,
-   "p_channels": 8,
-   "p_views": 72,
-   "score": 30.1,
+   "p_videos": 8,
+   "p_channels": 9,
+   "p_views": 76,
+   "score": 32.1,
    "growth": 1.25,
    "steam": "https://store.steampowered.com/search/?term=%E3%83%9A%E3%83%AB%E3%82%BD%E3%83%8A%EF%BC%95%E3%82%B9%E3%82%AF%E3%83%A9%E3%83%B3%E3%83%96%E3%83%AB%20%E3%82%B6%20%E3%83%95%E3%82%A1%E3%83%B3%E3%83%88%E3%83%A0%E3%82%B9%E3%83%88%E3%83%A9%E3%82%A4%E3%82%AB%E3%83%BC%E3%82%BA",
+   "amazon": null,
+   "rank": 29
+  },
+  {
+   "game": "鳴潮",
+   "canonical": "鳴潮",
+   "videos": 1,
+   "raw": 1,
+   "channels": 1,
+   "views": 12147,
+   "streams": [
+    {
+     "t": "【#鳴潮】 Ver3.7組属性武器は一体…！？マトリクスや第二ソラリスしながら全力待機🔥 / 2K1440p #787 【#Vtuber Yomi】",
+     "c": "夜魅ちゃんねる",
+     "u": "https://www.youtube.com/watch?v=t-bsWsLg8t8",
+     "th": "https://i.ytimg.com/vi/t-bsWsLg8t8/mqdefault.jpg",
+     "v": 12147
+    }
+   ],
+   "orgs": {
+    "個人・その他": 1
+   },
+   "spark": [
+    null,
+    null,
+    null,
+    2,
+    3,
+    5,
+    1
+   ],
+   "p_videos": 8,
+   "p_channels": 9,
+   "p_views": 74,
+   "score": 31.4,
+   "growth": 0.3,
+   "steam": "https://store.steampowered.com/search/?term=%E9%B3%B4%E6%BD%AE",
    "amazon": null,
    "rank": 30
   }
