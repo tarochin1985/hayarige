@@ -379,17 +379,21 @@ function render(){
   const col = DATA.column;
   $('#pick-sec').style.display = col ? '' : 'none';
   if (col) {
-    // コラムで取り上げたゲームの購入導線は、ランキング側の判定を使い回す
+    // 画像とSteamリンクはコラム自身が持っている（build_site が入れる）。
+    // ランキング30位以内から探していた頃は、取り上げたゲームが順位を
+    // 落とすと画像が消えていた。古いデータのために従来の探索も残す。
     const cr = (DATA.ranking || []).find(r => r.game === col.game);
+    const colSteam = col.steam || (cr && cr.steam) || '';
+    const colHero  = col.hero  || (cr && cr.streams && cr.streams[0] && cr.streams[0].th) || '';
     // コラムには、人が実際に商品ページを確かめたリンクだけを置く
     const links = [];
     if (col.buy && col.buy.u)
       links.push(`<a class="az" href="${esc(col.buy.u)}" target="_blank" rel="noopener sponsored nofollow">${CART}${esc(col.buy.t || '購入')}</a>`);
-    if (cr && cr.steam)
-      links.push(`<a class="st" href="${esc(cr.steam)}" target="_blank" rel="noopener sponsored">${CART}Steam</a>`);
+    if (colSteam)
+      links.push(`<a class="st" href="${esc(colSteam)}" target="_blank" rel="noopener sponsored">${CART}Steam</a>`);
     const cbuy = links.length
       ? `<div class="buy" style="margin-top:2px">${links.join('')}</div>` : '';
-    const hero = cr && cr.streams && cr.streams[0] && cr.streams[0].th ? cr.streams[0].th : '';
+    const hero = colHero;
     $('#pick').classList.toggle('has-img', !!hero);
     $('#pick').innerHTML = `
       ${hero ? `<img class="heroimg" src="${esc(hero)}" alt="" loading="lazy">` : ''}

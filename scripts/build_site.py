@@ -292,6 +292,28 @@ def main():
         column["buy"] = dict(column["buy"],
                              u=amazon_tagged(column["buy"].get("u", ""),
                                              (cfg.get("amazon_tag") or "").strip()))
+    if column:
+        # コラムの画像とSteamリンクを、コラム自身に持たせる。
+        # 以前は表示側でランキング30位以内から同名を探していたので、
+        # 取り上げたゲームが31位以下に落ちた瞬間に画像が消えていた
+        # （8/29のみんなのGOLF）。順位に関係なく出したいので、
+        # 30位で切る前の全ゲーム（rows）から引く。
+        cr = next((r for r in rows if r["game"] == column["game"]), None)
+        if cr:
+            st = cr.get("streams") or []
+            if st and st[0].get("th"):
+                column["hero"] = st[0]["th"]
+            if cr.get("steam"):
+                column["steam"] = cr["steam"]
+        if not column.get("hero"):
+            # ランキングに1本も無いゲーム（配信が終わって24時間を過ぎた等）でも、
+            # 出典のYouTube動画からサムネイルを作れる。
+            for src in column.get("sources") or []:
+                m = re.search(r"(?:youtube\.com/watch\?v=|youtu\.be/)([\w-]{11})",
+                              str(src.get("u", "")))
+                if m:
+                    column["hero"] = f"https://i.ytimg.com/vi/{m.group(1)}/mqdefault.jpg"
+                    break
 
     payload = {
         "mode": "day",
