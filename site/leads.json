@@ -1,6 +1,6 @@
 {
- "date": "2026-08-30",
- "generated": "2026-08-30 19:09",
+ "date": "2026-08-31",
+ "generated": "2026-08-31 07:07",
  "leads": {
   "events": [
    {
@@ -11,28 +11,14 @@
      "ベルモンド・バンデラス",
      "九里詠太 / Kuri Eita【にじさんじ】",
      "伊波ライ / Inami Rai【にじさんじ】",
+     "伏見ガク【にじさんじ所属】",
      "加賀美 ハヤト/Hayato Kagami",
      "四季凪アキラ / Shikinagi Akira",
      "夢追翔のJUKE BOX",
      "弦月 藤士郎 / Genzuki Tojiro【にじさんじ】",
-     "榊ネス / Sakaki Ness【にじさんじ】",
-     "甲斐田 晴 / Kaida Haru【にじさんじ】",
      "緋八マナ / Hibachi Mana【にじさんじ】",
-     "長尾 景 / Nagao Kei【にじさんじ】"
-    ]
-   },
-   {
-    "tag": "#ストグラ",
-    "channels": [
-     "たけぉ",
-     "まお",
-     "ましゃかりさん",
-     "みつき",
-     "クラウン【探検家の記録】",
-     "ノビーの遊び部屋",
-     "柚原いづみ / Izumi Channel 【ななしいんく】",
-     "闇乃あびす / Abyss",
-     "魔光リサ - Lisa Makoh -"
+     "長尾 景 / Nagao Kei【にじさんじ】",
+     "魁星 / Kaisei【にじさんじ】"
     ]
    },
    {
@@ -41,10 +27,10 @@
      "bintroll",
      "jirai channel",
      "たけぉ",
-     "天羽しろっぷ 【Amau Syrup】",
      "幽音しの Shino Channel - ななしいんく",
      "影。/かげまる",
      "愛channel",
+     "柚原いづみ / Izumi Channel 【ななしいんく】",
      "蝶屋はなび / Choya Hanabi"
     ]
    },
@@ -61,9 +47,21 @@
     ]
    },
    {
+    "tag": "#ストグラ",
+    "channels": [
+     "たけぉ",
+     "ましゃかりさん",
+     "みつき",
+     "クラウン【探検家の記録】",
+     "ノビーの遊び部屋",
+     "柚原いづみ / Izumi Channel 【ななしいんく】"
+    ]
+   },
+   {
     "tag": "#ストグラSeason2",
     "channels": [
      "たけぉ",
+     "はたさこ / hatasako_flag",
      "クラウン【探検家の記録】",
      "天羽よつは",
      "影。/かげまる",
@@ -71,28 +69,27 @@
     ]
    },
    {
-    "tag": "#ホロ甲2026",
+    "tag": "#ホロぷよテト大会",
     "channels": [
-     "Koyori ch. 博衣こより - holoX -",
-     "Mio Channel 大神ミオ",
-     "Polka Ch. 尾丸ポルカ",
-     "Riona Ch. 響咲リオナ - FLOW GLOW"
+     "Pekora Ch. 兎田ぺこら",
+     "Vivi Ch. 綺々羅々ヴィヴィ - FLOW GLOW",
+     "アキロゼCh。Vtuber/ホロライブ所属"
     ]
    },
    {
-    "tag": "#valorant",
+    "tag": "#フォートナイト",
     "channels": [
-     "たくろー",
-     "ふぇに男",
-     "朝陽ひろ"
+     "A2目標　じんちゅーぶ",
+     "LiaqN【りあん】",
+     "とち丸ちゃん【毎日19時配信】"
     ]
    },
    {
-    "tag": "#ストグラ救急隊",
+    "tag": "#にゃんこ大戦争",
     "channels": [
-     "ノビーの遊び部屋",
-     "天羽よつは",
-     "影。/かげまる"
+     "とあの3たん",
+     "まそしんチャンネル",
+     "ゆうハル"
     ]
    }
   ],
@@ -100,42 +97,42 @@
   "wide": [
    {
     "game": "Minecraft",
-    "channels": 33,
-    "videos": 41
-   },
-   {
-    "game": "ストリートファイター6",
-    "channels": 28,
-    "videos": 35
+    "channels": 27,
+    "videos": 34
    },
    {
     "game": "Apex Legends",
-    "channels": 27,
-    "videos": 36
+    "channels": 29,
+    "videos": 34
    },
    {
-    "game": "Rust",
-    "channels": 18,
-    "videos": 24
+    "game": "ストリートファイター6",
+    "channels": 25,
+    "videos": 29
    },
    {
     "game": "Grand Theft Auto V",
-    "channels": 18,
-    "videos": 24
+    "channels": 16,
+    "videos": 20
    },
    {
-    "game": "実況パワフルプロ野球2026",
-    "channels": 13,
+    "game": "Rust",
+    "channels": 15,
     "videos": 17
+   },
+   {
+    "game": "VALORANT",
+    "channels": 14,
+    "videos": 16
    },
    {
     "game": "ほの暮しの庭",
-    "channels": 14,
-    "videos": 17
+    "channels": 13,
+    "videos": 14
    },
    {
-    "game": "ぷよぷよテトリス2",
-    "channels": 12,
+    "game": "実況パワフルプロ野球2026",
+    "channels": 10,
     "videos": 15
    }
   ]
