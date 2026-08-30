@@ -233,9 +233,12 @@ def compute_rows(videos, idx, disp, override, hist, day_names, momentum_ready,
             past = [v for d, v in zip(day_names, r["spark"])
                     if d in hist and d != day_names[-1] and v is not None]
             if momentum_ready and past:
-                r["growth"] = round(r["videos"] / max(0.8, sum(past) / len(past)), 2)
+                # 「ふだん何件だったか」も持たせる。倍率だけだと、1件が3件に
+                # なっただけでも ×3 と出てしまい、読む側が大きさを測れない。
+                r["base"] = round(sum(past) / len(past), 1)
+                r["growth"] = round(r["videos"] / max(0.8, r["base"]), 2)
             else:
-                r["growth"] = None
+                r["growth"] = r["base"] = None
             r["steam"], r["amazon"] = store_links(
                 r["game"], plats.get(r["canonical"]), cfg)
         rows.sort(key=lambda r: -r["score"])
