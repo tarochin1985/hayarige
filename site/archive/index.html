@@ -64,6 +64,10 @@ a{color:inherit}
 .hotcard .x b{font-family:"Roboto Mono",monospace;font-size:29px;font-weight:700;color:var(--hot);line-height:1}
 .hotcard .x span{font-size:11.5px;color:var(--ink-3)}
 .hotcard .f{font-size:11.5px;color:var(--ink-3);display:flex;justify-content:space-between}
+/* 倍率だけでは大きさが伝わらない（1件が3件でも ×3）。実数の変化も並べる */
+.hotcard .delta{display:flex;align-items:center;gap:7px;font-size:12px;color:var(--ink-3)}
+.hotcard .delta svg{width:15px;height:15px;flex:none;color:var(--hot)}
+.hotcard .delta b{font-family:"Roboto Mono",monospace;font-size:13.5px;color:var(--ink);font-weight:700}
 .filters{display:flex;flex-wrap:wrap;gap:7px;margin-bottom:12px}
 .filters button{font:inherit;font-size:12px;font-weight:700;padding:5px 13px;border-radius:20px;cursor:pointer;
  background:var(--card);color:var(--ink-2);border:1px solid var(--line)}
@@ -278,10 +282,11 @@ footer{font-size:11.5px;color:var(--ink-3);text-align:center;border-top:1px soli
 </div>
 
 <script>
-const DATA = {"mode": "archive", "date": "2026-08-30", "archive": [{"date": "2026-08-30", "videos": 1013, "channels": 652, "games": 173, "top": [{"game": "ストリートファイター6", "videos": 42, "channels": 32}, {"game": "Minecraft", "videos": 38, "channels": 28}, {"game": "Apex Legends", "videos": 33, "channels": 25}, {"game": "Rust", "videos": 16, "channels": 16}, {"game": "Grand Theft Auto V", "videos": 21, "channels": 16}], "column": {"game": "キャプテン翼", "headline": "6年ぶりの家庭用キャプテン翼が8月27日に発売され、新作と一緒にファミコン版の配信も動き出した"}}, {"date": "2026-08-29", "videos": 900, "games": 171, "channels": 621, "top": [{"game": "Minecraft", "videos": 35, "channels": 27}, {"game": "ストリートファイター6", "videos": 34, "channels": 26}, {"game": "Apex Legends", "videos": 31, "channels": 24}, {"game": "実況パワフルプロ野球2026", "videos": 17, "channels": 15}, {"game": "Grand Theft Auto V", "videos": 15, "channels": 15}], "column": {"game": "Moo Who", "headline": "8月21日に出たばかりの声真似かくれんぼに、ホロライブの7人が同じ夜いっせいに入った"}}, {"date": "2026-08-28", "videos": 714, "games": 155, "channels": 531, "top": [{"game": "Minecraft", "videos": 37, "channels": 35}, {"game": "Apex Legends", "videos": 31, "channels": 24}, {"game": "Grand Theft Auto V", "videos": 18, "channels": 17}, {"game": "ストリートファイター6", "videos": 16, "channels": 14}, {"game": "7 Days to Die", "videos": 11, "channels": 11}], "column": {"game": "Minecraft", "headline": "無関係な3つのマイクラ企画が重なり、夏休みの最後にマイクラが跳ねた"}}, {"date": "2026-08-27", "videos": 550, "games": 121, "channels": 400, "top": [{"game": "Minecraft", "videos": 31, "channels": 27}, {"game": "ストリートファイター6", "videos": 19, "channels": 15}, {"game": "Apex Legends", "videos": 15, "channels": 13}, {"game": "ほの暮しの庭", "videos": 12, "channels": 11}, {"game": "実況パワフルプロ野球2026", "videos": 10, "channels": 10}], "column": {"game": "ぷよぷよテトリス2", "headline": "ホロライブの大会を控えて、メンバーがぷよぷよを教え合っている"}}, {"date": "2026-08-26", "videos": 471, "games": 107, "channels": 348, "top": [{"game": "Minecraft", "videos": 25, "channels": 22}, {"game": "ストリートファイター6", "videos": 17, "channels": 13}, {"game": "Apex Legends", "videos": 11, "channels": 11}, {"game": "ほの暮しの庭", "videos": 10, "channels": 10}, {"game": "VALORANT", "videos": 10, "channels": 9}], "column": null}, {"date": "2026-08-25", "videos": 142, "games": 48, "channels": 135, "top": [{"game": "Apex Legends", "videos": 8, "channels": 8}, {"game": "Minecraft", "videos": 6, "channels": 6}, {"game": "実況パワフルプロ野球2026", "videos": 4, "channels": 4}, {"game": "VALORANT", "videos": 4, "channels": 4}, {"game": "ぷよぷよテトリス2", "videos": 3, "channels": 3}], "column": null}], "paths": {"home": "../", "archive": "../archive/"}};
+const DATA = {"mode": "archive", "date": "2026-08-30", "archive": [{"date": "2026-08-30", "videos": 1043, "channels": 654, "games": 173, "top": [{"game": "ストリートファイター6", "videos": 42, "channels": 33}, {"game": "Minecraft", "videos": 41, "channels": 30}, {"game": "Apex Legends", "videos": 34, "channels": 27}, {"game": "Grand Theft Auto V", "videos": 24, "channels": 17}, {"game": "Rust", "videos": 19, "channels": 16}], "column": {"game": "キャプテン翼", "headline": "6年ぶりの家庭用キャプテン翼が8月27日に発売され、新作と一緒にファミコン版の配信も動き出した"}}, {"date": "2026-08-29", "videos": 893, "games": 171, "channels": 616, "top": [{"game": "Minecraft", "videos": 35, "channels": 27}, {"game": "ストリートファイター6", "videos": 34, "channels": 26}, {"game": "Apex Legends", "videos": 31, "channels": 24}, {"game": "実況パワフルプロ野球2026", "videos": 17, "channels": 15}, {"game": "Grand Theft Auto V", "videos": 15, "channels": 15}], "column": {"game": "Moo Who", "headline": "8月21日に出たばかりの声真似かくれんぼに、ホロライブの7人が同じ夜いっせいに入った"}}, {"date": "2026-08-28", "videos": 705, "games": 154, "channels": 525, "top": [{"game": "Minecraft", "videos": 37, "channels": 35}, {"game": "Apex Legends", "videos": 31, "channels": 24}, {"game": "Grand Theft Auto V", "videos": 18, "channels": 17}, {"game": "ストリートファイター6", "videos": 16, "channels": 14}, {"game": "7 Days to Die", "videos": 11, "channels": 11}], "column": {"game": "Minecraft", "headline": "無関係な3つのマイクラ企画が重なり、夏休みの最後にマイクラが跳ねた"}}, {"date": "2026-08-27", "videos": 550, "games": 121, "channels": 400, "top": [{"game": "Minecraft", "videos": 31, "channels": 27}, {"game": "ストリートファイター6", "videos": 19, "channels": 15}, {"game": "Apex Legends", "videos": 15, "channels": 13}, {"game": "ほの暮しの庭", "videos": 12, "channels": 11}, {"game": "実況パワフルプロ野球2026", "videos": 10, "channels": 10}], "column": {"game": "ぷよぷよテトリス2", "headline": "ホロライブの大会を控えて、メンバーがぷよぷよを教え合っている"}}, {"date": "2026-08-26", "videos": 471, "games": 107, "channels": 348, "top": [{"game": "Minecraft", "videos": 25, "channels": 22}, {"game": "ストリートファイター6", "videos": 17, "channels": 13}, {"game": "Apex Legends", "videos": 11, "channels": 11}, {"game": "ほの暮しの庭", "videos": 10, "channels": 10}, {"game": "VALORANT", "videos": 10, "channels": 9}], "column": null}, {"date": "2026-08-25", "videos": 142, "games": 48, "channels": 135, "top": [{"game": "Apex Legends", "videos": 8, "channels": 8}, {"game": "Minecraft", "videos": 6, "channels": 6}, {"game": "実況パワフルプロ野球2026", "videos": 4, "channels": 4}, {"game": "VALORANT", "videos": 4, "channels": 4}, {"game": "ぷよぷよテトリス2", "videos": 3, "channels": 3}], "column": null}], "paths": {"home": "../", "archive": "../archive/"}};
 const $ = s => document.querySelector(s);
 const esc = s => String(s ?? '').replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
 const cssv = n => getComputedStyle(document.documentElement).getPropertyValue(n).trim();
+const fmt1 = n => n == null ? '?' : String(Math.round(n * 10) / 10);
 const man = n => n >= 10000 ? (n/10000).toFixed(n >= 100000 ? 0 : 1) + '万' : (n||0).toLocaleString();
 
 function spark(v, w, h, color){
@@ -306,8 +311,9 @@ let orgFilter = null;
   const CART = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="20" r="1.4"/><circle cx="18" cy="20" r="1.4"/><path d="M2 3h3l2.4 12.1a1.6 1.6 0 0 0 1.6 1.3h8.4a1.6 1.6 0 0 0 1.6-1.3L21 7H6"/></svg>';
 function buy(r){
   const b = [];
-  if (r.steam)  b.push(`<a class="st" href="${esc(r.steam)}" target="_blank" rel="noopener sponsored">${CART}Steam</a>`);
-  if (r.amazon) b.push(`<a class="az" href="${esc(r.amazon)}" target="_blank" rel="noopener sponsored nofollow">${CART}Amazon</a>`);
+  // どちらも店の検索結果に飛ぶ。商品ページではないので「探す」と書く。
+  if (r.steam)  b.push(`<a class="st" href="${esc(r.steam)}" target="_blank" rel="noopener sponsored">${CART}Steamで探す</a>`);
+  if (r.amazon) b.push(`<a class="az" href="${esc(r.amazon)}" target="_blank" rel="noopener sponsored nofollow">${CART}Amazonで探す</a>`);
   return b.join('') || '<span style="color:var(--ink-3);font-size:10px">—</span>';
 }
 
@@ -390,7 +396,7 @@ function render(){
     if (col.buy && col.buy.u)
       links.push(`<a class="az" href="${esc(col.buy.u)}" target="_blank" rel="noopener sponsored nofollow">${CART}${esc(col.buy.t || '購入')}</a>`);
     if (colSteam)
-      links.push(`<a class="st" href="${esc(colSteam)}" target="_blank" rel="noopener sponsored">${CART}Steam</a>`);
+      links.push(`<a class="st" href="${esc(colSteam)}" target="_blank" rel="noopener sponsored">${CART}Steamで探す</a>`);
     const cbuy = links.length
       ? `<div class="buy" style="margin-top:2px">${links.join('')}</div>` : '';
     const hero = colHero;
@@ -436,8 +442,12 @@ function render(){
       ? DATA.rising.map(r => `<article class="hotcard">
           <div class="n">${esc(r.game)}</div>
           <div class="x"><b>×${(r.growth||1).toFixed(1)}</b><span>直近の平均とくらべて</span></div>
+          <div class="delta"><span>ふだん ${fmt1(r.base)}件</span>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"
+              stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h13M13 6l6 6-6 6"/></svg>
+            <b>${isArchive ? 'この日' : '今日'} ${r.videos}件</b></div>
           ${spark(r.spark, 200, 34, HOT)}
-          <div class="f"><span>${dayk} ${r.videos}件</span><span>${r.channels}チャンネル</span></div>
+          <div class="f"><span>${r.channels}チャンネルが配信</span><span>${man(r.views)}回 視聴</span></div>
         </article>`).join('')
       : '<div class="empty">今日は目立った急上昇はありませんでした。</div>';
   }
