@@ -340,6 +340,11 @@ def main():
     import json
     tpl = (SITE / "template.html").read_text(encoding="utf-8")
 
+    # XやDiscordにURLを貼ったときのカード（OGP）は、相対パスでは出ない。
+    # 画像もページのURLも「https://…」から書く必要があるので、
+    # サイトの住所を data/site_config.json から持ってくる。
+    site_url = (cfg.get("site_url") or "").strip().rstrip("/")
+
     def render(path, data, depth):
         """depth はサイト直下から何階層下か。リンクの相対パスに使う。"""
         d = dict(data, paths={"home": "../" * depth or "./",
@@ -347,8 +352,12 @@ def main():
         p = SITE / path
         p.parent.mkdir(parents=True, exist_ok=True)
         home = "../" * depth or "./"
+        # そのページ自身のURL。index.html は省いて、ディレクトリの形にする。
+        page = "" if path == "index.html" else path.replace("index.html", "")
         p.write_text(tpl.replace("__DATA__", json.dumps(d, ensure_ascii=False))
-                        .replace("__HOME__", home),
+                        .replace("__HOME__", home)
+                        .replace("__PAGEURL__", f"{site_url}/{page}" if site_url else "")
+                        .replace("__SITE__", site_url),
                      encoding="utf-8")
 
     render("index.html", payload, 0)
