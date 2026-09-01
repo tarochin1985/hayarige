@@ -83,6 +83,28 @@ a{color:inherit}
 .hotcard .delta{display:flex;align-items:center;gap:7px;font-size:12px;color:var(--ink-3)}
 .hotcard .delta svg{width:15px;height:15px;flex:none;color:var(--hot)}
 .hotcard .delta b{font-family:"Roboto Mono",monospace;font-size:13.5px;color:var(--ink);font-weight:700}
+footer .flink{color:var(--accent);font-weight:700;text-decoration:none;margin:0 9px}
+footer .flink:hover{text-decoration:underline}
+
+/* 説明ページ（/about/ など）の本文 */
+.doc{background:var(--card);border:1px solid var(--line);border-radius:var(--r);
+ box-shadow:var(--sh);padding:26px 30px 30px;max-width:100%}
+.doc h2{font-family:"Zen Kaku Gothic New",sans-serif;font-size:19px;font-weight:900;
+ margin:30px 0 10px;line-height:1.45}
+.doc h2:first-child{margin-top:0}
+.doc p{margin:0 0 13px;font-size:14.2px;line-height:1.95;color:var(--ink-2);max-width:62ch}
+.doc ul{margin:0 0 15px;padding-left:1.15em;color:var(--ink-2);font-size:14.2px;line-height:1.95}
+.doc li{margin-bottom:5px;max-width:60ch}
+.doc b,.doc strong{color:var(--ink);font-weight:700}
+.doc a{color:var(--accent);font-weight:700}
+.doc .lead{font-size:15px;color:var(--ink)}
+.doc dl{margin:0 0 15px;display:grid;grid-template-columns:auto 1fr;gap:6px 16px;
+ font-size:14.2px;line-height:1.9;color:var(--ink-2)}
+.doc dt{font-family:"Roboto Mono",monospace;font-size:12.5px;font-weight:700;color:var(--ink-3);
+ white-space:nowrap;padding-top:3px}
+.doc dd{margin:0}
+@media (max-width:560px){.doc{padding:20px 18px 24px}.doc dl{grid-template-columns:1fr;gap:2px 0}}
+
 .filters{display:flex;flex-wrap:wrap;gap:7px;margin-bottom:12px}
 .filters button{font:inherit;font-size:12px;font-weight:700;padding:5px 13px;border-radius:20px;cursor:pointer;
  background:var(--card);color:var(--ink-2);border:1px solid var(--line)}
@@ -246,10 +268,13 @@ footer{font-size:11.5px;color:var(--ink-3);text-align:center;border-top:1px soli
 
   <nav class="nav" id="nav" style="margin-left:0"></nav>
   <div id="banner"></div>
-  <section id="pick-sec" style="display:none">
+  <!-- __SSR_ から始まる場所には、build_site が中身をHTMLとして書き込む。
+       JavaScriptが動く環境では、同じ内容で描き直される。
+       検索エンジンやJSを実行しない読み手には、この静的な中身が渡る。 -->
+  <section id="pick-sec" style="__PICKDISP__">
     <div class="head"><h2>今日の注目ゲーム</h2>
       <span class="note">なぜ今このゲームが伸びているのか</span></div>
-    <article class="pick" id="pick"></article>
+    <article class="pick" id="pick">__SSR_PICK__</article>
   </section>
 
   <section id="hot-sec">
@@ -266,8 +291,12 @@ footer{font-size:11.5px;color:var(--ink-3);text-align:center;border-top:1px soli
       <span class="note">カードや行を押すと、そのゲームの配信一覧が開きます</span>
     </div>
     <div class="filters" id="filters"></div>
-    <div class="cards" id="cards"></div>
-    <div class="list" id="rows"></div>
+    <div class="cards" id="cards">__SSR_CARDS__</div>
+    <div class="list" id="rows">__SSR_ROWS__</div>
+  </section>
+
+  <section id="page-sec" style="display:none">
+    <article class="doc" id="page-body">__PAGEBODY__</article>
   </section>
 
   <section id="arch-sec" style="display:none">
@@ -290,8 +319,10 @@ footer{font-size:11.5px;color:var(--ink-3);text-align:center;border-top:1px soli
   </section>
 
   <footer>
+    <a class="flink" href="__HOME__about/">このサイトについて</a>
+    <a class="flink" href="__HOME__archive/">これまでの記録</a><br>
     ハヤリゲー ｜ YouTubeの配信タイトルを毎日自動で解析しています<br>
-    同じ配信者の連番シリーズは1件として集計 ／ <span id="f-gen"></span><br>
+    同じ配信者が同じ日に出した続きものは1件として集計 ／ <span id="f-gen"></span><br>
     <span style="opacity:.75">Amazonのアソシエイトとして、当サイトは適格販売により収入を得ています</span>
   </footer>
 </div>
@@ -385,7 +416,20 @@ function renderAdmin(){
   $('#f-gen').textContent = DATA.generated || '';
 }
 
+function renderPage(){
+  const P = DATA.paths || {home: './', archive: './archive/'};
+  ['#hot-sec', '#rank-sec', '#q-sec', '#pick-sec', '#arch-sec'].forEach(s => {
+    const e = $(s); if (e) e.style.display = 'none';
+  });
+  $('#page-sec').style.display = '';
+  $('#nav').innerHTML = `<a href="${P.home}">今日のランキングへ</a>`;
+  $('#s-date').textContent = '';
+  $('#s-meta').textContent = DATA.subtitle || '';
+  $('#f-gen').textContent = DATA.generated ? '最終更新 ' + DATA.generated : '';
+}
+
 function render(){
+  if (DATA.mode === 'page') return renderPage();
   if (DATA.mode === 'admin') return renderAdmin();
   if (DATA.mode === 'archive') return renderArchive();
   const AC = cssv('--accent'), HOT = cssv('--hot'), t = DATA.totals || {};

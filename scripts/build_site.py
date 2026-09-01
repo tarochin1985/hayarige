@@ -4,6 +4,7 @@
 
 出力: site/index.html と site/data.json
 """
+import html
 import math, re
 from collections import defaultdict, Counter
 from datetime import datetime, timedelta, timezone
@@ -132,9 +133,19 @@ def find_leads(videos, rows, hist, day_names):
     return {"events": events[:8], "newcomers": newcomers[:8], "wide": wide[:8]}
 
 
-def series_sig(title: str) -> str:
-    """連番シリーズをまとめるための署名。1人の連投で順位が動かないようにする。"""
-    return M.compact(re.sub(r"[0-9#＃]+", "", title))[:16]
+def series_sig(channel_id: str, title: str) -> str:
+    """連番シリーズをまとめるための署名。1人の連投で順位が動かないようにする。
+
+    署名に配信者を含める。以前はタイトルだけで作っていたので、
+    別々の配信者が同じ言い回しを使っただけで1件にまとめられていた
+    （「【Minecraft】久しぶりの…」を2人が同じ日に出した、など）。
+    2人が配信したなら2件である。
+
+    まとめる範囲は集計の窓（直近24時間）と同じ。数日おきに続く長期シリーズは
+    そもそも別の日に入るので、まとまらずに毎回数えられる。
+    ここで1件になるのは「同じ人が同じ日に、続きものを何本も出した」場合だけ。
+    """
+    return (channel_id or "") + "|" + M.compact(re.sub(r"[0-9#＃]+", "", title))[:16]
 
 
 def tally(videos, idx):
@@ -147,7 +158,7 @@ def tally(videos, idx):
         if how == "dict":
             e = games[g]
             e["videos"] += 1
-            e["sigs"].add(series_sig(v["title"]))
+            e["sigs"].add(series_sig(v.get("channel_id"), v["title"]))
             e["channels"].add(v["channel_id"])
             e["views"] += v.get("views", 0)
             e["titles"].append(v["title"])
@@ -171,6 +182,166 @@ def choose_name(canonical, jp, titles, override):
         return canonical
     blob = " ".join(M.compact(t) for t in titles)
     return jp if blob.count(M.compact(jp)) >= blob.count(M.compact(canonical)) else canonical
+
+
+# ------------------------------------------------------------ 静的HTML
+# ページの中身は、これまで全部JavaScriptで組み立てていた。
+# そのため <script> を除いたHTMLには380文字しか無く、ゲーム名もコラム本文も
+# 1文字も入っていなかった。検索エンジンはJavaScriptを動かして読むが後回しに
+# されるし、それ以外の読み手にはそもそも届かない。
+# このサイトが拾えるはずの検索は「ゲーム名 + 配信」なのに、そのゲーム名が
+# HTMLに無いのは致命的なので、同じ中身をHTMLとしても書き出しておく。
+# JavaScriptが動く環境では、読み込み後に同じ内容で描き直される。
+
+def e(s):
+    return html.escape(str(s if s is not None else ""))
+
+
+def man(n):
+    n = int(n or 0)
+    if n >= 100000:
+        return f"{n // 10000}万"
+    if n >= 10000:
+        return f"{n / 10000:.1f}万"
+    return f"{n:,}"
+
+
+def ssr_pick(col):
+    """コラム。サイトでいちばん読まれる部分なので、必ずHTMLに出す。"""
+    if not col:
+        return ""
+    parts = []
+    if col.get("hero"):
+        parts.append(f'<img class="heroimg" src="{e(col["hero"])}" alt="" loading="lazy">')
+    body = ['<div class="ptxt">', '<span class="badge">PICK UP</span>',
+            f'<div class="g">{e(col.get("game"))}</div>',
+            f'<div class="hl">{e(col.get("headline"))}</div>',
+            f'<p>{e(col.get("body"))}</p>']
+    people = col.get("people") or []
+    if people:
+        body.append('<div class="who">'
+                    + "".join(f"<span>{e(x)}</span>" for x in people) + "</div>")
+    srcs = col.get("sources") or []
+    if srcs:
+        body.append('<div class="src">' + "".join(
+            f'<a href="{e(s.get("u"))}" target="_blank" rel="noopener">{e(s.get("t"))}</a>'
+            for s in srcs) + "</div>")
+    body.append("</div>")
+    return ("".join(parts) + "".join(body))
+
+
+def ssr_cards(rows):
+    """上位3件のカード。"""
+    out = []
+    for r in rows[:3]:
+        st = (r.get("streams") or [{}])[0]
+        th = st.get("th") or ""
+        out.append(
+            f'<div class="gcard"><span class="th">'
+            + (f'<img src="{e(th)}" alt="" loading="lazy">' if th else "")
+            + f'<span class="rank">{r["rank"]}</span></span>'
+            f'<span class="gm"><b>{e(r["game"])}</b>'
+            f'<span class="nums"><i>{r["videos"]}</i>件 <i>{r["channels"]}</i>ch '
+            f'<i>{man(r["views"])}</i>回</span>'
+            + (f'<span class="tp">{e(st.get("c"))}「{e(st.get("t"))}」</span>' if st.get("t") else "")
+            + "</span></div>")
+    return "".join(out)
+
+
+def ssr_rows(rows):
+    """4位以下の一覧。ゲーム名と件数を、文字としてHTMLに残すのが目的。"""
+    out = []
+    for r in rows[3:]:
+        st = (r.get("streams") or [{}])[0]
+        th = st.get("th") or ""
+        out.append(
+            f'<div class="lrow"><span class="rk2">{r["rank"]}</span>'
+            + (f'<img src="{e(th)}" alt="" loading="lazy">' if th else "")
+            + f'<span class="nm2"><b>{e(r["game"])}</b>'
+              f'<span>{r["videos"]}件 ・ {r["channels"]}ch ・ {man(r["views"])}回</span></span>'
+              "</div>")
+    return "".join(out)
+
+
+def watched_channels():
+    """毎日見に行っているチャンネル数。説明ページに出すために数える。"""
+    chans = read_json(DATA / "channels_enriched.json", []) or []
+    manual = read_json(DATA / "channels_manual.json", {}) or {}
+    n = 0
+    for c in chans:
+        cid = c.get("channel_id")
+        m = manual.get(cid)
+        if m == "外す":
+            continue
+        if m != "残す" and str(c.get("auto", "")).startswith("外す"):
+            continue
+        n += 1
+    return n
+
+
+def about_html(cfg, n_channels):
+    """このサイトについて。数字の出どころと、数えていないものを書く。"""
+    lo = int(cfg.get("min_subscribers") or 0)
+    jp = float(cfg.get("min_japanese_ratio", 0.5))
+    return f"""
+<h2>このサイトは何か</h2>
+<p class="lead">VTuber・ゲーム実況者がYouTubeに出している配信のタイトルを毎日集めて、
+いまどのゲームが配信されているかをランキングにしています。
+「次、何のゲーム配信する？」と考えている配信者のために作りました。</p>
+<p>再生数の多い<b>動画</b>を並べるサイトはすでにたくさんあります。このサイトが並べるのは
+<b>ゲーム</b>です。誰の動画が伸びたかではなく、どのゲームに人が集まっているかを見ます。</p>
+
+<h2>どこから集めているか</h2>
+<dl>
+  <dt>対象</dt><dd>日本語で配信しているVTuber・ゲーム実況者のYouTubeチャンネル、現在 {n_channels:,} 件</dd>
+  <dt>範囲</dt><dd>直近24時間に公開された配信・動画</dd>
+  <dt>更新</dt><dd>1日2回（日本時間 7時ごろ / 19時ごろ）</dd>
+  <dt>判定</dt><dd>配信タイトルの文字列から、約5万本のゲーム名辞書と照合しています</dd>
+</dl>
+<p>チャンネルは、登録者数 {lo:,} 人以上・1年以内に投稿がある・ゲームの動画を出している、
+という条件で自動的に選んでいます。直近の動画タイトルにひらがな・カタカナが
+{jp:.0%} 以上出てくるかどうかも見ていて、これを下回るチャンネルは外しています。
+日本語圏の視聴者が見ている配信の流行を出すサイトなので、所属ではなく
+実際に使っている言語で判断しています。</p>
+
+<h2>どう数えているか</h2>
+<p>順位は、次の3つを合わせた独自のスコアで決めています。</p>
+<ul>
+  <li><b>配信者数</b> ── そのゲームを配信したチャンネルが何件あったか</li>
+  <li><b>再生数</b> ── その合計</li>
+  <li><b>配信数</b> ── 配信・動画が何本あったか</li>
+</ul>
+<p>ひとりがたくさん投稿しただけで上位に来ないよう、<b>何人が配信したか</b>をいちばん重く見ています。
+「今このゲームがアツい」は、直近数日とくらべて増えたタイトルです。
+倍率だけでは大きさが分からないので、実数（ふだん◯件 → 今日◯件）も並べています。</p>
+
+<h2>数えていないもの</h2>
+<ul>
+  <li><b>Shorts</b>（90秒以下の動画）</li>
+  <li><b>切り抜き</b>（タイトルや チャンネル名から判定）</li>
+  <li><b>同じ配信者が同じ日に出した続きもの</b> ── 1本の配信を分割した動画などは1件として数えます。
+      別の日に続くシリーズは、その日ごとに数えます</li>
+  <li><b>日本語以外で配信しているチャンネル</b> ── 事務所は問いません</li>
+  <li><b>ゲーム名を判定できなかった配信</b> ── 推測では埋めません</li>
+</ul>
+
+<h2>コラムについて</h2>
+<p>「今日の注目ゲーム」は、数字が動いた理由を書いています。書くときのルールを決めていて、
+<b>裏が取れないことは書きません</b>。根拠には、公式の発表・ゲームメディア・実際の配信そのものを
+当たっています。説明できることが何も無い日は、その日は書きません。</p>
+
+<h2>間違いを見つけたら</h2>
+<p>ゲーム名の判定は自動なので、間違えることがあります。見つけしだい直しています。
+おかしなものを見つけたら、<a href="https://x.com/tarochinko" target="_blank" rel="noopener">X（@tarochinko）</a>
+のDMで教えてください。</p>
+
+<h2>作っている人</h2>
+<p>ゲーム実況者の たろちん（<a href="https://x.com/tarochinko" target="_blank" rel="noopener">@tarochinko</a>）が
+個人で作っています。データはYouTube Data API、ゲーム名の辞書はIGDBを使っています。</p>
+<p>このサイトはAmazonアソシエイト・プログラムの参加者です。商品ページへのリンクから
+購入があった場合、紹介料を受け取ることがあります。ランキングの順位は
+配信の数字だけで決めていて、紹介料は関係しません。</p>
+"""
 
 
 def amazon_tagged(url, tag):
@@ -354,10 +525,18 @@ def main():
         home = "../" * depth or "./"
         # そのページ自身のURL。index.html は省いて、ディレクトリの形にする。
         page = "" if path == "index.html" else path.replace("index.html", "")
+        rows_ = data.get("ranking") or []
+        col_ = data.get("column")
         p.write_text(tpl.replace("__DATA__", json.dumps(d, ensure_ascii=False))
                         .replace("__HOME__", home)
                         .replace("__PAGEURL__", f"{site_url}/{page}" if site_url else "")
-                        .replace("__SITE__", site_url),
+                        .replace("__SITE__", site_url)
+                        # JavaScriptなしでも読める中身。JSが動けば同じ内容で描き直される
+                        .replace("__PICKDISP__", "" if col_ else "display:none")
+                        .replace("__SSR_PICK__", ssr_pick(col_))
+                        .replace("__SSR_CARDS__", ssr_cards(rows_))
+                        .replace("__SSR_ROWS__", ssr_rows(rows_))
+                        .replace("__PAGEBODY__", data.get("page_body", "")),
                      encoding="utf-8")
 
     render("index.html", payload, 0)
@@ -454,6 +633,37 @@ def main():
     write_json(idx_path, archive)
     render("archive/index.html",
            {"mode": "archive", "date": today(), "archive": archive}, 1)
+
+    # ---- 説明ページ ----------------------------------------------------
+    # 数字を出すサイトなので、どう数えているかが読めることが信用に直結する。
+    # 「Shortsと切り抜きは除く」「連番は1件」などは、書いていなければ
+    # 誰にも伝わらない。
+    render("about/index.html",
+           {"mode": "page", "date": today(), "subtitle": "このサイトについて",
+            "generated": payload["generated"],
+            "page_body": about_html(cfg, watched_channels())}, 1)
+
+    # ---- sitemap.xml ---------------------------------------------------
+    # 日付ごとの記録は日が経つほど増える資産だが、たどり着く道が
+    # トップからのリンクしかない。存在をまとめて知らせる。
+    if site_url:
+        urls = [(f"{site_url}/", "daily", "1.0"),
+                (f"{site_url}/about/", "monthly", "0.5"),
+                (f"{site_url}/archive/", "daily", "0.6")]
+        urls += [(f"{site_url}/d/{a['date']}/", "monthly", "0.4") for a in archive]
+        body = "".join(
+            f"<url><loc>{u}</loc><changefreq>{f}</changefreq><priority>{pr}</priority></url>"
+            for u, f, pr in urls)
+        (SITE / "sitemap.xml").write_text(
+            '<?xml version="1.0" encoding="UTF-8"?>'
+            '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">'
+            + body + "</urlset>", encoding="utf-8")
+        rb = SITE / "robots.txt"
+        txt = rb.read_text(encoding="utf-8") if rb.exists() else "User-agent: *\nAllow: /\n"
+        if "Sitemap:" not in txt:
+            rb.write_text(txt.rstrip() + f"\n\nSitemap: {site_url}/sitemap.xml\n",
+                          encoding="utf-8")
+        log(f"sitemap.xml を書き出しました（{len(urls)} ページ）")
 
     log(f"サイトを書き出しました: {len(rows)} タイトル / 急上昇 {len(rising)} 件 "
         f"/ 確認待ち {len(unknown)} 件")
