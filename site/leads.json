@@ -1,26 +1,8 @@
 {
  "date": "2026-09-01",
- "generated": "2026-09-01 12:15",
+ "generated": "2026-09-01 19:12",
  "leads": {
   "events": [
-   {
-    "tag": "#ななし夏休み歌枠リレー",
-    "channels": [
-     " 宗谷いちか / Ichika Channel【ななしいんく】",
-     "ここ・じぇす汰 / Coco･Jester【ななしいんく】",
-     "アズリ / Azri【ななしいんく】",
-     "堰代ミコ / Mico Channel【ななしいんく】",
-     "天羽衣 / Amaui Channel【ななしいんく】",
-     "幽音しの Shino Channel - ななしいんく",
-     "月野木ちろる / Tirol Channel 【ななしいんく】",
-     "汐鳴みりね / Mirine Shionari【ななしいんく】",
-     "漆瀬レイ / Ray Nanase【ななしいんく】",
-     "瀬島るい / Rui Channel 【ななしいんく】",
-     "緑青くれは / Kureha Channel【ななしいんく】",
-     "蛇宵ティア / Tier Channel【ななしいんく】",
-     "風見くく /  Kuku Channel 【ななしいんく】"
-    ]
-   },
    {
     "tag": "#マイクラなつにっき",
     "channels": [
@@ -36,82 +18,103 @@
     ]
    },
    {
+    "tag": "#ななし夏休み歌枠リレー",
+    "channels": [
+     " 宗谷いちか / Ichika Channel【ななしいんく】",
+     "アズリ / Azri【ななしいんく】",
+     "幽音しの Shino Channel - ななしいんく",
+     "月野木ちろる / Tirol Channel 【ななしいんく】",
+     "汐鳴みりね / Mirine Shionari【ななしいんく】",
+     "瀬島るい / Rui Channel 【ななしいんく】",
+     "緑青くれは / Kureha Channel【ななしいんく】"
+    ]
+   },
+   {
     "tag": "#ゲーム実況",
     "channels": [
-     "CHECHE GAME【顔出し初見ゲーム実況】",
      "Usagi Ch. 因幡兎",
+     "えびもりチャンネル",
      "こじちゃんねる【小嶋明梨】",
-     "ぱんちき🥖🦃",
      "ふぇに男",
      "エラch",
-     "ジョアだよ",
      "ツバのあしあと",
      "三雲ヒカリ"
     ]
    },
    {
-    "tag": "#個人勢vtuber",
+    "tag": "#ななし雪山人狼",
     "channels": [
-     "三雲ヒカリ",
-     "八樹めいら / Yatuki Meira",
-     "華白ユピア / Yupia Ch."
+     " 宗谷いちか / Ichika Channel【ななしいんく】",
+     "堰代ミコ / Mico Channel【ななしいんく】",
+     "漆瀬レイ / Ray Nanase【ななしいんく】",
+     "西園寺メアリ / Mary Channel【ななしいんく】"
+    ]
+   },
+   {
+    "tag": "#ホロ甲2026",
+    "channels": [
+     "Koyori ch. 博衣こより - holoX -",
+     "Noel Ch. 白銀ノエル",
+     "Riona Ch. 響咲リオナ - FLOW GLOW"
+    ]
+   },
+   {
+    "tag": "#救急ナイン2026",
+    "channels": [
+     "kaka🦊紺狐カカ",
+     "ノビーの遊び部屋",
+     "影。/かげまる"
     ]
    },
    {
     "tag": "#にゃんこ大戦争",
     "channels": [
      "Gommickey",
-     "とあの3たん",
-     "ゆうハル"
+     "san kyuu",
+     "とあの3たん"
     ]
    }
   ],
-  "newcomers": [
-   {
-    "game": "Deep Blue Sushi",
-    "channels": 5,
-    "videos": 5
-   }
-  ],
+  "newcomers": [],
   "wide": [
    {
     "game": "Apex Legends",
-    "channels": 29,
-    "videos": 35
+    "channels": 33,
+    "videos": 45
    },
    {
     "game": "Minecraft",
-    "channels": 29,
-    "videos": 35
+    "channels": 30,
+    "videos": 34
    },
    {
     "game": "ストリートファイター6",
-    "channels": 19,
-    "videos": 25
+    "channels": 25,
+    "videos": 31
    },
    {
     "game": "Dead by Daylight",
-    "channels": 20,
-    "videos": 23
+    "channels": 19,
+    "videos": 22
    },
    {
     "game": "ほの暮しの庭",
-    "channels": 18,
-    "videos": 19
+    "channels": 19,
+    "videos": 20
    },
    {
-    "game": "Rust",
+    "game": "実況パワフルプロ野球2026",
     "channels": 17,
     "videos": 18
    },
    {
-    "game": "VALORANT",
-    "channels": 12,
-    "videos": 13
+    "game": "Rust",
+    "channels": 13,
+    "videos": 14
    },
    {
-    "game": "Among Us",
-    "channels": 13,
+    "game": "Grand Theft Auto V",
+    "channels": 11,
     "videos": 15
    }
   ]
