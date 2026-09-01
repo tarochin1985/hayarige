@@ -1,44 +1,28 @@
 {
- "date": "2026-09-01",
- "generated": "2026-09-01 19:12",
+ "date": "2026-09-02",
+ "generated": "2026-09-02 07:09",
  "leads": {
   "events": [
    {
-    "tag": "#マイクラなつにっき",
-    "channels": [
-     "bintroll",
-     "jirai channel",
-     "たけぉ",
-     "天羽しろっぷ 【Amau Syrup】",
-     "幽音しの Shino Channel - ななしいんく",
-     "影。/かげまる",
-     "愛channel",
-     "柚原いづみ / Izumi Channel 【ななしいんく】",
-     "風見くく /  Kuku Channel 【ななしいんく】"
-    ]
-   },
-   {
-    "tag": "#ななし夏休み歌枠リレー",
-    "channels": [
-     " 宗谷いちか / Ichika Channel【ななしいんく】",
-     "アズリ / Azri【ななしいんく】",
-     "幽音しの Shino Channel - ななしいんく",
-     "月野木ちろる / Tirol Channel 【ななしいんく】",
-     "汐鳴みりね / Mirine Shionari【ななしいんく】",
-     "瀬島るい / Rui Channel 【ななしいんく】",
-     "緑青くれは / Kureha Channel【ななしいんく】"
-    ]
-   },
-   {
     "tag": "#ゲーム実況",
     "channels": [
+     "SIANちゃんねる【ディズニー大好きVtuber】",
      "Usagi Ch. 因幡兎",
      "えびもりチャンネル",
      "こじちゃんねる【小嶋明梨】",
      "ふぇに男",
      "エラch",
-     "ツバのあしあと",
-     "三雲ヒカリ"
+     "ツバのあしあと"
+    ]
+   },
+   {
+    "tag": "#ななし雀魂杯",
+    "channels": [
+     "因幡はねる / Haneru Channel【ななしいんく】",
+     "杏戸ゆげ / Uge Channel【ななしいんく】",
+     "柚原いづみ / Izumi Channel 【ななしいんく】",
+     "漆瀬レイ / Ray Nanase【ななしいんく】",
+     "緑青くれは / Kureha Channel【ななしいんく】"
     ]
    },
    {
@@ -46,16 +30,9 @@
     "channels": [
      " 宗谷いちか / Ichika Channel【ななしいんく】",
      "堰代ミコ / Mico Channel【ななしいんく】",
+     "柚原いづみ / Izumi Channel 【ななしいんく】",
      "漆瀬レイ / Ray Nanase【ななしいんく】",
      "西園寺メアリ / Mary Channel【ななしいんく】"
-    ]
-   },
-   {
-    "tag": "#ホロ甲2026",
-    "channels": [
-     "Koyori ch. 博衣こより - holoX -",
-     "Noel Ch. 白銀ノエル",
-     "Riona Ch. 響咲リオナ - FLOW GLOW"
     ]
    },
    {
@@ -67,55 +44,77 @@
     ]
    },
    {
+    "tag": "#ホロ7大豆劇場",
+    "channels": [
+     "Riona Ch. 響咲リオナ - FLOW GLOW",
+     "Ririka Ch. 一条莉々華 ‐ ReGLOSS",
+     "Towa Ch. 常闇トワ"
+    ]
+   },
+   {
+    "tag": "#ストグラ",
+    "channels": [
+     "marunnn【まるーんチャンネル】",
+     "みつき",
+     "柚原いづみ / Izumi Channel 【ななしいんく】"
+    ]
+   },
+   {
     "tag": "#にゃんこ大戦争",
     "channels": [
-     "Gommickey",
      "san kyuu",
-     "とあの3たん"
+     "まそしんチャンネル",
+     "ゆうハル"
     ]
    }
   ],
-  "newcomers": [],
+  "newcomers": [
+   {
+    "game": "Project Winter",
+    "channels": 6,
+    "videos": 6
+   }
+  ],
   "wide": [
    {
     "game": "Apex Legends",
-    "channels": 33,
-    "videos": 45
-   },
-   {
-    "game": "Minecraft",
-    "channels": 30,
-    "videos": 34
+    "channels": 31,
+    "videos": 37
    },
    {
     "game": "ストリートファイター6",
-    "channels": 25,
-    "videos": 31
+    "channels": 27,
+    "videos": 36
    },
    {
-    "game": "Dead by Daylight",
-    "channels": 19,
-    "videos": 22
-   },
-   {
-    "game": "ほの暮しの庭",
-    "channels": 19,
+    "game": "Minecraft",
+    "channels": 16,
     "videos": 20
    },
    {
-    "game": "実況パワフルプロ野球2026",
-    "channels": 17,
-    "videos": 18
+    "game": "ほの暮しの庭",
+    "channels": 15,
+    "videos": 17
    },
    {
-    "game": "Rust",
-    "channels": 13,
-    "videos": 14
+    "game": "実況パワフルプロ野球2026",
+    "channels": 14,
+    "videos": 15
    },
    {
     "game": "Grand Theft Auto V",
-    "channels": 11,
-    "videos": 15
+    "channels": 13,
+    "videos": 17
+   },
+   {
+    "game": "Dead by Daylight",
+    "channels": 13,
+    "videos": 16
+   },
+   {
+    "game": "フォートナイト",
+    "channels": 9,
+    "videos": 10
    }
   ]
  },
