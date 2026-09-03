@@ -1,19 +1,20 @@
 {
  "date": "2026-09-03",
- "generated": "2026-09-03 08:59",
+ "generated": "2026-09-03 19:13",
  "leads": {
   "events": [
    {
-    "tag": "#ゲーム実況",
+    "tag": "#ストグラ",
     "channels": [
-     "SIANちゃんねる【ディズニー大好きVtuber】",
-     "Usagi Ch. 因幡兎",
-     "こじちゃんねる【小嶋明梨】",
-     "ふぇに男",
-     "エラch",
-     "ジョアだよ",
-     "三雲ヒカリ",
-     "儚視まちこVTuber Hakanashi Matiko"
+     "marunnn【まるーんチャンネル】",
+     "【琵琶ちゃぷ】なな湖なな湖",
+     "たけぉ",
+     "にーとちゃん",
+     "ましゃかりさん",
+     "みつき",
+     "クラウン【探検家の記録】",
+     "ノビーの遊び部屋",
+     "柚原いづみ / Izumi Channel 【ななしいんく】"
     ]
    },
    {
@@ -30,11 +31,23 @@
     ]
    },
    {
+    "tag": "#ゲーム実況",
+    "channels": [
+     "CHECHE GAME【顔出し初見ゲーム実況】",
+     "SIANちゃんねる【ディズニー大好きVtuber】",
+     "Usagi Ch. 因幡兎",
+     "こじちゃんねる【小嶋明梨】",
+     "エラch",
+     "ジョアだよ",
+     "儚視まちこVTuber Hakanashi Matiko"
+    ]
+   },
+   {
     "tag": "#ストグラSeason2",
     "channels": [
      "kaka🦊紺狐カカ",
-     "けんつめしと飯田けんつ【ストグラ】",
      "たけぉ",
+     "クラウン【探検家の記録】",
      "バーチャル債務者youtuber天開司",
      "天羽よつは",
      "影。/かげまる",
@@ -42,32 +55,20 @@
     ]
    },
    {
-    "tag": "#ストグラ",
-    "channels": [
-     "marunnn【まるーんチャンネル】",
-     "【琵琶ちゃぷ】なな湖なな湖",
-     "たけぉ",
-     "ましゃかりさん",
-     "みつき",
-     "ノビーの遊び部屋",
-     "柚原いづみ / Izumi Channel 【ななしいんく】"
-    ]
-   },
-   {
-    "tag": "#apex",
-    "channels": [
-     "てつぽんげーむず",
-     "太刀ひろし　【Uncle gamer】 ",
-     "朝陽ひろ",
-     "秋風 林檎"
-    ]
-   },
-   {
     "tag": "#エンドフィールド",
     "channels": [
      "あかどらん",
+     "りんふぅ",
      "猫咲あんじ Nekosaki anji",
      "羅々華セーラ-Raraka Sera-"
+    ]
+   },
+   {
+    "tag": "#エーペックス",
+    "channels": [
+     "朝陽ひろ",
+     "無名のおにぎり@Apex沼クリップ製造機",
+     "秋風 林檎"
     ]
    },
    {
@@ -79,11 +80,11 @@
     ]
    },
    {
-    "tag": "#にゃんこ大戦争",
+    "tag": "#apex",
     "channels": [
-     "san kyuu",
-     "まそしんチャンネル",
-     "ゆうハル"
+     "太刀ひろし　【Uncle gamer】 ",
+     "朝陽ひろ",
+     "秋風 林檎"
     ]
    }
   ],
@@ -96,44 +97,44 @@
   ],
   "wide": [
    {
-    "game": "Apex Legends",
+    "game": "ストリートファイター6",
     "channels": 31,
+    "videos": 40
+   },
+   {
+    "game": "Apex Legends",
+    "channels": 30,
     "videos": 37
    },
    {
-    "game": "ストリートファイター6",
-    "channels": 28,
-    "videos": 36
-   },
-   {
     "game": "Grand Theft Auto V",
-    "channels": 21,
-    "videos": 24
-   },
-   {
-    "game": "アークナイツ：エンドフィールド",
-    "channels": 16,
-    "videos": 21
-   },
-   {
-    "game": "Dead by Daylight",
-    "channels": 16,
-    "videos": 18
-   },
-   {
-    "game": "ほの暮しの庭",
-    "channels": 15,
-    "videos": 15
+    "channels": 22,
+    "videos": 26
    },
    {
     "game": "Minecraft",
-    "channels": 13,
-    "videos": 15
+    "channels": 20,
+    "videos": 22
    },
    {
-    "game": "Fate/Grand Order",
-    "channels": 6,
+    "game": "Dead by Daylight",
+    "channels": 15,
+    "videos": 17
+   },
+   {
+    "game": "アークナイツ：エンドフィールド",
+    "channels": 13,
     "videos": 18
+   },
+   {
+    "game": "モンスターストライク",
+    "channels": 9,
+    "videos": 16
+   },
+   {
+    "game": "雀魂",
+    "channels": 12,
+    "videos": 14
    }
   ]
  },

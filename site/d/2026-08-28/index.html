@@ -272,8 +272,8 @@ footer{font-size:11.5px;color:var(--ink-3);text-align:center;border-top:1px soli
        JavaScriptが動く環境では、同じ内容で描き直される。
        検索エンジンやJSを実行しない読み手には、この静的な中身が渡る。 -->
   <section id="pick-sec" style="">
-    <div class="head"><h2>今日の注目ゲーム</h2>
-      <span class="note">なぜ今このゲームが伸びているのか</span></div>
+    <div class="head"><h2 id="pick-title">この日の注目ゲーム</h2>
+      <span class="note" id="pick-note">この日、数字が動いた理由</span></div>
     <article class="pick" id="pick"><div class="ptxt"><span class="badge">PICK UP</span><div class="g">Minecraft</div><div class="hl">無関係な3つのマイクラ企画が重なり、夏休みの最後にマイクラが跳ねた</div><p>マインクラフトが39チャンネル・292万回再生で、2位の3倍以上に伸びています。ひとつのブームではなく、別々の企画が同じ時期に重なった結果です。ぶいすぽっ！の「#ぶいすぽマイクラ夏祭り2026」に12人、にじさんじの「#にじメンマイクラ」に7人、事務所をまたいだ「#マイクラなつにっき」に3人。とくにぶいすぽの夏祭りは今日が開場日で、一ノ瀬うるはは「ついに来た！みんなでまわる」、藍沢エマは「いよいよ夏祭り！楽しむぞ～～！」というタイトルで配信しました。数日前まで闘技場や回廊を建てていた面々が、そろって遊ぶ側にまわっています。</p><div class="who"><span>一ノ瀬うるは</span><span>藍沢エマ</span><span>英リサ</span><span>橘ひなの</span><span>八雲べに</span><span>空澄セナ</span><span>オリバー・エバンス</span><span>伏見ガク</span><span>たけぉ</span></div><div class="src"><a href="https://www.youtube.com/watch?v=G-n7xZi2oiY" target="_blank" rel="noopener">一ノ瀬うるは — #ぶいすぽマイクラ夏祭り2026 ついに来た！みんなでまわる</a><a href="https://www.youtube.com/watch?v=uOv_cVunz34" target="_blank" rel="noopener">藍沢エマ — いよいよ夏祭り！楽しむぞ～～！</a><a href="https://www.youtube.com/watch?v=Ilas-WEWcQo" target="_blank" rel="noopener">空澄セナ — ぶいすぽ夏祭り仕上げ</a></div></div></article>
   </section>
 
@@ -444,6 +444,15 @@ function render(){
   const col = DATA.column;
   $('#pick-sec').style.display = col ? '' : 'none';
   if (col) {
+    // 今日のコラムがまだ無い日は、直近のものを出している。
+    // 今日のことのように見せないため、見出しに日付を入れる。
+    const cd = col.date || DATA.date;
+    const stale = cd && cd !== DATA.date;
+    const md = cd ? `${+cd.slice(5,7)}月${+cd.slice(8,10)}日の` : '';
+    $('#pick-title').textContent = isArchive ? 'この日の注目ゲーム'
+                                 : stale ? md + '注目ゲーム' : '今日の注目ゲーム';
+    $('#pick-note').textContent = (isArchive || stale) ? 'この日、数字が動いた理由'
+                                                       : 'なぜ今このゲームが伸びているのか';
     // 画像とSteamリンクはコラム自身が持っている（build_site が入れる）。
     // ランキング30位以内から探していた頃は、取り上げたゲームが順位を
     // 落とすと画像が消えていた。古いデータのために従来の探索も残す。
