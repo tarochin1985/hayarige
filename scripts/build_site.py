@@ -18,6 +18,10 @@ MIN_FOR_MOMENTUM = 3          # 急上昇の対象にする最低本数（少数
 MIN_HISTORY = 4               # 急上昇を出すのに必要な「実データのある日数」
 W = {"videos": 0.30, "channels": 0.35, "views": 0.35}
 
+# 今日のコラムがまだ無いとき、何日前まで さかのぼって表示するか。
+# 0にすると、今日の分が無い日はコラム欄が消える（以前の動き）。
+COLUMN_FALLBACK_DAYS = 7
+
 
 def load_all(days_back=30):
     """収集ファイルを全部読んで、動画IDで重複を除いた1本のリストにする。
@@ -204,6 +208,28 @@ def man(n):
     if n >= 10000:
         return f"{n / 10000:.1f}万"
     return f"{n:,}"
+
+
+def _pick_stale(col, data):
+    """そのコラムが、そのページの日付より前に書かれたものか。"""
+    if not col:
+        return False
+    return col.get("date", data.get("date")) != data.get("date")
+
+
+def pick_title(col, data):
+    if data.get("view") == "archive":
+        return "この日の注目ゲーム"
+    if _pick_stale(col, data):
+        d = col["date"]
+        return f"{int(d[5:7])}月{int(d[8:10])}日の注目ゲーム"
+    return "今日の注目ゲーム"
+
+
+def pick_note(col, data):
+    if data.get("view") == "archive" or _pick_stale(col, data):
+        return "この日、数字が動いた理由"
+    return "なぜ今このゲームが伸びているのか"
 
 
 def ssr_pick(col):
@@ -461,7 +487,23 @@ def main():
     spread = sorted(rows, key=lambda r: (-r["channels"], -r["videos"]))[:3]
 
     # 検証を通らないコラムは載せない。無理に載せるより、無いほうがいい。
-    column = load_valid(DATA / "columns" / f"{today()}.json", log)
+    #
+    # ただし「今日の分がまだ無い」あいだ、コラム欄ごと消えてしまうのは避ける。
+    # ここはサイトの顔なので、常に何か載っているほうがいい。
+    # 今日の分が用意できるまでは、直近に書いたものをそのまま出す。
+    # そのかわり見出しに日付を入れて、いつ書いたものかを必ず示す
+    # （今日のことのように見せない）。
+    column, column_day = None, today()
+    for back in range(0, COLUMN_FALLBACK_DAYS + 1):
+        day = (datetime.now(JST) - timedelta(days=back)).strftime("%Y-%m-%d")
+        # 今日の分だけは、落ちた理由をログに出す。過去の分は静かに探す。
+        c = load_valid(DATA / "columns" / f"{day}.json",
+                       log if back == 0 else (lambda *a, **k: None))
+        if c:
+            column, column_day = c, day
+            if back:
+                log(f"今日のコラムがないため、{day} のコラムを表示します")
+            break
     if column and column.get("buy"):
         column["buy"] = dict(column["buy"],
                              u=amazon_tagged(column["buy"].get("u", ""),
@@ -488,6 +530,9 @@ def main():
                 if m:
                     column["hero"] = f"https://i.ytimg.com/vi/{m.group(1)}/mqdefault.jpg"
                     break
+
+    if column:
+        column["date"] = column_day
 
     payload = {
         "mode": "day",
@@ -533,6 +578,9 @@ def main():
                         .replace("__SITE__", site_url)
                         # JavaScriptなしでも読める中身。JSが動けば同じ内容で描き直される
                         .replace("__PICKDISP__", "" if col_ else "display:none")
+                        # JavaScriptなしでも、いつ書いたコラムかが分かるように
+                        .replace("__PICKTITLE__", pick_title(col_, data))
+                        .replace("__PICKNOTE__", pick_note(col_, data))
                         .replace("__SSR_PICK__", ssr_pick(col_))
                         .replace("__SSR_CARDS__", ssr_cards(rows_))
                         .replace("__SSR_ROWS__", ssr_rows(rows_))

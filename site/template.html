@@ -272,8 +272,8 @@ footer{font-size:11.5px;color:var(--ink-3);text-align:center;border-top:1px soli
        JavaScriptが動く環境では、同じ内容で描き直される。
        検索エンジンやJSを実行しない読み手には、この静的な中身が渡る。 -->
   <section id="pick-sec" style="__PICKDISP__">
-    <div class="head"><h2>今日の注目ゲーム</h2>
-      <span class="note">なぜ今このゲームが伸びているのか</span></div>
+    <div class="head"><h2 id="pick-title">__PICKTITLE__</h2>
+      <span class="note" id="pick-note">__PICKNOTE__</span></div>
     <article class="pick" id="pick">__SSR_PICK__</article>
   </section>
 
@@ -444,6 +444,15 @@ function render(){
   const col = DATA.column;
   $('#pick-sec').style.display = col ? '' : 'none';
   if (col) {
+    // 今日のコラムがまだ無い日は、直近のものを出している。
+    // 今日のことのように見せないため、見出しに日付を入れる。
+    const cd = col.date || DATA.date;
+    const stale = cd && cd !== DATA.date;
+    const md = cd ? `${+cd.slice(5,7)}月${+cd.slice(8,10)}日の` : '';
+    $('#pick-title').textContent = isArchive ? 'この日の注目ゲーム'
+                                 : stale ? md + '注目ゲーム' : '今日の注目ゲーム';
+    $('#pick-note').textContent = (isArchive || stale) ? 'この日、数字が動いた理由'
+                                                       : 'なぜ今このゲームが伸びているのか';
     // 画像とSteamリンクはコラム自身が持っている（build_site が入れる）。
     // ランキング30位以内から探していた頃は、取り上げたゲームが順位を
     // 落とすと画像が消えていた。古いデータのために従来の探索も残す。
