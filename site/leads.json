@@ -1,15 +1,17 @@
 {
  "date": "2026-09-04",
- "generated": "2026-09-04 12:34",
+ "generated": "2026-09-04 19:13",
  "leads": {
   "events": [
    {
     "tag": "#ロゼキャンARK",
     "channels": [
      "AZKi Channel",
+     "Anya Melfissa Ch. hololive-ID",
      "Botan Ch.獅白ぼたん",
      "Flare Ch. 不知火フレア",
      "Hajime Ch. 轟はじめ ‐ ReGLOSS",
+     "Iroha ch. 風真いろは - holoX -",
      "Koyori ch. 博衣こより - holoX -",
      "Matsuri Channel 夏色まつり",
      "Miko Ch. さくらみこ",
@@ -18,6 +20,8 @@
      "Pekora Ch. 兎田ぺこら",
      "Polka Ch. 尾丸ポルカ",
      "Riona Ch. 響咲リオナ - FLOW GLOW",
+     "Towa Ch. 常闇トワ",
+     "Vivi Ch. 綺々羅々ヴィヴィ - FLOW GLOW",
      "Watame Ch. 角巻わため",
      "アキロゼCh。Vtuber/ホロライブ所属",
      "フブキCh。白上フブキ"
@@ -28,12 +32,10 @@
     "channels": [
      "marunnn【まるーんチャンネル】",
      "たけぉ",
-     "にーとちゃん",
-     "ましゃかりさん",
-     "みつき",
      "クラウン【探検家の記録】",
      "ノビーの遊び部屋",
      "柚原いづみ / Izumi Channel 【ななしいんく】",
+     "闇乃あびす / Abyss",
      "魔光リサ - Lisa Makoh -"
     ]
    },
@@ -50,22 +52,50 @@
     ]
    },
    {
+    "tag": "#ゲーム実況",
+    "channels": [
+     "Usagi Ch. 因幡兎",
+     "こじちゃんねる【小嶋明梨】",
+     "はりーシ結婚チャンネル",
+     "ぱんちき🥖🦃",
+     "エラch",
+     "シャオメイ【ゲーム実況】"
+    ]
+   },
+   {
+    "tag": "#SURGETown",
+    "channels": [
+     "Kanae Channel",
+     "かみと-KamitoChannel-",
+     "みつき",
+     "家入ポポ / Popo Channel【ななしいんく】",
+     "赤彩みあ / Akairo Mia Ch.【すずみあ】"
+    ]
+   },
+   {
     "tag": "#ななし雀魂杯",
     "channels": [
      "ここ・じぇす汰 / Coco･Jester【ななしいんく】",
-     "汐鳴みりね / Mirine Shionari【ななしいんく】",
-     "緑青くれは / Kureha Channel【ななしいんく】",
+     "漆瀬レイ / Ray Nanase【ななしいんく】",
      "蛇宵ティア / Tier Channel【ななしいんく】",
      "風見くく /  Kuku Channel 【ななしいんく】"
     ]
    },
    {
-    "tag": "#ゲーム実況",
+    "tag": "#エンドフィールド",
     "channels": [
-     "CHECHE GAME【顔出し初見ゲーム実況】",
-     "Usagi Ch. 因幡兎",
-     "こじちゃんねる【小嶋明梨】",
-     "エラch"
+     "あかどらん",
+     "りんふぅ",
+     "猫咲あんじ Nekosaki anji",
+     "羅々華セーラ-Raraka Sera-"
+    ]
+   },
+   {
+    "tag": "#ぶいきゃす",
+    "channels": [
+     "式神やしろ",
+     "浅葱なぎ",
+     "羅々華セーラ-Raraka Sera-"
     ]
    }
   ],
@@ -74,42 +104,42 @@
    {
     "game": "ストリートファイター6",
     "channels": 32,
-    "videos": 46
+    "videos": 41
    },
    {
     "game": "Apex Legends",
-    "channels": 28,
-    "videos": 32
+    "channels": 23,
+    "videos": 29
    },
    {
     "game": "Minecraft",
-    "channels": 25,
+    "channels": 24,
     "videos": 28
    },
    {
     "game": "Grand Theft Auto V",
-    "channels": 21,
-    "videos": 26
-   },
-   {
-    "game": "モンスターストライク",
-    "channels": 15,
+    "channels": 18,
     "videos": 23
    },
    {
-    "game": "Dead by Daylight",
-    "channels": 16,
-    "videos": 18
+    "game": "モンスターストライク",
+    "channels": 14,
+    "videos": 22
    },
    {
     "game": "VALORANT",
-    "channels": 14,
-    "videos": 15
+    "channels": 15,
+    "videos": 18
    },
    {
-    "game": "ARK: Survival Ascended",
-    "channels": 12,
-    "videos": 13
+    "game": "フォートナイト",
+    "channels": 14,
+    "videos": 18
+   },
+   {
+    "game": "鬼武者 Way of the Sword",
+    "channels": 14,
+    "videos": 14
    }
   ]
  },
