@@ -59,6 +59,18 @@ def validate(col):
         elif "amazon.co.jp/s?" in u or "/s?k=" in u:
             bad.append("buy に検索結果のURLは使えません。商品ページ（/dp/...）を指定してください")
 
+    # summary（3行要約）はツイート画像に使う。無くてもよいが、
+    # 入れるなら短く。長い行は画像の中で読めない。
+    sm = col.get("summary")
+    if sm is not None:
+        if not isinstance(sm, list) or len(sm) > 3:
+            bad.append("summary は3行までのリストにしてください")
+        else:
+            for i, line in enumerate(sm, 1):
+                n = len(str(line))
+                if n < 8 or n > 42:
+                    bad.append(f"summary の{i}行目が {n} 字です（8〜42字にしてください）")
+
     srcs = col.get("sources") or []
     if not srcs:
         bad.append("出典がありません。一次ソースを最低1つ付けてください")

@@ -30,6 +30,7 @@
    "game": "Minecraft",
    "headline": "見出し。出来事を一文で言い切る",
    "body": "本文120〜480字。裏が取れた事実だけ。",
+   "summary": ["Xの画像に出る3行", "1行8〜42字", "3行まで"],
    "people": ["配信者名", "..."],
    "sources": [{"t": "出典の見出し", "u": "https://..."}],
    "buy": {"t": "Amazonで買う", "u": "https://www.amazon.co.jp/dp/..."}

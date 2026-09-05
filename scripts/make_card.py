@@ -61,15 +61,15 @@ THEMES = {
         "accent": "#5FD8DC", "hot": "#F0A163", "on": "#0A1113",
         "sum": "#EAF2F1", "stroke": "", "strokec": "#070E10",
     },
-    # 明るいクリーム地。落ち着いた紙もの寄り。フチなし
+    # 明るいクリーム地。落ち着いた紙もの寄りだが、ゲーム名はフチで立たせる
     "cream": {
         "title": "dela", "text": "round",
         "bg": ("radial-gradient(1100px 760px at 78% -20%,#FFE7CE 0%,rgba(255,231,206,0) 62%),"
                "radial-gradient(760px 560px at -6% 112%,#D9F0EE 0%,rgba(217,240,238,0) 58%),#FBF7F1"),
         "ink": "#1A2426", "ink2": "#5B7375", "ink3": "#8AA0A1",
         "card": "rgba(255,255,255,.82)", "line": "#E3DACE", "rail": "#EDE5DA",
-        "accent": "#0E8B90", "hot": "#C0551A", "on": "#FFFFFF",
-        "sum": "#1A2426", "stroke": "", "strokec": "#1A2426",
+        "accent": "#0E8B90", "hot": "#E2620F", "on": "#FFFFFF",
+        "sum": "#1A2426", "stroke": "4px", "strokec": "#2A1A0E",
     },
     # 白地・高コントラスト。ゲーム名に濃いフチ。配信のサムネイルに近い出方
     "pop": {
@@ -136,26 +136,29 @@ header .c{font-size:13px;color:var(--ink2);margin-top:6px;font-weight:700}
 .eye svg{width:16px;height:16px}
 .eye.tealx{background:var(--accent)}
 
-.lead{display:flex;flex-direction:column;min-width:0}
-.game{font-family:%(titlefont)s;font-weight:%(titleweight)s;font-size:62px;line-height:1.18;
-  margin-top:16px;letter-spacing:-.01em;color:var(--hot)%(gamestroke)s}
-.game.long{font-size:51px}
-.game.xlong{font-size:43px}
-.sum{margin-top:22px;display:flex;flex-direction:column;gap:14px}
-.sum li{list-style:none;display:flex;gap:13px;align-items:flex-start;
-  font-size:30px;font-weight:800;line-height:1.48;color:var(--sum)}
-.sum li::before{content:"";flex:none;width:9px;height:9px;border-radius:3px;
-  background:var(--accent);margin-top:16px}
-.sum li.long{font-size:26px}
+.lead{display:flex;flex-direction:column;min-width:0;overflow:hidden}
+.game{font-family:%(titlefont)s;font-weight:%(titleweight)s;font-size:72px;line-height:1.16;
+  margin-top:14px;letter-spacing:-.01em;color:var(--hot)%(gamestroke)s}
+.game.long{font-size:59px}
+.game.xlong{font-size:49px}
 
-/* 要約が短い日は下に余白ができる。上下に均等に振って、
+/* 見出し。ゲーム名（hot）と本文（ink）の間を、色でもう1段つなぐ。 */
+.hl{margin-top:14px;font-size:26px;font-weight:900;line-height:1.4;color:var(--accent)}
+
+/* 本文。コラムは日によって120〜480字と幅があるので、
+   入りきる大きさを描画してから決める（下の fit() を見てください）。 */
+.txt{margin-top:14px;font-size:26px;font-weight:700;line-height:1.6;color:var(--sum)}
+
+/* 本文が短い日は下に余白ができる。上下に均等に振って、
    サムネイルが宙に浮いて見えないようにする。 */
-.pics{margin:auto 0 6px;padding-top:26px;display:flex;gap:16px}
-.pics figure{flex:1;min-width:0}
+.pics{margin:auto 0 2px;padding-top:18px;display:flex;gap:16px}
+.pics figure{width:232px;flex:none}
+.pics.sm figure{width:186px}
 .pics figure img{width:100%%;aspect-ratio:16/9;object-fit:cover;border-radius:10px;
   border:1px solid var(--line);display:block;background:var(--rail)}
-.pics figcaption{font-size:12px;color:var(--ink3);margin-top:7px;line-height:1.45;
+.pics figcaption{font-size:12px;color:var(--ink3);margin-top:6px;line-height:1.45;
   overflow:hidden;text-overflow:ellipsis;white-space:nowrap;font-weight:700}
+.pics.sm figcaption{font-size:11px}
 
 .side{display:grid;grid-template-rows:1fr 1fr;gap:26px;min-height:0}
 .row{display:grid;grid-template-columns:42px 1fr auto;align-items:center;gap:12px;
@@ -218,7 +221,30 @@ PAGE = """<!doctype html>
   <div class="note">%(note)s</div>
   <span class="url">%(url)s</span>
 </footer>
+<script>%(fit)s</script>
 </body></html>
+"""
+
+# コラムの本文は日によって120〜480字と長さが変わる。
+# 文字数から大きさを決め打ちすると、見出しが2行になった日などにはみ出す。
+# 実際に描いてから、入りきるまで1段ずつ小さくするほうが確実。
+# 書体が届く前に測ると行数がずれるので、必ず fonts.ready を待つ。
+# 先に本文を21.5pxまで落とし、それでも入らなければサムネイルを縮める。
+# 読めない大きさの本文より、小さいサムネイルのほうがましだという判断。
+FIT = """
+document.fonts.ready.then(function(){
+  var lead=document.querySelector('.lead'),t=lead&&lead.querySelector('.txt'),
+      pics=lead&&lead.querySelector('.pics');
+  if(!t) return;
+  function fits(){ return lead.scrollHeight<=lead.clientHeight+1; }
+  function step(sizes){
+    for(var i=0;i<sizes.length;i++){ t.style.fontSize=sizes[i]+'px'; if(fits()) return true; }
+    return false;
+  }
+  if(step([26,25,24,23,22,21])) return;
+  if(pics) pics.classList.add('sm');
+  step([21,20,19,18,17,16,15]);
+});
 """
 
 
@@ -245,25 +271,6 @@ CROWN = ico('<path d="M3 18h18M4 6l4 4 4-6 4 6 4-4-2 10H6z"/>')
 UP = ico('<path d="M4 17l6-6 4 4 6-8"/><path d="M15 7h5v5"/>')
 
 
-def summary_lines(col):
-    """画像に載せる3行。コラムに summary があればそれを使う。
-
-    無い日は本文の頭から文を拾って代わりにする。過去に書いたコラムでも
-    そのまま画像が作れるように。
-    """
-    sm = [str(x).strip() for x in (col.get("summary") or []) if str(x).strip()]
-    if sm:
-        return sm[:3]
-    body = str(col.get("body") or "")
-    out = []
-    for sent in re.split(r"(?<=。)", body):
-        sent = sent.strip()
-        if not sent:
-            continue
-        out.append(sent if len(sent) <= 46 else sent[:45] + "…")
-        if len(out) == 3:
-            break
-    return out
 
 
 def bars_html(spark, days):
@@ -292,19 +299,20 @@ def lead_html(col, ranking):
         top = (ranking or [{}])[0]
         return (f'<span class="eye">{BOLT}今日いちばん配信されたゲーム</span>'
                 f'<div class="game{size_class(top.get("game"), 13, 20)}">{e(top.get("game"))}</div>'
-                f'<ul class="sum"><li>{top.get("channels", 0)}チャンネルが配信しました</li>'
-                f'<li>再生数は合わせて {man(top.get("views"))}回</li></ul>')
-    lines = summary_lines(col)
-    sm = "".join('<li class="long">' + e(x) + "</li>" if len(x) > 30
-                 else "<li>" + e(x) + "</li>" for x in lines)
+                f'<div class="hl">{top.get("channels", 0)}チャンネルが配信しました</div>'
+                f'<p class="txt">再生数は合わせて {man(top.get("views"))}回。</p>')
+    game = str(col.get("game") or "")
+    head = str(col.get("headline") or "")
+    body = str(col.get("body") or "")
     pics = col.get("pics") or ([{"th": col["hero"], "by": col.get("hero_by", "")}]
                                if col.get("hero") else [])
     figs = "".join(f'<figure><img src="{e(x["th"])}" alt="">'
                    f'<figcaption>YouTube ／ {e(x.get("by"))}</figcaption></figure>'
                    for x in pics[:3])
     return (f'<span class="eye">{BOLT}今日の注目ゲーム</span>'
-            f'<div class="game{size_class(col.get("game"), 13, 20)}">{e(col.get("game"))}</div>'
-            f'<ul class="sum">{sm}</ul>'
+            f'<div class="game{size_class(game, 13, 20)}">{e(game)}</div>'
+            + (f'<div class="hl">{e(head)}</div>' if head else "")
+            + f'<p class="txt">{e(body)}</p>'
             + (f'<div class="pics">{figs}</div>' if figs else ""))
 
 
@@ -384,7 +392,7 @@ def build(data, theme="dark"):
         "lead": lead_html(data.get("column"), data.get("ranking") or []),
         "rows": rows_html(data.get("ranking") or []),
         "hot": hot_html(data),
-        "note": note, "url": SITE_URL,
+        "note": note, "url": SITE_URL, "fit": FIT,
     }
 
 def main():

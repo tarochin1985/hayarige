@@ -660,6 +660,13 @@ def main():
             st = cr.get("streams") or []
             if st and st[0].get("th"):
                 column["hero"] = st[0]["th"]
+                # 画像を借りた相手。出どころを書かずに使わないため、
+                # サムネイルと一緒に必ず持ち回る。
+                column["hero_by"] = st[0].get("c", "")
+            # Xに貼る画像用。小さいものを3枚並べる。1枚を大きく使うより、
+            # 借りている度合いが下がる。出どころは1枚ずつ添える。
+            column["pics"] = [{"th": s.get("th", ""), "by": s.get("c", "")}
+                              for s in st[:3] if s.get("th")]
             if cr.get("steam"):
                 column["steam"] = cr["steam"]
         if not column.get("hero"):
