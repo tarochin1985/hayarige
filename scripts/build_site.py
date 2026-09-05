@@ -5,6 +5,7 @@
 出力: site/index.html と site/data.json
 """
 import html
+import json
 import math, re
 from collections import defaultdict, Counter
 from datetime import datetime, timedelta, timezone
@@ -309,6 +310,126 @@ def ssr_rows(rows):
     return "".join(out)
 
 
+KEEP_DAYS = 30      # YouTubeのAPI規約で、配信タイトルなどを保存できる上限
+
+
+def purge_old(site_url):
+    """30日を過ぎた記録から、YouTubeから取った文字（配信タイトル・チャンネル名・
+    サムネイル）を消す。ゲーム名と件数──こちらが数えた結果──だけを残す。
+
+    YouTubeの開発者ポリシーにこう定められている。
+      「API Clients may store all other types of Authorized Data ...
+        for no longer than 30 calendar days. After 30 calendar days,
+        the API Client must either delete or refresh the stored data.」
+    再生数などの数値は別枠だが、配信タイトルとチャンネル名はこれに当たる。
+
+    独自に計算したスコアや集計値の公開は、ポリシーが明示的に認めている。
+    なので「その日どのゲームが何件配信されたか」は残せる。消すのは、
+    YouTubeから借りてきた文字と画像のほうだけ。
+
+    元の日別ファイル（data/daily/）も同時に消す。あちらが本体なので、
+    ページだけ消しても意味がない。
+    """
+    limit = (datetime.now(JST) - timedelta(days=KEEP_DAYS)).strftime("%Y-%m-%d")
+    gone = 0
+    for f in sorted((DATA / "daily").glob("*.json")):
+        day = f.stem
+        if len(day) == 10 and day < limit:
+            f.unlink()
+            gone += 1
+    if gone:
+        log(f"30日を過ぎた収集ファイルを {gone} 日分削除しました（〜{limit}）")
+
+    fixed = 0
+    for d in sorted((SITE / "d").glob("*")):
+        if not d.is_dir() or d.name >= limit:
+            continue
+        page = d / "index.html"
+        if not page.exists():
+            continue
+        h = page.read_text(encoding="utf-8")
+        key = "const DATA = "
+        if key not in h:
+            continue
+        try:
+            obj, _ = json.JSONDecoder().raw_decode(h[h.index(key) + len(key):])
+        except ValueError:
+            continue
+        if obj.get("purged"):
+            continue
+        # ranking だけでなく rising・spread にも同じ配信一覧が入っている。
+        # 1か所ずつ書くと取りこぼすので、まるごと歩いて外す。
+        def strip(node):
+            if isinstance(node, dict):
+                node.pop("streams", None)
+                for v in node.values():
+                    strip(v)
+            elif isinstance(node, list):
+                for v in node:
+                    strip(v)
+        for k in ("ranking", "rising", "spread", "momentum"):
+            strip(obj.get(k))
+        # コラムは扱いを分ける。本文も出典もこちらが書いた記事の一部で、
+        # 出典を消すと「裏が取れることが読者に確認できる」という
+        # このサイトの土台が崩れる。引用と出典の明示は残す。
+        # 見出し画像だけはYouTubeのサムネイルそのものなので外す。
+        if isinstance(obj.get("column"), dict):
+            obj["column"].pop("hero", None)
+        obj["purged"] = True
+        render_page(page.relative_to(SITE).as_posix(), obj, 2, site_url)
+        fixed += 1
+    if fixed:
+        log(f"30日を過ぎた記録 {fixed} 日分から、配信タイトルを外しました")
+
+
+def analytics_html():
+    """アクセス解析のタグ。data/site_config.json に token を入れると出る。
+
+    Cloudflare Web Analytics を使う。Cookieを置かず個人を追いかけないので、
+    同意バナーが要らない。いまは「何人来たか」が分かれば十分。
+    """
+    cfg = read_json(DATA / "site_config.json", {}) or {}
+    tok = (cfg.get("analytics_token") or "").strip()
+    if not tok:
+        return ""
+    return ('<script defer src="https://static.cloudflareinsights.com/beacon.min.js" '
+            f"data-cf-beacon='{json.dumps({'token': tok})}'></script>")
+
+
+def render_page(path, data, depth, site_url=""):
+    """1ページ書き出す。depth はサイト直下から何階層下か。
+
+    30日を過ぎた記録を作り直すときにも使うので、main() の中ではなく
+    モジュールの直下に置いてある。
+    """
+    tpl = (SITE / "template.html").read_text(encoding="utf-8")
+    d = dict(data, paths={"home": "../" * depth or "./",
+                          "archive": ("../" * depth or "./") + "archive/"})
+    p = SITE / path
+    p.parent.mkdir(parents=True, exist_ok=True)
+    home = "../" * depth or "./"
+    # そのページ自身のURL。index.html は省いて、ディレクトリの形にする。
+    page = "" if path == "index.html" else path.replace("index.html", "")
+    rows_ = data.get("ranking") or []
+    col_ = data.get("column")
+    p.write_text(tpl.replace("__DATA__", json.dumps(d, ensure_ascii=False))
+                    .replace("__HOME__", home)
+                    .replace("__PAGEURL__", f"{site_url}/{page}" if site_url else "")
+                    .replace("__SITE__", site_url)
+                    # JavaScriptなしでも読める中身。JSが動けば同じ内容で描き直される
+                    .replace("__PICKDISP__", "" if col_ else "display:none")
+                    # JavaScriptなしでも、いつ書いたコラムかが分かるように
+                    .replace("__PICKTITLE__", pick_title(col_, data))
+                    .replace("__PICKNOTE__", pick_note(col_, data))
+                    .replace("__SSR_PICK__", ssr_pick(col_))
+                    .replace("__SSR_CARDS__", ssr_cards(rows_))
+                    .replace("__SSR_ROWS__", ssr_rows(rows_))
+                    .replace("__PAGEBODY__", data.get("page_body", ""))
+                    .replace("__NAV__", nav_html(data, home))
+                    .replace("__ANALYTICS__", analytics_html()),
+                 encoding="utf-8")
+
+
 def watched_channels():
     """毎日見に行っているチャンネル数。説明ページに出すために数える。"""
     chans = read_json(DATA / "channels_enriched.json", []) or []
@@ -582,31 +703,7 @@ def main():
     site_url = (cfg.get("site_url") or "").strip().rstrip("/")
 
     def render(path, data, depth):
-        """depth はサイト直下から何階層下か。リンクの相対パスに使う。"""
-        d = dict(data, paths={"home": "../" * depth or "./",
-                              "archive": ("../" * depth or "./") + "archive/"})
-        p = SITE / path
-        p.parent.mkdir(parents=True, exist_ok=True)
-        home = "../" * depth or "./"
-        # そのページ自身のURL。index.html は省いて、ディレクトリの形にする。
-        page = "" if path == "index.html" else path.replace("index.html", "")
-        rows_ = data.get("ranking") or []
-        col_ = data.get("column")
-        p.write_text(tpl.replace("__DATA__", json.dumps(d, ensure_ascii=False))
-                        .replace("__HOME__", home)
-                        .replace("__PAGEURL__", f"{site_url}/{page}" if site_url else "")
-                        .replace("__SITE__", site_url)
-                        # JavaScriptなしでも読める中身。JSが動けば同じ内容で描き直される
-                        .replace("__PICKDISP__", "" if col_ else "display:none")
-                        # JavaScriptなしでも、いつ書いたコラムかが分かるように
-                        .replace("__PICKTITLE__", pick_title(col_, data))
-                        .replace("__PICKNOTE__", pick_note(col_, data))
-                        .replace("__SSR_PICK__", ssr_pick(col_))
-                        .replace("__SSR_CARDS__", ssr_cards(rows_))
-                        .replace("__SSR_ROWS__", ssr_rows(rows_))
-                        .replace("__PAGEBODY__", data.get("page_body", ""))
-                        .replace("__NAV__", nav_html(data, home)),
-                     encoding="utf-8")
+        render_page(path, data, depth, site_url)
 
     render("index.html", payload, 0)
     # その日の記録を、消えない住所に残す
@@ -733,6 +830,9 @@ def main():
             rb.write_text(txt.rstrip() + f"\n\nSitemap: {site_url}/sitemap.xml\n",
                           encoding="utf-8")
         log(f"sitemap.xml を書き出しました（{len(urls)} ページ）")
+
+    # YouTubeの規約で、配信タイトルなどを持てるのは30日まで
+    purge_old(site_url)
 
     log(f"サイトを書き出しました: {len(rows)} タイトル / 急上昇 {len(rising)} 件 "
         f"/ 確認待ち {len(unknown)} 件")
