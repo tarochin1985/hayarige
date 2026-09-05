@@ -8,10 +8,16 @@ site/data.json を読んで site/card.html を書き出すところまでを行�
     python scripts/make_card.py            # card.html を作る
     python scripts/make_card.py --png      # 画像まで作る（Playwrightが必要）
 
+見た目は6種類から選べる。data/site_config.json の card_theme で決まる。
+その場で見比べたいときは --theme= を付ける:
+
+    python scripts/make_card.py --png --theme=pop --out=card_pop
+
 Xに貼る前提なので、リンクを踏まなくてもURLが読めるよう画像内にも入れてある。
 """
 import html
 import json
+import re
 import sys
 from pathlib import Path
 
@@ -20,91 +26,177 @@ from common import SITE, log, read_json
 SITE_URL = "hayarige.tarochin1985.workers.dev"
 TOP_N = 10
 
+# ---------------------------------------------------------------- 見た目
+# 配色と書体をまとめて差し替えられるようにしてある。
+#     python scripts/make_card.py --png --theme=pop
+# どれを使うかは data/site_config.json の card_theme でも指定できる。
+# (Google Fontsへの指定, CSSの書体指定, 見出しに使う太さ)
+# 3つめが要る理由: Dela Gothic One と RocknRoll One は太さが1種類しかない。
+# そこに font-weight:900 を当てるとブラウザが勝手に太らせて字が潰れる。
+FONTS = {
+    "gothic": ('Zen+Kaku+Gothic+New:wght@500;700;900',
+               '"Zen Kaku Gothic New","Hiragino Kaku Gothic ProN",sans-serif', 900),
+    "round":  ('Zen+Maru+Gothic:wght@500;700;900',
+               '"Zen Maru Gothic","Hiragino Maru Gothic ProN",sans-serif', 900),
+    "mplus":  ('M+PLUS+Rounded+1c:wght@500;700;800;900',
+               '"M PLUS Rounded 1c","Hiragino Maru Gothic ProN",sans-serif', 900),
+    "dela":   ('Dela+Gothic+One', '"Dela Gothic One",sans-serif', 400),
+    "rock":   ('RocknRoll+One', '"RocknRoll One",sans-serif', 400),
+}
+
+# 各テーマの意味:
+#   title/text … 使う書体（FONTS のキー）
+#   bg         … 背景。ink〜on は文字と枠の色
+#   sum        … 3行要約の色。ゲーム名（hot）と変えて視線の順番を作る
+#   stroke     … ゲーム名と数字につけるフチの太さ。"" ならフチなし
+#   strokec    … フチの色。明るい地なら濃い色、白フチにしたいなら白
+THEMES = {
+    # いまのダークを、書体だけポップに寄せたもの
+    "dark": {
+        "title": "dela", "text": "round",
+        "bg": ("radial-gradient(1200px 800px at 74% -24%,#154A4E 0%,rgba(21,74,78,0) 60%),"
+               "radial-gradient(720px 540px at -6% 114%,#3A2411 0%,rgba(58,36,17,0) 56%),#070E10"),
+        "ink": "#EAF2F1", "ink2": "#8FADAE", "ink3": "#5F7B7D",
+        "card": "rgba(12,26,29,.72)", "line": "#1D3639", "rail": "#132528",
+        "accent": "#5FD8DC", "hot": "#F0A163", "on": "#0A1113",
+        "sum": "#EAF2F1", "stroke": "", "strokec": "#070E10",
+    },
+    # 明るいクリーム地。落ち着いた紙もの寄り。フチなし
+    "cream": {
+        "title": "dela", "text": "round",
+        "bg": ("radial-gradient(1100px 760px at 78% -20%,#FFE7CE 0%,rgba(255,231,206,0) 62%),"
+               "radial-gradient(760px 560px at -6% 112%,#D9F0EE 0%,rgba(217,240,238,0) 58%),#FBF7F1"),
+        "ink": "#1A2426", "ink2": "#5B7375", "ink3": "#8AA0A1",
+        "card": "rgba(255,255,255,.82)", "line": "#E3DACE", "rail": "#EDE5DA",
+        "accent": "#0E8B90", "hot": "#C0551A", "on": "#FFFFFF",
+        "sum": "#1A2426", "stroke": "", "strokec": "#1A2426",
+    },
+    # 白地・高コントラスト。ゲーム名に濃いフチ。配信のサムネイルに近い出方
+    "pop": {
+        "title": "dela", "text": "mplus",
+        "bg": ("radial-gradient(900px 620px at 88% -18%,#BFF3F2 0%,rgba(191,243,242,0) 58%),"
+               "radial-gradient(820px 600px at -8% 110%,#FFDCC0 0%,rgba(255,220,192,0) 56%),#FFFFFF"),
+        "ink": "#10191B", "ink2": "#4E6668", "ink3": "#809394",
+        "card": "#FFFFFF", "line": "#DCE6E5", "rail": "#E8EFEE",
+        "accent": "#0B7E83", "hot": "#F0521B", "on": "#FFFFFF",
+        "sum": "#10191B", "stroke": "4px", "strokec": "#10191B",
+    },
+    # パステル。丸ゴシックでやわらかく、フチは濃い紫で締める
+    "candy": {
+        "title": "round", "text": "mplus",
+        "bg": ("radial-gradient(980px 700px at 84% -18%,#CFF3E6 0%,rgba(207,243,230,0) 60%),"
+               "radial-gradient(860px 640px at -8% 112%,#FFD9E6 0%,rgba(255,217,230,0) 58%),#FFFBF6"),
+        "ink": "#241E2B", "ink2": "#6B6076", "ink3": "#9C93A6",
+        "card": "rgba(255,255,255,.88)", "line": "#EADFE8", "rail": "#F1E8EF",
+        "accent": "#1E9E8A", "hot": "#E8437F", "on": "#FFFFFF",
+        "sum": "#241E2B", "stroke": "4px", "strokec": "#2E2137",
+    },
+    # 黄色地。タイムラインでいちばん目に入る。サムネ寄せの最右翼
+    "sun": {
+        "title": "dela", "text": "mplus",
+        "bg": ("radial-gradient(1000px 700px at 84% -20%,#FFE44D 0%,rgba(255,228,77,0) 62%),"
+               "radial-gradient(880px 640px at -8% 112%,#FFB03A 0%,rgba(255,176,58,0) 58%),#FFF3C4"),
+        "ink": "#1B1405", "ink2": "#6A5A2E", "ink3": "#94834F",
+        "card": "rgba(255,255,255,.88)", "line": "#E8D79A", "rail": "#F2E6B8",
+        "accent": "#0E7C6B", "hot": "#E23A0E", "on": "#FFFFFF",
+        "sum": "#1B1405", "stroke": "4px", "strokec": "#1B1405",
+    },
+    # 濃い色地にフチ付き。いちばん賑やか
+    "vivid": {
+        "title": "dela", "text": "mplus",
+        "bg": ("radial-gradient(1000px 700px at 82% -20%,#1C6F74 0%,rgba(28,111,116,0) 58%),"
+               "radial-gradient(820px 620px at -8% 112%,#8A3D12 0%,rgba(138,61,18,0) 56%),#0E1A1D"),
+        "ink": "#FFFFFF", "ink2": "#A9C6C7", "ink3": "#7C9899",
+        "card": "rgba(10,24,27,.6)", "line": "#2A4A4E", "rail": "#162C30",
+        "accent": "#57E3E8", "hot": "#FFC24A", "on": "#0A1113",
+        "sum": "#FFFFFF", "stroke": "5px", "strokec": "#08181B",
+    },
+}
+
 CSS = """
 *{box-sizing:border-box;margin:0;padding:0}
-body{width:1600px;height:900px;overflow:hidden;color:#EAF2F1;
-  background:radial-gradient(1200px 780px at 78% -22%,#154A4E 0%,rgba(21,74,78,0) 62%),
-             radial-gradient(760px 560px at -6% 112%,#3A2411 0%,rgba(58,36,17,0) 58%),#080F11;
-  font-family:"Zen Kaku Gothic New","Hiragino Kaku Gothic ProN","Noto Sans JP",sans-serif;
-  padding:44px 54px 40px;display:flex;flex-direction:column}
+body{width:1600px;height:900px;overflow:hidden;color:var(--ink);background:%(bg)s;
+  font-family:%(textfont)s;padding:34px 44px 30px;display:flex;flex-direction:column;gap:22px}
 
-header{display:flex;align-items:center;gap:18px;flex:none}
-header img{width:52px;height:52px;object-fit:contain}
-header .nm{font-size:30px;font-weight:900;letter-spacing:.01em}
-header .tag{font-size:16px;color:#8FADAE;margin-left:2px}
+header{display:flex;align-items:center;gap:16px;flex:none}
+header img{width:48px;height:48px;object-fit:contain}
+header .nm{font-family:%(titlefont)s;font-weight:%(titleweight)s;font-size:28px;color:var(--ink)}
+header .tag{font-size:15px;color:var(--ink2);font-weight:700}
 header .meta{margin-left:auto;text-align:right}
-header .d{font-family:"Roboto Mono",monospace;font-size:30px;font-weight:700;color:#5FD8DC;line-height:1}
-header .c{font-size:14px;color:#8FADAE;margin-top:7px}
+header .d{font-family:"Roboto Mono",monospace;font-size:27px;font-weight:700;
+  color:var(--accent);line-height:1}
+header .c{font-size:13px;color:var(--ink2);margin-top:6px;font-weight:700}
 
-.body{flex:1;display:grid;grid-template-columns:1fr 520px;gap:46px;padding-top:26px;min-height:0}
+.body{flex:1;display:grid;grid-template-columns:1fr 560px;gap:26px;min-height:0}
+.card{background:var(--card);border:1px solid var(--line);border-radius:18px;
+  padding:24px 26px;display:flex;flex-direction:column;min-height:0}
+.eye{align-self:flex-start;display:inline-flex;align-items:center;gap:8px;
+  font-family:%(titlefont)s;font-weight:%(titleweight)s;font-size:16px;color:var(--on);background:var(--hot);
+  padding:6px 14px 6px 12px;border-radius:8px}
+.eye svg{width:16px;height:16px}
+.eye.tealx{background:var(--accent)}
 
-/* 左：今日いちばん言いたいこと。1枚の画像として、まずここが読まれる */
 .lead{display:flex;flex-direction:column;min-width:0}
-.eye{align-self:flex-start;display:flex;align-items:center;gap:9px;
-  font-size:15px;font-weight:900;color:#0A1113;background:#F0A163;
-  padding:6px 15px 6px 13px;border-radius:7px;letter-spacing:.02em}
-.eye svg{width:17px;height:17px}
-.game{font-size:62px;font-weight:900;line-height:1.14;margin-top:20px;letter-spacing:-.02em;
-  text-wrap:balance}
-.game.long{font-size:50px}
-.game.xlong{font-size:42px}
-.hl{font-size:26px;font-weight:700;line-height:1.55;color:#F0A163;margin-top:20px}
-.hl.long{font-size:23px}
-.who{display:flex;flex-wrap:wrap;gap:8px;margin-top:22px}
-.who span{font-size:16px;color:#B7CFD0;background:#12262A;border:1px solid #24444A;
-  border-radius:20px;padding:6px 15px}
-/* 7日分の棒グラフ。数字より形のほうが速く伝わる */
-.trend{margin-top:auto}
-.trend .cap{font-size:15px;color:#7E9A9B;display:flex;align-items:baseline;gap:14px}
-.trend .cap b{font-family:"Roboto Mono",monospace;font-size:19px;color:#F0A163;font-weight:700}
-.trend .bars{display:flex;align-items:flex-end;gap:12px;height:190px;margin-top:16px}
-.trend .b{flex:1;height:100%;display:flex;flex-direction:column;justify-content:flex-end;
-  align-items:stretch;gap:8px}
-.trend .b i{display:block;background:#1C3C40;border-radius:5px 5px 2px 2px}
-.trend .b.on i{background:linear-gradient(180deg,#F0A163,#B4551C)}
-.trend .b em{font-style:normal;font-family:"Roboto Mono",monospace;font-size:12px;
-  color:#5F7B7D;text-align:center}
-.trend .b.on em{color:#F0A163;font-weight:700}
+.game{font-family:%(titlefont)s;font-weight:%(titleweight)s;font-size:62px;line-height:1.18;
+  margin-top:16px;letter-spacing:-.01em;color:var(--hot)%(gamestroke)s}
+.game.long{font-size:51px}
+.game.xlong{font-size:43px}
+.sum{margin-top:22px;display:flex;flex-direction:column;gap:14px}
+.sum li{list-style:none;display:flex;gap:13px;align-items:flex-start;
+  font-size:30px;font-weight:800;line-height:1.48;color:var(--sum)}
+.sum li::before{content:"";flex:none;width:9px;height:9px;border-radius:3px;
+  background:var(--accent);margin-top:16px}
+.sum li.long{font-size:26px}
 
-.pitch{margin-top:30px;display:flex;align-items:center;gap:16px}
-.pitch b{font-size:26px;font-weight:900;color:#8FE9EC}
-.pitch span{font-size:15px;color:#7E9A9B}
+/* 要約が短い日は下に余白ができる。上下に均等に振って、
+   サムネイルが宙に浮いて見えないようにする。 */
+.pics{margin:auto 0 6px;padding-top:26px;display:flex;gap:16px}
+.pics figure{flex:1;min-width:0}
+.pics figure img{width:100%%;aspect-ratio:16/9;object-fit:cover;border-radius:10px;
+  border:1px solid var(--line);display:block;background:var(--rail)}
+.pics figcaption{font-size:12px;color:var(--ink3);margin-top:7px;line-height:1.45;
+  overflow:hidden;text-overflow:ellipsis;white-space:nowrap;font-weight:700}
 
-/* 右：ランキング。数字を大きく、順位の差が形で分かるように */
-.rank{display:flex;flex-direction:column;min-width:0}
-.rank h3{font-size:15px;font-weight:900;color:#8FADAE;padding-bottom:14px;
-  border-bottom:2px solid #1E3639;display:flex;align-items:baseline;gap:10px}
-.rank h3 em{font-style:normal;font-size:12.5px;font-weight:500;color:#5F7B7D}
-.row{display:grid;grid-template-columns:44px 1fr auto;align-items:center;gap:12px;
-  padding:11px 0 10px;border-bottom:1px solid #16282B}
-.row .rk{font-family:"Roboto Mono",monospace;font-size:30px;font-weight:700;
-  color:#3E5A5D;text-align:center;line-height:1}
-.row.t1 .rk{color:#F0A163;font-size:38px}
-.row.t2 .rk,.row.t3 .rk{color:#7FA3A5}
-.row .nm{font-size:21px;font-weight:700;overflow:hidden;text-overflow:ellipsis;
-  white-space:nowrap}
-.row.t1 .nm{font-size:25px}
-.row .bar{grid-column:2;height:7px;background:#132528;border-radius:4px;overflow:hidden;
-  margin-top:9px}
-.row .bar i{display:block;height:100%;border-radius:4px;
-  background:linear-gradient(90deg,#0E8B90,#5FD8DC)}
-.row.t1 .bar i{background:linear-gradient(90deg,#B4551C,#F0A163)}
-.row .ct{font-family:"Roboto Mono",monospace;font-size:17px;color:#9CB8B9;text-align:right;
-  white-space:nowrap}
-.row .ct em{font-style:normal;font-size:13px;color:#63807F}
-.row.t1 .ct{font-size:20px;color:#EAF2F1}
+.side{display:grid;grid-template-rows:1fr 1fr;gap:26px;min-height:0}
+.row{display:grid;grid-template-columns:42px 1fr auto;align-items:center;gap:12px;
+  padding:14px 0 12px;border-bottom:1px solid var(--line)}
+.row:last-child{border-bottom:none}
+.row .rk{font-family:%(titlefont)s;font-weight:%(titleweight)s;font-size:32px;color:var(--ink3);text-align:center;line-height:1}
+.row.t1 .rk{color:var(--hot);font-size:40px}
+.row .nm{font-size:24px;font-weight:800;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.row .ct{font-family:"Roboto Mono",monospace;font-size:17px;color:var(--ink2);white-space:nowrap}
+.row .ct em{font-style:normal;font-size:13px;color:var(--ink3)}
+.row .bar{grid-column:2/4;height:7px;background:var(--rail);border-radius:4px;
+  overflow:hidden;margin-top:8px}
+.row .bar i{display:block;height:100%%;border-radius:4px;background:var(--accent)}
+.row.t1 .bar i{background:var(--hot)}
 
-footer{flex:none;display:flex;align-items:center;gap:20px;padding-top:22px;
-  border-top:1px solid #1A2E31;margin-top:20px}
-.note{font-size:13.5px;color:#63807F;line-height:1.7}
-.url{margin-left:auto;font-family:"Roboto Mono",monospace;font-size:21px;font-weight:700;
-  color:#08191A;background:#5FD8DC;border-radius:9px;padding:11px 20px;white-space:nowrap}
+.hot{display:flex;flex-direction:column}
+.hot .g{font-family:%(titlefont)s;font-weight:%(titleweight)s;font-size:32px;margin-top:14px;line-height:1.25;
+  overflow:hidden;text-overflow:ellipsis;white-space:nowrap;color:var(--ink)}
+.hot .delta{display:flex;align-items:baseline;gap:12px;margin-top:12px}
+.hot .delta b{font-family:%(titlefont)s;font-weight:%(titleweight)s;font-size:44px;
+  color:var(--hot);line-height:1%(numstroke)s}
+.hot .delta span{font-size:16px;color:var(--ink2);font-weight:700}
+.bars{display:flex;align-items:flex-end;gap:9px;height:104px;margin-top:auto}
+.bars .b{flex:1;display:flex;flex-direction:column;justify-content:flex-end;gap:6px;height:100%%}
+.bars .b i{display:block;background:var(--rail);border-radius:5px 5px 2px 2px}
+.bars .b.on i{background:var(--hot)}
+.bars .b em{font-style:normal;font-family:"Roboto Mono",monospace;font-size:11px;
+  color:var(--ink3);text-align:center;font-weight:700}
+.bars .b.on em{color:var(--hot)}
+
+footer{flex:none;display:flex;align-items:center;gap:20px}
+.note{font-size:13px;color:var(--ink3);line-height:1.7;font-weight:700}
+.url{margin-left:auto;font-family:"Roboto Mono",monospace;font-size:20px;font-weight:700;
+  color:var(--on);background:var(--accent);border-radius:10px;padding:10px 19px;white-space:nowrap}
 """
 
 PAGE = """<!doctype html>
 <html lang="ja"><head><meta charset="utf-8">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+New:wght@500;700;900&family=Noto+Sans+JP:wght@500;700;900&family=Roboto+Mono:wght@500;700&display=swap">
-<style>%(css)s</style></head><body>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=%(fontq)s&family=Roboto+Mono:wght@500;700&display=swap">
+<style>:root{%(vars)s}
+%(css)s</style></head><body>
 <header>
   <img src="logo.svg" alt="">
   <span class="nm">ハヤリゲー</span>
@@ -113,14 +205,14 @@ PAGE = """<!doctype html>
     <div class="c">直近24時間 ／ 配信 %(videos)s本 ／ %(channels)sチャンネル</div></div>
 </header>
 <div class="body">
-  <section class="lead">%(lead)s
-    <div class="pitch"><b>次、何のゲーム配信する？</b>
-      <span>毎日更新のランキングです</span></div>
-  </section>
-  <section class="rank">
-    <h3>今日のTOP7<em>配信者数・再生数・配信数から算出</em></h3>
-    %(rows)s
-  </section>
+  <section class="card lead">%(lead)s</section>
+  <div class="side">
+    <section class="card rank">
+      <span class="eye tealx">%(crown)s今日のランキング</span>
+      %(rows)s
+    </section>
+    <section class="card hot">%(hot)s</section>
+  </div>
 </div>
 <footer>
   <div class="note">%(note)s</div>
@@ -143,9 +235,50 @@ def man(n):
     return f"{n:,}"
 
 
-BOLT = ('<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" '
-        'stroke-linecap="round" stroke-linejoin="round">'
-        '<path d="M13 2L4 14h7l-1 8 9-12h-7l1-8z"/></svg>')
+def ico(path):
+    return ('<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" '
+            f'stroke-linecap="round" stroke-linejoin="round">{path}</svg>')
+
+
+BOLT = ico('<path d="M13 2L4 14h7l-1 8 9-12h-7l1-8z"/>')
+CROWN = ico('<path d="M3 18h18M4 6l4 4 4-6 4 6 4-4-2 10H6z"/>')
+UP = ico('<path d="M4 17l6-6 4 4 6-8"/><path d="M15 7h5v5"/>')
+
+
+def summary_lines(col):
+    """画像に載せる3行。コラムに summary があればそれを使う。
+
+    無い日は本文の頭から文を拾って代わりにする。過去に書いたコラムでも
+    そのまま画像が作れるように。
+    """
+    sm = [str(x).strip() for x in (col.get("summary") or []) if str(x).strip()]
+    if sm:
+        return sm[:3]
+    body = str(col.get("body") or "")
+    out = []
+    for sent in re.split(r"(?<=。)", body):
+        sent = sent.strip()
+        if not sent:
+            continue
+        out.append(sent if len(sent) <= 46 else sent[:45] + "…")
+        if len(out) == 3:
+            break
+    return out
+
+
+def bars_html(spark, days):
+    vals = [v for v in spark if v is not None]
+    if len(vals) < 3:
+        return ""
+    top = max(vals) or 1
+    out = []
+    for i, v in enumerate(spark):
+        h = 0 if v is None else max(3, round(v / top * 100))
+        last = i == len(spark) - 1
+        d = (days or [])[i] if i < len(days or []) else ""
+        out.append(f'<span class="b{" on" if last else ""}">'
+                   f'<i style="height:{h}%"></i><em>{e(d[-5:])}</em></span>')
+    return f'<div class="bars">{"".join(out)}</div>'
 
 
 def size_class(text, small, smaller):
@@ -153,88 +286,104 @@ def size_class(text, small, smaller):
     return " xlong" if n > smaller else (" long" if n > small else "")
 
 
-def trend_html(game, ranking, days):
-    """取り上げたゲームの7日分を、大きな棒グラフで出す。
-
-    「なぜ今日これなのか」は、言葉より形のほうが速い。
-    倍率だけだと1件が3件でも×3になってしまうので、実数も添える。
-    """
-    row = next((r for r in ranking if r.get("game") == game), None)
-    spark = (row or {}).get("spark") or []
-    vals = [v for v in spark if v is not None]
-    if not row or len(vals) < 3 or max(vals) < 2:
-        return ""
-    top = max(vals) or 1
-    bars = []
-    for i, v in enumerate(spark):
-        h = 0 if v is None else max(3, round(v / top * 100))
-        last = i == len(spark) - 1
-        d = (days or [])[i] if i < len(days or []) else ""
-        bars.append(f'<span class="b{" on" if last else ""}">'
-                    f'<i style="height:{h}%"></i><em>{e(d[-5:])}</em></span>')
-    base = row.get("base")
-    cap = (f'ふだん {base:g}件 → 今日 {row.get("videos", 0)}件'
-           if base is not None else f'今日 {row.get("videos", 0)}件')
-    return (f'<div class="trend"><div class="cap">この7日間の配信数'
-            f'<b>{e(cap)}</b></div><div class="bars">{"".join(bars)}</div></div>')
-
-
-def lead_html(col, ranking, days=None):
-    """左半分。その日いちばん言いたいことを、大きな字で1つだけ置く。
-
-    以前はコラムの本文をそのまま流し込んでいたが、タイムラインでは
-    幅400pxほどに縮むので、あの大きさの文字は誰にも読まれない。
-    画像で伝えるのは「どのゲームか」と「なぜか」の一行まで。
-    本文はサイトで読んでもらう。
-    """
-    if col:
-        return (f'<span class="eye">{BOLT}今日の注目ゲーム</span>'
-                f'<div class="game{size_class(col.get("game"), 14, 22)}">{e(col.get("game"))}</div>'
-                f'<div class="hl{size_class(col.get("headline"), 40, 999)}">'
-                f'{e(col.get("headline"))}</div>'
-                + ('<div class="who">'
-                   + "".join(f"<span>{e(x)}</span>" for x in (col.get("people") or [])[:7])
-                   + "</div>" if col.get("people") else "")
-                + trend_html(col.get("game"), ranking, days))
-    # コラムが無い日は、1位のゲームを立てる
-    top = (ranking or [{}])[0]
-    return (f'<span class="eye">{BOLT}今日いちばん配信されたゲーム</span>'
-            f'<div class="game{size_class(top.get("game"), 14, 22)}">{e(top.get("game"))}</div>'
-            f'<div class="hl">{top.get("channels", 0)}チャンネルが配信、'
-            f'{man(top.get("views"))}回 再生されました</div>')
+def lead_html(col, ranking):
+    """左半分。コラムの中身をここで見せきる。"""
+    if not col:
+        top = (ranking or [{}])[0]
+        return (f'<span class="eye">{BOLT}今日いちばん配信されたゲーム</span>'
+                f'<div class="game{size_class(top.get("game"), 13, 20)}">{e(top.get("game"))}</div>'
+                f'<ul class="sum"><li>{top.get("channels", 0)}チャンネルが配信しました</li>'
+                f'<li>再生数は合わせて {man(top.get("views"))}回</li></ul>')
+    lines = summary_lines(col)
+    sm = "".join('<li class="long">' + e(x) + "</li>" if len(x) > 30
+                 else "<li>" + e(x) + "</li>" for x in lines)
+    pics = col.get("pics") or ([{"th": col["hero"], "by": col.get("hero_by", "")}]
+                               if col.get("hero") else [])
+    figs = "".join(f'<figure><img src="{e(x["th"])}" alt="">'
+                   f'<figcaption>YouTube ／ {e(x.get("by"))}</figcaption></figure>'
+                   for x in pics[:3])
+    return (f'<span class="eye">{BOLT}今日の注目ゲーム</span>'
+            f'<div class="game{size_class(col.get("game"), 13, 20)}">{e(col.get("game"))}</div>'
+            f'<ul class="sum">{sm}</ul>'
+            + (f'<div class="pics">{figs}</div>' if figs else ""))
 
 
 def rows_html(ranking):
-    rows = ranking[:7]
+    rows = ranking[:3]
     if not rows:
         return '<div class="row"><span class="nm">データがありません</span></div>'
     top = max((r.get("videos") or 0) for r in rows) or 1
     out = []
     for i, r in enumerate(rows):
-        w = max(6, (r.get("videos") or 0) / top * 100)
-        cls = f" t{i + 1}" if i < 3 else ""
+        w = max(8, (r.get("videos") or 0) / top * 100)
         out.append(
-            f'<div class="row{cls}">'
+            f'<div class="row{" t1" if i == 0 else ""}">'
             f'<span class="rk">{i + 1}</span>'
             f'<span class="nm">{e(r.get("game"))}</span>'
-            f'<span class="ct">{r.get("videos", 0)}<em>件</em> '
-            f'{r.get("channels", 0)}<em>ch</em></span>'
-            f'<span class="bar"><i style="width:{w:.0f}%"></i></span>'
-            f"</div>")
+            f'<span class="ct">{r.get("videos", 0)}<em>件</em> {r.get("channels", 0)}<em>ch</em></span>'
+            f'<span class="bar"><i style="width:{w:.0f}%"></i></span></div>')
     return "".join(out)
 
 
-def build(data):
+def hot_html(data):
+    """右下。いちばん伸びたゲームを1つだけ、グラフつきで。"""
+    rising = data.get("rising") or []
+    days = data.get("days") or []
+    if rising:
+        r = rising[0]
+        base = r.get("base")
+        delta = (f'<b>×{(r.get("growth") or 1):.1f}</b>'
+                 f'<span>ふだん {base:g}件 → 今日 {r.get("videos", 0)}件</span>'
+                 if base is not None else f'<b>{r.get("videos", 0)}件</b>')
+        return (f'<span class="eye">{UP}今日いちばん伸びた</span>'
+                f'<div class="g">{e(r.get("game"))}</div>'
+                f'<div class="delta">{delta}</div>'
+                + bars_html(r.get("spark") or [], days))
+    sp = (data.get("spread") or [{}])[0]
+    return (f'<span class="eye">{UP}多くの配信者が触った</span>'
+            f'<div class="g">{e(sp.get("game"))}</div>'
+            f'<div class="delta"><b>{sp.get("channels", 0)}</b>'
+            f'<span>チャンネルが配信</span></div>'
+            + bars_html(sp.get("spark") or [], days))
+
+
+def theme_css(name):
+    """テーマ名から、CSSの変数と書体の指定を作る。"""
+    th = THEMES.get(name) or THEMES["dark"]
+    tf, txf = FONTS[th["title"]], FONTS[th["text"]]
+    fontq = "&family=".join(dict.fromkeys([tf[0], txf[0]]))
+    titleweight = tf[2]
+    stroke = th.get("stroke") or ""
+    # フチ付き。文字の内側にフチが食い込まないよう paint-order で塗り順を変える。
+    # これを指定しないと、太いフチが文字を痩せさせて逆に読みにくくなる。
+    ol = (f";-webkit-text-stroke:{stroke} var(--strokec);paint-order:stroke fill"
+          if stroke else "")
+    # 数字は画数が少ないぶんフチが効きすぎる。細めにする。
+    num = (f";-webkit-text-stroke:{float(stroke[:-2]) * .6:g}px var(--strokec)"
+           ";paint-order:stroke fill" if stroke else "")
+    vars_ = ";".join(f"--{k}:{th[k]}" for k in
+                     ("ink", "ink2", "ink3", "card", "line", "rail",
+                      "accent", "hot", "on", "sum", "strokec"))
+    return {"fontq": fontq, "vars": vars_, "titlefont": tf[1], "textfont": txf[1],
+            "titleweight": titleweight,
+            "bg": th["bg"], "gamestroke": ol, "numstroke": num}
+
+
+def build(data, theme="dark"):
     t = data.get("totals") or {}
+    th = theme_css(theme)
     note = ("YouTubeの配信タイトルを毎日自動で解析しています<br>"
             "Shorts・切り抜きは対象外／同じ配信者が同じ日に出した続きものは1件として集計")
+    css = CSS % {"bg": th["bg"], "titlefont": th["titlefont"],
+                 "textfont": th["textfont"], "titleweight": th["titleweight"],
+                 "gamestroke": th["gamestroke"], "numstroke": th["numstroke"]}
     return PAGE % {
-        "css": CSS,
+        "css": css, "vars": th["vars"], "fontq": th["fontq"], "crown": CROWN,
         "date": e(str(data.get("date", "")).replace("-", ".")),
         "videos": t.get("videos", 0), "channels": t.get("channels", 0),
-        "lead": lead_html(data.get("column"), data.get("ranking") or [],
-                          data.get("days") or []),
+        "lead": lead_html(data.get("column"), data.get("ranking") or []),
         "rows": rows_html(data.get("ranking") or []),
+        "hot": hot_html(data),
         "note": note, "url": SITE_URL,
     }
 
@@ -243,19 +392,30 @@ def main():
     if not data:
         log("site/data.json がありません。先に build_site.py を動かしてください。")
         return 1
-    out = SITE / "card.html"
-    out.write_text(build(data), encoding="utf-8")
-    log(f"カードを書き出しました: {out}")
+    cfg = read_json(SITE.parent / "data" / "site_config.json", {}) or {}
+    theme = cfg.get("card_theme") or "dark"
+    out_name = "card"
+    for a in sys.argv[1:]:
+        if a.startswith("--theme="):
+            theme = a.split("=", 1)[1]
+        if a.startswith("--out="):
+            out_name = a.split("=", 1)[1]
+    if theme not in THEMES:
+        log(f"そんなテーマはありません: {theme}（{'・'.join(THEMES)}）")
+        return 1
+    out = SITE / f"{out_name}.html"
+    out.write_text(build(data, theme), encoding="utf-8")
+    log(f"カードを書き出しました: {out}（テーマ {theme}）")
 
     if "--png" in sys.argv:
         from playwright.sync_api import sync_playwright
-        png = SITE / "card.png"
+        png = SITE / f"{out_name}.png"
         with sync_playwright() as p:
             b = p.chromium.launch()
             pg = b.new_page(viewport={"width": 1600, "height": 900},
                             device_scale_factor=1)
             pg.goto("file://" + str(out.resolve()))
-            pg.wait_for_timeout(1200)          # フォントの読み込み待ち
+            pg.wait_for_timeout(1800)          # フォントの読み込み待ち
             pg.screenshot(path=str(png))
             b.close()
         log(f"画像を書き出しました: {png}")
