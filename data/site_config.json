@@ -12,5 +12,5 @@
  "_アクセス解析": "Cloudflare Web Analytics のトークン。Cloudflareの管理画面 → Web Analytics → サイトを追加 → 出てくる data-cf-beacon の token の文字列だけをここに貼ります。Cookieを置かず個人を追いかけない仕組みなので、同意バナーは要りません。空のままなら解析タグは出ません。",
  "analytics_token": "f213c4903d70429fbbd5c6318ec64f91",
  "_ツイート画像の見た目": "Xに貼る1枚画像（card.png）の配色と書体。dark / cream / pop / candy / sun / vivid のどれかを書きます。ここを1語書き換えるだけで切り替わります。試すだけなら python scripts/make_card.py --png --theme=pop でも見られます。",
- "card_theme": "dark"
+ "card_theme": "cream"
 }
