@@ -210,6 +210,26 @@ def man(n):
     return f"{n:,}"
 
 
+def nav_html(data, home):
+    """ページ上部のリンク。JavaScriptなしでも出るように、HTMLにも書いておく。
+    「このサイトについて」はフッターだけだと見つけてもらえない。"""
+    a = []
+    if data.get("mode") == "page":
+        a.append((home, "今日のランキングへ"))
+        a.append((home + "archive/", "これまでの記録"))
+    elif data.get("mode") == "archive":
+        a.append((home, "今日のランキング"))
+        a.append((home + "about/", "このサイトについて"))
+    elif data.get("mode") == "admin":
+        return ""
+    else:
+        if data.get("view") == "archive":
+            a.append((home, "今日のランキングへ"))
+        a.append((home + "archive/", "これまでの記録"))
+        a.append((home + "about/", "このサイトについて"))
+    return "".join(f'<a href="{e(u)}">{e(t)}</a>' for u, t in a)
+
+
 def _pick_stale(col, data):
     """そのコラムが、そのページの日付より前に書かれたものか。"""
     if not col:
@@ -584,7 +604,8 @@ def main():
                         .replace("__SSR_PICK__", ssr_pick(col_))
                         .replace("__SSR_CARDS__", ssr_cards(rows_))
                         .replace("__SSR_ROWS__", ssr_rows(rows_))
-                        .replace("__PAGEBODY__", data.get("page_body", "")),
+                        .replace("__PAGEBODY__", data.get("page_body", ""))
+                        .replace("__NAV__", nav_html(data, home)),
                      encoding="utf-8")
 
     render("index.html", payload, 0)

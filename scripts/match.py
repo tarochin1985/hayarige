@@ -134,6 +134,20 @@ class Index:
         return (best[0], best[1], best[2]) if best else None
 
 
+def catalogue():
+    """ゲーム名の一覧。2つのファイルを合わせて読む。
+
+    igdb_games.json  … 5万本。月1回まとめて作り直す。8MBある。
+    igdb_recent.json … 発売直後と発売前のぶんだけ。毎日足す。小さい。
+
+    分けているのは、誤検出がいちばん多いのが「昨日出たゲーム」だから。
+    そこだけ毎日新しくしたいが、8MBを毎日書き換えるとリポジトリが太る。
+    """
+    out = list(read_json(DATA / "igdb_games.json", []) or [])
+    out += list(read_json(DATA / "igdb_recent.json", []) or [])
+    return out
+
+
 def build_index() -> Index:
     idx = Index()
     banned = {n.lower() for n in (read_json(DATA / "game_blocklist.json", []) or [])}
@@ -142,7 +156,7 @@ def build_index() -> Index:
     # ゲームそのものを消したいときは game_blocklist.json のほう。
     bad_alias = {compact(a) for a in
                  (read_json(DATA / "alias_blocklist.json", []) or [])}
-    for g in read_json(DATA / "igdb_games.json", []) or []:
+    for g in catalogue():
         if g["name"].lower() in banned:
             continue
         if compact(g["name"]) not in bad_alias:
@@ -164,7 +178,7 @@ def load_platforms():
     """ゲーム名 → 対応機種のざっくり分類（pc / console）。
     どの店へのリンクを出すかを決めるのに使う。辞書が古い場合は空になる。"""
     out = {}
-    for g in read_json(DATA / "igdb_games.json", []) or []:
+    for g in catalogue():
         if g.get("p"):
             out[g["name"]] = g["p"]
     return out
@@ -174,7 +188,7 @@ def load_genres():
     """ゲーム名 → ジャンル。チャンネルの偏りを見るのに使う。
     辞書にジャンルが入っていない（古い）場合は空になる。"""
     out = {}
-    for g in read_json(DATA / "igdb_games.json", []) or []:
+    for g in catalogue():
         if g.get("g"):
             out[g["name"]] = g["g"]
     return out
@@ -183,7 +197,7 @@ def load_genres():
 def load_display():
     """表示用の名前。日本語タイトルがあればそちらを使う。"""
     disp = {}
-    for g in read_json(DATA / "igdb_games.json", []) or []:
+    for g in catalogue():
         if g.get("jp"):
             disp[g["name"]] = g["jp"]
     disp.update(read_json(DATA / "display_names.json", {}) or {})

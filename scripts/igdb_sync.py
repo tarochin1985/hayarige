@@ -31,6 +31,32 @@ WHERE_CANDIDATES = [
 ]
 
 
+KANA = re.compile(r"[ぁ-んァ-ヴー]")
+CJK = re.compile(r"[぀-ヿ一-鿿]")
+
+
+def japanese_title(alt_list, name):
+    """日本語のタイトルを選ぶ。IGDBの注記に Japan とあるものを最優先。
+
+    igdb_recent.py（新作だけを毎日取り込む方）からも呼ぶので、
+    main() の中ではなくモジュールの直下に置いてある。
+    """
+    cands = []
+    for a in alt_list:
+        nm = (a.get("name") or "").strip()
+        if not nm or nm == name or not CJK.search(nm):
+            continue
+        note = (a.get("comment") or "").lower()
+        score = 0
+        if "japan" in note:
+            score += 10
+        if KANA.search(nm):          # かなを含めば中国語ではない
+            score += 5
+        cands.append((score, len(nm), nm))
+    cands = [c for c in cands if c[0] > 0]
+    return max(cands)[2] if cands else None
+
+
 def pick_where(ig):
     for w in WHERE_CANDIDATES:
         res = ig.query("games", f"{FIELDS} {w} {SORT} limit 1;".encode())
@@ -64,26 +90,6 @@ def main():
             log(f"  {offset} 本まで取得")
         time.sleep(0.28)          # 1秒あたり4回までの制限を守る
 
-    KANA = re.compile(r"[ぁ-んァ-ヴー]")
-    CJK = re.compile(r"[぀-ヿ一-鿿]")
-
-    def japanese_title(alt_list, name):
-        """日本語のタイトルを選ぶ。IGDBの注記に Japan とあるものを最優先。"""
-        cands = []
-        for a in alt_list:
-            nm = (a.get("name") or "").strip()
-            if not nm or nm == name or not CJK.search(nm):
-                continue
-            note = (a.get("comment") or "").lower()
-            score = 0
-            if "japan" in note:
-                score += 10
-            if KANA.search(nm):          # かなを含めば中国語ではない
-                score += 5
-            cands.append((score, len(nm), nm))
-        cands = [c for c in cands if c[0] > 0]
-        return max(cands)[2] if cands else None
-
     out = []
     for g in games:
         name = (g.get("name") or "").strip()
@@ -113,6 +119,12 @@ def main():
         out.append(rec)
 
     write_json(DATA / "igdb_games.json", out)
+    # いつ作った辞書かを残す。新作の取りこぼしは辞書の古さで起きるので、
+    # 「そろそろ作り直す時期か」を後から judge できるようにしておく。
+    from datetime import datetime
+    from common import JST
+    write_json(DATA / "igdb_meta.json",
+               {"built": datetime.now(JST).strftime("%Y-%m-%d"), "games": len(out)})
     log(f"IGDB辞書を作成しました: {len(out)} タイトル → data/igdb_games.json")
 
 

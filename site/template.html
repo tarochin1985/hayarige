@@ -266,7 +266,7 @@ footer{font-size:11.5px;color:var(--ink-3);text-align:center;border-top:1px soli
     <div class="when"><b id="s-date">–</b><span id="s-meta">–</span></div>
   </header>
 
-  <nav class="nav" id="nav" style="margin-left:0"></nav>
+  <nav class="nav" id="nav" style="margin-left:0">__NAV__</nav>
   <div id="banner"></div>
   <!-- __SSR_ から始まる場所には、build_site が中身をHTMLとして書き込む。
        JavaScriptが動く環境では、同じ内容で描き直される。
@@ -369,7 +369,8 @@ function renderArchive(){
   $('#arch-sec').style.display = '';
   $('#s-date').textContent = 'アーカイブ';
   $('#s-meta').textContent = `${(DATA.archive || []).length}日分の記録`;
-  $('#nav').innerHTML = `<a href="${P.home}">今日のランキング</a>`;
+  $('#nav').innerHTML = `<a href="${P.home}">今日のランキング</a>`
+    + `<a href="${P.home}about/">このサイトについて</a>`;
   $('#arch').innerHTML = (DATA.archive || []).map(e => `
     <a class="day" href="${P.home}d/${esc(e.date)}/">
       <span class="dt">${esc(e.date.replace(/-/g, '.'))}</span>
@@ -422,7 +423,8 @@ function renderPage(){
     const e = $(s); if (e) e.style.display = 'none';
   });
   $('#page-sec').style.display = '';
-  $('#nav').innerHTML = `<a href="${P.home}">今日のランキングへ</a>`;
+  $('#nav').innerHTML = `<a href="${P.home}">今日のランキングへ</a>`
+    + `<a href="${P.archive}">これまでの記録</a>`;
   $('#s-date').textContent = '';
   $('#s-meta').textContent = DATA.subtitle || '';
   $('#f-gen').textContent = DATA.generated ? '最終更新 ' + DATA.generated : '';
@@ -437,7 +439,8 @@ function render(){
   const isArchive = DATA.view === 'archive';
 
   $('#nav').innerHTML = (isArchive ? `<a href="${P.home}">今日のランキングへ</a>` : '')
-    + `<a href="${P.archive}">これまでの記録</a>`;
+    + `<a href="${P.archive}">これまでの記録</a>`
+    + `<a href="${P.home}about/">このサイトについて</a>`;
   $('#banner').innerHTML = isArchive
     ? `<div class="banner">これは <b>${esc(DATA.date)}</b> の記録です。数字はこの日のもので、更新されません。</div>` : '';
 
