@@ -1,6 +1,6 @@
 {
  "date": "2026-09-05",
- "generated": "2026-09-05 11:39",
+ "generated": "2026-09-05 19:13",
  "leads": {
   "events": [
    {
@@ -12,6 +12,7 @@
      "Flare Ch. 不知火フレア",
      "Hajime Ch. 轟はじめ ‐ ReGLOSS",
      "Iroha ch. 風真いろは - holoX -",
+     "Kanade Ch. 音乃瀬奏 ‐ ReGLOSS",
      "Koyori ch. 博衣こより - holoX -",
      "Matsuri Channel 夏色まつり",
      "Miko Ch. さくらみこ",
@@ -29,18 +30,16 @@
     ]
    },
    {
-    "tag": "#ゲーム実況",
+    "tag": "#ストグラ",
     "channels": [
-     "Usagi Ch. 因幡兎",
-     "いのちくん",
-     "こじちゃんねる【小嶋明梨】",
-     "はりーシ結婚チャンネル",
-     "ぱんちき🥖🦃",
-     "エラch",
-     "シャオメイ【ゲーム実況】",
-     "ジョアだよ",
-     "ツバのあしあと",
-     "儚視まちこVTuber Hakanashi Matiko"
+     "marunnn【まるーんチャンネル】",
+     "たけぉ",
+     "ましゃかりさん",
+     "みつき",
+     "クラウン【探検家の記録】",
+     "ノビーの遊び部屋",
+     "柚原いづみ / Izumi Channel 【ななしいんく】",
+     "魔光リサ - Lisa Makoh -"
     ]
    },
    {
@@ -56,15 +55,15 @@
     ]
    },
    {
-    "tag": "#ストグラ",
+    "tag": "#ゲーム実況",
     "channels": [
-     "marunnn【まるーんチャンネル】",
-     "たけぉ",
-     "クラウン【探検家の記録】",
-     "ノビーの遊び部屋",
-     "柚原いづみ / Izumi Channel 【ななしいんく】",
-     "闇乃あびす / Abyss",
-     "魔光リサ - Lisa Makoh -"
+     "SIANちゃんねる【ディズニー大好きVtuber】",
+     "Usagi Ch. 因幡兎",
+     "いのちくん",
+     "ふぇに男",
+     "ジョアだよ",
+     "ツバのあしあと",
+     "儚視まちこVTuber Hakanashi Matiko"
     ]
    },
    {
@@ -72,17 +71,18 @@
     "channels": [
      "たけぉ",
      "クラウン【探検家の記録】",
+     "バーチャル債務者youtuber天開司",
      "天羽よつは",
      "影。/かげまる",
      "柚原いづみ / Izumi Channel 【ななしいんく】"
     ]
    },
    {
-    "tag": "#モンスト",
+    "tag": "#ぶいきゃす",
     "channels": [
-     "しょーとちゃん寝る",
-     "コーうのモンスト実況",
-     "モンスト（モンスターストライク）公式"
+     "式神やしろ",
+     "浅葱なぎ",
+     "羅々華セーラ-Raraka Sera-"
     ]
    },
    {
@@ -92,57 +92,55 @@
      "れんぴき",
      "ハルパパgamesTV"
     ]
-   },
-   {
-    "tag": "#ななし雀魂杯",
-    "channels": [
-     "漆瀬レイ / Ray Nanase【ななしいんく】",
-     "緑青くれは / Kureha Channel【ななしいんく】",
-     "風見くく /  Kuku Channel 【ななしいんく】"
-    ]
    }
   ],
-  "newcomers": [],
+  "newcomers": [
+   {
+    "game": "Halloween: The Game",
+    "channels": 9,
+    "videos": 10
+   }
+  ],
   "wide": [
    {
-    "game": "Apex Legends",
-    "channels": 27,
-    "videos": 38
+    "game": "ストリートファイター6",
+    "channels": 37,
+    "videos": 44
    },
    {
-    "game": "ストリートファイター6",
-    "channels": 28,
-    "videos": 34
+    "game": "Apex Legends",
+    "channels": 31,
+    "videos": 44
    },
    {
     "game": "Minecraft",
-    "channels": 22,
-    "videos": 24
+    "channels": 21,
+    "videos": 25
    },
    {
     "game": "鬼武者 Way of the Sword",
-    "channels": 20,
+    "channels": 19,
     "videos": 21
    },
    {
     "game": "Grand Theft Auto V",
-    "channels": 14,
-    "videos": 17
+    "channels": 19,
+    "videos": 23
    },
    {
     "game": "ARK: Survival Ascended",
-    "channels": 12,
-    "videos": 12
-   },
-   {
-    "game": "フォートナイト",
-    "channels": 12,
-    "videos": 18
-   },
-   {
-    "game": "Dead by Daylight",
-    "channels": 14,
+    "channels": 13,
     "videos": 16
+   },
+   {
+    "game": "ほの暮しの庭",
+    "channels": 14,
+    "videos": 14
+   },
+   {
+    "game": "スプラトゥーン3",
+    "channels": 13,
+    "videos": 13
    }
   ]
  },
