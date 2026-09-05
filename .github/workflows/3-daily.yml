@@ -53,6 +53,18 @@ jobs:
         with:
           python-version: "3.11"
 
+      # 発売直後・発売前のゲームだけを辞書に足す。
+      # 誤検出でいちばん多いのが「昨日出たゲームが辞書に無い」ケースで、
+      # しかも発売直後がいちばん配信される。月1回の作り直しでは間に合わない。
+      # IGDB（Twitch）だけを使うので、YouTubeのクォータは1ポイントも減らない。
+      # ここが失敗しても、その日の更新は止めない。
+      - name: 新作を辞書に足す
+        continue-on-error: true
+        env:
+          TWITCH_CLIENT_ID: ${{ secrets.TWITCH_CLIENT_ID }}
+          TWITCH_CLIENT_SECRET: ${{ secrets.TWITCH_CLIENT_SECRET }}
+        run: python scripts/igdb_recent.py
+
       - name: 新着の配信を集める
         env:
           YOUTUBE_API_KEY: ${{ secrets.YOUTUBE_API_KEY }}
