@@ -146,12 +146,15 @@ header .c{font-size:13px;color:var(--ink2);margin-top:6px;font-weight:700}
 .hl{margin-top:14px;font-size:26px;font-weight:900;line-height:1.4;color:var(--accent)}
 
 /* 本文。コラムは日によって120〜480字と幅があるので、
-   入りきる大きさを描画してから決める（下の fit() を見てください）。 */
-.txt{margin-top:14px;font-size:26px;font-weight:700;line-height:1.6;color:var(--sum)}
+   入りきる大きさを描画してから決める（下の FIT を見てください）。
+   縮むのはここだけ。サムネイル（出典表示）は絶対に削られてはいけないので、
+   flex:none で場所を先に確保し、あふれたぶんは本文側で吸収する。 */
+.txt{margin-top:14px;font-size:26px;font-weight:700;line-height:1.6;color:var(--sum);
+  flex:1 1 auto;min-height:0;overflow:hidden}
 
 /* 本文が短い日は下に余白ができる。上下に均等に振って、
    サムネイルが宙に浮いて見えないようにする。 */
-.pics{margin:auto 0 2px;padding-top:18px;display:flex;gap:16px}
+.pics{flex:none;margin:0 0 2px;padding-top:18px;display:flex;gap:16px}
 .pics figure{width:232px;flex:none}
 .pics.sm figure{width:186px}
 .pics figure img{width:100%%;aspect-ratio:16/9;object-fit:cover;border-radius:10px;
@@ -228,23 +231,52 @@ PAGE = """<!doctype html>
 # コラムの本文は日によって120〜480字と長さが変わる。
 # 文字数から大きさを決め打ちすると、見出しが2行になった日などにはみ出す。
 # 実際に描いてから、入りきるまで1段ずつ小さくするほうが確実。
-# 書体が届く前に測ると行数がずれるので、必ず fonts.ready を待つ。
-# 先に本文を21.5pxまで落とし、それでも入らなければサムネイルを縮める。
-# 読めない大きさの本文より、小さいサムネイルのほうがましだという判断。
+#
+# 順番:
+#   1. 本文を21pxまで小さくする
+#   2. それでも入らなければサムネイルを縮める（本文の場所を作る）
+#   3. それでも入らなければ本文を15pxまで小さくする
+#   4. まだ入らなければ本文の末尾を「…」で削る
+# サムネイルは出典表示なので、どれだけ詰まっても削らない。削るのは本文だけ。
+#
+# 書体が届く前に測ると行数がずれるので fonts.ready を待つ。ただし
+# Google Fontsが遅い・届かない環境でも必ず動くよう、6秒で見切りをつける。
+# 終わったら window.__fit を立てる。--png はこれを待ってから撮る。
 FIT = """
-document.fonts.ready.then(function(){
-  var lead=document.querySelector('.lead'),t=lead&&lead.querySelector('.txt'),
-      pics=lead&&lead.querySelector('.pics');
-  if(!t) return;
-  function fits(){ return lead.scrollHeight<=lead.clientHeight+1; }
-  function step(sizes){
-    for(var i=0;i<sizes.length;i++){ t.style.fontSize=sizes[i]+'px'; if(fits()) return true; }
-    return false;
+(function(){
+  function run(){
+    var lead=document.querySelector('.lead'),
+        t=lead&&lead.querySelector('.txt'),
+        pics=lead&&lead.querySelector('.pics');
+    if(!t){ window.__fit=true; return; }
+    function fits(){ return t.scrollHeight<=t.clientHeight+1; }
+    function step(sizes){
+      for(var i=0;i<sizes.length;i++){
+        t.style.fontSize=sizes[i]+'px';
+        if(fits()) return true;
+      }
+      return false;
+    }
+    if(!step([26,25,24,23,22,21])){
+      if(pics) pics.classList.add('sm');
+      if(!step([21,20,19,18,17,16,15])){
+        // ここまで来たら本文が長すぎる。末尾を削って収める。
+        var full=t.textContent;
+        var lo=40, hi=full.length;
+        while(lo<hi){
+          var mid=Math.ceil((lo+hi)/2);
+          t.textContent=full.slice(0,mid)+'…';
+          if(fits()) lo=mid; else hi=mid-1;
+        }
+        t.textContent=full.slice(0,lo)+'…';
+      }
+    }
+    window.__fit=true;
   }
-  if(step([26,25,24,23,22,21])) return;
-  if(pics) pics.classList.add('sm');
-  step([21,20,19,18,17,16,15]);
-});
+  var ready=(document.fonts&&document.fonts.ready)||Promise.resolve();
+  var giveup=new Promise(function(r){ setTimeout(r,6000); });
+  Promise.race([ready,giveup]).then(run);
+})();
 """
 
 
@@ -423,7 +455,14 @@ def main():
             pg = b.new_page(viewport={"width": 1600, "height": 900},
                             device_scale_factor=1)
             pg.goto("file://" + str(out.resolve()))
-            pg.wait_for_timeout(1800)          # フォントの読み込み待ち
+            # 待ち時間を決め打ちにしていたら、書体の到着が遅い日に
+            # 文字の大きさを詰める前に撮ってしまい、サムネイルが画面の外に
+            # はみ出したまま出た（2026-09-06）。詰め終わった合図を待つ。
+            try:
+                pg.wait_for_function("window.__fit === true", timeout=20000)
+            except Exception:
+                log("文字の大きさを詰める処理が終わりませんでした。そのまま撮ります。")
+            pg.wait_for_timeout(400)           # 画像の読み込みが終わるのを少し待つ
             pg.screenshot(path=str(png))
             b.close()
         log(f"画像を書き出しました: {png}")

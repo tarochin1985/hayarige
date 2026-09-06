@@ -33,8 +33,34 @@ BAD_SOURCE = [
 MIN_BODY, MAX_BODY = 120, 480
 
 
+def style(col):
+    """書き方の注意を返す。**これがあってもサイトには出す。**
+
+    validate() のほうは「出してはいけない」ものだけを見ている（裏取り・出典・
+    リンクの正しさ）。見出しの長さのような書き方の話でその日のコラムが
+    まるごと消えるのは、直したい問題よりも大きな損になる。
+    だから警告として分け、書いている最中に気づける形にしてある。
+    """
+    if not isinstance(col, dict):
+        return []
+    out = []
+    # 見出しは短いキャッチコピー。説明の一文になっていると、
+    # Xの画像で2〜3行を食いつぶして本文が小さくなる。
+    head = str(col.get("headline", "")).strip()
+    if head:
+        if not (8 <= len(head) <= 30):
+            out.append(f"見出しが {len(head)} 字です（8〜30字のキャッチコピーにしてください）")
+        if head.endswith("。"):
+            out.append("見出しが説明の一文になっています。句点で終わらない短い言葉にしてください")
+        game = str(col.get("game", "")).strip()
+        if game and game in head:
+            out.append(f"見出しにゲーム名が入っています（「{game}」）。"
+                       "見出しのすぐ上にゲーム名が大きく出るので、重ねないでください")
+    return out
+
+
 def validate(col):
-    """問題点のリストを返す。空なら合格。"""
+    """出してはいけない理由のリストを返す。空なら掲載してよい。"""
     bad = []
     if not isinstance(col, dict):
         return ["JSONの形が違います（オブジェクトではありません）"]
@@ -102,6 +128,8 @@ def load_valid(path, log=print):
         for b in bad:
             log(f"  - {b}")
         return None
+    for w in style(col):
+        log(f"コラムの書き方の注意（{p.name}）: {w}")
     return col
 
 
@@ -111,12 +139,15 @@ def main():
         return 2
     ok = True
     for arg in sys.argv[1:]:
-        bad = validate(json.loads(Path(arg).read_text(encoding="utf-8")))
-        if bad:
+        col = json.loads(Path(arg).read_text(encoding="utf-8"))
+        bad, warn = validate(col), style(col)
+        if bad or warn:
             ok = False
-            print(f"❌ {arg}")
+            print(("❌ " if bad else "⚠️  ") + arg)
             for b in bad:
                 print(f"   - {b}")
+            for w in warn:
+                print(f"   ※ {w}（サイトには出ますが、直したほうがよいです）")
         else:
             print(f"✅ {arg}")
     return 0 if ok else 1
