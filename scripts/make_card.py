@@ -200,7 +200,7 @@ footer{flex:none;display:flex;align-items:center;gap:20px}
 
 PAGE = """<!doctype html>
 <html lang="ja"><head><meta charset="utf-8">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=%(fontq)s&family=Roboto+Mono:wght@500;700&display=swap">
+<link rel="stylesheet" href="%(fontlink)s">
 <style>:root{%(vars)s}
 %(css)s</style></head><body>
 <header>
@@ -387,11 +387,80 @@ def hot_html(data):
             + bars_html(sp.get("spark") or [], days))
 
 
+# ---------------------------------------------------------------- 書体の調達
+# カードはGoogle Fontsを読む前提で書いてある。GitHub Actionsからは普通に届くが、
+# 画像を作っている場所（Claudeの作業環境）からは fonts.googleapis.com に
+# つながらないことがある。そのとき黙って端末の既定書体に落ちるので、
+# 「あなたの見せた見本と毎朝出てくる画像で書体が違う」ということが起きた。
+#
+# なので、届かないときは同じ書体を npm（@fontsource）から取ってきて、
+# ローカルのCSSに差し替える。npmのレジストリはどちらの環境からも届く。
+# 取れなかったときは黙って落ちず、はっきりログに出す。
+FONT_CACHE = Path.home() / ".cache" / "hayarige-fonts"
+
+
+def families_of(fontq):
+    """Google Fontsへの指定（'Zen+Maru+Gothic:wght@500;700;900'）から書体名を取り出す。"""
+    return [q.split(":")[0].replace("+", " ") for q in fontq.split("&family=")]
+
+
+def google_reachable(url):
+    import urllib.request
+    try:
+        req = urllib.request.Request(url, headers={"User-Agent": "Mozilla/5.0"})
+        with urllib.request.urlopen(req, timeout=8) as r:
+            return r.status == 200
+    except Exception:
+        return False
+
+
+def local_font_css(families):
+    """@fontsource から書体を落として、1枚のCSSにまとめる。作れなければ None。"""
+    import subprocess
+    pkgs = [f.lower().replace(" ", "-") for f in families]
+    FONT_CACHE.mkdir(parents=True, exist_ok=True)
+    have = FONT_CACHE / "node_modules" / "@fontsource"
+    need = [k for k in pkgs if not (have / k).is_dir()]
+    if need:
+        log(f"書体を取ってきます（{'・'.join(need)}）")
+        r = subprocess.run(["npm", "install", "--silent", "--no-audit", "--no-fund"]
+                           + [f"@fontsource/{k}" for k in need],
+                           cwd=FONT_CACHE, capture_output=True, text=True)
+        if r.returncode != 0:
+            log("書体を取ってこられませんでした: " + (r.stderr or "")[:200])
+            return None
+    out = []
+    for k in pkgs:
+        css = have / k / "index.css"
+        if not css.is_file():
+            log(f"書体の中身が見つかりません: {k}")
+            return None
+        out.append(css.read_text(encoding="utf-8")
+                   .replace("url(./files/", f"url(file://{(have / k).resolve()}/files/"))
+    path = FONT_CACHE / "card-fonts.css"
+    path.write_text("\n".join(out), encoding="utf-8")
+    return path
+
+
+def font_link(fontq):
+    """<link> のURLを決める。Google Fontsが届くならそのまま、駄目ならローカル。"""
+    url = f"https://fonts.googleapis.com/css2?family={fontq}&display=swap"
+    if google_reachable(url):
+        return url
+    log("Google Fontsに届きませんでした。同じ書体をローカルから読みます。")
+    path = local_font_css(families_of(fontq))
+    if path:
+        return "file://" + str(path.resolve())
+    log("警告: 指定した書体が使えません。この画像は見本と違う書体で出ます。")
+    return url
+
+
 def theme_css(name):
     """テーマ名から、CSSの変数と書体の指定を作る。"""
     th = THEMES.get(name) or THEMES["dark"]
     tf, txf = FONTS[th["title"]], FONTS[th["text"]]
-    fontq = "&family=".join(dict.fromkeys([tf[0], txf[0]]))
+    fontq = "&family=".join(dict.fromkeys(
+        [tf[0], txf[0], "Roboto+Mono:wght@500;700"]))
     titleweight = tf[2]
     stroke = th.get("stroke") or ""
     # フチ付き。文字の内側にフチが食い込まないよう paint-order で塗り順を変える。
@@ -418,7 +487,8 @@ def build(data, theme="dark"):
                  "textfont": th["textfont"], "titleweight": th["titleweight"],
                  "gamestroke": th["gamestroke"], "numstroke": th["numstroke"]}
     return PAGE % {
-        "css": css, "vars": th["vars"], "fontq": th["fontq"], "crown": CROWN,
+        "css": css, "vars": th["vars"], "fontlink": font_link(th["fontq"]),
+        "crown": CROWN,
         "date": e(str(data.get("date", "")).replace("-", ".")),
         "videos": t.get("videos", 0), "channels": t.get("channels", 0),
         "lead": lead_html(data.get("column"), data.get("ranking") or []),
@@ -463,6 +533,30 @@ def main():
             except Exception:
                 log("文字の大きさを詰める処理が終わりませんでした。そのまま撮ります。")
             pg.wait_for_timeout(400)           # 画像の読み込みが終わるのを少し待つ
+            # ここから下は「出せる画像かどうか」の確認。
+            # 2026-09-06に、書体が別物・サムネイル空欄の画像がそのまま出てしまった。
+            # 見て気づけない種類の崩れなので、機械で止める。
+            ng = []
+            miss = pg.evaluate("""() => [...document.querySelectorAll('.pics img')]
+                .filter(i => !i.complete || i.naturalWidth === 0).length""")
+            if miss:
+                ng.append(f"配信サムネイル {miss} 枚が読み込めていません"
+                          "（i.ytimg.com に出られていない）")
+            for fam in families_of(theme_css(theme)["fontq"]):
+                if not pg.evaluate('f => document.fonts.check(\'40px "\' + f + \'"\')', fam):
+                    ng.append(f"書体「{fam}」が当たっていません")
+            if ng and "--force" not in sys.argv:
+                # 投稿に使えないので、card.png としては書かない。
+                # 配置だけ見たいときのために別名で残す。
+                prev = SITE / f"{out_name}_preview.png"
+                pg.screenshot(path=str(prev))
+                b.close()
+                for x in ng:
+                    log("  ・" + x)
+                log(f"この環境では投稿用の画像を作れません。配置の確認用に {prev} だけ残しました。")
+                log("投稿用の画像は Actions →「3. 毎日の更新」→ Run workflow で作られ、"
+                    "site/card.png に入ります。")
+                return 2
             pg.screenshot(path=str(png))
             b.close()
         log(f"画像を書き出しました: {png}")
