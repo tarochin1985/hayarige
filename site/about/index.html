@@ -235,7 +235,8 @@ footer{font-size:11.5px;color:var(--ink-3);text-align:center;border-top:1px soli
  letter-spacing:.12em;font-weight:700;color:#fff;background:var(--hot);padding:4px 9px;border-radius:5px}
 .pick .g{font-family:"Zen Kaku Gothic New",sans-serif;font-weight:900;font-size:21px;line-height:1.3}
 .pick .hl{font-family:"Zen Kaku Gothic New",sans-serif;font-weight:700;font-size:15px;
- color:var(--hot);line-height:1.5}
+ color:var(--hot);line-height:1.5;display:flex;gap:7px;align-items:flex-start}
+.pick .hl .pt{flex:none;width:1em;height:1em;margin-top:.24em;fill:currentColor}
 .pick p{margin:0;font-size:13.8px;line-height:1.95;color:var(--ink-2)}
 .pick .who{display:flex;flex-wrap:wrap;gap:6px;margin-top:2px}
 .pick .who span{font-size:11.5px;color:var(--ink-3);background:var(--card-2);
@@ -386,7 +387,7 @@ footer{font-size:11.5px;color:var(--ink-3);text-align:center;border-top:1px soli
 </div>
 
 <script>
-const DATA = {"mode": "page", "date": "2026-09-06", "subtitle": "このサイトについて", "generated": "2026-09-06 19:27", "page_body": "\n<h2>このサイトは何か</h2>\n<p class=\"lead\">VTuber・ゲーム実況者がYouTubeに出している配信のタイトルを毎日集めて、\nいまどのゲームが配信されているかをランキングにしています。\n「次、何のゲーム配信する？」と考えている配信者のために作りました。</p>\n<p>再生数の多い<b>動画</b>を並べるサイトはすでにたくさんあります。このサイトが並べるのは\n<b>ゲーム</b>です。誰の動画が伸びたかではなく、どのゲームに人が集まっているかを見ます。</p>\n\n<h2>どこから集めているか</h2>\n<dl>\n  <dt>対象</dt><dd>日本語で配信しているVTuber・ゲーム実況者のYouTubeチャンネル、現在 1,523 件</dd>\n  <dt>範囲</dt><dd>直近24時間に公開された配信・動画</dd>\n  <dt>更新</dt><dd>1日2回（日本時間 7時ごろ / 19時ごろ）</dd>\n  <dt>判定</dt><dd>配信タイトルの文字列から、約5万本のゲーム名辞書と照合しています</dd>\n</dl>\n<p>チャンネルは、登録者数 1,000 人以上・1年以内に投稿がある・ゲームの動画を出している、\nという条件で自動的に選んでいます。直近の動画タイトルにひらがな・カタカナが\n50% 以上出てくるかどうかも見ていて、これを下回るチャンネルは外しています。\n日本語圏の視聴者が見ている配信の流行を出すサイトなので、所属ではなく\n実際に使っている言語で判断しています。</p>\n\n<h2>どう数えているか</h2>\n<p>順位は、次の3つを合わせた独自のスコアで決めています。</p>\n<ul>\n  <li><b>配信者数</b> ── そのゲームを配信したチャンネルが何件あったか</li>\n  <li><b>再生数</b> ── その合計</li>\n  <li><b>配信数</b> ── 配信・動画が何本あったか</li>\n</ul>\n<p>ひとりがたくさん投稿しただけで上位に来ないよう、<b>何人が配信したか</b>をいちばん重く見ています。\n「今このゲームがアツい」は、直近数日とくらべて増えたタイトルです。\n倍率だけでは大きさが分からないので、実数（ふだん◯件 → 今日◯件）も並べています。</p>\n\n<h2>数えていないもの</h2>\n<ul>\n  <li><b>Shorts</b>（90秒以下の動画）</li>\n  <li><b>切り抜き</b>（タイトルや チャンネル名から判定）</li>\n  <li><b>同じ配信者が同じ日に出した続きもの</b> ── 1本の配信を分割した動画などは1件として数えます。\n      別の日に続くシリーズは、その日ごとに数えます</li>\n  <li><b>日本語以外で配信しているチャンネル</b> ── 事務所は問いません</li>\n  <li><b>ゲーム名を判定できなかった配信</b> ── 推測では埋めません</li>\n</ul>\n\n<h2>コラムについて</h2>\n<p>「今日の注目ゲーム」は、数字が動いた理由を書いています。書くときのルールを決めていて、\n<b>裏が取れないことは書きません</b>。根拠には、公式の発表・ゲームメディア・実際の配信そのものを\n当たっています。説明できることが何も無い日は、その日は書きません。</p>\n\n<h2>間違いを見つけたら</h2>\n<p>ゲーム名の判定は自動なので、間違えることがあります。見つけしだい直しています。\nおかしなものを見つけたら、<a href=\"https://x.com/tarochinko\" target=\"_blank\" rel=\"noopener\">X（@tarochinko）</a>\nのDMで教えてください。</p>\n\n<h2>作っている人</h2>\n<p>ゲーム実況者の たろちん（<a href=\"https://x.com/tarochinko\" target=\"_blank\" rel=\"noopener\">@tarochinko</a>）が\n個人で作っています。データはYouTube Data API、ゲーム名の辞書はIGDBを使っています。</p>\n<p>このサイトはAmazonアソシエイト・プログラムの参加者です。商品ページへのリンクから\n購入があった場合、紹介料を受け取ることがあります。ランキングの順位は\n配信の数字だけで決めていて、紹介料は関係しません。</p>\n", "paths": {"home": "../", "archive": "../archive/"}};
+const DATA = {"mode": "page", "date": "2026-09-06", "subtitle": "このサイトについて", "generated": "2026-09-06 19:59", "page_body": "\n<h2>このサイトは何か</h2>\n<p class=\"lead\">VTuber・ゲーム実況者がYouTubeに出している配信のタイトルを毎日集めて、\nいまどのゲームが配信されているかをランキングにしています。\n「次、何のゲーム配信する？」と考えている配信者のために作りました。</p>\n<p>再生数の多い<b>動画</b>を並べるサイトはすでにたくさんあります。このサイトが並べるのは\n<b>ゲーム</b>です。誰の動画が伸びたかではなく、どのゲームに人が集まっているかを見ます。</p>\n\n<h2>どこから集めているか</h2>\n<dl>\n  <dt>対象</dt><dd>日本語で配信しているVTuber・ゲーム実況者のYouTubeチャンネル、現在 1,523 件</dd>\n  <dt>範囲</dt><dd>直近24時間に公開された配信・動画</dd>\n  <dt>更新</dt><dd>1日2回（日本時間 7時ごろ / 19時ごろ）</dd>\n  <dt>判定</dt><dd>配信タイトルの文字列から、約5万本のゲーム名辞書と照合しています</dd>\n</dl>\n<p>チャンネルは、登録者数 1,000 人以上・1年以内に投稿がある・ゲームの動画を出している、\nという条件で自動的に選んでいます。直近の動画タイトルにひらがな・カタカナが\n50% 以上出てくるかどうかも見ていて、これを下回るチャンネルは外しています。\n日本語圏の視聴者が見ている配信の流行を出すサイトなので、所属ではなく\n実際に使っている言語で判断しています。</p>\n\n<h2>どう数えているか</h2>\n<p>順位は、次の3つを合わせた独自のスコアで決めています。</p>\n<ul>\n  <li><b>配信者数</b> ── そのゲームを配信したチャンネルが何件あったか</li>\n  <li><b>再生数</b> ── その合計</li>\n  <li><b>配信数</b> ── 配信・動画が何本あったか</li>\n</ul>\n<p>ひとりがたくさん投稿しただけで上位に来ないよう、<b>何人が配信したか</b>をいちばん重く見ています。\n「今このゲームがアツい」は、直近数日とくらべて増えたタイトルです。\n倍率だけでは大きさが分からないので、実数（ふだん◯件 → 今日◯件）も並べています。</p>\n\n<h2>数えていないもの</h2>\n<ul>\n  <li><b>Shorts</b>（90秒以下の動画）</li>\n  <li><b>切り抜き</b>（タイトルや チャンネル名から判定）</li>\n  <li><b>同じ配信者が同じ日に出した続きもの</b> ── 1本の配信を分割した動画などは1件として数えます。\n      別の日に続くシリーズは、その日ごとに数えます</li>\n  <li><b>日本語以外で配信しているチャンネル</b> ── 事務所は問いません</li>\n  <li><b>ゲーム名を判定できなかった配信</b> ── 推測では埋めません</li>\n</ul>\n\n<h2>コラムについて</h2>\n<p>「今日の注目ゲーム」は、数字が動いた理由を書いています。書くときのルールを決めていて、\n<b>裏が取れないことは書きません</b>。根拠には、公式の発表・ゲームメディア・実際の配信そのものを\n当たっています。説明できることが何も無い日は、その日は書きません。</p>\n\n<h2>間違いを見つけたら</h2>\n<p>ゲーム名の判定は自動なので、間違えることがあります。見つけしだい直しています。\nおかしなものを見つけたら、<a href=\"https://x.com/tarochinko\" target=\"_blank\" rel=\"noopener\">X（@tarochinko）</a>\nのDMで教えてください。</p>\n\n<h2>作っている人</h2>\n<p>ゲーム実況者の たろちん（<a href=\"https://x.com/tarochinko\" target=\"_blank\" rel=\"noopener\">@tarochinko</a>）が\n個人で作っています。データはYouTube Data API、ゲーム名の辞書はIGDBを使っています。</p>\n<p>このサイトはAmazonアソシエイト・プログラムの参加者です。商品ページへのリンクから\n購入があった場合、紹介料を受け取ることがあります。ランキングの順位は\n配信の数字だけで決めていて、紹介料は関係しません。</p>\n", "paths": {"home": "../", "archive": "../archive/"}};
 const $ = s => document.querySelector(s);
 const esc = s => String(s ?? '').replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
 const cssv = n => getComputedStyle(document.documentElement).getPropertyValue(n).trim();
@@ -412,6 +413,8 @@ let orgFilter = null;
 
 // 実際にそのゲームを売っている店だけボタンを出す（無い店のボタンは出さない）
   // 購入ボタンの先頭に付ける小さなカート。店へのリンクだと一目で分かるように。
+  // 見出しの頭に付ける印。ここだけ読めば今日の話が分かる、という目印。
+  const POINT = '<svg class="pt" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.6l2.9 6.2 6.8.8-5 4.6 1.4 6.7L12 17.5 5.9 20.9l1.4-6.7-5-4.6 6.8-.8z"/></svg>';
   const CART = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="20" r="1.4"/><circle cx="18" cy="20" r="1.4"/><path d="M2 3h3l2.4 12.1a1.6 1.6 0 0 0 1.6 1.3h8.4a1.6 1.6 0 0 0 1.6-1.3L21 7H6"/></svg>';
 function buy(r){
   const b = [];
@@ -535,7 +538,7 @@ function render(){
       <div class="ptxt">
         <span class="badge">PICK UP</span>
         <div class="g">${esc(col.game)}</div>
-        <div class="hl">${esc(col.headline)}</div>
+        <div class="hl">${POINT}${esc(col.headline)}</div>
         <p>${esc(col.body)}</p>
         ${cbuy}
         ${(col.people || []).length ? `<div class="who">${col.people.map(p => `<span>${esc(p)}</span>`).join('')}</div>` : ''}

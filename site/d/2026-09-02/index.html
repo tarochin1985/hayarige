@@ -235,7 +235,8 @@ footer{font-size:11.5px;color:var(--ink-3);text-align:center;border-top:1px soli
  letter-spacing:.12em;font-weight:700;color:#fff;background:var(--hot);padding:4px 9px;border-radius:5px}
 .pick .g{font-family:"Zen Kaku Gothic New",sans-serif;font-weight:900;font-size:21px;line-height:1.3}
 .pick .hl{font-family:"Zen Kaku Gothic New",sans-serif;font-weight:700;font-size:15px;
- color:var(--hot);line-height:1.5}
+ color:var(--hot);line-height:1.5;display:flex;gap:7px;align-items:flex-start}
+.pick .hl .pt{flex:none;width:1em;height:1em;margin-top:.24em;fill:currentColor}
 .pick p{margin:0;font-size:13.8px;line-height:1.95;color:var(--ink-2)}
 .pick .who{display:flex;flex-wrap:wrap;gap:6px;margin-top:2px}
 .pick .who span{font-size:11.5px;color:var(--ink-3);background:var(--card-2);
@@ -274,7 +275,7 @@ footer{font-size:11.5px;color:var(--ink-3);text-align:center;border-top:1px soli
   <section id="pick-sec" style="">
     <div class="head"><h2 id="pick-title">この日の注目ゲーム</h2>
       <span class="note" id="pick-note">この日、数字が動いた理由</span></div>
-    <article class="pick" id="pick"><div class="ptxt"><span class="badge">PICK UP</span><div class="g">Project Winter</div><div class="hl">ななしいんくの8人が夜11時半、雪山人狼「Project Winter」にいっせいに集まった</div><p>9月1日23時25分から32分までの7分間に、ななしいんくの6チャンネルが「#ななし雪山人狼」のタグで同時に視点配信を始めた。瀬島るいの配信タイトルには宗谷いちか、西園寺メアリ、堰代ミコ、柚原いづみ、茜音カンナ、漆瀬レイ、アズリ、瀬島るいの8人の名前が並ぶ。Project Winterは2019年にPC版が出たサバイバル×人狼ゲームで、「雪山人狼」の呼び名で知られ、2021年にはPS4・Switch版も配信された。直近1週間の当サイトの集計には1本も出ていなかったゲームに、ひと晩で6チャンネル。今朝7時の集計時点で、6本の合計再生数は3万6千回を超えている。</p><div class="who"><span>宗谷いちか</span><span>西園寺メアリ</span><span>堰代ミコ</span><span>柚原いづみ</span><span>茜音カンナ</span><span>漆瀬レイ</span><span>アズリ</span><span>瀬島るい</span></div><div class="src"><a href="https://www.youtube.com/watch?v=PUC8HK9Hb2Q" target="_blank" rel="noopener">瀬島るい — 違う！人狼じゃないってばぁあああ！！初見PLAY🐺</a><a href="https://www.youtube.com/watch?v=WB-H3pcNQL0" target="_blank" rel="noopener">宗谷いちか — 【#ななし雪山人狼】全員ぶっ飛ばしてでも生存します🔫🔥</a><a href="https://www.famitsu.com/news/202109/16233935.html" target="_blank" rel="noopener">ファミ通.com — 雪山人狼『Project Winter』がPS4/Switchで本日（9/16）より配信開始</a></div></div></article>
+    <article class="pick" id="pick"><div class="ptxt"><span class="badge">PICK UP</span><div class="g">Project Winter</div><div class="hl"><svg class="pt" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.6l2.9 6.2 6.8.8-5 4.6 1.4 6.7L12 17.5 5.9 20.9l1.4-6.7-5-4.6 6.8-.8z"/></svg>ななしいんくの8人が夜11時半、雪山人狼「Project Winter」にいっせいに集まった</div><p>9月1日23時25分から32分までの7分間に、ななしいんくの6チャンネルが「#ななし雪山人狼」のタグで同時に視点配信を始めた。瀬島るいの配信タイトルには宗谷いちか、西園寺メアリ、堰代ミコ、柚原いづみ、茜音カンナ、漆瀬レイ、アズリ、瀬島るいの8人の名前が並ぶ。Project Winterは2019年にPC版が出たサバイバル×人狼ゲームで、「雪山人狼」の呼び名で知られ、2021年にはPS4・Switch版も配信された。直近1週間の当サイトの集計には1本も出ていなかったゲームに、ひと晩で6チャンネル。今朝7時の集計時点で、6本の合計再生数は3万6千回を超えている。</p><div class="who"><span>宗谷いちか</span><span>西園寺メアリ</span><span>堰代ミコ</span><span>柚原いづみ</span><span>茜音カンナ</span><span>漆瀬レイ</span><span>アズリ</span><span>瀬島るい</span></div><div class="src"><a href="https://www.youtube.com/watch?v=PUC8HK9Hb2Q" target="_blank" rel="noopener">瀬島るい — 違う！人狼じゃないってばぁあああ！！初見PLAY🐺</a><a href="https://www.youtube.com/watch?v=WB-H3pcNQL0" target="_blank" rel="noopener">宗谷いちか — 【#ななし雪山人狼】全員ぶっ飛ばしてでも生存します🔫🔥</a><a href="https://www.famitsu.com/news/202109/16233935.html" target="_blank" rel="noopener">ファミ通.com — 雪山人狼『Project Winter』がPS4/Switchで本日（9/16）より配信開始</a></div></div></article>
   </section>
 
   <section id="hot-sec">
@@ -354,6 +355,8 @@ let orgFilter = null;
 
 // 実際にそのゲームを売っている店だけボタンを出す（無い店のボタンは出さない）
   // 購入ボタンの先頭に付ける小さなカート。店へのリンクだと一目で分かるように。
+  // 見出しの頭に付ける印。ここだけ読めば今日の話が分かる、という目印。
+  const POINT = '<svg class="pt" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.6l2.9 6.2 6.8.8-5 4.6 1.4 6.7L12 17.5 5.9 20.9l1.4-6.7-5-4.6 6.8-.8z"/></svg>';
   const CART = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="20" r="1.4"/><circle cx="18" cy="20" r="1.4"/><path d="M2 3h3l2.4 12.1a1.6 1.6 0 0 0 1.6 1.3h8.4a1.6 1.6 0 0 0 1.6-1.3L21 7H6"/></svg>';
 function buy(r){
   const b = [];
@@ -477,7 +480,7 @@ function render(){
       <div class="ptxt">
         <span class="badge">PICK UP</span>
         <div class="g">${esc(col.game)}</div>
-        <div class="hl">${esc(col.headline)}</div>
+        <div class="hl">${POINT}${esc(col.headline)}</div>
         <p>${esc(col.body)}</p>
         ${cbuy}
         ${(col.people || []).length ? `<div class="who">${col.people.map(p => `<span>${esc(p)}</span>`).join('')}</div>` : ''}
