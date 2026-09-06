@@ -23,6 +23,14 @@ W = {"videos": 0.30, "channels": 0.35, "views": 0.35}
 # 0にすると、今日の分が無い日はコラム欄が消える（以前の動き）。
 COLUMN_FALLBACK_DAYS = 7
 
+# 見出しの頭に付ける印。ここだけ読めば今日の話が分かる、という目印。
+# 形を変えるときはここだけ直せばよい。サイトのテンプレートには __POINT__ として
+# 埋め込まれ、ツイート用カード（scripts/make_card.py）はここから読み込む。
+# 別の形にしたいとき用の控え:
+#   ピン  <path fill-rule="evenodd" d="M12 2a7 7 0 00-7 7c0 5.2 7 13 7 13s7-7.8 7-13a7 7 0 00-7-7zm0 9.6A2.6 2.6 0 1112 6.4a2.6 2.6 0 010 5.2z"/>
+#   電球  <path d="M12 2a6.2 6.2 0 00-3.4 11.4c.5.4.8 1 .8 1.6v.3h5.2v-.3c0-.6.3-1.2.8-1.6A6.2 6.2 0 0012 2z"/><path d="M9.4 17h5.2v1.4H9.4z"/><path d="M10 19.6h4a2 2 0 01-4 0z"/>
+POINT = ('<svg class="pt" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.6l2.9 6.2 6.8.8-5 4.6 1.4 6.7L12 17.5 5.9 20.9l1.4-6.7-5-4.6 6.8-.8z"/></svg>')
+
 
 def load_all(days_back=30):
     """収集ファイルを全部読んで、動画IDで重複を除いた1本のリストにする。
@@ -262,7 +270,7 @@ def ssr_pick(col):
         parts.append(f'<img class="heroimg" src="{e(col["hero"])}" alt="" loading="lazy">')
     body = ['<div class="ptxt">', '<span class="badge">PICK UP</span>',
             f'<div class="g">{e(col.get("game"))}</div>',
-            f'<div class="hl">{e(col.get("headline"))}</div>',
+            f'<div class="hl">{POINT}{e(col.get("headline"))}</div>',
             f'<p>{e(col.get("body"))}</p>']
     people = col.get("people") or []
     if people:
@@ -426,6 +434,7 @@ def render_page(path, data, depth, site_url=""):
                     .replace("__SSR_ROWS__", ssr_rows(rows_))
                     .replace("__PAGEBODY__", data.get("page_body", ""))
                     .replace("__NAV__", nav_html(data, home))
+                    .replace("__POINT__", POINT)
                     .replace("__ANALYTICS__", analytics_html()),
                  encoding="utf-8")
 

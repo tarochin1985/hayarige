@@ -142,8 +142,11 @@ header .c{font-size:13px;color:var(--ink2);margin-top:6px;font-weight:700}
 .game.long{font-size:59px}
 .game.xlong{font-size:49px}
 
-/* 見出し。ゲーム名（hot）と本文（ink）の間を、色でもう1段つなぐ。 */
-.hl{margin-top:14px;font-size:26px;font-weight:900;line-height:1.4;color:var(--accent)}
+/* 見出し。ゲーム名（hot）と本文（ink）の間を、色でもう1段つなぐ。
+   頭の印は「ここだけ読めば分かる」の合図。サイト側と同じ形にしてある。 */
+.hl{margin-top:14px;font-size:26px;font-weight:900;line-height:1.4;color:var(--accent);
+  display:flex;gap:11px;align-items:flex-start}
+.hl .pt{flex:none;width:1em;height:1em;margin-top:.24em;fill:currentColor}
 
 /* 本文。コラムは日によって120〜480字と幅があるので、
    入りきる大きさを描画してから決める（下の FIT を見てください）。
@@ -299,6 +302,8 @@ def ico(path):
 
 
 BOLT = ico('<path d="M13 2L4 14h7l-1 8 9-12h-7l1-8z"/>')
+# 見出しの頭に付ける印。形の定義は build_site.py に1つだけ置いてある。
+from build_site import POINT
 CROWN = ico('<path d="M3 18h18M4 6l4 4 4-6 4 6 4-4-2 10H6z"/>')
 UP = ico('<path d="M4 17l6-6 4 4 6-8"/><path d="M15 7h5v5"/>')
 
@@ -331,7 +336,7 @@ def lead_html(col, ranking):
         top = (ranking or [{}])[0]
         return (f'<span class="eye">{BOLT}今日いちばん配信されたゲーム</span>'
                 f'<div class="game{size_class(top.get("game"), 13, 20)}">{e(top.get("game"))}</div>'
-                f'<div class="hl">{top.get("channels", 0)}チャンネルが配信しました</div>'
+                f'<div class="hl">{POINT}{top.get("channels", 0)}チャンネルが配信しました</div>'
                 f'<p class="txt">再生数は合わせて {man(top.get("views"))}回。</p>')
     game = str(col.get("game") or "")
     head = str(col.get("headline") or "")
@@ -343,7 +348,7 @@ def lead_html(col, ranking):
                    for x in pics[:3])
     return (f'<span class="eye">{BOLT}今日の注目ゲーム</span>'
             f'<div class="game{size_class(game, 13, 20)}">{e(game)}</div>'
-            + (f'<div class="hl">{e(head)}</div>' if head else "")
+            + (f'<div class="hl">{POINT}{e(head)}</div>' if head else "")
             + f'<p class="txt">{e(body)}</p>'
             + (f'<div class="pics">{figs}</div>' if figs else ""))
 
