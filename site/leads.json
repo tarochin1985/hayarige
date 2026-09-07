@@ -1,6 +1,6 @@
 {
  "date": "2026-09-07",
- "generated": "2026-09-07 11:24",
+ "generated": "2026-09-07 19:13",
  "leads": {
   "events": [
    {
@@ -8,16 +8,39 @@
     "channels": [
      "AZKi Channel",
      "Anya Melfissa Ch. hololive-ID",
+     "Botan Ch.獅白ぼたん",
+     "Flare Ch. 不知火フレア",
+     "Hajime Ch. 轟はじめ ‐ ReGLOSS",
      "Iroha ch. 風真いろは - holoX -",
+     "Kanade Ch. 音乃瀬奏 ‐ ReGLOSS",
+     "Koyori ch. 博衣こより - holoX -",
      "Matsuri Channel 夏色まつり",
      "Miko Ch. さくらみこ",
+     "Mio Channel 大神ミオ",
      "Noel Ch. 白銀ノエル",
+     "Pekora Ch. 兎田ぺこら",
      "Polka Ch. 尾丸ポルカ",
      "Riona Ch. 響咲リオナ - FLOW GLOW",
+     "Subaru Ch. 大空スバル",
      "Towa Ch. 常闇トワ",
      "Vivi Ch. 綺々羅々ヴィヴィ - FLOW GLOW",
+     "Watame Ch. 角巻わため",
      "アキロゼCh。Vtuber/ホロライブ所属",
      "フブキCh。白上フブキ"
+    ]
+   },
+   {
+    "tag": "#ゲーム実況",
+    "channels": [
+     "SIANちゃんねる【ディズニー大好きVtuber】",
+     "Usagi Ch. 因幡兎",
+     "こじちゃんねる【小嶋明梨】",
+     "ごまっぷ_GameCh",
+     "ぱんちき🥖🦃",
+     "みほち",
+     "エラch",
+     "ジョアだよ",
+     "儚視まちこVTuber Hakanashi Matiko"
     ]
    },
    {
@@ -26,32 +49,34 @@
      "Kanae Channel",
      "みつき",
      "家入ポポ / Popo Channel【ななしいんく】",
+     "柚原いづみ / Izumi Channel 【ななしいんく】",
+     "赤彩みあ / Akairo Mia Ch.【すずみあ】",
      "鬼ヶ谷 テン / Onigaya Ten"
-    ]
-   },
-   {
-    "tag": "#ゲーム実況",
-    "channels": [
-     "CHECHE GAME【顔出し初見ゲーム実況】",
-     "Usagi Ch. 因幡兎",
-     "エラch",
-     "ジョアだよ"
     ]
    },
    {
     "tag": "#ストグラ",
     "channels": [
+     "marunnn【まるーんチャンネル】",
      "たけぉ",
-     "にーとちゃん",
-     "ましゃかりさん"
+     "ましゃかりさん",
+     "ノビーの遊び部屋"
     ]
    },
    {
-    "tag": "#にゃんこ大戦争",
+    "tag": "#ホロ7大豆劇場",
     "channels": [
-     "Gommickey",
-     "まそしんチャンネル",
-     "ゆうハル"
+     "Matsuri Channel 夏色まつり",
+     "Riona Ch. 響咲リオナ - FLOW GLOW",
+     "Towa Ch. 常闇トワ"
+    ]
+   },
+   {
+    "tag": "#サボラス",
+    "channels": [
+     "プテラたかはし",
+     "怪傑がみちゃんねる",
+     "椎名唯華 / Shiina Yuika"
     ]
    }
   ],
@@ -59,43 +84,43 @@
   "wide": [
    {
     "game": "Apex Legends",
-    "channels": 22,
-    "videos": 25
+    "channels": 32,
+    "videos": 44
    },
    {
     "game": "ストリートファイター6",
-    "channels": 16,
-    "videos": 19
-   },
-   {
-    "game": "Minecraft",
-    "channels": 12,
-    "videos": 12
+    "channels": 28,
+    "videos": 38
    },
    {
     "game": "鬼武者 Way of the Sword",
-    "channels": 9,
-    "videos": 9
+    "channels": 19,
+    "videos": 21
    },
    {
     "game": "Escape from Tarkov",
-    "channels": 8,
-    "videos": 8
+    "channels": 14,
+    "videos": 15
    },
    {
-    "game": "VALORANT",
-    "channels": 8,
-    "videos": 9
+    "game": "ELDEN RING",
+    "channels": 14,
+    "videos": 15
    },
    {
-    "game": "スプラトゥーン3",
-    "channels": 9,
-    "videos": 9
+    "game": "Rust",
+    "channels": 15,
+    "videos": 16
    },
    {
-    "game": "雀魂",
-    "channels": 8,
-    "videos": 10
+    "game": "Minecraft",
+    "channels": 15,
+    "videos": 16
+   },
+   {
+    "game": "ARK: Survival Ascended",
+    "channels": 11,
+    "videos": 12
    }
   ]
  },

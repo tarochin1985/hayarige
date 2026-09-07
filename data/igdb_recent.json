@@ -4341,18 +4341,6 @@
   ]
  },
  {
-  "name": "Avernoth",
-  "alias": [],
-  "pop": 0,
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Role-playing (RPG)",
-   "Indie"
-  ]
- },
- {
   "name": "Avoidvania",
   "alias": [
    "AvoidVania.exe"
@@ -5083,17 +5071,6 @@
   ],
   "g": [
    "Strategy"
-  ]
- },
- {
-  "name": "BattleBoat X",
-  "alias": [],
-  "pop": 0,
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Indie"
   ]
  },
  {
@@ -9931,6 +9908,19 @@
   ]
  },
  {
+  "name": "Chompy Party",
+  "alias": [],
+  "pop": 0,
+  "p": [
+   "pc"
+  ],
+  "g": [
+   "Hack and slash/Beat 'em up",
+   "Indie",
+   "MOBA"
+  ]
+ },
+ {
   "name": "Chop Chop Inc.",
   "alias": [
    "ChopChopInc.exe"
@@ -10041,17 +10031,6 @@
    "Role-playing (RPG)",
    "Adventure",
    "Indie"
-  ]
- },
- {
-  "name": "Chronicles Meteorfall",
-  "alias": [],
-  "pop": 0,
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Role-playing (RPG)"
   ]
  },
  {
@@ -14495,20 +14474,6 @@
   ]
  },
  {
-  "name": "Deluge: Raintime",
-  "alias": [],
-  "pop": 0,
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Simulator",
-   "Adventure",
-   "Indie",
-   "Visual Novel"
-  ]
- },
- {
   "name": "Delve Survivors",
   "alias": [],
   "pop": 0,
@@ -15221,6 +15186,20 @@
   ]
  },
  {
+  "name": "Did You See That?",
+  "alias": [],
+  "pop": 0,
+  "p": [
+   "pc"
+  ],
+  "g": [
+   "Puzzle",
+   "Simulator",
+   "Adventure",
+   "Indie"
+  ]
+ },
+ {
   "name": "Diddy Kong Racing: Recompiled",
   "alias": [
    "DKR-R"
@@ -15820,7 +15799,9 @@
  },
  {
   "name": "Do Disciplinary Committee Members Dream of Succubi?",
-  "alias": [],
+  "alias": [
+   "风纪委员会梦见魅魔吗？"
+  ],
   "pop": 0,
   "p": [
    "pc"
@@ -21754,15 +21735,6 @@
   ]
  },
  {
-  "name": "Forever Skies: The Final Echoes Update",
-  "alias": [],
-  "pop": 0,
-  "p": [
-   "pc",
-   "console"
-  ]
- },
- {
   "name": "Forge the Fates",
   "alias": [],
   "pop": 0,
@@ -23255,6 +23227,20 @@
   ]
  },
  {
+  "name": "Gem Quest: Rush",
+  "alias": [],
+  "pop": 0,
+  "p": [
+   "pc"
+  ],
+  "g": [
+   "Puzzle",
+   "Adventure",
+   "Indie",
+   "Arcade"
+  ]
+ },
+ {
   "name": "Gemblades",
   "alias": [
    "Gemblades.exe"
@@ -23265,6 +23251,14 @@
   ],
   "g": [
    "Strategy"
+  ]
+ },
+ {
+  "name": "Gems of Destiny: Magic Rescue",
+  "alias": [],
+  "pop": 0,
+  "p": [
+   "pc"
   ]
  },
  {
@@ -23563,6 +23557,17 @@
   "g": [
    "Shooter",
    "Tactical"
+  ]
+ },
+ {
+  "name": "Ghosts of the Tozai Line",
+  "alias": [],
+  "pop": 0,
+  "p": [
+   "pc"
+  ],
+  "g": [
+   "Adventure"
   ]
  },
  {
@@ -24391,6 +24396,7 @@
   ],
   "pop": 0,
   "p": [
+   "pc",
    "console"
   ]
  },
@@ -37144,6 +37150,7 @@
   "alias": [],
   "pop": 0,
   "p": [
+   "pc",
    "console"
   ]
  },
@@ -50890,6 +50897,20 @@
   ]
  },
  {
+  "name": "Somnius",
+  "alias": [
+   "SOMNIUS"
+  ],
+  "pop": 0,
+  "p": [
+   "pc"
+  ],
+  "g": [
+   "Shooter",
+   "Indie"
+  ]
+ },
+ {
   "name": "Sondro Gomez: A Sunova Story",
   "alias": [
    "Sondro Gomez: A Wonderworld Story"
@@ -51577,20 +51598,6 @@
   ]
  },
  {
-  "name": "Spell Knight",
-  "alias": [
-   "Spell Knight: Abyss Cleaver",
-   "Spell Knight.exe"
-  ],
-  "pop": 0,
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Indie"
-  ]
- },
- {
   "name": "Spell Magic",
   "alias": [
    "Spell Magic.exe"
@@ -51634,21 +51641,6 @@
    "pc"
   ],
   "g": [
-   "Indie"
-  ]
- },
- {
-  "name": "Spheroll",
-  "alias": [
-   "Spheroll.exe"
-  ],
-  "pop": 0,
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Platform",
-   "Adventure",
    "Indie"
   ]
  },
@@ -58065,6 +58057,17 @@
   ]
  },
  {
+  "name": "The Walker",
+  "alias": [],
+  "pop": 0,
+  "p": [
+   "pc"
+  ],
+  "g": [
+   "Adventure"
+  ]
+ },
+ {
   "name": "The Walking Dead: Streets of Survival",
   "alias": [],
   "pop": 0,
@@ -64146,6 +64149,10 @@
   "pop": 0,
   "p": [
    "console"
+  ],
+  "g": [
+   "Strategy",
+   "Card & Board Game"
   ]
  },
  {
