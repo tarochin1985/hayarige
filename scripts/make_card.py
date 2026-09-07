@@ -542,13 +542,26 @@ def main():
             # 2026-09-06に、書体が別物・サムネイル空欄の画像がそのまま出てしまった。
             # 見て気づけない種類の崩れなので、機械で止める。
             ng = []
+            # 画像が届ききるのを待ってから数える
+            try:
+                pg.wait_for_function(
+                    """() => [...document.querySelectorAll('.pics img')]
+                        .every(i => i.complete)""", timeout=15000)
+            except Exception:
+                pass
             miss = pg.evaluate("""() => [...document.querySelectorAll('.pics img')]
                 .filter(i => !i.complete || i.naturalWidth === 0).length""")
             if miss:
                 ng.append(f"配信サムネイル {miss} 枚が読み込めていません"
                           "（i.ytimg.com に出られていない）")
+            # 書体の確認に document.fonts.check は使えない。あれは太さ400を
+            # 探しにいくが、Google Fontsからは指定した太さ（500/700/900）しか
+            # 届かないので、正しく表示できている日でも「無い」と答えてしまう。
+            # 実際に読み込まれた書体の一覧を見るほうが確か。
+            loaded = pg.evaluate("""() => [...document.fonts]
+                .filter(f => f.status === 'loaded').map(f => f.family)""")
             for fam in families_of(theme_css(theme)["fontq"]):
-                if not pg.evaluate('f => document.fonts.check(\'40px "\' + f + \'"\')', fam):
+                if fam not in loaded:
                     ng.append(f"書体「{fam}」が当たっていません")
             if ng and "--force" not in sys.argv:
                 # 投稿に使えないので、card.png としては書かない。
@@ -564,6 +577,8 @@ def main():
                 return 2
             pg.screenshot(path=str(png))
             b.close()
+        # 前に失敗したときの見本が残っていると、どちらが新しいか分からなくなる
+        (SITE / f"{out_name}_preview.png").unlink(missing_ok=True)
         log(f"画像を書き出しました: {png}")
     return 0
 
