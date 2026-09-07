@@ -73,6 +73,19 @@ jobs:
       - name: 集計してサイトを作る
         run: python scripts/build_site.py
 
+      # Xに貼る1枚画像。ここで作るのには理由がある。
+      # この画像はGoogle Fontsの書体とYouTubeのサムネイルを読み込む。
+      # 手元（Claudeの作業環境）からはどちらにもつながらないため、
+      # そこで作ると書体が別のものに置き換わり、サムネイルも空欄になる。
+      # ネットにつながるここで作れば、いつも同じ見た目になる。
+      # 失敗してもサイトの更新は止めない。
+      - name: ツイート用の画像を作る
+        continue-on-error: true
+        run: |
+          pip install --quiet playwright
+          python -m playwright install --with-deps chromium
+          python scripts/make_card.py --png
+
       - name: 保存して公開
         run: |
           git config user.name "hayarige-bot"
