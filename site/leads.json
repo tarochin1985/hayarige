@@ -1,32 +1,29 @@
 {
- "date": "2026-09-07",
- "generated": "2026-09-07 19:13",
+ "date": "2026-09-08",
+ "generated": "2026-09-08 07:11",
  "leads": {
   "events": [
    {
-    "tag": "#ロゼキャンARK",
+    "tag": "#ホロ7大豆劇場",
     "channels": [
-     "AZKi Channel",
-     "Anya Melfissa Ch. hololive-ID",
-     "Botan Ch.獅白ぼたん",
-     "Flare Ch. 不知火フレア",
-     "Hajime Ch. 轟はじめ ‐ ReGLOSS",
-     "Iroha ch. 風真いろは - holoX -",
-     "Kanade Ch. 音乃瀬奏 ‐ ReGLOSS",
-     "Koyori ch. 博衣こより - holoX -",
+     "Chihaya Ch. 輪堂 千速 - FLOW GLOW",
      "Matsuri Channel 夏色まつり",
      "Miko Ch. さくらみこ",
-     "Mio Channel 大神ミオ",
-     "Noel Ch. 白銀ノエル",
-     "Pekora Ch. 兎田ぺこら",
-     "Polka Ch. 尾丸ポルカ",
      "Riona Ch. 響咲リオナ - FLOW GLOW",
-     "Subaru Ch. 大空スバル",
+     "Ririka Ch. 一条莉々華 ‐ ReGLOSS",
      "Towa Ch. 常闇トワ",
-     "Vivi Ch. 綺々羅々ヴィヴィ - FLOW GLOW",
-     "Watame Ch. 角巻わため",
-     "アキロゼCh。Vtuber/ホロライブ所属",
      "フブキCh。白上フブキ"
+    ]
+   },
+   {
+    "tag": "#SURGETown",
+    "channels": [
+     "Kanae Channel",
+     "きつねさん / Kitune-san",
+     "みつき",
+     "家入ポポ / Popo Channel【ななしいんく】",
+     "赤彩みあ / Akairo Mia Ch.【すずみあ】",
+     "鬼ヶ谷 テン / Onigaya Ten"
     ]
    },
    {
@@ -34,49 +31,27 @@
     "channels": [
      "SIANちゃんねる【ディズニー大好きVtuber】",
      "Usagi Ch. 因幡兎",
-     "こじちゃんねる【小嶋明梨】",
-     "ごまっぷ_GameCh",
      "ぱんちき🥖🦃",
-     "みほち",
      "エラch",
      "ジョアだよ",
      "儚視まちこVTuber Hakanashi Matiko"
     ]
    },
    {
-    "tag": "#SURGETown",
-    "channels": [
-     "Kanae Channel",
-     "みつき",
-     "家入ポポ / Popo Channel【ななしいんく】",
-     "柚原いづみ / Izumi Channel 【ななしいんく】",
-     "赤彩みあ / Akairo Mia Ch.【すずみあ】",
-     "鬼ヶ谷 テン / Onigaya Ten"
-    ]
-   },
-   {
-    "tag": "#ストグラ",
-    "channels": [
-     "marunnn【まるーんチャンネル】",
-     "たけぉ",
-     "ましゃかりさん",
-     "ノビーの遊び部屋"
-    ]
-   },
-   {
-    "tag": "#ホロ7大豆劇場",
-    "channels": [
-     "Matsuri Channel 夏色まつり",
-     "Riona Ch. 響咲リオナ - FLOW GLOW",
-     "Towa Ch. 常闇トワ"
-    ]
-   },
-   {
     "tag": "#サボラス",
     "channels": [
+     "フルコンチャンネル",
      "プテラたかはし",
      "怪傑がみちゃんねる",
      "椎名唯華 / Shiina Yuika"
+    ]
+   },
+   {
+    "tag": "#おんりーバースデー2026",
+    "channels": [
+     "おらふくん / ドズル社",
+     "おんりー / ドズル社",
+     "ぼんじゅうる / ドズル社"
     ]
    }
   ],
@@ -84,33 +59,18 @@
   "wide": [
    {
     "game": "Apex Legends",
-    "channels": 32,
-    "videos": 44
+    "channels": 37,
+    "videos": 40
    },
    {
     "game": "ストリートファイター6",
-    "channels": 28,
-    "videos": 38
-   },
-   {
-    "game": "鬼武者 Way of the Sword",
-    "channels": 19,
-    "videos": 21
-   },
-   {
-    "game": "Escape from Tarkov",
-    "channels": 14,
-    "videos": 15
-   },
-   {
-    "game": "ELDEN RING",
-    "channels": 14,
-    "videos": 15
+    "channels": 32,
+    "videos": 40
    },
    {
     "game": "Rust",
     "channels": 15,
-    "videos": 16
+    "videos": 15
    },
    {
     "game": "Minecraft",
@@ -118,9 +78,24 @@
     "videos": 16
    },
    {
-    "game": "ARK: Survival Ascended",
-    "channels": 11,
+    "game": "7 Days to Die",
+    "channels": 12,
+    "videos": 13
+   },
+   {
+    "game": "ELDEN RING",
+    "channels": 12,
+    "videos": 13
+   },
+   {
+    "game": "VALORANT",
+    "channels": 12,
     "videos": 12
+   },
+   {
+    "game": "鬼武者 Way of the Sword",
+    "channels": 12,
+    "videos": 13
    }
   ]
  },

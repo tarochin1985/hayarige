@@ -586,6 +586,17 @@
   ]
  },
  {
+  "name": "771",
+  "alias": [],
+  "pop": 0,
+  "p": [
+   "pc"
+  ],
+  "g": [
+   "Indie"
+  ]
+ },
+ {
   "name": "8AM: The Warehouse",
   "alias": [],
   "pop": 0,
@@ -4675,6 +4686,19 @@
   ]
  },
  {
+  "name": "Backseat",
+  "alias": [],
+  "pop": 0,
+  "p": [
+   "pc"
+  ],
+  "g": [
+   "Simulator",
+   "Strategy",
+   "Indie"
+  ]
+ },
+ {
   "name": "Backyard Paintball",
   "alias": [
    "Backyard Paintball.exe"
@@ -5192,7 +5216,7 @@
  {
   "name": "Beast of Reincarnation",
   "alias": [],
-  "pop": 19,
+  "pop": 20,
   "p": [
    "pc",
    "console"
@@ -5334,22 +5358,6 @@
   "g": [
    "Simulator",
    "Adventure",
-   "Indie"
-  ]
- },
- {
-  "name": "Behind The Walls",
-  "alias": [
-   "BEHIND THE WALLS",
-   "FINAL.exe"
-  ],
-  "pop": 0,
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Puzzle",
-   "Strategy",
    "Indie"
   ]
  },
@@ -5719,7 +5727,7 @@
    "빅 앰비션스",
    "Big Ambitions.exe"
   ],
-  "pop": 10,
+  "pop": 11,
   "p": [
    "pc"
   ],
@@ -7272,19 +7280,6 @@
   "g": [
    "Platform",
    "Indie"
-  ]
- },
- {
-  "name": "Bounce Forever",
-  "alias": [
-   "BounceForever.exe"
-  ],
-  "pop": 0,
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Simulator"
   ]
  },
  {
@@ -15625,18 +15620,6 @@
   "pop": 0,
   "p": [
    "console"
-  ]
- },
- {
-  "name": "DishDash",
-  "alias": [],
-  "pop": 0,
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Simulator",
-   "Indie"
   ]
  },
  {
@@ -25129,6 +25112,14 @@
   ]
  },
  {
+  "name": "H to Maid to Mujintou",
+  "alias": [],
+  "pop": 0,
+  "p": [
+   "pc"
+  ]
+ },
+ {
   "name": "HMUR",
   "alias": [],
   "pop": 0,
@@ -32874,6 +32865,21 @@
   ]
  },
  {
+  "name": "Lost & Found",
+  "alias": [
+   "LOST & FOUND"
+  ],
+  "pop": 0,
+  "p": [
+   "pc"
+  ],
+  "g": [
+   "Puzzle",
+   "Simulator",
+   "Indie"
+  ]
+ },
+ {
   "name": "Lost & Found: A This Bed We Made Story",
   "alias": [
    "LostAndFound.exe"
@@ -36801,7 +36807,7 @@
    "MortalShell2.exe",
    "Mortal Shell 2"
   ],
-  "pop": 12,
+  "pop": 14,
   "p": [
    "pc",
    "console"
@@ -38191,21 +38197,6 @@
   ]
  },
  {
-  "name": "Nightmare Hospital",
-  "alias": [
-   "NH.exe"
-  ],
-  "pop": 0,
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Simulator",
-   "Adventure",
-   "Indie"
-  ]
- },
- {
   "name": "Nightpark Journal",
   "alias": [
    "夜园游记"
@@ -39300,19 +39291,6 @@
    "Simulator",
    "Indie",
    "Visual Novel"
-  ]
- },
- {
-  "name": "Office Leveling",
-  "alias": [
-   "Office Leveling.exe"
-  ],
-  "pop": 0,
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Indie"
   ]
  },
  {
@@ -44437,6 +44415,19 @@
   ]
  },
  {
+  "name": "Qumino",
+  "alias": [],
+  "pop": 0,
+  "p": [
+   "pc"
+  ],
+  "g": [
+   "Simulator",
+   "Strategy",
+   "Indie"
+  ]
+ },
+ {
   "name": "R-Type Tactics I & II Cosmos: Deluxe Edition",
   "alias": [
    "R-Type Tactics I • II Cosmos: Deluxe Edition"
@@ -45736,7 +45727,7 @@
   "alias": [
    "Resonance.exe"
   ],
-  "pop": 22,
+  "pop": 24,
   "p": [
    "pc",
    "console"
@@ -46478,14 +46469,6 @@
   ],
   "g": [
    "Puzzle"
-  ]
- },
- {
-  "name": "Rogualik",
-  "alias": [],
-  "pop": 0,
-  "p": [
-   "pc"
   ]
  },
  {
@@ -54074,6 +54057,15 @@
   ]
  },
  {
+  "name": "Taiko no Tatsujin: Rhythm Festival - 90s Pops Pack",
+  "alias": [],
+  "pop": 0,
+  "p": [
+   "pc",
+   "console"
+  ]
+ },
+ {
   "name": "Tail and Сhaos",
   "alias": [
    "Хвост и Хаос",
@@ -60307,7 +60299,7 @@
    "Тукони: Грижители на Гората",
    "Τουκόνι: Φροντιστές του Δάσους"
   ],
-  "pop": 11,
+  "pop": 14,
   "p": [
    "pc"
   ],
@@ -63507,6 +63499,9 @@
   "pop": 0,
   "p": [
    "pc"
+  ],
+  "g": [
+   "Adventure"
   ]
  },
  {
