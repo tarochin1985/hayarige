@@ -9,7 +9,7 @@
 import os
 from datetime import datetime, timedelta, timezone
 from common import (YouTube, QuotaExhausted, DATA, JST, log,
-                    read_json, write_json, today, is_countable)
+                    read_json, write_json, today, is_countable, iso_seconds)
 
 # 毎回見るチャンネル数（登録者順）。ここに入らなかったチャンネルは曜日で分けて週1回。
 # 1回の消費は「チャンネル数 × 1.2」ポイント。1日の実行回数を R とすると、
@@ -108,6 +108,12 @@ def main():
                 continue
             c = owner.get(v["id"], {})
             live = v.get("liveStreamingDetails") or {}
+            # 縦横比。1より大きければ縦長。いまは記録するだけで、
+            # これを理由に落とすことはしていない。実際の数字を数日ぶん見てから
+            # 決めたいので、まず材料を残す。
+            pl = v.get("player") or {}
+            w, hgt = pl.get("embedWidth"), pl.get("embedHeight")
+            shape = round(float(hgt) / float(w), 2) if w and hgt else None
             videos.append({
                 "id": v["id"],
                 "title": v["snippet"]["title"],
@@ -118,12 +124,19 @@ def main():
                 "views": int(v["statistics"].get("viewCount", 0) or 0),
                 "is_live": bool(live.get("actualStartTime")),
                 "thumb": (v["snippet"]["thumbnails"].get("medium") or {}).get("url", ""),
+                "secs": iso_seconds(dur),
+                "shape": shape,
             })
 
     write_json(DATA / "daily" / f"{today()}.json",
                {"date": today(), "quota_used": yt.used,
                 "channels_checked": len(targets), "videos": videos})
+    tall = [v for v in videos if (v.get("shape") or 0) > 1.2]
     log(f"保存しました: data/daily/{today()}.json （{len(videos)} 本 ／ Shorts・切り抜き {skipped} 本を除外）")
+    if tall:
+        log(f"  うち縦長の動画 {len(tall)} 本（いまは数に入れている。様子を見る）")
+        for v in sorted(tall, key=lambda x: -x["views"])[:5]:
+            log(f"    {v['secs']}秒 比{v['shape']} {v['channel']} — {v['title'][:40]}")
     log(f"本日の使用クォータ: {yt.used}")
 
 

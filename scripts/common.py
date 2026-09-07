@@ -48,10 +48,18 @@ def iso_seconds(dur: str) -> int:
 
 SKIP_WORDS = ("切り抜き", "#shorts", "＃shorts")
 
+# ここより短い動画は数えない。
+# 90秒にしていたが、YouTubeは2024年10月15日にShortsの上限を60秒から3分に
+# 延ばしている。しかも「縦向き（9:16）で3分以内」なら、投稿者がそのつもりで
+# なくても自動的にShortsとして扱われる。つまり91〜180秒の縦型動画は
+# YouTube上ではShortsなのに、こちらでは配信として数えていた。
+# ゲーム配信が3分で終わることはないので、ここを3分に上げても実害はない。
+SHORT_MAX_SECONDS = 180
+
 
 def is_countable(title: str, duration: str) -> bool:
     """配信・動画として数える対象か。Shortsと切り抜きは除く。"""
-    if iso_seconds(duration) and iso_seconds(duration) <= 90:
+    if iso_seconds(duration) and iso_seconds(duration) <= SHORT_MAX_SECONDS:
         return False
     low = title.lower()
     return not any(w.lower() in low for w in SKIP_WORDS)
@@ -143,11 +151,30 @@ class YouTube:
         return self.call("playlistItems", 1, part="contentDetails",
                          playlistId=playlist_id, maxResults=max_results)
 
+    _player_ok = True      # 縦横比が取れるか。取れなければ一度だけ諦める
+
     def videos(self, ids):
         """動画の詳細。50件まとめて1ユニット。"""
-        return self.call("videos", 1,
-                         part="snippet,statistics,contentDetails,liveStreamingDetails",
-                         id=",".join(ids), maxResults=50)
+        # player を足しているのは、縦型の動画を見分けるため。
+        # maxWidth を付けると embedHeight が動画の縦横比に合わせて返る
+        # （縦型なら height > width）。part を増やしてもクォータは1のまま。
+        #
+        # ただしここは毎日の収集の心臓部で、止まるとその日のデータが丸ごと
+        # 無くなる。この指定がいつか通らなくなる可能性に備えて、
+        # 駄目だった時点で player 抜きに切り替えて続ける。
+        # 縦横比が取れないだけで、ランキングは今まで通り作れる。
+        base = "snippet,statistics,contentDetails,liveStreamingDetails"
+        if self._player_ok:
+            try:
+                return self.call("videos", 1, part=base + ",player",
+                                 id=",".join(ids), maxResults=50, maxWidth=100)
+            except QuotaExhausted:
+                raise
+            except (SystemExit, Exception):     # die() は SystemExit を投げる
+                self._player_ok = False
+                log("縦横比の取得が通らなかったので、無しで続けます"
+                    "（ランキングには影響しません）")
+        return self.call("videos", 1, part=base, id=",".join(ids), maxResults=50)
 
     def search_channel(self, q):
         """名前からチャンネルを探す。1回100ユニットと高いので最後の手段。"""
