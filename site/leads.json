@@ -1,6 +1,6 @@
 {
  "date": "2026-09-07",
- "generated": "2026-09-07 11:00",
+ "generated": "2026-09-07 11:24",
  "leads": {
   "events": [
    {
@@ -30,21 +30,20 @@
     ]
    },
    {
-    "tag": "#ストグラ",
-    "channels": [
-     "marunnn【まるーんチャンネル】",
-     "たけぉ",
-     "にーとちゃん",
-     "ましゃかりさん"
-    ]
-   },
-   {
     "tag": "#ゲーム実況",
     "channels": [
      "CHECHE GAME【顔出し初見ゲーム実況】",
      "Usagi Ch. 因幡兎",
      "エラch",
      "ジョアだよ"
+    ]
+   },
+   {
+    "tag": "#ストグラ",
+    "channels": [
+     "たけぉ",
+     "にーとちゃん",
+     "ましゃかりさん"
     ]
    },
    {
@@ -61,7 +60,7 @@
    {
     "game": "Apex Legends",
     "channels": 22,
-    "videos": 26
+    "videos": 25
    },
    {
     "game": "ストリートファイター6",
@@ -70,13 +69,8 @@
    },
    {
     "game": "Minecraft",
-    "channels": 13,
-    "videos": 13
-   },
-   {
-    "game": "VALORANT",
-    "channels": 9,
-    "videos": 10
+    "channels": 12,
+    "videos": 12
    },
    {
     "game": "鬼武者 Way of the Sword",
@@ -84,19 +78,24 @@
     "videos": 9
    },
    {
-    "game": "スプラトゥーン3",
-    "channels": 10,
-    "videos": 10
-   },
-   {
-    "game": "フォートナイト",
-    "channels": 8,
-    "videos": 10
-   },
-   {
     "game": "Escape from Tarkov",
     "channels": 8,
     "videos": 8
+   },
+   {
+    "game": "VALORANT",
+    "channels": 8,
+    "videos": 9
+   },
+   {
+    "game": "スプラトゥーン3",
+    "channels": 9,
+    "videos": 9
+   },
+   {
+    "game": "雀魂",
+    "channels": 8,
+    "videos": 10
    }
   ]
  },
