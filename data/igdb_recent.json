@@ -9692,21 +9692,6 @@
   ]
  },
  {
-  "name": "Chemical Combat",
-  "alias": [
-   "Chemical Combat.exe"
-  ],
-  "pop": 0,
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Shooter",
-   "Strategy",
-   "Indie"
-  ]
- },
- {
   "name": "Chemist Wanted",
   "alias": [],
   "pop": 0,
@@ -9825,19 +9810,6 @@
    "Racing",
    "Simulator",
    "Indie"
-  ]
- },
- {
-  "name": "Chill Planet",
-  "alias": [],
-  "pop": 0,
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Adventure",
-   "Indie",
-   "Visual Novel"
   ]
  },
  {
@@ -10655,6 +10627,32 @@
   ],
   "g": [
    "Adventure"
+  ]
+ },
+ {
+  "name": "Clogwork",
+  "alias": [],
+  "pop": 0,
+  "p": [
+   "pc"
+  ],
+  "g": [
+   "Simulator",
+   "Indie"
+  ]
+ },
+ {
+  "name": "Close the Sky",
+  "alias": [],
+  "pop": 0,
+  "p": [
+   "pc"
+  ],
+  "g": [
+   "Real Time Strategy (RTS)",
+   "Simulator",
+   "Strategy",
+   "Tactical"
   ]
  },
  {
@@ -28855,7 +28853,8 @@
    "pc"
   ],
   "g": [
-   "Platform"
+   "Platform",
+   "Indie"
   ]
  },
  {
@@ -45759,7 +45758,7 @@
   "alias": [
    "Resonance.exe"
   ],
-  "pop": 25,
+  "pop": 26,
   "p": [
    "pc",
    "console"
@@ -47564,17 +47563,6 @@
    "LAPSO",
    "SANGRA"
   ],
-  "pop": 0,
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Indie"
-  ]
- },
- {
-  "name": "Santa's Burnout",
-  "alias": [],
   "pop": 0,
   "p": [
    "pc"
@@ -52730,7 +52718,10 @@
  },
  {
   "name": "Stranded With You",
-  "alias": [],
+  "alias": [
+   "与你流落荒岛",
+   "與你流落荒島"
+  ],
   "pop": 0,
   "p": [
    "pc"
@@ -56754,6 +56745,17 @@
   ],
   "g": [
    "Strategy"
+  ]
+ },
+ {
+  "name": "The Legend of Zelda: Ocarina of Time",
+  "alias": [],
+  "pop": 0,
+  "p": [
+   "console"
+  ],
+  "g": [
+   "Adventure"
   ]
  },
  {
