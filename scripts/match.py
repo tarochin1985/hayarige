@@ -128,9 +128,14 @@ class Index:
                     # 『テニス』『Golf』のような一般語との衝突を防ぐ。
                     if len(alias) < (6 if is_latin(alias) else 4) or pop < 1:
                         continue
-                key = (len(alias), pop)
+                # 手で登録したエイリアスは、少しだけ長さを盛って優先する。
+                # 「BIOHAZARD/バイオハザード6」のように英日を併記した題名だと、
+                # 辞書由来の biohazard（9字）が、手で入れたバイオハザード6（8字）に
+                # 長さで勝ってしまい、無印のバイオハザードに吸い込まれていた。
+                score = len(alias) + (3 if curated else 0)
+                key = (score, pop)
                 if best is None or key > (best[1], best[3]):
-                    best = (game, len(alias), False, pop)
+                    best = (game, score, False, pop)
         return (best[0], best[1], best[2]) if best else None
 
 

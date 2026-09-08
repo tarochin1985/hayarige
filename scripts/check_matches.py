@@ -21,6 +21,12 @@
      判定されているもの
      例: 「ラスト配信」→ Rust（別名「ラスト」）
 
+  3. 当たったゲーム名のすぐ後ろに数字が続いているもの
+     例: 「【龍が如く6】…」に対して判定が『龍が如く』
+     シリーズものは、続編の名前が無印の名前をまるごと含む。だから
+     続編が辞書に無いと、全部が無印の行に集まってしまう。
+     バイオハザード・龍が如く・ペルソナで実際に起きた（2026-09-08）。
+
 出てきたものは、直し方が2通りある。
   ・正しいゲームが辞書に無い → data/aliases.json に足す
   ・別名が普通の言葉すぎる   → data/alias_blocklist.json に足す
@@ -62,14 +68,24 @@ def main():
 
     frag = collections.defaultdict(list)   # 1. 括弧の一部だけに当たった
     alias = collections.defaultdict(list)  # 2. 名前が出てこないのに当たった
+    seq = collections.defaultdict(list)    # 3. 名前の直後に数字が続く
 
     for v in vids:
         t = v["title"]
         g, how = M.extract(t, idx)
         if how != "dict":
             continue
-        if M.compact(g) not in M.compact(t):
+        ct, sep = M.compact_map(t)
+        cg = M.compact(g)
+        if cg not in ct:
             alias[g].append(t)
+        else:
+            # 名前の直後が数字なら、続編の題名を無印で拾っている疑い。
+            # ただし「鉄拳8 #274」「Among Us/2026.8.26」のような回数・日付は
+            # 元の文で区切られている。区切りが無いものだけを疑う。
+            i = ct.index(cg) + len(cg)
+            if i < len(ct) and ct[i].isdigit() and not sep[i]:
+                seq[(g, ct[i])].append(t)
         m = re.match(r"^[\s　#＃0-9]*[【『〖]([^】』〗]{1,60})[】』〗]", t)
         if not m:
             continue
@@ -87,6 +103,13 @@ def main():
     for (g, seg), ts in sorted(frag.items(), key=lambda kv: -len(kv[1])):
         print(f"   {len(ts):3}本  判定={g!r}")
         print(f"        括弧の中身: {seg[:64]}")
+
+    print("\n■ 判定したゲーム名のすぐ後ろに数字が続くもの（続編が辞書に無い疑い）")
+    if not seq:
+        print("   なし")
+    for (g, n), ts in sorted(seq.items(), key=lambda kv: -len(kv[1])):
+        print(f"   {len(ts):3}本  判定={g!r} だが題名は「{g}{n}」")
+        print(f"        例: {ts[0][:66]}")
 
     print("\n■ ゲーム名がタイトルに出てこないのに判定されたもの（多い順・上位15）")
     for g, ts in sorted(alias.items(), key=lambda kv: -len(kv[1]))[:15]:
