@@ -46,7 +46,14 @@ def iso_seconds(dur: str) -> int:
     return ((d * 24 + h) * 60 + mi) * 60 + sec
 
 
-SKIP_WORDS = ("切り抜き", "#shorts", "＃shorts")
+# 数えない言葉。
+# 「同時視聴」は、アニメ・映画・発表会を視聴者と一緒に見る配信につく。
+# ゲームを遊んでいる配信ではないので数えない。放っておくと
+#   「宇宙兄弟 第95話 同時視聴」→ Brothers: A Tale of Two Sons
+#   「金曜ロードショー『8番出口』を一緒に見よう」→ 8番出口
+#   「Nintendo Direct 同時視聴」→ Direct
+# のように、題名に出てくる作品名を配信数として数えてしまう。
+SKIP_WORDS = ("切り抜き", "#shorts", "＃shorts", "同時視聴")
 
 # ここより短い動画は数えない。
 # 90秒にしていたが、YouTubeは2024年10月15日にShortsの上限を60秒から3分に
