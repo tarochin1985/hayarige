@@ -5761,6 +5761,19 @@
   ]
  },
  {
+  "name": "Big Breakfast 2",
+  "alias": [],
+  "pop": 0,
+  "p": [
+   "pc"
+  ],
+  "g": [
+   "Role-playing (RPG)",
+   "Adventure",
+   "Indie"
+  ]
+ },
+ {
   "name": "Big Dig",
   "alias": [],
   "pop": 0,
@@ -7345,6 +7358,17 @@
   "g": [
    "Adventure",
    "Indie"
+  ]
+ },
+ {
+  "name": "Bounty Trail",
+  "alias": [],
+  "pop": 0,
+  "p": [
+   "pc"
+  ],
+  "g": [
+   "Role-playing (RPG)"
   ]
  },
  {
@@ -11191,21 +11215,6 @@
   ]
  },
  {
-  "name": "Conjurers",
-  "alias": [],
-  "pop": 0,
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Strategy",
-   "Turn-based strategy (TBS)",
-   "Tactical",
-   "Indie",
-   "Card & Board Game"
-  ]
- },
- {
   "name": "Connie and the Essence of Chaos",
   "alias": [
    "Connie.exe"
@@ -12108,7 +12117,9 @@
  },
  {
   "name": "Crescent Creek: Survival Horror",
-  "alias": [],
+  "alias": [
+   "CrescentCreek.exe"
+  ],
   "pop": 0,
   "p": [
    "pc"
@@ -13805,6 +13816,20 @@
    "Simulator",
    "Indie",
    "Visual Novel"
+  ]
+ },
+ {
+  "name": "Deadzoned",
+  "alias": [
+   "Deadzoned: A Credits Bounty"
+  ],
+  "pop": 0,
+  "p": [
+   "pc"
+  ],
+  "g": [
+   "Adventure",
+   "Indie"
   ]
  },
  {
@@ -16728,19 +16753,6 @@
   ],
   "g": [
    "Simulator",
-   "Indie"
-  ]
- },
- {
-  "name": "Dream Village",
-  "alias": [],
-  "pop": 0,
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Simulator",
-   "Adventure",
    "Indie"
   ]
  },
@@ -19683,6 +19695,21 @@
   ]
  },
  {
+  "name": "Explorers of Palan",
+  "alias": [],
+  "pop": 0,
+  "p": [
+   "pc"
+  ],
+  "g": [
+   "Point-and-click",
+   "Role-playing (RPG)",
+   "Adventure",
+   "Indie",
+   "Arcade"
+  ]
+ },
+ {
   "name": "Explory Story",
   "alias": [],
   "pop": 0,
@@ -20808,6 +20835,12 @@
   "pop": 0,
   "p": [
    "pc"
+  ],
+  "g": [
+   "Point-and-click",
+   "Puzzle",
+   "Adventure",
+   "Indie"
   ]
  },
  {
@@ -20843,6 +20876,14 @@
   "g": [
    "Adventure",
    "Indie"
+  ]
+ },
+ {
+  "name": "Fingerball: Dodge The Balls",
+  "alias": [],
+  "pop": 0,
+  "g": [
+   "Arcade"
   ]
  },
  {
@@ -23775,17 +23816,13 @@
   ]
  },
  {
-  "name": "Go North",
-  "alias": [
-   "Go North.exe"
-  ],
+  "name": "Go Next!",
+  "alias": [],
   "pop": 0,
   "p": [
-   "pc",
-   "console"
+   "pc"
   ],
   "g": [
-   "Puzzle",
    "Adventure",
    "Indie"
   ]
@@ -29469,6 +29506,18 @@
   ]
  },
  {
+  "name": "JettFuel+",
+  "alias": [],
+  "pop": 0,
+  "p": [
+   "pc"
+  ],
+  "g": [
+   "Platform",
+   "Indie"
+  ]
+ },
+ {
   "name": "Jewel Match Solitaire: Cats and Cards - Collector's Edition",
   "alias": [],
   "pop": 0,
@@ -29950,19 +29999,6 @@
   "pop": 0,
   "p": [
    "console"
-  ]
- },
- {
-  "name": "Kafak",
-  "alias": [
-   "KAFAK"
-  ],
-  "pop": 0,
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Indie"
   ]
  },
  {
@@ -32565,6 +32601,17 @@
   ],
   "g": [
    "Indie"
+  ]
+ },
+ {
+  "name": "Locktale",
+  "alias": [],
+  "pop": 0,
+  "p": [
+   "pc"
+  ],
+  "g": [
+   "Strategy"
   ]
  },
  {
@@ -37228,19 +37275,6 @@
   "g": [
    "Adventure",
    "Visual Novel"
-  ]
- },
- {
-  "name": "My Lil Afterlife",
-  "alias": [],
-  "pop": 0,
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Simulator",
-   "Adventure",
-   "Indie"
   ]
  },
  {
@@ -43116,7 +43150,9 @@
  },
  {
   "name": "Port of Jumanah",
-  "alias": [],
+  "alias": [
+   "幻珠奇港"
+  ],
   "pop": 0,
   "p": [
    "pc",
@@ -45126,19 +45162,6 @@
   ]
  },
  {
-  "name": "Realms and Ruins: Abencor",
-  "alias": [
-   "Realms & Ruins: Abencor"
-  ],
-  "pop": 0,
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Role-playing (RPG)"
-  ]
- },
- {
   "name": "Reanimal: The Prisoner",
   "alias": [
    "Reanimal: The Expanded World - Chapter 1"
@@ -46631,17 +46654,6 @@
   "alias": [
    "RollnBounce.exe"
   ],
-  "pop": 0,
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Indie"
-  ]
- },
- {
-  "name": "Roll The Bones",
-  "alias": [],
   "pop": 0,
   "p": [
    "pc"
@@ -48316,18 +48328,6 @@
   ]
  },
  {
-  "name": "Sepium",
-  "alias": [],
-  "pop": 0,
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Adventure",
-   "Indie"
-  ]
- },
- {
   "name": "Sepulchron",
   "alias": [],
   "pop": 0,
@@ -49373,6 +49373,7 @@
   "alias": [
    "锡吉尔法师",
    "Wanderer's Sigil: Dice-Fueled Adventure",
+   "Sigilfarer: A Dice-Rolling Roguelite",
    "Wanderer's Sigil"
   ],
   "pop": 0,
@@ -49654,20 +49655,6 @@
    "Strategy",
    "Indie",
    "Card & Board Game"
-  ]
- },
- {
-  "name": "Sinned Arena",
-  "alias": [
-   "Sinned Arena.exe"
-  ],
-  "pop": 0,
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Shooter",
-   "Indie"
   ]
  },
  {
@@ -50232,19 +50219,6 @@
   ],
   "g": [
    "Arcade"
-  ]
- },
- {
-  "name": "Slot & Dungeons",
-  "alias": [],
-  "pop": 0,
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Role-playing (RPG)",
-   "Strategy",
-   "Indie"
   ]
  },
  {
@@ -52866,6 +52840,15 @@
   "g": [
    "Fighting",
    "Arcade"
+  ]
+ },
+ {
+  "name": "Street Fighter 6: Year 4 - Arjun",
+  "alias": [],
+  "pop": 0,
+  "p": [
+   "pc",
+   "console"
   ]
  },
  {
@@ -56402,6 +56385,14 @@
  },
  {
   "name": "The Idolmaster: Shiny Colors - A.X.E.8: Alstroemeria",
+  "alias": [],
+  "pop": 0,
+  "g": [
+   "Visual Novel"
+  ]
+ },
+ {
+  "name": "The Idolmaster: Shiny Colors - A.X.E.8: Illumination Stars",
   "alias": [],
   "pop": 0,
   "g": [

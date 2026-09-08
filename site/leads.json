@@ -1,20 +1,8 @@
 {
  "date": "2026-09-08",
- "generated": "2026-09-08 10:26",
+ "generated": "2026-09-08 19:14",
  "leads": {
   "events": [
-   {
-    "tag": "#ホロ7大豆劇場",
-    "channels": [
-     "Chihaya Ch. 輪堂 千速 - FLOW GLOW",
-     "Matsuri Channel 夏色まつり",
-     "Miko Ch. さくらみこ",
-     "Riona Ch. 響咲リオナ - FLOW GLOW",
-     "Ririka Ch. 一条莉々華 ‐ ReGLOSS",
-     "Towa Ch. 常闇トワ",
-     "フブキCh。白上フブキ"
-    ]
-   },
    {
     "tag": "#SURGETown",
     "channels": [
@@ -28,13 +16,24 @@
     ]
    },
    {
+    "tag": "#ホロ7大豆劇場",
+    "channels": [
+     "Chihaya Ch. 輪堂 千速 - FLOW GLOW",
+     "Matsuri Channel 夏色まつり",
+     "Riona Ch. 響咲リオナ - FLOW GLOW",
+     "Ririka Ch. 一条莉々華 ‐ ReGLOSS",
+     "Towa Ch. 常闇トワ",
+     "フブキCh。白上フブキ"
+    ]
+   },
+   {
     "tag": "#ゲーム実況",
     "channels": [
-     "SIANちゃんねる【ディズニー大好きVtuber】",
+     "CHECHE GAME【顔出し初見ゲーム実況】",
      "Usagi Ch. 因幡兎",
-     "ぱんちき🥖🦃",
+     "こじちゃんねる【小嶋明梨】",
+     "てぃーけぇー",
      "エラch",
-     "ジョアだよ",
      "儚視まちこVTuber Hakanashi Matiko"
     ]
    },
@@ -48,11 +47,20 @@
     ]
    },
    {
-    "tag": "#おんりーバースデー2026",
+    "tag": "#にじ遊戯王祭2026",
     "channels": [
-     "おらふくん / ドズル社",
-     "おんりー / ドズル社",
-     "ぼんじゅうる / ドズル社"
+     "オリバー・エバンス / Oliver Evans 【にじさんじ】",
+     "レイン・パターソン／Lain Paterson【にじさんじ】",
+     "社築",
+     "長尾 景 / Nagao Kei【にじさんじ】"
+    ]
+   },
+   {
+    "tag": "#レトロゲーム",
+    "channels": [
+     "ラウルちゃん",
+     "ロッキー先生",
+     "草蔦みかん / Kusatsuta Mikan"
     ]
    }
   ],
@@ -66,32 +74,32 @@
   "wide": [
    {
     "game": "ストリートファイター6",
-    "channels": 37,
-    "videos": 49
+    "channels": 38,
+    "videos": 55
    },
    {
     "game": "Apex Legends",
-    "channels": 39,
-    "videos": 44
+    "channels": 38,
+    "videos": 49
    },
    {
     "game": "Rust",
+    "channels": 16,
+    "videos": 24
+   },
+   {
+    "game": "VALORANT",
     "channels": 14,
-    "videos": 14
+    "videos": 17
+   },
+   {
+    "game": "実況パワフルプロ野球2026",
+    "channels": 13,
+    "videos": 15
    },
    {
     "game": "Minecraft",
     "channels": 14,
-    "videos": 15
-   },
-   {
-    "game": "7 Days to Die",
-    "channels": 12,
-    "videos": 13
-   },
-   {
-    "game": "鬼武者 Way of the Sword",
-    "channels": 13,
     "videos": 14
    },
    {
@@ -100,9 +108,9 @@
     "videos": 12
    },
    {
-    "game": "Bombanana!",
+    "game": "7 Days to Die",
     "channels": 10,
-    "videos": 10
+    "videos": 12
    }
   ]
  },
