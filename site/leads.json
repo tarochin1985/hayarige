@@ -1,30 +1,17 @@
 {
  "date": "2026-09-09",
- "generated": "2026-09-09 00:02",
+ "generated": "2026-09-09 07:12",
  "leads": {
   "events": [
    {
     "tag": "#SURGETown",
     "channels": [
      "Kanae Channel",
-     "きつねさん / Kitune-san",
      "みつき",
      "家入ポポ / Popo Channel【ななしいんく】",
-     "柚原いづみ / Izumi Channel 【ななしいんく】",
      "赤彩みあ / Akairo Mia Ch.【すずみあ】",
      "風見くく /  Kuku Channel 【ななしいんく】",
      "鬼ヶ谷 テン / Onigaya Ten"
-    ]
-   },
-   {
-    "tag": "#ホロ7大豆劇場",
-    "channels": [
-     "Chihaya Ch. 輪堂 千速 - FLOW GLOW",
-     "Matsuri Channel 夏色まつり",
-     "Riona Ch. 響咲リオナ - FLOW GLOW",
-     "Ririka Ch. 一条莉々華 ‐ ReGLOSS",
-     "Towa Ch. 常闇トワ",
-     "フブキCh。白上フブキ"
     ]
    },
    {
@@ -39,6 +26,34 @@
     ]
    },
    {
+    "tag": "#ホロ7大豆劇場",
+    "channels": [
+     "Chihaya Ch. 輪堂 千速 - FLOW GLOW",
+     "Matsuri Channel 夏色まつり",
+     "Miko Ch. さくらみこ",
+     "Towa Ch. 常闇トワ",
+     "フブキCh。白上フブキ"
+    ]
+   },
+   {
+    "tag": "#ななし雀魂杯",
+    "channels": [
+     "ここ・じぇす汰 / Coco･Jester【ななしいんく】",
+     "汐鳴みりね / Mirine Shionari【ななしいんく】",
+     "漆瀬レイ / Ray Nanase【ななしいんく】",
+     "飛良ひかり / Hikari Channel【ななしいんく】"
+    ]
+   },
+   {
+    "tag": "#おんりーバースデー2026",
+    "channels": [
+     "おおはらMEN / ドズル社",
+     "おらふくん / ドズル社",
+     "おんりー / ドズル社",
+     "ぼんじゅうる / ドズル社"
+    ]
+   },
+   {
     "tag": "#サボラス",
     "channels": [
      "フルコンチャンネル",
@@ -48,80 +63,69 @@
     ]
    },
    {
-    "tag": "#にじ遊戯王祭2026",
-    "channels": [
-     "オリバー・エバンス / Oliver Evans 【にじさんじ】",
-     "加賀美 ハヤト/Hayato Kagami",
-     "社築",
-     "長尾 景 / Nagao Kei【にじさんじ】"
-    ]
-   },
-   {
-    "tag": "#ななし雀魂杯",
-    "channels": [
-     "汐鳴みりね / Mirine Shionari【ななしいんく】",
-     "漆瀬レイ / Ray Nanase【ななしいんく】",
-     "飛良ひかり / Hikari Channel【ななしいんく】"
-    ]
-   },
-   {
-    "tag": "#ポケモン",
-    "channels": [
-     "ミロ",
-     "蛇目 欠番@Vtuber",
-     "鈴ノ時みぃ@新人Vtuber"
-    ]
-   },
-   {
     "tag": "#レトロゲーム",
     "channels": [
      "ラウルちゃん",
      "ロッキー先生",
      "草蔦みかん / Kusatsuta Mikan"
     ]
+   },
+   {
+    "tag": "#にじ遊戯王祭2026",
+    "channels": [
+     "オリバー・エバンス / Oliver Evans 【にじさんじ】",
+     "加賀美 ハヤト/Hayato Kagami",
+     "長尾 景 / Nagao Kei【にじさんじ】"
+    ]
    }
   ],
-  "newcomers": [],
+  "newcomers": [
+   {
+    "game": "Pizza House Simulator",
+    "channels": 5,
+    "videos": 5
+   }
+  ],
   "wide": [
    {
     "game": "ストリートファイター6",
-    "channels": 38,
-    "videos": 55
-   },
-   {
-    "game": "Apex Legends",
-    "channels": 36,
+    "channels": 34,
     "videos": 47
    },
    {
+    "game": "Apex Legends",
+    "channels": 32,
+    "videos": 42
+   },
+   {
     "game": "Rust",
-    "channels": 17,
-    "videos": 27
-   },
-   {
-    "game": "Direct",
-    "channels": 18,
-    "videos": 20
-   },
-   {
-    "game": "VALORANT",
-    "channels": 15,
-    "videos": 19
+    "channels": 16,
+    "videos": 17
    },
    {
     "game": "実況パワフルプロ野球2026",
     "channels": 15,
-    "videos": 19
+    "videos": 17
    },
    {
-    "game": "7 Days to Die",
-    "channels": 11,
+    "game": "鬼武者 Way of the Sword",
+    "channels": 12,
+    "videos": 13
+   },
+   {
+    "game": "VALORANT",
+    "channels": 14,
     "videos": 14
    },
    {
     "game": "Minecraft",
-    "channels": 14,
-    "videos": 15
+    "channels": 13,
+    "videos": 13
+   },
+   {
+    "game": "Dead by Daylight",
+    "channels": 12,
+    "videos": 17
    }
   ]
  },

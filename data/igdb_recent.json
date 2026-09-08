@@ -459,10 +459,13 @@
   "alias": [],
   "pop": 0,
   "p": [
+   "pc",
    "console"
   ],
   "g": [
-   "Strategy"
+   "Simulator",
+   "Strategy",
+   "Indie"
   ]
  },
  {
@@ -1325,6 +1328,19 @@
   ]
  },
  {
+  "name": "Acceptable Losses",
+  "alias": [],
+  "pop": 0,
+  "p": [
+   "pc"
+  ],
+  "g": [
+   "Simulator",
+   "Strategy",
+   "Indie"
+  ]
+ },
+ {
   "name": "Accident Investigator Simulator: Black Box",
   "alias": [],
   "pop": 0,
@@ -2128,6 +2144,20 @@
   "p": [
    "pc",
    "console"
+  ]
+ },
+ {
+  "name": "Alchemy Factory",
+  "alias": [
+   "AlchemyFactory.exe",
+   "炼金工厂"
+  ],
+  "pop": 0,
+  "p": [
+   "pc"
+  ],
+  "g": [
+   "Simulator"
   ]
  },
  {
@@ -3497,6 +3527,20 @@
   ]
  },
  {
+  "name": "Arcade Galaxy",
+  "alias": [],
+  "pop": 0,
+  "p": [
+   "pc"
+  ],
+  "g": [
+   "Platform",
+   "Racing",
+   "Indie",
+   "Arcade"
+  ]
+ },
+ {
   "name": "Arcade Shop Simulator",
   "alias": [],
   "pop": 0,
@@ -4207,6 +4251,18 @@
   ]
  },
  {
+  "name": "Atlantis Fantasy: Reborn",
+  "alias": [],
+  "pop": 0,
+  "p": [
+   "pc"
+  ],
+  "g": [
+   "Simulator",
+   "Strategy"
+  ]
+ },
+ {
   "name": "Atomic Age",
   "alias": [],
   "pop": 0,
@@ -4251,21 +4307,6 @@
   ],
   "g": [
    "Point-and-click",
-   "Indie"
-  ]
- },
- {
-  "name": "Augmented Fear",
-  "alias": [
-   "Augmented Fear.exe"
-  ],
-  "pop": 0,
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Puzzle",
-   "Adventure",
    "Indie"
   ]
  },
@@ -7152,19 +7193,6 @@
   "alias": [
    "BONEBUILDER"
   ],
-  "pop": 0,
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Role-playing (RPG)",
-   "Adventure",
-   "Indie"
-  ]
- },
- {
-  "name": "Bonehold",
-  "alias": [],
   "pop": 0,
   "p": [
    "pc"
@@ -11068,17 +11096,6 @@
   ]
  },
  {
-  "name": "Come Out Guys",
-  "alias": [],
-  "pop": 0,
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Indie"
-  ]
- },
- {
   "name": "Come To My Party!",
   "alias": [
    "컴 투 마이 파티!",
@@ -11376,20 +11393,6 @@
    "Role-playing (RPG)",
    "Hack and slash/Beat 'em up",
    "Adventure"
-  ]
- },
- {
-  "name": "Convent Chronicles: Revelation",
-  "alias": [
-   "Game.exe"
-  ],
-  "pop": 0,
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Indie",
-   "Visual Novel"
   ]
  },
  {
@@ -13083,6 +13086,18 @@
   ]
  },
  {
+  "name": "Cyberpunk Store Simulator",
+  "alias": [],
+  "pop": 0,
+  "p": [
+   "pc"
+  ],
+  "g": [
+   "Simulator",
+   "Indie"
+  ]
+ },
+ {
   "name": "Cycle01",
   "alias": [
    "CYCLE01"
@@ -13422,19 +13437,6 @@
   ],
   "g": [
    "Fighting",
-   "Indie"
-  ]
- },
- {
-  "name": "Dark Lessons",
-  "alias": [],
-  "pop": 0,
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Puzzle",
-   "Adventure",
    "Indie"
   ]
  },
@@ -14441,6 +14443,18 @@
   ],
   "g": [
    "Simulator",
+   "Indie"
+  ]
+ },
+ {
+  "name": "Deka Nomos",
+  "alias": [],
+  "pop": 0,
+  "p": [
+   "pc"
+  ],
+  "g": [
+   "Adventure",
    "Indie"
   ]
  },
@@ -15702,22 +15716,6 @@
  {
   "name": "Dissolution of My Self",
   "alias": [],
-  "pop": 0,
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Adventure",
-   "Indie",
-   "Visual Novel"
-  ]
- },
- {
-  "name": "Dissolution of the Silent Union",
-  "alias": [
-   "Velyograd HS-12",
-   "Dissolution of the Silent Union.exe"
-  ],
   "pop": 0,
   "p": [
    "pc"
@@ -17318,6 +17316,14 @@
   ]
  },
  {
+  "name": "Dungeon Bucko",
+  "alias": [],
+  "pop": 0,
+  "p": [
+   "pc"
+  ]
+ },
+ {
   "name": "Dungeon Gambler: All In, No Out",
   "alias": [
    "Alt+F4"
@@ -17792,21 +17798,6 @@
    "Adventure",
    "Indie",
    "Arcade"
-  ]
- },
- {
-  "name": "E-Shop Tycoon",
-  "alias": [
-   "EShopTycoon.exe"
-  ],
-  "pop": 0,
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Simulator",
-   "Strategy",
-   "Indie"
   ]
  },
  {
@@ -19420,18 +19411,6 @@
   ]
  },
  {
-  "name": "EverQuest Legends",
-  "alias": [],
-  "pop": 0,
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Role-playing (RPG)",
-   "Adventure"
-  ]
- },
- {
   "name": "Everfront",
   "alias": [],
   "pop": 0,
@@ -20314,8 +20293,7 @@
   ],
   "pop": 0,
   "p": [
-   "pc",
-   "console"
+   "pc"
   ],
   "g": [
    "Shooter",
@@ -21074,6 +21052,14 @@
   "g": [
    "Platform",
    "Indie"
+  ]
+ },
+ {
+  "name": "Flappy Bill",
+  "alias": [],
+  "pop": 0,
+  "p": [
+   "console"
   ]
  },
  {
@@ -22043,6 +22029,17 @@
   "g": [
    "Adventure",
    "Indie"
+  ]
+ },
+ {
+  "name": "Foxy Succubus Maker",
+  "alias": [],
+  "pop": 0,
+  "p": [
+   "pc"
+  ],
+  "g": [
+   "Visual Novel"
   ]
  },
  {
@@ -25357,19 +25354,6 @@
   ]
  },
  {
-  "name": "Halo: Campaign Evolved",
-  "alias": [],
-  "pop": 35,
-  "p": [
-   "pc",
-   "console"
-  ],
-  "g": [
-   "Shooter",
-   "Adventure"
-  ]
- },
- {
   "name": "Halo: Project Chozo",
   "alias": [
    "Metroid: Combat Evolved"
@@ -25837,19 +25821,6 @@
    "Puzzle",
    "Adventure",
    "Indie"
-  ]
- },
- {
-  "name": "Heartdust",
-  "alias": [
-   "HEARTDUST"
-  ],
-  "pop": 0,
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Shooter"
   ]
  },
  {
@@ -26484,6 +26455,20 @@
   ]
  },
  {
+  "name": "Hidden Saga: Xamadeon Stone",
+  "alias": [
+   "SecretSaga.exe"
+  ],
+  "pop": 0,
+  "p": [
+   "pc"
+  ],
+  "g": [
+   "Adventure",
+   "Indie"
+  ]
+ },
+ {
   "name": "Hiddenius: Crystal Prophecy",
   "alias": [],
   "pop": 0,
@@ -27016,6 +27001,19 @@
   "g": [
    "Simulator",
    "Adventure"
+  ]
+ },
+ {
+  "name": "Horse Magic",
+  "alias": [],
+  "pop": 0,
+  "p": [
+   "pc"
+  ],
+  "g": [
+   "Adventure",
+   "Indie",
+   "Visual Novel"
   ]
  },
  {
@@ -28428,20 +28426,6 @@
   ]
  },
  {
-  "name": "Incremental Retro Racing",
-  "alias": [
-   "IncrementalRetroRacing.exe"
-  ],
-  "pop": 0,
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Racing",
-   "Indie"
-  ]
- },
- {
   "name": "Industrix",
   "alias": [],
   "pop": 0,
@@ -29112,21 +29096,6 @@
   ]
  },
  {
-  "name": "Island Beekeeper",
-  "alias": [
-   "IslandBeekeeper.exe"
-  ],
-  "pop": 0,
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Simulator",
-   "Adventure",
-   "Indie"
-  ]
- },
- {
   "name": "Island Market Simulator",
   "alias": [
    "Island Market Simulator.exe"
@@ -29216,18 +29185,6 @@
   ],
   "g": [
    "Adventure"
-  ]
- },
- {
-  "name": "Ispell",
-  "alias": [],
-  "pop": 0,
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Adventure",
-   "Indie"
   ]
  },
  {
@@ -29880,6 +29837,17 @@
    "Simulator",
    "Strategy",
    "Indie"
+  ]
+ },
+ {
+  "name": "Jupiter & Mars: Definitive Edition",
+  "alias": [],
+  "pop": 0,
+  "p": [
+   "console"
+  ],
+  "g": [
+   "Adventure"
   ]
  },
  {
@@ -34184,6 +34152,7 @@
   "alias": [],
   "pop": 0,
   "p": [
+   "pc",
    "console"
   ]
  },
@@ -36894,7 +36863,7 @@
    "MortalShell2.exe",
    "Mortal Shell 2"
   ],
-  "pop": 14,
+  "pop": 15,
   "p": [
    "pc",
    "console"
@@ -36958,6 +36927,18 @@
   "pop": 0,
   "p": [
    "console"
+  ]
+ },
+ {
+  "name": "Mournight",
+  "alias": [],
+  "pop": 0,
+  "p": [
+   "pc"
+  ],
+  "g": [
+   "Adventure",
+   "Indie"
   ]
  },
  {
@@ -37245,21 +37226,6 @@
   "p": [
    "pc",
    "console"
-  ]
- },
- {
-  "name": "My Infamous Dungeon",
-  "alias": [
-   "My Infamous Dungeon.exe"
-  ],
-  "pop": 0,
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Role-playing (RPG)",
-   "Strategy",
-   "Indie"
   ]
  },
  {
@@ -39002,21 +38968,6 @@
   ]
  },
  {
-  "name": "Nulla Via",
-  "alias": [
-   "NullaVia.exe"
-  ],
-  "pop": 0,
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Puzzle",
-   "Adventure",
-   "Indie"
-  ]
- },
- {
   "name": "Nullbreak Protocol",
   "alias": [],
   "pop": 0,
@@ -39752,7 +39703,7 @@
   "alias": [
    "OnimushaWotS.exe"
   ],
-  "pop": 3,
+  "pop": 4,
   "p": [
    "pc",
    "console"
@@ -42344,6 +42295,18 @@
   ]
  },
  {
+  "name": "Pit of Fears",
+  "alias": [],
+  "pop": 0,
+  "p": [
+   "pc"
+  ],
+  "g": [
+   "Adventure",
+   "Indie"
+  ]
+ },
+ {
   "name": "Pitchside Empire",
   "alias": [],
   "pop": 0,
@@ -43376,6 +43339,17 @@
   ]
  },
  {
+  "name": "Pragma Twice",
+  "alias": [],
+  "pop": 0,
+  "p": [
+   "pc"
+  ],
+  "g": [
+   "Simulator"
+  ]
+ },
+ {
   "name": "Prehistoric Adventure",
   "alias": [
    "PrehistoricAdventure.exe"
@@ -43957,21 +43931,6 @@
   ]
  },
  {
-  "name": "Proton & Electron",
-  "alias": [
-   "ProtonElectron.exe"
-  ],
-  "pop": 0,
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Platform",
-   "Puzzle",
-   "Adventure"
-  ]
- },
- {
   "name": "Province: Suroste",
   "alias": [
    "province_suroste.exe"
@@ -43997,19 +43956,6 @@
   ],
   "g": [
    "Indie"
-  ]
- },
- {
-  "name": "Proxxy",
-  "alias": [
-   "PROXXY"
-  ],
-  "pop": 0,
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Adventure"
   ]
  },
  {
@@ -47434,6 +47380,19 @@
   ]
  },
  {
+  "name": "Salt of the Earth",
+  "alias": [],
+  "pop": 0,
+  "p": [
+   "pc"
+  ],
+  "g": [
+   "Simulator",
+   "Strategy",
+   "Indie"
+  ]
+ },
+ {
   "name": "Salvation Denied",
   "alias": [],
   "pop": 0,
@@ -47572,6 +47531,17 @@
   ]
  },
  {
+  "name": "Santa's Burnout",
+  "alias": [],
+  "pop": 0,
+  "p": [
+   "pc"
+  ],
+  "g": [
+   "Indie"
+  ]
+ },
+ {
   "name": "Satawn",
   "alias": [
    "satawn.exe"
@@ -47636,20 +47606,6 @@
    "Sport",
    "Indie",
    "Arcade"
-  ]
- },
- {
-  "name": "Saved by the Coupon",
-  "alias": [
-   "Saved by the Coupon.exe"
-  ],
-  "pop": 0,
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Simulator",
-   "Indie"
   ]
  },
  {
@@ -48729,22 +48685,6 @@
   ]
  },
  {
-  "name": "Shards of Order",
-  "alias": [
-   "ShardsOfOrder.exe"
-  ],
-  "pop": 0,
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Role-playing (RPG)",
-   "Strategy",
-   "Adventure",
-   "Indie"
-  ]
- },
- {
   "name": "Shared RC",
   "alias": [],
   "pop": 0,
@@ -49659,17 +49599,16 @@
   ]
  },
  {
-  "name": "Sir, We Have an Orc Problem",
+  "name": "Sir Galgano: A Medieval Tale",
   "alias": [
-   "swhaop.exe"
+   "Sir Galgano - A Medieval Tale.exe"
   ],
   "pop": 0,
   "p": [
    "pc"
   ],
   "g": [
-   "Simulator",
-   "Strategy",
+   "Adventure",
    "Indie"
   ]
  },
@@ -49902,19 +49841,6 @@
   ],
   "g": [
    "Adventure"
-  ]
- },
- {
-  "name": "Skyward Bastion",
-  "alias": [],
-  "pop": 0,
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Strategy",
-   "Tactical",
-   "Indie"
   ]
  },
  {
@@ -50615,6 +50541,20 @@
   ]
  },
  {
+  "name": "So Close",
+  "alias": [
+   "Proxxy",
+   "SO CLOSE"
+  ],
+  "pop": 0,
+  "p": [
+   "pc"
+  ],
+  "g": [
+   "Adventure"
+  ]
+ },
+ {
   "name": "Sobakistan: The Land of Dogs",
   "alias": [
    "Собакистан"
@@ -51014,6 +50954,19 @@
   ]
  },
  {
+  "name": "Soul Chained",
+  "alias": [],
+  "pop": 0,
+  "p": [
+   "pc"
+  ],
+  "g": [
+   "Role-playing (RPG)",
+   "Adventure",
+   "Indie"
+  ]
+ },
+ {
   "name": "Soul Descent: Invade of Ether",
   "alias": [],
   "pop": 0,
@@ -51282,20 +51235,6 @@
   ],
   "g": [
    "Simulator"
-  ]
- },
- {
-  "name": "Space Imperia 4X",
-  "alias": [
-   "Space Empires 4X",
-   "Space Empires.exe"
-  ],
-  "pop": 0,
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Strategy"
   ]
  },
  {
@@ -51610,17 +51549,6 @@
   "g": [
    "Simulator",
    "Strategy"
-  ]
- },
- {
-  "name": "Spellsy",
-  "alias": [],
-  "pop": 0,
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Indie"
   ]
  },
  {
@@ -53121,6 +53049,23 @@
   ]
  },
  {
+  "name": "Suicide Mr. Fury",
+  "alias": [
+   "倪帝蔷决定去死"
+  ],
+  "pop": 0,
+  "p": [
+   "pc"
+  ],
+  "g": [
+   "Puzzle",
+   "Role-playing (RPG)",
+   "Adventure",
+   "Indie",
+   "Visual Novel"
+  ]
+ },
+ {
   "name": "Suika Pets",
   "alias": [
    "SuikaPets.exe"
@@ -53197,20 +53142,6 @@
    "Role-playing (RPG)",
    "Strategy",
    "Indie"
-  ]
- },
- {
-  "name": "Suncraft",
-  "alias": [
-   "Suncraft.exe"
-  ],
-  "pop": 0,
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Simulator",
-   "Adventure"
   ]
  },
  {
@@ -53536,6 +53467,14 @@
   ]
  },
  {
+  "name": "Supply Line",
+  "alias": [],
+  "pop": 0,
+  "p": [
+   "console"
+  ]
+ },
+ {
   "name": "Sura: Shattered Star",
   "alias": [],
   "pop": 0,
@@ -53849,6 +53788,18 @@
    "Simulator",
    "Strategy",
    "Adventure",
+   "Indie"
+  ]
+ },
+ {
+  "name": "Syntax: Overload",
+  "alias": [],
+  "pop": 0,
+  "p": [
+   "pc"
+  ],
+  "g": [
+   "Strategy",
    "Indie"
   ]
  },
@@ -55177,7 +55128,7 @@
   "alias": [
    "Dawnwalker.exe"
   ],
-  "pop": 10,
+  "pop": 11,
   "p": [
    "pc",
    "console"
@@ -57266,6 +57217,21 @@
   ]
  },
  {
+  "name": "The Patient: Can You Escape?",
+  "alias": [
+   "The Patient - can you escape?"
+  ],
+  "pop": 0,
+  "p": [
+   "pc"
+  ],
+  "g": [
+   "Puzzle",
+   "Adventure",
+   "Indie"
+  ]
+ },
+ {
   "name": "The Person Living Next Door",
   "alias": [],
   "pop": 0,
@@ -57584,18 +57550,6 @@
   "g": [
    "Platform",
    "Adventure",
-   "Indie"
-  ]
- },
- {
-  "name": "The Secret of Weepstone",
-  "alias": [],
-  "pop": 0,
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Role-playing (RPG)",
    "Indie"
   ]
  },
@@ -58439,6 +58393,21 @@
   ]
  },
  {
+  "name": "Three Verses3",
+  "alias": [
+   "THREE VERSES³"
+  ],
+  "pop": 0,
+  "p": [
+   "pc"
+  ],
+  "g": [
+   "Role-playing (RPG)",
+   "Adventure",
+   "Indie"
+  ]
+ },
+ {
   "name": "Threshold Warden",
   "alias": [],
   "pop": 0,
@@ -58790,6 +58759,20 @@
   "g": [
    "Platform",
    "Adventure"
+  ]
+ },
+ {
+  "name": "Tiny Bakery",
+  "alias": [
+   "Tiny Bakery.exe"
+  ],
+  "pop": 0,
+  "p": [
+   "pc"
+  ],
+  "g": [
+   "Simulator",
+   "Indie"
   ]
  },
  {
@@ -59445,6 +59428,18 @@
   ],
   "g": [
    "Adventure",
+   "Indie"
+  ]
+ },
+ {
+  "name": "Tower's Gate",
+  "alias": [],
+  "pop": 0,
+  "p": [
+   "pc"
+  ],
+  "g": [
+   "Role-playing (RPG)",
    "Indie"
   ]
  },
@@ -60150,6 +60145,14 @@
    "Role-playing (RPG)",
    "Simulator",
    "Adventure"
+  ]
+ },
+ {
+  "name": "Trump Savings Tycoon",
+  "alias": [],
+  "pop": 0,
+  "p": [
+   "console"
   ]
  },
  {
@@ -61718,6 +61721,24 @@
   ]
  },
  {
+  "name": "Veterum",
+  "alias": [
+   "veterum.exe"
+  ],
+  "pop": 0,
+  "p": [
+   "pc"
+  ],
+  "g": [
+   "Role-playing (RPG)",
+   "Strategy",
+   "Turn-based strategy (TBS)",
+   "Tactical",
+   "Adventure",
+   "Indie"
+  ]
+ },
+ {
   "name": "Vexlands",
   "alias": [],
   "pop": 0,
@@ -61866,18 +61887,6 @@
   ],
   "g": [
    "Simulator",
-   "Indie"
-  ]
- },
- {
-  "name": "Vignettes: The Dream City",
-  "alias": [],
-  "pop": 0,
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Role-playing (RPG)",
    "Indie"
   ]
  },
@@ -62291,21 +62300,6 @@
   "p": [
    "pc",
    "console"
-  ]
- },
- {
-  "name": "Waifu Wars Online",
-  "alias": [
-   "WAIFU WARS ONLINE"
-  ],
-  "pop": 0,
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Shooter",
-   "Role-playing (RPG)",
-   "Indie"
   ]
  },
  {
@@ -63126,20 +63120,6 @@
   ],
   "g": [
    "Simulator",
-   "Adventure",
-   "Indie"
-  ]
- },
- {
-  "name": "Where We Used to Play",
-  "alias": [
-   "Where we used to play.exe"
-  ],
-  "pop": 0,
-  "p": [
-   "pc"
-  ],
-  "g": [
    "Adventure",
    "Indie"
   ]
@@ -64978,20 +64958,6 @@
   "g": [
    "Hack and slash/Beat 'em up",
    "Adventure",
-   "Indie"
-  ]
- },
- {
-  "name": "Zwamman",
-  "alias": [
-   "Zwamman.exe"
-  ],
-  "pop": 0,
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Puzzle",
    "Indie"
   ]
  },
