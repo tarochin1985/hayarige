@@ -1129,6 +1129,17 @@
   ]
  },
  {
+  "name": "Abductables",
+  "alias": [],
+  "pop": 0,
+  "p": [
+   "pc"
+  ],
+  "g": [
+   "Arcade"
+  ]
+ },
+ {
   "name": "Aberrate Inc.",
   "alias": [],
   "pop": 0,
@@ -6437,6 +6448,17 @@
   ]
  },
  {
+  "name": "Blobby and the Milkshake",
+  "alias": [],
+  "pop": 0,
+  "p": [
+   "pc"
+  ],
+  "g": [
+   "Platform"
+  ]
+ },
+ {
   "name": "Block Block Block",
   "alias": [
    "BlockBlockBlock.exe"
@@ -9926,21 +9948,6 @@
   ]
  },
  {
-  "name": "Chop Chop for the Old God",
-  "alias": [
-   "CHOP CHOP FOR THE OLD GOD"
-  ],
-  "pop": 0,
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Simulator",
-   "Adventure",
-   "Indie"
-  ]
- },
- {
   "name": "Choppa: Rescue Rivals",
   "alias": [
    "Rescue Choppas",
@@ -12131,20 +12138,6 @@
    "Adventure",
    "Indie",
    "Arcade"
-  ]
- },
- {
-  "name": "Crime Scene Clean: Paranormal",
-  "alias": [],
-  "pop": 0,
-  "p": [
-   "pc",
-   "console"
-  ],
-  "g": [
-   "Simulator",
-   "Adventure",
-   "Indie"
   ]
  },
  {
@@ -14488,20 +14481,6 @@
   ]
  },
  {
-  "name": "Delucid",
-  "alias": [
-   "DELUCID"
-  ],
-  "pop": 0,
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Adventure",
-   "Indie"
-  ]
- },
- {
   "name": "Deluge: Raintime",
   "alias": [],
   "pop": 0,
@@ -16755,19 +16734,6 @@
   ]
  },
  {
-  "name": "Dream Village",
-  "alias": [],
-  "pop": 0,
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Simulator",
-   "Adventure",
-   "Indie"
-  ]
- },
- {
   "name": "DreamEcho",
   "alias": [
    "DreamEchoes.exe",
@@ -18458,6 +18424,17 @@
   ]
  },
  {
+  "name": "Eggstreme Farming",
+  "alias": [],
+  "pop": 0,
+  "p": [
+   "pc"
+  ],
+  "g": [
+   "Indie"
+  ]
+ },
+ {
   "name": "Eggventure",
   "alias": [
    "Eggventure.exe"
@@ -18847,6 +18824,18 @@
   "g": [
    "Puzzle",
    "Adventure",
+   "Indie"
+  ]
+ },
+ {
+  "name": "Endless Mall",
+  "alias": [],
+  "pop": 0,
+  "p": [
+   "pc"
+  ],
+  "g": [
+   "Strategy",
    "Indie"
   ]
  },
@@ -19332,7 +19321,9 @@
  },
  {
   "name": "Eternal Levels",
-  "alias": [],
+  "alias": [
+   "Game.exe"
+  ],
   "pop": 0,
   "p": [
    "pc"
@@ -19688,7 +19679,9 @@
  },
  {
   "name": "Explorers of Palan",
-  "alias": [],
+  "alias": [
+   "Game.exe"
+  ],
   "pop": 0,
   "p": [
    "pc"
@@ -20292,23 +20285,6 @@
   ]
  },
  {
-  "name": "Farming & Defense: Farmfence",
-  "alias": [
-   "Farmfence",
-   "Supermarket Farming Defence - Farmfence",
-   "Farming & Defense - Farmfence"
-  ],
-  "pop": 0,
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Shooter",
-   "Simulator",
-   "Adventure"
-  ]
- },
- {
   "name": "Farming Camp",
   "alias": [],
   "pop": 0,
@@ -20788,6 +20764,18 @@
  },
  {
   "name": "Finally a Florist",
+  "alias": [],
+  "pop": 0,
+  "p": [
+   "pc"
+  ],
+  "g": [
+   "Point-and-click",
+   "Indie"
+  ]
+ },
+ {
+  "name": "Find All 10: Greece",
   "alias": [],
   "pop": 0,
   "p": [
@@ -24436,6 +24424,18 @@
   ]
  },
  {
+  "name": "Graven",
+  "alias": [],
+  "pop": 0,
+  "p": [
+   "pc"
+  ],
+  "g": [
+   "Point-and-click",
+   "Role-playing (RPG)"
+  ]
+ },
+ {
   "name": "Graveyard Keeper II",
   "alias": [
    "Graveyard Keeper 2"
@@ -26634,6 +26634,14 @@
   ]
  },
  {
+  "name": "Hold the Dawn",
+  "alias": [],
+  "pop": 0,
+  "p": [
+   "pc"
+  ]
+ },
+ {
   "name": "Hole Is Mine",
   "alias": [],
   "pop": 0,
@@ -26730,6 +26738,14 @@
   ],
   "g": [
    "Adventure"
+  ]
+ },
+ {
+  "name": "Hollow Parish: Dead Frequency",
+  "alias": [],
+  "pop": 0,
+  "p": [
+   "pc"
   ]
  },
  {
@@ -27342,6 +27358,18 @@
   ],
   "g": [
    "Adventure",
+   "Indie"
+  ]
+ },
+ {
+  "name": "Hug & Betray",
+  "alias": [],
+  "pop": 0,
+  "p": [
+   "pc"
+  ],
+  "g": [
+   "Strategy",
    "Indie"
   ]
  },
@@ -28835,18 +28863,6 @@
   ]
  },
  {
-  "name": "Internet Cafe 98",
-  "alias": [],
-  "pop": 0,
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Point-and-click",
-   "Indie"
-  ]
- },
- {
   "name": "Internet Survivor Survivors",
   "alias": [
    "ISS.exe"
@@ -29959,19 +29975,6 @@
   "pop": 0,
   "p": [
    "console"
-  ]
- },
- {
-  "name": "Kafak",
-  "alias": [
-   "KAFAK"
-  ],
-  "pop": 0,
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Indie"
   ]
  },
  {
@@ -31475,6 +31478,14 @@
   ]
  },
  {
+  "name": "Last Train to Yotsuya",
+  "alias": [],
+  "pop": 0,
+  "p": [
+   "pc"
+  ]
+ },
+ {
   "name": "LastStanding",
   "alias": [],
   "pop": 0,
@@ -32243,7 +32254,9 @@
  },
  {
   "name": "Liminal Space Holiday",
-  "alias": [],
+  "alias": [
+   "Liminal Space Holiday.exe"
+  ],
   "pop": 0,
   "p": [
    "pc"
@@ -32745,20 +32758,6 @@
   ]
  },
  {
-  "name": "Loot And Defend",
-  "alias": [],
-  "pop": 0,
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Role-playing (RPG)",
-   "Strategy",
-   "Adventure",
-   "Indie"
-  ]
- },
- {
   "name": "Loot Before the Law",
   "alias": [],
   "pop": 0,
@@ -33178,18 +33177,6 @@
   ]
  },
  {
-  "name": "Lounge Café",
-  "alias": [],
-  "pop": 0,
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Simulator",
-   "Indie"
-  ]
- },
- {
   "name": "Love All My Girls",
   "alias": [],
   "pop": 0,
@@ -33343,6 +33330,14 @@
   "g": [
    "Strategy",
    "Indie"
+  ]
+ },
+ {
+  "name": "Ludus Deceptor",
+  "alias": [],
+  "pop": 0,
+  "p": [
+   "pc"
   ]
  },
  {
@@ -33746,7 +33741,7 @@
  {
   "name": "Mafia: The Old Country - Man of Honor",
   "alias": [],
-  "pop": 0,
+  "pop": 5,
   "p": [
    "pc",
    "console"
@@ -34212,6 +34207,9 @@
   "p": [
    "pc",
    "console"
+  ],
+  "g": [
+   "Platform"
   ]
  },
  {
@@ -36954,18 +36952,6 @@
   ]
  },
  {
-  "name": "Mount Noire",
-  "alias": [],
-  "pop": 0,
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Adventure",
-   "Indie"
-  ]
- },
- {
   "name": "Mournight",
   "alias": [],
   "pop": 0,
@@ -39057,6 +39043,14 @@
   ]
  },
  {
+  "name": "Oath of Stigmata",
+  "alias": [],
+  "pop": 0,
+  "p": [
+   "pc"
+  ]
+ },
+ {
   "name": "Oathwood Realms",
   "alias": [],
   "pop": 0,
@@ -39964,18 +39958,6 @@
   "g": [
    "Simulator",
    "Adventure",
-   "Indie"
-  ]
- },
- {
-  "name": "Only Tactics",
-  "alias": [],
-  "pop": 0,
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Strategy",
    "Indie"
   ]
  },
@@ -41635,6 +41617,21 @@
   "g": [
    "Point-and-click",
    "Simulator",
+   "Adventure",
+   "Indie"
+  ]
+ },
+ {
+  "name": "Pencils Down",
+  "alias": [
+   "PENCILS DOWN"
+  ],
+  "pop": 0,
+  "p": [
+   "pc"
+  ],
+  "g": [
+   "Quiz/Trivia",
    "Adventure",
    "Indie"
   ]
@@ -45741,7 +45738,7 @@
   "alias": [
    "Resonance.exe"
   ],
-  "pop": 26,
+  "pop": 25,
   "p": [
    "pc",
    "console"
@@ -47042,6 +47039,21 @@
   ]
  },
  {
+  "name": "Ruin",
+  "alias": [
+   "Ruin.exe"
+  ],
+  "pop": 0,
+  "p": [
+   "pc"
+  ],
+  "g": [
+   "Role-playing (RPG)",
+   "Adventure",
+   "Indie"
+  ]
+ },
+ {
   "name": "Rules of Alchemy",
   "alias": [],
   "pop": 0,
@@ -47568,17 +47580,6 @@
   ]
  },
  {
-  "name": "Santa's Burnout",
-  "alias": [],
-  "pop": 0,
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Indie"
-  ]
- },
- {
   "name": "Satawn",
   "alias": [
    "satawn.exe"
@@ -47740,19 +47741,6 @@
   "g": [
    "Role-playing (RPG)",
    "Adventure",
-   "Indie"
-  ]
- },
- {
-  "name": "Scicry",
-  "alias": [
-   "SCICRY"
-  ],
-  "pop": 0,
-  "p": [
-   "pc"
-  ],
-  "g": [
    "Indie"
   ]
  },
@@ -48288,18 +48276,6 @@
   ],
   "g": [
    "Role-playing (RPG)",
-   "Adventure",
-   "Indie"
-  ]
- },
- {
-  "name": "Sepium",
-  "alias": [],
-  "pop": 0,
-  "p": [
-   "pc"
-  ],
-  "g": [
    "Adventure",
    "Indie"
   ]
@@ -49730,18 +49706,6 @@
   "pop": 0,
   "p": [
    "pc"
-  ]
- },
- {
-  "name": "SkyRen",
-  "alias": [],
-  "pop": 0,
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Racing",
-   "Indie"
   ]
  },
  {
@@ -57464,6 +57428,14 @@
   ]
  },
  {
+  "name": "The Rhapsody of Zephyr Remastered",
+  "alias": [],
+  "pop": 0,
+  "p": [
+   "pc"
+  ]
+ },
+ {
   "name": "The Ripe Blood Anthology: This World Is Just for the Two of Us",
   "alias": [],
   "pop": 0,
@@ -58733,6 +58705,14 @@
   ]
  },
  {
+  "name": "Tinker's Nook",
+  "alias": [],
+  "pop": 0,
+  "p": [
+   "pc"
+  ]
+ },
+ {
   "name": "Tiny Bakery",
   "alias": [
    "Tiny Bakery.exe"
@@ -59265,7 +59245,8 @@
  {
   "name": "Tough Cat",
   "alias": [
-   "硬汉猫猫"
+   "硬汉猫猫",
+   "硬汉猫猫.exe"
   ],
   "pop": 0,
   "p": [
@@ -59273,6 +59254,7 @@
   ],
   "g": [
    "Shooter",
+   "Adventure",
    "Indie"
   ]
  },
@@ -60562,7 +60544,9 @@
  },
  {
   "name": "Ultradimensional",
-  "alias": [],
+  "alias": [
+   "Utradimensional.exe"
+  ],
   "pop": 0,
   "p": [
    "pc"
@@ -63547,19 +63531,6 @@
   ]
  },
  {
-  "name": "Wing-It",
-  "alias": [
-   "WING-IT"
-  ],
-  "pop": 0,
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Indie"
-  ]
- },
- {
   "name": "Wingmine",
   "alias": [
    "WINGMINE"
@@ -64008,6 +63979,17 @@
   ]
  },
  {
+  "name": "Words of Power",
+  "alias": [],
+  "pop": 0,
+  "p": [
+   "pc"
+  ],
+  "g": [
+   "Indie"
+  ]
+ },
+ {
   "name": "Work In Progress",
   "alias": [
    "WIP"
@@ -64073,19 +64055,6 @@
   "g": [
    "Strategy",
    "Card & Board Game"
-  ]
- },
- {
-  "name": "World Without Time",
-  "alias": [],
-  "pop": 0,
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Puzzle",
-   "Role-playing (RPG)",
-   "Adventure"
   ]
  },
  {
