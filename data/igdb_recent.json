@@ -3608,19 +3608,6 @@
   ]
  },
  {
-  "name": "Archon Soul",
-  "alias": [
-   "Archon Soul.exe"
-  ],
-  "pop": 0,
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Strategy"
-  ]
- },
- {
   "name": "Ardenfall",
   "alias": [],
   "pop": 0,
@@ -3898,6 +3885,24 @@
   ]
  },
  {
+  "name": "Asgard's Fall: Viking Survivors",
+  "alias": [
+   "Asgard's Fall",
+   "阿斯加德的陨落",
+   "阿斯加德的陨落",
+   "AsgardsFall.exe"
+  ],
+  "pop": 0,
+  "p": [
+   "pc"
+  ],
+  "g": [
+   "Role-playing (RPG)",
+   "Adventure",
+   "Indie"
+  ]
+ },
+ {
   "name": "Ashen Vow",
   "alias": [],
   "pop": 0,
@@ -3913,6 +3918,23 @@
  {
   "name": "Ashes of Kardoria",
   "alias": [],
+  "pop": 0,
+  "p": [
+   "pc"
+  ],
+  "g": [
+   "Role-playing (RPG)",
+   "Adventure",
+   "Indie"
+  ]
+ },
+ {
+  "name": "Ashes of Paradise",
+  "alias": [
+   "Ashes of Paradise: Aetherion",
+   "AoP",
+   "AshesOfParadise.exe"
+  ],
   "pop": 0,
   "p": [
    "pc"
@@ -5300,6 +5322,21 @@
   ]
  },
  {
+  "name": "BeaterCore",
+  "alias": [
+   "beaterCore",
+   "beaterCore.exe"
+  ],
+  "pop": 0,
+  "p": [
+   "pc"
+  ],
+  "g": [
+   "Racing",
+   "Indie"
+  ]
+ },
+ {
   "name": "Beats of Un'sonia",
   "alias": [
    "Beats Of Un'sonia.exe"
@@ -5309,21 +5346,6 @@
    "pc"
   ],
   "g": [
-   "Indie"
-  ]
- },
- {
-  "name": "Become",
-  "alias": [
-   "BeCum: A Sperm's Journey"
-  ],
-  "pop": 0,
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Racing",
-   "Adventure",
    "Indie"
   ]
  },
@@ -5465,20 +5487,6 @@
   ]
  },
  {
-  "name": "Below, Rusted Gods",
-  "alias": [
-   "BelowRustedGods-Win64-Shipping.exe"
-  ],
-  "pop": 0,
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Adventure",
-   "Indie"
-  ]
- },
- {
   "name": "Ben's Zombie Apocalypse",
   "alias": [
    "Ben's Zombie Odyssey"
@@ -5563,7 +5571,8 @@
  {
   "name": "Between Adventures Idle",
   "alias": [
-   "Between Adventures IDLE"
+   "Between Adventures IDLE",
+   "Between Adventures IDLE.exe"
   ],
   "pop": 0,
   "p": [
@@ -5736,6 +5745,8 @@
    "pc"
   ],
   "g": [
+   "Simulator",
+   "Strategy",
    "Indie"
   ]
  },
@@ -5895,7 +5906,7 @@
   "alias": [
    "Bills Must Be Paid.exe"
   ],
-  "pop": 0,
+  "pop": 5,
   "p": [
    "pc"
   ],
@@ -7953,6 +7964,14 @@
   ]
  },
  {
+  "name": "Build the Wall",
+  "alias": [],
+  "pop": 0,
+  "p": [
+   "console"
+  ]
+ },
+ {
   "name": "Building Relationships",
   "alias": [],
   "pop": 0,
@@ -8173,7 +8192,9 @@
  },
  {
   "name": "Bus Simulator 27",
-  "alias": [],
+  "alias": [
+   "BusSimulator27.exe"
+  ],
   "pop": 0,
   "p": [
    "pc",
@@ -8778,7 +8799,9 @@
  },
  {
   "name": "Card Revolution Soccer",
-  "alias": [],
+  "alias": [
+   "CardRevolutionSoccer.exe"
+  ],
   "pop": 0,
   "p": [
    "pc"
@@ -9160,7 +9183,9 @@
  },
  {
   "name": "Cat Me If You Can",
-  "alias": [],
+  "alias": [
+   "CatMeIfYouCan.exe"
+  ],
   "pop": 0,
   "p": [
    "pc",
@@ -9210,17 +9235,6 @@
   ]
  },
  {
-  "name": "Cata-Bomb",
-  "alias": [
-   "The Cata-Bomb"
-  ],
-  "pop": 0,
-  "p": [
-   "pc",
-   "console"
-  ]
- },
- {
   "name": "Cataclismo: The Old Kingdom",
   "alias": [],
   "pop": 0,
@@ -9235,7 +9249,8 @@
  {
   "name": "Catal Carta",
   "alias": [
-   "CATAL CARTA"
+   "CATAL CARTA",
+   "CatalCarta.exe"
   ],
   "pop": 0,
   "p": [
@@ -9661,6 +9676,22 @@
   ]
  },
  {
+  "name": "Cheated",
+  "alias": [
+   "CHEATED"
+  ],
+  "pop": 0,
+  "p": [
+   "pc"
+  ],
+  "g": [
+   "Simulator",
+   "Strategy",
+   "Adventure",
+   "Indie"
+  ]
+ },
+ {
   "name": "Check x Mate",
   "alias": [],
   "pop": 0,
@@ -9937,7 +9968,9 @@
  },
  {
   "name": "Chop Chop Together",
-  "alias": [],
+  "alias": [
+   "ChopChopTogetherSteam.exe"
+  ],
   "pop": 0,
   "p": [
    "pc"
@@ -10924,6 +10957,16 @@
   ]
  },
  {
+  "name": "Code: Terraform",
+  "alias": [
+   "code-terraform.exe"
+  ],
+  "pop": 0,
+  "p": [
+   "pc"
+  ]
+ },
+ {
   "name": "Codebreakers VR",
   "alias": [],
   "pop": 0,
@@ -11256,19 +11299,6 @@
   ]
  },
  {
-  "name": "Conquest: Global Domination",
-  "alias": [],
-  "pop": 0,
-  "p": [
-   "console"
-  ],
-  "g": [
-   "Simulator",
-   "Strategy",
-   "Card & Board Game"
-  ]
- },
- {
   "name": "Console Archives: Bubble Bobble",
   "alias": [
    "Console Archives BUBBLE BOBBLE"
@@ -11420,14 +11450,6 @@
   ]
  },
  {
-  "name": "CookieRun: Crumble - Idle RPG",
-  "alias": [],
-  "pop": 0,
-  "g": [
-   "Role-playing (RPG)"
-  ]
- },
- {
   "name": "Cooking Tycoons: 3 in 1 Bundle - Silver Edition",
   "alias": [],
   "pop": 0,
@@ -11455,6 +11477,19 @@
   "pop": 0,
   "p": [
    "pc"
+  ]
+ },
+ {
+  "name": "Cordels & Spells",
+  "alias": [],
+  "pop": 0,
+  "p": [
+   "pc",
+   "console"
+  ],
+  "g": [
+   "Adventure",
+   "Indie"
   ]
  },
  {
@@ -11573,7 +11608,9 @@
  },
  {
   "name": "Cosmic Fear",
-  "alias": [],
+  "alias": [
+   "CosmicFear-Win64-Shipping.exe"
+  ],
   "pop": 0,
   "p": [
    "pc"
@@ -12275,17 +12312,6 @@
   ]
  },
  {
-  "name": "Cristal Absoluto",
-  "alias": [],
-  "pop": 0,
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Role-playing (RPG)"
-  ]
- },
- {
   "name": "Critias Empire",
   "alias": [],
   "pop": 0,
@@ -12379,6 +12405,19 @@
   "g": [
    "Adventure",
    "Visual Novel"
+  ]
+ },
+ {
+  "name": "Crosstalk",
+  "alias": [],
+  "pop": 0,
+  "p": [
+   "pc"
+  ],
+  "g": [
+   "Simulator",
+   "Strategy",
+   "Indie"
   ]
  },
  {
@@ -12727,6 +12766,20 @@
   "g": [
    "Platform",
    "Adventure"
+  ]
+ },
+ {
+  "name": "Curse of Pirates",
+  "alias": [
+   "Curse Of Pirates.exe"
+  ],
+  "pop": 0,
+  "p": [
+   "pc"
+  ],
+  "g": [
+   "Role-playing (RPG)",
+   "Indie"
   ]
  },
  {
@@ -13383,18 +13436,6 @@
   "g": [
    "Puzzle",
    "Indie"
-  ]
- },
- {
-  "name": "Dao Zhi Hua Yin",
-  "alias": [],
-  "pop": 0,
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Indie",
-   "Visual Novel"
   ]
  },
  {
@@ -14858,7 +14899,9 @@
  },
  {
   "name": "Desk Top Racer",
-  "alias": [],
+  "alias": [
+   "Desk Top Racer.exe"
+  ],
   "pop": 0,
   "p": [
    "pc"
@@ -15055,19 +15098,6 @@
    "Adventure",
    "Indie",
    "Visual Novel"
-  ]
- },
- {
-  "name": "Devils Due",
-  "alias": [],
-  "pop": 0,
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Simulator",
-   "Strategy",
-   "Indie"
   ]
  },
  {
@@ -15581,6 +15611,18 @@
   ]
  },
  {
+  "name": "Dirty Laundry",
+  "alias": [],
+  "pop": 0,
+  "p": [
+   "pc"
+  ],
+  "g": [
+   "Adventure",
+   "Indie"
+  ]
+ },
+ {
   "name": "Dirty Work",
   "alias": [],
   "pop": 0,
@@ -15679,6 +15721,20 @@
   "p": [
    "pc",
    "console"
+  ]
+ },
+ {
+  "name": "Disney Dreamlight Valley: The Keepsake Sea",
+  "alias": [],
+  "pop": 0,
+  "p": [
+   "pc",
+   "console"
+  ],
+  "g": [
+   "Role-playing (RPG)",
+   "Simulator",
+   "Adventure"
   ]
  },
  {
@@ -15845,17 +15901,6 @@
   ]
  },
  {
-  "name": "DoDoon",
-  "alias": [],
-  "pop": 0,
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Indie"
-  ]
- },
- {
   "name": "Doctrine: C.U.L.T.",
   "alias": [
    "DoctrineCULT.exe"
@@ -15881,17 +15926,6 @@
    "Strategy",
    "Turn-based strategy (TBS)",
    "Indie"
-  ]
- },
- {
-  "name": "Dog of Wisdom",
-  "alias": [],
-  "pop": 0,
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Platform"
   ]
  },
  {
@@ -15971,6 +16005,19 @@
    "Puzzle",
    "Strategy",
    "Indie"
+  ]
+ },
+ {
+  "name": "Dominus Gladiatus",
+  "alias": [],
+  "pop": 0,
+  "p": [
+   "pc",
+   "console"
+  ],
+  "g": [
+   "Simulator",
+   "Strategy"
   ]
  },
  {
@@ -16426,6 +16473,23 @@
   ],
   "g": [
    "Platform"
+  ]
+ },
+ {
+  "name": "Dragon Quest Heroes: Torneko‘s Mystery Dungeon Classic HD",
+  "alias": [
+   "Dragon Quest Heroes: Torneko‘s Mystery Dungeon -Classic HD-",
+   "TornekosMysteryDungeon.exe"
+  ],
+  "pop": 0,
+  "p": [
+   "pc",
+   "console"
+  ],
+  "g": [
+   "Role-playing (RPG)",
+   "Simulator",
+   "Strategy"
   ]
  },
  {
@@ -17166,22 +17230,6 @@
   ]
  },
  {
-  "name": "Duet Night Abyss: Paradise Prelude",
-  "alias": [],
-  "pop": 0,
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Fighting",
-   "Shooter",
-   "Platform",
-   "Role-playing (RPG)",
-   "Strategy",
-   "Adventure"
-  ]
- },
- {
   "name": "Dumb Dunks",
   "alias": [],
   "pop": 0,
@@ -17337,7 +17385,8 @@
  {
   "name": "Dungeon Settlers",
   "alias": [
-   "DS"
+   "DS",
+   "DungeonSettlers.exe"
   ],
   "pop": 0,
   "p": [
@@ -17577,20 +17626,6 @@
   ]
  },
  {
-  "name": "Dust Bunny Simulator",
-  "alias": [
-   "DustBunnySimulator.exe"
-  ],
-  "pop": 0,
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Simulator",
-   "Indie"
-  ]
- },
- {
   "name": "DustCrow",
   "alias": [
    "DUSTCROW"
@@ -17618,17 +17653,6 @@
    "Simulator",
    "Adventure",
    "Indie"
-  ]
- },
- {
-  "name": "Dverghold",
-  "alias": [],
-  "pop": 0,
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Role-playing (RPG)"
   ]
  },
  {
@@ -18062,19 +18086,6 @@
   "g": [
    "Adventure",
    "Visual Novel"
-  ]
- },
- {
-  "name": "Echoes of Egypt",
-  "alias": [
-   "Echoes of Egypt.exe"
-  ],
-  "pop": 0,
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Indie"
   ]
  },
  {
@@ -19935,6 +19946,18 @@
   ]
  },
  {
+  "name": "Factory Default: Build, Trade, Repeat",
+  "alias": [],
+  "pop": 0,
+  "p": [
+   "pc"
+  ],
+  "g": [
+   "Simulator",
+   "Indie"
+  ]
+ },
+ {
   "name": "Factory Time",
   "alias": [],
   "pop": 0,
@@ -20705,7 +20728,7 @@
   "alias": [
    "FieldsOfMistria.exe"
   ],
-  "pop": 13,
+  "pop": 12,
   "p": [
    "pc"
   ],
@@ -21370,6 +21393,18 @@
   ]
  },
  {
+  "name": "Flood With Friends",
+  "alias": [],
+  "pop": 0,
+  "p": [
+   "pc"
+  ],
+  "g": [
+   "Adventure",
+   "Indie"
+  ]
+ },
+ {
   "name": "Flooded Burials",
   "alias": [],
   "pop": 0,
@@ -21620,6 +21655,20 @@
   ]
  },
  {
+  "name": "Folklands",
+  "alias": [
+   "folklands.exe"
+  ],
+  "pop": 0,
+  "p": [
+   "pc"
+  ],
+  "g": [
+   "Simulator",
+   "Strategy"
+  ]
+ },
+ {
   "name": "Followers of Krow",
   "alias": [],
   "pop": 0,
@@ -21655,14 +21704,6 @@
    "Indie",
    "Arcade",
    "Card & Board Game"
-  ]
- },
- {
-  "name": "Foodie Blast: Block Puzzle",
-  "alias": [],
-  "pop": 0,
-  "g": [
-   "Puzzle"
   ]
  },
  {
@@ -22829,6 +22870,23 @@
    "pc"
   ],
   "g": [
+   "Strategy",
+   "Indie"
+  ]
+ },
+ {
+  "name": "Galactic Speed Legends",
+  "alias": [
+   "GalacticSpeedLegends.exe"
+  ],
+  "pop": 0,
+  "p": [
+   "pc"
+  ],
+  "g": [
+   "Racing",
+   "Simulator",
+   "Sport",
    "Strategy",
    "Indie"
   ]
@@ -24060,6 +24118,25 @@
   ],
   "g": [
    "Racing"
+  ]
+ },
+ {
+  "name": "Golden Swirl",
+  "alias": [
+   "黃金星漩",
+   "黄金星漩",
+   "Золотой Вихрь",
+   "GoldenSwirl.exe"
+  ],
+  "pop": 0,
+  "p": [
+   "pc"
+  ],
+  "g": [
+   "Role-playing (RPG)",
+   "Strategy",
+   "Adventure",
+   "Indie"
   ]
  },
  {
@@ -25352,7 +25429,8 @@
  {
   "name": "Halloween: The Game",
   "alias": [
-   "Halloween"
+   "Halloween",
+   "start_protected_game.exe"
   ],
   "pop": 0,
   "p": [
@@ -25796,6 +25874,7 @@
   ],
   "g": [
    "Real Time Strategy (RTS)",
+   "Simulator",
    "Strategy",
    "Indie"
   ]
@@ -26246,18 +26325,6 @@
   "g": [
    "Role-playing (RPG)",
    "Strategy",
-   "Indie"
-  ]
- },
- {
-  "name": "Heroes of Hammerwatch II: Celestial Ruins",
-  "alias": [],
-  "pop": 0,
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Role-playing (RPG)",
    "Indie"
   ]
  },
@@ -26830,7 +26897,8 @@
   "name": "Honeycomb: The World Beyond",
   "alias": [
    "蜂巢：异星物语",
-   "Honeycomb"
+   "Honeycomb",
+   "Honeycomb.exe"
   ],
   "pop": 0,
   "p": [
@@ -27304,7 +27372,7 @@
   "alias": [
    "How to Fish.exe"
   ],
-  "pop": 5,
+  "pop": 6,
   "p": [
    "pc"
   ],
@@ -28269,7 +28337,9 @@
  },
  {
   "name": "In Falsus",
-  "alias": [],
+  "alias": [
+   "infalsus.exe"
+  ],
   "pop": 0,
   "p": [
    "pc"
@@ -28986,7 +29056,9 @@
  },
  {
   "name": "Iron Wasteland",
-  "alias": [],
+  "alias": [
+   "Iron_Wasteland.exe"
+  ],
   "pop": 0,
   "p": [
    "pc"
@@ -30385,19 +30457,6 @@
   ]
  },
  {
-  "name": "Kill your Darlings",
-  "alias": [],
-  "pop": 0,
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Role-playing (RPG)",
-   "Simulator",
-   "Indie"
-  ]
- },
- {
   "name": "Killa",
   "alias": [],
   "pop": 0,
@@ -30747,6 +30806,20 @@
   ]
  },
  {
+  "name": "Kitty Kitty Bounce Bounce",
+  "alias": [
+   "KittyKitty BounceBounce",
+   "KittyKittyBounceBounce.exe"
+  ],
+  "pop": 0,
+  "p": [
+   "pc"
+  ],
+  "g": [
+   "Arcade"
+  ]
+ },
+ {
   "name": "Knights Province",
   "alias": [],
   "pop": 0,
@@ -30788,7 +30861,9 @@
  },
  {
   "name": "KnitBone",
-  "alias": [],
+  "alias": [
+   "knitbone.exe"
+  ],
   "pop": 0,
   "p": [
    "pc"
@@ -30987,20 +31062,6 @@
   ],
   "g": [
    "Strategy",
-   "Indie"
-  ]
- },
- {
-  "name": "Kubika",
-  "alias": [],
-  "pop": 0,
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Puzzle",
-   "Strategy",
-   "Adventure",
    "Indie"
   ]
  },
@@ -31408,6 +31469,7 @@
  {
   "name": "Last Pill Bar",
   "alias": [
+   "Last Pill Bar.exe",
    "[Bober Bros] Last Pill Bar"
   ],
   "pop": 0,
@@ -32155,22 +32217,6 @@
   ]
  },
  {
-  "name": "Lily Fantasia",
-  "alias": [
-   "LilyFantasia.exe"
-  ],
-  "pop": 0,
-  "p": [
-   "pc",
-   "console"
-  ],
-  "g": [
-   "Music",
-   "Role-playing (RPG)",
-   "Indie"
-  ]
- },
- {
   "name": "Lily's World XD",
   "alias": [
    "lily's world XD"
@@ -32406,6 +32452,18 @@
   "g": [
    "Platform",
    "Adventure",
+   "Indie"
+  ]
+ },
+ {
+  "name": "Little Ghosties",
+  "alias": [],
+  "pop": 0,
+  "p": [
+   "pc"
+  ],
+  "g": [
+   "Simulator",
    "Indie"
   ]
  },
@@ -33454,19 +33512,6 @@
   ]
  },
  {
-  "name": "Lunarium",
-  "alias": [],
-  "pop": 0,
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Role-playing (RPG)",
-   "Adventure",
-   "Indie"
-  ]
- },
- {
   "name": "Lunr.Rdio.Taxi",
   "alias": [
    "lunar.radio.taxi",
@@ -34144,21 +34189,6 @@
   ]
  },
  {
-  "name": "MandarinMastermind",
-  "alias": [
-   "MandarinMastermind.exe"
-  ],
-  "pop": 0,
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Role-playing (RPG)",
-   "Adventure",
-   "Indie"
-  ]
- },
- {
   "name": "Mandate Order",
   "alias": [
    "MOProject.exe"
@@ -34601,21 +34631,6 @@
    "pc"
   ],
   "g": [
-   "Strategy",
-   "Indie"
-  ]
- },
- {
-  "name": "Mattami Restaurant & Cafe Tycoon",
-  "alias": [
-   "Mattami.exe"
-  ],
-  "pop": 0,
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Simulator",
    "Strategy",
    "Indie"
   ]
@@ -35821,19 +35836,6 @@
   ]
  },
  {
-  "name": "MineGeon: Renegades",
-  "alias": [],
-  "pop": 0,
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Role-playing (RPG)",
-   "Adventure",
-   "Indie"
-  ]
- },
- {
   "name": "Minecraft Dungeons II",
   "alias": [
    "Minecraft Dungeons 2",
@@ -36200,21 +36202,6 @@
   ]
  },
  {
-  "name": "Mistfall Hunter",
-  "alias": [
-   "MistfallHunter.exe"
-  ],
-  "pop": 20,
-  "p": [
-   "pc",
-   "console"
-  ],
-  "g": [
-   "Role-playing (RPG)",
-   "Adventure"
-  ]
- },
- {
   "name": "Mistwilds",
   "alias": [],
   "pop": 0,
@@ -36306,6 +36293,20 @@
   "g": [
    "Role-playing (RPG)",
    "Simulator"
+  ]
+ },
+ {
+  "name": "Model Kit Shop Simulator",
+  "alias": [
+   "Model Kit Shop Simulator.exe"
+  ],
+  "pop": 0,
+  "p": [
+   "pc"
+  ],
+  "g": [
+   "Simulator",
+   "Indie"
   ]
  },
  {
@@ -36650,7 +36651,9 @@
  },
  {
   "name": "Moon Shop Simulator",
-  "alias": [],
+  "alias": [
+   "MoonShopSimulator.exe"
+  ],
   "pop": 0,
   "p": [
    "pc"
@@ -36885,7 +36888,7 @@
    "MortalShell2.exe",
    "Mortal Shell 2"
   ],
-  "pop": 15,
+  "pop": 16,
   "p": [
    "pc",
    "console"
@@ -37668,6 +37671,19 @@
   ]
  },
  {
+  "name": "Necrowhisper",
+  "alias": [],
+  "pop": 0,
+  "p": [
+   "pc"
+  ],
+  "g": [
+   "Simulator",
+   "Adventure",
+   "Indie"
+  ]
+ },
+ {
   "name": "Negative Time",
   "alias": [
    "Negative Time.exe"
@@ -38434,6 +38450,15 @@
   ]
  },
  {
+  "name": "No Man's Sky: Comos",
+  "alias": [],
+  "pop": 0,
+  "p": [
+   "pc",
+   "console"
+  ]
+ },
+ {
   "name": "No More Pesticide",
   "alias": [],
   "pop": 0,
@@ -38524,6 +38549,20 @@
   ],
   "g": [
    "Simulator",
+   "Indie"
+  ]
+ },
+ {
+  "name": "No Sheep Left Behind",
+  "alias": [
+   "no_sheep_left_behind.exe"
+  ],
+  "pop": 0,
+  "p": [
+   "pc"
+  ],
+  "g": [
+   "Adventure",
    "Indie"
   ]
  },
@@ -38950,7 +38989,9 @@
  },
  {
   "name": "Nuktedan: The Forgotten Emotions",
-  "alias": [],
+  "alias": [
+   "Nuktedan The Forgotten Emotions.exe"
+  ],
   "pop": 0,
   "p": [
    "pc"
@@ -39400,7 +39441,9 @@
  },
  {
   "name": "Olga: Episode 1",
-  "alias": [],
+  "alias": [
+   "Olga - Episode 1.exe"
+  ],
   "pop": 0,
   "p": [
    "pc"
@@ -39604,6 +39647,21 @@
   ],
   "g": [
    "Strategy"
+  ]
+ },
+ {
+  "name": "One More Tower",
+  "alias": [
+   "Defense Collapse"
+  ],
+  "pop": 0,
+  "p": [
+   "pc"
+  ],
+  "g": [
+   "Simulator",
+   "Strategy",
+   "Indie"
   ]
  },
  {
@@ -40073,6 +40131,17 @@
   ]
  },
  {
+  "name": "Operation: Black Genesis - The Immortal Trials",
+  "alias": [],
+  "pop": 0,
+  "p": [
+   "pc"
+  ],
+  "g": [
+   "Adventure"
+  ]
+ },
+ {
   "name": "Operation: Outbreak Idle",
   "alias": [],
   "pop": 0,
@@ -40225,7 +40294,9 @@
  },
  {
   "name": "Orc Incremental",
-  "alias": [],
+  "alias": [
+   "Orc Incremental.exe"
+  ],
   "pop": 0,
   "p": [
    "pc"
@@ -40466,28 +40537,6 @@
   "g": [
    "Shooter",
    "Arcade"
-  ]
- },
- {
-  "name": "Outclaw",
-  "alias": [],
-  "pop": 0,
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Platform",
-   "Strategy",
-   "Adventure",
-   "Indie"
-  ]
- },
- {
-  "name": "Outfield",
-  "alias": [],
-  "pop": 0,
-  "p": [
-   "pc"
   ]
  },
  {
@@ -41147,24 +41196,6 @@
   ]
  },
  {
-  "name": "Parry Counter",
-  "alias": [
-   "PARRY COUNTER",
-   "PARRY COUNTER / パリィカウンター",
-   "パリィカウンター",
-   "ParryCounter.exe"
-  ],
-  "pop": 0,
-  "jp": "パリィカウンター",
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Platform",
-   "Indie"
-  ]
- },
- {
   "name": "Party Pop Bubblyz",
   "alias": [
    "Bubblyz"
@@ -41448,6 +41479,7 @@
    "pc"
   ],
   "g": [
+   "Strategy",
    "Arcade"
   ]
  },
@@ -41585,7 +41617,10 @@
  },
  {
   "name": "Pegture",
-  "alias": [],
+  "alias": [
+   "PEGTURE",
+   "PEGTURE: Peg Solitaire Roguelike"
+  ],
   "pop": 0,
   "p": [
    "pc"
@@ -41768,7 +41803,9 @@
  },
  {
   "name": "Permaban",
-  "alias": [],
+  "alias": [
+   "Permaban.exe"
+  ],
   "pop": 0,
   "p": [
    "pc"
@@ -42013,20 +42050,6 @@
   ]
  },
  {
-  "name": "PhiloDeka",
-  "alias": [
-   "PhiloDeka.exe"
-  ],
-  "pop": 0,
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Strategy",
-   "Indie"
-  ]
- },
- {
   "name": "Piano at 5 am Encore",
   "alias": [
    "Piano at 5 a.m. Encore"
@@ -42196,6 +42219,14 @@
   ]
  },
  {
+  "name": "Pikmin 4: Nintendo Switch 2 Edition + Dandori Academy",
+  "alias": [],
+  "pop": 0,
+  "p": [
+   "console"
+  ]
+ },
+ {
   "name": "Pikmon Flower White",
   "alias": [],
   "pop": 0,
@@ -42251,6 +42282,19 @@
   "g": [
    "Simulator",
    "Strategy",
+   "Indie"
+  ]
+ },
+ {
+  "name": "Pinballers",
+  "alias": [
+   "Pinballers.exe"
+  ],
+  "pop": 0,
+  "p": [
+   "pc"
+  ],
+  "g": [
    "Indie"
   ]
  },
@@ -42318,7 +42362,9 @@
  },
  {
   "name": "Pit of Fears",
-  "alias": [],
+  "alias": [
+   "Pit of Fears.exe"
+  ],
   "pop": 0,
   "p": [
    "pc"
@@ -42388,6 +42434,20 @@
   ],
   "g": [
    "Simulator",
+   "Indie"
+  ]
+ },
+ {
+  "name": "Pizza of the Gods",
+  "alias": [
+   "Pizza_of_the_Gods.exe"
+  ],
+  "pop": 0,
+  "p": [
+   "pc"
+  ],
+  "g": [
+   "Adventure",
    "Indie"
   ]
  },
@@ -42973,17 +43033,6 @@
   ]
  },
  {
-  "name": "Polygon Mayhem",
-  "alias": [],
-  "pop": 0,
-  "p": [
-   "console"
-  ],
-  "g": [
-   "Puzzle"
-  ]
- },
- {
   "name": "Polylithic",
   "alias": [],
   "pop": 0,
@@ -43334,22 +43383,6 @@
   ]
  },
  {
-  "name": "Powerplay",
-  "alias": [
-   "powerplay.exe"
-  ],
-  "pop": 0,
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Real Time Strategy (RTS)",
-   "Simulator",
-   "Strategy",
-   "Indie"
-  ]
- },
- {
   "name": "Pozionista",
   "alias": [],
   "pop": 0,
@@ -43362,7 +43395,9 @@
  },
  {
   "name": "Pragma Twice",
-  "alias": [],
+  "alias": [
+   "pragma_twice.exe"
+  ],
   "pop": 0,
   "p": [
    "pc"
@@ -45536,19 +45571,6 @@
   ]
  },
  {
-  "name": "Remembrance",
-  "alias": [],
-  "pop": 0,
-  "p": [
-   "console"
-  ],
-  "g": [
-   "Puzzle",
-   "Adventure",
-   "Indie"
-  ]
- },
- {
   "name": "Remnants of Sin: Deck & Puzzle",
   "alias": [
    "Remnants of Sin"
@@ -46157,6 +46179,14 @@
   ]
  },
  {
+  "name": "Rio Run",
+  "alias": [],
+  "pop": 0,
+  "p": [
+   "console"
+  ]
+ },
+ {
   "name": "Rip N Ship Simulator",
   "alias": [],
   "pop": 0,
@@ -46296,20 +46326,6 @@
   "g": [
    "Puzzle",
    "Adventure",
-   "Indie"
-  ]
- },
- {
-  "name": "Rleotha: Trial of Gods",
-  "alias": [
-   "Rleotha.exe"
-  ],
-  "pop": 0,
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Strategy",
    "Indie"
   ]
  },
@@ -47140,17 +47156,6 @@
   ]
  },
  {
-  "name": "Runebook",
-  "alias": [],
-  "pop": 0,
-  "p": [
-   "console"
-  ],
-  "g": [
-   "Adventure"
-  ]
- },
- {
   "name": "Runic Rogues",
   "alias": [],
   "pop": 0,
@@ -47699,7 +47704,9 @@
  },
  {
   "name": "Scarlet Skips",
-  "alias": [],
+  "alias": [
+   "ScarletSkips.exe"
+  ],
   "pop": 0,
   "p": [
    "pc"
@@ -47733,7 +47740,9 @@
  },
  {
   "name": "Scavland",
-  "alias": [],
+  "alias": [
+   "Scavland.exe"
+  ],
   "pop": 0,
   "p": [
    "pc"
@@ -47798,22 +47807,6 @@
   ],
   "g": [
    "Adventure"
-  ]
- },
- {
-  "name": "Scottside",
-  "alias": [
-   "Game.exe"
-  ],
-  "pop": 0,
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Role-playing (RPG)",
-   "Adventure",
-   "Indie",
-   "Visual Novel"
   ]
  },
  {
@@ -47915,20 +47908,6 @@
  {
   "name": "Scum's Errand",
   "alias": [],
-  "pop": 0,
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Adventure",
-   "Indie"
-  ]
- },
- {
-  "name": "Scuttle",
-  "alias": [
-   "Scuttle.exe"
-  ],
   "pop": 0,
   "p": [
    "pc"
@@ -48250,18 +48229,6 @@
   ]
  },
  {
-  "name": "Separated",
-  "alias": [],
-  "pop": 0,
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Puzzle",
-   "Indie"
-  ]
- },
- {
   "name": "Sephiria",
   "alias": [
    "세피리아",
@@ -48401,7 +48368,9 @@
  },
  {
   "name": "Seven Blasphemies",
-  "alias": [],
+  "alias": [
+   "seven_blasphemies.exe"
+  ],
   "pop": 0,
   "p": [
    "pc"
@@ -50029,18 +49998,6 @@
   ]
  },
  {
-  "name": "Slimelon",
-  "alias": [],
-  "pop": 0,
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Indie",
-   "Arcade"
-  ]
- },
- {
   "name": "Slingbox",
   "alias": [],
   "pop": 0,
@@ -50367,20 +50324,6 @@
  {
   "name": "Sneaky Clean",
   "alias": [],
-  "pop": 0,
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Indie"
-  ]
- },
- {
-  "name": "Snekromancy",
-  "alias": [
-   "SnekromancY",
-   "snekromancy.exe"
-  ],
   "pop": 0,
   "p": [
    "pc"
@@ -50806,6 +50749,20 @@
   "g": [
    "Role-playing (RPG)",
    "Adventure"
+  ]
+ },
+ {
+  "name": "Sonic Pico Park",
+  "alias": [
+   "SONIC PICO PARK"
+  ],
+  "pop": 0,
+  "p": [
+   "pc",
+   "console"
+  ],
+  "g": [
+   "Puzzle"
   ]
  },
  {
@@ -51478,6 +51435,17 @@
   ]
  },
  {
+  "name": "Spellarium 14: Collector's Edition",
+  "alias": [],
+  "pop": 0,
+  "p": [
+   "pc"
+  ],
+  "g": [
+   "Indie"
+  ]
+ },
+ {
   "name": "Spellcast",
   "alias": [
    "SPELL_CAST.exe"
@@ -51732,6 +51700,7 @@
  {
   "name": "Sprawl Zero",
   "alias": [
+   "Silas.exe",
    "SPRAWL zero"
   ],
   "pop": 0,
@@ -51827,6 +51796,20 @@
   ],
   "g": [
    "Shooter",
+   "Indie"
+  ]
+ },
+ {
+  "name": "Squingle Arcade",
+  "alias": [
+   "Squingle Arcade.exe"
+  ],
+  "pop": 0,
+  "p": [
+   "console"
+  ],
+  "g": [
+   "Puzzle",
    "Indie"
   ]
  },
@@ -52351,6 +52334,20 @@
   ]
  },
  {
+  "name": "Stella",
+  "alias": [
+   "Stella.exe"
+  ],
+  "pop": 0,
+  "p": [
+   "pc"
+  ],
+  "g": [
+   "Strategy",
+   "Indie"
+  ]
+ },
+ {
   "name": "Stellar Breach",
   "alias": [],
   "pop": 0,
@@ -52390,6 +52387,19 @@
    "Adventure",
    "Indie",
    "Arcade"
+  ]
+ },
+ {
+  "name": "Step Theater",
+  "alias": [],
+  "pop": 0,
+  "p": [
+   "pc",
+   "console"
+  ],
+  "g": [
+   "Music",
+   "Indie"
   ]
  },
  {
@@ -53192,7 +53202,8 @@
  {
   "name": "Sunset Summit",
   "alias": [
-   "Rise"
+   "Rise",
+   "Sunset Summit.exe"
   ],
   "pop": 0,
   "p": [
@@ -54323,6 +54334,22 @@
   ]
  },
  {
+  "name": "Tangent",
+  "alias": [
+   "TANGENT",
+   "TANGENT v3.exe"
+  ],
+  "pop": 0,
+  "p": [
+   "pc"
+  ],
+  "g": [
+   "Platform",
+   "Racing",
+   "Indie"
+  ]
+ },
+ {
   "name": "Tank Brigade",
   "alias": [
    "Tank Brigade.exe"
@@ -54903,6 +54930,14 @@
   ],
   "g": [
    "Adventure"
+  ]
+ },
+ {
+  "name": "The Ascent: Ultimate Edition",
+  "alias": [],
+  "pop": 0,
+  "p": [
+   "console"
   ]
  },
  {
@@ -57314,7 +57349,9 @@
  },
  {
   "name": "The Quiet Flat",
-  "alias": [],
+  "alias": [
+   "TheQuietFlat.exe"
+  ],
   "pop": 0,
   "p": [
    "pc"
@@ -57595,7 +57632,7 @@
   "alias": [
    "TheSinkingCity2.exe"
   ],
-  "pop": 8,
+  "pop": 7,
   "p": [
    "pc",
    "console"
@@ -58296,7 +58333,9 @@
  },
  {
   "name": "Thousand Hells: The Underworld Heists",
-  "alias": [],
+  "alias": [
+   "ThousandHells.exe"
+  ],
   "pop": 0,
   "p": [
    "pc"
@@ -59742,7 +59781,9 @@
  },
  {
   "name": "TransGenDeer",
-  "alias": [],
+  "alias": [
+   "TransGenDeer.exe"
+  ],
   "pop": 0,
   "p": [
    "pc"
@@ -60061,7 +60102,8 @@
  {
   "name": "Trudge",
   "alias": [
-   "TRUDGE"
+   "TRUDGE",
+   "Trudge.exe"
   ],
   "pop": 0,
   "p": [
@@ -60396,6 +60438,22 @@
   ]
  },
  {
+  "name": "TwwwT: The Witches Who Weave Timelines",
+  "alias": [
+   "TwwwT",
+   "The Witches Who Weave Timelines",
+   "(TwwwT) The Witches Who Weave Timelines"
+  ],
+  "pop": 0,
+  "p": [
+   "pc"
+  ],
+  "g": [
+   "Indie",
+   "Arcade"
+  ]
+ },
+ {
   "name": "Type Ride",
   "alias": [],
   "pop": 0,
@@ -60692,7 +60750,9 @@
  },
  {
   "name": "Undying Flame",
-  "alias": [],
+  "alias": [
+   "Undying Flame.exe"
+  ],
   "pop": 0,
   "p": [
    "pc"
@@ -61221,7 +61281,7 @@
    "瓦爾海姆",
    "英灵神殿"
   ],
-  "pop": 297,
+  "pop": 298,
   "p": [
    "pc",
    "console"
@@ -61230,6 +61290,15 @@
    "Role-playing (RPG)",
    "Adventure",
    "Indie"
+  ]
+ },
+ {
+  "name": "Valheim: 1.0",
+  "alias": [],
+  "pop": 0,
+  "p": [
+   "pc",
+   "console"
   ]
  },
  {
@@ -61852,20 +61921,6 @@
   ]
  },
  {
-  "name": "Victor Space Program",
-  "alias": [
-   "VictorSpaceProgram.exe"
-  ],
-  "pop": 0,
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Role-playing (RPG)",
-   "Indie"
-  ]
- },
- {
   "name": "Video Game Menu: The Game",
   "alias": [],
   "pop": 0,
@@ -62334,7 +62389,10 @@
    "pc"
   ],
   "g": [
-   "Role-playing (RPG)"
+   "Role-playing (RPG)",
+   "Simulator",
+   "Strategy",
+   "Indie"
   ]
  },
  {
@@ -63025,6 +63083,21 @@
    "Racing",
    "Simulator",
    "Sport",
+   "Adventure",
+   "Indie"
+  ]
+ },
+ {
+  "name": "When We Arrive",
+  "alias": [
+   "When We Arrive.exe"
+  ],
+  "pop": 0,
+  "p": [
+   "pc"
+  ],
+  "g": [
+   "Role-playing (RPG)",
    "Adventure",
    "Indie"
   ]
@@ -63749,7 +63822,9 @@
  },
  {
   "name": "Wiz-herd",
-  "alias": [],
+  "alias": [
+   "Wizherd.exe"
+  ],
   "pop": 0,
   "p": [
    "pc"
@@ -63788,6 +63863,19 @@
   "pop": 0,
   "p": [
    "pc"
+  ]
+ },
+ {
+  "name": "Wobble Ops!",
+  "alias": [
+   "Wobble_Ops.exe"
+  ],
+  "pop": 0,
+  "p": [
+   "pc"
+  ],
+  "g": [
+   "Indie"
   ]
  },
  {
@@ -63876,18 +63964,6 @@
   "pop": 0,
   "p": [
    "console"
-  ]
- },
- {
-  "name": "Wong",
-  "alias": [],
-  "pop": 0,
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Adventure",
-   "Indie"
   ]
  },
  {
