@@ -1,8 +1,22 @@
 {
  "date": "2026-09-10",
- "generated": "2026-09-10 07:12",
+ "generated": "2026-09-10 11:15",
  "leads": {
   "events": [
+   {
+    "tag": "#ゲーム実況",
+    "channels": [
+     "CHECHE GAME【顔出し初見ゲーム実況】",
+     "SIANちゃんねる【ディズニー大好きVtuber】",
+     "Usagi Ch. 因幡兎",
+     "こじちゃんねる【小嶋明梨】",
+     "ぱんちき🥖🦃",
+     "エラch",
+     "ジョアだよ",
+     "儚視まちこVTuber Hakanashi Matiko",
+     "週刊少年ゲームマガジン230円"
+    ]
+   },
    {
     "tag": "#ストグラSeason2",
     "channels": [
@@ -14,18 +28,6 @@
      "天羽よつは",
      "影。/かげまる",
      "赤髪のとものゲーム実況チャンネル!!"
-    ]
-   },
-   {
-    "tag": "#ゲーム実況",
-    "channels": [
-     "CHECHE GAME【顔出し初見ゲーム実況】",
-     "SIANちゃんねる【ディズニー大好きVtuber】",
-     "Usagi Ch. 因幡兎",
-     "ぱんちき🥖🦃",
-     "エラch",
-     "ジョアだよ",
-     "儚視まちこVTuber Hakanashi Matiko"
     ]
    },
    {
@@ -93,23 +95,23 @@
   "wide": [
    {
     "game": "ストリートファイター6",
-    "channels": 36,
-    "videos": 50
+    "channels": 37,
+    "videos": 53
    },
    {
     "game": "Apex Legends",
     "channels": 29,
-    "videos": 38
+    "videos": 39
    },
    {
     "game": "Minecraft",
-    "channels": 21,
-    "videos": 22
+    "channels": 20,
+    "videos": 21
    },
    {
     "game": "Dead by Daylight",
-    "channels": 17,
-    "videos": 28
+    "channels": 16,
+    "videos": 26
    },
    {
     "game": "Rust",
@@ -134,6 +136,11 @@
   ]
  },
  "recent_columns": [
+  {
+   "date": "2026-09-10",
+   "game": "雀魂",
+   "headline": "牌を握る前に、まず自己紹介から"
+  },
   {
    "date": "2026-09-09",
    "game": "ゼルダの伝説 時のオカリナ",
@@ -198,11 +205,6 @@
    "date": "2026-08-28",
    "game": "Minecraft",
    "headline": "無関係な3つのマイクラ企画が重なり、夏休みの最後にマイクラが跳ねた"
-  },
-  {
-   "date": "2026-08-27",
-   "game": "ぷよぷよテトリス2",
-   "headline": "ホロライブの大会を控えて、メンバーがぷよぷよを教え合っている"
   }
  ]
 }
