@@ -465,7 +465,8 @@
   "g": [
    "Simulator",
    "Strategy",
-   "Indie"
+   "Indie",
+   "Arcade"
   ]
  },
  {
@@ -1815,13 +1816,16 @@
  },
  {
   "name": "Age of the Fallen",
-  "alias": [],
+  "alias": [
+   "AgeOfTheFallen.exe"
+  ],
   "pop": 0,
   "p": [
    "pc"
   ],
   "g": [
    "Shooter",
+   "Adventure",
    "Indie",
    "Arcade"
   ]
@@ -2693,6 +2697,18 @@
   "g": [
    "Simulator",
    "Adventure",
+   "Indie"
+  ]
+ },
+ {
+  "name": "An Ecospace of Epochs",
+  "alias": [],
+  "pop": 0,
+  "p": [
+   "pc"
+  ],
+  "g": [
+   "Simulator",
    "Indie"
   ]
  },
@@ -4134,6 +4150,9 @@
   "pop": 0,
   "p": [
    "console"
+  ],
+  "g": [
+   "Adventure"
   ]
  },
  {
@@ -5447,7 +5466,9 @@
  },
  {
   "name": "Beetleball",
-  "alias": [],
+  "alias": [
+   "Beetleball.exe"
+  ],
   "pop": 0,
   "p": [
    "pc"
@@ -5852,7 +5873,9 @@
  },
  {
   "name": "Big Breakfast 2",
-  "alias": [],
+  "alias": [
+   "Big Breakfast 2.exe"
+  ],
   "pop": 0,
   "p": [
    "pc"
@@ -9246,6 +9269,7 @@
    "pc"
   ],
   "g": [
+   "Music",
    "Sport",
    "Adventure",
    "Indie"
@@ -11842,6 +11866,9 @@
   "pop": 0,
   "p": [
    "console"
+  ],
+  "g": [
+   "Strategy"
   ]
  },
  {
@@ -16453,7 +16480,8 @@
   "g": [
    "Role-playing (RPG)",
    "Simulator",
-   "Strategy"
+   "Strategy",
+   "Adventure"
   ]
  },
  {
@@ -16587,22 +16615,6 @@
   ],
   "g": [
    "Role-playing (RPG)"
-  ]
- },
- {
-  "name": "Dramatic Road: The Origin of Wind",
-  "alias": [
-   "Dramatic Wind: The Origin of Wind",
-   "Dramatic Road the origin of wind.exe"
-  ],
-  "pop": 0,
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Role-playing (RPG)",
-   "Simulator",
-   "Strategy"
   ]
  },
  {
@@ -18177,7 +18189,9 @@
  },
  {
   "name": "Eco Volunteer",
-  "alias": [],
+  "alias": [
+   "Eco Volunteer.exe"
+  ],
   "pop": 0,
   "p": [
    "pc"
@@ -19069,6 +19083,11 @@
   "pop": 0,
   "p": [
    "console"
+  ],
+  "g": [
+   "Puzzle",
+   "Simulator",
+   "Adventure"
   ]
  },
  {
@@ -19745,7 +19764,8 @@
    "console"
   ],
   "g": [
-   "Role-playing (RPG)"
+   "Role-playing (RPG)",
+   "Adventure"
   ]
  },
  {
@@ -21296,6 +21316,10 @@
   "pop": 0,
   "p": [
    "console"
+  ],
+  "g": [
+   "Simulator",
+   "Adventure"
   ]
  },
  {
@@ -23535,6 +23559,10 @@
   "pop": 0,
   "p": [
    "console"
+  ],
+  "g": [
+   "Strategy",
+   "Indie"
   ]
  },
  {
@@ -24717,7 +24745,9 @@
  },
  {
   "name": "Grey Cloaks of Aron: The Sleeping Village",
-  "alias": [],
+  "alias": [
+   "Истории из Арона или че-то такое.exe"
+  ],
   "pop": 0,
   "p": [
    "pc"
@@ -25739,7 +25769,9 @@
  },
  {
   "name": "Hazard Pay",
-  "alias": [],
+  "alias": [
+   "hazard_pay.exe"
+  ],
   "pop": 0,
   "p": [
    "pc",
@@ -30326,6 +30358,20 @@
   ]
  },
  {
+  "name": "Kid Kirby Recreated",
+  "alias": [
+   "Kid Kirby Recreation"
+  ],
+  "pop": 0,
+  "p": [
+   "pc"
+  ],
+  "g": [
+   "Platform",
+   "Puzzle"
+  ]
+ },
+ {
   "name": "Kill Spewy",
   "alias": [],
   "pop": 0,
@@ -31694,6 +31740,7 @@
  {
   "name": "Leap Tactics",
   "alias": [
+   "LeapTactics-Win.exe",
    "跳跳为营"
   ],
   "pop": 0,
@@ -31997,7 +32044,9 @@
  },
  {
   "name": "LifePaths",
-  "alias": [],
+  "alias": [
+   "LP"
+  ],
   "pop": 0,
   "p": [
    "console"
@@ -32166,7 +32215,9 @@
  },
  {
   "name": "Liminal Shroud",
-  "alias": [],
+  "alias": [
+   "LiminalShroud.exe"
+  ],
   "pop": 0,
   "p": [
    "pc"
@@ -32489,7 +32540,9 @@
  },
  {
   "name": "Living on Plain Pasta",
-  "alias": [],
+  "alias": [
+   "Living_on_Plain_Pasta.exe"
+  ],
   "pop": 0,
   "p": [
    "pc"
@@ -33053,7 +33106,9 @@
  },
  {
   "name": "Lost Sanity: Cthulhu",
-  "alias": [],
+  "alias": [
+   "Cthulhu.exe"
+  ],
   "pop": 0,
   "p": [
    "pc"
@@ -37031,7 +37086,8 @@
    "pc"
   ],
   "g": [
-   "Simulator"
+   "Simulator",
+   "Indie"
   ]
  },
  {
@@ -37428,7 +37484,7 @@
  {
   "name": "NBA 2K27",
   "alias": [],
-  "pop": 0,
+  "pop": 1,
   "p": [
    "pc",
    "console"
@@ -42161,6 +42217,9 @@
   "pop": 0,
   "p": [
    "console"
+  ],
+  "g": [
+   "Adventure"
   ]
  },
  {
@@ -43003,7 +43062,9 @@
  },
  {
   "name": "Poncik's Little Tragedy",
-  "alias": [],
+  "alias": [
+   "ponciklittle.exe"
+  ],
   "pop": 0,
   "p": [
    "pc"
@@ -43147,6 +43208,7 @@
    "console"
   ],
   "g": [
+   "Adventure",
    "Indie"
   ]
  },
@@ -44864,6 +44926,17 @@
   ]
  },
  {
+  "name": "Random Mix",
+  "alias": [],
+  "pop": 0,
+  "p": [
+   "pc"
+  ],
+  "g": [
+   "Music"
+  ]
+ },
+ {
   "name": "RasterFire",
   "alias": [],
   "pop": 0,
@@ -44953,6 +45026,17 @@
   ],
   "g": [
    "Indie"
+  ]
+ },
+ {
+  "name": "Razing Core",
+  "alias": [],
+  "pop": 0,
+  "p": [
+   "console"
+  ],
+  "g": [
+   "Shooter"
   ]
  },
  {
@@ -45104,7 +45188,9 @@
  },
  {
   "name": "Reality Breach",
-  "alias": [],
+  "alias": [
+   "Reality Breach.exe"
+  ],
   "pop": 0,
   "p": [
    "pc"
@@ -49138,6 +49224,21 @@
   ]
  },
  {
+  "name": "Shroom and Gloom",
+  "alias": [],
+  "pop": 0,
+  "p": [
+   "pc"
+  ],
+  "g": [
+   "Role-playing (RPG)",
+   "Turn-based strategy (TBS)",
+   "Adventure",
+   "Indie",
+   "Card & Board Game"
+  ]
+ },
+ {
   "name": "Shroomwood",
   "alias": [],
   "pop": 0,
@@ -49261,19 +49362,6 @@
   "g": [
    "Simulator",
    "Strategy"
-  ]
- },
- {
-  "name": "Signy & Mino: Against All Gods",
-  "alias": [
-   "Designated Demigod"
-  ],
-  "pop": 0,
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Role-playing (RPG)"
   ]
  },
  {
@@ -49690,23 +49778,6 @@
   ]
  },
  {
-  "name": "Skyformer",
-  "alias": [
-   "Xenion",
-   "Skyformer.exe"
-  ],
-  "pop": 0,
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Simulator",
-   "Strategy",
-   "Adventure",
-   "Indie"
-  ]
- },
- {
   "name": "Skyland",
   "alias": [
    "Skyland.exe"
@@ -49912,7 +49983,9 @@
  },
  {
   "name": "Slime Slayer: Endless Loot",
-  "alias": [],
+  "alias": [
+   "SlimeSlayer.exe"
+  ],
   "pop": 0,
   "p": [
    "pc"
@@ -51340,7 +51413,8 @@
    "Fighting",
    "Racing",
    "Sport",
-   "Indie"
+   "Indie",
+   "Arcade"
   ]
  },
  {
@@ -52432,21 +52506,6 @@
   ],
   "g": [
    "Puzzle",
-   "Indie"
-  ]
- },
- {
-  "name": "Stoneguard",
-  "alias": [
-   "Stoneguard.exe"
-  ],
-  "pop": 0,
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Real Time Strategy (RTS)",
-   "Strategy",
    "Indie"
   ]
  },
@@ -53786,7 +53845,7 @@
    "pc"
   ],
   "g": [
-   "Quiz/Trivia",
+   "Strategy",
    "Adventure"
   ]
  },
@@ -55484,6 +55543,20 @@
   ]
  },
  {
+  "name": "The Crust",
+  "alias": [
+   "TheCrust.exe"
+  ],
+  "pop": 0,
+  "p": [
+   "pc"
+  ],
+  "g": [
+   "Simulator",
+   "Strategy"
+  ]
+ },
+ {
   "name": "The Curator",
   "alias": [],
   "pop": 0,
@@ -56599,7 +56672,9 @@
  },
  {
   "name": "The Legend of Zelda: Ocarina of Time",
-  "alias": [],
+  "alias": [
+   "Zelda no Densetsu Toki no Ocarina"
+  ],
   "pop": 0,
   "p": [
    "console"
@@ -57770,7 +57845,9 @@
  },
  {
   "name": "The Things We Don't See: 10 Interactive Stories of Horror, Mystery, and the Unknown",
-  "alias": [],
+  "alias": [
+   "TheThingsWeDontSee.exe"
+  ],
   "pop": 0,
   "p": [
    "pc"
@@ -60060,22 +60137,6 @@
   ]
  },
  {
-  "name": "Truxton Extreme",
-  "alias": [
-   "Tatsujin Extreme",
-   "TATSUJIN EXTREME.exe"
-  ],
-  "pop": 1,
-  "p": [
-   "pc",
-   "console"
-  ],
-  "g": [
-   "Shooter",
-   "Arcade"
-  ]
- },
- {
   "name": "Truxton Extreme: Batsugun Ship + Music Pack",
   "alias": [],
   "pop": 0,
@@ -60258,23 +60319,6 @@
   "g": [
    "Adventure",
    "Indie"
-  ]
- },
- {
-  "name": "Turnip Mountain",
-  "alias": [
-   "Go! Go! Turnip Boy!!"
-  ],
-  "pop": 0,
-  "p": [
-   "pc",
-   "console"
-  ],
-  "g": [
-   "Platform",
-   "Adventure",
-   "Indie",
-   "Arcade"
   ]
  },
  {
@@ -61427,6 +61471,8 @@
   ],
   "g": [
    "Platform",
+   "Role-playing (RPG)",
+   "Adventure",
    "Indie"
   ]
  },
@@ -62527,7 +62573,8 @@
  {
   "name": "Warlord: Awaji",
   "alias": [
-   "Warlord Awaji"
+   "Warlord Awaji",
+   "Warlord Awaji.exe"
   ],
   "pop": 0,
   "p": [
@@ -62536,6 +62583,7 @@
   "g": [
    "Fighting",
    "Role-playing (RPG)",
+   "Strategy",
    "Adventure",
    "Indie"
   ]
@@ -62607,6 +62655,7 @@
    "console"
   ],
   "g": [
+   "Fighting",
    "Role-playing (RPG)",
    "Adventure"
   ]
@@ -63972,6 +64021,9 @@
   "pop": 0,
   "p": [
    "console"
+  ],
+  "g": [
+   "Puzzle"
   ]
  },
  {
@@ -64719,7 +64771,9 @@
  },
  {
   "name": "Zedfall: Outbreak",
-  "alias": [],
+  "alias": [
+   "ZedFall Outbreak.exe"
+  ],
   "pop": 0,
   "p": [
    "pc"
