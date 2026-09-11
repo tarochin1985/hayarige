@@ -2920,13 +2920,16 @@
  },
  {
   "name": "Anime Shop Simulator",
-  "alias": [],
+  "alias": [
+   "Anime Shop Simulator ✨"
+  ],
   "pop": 0,
   "p": [
    "pc"
   ],
   "g": [
-   "Simulator"
+   "Simulator",
+   "Card & Board Game"
   ]
  },
  {
@@ -3443,17 +3446,6 @@
   ]
  },
  {
-  "name": "Arcade Archives 2: TX-1",
-  "alias": [],
-  "pop": 0,
-  "p": [
-   "console"
-  ],
-  "g": [
-   "Racing"
-  ]
- },
- {
   "name": "Arcade Archives 2: V'Ball",
   "alias": [],
   "pop": 0,
@@ -3508,6 +3500,18 @@
   "pop": 0,
   "p": [
    "console"
+  ]
+ },
+ {
+  "name": "Arcade Audience",
+  "alias": [],
+  "pop": 0,
+  "p": [
+   "pc"
+  ],
+  "g": [
+   "Indie",
+   "Arcade"
   ]
  },
  {
@@ -4884,7 +4888,9 @@
  },
  {
   "name": "Ball Scratch Simulator",
-  "alias": [],
+  "alias": [
+   "ballscratch.exe"
+  ],
   "pop": 0,
   "p": [
    "pc",
@@ -5203,6 +5209,18 @@
   ]
  },
  {
+  "name": "Battle of Plans",
+  "alias": [],
+  "pop": 0,
+  "p": [
+   "pc"
+  ],
+  "g": [
+   "Strategy",
+   "Indie"
+  ]
+ },
+ {
   "name": "BattleBoat X",
   "alias": [],
   "pop": 0,
@@ -5223,18 +5241,6 @@
   "g": [
    "Simulator",
    "Strategy"
-  ]
- },
- {
-  "name": "Be Kind Rewind",
-  "alias": [],
-  "pop": 0,
-  "p": [
-   "console"
-  ],
-  "g": [
-   "Simulator",
-   "Arcade"
   ]
  },
  {
@@ -5825,14 +5831,6 @@
    "Simulator",
    "Strategy",
    "Indie"
-  ]
- },
- {
-  "name": "Bicycle Quiz & Riding",
-  "alias": [],
-  "pop": 0,
-  "p": [
-   "console"
   ]
  },
  {
@@ -6899,6 +6897,23 @@
   ]
  },
  {
+  "name": "Blurry Shopping",
+  "alias": [
+   "BlurryShopping.exe"
+  ],
+  "pop": 0,
+  "p": [
+   "pc"
+  ],
+  "g": [
+   "Puzzle",
+   "Racing",
+   "Simulator",
+   "Sport",
+   "Indie"
+  ]
+ },
+ {
   "name": "BoHeM",
   "alias": [],
   "pop": 0,
@@ -7403,6 +7418,19 @@
    "Simulator",
    "Strategy",
    "Tactical"
+  ]
+ },
+ {
+  "name": "Brave New Wonders",
+  "alias": [],
+  "pop": 0,
+  "p": [
+   "pc"
+  ],
+  "g": [
+   "Simulator",
+   "Strategy",
+   "Indie"
   ]
  },
  {
@@ -8048,6 +8076,20 @@
   ]
  },
  {
+  "name": "Burger Shift: Team Rush",
+  "alias": [
+   "BurgerShift.exe"
+  ],
+  "pop": 0,
+  "p": [
+   "pc"
+  ],
+  "g": [
+   "Simulator",
+   "Indie"
+  ]
+ },
+ {
   "name": "Buried Below",
   "alias": [
    "BURIED BELOW"
@@ -8502,7 +8544,7 @@
    "Captain Tsubasa 2: World Fighters",
    "start_protected_game.exe"
   ],
-  "pop": 1,
+  "pop": 2,
   "p": [
    "pc",
    "console"
@@ -12725,17 +12767,6 @@
   ]
  },
  {
-  "name": "Cute Animals",
-  "alias": [],
-  "pop": 0,
-  "p": [
-   "console"
-  ],
-  "g": [
-   "Puzzle"
-  ]
- },
- {
   "name": "Cute Country",
   "alias": [],
   "pop": 0,
@@ -12799,19 +12830,6 @@
    "Role-playing (RPG)",
    "Strategy",
    "Indie"
-  ]
- },
- {
-  "name": "Cyber City: Science Crime Mystery",
-  "alias": [],
-  "pop": 0,
-  "p": [
-   "console"
-  ],
-  "g": [
-   "Role-playing (RPG)",
-   "Simulator",
-   "Strategy"
   ]
  },
  {
@@ -13267,6 +13285,14 @@
   "g": [
    "Fighting",
    "Indie"
+  ]
+ },
+ {
+  "name": "Dark DieMansion",
+  "alias": [],
+  "pop": 0,
+  "p": [
+   "pc"
   ]
  },
  {
@@ -14122,7 +14148,9 @@
  },
  {
   "name": "Deep Sheol",
-  "alias": [],
+  "alias": [
+   "deep_sheol.exe"
+  ],
   "pop": 0,
   "p": [
    "pc"
@@ -15084,14 +15112,6 @@
   ]
  },
  {
-  "name": "DieMansion",
-  "alias": [],
-  "pop": 0,
-  "p": [
-   "pc"
-  ]
- },
- {
   "name": "Diffusion",
   "alias": [],
   "pop": 0,
@@ -15260,19 +15280,6 @@
   ],
   "g": [
    "Strategy",
-   "Adventure",
-   "Indie"
-  ]
- },
- {
-  "name": "Dimraeth",
-  "alias": [],
-  "pop": 0,
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Role-playing (RPG)",
    "Adventure",
    "Indie"
   ]
@@ -16278,18 +16285,6 @@
   "pop": 0,
   "p": [
    "pc"
-  ]
- },
- {
-  "name": "Dragon Ball: Sparking! Zero - Super Limit-Breaking Neo",
-  "alias": [],
-  "pop": 0,
-  "p": [
-   "pc",
-   "console"
-  ],
-  "g": [
-   "Fighting"
   ]
  },
  {
@@ -18114,17 +18109,6 @@
   ]
  },
  {
-  "name": "Eden Coil",
-  "alias": [],
-  "pop": 0,
-  "p": [
-   "console"
-  ],
-  "g": [
-   "Puzzle"
-  ]
- },
- {
   "name": "Eden.schemata();",
   "alias": [
    "EDEN.schemata();"
@@ -18461,18 +18445,6 @@
   "alias": [
    "Witches of Element"
   ],
-  "pop": 0,
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Strategy",
-   "Indie"
-  ]
- },
- {
-  "name": "Elementis TD",
-  "alias": [],
   "pop": 0,
   "p": [
    "pc"
@@ -19079,18 +19051,6 @@
    "Puzzle",
    "Adventure",
    "Indie"
-  ]
- },
- {
-  "name": "Escape game R00m15",
-  "alias": [],
-  "pop": 0,
-  "p": [
-   "console"
-  ],
-  "g": [
-   "Puzzle",
-   "Adventure"
   ]
  },
  {
@@ -20264,18 +20224,6 @@
   ]
  },
  {
-  "name": "Fast & Fractured",
-  "alias": [],
-  "pop": 0,
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Racing",
-   "Indie"
-  ]
- },
- {
   "name": "Fat Goblins",
   "alias": [],
   "pop": 0,
@@ -20785,6 +20733,21 @@
    "pc"
   ],
   "g": [
+   "Adventure",
+   "Indie"
+  ]
+ },
+ {
+  "name": "Finding Ruby",
+  "alias": [
+   "Finding Ruby: Hidden Object Adventure"
+  ],
+  "pop": 0,
+  "p": [
+   "pc"
+  ],
+  "g": [
+   "Point-and-click",
    "Adventure",
    "Indie"
   ]
@@ -23386,18 +23349,6 @@
   ]
  },
  {
-  "name": "Get Fit: Beach Workout",
-  "alias": [],
-  "pop": 0,
-  "p": [
-   "console"
-  ],
-  "g": [
-   "Simulator",
-   "Sport"
-  ]
- },
- {
   "name": "Get Fit: Furry Edition",
   "alias": [],
   "pop": 0,
@@ -24230,7 +24181,9 @@
  },
  {
   "name": "Gradanix",
-  "alias": [],
+  "alias": [
+   "Gradanix.exe"
+  ],
   "pop": 0,
   "p": [
    "pc"
@@ -25121,7 +25074,9 @@
  },
  {
   "name": "Gun Shop 3",
-  "alias": [],
+  "alias": [
+   "GUNSHOP 3.exe"
+  ],
   "pop": 0,
   "p": [
    "pc"
@@ -26697,6 +26652,19 @@
   ]
  },
  {
+  "name": "Hockey Beasts",
+  "alias": [],
+  "pop": 0,
+  "p": [
+   "pc",
+   "console"
+  ],
+  "g": [
+   "Sport",
+   "Indie"
+  ]
+ },
+ {
   "name": "Hocus Focus",
   "alias": [
    "Hocus Focus.exe"
@@ -27467,6 +27435,21 @@
   "g": [
    "Role-playing (RPG)",
    "Adventure",
+   "Indie"
+  ]
+ },
+ {
+  "name": "Human Parking Simulator",
+  "alias": [
+   "I Park on Earth.exe",
+   "I Park on Earth"
+  ],
+  "pop": 0,
+  "p": [
+   "pc"
+  ],
+  "g": [
+   "Simulator",
    "Indie"
   ]
  },
@@ -28460,6 +28443,21 @@
   ],
   "g": [
    "Adventure",
+   "Indie"
+  ]
+ },
+ {
+  "name": "Increbouncer",
+  "alias": [
+   "Increbouncer.exe"
+  ],
+  "pop": 0,
+  "p": [
+   "pc"
+  ],
+  "g": [
+   "Simulator",
+   "Strategy",
    "Indie"
   ]
  },
@@ -30418,7 +30416,9 @@
  },
  {
   "name": "Kill Spewy",
-  "alias": [],
+  "alias": [
+   "main.exe"
+  ],
   "pop": 0,
   "p": [
    "pc"
@@ -31709,6 +31709,17 @@
    "Simulator",
    "Strategy",
    "Indie"
+  ]
+ },
+ {
+  "name": "Le Mirage Mystique",
+  "alias": [],
+  "pop": 0,
+  "p": [
+   "console"
+  ],
+  "g": [
+   "Visual Novel"
   ]
  },
  {
@@ -33410,23 +33421,6 @@
   ]
  },
  {
-  "name": "Ludus: A Gladiator Story",
-  "alias": [
-   "Ludus A Gladiator Story.exe"
-  ],
-  "pop": 0,
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Role-playing (RPG)",
-   "Simulator",
-   "Adventure",
-   "Indie",
-   "Visual Novel"
-  ]
- },
- {
   "name": "Luduvo",
   "alias": [
    "LUDUVO",
@@ -34015,19 +34009,6 @@
   "g": [
    "Adventure",
    "Indie"
-  ]
- },
- {
-  "name": "Mahjongus: The Warlock Within",
-  "alias": [],
-  "pop": 0,
-  "p": [
-   "console"
-  ],
-  "g": [
-   "Puzzle",
-   "Arcade",
-   "Card & Board Game"
   ]
  },
  {
@@ -36629,7 +36610,9 @@
  },
  {
   "name": "Moon Garden",
-  "alias": [],
+  "alias": [
+   "Moon Garden.exe"
+  ],
   "pop": 0,
   "p": [
    "pc"
@@ -36891,7 +36874,7 @@
    "MortalShell2.exe",
    "Mortal Shell 2"
   ],
-  "pop": 16,
+  "pop": 18,
   "p": [
    "pc",
    "console"
@@ -37309,7 +37292,9 @@
  },
  {
   "name": "My Party Is Grinding",
-  "alias": [],
+  "alias": [
+   "MyPartyIsGrinding.exe"
+  ],
   "pop": 0,
   "p": [
    "pc"
@@ -37419,19 +37404,6 @@
   "g": [
    "Role-playing (RPG)",
    "Turn-based strategy (TBS)",
-   "Indie"
-  ]
- },
- {
-  "name": "Mystic Tavern",
-  "alias": [],
-  "pop": 0,
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Simulator",
-   "Adventure",
    "Indie"
   ]
  },
@@ -39810,19 +39782,6 @@
   ]
  },
  {
-  "name": "One-Move Checkmate: Chess Brain Trainer",
-  "alias": [],
-  "pop": 0,
-  "p": [
-   "console"
-  ],
-  "g": [
-   "Puzzle",
-   "Arcade",
-   "Card & Board Game"
-  ]
- },
- {
   "name": "OneMore",
   "alias": [],
   "pop": 0,
@@ -41671,6 +41630,16 @@
   ]
  },
  {
+  "name": "PegPigeon",
+  "alias": [
+   "pegpigeon.exe"
+  ],
+  "pop": 0,
+  "p": [
+   "pc"
+  ]
+ },
+ {
   "name": "Peganomics",
   "alias": [
    "PACHINCRO!",
@@ -42223,7 +42192,9 @@
  },
  {
   "name": "Pieces of the Kingdom",
-  "alias": [],
+  "alias": [
+   "Pieces of the Kingdom.exe"
+  ],
   "pop": 0,
   "p": [
    "pc"
@@ -43629,7 +43600,9 @@
  },
  {
   "name": "Print I Love U",
-  "alias": [],
+  "alias": [
+   "pilu.exe"
+  ],
   "pop": 0,
   "p": [
    "pc"
@@ -44037,6 +44010,21 @@
   ]
  },
  {
+  "name": "Project Vroom Vroom Prototype",
+  "alias": [
+   "Screw Drivers.exe"
+  ],
+  "pop": 0,
+  "p": [
+   "pc"
+  ],
+  "g": [
+   "Racing",
+   "Simulator",
+   "Indie"
+  ]
+ },
+ {
   "name": "Project: Aftershock",
   "alias": [
    "Project: AFTERSHOCK",
@@ -44108,6 +44096,7 @@
   ],
   "g": [
    "Puzzle",
+   "Simulator",
    "Strategy",
    "Indie",
    "Card & Board Game"
@@ -44253,7 +44242,9 @@
  },
  {
   "name": "Pumpkin Woods",
-  "alias": [],
+  "alias": [
+   "Pumpkin Woods.exe"
+  ],
   "pop": 0,
   "p": [
    "pc"
@@ -44377,6 +44368,7 @@
    "console"
   ],
   "g": [
+   "Puzzle",
    "Simulator"
   ]
  },
@@ -44389,6 +44381,17 @@
   ],
   "g": [
    "Puzzle",
+   "Simulator"
+  ]
+ },
+ {
+  "name": "Put Your Toys Away Together!",
+  "alias": [],
+  "pop": 0,
+  "p": [
+   "pc"
+  ],
+  "g": [
    "Simulator"
   ]
  },
@@ -46376,6 +46379,7 @@
  {
   "name": "Ripgraze",
   "alias": [
+   "RIPGRAZE.exe",
    "RIPGRAZE"
   ],
   "pop": 0,
@@ -46667,7 +46671,9 @@
  },
  {
   "name": "Rogue Blight",
-  "alias": [],
+  "alias": [
+   "RogueBlight.exe"
+  ],
   "pop": 0,
   "p": [
    "pc"
@@ -46908,19 +46914,6 @@
    "Strategy",
    "Indie",
    "Card & Board Game"
-  ]
- },
- {
-  "name": "Room 0",
-  "alias": [],
-  "pop": 0,
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Puzzle",
-   "Adventure",
-   "Indie"
   ]
  },
  {
@@ -47461,7 +47454,7 @@
  {
   "name": "S.T.A.L.K.E.R. 2: Cost of Hope",
   "alias": [],
-  "pop": 0,
+  "pop": 5,
   "p": [
    "pc",
    "console"
@@ -48936,6 +48929,22 @@
   ]
  },
  {
+  "name": "Sherlock Holmes: Night Stalker",
+  "alias": [
+   "Sherlock Holmes: Night Stalker - The World's First AI D Game",
+   "Sherlock Holmes: Night Stalker - The World's First AI Detective Game"
+  ],
+  "pop": 0,
+  "p": [
+   "pc"
+  ],
+  "g": [
+   "Role-playing (RPG)",
+   "Adventure",
+   "Indie"
+  ]
+ },
+ {
   "name": "Sherpa's Caravan",
   "alias": [],
   "pop": 0,
@@ -49154,7 +49163,9 @@
  },
  {
   "name": "Shoe it All!",
-  "alias": [],
+  "alias": [
+   "ShoeItAll.exe"
+  ],
   "pop": 0,
   "p": [
    "pc",
@@ -50721,19 +50732,6 @@
   ]
  },
  {
-  "name": "Solitaire Paradise: Anime Bikini Babes",
-  "alias": [],
-  "pop": 0,
-  "p": [
-   "console"
-  ],
-  "g": [
-   "Puzzle",
-   "Arcade",
-   "Card & Board Game"
-  ]
- },
- {
   "name": "Solitaire World: Anime Waifus",
   "alias": [],
   "pop": 0,
@@ -50784,14 +50782,6 @@
    "Strategy",
    "Adventure",
    "Indie"
-  ]
- },
- {
-  "name": "Something That Shouldn't Be There Is Visible.",
-  "alias": [],
-  "pop": 0,
-  "p": [
-   "console"
   ]
  },
  {
@@ -51201,19 +51191,6 @@
   ],
   "g": [
    "Adventure",
-   "Indie"
-  ]
- },
- {
-  "name": "Space Bar",
-  "alias": [
-   "SPACE BAR"
-  ],
-  "pop": 0,
-  "p": [
-   "pc"
-  ],
-  "g": [
    "Indie"
   ]
  },
@@ -52291,7 +52268,9 @@
  },
  {
   "name": "Starweaver Express: Per Aspera Ad Astra",
-  "alias": [],
+  "alias": [
+   "Starweaver_Express.exe"
+  ],
   "pop": 0,
   "p": [
    "pc"
@@ -55211,7 +55190,7 @@
   "alias": [
    "Dawnwalker.exe"
   ],
-  "pop": 12,
+  "pop": 14,
   "p": [
    "pc",
    "console"
@@ -56871,7 +56850,9 @@
  },
  {
   "name": "The Loopler",
-  "alias": [],
+  "alias": [
+   "The Loopler.exe"
+  ],
   "pop": 0,
   "p": [
    "pc"
@@ -58413,6 +58394,17 @@
   ]
  },
  {
+  "name": "Three's a Crowd",
+  "alias": [],
+  "pop": 0,
+  "p": [
+   "pc"
+  ],
+  "g": [
+   "Puzzle"
+  ]
+ },
+ {
   "name": "Threshold Warden",
   "alias": [],
   "pop": 0,
@@ -58836,6 +58828,20 @@
   ],
   "g": [
    "Simulator",
+   "Indie"
+  ]
+ },
+ {
+  "name": "Tiny Flock",
+  "alias": [],
+  "pop": 0,
+  "p": [
+   "console"
+  ],
+  "g": [
+   "Puzzle",
+   "Simulator",
+   "Adventure",
    "Indie"
   ]
  },
@@ -59988,6 +59994,18 @@
   ]
  },
  {
+  "name": "Tremble of Towers",
+  "alias": [],
+  "pop": 0,
+  "p": [
+   "pc"
+  ],
+  "g": [
+   "Strategy",
+   "Indie"
+  ]
+ },
+ {
   "name": "Trial By Magic",
   "alias": [],
   "pop": 0,
@@ -60717,19 +60735,6 @@
   ],
   "g": [
    "Role-playing (RPG)",
-   "Adventure",
-   "Indie"
-  ]
- },
- {
-  "name": "Undergone: Before",
-  "alias": [],
-  "pop": 0,
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Simulator",
    "Adventure",
    "Indie"
   ]
@@ -61983,6 +61988,21 @@
   ]
  },
  {
+  "name": "Visitors: First Contact",
+  "alias": [
+   "Visitors.exe"
+  ],
+  "pop": 0,
+  "p": [
+   "pc"
+  ],
+  "g": [
+   "Shooter",
+   "Adventure",
+   "Indie"
+  ]
+ },
+ {
   "name": "Vitalis",
   "alias": [
    "Vitalis.exe"
@@ -62248,6 +62268,21 @@
    "pc"
   ],
   "g": [
+   "Indie"
+  ]
+ },
+ {
+  "name": "Vortex",
+  "alias": [
+   "vortex.exe"
+  ],
+  "pop": 0,
+  "p": [
+   "pc"
+  ],
+  "g": [
+   "Puzzle",
+   "Strategy",
    "Indie"
   ]
  },
@@ -62991,6 +63026,18 @@
   ]
  },
  {
+  "name": "Wetter",
+  "alias": [],
+  "pop": 0,
+  "p": [
+   "pc"
+  ],
+  "g": [
+   "Adventure",
+   "Indie"
+  ]
+ },
+ {
   "name": "Wheel Make It",
   "alias": [],
   "pop": 0,
@@ -63102,6 +63149,18 @@
    "Puzzle",
    "Adventure",
    "Visual Novel"
+  ]
+ },
+ {
+  "name": "Where Is My Pet?",
+  "alias": [],
+  "pop": 0,
+  "p": [
+   "pc"
+  ],
+  "g": [
+   "Simulator",
+   "Strategy"
   ]
  },
  {
@@ -64661,7 +64720,9 @@
  },
  {
   "name": "Your Story: Games with Death",
-  "alias": [],
+  "alias": [
+   "Your Story：Games with Death.exe"
+  ],
   "pop": 0,
   "p": [
    "pc"
