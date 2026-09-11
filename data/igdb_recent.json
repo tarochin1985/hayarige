@@ -1698,15 +1698,16 @@
  },
  {
   "name": "After Work",
-  "alias": [],
+  "alias": [
+   "After Work.exe"
+  ],
   "pop": 0,
   "p": [
    "pc"
   ],
   "g": [
-   "Simulator",
-   "Indie",
-   "Visual Novel"
+   "Adventure",
+   "Indie"
   ]
  },
  {
@@ -4715,6 +4716,19 @@
   ]
  },
  {
+  "name": "Backrooms Protocol",
+  "alias": [],
+  "pop": 0,
+  "p": [
+   "pc"
+  ],
+  "g": [
+   "Puzzle",
+   "Adventure",
+   "Indie"
+  ]
+ },
+ {
   "name": "Backrooms: Code Yellow",
   "alias": [],
   "pop": 0,
@@ -6778,23 +6792,6 @@
   ]
  },
  {
-  "name": "Bloody Grids",
-  "alias": [
-   "BloodyGrids.exe"
-  ],
-  "pop": 0,
-  "p": [
-   "pc",
-   "console"
-  ],
-  "g": [
-   "Puzzle",
-   "Simulator",
-   "Strategy",
-   "Indie"
-  ]
- },
- {
   "name": "Bloody Hell Hotel",
   "alias": [],
   "pop": 0,
@@ -7076,21 +7073,6 @@
   ]
  },
  {
-  "name": "Boli",
-  "alias": [
-   "Boli.exe"
-  ],
-  "pop": 0,
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Role-playing (RPG)",
-   "Adventure",
-   "Indie"
-  ]
- },
- {
   "name": "Bomb Farm",
   "alias": [
    "BombFarm.exe",
@@ -7242,21 +7224,6 @@
   "g": [
    "Puzzle",
    "Arcade"
-  ]
- },
- {
-  "name": "Boreal Tenebrae Act 0",
-  "alias": [
-   "Boreal Tenebrae ACT 0.exe",
-   "Boreal Tenebrae Act 0: Sundowning"
-  ],
-  "pop": 0,
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Adventure",
-   "Visual Novel"
   ]
  },
  {
@@ -8179,20 +8146,6 @@
   ]
  },
  {
-  "name": "Buttons Up! 2",
-  "alias": [
-   "Buttons Up 2.exe"
-  ],
-  "pop": 0,
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Strategy",
-   "Indie"
-  ]
- },
- {
   "name": "Buzzin",
   "alias": [
    "Buzzin: TV Party Game Show",
@@ -8741,19 +8694,6 @@
    "Strategy",
    "Indie",
    "Card & Board Game"
-  ]
- },
- {
-  "name": "Card Homestead",
-  "alias": [],
-  "pop": 0,
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Simulator",
-   "Strategy",
-   "Indie"
   ]
  },
  {
@@ -9757,6 +9697,14 @@
   ]
  },
  {
+  "name": "Chicken Miner",
+  "alias": [],
+  "pop": 0,
+  "p": [
+   "pc"
+  ]
+ },
+ {
   "name": "Chief Cenab: Şahmaran",
   "alias": [
    "Chief Cenab  Sahmaran"
@@ -10531,19 +10479,6 @@
   ]
  },
  {
-  "name": "Click Build Repeat",
-  "alias": [],
-  "pop": 0,
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Point-and-click",
-   "Simulator",
-   "Indie"
-  ]
- },
- {
   "name": "Click the Button",
   "alias": [
    "Click the Button.exe",
@@ -10971,6 +10906,17 @@
    "Role-playing (RPG)",
    "Simulator",
    "Adventure",
+   "Indie"
+  ]
+ },
+ {
+  "name": "CoinClave",
+  "alias": [],
+  "pop": 0,
+  "p": [
+   "pc"
+  ],
+  "g": [
    "Indie"
   ]
  },
@@ -11781,6 +11727,18 @@
   "p": [
    "pc",
    "console"
+  ],
+  "g": [
+   "Simulator",
+   "Indie"
+  ]
+ },
+ {
+  "name": "Cozy Farm: Tidy Up!",
+  "alias": [],
+  "pop": 0,
+  "p": [
+   "pc"
   ],
   "g": [
    "Simulator",
@@ -15158,6 +15116,23 @@
   ]
  },
  {
+  "name": "Dig for Riches",
+  "alias": [
+   "Dig For Riches.exe"
+  ],
+  "pop": 0,
+  "p": [
+   "pc"
+  ],
+  "g": [
+   "Role-playing (RPG)",
+   "Simulator",
+   "Strategy",
+   "Adventure",
+   "Indie"
+  ]
+ },
+ {
   "name": "Dig to China Simulator",
   "alias": [],
   "pop": 0,
@@ -16513,6 +16488,19 @@
   ],
   "g": [
    "Simulator"
+  ]
+ },
+ {
+  "name": "Drawmi: Creature Collector",
+  "alias": [],
+  "pop": 0,
+  "p": [
+   "pc"
+  ],
+  "g": [
+   "Role-playing (RPG)",
+   "Adventure",
+   "Indie"
   ]
  },
  {
@@ -20273,6 +20261,18 @@
    "Adventure",
    "Indie",
    "Visual Novel"
+  ]
+ },
+ {
+  "name": "Fast & Fractured",
+  "alias": [],
+  "pop": 0,
+  "p": [
+   "pc"
+  ],
+  "g": [
+   "Racing",
+   "Indie"
   ]
  },
  {
@@ -26395,22 +26395,6 @@
   ]
  },
  {
-  "name": "Hex Core",
-  "alias": [
-   "HexCore.exe"
-  ],
-  "pop": 0,
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Simulator",
-   "Strategy",
-   "Indie",
-   "Arcade"
-  ]
- },
- {
   "name": "Hex Park: Master DLC",
   "alias": [],
   "pop": 0,
@@ -28975,18 +28959,6 @@
   ]
  },
  {
-  "name": "Invokyr",
-  "alias": [],
-  "pop": 0,
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Adventure",
-   "Indie"
-  ]
- },
- {
   "name": "Iona's Island",
   "alias": [],
   "pop": 0,
@@ -29277,6 +29249,21 @@
   ]
  },
  {
+  "name": "It Thinks!",
+  "alias": [
+   "IT THINKS!"
+  ],
+  "pop": 0,
+  "p": [
+   "pc"
+  ],
+  "g": [
+   "Simulator",
+   "Strategy",
+   "Indie"
+  ]
+ },
+ {
   "name": "It Works: Electronics Repair Simulator",
   "alias": [],
   "pop": 0,
@@ -29537,6 +29524,19 @@
   "g": [
    "Puzzle",
    "Indie"
+  ]
+ },
+ {
+  "name": "Jester Under Pressure",
+  "alias": [],
+  "pop": 0,
+  "p": [
+   "pc"
+  ],
+  "g": [
+   "Adventure",
+   "Indie",
+   "Visual Novel"
   ]
  },
  {
@@ -31368,19 +31368,6 @@
   ]
  },
  {
-  "name": "Laptop Architect",
-  "alias": [],
-  "pop": 0,
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Puzzle",
-   "Strategy",
-   "Indie"
-  ]
- },
- {
   "name": "Last Ascender",
   "alias": [
    "Last Ascender.exe"
@@ -32074,6 +32061,21 @@
    "pc"
   ],
   "g": [
+   "Simulator",
+   "Indie"
+  ]
+ },
+ {
+  "name": "Life of a Thug",
+  "alias": [
+   "Devil's Deal"
+  ],
+  "pop": 0,
+  "p": [
+   "pc"
+  ],
+  "g": [
+   "Role-playing (RPG)",
    "Simulator",
    "Indie"
   ]
@@ -34511,7 +34513,7 @@
   "alias": [
    "Wolverine"
   ],
-  "pop": 0,
+  "pop": 3,
   "p": [
    "console"
   ],
@@ -35162,6 +35164,18 @@
   ]
  },
  {
+  "name": "Meltdown Crew",
+  "alias": [],
+  "pop": 0,
+  "p": [
+   "pc"
+  ],
+  "g": [
+   "Simulator",
+   "Strategy"
+  ]
+ },
+ {
   "name": "Meltdown Masters",
   "alias": [],
   "pop": 0,
@@ -35699,26 +35713,6 @@
   ],
   "g": [
    "Adventure"
-  ]
- },
- {
-  "name": "Midnight Moments",
-  "alias": [],
-  "pop": 0,
-  "p": [
-   "pc"
-  ]
- },
- {
-  "name": "Mikane's Hand",
-  "alias": [],
-  "pop": 0,
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Adventure",
-   "Visual Novel"
   ]
  },
  {
@@ -36634,25 +36628,6 @@
   ]
  },
  {
-  "name": "Moon Corona",
-  "alias": [
-   "月之冕",
-   "月之冕"
-  ],
-  "pop": 0,
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Real Time Strategy (RTS)",
-   "Role-playing (RPG)",
-   "Strategy",
-   "Adventure",
-   "Indie",
-   "Card & Board Game"
-  ]
- },
- {
   "name": "Moon Garden",
   "alias": [],
   "pop": 0,
@@ -37448,6 +37423,19 @@
   ]
  },
  {
+  "name": "Mystic Tavern",
+  "alias": [],
+  "pop": 0,
+  "p": [
+   "pc"
+  ],
+  "g": [
+   "Simulator",
+   "Adventure",
+   "Indie"
+  ]
+ },
+ {
   "name": "Myth of Valderit",
   "alias": [],
   "pop": 0,
@@ -38214,6 +38202,18 @@
   ]
  },
  {
+  "name": "Night Shift: Something Is Wrong",
+  "alias": [],
+  "pop": 0,
+  "p": [
+   "pc"
+  ],
+  "g": [
+   "Adventure",
+   "Indie"
+  ]
+ },
+ {
   "name": "Night Train",
   "alias": [
    "NIGHT TRAIN"
@@ -38348,7 +38348,8 @@
  {
   "name": "Nightpark Journal",
   "alias": [
-   "夜园游记"
+   "夜园游记",
+   "NightparkJournal.exe"
   ],
   "pop": 0,
   "p": [
@@ -38775,6 +38776,19 @@
   ]
  },
  {
+  "name": "Node Crown",
+  "alias": [],
+  "pop": 0,
+  "p": [
+   "pc"
+  ],
+  "g": [
+   "Simulator",
+   "Strategy",
+   "Indie"
+  ]
+ },
+ {
   "name": "Nomad Drive",
   "alias": [],
   "pop": 0,
@@ -38963,20 +38977,6 @@
   "g": [
    "Puzzle",
    "Indie"
-  ]
- },
- {
-  "name": "Noun Town: Learn & Chill",
-  "alias": [
-   "Noun Town Learn & Chill.exe"
-  ],
-  "pop": 0,
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Simulator",
-   "Adventure"
   ]
  },
  {
@@ -40877,20 +40877,6 @@
   "g": [
    "Simulator",
    "Strategy",
-   "Indie"
-  ]
- },
- {
-  "name": "PSI",
-  "alias": [
-   "PSI: Pressure Climbing"
-  ],
-  "pop": 0,
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Adventure",
    "Indie"
   ]
  },
@@ -43799,6 +43785,23 @@
   ]
  },
  {
+  "name": "Project Cobalt",
+  "alias": [
+   "Project Cobalt.exe"
+  ],
+  "pop": 0,
+  "p": [
+   "pc"
+  ],
+  "g": [
+   "Role-playing (RPG)",
+   "Simulator",
+   "Strategy",
+   "Adventure",
+   "Indie"
+  ]
+ },
+ {
   "name": "Project DeepWeb: Eternal Nightmare",
   "alias": [
    "PDW:EN",
@@ -46345,7 +46348,9 @@
  },
  {
   "name": "Rip N Ship Simulator",
-  "alias": [],
+  "alias": [
+   "Rip N Ship Early Access.exe"
+  ],
   "pop": 0,
   "p": [
    "pc"
@@ -46986,21 +46991,6 @@
    "Puzzle",
    "Adventure",
    "Indie"
-  ]
- },
- {
-  "name": "Rose Guns Days: Season 2",
-  "alias": [
-   "RoseGunsDays2.exe"
-  ],
-  "pop": 0,
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Adventure",
-   "Indie",
-   "Visual Novel"
   ]
  },
  {
@@ -50175,6 +50165,18 @@
   ]
  },
  {
+  "name": "Slots & Skulls",
+  "alias": [],
+  "pop": 0,
+  "p": [
+   "pc"
+  ],
+  "g": [
+   "Strategy",
+   "Indie"
+  ]
+ },
+ {
   "name": "Sludgineers",
   "alias": [
    "Sludgineers.exe"
@@ -51092,6 +51094,17 @@
   ]
  },
  {
+  "name": "Sound Mind",
+  "alias": [],
+  "pop": 0,
+  "p": [
+   "console"
+  ],
+  "g": [
+   "Indie"
+  ]
+ },
+ {
   "name": "Soundscapes",
   "alias": [],
   "pop": 0,
@@ -51366,20 +51379,6 @@
   ]
  },
  {
-  "name": "Spanking Exorcist",
-  "alias": [
-   "SpankingExorcist.exe"
-  ],
-  "pop": 0,
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Simulator",
-   "Indie"
-  ]
- },
- {
   "name": "Spark! Photon Blast",
   "alias": [
    "SPARK! -PHOTON BLAST-"
@@ -51502,6 +51501,20 @@
   "pop": 0,
   "p": [
    "pc"
+  ]
+ },
+ {
+  "name": "Spell Unbound",
+  "alias": [],
+  "pop": 0,
+  "p": [
+   "pc"
+  ],
+  "g": [
+   "Role-playing (RPG)",
+   "Adventure",
+   "Indie",
+   "Arcade"
   ]
  },
  {
@@ -51685,22 +51698,6 @@
   "name": "Spline: Part One",
   "alias": [
    "SPLINE: PART ONE"
-  ],
-  "pop": 0,
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Adventure",
-   "Indie"
-  ]
- },
- {
-  "name": "Sponge Break",
-  "alias": [
-   "ProjectGosling.exe",
-   "SpongeBreak",
-   "SB"
   ],
   "pop": 0,
   "p": [
@@ -53056,6 +53053,18 @@
    "Real Time Strategy (RTS)",
    "Simulator",
    "Strategy"
+  ]
+ },
+ {
+  "name": "Sudokiller",
+  "alias": [],
+  "pop": 0,
+  "p": [
+   "pc"
+  ],
+  "g": [
+   "Puzzle",
+   "Indie"
   ]
  },
  {
@@ -55202,7 +55211,7 @@
   "alias": [
    "Dawnwalker.exe"
   ],
-  "pop": 11,
+  "pop": 12,
   "p": [
    "pc",
    "console"
@@ -57295,14 +57304,6 @@
   ]
  },
  {
-  "name": "The Person Living Next Door",
-  "alias": [],
-  "pop": 0,
-  "p": [
-   "console"
-  ]
- },
- {
   "name": "The Piper of Dawn",
   "alias": [],
   "pop": 0,
@@ -57503,6 +57504,9 @@
   "pop": 0,
   "p": [
    "pc"
+  ],
+  "g": [
+   "Role-playing (RPG)"
   ]
  },
  {
@@ -59051,6 +59055,21 @@
   ]
  },
  {
+  "name": "Toilet 101",
+  "alias": [
+   "Restroom 101"
+  ],
+  "pop": 0,
+  "p": [
+   "pc"
+  ],
+  "g": [
+   "Simulator",
+   "Adventure",
+   "Indie"
+  ]
+ },
+ {
   "name": "Tokatonton: One-Armed Blacksmith",
   "alias": [],
   "pop": 0,
@@ -60207,33 +60226,6 @@
   ]
  },
  {
-  "name": "Truxton Extreme: Batsugun Ship + Music Pack",
-  "alias": [],
-  "pop": 0,
-  "p": [
-   "pc",
-   "console"
-  ]
- },
- {
-  "name": "Truxton Extreme: Truxton II Ship + Music Pack",
-  "alias": [],
-  "pop": 0,
-  "p": [
-   "pc",
-   "console"
-  ]
- },
- {
-  "name": "Truxton Extreme: Truxton Ship + Music Pack",
-  "alias": [],
-  "pop": 0,
-  "p": [
-   "pc",
-   "console"
-  ]
- },
- {
   "name": "Tsugunohi: The Thread That Beckons to Heaven",
   "alias": [
    "Tsugunohi -The Thread That Beckons to Heaven-",
@@ -60726,6 +60718,19 @@
   ],
   "g": [
    "Role-playing (RPG)",
+   "Adventure",
+   "Indie"
+  ]
+ },
+ {
+  "name": "Undergone: Before",
+  "alias": [],
+  "pop": 0,
+  "p": [
+   "pc"
+  ],
+  "g": [
+   "Simulator",
    "Adventure",
    "Indie"
   ]
@@ -61979,18 +61984,6 @@
   ]
  },
  {
-  "name": "Vision Quest: A New Ascent",
-  "alias": [],
-  "pop": 0,
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Adventure",
-   "Indie"
-  ]
- },
- {
   "name": "Vitalis",
   "alias": [
    "Vitalis.exe"
@@ -62501,7 +62494,7 @@
   "alias": [
    "WARDOGS"
   ],
-  "pop": 0,
+  "pop": 5,
   "p": [
    "pc",
    "console"
@@ -63422,6 +63415,22 @@
   ]
  },
  {
+  "name": "Wild Justice",
+  "alias": [
+   "Wild-Justice.exe"
+  ],
+  "pop": 0,
+  "p": [
+   "pc"
+  ],
+  "g": [
+   "Shooter",
+   "Role-playing (RPG)",
+   "Strategy",
+   "Indie"
+  ]
+ },
+ {
   "name": "Wild Story: Primal Secrets - Collector's Edition",
   "alias": [],
   "pop": 0,
@@ -63554,6 +63563,7 @@
    "pc"
   ],
   "g": [
+   "Simulator",
    "Indie"
   ]
  },
@@ -64391,18 +64401,6 @@
   ]
  },
  {
-  "name": "Xenoblade Chronicles 2: Nintendo Switch 2 Edition",
-  "alias": [],
-  "pop": 0,
-  "p": [
-   "console"
-  ],
-  "g": [
-   "Role-playing (RPG)",
-   "Adventure"
-  ]
- },
- {
   "name": "Xenoblade Chronicles 3: Nintendo Switch 2 Edition",
   "alias": [],
   "pop": 0,
@@ -64445,13 +64443,17 @@
  },
  {
   "name": "Y2kill",
-  "alias": [],
+  "alias": [
+   "Y2Kill.exe"
+  ],
   "pop": 0,
   "p": [
    "pc"
   ],
   "g": [
    "Shooter",
+   "Adventure",
+   "Indie",
    "Arcade"
   ]
  },

@@ -1,19 +1,18 @@
 {
  "date": "2026-09-11",
- "generated": "2026-09-11 07:11",
+ "generated": "2026-09-11 15:56",
  "leads": {
   "events": [
    {
     "tag": "#ゲーム実況",
     "channels": [
-     "CHECHE GAME【顔出し初見ゲーム実況】",
      "Usagi Ch. 因幡兎",
      "くものち ふれすch.☁️🫧",
      "こじちゃんねる【小嶋明梨】",
-     "てぃーけぇー",
      "エラch",
      "ジョアだよ",
      "儚視まちこVTuber Hakanashi Matiko",
+     "桃之もれん Momono Moren Ch",
      "週刊少年ゲームマガジン230円"
     ]
    },
@@ -22,7 +21,6 @@
     "channels": [
      "Kanae Channel",
      "marunnn【まるーんチャンネル】",
-     "みつき",
      "柚原いづみ / Izumi Channel 【ななしいんく】",
      "赤彩みあ / Akairo Mia Ch.【すずみあ】",
      "風見くく /  Kuku Channel 【ななしいんく】",
@@ -48,6 +46,14 @@
     ]
    },
    {
+    "tag": "#にじ遊戯王祭2026",
+    "channels": [
+     "レイン・パターソン／Lain Paterson【にじさんじ】",
+     "七瀬 すず菜 / Nanase Suzuna【にじさんじ】",
+     "壱百満天原サロメ / Hyakumantenbara Salome"
+    ]
+   },
+   {
     "tag": "#ななし雀魂杯",
     "channels": [
      "ねくろちゃん -Yamaguro Nekuro- /あおぎり高校",
@@ -70,32 +76,19 @@
      "Kuu Ch. 朱舞くぅ",
      "vii / ビー"
     ]
-   },
-   {
-    "tag": "#鳴潮朝月会",
-    "channels": [
-     "ノーラ Nora ch",
-     "夜魅ちゃんねる",
-     "式神やしろ"
-    ]
    }
   ],
   "newcomers": [],
   "wide": [
    {
     "game": "Apex Legends",
-    "channels": 34,
-    "videos": 45
+    "channels": 39,
+    "videos": 51
    },
    {
     "game": "ストリートファイター6",
-    "channels": 30,
-    "videos": 40
-   },
-   {
-    "game": "実況パワフルプロ野球2026",
-    "channels": 16,
-    "videos": 19
+    "channels": 28,
+    "videos": 38
    },
    {
     "game": "Rust",
@@ -105,11 +98,11 @@
    {
     "game": "Minecraft",
     "channels": 17,
-    "videos": 17
+    "videos": 19
    },
    {
-    "game": "Dead by Daylight",
-    "channels": 14,
+    "game": "実況パワフルプロ野球2026",
+    "channels": 15,
     "videos": 18
    },
    {
@@ -120,11 +113,21 @@
    {
     "game": "Grand Theft Auto V",
     "channels": 14,
-    "videos": 16
+    "videos": 15
+   },
+   {
+    "game": "VALORANT",
+    "channels": 12,
+    "videos": 14
    }
   ]
  },
  "recent_columns": [
+  {
+   "date": "2026-09-11",
+   "game": "hololive Dreams",
+   "headline": "王を決める配信の裏で、最弱も決めていた"
+  },
   {
    "date": "2026-09-10",
    "game": "雀魂",
@@ -189,11 +192,6 @@
    "date": "2026-08-29",
    "game": "Moo Who",
    "headline": "8月21日に出たばかりの声真似かくれんぼに、ホロライブの7人が同じ夜いっせいに入った"
-  },
-  {
-   "date": "2026-08-28",
-   "game": "Minecraft",
-   "headline": "無関係な3つのマイクラ企画が重なり、夏休みの最後にマイクラが跳ねた"
   }
  ]
 }
