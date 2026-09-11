@@ -1,16 +1,18 @@
 {
  "date": "2026-09-11",
- "generated": "2026-09-11 15:56",
+ "generated": "2026-09-11 19:15",
  "leads": {
   "events": [
    {
     "tag": "#ゲーム実況",
     "channels": [
+     "CHECHE GAME【顔出し初見ゲーム実況】",
+     "SIANちゃんねる【ディズニー大好きVtuber】",
      "Usagi Ch. 因幡兎",
      "くものち ふれすch.☁️🫧",
      "こじちゃんねる【小嶋明梨】",
+     "ぱんちき🥖🦃",
      "エラch",
-     "ジョアだよ",
      "儚視まちこVTuber Hakanashi Matiko",
      "桃之もれん Momono Moren Ch",
      "週刊少年ゲームマガジン230円"
@@ -21,6 +23,7 @@
     "channels": [
      "Kanae Channel",
      "marunnn【まるーんチャンネル】",
+     "みつき",
      "柚原いづみ / Izumi Channel 【ななしいんく】",
      "赤彩みあ / Akairo Mia Ch.【すずみあ】",
      "風見くく /  Kuku Channel 【ななしいんく】",
@@ -46,6 +49,24 @@
     ]
    },
    {
+    "tag": "#ホロ7大豆劇場",
+    "channels": [
+     "Chihaya Ch. 輪堂 千速 - FLOW GLOW",
+     "Riona Ch. 響咲リオナ - FLOW GLOW",
+     "Towa Ch. 常闇トワ",
+     "フブキCh。白上フブキ"
+    ]
+   },
+   {
+    "tag": "#わちゃわちゃカメレオン",
+    "channels": [
+     "Anya Melfissa Ch. hololive",
+     "Hajime Ch. 轟はじめ ‐ ReGLOSS",
+     "Kanade Ch. 音乃瀬奏 ‐ ReGLOSS",
+     "Raden Ch. 儒烏風亭らでん ‐ ReGLOSS"
+    ]
+   },
+   {
     "tag": "#にじ遊戯王祭2026",
     "channels": [
      "レイン・パターソン／Lain Paterson【にじさんじ】",
@@ -60,65 +81,49 @@
      "家入ポポ / Popo Channel【ななしいんく】",
      "風見くく /  Kuku Channel 【ななしいんく】"
     ]
-   },
-   {
-    "tag": "#ストグラ",
-    "channels": [
-     "たけぉ",
-     "ノビーの遊び部屋",
-     "影。/かげまる"
-    ]
-   },
-   {
-    "tag": "#ホロドリ",
-    "channels": [
-     "ACHRORA - mekPark",
-     "Kuu Ch. 朱舞くぅ",
-     "vii / ビー"
-    ]
    }
   ],
   "newcomers": [],
   "wide": [
    {
     "game": "Apex Legends",
-    "channels": 39,
-    "videos": 51
+    "channels": 40,
+    "videos": 56
    },
    {
     "game": "ストリートファイター6",
-    "channels": 28,
-    "videos": 38
+    "channels": 31,
+    "videos": 42
+   },
+   {
+    "game": "Minecraft",
+    "channels": 24,
+    "videos": 26
    },
    {
     "game": "Rust",
     "channels": 16,
-    "videos": 16
-   },
-   {
-    "game": "Minecraft",
-    "channels": 17,
-    "videos": 19
-   },
-   {
-    "game": "実況パワフルプロ野球2026",
-    "channels": 15,
-    "videos": 18
-   },
-   {
-    "game": "モンスターストライク",
-    "channels": 11,
     "videos": 17
    },
    {
-    "game": "Grand Theft Auto V",
+    "game": "実況パワフルプロ野球2026",
     "channels": 14,
     "videos": 15
    },
    {
-    "game": "VALORANT",
-    "channels": 12,
+    "game": "Grand Theft Auto V",
+    "channels": 14,
+    "videos": 17
+   },
+   {
+    "game": "スプラトゥーン3",
+    "channels": 13,
     "videos": 14
+   },
+   {
+    "game": "Dead by Daylight",
+    "channels": 13,
+    "videos": 16
    }
   ]
  },
