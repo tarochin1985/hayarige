@@ -4750,6 +4750,10 @@
   "pop": 0,
   "p": [
    "pc"
+  ],
+  "g": [
+   "Adventure",
+   "Indie"
   ]
  },
  {
@@ -5567,21 +5571,6 @@
    "Strategy",
    "Tactical",
    "Indie"
-  ]
- },
- {
-  "name": "Ben's Zombie Apocalypse",
-  "alias": [
-   "Ben's Zombie Odyssey"
-  ],
-  "pop": 0,
-  "p": [
-   "console"
-  ],
-  "g": [
-   "Shooter",
-   "Adventure",
-   "Arcade"
   ]
  },
  {
@@ -7662,7 +7651,9 @@
  },
  {
   "name": "Broken Sword: The Smoking Mirror - Reforged",
-  "alias": [],
+  "alias": [
+   "Les Chevaliers de Baphomet - Les Boucliers de Quetzalcoatl: Reforged"
+  ],
   "pop": 0,
   "p": [
    "pc",
@@ -16063,6 +16054,19 @@
   ]
  },
  {
+  "name": "Door Runners",
+  "alias": [
+   "Door_Runers.exe"
+  ],
+  "pop": 0,
+  "p": [
+   "pc"
+  ],
+  "g": [
+   "Indie"
+  ]
+ },
+ {
   "name": "Doors Closed",
   "alias": [],
   "pop": 0,
@@ -21818,20 +21822,6 @@
   ]
  },
  {
-  "name": "Fortnite Festival: Season 15",
-  "alias": [
-   "FN Festival S15"
-  ],
-  "pop": 0,
-  "p": [
-   "pc",
-   "console"
-  ],
-  "g": [
-   "Music"
-  ]
- },
- {
   "name": "Fortnite: Chapter 7 - Season 4: Override",
   "alias": [],
   "pop": 0,
@@ -23711,6 +23701,18 @@
    "Simulator",
    "Sport",
    "Arcade"
+  ]
+ },
+ {
+  "name": "Girl & Scarecrow",
+  "alias": [],
+  "pop": 0,
+  "p": [
+   "pc"
+  ],
+  "g": [
+   "Indie",
+   "Visual Novel"
   ]
  },
  {
@@ -29916,14 +29918,6 @@
   ],
   "g": [
    "Adventure"
-  ]
- },
- {
-  "name": "Jurassic World Evolution 2: Complete Edition",
-  "alias": [],
-  "pop": 0,
-  "p": [
-   "console"
   ]
  },
  {
@@ -36884,6 +36878,34 @@
   ]
  },
  {
+  "name": "Mortality... Please",
+  "alias": [],
+  "pop": 0,
+  "p": [
+   "pc"
+  ],
+  "g": [
+   "Adventure",
+   "Indie",
+   "Visual Novel"
+  ]
+ },
+ {
+  "name": "Mother;Above",
+  "alias": [
+   "MotherAbove.exe"
+  ],
+  "pop": 0,
+  "p": [
+   "pc"
+  ],
+  "g": [
+   "Adventure",
+   "Indie",
+   "Visual Novel"
+  ]
+ },
+ {
   "name": "Mothership Down",
   "alias": [
    "MothershipDown.exe"
@@ -37403,19 +37425,6 @@
   "g": [
    "Role-playing (RPG)",
    "Turn-based strategy (TBS)",
-   "Indie"
-  ]
- },
- {
-  "name": "Mystic Tavern",
-  "alias": [],
-  "pop": 0,
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Simulator",
-   "Adventure",
    "Indie"
   ]
  },
@@ -50268,6 +50277,18 @@
   ]
  },
  {
+  "name": "SmashCore",
+  "alias": [],
+  "pop": 0,
+  "p": [
+   "pc"
+  ],
+  "g": [
+   "Simulator",
+   "Strategy"
+  ]
+ },
+ {
   "name": "Smashing Bottles",
   "alias": [
    "SmashingBottles.exe"
@@ -55190,7 +55211,7 @@
   "alias": [
    "Dawnwalker.exe"
   ],
-  "pop": 14,
+  "pop": 15,
   "p": [
    "pc",
    "console"
@@ -60740,19 +60761,6 @@
   ]
  },
  {
-  "name": "Undergone: Before",
-  "alias": [],
-  "pop": 0,
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Simulator",
-   "Adventure",
-   "Indie"
-  ]
- },
- {
   "name": "Underground Security Inc",
   "alias": [],
   "pop": 0,
@@ -62541,7 +62549,7 @@
   "alias": [
    "WARDOGS"
   ],
-  "pop": 5,
+  "pop": 6,
   "p": [
    "pc",
    "console"
