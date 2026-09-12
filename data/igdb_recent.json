@@ -3446,6 +3446,18 @@
   ]
  },
  {
+  "name": "Arcade Archives 2: Satan of Saturn",
+  "alias": [],
+  "pop": 0,
+  "p": [
+   "console"
+  ],
+  "g": [
+   "Shooter",
+   "Arcade"
+  ]
+ },
+ {
   "name": "Arcade Archives 2: V'Ball",
   "alias": [],
   "pop": 0,
@@ -3483,14 +3495,14 @@
   ]
  },
  {
-  "name": "Arcade Archives: TX-1",
+  "name": "Arcade Archives: Satan of Saturn",
   "alias": [],
   "pop": 0,
   "p": [
    "console"
   ],
   "g": [
-   "Racing",
+   "Shooter",
    "Arcade"
   ]
  },
@@ -9473,17 +9485,6 @@
   ]
  },
  {
-  "name": "Chameleon Dummy Hunt",
-  "alias": [],
-  "pop": 0,
-  "p": [
-   "console"
-  ],
-  "g": [
-   "Adventure"
-  ]
- },
- {
   "name": "Channel 51",
   "alias": [],
   "pop": 0,
@@ -11700,6 +11701,23 @@
   ]
  },
  {
+  "name": "Cowgirl Maid Milk Cafe",
+  "alias": [
+   "牛娘女仆的牛奶咖啡厅",
+   "牛娘女僕的牛奶咖啡廳"
+  ],
+  "pop": 0,
+  "p": [
+   "pc"
+  ],
+  "g": [
+   "Role-playing (RPG)",
+   "Simulator",
+   "Strategy",
+   "Indie"
+  ]
+ },
+ {
   "name": "Cozy Banker",
   "alias": [],
   "pop": 0,
@@ -11986,17 +12004,6 @@
  },
  {
   "name": "Crayon Friends",
-  "alias": [],
-  "pop": 0,
-  "p": [
-   "console"
-  ],
-  "g": [
-   "Arcade"
-  ]
- },
- {
-  "name": "Crayon Mandala",
   "alias": [],
   "pop": 0,
   "p": [
@@ -14828,18 +14835,6 @@
    "Role-playing (RPG)",
    "Adventure",
    "Indie"
-  ]
- },
- {
-  "name": "Destroy The Universe: Solar Mayhem",
-  "alias": [],
-  "pop": 0,
-  "p": [
-   "console"
-  ],
-  "g": [
-   "Simulator",
-   "Arcade"
   ]
  },
  {
@@ -20224,6 +20219,18 @@
   ]
  },
  {
+  "name": "Fast & Fractured",
+  "alias": [],
+  "pop": 0,
+  "p": [
+   "pc"
+  ],
+  "g": [
+   "Racing",
+   "Indie"
+  ]
+ },
+ {
   "name": "Fat Goblins",
   "alias": [],
   "pop": 0,
@@ -22265,6 +22272,14 @@
   "g": [
    "Platform",
    "Adventure"
+  ]
+ },
+ {
+  "name": "Frog Adventure",
+  "alias": [],
+  "pop": 0,
+  "p": [
+   "pc"
   ]
  },
  {
@@ -29797,14 +29812,6 @@
   ]
  },
  {
-  "name": "Jump Protocol",
-  "alias": [],
-  "pop": 0,
-  "p": [
-   "console"
-  ]
- },
- {
   "name": "JunkTok: Paranormal Investigators Challenge",
   "alias": [],
   "pop": 0,
@@ -32824,14 +32831,6 @@
   ]
  },
  {
-  "name": "Loot Before the Law",
-  "alias": [],
-  "pop": 0,
-  "p": [
-   "console"
-  ]
- },
- {
   "name": "Loot Dungeon",
   "alias": [],
   "pop": 0,
@@ -34442,7 +34441,7 @@
    "MARVEL 闘魂",
    "漫威斗魂"
   ],
-  "pop": 11,
+  "pop": 12,
   "jp": "MARVEL 闘魂",
   "p": [
    "pc",
@@ -37404,6 +37403,19 @@
   "g": [
    "Role-playing (RPG)",
    "Turn-based strategy (TBS)",
+   "Indie"
+  ]
+ },
+ {
+  "name": "Mystic Tavern",
+  "alias": [],
+  "pop": 0,
+  "p": [
+   "pc"
+  ],
+  "g": [
+   "Simulator",
+   "Adventure",
    "Indie"
   ]
  },
@@ -51864,18 +51876,6 @@
   ]
  },
  {
-  "name": "Squid Grid",
-  "alias": [],
-  "pop": 0,
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Puzzle",
-   "Indie"
-  ]
- },
- {
   "name": "Squid Hunt 1923",
   "alias": [],
   "pop": 0,
@@ -60735,6 +60735,19 @@
   ],
   "g": [
    "Role-playing (RPG)",
+   "Adventure",
+   "Indie"
+  ]
+ },
+ {
+  "name": "Undergone: Before",
+  "alias": [],
+  "pop": 0,
+  "p": [
+   "pc"
+  ],
+  "g": [
+   "Simulator",
    "Adventure",
    "Indie"
   ]
