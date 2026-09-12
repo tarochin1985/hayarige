@@ -13,6 +13,49 @@ import re
 import sys
 from pathlib import Path
 
+# 記録ページの置き場所。「初めて」を確かめるのに使う。
+SITE_D = Path(__file__).resolve().parent.parent / "site" / "d"
+
+# 「当サイトの集計に入ったのは今日が初めて」と書いてよいのは、
+# 本当に過去1日も出ていないときだけ。
+# 2026-09-12に、直近3日ぶんしか見ずに How to Fish を「初めて」と書いて間違えた。
+# 実際には 8/26・8/27・8/28・9/1・9/6 にも入っていた。
+# 人が数え忘れる種類の間違いなので、機械で確かめる。
+FIRST_RE = re.compile(
+    r"(当サイト|集計|ランキング)[^。]{0,40}?(初めて|初登場|今回が初)"
+    r"|(初めて|初登場|今回が初)[^。]{0,40}?(集計|ランキング)")
+
+
+def _today():
+    from datetime import datetime, timedelta, timezone
+    return (datetime.now(timezone.utc) + timedelta(hours=9)).strftime("%Y-%m-%d")
+
+
+def seen_days(game, before):
+    """そのゲームがランキングに入った日を古い順に返す（before より前だけ）。
+
+    記録ページに埋め込んである当日ぶんのデータを読む。30日を過ぎた日でも
+    ゲーム名と件数は残っているので、全期間を数えられる。
+    """
+    out = []
+    if not game or not SITE_D.is_dir():
+        return out
+    for d in sorted(SITE_D.iterdir()):
+        if not d.is_dir() or (before and d.name >= before):
+            continue
+        f = d / "index.html"
+        if not f.is_file():
+            continue
+        try:
+            h = f.read_text(encoding="utf-8")
+            i = h.index("const DATA = ") + len("const DATA = ")
+            obj, _ = json.JSONDecoder().raw_decode(h[i:])
+        except (ValueError, OSError):
+            continue
+        if any(r.get("game") == game for r in (obj.get("ranking") or [])):
+            out.append(d.name)
+    return out
+
 # 裏が取れていないことを、取れているように見せてしまう言い回し。
 # 「〜という事実」だけを書くルールを、言葉のレベルで縛る。
 HEDGE = [
@@ -33,7 +76,7 @@ BAD_SOURCE = [
 MIN_BODY, MAX_BODY = 120, 480
 
 
-def style(col):
+def style(col, day=""):
     """書き方の注意を返す。**これがあってもサイトには出す。**
 
     validate() のほうは「出してはいけない」ものだけを見ている（裏取り・出典・
@@ -56,6 +99,27 @@ def style(col):
         if game and game in head:
             out.append(f"見出しにゲーム名が入っています（「{game}」）。"
                        "見出しのすぐ上にゲーム名が大きく出るので、重ねないでください")
+
+    # 「初めて」と書いているなら、本当に初めてかを数えて確かめる。
+    # 書いていない日は記録ページを読みに行かないので、普段の負担はない。
+    text = str(col.get("body", "")) + " " + str(col.get("headline", ""))
+    if FIRST_RE.search(text):
+        # day はコラムの日付（ファイル名から取る）。その日より前だけを数える。
+        # ここを空にすると当日の記録ページまで数えてしまい、本当に初めての
+        # ゲームを「前にも出ている」と誤って弾いてしまう。
+        days = seen_days(str(col.get("game", "")).strip(),
+                         day or str(col.get("date", "")) or _today())
+        if days:
+            # ここは「間違い」と断定しない。「昨日が初めて」のように、
+            # 過去に出ていても正しい書き方があるため。事実だけを出して、
+            # 書いた本人に確かめさせる。
+            last = f"{int(days[-1][5:7])}月{int(days[-1][8:10])}日"
+            first = f"{int(days[0][5:7])}月{int(days[0][8:10])}日"
+            out.append(
+                f"「初めて」と書いています。このゲームがランキングに入った日は"
+                f"{first}が最初で、直近は{last}、全部で{len(days)}日あります。"
+                "書いた内容と合っているか確かめてください"
+                "（本当に今日が初めてなら、この行は出ません）")
     return out
 
 
@@ -128,7 +192,7 @@ def load_valid(path, log=print):
         for b in bad:
             log(f"  - {b}")
         return None
-    for w in style(col):
+    for w in style(col, p.stem):
         log(f"コラムの書き方の注意（{p.name}）: {w}")
     return col
 
@@ -140,7 +204,7 @@ def main():
     ok = True
     for arg in sys.argv[1:]:
         col = json.loads(Path(arg).read_text(encoding="utf-8"))
-        bad, warn = validate(col), style(col)
+        bad, warn = validate(col), style(col, Path(arg).stem)
         if bad or warn:
             ok = False
             print(("❌ " if bad else "⚠️  ") + arg)
