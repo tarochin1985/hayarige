@@ -1,12 +1,13 @@
 {
- "date": "2026-09-12",
- "generated": "2026-09-12 19:14",
+ "date": "2026-09-13",
+ "generated": "2026-09-13 07:13",
  "leads": {
   "events": [
    {
     "tag": "#ななし雀魂杯",
     "channels": [
      "ここ・じぇす汰 / Coco･Jester【ななしいんく】",
+     "ねくろちゃん -Yamaguro Nekuro- /あおぎり高校",
      "メイカちゃんねる",
      "伊東ライフ",
      "因幡はねる / Haneru Channel【ななしいんく】",
@@ -31,8 +32,6 @@
      "オリバー・エバンス / Oliver Evans 【にじさんじ】",
      "レイン・パターソン／Lain Paterson【にじさんじ】",
      "レオス・ヴィンセント / Leos.Vincent【にじさんじ】",
-     "七瀬 すず菜 / Nanase Suzuna【にじさんじ】",
-     "伏見ガク【にじさんじ所属】",
      "小清水 透 / Koshimizu Toru【にじさんじ】",
      "星川サラ / Sara Hoshikawa",
      "花畑チャイカ",
@@ -42,38 +41,20 @@
    {
     "tag": "#ゲーム実況",
     "channels": [
-     "SIANちゃんねる【ディズニー大好きVtuber】",
      "Usagi Ch. 因幡兎",
      "こじちゃんねる【小嶋明梨】",
      "てぃーけぇー",
-     "ジョアだよ",
-     "儚視まちこVTuber Hakanashi Matiko",
-     "桃之もれん Momono Moren Ch"
-    ]
-   },
-   {
-    "tag": "#ホロ7大豆劇場",
-    "channels": [
-     "Chihaya Ch. 輪堂 千速 - FLOW GLOW",
-     "Riona Ch. 響咲リオナ - FLOW GLOW",
-     "Towa Ch. 常闇トワ",
-     "フブキCh。白上フブキ"
-    ]
-   },
-   {
-    "tag": "#わちゃわちゃカメレオン",
-    "channels": [
-     "Anya Melfissa Ch. hololive",
-     "Hajime Ch. 轟はじめ ‐ ReGLOSS",
-     "Kanade Ch. 音乃瀬奏 ‐ ReGLOSS",
-     "Raden Ch. 儒烏風亭らでん ‐ ReGLOSS"
+     "ぱんちき🥖🦃",
+     "エラch",
+     "ジョアだよ"
     ]
    },
    {
     "tag": "#SURGETown",
     "channels": [
-     "Kanae Channel",
      "みつき",
+     "家入ポポ / Popo Channel【ななしいんく】",
+     "柚原いづみ / Izumi Channel 【ななしいんく】",
      "赤彩みあ / Akairo Mia Ch.【すずみあ】",
      "鬼ヶ谷 テン / Onigaya Ten"
     ]
@@ -88,11 +69,27 @@
     ]
    },
    {
-    "tag": "#記念配信",
+    "tag": "#ストグラ",
     "channels": [
-     "えういん ∕ euin Ch.",
-     "マリー・トリコロール / Mary Tricolor",
-     "蹄音かさね / Kasane Teion"
+     "クラウン【探検家の記録】",
+     "ノビーの遊び部屋",
+     "柚原いづみ / Izumi Channel 【ななしいんく】"
+    ]
+   },
+   {
+    "tag": "#ストグラSeason2",
+    "channels": [
+     "クラウン【探検家の記録】",
+     "影。/かげまる",
+     "柚原いづみ / Izumi Channel 【ななしいんく】"
+    ]
+   },
+   {
+    "tag": "#ホロ甲2026",
+    "channels": [
+     "Mio Channel 大神ミオ",
+     "Polka Ch. 尾丸ポルカ",
+     "Riona Ch. 響咲リオナ - FLOW GLOW"
     ]
    }
   ],
@@ -100,43 +97,43 @@
   "wide": [
    {
     "game": "Apex Legends",
-    "channels": 41,
-    "videos": 60
+    "channels": 40,
+    "videos": 51
    },
    {
     "game": "ストリートファイター6",
-    "channels": 27,
-    "videos": 36
-   },
-   {
-    "game": "スプラトゥーン3",
-    "channels": 20,
-    "videos": 25
-   },
-   {
-    "game": "雀魂",
-    "channels": 19,
-    "videos": 21
+    "channels": 28,
+    "videos": 35
    },
    {
     "game": "Minecraft",
-    "channels": 19,
-    "videos": 21
+    "channels": 22,
+    "videos": 23
+   },
+   {
+    "game": "スプラトゥーン3",
+    "channels": 21,
+    "videos": 24
+   },
+   {
+    "game": "雀魂",
+    "channels": 18,
+    "videos": 19
+   },
+   {
+    "game": "実況パワフルプロ野球2026",
+    "channels": 16,
+    "videos": 19
    },
    {
     "game": "モンスターストライク",
-    "channels": 15,
-    "videos": 21
+    "channels": 13,
+    "videos": 19
    },
    {
-    "game": "Dead by Daylight",
-    "channels": 15,
-    "videos": 20
-   },
-   {
-    "game": "ポケモンチャンピオンズ",
+    "game": "鬼武者 Way of the Sword",
     "channels": 14,
-    "videos": 15
+    "videos": 14
    }
   ]
  },
