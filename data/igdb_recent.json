@@ -12302,6 +12302,7 @@
   "g": [
    "Role-playing (RPG)",
    "Hack and slash/Beat 'em up",
+   "Adventure",
    "Indie"
   ]
  },
@@ -15946,19 +15947,6 @@
   ]
  },
  {
-  "name": "Donnie's Delicious Nuclear Funeral",
-  "alias": [],
-  "pop": 0,
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Adventure",
-   "Indie",
-   "Visual Novel"
-  ]
- },
- {
   "name": "Donut Panic",
   "alias": [
    "DONUT PANIC"
@@ -16428,7 +16416,9 @@
  },
  {
   "name": "Dragonlance: Veil of the Last Sanctum",
-  "alias": [],
+  "alias": [
+   "Dragonlance.exe"
+  ],
   "pop": 0,
   "p": [
    "pc"
@@ -17342,7 +17332,9 @@
  },
  {
   "name": "Dungeons & Donuts",
-  "alias": [],
+  "alias": [
+   "DungeonsAndDonuts.exe"
+  ],
   "pop": 0,
   "p": [
    "pc"
@@ -18926,6 +18918,20 @@
   ]
  },
  {
+  "name": "Escape Hatch",
+  "alias": [
+   "Escape Hatch.exe"
+  ],
+  "pop": 0,
+  "p": [
+   "pc"
+  ],
+  "g": [
+   "Strategy",
+   "Adventure"
+  ]
+ },
+ {
   "name": "Escape Room: The Secret Portal Puzzle",
   "alias": [],
   "pop": 0,
@@ -19405,6 +19411,21 @@
   ],
   "g": [
    "Shooter",
+   "Indie"
+  ]
+ },
+ {
+  "name": "Exitrance",
+  "alias": [
+   "EXITRANCE",
+   "EXITRANCE.exe"
+  ],
+  "pop": 0,
+  "p": [
+   "pc"
+  ],
+  "g": [
+   "Adventure",
    "Indie"
   ]
  },
@@ -19992,19 +20013,6 @@
   "g": [
    "Simulator",
    "Strategy",
-   "Indie"
-  ]
- },
- {
-  "name": "Fantasy Journey",
-  "alias": [],
-  "pop": 0,
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Role-playing (RPG)",
-   "Adventure",
    "Indie"
   ]
  },
@@ -22940,8 +22948,11 @@
  },
  {
   "name": "Gamble Life",
-  "alias": [],
+  "alias": [
+   "ギャンブルライフ.exe"
+  ],
   "pop": 0,
+  "jp": "ギャンブルライフ.exe",
   "p": [
    "pc"
   ],
@@ -30524,7 +30535,9 @@
  },
  {
   "name": "Kilnborn",
-  "alias": [],
+  "alias": [
+   "Kilnborn.exe"
+  ],
   "pop": 0,
   "p": [
    "pc"
@@ -36856,7 +36869,7 @@
    "MortalShell2.exe",
    "Mortal Shell 2"
   ],
-  "pop": 18,
+  "pop": 19,
   "p": [
    "pc",
    "console"
@@ -37621,21 +37634,6 @@
   ]
  },
  {
-  "name": "Nazi Zombies",
-  "alias": [
-   "Nazi Zombies.exe"
-  ],
-  "pop": 0,
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Shooter",
-   "Indie",
-   "Arcade"
-  ]
- },
- {
   "name": "Near the Sun: Chapter 1",
   "alias": [],
   "pop": 0,
@@ -38230,6 +38228,20 @@
   "g": [
    "Role-playing (RPG)",
    "Simulator",
+   "Indie"
+  ]
+ },
+ {
+  "name": "Nighthawks",
+  "alias": [],
+  "pop": 0,
+  "p": [
+   "pc"
+  ],
+  "g": [
+   "Role-playing (RPG)",
+   "Simulator",
+   "Adventure",
    "Indie"
   ]
  },
@@ -40248,7 +40260,8 @@
  {
   "name": "Orba",
   "alias": [
-   "ORBA"
+   "ORBA",
+   "ORBA.exe"
   ],
   "pop": 0,
   "p": [
@@ -44008,21 +44021,6 @@
   ]
  },
  {
-  "name": "Project Vroom Vroom Prototype",
-  "alias": [
-   "Screw Drivers.exe"
-  ],
-  "pop": 0,
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Racing",
-   "Simulator",
-   "Indie"
-  ]
- },
- {
   "name": "Project: Aftershock",
   "alias": [
    "Project: AFTERSHOCK",
@@ -45611,19 +45609,6 @@
   ]
  },
  {
-  "name": "Redtail Relic Rush",
-  "alias": [],
-  "pop": 0,
-  "p": [
-   "pc",
-   "console"
-  ],
-  "g": [
-   "Platform",
-   "Adventure"
-  ]
- },
- {
   "name": "Reel Life",
   "alias": [
    "Reel Life.exe"
@@ -45948,7 +45933,7 @@
   "alias": [
    "Resonance.exe"
   ],
-  "pop": 26,
+  "pop": 28,
   "p": [
    "pc",
    "console"
@@ -47018,6 +47003,20 @@
   ],
   "g": [
    "Role-playing (RPG)",
+   "Adventure",
+   "Indie"
+  ]
+ },
+ {
+  "name": "Rotfang: The House",
+  "alias": [
+   "DogHorror.exe"
+  ],
+  "pop": 0,
+  "p": [
+   "pc"
+  ],
+  "g": [
    "Adventure",
    "Indie"
   ]
@@ -49115,19 +49114,6 @@
   ],
   "g": [
    "Role-playing (RPG)"
-  ]
- },
- {
-  "name": "Shisya Zero",
-  "alias": [
-   "ShisyaZero.exe"
-  ],
-  "pop": 0,
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Adventure"
   ]
  },
  {
@@ -52458,7 +52444,10 @@
    "pc"
   ],
   "g": [
-   "Platform"
+   "Platform",
+   "Role-playing (RPG)",
+   "Adventure",
+   "Indie"
   ]
  },
  {
@@ -55218,7 +55207,7 @@
   "alias": [
    "Dawnwalker.exe"
   ],
-  "pop": 19,
+  "pop": 20,
   "p": [
    "pc",
    "console"
@@ -57663,7 +57652,7 @@
   "alias": [
    "TheSinkingCity2.exe"
   ],
-  "pop": 9,
+  "pop": 10,
   "p": [
    "pc",
    "console"
@@ -62216,6 +62205,22 @@
   ]
  },
  {
+  "name": "Volatility",
+  "alias": [
+   "Volatility.exe"
+  ],
+  "pop": 0,
+  "p": [
+   "pc"
+  ],
+  "g": [
+   "Real Time Strategy (RTS)",
+   "Simulator",
+   "Strategy",
+   "Indie"
+  ]
+ },
+ {
   "name": "Voldark",
   "alias": [],
   "pop": 0,
@@ -62733,6 +62738,18 @@
    "Fighting",
    "Role-playing (RPG)",
    "Adventure"
+  ]
+ },
+ {
+  "name": "Warscape Alpha",
+  "alias": [],
+  "pop": 0,
+  "p": [
+   "pc"
+  ],
+  "g": [
+   "Shooter",
+   "Arcade"
   ]
  },
  {
@@ -64269,7 +64286,8 @@
  {
   "name": "World of Warcraft: Forever",
   "alias": [
-   "World of Warcraft: Classic Plus"
+   "World of Warcraft: Classic Plus",
+   "wow forever"
   ],
   "pop": 0,
   "p": [
@@ -64902,17 +64920,6 @@
    "Role-playing (RPG)",
    "Adventure",
    "Indie"
-  ]
- },
- {
-  "name": "Zentris",
-  "alias": [],
-  "pop": 0,
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Puzzle"
   ]
  },
  {
