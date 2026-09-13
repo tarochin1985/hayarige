@@ -6838,18 +6838,6 @@
   ]
  },
  {
-  "name": "Blue Flag Down, Guard Up",
-  "alias": [],
-  "pop": 0,
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Indie",
-   "Arcade"
-  ]
- },
- {
   "name": "Blue Sign",
   "alias": [
    "BlueSign.exe"
@@ -8823,6 +8811,20 @@
   ]
  },
  {
+  "name": "Cardsharp",
+  "alias": [
+   "Card Sharp"
+  ],
+  "pop": 0,
+  "p": [
+   "pc"
+  ],
+  "g": [
+   "Strategy",
+   "Card & Board Game"
+  ]
+ },
+ {
   "name": "Cardstronaut",
   "alias": [],
   "pop": 0,
@@ -10786,6 +10788,18 @@
   ]
  },
  {
+  "name": "Cocosic: On Pirates' Trail",
+  "alias": [],
+  "pop": 0,
+  "p": [
+   "pc"
+  ],
+  "g": [
+   "Platform",
+   "Adventure"
+  ]
+ },
+ {
   "name": "Code My Robot Vacuum",
   "alias": [],
   "pop": 0,
@@ -12379,6 +12393,7 @@
   "alias": [],
   "pop": 0,
   "p": [
+   "pc",
    "console"
   ],
   "g": [
@@ -13788,19 +13803,6 @@
   ]
  },
  {
-  "name": "Death Pong",
-  "alias": [],
-  "pop": 0,
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Simulator",
-   "Indie",
-   "Arcade"
-  ]
- },
- {
   "name": "Death Rabbit",
   "alias": [],
   "pop": 0,
@@ -14907,6 +14909,18 @@
   "g": [
    "Simulator",
    "Indie"
+  ]
+ },
+ {
+  "name": "Dialshift",
+  "alias": [],
+  "pop": 0,
+  "p": [
+   "pc"
+  ],
+  "g": [
+   "Indie",
+   "Arcade"
   ]
  },
  {
@@ -16420,7 +16434,9 @@
    "pc"
   ],
   "g": [
-   "Role-playing (RPG)"
+   "Role-playing (RPG)",
+   "Adventure",
+   "Indie"
   ]
  },
  {
@@ -19430,18 +19446,6 @@
   ]
  },
  {
-  "name": "Exorcism:Nuo Rituals",
-  "alias": [],
-  "pop": 0,
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Puzzle",
-   "Indie"
-  ]
- },
- {
   "name": "Exorcist Hotline",
   "alias": [],
   "pop": 0,
@@ -20529,6 +20533,19 @@
    "Simulator",
    "Strategy",
    "Turn-based strategy (TBS)",
+   "Indie"
+  ]
+ },
+ {
+  "name": "Fickle Allies",
+  "alias": [],
+  "pop": 0,
+  "p": [
+   "pc"
+  ],
+  "g": [
+   "Strategy",
+   "Adventure",
    "Indie"
   ]
  },
@@ -25367,6 +25384,20 @@
   ]
  },
  {
+  "name": "Halley's Big Catch",
+  "alias": [],
+  "pop": 0,
+  "p": [
+   "pc"
+  ],
+  "g": [
+   "Simulator",
+   "Sport",
+   "Adventure",
+   "Indie"
+  ]
+ },
+ {
   "name": "Halloween: The Game",
   "alias": [
    "Halloween",
@@ -28241,14 +28272,6 @@
    "Adventure",
    "Indie",
    "Visual Novel"
-  ]
- },
- {
-  "name": "Important things",
-  "alias": [],
-  "pop": 0,
-  "p": [
-   "console"
   ]
  },
  {
@@ -35974,18 +35997,6 @@
   ]
  },
  {
-  "name": "MioAquaria",
-  "alias": [],
-  "pop": 0,
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Simulator",
-   "Indie"
-  ]
- },
- {
   "name": "Mion and the Cursed Killer Hamster",
   "alias": [],
   "pop": 0,
@@ -37554,18 +37565,6 @@
   ]
  },
  {
-  "name": "NPC Simulator",
-  "alias": [],
-  "pop": 0,
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Simulator",
-   "Indie"
-  ]
- },
- {
   "name": "NVA: No Visitors Allowed",
   "alias": [],
   "pop": 0,
@@ -37886,17 +37885,6 @@
   ],
   "g": [
    "Adventure",
-   "Indie"
-  ]
- },
- {
-  "name": "Neural Drive",
-  "alias": [],
-  "pop": 0,
-  "p": [
-   "pc"
-  ],
-  "g": [
    "Indie"
   ]
  },
@@ -45960,7 +45948,7 @@
   "alias": [
    "Resonance.exe"
   ],
-  "pop": 25,
+  "pop": 26,
   "p": [
    "pc",
    "console"
@@ -52382,6 +52370,22 @@
   ]
  },
  {
+  "name": "Steel Gullet",
+  "alias": [
+   "STEEL GULLET"
+  ],
+  "pop": 0,
+  "p": [
+   "pc"
+  ],
+  "g": [
+   "Puzzle",
+   "Simulator",
+   "Strategy",
+   "Indie"
+  ]
+ },
+ {
   "name": "Steel Judgment",
   "alias": [],
   "pop": 0,
@@ -52444,6 +52448,17 @@
   "g": [
    "Strategy",
    "Indie"
+  ]
+ },
+ {
+  "name": "Stella Supernova: The Astral Vale",
+  "alias": [],
+  "pop": 0,
+  "p": [
+   "pc"
+  ],
+  "g": [
+   "Platform"
   ]
  },
  {
@@ -55203,7 +55218,7 @@
   "alias": [
    "Dawnwalker.exe"
   ],
-  "pop": 17,
+  "pop": 19,
   "p": [
    "pc",
    "console"
@@ -62497,6 +62512,14 @@
   ]
  },
  {
+  "name": "Warcraft III: Reforged - Forsaken Kingdom",
+  "alias": [],
+  "pop": 0,
+  "p": [
+   "pc"
+  ]
+ },
+ {
   "name": "Ward Off Evil",
   "alias": [],
   "pop": 0,
@@ -62512,7 +62535,7 @@
   "alias": [
    "WARDOGS"
   ],
-  "pop": 7,
+  "pop": 8,
   "p": [
    "pc",
    "console"
@@ -64863,14 +64886,6 @@
   "g": [
    "Adventure",
    "Indie"
-  ]
- },
- {
-  "name": "Zella's Gun",
-  "alias": [],
-  "pop": 0,
-  "p": [
-   "console"
   ]
  },
  {
