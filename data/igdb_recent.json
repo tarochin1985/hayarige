@@ -769,6 +769,20 @@
   ]
  },
  {
+  "name": "A Game About Opening a Chest",
+  "alias": [],
+  "pop": 0,
+  "p": [
+   "pc"
+  ],
+  "g": [
+   "Role-playing (RPG)",
+   "Strategy",
+   "Adventure",
+   "Indie"
+  ]
+ },
+ {
   "name": "A Game About Penguins",
   "alias": [],
   "pop": 0,
@@ -976,20 +990,6 @@
   "g": [
    "Puzzle",
    "Adventure",
-   "Indie"
-  ]
- },
- {
-  "name": "A-Spec: First Assault",
-  "alias": [
-   "A-SPEC First Assault.exe"
-  ],
-  "pop": 0,
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Simulator",
    "Indie"
   ]
  },
@@ -1733,18 +1733,6 @@
   ],
   "g": [
    "Puzzle",
-   "Strategy"
-  ]
- },
- {
-  "name": "AfterWar",
-  "alias": [],
-  "pop": 0,
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Simulator",
    "Strategy"
   ]
  },
@@ -4815,20 +4803,6 @@
   ]
  },
  {
-  "name": "Bad Pixels",
-  "alias": [
-   "Bad Pixels.exe"
-  ],
-  "pop": 0,
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Shooter",
-   "Indie"
-  ]
- },
- {
   "name": "Badass Brigade",
   "alias": [],
   "pop": 0,
@@ -5815,6 +5789,28 @@
    "Role-playing (RPG)",
    "Adventure",
    "Indie"
+  ]
+ },
+ {
+  "name": "Bibi & Tina: Ready, Set, Ride!",
+  "alias": [
+   "Bibi & Tina – Auf die Pferde, fertig, los!",
+   "Bibi & Tina – À vos marques, prêts, galopez !",
+   "Bibi & Tina – In sella, pronti, via!",
+   "Bibi & Tina : ¡Preparados, listos, a cabalgar!",
+   "Bibi & Tina – На старт, внимание, верхом!",
+   "Bibi & Tina – Na konie, gotowi, start!"
+  ],
+  "pop": 0,
+  "p": [
+   "pc",
+   "console"
+  ],
+  "g": [
+   "Racing",
+   "Simulator",
+   "Sport",
+   "Adventure"
   ]
  },
  {
@@ -10141,7 +10137,9 @@
  },
  {
   "name": "Cinnabar Nights",
-  "alias": [],
+  "alias": [
+   "Game.exe"
+  ],
   "pop": 0,
   "p": [
    "pc"
@@ -10895,6 +10893,17 @@
    "Role-playing (RPG)",
    "Simulator",
    "Adventure",
+   "Indie"
+  ]
+ },
+ {
+  "name": "CoinClave",
+  "alias": [],
+  "pop": 0,
+  "p": [
+   "pc"
+  ],
+  "g": [
    "Indie"
   ]
  },
@@ -12314,8 +12323,10 @@
    "pc"
   ],
   "g": [
+   "Real Time Strategy (RTS)",
    "Simulator",
-   "Strategy"
+   "Strategy",
+   "Indie"
   ]
  },
  {
@@ -13801,6 +13812,19 @@
    "Role-playing (RPG)",
    "Adventure",
    "Indie"
+  ]
+ },
+ {
+  "name": "Death Pong",
+  "alias": [],
+  "pop": 0,
+  "p": [
+   "pc"
+  ],
+  "g": [
+   "Simulator",
+   "Indie",
+   "Arcade"
   ]
  },
  {
@@ -15947,6 +15971,19 @@
   ]
  },
  {
+  "name": "Donnie's Delicious Nuclear Funeral",
+  "alias": [],
+  "pop": 0,
+  "p": [
+   "pc"
+  ],
+  "g": [
+   "Adventure",
+   "Indie",
+   "Visual Novel"
+  ]
+ },
+ {
   "name": "Donut Panic",
   "alias": [
    "DONUT PANIC"
@@ -17964,6 +18001,18 @@
   ]
  },
  {
+  "name": "Echoes of Pinebridge",
+  "alias": [],
+  "pop": 0,
+  "p": [
+   "pc"
+  ],
+  "g": [
+   "Indie",
+   "Visual Novel"
+  ]
+ },
+ {
   "name": "Echoes of the End: Enhanced Edition",
   "alias": [],
   "pop": 0,
@@ -18456,18 +18505,6 @@
   "g": [
    "Adventure",
    "Indie"
-  ]
- },
- {
-  "name": "Elsewar",
-  "alias": [],
-  "pop": 0,
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Strategy",
-   "Card & Board Game"
   ]
  },
  {
@@ -19467,6 +19504,18 @@
   ]
  },
  {
+  "name": "Exorcism:Nuo Rituals",
+  "alias": [],
+  "pop": 0,
+  "p": [
+   "pc"
+  ],
+  "g": [
+   "Puzzle",
+   "Indie"
+  ]
+ },
+ {
   "name": "Exorcist Hotline",
   "alias": [],
   "pop": 0,
@@ -19681,6 +19730,20 @@
   ]
  },
  {
+  "name": "F1 Simulator",
+  "alias": [],
+  "pop": 0,
+  "p": [
+   "pc"
+  ],
+  "g": [
+   "Racing",
+   "Simulator",
+   "Sport",
+   "Indie"
+  ]
+ },
+ {
   "name": "FAFO Executive Order Simulator",
   "alias": [],
   "pop": 0,
@@ -19830,20 +19893,6 @@
   ],
   "g": [
    "Adventure",
-   "Indie"
-  ]
- },
- {
-  "name": "Fairtravel Battle",
-  "alias": [
-   "Fairtravel Battle CCG"
-  ],
-  "pop": 0,
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Strategy",
    "Indie"
   ]
  },
@@ -20204,6 +20253,18 @@
    "Adventure",
    "Indie",
    "Visual Novel"
+  ]
+ },
+ {
+  "name": "Fast & Fractured",
+  "alias": [],
+  "pop": 0,
+  "p": [
+   "pc"
+  ],
+  "g": [
+   "Racing",
+   "Indie"
   ]
  },
  {
@@ -20829,18 +20890,6 @@
   ],
   "g": [
    "Strategy",
-   "Indie"
-  ]
- },
- {
-  "name": "Fisher Idle",
-  "alias": [],
-  "pop": 0,
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Adventure",
    "Indie"
   ]
  },
@@ -22260,14 +22309,6 @@
   "g": [
    "Platform",
    "Adventure"
-  ]
- },
- {
-  "name": "Frog Adventure",
-  "alias": [],
-  "pop": 0,
-  "p": [
-   "pc"
   ]
  },
  {
@@ -25225,6 +25266,20 @@
   ]
  },
  {
+  "name": "Guys with Magnets",
+  "alias": [
+   "Golden Magnet"
+  ],
+  "pop": 0,
+  "p": [
+   "pc"
+  ],
+  "g": [
+   "Adventure",
+   "Indie"
+  ]
+ },
+ {
   "name": "GwenBlade Witcheresque",
   "alias": [
    "GB_Witcheresque.exe"
@@ -27235,20 +27290,6 @@
   ]
  },
  {
-  "name": "Hotel Tales",
-  "alias": [
-   "Hotel Tales.exe"
-  ],
-  "pop": 0,
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Role-playing (RPG)",
-   "Adventure"
-  ]
- },
- {
   "name": "Hotel Tycoon",
   "alias": [],
   "pop": 0,
@@ -28030,6 +28071,17 @@
   ]
  },
  {
+  "name": "Idle Garden",
+  "alias": [],
+  "pop": 0,
+  "p": [
+   "pc"
+  ],
+  "g": [
+   "Simulator"
+  ]
+ },
+ {
   "name": "Idle Immortal",
   "alias": [],
   "pop": 0,
@@ -28470,21 +28522,6 @@
    "Simulator",
    "Strategy",
    "Indie"
-  ]
- },
- {
-  "name": "Incredeck",
-  "alias": [
-   "INCREDECK",
-   "INCREDECK.exe"
-  ],
-  "pop": 0,
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Indie",
-   "Card & Board Game"
   ]
  },
  {
@@ -30145,6 +30182,18 @@
   ]
  },
  {
+  "name": "Kapka The Game",
+  "alias": [],
+  "pop": 0,
+  "p": [
+   "console"
+  ],
+  "g": [
+   "Indie",
+   "Card & Board Game"
+  ]
+ },
+ {
   "name": "Kara",
   "alias": [],
   "pop": 0,
@@ -30742,6 +30791,22 @@
   "g": [
    "Adventure",
    "Indie"
+  ]
+ },
+ {
+  "name": "Kitten Airsoft",
+  "alias": [],
+  "pop": 0,
+  "p": [
+   "pc"
+  ],
+  "g": [
+   "Real Time Strategy (RTS)",
+   "Sport",
+   "Strategy",
+   "Tactical",
+   "Indie",
+   "Arcade"
   ]
  },
  {
@@ -33392,19 +33457,6 @@
   ]
  },
  {
-  "name": "Luck of the Draw",
-  "alias": [
-   "luck_of_the_draw.exe"
-  ],
-  "pop": 0,
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Strategy"
-  ]
- },
- {
   "name": "Lucky Shot",
   "alias": [
    "LuckyShot.exe"
@@ -33631,6 +33683,20 @@
    "Simulator",
    "Adventure",
    "Indie"
+  ]
+ },
+ {
+  "name": "MSO FreeCell Arena",
+  "alias": [],
+  "pop": 0,
+  "p": [
+   "pc"
+  ],
+  "g": [
+   "Puzzle",
+   "Strategy",
+   "Indie",
+   "Card & Board Game"
   ]
  },
  {
@@ -36010,6 +36076,18 @@
   ]
  },
  {
+  "name": "MioAquaria",
+  "alias": [],
+  "pop": 0,
+  "p": [
+   "pc"
+  ],
+  "g": [
+   "Simulator",
+   "Indie"
+  ]
+ },
+ {
   "name": "Mion and the Cursed Killer Hamster",
   "alias": [],
   "pop": 0,
@@ -37013,20 +37091,6 @@
   ]
  },
  {
-  "name": "Mr. President",
-  "alias": [
-   "MrPresident.exe"
-  ],
-  "pop": 0,
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Simulator",
-   "Strategy"
-  ]
- },
- {
   "name": "Mr. Swop",
   "alias": [
    "MR. SWOP"
@@ -37263,6 +37327,10 @@
   "pop": 0,
   "p": [
    "pc"
+  ],
+  "g": [
+   "Simulator",
+   "Strategy"
   ]
  },
  {
@@ -37431,6 +37499,19 @@
   ]
  },
  {
+  "name": "Mystic Tavern",
+  "alias": [],
+  "pop": 0,
+  "p": [
+   "pc"
+  ],
+  "g": [
+   "Simulator",
+   "Adventure",
+   "Indie"
+  ]
+ },
+ {
   "name": "Myth of Valderit",
   "alias": [],
   "pop": 0,
@@ -37575,6 +37656,18 @@
   "g": [
    "Simulator",
    "Sport"
+  ]
+ },
+ {
+  "name": "NPC Simulator",
+  "alias": [],
+  "pop": 0,
+  "p": [
+   "pc"
+  ],
+  "g": [
+   "Simulator",
+   "Indie"
   ]
  },
  {
@@ -37883,6 +37976,17 @@
   ],
   "g": [
    "Adventure",
+   "Indie"
+  ]
+ },
+ {
+  "name": "Neural Drive",
+  "alias": [],
+  "pop": 0,
+  "p": [
+   "pc"
+  ],
+  "g": [
    "Indie"
   ]
  },
@@ -39208,21 +39312,6 @@
   ]
  },
  {
-  "name": "Occulto",
-  "alias": [
-   "occulto.exe"
-  ],
-  "pop": 0,
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Point-and-click",
-   "Adventure",
-   "Indie"
-  ]
- },
- {
   "name": "Ocean City Killer",
   "alias": [],
   "pop": 0,
@@ -39243,18 +39332,6 @@
   ],
   "g": [
    "Simulator",
-   "Arcade"
-  ]
- },
- {
-  "name": "Ocean Survivors",
-  "alias": [],
-  "pop": 0,
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Indie",
    "Arcade"
   ]
  },
@@ -41210,21 +41287,6 @@
   ]
  },
  {
-  "name": "Parkside: Decayed Soul Manipulation",
-  "alias": [
-   "PARKSIDE: DECAYED SOUL MANIPULATION",
-   "Parkside"
-  ],
-  "pop": 0,
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Role-playing (RPG)",
-   "Indie"
-  ]
- },
- {
   "name": "Party Pop Bubblyz",
   "alias": [
    "Bubblyz"
@@ -41236,20 +41298,6 @@
   "g": [
    "Platform",
    "Racing",
-   "Indie"
-  ]
- },
- {
-  "name": "Party Quiz",
-  "alias": [
-   "Party Quiz.exe"
-  ],
-  "pop": 0,
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Quiz/Trivia",
    "Indie"
   ]
  },
@@ -42117,7 +42165,9 @@
  },
  {
   "name": "Pibcremental",
-  "alias": [],
+  "alias": [
+   "米粒新世界"
+  ],
   "pop": 0,
   "p": [
    "pc"
@@ -44511,23 +44561,6 @@
   "g": [
    "Puzzle",
    "Arcade"
-  ]
- },
- {
-  "name": "Quasimorph",
-  "alias": [
-   "Quasimorphosis",
-   "Quasimorph.exe"
-  ],
-  "pop": 7,
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Role-playing (RPG)",
-   "Simulator",
-   "Strategy",
-   "Indie"
   ]
  },
  {
@@ -48152,20 +48185,6 @@
   ]
  },
  {
-  "name": "Security Simulator: Nightshift",
-  "alias": [
-   "SecuritySimulator.exe"
-  ],
-  "pop": 0,
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Simulator",
-   "Indie"
-  ]
- },
- {
   "name": "Seeding The Wasteland",
   "alias": [
    "Seeding The Wasteland.exe"
@@ -48343,25 +48362,6 @@
    "pc"
   ],
   "g": [
-   "Indie"
-  ]
- },
- {
-  "name": "Sephiria",
-  "alias": [
-   "세피리아",
-   "赛菲莉娅",
-   "セフィリア",
-   "Sephiria.exe"
-  ],
-  "pop": 0,
-  "jp": "セフィリア",
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Role-playing (RPG)",
-   "Adventure",
    "Indie"
   ]
  },
@@ -50880,18 +50880,6 @@
   ]
  },
  {
-  "name": "Sorry About The Mess",
-  "alias": [],
-  "pop": 0,
-  "p": [
-   "pc",
-   "console"
-  ],
-  "g": [
-   "Visual Novel"
-  ]
- },
- {
   "name": "Sort Them Ducks",
   "alias": [],
   "pop": 0,
@@ -52150,6 +52138,18 @@
   ]
  },
  {
+  "name": "Starburst Fever Night",
+  "alias": [],
+  "pop": 0,
+  "p": [
+   "pc"
+  ],
+  "g": [
+   "Puzzle",
+   "Indie"
+  ]
+ },
+ {
   "name": "Starfinder: Afterlight",
   "alias": [],
   "pop": 0,
@@ -52372,18 +52372,6 @@
   ]
  },
  {
-  "name": "Steel Judgment",
-  "alias": [],
-  "pop": 0,
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Shooter",
-   "Indie"
-  ]
- },
- {
   "name": "Steelarchy",
   "alias": [],
   "pop": 0,
@@ -52569,6 +52557,20 @@
    "pc"
   ],
   "g": [
+   "Indie"
+  ]
+ },
+ {
+  "name": "Stillwell",
+  "alias": [],
+  "pop": 0,
+  "p": [
+   "pc"
+  ],
+  "g": [
+   "Puzzle",
+   "Strategy",
+   "Adventure",
    "Indie"
   ]
  },
@@ -53474,6 +53476,18 @@
    "Simulator",
    "Adventure",
    "Arcade"
+  ]
+ },
+ {
+  "name": "Supermarket Life Simulator",
+  "alias": [],
+  "pop": 0,
+  "p": [
+   "pc"
+  ],
+  "g": [
+   "Simulator",
+   "Indie"
   ]
  },
  {
@@ -56445,14 +56459,6 @@
   ]
  },
  {
-  "name": "The Idolmaster: Shiny Colors - With Open()",
-  "alias": [],
-  "pop": 0,
-  "g": [
-   "Visual Novel"
-  ]
- },
- {
   "name": "The Immortal John Triptych",
   "alias": [],
   "pop": 0,
@@ -56475,6 +56481,17 @@
   "g": [
    "Role-playing (RPG)",
    "Indie"
+  ]
+ },
+ {
+  "name": "The Infectious Adventure",
+  "alias": [],
+  "pop": 0,
+  "p": [
+   "pc"
+  ],
+  "g": [
+   "Adventure"
   ]
  },
  {
@@ -57450,22 +57467,6 @@
    "Simulator",
    "Sport",
    "Strategy",
-   "Indie"
-  ]
- },
- {
-  "name": "The Relic: First Guardian",
-  "alias": [
-   "Project Relic"
-  ],
-  "pop": 1,
-  "p": [
-   "pc",
-   "console"
-  ],
-  "g": [
-   "Role-playing (RPG)",
-   "Adventure",
    "Indie"
   ]
  },
@@ -58657,15 +58658,6 @@
   ]
  },
  {
-  "name": "Tikal Online",
-  "alias": [],
-  "pop": 0,
-  "g": [
-   "Role-playing (RPG)",
-   "Indie"
-  ]
- },
- {
   "name": "Tile & Error",
   "alias": [],
   "pop": 0,
@@ -58794,17 +58786,6 @@
   ],
   "g": [
    "Simulator",
-   "Indie"
-  ]
- },
- {
-  "name": "Tiny Bomber",
-  "alias": [],
-  "pop": 0,
-  "p": [
-   "pc"
-  ],
-  "g": [
    "Indie"
   ]
  },
@@ -58968,20 +58949,6 @@
   ]
  },
  {
-  "name": "Titan Force",
-  "alias": [
-   "Titanforce.exe",
-   "Titan Forge"
-  ],
-  "pop": 0,
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Adventure"
-  ]
- },
- {
   "name": "Titanic Escape Simulator",
   "alias": [],
   "pop": 0,
@@ -58991,6 +58958,20 @@
   "g": [
    "Simulator",
    "Adventure",
+   "Indie"
+  ]
+ },
+ {
+  "name": "To Be Connected",
+  "alias": [],
+  "pop": 0,
+  "p": [
+   "pc"
+  ],
+  "g": [
+   "Puzzle",
+   "Simulator",
+   "Strategy",
    "Indie"
   ]
  },
@@ -60459,6 +60440,18 @@
   ]
  },
  {
+  "name": "Two Dollar Suits",
+  "alias": [],
+  "pop": 0,
+  "p": [
+   "pc"
+  ],
+  "g": [
+   "Strategy",
+   "Indie"
+  ]
+ },
+ {
   "name": "Two Sides of Hell",
   "alias": [],
   "pop": 0,
@@ -60738,6 +60731,19 @@
   ],
   "g": [
    "Role-playing (RPG)",
+   "Adventure",
+   "Indie"
+  ]
+ },
+ {
+  "name": "Undergone: Before",
+  "alias": [],
+  "pop": 0,
+  "p": [
+   "pc"
+  ],
+  "g": [
+   "Simulator",
    "Adventure",
    "Indie"
   ]
@@ -61023,6 +61029,20 @@
   ],
   "g": [
    "Adventure"
+  ]
+ },
+ {
+  "name": "Untergrund Raceways: Arena",
+  "alias": [],
+  "pop": 0,
+  "p": [
+   "pc"
+  ],
+  "g": [
+   "Fighting",
+   "Racing",
+   "Indie",
+   "Arcade"
   ]
  },
  {
@@ -64507,23 +64527,6 @@
   "g": [
    "Role-playing (RPG)",
    "Adventure"
-  ]
- },
- {
-  "name": "Xialuo: Kill All Flowers",
-  "alias": [
-   "侠落：百花杀尽",
-   "百花杀尽.exe"
-  ],
-  "pop": 0,
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Role-playing (RPG)",
-   "Strategy",
-   "Adventure",
-   "Indie"
   ]
  },
  {
