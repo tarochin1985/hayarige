@@ -1,6 +1,6 @@
 {
  "date": "2026-09-15",
- "generated": "2026-09-15 07:12",
+ "generated": "2026-09-15 08:37",
  "leads": {
   "events": [
    {
@@ -21,6 +21,17 @@
     ]
    },
    {
+    "tag": "#ゲーム実況",
+    "channels": [
+     "CHECHE GAME【顔出し初見ゲーム実況】",
+     "Usagi Ch. 因幡兎",
+     "こじちゃんねる【小嶋明梨】",
+     "エラch",
+     "儚視まちこVTuber Hakanashi Matiko",
+     "星埜きぃ -Key Hoshino-"
+    ]
+   },
+   {
     "tag": "#SURGETown",
     "channels": [
      "Kanae Channel",
@@ -29,16 +40,6 @@
      "アズリ / Azri【ななしいんく】",
      "赤彩みあ / Akairo Mia Ch.【すずみあ】",
      "鬼ヶ谷 テン / Onigaya Ten"
-    ]
-   },
-   {
-    "tag": "#ゲーム実況",
-    "channels": [
-     "CHECHE GAME【顔出し初見ゲーム実況】",
-     "Usagi Ch. 因幡兎",
-     "こじちゃんねる【小嶋明梨】",
-     "エラch",
-     "儚視まちこVTuber Hakanashi Matiko"
     ]
    },
    {
@@ -69,12 +70,12 @@
    {
     "game": "Apex Legends",
     "channels": 41,
-    "videos": 56
+    "videos": 54
    },
    {
     "game": "ストリートファイター6",
     "channels": 27,
-    "videos": 37
+    "videos": 36
    },
    {
     "game": "Minecraft",
@@ -104,11 +105,16 @@
    {
     "game": "モンスターストライク",
     "channels": 10,
-    "videos": 11
+    "videos": 14
    }
   ]
  },
  "recent_columns": [
+  {
+   "date": "2026-09-15",
+   "game": "Super Battle Golf",
+   "headline": "勝った夜は解散せず、日付をまたいで二次会へ"
+  },
   {
    "date": "2026-09-14",
    "game": "クレイジータクシー",
@@ -173,11 +179,6 @@
    "date": "2026-09-02",
    "game": "Project Winter",
    "headline": "ななしいんくの8人が夜11時半、雪山人狼「Project Winter」にいっせいに集まった"
-  },
-  {
-   "date": "2026-09-01",
-   "game": "Deep Blue Sushi",
-   "headline": "発売11日目の寿司屋経営ゲームに、らっだぁとにじさんじ「オリエンス」が同じ夜に飛び込んだ"
   }
  ]
 }
