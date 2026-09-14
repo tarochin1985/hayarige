@@ -12,7 +12,7 @@ from datetime import datetime, timedelta, timezone
 from urllib.parse import quote, quote_plus
 from common import DATA, SITE, JST, log, read_json, write_json, today
 import match as M
-from check_column import load_valid
+from check_column import load_valid, HEDGE, BAD_SOURCE
 
 DAYS = 7
 MIN_FOR_MOMENTUM = 3          # 急上昇の対象にする最低本数（少数のブレを弾く）
@@ -225,15 +225,18 @@ def nav_html(data, home):
     a = []
     if data.get("mode") == "page":
         a.append((home, "今日のランキングへ"))
+        a.append((home + "matome/", "週・月のまとめ"))
         a.append((home + "archive/", "これまでの記録"))
     elif data.get("mode") == "archive":
         a.append((home, "今日のランキング"))
+        a.append((home + "matome/", "週・月のまとめ"))
         a.append((home + "about/", "このサイトについて"))
     elif data.get("mode") == "admin":
         return ""
     else:
         if data.get("view") == "archive":
             a.append((home, "今日のランキングへ"))
+        a.append((home + "matome/", "週・月のまとめ"))
         a.append((home + "archive/", "これまでの記録"))
         a.append((home + "about/", "このサイトについて"))
     return "".join(f'<a href="{e(u)}">{e(t)}</a>' for u, t in a)
@@ -453,6 +456,125 @@ def watched_channels():
             continue
         n += 1
     return n
+
+
+# ------------------------------------------------------- 週・月のまとめ
+# 毎日のコラムが「その日起きたこと」なのに対し、こちらは
+# 1日では見えないことを書く読みもの。2026-09-14に、Xに流して消すのは
+# もったいないという話になり、サイトにも残すことにした。
+#
+#   data/columns/weekly/YYYY-MM-DD.json   … その週の月曜の日付で置く
+#   data/columns/monthly/YYYY-MM.json     … その月
+#
+# 形（週と月で同じ。週は section が1つ、月は3〜5つになる）:
+#   {"title": "見出し", "lead": "リード（任意）",
+#    "sections": [{"h": "小見出し（任意）", "body": "本文"}],
+#    "sources": [{"t": "見出し", "u": "https://..."}]}
+SPECIALS = [("weekly", "w", "週まとめ"), ("monthly", "m", "月まとめ")]
+
+
+def special_key_label(kind, key):
+    """ファイル名から、人が読む見出しを作る。"""
+    if kind == "monthly":
+        return f"{int(key[:4])}年{int(key[5:7])}月のまとめ"
+    d = datetime.strptime(key, "%Y-%m-%d")
+    end = d + timedelta(days=6)
+    return (f"{d.year}年{d.month}月{d.day}日〜{end.month}月{end.day}日の週まとめ")
+
+
+def load_specials():
+    """週・月のまとめを読む。壊れているものは載せない。"""
+    out = []
+    for kind, slug, label in SPECIALS:
+        d = DATA / "columns" / kind
+        if not d.is_dir():
+            continue
+        for f in sorted(d.glob("*.json")):
+            c = read_json(f, None)
+            bad = check_special(c)
+            if bad:
+                log(f"まとめを載せません（{kind}/{f.name}）: {bad[0]}")
+                continue
+            out.append({"kind": kind, "slug": slug, "label": label,
+                        "key": f.stem, "col": c,
+                        "title": str(c.get("title", "")).strip(),
+                        "heading": special_key_label(kind, f.stem)})
+    out.sort(key=lambda x: (x["key"], x["kind"]), reverse=True)
+    return out
+
+
+def check_special(c):
+    """まとめの形だけ見る。中身の言い回しは check_column.py 側と同じ考え方。"""
+    if not isinstance(c, dict):
+        return ["JSONの形が違います"]
+    bad = []
+    if not str(c.get("title", "")).strip():
+        bad.append("title が空です")
+    secs = c.get("sections")
+    if not isinstance(secs, list) or not secs:
+        bad.append("sections がありません")
+    else:
+        for i, sec in enumerate(secs, 1):
+            if not isinstance(sec, dict) or not str(sec.get("body", "")).strip():
+                bad.append(f"{i}番目の section に body がありません")
+    text = " ".join(str(sec.get("body", "")) for sec in (secs or [])
+                    if isinstance(sec, dict)) + str(c.get("lead", ""))
+    for w in HEDGE:
+        if w in text:
+            bad.append(f"推測を含む言い回しがあります: 「{w}」")
+    for src in (c.get("sources") or []):
+        u = str((src or {}).get("u", ""))
+        if not re.match(r"^https?://", u):
+            bad.append(f"出典のURLが不正です: {u!r}")
+        else:
+            for ng in BAD_SOURCE:
+                if ng in u.lower():
+                    bad.append(f"まとめ・二次情報を出典にしています: {u}")
+                    break
+    return bad
+
+
+def special_html(item):
+    """まとめ1本ぶんの中身。"""
+    c = item["col"]
+    out = [f'<p class="when">{e(item["heading"])}</p>',
+           f'<h1>{e(c.get("title"))}</h1>']
+    if str(c.get("lead", "")).strip():
+        out.append(f'<p class="lead">{e(c["lead"])}</p>')
+    for sec in c.get("sections") or []:
+        if str(sec.get("h", "")).strip():
+            out.append(f'<h2>{e(sec["h"])}</h2>')
+        for para in str(sec.get("body", "")).split("\n"):
+            if para.strip():
+                out.append(f"<p>{e(para.strip())}</p>")
+    srcs = c.get("sources") or []
+    if srcs:
+        out.append("<h2>出典</h2><ul>")
+        out += [f'<li><a href="{e(s.get("u"))}" target="_blank" '
+                f'rel="noopener">{e(s.get("t") or s.get("u"))}</a></li>' for s in srcs]
+        out.append("</ul>")
+    return "\n".join(out)
+
+
+def specials_index_html(items):
+    """まとめの一覧ページ。"""
+    if not items:
+        return ("<h1>週・月のまとめ</h1>"
+                "<p>まだありません。毎週月曜と毎月1日に追加していきます。</p>")
+    out = ["<h1>週・月のまとめ</h1>",
+           "<p>毎日のコラムが「その日起きたこと」なのに対して、ここでは"
+           "1日を見ているだけでは分からないことを書いています。</p>"]
+    for kind, slug, label in SPECIALS:
+        rows = [x for x in items if x["kind"] == kind]
+        if not rows:
+            continue
+        out.append(f"<h2>{e(label)}</h2><ul>")
+        for x in rows:
+            out.append(f'<li><a href="../{x["slug"]}/{e(x["key"])}/">'
+                       f'{e(x["title"])}</a>'
+                       f'<br><small>{e(x["heading"])}</small></li>')
+        out.append("</ul>")
+    return "\n".join(out)
 
 
 def about_html(cfg, n_channels):
@@ -827,6 +949,21 @@ def main():
     render("archive/index.html",
            {"mode": "archive", "date": today(), "archive": archive}, 1)
 
+    # ---- 週・月のまとめ --------------------------------------------------
+    # 読みものがこのサイトの本体なので、Xに流して消えるのはもったいない。
+    specials = load_specials()
+    for x in specials:
+        render(f'{x["slug"]}/{x["key"]}/index.html',
+               {"mode": "page", "date": today(), "subtitle": x["heading"],
+                "generated": payload["generated"],
+                "page_body": special_html(x)}, 2)
+    render("matome/index.html",
+           {"mode": "page", "date": today(), "subtitle": "週・月のまとめ",
+            "generated": payload["generated"],
+            "page_body": specials_index_html(specials)}, 1)
+    if specials:
+        log(f"週・月のまとめを {len(specials)} 本書き出しました")
+
     # ---- 説明ページ ----------------------------------------------------
     # 数字を出すサイトなので、どう数えているかが読めることが信用に直結する。
     # 「Shortsと切り抜きは除く」「連番は1件」などは、書いていなければ
@@ -842,7 +979,10 @@ def main():
     if site_url:
         urls = [(f"{site_url}/", "daily", "1.0"),
                 (f"{site_url}/about/", "monthly", "0.5"),
-                (f"{site_url}/archive/", "daily", "0.6")]
+                (f"{site_url}/archive/", "daily", "0.6"),
+                (f"{site_url}/matome/", "weekly", "0.8")]
+        urls += [(f"{site_url}/{x['slug']}/{x['key']}/", "monthly", "0.7")
+                 for x in specials]
         urls += [(f"{site_url}/d/{a['date']}/", "monthly", "0.4") for a in archive]
         body = "".join(
             f"<url><loc>{u}</loc><changefreq>{f}</changefreq><priority>{pr}</priority></url>"
