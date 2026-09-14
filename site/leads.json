@@ -1,19 +1,23 @@
 {
  "date": "2026-09-14",
- "generated": "2026-09-14 11:39",
+ "generated": "2026-09-14 19:14",
  "leads": {
   "events": [
    {
-    "tag": "#ななし雀魂杯",
+    "tag": "#ししドリ杯",
     "channels": [
-     "ここ・じぇす汰 / Coco･Jester【ななしいんく】",
-     "ねくろちゃん -Yamaguro Nekuro- /あおぎり高校",
-     "メイカちゃんねる",
-     "家入ポポ / Popo Channel【ななしいんく】",
-     "日向ましゅ / Mashu Channel【ななしいんく】",
-     "柚原いづみ / Izumi Channel 【ななしいんく】",
-     "汐鳴みりね / Mirine Shionari【ななしいんく】",
-     "蛇宵ティア / Tier Channel【ななしいんく】"
+     "AZKi Channel",
+     "Anya Melfissa Ch. hololive",
+     "Chihaya Ch. 輪堂 千速 - FLOW GLOW",
+     "Iroha ch. 風真いろは - holoX -",
+     "Noel Ch. 白銀ノエル",
+     "Pekora Ch. 兎田ぺこら",
+     "Riona Ch. 響咲リオナ - FLOW GLOW",
+     "Ririka Ch. 一条莉々華 ‐ ReGLOSS",
+     "Towa Ch. 常闇トワ",
+     "Vivi Ch. 綺々羅々ヴィヴィ - FLOW GLOW",
+     "Watame Ch. 角巻わため",
+     "アキロゼCh。Vtuber/ホロライブ所属"
     ]
    },
    {
@@ -32,31 +36,10 @@
     "tag": "#ゲーム実況",
     "channels": [
      "Usagi Ch. 因幡兎",
-     "てぃーけぇー",
+     "こじちゃんねる【小嶋明梨】",
      "みほち",
      "エラch",
-     "ジョアだよ",
      "儚視まちこVTuber Hakanashi Matiko"
-    ]
-   },
-   {
-    "tag": "#ししドリ杯",
-    "channels": [
-     "AZKi Channel",
-     "Anya Melfissa Ch. hololive",
-     "Pekora Ch. 兎田ぺこら",
-     "Ririka Ch. 一条莉々華 ‐ ReGLOSS",
-     "Watame Ch. 角巻わため"
-    ]
-   },
-   {
-    "tag": "#ストグラ",
-    "channels": [
-     "まお",
-     "ましゃかりさん",
-     "ノビーの遊び部屋",
-     "柚原いづみ / Izumi Channel 【ななしいんく】",
-     "魔光リサ - Lisa Makoh -"
     ]
    },
    {
@@ -78,11 +61,28 @@
     ]
    },
    {
-    "tag": "#NIJIRhythmParade",
+    "tag": "#ストグラ",
     "channels": [
-     "Meloco Kyoran【NIJISANJI EN】",
-     "シスター・クレア -SisterClaire-",
-     "セラフ・ダズルガーデン / Seraph Dazzlegarden"
+     "まお",
+     "ノビーの遊び部屋",
+     "柚原いづみ / Izumi Channel 【ななしいんく】",
+     "魔光リサ - Lisa Makoh -"
+    ]
+   },
+   {
+    "tag": "#ホロ甲2026",
+    "channels": [
+     "Koyori ch. 博衣こより - holoX -",
+     "Marine Ch. 宝鐘マリン hololive3期生",
+     "Riona Ch. 響咲リオナ - FLOW GLOW"
+    ]
+   },
+   {
+    "tag": "#ぶいすぽGG",
+    "channels": [
+     "千燈ゆうひ",
+     "紡木こかげ",
+     "蝶屋はなび / Choya Hanabi"
     ]
    }
   ],
@@ -90,43 +90,43 @@
   "wide": [
    {
     "game": "Apex Legends",
-    "channels": 31,
-    "videos": 47
-   },
-   {
-    "game": "ストリートファイター6",
-    "channels": 28,
-    "videos": 35
+    "channels": 34,
+    "videos": 53
    },
    {
     "game": "Minecraft",
-    "channels": 26,
+    "channels": 24,
     "videos": 26
    },
    {
-    "game": "スプラトゥーン3",
-    "channels": 16,
-    "videos": 18
+    "game": "ストリートファイター6",
+    "channels": 21,
+    "videos": 33
    },
    {
     "game": "実況パワフルプロ野球2026",
-    "channels": 14,
+    "channels": 15,
+    "videos": 20
+   },
+   {
+    "game": "hololive Dreams",
+    "channels": 15,
+    "videos": 18
+   },
+   {
+    "game": "スプラトゥーン3",
+    "channels": 15,
+    "videos": 16
+   },
+   {
+    "game": "VALORANT",
+    "channels": 13,
     "videos": 15
    },
    {
     "game": "Dead by Daylight",
     "channels": 14,
-    "videos": 18
-   },
-   {
-    "game": "Wardogs",
-    "channels": 11,
-    "videos": 13
-   },
-   {
-    "game": "ELDEN RING",
-    "channels": 13,
-    "videos": 14
+    "videos": 17
    }
   ]
  },
