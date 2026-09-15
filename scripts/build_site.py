@@ -242,6 +242,46 @@ def nav_html(data, home):
     return "".join(f'<a href="{e(u)}">{e(t)}</a>' for u, t in a)
 
 
+def enrich_column(column, rows):
+    """コラムに画像とSteamリンクを持たせる。
+
+    表示側でランキングから同名を探す作りにしていた時期は、取り上げたゲームが
+    31位以下に落ちた瞬間に画像が消えていた（8/29のみんなのGOLF）。
+    順位に関係なく出したいので、30位で切る前の全ゲームから引く。
+
+    過去の日のページを作り直すときにも同じ処理が要る。ここを今日のぶんだけに
+    していたため、記録に残ったコラムのサムネイルが全部消えていた（2026-09-15）。
+    """
+    if not column:
+        return column
+    cr = next((r for r in rows if r["game"] == column.get("game")), None)
+    if cr:
+        st = cr.get("streams") or []
+        if st and st[0].get("th"):
+            column["hero"] = st[0]["th"]
+            # 画像を借りた相手。出どころを書かずに使わないため、
+            # サムネイルと一緒に必ず持ち回る。
+            column["hero_by"] = st[0].get("c", "")
+        # Xに貼る画像用。小さいものを3枚並べる。1枚を大きく使うより、
+        # 借りている度合いが下がる。出どころは1枚ずつ添える。
+        column["pics"] = [{"th": s.get("th", ""), "by": s.get("c", "")}
+                          for s in st[:3] if s.get("th")]
+        if cr.get("steam"):
+            column["steam"] = cr["steam"]
+    if not column.get("hero"):
+        # ランキングに1本も無いゲーム（配信が終わって24時間を過ぎた等）でも、
+        # 出典のYouTube動画からサムネイルを作れる。コラムの game の書き方が
+        # ランキングの表記とずれている日も、ここで拾える。
+        for src in column.get("sources") or []:
+            m = re.search(r"(?:youtube\.com/watch\?v=|youtu\.be/)([\w-]{11})",
+                          str(src.get("u", "")))
+            if m:
+                column["hero"] = f"https://i.ytimg.com/vi/{m.group(1)}/mqdefault.jpg"
+                column["hero_by"] = column.get("hero_by", "")
+                break
+    return column
+
+
 def _pick_stale(col, data):
     """そのコラムが、そのページの日付より前に書かれたものか。"""
     if not col:
@@ -423,6 +463,8 @@ def render_page(path, data, depth, site_url=""):
     page = "" if path == "index.html" else path.replace("index.html", "")
     rows_ = data.get("ranking") or []
     col_ = data.get("column")
+    # まとめのカードはトップにだけ出す。過去の日のページには出さない
+    mt = data.get("matome") if data.get("view") != "archive" else None
     p.write_text(tpl.replace("__DATA__", json.dumps(d, ensure_ascii=False))
                     .replace("__HOME__", home)
                     .replace("__PAGEURL__", f"{site_url}/{page}" if site_url else "")
@@ -438,6 +480,9 @@ def render_page(path, data, depth, site_url=""):
                     .replace("__PAGEBODY__", data.get("page_body", ""))
                     .replace("__NAV__", nav_html(data, home))
                     .replace("__POINT__", POINT)
+                    .replace("__MTDISP__", "" if mt else "display:none")
+                    .replace("__MTHREF__", home + (mt["href"] if mt else ""))
+                    .replace("__SSR_MT__", ssr_matome(mt))
                     .replace("__ANALYTICS__", analytics_html()),
                  encoding="utf-8")
 
@@ -534,11 +579,73 @@ def check_special(c):
     return bad
 
 
+YT_ID = re.compile(r"(?:youtube\.com/watch\?v=|youtu\.be/)([\w-]{11})")
+
+
+def special_thumb(c):
+    """まとめに載せる画像。YouTubeの動画URLからサムネイルを作る。
+
+    JSONに "hero": {"u": "...", "by": "チャンネル名"} があればそれを使い、
+    無ければ出典のYouTube動画から拾う。借りた相手（by）は必ず一緒に持ち回る。
+    """
+    hero = c.get("hero") or {}
+    cands = [(hero.get("u", ""), hero.get("by", ""))]
+    cands += [(str(s.get("u", "")), str(s.get("t", "")).split(" — ")[0])
+              for s in (c.get("sources") or [])]
+    for u, by in cands:
+        m = YT_ID.search(str(u))
+        if m:
+            return {"th": f"https://i.ytimg.com/vi/{m.group(1)}/mqdefault.jpg", "by": by}
+    return {"th": "", "by": ""}
+
+
+def special_period_end(item):
+    """その まとめ が扱っている期間の最終日。"""
+    if item["kind"] == "monthly":
+        y, m = int(item["key"][:4]), int(item["key"][5:7])
+        nxt = datetime(y + (m == 12), (m % 12) + 1, 1)
+        return nxt - timedelta(days=1)
+    return datetime.strptime(item["key"], "%Y-%m-%d") + timedelta(days=6)
+
+
+def latest_special(items, days=14):
+    """トップに出す1本。期間が終わってから days 日までは出し続ける。
+
+    「更新された日だけ」にすると、せっかく書いた読みものが翌日には
+    どこからも見えなくなる。次のまとめが出るまでは置いておく。
+    """
+    now = datetime.now(JST).replace(tzinfo=None)
+    fresh = [x for x in items
+             if (now - special_period_end(x)).days <= days]
+    if not fresh:
+        return None
+    x = max(fresh, key=lambda i: special_period_end(i))
+    th = special_thumb(x["col"])
+    return {"href": f'{x["slug"]}/{x["key"]}/', "label": x["label"],
+            "title": x["title"], "heading": x["heading"],
+            "th": th["th"], "by": th["by"]}
+
+
+def ssr_matome(mt, home=""):
+    """JavaScriptなしでも読めるように、同じカードをHTMLでも書いておく。"""
+    if not mt:
+        return ""
+    img = (f'<img src="{e(mt["th"])}" alt="" loading="lazy">' if mt["th"] else "")
+    by = f' ／ 画像 YouTube {e(mt["by"])}' if mt["by"] else ""
+    return (f'{img}<div class="txt"><span class="kind">{e(mt["label"])}</span>'
+            f'<div class="tt">{e(mt["title"])}</div>'
+            f'<div class="sub">{e(mt["heading"])}{by}</div></div>')
+
+
 def special_html(item):
     """まとめ1本ぶんの中身。"""
     c = item["col"]
     out = [f'<p class="when">{e(item["heading"])}</p>',
            f'<h1>{e(c.get("title"))}</h1>']
+    th = special_thumb(c)
+    if th["th"]:
+        out.append(f'<figure class="dochero"><img src="{e(th["th"])}" alt="" loading="lazy">'
+                   f'<figcaption>YouTube ／ {e(th["by"])}</figcaption></figure>')
     if str(c.get("lead", "")).strip():
         out.append(f'<p class="lead">{e(c["lead"])}</p>')
     for sec in c.get("sections") or []:
@@ -792,42 +899,20 @@ def main():
                              u=amazon_tagged(column["buy"].get("u", ""),
                                              (cfg.get("amazon_tag") or "").strip()))
     if column:
-        # コラムの画像とSteamリンクを、コラム自身に持たせる。
-        # 以前は表示側でランキング30位以内から同名を探していたので、
-        # 取り上げたゲームが31位以下に落ちた瞬間に画像が消えていた
-        # （8/29のみんなのGOLF）。順位に関係なく出したいので、
-        # 30位で切る前の全ゲーム（rows）から引く。
-        cr = next((r for r in rows if r["game"] == column["game"]), None)
-        if cr:
-            st = cr.get("streams") or []
-            if st and st[0].get("th"):
-                column["hero"] = st[0]["th"]
-                # 画像を借りた相手。出どころを書かずに使わないため、
-                # サムネイルと一緒に必ず持ち回る。
-                column["hero_by"] = st[0].get("c", "")
-            # Xに貼る画像用。小さいものを3枚並べる。1枚を大きく使うより、
-            # 借りている度合いが下がる。出どころは1枚ずつ添える。
-            column["pics"] = [{"th": s.get("th", ""), "by": s.get("c", "")}
-                              for s in st[:3] if s.get("th")]
-            if cr.get("steam"):
-                column["steam"] = cr["steam"]
-        if not column.get("hero"):
-            # ランキングに1本も無いゲーム（配信が終わって24時間を過ぎた等）でも、
-            # 出典のYouTube動画からサムネイルを作れる。
-            for src in column.get("sources") or []:
-                m = re.search(r"(?:youtube\.com/watch\?v=|youtu\.be/)([\w-]{11})",
-                              str(src.get("u", "")))
-                if m:
-                    column["hero"] = f"https://i.ytimg.com/vi/{m.group(1)}/mqdefault.jpg"
-                    break
+        enrich_column(column, rows)
 
     if column:
         column["date"] = column_day
+
+    # 週・月のまとめ。トップにも1本出すので、payload を作る前に読んでおく。
+    specials = load_specials()
+    matome = latest_special(specials)
 
     payload = {
         "mode": "day",
         "date": today(),
         "column": column,
+        "matome": matome,
         "generated": datetime.now(JST).strftime("%Y-%m-%d %H:%M"),
         "range": "直近24時間",
         "days": list(day_names),
@@ -926,6 +1011,8 @@ def main():
         if not past_rows:
             continue
         col = read_json(DATA / "columns" / f"{day}.json", None)
+        # 記録のページでも、今日のページと同じようにサムネイルを出す
+        enrich_column(col, past_rows)
         entries[day] = {
             "date": day, "videos": len(vids), "games": len(past_rows),
             "channels": len({v["channel_id"] for v in vids}),
@@ -951,7 +1038,6 @@ def main():
 
     # ---- 週・月のまとめ --------------------------------------------------
     # 読みものがこのサイトの本体なので、Xに流して消えるのはもったいない。
-    specials = load_specials()
     for x in specials:
         render(f'{x["slug"]}/{x["key"]}/index.html',
                {"mode": "page", "date": today(), "subtitle": x["heading"],
