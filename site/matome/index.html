@@ -239,6 +239,22 @@ footer{font-size:11.5px;color:var(--ink-3);text-align:center;border-top:1px soli
 .pick .badge{align-self:flex-start;font-family:"Roboto Mono",monospace;font-size:10px;
  letter-spacing:.12em;font-weight:700;color:#fff;background:var(--hot);padding:4px 9px;border-radius:5px}
 .pick .g{font-family:"Zen Kaku Gothic New",sans-serif;font-weight:900;font-size:21px;line-height:1.3}
+.mt{display:flex;gap:14px;align-items:center;background:var(--card);border:1px solid var(--line);
+ border-radius:var(--r);box-shadow:var(--sh);padding:14px 16px;text-decoration:none;color:inherit;
+ position:relative;overflow:hidden}
+.mt::before{content:"";position:absolute;inset:0 auto 0 0;width:3px;background:var(--accent)}
+.mt img{width:104px;height:59px;object-fit:cover;border-radius:8px;flex:none;background:var(--card-2)}
+.mt .txt{min-width:0}
+.mt .kind{font-family:"Roboto Mono",monospace;font-size:10px;letter-spacing:.12em;font-weight:700;
+ color:#fff;background:var(--accent);padding:3px 8px;border-radius:5px;display:inline-block}
+.mt .tt{font-family:"Zen Kaku Gothic New",sans-serif;font-weight:900;font-size:16px;
+ line-height:1.45;margin-top:7px}
+.mt .sub{font-size:11.5px;color:var(--ink-3);margin-top:4px}
+.mt:hover .tt{color:var(--accent)}
+.doc .dochero{margin:0 0 16px}
+.doc .dochero img{width:100%;max-width:420px;border-radius:10px;border:1px solid var(--line);display:block}
+.doc .dochero figcaption{font-size:11.5px;color:var(--ink-3);margin-top:6px;font-weight:700}
+@media(max-width:560px){.mt img{width:84px;height:48px}.mt .tt{font-size:14.5px}}
 .pick .hl{font-family:"Zen Kaku Gothic New",sans-serif;font-weight:700;font-size:15px;
  color:var(--hot);line-height:1.5;display:flex;gap:7px;align-items:flex-start}
 .pick .hl .pt{flex:none;width:1em;height:1em;margin-top:.24em;fill:currentColor}
@@ -277,6 +293,10 @@ footer{font-size:11.5px;color:var(--ink-3);text-align:center;border-top:1px soli
   <!-- __SSR_ から始まる場所には、build_site が中身をHTMLとして書き込む。
        JavaScriptが動く環境では、同じ内容で描き直される。
        検索エンジンやJSを実行しない読み手には、この静的な中身が渡る。 -->
+  <section id="mt-sec" style="display:none">
+    <a class="mt" id="mt" href="../"></a>
+  </section>
+
   <section id="pick-sec" style="display:none">
     <div class="head"><h2 id="pick-title">今日の注目ゲーム</h2>
       <span class="note" id="pick-note">なぜ今このゲームが伸びているのか</span></div>
@@ -338,7 +358,7 @@ footer{font-size:11.5px;color:var(--ink-3);text-align:center;border-top:1px soli
 </div>
 
 <script>
-const DATA = {"mode": "page", "date": "2026-09-15", "subtitle": "週・月のまとめ", "generated": "2026-09-15 08:37", "page_body": "<h1>週・月のまとめ</h1>\n<p>毎日のコラムが「その日起きたこと」なのに対して、ここでは1日を見ているだけでは分からないことを書いています。</p>\n<h2>週まとめ</h2><ul>\n<li><a href=\"../w/2026-09-07/\">拠点を焼き合う企画で、いちばん見られたのは男3人の言い合い</a><br><small>2026年9月7日〜9月13日の週まとめ</small></li>\n</ul>", "paths": {"home": "../", "archive": "../archive/"}};
+const DATA = {"mode": "page", "date": "2026-09-15", "subtitle": "週・月のまとめ", "generated": "2026-09-15 09:50", "page_body": "<h1>週・月のまとめ</h1>\n<p>毎日のコラムが「その日起きたこと」なのに対して、ここでは1日を見ているだけでは分からないことを書いています。</p>\n<h2>週まとめ</h2><ul>\n<li><a href=\"../w/2026-09-07/\">拠点を焼き合う企画で、いちばん見られたのは男3人の言い合い</a><br><small>2026年9月7日〜9月13日の週まとめ</small></li>\n</ul>", "paths": {"home": "../", "archive": "../archive/"}};
 const $ = s => document.querySelector(s);
 const esc = s => String(s ?? '').replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
 const cssv = n => getComputedStyle(document.documentElement).getPropertyValue(n).trim();
@@ -456,6 +476,18 @@ function render(){
     + `<a href="${P.home}matome/">週・月のまとめ</a>`
     + `<a href="${P.archive}">これまでの記録</a>`
     + `<a href="${P.home}about/">このサイトについて</a>`;
+  const MT = DATA.matome;
+  if (MT && !isArchive) {
+    $('#mt-sec').style.display = '';
+    $('#mt').href = P.home + MT.href;
+    $('#mt').innerHTML =
+      (MT.th ? `<img src="${esc(MT.th)}" alt="" loading="lazy">` : '')
+      + `<div class="txt"><span class="kind">${esc(MT.label)}</span>`
+      + `<div class="tt">${esc(MT.title)}</div>`
+      + `<div class="sub">${esc(MT.heading)}${MT.by ? ' ／ 画像 YouTube ' + esc(MT.by) : ''}</div></div>`;
+  } else {
+    $('#mt-sec').style.display = 'none';
+  }
   $('#banner').innerHTML = isArchive
     ? `<div class="banner">これは <b>${esc(DATA.date)}</b> の記録です。数字はこの日のもので、更新されません。</div>` : '';
 

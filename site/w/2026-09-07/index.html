@@ -239,6 +239,22 @@ footer{font-size:11.5px;color:var(--ink-3);text-align:center;border-top:1px soli
 .pick .badge{align-self:flex-start;font-family:"Roboto Mono",monospace;font-size:10px;
  letter-spacing:.12em;font-weight:700;color:#fff;background:var(--hot);padding:4px 9px;border-radius:5px}
 .pick .g{font-family:"Zen Kaku Gothic New",sans-serif;font-weight:900;font-size:21px;line-height:1.3}
+.mt{display:flex;gap:14px;align-items:center;background:var(--card);border:1px solid var(--line);
+ border-radius:var(--r);box-shadow:var(--sh);padding:14px 16px;text-decoration:none;color:inherit;
+ position:relative;overflow:hidden}
+.mt::before{content:"";position:absolute;inset:0 auto 0 0;width:3px;background:var(--accent)}
+.mt img{width:104px;height:59px;object-fit:cover;border-radius:8px;flex:none;background:var(--card-2)}
+.mt .txt{min-width:0}
+.mt .kind{font-family:"Roboto Mono",monospace;font-size:10px;letter-spacing:.12em;font-weight:700;
+ color:#fff;background:var(--accent);padding:3px 8px;border-radius:5px;display:inline-block}
+.mt .tt{font-family:"Zen Kaku Gothic New",sans-serif;font-weight:900;font-size:16px;
+ line-height:1.45;margin-top:7px}
+.mt .sub{font-size:11.5px;color:var(--ink-3);margin-top:4px}
+.mt:hover .tt{color:var(--accent)}
+.doc .dochero{margin:0 0 16px}
+.doc .dochero img{width:100%;max-width:420px;border-radius:10px;border:1px solid var(--line);display:block}
+.doc .dochero figcaption{font-size:11.5px;color:var(--ink-3);margin-top:6px;font-weight:700}
+@media(max-width:560px){.mt img{width:84px;height:48px}.mt .tt{font-size:14.5px}}
 .pick .hl{font-family:"Zen Kaku Gothic New",sans-serif;font-weight:700;font-size:15px;
  color:var(--hot);line-height:1.5;display:flex;gap:7px;align-items:flex-start}
 .pick .hl .pt{flex:none;width:1em;height:1em;margin-top:.24em;fill:currentColor}
@@ -277,6 +293,10 @@ footer{font-size:11.5px;color:var(--ink-3);text-align:center;border-top:1px soli
   <!-- __SSR_ から始まる場所には、build_site が中身をHTMLとして書き込む。
        JavaScriptが動く環境では、同じ内容で描き直される。
        検索エンジンやJSを実行しない読み手には、この静的な中身が渡る。 -->
+  <section id="mt-sec" style="display:none">
+    <a class="mt" id="mt" href="../../"></a>
+  </section>
+
   <section id="pick-sec" style="display:none">
     <div class="head"><h2 id="pick-title">今日の注目ゲーム</h2>
       <span class="note" id="pick-note">なぜ今このゲームが伸びているのか</span></div>
@@ -304,6 +324,7 @@ footer{font-size:11.5px;color:var(--ink-3);text-align:center;border-top:1px soli
   <section id="page-sec" style="display:none">
     <article class="doc" id="page-body"><p class="when">2026年9月7日〜9月13日の週まとめ</p>
 <h1>拠点を焼き合う企画で、いちばん見られたのは男3人の言い合い</h1>
+<figure class="dochero"><img src="https://i.ytimg.com/vi/5qK8UwWCtRA/mqdefault.jpg" alt="" loading="lazy"><figcaption>YouTube ／ SHAKAch</figcaption></figure>
 <p class="lead">9月7日から4日間、事務所をまたいでRustに人が集まった。ただ、数字が伸びたのはレイドの攻防のほうではなかった。</p>
 <p>『SAVOGE RUST : REBIRTH DAY』は、ZETA DIVISION CREATOR部門のぐちつぼが自身の30歳の誕生日を記念して開いた企画。3人1組のチームが他チームの拠点をレイドし、獲得したポイントを競う。9月7日から10日までの4日間、Day1からDay3は17時から翌2時までと告知されていた。</p>
 <p>当サイトの集計でいちばん再生されたのは、ローレン・イロアスがなるせ・SHAKAと組んだ「チンパンBee」の配信で、初日の1本が71万回を超えている。ただ、SHAKAのチャンネルが本番のあとに出した動画の題に並ぶのは、戦術ではなく3人の言い合いのほうだった。「チーム名決めで暴走するSHAKAのワイプ芸に振り回されるローレンなるせ達」が46万回、「うっかり漏れ出た一言にブチギレて友情崩壊する男達」が33万回、「永遠にお互いの発言を言葉狩りして燃やし合うSHAKA達」が24万回。拠点を焼き合う企画で数字を作ったのは、焼き合う前の口論だった。</p>
@@ -312,8 +333,9 @@ footer{font-size:11.5px;color:var(--ink-3);text-align:center;border-top:1px soli
 <h2>出典</h2><ul>
 <li><a href="https://prtimes.jp/main/html/rd/p/000000219.000041650.html" target="_blank" rel="noopener">GANYMEDE — プロeスポーツチーム「ZETA DIVISION」CREATOR部門ぐちつぼ、『SAVOGE RUST : REBIRTH DAY』を開催！</a></li>
 <li><a href="https://zetadivision.com/news/2026/09/03/46688" target="_blank" rel="noopener">ZETA DIVISION — ぐちつぼが『SAVOGE RUST : REBIRTH DAY』を開催</a></li>
-<li><a href="https://www.youtube.com/@SHAKAch" target="_blank" rel="noopener">SHAKAch — チーム名決めで暴走するSHAKAのワイプ芸に振り回されるローレンなるせ達</a></li>
-<li><a href="https://www.youtube.com/@ZerostChannel" target="_blank" rel="noopener">Zerost Channel — 4日間で最もダメージを出した人に送られる「SAVOGE賞」を受賞するZerost</a></li>
+<li><a href="https://www.youtube.com/watch?v=5qK8UwWCtRA" target="_blank" rel="noopener">SHAKAch — チーム名決めで暴走するSHAKAのワイプ芸に振り回されるローレンなるせ達</a></li>
+<li><a href="https://www.youtube.com/watch?v=0QhfyMcP_mA" target="_blank" rel="noopener">ローレン・イロアス — 【SAVOGE RUST#2】らすときたあああああああああああ</a></li>
+<li><a href="https://www.youtube.com/watch?v=zN96JEe_tRk" target="_blank" rel="noopener">Zerost Channel — 4日間で最もダメージを出した人に送られる「SAVOGE賞」を受賞するZerost</a></li>
 </ul></article>
   </section>
 
@@ -346,7 +368,7 @@ footer{font-size:11.5px;color:var(--ink-3);text-align:center;border-top:1px soli
 </div>
 
 <script>
-const DATA = {"mode": "page", "date": "2026-09-15", "subtitle": "2026年9月7日〜9月13日の週まとめ", "generated": "2026-09-15 08:37", "page_body": "<p class=\"when\">2026年9月7日〜9月13日の週まとめ</p>\n<h1>拠点を焼き合う企画で、いちばん見られたのは男3人の言い合い</h1>\n<p class=\"lead\">9月7日から4日間、事務所をまたいでRustに人が集まった。ただ、数字が伸びたのはレイドの攻防のほうではなかった。</p>\n<p>『SAVOGE RUST : REBIRTH DAY』は、ZETA DIVISION CREATOR部門のぐちつぼが自身の30歳の誕生日を記念して開いた企画。3人1組のチームが他チームの拠点をレイドし、獲得したポイントを競う。9月7日から10日までの4日間、Day1からDay3は17時から翌2時までと告知されていた。</p>\n<p>当サイトの集計でいちばん再生されたのは、ローレン・イロアスがなるせ・SHAKAと組んだ「チンパンBee」の配信で、初日の1本が71万回を超えている。ただ、SHAKAのチャンネルが本番のあとに出した動画の題に並ぶのは、戦術ではなく3人の言い合いのほうだった。「チーム名決めで暴走するSHAKAのワイプ芸に振り回されるローレンなるせ達」が46万回、「うっかり漏れ出た一言にブチギレて友情崩壊する男達」が33万回、「永遠にお互いの発言を言葉狩りして燃やし合うSHAKA達」が24万回。拠点を焼き合う企画で数字を作ったのは、焼き合う前の口論だった。</p>\n<p>勝負のほうも動いている。Zerostのチャンネルは、4日間で最もダメージを出した人に贈られる「SAVOGE賞」を受賞したとして動画を出した（赤見かるび・けんきとのチーム）。Rustの解説で知られるsasatikkは参加者ではなく「神視点」として、各チームの拠点配置やレイドの応酬を日ごとに解説していて、こちらも7万〜9万回再生されている。</p>\n<p>本番は10日に終わったが、振り返りやまとめの動画は13日まで出続けた。当サイトの集計では、配信タイトルに「SAVOGE」または「サボラス」と入れていたチャンネルが18件。にじさんじ、ぶいすぽっ！、ネオポルテ、ドズル社、そして個人勢が混ざっている。事務所の企画ではないので、こういう並びになる。</p>\n<h2>出典</h2><ul>\n<li><a href=\"https://prtimes.jp/main/html/rd/p/000000219.000041650.html\" target=\"_blank\" rel=\"noopener\">GANYMEDE — プロeスポーツチーム「ZETA DIVISION」CREATOR部門ぐちつぼ、『SAVOGE RUST : REBIRTH DAY』を開催！</a></li>\n<li><a href=\"https://zetadivision.com/news/2026/09/03/46688\" target=\"_blank\" rel=\"noopener\">ZETA DIVISION — ぐちつぼが『SAVOGE RUST : REBIRTH DAY』を開催</a></li>\n<li><a href=\"https://www.youtube.com/@SHAKAch\" target=\"_blank\" rel=\"noopener\">SHAKAch — チーム名決めで暴走するSHAKAのワイプ芸に振り回されるローレンなるせ達</a></li>\n<li><a href=\"https://www.youtube.com/@ZerostChannel\" target=\"_blank\" rel=\"noopener\">Zerost Channel — 4日間で最もダメージを出した人に送られる「SAVOGE賞」を受賞するZerost</a></li>\n</ul>", "paths": {"home": "../../", "archive": "../../archive/"}};
+const DATA = {"mode": "page", "date": "2026-09-15", "subtitle": "2026年9月7日〜9月13日の週まとめ", "generated": "2026-09-15 09:50", "page_body": "<p class=\"when\">2026年9月7日〜9月13日の週まとめ</p>\n<h1>拠点を焼き合う企画で、いちばん見られたのは男3人の言い合い</h1>\n<figure class=\"dochero\"><img src=\"https://i.ytimg.com/vi/5qK8UwWCtRA/mqdefault.jpg\" alt=\"\" loading=\"lazy\"><figcaption>YouTube ／ SHAKAch</figcaption></figure>\n<p class=\"lead\">9月7日から4日間、事務所をまたいでRustに人が集まった。ただ、数字が伸びたのはレイドの攻防のほうではなかった。</p>\n<p>『SAVOGE RUST : REBIRTH DAY』は、ZETA DIVISION CREATOR部門のぐちつぼが自身の30歳の誕生日を記念して開いた企画。3人1組のチームが他チームの拠点をレイドし、獲得したポイントを競う。9月7日から10日までの4日間、Day1からDay3は17時から翌2時までと告知されていた。</p>\n<p>当サイトの集計でいちばん再生されたのは、ローレン・イロアスがなるせ・SHAKAと組んだ「チンパンBee」の配信で、初日の1本が71万回を超えている。ただ、SHAKAのチャンネルが本番のあとに出した動画の題に並ぶのは、戦術ではなく3人の言い合いのほうだった。「チーム名決めで暴走するSHAKAのワイプ芸に振り回されるローレンなるせ達」が46万回、「うっかり漏れ出た一言にブチギレて友情崩壊する男達」が33万回、「永遠にお互いの発言を言葉狩りして燃やし合うSHAKA達」が24万回。拠点を焼き合う企画で数字を作ったのは、焼き合う前の口論だった。</p>\n<p>勝負のほうも動いている。Zerostのチャンネルは、4日間で最もダメージを出した人に贈られる「SAVOGE賞」を受賞したとして動画を出した（赤見かるび・けんきとのチーム）。Rustの解説で知られるsasatikkは参加者ではなく「神視点」として、各チームの拠点配置やレイドの応酬を日ごとに解説していて、こちらも7万〜9万回再生されている。</p>\n<p>本番は10日に終わったが、振り返りやまとめの動画は13日まで出続けた。当サイトの集計では、配信タイトルに「SAVOGE」または「サボラス」と入れていたチャンネルが18件。にじさんじ、ぶいすぽっ！、ネオポルテ、ドズル社、そして個人勢が混ざっている。事務所の企画ではないので、こういう並びになる。</p>\n<h2>出典</h2><ul>\n<li><a href=\"https://prtimes.jp/main/html/rd/p/000000219.000041650.html\" target=\"_blank\" rel=\"noopener\">GANYMEDE — プロeスポーツチーム「ZETA DIVISION」CREATOR部門ぐちつぼ、『SAVOGE RUST : REBIRTH DAY』を開催！</a></li>\n<li><a href=\"https://zetadivision.com/news/2026/09/03/46688\" target=\"_blank\" rel=\"noopener\">ZETA DIVISION — ぐちつぼが『SAVOGE RUST : REBIRTH DAY』を開催</a></li>\n<li><a href=\"https://www.youtube.com/watch?v=5qK8UwWCtRA\" target=\"_blank\" rel=\"noopener\">SHAKAch — チーム名決めで暴走するSHAKAのワイプ芸に振り回されるローレンなるせ達</a></li>\n<li><a href=\"https://www.youtube.com/watch?v=0QhfyMcP_mA\" target=\"_blank\" rel=\"noopener\">ローレン・イロアス — 【SAVOGE RUST#2】らすときたあああああああああああ</a></li>\n<li><a href=\"https://www.youtube.com/watch?v=zN96JEe_tRk\" target=\"_blank\" rel=\"noopener\">Zerost Channel — 4日間で最もダメージを出した人に送られる「SAVOGE賞」を受賞するZerost</a></li>\n</ul>", "paths": {"home": "../../", "archive": "../../archive/"}};
 const $ = s => document.querySelector(s);
 const esc = s => String(s ?? '').replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
 const cssv = n => getComputedStyle(document.documentElement).getPropertyValue(n).trim();
@@ -464,6 +486,18 @@ function render(){
     + `<a href="${P.home}matome/">週・月のまとめ</a>`
     + `<a href="${P.archive}">これまでの記録</a>`
     + `<a href="${P.home}about/">このサイトについて</a>`;
+  const MT = DATA.matome;
+  if (MT && !isArchive) {
+    $('#mt-sec').style.display = '';
+    $('#mt').href = P.home + MT.href;
+    $('#mt').innerHTML =
+      (MT.th ? `<img src="${esc(MT.th)}" alt="" loading="lazy">` : '')
+      + `<div class="txt"><span class="kind">${esc(MT.label)}</span>`
+      + `<div class="tt">${esc(MT.title)}</div>`
+      + `<div class="sub">${esc(MT.heading)}${MT.by ? ' ／ 画像 YouTube ' + esc(MT.by) : ''}</div></div>`;
+  } else {
+    $('#mt-sec').style.display = 'none';
+  }
   $('#banner').innerHTML = isArchive
     ? `<div class="banner">これは <b>${esc(DATA.date)}</b> の記録です。数字はこの日のもので、更新されません。</div>` : '';
 
