@@ -380,21 +380,6 @@
   ]
  },
  {
-  "name": "25 Days in the Dark",
-  "alias": [
-   "25 Days in the DARK",
-   "25 DAYS in the Dark.exe"
-  ],
-  "pop": 0,
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Adventure",
-   "Indie"
-  ]
- },
- {
   "name": "2nd Eve",
   "alias": [
    "secondEve.exe"
@@ -978,18 +963,6 @@
    "Puzzle",
    "Adventure",
    "Indie"
-  ]
- },
- {
-  "name": "A.R.U.",
-  "alias": [],
-  "pop": 0,
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Tactical",
-   "Adventure"
   ]
  },
  {
@@ -2798,7 +2771,9 @@
  },
  {
   "name": "Aniimo",
-  "alias": [],
+  "alias": [
+   "Aniimo.exe"
+  ],
   "pop": 0,
   "p": [
    "pc",
@@ -2875,6 +2850,20 @@
   ],
   "g": [
    "Adventure",
+   "Indie"
+  ]
+ },
+ {
+  "name": "Anime Angels feat. Luca Brasil",
+  "alias": [],
+  "pop": 0,
+  "p": [
+   "pc"
+  ],
+  "g": [
+   "Puzzle",
+   "Simulator",
+   "Strategy",
    "Indie"
   ]
  },
@@ -4305,7 +4294,9 @@
  },
  {
   "name": "Atlantis Fantasy: Reborn",
-  "alias": [],
+  "alias": [
+   "Atlantis Fantasy"
+  ],
   "pop": 0,
   "p": [
    "pc"
@@ -7998,19 +7989,6 @@
   ]
  },
  {
-  "name": "Buloki: Escape from the Alien Ship",
-  "alias": [],
-  "pop": 0,
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Puzzle",
-   "Indie",
-   "Arcade"
-  ]
- },
- {
   "name": "Bump Guardian",
   "alias": [
    "Bump Guardian.exe"
@@ -9057,6 +9035,7 @@
   "alias": [],
   "pop": 0,
   "p": [
+   "pc",
    "console"
   ]
  },
@@ -13875,19 +13854,6 @@
    "Role-playing (RPG)",
    "Adventure",
    "Indie"
-  ]
- },
- {
-  "name": "Death Pong",
-  "alias": [],
-  "pop": 0,
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Simulator",
-   "Indie",
-   "Arcade"
   ]
  },
  {
@@ -18730,18 +18696,6 @@
   ]
  },
  {
-  "name": "Endless Defense",
-  "alias": [],
-  "pop": 0,
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Strategy",
-   "Indie"
-  ]
- },
- {
   "name": "Endless Isolation",
   "alias": [],
   "pop": 0,
@@ -22927,17 +22881,6 @@
   ]
  },
  {
-  "name": "Galaxy Enemies",
-  "alias": [],
-  "pop": 0,
-  "p": [
-   "console"
-  ],
-  "g": [
-   "Arcade"
-  ]
- },
- {
   "name": "Gallipoli",
   "alias": [
    "Gallipoli.exe"
@@ -25503,6 +25446,14 @@
   ]
  },
  {
+  "name": "Happy Endings",
+  "alias": [],
+  "pop": 0,
+  "p": [
+   "pc"
+  ]
+ },
+ {
   "name": "Happy's Humble Burger Cult: Trial by Fryer",
   "alias": [
    "Happy's Humble Burger Cult: TRIAL BY FRYER"
@@ -25510,6 +25461,10 @@
   "pop": 0,
   "p": [
    "pc"
+  ],
+  "g": [
+   "Simulator",
+   "Indie"
   ]
  },
  {
@@ -25698,19 +25653,6 @@
   "g": [
    "Simulator",
    "Visual Novel"
-  ]
- },
- {
-  "name": "Having fun, Mochi?",
-  "alias": [],
-  "pop": 0,
-  "p": [
-   "pc",
-   "console"
-  ],
-  "g": [
-   "Point-and-click",
-   "Indie"
   ]
  },
  {
@@ -26227,6 +26169,19 @@
   ]
  },
  {
+  "name": "Hentai Elf: Elaria",
+  "alias": [],
+  "pop": 0,
+  "p": [
+   "pc"
+  ],
+  "g": [
+   "Puzzle",
+   "Strategy",
+   "Indie"
+  ]
+ },
+ {
   "name": "Herb Seek Slash",
   "alias": [],
   "pop": 0,
@@ -26709,6 +26664,10 @@
   "pop": 0,
   "p": [
    "pc"
+  ],
+  "g": [
+   "Simulator",
+   "Strategy"
   ]
  },
  {
@@ -28028,7 +27987,9 @@
  },
  {
   "name": "Idle Bookstore",
-  "alias": [],
+  "alias": [
+   "摸鱼作家"
+  ],
   "pop": 0,
   "p": [
    "pc"
@@ -29252,17 +29213,6 @@
   ]
  },
  {
-  "name": "It Comes at Night",
-  "alias": [],
-  "pop": 0,
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Adventure"
-  ]
- },
- {
   "name": "It Consumes",
   "alias": [],
   "pop": 0,
@@ -30143,19 +30093,6 @@
   "g": [
    "Indie",
    "Card & Board Game"
-  ]
- },
- {
-  "name": "Karakulo 21",
-  "alias": [],
-  "pop": 0,
-  "p": [
-   "pc",
-   "console"
-  ],
-  "g": [
-   "Indie",
-   "Arcade"
   ]
  },
  {
@@ -33332,6 +33269,19 @@
   ]
  },
  {
+  "name": "Lumber Tycoon Island",
+  "alias": [],
+  "pop": 0,
+  "p": [
+   "pc"
+  ],
+  "g": [
+   "Simulator",
+   "Strategy",
+   "Indie"
+  ]
+ },
+ {
   "name": "Lumi Master",
   "alias": [
    "闪耀吧！噜咪",
@@ -35855,18 +35805,6 @@
   ]
  },
  {
-  "name": "MioAquaria",
-  "alias": [],
-  "pop": 0,
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Simulator",
-   "Indie"
-  ]
- },
- {
   "name": "Mion and the Cursed Killer Hamster",
   "alias": [],
   "pop": 0,
@@ -36041,6 +35979,20 @@
   "g": [
    "Adventure",
    "Indie"
+  ]
+ },
+ {
+  "name": "Mix Dunk: King of Basketball",
+  "alias": [
+   "MIX DUNK -KING OF BASKETBALL-"
+  ],
+  "pop": 0,
+  "p": [
+   "console"
+  ],
+  "g": [
+   "Sport",
+   "Visual Novel"
   ]
  },
  {
@@ -37310,7 +37262,8 @@
  {
   "name": "NASCAR 26",
   "alias": [
-   "iRacing® Studios NASCAR 26"
+   "iRacing® Studios NASCAR 26",
+   "iRacing Studios NASCAR 26"
   ],
   "pop": 0,
   "p": [
@@ -37376,18 +37329,6 @@
   "g": [
    "Simulator",
    "Sport"
-  ]
- },
- {
-  "name": "NPC Simulator",
-  "alias": [],
-  "pop": 0,
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Simulator",
-   "Indie"
   ]
  },
  {
@@ -37470,6 +37411,10 @@
    "pc"
   ],
   "g": [
+   "Role-playing (RPG)",
+   "Simulator",
+   "Sport",
+   "Adventure",
    "Indie"
   ]
  },
@@ -37724,17 +37669,6 @@
   ],
   "g": [
    "Adventure",
-   "Indie"
-  ]
- },
- {
-  "name": "Neural Drive",
-  "alias": [],
-  "pop": 0,
-  "p": [
-   "pc"
-  ],
-  "g": [
    "Indie"
   ]
  },
@@ -38732,7 +38666,7 @@
  {
   "name": "Not My Child",
   "alias": [
-   "NotMyChildGAME.exe"
+   "NotMyChild.exe"
   ],
   "pop": 0,
   "p": [
@@ -41559,18 +41493,6 @@
   "pop": 0,
   "p": [
    "console"
-  ]
- },
- {
-  "name": "Perfect Game",
-  "alias": [],
-  "pop": 0,
-  "p": [
-   "console"
-  ],
-  "g": [
-   "Puzzle",
-   "Quiz/Trivia"
   ]
  },
  {
@@ -45297,6 +45219,18 @@
   ]
  },
  {
+  "name": "Red Tanks vs Lizard",
+  "alias": [],
+  "pop": 0,
+  "p": [
+   "pc"
+  ],
+  "g": [
+   "Indie",
+   "Arcade"
+  ]
+ },
+ {
   "name": "Red Tape Rampage",
   "alias": [],
   "pop": 0,
@@ -45673,7 +45607,7 @@
   "alias": [
    "Resonance.exe"
   ],
-  "pop": 28,
+  "pop": 30,
   "p": [
    "pc",
    "console"
@@ -46200,6 +46134,15 @@
   ]
  },
  {
+  "name": "River City Survivors",
+  "alias": [],
+  "pop": 0,
+  "p": [
+   "pc",
+   "console"
+  ]
+ },
+ {
   "name": "Road Line Puzzle: Connect the Paths",
   "alias": [],
   "pop": 0,
@@ -46526,6 +46469,21 @@
   "pop": 0,
   "p": [
    "console"
+  ]
+ },
+ {
+  "name": "Roll to Ruin",
+  "alias": [
+   "Roll to Ruin.exe"
+  ],
+  "pop": 0,
+  "p": [
+   "pc"
+  ],
+  "g": [
+   "Strategy",
+   "Indie",
+   "Card & Board Game"
   ]
  },
  {
@@ -51261,6 +51219,21 @@
   ]
  },
  {
+  "name": "Spiritus Astrum",
+  "alias": [
+   "Meridian"
+  ],
+  "pop": 0,
+  "p": [
+   "pc"
+  ],
+  "g": [
+   "Role-playing (RPG)",
+   "Simulator",
+   "Indie"
+  ]
+ },
+ {
   "name": "Spiritus Sancti",
   "alias": [
    "SpiritusSancti.exe"
@@ -52426,6 +52399,15 @@
   "alias": [],
   "pop": 0,
   "p": [
+   "console"
+  ]
+ },
+ {
+  "name": "Street Fighter 6: Additional Character - Arjun & Outfit 2",
+  "alias": [],
+  "pop": 0,
+  "p": [
+   "pc",
    "console"
   ]
  },
@@ -56304,6 +56286,19 @@
   ]
  },
  {
+  "name": "The Jackbox Party Pack 12",
+  "alias": [],
+  "pop": 0,
+  "p": [
+   "pc"
+  ],
+  "g": [
+   "Strategy",
+   "Quiz/Trivia",
+   "Indie"
+  ]
+ },
+ {
   "name": "The Journey Home",
   "alias": [],
   "pop": 0,
@@ -56953,6 +56948,18 @@
   ]
  },
  {
+  "name": "The No Jumpscare Show",
+  "alias": [],
+  "pop": 0,
+  "p": [
+   "pc"
+  ],
+  "g": [
+   "Adventure",
+   "Indie"
+  ]
+ },
+ {
   "name": "The Nobody Woods: Lucy",
   "alias": [],
   "pop": 0,
@@ -57195,22 +57202,6 @@
   "g": [
    "Strategy",
    "Adventure",
-   "Indie"
-  ]
- },
- {
-  "name": "The Referee Committee",
-  "alias": [
-   "TheRefereeCommittee.exe"
-  ],
-  "pop": 0,
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Simulator",
-   "Sport",
-   "Strategy",
    "Indie"
   ]
  },
@@ -58157,6 +58148,20 @@
   ]
  },
  {
+  "name": "Throttle Trace",
+  "alias": [],
+  "pop": 0,
+  "p": [
+   "pc"
+  ],
+  "g": [
+   "Racing",
+   "Simulator",
+   "Sport",
+   "Indie"
+  ]
+ },
+ {
   "name": "Through Hell and Back",
   "alias": [],
   "pop": 0,
@@ -58678,20 +58683,6 @@
   "g": [
    "Simulator",
    "Adventure",
-   "Indie"
-  ]
- },
- {
-  "name": "To Be Connected",
-  "alias": [],
-  "pop": 0,
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Puzzle",
-   "Simulator",
-   "Strategy",
    "Indie"
   ]
  },
@@ -62602,6 +62593,20 @@
   ]
  },
  {
+  "name": "We Are Football 2027",
+  "alias": [
+   "WE ARE FOOTBALL 2027"
+  ],
+  "pop": 0,
+  "p": [
+   "pc"
+  ],
+  "g": [
+   "Simulator",
+   "Strategy"
+  ]
+ },
+ {
   "name": "We Are Gum",
   "alias": [],
   "pop": 0,
@@ -63575,6 +63580,18 @@
   "g": [
    "Role-playing (RPG)",
    "Adventure",
+   "Indie"
+  ]
+ },
+ {
+  "name": "With the Devilish Her…",
+  "alias": [],
+  "pop": 0,
+  "p": [
+   "pc"
+  ],
+  "g": [
+   "Simulator",
    "Indie"
   ]
  },
