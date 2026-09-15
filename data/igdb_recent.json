@@ -420,14 +420,6 @@
   ]
  },
  {
-  "name": "3 Bingos Away From Hell",
-  "alias": [],
-  "pop": 0,
-  "p": [
-   "console"
-  ]
- },
- {
   "name": "3 Last Chances",
   "alias": [],
   "pop": 0,
@@ -605,7 +597,9 @@
  },
  {
   "name": "911 Dispatcher: Unknown Caller",
-  "alias": [],
+  "alias": [
+   "Dispatcher911.exe"
+  ],
   "pop": 0,
   "p": [
    "pc"
@@ -5201,6 +5195,20 @@
   ]
  },
  {
+  "name": "Batomon Showdown",
+  "alias": [],
+  "pop": 0,
+  "p": [
+   "pc",
+   "console"
+  ],
+  "g": [
+   "Strategy",
+   "Tactical",
+   "Indie"
+  ]
+ },
+ {
   "name": "Battle Meating",
   "alias": [
    "BATTLE MEATING"
@@ -8893,17 +8901,6 @@
   ]
  },
  {
-  "name": "Cardstronaut",
-  "alias": [],
-  "pop": 0,
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Strategy"
-  ]
- },
- {
   "name": "Carnaval Marbles",
   "alias": [],
   "pop": 0,
@@ -9205,19 +9202,23 @@
   ]
  },
  {
-  "name": "Catch Flex: Quest",
+  "name": "Catch Flex",
   "alias": [
-   "Catch Flex.exe"
+   "Catch Flex.exe",
+   "catchflex",
+   "CF",
+   "Catch Flex: Quest"
   ],
   "pop": 0,
   "p": [
-   "pc"
+   "pc",
+   "console"
   ],
   "g": [
    "Music",
    "Sport",
-   "Adventure",
-   "Indie"
+   "Indie",
+   "Arcade"
   ]
  },
  {
@@ -11004,17 +11005,6 @@
   ]
  },
  {
-  "name": "CoinClave",
-  "alias": [],
-  "pop": 0,
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Indie"
-  ]
- },
- {
   "name": "Collapsed Horizon",
   "alias": [],
   "pop": 0,
@@ -11290,6 +11280,21 @@
   "g": [
    "Shooter",
    "Platform"
+  ]
+ },
+ {
+  "name": "Console Archives: Nobunaga's Ambition II",
+  "alias": [
+   "Console Archives NOBUNAGA’S AMBITION II"
+  ],
+  "pop": 0,
+  "p": [
+   "console"
+  ],
+  "g": [
+   "Simulator",
+   "Strategy",
+   "Turn-based strategy (TBS)"
   ]
  },
  {
@@ -12042,14 +12047,6 @@
   ],
   "g": [
    "Indie"
-  ]
- },
- {
-  "name": "CrankLander",
-  "alias": [],
-  "pop": 0,
-  "p": [
-   "console"
   ]
  },
  {
@@ -15331,6 +15328,19 @@
   ]
  },
  {
+  "name": "Dimraeth",
+  "alias": [],
+  "pop": 0,
+  "p": [
+   "pc"
+  ],
+  "g": [
+   "Role-playing (RPG)",
+   "Adventure",
+   "Indie"
+  ]
+ },
+ {
   "name": "Din's Champion",
   "alias": [
    "DinsChampion.exe"
@@ -16378,13 +16388,16 @@
  },
  {
   "name": "Drag'n Wash",
-  "alias": [],
+  "alias": [
+   "DragNWash.exe"
+  ],
   "pop": 0,
   "p": [
    "pc"
   ],
   "g": [
-   "Simulator"
+   "Simulator",
+   "Indie"
   ]
  },
  {
@@ -17231,21 +17244,6 @@
   "g": [
    "Simulator",
    "Indie"
-  ]
- },
- {
-  "name": "Dunchess",
-  "alias": [
-   "Dunchess.exe"
-  ],
-  "pop": 0,
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Strategy",
-   "Indie",
-   "Card & Board Game"
   ]
  },
  {
@@ -19187,22 +19185,6 @@
   ]
  },
  {
-  "name": "Escape the House",
-  "alias": [
-   "Escape the House.exe"
-  ],
-  "pop": 0,
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Puzzle",
-   "Role-playing (RPG)",
-   "Adventure",
-   "Indie"
-  ]
- },
- {
   "name": "Eslabong",
   "alias": [
    "eslabong.exe"
@@ -19724,7 +19706,9 @@
  },
  {
   "name": "Exspelled",
-  "alias": [],
+  "alias": [
+   "EXSPELLED.exe"
+  ],
   "pop": 0,
   "p": [
    "pc"
@@ -21235,6 +21219,20 @@
   "g": [
    "Strategy",
    "Indie"
+  ]
+ },
+ {
+  "name": "Fleetbreakers",
+  "alias": [
+   "Project Citadel"
+  ],
+  "pop": 0,
+  "p": [
+   "pc"
+  ],
+  "g": [
+   "Real Time Strategy (RTS)",
+   "Strategy"
   ]
  },
  {
@@ -25302,19 +25300,6 @@
   ]
  },
  {
-  "name": "HMUR",
-  "alias": [],
-  "pop": 0,
-  "p": [
-   "pc",
-   "console"
-  ],
-  "g": [
-   "Shooter",
-   "Indie"
-  ]
- },
- {
   "name": "HR: Human Remains",
   "alias": [],
   "pop": 0,
@@ -27036,6 +27021,21 @@
   ]
  },
  {
+  "name": "Hope 01",
+  "alias": [
+   "HOPE 01"
+  ],
+  "pop": 0,
+  "p": [
+   "pc"
+  ],
+  "g": [
+   "Role-playing (RPG)",
+   "Adventure",
+   "Indie"
+  ]
+ },
+ {
   "name": "Hope Timbre",
   "alias": [],
   "pop": 0,
@@ -27639,17 +27639,6 @@
   ],
   "g": [
    "Simulator"
-  ]
- },
- {
-  "name": "Hush Darling",
-  "alias": [],
-  "pop": 0,
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Indie"
   ]
  },
  {
@@ -29693,18 +29682,6 @@
   "g": [
    "Role-playing (RPG)",
    "Adventure"
-  ]
- },
- {
-  "name": "Jobby",
-  "alias": [],
-  "pop": 0,
-  "p": [
-   "console"
-  ],
-  "g": [
-   "Strategy",
-   "Arcade"
   ]
  },
  {
@@ -34850,7 +34827,9 @@
  },
  {
   "name": "Meeple Incremental",
-  "alias": [],
+  "alias": [
+   "Meeple Incremental.exe"
+  ],
   "pop": 0,
   "p": [
    "pc"
@@ -45109,7 +45088,8 @@
  {
   "name": "Reality Rivals: The First Season",
   "alias": [
-   "Reality Rivals"
+   "Reality Rivals",
+   "RealityRivals.exe"
   ],
   "pop": 0,
   "p": [
@@ -46282,18 +46262,6 @@
   ]
  },
  {
-  "name": "Roadside",
-  "alias": [],
-  "pop": 0,
-  "p": [
-   "console"
-  ],
-  "g": [
-   "Role-playing (RPG)",
-   "Adventure"
-  ]
- },
- {
   "name": "Roadside Reseal",
   "alias": [],
   "pop": 0,
@@ -47022,6 +46990,19 @@
   ]
  },
  {
+  "name": "RuneScape: Dragonwilds",
+  "alias": [],
+  "pop": 8,
+  "p": [
+   "pc",
+   "console"
+  ],
+  "g": [
+   "Role-playing (RPG)",
+   "Adventure"
+  ]
+ },
+ {
   "name": "Runic Rogues",
   "alias": [],
   "pop": 0,
@@ -47602,6 +47583,17 @@
   ]
  },
  {
+  "name": "Schedule Store Simulator",
+  "alias": [],
+  "pop": 0,
+  "p": [
+   "pc"
+  ],
+  "g": [
+   "Simulator"
+  ]
+ },
+ {
   "name": "Scicry",
   "alias": [
    "SCICRY"
@@ -47818,20 +47810,6 @@
   ]
  },
  {
-  "name": "Sector 86",
-  "alias": [],
-  "pop": 0,
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Puzzle",
-   "Strategy",
-   "Indie",
-   "Arcade"
-  ]
- },
- {
   "name": "Security 51",
   "alias": [
    "51区安检站",
@@ -47965,6 +47943,19 @@
   ],
   "g": [
    "Hack and slash/Beat 'em up",
+   "Indie",
+   "Arcade"
+  ]
+ },
+ {
+  "name": "Send Them to Hell",
+  "alias": [],
+  "pop": 0,
+  "p": [
+   "pc"
+  ],
+  "g": [
+   "Adventure",
    "Indie",
    "Arcade"
   ]
@@ -49979,6 +49970,17 @@
   ]
  },
  {
+  "name": "Snackrifice",
+  "alias": [],
+  "pop": 0,
+  "p": [
+   "pc"
+  ],
+  "g": [
+   "Indie"
+  ]
+ },
+ {
   "name": "Snake Sphere",
   "alias": [],
   "pop": 0,
@@ -51437,17 +51439,6 @@
   ]
  },
  {
-  "name": "Spyro the Dragon: Grim Garden",
-  "alias": [],
-  "pop": 0,
-  "p": [
-   "console"
-  ],
-  "g": [
-   "Platform"
-  ]
- },
- {
   "name": "Squad Legends: Battle Royale",
   "alias": [],
   "pop": 0,
@@ -51936,6 +51927,19 @@
   ]
  },
  {
+  "name": "Station Command",
+  "alias": [],
+  "pop": 0,
+  "p": [
+   "pc"
+  ],
+  "g": [
+   "Role-playing (RPG)",
+   "Strategy",
+   "Indie"
+  ]
+ },
+ {
   "name": "Stealer",
   "alias": [],
   "pop": 0,
@@ -52205,20 +52209,6 @@
   ]
  },
  {
-  "name": "Stillwell",
-  "alias": [],
-  "pop": 0,
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Puzzle",
-   "Strategy",
-   "Adventure",
-   "Indie"
-  ]
- },
- {
   "name": "Stinker Golf",
   "alias": [],
   "pop": 0,
@@ -52395,6 +52385,18 @@
   ],
   "g": [
    "Visual Novel"
+  ]
+ },
+ {
+  "name": "Stream Clicker",
+  "alias": [],
+  "pop": 0,
+  "p": [
+   "console"
+  ],
+  "g": [
+   "Point-and-click",
+   "Arcade"
   ]
  },
  {
@@ -52601,6 +52603,18 @@
    "Platform",
    "Indie",
    "Arcade"
+  ]
+ },
+ {
+  "name": "Sublight",
+  "alias": [],
+  "pop": 0,
+  "p": [
+   "pc"
+  ],
+  "g": [
+   "Shooter",
+   "Indie"
   ]
  },
  {
@@ -53678,6 +53692,20 @@
   "g": [
    "Puzzle",
    "Simulator",
+   "Indie"
+  ]
+ },
+ {
+  "name": "TCG Card Shop Simulator",
+  "alias": [],
+  "pop": 24,
+  "p": [
+   "pc",
+   "console"
+  ],
+  "g": [
+   "Simulator",
+   "Strategy",
    "Indie"
   ]
  },
@@ -54947,7 +54975,7 @@
   "alias": [
    "Dawnwalker.exe"
   ],
-  "pop": 20,
+  "pop": 21,
   "p": [
    "pc",
    "console"
@@ -55356,6 +55384,7 @@
    "pc"
   ],
   "g": [
+   "Shooter",
    "Adventure",
    "Indie"
   ]
@@ -56910,7 +56939,9 @@
  },
  {
   "name": "The Night Route",
-  "alias": [],
+  "alias": [
+   "The Night Route.exe"
+  ],
   "pop": 0,
   "p": [
    "pc"
@@ -59537,20 +59568,6 @@
   ]
  },
  {
-  "name": "TransGenDeer",
-  "alias": [
-   "TransGenDeer.exe"
-  ],
-  "pop": 0,
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Platform",
-   "Indie"
-  ]
- },
- {
   "name": "Transport Fever 3",
   "alias": [],
   "pop": 0,
@@ -60259,6 +60276,21 @@
   ],
   "g": [
    "Adventure"
+  ]
+ },
+ {
+  "name": "UPG: Underground",
+  "alias": [
+   "UPG - Underground.exe"
+  ],
+  "pop": 0,
+  "p": [
+   "pc"
+  ],
+  "g": [
+   "Sport",
+   "Hack and slash/Beat 'em up",
+   "Indie"
   ]
  },
  {
@@ -63730,14 +63762,6 @@
   ]
  },
  {
-  "name": "Wonderstructs",
-  "alias": [],
-  "pop": 0,
-  "p": [
-   "console"
-  ]
- },
- {
   "name": "Wong",
   "alias": [],
   "pop": 0,
@@ -64806,6 +64830,17 @@
   "g": [
    "Simulator",
    "Adventure"
+  ]
+ },
+ {
+  "name": "Čtyřka",
+  "alias": [],
+  "pop": 0,
+  "p": [
+   "console"
+  ],
+  "g": [
+   "Card & Board Game"
   ]
  }
 ]
