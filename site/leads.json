@@ -1,34 +1,47 @@
 {
- "date": "2026-09-16",
- "generated": "2026-09-16 19:17",
+ "date": "2026-09-17",
+ "generated": "2026-09-17 07:14",
  "leads": {
   "events": [
-   {
-    "tag": "#にじ遊戯王祭2026",
-    "channels": [
-     "オリバー・エバンス / Oliver Evans 【にじさんじ】",
-     "レオス・ヴィンセント / Leos.Vincent【にじさんじ】",
-     "七瀬 すず菜 / Nanase Suzuna【にじさんじ】",
-     "伏見ガク【にじさんじ所属】",
-     "壱百満天原サロメ / Hyakumantenbara Salome",
-     "小清水 透 / Koshimizu Toru【にじさんじ】",
-     "星川サラ / Sara Hoshikawa",
-     "梢桃音 / Kozue Mone【にじさんじ】",
-     "獅子堂 あかり / Shishido Akari【にじさんじ】",
-     "社築",
-     "花畑チャイカ"
-    ]
-   },
    {
     "tag": "#SURGETown",
     "channels": [
      "Kanae Channel",
      "marunnn【まるーんチャンネル】",
+     "きつねさん / Kitune-san",
      "みつき",
      "アズリ / Azri【ななしいんく】",
+     "家入ポポ / Popo Channel【ななしいんく】",
      "暁月ホタル AKATSUKI HOTARU",
+     "柚原いづみ / Izumi Channel 【ななしいんく】",
      "赤彩みあ / Akairo Mia Ch.【すずみあ】",
      "鬼ヶ谷 テン / Onigaya Ten"
+    ]
+   },
+   {
+    "tag": "#にじ遊戯王祭2026",
+    "channels": [
+     "イブラヒム【にじさんじ】",
+     "オリバー・エバンス / Oliver Evans 【にじさんじ】",
+     "七瀬 すず菜 / Nanase Suzuna【にじさんじ】",
+     "加賀美 ハヤト/Hayato Kagami",
+     "小清水 透 / Koshimizu Toru【にじさんじ】",
+     "星川サラ / Sara Hoshikawa",
+     "梢桃音 / Kozue Mone【にじさんじ】",
+     "獅子堂 あかり / Shishido Akari【にじさんじ】",
+     "花畑チャイカ"
+    ]
+   },
+   {
+    "tag": "#ストグラ",
+    "channels": [
+     "Tenten Ch. / 鳳玲天々",
+     "たけぉ",
+     "ましゃかりさん",
+     "クラウン【探検家の記録】",
+     "ノビーの遊び部屋",
+     "柚原いづみ / Izumi Channel 【ななしいんく】",
+     "闇乃あびす / Abyss"
     ]
    },
    {
@@ -44,22 +57,22 @@
     ]
    },
    {
-    "tag": "#ストグラ",
+    "tag": "#ストグラSeason2",
     "channels": [
-     "Tenten Ch. / 鳳玲天々",
      "たけぉ",
-     "ましゃかりさん",
      "クラウン【探検家の記録】",
-     "闇乃あびす / Abyss"
+     "天羽よつは",
+     "暁月ホタル AKATSUKI HOTARU",
+     "柚原いづみ / Izumi Channel 【ななしいんく】"
     ]
    },
    {
-    "tag": "#ぶいきゃす",
+    "tag": "#縦型配信",
     "channels": [
-     "おいもパイちゃん / OimoPie ch.",
-     "式神やしろ",
-     "浅葱なぎ",
-     "羅々華セーラ-Raraka Sera-"
+     "かおりんごー",
+     "ぺれ",
+     "もみじビーム",
+     "ミロ"
     ]
    },
    {
@@ -71,19 +84,11 @@
     ]
    },
    {
-    "tag": "#ホロ7大豆劇場",
+    "tag": "#ホロ甲2026",
     "channels": [
-     "Matsuri Channel 夏色まつり",
-     "Miko Ch. さくらみこ",
-     "Towa Ch. 常闇トワ"
-    ]
-   },
-   {
-    "tag": "#ストグラSeason2",
-    "channels": [
-     "たけぉ",
-     "クラウン【探検家の記録】",
-     "暁月ホタル AKATSUKI HOTARU"
+     "Koyori ch. 博衣こより - holoX -",
+     "Mio Channel 大神ミオ",
+     "Polka Ch. 尾丸ポルカ"
     ]
    }
   ],
@@ -91,43 +96,43 @@
   "wide": [
    {
     "game": "Apex Legends",
-    "channels": 50,
-    "videos": 62
+    "channels": 44,
+    "videos": 54
    },
    {
     "game": "ストリートファイター6",
-    "channels": 39,
-    "videos": 44
+    "channels": 38,
+    "videos": 42
    },
    {
     "game": "Minecraft",
-    "channels": 32,
-    "videos": 33
-   },
-   {
-    "game": "Wardogs",
-    "channels": 13,
-    "videos": 14
+    "channels": 30,
+    "videos": 31
    },
    {
     "game": "Dead by Daylight",
+    "channels": 18,
+    "videos": 28
+   },
+   {
+    "game": "Wardogs",
     "channels": 15,
-    "videos": 22
+    "videos": 16
    },
    {
-    "game": "モンスターハンターワイルズ",
+    "game": "実況パワフルプロ野球2026",
     "channels": 13,
-    "videos": 19
+    "videos": 15
    },
    {
-    "game": "VALORANT",
+    "game": "スプラトゥーン3",
+    "channels": 14,
+    "videos": 17
+   },
+   {
+    "game": "原神",
     "channels": 13,
     "videos": 14
-   },
-   {
-    "game": "7 Days to Die",
-    "channels": 9,
-    "videos": 10
    }
   ]
  },
