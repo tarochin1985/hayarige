@@ -2647,20 +2647,6 @@
   ]
  },
  {
-  "name": "Among Demons",
-  "alias": [],
-  "pop": 0,
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Role-playing (RPG)",
-   "Strategy",
-   "Adventure",
-   "Indie"
-  ]
- },
- {
   "name": "Among Shadows",
   "alias": [
    "Celestial Fall"
@@ -3440,6 +3426,19 @@
   ],
   "g": [
    "Racing",
+   "Arcade"
+  ]
+ },
+ {
+  "name": "Arcade Archives 2: Karnov",
+  "alias": [
+   "Arcade Archives 2 KARNOV"
+  ],
+  "pop": 0,
+  "p": [
+   "console"
+  ],
+  "g": [
    "Arcade"
   ]
  },
@@ -5261,20 +5260,6 @@
    "Strategy",
    "Indie",
    "Card & Board Game"
-  ]
- },
- {
-  "name": "Bash Moto",
-  "alias": [],
-  "pop": 0,
-  "p": [
-   "pc",
-   "console"
-  ],
-  "g": [
-   "Racing",
-   "Hack and slash/Beat 'em up",
-   "Arcade"
   ]
  },
  {
@@ -7610,6 +7595,20 @@
   ]
  },
  {
+  "name": "Brick by Brick",
+  "alias": [
+   "BrickByBrick.exe"
+  ],
+  "pop": 0,
+  "p": [
+   "pc"
+  ],
+  "g": [
+   "Simulator",
+   "Indie"
+  ]
+ },
+ {
   "name": "Brick: One Block at a Time",
   "alias": [
    "BRICK.exe"
@@ -9601,18 +9600,6 @@
   "g": [
    "Shooter",
    "Indie"
-  ]
- },
- {
-  "name": "Charlie Spotlight",
-  "alias": [],
-  "pop": 0,
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Puzzle",
-   "Adventure"
   ]
  },
  {
@@ -12664,17 +12651,6 @@
   ]
  },
  {
-  "name": "Cubenen Gardens: Kingdom",
-  "alias": [],
-  "pop": 0,
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Role-playing (RPG)"
-  ]
- },
- {
   "name": "Cucina Stellata: Starred Cuisine",
   "alias": [
    "Cucina Stellata ✦ Starred Cuisine"
@@ -14924,18 +14900,6 @@
   ]
  },
  {
-  "name": "Devil's Dice",
-  "alias": [],
-  "pop": 0,
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Point-and-click",
-   "Indie"
-  ]
- },
- {
   "name": "Devil's Liminal",
   "alias": [
    "DEVIL'S LIMINAL",
@@ -16402,7 +16366,8 @@
   "alias": [
    "Dragon Quest Monsters 4: The Withered World",
    "DQM4",
-   "DRAGON QUEST MONSTERS: The Withered World"
+   "DRAGON QUEST MONSTERS: The Withered World",
+   "Dragon Quest Monsters : Le royaume de Boisflétri"
   ],
   "pop": 0,
   "p": [
@@ -17676,6 +17641,7 @@
   "alias": [],
   "pop": 0,
   "p": [
+   "pc",
    "console"
   ]
  },
@@ -19828,19 +19794,6 @@
   ]
  },
  {
-  "name": "Factomancer",
-  "alias": [],
-  "pop": 0,
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Simulator",
-   "Strategy",
-   "Indie"
-  ]
- },
- {
   "name": "Factories in Factories in Factories",
   "alias": [],
   "pop": 0,
@@ -19977,6 +19930,15 @@
    "Pinball",
    "Adventure",
    "Indie"
+  ]
+ },
+ {
+  "name": "Fallout 76: The Slasher",
+  "alias": [],
+  "pop": 0,
+  "p": [
+   "pc",
+   "console"
   ]
  },
  {
@@ -25413,6 +25375,18 @@
   ]
  },
  {
+  "name": "Hand Cooking Simulator: Multi-Chef",
+  "alias": [],
+  "pop": 0,
+  "p": [
+   "pc"
+  ],
+  "g": [
+   "Simulator",
+   "Indie"
+  ]
+ },
+ {
   "name": "Handyman Flipper: House Stories",
   "alias": [],
   "pop": 0,
@@ -26947,6 +26921,20 @@
   ]
  },
  {
+  "name": "Hope in the City",
+  "alias": [],
+  "pop": 0,
+  "p": [
+   "pc",
+   "console"
+  ],
+  "g": [
+   "Puzzle",
+   "Adventure",
+   "Indie"
+  ]
+ },
+ {
   "name": "Hoptale",
   "alias": [
    "Spin & Jump"
@@ -27690,6 +27678,21 @@
    "Role-playing (RPG)",
    "Strategy",
    "Card & Board Game"
+  ]
+ },
+ {
+  "name": "I Am Your Beast: Quitting Time",
+  "alias": [],
+  "pop": 0,
+  "p": [
+   "pc",
+   "console"
+  ],
+  "g": [
+   "Shooter",
+   "Tactical",
+   "Indie",
+   "Arcade"
   ]
  },
  {
@@ -29371,18 +29374,6 @@
   "g": [
    "Simulator",
    "Adventure",
-   "Indie"
-  ]
- },
- {
-  "name": "Japanese Ramen Simulator",
-  "alias": [],
-  "pop": 0,
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Simulator",
    "Indie"
   ]
  },
@@ -34195,7 +34186,7 @@
   "alias": [
    "Wolverine"
   ],
-  "pop": 3,
+  "pop": 9,
   "p": [
    "console"
   ],
@@ -35036,14 +35027,6 @@
   ]
  },
  {
-  "name": "Messy Minecart",
-  "alias": [],
-  "pop": 0,
-  "p": [
-   "console"
-  ]
- },
- {
   "name": "Metahustle One",
   "alias": [
    "MetaHustleOne.exe",
@@ -35419,17 +35402,6 @@
    "Platform",
    "Hack and slash/Beat 'em up",
    "Adventure",
-   "Indie"
-  ]
- },
- {
-  "name": "Mile 27",
-  "alias": [],
-  "pop": 0,
-  "p": [
-   "pc"
-  ],
-  "g": [
    "Indie"
   ]
  },
@@ -39348,6 +39320,15 @@
   ]
  },
  {
+  "name": "Once Human: Isles of Abyss",
+  "alias": [],
+  "pop": 0,
+  "p": [
+   "pc",
+   "console"
+  ]
+ },
+ {
   "name": "Once Upon A Katamari: Rolling Live Highlights",
   "alias": [],
   "pop": 0,
@@ -39718,6 +39699,10 @@
   "p": [
    "pc",
    "console"
+  ],
+  "g": [
+   "Role-playing (RPG)",
+   "Adventure"
   ]
  },
  {
@@ -39894,6 +39879,18 @@
   "pop": 0,
   "p": [
    "pc"
+  ]
+ },
+ {
+  "name": "Operation Eventide",
+  "alias": [],
+  "pop": 0,
+  "p": [
+   "pc"
+  ],
+  "g": [
+   "Indie",
+   "Visual Novel"
   ]
  },
  {
@@ -41460,6 +41457,18 @@
   ]
  },
  {
+  "name": "Perfect Heist 2: Pietsmiet DLC",
+  "alias": [],
+  "pop": 0,
+  "p": [
+   "pc"
+  ],
+  "g": [
+   "Strategy",
+   "Indie"
+  ]
+ },
+ {
   "name": "Perk Up",
   "alias": [
    "PerkUp.exe"
@@ -42025,18 +42034,6 @@
    "Shooter",
    "Adventure",
    "Arcade"
-  ]
- },
- {
-  "name": "Pirate Pillage and Plunder",
-  "alias": [],
-  "pop": 0,
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Strategy",
-   "Indie"
   ]
  },
  {
@@ -43174,20 +43171,6 @@
   ]
  },
  {
-  "name": "Prehistoric Adventure",
-  "alias": [
-   "PrehistoricAdventure.exe"
-  ],
-  "pop": 0,
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Simulator",
-   "Indie"
-  ]
- },
- {
   "name": "Pretty Home Run Derby: Re - Return of Kusogaki",
   "alias": [],
   "pop": 0,
@@ -43451,18 +43434,6 @@
   ],
   "g": [
    "Puzzle",
-   "Adventure"
-  ]
- },
- {
-  "name": "Project Blood Sword",
-  "alias": [],
-  "pop": 0,
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Hack and slash/Beat 'em up",
    "Adventure"
   ]
  },
@@ -46969,6 +46940,18 @@
   ]
  },
  {
+  "name": "Runeomicon",
+  "alias": [],
+  "pop": 0,
+  "p": [
+   "pc"
+  ],
+  "g": [
+   "Strategy",
+   "Indie"
+  ]
+ },
+ {
   "name": "Runic Tower",
   "alias": [],
   "pop": 0,
@@ -47710,6 +47693,20 @@
   ],
   "g": [
    "Racing",
+   "Simulator",
+   "Indie"
+  ]
+ },
+ {
+  "name": "Screw It",
+  "alias": [
+   "Screw IT"
+  ],
+  "pop": 0,
+  "p": [
+   "pc"
+  ],
+  "g": [
    "Simulator",
    "Indie"
   ]
@@ -49061,6 +49058,10 @@
   "p": [
    "pc",
    "console"
+  ],
+  "g": [
+   "Puzzle",
+   "Adventure"
   ]
  },
  {
@@ -50951,6 +50952,20 @@
   ],
   "g": [
    "Indie"
+  ]
+ },
+ {
+  "name": "Special Force Remastered",
+  "alias": [
+   "스페셜포스 리마스터"
+  ],
+  "pop": 0,
+  "p": [
+   "pc"
+  ],
+  "g": [
+   "Shooter",
+   "Strategy"
   ]
  },
  {
@@ -53979,22 +53994,6 @@
   ]
  },
  {
-  "name": "Talespinner",
-  "alias": [
-   "Talespinner.exe"
-  ],
-  "pop": 0,
-  "p": [
-   "pc",
-   "console"
-  ],
-  "g": [
-   "Role-playing (RPG)",
-   "Strategy",
-   "Indie"
-  ]
- },
- {
   "name": "Tama In-Between",
   "alias": [],
   "pop": 0,
@@ -54872,7 +54871,7 @@
   "alias": [
    "Dawnwalker.exe"
   ],
-  "pop": 21,
+  "pop": 22,
   "p": [
    "pc",
    "console"
@@ -57667,6 +57666,20 @@
   ]
  },
  {
+  "name": "The War Disorder Hexa",
+  "alias": [
+   "战乱的六芒星"
+  ],
+  "pop": 0,
+  "p": [
+   "pc"
+  ],
+  "g": [
+   "Role-playing (RPG)",
+   "Adventure"
+  ]
+ },
+ {
   "name": "The War in Chiapas",
   "alias": [],
   "pop": 0,
@@ -59090,6 +59103,7 @@
   "alias": [],
   "pop": 0,
   "p": [
+   "pc",
    "console"
   ]
  },
