@@ -2991,6 +2991,22 @@
   ]
  },
  {
+  "name": "Annie's Dineinn",
+  "alias": [
+   "Dineinn",
+   "Annies Dineinn"
+  ],
+  "pop": 0,
+  "p": [
+   "pc",
+   "console"
+  ],
+  "g": [
+   "Simulator",
+   "Indie"
+  ]
+ },
+ {
   "name": "Annihilated",
   "alias": [
    "勇者小队全灭了。"
@@ -13466,21 +13482,6 @@
   ]
  },
  {
-  "name": "Dawn Sanatorium",
-  "alias": [
-   "Dawn Sanatorium.exe"
-  ],
-  "pop": 0,
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Puzzle",
-   "Adventure",
-   "Indie"
-  ]
- },
- {
   "name": "Dawn of Defense",
   "alias": [
    "军团塔防",
@@ -14157,17 +14158,6 @@
    "Role-playing (RPG)",
    "Adventure",
    "Indie"
-  ]
- },
- {
-  "name": "Deep Sea Delivery & Co.",
-  "alias": [],
-  "pop": 0,
-  "p": [
-   "console"
-  ],
-  "g": [
-   "Arcade"
   ]
  },
  {
@@ -23906,7 +23896,9 @@
  },
  {
   "name": "God of Chaos",
-  "alias": [],
+  "alias": [
+   "GodOfChaos.exe"
+  ],
   "pop": 0,
   "p": [
    "pc"
@@ -36613,7 +36605,7 @@
    "MortalShell2.exe",
    "Mortal Shell 2"
   ],
-  "pop": 19,
+  "pop": 20,
   "p": [
    "pc",
    "console"
@@ -38237,7 +38229,7 @@
   ]
  },
  {
-  "name": "No Man's Sky: Comos",
+  "name": "No Man's Sky: Cosmos",
   "alias": [],
   "pop": 0,
   "p": [
@@ -39520,7 +39512,7 @@
   "alias": [
    "OnimushaWotS.exe"
   ],
-  "pop": 4,
+  "pop": 9,
   "p": [
    "pc",
    "console"
@@ -41047,20 +41039,6 @@
    "Strategy",
    "Adventure",
    "Indie"
-  ]
- },
- {
-  "name": "PatriotMemoirs",
-  "alias": [],
-  "pop": 0,
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Role-playing (RPG)",
-   "Simulator",
-   "Adventure",
-   "Visual Novel"
   ]
  },
  {
@@ -45659,7 +45637,7 @@
   "alias": [
    "Resonance.exe"
   ],
-  "pop": 30,
+  "pop": 31,
   "p": [
    "pc",
    "console"
@@ -47542,6 +47520,15 @@
   ],
   "g": [
    "Adventure"
+  ]
+ },
+ {
+  "name": "Scavenger Mouse",
+  "alias": [],
+  "pop": 0,
+  "p": [
+   "pc",
+   "console"
   ]
  },
  {
@@ -50928,6 +50915,17 @@
   ],
   "g": [
    "Sport"
+  ]
+ },
+ {
+  "name": "Sparkle Saga",
+  "alias": [],
+  "pop": 0,
+  "p": [
+   "pc"
+  ],
+  "g": [
+   "Shooter"
   ]
  },
  {
@@ -62541,6 +62539,7 @@
  {
   "name": "We Are Football 2027",
   "alias": [
+   "waf2027.exe",
    "WE ARE FOOTBALL 2027"
   ],
   "pop": 0,
@@ -62549,6 +62548,7 @@
   ],
   "g": [
    "Simulator",
+   "Sport",
    "Strategy"
   ]
  },
