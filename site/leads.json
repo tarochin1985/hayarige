@@ -1,6 +1,6 @@
 {
  "date": "2026-09-17",
- "generated": "2026-09-17 07:14",
+ "generated": "2026-09-17 12:26",
  "leads": {
   "events": [
    {
@@ -47,10 +47,10 @@
    {
     "tag": "#ゲーム実況",
     "channels": [
+     "CHECHE GAME【顔出し初見ゲーム実況】",
      "Usagi Ch. 因幡兎",
      "こじちゃんねる【小嶋明梨】",
      "エラch",
-     "ジョアだよ",
      "三雲ヒカリ",
      "星埜きぃ -Key Hoshino-",
      "週刊少年ゲームマガジン230円"
@@ -67,6 +67,15 @@
     ]
    },
    {
+    "tag": "#ホロ甲2026",
+    "channels": [
+     "Koyori ch. 博衣こより - holoX -",
+     "Marine Ch. 宝鐘マリン hololive3期生",
+     "Mio Channel 大神ミオ",
+     "Polka Ch. 尾丸ポルカ"
+    ]
+   },
+   {
     "tag": "#縦型配信",
     "channels": [
      "かおりんごー",
@@ -76,19 +85,11 @@
     ]
    },
    {
-    "tag": "#雑談配信",
+    "tag": "#apex",
     "channels": [
-     "なすまゆ🍆🧶",
-     "三雲ヒカリ",
-     "和菓子のフランメ【わがフラch】"
-    ]
-   },
-   {
-    "tag": "#ホロ甲2026",
-    "channels": [
-     "Koyori ch. 博衣こより - holoX -",
-     "Mio Channel 大神ミオ",
-     "Polka Ch. 尾丸ポルカ"
+     "ぬるぬる",
+     "のったんちゃんねる",
+     "太刀ひろし　【Uncle gamer】 "
     ]
    }
   ],
@@ -96,38 +97,38 @@
   "wide": [
    {
     "game": "Apex Legends",
-    "channels": 44,
-    "videos": 54
+    "channels": 41,
+    "videos": 50
    },
    {
     "game": "ストリートファイター6",
-    "channels": 38,
-    "videos": 42
+    "channels": 39,
+    "videos": 44
    },
    {
     "game": "Minecraft",
-    "channels": 30,
-    "videos": 31
+    "channels": 27,
+    "videos": 28
    },
    {
     "game": "Dead by Daylight",
-    "channels": 18,
+    "channels": 19,
     "videos": 28
    },
    {
     "game": "Wardogs",
-    "channels": 15,
-    "videos": 16
-   },
-   {
-    "game": "実況パワフルプロ野球2026",
-    "channels": 13,
-    "videos": 15
+    "channels": 16,
+    "videos": 17
    },
    {
     "game": "スプラトゥーン3",
+    "channels": 15,
+    "videos": 19
+   },
+   {
+    "game": "実況パワフルプロ野球2026",
     "channels": 14,
-    "videos": 17
+    "videos": 16
    },
    {
     "game": "原神",
@@ -137,6 +138,11 @@
   ]
  },
  "recent_columns": [
+  {
+   "date": "2026-09-17",
+   "game": "Wardogs",
+   "headline": "100万ドル稼いで、全部使って、また稼ぐ"
+  },
   {
    "date": "2026-09-16",
    "game": "Marvel's Wolverine",
@@ -201,11 +207,6 @@
    "date": "2026-09-04",
    "game": "つぐのひ",
    "headline": "発売10日の『つぐのひ』最新作、事務所も個人も入り混じって10チャンネルが左へ歩き始めた"
-  },
-  {
-   "date": "2026-09-03",
-   "game": "Big Walk",
-   "headline": "ホロライブの7人が夜11時40分、発売1か月の協力ゲーム「Big Walk」をいっせいに歩き始めた"
   }
  ]
 }
