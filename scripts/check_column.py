@@ -123,6 +123,31 @@ def style(col, day=""):
     return out
 
 
+def info(col, day=""):
+    """止めるほどではないが、書く前に知っておきたいこと。
+
+    いまのところ1つだけ。そのゲームが過去に何日ランキングに入っていたか。
+    本文を「どんなゲームか」から始めるか「何が起きたか」から始めるかは、
+    読者がそのゲームを知っているかで決まる（EDITORIAL.md 5章）。
+    その判断材料になる。
+    """
+    if not isinstance(col, dict):
+        return []
+    game = str(col.get("game", "")).strip()
+    days = seen_days(game, day or str(col.get("date", "")) or _today())
+    if not days:
+        return [f"「{game}」が当サイトのランキングに入るのは今日が初めてです。"
+                "読者も知らない可能性が高いので、どんなゲームかの説明から始めるのが無難です"]
+    first = f"{int(days[0][5:7])}月{int(days[0][8:10])}日"
+    if len(days) <= 3:
+        add = "まだ数日しか出ていません。どんなゲームかの説明から始めるのが無難です"
+    elif len(days) >= 10:
+        add = "常連です。読者も知っている前提で、何が起きたかから書き始めてよいです"
+    else:
+        add = "ときどき出てきます。どちらから書くかは中身で決めてください"
+    return [f"「{game}」は過去{len(days)}日ランキングに入っています（最初は{first}）。{add}"]
+
+
 def validate(col):
     """出してはいけない理由のリストを返す。空なら掲載してよい。"""
     bad = []
@@ -204,7 +229,8 @@ def main():
     ok = True
     for arg in sys.argv[1:]:
         col = json.loads(Path(arg).read_text(encoding="utf-8"))
-        bad, warn = validate(col), style(col, Path(arg).stem)
+        day = Path(arg).stem
+        bad, warn = validate(col), style(col, day)
         if bad or warn:
             ok = False
             print(("❌ " if bad else "⚠️  ") + arg)
@@ -214,6 +240,9 @@ def main():
                 print(f"   ※ {w}（サイトには出ますが、直したほうがよいです）")
         else:
             print(f"✅ {arg}")
+        # 合否とは関係のない参考情報。書き出しをどちらから始めるかの判断に使う
+        for i in info(col, day):
+            print(f"   ℹ️  {i}")
     return 0 if ok else 1
 
 
