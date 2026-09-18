@@ -2312,7 +2312,7 @@
   "alias": [
    "AFE2"
   ],
-  "pop": 1,
+  "pop": 2,
   "p": [
    "pc",
    "console"
@@ -3149,7 +3149,7 @@
  {
   "name": "Another Eden Begins",
   "alias": [],
-  "pop": 0,
+  "pop": 1,
   "p": [
    "pc",
    "console"
@@ -4748,6 +4748,19 @@
   ],
   "g": [
    "Adventure",
+   "Indie"
+  ]
+ },
+ {
+  "name": "Backlot: Hollywood Studio Tycoon",
+  "alias": [],
+  "pop": 0,
+  "p": [
+   "pc"
+  ],
+  "g": [
+   "Simulator",
+   "Strategy",
    "Indie"
   ]
  },
@@ -6481,20 +6494,6 @@
   ]
  },
  {
-  "name": "Blast Off! Summer Showdown",
-  "alias": [],
-  "pop": 0,
-  "p": [
-   "pc",
-   "console"
-  ],
-  "g": [
-   "Racing",
-   "Sport",
-   "Indie"
-  ]
- },
- {
   "name": "Blast Racer",
   "alias": [
    "烈焰狂奔",
@@ -7852,7 +7851,9 @@
  },
  {
   "name": "BrushHammer Miniature Painter",
-  "alias": [],
+  "alias": [
+   "BrushHammer"
+  ],
   "pop": 0,
   "p": [
    "console"
@@ -9919,7 +9920,9 @@
  },
  {
   "name": "Chill Drive Together",
-  "alias": [],
+  "alias": [
+   "Chill Drive Together.exe"
+  ],
   "pop": 0,
   "p": [
    "pc"
@@ -10192,6 +10195,19 @@
   "g": [
    "Adventure",
    "Indie"
+  ]
+ },
+ {
+  "name": "Chronime Puzzle: Dogs",
+  "alias": [
+   "Chronime Puzzle Dogs.exe"
+  ],
+  "pop": 0,
+  "p": [
+   "pc"
+  ],
+  "g": [
+   "Puzzle"
   ]
  },
  {
@@ -11482,6 +11498,20 @@
   ]
  },
  {
+  "name": "Control Resonant: Digital Deluxe Edition",
+  "alias": [],
+  "pop": 0,
+  "p": [
+   "pc",
+   "console"
+  ],
+  "g": [
+   "Role-playing (RPG)",
+   "Hack and slash/Beat 'em up",
+   "Adventure"
+  ]
+ },
+ {
   "name": "Cook with Card",
   "alias": [
    "Cook with Card.exe"
@@ -12337,7 +12367,7 @@
   "alias": [
    "CrimsonMoonNG.exe"
   ],
-  "pop": 0,
+  "pop": 1,
   "p": [
    "pc",
    "console"
@@ -16392,7 +16422,7 @@
    "Dragon Quest Heroes: Torneko‘s Mystery Dungeon -Classic HD-",
    "TornekosMysteryDungeon.exe"
   ],
-  "pop": 0,
+  "pop": 1,
   "p": [
    "pc",
    "console"
@@ -18252,18 +18282,6 @@
   ]
  },
  {
-  "name": "Eggconsole Elthlead PC-8801mkIISR",
-  "alias": [],
-  "pop": 0,
-  "p": [
-   "console"
-  ],
-  "g": [
-   "Role-playing (RPG)",
-   "Simulator"
-  ]
- },
- {
   "name": "Eggconsole Onryou Senki PC-8801mkIISR",
   "alias": [],
   "pop": 0,
@@ -18687,7 +18705,7 @@
    "Endless Legend 2.exe",
    "Endless Legend II"
   ],
-  "pop": 0,
+  "pop": 1,
   "p": [
    "pc",
    "console"
@@ -20506,6 +20524,19 @@
   ]
  },
  {
+  "name": "Feed The Frog King: Incremental TD",
+  "alias": [],
+  "pop": 0,
+  "p": [
+   "pc"
+  ],
+  "g": [
+   "Simulator",
+   "Strategy",
+   "Indie"
+  ]
+ },
+ {
   "name": "Feed The Scorchpot",
   "alias": [
    "Dragon Fodder"
@@ -20843,7 +20874,7 @@
    "Fire Emblem: Ten Thousand Purples, One Thousand Reds",
    "Fire Emblem: Manshi Senkou"
   ],
-  "pop": 0,
+  "pop": 1,
   "p": [
    "console"
   ],
@@ -24873,7 +24904,7 @@
  {
   "name": "Ground Zero Hero",
   "alias": [],
-  "pop": 0,
+  "pop": 1,
   "p": [
    "pc",
    "console"
@@ -26113,18 +26144,6 @@
   ]
  },
  {
-  "name": "Hellwire",
-  "alias": [],
-  "pop": 0,
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Strategy",
-   "Indie"
-  ]
- },
- {
   "name": "Hemobloom",
   "alias": [],
   "pop": 0,
@@ -27104,7 +27123,7 @@
   "alias": [
    "HOT WHEELS Infinite Rush"
   ],
-  "pop": 0,
+  "pop": 1,
   "p": [
    "pc",
    "console"
@@ -34060,7 +34079,7 @@
   "alias": [
    "Wolverine"
   ],
-  "pop": 10,
+  "pop": 12,
   "p": [
    "console"
   ],
@@ -34938,9 +34957,11 @@
  {
   "name": "Metal Gear Solid Master Collection: Volume 2",
   "alias": [
+   "Metal Gear Solid Master Collection: Vol. 2",
+   "METAL GEAR SOLID MASTER COLLECTION: Vol. 2",
    "mgs_mc2.exe"
   ],
-  "pop": 3,
+  "pop": 4,
   "p": [
    "pc",
    "console"
@@ -37104,7 +37125,7 @@
  {
   "name": "NHL 27",
   "alias": [],
-  "pop": 0,
+  "pop": 1,
   "p": [
    "console"
   ],
@@ -47915,7 +47936,7 @@
  {
   "name": "Serious Sam: Shatterverse",
   "alias": [],
-  "pop": 0,
+  "pop": 1,
   "p": [
    "pc",
    "console"
@@ -53860,7 +53881,8 @@
    "pc"
   ],
   "g": [
-   "Platform"
+   "Platform",
+   "Puzzle"
   ]
  },
  {
@@ -59357,7 +59379,7 @@
   "alias": [
    "Sora no Kiseki the 2nd"
   ],
-  "pop": 0,
+  "pop": 2,
   "p": [
    "pc",
    "console"
@@ -63641,7 +63663,7 @@
  {
   "name": "Woodo",
   "alias": [],
-  "pop": 0,
+  "pop": 1,
   "p": [
    "pc",
    "console"
@@ -63994,17 +64016,6 @@
   ]
  },
  {
-  "name": "Wrong Treatment",
-  "alias": [],
-  "pop": 0,
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Adventure"
-  ]
- },
- {
   "name": "Wrongly Accused",
   "alias": [],
   "pop": 0,
@@ -64163,7 +64174,7 @@
   "alias": [
    "YAZS"
   ],
-  "pop": 9,
+  "pop": 10,
   "p": [
    "pc",
    "console"
