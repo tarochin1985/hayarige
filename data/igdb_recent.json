@@ -2845,7 +2845,7 @@
   "alias": [
    "Aniimo.exe"
   ],
-  "pop": 5,
+  "pop": 6,
   "p": [
    "pc",
    "console"
@@ -4330,6 +4330,18 @@
    "Role-playing (RPG)",
    "Turn-based strategy (TBS)",
    "Adventure",
+   "Indie"
+  ]
+ },
+ {
+  "name": "Astromental Incremental",
+  "alias": [],
+  "pop": 0,
+  "p": [
+   "pc"
+  ],
+  "g": [
+   "Simulator",
    "Indie"
   ]
  },
@@ -7063,6 +7075,20 @@
   ]
  },
  {
+  "name": "Boardlike",
+  "alias": [],
+  "pop": 0,
+  "p": [
+   "pc"
+  ],
+  "g": [
+   "Strategy",
+   "Adventure",
+   "Indie",
+   "Card & Board Game"
+  ]
+ },
+ {
   "name": "Boba Avoider",
   "alias": [],
   "pop": 0,
@@ -7328,6 +7354,22 @@
   "g": [
    "Puzzle",
    "Arcade"
+  ]
+ },
+ {
+  "name": "Borderlands 4: Story Pack 2 - FL4K and the Last Resort",
+  "alias": [
+   "Borderlands 4 - Сюжетный набор 2: З4ЛП и райский ад"
+  ],
+  "pop": 0,
+  "p": [
+   "pc",
+   "console"
+  ],
+  "g": [
+   "Shooter",
+   "Role-playing (RPG)",
+   "Adventure"
   ]
  },
  {
@@ -9292,20 +9334,6 @@
    "pc"
   ],
   "g": [
-   "Indie"
-  ]
- },
- {
-  "name": "Caten Village",
-  "alias": [],
-  "pop": 0,
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Role-playing (RPG)",
-   "Strategy",
-   "Adventure",
    "Indie"
   ]
  },
@@ -12177,6 +12205,18 @@
   ]
  },
  {
+  "name": "Crash Relay",
+  "alias": [],
+  "pop": 0,
+  "p": [
+   "pc"
+  ],
+  "g": [
+   "Racing",
+   "Indie"
+  ]
+ },
+ {
   "name": "Craving Wisps",
   "alias": [],
   "pop": 0,
@@ -14495,21 +14535,6 @@
   ]
  },
  {
-  "name": "Demake86",
-  "alias": [
-   "Legally Distinct Action Adventure Platforming Game set on a Meteoroid"
-  ],
-  "pop": 0,
-  "p": [
-   "pc",
-   "console"
-  ],
-  "g": [
-   "Adventure",
-   "Indie"
-  ]
- },
- {
   "name": "Demersus",
   "alias": [],
   "pop": 0,
@@ -14744,23 +14769,6 @@
   ],
   "g": [
    "Simulator",
-   "Indie"
-  ]
- },
- {
-  "name": "Derby Heroines: Run, Bet, Win!",
-  "alias": [
-   "ダービーヒロイン！〜駆けて、賭けて、勝て！〜"
-  ],
-  "pop": 0,
-  "jp": "ダービーヒロイン！〜駆けて、賭けて、勝て！〜",
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Racing",
-   "Simulator",
-   "Sport",
    "Indie"
   ]
  },
@@ -18579,6 +18587,20 @@
    "Role-playing (RPG)",
    "Hack and slash/Beat 'em up",
    "Adventure"
+  ]
+ },
+ {
+  "name": "Emberward",
+  "alias": [
+   "Emberward.exe"
+  ],
+  "pop": 0,
+  "p": [
+   "pc"
+  ],
+  "g": [
+   "Strategy",
+   "Indie"
   ]
  },
  {
@@ -22664,22 +22686,6 @@
   ]
  },
  {
-  "name": "G-Mode Archives+: Kishinden Strike-G-",
-  "alias": [
-   "G-MODEアーカイブス+ 機神伝 STRIKE-G-"
-  ],
-  "pop": 0,
-  "jp": "G-MODEアーカイブス+ 機神伝 STRIKE-G-",
-  "p": [
-   "pc",
-   "console"
-  ],
-  "g": [
-   "Role-playing (RPG)",
-   "Simulator"
-  ]
- },
- {
   "name": "G-Mode Archives+: Ridge Racer",
   "alias": [],
   "pop": 0,
@@ -23135,20 +23141,6 @@
   ],
   "g": [
    "Simulator"
-  ]
- },
- {
-  "name": "Gate to Die",
-  "alias": [
-   "GateToDie.exe"
-  ],
-  "pop": 0,
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Adventure",
-   "Indie"
   ]
  },
  {
@@ -25789,6 +25781,19 @@
    "Quiz/Trivia",
    "Arcade",
    "MOBA"
+  ]
+ },
+ {
+  "name": "Headshot Holdout",
+  "alias": [],
+  "pop": 0,
+  "p": [
+   "pc"
+  ],
+  "g": [
+   "Shooter",
+   "Tactical",
+   "Indie"
   ]
  },
  {
@@ -32319,19 +32324,6 @@
   ]
  },
  {
-  "name": "Loco!",
-  "alias": [
-   "LOCO!"
-  ],
-  "pop": 0,
-  "p": [
-   "console"
-  ],
-  "g": [
-   "Card & Board Game"
-  ]
- },
- {
   "name": "Loco: Rails & Tails",
   "alias": [],
   "pop": 0,
@@ -34079,7 +34071,7 @@
   "alias": [
    "Wolverine"
   ],
-  "pop": 12,
+  "pop": 14,
   "p": [
    "console"
   ],
@@ -36684,6 +36676,17 @@
   ]
  },
  {
+  "name": "Murders & Mistresses",
+  "alias": [],
+  "pop": 0,
+  "p": [
+   "pc"
+  ],
+  "g": [
+   "Visual Novel"
+  ]
+ },
+ {
   "name": "Museologist: Tidy Up the Museum!",
   "alias": [],
   "pop": 0,
@@ -38909,19 +38912,6 @@
   ]
  },
  {
-  "name": "Oddinary Farm",
-  "alias": [],
-  "pop": 0,
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Adventure",
-   "Indie",
-   "Arcade"
-  ]
- },
- {
   "name": "Odds Chronicles",
   "alias": [],
   "pop": 0,
@@ -40762,6 +40752,21 @@
   ]
  },
  {
+  "name": "Parisian Brasserie Simulator",
+  "alias": [
+   "BrasserieSimulator.exe"
+  ],
+  "pop": 0,
+  "p": [
+   "pc"
+  ],
+  "g": [
+   "Simulator",
+   "Strategy",
+   "Indie"
+  ]
+ },
+ {
   "name": "Parking in Tight Spaces",
   "alias": [],
   "pop": 0,
@@ -42082,6 +42087,18 @@
   "g": [
    "Racing",
    "Simulator"
+  ]
+ },
+ {
+  "name": "Planet Killer",
+  "alias": [],
+  "pop": 0,
+  "p": [
+   "pc"
+  ],
+  "g": [
+   "Indie",
+   "Arcade"
   ]
  },
  {
@@ -43627,6 +43644,14 @@
   ]
  },
  {
+  "name": "Promised Harvest",
+  "alias": [],
+  "pop": 0,
+  "g": [
+   "Arcade"
+  ]
+ },
+ {
   "name": "Proper Tosser",
   "alias": [],
   "pop": 0,
@@ -44069,20 +44094,6 @@
   ]
  },
  {
-  "name": "Quake: Dawn of the Machine",
-  "alias": [
-   "Quake Episode 7: Dawn of the Machine"
-  ],
-  "pop": 0,
-  "p": [
-   "pc",
-   "console"
-  ],
-  "g": [
-   "Shooter"
-  ]
- },
- {
   "name": "Quantum Hell",
   "alias": [],
   "pop": 0,
@@ -44118,20 +44129,6 @@
    "Role-playing (RPG)",
    "Simulator",
    "Adventure"
-  ]
- },
- {
-  "name": "Quest for Choices: Ivan's Tale - Chapter 0+1",
-  "alias": [
-   "Quest for Choices: Ivan's Tale｜Chapter 0+1"
-  ],
-  "pop": 0,
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Indie",
-   "Visual Novel"
   ]
  },
  {
@@ -45525,7 +45522,7 @@
   "alias": [
    "Resonance.exe"
   ],
-  "pop": 31,
+  "pop": 32,
   "p": [
    "pc",
    "console"
@@ -47906,19 +47903,6 @@
   ]
  },
  {
-  "name": "Serenity",
-  "alias": [],
-  "pop": 0,
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Simulator",
-   "Adventure",
-   "Indie"
-  ]
- },
- {
   "name": "Serial World",
   "alias": [
    "SerialWorld"
@@ -48044,6 +48028,20 @@
   ],
   "g": [
    "Adventure",
+   "Indie"
+  ]
+ },
+ {
+  "name": "Seven Suns of Orion",
+  "alias": [
+   "Seven Suns Of Orion.exe"
+  ],
+  "pop": 0,
+  "p": [
+   "pc"
+  ],
+  "g": [
+   "Shooter",
    "Indie"
   ]
  },
@@ -48624,6 +48622,19 @@
   ],
   "g": [
    "Role-playing (RPG)"
+  ]
+ },
+ {
+  "name": "Shockface",
+  "alias": [],
+  "pop": 0,
+  "p": [
+   "pc"
+  ],
+  "g": [
+   "Puzzle",
+   "Adventure",
+   "Indie"
   ]
  },
  {
@@ -52823,6 +52834,14 @@
   ]
  },
  {
+  "name": "Super Froppings",
+  "alias": [],
+  "pop": 0,
+  "p": [
+   "pc"
+  ]
+ },
+ {
   "name": "Super Mario 64: Rogue Chaos Edition Version 2.0",
   "alias": [],
   "pop": 0,
@@ -53929,21 +53948,6 @@
   "g": [
    "Platform",
    "Racing",
-   "Indie"
-  ]
- },
- {
-  "name": "Tangles 2",
-  "alias": [
-   "تشابك"
-  ],
-  "pop": 0,
-  "p": [
-   "pc",
-   "console"
-  ],
-  "g": [
-   "Adventure",
    "Indie"
   ]
  },
@@ -57541,6 +57545,19 @@
   ]
  },
  {
+  "name": "The Wake Event",
+  "alias": [],
+  "pop": 0,
+  "p": [
+   "pc"
+  ],
+  "g": [
+   "Puzzle",
+   "Adventure",
+   "Indie"
+  ]
+ },
+ {
   "name": "The Walker",
   "alias": [],
   "pop": 0,
@@ -58729,34 +58746,6 @@
   ]
  },
  {
-  "name": "Tom Clancy's Ghost Recon: Wildlands - Definitive Edition",
-  "alias": [],
-  "pop": 0,
-  "p": [
-   "pc",
-   "console"
-  ],
-  "g": [
-   "Shooter",
-   "Tactical",
-   "Arcade"
-  ]
- },
- {
-  "name": "Tom Clancy's Ghost Recon: Wildlands - Last Rites",
-  "alias": [],
-  "pop": 0,
-  "p": [
-   "pc",
-   "console"
-  ],
-  "g": [
-   "Shooter",
-   "Tactical",
-   "Arcade"
-  ]
- },
- {
   "name": "Tom Clancy's Rainbow Six Siege: Operation Splitfire",
   "alias": [
    "Tom Clancy's Rainbow Six Siege: Year 11, Season 3"
@@ -58861,6 +58850,21 @@
   ]
  },
  {
+  "name": "TomoTomo",
+  "alias": [
+   "TomoTomo.exe"
+  ],
+  "pop": 0,
+  "p": [
+   "pc"
+  ],
+  "g": [
+   "Platform",
+   "Adventure",
+   "Indie"
+  ]
+ },
+ {
   "name": "Too Many Balls",
   "alias": [],
   "pop": 0,
@@ -58894,6 +58898,22 @@
   "g": [
    "Strategy",
    "Card & Board Game"
+  ]
+ },
+ {
+  "name": "Torawase: The Girl in the Mirror",
+  "alias": [
+   "TORAWASE ～被囚禁的偽妃夢寐以求的幸福～",
+   "TORAWASE ～被囚禁的伪妃梦寐以求的幸福～",
+   "TO･RA･WA･SE ～囚われの偽妃が夢みる初夜～"
+  ],
+  "pop": 0,
+  "jp": "TO･RA･WA･SE ～囚われの偽妃が夢みる初夜～",
+  "p": [
+   "pc"
+  ],
+  "g": [
+   "Visual Novel"
   ]
  },
  {
@@ -60242,18 +60262,6 @@
   ]
  },
  {
-  "name": "UN:Me",
-  "alias": [],
-  "pop": 0,
-  "p": [
-   "pc",
-   "console"
-  ],
-  "g": [
-   "Adventure"
-  ]
- },
- {
   "name": "UPG: Underground",
   "alias": [
    "UPG - Underground.exe"
@@ -60951,7 +60959,7 @@
    "瓦爾海姆",
    "英灵神殿"
   ],
-  "pop": 299,
+  "pop": 300,
   "p": [
    "pc",
    "console"
@@ -62434,19 +62442,6 @@
   ]
  },
  {
-  "name": "Watch The Edge Honey",
-  "alias": [
-   "WatchtheEdgeHoney.exe"
-  ],
-  "pop": 0,
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Adventure"
-  ]
- },
- {
   "name": "Water Me & You",
   "alias": [],
   "pop": 0,
@@ -62747,20 +62742,6 @@
    "Simulator",
    "Sport",
    "Adventure",
-   "Indie"
-  ]
- },
- {
-  "name": "When I’m Not Drawing",
-  "alias": [],
-  "pop": 0,
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Role-playing (RPG)",
-   "Simulator",
-   "Strategy",
    "Indie"
   ]
  },
