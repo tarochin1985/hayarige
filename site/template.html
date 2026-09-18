@@ -424,6 +424,11 @@ function renderAdmin(){
   const row = (label, body) =>
     `<div class="qrow"><span class="g">${esc(label)}</span><span class="t">${body}</span></div>`;
   const parts = [];
+  // 続編が前作と同じ行に入っている疑い。いちばん上に出す（順位そのものが狂うため）
+  (DATA.drift || []).forEach(d => parts.push(row('名前のゆれ',
+    `<b>${esc(d.written)}</b> と書いている配信者が ${d.channels}人／${d.of}人。
+     いまは <b>${esc(d.game)}</b> として数えています。別のゲームなら
+     <code>data/aliases.json</code> に足してください`)));
   (L.events || []).forEach(e => parts.push(row('同じタグ',
     `<b>${esc(e.tag)}</b> — ${e.channels.length}人：${e.channels.map(esc).join('、')}`)));
   (L.newcomers || []).forEach(n => parts.push(row('新顔',

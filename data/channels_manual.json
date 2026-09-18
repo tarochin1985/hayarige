@@ -1,1 +1,57 @@
-{}
+{
+ "_このファイルは何か": "チャンネルを手で残す／外すための指定です。{チャンネルID: \"残す\" または \"外す\"} と書きます。自動判定（channels_enriched.json の auto）より、こちらが優先されます。アンダースコアで始まるキーはメモなので、動作には影響しません。",
+
+ "_なぜ外すのか": "このサイトが数えているのは『VTuber・ゲーム実況者が何を配信しているか』です。ゲームを作っている会社が自社ゲームの宣伝として出す動画は、それとは別のものです。2026-09-18に調べたところ、ウマ娘の再生数の99%、モンスターストライクの47%、鳴潮の39%が、メーカー公式チャンネル1つから出ていました。会社が新キャラのPVを出した日に順位が上がるのは、配信の流行ではありません。",
+
+ "_戻したいとき": "値を \"外す\" から \"残す\" に書き換えれば、翌朝から元に戻ります。行を消しても同じです。",
+
+ "UCkH3CcMfqww9RsZvPRPkAJA": "外す",
+ "_UCkH3CcMfqww9RsZvPRPkAJA": "Nintendo 公式チャンネル（380万人）",
+
+ "UCAVR6Q0YgYa8xwz8rdg9Mrg": "外す",
+ "_UCAVR6Q0YgYa8xwz8rdg9Mrg": "原神-Genshin-公式（216万人）",
+
+ "UCqly9F4Fr_jf2Y1Cy5hacRg": "外す",
+ "_UCqly9F4Fr_jf2Y1Cy5hacRg": "Bandai Namco Entertainment（200万人）",
+
+ "UCd9BXPj-KcMTh0HiB-Vlb8A": "外す",
+ "_UCd9BXPj-KcMTh0HiB-Vlb8A": "モンスト（モンスターストライク）公式（157万人）",
+
+ "UCAWxPGGuIfWME2KTLUmSCHw": "外す",
+ "_UCAWxPGGuIfWME2KTLUmSCHw": "ぱかチューブっ!【ウマ娘公式】（142万人）",
+
+ "UC6SmH9mR82nj28_NNg_rZvA": "外す",
+ "_UC6SmH9mR82nj28_NNg_rZvA": "スクウェア・エニックス（116万人）",
+
+ "UCaghC0OZwAdidMrbvxkcrPg": "外す",
+ "_UCaghC0OZwAdidMrbvxkcrPg": "PlayStation Japan（86.6万人）",
+
+ "UCWSPqhLRvqjC-vLYA5_n4LQ": "外す",
+ "_UCWSPqhLRvqjC-vLYA5_n4LQ": "KONAMI公式（49.8万人）",
+
+ "UCGc93NguHRwzv1Rw9MyIcxQ": "外す",
+ "_UCGc93NguHRwzv1Rw9MyIcxQ": "鳴潮 (Wuthering Waves)公式（42.2万人）",
+
+ "UCWzEh28vj3mQKpe0fzVTOUw": "外す",
+ "_UCWzEh28vj3mQKpe0fzVTOUw": "パワプロ・プロスピ公式チャンネル（37.6万人）",
+
+ "UCu2Fxqf37DAZ0ZhIsd1FZwA": "外す",
+ "_UCu2Fxqf37DAZ0ZhIsd1FZwA": "Capcom Fighters JP（28.4万人）。ストリートファイターリーグの公式中継。",
+
+ "UCGm5NSZFeb7q54h52bvX80g": "外す",
+ "_UCGm5NSZFeb7q54h52bvX80g": "デュエチューブ-DM公式-（19.7万人）",
+
+ "UCYkuIMi5szEmbO-uiuv2GCw": "外す",
+ "_UCYkuIMi5szEmbO-uiuv2GCw": "メタスト公式（15.4万人）。モンストのキャラが配信する、MIXI運営のVTuberチャンネル。見た目は実況だが運営はメーカーなので外した。ここは判断が分かれるので、残したければ \"残す\" に変える。",
+
+ "UCvo8JUqHh2d1QGnK3LKyI4Q": "外す",
+ "_UCvo8JUqHh2d1QGnK3LKyI4Q": "ポケモンユナイト公式チャンネル（14.9万人）",
+
+ "UCJxxoli_XbupD8SK_TtytAQ": "外す",
+ "_UCJxxoli_XbupD8SK_TtytAQ": "バンダイナムコ アミューズメントユニット公式チャンネル（12.6万人）",
+
+ "UCTgOPO7kIQ35YzB7SBIQoWQ": "外す",
+ "_UCTgOPO7kIQ35YzB7SBIQoWQ": "キャプテン翼 たたかえドリームチーム公式チャンネル（8.94万人）",
+
+ "_外していないもの": "名前に『公式』が入っていても、本人が配信している実況者・VTuberは残しています。狩野英孝【公式チャンネル】EIKO!GO!!、夕陽リリ、静凛、瀬戸環奈、くにくんOfficial、出雲モニカ、ゼロピュアなど。ゲーム系のニュース解説やレビューのチャンネル（KENT for 任天堂ゲームレビュー、スイッチ通など）も、メーカーではないので残しています。"
+}

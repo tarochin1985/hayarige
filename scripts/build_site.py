@@ -39,8 +39,17 @@ def load_all(days_back=30):
     再生数はいちばん大きい（＝いちばん新しく取った）ものを採用する。
 
     戻り値は (動画リスト, 収集した日のリスト)。
+
+    channels_manual.json で「外す」と書いたチャンネルは、ここでも落とす。
+    集める側（fetch_daily.py）でも同じ指定を見ているが、すでに保存済みの
+    ぶんはそのまま残っている。読むときにももう一度ふるいにかけておくと、
+    外した効果がその日のうちに効き、過去の記録ページを作り直したときも
+    同じ基準になる。
     """
-    best, runs = {}, []
+    manual = read_json(DATA / "channels_manual.json", {}) or {}
+    drop = {k for k, v in manual.items()
+            if v == "外す" and not k.startswith("_")}
+    best, runs, cut = {}, [], 0
     for f in sorted((DATA / "daily").glob("*.json")):
         if not re.fullmatch(r"\d{4}-\d{2}-\d{2}", f.stem):
             continue                      # .gitkeep.json などの置き石は読まない
@@ -49,9 +58,15 @@ def load_all(days_back=30):
             continue
         runs.append(f.stem)
         for v in rec.get("videos", []):
+            if v.get("channel_id") in drop:
+                cut += 1
+                continue
             cur = best.get(v["id"])
             if cur is None or v.get("views", 0) >= cur.get("views", 0):
                 best[v["id"]] = v
+    if cut:
+        log(f"手で外したチャンネルの動画を {cut} 本除きました"
+            f"（data/channels_manual.json に {len(drop)} チャンネル）")
     return list(best.values()), sorted(runs)
 
 
@@ -144,6 +159,65 @@ def find_leads(videos, rows, hist, day_names):
             for r in rows[:10] if r["channels"] >= 4]
 
     return {"events": events[:8], "newcomers": newcomers[:8], "wide": wide[:8]}
+
+
+def find_drift(videos, idx, limit=12):
+    """続編が、前作と同じ行に数えられていないか探す。
+
+    2026-09-18に、発売初日の『空の軌跡 the 2nd』の配信20本が、前作
+    『空の軌跡 the 1st』として数えられていた。辞書に『the 2nd』が
+    無かったので、名前の前半だけが一致して前作に吸い込まれていた。
+
+    これは未知タイトル一覧（/admin/）には出ない種類の事故である。判定
+    そのものは成功していて、行き先だけが違うからだ。だから別に見張る。
+
+    見張り方: 冒頭の【】に書かれた名前が「登録してある名前＋数字」の形に
+    なっていて、しかもその書き方がそのゲームの配信者の3分の1以上を
+    占めているとき、辞書に足りない続編があると見る。
+    数字を条件にしているのは、続編・章・版の区別がほぼ必ず数字で
+    書かれるから。『【モンスト参加型】』のような書き足しは数字が無いので
+    出てこない。割合で足切りするのは、『【マイクラ1.21】』のような
+    バージョン表記が1〜2人ぶん混ざっても騒がないようにするため。
+    """
+    ORD = re.compile(r"[0-9]|1st|2nd|3rd|4th|ii|iii|iv")
+    # ゲーム名 → 登録してある表記（詰めた形）
+    known = defaultdict(set)
+    for c, (g, _) in idx.exact.items():
+        known[g].add(c)
+    for lst in idx.bucket.values():
+        for c, _sp, g, _p in lst:
+            known[g].add(c)
+
+    ways = defaultdict(lambda: defaultdict(set))   # game -> 書かれ方 -> 配信者
+    total = defaultdict(set)                       # game -> 配信者ぜんぶ
+    for v in videos:
+        g, how = M.extract(v["title"], idx, fallback=True)
+        if how != "dict":
+            continue
+        total[g].add(v["channel"])
+        raw = M.leading_bracket(v["title"], idx.ng)
+        if not raw:
+            continue
+        c = M.compact(raw)
+        if len(c) < 3 or c in known.get(g, ()):
+            continue
+        for k in known.get(g, ()):
+            if len(k) < 3 or k not in c:
+                continue
+            rest = c.replace(k, "", 1)
+            if rest and ORD.search(rest):
+                ways[g][raw].add(v["channel"])
+            break
+
+    out = []
+    for g, w in ways.items():
+        n_all = len(total[g]) or 1
+        for raw, chans in w.items():
+            if len(chans) >= 3 and len(chans) * 3 >= n_all:
+                out.append({"game": g, "written": raw, "channels": len(chans),
+                            "of": n_all, "example": sorted(chans)[:3]})
+    out.sort(key=lambda d: -d["channels"])
+    return out[:limit]
 
 
 def series_sig(channel_id: str, title: str) -> str:
@@ -708,6 +782,10 @@ def about_html(cfg, n_channels):
 {jp:.0%} 以上出てくるかどうかも見ていて、これを下回るチャンネルは外しています。
 日本語圏の視聴者が見ている配信の流行を出すサイトなので、所属ではなく
 実際に使っている言語で判断しています。</p>
+<p>ゲームを作っている会社が運営する公式チャンネルは、数に入れていません。
+新キャラのPVや生放送は、配信者がそのゲームを選んだという話ではないためです。
+2026-09-18に調べたところ、あるゲームでは再生数の99%が会社の公式チャンネル1つから
+出ていました。そのままだと「宣伝を打った日に流行している」と出てしまいます。</p>
 
 <h2>どう数えているか</h2>
 <p>順位は、次の3つを合わせた独自のスコアで決めています。</p>
@@ -955,6 +1033,11 @@ def main():
         unk_rows.append(dict(u, n=unk_counts[u["title"]]))
     unk_rows.sort(key=lambda u: -u["n"])
     leads = find_leads(today_videos, rows, hist, day_names)
+    drift = find_drift(today_videos, idx)
+    for d in drift:
+        log(f"辞書に足りない続編かもしれません: 「{d['written']}」を"
+            f"{d['channels']}人が書いていますが、"
+            f"「{d['game']}」として数えています（data/aliases.json）")
     recent_cols = []
     for f in sorted((DATA / "columns").glob("*.json"))[-14:]:
         c = read_json(f, None) or {}
@@ -963,7 +1046,8 @@ def main():
                                 "headline": c.get("headline", "")})
     admin = {"mode": "admin", "date": today(),
              "generated": payload["generated"], "unknown": unk_rows,
-             "leads": leads, "recent_columns": recent_cols[::-1]}
+             "leads": leads, "drift": drift,
+             "recent_columns": recent_cols[::-1]}
     render("admin/index.html", admin, 1)
     write_json(SITE / "admin" / "unknown.json", admin)
     # robots.txt で /admin/ を検索避けしているが、それだと外から読む手段まで
@@ -971,7 +1055,8 @@ def main():
     # 直下にも置く（トップからはリンクしない）。
     write_json(SITE / "leads.json",
                {"date": today(), "generated": payload["generated"],
-                "leads": leads, "recent_columns": recent_cols[::-1]})
+                "leads": leads, "drift": drift,
+                "recent_columns": recent_cols[::-1]})
 
     # ---- アーカイブ一覧を更新する ----
     idx_path = DATA / "archive_index.json"

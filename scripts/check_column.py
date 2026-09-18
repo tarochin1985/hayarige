@@ -148,6 +148,31 @@ def info(col, day=""):
     return [f"「{game}」は過去{len(days)}日ランキングに入っています（最初は{first}）。{add}"]
 
 
+def drift_notes():
+    """続編が前作と同じ行に数えられている疑いを、コラムを書く人にも見せる。
+
+    build_site.py が毎回調べて site/admin/unknown.json に書いている。
+    ただし管理ページを毎日開く運用にはなっていないので、コラムを書く前に
+    必ず通るここにも出す。順位そのものが狂っている可能性がある話なので、
+    その日のコラムを書く前に気づけたほうがよい。
+    """
+    f = SITE_D.parent / "admin" / "unknown.json"
+    if not f.is_file():
+        return []
+    try:
+        d = json.loads(f.read_text(encoding="utf-8"))
+    except (ValueError, OSError):
+        return []
+    out = []
+    for x in (d.get("drift") or []):
+        out.append(
+            f"「{x.get('written')}」と書いている配信者が {x.get('channels')}人／"
+            f"{x.get('of')}人いますが、いまは「{x.get('game')}」として数えています。"
+            "別のゲームなら data/aliases.json に足す必要があります"
+            "（順位が前作と合算されています）")
+    return out
+
+
 def validate(col):
     """出してはいけない理由のリストを返す。空なら掲載してよい。"""
     bad = []
@@ -243,6 +268,9 @@ def main():
         # 合否とは関係のない参考情報。書き出しをどちらから始めるかの判断に使う
         for i in info(col, day):
             print(f"   ℹ️  {i}")
+    # 辞書の穴。コラムの合否とは関係ないが、順位のほうが狂っている話なので出す
+    for d in drift_notes():
+        print(f"🔧 {d}")
     return 0 if ok else 1
 
 
