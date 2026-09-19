@@ -69,18 +69,49 @@ a{color:inherit}
 .head h2{font-size:20px;font-weight:900;display:flex;align-items:center;gap:8px}
 .head .note{font-size:12.5px;color:var(--ink-3)}
 .ico{width:19px;height:19px;flex:none}
-.hot-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:13px}
-.hotcard{background:var(--card);border:1px solid var(--line);border-radius:var(--r);
- box-shadow:var(--sh);padding:15px 16px 13px;display:flex;flex-direction:column;gap:8px;
- position:relative;overflow:hidden}
-.hotcard::before{content:"";position:absolute;inset:0 auto 0 0;width:3px;background:var(--hot)}
-.hotcard .n{font-family:"Zen Kaku Gothic New",sans-serif;font-weight:700;font-size:15px;line-height:1.35}
-.hotcard .x{display:flex;align-items:baseline;gap:7px}
-.hotcard .x b{font-family:"Roboto Mono",monospace;font-size:29px;font-weight:700;color:var(--hot);line-height:1}
-.hotcard .x span{font-size:11.5px;color:var(--ink-3)}
-.hotcard .f{font-size:11.5px;color:var(--ink-3);display:flex;justify-content:space-between}
+.hot-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(248px,1fr));gap:13px}
+.hotcard{background:var(--card);border:1px solid var(--line);border-radius:13px;
+ box-shadow:var(--sh);display:flex;flex-direction:column;position:relative;overflow:hidden}
+.hotcard::before{content:"";position:absolute;inset:0 auto auto 0;width:3px;height:100%;
+ background:var(--hot);z-index:2}
+/* カードの上半分。押すと配信一覧が開く */
+.hotcard .hbtn{display:block;width:100%;text-align:left;font:inherit;color:inherit;
+ background:none;border:0;padding:0;cursor:pointer}
+.hotcard .hth{position:relative;display:block;background:var(--line-soft)}
+.hotcard .hth img{width:100%;aspect-ratio:16/9;object-fit:cover;display:block}
+.hotcard .hth .ph{display:block;aspect-ratio:16/9}
+.hotcard .mul{position:absolute;left:10px;top:10px;display:flex;align-items:baseline;gap:3px;
+ background:var(--hot);color:#fff;border-radius:9px;padding:4px 9px 5px;
+ font-family:"Roboto Mono",monospace;font-weight:700;font-size:19px;line-height:1;
+ box-shadow:0 2px 8px rgba(0,0,0,.22)}
+.hotcard .mul i{font-style:normal;font-size:11px;font-weight:700;opacity:.9}
+.hotcard .open{position:absolute;right:9px;bottom:9px;display:flex;align-items:center;gap:4px;
+ font-size:11px;font-weight:700;color:#fff;background:rgba(11,27,29,.72);border-radius:20px;padding:4px 10px}
+.hotcard .hbody{padding:11px 13px 6px;display:flex;flex-direction:column;gap:7px}
+.hotcard:hover{border-color:var(--hot)}
+.hotcard .n{font-family:"Zen Kaku Gothic New",sans-serif;font-weight:700;font-size:15.5px;line-height:1.35}
+.hotcard .f{font-size:11.5px;color:var(--ink-3);display:flex;justify-content:space-between;gap:8px}
+.hotcard .hbuy{padding:0 13px 13px;gap:6px}
+.hotcard .hbuy a{font-size:11px;padding:5px 10px}
+/* 急上昇カードの配信一覧は、カード群のすぐ下にまとめて置く */
+#hotpanels{margin-top:13px}
+/* スマホでは2列。1列だと6枚ぶん縦に伸びて、下のランキングまで遠くなる */
+@media(max-width:560px){
+  .hot-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:9px}
+  .hotcard .hbody{padding:9px 10px 5px;gap:5px}
+  .hotcard .n{font-size:13.5px}
+  .hotcard .mul{font-size:15px;padding:3px 7px 4px;left:7px;top:7px}
+  .hotcard .open{font-size:10px;padding:3px 8px;right:7px;bottom:7px}
+  .hotcard .delta{font-size:11px;gap:4px}
+  .hotcard .delta b{font-size:12px}
+  .hotcard .f{font-size:10.5px;flex-direction:column;gap:1px}
+  .hotcard .hbuy{padding:0 10px 10px;gap:5px}
+  .hotcard .hbuy a{font-size:10.5px;padding:4px 8px}
+}
 /* 倍率だけでは大きさが伝わらない（1件が3件でも ×3）。実数の変化も並べる */
 .hotcard .delta{display:flex;align-items:center;gap:7px;font-size:12px;color:var(--ink-3)}
+.hotcard .delta{flex-wrap:wrap}
+.hotcard .delta>span,.hotcard .delta>b{white-space:nowrap}
 .hotcard .delta svg{width:15px;height:15px;flex:none;color:var(--hot)}
 .hotcard .delta b{font-family:"Roboto Mono",monospace;font-size:13.5px;color:var(--ink);font-weight:700}
 footer .flink{color:var(--accent);font-weight:700;text-decoration:none;margin:0 9px}
@@ -306,7 +337,7 @@ footer{font-size:11.5px;color:var(--ink-3);text-align:center;border-top:1px soli
   <section id="hot-sec">
     <div class="head">
       <h2><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="var(--hot)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2L4 14h7l-1 8 9-12h-7l1-8z"/></svg><span id="hot-title">今このゲームがアツい！</span></h2>
-      <span class="note" id="hot-note">直近の平均とくらべて配信がグッと増えたタイトル</span>
+      <span class="note" id="hot-note">ふだんの何倍に増えたかで並べています。まだ知られていないゲームほど上に来ます</span>
     </div>
     <div class="hot-grid" id="hot"></div>
   </section>
@@ -368,7 +399,7 @@ footer{font-size:11.5px;color:var(--ink-3);text-align:center;border-top:1px soli
 </div>
 
 <script>
-const DATA = {"mode": "page", "date": "2026-09-19", "subtitle": "2026年9月7日〜9月13日の週まとめ", "generated": "2026-09-19 11:06", "page_body": "<p class=\"when\">2026年9月7日〜9月13日の週まとめ</p>\n<h1>拠点を焼き合う企画で、いちばん見られたのは男3人の言い合い</h1>\n<figure class=\"dochero\"><img src=\"https://i.ytimg.com/vi/5qK8UwWCtRA/mqdefault.jpg\" alt=\"\" loading=\"lazy\"><figcaption>YouTube ／ SHAKAch</figcaption></figure>\n<p class=\"lead\">9月7日から4日間、事務所をまたいでRustに人が集まった。ただ、数字が伸びたのはレイドの攻防のほうではなかった。</p>\n<p>『SAVOGE RUST : REBIRTH DAY』は、ZETA DIVISION CREATOR部門のぐちつぼが自身の30歳の誕生日を記念して開いた企画。3人1組のチームが他チームの拠点をレイドし、獲得したポイントを競う。9月7日から10日までの4日間、Day1からDay3は17時から翌2時までと告知されていた。</p>\n<p>当サイトの集計でいちばん再生されたのは、ローレン・イロアスがなるせ・SHAKAと組んだ「チンパンBee」の配信で、初日の1本が71万回を超えている。ただ、SHAKAのチャンネルが本番のあとに出した動画の題に並ぶのは、戦術ではなく3人の言い合いのほうだった。「チーム名決めで暴走するSHAKAのワイプ芸に振り回されるローレンなるせ達」が46万回、「うっかり漏れ出た一言にブチギレて友情崩壊する男達」が33万回、「永遠にお互いの発言を言葉狩りして燃やし合うSHAKA達」が24万回。拠点を焼き合う企画で数字を作ったのは、焼き合う前の口論だった。</p>\n<p>勝負のほうも動いている。Zerostのチャンネルは、4日間で最もダメージを出した人に贈られる「SAVOGE賞」を受賞したとして動画を出した（赤見かるび・けんきとのチーム）。Rustの解説で知られるsasatikkは参加者ではなく「神視点」として、各チームの拠点配置やレイドの応酬を日ごとに解説していて、こちらも7万〜9万回再生されている。</p>\n<p>本番は10日に終わったが、振り返りやまとめの動画は13日まで出続けた。当サイトの集計では、配信タイトルに「SAVOGE」または「サボラス」と入れていたチャンネルが18件。にじさんじ、ぶいすぽっ！、ネオポルテ、ドズル社、そして個人勢が混ざっている。事務所の企画ではないので、こういう並びになる。</p>\n<h2>出典</h2><ul>\n<li><a href=\"https://prtimes.jp/main/html/rd/p/000000219.000041650.html\" target=\"_blank\" rel=\"noopener\">GANYMEDE — プロeスポーツチーム「ZETA DIVISION」CREATOR部門ぐちつぼ、『SAVOGE RUST : REBIRTH DAY』を開催！</a></li>\n<li><a href=\"https://zetadivision.com/news/2026/09/03/46688\" target=\"_blank\" rel=\"noopener\">ZETA DIVISION — ぐちつぼが『SAVOGE RUST : REBIRTH DAY』を開催</a></li>\n<li><a href=\"https://www.youtube.com/watch?v=5qK8UwWCtRA\" target=\"_blank\" rel=\"noopener\">SHAKAch — チーム名決めで暴走するSHAKAのワイプ芸に振り回されるローレンなるせ達</a></li>\n<li><a href=\"https://www.youtube.com/watch?v=0QhfyMcP_mA\" target=\"_blank\" rel=\"noopener\">ローレン・イロアス — 【SAVOGE RUST#2】らすときたあああああああああああ</a></li>\n<li><a href=\"https://www.youtube.com/watch?v=zN96JEe_tRk\" target=\"_blank\" rel=\"noopener\">Zerost Channel — 4日間で最もダメージを出した人に送られる「SAVOGE賞」を受賞するZerost</a></li>\n</ul>", "paths": {"home": "../../", "archive": "../../archive/"}};
+const DATA = {"mode": "page", "date": "2026-09-19", "subtitle": "2026年9月7日〜9月13日の週まとめ", "generated": "2026-09-19 12:21", "page_body": "<p class=\"when\">2026年9月7日〜9月13日の週まとめ</p>\n<h1>拠点を焼き合う企画で、いちばん見られたのは男3人の言い合い</h1>\n<figure class=\"dochero\"><img src=\"https://i.ytimg.com/vi/5qK8UwWCtRA/mqdefault.jpg\" alt=\"\" loading=\"lazy\"><figcaption>YouTube ／ SHAKAch</figcaption></figure>\n<p class=\"lead\">9月7日から4日間、事務所をまたいでRustに人が集まった。ただ、数字が伸びたのはレイドの攻防のほうではなかった。</p>\n<p>『SAVOGE RUST : REBIRTH DAY』は、ZETA DIVISION CREATOR部門のぐちつぼが自身の30歳の誕生日を記念して開いた企画。3人1組のチームが他チームの拠点をレイドし、獲得したポイントを競う。9月7日から10日までの4日間、Day1からDay3は17時から翌2時までと告知されていた。</p>\n<p>当サイトの集計でいちばん再生されたのは、ローレン・イロアスがなるせ・SHAKAと組んだ「チンパンBee」の配信で、初日の1本が71万回を超えている。ただ、SHAKAのチャンネルが本番のあとに出した動画の題に並ぶのは、戦術ではなく3人の言い合いのほうだった。「チーム名決めで暴走するSHAKAのワイプ芸に振り回されるローレンなるせ達」が46万回、「うっかり漏れ出た一言にブチギレて友情崩壊する男達」が33万回、「永遠にお互いの発言を言葉狩りして燃やし合うSHAKA達」が24万回。拠点を焼き合う企画で数字を作ったのは、焼き合う前の口論だった。</p>\n<p>勝負のほうも動いている。Zerostのチャンネルは、4日間で最もダメージを出した人に贈られる「SAVOGE賞」を受賞したとして動画を出した（赤見かるび・けんきとのチーム）。Rustの解説で知られるsasatikkは参加者ではなく「神視点」として、各チームの拠点配置やレイドの応酬を日ごとに解説していて、こちらも7万〜9万回再生されている。</p>\n<p>本番は10日に終わったが、振り返りやまとめの動画は13日まで出続けた。当サイトの集計では、配信タイトルに「SAVOGE」または「サボラス」と入れていたチャンネルが18件。にじさんじ、ぶいすぽっ！、ネオポルテ、ドズル社、そして個人勢が混ざっている。事務所の企画ではないので、こういう並びになる。</p>\n<h2>出典</h2><ul>\n<li><a href=\"https://prtimes.jp/main/html/rd/p/000000219.000041650.html\" target=\"_blank\" rel=\"noopener\">GANYMEDE — プロeスポーツチーム「ZETA DIVISION」CREATOR部門ぐちつぼ、『SAVOGE RUST : REBIRTH DAY』を開催！</a></li>\n<li><a href=\"https://zetadivision.com/news/2026/09/03/46688\" target=\"_blank\" rel=\"noopener\">ZETA DIVISION — ぐちつぼが『SAVOGE RUST : REBIRTH DAY』を開催</a></li>\n<li><a href=\"https://www.youtube.com/watch?v=5qK8UwWCtRA\" target=\"_blank\" rel=\"noopener\">SHAKAch — チーム名決めで暴走するSHAKAのワイプ芸に振り回されるローレンなるせ達</a></li>\n<li><a href=\"https://www.youtube.com/watch?v=0QhfyMcP_mA\" target=\"_blank\" rel=\"noopener\">ローレン・イロアス — 【SAVOGE RUST#2】らすときたあああああああああああ</a></li>\n<li><a href=\"https://www.youtube.com/watch?v=zN96JEe_tRk\" target=\"_blank\" rel=\"noopener\">Zerost Channel — 4日間で最もダメージを出した人に送られる「SAVOGE賞」を受賞するZerost</a></li>\n</ul>", "paths": {"home": "../../", "archive": "../../archive/"}};
 const $ = s => document.querySelector(s);
 const esc = s => String(s ?? '').replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
 const cssv = n => getComputedStyle(document.documentElement).getPropertyValue(n).trim();
@@ -438,6 +469,10 @@ function renderAdmin(){
   const row = (label, body) =>
     `<div class="qrow"><span class="g">${esc(label)}</span><span class="t">${body}</span></div>`;
   const parts = [];
+  // 企画タグから足したぶん。順位に足している数字なので、見えるところに出す
+  (DATA.tags || []).forEach(t => parts.push(row('タグから',
+    `<b>#${esc(t.tag)}</b> の配信 ${t.added}本を <b>${esc(t.game)}</b> として数えました
+     — ${t.channels}人が使用、うち ${t.evidence}本にゲーム名の記載`)));
   // 続編が前作と同じ行に入っている疑い。いちばん上に出す（順位そのものが狂うため）
   (DATA.drift || []).forEach(d => parts.push(row('名前のゆれ',
     `<b>${esc(d.written)}</b> と書いている配信者が ${d.channels}人／${d.of}人。
@@ -556,34 +591,6 @@ function render(){
   const dayk = isArchive ? 'この日' : '24時間で';
 
   const mo = DATA.momentum || {ready: true};
-  // 倍率が出せない間の「広がり」は、下の上位3カードと同じ中身になってしまう。
-  // 二度同じものを見せても意味がないので、出せるようになるまで隠す。
-  $('#hot-sec').style.display = mo.ready ? '' : 'none';
-  if (!mo.ready) {
-    // データが足りないうちは倍率を出さない。代わりに「広がり」を出す。
-    $('#hot-title').textContent = DAY + 'いちばん広がったゲーム';
-    const left = Math.max(0, (mo.need || 4) - (mo.days || 0));
-    $('#hot-note').textContent = '多くの配信者が同じ日に触ったタイトル'
-      + (isArchive ? '' : `（急上昇の判定はデータがあと${left}日分で始まります）`);
-    $('#hot').innerHTML = (DATA.spread || []).map(r => `<article class="hotcard">
-        <div class="n">${esc(r.game)}</div>
-        <div class="x"><b>${r.channels}</b><span>チャンネルが配信</span></div>
-        <div class="f"><span>${dayk} ${r.videos}件</span><span>${man(r.views)}回 視聴</span></div>
-      </article>`).join('') || '<div class="empty">データがまだありません。</div>';
-  } else {
-    $('#hot').innerHTML = (DATA.rising || []).length
-      ? DATA.rising.map(r => `<article class="hotcard">
-          <div class="n">${esc(r.game)}</div>
-          <div class="x"><b>×${(r.growth||1).toFixed(1)}</b><span>直近の平均とくらべて</span></div>
-          <div class="delta"><span>ふだん ${fmt1(r.base)}件</span>
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"
-              stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h13M13 6l6 6-6 6"/></svg>
-            <b>${isArchive ? 'この日' : '今日'} ${r.videos}件</b></div>
-          ${spark(r.spark, 200, 34, HOT)}
-          <div class="f"><span>${r.channels}チャンネルが配信</span><span>${man(r.views)}回 視聴</span></div>
-        </article>`).join('')
-      : '<div class="empty">今日は目立った急上昇はありませんでした。</div>';
-  }
 
   const orgs = {};
   (DATA.ranking || []).forEach(r => Object.entries(r.orgs || {}).forEach(([k, v]) => orgs[k] = (orgs[k]||0) + v));
@@ -597,13 +604,13 @@ function render(){
   const PLUS = '<svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><path d="M6 9l6 6 6-6"/></svg>';
 
   // 配信一覧のパネル。カードでも行でも中身は同じ
-  const panel = r => {
+  const panel = (r, key) => {
     const st = (r.streams || []).map(s => `<a class="stream" href="${esc(s.u)}" target="_blank" rel="noopener">
       ${s.th ? `<img src="${esc(s.th)}" alt="" loading="lazy">` : ''}
       <span><span class="t">${esc(s.t)}</span><span class="c">${esc(s.c)} ・ ${man(s.v)}回</span></span></a>`).join('');
     const mv = (r.growth && r.growth >= 1.25 && r.videos >= 3)
       ? `<span class="mv up">▲ ×${r.growth.toFixed(1)}</span>` : '';
-    return `<div class="panel" data-p="${esc(r.game)}">
+    return `<div class="panel" data-p="${esc(key || r.game)}">
       <div style="display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin-bottom:10px">
         <span class="buy">${buy(r)}</span>${mv}
         ${(() => { const sp = spark(r.spark, 90, 22, AC);
@@ -619,6 +626,42 @@ function render(){
     const s0 = (r.streams || [])[0];
     return s0 ? `${esc(s0.c)}「${esc(s0.t)}」` : '';
   };
+
+  // ---- 今このゲームがアツい（このサイトの主役。ランキングより先に読ませる）
+  $('#hot-sec').style.display = mo.ready ? '' : 'none';
+  if (!mo.ready) {
+    // データが足りないうちは倍率を出さない。代わりに「広がり」を出す。
+    $('#hot-title').textContent = DAY + 'いちばん広がったゲーム';
+    const left = Math.max(0, (mo.need || 4) - (mo.days || 0));
+    $('#hot-note').textContent = '多くの配信者が同じ日に触ったタイトル'
+      + (isArchive ? '' : `（急上昇の判定はデータがあと${left}日分で始まります）`);
+    $('#hot').innerHTML = (DATA.spread || []).map(r => `<article class="hotcard"><div class="hbody">
+        <div class="n">${esc(r.game)}</div>
+        <div class="f"><span>${r.channels}チャンネルが配信</span><span>${man(r.views)}回 視聴</span></div>
+      </div></article>`).join('') || '<div class="empty">データがまだありません。</div>';
+  } else {
+    const hot = DATA.rising || [];
+    $('#hot').innerHTML = hot.length ? hot.map(r => {
+      const th = thumb(r), s0 = (r.streams || [])[0];
+      return `<article class="hotcard">
+        <button type="button" class="hbtn" data-g="hot:${esc(r.game)}">
+          <span class="hth">${th ? `<img src="${esc(th)}" alt="" loading="lazy">` : '<span class="ph"></span>'}
+            <span class="mul">×${(r.growth||1).toFixed(1)}</span>
+            ${s0 ? `<span class="open">${PLUS}配信一覧</span>` : ''}</span>
+          <span class="hbody">
+            <span class="n">${esc(r.game)}</span>
+            <span class="delta"><span>ふだん ${fmt1(r.base)}件</span>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"
+                stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h13M13 6l6 6-6 6"/></svg>
+              <b>${isArchive ? 'この日' : '今日'} ${r.videos}件</b></span>
+            <span class="f"><span>${r.channels}チャンネルが配信</span><span>${man(r.views)}回 視聴</span></span>
+          </span></button>
+        <div class="buy hbuy">${buy(r)}</div>
+      </article>`;
+    }).join('') : '<div class="empty">今日は目立った急上昇はありませんでした。</div>';
+    $('#hot').insertAdjacentHTML('afterend',
+      '<div id="hotpanels">' + hot.map(r => panel(r, 'hot:' + r.game)).join('') + '</div>');
+  }
 
   // 上位3件はカード
   $('#cards').innerHTML = list.slice(0, 3).map((r, i) => {
@@ -654,7 +697,7 @@ function render(){
 document.addEventListener('click', e => {
   const b = e.target.closest('#filters button');
   if (b){ orgFilter = b.dataset.org === 'すべて' ? null : b.dataset.org; render(); return; }
-  const hit = e.target.closest('.gcard, .lrow');
+  const hit = e.target.closest('.gcard, .lrow, .hbtn');
   if (!hit || e.target.closest('a')) return;
   const name = hit.dataset.g;
   const pane = [...document.querySelectorAll('.panel')].find(p => p.dataset.p === name);
