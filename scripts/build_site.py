@@ -17,7 +17,28 @@ from check_column import load_valid, HEDGE, BAD_SOURCE
 DAYS = 7
 MIN_FOR_MOMENTUM = 3          # 急上昇の対象にする最低本数（少数のブレを弾く）
 MIN_HISTORY = 4               # 急上昇を出すのに必要な「実データのある日数」
+RISING_MIN_CHANNELS = 3       # 急上昇に載せる最低チャンネル数（下の rising に理由）
+RISING_N = 6                  # 急上昇に出す件数
 W = {"videos": 0.30, "channels": 0.35, "views": 0.35}
+
+# 1人が同じゲームを1日に何本も出したときの数え方。
+# site_config.json の per_channel で切り替える。
+#
+# 毎日決まったチャンネルが同じゲームを何本も上げているために、
+# 順位が動かなくなる、という話から入れた（2026-09-19 たろちんさん）。
+# 実際、パズル&ドラゴンズは3チャンネル14本で、うち1つが再生数の65%を
+# 占めていた。「何人が配信したか」を見たいサイトなので、1人の連投で
+# 数字が積み上がるのは趣旨と合わない。
+#
+# 2本目以降を何割として数えるか:
+#   "全部数える"      1.0 … 以前の動き
+#   "2本目から半分"    0.5 … 既定。連投は効くが、効きが半分になる
+#   "1人1件"         0.0 … 1人が何本出しても1件・いちばん伸びた1本だけ
+#
+# 本数にも再生数にも同じ割引をかける。片方だけだと、
+# 「本数は1件なのに再生数は3本ぶん」という食い違いが出る。
+PER_CHANNEL = {"全部数える": 1.0, "2本目から半分": 0.5, "1人1件": 0.0}
+PER_CHANNEL_DEFAULT = "2本目から半分"
 
 # 今日のコラムがまだ無いとき、何日前まで さかのぼって表示するか。
 # 0にすると、今日の分が無い日はコラム欄が消える（以前の動き）。
@@ -235,19 +256,114 @@ def series_sig(channel_id: str, title: str) -> str:
     return (channel_id or "") + "|" + M.compact(re.sub(r"[0-9#＃]+", "", title))[:16]
 
 
-def tally(videos, idx):
-    games = defaultdict(lambda: {"videos": 0, "sigs": set(), "channels": set(),
-                                 "views": 0, "streams": [], "titles": [],
+TAG_MIN_CHANNELS = 3     # そのタグを使っている配信者が何人いれば企画とみなすか
+TAG_MIN_EVIDENCE = 3     # うち、ゲーム名を書いてくれた動画が何本必要か
+TAG_AGREE = 0.8          # そのうち何割が同じゲームを指していれば採用するか
+
+
+def tag_games(videos, idx):
+    """企画タグから、ゲーム名を書いていない配信のゲームを割り出す。
+
+    大会や企画の配信は、題名がタグだけになりやすい。
+    2026-09-19の #にじ遊戯王祭2026 は、13人が21本出していたのに、
+    ゲーム名（遊戯王マスターデュエル）を書いていたのは6本だけだった。
+    残りの15本はランキングに入らず、企画そのものが小さく見えていた。
+
+    辞書に足して解ける問題ではない。企画名は毎回変わるし、事前には分からない。
+    だから、その日のデータの中から答えを拾う。同じタグの配信のうち、
+    ゲーム名を書いてくれた人が何を書いたかを見る。全員が同じゲームを
+    書いているなら、書かなかった人も同じゲームである。
+
+    安全のために3つ条件を置く。
+      ・そのタグを3人以上が使っている（個人の口ぐせを拾わない）
+      ・ゲーム名が判定できた動画が3本以上、しかも2人以上から出ている
+      ・そのうち8割以上が同じゲームを指している
+    判定に成功している動画は、絶対に書き換えない。足すのは「不明」だけ。
+    """
+    tags = defaultdict(lambda: {"ch": set(), "hit": Counter(),
+                                "hit_ch": defaultdict(set), "miss": []})
+    for v in videos:
+        found = set()
+        for m in HASHTAG.finditer(v["title"]):
+            t = M.compact(m.group(1))
+            if len(t) >= 4 and t not in TAG_NG:
+                found.add(t)
+        if not found:
+            continue
+        g, how = M.extract(v["title"], idx, fallback=True)
+        for t in found:
+            e = tags[t]
+            e["ch"].add(v.get("channel_id"))
+            if how == "dict":
+                e["hit"][g] += 1
+                e["hit_ch"][g].add(v.get("channel_id"))
+            else:
+                e["miss"].append(v["id"])
+
+    out, notes = {}, []
+    for t, e in tags.items():
+        if len(e["ch"]) < TAG_MIN_CHANNELS or not e["miss"] or not e["hit"]:
+            continue
+        game, n = e["hit"].most_common(1)[0]
+        if n < TAG_MIN_EVIDENCE or len(e["hit_ch"][game]) < 2:
+            continue
+        if n / sum(e["hit"].values()) < TAG_AGREE:
+            continue
+        for vid in e["miss"]:
+            out.setdefault(vid, game)
+        notes.append({"tag": t, "game": game, "evidence": n,
+                      "added": len(e["miss"]), "channels": len(e["ch"])})
+    notes.sort(key=lambda x: -x["added"])
+    return out, notes
+
+
+def per_channel(cfg):
+    """site_config.json の per_channel を倍率にする。未設定なら既定値。"""
+    name = str((cfg or {}).get("per_channel") or PER_CHANNEL_DEFAULT)
+    if name not in PER_CHANNEL:
+        log(f"per_channel の値「{name}」は使えません。"
+            f"{' / '.join(PER_CHANNEL)} のどれかにしてください。"
+            f"今回は「{PER_CHANNEL_DEFAULT}」で動かします。")
+        name = PER_CHANNEL_DEFAULT
+    return PER_CHANNEL[name]
+
+
+def discount(e, d):
+    """1人の連投を割り引いた「件数」と「再生数」を出す。
+
+    まず同じ人の同じ続きもの（series_sig）を1本にまとめ、そのうえで
+    2本目以降を d 倍として数える。本数にも再生数にも同じ倍率をかける。
+    再生数は、その人のいちばん伸びた1本を丸ごと、残りを d 倍で足す。
+    d=1.0 なら以前と同じ、d=0.0 なら「1人につき1件・1本だけ」。
+    """
+    n = 0.0
+    w = 0
+    for sigs in e["by_ch"].values():
+        vs = sorted(sigs.values(), reverse=True)
+        n += 1 + d * (len(vs) - 1)
+        w += vs[0] + round(d * sum(vs[1:]))
+    return n, w
+
+
+def tally(videos, idx, d=None):
+    d = PER_CHANNEL[PER_CHANNEL_DEFAULT] if d is None else d
+    games = defaultdict(lambda: {"raw": 0, "channels": set(),
+                                 "by_ch": defaultdict(dict),
+                                 "streams": [], "titles": [],
                                  "orgs": defaultdict(int)})
     unknown = []
+    by_tag, _ = tag_games(videos, idx)
     for v in videos:
         g, how = M.extract(v["title"], idx, fallback=True)
+        if how != "dict" and v["id"] in by_tag:
+            g, how = by_tag[v["id"]], "dict"
         if how == "dict":
             e = games[g]
-            e["videos"] += 1
-            e["sigs"].add(series_sig(v.get("channel_id"), v["title"]))
+            e["raw"] += 1
             e["channels"].add(v["channel_id"])
-            e["views"] += v.get("views", 0)
+            sig = series_sig(v.get("channel_id"), v["title"])
+            cur = e["by_ch"][v["channel_id"]]
+            cur[sig] = max(cur.get(sig, 0), v.get("views", 0))
             e["titles"].append(v["title"])
             e["orgs"][v.get("affiliation") or "個人・その他"] += 1
             if len(e["streams"]) < 12:
@@ -257,6 +373,8 @@ def tally(videos, idx):
         elif how == "unknown":
             unknown.append({"title": v["title"], "guess": g, "channel": v["channel"],
                             "u": f"https://www.youtube.com/watch?v={v['id']}"})
+    for e in games.values():
+        e["n"], e["views"] = discount(e, d)
     return games, unknown
 
 
@@ -400,6 +518,33 @@ def ssr_pick(col):
             for s in srcs) + "</div>")
     body.append("</div>")
     return ("".join(parts) + "".join(body))
+
+
+def ssr_hot(rising, archive=False):
+    """急上昇のカード。JavaScriptが動かなくても読めるようにする。
+
+    ここはこのサイトの主役なので、検索エンジンにも中身が渡るようにしておく。
+    JSが動けば同じ内容で描き直される。
+    """
+    out = []
+    day = "この日" if archive else "今日"
+    for r in rising or []:
+        st = (r.get("streams") or [{}])[0]
+        th = st.get("th") or ""
+        # JS側の toFixed(1) と同じ丸め方にする（6.25 は 6.3）。Pythonの書式指定は
+        # 6.2 にするので、そのままだと読み込んだ直後に数字がチラッと変わる。
+        mul = math.floor((r.get("growth") or 1) * 10 + 0.5) / 10
+        img = (f'<img src="{e(th)}" alt="" loading="lazy">' if th
+               else '<span class="ph"></span>')
+        out.append(
+            '<article class="hotcard"><span class="hbtn"><span class="hth">'
+            f'{img}<span class="mul">×{mul:.1f}</span></span>'
+            f'<span class="hbody"><span class="n">{e(r["game"])}</span>'
+            f'<span class="delta"><span>ふだん {r.get("base")}件</span>'
+            f'<b>{day} {r["videos"]}件</b></span>'
+            f'<span class="f"><span>{r["channels"]}チャンネルが配信</span>'
+            f'<span>{man(r["views"])}回 視聴</span></span></span></span></article>')
+    return "".join(out)
 
 
 def ssr_cards(rows):
@@ -549,6 +694,8 @@ def render_page(path, data, depth, site_url=""):
                     .replace("__PICKTITLE__", pick_title(col_, data))
                     .replace("__PICKNOTE__", pick_note(col_, data))
                     .replace("__SSR_PICK__", ssr_pick(col_))
+                    .replace("__SSR_HOT__", ssr_hot(data.get("rising"),
+                                                    data.get("view") == "archive"))
                     .replace("__SSR_CARDS__", ssr_cards(rows_))
                     .replace("__SSR_ROWS__", ssr_rows(rows_))
                     .replace("__PAGEBODY__", data.get("page_body", ""))
@@ -795,8 +942,18 @@ def about_html(cfg, n_channels):
   <li><b>配信数</b> ── 配信・動画が何本あったか</li>
 </ul>
 <p>ひとりがたくさん投稿しただけで上位に来ないよう、<b>何人が配信したか</b>をいちばん重く見ています。
-「今このゲームがアツい」は、直近数日とくらべて増えたタイトルです。
-倍率だけでは大きさが分からないので、実数（ふだん◯件 → 今日◯件）も並べています。</p>
+そのうえで、<b>同じ人が同じゲームを1日に何本も出した場合、2本目からは半分として数えています</b>
+（再生数も同じで、その人のいちばん伸びた1本を丸ごと、残りを半分として足します）。
+毎日おなじ顔ぶれが同じゲームを何本も上げると、その人ひとりで順位が積み上がってしまうためです。
+「◯件」として出している数は、この割引をしたあとの数です。</p>
+<p><b>「今このゲームがアツい」は、このサイトでいちばん見てほしい欄です。</b>
+直近数日の平均とくらべて配信が増えたタイトルを、<b>倍率の大きい順</b>に6つ出しています。
+倍率で並べると、ふだん誰も配信していない小さなゲームが上に来ます。それが狙いです。
+まだ名前の知られていないゲームを見つけて、自分の配信で試してほしくて作った欄だからです。
+大きな企画が立った日には、大きなゲームもここに入ってきます。
+<b>3チャンネル以上が同じ日に別々に配信していること</b>を条件にしているので、
+ひとりの思いつきは出てきません。倍率だけでは大きさが分からないので、
+実数（ふだん◯件 → 今日◯件）と、何人が配信したかも並べています。</p>
 
 <h2>数えていないもの</h2>
 <ul>
@@ -810,6 +967,12 @@ def about_html(cfg, n_channels):
   <li><b>日本語以外で配信しているチャンネル</b> ── 事務所は問いません</li>
   <li><b>ゲーム名を判定できなかった配信</b> ── 推測では埋めません</li>
 </ul>
+<p>ただし、大会や企画の配信は題名がハッシュタグだけになりがちです
+（「【#にじ遊戯王祭2026】対抗戦」など）。そういう配信は、<b>同じタグを使っている
+ほかの人がゲーム名を書いていれば、そちらから判定しています</b>。
+3人以上が使っているタグで、ゲーム名の分かる配信が3本以上あり、
+その8割以上が同じゲームを指しているときだけです。
+推測ではなく、同じ企画の中に答えが書いてある場合にかぎります。</p>
 
 <h2>コラムについて</h2>
 <p>「今日の注目ゲーム」は、数字が動いた理由を書いています。書くときのルールを決めていて、
@@ -857,8 +1020,10 @@ def store_links(name, plat, cfg):
     読者に間違ったリンクを見せる損のほうが、2%の紹介料より大きい。
     出すのは、人が実際に商品ページを確かめたコラムの中だけにする。
     """
-    on_pc = (not plat) or ("pc" in plat)
-    on_console = (not plat) or ("console" in plat)
+    # plat が None なら「機種が分からない」なので、どちらの店も出す。
+    # 空のリスト [] は「PCでもゲーム機でも売っていない」（スマホ専用など）。
+    on_pc = plat is None or "pc" in plat
+    on_console = plat is None or "console" in plat
 
     steam = ("https://store.steampowered.com/search/?term=" + quote(name)) if on_pc else None
     amazon = None
@@ -873,23 +1038,26 @@ def compute_rows(videos, idx, disp, override, hist, day_names, momentum_ready,
                  plats=None, cfg=None):
     """その日の動画リストから、ランキングの行を作る。"""
     plats, cfg = plats or {}, cfg or {}
-    games, unknown = tally(videos, idx)
+    games, unknown = tally(videos, idx, per_channel(cfg))
     rows = []
     for name, e in games.items():
+        # n は連投を割り引いた件数（小数になる）。順位はこちらで決め、
+        # 画面には四捨五入した整数を出す。raw は割引前の実数で、参考用。
         rows.append({"game": choose_name(name, disp.get(name), e["titles"], override),
-                     "canonical": name, "videos": len(e["sigs"]), "raw": e["videos"],
+                     "canonical": name, "videos": round(e["n"]), "n": round(e["n"], 1),
+                     "raw": e["raw"],
                      "channels": len(e["channels"]), "views": e["views"],
                      "streams": sorted(e["streams"], key=lambda s: -s["v"])[:8],
                      "orgs": dict(sorted(e["orgs"].items(), key=lambda x: -x[1])),
                      "spark": [hist[d].get(name, 0) if d in hist else None
                                for d in day_names]})
     if rows:
-        mx_v = max(r["videos"] for r in rows) or 1
+        mx_v = max(r["n"] for r in rows) or 1
         mx_c = max(r["channels"] for r in rows) or 1
         logs_ = [math.log10(1 + r["views"]) for r in rows]
         lo, hi = min(logs_), max(logs_)
         for r in rows:
-            r["p_videos"] = round(r["videos"] / mx_v * 100)
+            r["p_videos"] = round(r["n"] / mx_v * 100)
             r["p_channels"] = round(r["channels"] / mx_c * 100)
             r["p_views"] = round((math.log10(1 + r["views"]) - lo) / max(1e-9, hi - lo) * 100)
             r["score"] = round(r["p_videos"] * W["videos"] + r["p_channels"] * W["channels"]
@@ -939,8 +1107,8 @@ def main():
     for day, vids, ok in days:
         if not ok:
             continue
-        g, _ = tally(vids, idx)
-        hist[day] = {k: len(v["sigs"]) for k, v in g.items()}
+        g, _ = tally(vids, idx, per_channel(cfg))
+        hist[day] = {k: round(v["n"], 1) for k, v in g.items()}
     momentum_ready = len(have) >= MIN_HISTORY
 
     rows, unknown = compute_rows(today_videos, idx, disp, override,
@@ -948,9 +1116,24 @@ def main():
     if not rows:
         log("今日のデータからゲームを検出できませんでした。処理を続けます。")
 
-    rising = sorted([r for r in rows if r["videos"] >= MIN_FOR_MOMENTUM
-                     and (r["growth"] or 0) > 1.25],
-                    key=lambda r: -r["growth"])[:3] if momentum_ready else []
+    # 急上昇は「倍率の大きい順」。小さくて誰も知らないゲームが出るようにする。
+    #
+    # このサイトを作ったきっかけが「まだ誰も配信していないゲームを掘り出したい」
+    # なので、ここは大きいゲームに譲らない（2026-09-19 たろちんさん）。
+    # 倍率順なら自然と小さいものが上に来る。大きいゲームは、よほどの企画が
+    # 立ったときだけ高い倍率になって入ってくる。特別扱いはしない。
+    #
+    # 品質の担保は本数ではなく「何人が別々に始めたか」で取る。
+    # 1〜2人だと、ひとりの思いつきや連番の区切り方のブレが混ざる。
+    # 3人が同じ日に別々に触っているなら、それは見つけてよい兆しである。
+    # 26日ぶんで数えたところ、3人以上の候補は1日あたり37件あり、6件出しても
+    # 毎日3.5件が入れ替わる（22日間で68種類、件数の中央値4.5件）。
+    rising = sorted(
+        [r for r in rows
+         if r["videos"] >= MIN_FOR_MOMENTUM
+         and r["channels"] >= RISING_MIN_CHANNELS
+         and (r["growth"] or 0) > 1.25],
+        key=lambda r: -r["growth"])[:RISING_N] if momentum_ready else []
     # 急上昇が出せない間は「今日いちばん多くの配信者が触ったゲーム」を代わりに出す
     spread = sorted(rows, key=lambda r: (-r["channels"], -r["videos"]))[:3]
 
@@ -1034,6 +1217,10 @@ def main():
     unk_rows.sort(key=lambda u: -u["n"])
     leads = find_leads(today_videos, rows, hist, day_names)
     drift = find_drift(today_videos, idx)
+    _, tagnotes = tag_games(today_videos, idx)
+    for t in tagnotes:
+        log(f"企画タグ #{t['tag']} から {t['added']} 本を「{t['game']}」として数えました"
+            f"（{t['channels']}人が使用、うち{t['evidence']}本にゲーム名の記載あり）")
     for d in drift:
         log(f"辞書に足りない続編かもしれません: 「{d['written']}」を"
             f"{d['channels']}人が書いていますが、"
@@ -1046,7 +1233,7 @@ def main():
                                 "headline": c.get("headline", "")})
     admin = {"mode": "admin", "date": today(),
              "generated": payload["generated"], "unknown": unk_rows,
-             "leads": leads, "drift": drift,
+             "leads": leads, "drift": drift, "tags": tagnotes,
              "recent_columns": recent_cols[::-1]}
     render("admin/index.html", admin, 1)
     write_json(SITE / "admin" / "unknown.json", admin)
@@ -1055,7 +1242,7 @@ def main():
     # 直下にも置く（トップからはリンクしない）。
     write_json(SITE / "leads.json",
                {"date": today(), "generated": payload["generated"],
-                "leads": leads, "drift": drift,
+                "leads": leads, "drift": drift, "tags": tagnotes,
                 "recent_columns": recent_cols[::-1]})
 
     # ---- アーカイブ一覧を更新する ----

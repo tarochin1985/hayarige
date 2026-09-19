@@ -214,11 +214,34 @@ def build_index() -> Index:
 
 def load_platforms():
     """ゲーム名 → 対応機種のざっくり分類（pc / console）。
-    どの店へのリンクを出すかを決めるのに使う。辞書が古い場合は空になる。"""
-    out = {}
+    どの店へのリンクを出すかを決めるのに使う。辞書が古い場合は空になる。
+
+    手で足したゲーム（aliases.json のキー）は、IGDBの正式名と違う名前なので
+    そのままでは機種が引けない。引けないと「どちらでも売っている」扱いになり、
+    スプラトゥーン3やマリオカートに『Steamで探す』が出ていた。
+    そこで、別名のどれかがIGDBの名前や別名と一致すれば、そこから機種を借りる。
+    2026-09-19の時点で、手で足した116件のうち65件がこれで埋まった。
+
+    残り（スマホ専用ゲームなど）は data/platforms.json に手で書く。
+    空のリスト [] は「PCでもゲーム機でも売っていない」＝店のリンクを出さない。
+    """
+    out, by = {}, {}
     for g in catalogue():
-        if g.get("p"):
-            out[g["name"]] = g["p"]
+        if not g.get("p"):
+            continue
+        out[g["name"]] = g["p"]
+        for nm in [g["name"]] + list(g.get("alias") or []) + \
+                  ([g["jp"]] if g.get("jp") else []):
+            by.setdefault(compact(nm), g["p"])
+    for game, aliases in (read_json(DATA / "aliases.json", {}) or {}).items():
+        if out.get(game):
+            continue
+        for nm in [game] + list(aliases):
+            p = by.get(compact(nm))
+            if p:
+                out[game] = p
+                break
+    out.update(read_json(DATA / "platforms.json", {}) or {})
     return out
 
 
