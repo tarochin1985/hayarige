@@ -5973,19 +5973,6 @@
   ]
  },
  {
-  "name": "Beyond the Plastic Wall",
-  "alias": [
-   "BEYOND THE PLASTIC WALL"
-  ],
-  "pop": 0,
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Adventure"
-  ]
- },
- {
   "name": "Bhangarh: The Untold Story",
   "alias": [],
   "pop": 0,
@@ -16663,19 +16650,6 @@
   ]
  },
  {
-  "name": "DreadOut 3",
-  "alias": [],
-  "pop": 0,
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Role-playing (RPG)",
-   "Adventure",
-   "Indie"
-  ]
- },
- {
   "name": "Dreadline Express",
   "alias": [],
   "pop": 0,
@@ -25458,10 +25432,15 @@
  },
  {
   "name": "Happy Endings",
-  "alias": [],
+  "alias": [
+   "Happy Endings.exe"
+  ],
   "pop": 0,
   "p": [
    "pc"
+  ],
+  "g": [
+   "Simulator"
   ]
  },
  {
@@ -29840,7 +29819,8 @@
   "g": [
    "Music",
    "Simulator",
-   "Adventure"
+   "Adventure",
+   "Visual Novel"
   ]
  },
  {
@@ -34449,7 +34429,9 @@
  },
  {
   "name": "Medieval Juice Crafter",
-  "alias": [],
+  "alias": [
+   "MedievalJuiceCrafter.exe"
+  ],
   "pop": 0,
   "p": [
    "pc"
@@ -48389,7 +48371,9 @@
  },
  {
   "name": "She Never Left",
-  "alias": [],
+  "alias": [
+   "Grandma.exe"
+  ],
   "pop": 0,
   "p": [
    "pc"
@@ -53980,6 +53964,21 @@
   ]
  },
  {
+  "name": "Tangles 2",
+  "alias": [
+   "تشابك"
+  ],
+  "pop": 0,
+  "p": [
+   "pc",
+   "console"
+  ],
+  "g": [
+   "Adventure",
+   "Indie"
+  ]
+ },
+ {
   "name": "Tank Brigade",
   "alias": [
    "Tank Brigade.exe"
@@ -54813,7 +54812,7 @@
   "alias": [
    "Dawnwalker.exe"
   ],
-  "pop": 22,
+  "pop": 23,
   "p": [
    "pc",
    "console"
@@ -60564,7 +60563,14 @@
  },
  {
   "name": "Unicorn Academy: Island of Magic",
-  "alias": [],
+  "alias": [
+   "L'École des licornes : L'Île de la Magie",
+   "Akademia Jednorożców: Wyspa Magii",
+   "Academia Unicornio: La Isla de la Magia",
+   "Academia Unicórnio: A Ilha da Magia",
+   "独角兽骑士队: 魔法之岛",
+   "獨角獸學院: 魔法之島"
+  ],
   "pop": 0,
   "p": [
    "pc",
@@ -62770,6 +62776,20 @@
    "Simulator",
    "Sport",
    "Adventure",
+   "Indie"
+  ]
+ },
+ {
+  "name": "When I’m Not Drawing",
+  "alias": [],
+  "pop": 0,
+  "p": [
+   "pc"
+  ],
+  "g": [
+   "Role-playing (RPG)",
+   "Simulator",
+   "Strategy",
    "Indie"
   ]
  },

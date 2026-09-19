@@ -94,7 +94,9 @@ a{color:inherit}
 .hotcard .hbuy{padding:0 13px 13px;gap:6px}
 .hotcard .hbuy a{font-size:11px;padding:5px 10px}
 /* 急上昇カードの配信一覧は、カード群のすぐ下にまとめて置く */
-#hotpanels{margin-top:13px}
+/* 急上昇のパネルはグリッドの中に入る。押した行の下に、横いっぱいで出す */
+.hot-grid>.panel{grid-column:1/-1;border:1px solid var(--line);border-radius:11px;
+ border-left:3px solid var(--hot);background:var(--card-2)}
 /* スマホでは2列。1列だと6枚ぶん縦に伸びて、下のランキングまで遠くなる */
 @media(max-width:560px){
   .hot-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:9px}
@@ -246,6 +248,10 @@ tr.detail td{background:var(--card-2);padding:14px 18px}
  background:linear-gradient(90deg,var(--accent),var(--accent-2))}
 .chev{flex:none;width:22px;height:22px;color:var(--ink-3);transition:transform .18s}
 .open-x .chev{transform:rotate(180deg);color:var(--accent)}
+/* 開いている急上昇カードを分かるようにする */
+.hotcard.on{border-color:var(--hot);box-shadow:0 0 0 1px var(--hot),var(--sh)}
+.hotcard.on .open{background:var(--hot)}
+.hotcard.on .open svg{transform:rotate(180deg)}
 .panel{display:none;padding:13px 15px;background:var(--card-2);border-bottom:1px solid var(--line-soft)}
 .panel.on{display:block}
 .hint{display:inline-flex;align-items:center;gap:5px;font-size:11.5px;font-weight:700;color:var(--accent);
@@ -474,7 +480,7 @@ footer{font-size:11.5px;color:var(--ink-3);text-align:center;border-top:1px soli
 </div>
 
 <script>
-const DATA = {"mode": "page", "date": "2026-09-19", "subtitle": "このサイトについて", "generated": "2026-09-19 12:21", "page_body": "\n<h2>このサイトは何か</h2>\n<p class=\"lead\">VTuber・ゲーム実況者がYouTubeに出している配信のタイトルを毎日集めて、\nいまどのゲームが配信されているかをランキングにしています。\n「次、何のゲーム配信する？」と考えている配信者のために作りました。</p>\n<p>再生数の多い<b>動画</b>を並べるサイトはすでにたくさんあります。このサイトが並べるのは\n<b>ゲーム</b>です。誰の動画が伸びたかではなく、どのゲームに人が集まっているかを見ます。</p>\n\n<h2>どこから集めているか</h2>\n<dl>\n  <dt>対象</dt><dd>日本語で配信しているVTuber・ゲーム実況者のYouTubeチャンネル、現在 1,919 件</dd>\n  <dt>範囲</dt><dd>直近24時間に公開された配信・動画</dd>\n  <dt>更新</dt><dd>1日2回（日本時間 7時ごろ / 19時ごろ）</dd>\n  <dt>判定</dt><dd>配信タイトルの文字列から、約5万本のゲーム名辞書と照合しています</dd>\n</dl>\n<p>チャンネルは、登録者数 1,000 人以上・1年以内に投稿がある・ゲームの動画を出している、\nという条件で自動的に選んでいます。直近の動画タイトルにひらがな・カタカナが\n50% 以上出てくるかどうかも見ていて、これを下回るチャンネルは外しています。\n日本語圏の視聴者が見ている配信の流行を出すサイトなので、所属ではなく\n実際に使っている言語で判断しています。</p>\n<p>ゲームを作っている会社が運営する公式チャンネルは、数に入れていません。\n新キャラのPVや生放送は、配信者がそのゲームを選んだという話ではないためです。\n2026-09-18に調べたところ、あるゲームでは再生数の99%が会社の公式チャンネル1つから\n出ていました。そのままだと「宣伝を打った日に流行している」と出てしまいます。</p>\n\n<h2>どう数えているか</h2>\n<p>順位は、次の3つを合わせた独自のスコアで決めています。</p>\n<ul>\n  <li><b>配信者数</b> ── そのゲームを配信したチャンネルが何件あったか</li>\n  <li><b>再生数</b> ── その合計</li>\n  <li><b>配信数</b> ── 配信・動画が何本あったか</li>\n</ul>\n<p>ひとりがたくさん投稿しただけで上位に来ないよう、<b>何人が配信したか</b>をいちばん重く見ています。\nそのうえで、<b>同じ人が同じゲームを1日に何本も出した場合、2本目からは半分として数えています</b>\n（再生数も同じで、その人のいちばん伸びた1本を丸ごと、残りを半分として足します）。\n毎日おなじ顔ぶれが同じゲームを何本も上げると、その人ひとりで順位が積み上がってしまうためです。\n「◯件」として出している数は、この割引をしたあとの数です。</p>\n<p><b>「今このゲームがアツい」は、このサイトでいちばん見てほしい欄です。</b>\n直近数日の平均とくらべて配信が増えたタイトルを、<b>倍率の大きい順</b>に6つ出しています。\n倍率で並べると、ふだん誰も配信していない小さなゲームが上に来ます。それが狙いです。\nまだ名前の知られていないゲームを見つけて、自分の配信で試してほしくて作った欄だからです。\n大きな企画が立った日には、大きなゲームもここに入ってきます。\n<b>3チャンネル以上が同じ日に別々に配信していること</b>を条件にしているので、\nひとりの思いつきは出てきません。倍率だけでは大きさが分からないので、\n実数（ふだん◯件 → 今日◯件）と、何人が配信したかも並べています。</p>\n\n<h2>数えていないもの</h2>\n<ul>\n  <li><b>Shorts</b>（3分以下の動画）── YouTubeは縦向きで3分以内の動画を\n      Shortsとして扱うため、それに合わせています</li>\n  <li><b>切り抜き</b>（タイトルや チャンネル名から判定）</li>\n  <li><b>同時視聴</b> ── アニメ・映画・発表会を視聴者と一緒に見る配信。\n      ゲームを遊んでいる配信ではないので数えません</li>\n  <li><b>同じ配信者が同じ日に出した続きもの</b> ── 1本の配信を分割した動画などは1件として数えます。\n      別の日に続くシリーズは、その日ごとに数えます</li>\n  <li><b>日本語以外で配信しているチャンネル</b> ── 事務所は問いません</li>\n  <li><b>ゲーム名を判定できなかった配信</b> ── 推測では埋めません</li>\n</ul>\n<p>ただし、大会や企画の配信は題名がハッシュタグだけになりがちです\n（「【#にじ遊戯王祭2026】対抗戦」など）。そういう配信は、<b>同じタグを使っている\nほかの人がゲーム名を書いていれば、そちらから判定しています</b>。\n3人以上が使っているタグで、ゲーム名の分かる配信が3本以上あり、\nその8割以上が同じゲームを指しているときだけです。\n推測ではなく、同じ企画の中に答えが書いてある場合にかぎります。</p>\n\n<h2>コラムについて</h2>\n<p>「今日の注目ゲーム」は、数字が動いた理由を書いています。書くときのルールを決めていて、\n<b>裏が取れないことは書きません</b>。根拠には、公式の発表・ゲームメディア・実際の配信そのものを\n当たっています。説明できることが何も無い日は、その日は書きません。</p>\n\n<h2>間違いを見つけたら</h2>\n<p>ゲーム名の判定は自動なので、間違えることがあります。見つけしだい直しています。\nおかしなものを見つけたら、<a href=\"https://x.com/tarochinko\" target=\"_blank\" rel=\"noopener\">X（@tarochinko）</a>\nのDMで教えてください。</p>\n\n<h2>作っている人</h2>\n<p>ゲーム実況者の たろちん（<a href=\"https://x.com/tarochinko\" target=\"_blank\" rel=\"noopener\">@tarochinko</a>）が\n個人で作っています。データはYouTube Data API、ゲーム名の辞書はIGDBを使っています。</p>\n<p>このサイトはAmazonアソシエイト・プログラムの参加者です。商品ページへのリンクから\n購入があった場合、紹介料を受け取ることがあります。ランキングの順位は\n配信の数字だけで決めていて、紹介料は関係しません。</p>\n\n<h2>アクセス解析について</h2>\n<p>どのページがどれくらい見られているかを知るために、Cloudflare Web Analytics を\n使っています。Cookieを置かず、閲覧者を個人として追いかけない仕組みのものです。\nこのサイトが名前・メールアドレスなどの個人情報を集めることはありません。</p>\n<p>集めた配信のデータ（タイトル・チャンネル名など）は、YouTubeの規約に従って\n30日を過ぎたら消しています。古い日の記録ページに配信の一覧が出ないのは\nそのためです。</p>\n", "paths": {"home": "../", "archive": "../archive/"}};
+const DATA = {"mode": "page", "date": "2026-09-19", "subtitle": "このサイトについて", "generated": "2026-09-19 19:17", "page_body": "\n<h2>このサイトは何か</h2>\n<p class=\"lead\">VTuber・ゲーム実況者がYouTubeに出している配信のタイトルを毎日集めて、\nいまどのゲームが配信されているかをランキングにしています。\n「次、何のゲーム配信する？」と考えている配信者のために作りました。</p>\n<p>再生数の多い<b>動画</b>を並べるサイトはすでにたくさんあります。このサイトが並べるのは\n<b>ゲーム</b>です。誰の動画が伸びたかではなく、どのゲームに人が集まっているかを見ます。</p>\n\n<h2>どこから集めているか</h2>\n<dl>\n  <dt>対象</dt><dd>日本語で配信しているVTuber・ゲーム実況者のYouTubeチャンネル、現在 1,919 件</dd>\n  <dt>範囲</dt><dd>直近24時間に公開された配信・動画</dd>\n  <dt>更新</dt><dd>1日2回（日本時間 7時ごろ / 19時ごろ）</dd>\n  <dt>判定</dt><dd>配信タイトルの文字列から、約5万本のゲーム名辞書と照合しています</dd>\n</dl>\n<p>チャンネルは、登録者数 1,000 人以上・1年以内に投稿がある・ゲームの動画を出している、\nという条件で自動的に選んでいます。直近の動画タイトルにひらがな・カタカナが\n50% 以上出てくるかどうかも見ていて、これを下回るチャンネルは外しています。\n日本語圏の視聴者が見ている配信の流行を出すサイトなので、所属ではなく\n実際に使っている言語で判断しています。</p>\n<p>ゲームを作っている会社が運営する公式チャンネルは、数に入れていません。\n新キャラのPVや生放送は、配信者がそのゲームを選んだという話ではないためです。\n2026-09-18に調べたところ、あるゲームでは再生数の99%が会社の公式チャンネル1つから\n出ていました。そのままだと「宣伝を打った日に流行している」と出てしまいます。</p>\n\n<h2>どう数えているか</h2>\n<p>順位は、次の3つを合わせた独自のスコアで決めています。</p>\n<ul>\n  <li><b>配信者数</b> ── そのゲームを配信したチャンネルが何件あったか</li>\n  <li><b>再生数</b> ── その合計</li>\n  <li><b>配信数</b> ── 配信・動画が何本あったか</li>\n</ul>\n<p>ひとりがたくさん投稿しただけで上位に来ないよう、<b>何人が配信したか</b>をいちばん重く見ています。\nそのうえで、<b>同じ人が同じゲームを1日に何本も出した場合、2本目からは半分として数えています</b>\n（再生数も同じで、その人のいちばん伸びた1本を丸ごと、残りを半分として足します）。\n毎日おなじ顔ぶれが同じゲームを何本も上げると、その人ひとりで順位が積み上がってしまうためです。\n「◯件」として出している数は、この割引をしたあとの数です。</p>\n<p><b>「今このゲームがアツい」は、このサイトでいちばん見てほしい欄です。</b>\n直近数日の平均とくらべて配信が増えたタイトルを、<b>倍率の大きい順</b>に6つ出しています。\n倍率で並べると、ふだん誰も配信していない小さなゲームが上に来ます。それが狙いです。\nまだ名前の知られていないゲームを見つけて、自分の配信で試してほしくて作った欄だからです。\n大きな企画が立った日には、大きなゲームもここに入ってきます。\n<b>3チャンネル以上が同じ日に別々に配信していること</b>を条件にしているので、\nひとりの思いつきは出てきません。倍率だけでは大きさが分からないので、\n実数（ふだん◯件 → 今日◯件）と、何人が配信したかも並べています。</p>\n\n<h2>数えていないもの</h2>\n<ul>\n  <li><b>Shorts</b>（3分以下の動画）── YouTubeは縦向きで3分以内の動画を\n      Shortsとして扱うため、それに合わせています</li>\n  <li><b>切り抜き</b>（タイトルや チャンネル名から判定）</li>\n  <li><b>同時視聴</b> ── アニメ・映画・発表会を視聴者と一緒に見る配信。\n      ゲームを遊んでいる配信ではないので数えません</li>\n  <li><b>同じ配信者が同じ日に出した続きもの</b> ── 1本の配信を分割した動画などは1件として数えます。\n      別の日に続くシリーズは、その日ごとに数えます</li>\n  <li><b>日本語以外で配信しているチャンネル</b> ── 事務所は問いません</li>\n  <li><b>ゲーム名を判定できなかった配信</b> ── 推測では埋めません</li>\n</ul>\n<p>ただし、大会や企画の配信は題名がハッシュタグだけになりがちです\n（「【#にじ遊戯王祭2026】対抗戦」など）。そういう配信は、<b>同じタグを使っている\nほかの人がゲーム名を書いていれば、そちらから判定しています</b>。\n3人以上が使っているタグで、ゲーム名の分かる配信が3本以上あり、\nその8割以上が同じゲームを指しているときだけです。\n推測ではなく、同じ企画の中に答えが書いてある場合にかぎります。</p>\n\n<h2>コラムについて</h2>\n<p>「今日の注目ゲーム」は、数字が動いた理由を書いています。書くときのルールを決めていて、\n<b>裏が取れないことは書きません</b>。根拠には、公式の発表・ゲームメディア・実際の配信そのものを\n当たっています。説明できることが何も無い日は、その日は書きません。</p>\n\n<h2>間違いを見つけたら</h2>\n<p>ゲーム名の判定は自動なので、間違えることがあります。見つけしだい直しています。\nおかしなものを見つけたら、<a href=\"https://x.com/tarochinko\" target=\"_blank\" rel=\"noopener\">X（@tarochinko）</a>\nのDMで教えてください。</p>\n\n<h2>作っている人</h2>\n<p>ゲーム実況者の たろちん（<a href=\"https://x.com/tarochinko\" target=\"_blank\" rel=\"noopener\">@tarochinko</a>）が\n個人で作っています。データはYouTube Data API、ゲーム名の辞書はIGDBを使っています。</p>\n<p>このサイトはAmazonアソシエイト・プログラムの参加者です。商品ページへのリンクから\n購入があった場合、紹介料を受け取ることがあります。ランキングの順位は\n配信の数字だけで決めていて、紹介料は関係しません。</p>\n\n<h2>アクセス解析について</h2>\n<p>どのページがどれくらい見られているかを知るために、Cloudflare Web Analytics を\n使っています。Cookieを置かず、閲覧者を個人として追いかけない仕組みのものです。\nこのサイトが名前・メールアドレスなどの個人情報を集めることはありません。</p>\n<p>集めた配信のデータ（タイトル・チャンネル名など）は、YouTubeの規約に従って\n30日を過ぎたら消しています。古い日の記録ページに配信の一覧が出ないのは\nそのためです。</p>\n", "paths": {"home": "../", "archive": "../archive/"}};
 const $ = s => document.querySelector(s);
 const esc = s => String(s ?? '').replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
 const cssv = n => getComputedStyle(document.documentElement).getPropertyValue(n).trim();
@@ -685,7 +691,8 @@ function render(){
       <span><span class="t">${esc(s.t)}</span><span class="c">${esc(s.c)} ・ ${man(s.v)}回</span></span></a>`).join('');
     const mv = (r.growth && r.growth >= 1.25 && r.videos >= 3)
       ? `<span class="mv up">▲ ×${r.growth.toFixed(1)}</span>` : '';
-    return `<div class="panel" data-p="${esc(key || r.game)}">
+    // key は文字列のときだけ使う。map(panel) のように添字が入っても壊れないように
+    return `<div class="panel" data-p="${esc(typeof key === 'string' ? key : r.game)}">
       <div style="display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin-bottom:10px">
         <span class="buy">${buy(r)}</span>${mv}
         ${(() => { const sp = spark(r.spark, 90, 22, AC);
@@ -734,8 +741,11 @@ function render(){
         <div class="buy hbuy">${buy(r)}</div>
       </article>`;
     }).join('') : '<div class="empty">今日は目立った急上昇はありませんでした。</div>';
-    $('#hot').insertAdjacentHTML('afterend',
-      '<div id="hotpanels">' + hot.map(r => panel(r, 'hot:' + r.game)).join('') + '</div>');
+    // パネルはグリッドの中に入れる。押したカードと同じ行のすぐ下に出したいので、
+    // グリッドの外（下）にまとめて置くのをやめた。閉じている間は display:none
+    // なので、並びには影響しない。
+    $('#hot').insertAdjacentHTML('beforeend',
+      hot.map(r => panel(r, 'hot:' + r.game)).join(''));
   }
 
   // 上位3件はカード
@@ -764,9 +774,22 @@ function render(){
 
   // カードを押したときのパネルは、カード群のすぐ下にまとめて置く
   $('#cards').insertAdjacentHTML('afterend',
-    '<div id="cardpanels">' + list.slice(0, 3).map(panel).join('') + '</div>');
+    '<div id="cardpanels">' + list.slice(0, 3).map(r => panel(r)).join('') + '</div>');
 
   // 「これ、なんのゲーム？」は公開ページには出しません（site/admin/ 側で表示）
+}
+
+// 急上昇のパネルを「押したカードと同じ行」の下へ動かす。
+// 横に何枚並ぶかは画面幅しだい（3列／2列）なので、位置は数えずに
+// 実際の縦位置（offsetTop）が同じものを1行とみなす。
+function placeHot(card, pane){
+  const grid = card.parentElement;
+  const top = card.offsetTop;
+  let last = card;
+  grid.querySelectorAll('.hotcard').forEach(c => {
+    if (Math.abs(c.offsetTop - top) < 6) last = c;
+  });
+  if (pane.previousElementSibling !== last) grid.insertBefore(pane, last.nextSibling);
 }
 
 document.addEventListener('click', e => {
@@ -777,11 +800,24 @@ document.addEventListener('click', e => {
   const name = hit.dataset.g;
   const pane = [...document.querySelectorAll('.panel')].find(p => p.dataset.p === name);
   if (!pane) return;
+  if (hit.classList.contains('hbtn')) placeHot(hit.closest('.hotcard'), pane);
   const on = pane.classList.toggle('on');
   hit.classList.toggle('open-x', on);
+  // 急上昇カードは、どれを開いているかカード全体で分かるようにする
+  hit.closest('.hotcard')?.classList.toggle('on', on);
   hit.setAttribute('aria-expanded', on);
 });
 render();
 matchMedia('(prefers-color-scheme: dark)').addEventListener('change', render);
+// 画面幅が変わると1行の枚数が変わる。開いたままのパネルを行の下へ置き直す。
+let rsz;
+addEventListener('resize', () => {
+  clearTimeout(rsz);
+  rsz = setTimeout(() => document.querySelectorAll('#hot .panel.on').forEach(pane => {
+    const card = [...document.querySelectorAll('#hot .hotcard')]
+      .find(c => c.querySelector('.hbtn')?.dataset.g === pane.dataset.p);
+    if (card) placeHot(card, pane);
+  }), 150);
+});
 </script>
 </body></html>
