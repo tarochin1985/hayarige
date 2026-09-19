@@ -223,18 +223,6 @@
   ]
  },
  {
-  "name": "100 Toy Cats",
-  "alias": [],
-  "pop": 0,
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Point-and-click",
-   "Indie"
-  ]
- },
- {
   "name": "100 for Justice",
   "alias": [
    "100forJustice.exe"
@@ -3419,17 +3407,6 @@
   ]
  },
  {
-  "name": "Arcade Archives 2: Combat School",
-  "alias": [],
-  "pop": 0,
-  "p": [
-   "console"
-  ],
-  "g": [
-   "Arcade"
-  ]
- },
- {
   "name": "Arcade Archives 2: Cyber Cycles",
   "alias": [],
   "pop": 0,
@@ -4153,6 +4130,22 @@
   ],
   "g": [
    "Shooter",
+   "Arcade"
+  ]
+ },
+ {
+  "name": "AsterMaster",
+  "alias": [
+   "Aster Master"
+  ],
+  "pop": 0,
+  "p": [
+   "pc"
+  ],
+  "g": [
+   "Shooter",
+   "Music",
+   "Indie",
    "Arcade"
   ]
  },
@@ -10335,20 +10328,6 @@
   ]
  },
  {
-  "name": "Cielle Is Not Happy",
-  "alias": [],
-  "pop": 0,
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Role-playing (RPG)",
-   "Strategy",
-   "Adventure",
-   "Indie"
-  ]
- },
- {
   "name": "Cinema Manager Simulator",
   "alias": [],
   "pop": 0,
@@ -10934,18 +10913,6 @@
   ]
  },
  {
-  "name": "Cláudio",
-  "alias": [],
-  "pop": 0,
-  "p": [
-   "console"
-  ],
-  "g": [
-   "Shooter",
-   "Arcade"
-  ]
- },
- {
   "name": "CoLane",
   "alias": [],
   "pop": 0,
@@ -11419,6 +11386,19 @@
   ]
  },
  {
+  "name": "Console Archives: Crazy Climber",
+  "alias": [
+   "Console Archives CRAZY CLIMBER"
+  ],
+  "pop": 0,
+  "p": [
+   "console"
+  ],
+  "g": [
+   "Arcade"
+  ]
+ },
+ {
   "name": "Console Archives: Nobunaga's Ambition II",
   "alias": [
    "Console Archives NOBUNAGA’S AMBITION II"
@@ -11515,7 +11495,9 @@
  },
  {
   "name": "Control Resonant: Digital Deluxe Edition",
-  "alias": [],
+  "alias": [
+   "CONTROL Resonant: Digital Deluxe Edition"
+  ],
   "pop": 0,
   "p": [
    "pc",
@@ -14163,6 +14145,20 @@
    "Strategy",
    "Adventure",
    "Indie"
+  ]
+ },
+ {
+  "name": "Declan Moses",
+  "alias": [
+   "Declan Moses.exe"
+  ],
+  "pop": 0,
+  "p": [
+   "pc"
+  ],
+  "g": [
+   "Shooter",
+   "Tactical"
   ]
  },
  {
@@ -16837,14 +16833,6 @@
   "g": [
    "Simulator",
    "Indie"
-  ]
- },
- {
-  "name": "Drift Club",
-  "alias": [],
-  "pop": 0,
-  "p": [
-   "console"
   ]
  },
  {
@@ -25011,18 +24999,6 @@
   ]
  },
  {
-  "name": "Gummy Invaders",
-  "alias": [],
-  "pop": 0,
-  "p": [
-   "console"
-  ],
-  "g": [
-   "Simulator",
-   "Adventure"
-  ]
- },
- {
   "name": "Gummy Nightmares",
   "alias": [],
   "pop": 0,
@@ -25894,14 +25870,6 @@
   "g": [
    "Simulator",
    "Indie"
-  ]
- },
- {
-  "name": "Heave Ho + Heave Ho 2 Bundle",
-  "alias": [],
-  "pop": 0,
-  "p": [
-   "console"
   ]
  },
  {
@@ -27273,7 +27241,7 @@
   "alias": [
    "How to Fish.exe"
   ],
-  "pop": 7,
+  "pop": 8,
   "p": [
    "pc"
   ],
@@ -30610,6 +30578,17 @@
   ]
  },
  {
+  "name": "Knuckle Jet",
+  "alias": [],
+  "pop": 0,
+  "p": [
+   "pc"
+  ],
+  "g": [
+   "Adventure"
+  ]
+ },
+ {
   "name": "Knytt Classic",
   "alias": [
    "Knytt Classic.exe"
@@ -32623,19 +32602,6 @@
    "Role-playing (RPG)",
    "Adventure",
    "Indie"
-  ]
- },
- {
-  "name": "Loree 3D",
-  "alias": [],
-  "pop": 0,
-  "p": [
-   "console"
-  ],
-  "g": [
-   "Platform",
-   "Puzzle",
-   "Arcade"
   ]
  },
  {
@@ -35228,6 +35194,19 @@
   ]
  },
  {
+  "name": "Midnight News Report",
+  "alias": [],
+  "pop": 0,
+  "p": [
+   "pc"
+  ],
+  "g": [
+   "Puzzle",
+   "Simulator",
+   "Adventure"
+  ]
+ },
+ {
   "name": "Mike the Hooper",
   "alias": [],
   "pop": 0,
@@ -36091,6 +36070,18 @@
   ]
  },
  {
+  "name": "Monster Museum: Tidy Up the Collection!",
+  "alias": [],
+  "pop": 0,
+  "p": [
+   "pc"
+  ],
+  "g": [
+   "Simulator",
+   "Indie"
+  ]
+ },
+ {
   "name": "Monster Ops 22",
   "alias": [
    "MonsterOps22.exe"
@@ -36389,6 +36380,18 @@
    "Puzzle",
    "Role-playing (RPG)",
    "Turn-based strategy (TBS)",
+   "Adventure",
+   "Indie"
+  ]
+ },
+ {
+  "name": "Moros",
+  "alias": [],
+  "pop": 0,
+  "p": [
+   "pc"
+  ],
+  "g": [
    "Adventure",
    "Indie"
   ]
@@ -36915,6 +36918,18 @@
    "Adventure",
    "Indie",
    "Visual Novel"
+  ]
+ },
+ {
+  "name": "My Zombies Are Hungry",
+  "alias": [],
+  "pop": 0,
+  "p": [
+   "pc"
+  ],
+  "g": [
+   "Strategy",
+   "Indie"
   ]
  },
  {
@@ -41960,6 +41975,21 @@
   ]
  },
  {
+  "name": "Pith",
+  "alias": [
+   "PITH"
+  ],
+  "pop": 0,
+  "p": [
+   "pc"
+  ],
+  "g": [
+   "Puzzle",
+   "Adventure",
+   "Indie"
+  ]
+ },
+ {
   "name": "Pix Football Manager",
   "alias": [
    "PIX Football Manager"
@@ -43608,22 +43638,6 @@
   ],
   "g": [
    "Simulator",
-   "Adventure",
-   "Indie",
-   "Visual Novel"
-  ]
- },
- {
-  "name": "Prolegomena to a Hyperdimensional Interface That Will Be Able to Manifest From Three-Minute Interchanges",
-  "alias": [
-   "Prolegomena To a Hyperdimensional Interface That Will Be Able to Manifest From Three-Minute Interchanges"
-  ],
-  "pop": 0,
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Point-and-click",
    "Adventure",
    "Indie",
    "Visual Novel"
@@ -45624,14 +45638,6 @@
    "Shooter",
    "Simulator",
    "Indie"
-  ]
- },
- {
-  "name": "Retrobot: 2085",
-  "alias": [],
-  "pop": 0,
-  "p": [
-   "console"
   ]
  },
  {
@@ -49732,6 +49738,18 @@
   ]
  },
  {
+  "name": "Smartphone",
+  "alias": [],
+  "pop": 0,
+  "p": [
+   "pc"
+  ],
+  "g": [
+   "Adventure",
+   "Indie"
+  ]
+ },
+ {
   "name": "Smash Cat",
   "alias": [],
   "pop": 0,
@@ -51592,7 +51610,7 @@
   "alias": [
    "SWZeroCompany.exe"
   ],
-  "pop": 3,
+  "pop": 9,
   "p": [
    "pc",
    "console"
@@ -52854,6 +52872,17 @@
   ]
  },
  {
+  "name": "Super Macklemore 64",
+  "alias": [],
+  "pop": 0,
+  "p": [
+   "console"
+  ],
+  "g": [
+   "Indie"
+  ]
+ },
+ {
   "name": "Super Mario 64: Rogue Chaos Edition Version 2.0",
   "alias": [],
   "pop": 0,
@@ -53964,21 +53993,6 @@
   ]
  },
  {
-  "name": "Tangles 2",
-  "alias": [
-   "تشابك"
-  ],
-  "pop": 0,
-  "p": [
-   "pc",
-   "console"
-  ],
-  "g": [
-   "Adventure",
-   "Indie"
-  ]
- },
- {
   "name": "Tank Brigade",
   "alias": [
    "Tank Brigade.exe"
@@ -54812,7 +54826,7 @@
   "alias": [
    "Dawnwalker.exe"
   ],
-  "pop": 23,
+  "pop": 24,
   "p": [
    "pc",
    "console"
@@ -58916,6 +58930,20 @@
   ]
  },
  {
+  "name": "Toonsouls",
+  "alias": [
+   "TOONSOULS"
+  ],
+  "pop": 0,
+  "p": [
+   "pc"
+  ],
+  "g": [
+   "Adventure",
+   "Indie"
+  ]
+ },
+ {
   "name": "Top Check",
   "alias": [],
   "pop": 0,
@@ -59384,14 +59412,6 @@
    "Role-playing (RPG)",
    "Simulator",
    "Indie"
-  ]
- },
- {
-  "name": "Traffic Rush: Ultimate Drive",
-  "alias": [],
-  "pop": 0,
-  "p": [
-   "console"
   ]
  },
  {
@@ -62149,18 +62169,6 @@
   ]
  },
  {
-  "name": "War Pawns",
-  "alias": [],
-  "pop": 0,
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Strategy",
-   "Indie"
-  ]
- },
- {
   "name": "War of Banners",
   "alias": [],
   "pop": 0,
@@ -62541,6 +62549,18 @@
  },
  {
   "name": "We Are Gum",
+  "alias": [],
+  "pop": 0,
+  "p": [
+   "pc"
+  ],
+  "g": [
+   "Adventure",
+   "Indie"
+  ]
+ },
+ {
+  "name": "We Are Sisters",
   "alias": [],
   "pop": 0,
   "p": [
