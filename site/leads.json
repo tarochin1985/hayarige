@@ -1,19 +1,20 @@
 {
  "date": "2026-09-19",
- "generated": "2026-09-19 07:14",
+ "generated": "2026-09-19 11:06",
  "leads": {
   "events": [
    {
-    "tag": "#ゲーム実況",
+    "tag": "#にじ遊戯王祭2026",
     "channels": [
-     "SIANちゃんねる【ディズニー大好きVtuber】",
-     "Usagi Ch. 因幡兎",
-     "こじちゃんねる【小嶋明梨】",
-     "てぃーけぇー",
-     "ぱんちき🥖🦃",
-     "エラch",
-     "ジョアだよ",
-     "豚咲あおい_TomisakiAoi"
+     "オリバー・エバンス / Oliver Evans 【にじさんじ】",
+     "レイン・パターソン／Lain Paterson【にじさんじ】",
+     "七瀬 すず菜 / Nanase Suzuna【にじさんじ】",
+     "加賀美 ハヤト/Hayato Kagami",
+     "小清水 透 / Koshimizu Toru【にじさんじ】",
+     "星川サラ / Sara Hoshikawa",
+     "梢桃音 / Kozue Mone【にじさんじ】",
+     "獅子堂 あかり / Shishido Akari【にじさんじ】",
+     "長尾 景 / Nagao Kei【にじさんじ】"
     ]
    },
    {
@@ -30,15 +31,15 @@
     ]
    },
    {
-    "tag": "#にじ遊戯王祭2026",
+    "tag": "#ゲーム実況",
     "channels": [
-     "オリバー・エバンス / Oliver Evans 【にじさんじ】",
-     "レイン・パターソン／Lain Paterson【にじさんじ】",
-     "加賀美 ハヤト/Hayato Kagami",
-     "星川サラ / Sara Hoshikawa",
-     "梢桃音 / Kozue Mone【にじさんじ】",
-     "獅子堂 あかり / Shishido Akari【にじさんじ】",
-     "長尾 景 / Nagao Kei【にじさんじ】"
+     "Usagi Ch. 因幡兎",
+     "こじちゃんねる【小嶋明梨】",
+     "てぃーけぇー",
+     "ぱんちき🥖🦃",
+     "エラch",
+     "ジョアだよ",
+     "豚咲あおい_TomisakiAoi"
     ]
    },
    {
@@ -66,14 +67,6 @@
     ]
    },
    {
-    "tag": "#マイクラ",
-    "channels": [
-     "A2目標　ドパじんちゅーぶ",
-     "いのちくん",
-     "リベル"
-    ]
-   },
-   {
     "tag": "#縦型配信",
     "channels": [
      "vii / ビー",
@@ -86,48 +79,53 @@
   "wide": [
    {
     "game": "Apex Legends",
-    "channels": 42,
-    "videos": 55
+    "channels": 40,
+    "videos": 50
    },
    {
     "game": "Minecraft",
-    "channels": 32,
-    "videos": 33
+    "channels": 33,
+    "videos": 35
    },
    {
     "game": "ストリートファイター6",
-    "channels": 30,
-    "videos": 34
+    "channels": 29,
+    "videos": 33
    },
    {
     "game": "Grand Theft Auto V",
     "channels": 21,
-    "videos": 28
+    "videos": 29
+   },
+   {
+    "game": "Dead by Daylight",
+    "channels": 17,
+    "videos": 19
    },
    {
     "game": "フォートナイト",
-    "channels": 15,
-    "videos": 20
+    "channels": 14,
+    "videos": 21
    },
    {
     "game": "VALORANT",
     "channels": 15,
-    "videos": 15
-   },
-   {
-    "game": "Dead by Daylight",
-    "channels": 16,
-    "videos": 18
+    "videos": 16
    },
    {
     "game": "実況パワフルプロ野球2026",
-    "channels": 13,
-    "videos": 15
+    "channels": 12,
+    "videos": 14
    }
   ]
  },
  "drift": [],
  "recent_columns": [
+  {
+   "date": "2026-09-19",
+   "game": "遊戯王 マスターデュエル",
+   "headline": "デッキはくじ引き、まず覚えるところから"
+  },
   {
    "date": "2026-09-18",
    "game": "Bombanana!",
@@ -192,11 +190,6 @@
    "date": "2026-09-06",
    "game": "Halloween: The Game",
    "headline": "殺人鬼マイケル・マイヤーズになれるホラーゲーム"
-  },
-  {
-   "date": "2026-09-05",
-   "game": "鬼武者 Way of the Sword",
-   "headline": "約20年ぶりの『鬼武者』完全新作が発売初日、弟者からにじさんじまで24チャンネルを一斉に斬り込ませた"
   }
  ]
 }
