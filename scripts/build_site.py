@@ -719,6 +719,7 @@ def render_page(path, data, depth, site_url=""):
                     .replace("__PAGEBODY__", data.get("page_body", ""))
                     .replace("__NAV__", nav_html(data, home))
                     .replace("__POINT__", POINT)
+                    .replace("__NCH__", f"{watched_channels():,}")
                     .replace("__MTDISP__", "" if mt else "display:none")
                     .replace("__MTHREF__", home + (mt["href"] if mt else ""))
                     .replace("__SSR_MT__", ssr_matome(mt))
@@ -726,8 +727,14 @@ def render_page(path, data, depth, site_url=""):
                  encoding="utf-8")
 
 
+_NCH = []
+
+
 def watched_channels():
-    """毎日見に行っているチャンネル数。説明ページに出すために数える。"""
+    """毎日見に行っているチャンネル数。看板と説明ページに出すために数える。
+    ページごとに数え直すと遅いので、一度数えたら覚えておく。"""
+    if _NCH:
+        return _NCH[0]
     chans = read_json(DATA / "channels_enriched.json", []) or []
     manual = read_json(DATA / "channels_manual.json", {}) or {}
     n = 0
@@ -739,6 +746,7 @@ def watched_channels():
         if m != "残す" and str(c.get("auto", "")).startswith("外す"):
             continue
         n += 1
+    _NCH.append(n)
     return n
 
 
@@ -931,7 +939,8 @@ def about_html(cfg, n_channels):
 <h2>このサイトは何か</h2>
 <p class="lead">VTuber・ゲーム実況者がYouTubeに出している配信のタイトルを毎日集めて、
 いまどのゲームが配信されているかをランキングにしています。
-「次、何のゲーム配信する？」と考えている配信者のために作りました。</p>
+「次に流行るゲームを早く見つけたい」人のために作りました。
+配信する側にとっては次のネタ探しに、見る側にとっては「あのゲーム、急にみんなやってる」の答え合わせになります。</p>
 <p>再生数の多い<b>動画</b>を並べるサイトはすでにたくさんあります。このサイトが並べるのは
 <b>ゲーム</b>です。誰の動画が伸びたかではなく、どのゲームに人が集まっているかを見ます。</p>
 

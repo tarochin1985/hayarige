@@ -209,7 +209,7 @@ PAGE = """<!doctype html>
 <header>
   <img src="logo.svg" alt="">
   <span class="nm">ハヤリゲー</span>
-  <span class="tag">VTuber・ゲーム実況者が、いま配信しているゲーム</span>
+  <span class="tag">「次に流行るゲーム」がわかるサイト</span>
   <div class="meta"><div class="d">%(date)s</div>
     <div class="c">直近24時間 ／ 配信 %(videos)s本 ／ %(channels)sチャンネル</div></div>
 </header>
