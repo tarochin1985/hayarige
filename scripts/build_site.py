@@ -1415,11 +1415,14 @@ def main():
             '<?xml version="1.0" encoding="UTF-8"?>'
             '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">'
             + body + "</urlset>", encoding="utf-8")
+        # robots.txt の Sitemap 行は、毎回いまの住所で書き直す。
+        # 「無いときだけ足す」にしていたため、独自ドメインに移したあとも
+        # 古いURLが残っていた（2026-09-21に気づいた）。
         rb = SITE / "robots.txt"
         txt = rb.read_text(encoding="utf-8") if rb.exists() else "User-agent: *\nAllow: /\n"
-        if "Sitemap:" not in txt:
-            rb.write_text(txt.rstrip() + f"\n\nSitemap: {site_url}/sitemap.xml\n",
-                          encoding="utf-8")
+        keep = [ln for ln in txt.splitlines() if not ln.startswith("Sitemap:")]
+        rb.write_text("\n".join(keep).rstrip()
+                      + f"\n\nSitemap: {site_url}/sitemap.xml\n", encoding="utf-8")
         log(f"sitemap.xml を書き出しました（{len(urls)} ページ）")
 
     # YouTubeの規約で、配信タイトルなどを持てるのは30日まで

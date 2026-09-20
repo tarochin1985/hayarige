@@ -21,9 +21,16 @@ import re
 import sys
 from pathlib import Path
 
-from common import SITE, log, read_json
+from common import DATA, SITE, log, read_json
 
-SITE_URL = "hayarige.tarochin1985.workers.dev"
+
+def site_url():
+    """カードの右上に出す住所。data/site_config.json から読む。
+    ここを決め打ちにしていたせいで、独自ドメインに移したとき
+    画像だけ古いURLのままになりかけた（2026-09-21）。"""
+    u = (read_json(DATA / "site_config.json", {}) or {}).get("site_url") or ""
+    return u.replace("https://", "").replace("http://", "").rstrip("/") \
+        or "hayarige.com"
 TOP_N = 10
 
 # ---------------------------------------------------------------- 見た目
@@ -499,7 +506,7 @@ def build(data, theme="dark"):
         "lead": lead_html(data.get("column"), data.get("ranking") or []),
         "rows": rows_html(data.get("ranking") or []),
         "hot": hot_html(data),
-        "note": note, "url": SITE_URL, "fit": FIT,
+        "note": note, "url": site_url(), "fit": FIT,
     }
 
 def main():

@@ -31,9 +31,11 @@ body{width:1200px;height:630px;overflow:hidden;color:#E9F1F0;
 .L{grid-column:1;display:flex;flex-direction:column;justify-content:center}
 .brand{display:flex;align-items:center;gap:13px;font-size:28px;font-weight:900;color:#8FE4E7}
 .brand i{display:block;width:28px;height:3px;background:#E8975C;border-radius:2px}
-h1{font-size:70px;font-weight:900;line-height:1.16;margin-top:18px;letter-spacing:-.01em}
+h1{font-size:62px;font-weight:900;line-height:1.2;margin-top:18px;letter-spacing:-.02em;
+  white-space:nowrap}
 h1 em{font-style:normal;color:#6FDCE0}
-.sub{margin-top:22px;font-size:23px;font-weight:500;color:#A6C2C3;line-height:1.65}
+.sub{margin-top:22px;font-size:22px;font-weight:500;color:#A6C2C3;line-height:1.65;
+  white-space:nowrap}
 .url{align-self:flex-start;margin-top:30px;font-family:"Roboto Mono",monospace;font-size:22px;
   font-weight:700;color:#0A1113;background:#6FDCE0;border-radius:10px;padding:12px 20px;white-space:nowrap}
 .chips{display:flex;gap:9px;margin-top:16px}
@@ -41,12 +43,12 @@ h1 em{font-style:normal;color:#6FDCE0}
 """
 
 PAGE = """<!doctype html><html lang="ja"><head><meta charset="utf-8">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+New:wght@500;900&family=Noto+Sans+JP:wght@500;900&family=Roboto+Mono:wght@700&display=swap">
+<link rel="stylesheet" href="%(fontlink)s">
 <style>%(css)s</style></head><body>
   <div class="L">
     <div class="brand"><i></i>ハヤリゲー</div>
-    <h1>次、<em>何のゲーム</em><br>配信する？</h1>
-    <div class="sub">VTuber・ゲーム実況者が、いま配信しているゲーム。<br>YouTubeの配信タイトルを毎日自動で集計。</div>
+    <h1><em>「次に流行るゲーム」</em><br>がわかるサイト</h1>
+    <div class="sub">VTuber・ゲーム実況者のYouTube配信を、毎日数えています。<br>いま配信が増えているゲームがわかります。</div>
     <span class="url">%(url)s</span>
     <div class="chips"><span>毎日更新</span><span>登録不要</span><span>無料</span></div>
   </div>
@@ -56,12 +58,20 @@ PAGE = """<!doctype html><html lang="ja"><head><meta charset="utf-8">
 
 
 def main():
-    url = "hayarige.tarochin1985.workers.dev"
+    from common import DATA, read_json
+    url = ((read_json(DATA / "site_config.json", {}) or {}).get("site_url") or "")
+    url = url.replace("https://", "").replace("http://", "").rstrip("/") or "hayarige.com"
     for a in sys.argv[1:]:
         if a.startswith("--url="):
             url = a.split("=", 1)[1]
     html = SITE / "_ogp.html"
-    html.write_text(PAGE % {"css": CSS, "url": url}, encoding="utf-8")
+    # 書体はカード画像と同じ仕組みで解決する。Google Fontsが届かない環境でも
+    # 同じ書体で出るように、make_card.py の仕掛けを使い回す。
+    from make_card import font_link
+    fonts = ("Zen+Kaku+Gothic+New:wght@500;900&family=Noto+Sans+JP:wght@500;900"
+             "&family=Roboto+Mono:wght@700")
+    html.write_text(PAGE % {"css": CSS, "url": url, "fontlink": font_link(fonts)},
+                    encoding="utf-8")
     from playwright.sync_api import sync_playwright
     out = SITE / "ogp.png"
     with sync_playwright() as p:
