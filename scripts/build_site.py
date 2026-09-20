@@ -6,6 +6,7 @@
 """
 import html
 import json
+import hashlib
 import math, re
 from collections import defaultdict, Counter
 from datetime import datetime, timedelta, timezone
@@ -52,6 +53,22 @@ COLUMN_FALLBACK_DAYS = 7
 #   ピン  <path fill-rule="evenodd" d="M12 2a7 7 0 00-7 7c0 5.2 7 13 7 13s7-7.8 7-13a7 7 0 00-7-7zm0 9.6A2.6 2.6 0 1112 6.4a2.6 2.6 0 010 5.2z"/>
 #   電球  <path d="M12 2a6.2 6.2 0 00-3.4 11.4c.5.4.8 1 .8 1.6v.3h5.2v-.3c0-.6.3-1.2.8-1.6A6.2 6.2 0 0012 2z"/><path d="M9.4 17h5.2v1.4H9.4z"/><path d="M10 19.6h4a2 2 0 01-4 0z"/>
 POINT = ('<svg class="pt" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.6l2.9 6.2 6.8.8-5 4.6 1.4 6.7L12 17.5 5.9 20.9l1.4-6.7-5-4.6 6.8-.8z"/></svg>')
+
+
+# 判定の結果を変えうるファイル。どれかが変わったら、過去のページも作り直す。
+MATCH_INPUTS = ("aliases.json", "display_names.json", "blocklist.json",
+                "alias_blocklist.json", "game_blocklist.json", "platforms.json",
+                "channels_manual.json", "igdb_meta.json", "site_config.json")
+
+
+def matcher_fingerprint():
+    """辞書まわりの中身をまとめた短い文字列。変わったかどうかだけを見る。"""
+    h = hashlib.sha1()
+    for name in MATCH_INPUTS:
+        f = DATA / name
+        h.update(name.encode())
+        h.update(f.read_bytes() if f.is_file() else b"")
+    return h.hexdigest()[:16]
 
 
 def load_all(days_back=30):
@@ -1282,7 +1299,23 @@ def main():
     # それより古い日は、ページが無いときだけ作る。毎日全部作り直すと、
     # 記録がたまるほど処理時間が伸びてしまうため。
     buckets = by_calendar_day(all_videos)
-    recent = sorted(buckets)[-7:]
+    # 辞書を直した日は、手元に残っている日ぶん全部を作り直す。
+    #
+    # 2026-09-20に「デスゲームの報告書」「トルネコの大冒険」など14タイトルを
+    # 足したとき、その日から先は直るのに、過去の記録ページは古い判定のまま
+    # 残ることに気づいた。同じ日の同じ配信なのに、ページによって数字が違う
+    # のはおかしい。辞書を直したら過去にも反映する、を既定の動きにする。
+    #
+    # 作り直せるのは data/daily に元データが残っている30日ぶんだけ。
+    # それより前は元データを消してある（YouTubeの規約）ので直せない。
+    # だから、辞書に足すのは早いほうがよい。
+    state = read_json(DATA / "build_state.json", {}) or {}
+    fingerprint = matcher_fingerprint()
+    remake_all = state.get("fingerprint") != fingerprint
+    recent = sorted(buckets) if remake_all else sorted(buckets)[-7:]
+    if remake_all:
+        log(f"辞書まわりに変更がありました。手元に残っている "
+            f"{len(buckets)} 日分の記録ページを作り直します")
     # 収集を始める前の日は「その日の記録」として不完全なので載せない。
     # 収集は48時間ぶんを取るが、控えめに1日ぶんだけ信用する。
     cover_from = ((datetime.strptime(runs[0], "%Y-%m-%d") - timedelta(days=1))
@@ -1321,6 +1354,11 @@ def main():
         added += 1
     if added:
         log(f"過去 {added} 日分のページを作り直しました")
+    write_json(DATA / "build_state.json",
+               {"_説明": "辞書まわりのファイルが変わったかどうかを見るための印です。"
+                         "変わっていれば、過去の記録ページも作り直します。"
+                         "中身に意味はないので、消しても次回また作られます。",
+                "fingerprint": fingerprint, "updated": today()})
 
     archive = sorted(entries.values(), key=lambda e: e["date"], reverse=True)
     write_json(idx_path, archive)
