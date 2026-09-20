@@ -484,11 +484,15 @@ function renderAdmin(){
   $('#s-meta').textContent = `${esc(DATA.date)} ／ 確認待ち ${q.length}件`;
   $('#nav').innerHTML = `<a href="${P.home}">サイトを見る</a><a href="unknown.json">JSONで見る</a>`;
   $('#banner').innerHTML = `<div class="banner" style="display:block;line-height:1.75">このページは公開ページからリンクされていません。ここに出たタイトルは<b>ランキングには一切入っていません</b>。よく出るものを <code>data/aliases.json</code> に足すと、次から正しく数えられます。</div>`;
-  $('#queue').innerHTML = q.map(u =>
-    `<div class="qrow"><span class="t"><a href="${esc(u.u)}" target="_blank" rel="noopener">${esc(u.title)}</a>
-      <span style="color:var(--ink-3)"> — ${esc(u.channel || '')}${u.n > 1 ? ` ほか${u.n - 1}件` : ''}</span></span>
-     <span class="g">${esc(u.guess || '?')}</span></div>`).join('')
-    || '<div class="empty">確認待ちはありません。</div>';
+  // ゲーム名ごとにまとめて、何人が配信したかの多い順。新作ほど上に出る。
+  $('#queue').innerHTML = q.map(u => {
+    const ex = (u.examples || []).map(x =>
+      `<div style="font-size:11.5px;color:var(--ink-3);line-height:1.6">
+         <a href="${esc(x.u)}" target="_blank" rel="noopener">${esc(x.t)}</a> — ${esc(x.c)}</div>`).join('');
+    return `<div class="qrow"><span class="g" style="${u.channels >= 3 ? 'background:var(--hot);color:#fff' : ''}">${u.channels}ch</span>
+      <span class="t"><b>${esc(u.guess || '?')}</b>
+      <span style="color:var(--ink-3)"> ・ ${u.n}本</span>${ex}</span></div>`;
+  }).join('') || '<div class="empty">確認待ちはありません。</div>';
   $('#f-gen').textContent = DATA.generated || '';
 }
 

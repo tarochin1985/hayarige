@@ -149,7 +149,15 @@ def info(col, day=""):
 
 
 def drift_notes():
-    """続編が前作と同じ行に数えられている疑いを、コラムを書く人にも見せる。
+    """辞書の穴を、コラムを書く人にも見せる。
+
+    2つある。ひとつは続編が前作と同じ行に数えられている疑い。
+    もうひとつは「何人もが配信しているのに、ゲーム名と判定できていない名前」。
+    後者は2026-09-20に『デスゲームの報告書』を19日間見落としていたのが
+    分かって足した。管理ページを毎日開く運用になっていないので、
+    コラムを書く前に必ず通るここにも出す。
+
+    もとの説明（続編の件）:
 
     build_site.py が毎回調べて site/admin/unknown.json に書いている。
     ただし管理ページを毎日開く運用にはなっていないので、コラムを書く前に
@@ -164,6 +172,13 @@ def drift_notes():
     except (ValueError, OSError):
         return []
     out = []
+    # 辞書に無いかもしれない新作。何人が配信しているかの多い順で上位だけ。
+    for x in (d.get("unknown") or [])[:5]:
+        if (x.get("channels") or 0) >= 3:
+            out.append(
+                f"「{x.get('guess')}」を {x.get('channels')}チャンネルが配信していますが、"
+                f"ゲーム名として判定できていません（{x.get('n')}本）。"
+                "ゲームなら data/aliases.json に足すと、次から数に入ります")
     for x in (d.get("drift") or []):
         out.append(
             f"「{x.get('written')}」と書いている配信者が {x.get('channels')}人／"

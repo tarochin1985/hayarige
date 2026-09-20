@@ -19,6 +19,7 @@ MIN_FOR_MOMENTUM = 3          # 急上昇の対象にする最低本数（少数
 MIN_HISTORY = 4               # 急上昇を出すのに必要な「実データのある日数」
 RISING_MIN_CHANNELS = 3       # 急上昇に載せる最低チャンネル数（下の rising に理由）
 RISING_N = 6                  # 急上昇に出す件数
+UNKNOWN_ALERT = 3             # 未判定のタイトルを「辞書の穴」として知らせるチャンネル数
 W = {"videos": 0.30, "channels": 0.35, "views": 0.35}
 
 # 1人が同じゲームを1日に何本も出したときの数え方。
@@ -1206,15 +1207,33 @@ def main():
 
     # ---- 管理用ページ（トップからはリンクしない） ----
     # よく出るタイトルを data/aliases.json に足していくための作業台。
-    unk_counts = Counter(u["title"] for u in unknown)
-    seen, unk_rows = set(), []
+    # 未判定のタイトルは「【】に書かれていたゲーム名」でまとめる。
+    #
+    # 以前は1本ずつ並べ、同じ題名が何本あったかで並べていた。だが新作は
+    # 配信者ごとに題名が違うので、8人が配信していても n=1 の行が8つに散り、
+    # 200件の中に埋もれていた。2026-09-20に『デスゲームの報告書』が
+    # 19日間ずっと見落とされていたのが分かったのは、これが原因だった
+    # （最大で1日8チャンネル、のべ17チャンネルが配信していた）。
+    #
+    # 何人が配信したかで並べれば、新作ほど上に来る。辞書に足すべきものが
+    # 一番上に出る、という当たり前の形にする。
+    groups = defaultdict(lambda: {"name": "", "chs": set(), "n": 0, "ex": []})
     for u in unknown:
-        key = M.compact(u["title"])[:24]
-        if key in seen:
-            continue
-        seen.add(key)
-        unk_rows.append(dict(u, n=unk_counts[u["title"]]))
-    unk_rows.sort(key=lambda u: -u["n"])
+        key = M.compact(u.get("guess") or u["title"])[:24]
+        g = groups[key]
+        g["name"] = g["name"] or (u.get("guess") or u["title"])
+        g["chs"].add(u.get("channel") or "")
+        g["n"] += 1
+        if len(g["ex"]) < 3:
+            g["ex"].append({"t": u["title"], "c": u.get("channel") or "", "u": u["u"]})
+    unk_rows = [{"guess": g["name"], "channels": len(g["chs"]), "n": g["n"],
+                 "examples": g["ex"]} for g in groups.values()]
+    unk_rows.sort(key=lambda u: (-u["channels"], -u["n"]))
+    for u in unk_rows:
+        if u["channels"] >= UNKNOWN_ALERT:
+            log(f"辞書に無いかもしれません: 「{u['guess']}」を "
+                f"{u['channels']}チャンネルが配信しています（{u['n']}本）。"
+                "ゲームなら data/aliases.json に足してください")
     leads = find_leads(today_videos, rows, hist, day_names)
     drift = find_drift(today_videos, idx)
     _, tagnotes = tag_games(today_videos, idx)
