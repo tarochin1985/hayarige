@@ -4481,20 +4481,6 @@
   ]
  },
  {
-  "name": "Avoid Mushrooms",
-  "alias": [
-   "Avoid Mushrooms.exe"
-  ],
-  "pop": 0,
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Platform",
-   "Adventure"
-  ]
- },
- {
   "name": "Awaken in Fear",
   "alias": [],
   "pop": 0,
@@ -9156,6 +9142,12 @@
   "p": [
    "pc",
    "console"
+  ],
+  "g": [
+   "Platform",
+   "Role-playing (RPG)",
+   "Hack and slash/Beat 'em up",
+   "Adventure"
   ]
  },
  {
@@ -25351,20 +25343,6 @@
   ]
  },
  {
-  "name": "Hamayumishi: The Night Parade of a Hundred Yokai",
-  "alias": [
-   "破魔弓師　~逆走、百鬼夜行~"
-  ],
-  "pop": 0,
-  "jp": "破魔弓師　~逆走、百鬼夜行~",
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Indie"
-  ]
- },
- {
   "name": "Hamster Ballers",
   "alias": [
    "HamsterBallers.exe"
@@ -28396,6 +28374,20 @@
   ]
  },
  {
+  "name": "Increvaders",
+  "alias": [
+   "Increvaders.exe"
+  ],
+  "pop": 0,
+  "p": [
+   "pc"
+  ],
+  "g": [
+   "Indie",
+   "Arcade"
+  ]
+ },
+ {
   "name": "Indoors: Trespasser",
   "alias": [
    "INDOORS: Trespasser"
@@ -30018,6 +30010,7 @@
    "pc"
   ],
   "g": [
+   "Shooter",
    "Adventure"
   ]
  },
@@ -44711,7 +44704,15 @@
   "alias": [],
   "pop": 0,
   "p": [
+   "pc",
    "console"
+  ],
+  "g": [
+   "Music",
+   "Role-playing (RPG)",
+   "Strategy",
+   "Adventure",
+   "Indie"
   ]
  },
  {
@@ -45639,6 +45640,7 @@
   "g": [
    "Shooter",
    "Simulator",
+   "Adventure",
    "Indie"
   ]
  },
@@ -47965,6 +47967,20 @@
   ],
   "g": [
    "Simulator"
+  ]
+ },
+ {
+  "name": "Server-Admin Simulator",
+  "alias": [
+   "Server-Admin Simulation"
+  ],
+  "pop": 0,
+  "p": [
+   "pc"
+  ],
+  "g": [
+   "Simulator",
+   "Strategy"
   ]
  },
  {

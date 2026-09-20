@@ -1,11 +1,12 @@
 {
  "date": "2026-09-20",
- "generated": "2026-09-20 19:16",
+ "generated": "2026-09-20 23:09",
  "leads": {
   "events": [
    {
     "tag": "#マイクラ肝試し2026",
     "channels": [
+     "Iroha ch. 風真いろは - holoX -",
      "えおちゃんねる！",
      "おおはらMEN / ドズル社",
      "おらふくん / ドズル社",
@@ -15,6 +16,7 @@
      "堰代ミコ / Mico Channel【ななしいんく】",
      "小廻こま / Komawari Koma",
      "日向ましゅ / Mashu Channel【ななしいんく】",
+     "柚原いづみ / Izumi Channel 【ななしいんく】",
      "羽渦ミウネル -Miuneru Haneuzu-",
      "赤髪のとものゲーム実況チャンネル!!",
      "飛良ひかり / Hikari Channel【ななしいんく】"
@@ -23,6 +25,7 @@
    {
     "tag": "#にじ遊戯王祭2026",
     "channels": [
+     "オリバー・エバンス / Oliver Evans 【にじさんじ】",
      "フミ/にじさんじ",
      "レイン・パターソン／Lain Paterson【にじさんじ】",
      "レオス・ヴィンセント / Leos.Vincent【にじさんじ】",
@@ -30,8 +33,10 @@
      "伏見ガク【にじさんじ所属】",
      "壱百満天原サロメ / Hyakumantenbara Salome",
      "小清水 透 / Koshimizu Toru【にじさんじ】",
+     "星川サラ / Sara Hoshikawa",
      "梢桃音 / Kozue Mone【にじさんじ】",
      "獅子堂 あかり / Shishido Akari【にじさんじ】",
+     "花畑チャイカ",
      "長尾 景 / Nagao Kei【にじさんじ】"
     ]
    },
@@ -40,12 +45,11 @@
     "channels": [
      "CHECHE GAME【顔出し初見ゲーム実況】",
      "Usagi Ch. 因幡兎",
-     "てぃーけぇー",
      "ぱんちき🥖🦃",
      "エラch",
      "ジョアだよ",
+     "儚視まちこVTuber Hakanashi Matiko",
      "恋因ロス KoinRosu",
-     "星埜きぃ -Key Hoshino-",
      "週刊少年ゲームマガジン230円"
     ]
    },
@@ -79,10 +83,20 @@
     "channels": [
      "たけぉ",
      "にーとちゃん",
-     "まお",
      "ましゃかりさん",
      "ノビーの遊び部屋",
-     "影。/かげまる"
+     "影。/かげまる",
+     "闇乃あびす / Abyss"
+    ]
+   },
+   {
+    "tag": "#天下無双ARK",
+    "channels": [
+     "おなつのにびたし / Onatsu no Nibitashi",
+     "ひなたチャンネル (Hinata Channel)",
+     "ダナ",
+     "史門 / Shimon ",
+     "柚原いづみ / Izumi Channel 【ななしいんく】"
     ]
    },
    {
@@ -94,15 +108,6 @@
      "影。/かげまる",
      "暁月ホタル AKATSUKI HOTARU"
     ]
-   },
-   {
-    "tag": "#天下無双ARK",
-    "channels": [
-     "ひなたチャンネル (Hinata Channel)",
-     "ダナ",
-     "史門 / Shimon ",
-     "柚原いづみ / Izumi Channel 【ななしいんく】"
-    ]
    }
   ],
   "newcomers": [],
@@ -110,41 +115,41 @@
    {
     "game": "Minecraft",
     "channels": 49,
-    "videos": 53
+    "videos": 52
    },
    {
     "game": "Apex Legends",
-    "channels": 40,
-    "videos": 44
-   },
-   {
-    "game": "ストリートファイター6",
-    "channels": 28,
-    "videos": 30
+    "channels": 39,
+    "videos": 43
    },
    {
     "game": "Grand Theft Auto V",
-    "channels": 25,
-    "videos": 31
+    "channels": 27,
+    "videos": 34
+   },
+   {
+    "game": "ストリートファイター6",
+    "channels": 30,
+    "videos": 34
    },
    {
     "game": "トルネコの大冒険 ちょっとステキなリマスター",
-    "channels": 21,
-    "videos": 22
+    "channels": 23,
+    "videos": 24
+   },
+   {
+    "game": "VALORANT",
+    "channels": 23,
+    "videos": 26
+   },
+   {
+    "game": "遊戯王 マスターデュエル",
+    "channels": 15,
+    "videos": 18
    },
    {
     "game": "7 Days to Die",
     "channels": 15,
-    "videos": 15
-   },
-   {
-    "game": "VALORANT",
-    "channels": 17,
-    "videos": 18
-   },
-   {
-    "game": "実況パワフルプロ野球2026",
-    "channels": 13,
     "videos": 16
    }
   ]
@@ -154,9 +159,9 @@
   {
    "tag": "にじ遊戯王祭2026",
    "game": "Yu-Gi-Oh! Master Duel",
-   "evidence": 3,
-   "added": 11,
-   "channels": 10
+   "evidence": 6,
+   "added": 12,
+   "channels": 13
   }
  ],
  "recent_columns": [
