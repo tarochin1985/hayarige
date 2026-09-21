@@ -10,9 +10,9 @@
 <meta property="og:site_name" content="ハヤリゲー">
 <meta property="og:locale" content="ja_JP">
 <!-- XやDiscordに貼ったときのカード。画像とURLは絶対パスでないと出ない。
-     https://hayarige.com / https://hayarige.com/about/ は build_site が data/site_config.json の
+     https://hayarige.com / https://hayarige.com/w/2026-09-14/ は build_site が data/site_config.json の
      site_url から埋める。独自ドメインに移すときは設定を1行変えるだけでよい。 -->
-<meta property="og:url" content="https://hayarige.com/about/">
+<meta property="og:url" content="https://hayarige.com/w/2026-09-14/">
 <meta property="og:image" content="https://hayarige.com/ogp.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
@@ -21,9 +21,9 @@
 <meta name="twitter:title" content="ハヤリゲー ｜「次に流行るゲーム」がわかるサイト">
 <meta name="twitter:description" content="VTuber・ゲーム実況者がいま配信しているゲームを毎日自動集計。">
 <meta name="twitter:image" content="https://hayarige.com/ogp.png">
-<link rel="canonical" href="https://hayarige.com/about/">
-<link rel="icon" href="../icon.svg" type="image/svg+xml">
-<link rel="apple-touch-icon" href="../icon.png">
+<link rel="canonical" href="https://hayarige.com/w/2026-09-14/">
+<link rel="icon" href="../../icon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="../../icon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+New:wght@500;700;900&family=Noto+Sans+JP:wght@400;500;700&family=Roboto+Mono:wght@400;500;700&display=swap">
@@ -319,19 +319,19 @@ footer{font-size:11.5px;color:var(--ink-3);text-align:center;border-top:1px soli
 <div class="wrap">
   <header class="top">
     <div class="logo">
-      <img class="mark" src="../logo.svg" alt="" width="46" height="46">
+      <img class="mark" src="../../logo.svg" alt="" width="46" height="46">
       <div><h1>ハヤリゲー</h1><div class="tag">「次に流行るゲーム」がわかるサイト<span class="tag2">YouTubeのゲーム配信 1,977チャンネルを毎日数えています</span></div></div>
     </div>
     <div class="when"><b id="s-date">–</b><span id="s-meta">–</span></div>
   </header>
 
-  <nav class="nav" id="nav" style="margin-left:0"><a href="../">今日のランキングへ</a><a href="../matome/">週・月のまとめ</a><a href="../archive/">これまでの記録</a></nav>
+  <nav class="nav" id="nav" style="margin-left:0"><a href="../../">今日のランキングへ</a><a href="../../matome/">週・月のまとめ</a><a href="../../archive/">これまでの記録</a></nav>
   <div id="banner"></div>
   <!-- __SSR_ から始まる場所には、build_site が中身をHTMLとして書き込む。
        JavaScriptが動く環境では、同じ内容で描き直される。
        検索エンジンやJSを実行しない読み手には、この静的な中身が渡る。 -->
   <section id="mt-sec" style="display:none">
-    <a class="mt" id="mt" href="../"></a>
+    <a class="mt" id="mt" href="../../"></a>
   </section>
 
   <section id="pick-sec" style="display:none">
@@ -359,97 +359,24 @@ footer{font-size:11.5px;color:var(--ink-3);text-align:center;border-top:1px soli
   </section>
 
   <section id="page-sec" style="display:none">
-    <article class="doc" id="page-body">
-<h2>このサイトは何か</h2>
-<p class="lead">VTuber・ゲーム実況者がYouTubeに出している配信のタイトルを毎日集めて、
-いまどのゲームが配信されているかをランキングにしています。
-「次に流行るゲームを早く見つけたい」人のために作りました。
-配信する側にとっては次のネタ探しに、見る側にとっては「あのゲーム、急にみんなやってる」の答え合わせになります。</p>
-<p>再生数の多い<b>動画</b>を並べるサイトはすでにたくさんあります。このサイトが並べるのは
-<b>ゲーム</b>です。誰の動画が伸びたかではなく、どのゲームに人が集まっているかを見ます。</p>
-
-<h2>どこから集めているか</h2>
-<dl>
-  <dt>対象</dt><dd>日本語で配信しているVTuber・ゲーム実況者のYouTubeチャンネル、現在 1,977 件</dd>
-  <dt>範囲</dt><dd>直近24時間に公開された配信・動画</dd>
-  <dt>更新</dt><dd>1日2回（日本時間 7時ごろ / 19時ごろ）</dd>
-  <dt>判定</dt><dd>配信タイトルの文字列から、約5万本のゲーム名辞書と照合しています</dd>
-</dl>
-<p>チャンネルは、登録者数 1,000 人以上・1年以内に投稿がある・ゲームの動画を出している、
-という条件で自動的に選んでいます。直近の動画タイトルにひらがな・カタカナが
-50% 以上出てくるかどうかも見ていて、これを下回るチャンネルは外しています。
-日本語圏の視聴者が見ている配信の流行を出すサイトなので、所属ではなく
-実際に使っている言語で判断しています。</p>
-<p>ゲームを作っている会社が運営する公式チャンネルは、数に入れていません。
-新キャラのPVや生放送は、配信者がそのゲームを選んだという話ではないためです。
-2026-09-18に調べたところ、あるゲームでは再生数の99%が会社の公式チャンネル1つから
-出ていました。そのままだと「宣伝を打った日に流行している」と出てしまいます。</p>
-
-<h2>どう数えているか</h2>
-<p>順位は、次の3つを合わせた独自のスコアで決めています。</p>
-<ul>
-  <li><b>配信者数</b> ── そのゲームを配信したチャンネルが何件あったか</li>
-  <li><b>再生数</b> ── その合計</li>
-  <li><b>配信数</b> ── 配信・動画が何本あったか</li>
-</ul>
-<p>ひとりがたくさん投稿しただけで上位に来ないよう、<b>何人が配信したか</b>をいちばん重く見ています。
-そのうえで、<b>同じ人が同じゲームを1日に何本も出した場合、2本目からは半分として数えています</b>
-（再生数も同じで、その人のいちばん伸びた1本を丸ごと、残りを半分として足します）。
-毎日おなじ顔ぶれが同じゲームを何本も上げると、その人ひとりで順位が積み上がってしまうためです。
-「◯件」として出している数は、この割引をしたあとの数です。</p>
-<p><b>「今このゲームがアツい」は、このサイトでいちばん見てほしい欄です。</b>
-直近数日の平均とくらべて配信が増えたタイトルを、<b>倍率の大きい順</b>に6つ出しています。
-倍率で並べると、ふだん誰も配信していない小さなゲームが上に来ます。それが狙いです。
-まだ名前の知られていないゲームを見つけて、自分の配信で試してほしくて作った欄だからです。
-大きな企画が立った日には、大きなゲームもここに入ってきます。
-<b>3チャンネル以上が同じ日に別々に配信していること</b>を条件にしているので、
-ひとりの思いつきは出てきません。倍率だけでは大きさが分からないので、
-実数（ふだん◯件 → 今日◯件）と、何人が配信したかも並べています。</p>
-
-<h2>数えていないもの</h2>
-<ul>
-  <li><b>Shorts</b>（3分以下の動画）── YouTubeは縦向きで3分以内の動画を
-      Shortsとして扱うため、それに合わせています</li>
-  <li><b>切り抜き</b>（タイトルや チャンネル名から判定）</li>
-  <li><b>同時視聴</b> ── アニメ・映画・発表会を視聴者と一緒に見る配信。
-      ゲームを遊んでいる配信ではないので数えません</li>
-  <li><b>同じ配信者が同じ日に出した続きもの</b> ── 1本の配信を分割した動画などは1件として数えます。
-      別の日に続くシリーズは、その日ごとに数えます</li>
-  <li><b>日本語以外で配信しているチャンネル</b> ── 事務所は問いません</li>
-  <li><b>ゲーム名を判定できなかった配信</b> ── 推測では埋めません</li>
-</ul>
-<p>ただし、大会や企画の配信は題名がハッシュタグだけになりがちです
-（「【#にじ遊戯王祭2026】対抗戦」など）。そういう配信は、<b>同じタグを使っている
-ほかの人がゲーム名を書いていれば、そちらから判定しています</b>。
-3人以上が使っているタグで、ゲーム名の分かる配信が3本以上あり、
-その8割以上が同じゲームを指しているときだけです。
-推測ではなく、同じ企画の中に答えが書いてある場合にかぎります。</p>
-
-<h2>コラムについて</h2>
-<p>「今日の注目ゲーム」は、数字が動いた理由を書いています。書くときのルールを決めていて、
-<b>裏が取れないことは書きません</b>。根拠には、公式の発表・ゲームメディア・実際の配信そのものを
-当たっています。説明できることが何も無い日は、その日は書きません。</p>
-
-<h2>間違いを見つけたら</h2>
-<p>ゲーム名の判定は自動なので、間違えることがあります。見つけしだい直しています。
-おかしなものを見つけたら、<a href="https://x.com/tarochinko" target="_blank" rel="noopener">X（@tarochinko）</a>
-のDMで教えてください。</p>
-
-<h2>作っている人</h2>
-<p>ゲーム実況者の たろちん（<a href="https://x.com/tarochinko" target="_blank" rel="noopener">@tarochinko</a>）が
-個人で作っています。データはYouTube Data API、ゲーム名の辞書はIGDBを使っています。</p>
-<p>このサイトはAmazonアソシエイト・プログラムの参加者です。商品ページへのリンクから
-購入があった場合、紹介料を受け取ることがあります。ランキングの順位は
-配信の数字だけで決めていて、紹介料は関係しません。</p>
-
-<h2>アクセス解析について</h2>
-<p>どのページがどれくらい見られているかを知るために、Cloudflare Web Analytics を
-使っています。Cookieを置かず、閲覧者を個人として追いかけない仕組みのものです。
-このサイトが名前・メールアドレスなどの個人情報を集めることはありません。</p>
-<p>集めた配信のデータ（タイトル・チャンネル名など）は、YouTubeの規約に従って
-30日を過ぎたら消しています。古い日の記録ページに配信の一覧が出ないのは
-そのためです。</p>
-</article>
+    <article class="doc" id="page-body"><p class="when">2026年9月14日〜9月20日の週まとめ</p>
+<h1>犯罪の街で、いちばん見られたのは黒服の夜</h1>
+<figure class="dochero"><img src="https://i.ytimg.com/vi/gCkznd2GvpU/mqdefault.jpg" alt="" loading="lazy"><figcaption>YouTube ／ Kanae Channel</figcaption></figure>
+<p class="lead">GTA5のコミュニティサーバー「SURGE Town」が9月20日に最終日を迎えた。17日間のうち、あとから動画になった場面を並べていくと、強盗や撃ち合いはあまり出てこない。</p>
+<p>「SURGE Town」は9月4日に始まったGTA5のコミュニティサーバー。参加者は警察、メカニック、医者、ギャングと職業を持って同じ街に暮らす。20日、各チャンネルが「最終日」と題した枠を並べて終わった。</p>
+<p>16日の夜、街にホストクラブが開いた。家入ポポは「ホストクラブがオープンするらしいポポ」、きつねさんは「今夜限りの極上心停止ホスト、参上。」、叶は「今日は黒服をやるそうです」。当サイトの集計では、先週この街から出た配信・動画でいちばん再生されたのが、この叶の枠だった（72万回）。SHAKAが先週出したクリップ11本も、題名に並ぶのは撃ち合いではない。「癖強すぎるホストと姫達に腹筋崩壊する黒服SHAKA」（34万回）、「かつての弟子・飛良ひかりとこの街で遭遇する」（50万回）。街で誰と会ったか、のほうだった。</p>
+<p>一日ずつ見ていると気づかない筋もある。marunnnの動画を日付順に並べる。11日「ブレキルできる個人医の救助が強すぎて即ナーフされた」、15日「個人医の神連携で護送された犯人の強奪を大成功させまくる」、17日「仲間を救うために警察署前で個人医vs警察の襲撃が始まる」。救助役の集団が、警察と正面からぶつかるところまで来ていた。最終日の朝に出た題は「初めての個人医による客船強盗で利確を成功させる」。</p>
+<p>叶は19日に「ありがとう、そしてこんにちは」、20日に「最終日！楽しかったSURGETown」と題して街を出た。当サイトの集計では、この街の名を題に入れた配信・動画は4日から20日までで18チャンネル173本、1,548万回。うち先週分が15チャンネル82本、759万回。</p>
+<h2>出典</h2><ul>
+<li><a href="https://x.com/TeamSURGE_JP/status/2094734912356278691" target="_blank" rel="noopener">SURGE 公式X — SURGE Town、始動。</a></li>
+<li><a href="https://www.youtube.com/watch?v=gCkznd2GvpU" target="_blank" rel="noopener">叶 — #13 今日は黒服をやるそうです | #SURGETown</a></li>
+<li><a href="https://www.youtube.com/watch?v=WeNFTGw-OEk" target="_blank" rel="noopener">SHAKAch — 癖強すぎるホストと姫達に腹筋崩壊する黒服SHAKA【SURGE Town】</a></li>
+<li><a href="https://www.youtube.com/watch?v=AFNvHdNOVVk" target="_blank" rel="noopener">SHAKAch — かつての弟子・飛良ひかりとこの街で遭遇するSHAKA【SURGE Town】</a></li>
+<li><a href="https://www.youtube.com/watch?v=jDwMq05qIS0" target="_blank" rel="noopener">家入ポポ — 【#SURGETown / 9日目】ホストクラブがオープンするらしいポポ</a></li>
+<li><a href="https://www.youtube.com/watch?v=NS9QqoYaR0g" target="_blank" rel="noopener">marunnn — 【#SURGETown】仲間を救うために警察署前で個人医vs警察の襲撃が始まるｗｗｗ</a></li>
+<li><a href="https://www.youtube.com/watch?v=ff2DIUgoqzI" target="_blank" rel="noopener">marunnn — 【#SURGETown】初めての個人医による客船強盗で利確を成功させる</a></li>
+<li><a href="https://www.youtube.com/watch?v=yarsDxRPxxM" target="_blank" rel="noopener">叶 — #16 最終日！楽しかったSURGETown | #SURGETown</a></li>
+</ul></article>
   </section>
 
   <section id="arch-sec" style="display:none">
@@ -472,8 +399,8 @@ footer{font-size:11.5px;color:var(--ink-3);text-align:center;border-top:1px soli
   </section>
 
   <footer>
-    <a class="flink" href="../about/">このサイトについて</a>
-    <a class="flink" href="../archive/">これまでの記録</a><br>
+    <a class="flink" href="../../about/">このサイトについて</a>
+    <a class="flink" href="../../archive/">これまでの記録</a><br>
     ハヤリゲー ｜ YouTubeの配信タイトルを毎日自動で解析しています<br>
     同じ配信者が同じ日に出した続きものは1件として集計 ／ <span id="f-gen"></span><br>
     <span style="opacity:.75">Amazonのアソシエイトとして、当サイトは適格販売により収入を得ています</span>
@@ -481,7 +408,7 @@ footer{font-size:11.5px;color:var(--ink-3);text-align:center;border-top:1px soli
 </div>
 
 <script>
-const DATA = {"mode": "page", "date": "2026-09-21", "subtitle": "このサイトについて", "generated": "2026-09-21 17:07", "page_body": "\n<h2>このサイトは何か</h2>\n<p class=\"lead\">VTuber・ゲーム実況者がYouTubeに出している配信のタイトルを毎日集めて、\nいまどのゲームが配信されているかをランキングにしています。\n「次に流行るゲームを早く見つけたい」人のために作りました。\n配信する側にとっては次のネタ探しに、見る側にとっては「あのゲーム、急にみんなやってる」の答え合わせになります。</p>\n<p>再生数の多い<b>動画</b>を並べるサイトはすでにたくさんあります。このサイトが並べるのは\n<b>ゲーム</b>です。誰の動画が伸びたかではなく、どのゲームに人が集まっているかを見ます。</p>\n\n<h2>どこから集めているか</h2>\n<dl>\n  <dt>対象</dt><dd>日本語で配信しているVTuber・ゲーム実況者のYouTubeチャンネル、現在 1,977 件</dd>\n  <dt>範囲</dt><dd>直近24時間に公開された配信・動画</dd>\n  <dt>更新</dt><dd>1日2回（日本時間 7時ごろ / 19時ごろ）</dd>\n  <dt>判定</dt><dd>配信タイトルの文字列から、約5万本のゲーム名辞書と照合しています</dd>\n</dl>\n<p>チャンネルは、登録者数 1,000 人以上・1年以内に投稿がある・ゲームの動画を出している、\nという条件で自動的に選んでいます。直近の動画タイトルにひらがな・カタカナが\n50% 以上出てくるかどうかも見ていて、これを下回るチャンネルは外しています。\n日本語圏の視聴者が見ている配信の流行を出すサイトなので、所属ではなく\n実際に使っている言語で判断しています。</p>\n<p>ゲームを作っている会社が運営する公式チャンネルは、数に入れていません。\n新キャラのPVや生放送は、配信者がそのゲームを選んだという話ではないためです。\n2026-09-18に調べたところ、あるゲームでは再生数の99%が会社の公式チャンネル1つから\n出ていました。そのままだと「宣伝を打った日に流行している」と出てしまいます。</p>\n\n<h2>どう数えているか</h2>\n<p>順位は、次の3つを合わせた独自のスコアで決めています。</p>\n<ul>\n  <li><b>配信者数</b> ── そのゲームを配信したチャンネルが何件あったか</li>\n  <li><b>再生数</b> ── その合計</li>\n  <li><b>配信数</b> ── 配信・動画が何本あったか</li>\n</ul>\n<p>ひとりがたくさん投稿しただけで上位に来ないよう、<b>何人が配信したか</b>をいちばん重く見ています。\nそのうえで、<b>同じ人が同じゲームを1日に何本も出した場合、2本目からは半分として数えています</b>\n（再生数も同じで、その人のいちばん伸びた1本を丸ごと、残りを半分として足します）。\n毎日おなじ顔ぶれが同じゲームを何本も上げると、その人ひとりで順位が積み上がってしまうためです。\n「◯件」として出している数は、この割引をしたあとの数です。</p>\n<p><b>「今このゲームがアツい」は、このサイトでいちばん見てほしい欄です。</b>\n直近数日の平均とくらべて配信が増えたタイトルを、<b>倍率の大きい順</b>に6つ出しています。\n倍率で並べると、ふだん誰も配信していない小さなゲームが上に来ます。それが狙いです。\nまだ名前の知られていないゲームを見つけて、自分の配信で試してほしくて作った欄だからです。\n大きな企画が立った日には、大きなゲームもここに入ってきます。\n<b>3チャンネル以上が同じ日に別々に配信していること</b>を条件にしているので、\nひとりの思いつきは出てきません。倍率だけでは大きさが分からないので、\n実数（ふだん◯件 → 今日◯件）と、何人が配信したかも並べています。</p>\n\n<h2>数えていないもの</h2>\n<ul>\n  <li><b>Shorts</b>（3分以下の動画）── YouTubeは縦向きで3分以内の動画を\n      Shortsとして扱うため、それに合わせています</li>\n  <li><b>切り抜き</b>（タイトルや チャンネル名から判定）</li>\n  <li><b>同時視聴</b> ── アニメ・映画・発表会を視聴者と一緒に見る配信。\n      ゲームを遊んでいる配信ではないので数えません</li>\n  <li><b>同じ配信者が同じ日に出した続きもの</b> ── 1本の配信を分割した動画などは1件として数えます。\n      別の日に続くシリーズは、その日ごとに数えます</li>\n  <li><b>日本語以外で配信しているチャンネル</b> ── 事務所は問いません</li>\n  <li><b>ゲーム名を判定できなかった配信</b> ── 推測では埋めません</li>\n</ul>\n<p>ただし、大会や企画の配信は題名がハッシュタグだけになりがちです\n（「【#にじ遊戯王祭2026】対抗戦」など）。そういう配信は、<b>同じタグを使っている\nほかの人がゲーム名を書いていれば、そちらから判定しています</b>。\n3人以上が使っているタグで、ゲーム名の分かる配信が3本以上あり、\nその8割以上が同じゲームを指しているときだけです。\n推測ではなく、同じ企画の中に答えが書いてある場合にかぎります。</p>\n\n<h2>コラムについて</h2>\n<p>「今日の注目ゲーム」は、数字が動いた理由を書いています。書くときのルールを決めていて、\n<b>裏が取れないことは書きません</b>。根拠には、公式の発表・ゲームメディア・実際の配信そのものを\n当たっています。説明できることが何も無い日は、その日は書きません。</p>\n\n<h2>間違いを見つけたら</h2>\n<p>ゲーム名の判定は自動なので、間違えることがあります。見つけしだい直しています。\nおかしなものを見つけたら、<a href=\"https://x.com/tarochinko\" target=\"_blank\" rel=\"noopener\">X（@tarochinko）</a>\nのDMで教えてください。</p>\n\n<h2>作っている人</h2>\n<p>ゲーム実況者の たろちん（<a href=\"https://x.com/tarochinko\" target=\"_blank\" rel=\"noopener\">@tarochinko</a>）が\n個人で作っています。データはYouTube Data API、ゲーム名の辞書はIGDBを使っています。</p>\n<p>このサイトはAmazonアソシエイト・プログラムの参加者です。商品ページへのリンクから\n購入があった場合、紹介料を受け取ることがあります。ランキングの順位は\n配信の数字だけで決めていて、紹介料は関係しません。</p>\n\n<h2>アクセス解析について</h2>\n<p>どのページがどれくらい見られているかを知るために、Cloudflare Web Analytics を\n使っています。Cookieを置かず、閲覧者を個人として追いかけない仕組みのものです。\nこのサイトが名前・メールアドレスなどの個人情報を集めることはありません。</p>\n<p>集めた配信のデータ（タイトル・チャンネル名など）は、YouTubeの規約に従って\n30日を過ぎたら消しています。古い日の記録ページに配信の一覧が出ないのは\nそのためです。</p>\n", "paths": {"home": "../", "archive": "../archive/"}};
+const DATA = {"mode": "page", "date": "2026-09-21", "subtitle": "2026年9月14日〜9月20日の週まとめ", "generated": "2026-09-21 17:07", "page_body": "<p class=\"when\">2026年9月14日〜9月20日の週まとめ</p>\n<h1>犯罪の街で、いちばん見られたのは黒服の夜</h1>\n<figure class=\"dochero\"><img src=\"https://i.ytimg.com/vi/gCkznd2GvpU/mqdefault.jpg\" alt=\"\" loading=\"lazy\"><figcaption>YouTube ／ Kanae Channel</figcaption></figure>\n<p class=\"lead\">GTA5のコミュニティサーバー「SURGE Town」が9月20日に最終日を迎えた。17日間のうち、あとから動画になった場面を並べていくと、強盗や撃ち合いはあまり出てこない。</p>\n<p>「SURGE Town」は9月4日に始まったGTA5のコミュニティサーバー。参加者は警察、メカニック、医者、ギャングと職業を持って同じ街に暮らす。20日、各チャンネルが「最終日」と題した枠を並べて終わった。</p>\n<p>16日の夜、街にホストクラブが開いた。家入ポポは「ホストクラブがオープンするらしいポポ」、きつねさんは「今夜限りの極上心停止ホスト、参上。」、叶は「今日は黒服をやるそうです」。当サイトの集計では、先週この街から出た配信・動画でいちばん再生されたのが、この叶の枠だった（72万回）。SHAKAが先週出したクリップ11本も、題名に並ぶのは撃ち合いではない。「癖強すぎるホストと姫達に腹筋崩壊する黒服SHAKA」（34万回）、「かつての弟子・飛良ひかりとこの街で遭遇する」（50万回）。街で誰と会ったか、のほうだった。</p>\n<p>一日ずつ見ていると気づかない筋もある。marunnnの動画を日付順に並べる。11日「ブレキルできる個人医の救助が強すぎて即ナーフされた」、15日「個人医の神連携で護送された犯人の強奪を大成功させまくる」、17日「仲間を救うために警察署前で個人医vs警察の襲撃が始まる」。救助役の集団が、警察と正面からぶつかるところまで来ていた。最終日の朝に出た題は「初めての個人医による客船強盗で利確を成功させる」。</p>\n<p>叶は19日に「ありがとう、そしてこんにちは」、20日に「最終日！楽しかったSURGETown」と題して街を出た。当サイトの集計では、この街の名を題に入れた配信・動画は4日から20日までで18チャンネル173本、1,548万回。うち先週分が15チャンネル82本、759万回。</p>\n<h2>出典</h2><ul>\n<li><a href=\"https://x.com/TeamSURGE_JP/status/2094734912356278691\" target=\"_blank\" rel=\"noopener\">SURGE 公式X — SURGE Town、始動。</a></li>\n<li><a href=\"https://www.youtube.com/watch?v=gCkznd2GvpU\" target=\"_blank\" rel=\"noopener\">叶 — #13 今日は黒服をやるそうです | #SURGETown</a></li>\n<li><a href=\"https://www.youtube.com/watch?v=WeNFTGw-OEk\" target=\"_blank\" rel=\"noopener\">SHAKAch — 癖強すぎるホストと姫達に腹筋崩壊する黒服SHAKA【SURGE Town】</a></li>\n<li><a href=\"https://www.youtube.com/watch?v=AFNvHdNOVVk\" target=\"_blank\" rel=\"noopener\">SHAKAch — かつての弟子・飛良ひかりとこの街で遭遇するSHAKA【SURGE Town】</a></li>\n<li><a href=\"https://www.youtube.com/watch?v=jDwMq05qIS0\" target=\"_blank\" rel=\"noopener\">家入ポポ — 【#SURGETown / 9日目】ホストクラブがオープンするらしいポポ</a></li>\n<li><a href=\"https://www.youtube.com/watch?v=NS9QqoYaR0g\" target=\"_blank\" rel=\"noopener\">marunnn — 【#SURGETown】仲間を救うために警察署前で個人医vs警察の襲撃が始まるｗｗｗ</a></li>\n<li><a href=\"https://www.youtube.com/watch?v=ff2DIUgoqzI\" target=\"_blank\" rel=\"noopener\">marunnn — 【#SURGETown】初めての個人医による客船強盗で利確を成功させる</a></li>\n<li><a href=\"https://www.youtube.com/watch?v=yarsDxRPxxM\" target=\"_blank\" rel=\"noopener\">叶 — #16 最終日！楽しかったSURGETown | #SURGETown</a></li>\n</ul>", "paths": {"home": "../../", "archive": "../../archive/"}};
 const $ = s => document.querySelector(s);
 const esc = s => String(s ?? '').replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
 const cssv = n => getComputedStyle(document.documentElement).getPropertyValue(n).trim();
