@@ -226,6 +226,187 @@ def rising_again(month, days):
              "best": max(v, key=lambda x: x["growth"])} for g, v in ranked[:12]]
 
 
+# ------------------------------------------------- サイトの月まとめ用の材料
+# ここから下は note の裏話ではなく、**サイトに載せる月まとめ**を書くための材料。
+# （2026-09-21 たろちんさんと決めた）
+#
+# 月まとめの主役は「今月伸びたゲーム3本」。総数の多い順ではない。
+# 総数で並べると毎月おなじ顔ぶれになることを、26日ぶんのデータで確かめた。
+# 窓を3つに切って上位5を出したら、どの2つを比べても重なりが4/5あり、
+# 上位3本は3つの窓すべてで Minecraft・Apex・ストリートファイター6 だった。
+# 順番が入れ替わるだけで、顔ぶれは動かない。それでは「流行った」の記事にならない。
+#
+# ■ 人数をそのまま比べてはいけない（2026-09-21に気づいて直した）
+#
+# このサイトが見ているチャンネルは増え続けている。8月26日は343、9月20日は1,977。
+# 実際に配信していた人の数も 392人 → 807人 と倍以上になった。
+# だから「配信した人数」をそのまま月どうしで比べると、**何もしていないゲームまで
+# 増えたように見える。** 実際、生の人数で並べると Apex が9月の伸びた順の4位に
+# 来るが、割合で見ると順位表から消える。増えたのは Apex ではなく、こちらの目の数。
+#
+# なので、その日「配信していた人のうち何%がそのゲームを配信したか」で比べる。
+# 分母（totals.channels）は記録ページに永久に残るので、何年でも比べられる。
+
+def day_rows(day):
+    """その日のランキングを {ゲーム名: (人数, 割合%)} で返す。
+
+    割合は「その日配信していた人のうち何%か」。見ているチャンネルが
+    増えても意味が変わらないので、月どうしを比べるときはこちらを使う。
+    """
+    o = read_day(day) or {}
+    tot = (o.get("totals") or {}).get("channels") or 0
+    if not tot:
+        return {}
+    return {r["game"]: (r.get("channels", 0), r.get("channels", 0) / tot * 100)
+            for r in o.get("ranking", [])}
+
+
+def window(ds):
+    """日付の一覧から、ゲームごとの1日あたり平均（人数と割合）を出す。
+
+    記録ページに残っているのは各日の上位30件まで。30位に入らなかった日は
+    0として平均するので、小さいゲームの数字はやや低めに出る。
+    伸びたものを見つける用途なら、これで足りる。
+    """
+    ch, sh = defaultdict(float), defaultdict(float)
+    for d in ds:
+        for g, (c, s) in day_rows(d).items():
+            ch[g] += c
+            sh[g] += s
+    n = max(len(ds), 1)
+    return {g: {"ch": ch[g] / n, "sh": sh[g] / n} for g in ch}
+
+
+def month_days(month):
+    return [d for d in all_days() if d.startswith(month)]
+
+
+def prev_month(month):
+    y, m = int(month[:4]), int(month[5:7])
+    return f"{y - 1}-12" if m == 1 else f"{y}-{m - 1:02d}"
+
+
+def peak_of(game, ds):
+    """そのゲームがいちばん多く配信された日と、その日の代表的な配信3本。"""
+    best = (0, "", [])
+    for d in ds:
+        for r in (read_day(d) or {}).get("ranking", []):
+            if r["game"] == game and r.get("channels", 0) > best[0]:
+                st = sorted(r.get("streams") or [], key=lambda s: -s.get("v", 0))
+                best = (r["channels"], d, st[:3])
+    return {"channels": best[0], "day": best[1], "streams": best[2]}
+
+
+def grew(month):
+    """今月いちばん伸びたゲームを出す。月まとめの1〜3位の候補になる。
+
+    比べる相手は先月。先月の記録が5日に満たないとき（サイトを始めた最初の月など）
+    は、同じ月の前半と後半を比べる。どちらで比べたかは呼び出し側に返す。
+    """
+    cur_days = month_days(month)
+    if not cur_days:
+        return None
+    prev_days = month_days(prev_month(month))
+    cur = window(cur_days)
+    if len(prev_days) >= 5:
+        basis = f"先月（{prev_month(month)}／{len(prev_days)}日）とくらべて"
+        base, target, tgt_days = window(prev_days), cur, cur_days
+    else:
+        half = len(cur_days) // 2
+        if half < 3:
+            return None
+        early, late = cur_days[:half], cur_days[half:]
+        basis = (f"この月の前半（{early[0][5:]}〜{early[-1][5:]}）と"
+                 f"後半（{late[0][5:]}〜{late[-1][5:]}）をくらべて")
+        base, target, tgt_days = window(early), window(late), late
+
+    seen_before = set()
+    for d in all_days():
+        if d >= month + "-01":
+            break
+        seen_before |= set(day_rows(d))
+
+    rows = []
+    for g, a in target.items():
+        if a["sh"] < 0.5 or a["ch"] < 3:     # 小さすぎるものは拾わない
+            continue
+        b = base.get(g) or {"ch": 0.0, "sh": 0.0}
+        rows.append({"game": g, "new": g not in seen_before,
+                     "before_ch": round(b["ch"], 1), "after_ch": round(a["ch"], 1),
+                     "before": round(b["sh"], 2), "after": round(a["sh"], 2),
+                     "diff": round(a["sh"] - b["sh"], 2)})
+    rows.sort(key=lambda x: -x["diff"])
+    rows = rows[:10]
+    for r in rows:
+        r["peak"] = peak_of(r["game"], tgt_days)
+
+    # 定番（割合の大きい順）。先月と顔ぶれが変わったかどうかを見るために出す。
+    prev = window(prev_days) if prev_days else {}
+    top = sorted(cur.items(), key=lambda kv: -kv[1]["sh"])[:5]
+    ptop = [g for g, _ in sorted(prev.items(), key=lambda kv: -kv[1]["sh"])[:3]]
+    ctop = [g for g, _ in top[:3]]
+    if len(prev_days) < 5:
+        shift = "先月の記録が足りないので、くらべられません。"
+    elif set(ctop) == set(ptop):
+        shift = ("先月のトップ3と同じ顔ぶれです（順番だけ違うことがあります）。"
+                 "同じ状態が続くなら、月まとめで触れなくて構いません。")
+    else:
+        gone = [g for g in ptop if g not in ctop]
+        came = [g for g in ctop if g not in ptop]
+        shift = ("★ 先月から入れ替わりました。"
+                 + ("落ちた: " + "、".join(gone) + "　" if gone else "")
+                 + ("入った: " + "、".join(came) if came else "")
+                 + " ── 入れ替わり自体がひとつのトピックになります。")
+    return {"basis": basis, "rows": rows, "days": len(cur_days), "shift": shift,
+            "staples": [{"game": g, "sh": round(v["sh"], 2), "ch": round(v["ch"], 1),
+                         "diff": (round(v["sh"] - prev[g]["sh"], 2)
+                                  if g in prev else None)} for g, v in top]}
+
+
+def column_brief(month, gr):
+    """サイトの月まとめを書く人へ渡す、文字だけの材料。"""
+    if not gr:
+        return (f"■ {month} サイトの月まとめ用の材料\n"
+                "　記録ページが足りないため、伸びたゲームを出せませんでした。")
+    o = [f"■ {month} サイトの月まとめ用の材料（記録 {gr['days']}日）",
+         f"　並べ方: {gr['basis']}、『その日配信していた人のうち何%がそのゲームを",
+         "　　　　　配信したか』がどれだけ増えたか。",
+         "　　　　　人数をそのまま比べない。見ているチャンネルが増え続けているので、",
+         "　　　　　人数だと何もしていないゲームまで増えたように見えるため。",
+         "",
+         "【今月伸びたゲーム ── 1〜3位の候補】"]
+    for i, r in enumerate(gr["rows"], 1):
+        mark = "（今月が初登場）" if r["new"] else ""
+        o.append(f"{i:2d}. {r['game']}{mark}")
+        o.append(f"      配信していた人の {r['before']}% → {r['after']}%"
+                 f"（+{r['diff']}ポイント）")
+        o.append(f"      1日あたりの人数では {r['before_ch']}人 → {r['after_ch']}人")
+        p = r["peak"]
+        if p["day"]:
+            o.append(f"      いちばん多かった日: {p['day']}（{p['channels']}人）")
+        for s in p["streams"]:
+            o.append(f"        ・{s.get('c', '')} — {s.get('t', '')[:52]}"
+                     f"（{s.get('v', 0):,}回）")
+    o += ["", "【定番（割合の大きい順）】"]
+    for s in gr["staples"]:
+        d = "" if s["diff"] is None else f"（先月比 {s['diff']:+.2f}ポイント）"
+        o.append(f"　{s['game']}　{s['sh']}%（1日あたり {s['ch']}人）{d}")
+    o += ["", "　" + gr["shift"], "",
+          "【この材料の使い方】",
+          "　・1〜3位は、上の候補から『なぜ増えたかを説明できるもの』を選ぶ。",
+          "　　数字の大きい順に機械的に選ばない。理由が書けないものは落とす。",
+          "　・理由は一次ソースで裏を取る（発売日、公式の告知、企画のページ）。",
+          "　・代表的な配信は、その日の再生数の多い順に出してある。",
+          "　　本文に入れるなら、実際に開いて中身を確かめてから。",
+          "　・本文に書く数字は『人数』のほうがよい。割合は並べ替えのための物差しで、",
+          "　　読者には『18人が配信した』のほうが伝わる。",
+          "　・『定番』は、先月と顔ぶれが同じなら書かなくてよい。",
+          "　　入れ替わったときだけ、それ自体をひとつの節にする。",
+          "　・記録ページは上位30件までなので、30位に入らなかった日は0として",
+          "　　平均している。小さいゲームの数字は実際よりやや低く出る。"]
+    return "\n".join(o)
+
+
 def hand_notes(month):
     """data/columns/運営メモ.md から、その月のぶんを取り出す。
 
@@ -577,6 +758,15 @@ def main():
     out = ROOT / f"note_{month}.html"
     out.write_text(build_html(month, days, chg, mov, rise, pv, hand), encoding="utf-8")
     log(f"書き出しました: {out}")
+
+    # サイトの月まとめ用の材料を先に出す。こちらが本編（読みもの）の材料で、
+    # 下の裏話レポートは note 用。混ざらないように区切りを入れておく。
+    brief = column_brief(month, grew(month))
+    bf = ROOT / f"月まとめの材料_{month}.txt"
+    bf.write_text(brief + "\n", encoding="utf-8")
+    log(f"書き出しました: {bf}")
+    print(brief)
+    print("\n" + "─" * 60 + "\n")
     print(digest(month, days, chg, mov, rise, pv, hand))
     return 0
 
