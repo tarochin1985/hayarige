@@ -2041,6 +2041,19 @@
   ]
  },
  {
+  "name": "Ake no Yosuga: Twilight Loop",
+  "alias": [],
+  "pop": 0,
+  "p": [
+   "pc"
+  ],
+  "g": [
+   "Adventure",
+   "Indie",
+   "Visual Novel"
+  ]
+ },
+ {
   "name": "Akegarasu: Journey to the Underworld",
   "alias": [
    "AKEGARASU: Journey to the Underworld"
@@ -2967,20 +2980,6 @@
   "g": [
    "Simulator",
    "Card & Board Game"
-  ]
- },
- {
-  "name": "Animosity",
-  "alias": [
-   "Animosity.exe"
-  ],
-  "pop": 0,
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Adventure",
-   "Indie"
   ]
  },
  {
@@ -4989,6 +4988,9 @@
   "p": [
    "pc",
    "console"
+  ],
+  "g": [
+   "Indie"
   ]
  },
  {
@@ -5045,7 +5047,9 @@
  },
  {
   "name": "Banana Kingdom",
-  "alias": [],
+  "alias": [
+   "BananaKingdom.exe"
+  ],
   "pop": 0,
   "p": [
    "pc"
@@ -7625,6 +7629,19 @@
   "g": [
    "Role-playing (RPG)",
    "Adventure",
+   "Indie"
+  ]
+ },
+ {
+  "name": "Breakout Garage",
+  "alias": [],
+  "pop": 0,
+  "p": [
+   "pc"
+  ],
+  "g": [
+   "Racing",
+   "Simulator",
    "Indie"
   ]
  },
@@ -12619,6 +12636,19 @@
    "Real Time Strategy (RTS)",
    "Simulator",
    "Strategy",
+   "Indie"
+  ]
+ },
+ {
+  "name": "Crown of Hispania",
+  "alias": [],
+  "pop": 0,
+  "p": [
+   "pc"
+  ],
+  "g": [
+   "Strategy",
+   "Turn-based strategy (TBS)",
    "Indie"
   ]
  },
@@ -20891,14 +20921,6 @@
   ]
  },
  {
-  "name": "Fingerball: Dodge The Balls",
-  "alias": [],
-  "pop": 0,
-  "g": [
-   "Arcade"
-  ]
- },
- {
   "name": "Fire Emblem: Fortune's Weave",
   "alias": [
    "Fire Emblem: Ten Thousand Purples, One Thousand Reds",
@@ -22912,6 +22934,18 @@
   ]
  },
  {
+  "name": "Galvatein: Adventurer’s Guild",
+  "alias": [],
+  "pop": 0,
+  "p": [
+   "pc"
+  ],
+  "g": [
+   "Simulator",
+   "Indie"
+  ]
+ },
+ {
   "name": "Gamble Life",
   "alias": [
    "ギャンブルライフ.exe"
@@ -23334,19 +23368,6 @@
   "g": [
    "Role-playing (RPG)",
    "Adventure"
-  ]
- },
- {
-  "name": "Gently Packed",
-  "alias": [],
-  "pop": 0,
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Puzzle",
-   "Simulator",
-   "Indie"
   ]
  },
  {
@@ -24465,21 +24486,6 @@
   "p": [
    "pc",
    "console"
-  ]
- },
- {
-  "name": "Graveyard Shift",
-  "alias": [
-   "GraveyardShift.exe"
-  ],
-  "pop": 0,
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Strategy",
-   "Adventure",
-   "Indie"
   ]
  },
  {
@@ -28390,7 +28396,9 @@
  },
  {
   "name": "Incremedieval",
-  "alias": [],
+  "alias": [
+   "Incremedieval.exe"
+  ],
   "pop": 0,
   "p": [
    "pc"
@@ -32891,19 +32899,6 @@
   ]
  },
  {
-  "name": "Love WMC",
-  "alias": [],
-  "pop": 0,
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Music",
-   "Role-playing (RPG)",
-   "Visual Novel"
-  ]
- },
- {
   "name": "Love and Demons",
   "alias": [],
   "pop": 0,
@@ -34167,20 +34162,6 @@
   ],
   "g": [
    "Puzzle",
-   "Indie"
-  ]
- },
- {
-  "name": "Matchstick: Cosmic Flame",
-  "alias": [
-   "Matchstick.exe"
-  ],
-  "pop": 0,
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Adventure",
    "Indie"
   ]
  },
@@ -39344,19 +39325,6 @@
   ]
  },
  {
-  "name": "One Song, One Life",
-  "alias": [],
-  "pop": 0,
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Music",
-   "Adventure",
-   "Indie"
-  ]
- },
- {
   "name": "One With the Unicycleverse",
   "alias": [],
   "pop": 0,
@@ -41791,20 +41759,6 @@
   ]
  },
  {
-  "name": "Pikku Adventure",
-  "alias": [],
-  "pop": 0,
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Point-and-click",
-   "Puzzle",
-   "Adventure",
-   "Indie"
-  ]
- },
- {
   "name": "Pikmin 4: Nintendo Switch 2 Edition + Dandori Academy",
   "alias": [],
   "pop": 0,
@@ -42323,6 +42277,16 @@
   ],
   "g": [
    "Adventure"
+  ]
+ },
+ {
+  "name": "Playdate: Season 3",
+  "alias": [
+   "Playdate Season Three"
+  ],
+  "pop": 0,
+  "p": [
+   "console"
   ]
  },
  {
@@ -46218,6 +46182,22 @@
    "pc"
   ],
   "g": [
+   "Indie"
+  ]
+ },
+ {
+  "name": "Rogue Hanafuda",
+  "alias": [
+   "RogueHwatu",
+   "RogueHanafuda"
+  ],
+  "pop": 0,
+  "p": [
+   "pc"
+  ],
+  "g": [
+   "Simulator",
+   "Strategy",
    "Indie"
   ]
  },
@@ -50268,6 +50248,21 @@
   ]
  },
  {
+  "name": "Somnius",
+  "alias": [
+   "SOMNIUS"
+  ],
+  "pop": 0,
+  "p": [
+   "pc"
+  ],
+  "g": [
+   "Shooter",
+   "Adventure",
+   "Indie"
+  ]
+ },
+ {
   "name": "Sondro Gomez: A Sunova Story",
   "alias": [
    "Sondro Gomez: A Wonderworld Story"
@@ -50434,7 +50429,9 @@
  },
  {
   "name": "Soul Injector Commando",
-  "alias": [],
+  "alias": [
+   "SoulInjectorCommando.exe"
+  ],
   "pop": 0,
   "p": [
    "pc"
@@ -51151,6 +51148,19 @@
   ],
   "g": [
    "Simulator"
+  ]
+ },
+ {
+  "name": "SpongeBob SquarePants: Battle for Bikini Bottom Deluxe",
+  "alias": [
+   "SpongeBob SquarePants: Battle for Bikini Bottom DELUXE"
+  ],
+  "pop": 0,
+  "p": [
+   "console"
+  ],
+  "g": [
+   "Platform"
   ]
  },
  {
@@ -56001,18 +56011,6 @@
    "Puzzle",
    "Adventure",
    "Indie"
-  ]
- },
- {
-  "name": "The Housekeeper",
-  "alias": [],
-  "pop": 0,
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Simulator",
-   "Adventure"
   ]
  },
  {
@@ -64229,6 +64227,20 @@
   "g": [
    "Shooter",
    "Role-playing (RPG)",
+   "Indie"
+  ]
+ },
+ {
+  "name": "Yo Skater",
+  "alias": [
+   "Yo Skater.exe"
+  ],
+  "pop": 0,
+  "p": [
+   "pc"
+  ],
+  "g": [
+   "Platform",
    "Indie"
   ]
  },
