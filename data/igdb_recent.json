@@ -188,18 +188,6 @@
   ]
  },
  {
-  "name": "100 Mystic Cats",
-  "alias": [],
-  "pop": 0,
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Puzzle",
-   "Indie"
-  ]
- },
- {
   "name": "100 Panda Cats",
   "alias": [],
   "pop": 0,
@@ -283,6 +271,19 @@
   "pop": 0,
   "p": [
    "pc"
+  ]
+ },
+ {
+  "name": "13 Playing Cards of Demon",
+  "alias": [],
+  "pop": 0,
+  "p": [
+   "pc"
+  ],
+  "g": [
+   "Strategy",
+   "Indie",
+   "Card & Board Game"
   ]
  },
  {
@@ -1030,19 +1031,6 @@
    "Puzzle",
    "Adventure",
    "Indie"
-  ]
- },
- {
-  "name": "A Toast for the End Times",
-  "alias": [],
-  "pop": 0,
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Adventure",
-   "Indie",
-   "Visual Novel"
   ]
  },
  {
@@ -2839,7 +2827,7 @@
   "alias": [
    "Aniimo.exe"
   ],
-  "pop": 6,
+  "pop": 8,
   "p": [
    "pc",
    "console"
@@ -7028,6 +7016,7 @@
   "alias": [],
   "pop": 0,
   "p": [
+   "pc",
    "console"
   ]
  },
@@ -7406,6 +7395,18 @@
   ]
  },
  {
+  "name": "Bottled by Bears",
+  "alias": [],
+  "pop": 0,
+  "p": [
+   "pc"
+  ],
+  "g": [
+   "Simulator",
+   "Indie"
+  ]
+ },
+ {
   "name": "Bounce Gun",
   "alias": [
    "BOUNCE GUN"
@@ -7658,20 +7659,6 @@
   "g": [
    "Role-playing (RPG)",
    "Simulator"
-  ]
- },
- {
-  "name": "Breezevale",
-  "alias": [],
-  "pop": 0,
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Role-playing (RPG)",
-   "Simulator",
-   "Adventure",
-   "Indie"
   ]
  },
  {
@@ -9372,26 +9359,6 @@
   ]
  },
  {
-  "name": "Catch Flex",
-  "alias": [
-   "Catch Flex.exe",
-   "catchflex",
-   "CF",
-   "Catch Flex: Quest"
-  ],
-  "pop": 0,
-  "p": [
-   "pc",
-   "console"
-  ],
-  "g": [
-   "Music",
-   "Sport",
-   "Indie",
-   "Arcade"
-  ]
- },
- {
   "name": "Category 6",
   "alias": [],
   "pop": 0,
@@ -9833,22 +9800,6 @@
   ],
   "g": [
    "Simulator",
-   "Indie"
-  ]
- },
- {
-  "name": "Cheated",
-  "alias": [
-   "CHEATED"
-  ],
-  "pop": 0,
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Simulator",
-   "Strategy",
-   "Adventure",
    "Indie"
   ]
  },
@@ -10871,22 +10822,6 @@
   ],
   "g": [
    "Platform",
-   "Indie"
-  ]
- },
- {
-  "name": "Cloud Sculptor",
-  "alias": [
-   "Sculptor.exe"
-  ],
-  "pop": 0,
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Puzzle",
-   "Simulator",
-   "Adventure",
    "Indie"
   ]
  },
@@ -13411,6 +13346,18 @@
   ]
  },
  {
+  "name": "DR Dominoes",
+  "alias": [],
+  "pop": 0,
+  "p": [
+   "pc"
+  ],
+  "g": [
+   "Simulator",
+   "Card & Board Game"
+  ]
+ },
+ {
   "name": "Dadum The Dice",
   "alias": [],
   "pop": 0,
@@ -15678,17 +15625,6 @@
   ]
  },
  {
-  "name": "Dirty Work",
-  "alias": [],
-  "pop": 0,
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Shooter"
-  ]
- },
- {
   "name": "Disaster Response Force",
   "alias": [],
   "pop": 0,
@@ -15965,6 +15901,11 @@
   "pop": 0,
   "p": [
    "console"
+  ],
+  "g": [
+   "Platform",
+   "Adventure",
+   "Arcade"
   ]
  },
  {
@@ -21177,20 +21118,6 @@
   ]
  },
  {
-  "name": "Flavors of Spain",
-  "alias": [
-   "SaborDeEspana.exe"
-  ],
-  "pop": 0,
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Strategy",
-   "Indie"
-  ]
- },
- {
   "name": "Fleet Hunters",
   "alias": [
    "FleetHunters.exe"
@@ -22761,6 +22688,17 @@
   ]
  },
  {
+  "name": "GON: God Of Nothing",
+  "alias": [],
+  "pop": 0,
+  "p": [
+   "pc"
+  ],
+  "g": [
+   "Indie"
+  ]
+ },
+ {
   "name": "GT Rivals",
   "alias": [],
   "pop": 0,
@@ -22996,6 +22934,18 @@
   ],
   "g": [
    "Simulator"
+  ]
+ },
+ {
+  "name": "Game of Mods",
+  "alias": [],
+  "pop": 0,
+  "p": [
+   "pc"
+  ],
+  "g": [
+   "Adventure",
+   "Indie"
   ]
  },
  {
@@ -28066,6 +28016,14 @@
   ]
  },
  {
+  "name": "Ikebana Dones and the Great Adventure",
+  "alias": [],
+  "pop": 0,
+  "p": [
+   "console"
+  ]
+ },
+ {
   "name": "Ikuma: The Frozen Compass",
   "alias": [
    "IKUMA - The Frozen Compass"
@@ -30492,19 +30450,6 @@
   ]
  },
  {
-  "name": "Kitman",
-  "alias": [],
-  "pop": 0,
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Simulator",
-   "Sport",
-   "Indie"
-  ]
- },
- {
   "name": "Kitsune: The Journey of Adashino",
   "alias": [],
   "pop": 0,
@@ -31663,6 +31608,19 @@
   ],
   "g": [
    "Adventure"
+  ]
+ },
+ {
+  "name": "Let Me Die",
+  "alias": [],
+  "pop": 0,
+  "p": [
+   "pc"
+  ],
+  "g": [
+   "Strategy",
+   "Indie",
+   "Arcade"
   ]
  },
  {
@@ -33030,18 +32988,6 @@
    "Real Time Strategy (RTS)",
    "Role-playing (RPG)",
    "Simulator",
-   "Adventure",
-   "Indie"
-  ]
- },
- {
-  "name": "Lull: Rest After Crying",
-  "alias": [],
-  "pop": 0,
-  "p": [
-   "pc"
-  ],
-  "g": [
    "Adventure",
    "Indie"
   ]
@@ -35816,6 +35762,20 @@
   ]
  },
  {
+  "name": "Model Human",
+  "alias": [
+   "Human Model"
+  ],
+  "pop": 0,
+  "p": [
+   "pc"
+  ],
+  "g": [
+   "Point-and-click",
+   "Adventure"
+  ]
+ },
+ {
   "name": "Model Kit Shop Simulator",
   "alias": [
    "Model Kit Shop Simulator.exe"
@@ -36000,7 +35960,9 @@
  {
   "name": "Monowave",
   "alias": [
-   "MONOWAVE"
+   "MONOWAVE",
+   "莫诺微步 MONOWAVE",
+   "莫諾微步 MONOWAVE"
   ],
   "pop": 0,
   "p": [
@@ -37680,6 +37642,18 @@
   ]
  },
  {
+  "name": "Night Alley",
+  "alias": [],
+  "pop": 0,
+  "p": [
+   "pc"
+  ],
+  "g": [
+   "Adventure",
+   "Indie"
+  ]
+ },
+ {
   "name": "Night Blood W: Cutthroat Wolf",
   "alias": [
    "夜血W：割喉之狼"
@@ -37841,7 +37815,7 @@
  {
   "name": "Nighthawks",
   "alias": [],
-  "pop": 0,
+  "pop": 1,
   "p": [
    "pc"
   ],
@@ -39387,7 +39361,7 @@
   "alias": [
    "OnimushaWotS.exe"
   ],
-  "pop": 12,
+  "pop": 13,
   "p": [
    "pc",
    "console"
@@ -39626,12 +39600,11 @@
   "alias": [],
   "pop": 0,
   "p": [
-   "pc",
-   "console"
+   "pc"
   ],
   "g": [
-   "Platform",
-   "Adventure"
+   "Adventure",
+   "Indie"
   ]
  },
  {
@@ -42280,7 +42253,7 @@
   ]
  },
  {
-  "name": "Playdate: Season 3",
+  "name": "Playdate Season 3",
   "alias": [
    "Playdate Season Three"
   ],
@@ -42367,6 +42340,14 @@
    "Strategy",
    "Indie",
    "Arcade"
+  ]
+ },
+ {
+  "name": "Ploop",
+  "alias": [],
+  "pop": 0,
+  "p": [
+   "console"
   ]
  },
  {
@@ -46729,7 +46710,7 @@
  {
   "name": "RuneScape: Dragonwilds",
   "alias": [],
-  "pop": 8,
+  "pop": 9,
   "p": [
    "pc",
    "console"
@@ -47034,20 +47015,6 @@
   ],
   "g": [
    "Adventure",
-   "Indie"
-  ]
- },
- {
-  "name": "Samurai Beat Demon",
-  "alias": [
-   "Samurai Beat Demons",
-   "Samurai Beat Demons.exe"
-  ],
-  "pop": 0,
-  "p": [
-   "pc"
-  ],
-  "g": [
    "Indie"
   ]
  },
@@ -47559,6 +47526,18 @@
   "g": [
    "Role-playing (RPG)",
    "Adventure",
+   "Indie"
+  ]
+ },
+ {
+  "name": "Seconds Until You Die",
+  "alias": [],
+  "pop": 0,
+  "p": [
+   "pc"
+  ],
+  "g": [
+   "Simulator",
    "Indie"
   ]
  },
@@ -48392,20 +48371,6 @@
   ]
  },
  {
-  "name": "Shibogami",
-  "alias": [
-   "Shibōgami"
-  ],
-  "pop": 0,
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Platform",
-   "Adventure"
-  ]
- },
- {
   "name": "Shibuya Sushi Master",
   "alias": [],
   "pop": 0,
@@ -48767,6 +48732,21 @@
    "Sport",
    "Indie",
    "Arcade"
+  ]
+ },
+ {
+  "name": "Siege of Akanor",
+  "alias": [],
+  "pop": 0,
+  "p": [
+   "pc"
+  ],
+  "g": [
+   "Strategy",
+   "Tactical",
+   "Hack and slash/Beat 'em up",
+   "Adventure",
+   "Indie"
   ]
  },
  {
@@ -49144,18 +49124,6 @@
    "Simulator",
    "Sport",
    "Indie"
-  ]
- },
- {
-  "name": "SkullBall",
-  "alias": [],
-  "pop": 0,
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Shooter",
-   "Arcade"
   ]
  },
  {
@@ -51574,7 +51542,7 @@
   "alias": [
    "SWZeroCompany.exe"
   ],
-  "pop": 10,
+  "pop": 12,
   "p": [
    "pc",
    "console"
@@ -54415,18 +54383,6 @@
   ]
  },
  {
-  "name": "Tenshi no Bon Kaeri",
-  "alias": [],
-  "pop": 0,
-  "p": [
-   "console"
-  ],
-  "g": [
-   "Indie",
-   "Visual Novel"
-  ]
- },
- {
   "name": "Terminal Error",
   "alias": [
    "TerminalError.exe"
@@ -55872,6 +55828,7 @@
   "alias": [],
   "pop": 0,
   "p": [
+   "pc",
    "console"
   ],
   "g": [
@@ -57244,7 +57201,7 @@
   "alias": [
    "TheSinkingCity2.exe"
   ],
-  "pop": 10,
+  "pop": 11,
   "p": [
    "pc",
    "console"
@@ -59435,6 +59392,18 @@
   ],
   "g": [
    "Adventure"
+  ]
+ },
+ {
+  "name": "Trafficity",
+  "alias": [],
+  "pop": 0,
+  "p": [
+   "pc"
+  ],
+  "g": [
+   "Simulator",
+   "Indie"
   ]
  },
  {
@@ -62251,6 +62220,16 @@
   ]
  },
  {
+  "name": "Wardogs: Season 2",
+  "alias": [
+   "WARDOGS: Season 2"
+  ],
+  "pop": 0,
+  "p": [
+   "pc"
+  ]
+ },
+ {
   "name": "Wardogs: Supporter Edition",
   "alias": [
    "WARDOGS - Supporter Edition"
@@ -62707,7 +62686,7 @@
  {
   "name": "Well Dweller",
   "alias": [],
-  "pop": 0,
+  "pop": 1,
   "p": [
    "pc",
    "console"
@@ -63438,6 +63417,20 @@
   ],
   "g": [
    "Simulator"
+  ]
+ },
+ {
+  "name": "Witch Please!",
+  "alias": [],
+  "pop": 0,
+  "p": [
+   "pc"
+  ],
+  "g": [
+   "Simulator",
+   "Strategy",
+   "Indie",
+   "Visual Novel"
   ]
  },
  {
