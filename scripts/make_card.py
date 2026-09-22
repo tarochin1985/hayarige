@@ -509,6 +509,67 @@ def build(data, theme="dark"):
         "note": note, "url": site_url(), "fit": FIT,
     }
 
+
+# ---------------------------------------------------------------- 投稿文
+# 画像と一緒に、Xに貼る文もここで作る。
+# 毎朝これを手で打ち直していると、日付やかぎかっこを取り違える。
+# 中身は全部 site/data.json に入っているので、機械で組み立てたほうが確実。
+
+def x_weight(text):
+    """Xの文字数の目安。日本語と絵文字は2文字ぶん、URLは長さに関係なく
+    23文字ぶんで数える。上限は280。厳密な仕様の近似なので目安として使う。"""
+    t = re.sub(r"https?://\S+", "x" * 23, text)
+    return sum(1 if ord(c) < 0x1100 else 2 for c in t)
+
+
+def tweet_text(data):
+    """Xに貼る投稿文を組み立てる。
+    （2026-09-22 たろちんさんと決めた形。変えるときは本人に確認すること）
+
+        今日の #ハヤリゲー（9/21）🎮
+
+        注目ゲームは『妹に運転を教える』✨
+
+        毎回ちがう顔ぶれが、同じ助手席に座ってる。
+        https://hayarige.com
+
+    コラムが無い日は None を返す。"""
+    col = data.get("column") or {}
+    game = str(col.get("game") or "").strip()
+    head = str(col.get("headline") or "").strip()
+    d = str(data.get("date") or "")
+    if not game or not head or len(d) < 10:
+        return None
+    md = f"{int(d[5:7])}/{int(d[8:10])}"      # 09/21 ではなく 9/21
+    return (f"今日の #ハヤリゲー（{md}）🎮\n"
+            f"\n"
+            f"注目ゲームは『{game}』✨\n"
+            f"\n"
+            f"{head}\n"
+            f"https://{site_url()}")
+
+
+def write_tweet(data):
+    """投稿文を site/tweet.txt に置く。画像と同じように公開URLからも
+    取れるので、スマホで開いてそのままコピーできる。
+    コラムが無い日は、前の日の文が残らないように消す。"""
+    path = SITE / "tweet.txt"
+    text = tweet_text(data)
+    if not text:
+        path.unlink(missing_ok=True)
+        log("今日のコラムがまだ無いので、投稿文は作りませんでした。")
+        return None
+    path.write_text(text + "\n", encoding="utf-8")
+    n = x_weight(text)
+    log(f"投稿文を書き出しました: {path}（約{n}文字ぶん／上限280）")
+    if n > 280:
+        log("⚠️ Xの上限を超えています。見出しを短くするか、投稿を分けてください。")
+    log("---- ここから投稿文 ----")
+    log(text)
+    log("---- ここまで ----")
+    return text
+
+
 def main():
     data = read_json(SITE / "data.json", None)
     if not data:
@@ -528,6 +589,12 @@ def main():
     out = SITE / f"{out_name}.html"
     out.write_text(build(data, theme), encoding="utf-8")
     log(f"カードを書き出しました: {out}（テーマ {theme}）")
+
+    # 投稿文は画像より先に作る。画像は書体やサムネイルが取れないと失敗するが、
+    # 文のほうは data.json だけで作れるので、失敗する日でも渡せる。
+    # 見本を作っているだけのとき（--out=）は本番の文を上書きしない。
+    if out_name == "card":
+        write_tweet(data)
 
     if "--png" in sys.argv:
         from playwright.sync_api import sync_playwright

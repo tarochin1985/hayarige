@@ -23,6 +23,10 @@
   反映は次の更新から。すぐ見たいときは
   Actions →「3. 毎日の更新」→「Run workflow」。
 
+  この更新で、サイトへの反映と同時に次の2つも作られます。
+    https://hayarige.com/card.png    … Xに貼る画像
+    https://hayarige.com/tweet.txt   … Xに貼る文（開いてそのままコピー）
+
 
 ■ 書式
 

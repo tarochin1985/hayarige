@@ -1421,6 +1421,14 @@ def main():
         rb = SITE / "robots.txt"
         txt = rb.read_text(encoding="utf-8") if rb.exists() else "User-agent: *\nAllow: /\n"
         keep = [ln for ln in txt.splitlines() if not ln.startswith("Sitemap:")]
+        # tweet.txt はXに貼る文の置き場。読み物ではないので検索には出さない。
+        if not any(ln.strip() == "Disallow: /tweet.txt" for ln in keep):
+            for i, ln in enumerate(keep):
+                if ln.startswith("Disallow: /admin/"):
+                    keep.insert(i + 1, "Disallow: /tweet.txt")
+                    break
+            else:
+                keep.append("Disallow: /tweet.txt")
         rb.write_text("\n".join(keep).rstrip()
                       + f"\n\nSitemap: {site_url}/sitemap.xml\n", encoding="utf-8")
         log(f"sitemap.xml を書き出しました（{len(urls)} ページ）")
