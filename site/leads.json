@@ -1,6 +1,6 @@
 {
  "date": "2026-09-23",
- "generated": "2026-09-23 07:13",
+ "generated": "2026-09-23 11:16",
  "leads": {
   "events": [
    {
@@ -14,12 +14,14 @@
      "伏見ガク【にじさんじ所属】",
      "加賀美 ハヤト/Hayato Kagami",
      "壱百満天原サロメ / Hyakumantenbara Salome",
-     "星川サラ / Sara Hoshikawa"
+     "星川サラ / Sara Hoshikawa",
+     "鏑木ろこ / Kaburaki Roco【にじさんじ】"
     ]
    },
    {
     "tag": "#マイクラ肝試し2026",
     "channels": [
+     "Watame Ch. 角巻わため",
      "えおちゃんねる！",
      "おんりー / ドズル社",
      "小廻こま / Komawari Koma",
@@ -36,16 +38,8 @@
      "こじちゃんねる【小嶋明梨】",
      "ジョアだよ",
      "儚視まちこVTuber Hakanashi Matiko",
+     "恋因ロス KoinRosu",
      "星埜きぃ -Key Hoshino-"
-    ]
-   },
-   {
-    "tag": "#マイクラ",
-    "channels": [
-     "sa-nigo",
-     "いのちくん",
-     "まこりんとゲーム",
-     "リベル"
     ]
    },
    {
@@ -65,19 +59,11 @@
     ]
    },
    {
-    "tag": "#縦型配信",
+    "tag": "#マイクラ",
     "channels": [
-     "vii / ビー",
-     "かおりんごー",
-     "ミロ"
-    ]
-   },
-   {
-    "tag": "#ポケモン",
-    "channels": [
-     "でみあ@マイナーポケモン使い",
-     "蛇目 欠番@Vtuber",
-     "鈴ノ時みぃ@新人Vtuber"
+     "sa-nigo",
+     "いのちくん",
+     "まこりんとゲーム"
     ]
    }
   ],
@@ -85,18 +71,23 @@
   "wide": [
    {
     "game": "Apex Legends",
-    "channels": 49,
-    "videos": 53
+    "channels": 47,
+    "videos": 54
    },
    {
     "game": "Minecraft",
-    "channels": 39,
-    "videos": 40
+    "channels": 42,
+    "videos": 42
    },
    {
     "game": "ストリートファイター6",
-    "channels": 36,
+    "channels": 35,
     "videos": 40
+   },
+   {
+    "game": "Silent Hill: Townfall",
+    "channels": 24,
+    "videos": 28
    },
    {
     "game": "トルネコの大冒険 ちょっとステキなリマスター",
@@ -104,19 +95,14 @@
     "videos": 22
    },
    {
-    "game": "Silent Hill: Townfall",
-    "channels": 17,
-    "videos": 20
+    "game": "遊戯王 マスターデュエル",
+    "channels": 13,
+    "videos": 15
    },
    {
     "game": "実況パワフルプロ野球2026",
-    "channels": 15,
-    "videos": 16
-   },
-   {
-    "game": "遊戯王 マスターデュエル",
-    "channels": 12,
-    "videos": 14
+    "channels": 14,
+    "videos": 15
    },
    {
     "game": "鬼武者 Way of the Sword",
@@ -131,11 +117,16 @@
    "tag": "にじ遊戯王祭2026",
    "game": "Yu-Gi-Oh! Master Duel",
    "evidence": 3,
-   "added": 9,
-   "channels": 9
+   "added": 11,
+   "channels": 10
   }
  ],
  "recent_columns": [
+  {
+   "date": "2026-09-23",
+   "game": "トルネコの大冒険 ちょっとステキなリマスター",
+   "headline": "全ロスしました、という題ばかりが並ぶ朝"
+  },
   {
    "date": "2026-09-22",
    "game": "Silent Hill: Townfall",
@@ -200,11 +191,6 @@
    "date": "2026-09-10",
    "game": "雀魂",
    "headline": "牌を握る前に、まず自己紹介から"
-  },
-  {
-   "date": "2026-09-09",
-   "game": "ゼルダの伝説 時のオカリナ",
-   "headline": "28年ぶりの帰還、オカリナは鼻歌でも吹ける"
   }
  ]
 }
