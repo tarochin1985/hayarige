@@ -530,8 +530,12 @@ def tweet_text(data):
 
         注目ゲームは『妹に運転を教える』✨
 
-        毎回ちがう顔ぶれが、同じ助手席に座ってる。
+        ★毎回ちがう顔ぶれが、同じ助手席に座ってる。
         https://hayarige.com
+
+    見出しの頭の ★ は、ここで足す（2026-09-23 追加）。
+    コラムのJSONには入れない。見出しはサイトと画像にも同じものが出るので、
+    JSONに★を書くと3か所すべてに出てしまう。★が欲しいのは投稿文だけ。
 
     コラムが無い日は None を返す。"""
     col = data.get("column") or {}
@@ -540,6 +544,8 @@ def tweet_text(data):
     d = str(data.get("date") or "")
     if not game or not head or len(d) < 10:
         return None
+    if not head.startswith("★"):           # すでに付いていたら重ねない
+        head = "★" + head
     md = f"{int(d[5:7])}/{int(d[8:10])}"      # 09/21 ではなく 9/21
     return (f"今日の #ハヤリゲー（{md}）🎮\n"
             f"\n"
