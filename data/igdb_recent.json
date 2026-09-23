@@ -484,7 +484,9 @@
  },
  {
   "name": "4096 Space Traders Era",
-  "alias": [],
+  "alias": [
+   "4096 Space Traders Era.exe"
+  ],
   "pop": 0,
   "p": [
    "pc",
@@ -19338,17 +19340,6 @@
   ]
  },
  {
-  "name": "Every Child of Hameln",
-  "alias": [],
-  "pop": 0,
-  "p": [
-   "console"
-  ],
-  "g": [
-   "Indie"
-  ]
- },
- {
   "name": "Every Step Has a Sound",
   "alias": [
    "E_Step_Has_a_Sound.exe"
@@ -19950,6 +19941,23 @@
    "Adventure",
    "Indie",
    "Visual Novel"
+  ]
+ },
+ {
+  "name": "Fallen Tear: The Ascension",
+  "alias": [
+   "FallenTear.exe"
+  ],
+  "pop": 0,
+  "p": [
+   "pc",
+   "console"
+  ],
+  "g": [
+   "Platform",
+   "Role-playing (RPG)",
+   "Adventure",
+   "Indie"
   ]
  },
  {
@@ -22145,7 +22153,9 @@
  },
  {
   "name": "Friendly Steps",
-  "alias": [],
+  "alias": [
+   "Friendly Steps.exe"
+  ],
   "pop": 0,
   "p": [
    "pc"
@@ -22549,6 +22559,18 @@
    "pc"
   ],
   "g": [
+   "Indie"
+  ]
+ },
+ {
+  "name": "Furyball: Rogue Revenge",
+  "alias": [],
+  "pop": 0,
+  "p": [
+   "pc"
+  ],
+  "g": [
+   "Sport",
    "Indie"
   ]
  },
@@ -23107,17 +23129,6 @@
   ],
   "g": [
    "Simulator",
-   "Indie"
-  ]
- },
- {
-  "name": "Gates and Violet",
-  "alias": [],
-  "pop": 0,
-  "p": [
-   "console"
-  ],
-  "g": [
    "Indie"
   ]
  },
@@ -24091,7 +24102,8 @@
    "console"
   ],
   "g": [
-   "Role-playing (RPG)"
+   "Role-playing (RPG)",
+   "Adventure"
   ]
  },
  {
@@ -26132,13 +26144,16 @@
  },
  {
   "name": "Heroes of Lust and Magic",
-  "alias": [],
+  "alias": [
+   "Heroes of Lust and Magic.exe"
+  ],
   "pop": 0,
   "p": [
    "pc"
   ],
   "g": [
-   "Role-playing (RPG)"
+   "Role-playing (RPG)",
+   "Strategy"
   ]
  },
  {
@@ -33137,6 +33152,21 @@
   ]
  },
  {
+  "name": "Mad King Redemption",
+  "alias": [
+   "Mad King Redemption.exe"
+  ],
+  "pop": 0,
+  "p": [
+   "pc",
+   "console"
+  ],
+  "g": [
+   "Adventure",
+   "Indie"
+  ]
+ },
+ {
   "name": "Mad Mojo",
   "alias": [
    "Mad MOJO"
@@ -37709,7 +37739,9 @@
  },
  {
   "name": "Nighthawks",
-  "alias": [],
+  "alias": [
+   "nighthawks.exe"
+  ],
   "pop": 1,
   "p": [
    "pc"
@@ -44826,6 +44858,19 @@
   ]
  },
  {
+  "name": "Reanimal: The Expanded World - Chapter 2",
+  "alias": [],
+  "pop": 0,
+  "p": [
+   "pc",
+   "console"
+  ],
+  "g": [
+   "Puzzle",
+   "Adventure"
+  ]
+ },
+ {
   "name": "Rebirth of Arcadia",
   "alias": [],
   "pop": 0,
@@ -48755,7 +48800,7 @@
    "SILENT HILL: townfall",
    "Cannula"
   ],
-  "pop": 2,
+  "pop": 3,
   "p": [
    "pc",
    "console"
@@ -49024,7 +49069,9 @@
  },
  {
   "name": "Sky Scaffold",
-  "alias": [],
+  "alias": [
+   "SkyScaffold.exe"
+  ],
   "pop": 0,
   "p": [
    "pc"
@@ -52425,7 +52472,9 @@
  },
  {
   "name": "Sublight",
-  "alias": [],
+  "alias": [
+   "Sublight.exe"
+  ],
   "pop": 0,
   "p": [
    "pc"
@@ -59093,19 +59142,6 @@
   ]
  },
  {
-  "name": "Tower of Scherbenmark",
-  "alias": [
-   "tower-of-scherbenmark.exe"
-  ],
-  "pop": 0,
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Role-playing (RPG)"
-  ]
- },
- {
   "name": "Tower of Tears",
   "alias": [],
   "pop": 0,
@@ -60947,7 +60983,7 @@
    "瓦爾海姆",
    "英灵神殿"
   ],
-  "pop": 300,
+  "pop": 301,
   "p": [
    "pc",
    "console"
@@ -63145,20 +63181,6 @@
   ],
   "g": [
    "Adventure",
-   "Indie"
-  ]
- },
- {
-  "name": "Wilderlocke",
-  "alias": [
-   "WILDERLOCKE"
-  ],
-  "pop": 0,
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Strategy",
    "Indie"
   ]
  },
