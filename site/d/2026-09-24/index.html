@@ -1,0 +1,742 @@
+<!doctype html>
+<html lang="ja"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ハヤリゲー ｜ VTuber・ゲーム実況者がいま配信しているゲーム ランキング</title>
+<meta name="description" content="VTuber・ゲーム実況者のYouTube配信を毎日数えて、いま配信が増えているゲームを出しています。「次に流行るゲーム」探しに。">
+<meta property="og:title" content="ハヤリゲー ｜「次に流行るゲーム」がわかるサイト">
+<meta property="og:description" content="YouTubeのゲーム配信を毎日数えて、いま増えているゲームを出しています。">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="ハヤリゲー">
+<meta property="og:locale" content="ja_JP">
+<!-- XやDiscordに貼ったときのカード。画像とURLは絶対パスでないと出ない。
+     https://hayarige.com / https://hayarige.com/d/2026-09-24/ は build_site が data/site_config.json の
+     site_url から埋める。独自ドメインに移すときは設定を1行変えるだけでよい。 -->
+<meta property="og:url" content="https://hayarige.com/d/2026-09-24/">
+<meta property="og:image" content="https://hayarige.com/ogp.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="ハヤリゲー ｜「次に流行るゲーム」がわかるサイト">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="ハヤリゲー ｜「次に流行るゲーム」がわかるサイト">
+<meta name="twitter:description" content="VTuber・ゲーム実況者がいま配信しているゲームを毎日自動集計。">
+<meta name="twitter:image" content="https://hayarige.com/ogp.png">
+<link rel="canonical" href="https://hayarige.com/d/2026-09-24/">
+<link rel="icon" href="../../icon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="../../icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+New:wght@500;700;900&family=Noto+Sans+JP:wght@400;500;700&family=Roboto+Mono:wght@400;500;700&display=swap">
+<style>
+:root{
+  --ground:#F3F5F4;--card:#FFF;--card-2:#F8FAF9;--line:#DBE4E2;--line-soft:#EAF0EE;
+  --ink:#111B1D;--ink-2:#3E5457;--ink-3:#6F8688;
+  --accent:#0B6B70;--accent-2:#0E8B90;--wash:#DFEFEE;
+  --hot:#B4551C;--hot-wash:#FAEBDD;--down:#5C7683;
+  --tipbg:#1D2C2E;--tipfg:#EFF5F4;--r:12px;
+  --sh:0 1px 2px rgba(17,27,29,.05),0 10px 30px -22px rgba(17,27,29,.4);
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --ground:#0D1415;--card:#141E1F;--card-2:#182324;--line:#27383A;--line-soft:#1E2B2C;
+  --ink:#E8EFEE;--ink-2:#A2B7B8;--ink-3:#7C9294;
+  --accent:#48BEC2;--accent-2:#6BD2D5;--wash:#102C2E;
+  --hot:#E8975C;--hot-wash:#2C2017;--down:#7E9DAA;
+  --tipbg:#E8EFEE;--tipfg:#101A1B;
+  --sh:0 1px 2px rgba(0,0,0,.45),0 12px 34px -24px #000;}}
+:root[data-theme="dark"]{
+  --ground:#0D1415;--card:#141E1F;--card-2:#182324;--line:#27383A;--line-soft:#1E2B2C;
+  --ink:#E8EFEE;--ink-2:#A2B7B8;--ink-3:#7C9294;
+  --accent:#48BEC2;--accent-2:#6BD2D5;--wash:#102C2E;
+  --hot:#E8975C;--hot-wash:#2C2017;--down:#7E9DAA;
+  --tipbg:#E8EFEE;--tipfg:#101A1B;
+  --sh:0 1px 2px rgba(0,0,0,.45),0 12px 34px -24px #000;}
+*{box-sizing:border-box}
+body{margin:0;background:var(--ground);color:var(--ink);font-size:15px;line-height:1.75;
+ font-family:"Noto Sans JP","Hiragino Kaku Gothic ProN",system-ui,sans-serif;-webkit-font-smoothing:antialiased}
+.wrap{max-width:940px;margin:0 auto;padding:24px 18px 72px;display:flex;flex-direction:column;gap:32px}
+h1,h2{font-family:"Zen Kaku Gothic New","Noto Sans JP",sans-serif;margin:0;text-wrap:balance}
+a{color:inherit}
+.mono{font-family:"Roboto Mono",monospace;font-variant-numeric:tabular-nums}
+.top{display:flex;flex-wrap:wrap;align-items:center;gap:14px 22px}
+.logo{display:flex;align-items:center;gap:11px}
+.mark{width:46px;height:46px;flex:none;object-fit:contain}
+.logo h1{font-size:27px;font-weight:900;line-height:1}
+.logo .tag{font-size:12.5px;font-weight:700;color:var(--ink-2);margin-top:4px;line-height:1.5}
+.logo .tag2{display:block;font-size:11.5px;font-weight:400;color:var(--ink-3);margin-top:1px}
+.when{margin-left:auto;font-family:"Roboto Mono",monospace;font-size:11.5px;color:var(--ink-3);text-align:right;line-height:1.5}
+.when b{display:block;font-size:14px;color:var(--ink)}
+.head{display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin-bottom:13px}
+.head h2{font-size:20px;font-weight:900;display:flex;align-items:center;gap:8px}
+.head .note{font-size:12.5px;color:var(--ink-3)}
+.ico{width:19px;height:19px;flex:none}
+.hot-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(248px,1fr));gap:13px}
+.hotcard{background:var(--card);border:1px solid var(--line);border-radius:13px;
+ box-shadow:var(--sh);display:flex;flex-direction:column;position:relative;overflow:hidden}
+.hotcard::before{content:"";position:absolute;inset:0 auto auto 0;width:3px;height:100%;
+ background:var(--hot);z-index:2}
+/* カードの上半分。押すと配信一覧が開く */
+.hotcard .hbtn{display:block;width:100%;text-align:left;font:inherit;color:inherit;
+ background:none;border:0;padding:0;cursor:pointer}
+.hotcard .hth{position:relative;display:block;background:var(--line-soft)}
+.hotcard .hth img{width:100%;aspect-ratio:16/9;object-fit:cover;display:block}
+.hotcard .hth .ph{display:block;aspect-ratio:16/9}
+.hotcard .mul{position:absolute;left:10px;top:10px;display:flex;align-items:baseline;gap:3px;
+ background:var(--hot);color:#fff;border-radius:9px;padding:4px 9px 5px;
+ font-family:"Roboto Mono",monospace;font-weight:700;font-size:19px;line-height:1;
+ box-shadow:0 2px 8px rgba(0,0,0,.22)}
+.hotcard .mul i{font-style:normal;font-size:11px;font-weight:700;opacity:.9}
+.hotcard .open{position:absolute;right:9px;bottom:9px;display:flex;align-items:center;gap:4px;
+ font-size:11px;font-weight:700;color:#fff;background:rgba(11,27,29,.72);border-radius:20px;padding:4px 10px}
+.hotcard .hbody{padding:11px 13px 6px;display:flex;flex-direction:column;gap:7px}
+.hotcard:hover{border-color:var(--hot)}
+.hotcard .n{font-family:"Zen Kaku Gothic New",sans-serif;font-weight:700;font-size:15.5px;line-height:1.35}
+.hotcard .f{font-size:11.5px;color:var(--ink-3);display:flex;justify-content:space-between;gap:8px}
+.hotcard .hbuy{padding:0 13px 13px;gap:6px}
+.hotcard .hbuy a{font-size:11px;padding:5px 10px}
+/* 急上昇カードの配信一覧は、カード群のすぐ下にまとめて置く */
+/* 急上昇のパネルはグリッドの中に入る。押した行の下に、横いっぱいで出す */
+.hot-grid>.panel{grid-column:1/-1;border:1px solid var(--line);border-radius:11px;
+ border-left:3px solid var(--hot);background:var(--card-2)}
+/* スマホでは2列。1列だと6枚ぶん縦に伸びて、下のランキングまで遠くなる */
+@media(max-width:560px){
+  .hot-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:9px}
+  .hotcard .hbody{padding:9px 10px 5px;gap:5px}
+  .hotcard .n{font-size:13.5px}
+  .hotcard .mul{font-size:15px;padding:3px 7px 4px;left:7px;top:7px}
+  .hotcard .open{font-size:10px;padding:3px 8px;right:7px;bottom:7px}
+  .hotcard .delta{font-size:11px;gap:4px}
+  .hotcard .delta b{font-size:12px}
+  .hotcard .f{font-size:10.5px;flex-direction:column;gap:1px}
+  .hotcard .hbuy{padding:0 10px 10px;gap:5px}
+  .hotcard .hbuy a{font-size:10.5px;padding:4px 8px}
+}
+/* 倍率だけでは大きさが伝わらない（1件が3件でも ×3）。実数の変化も並べる */
+.hotcard .delta{display:flex;align-items:center;gap:7px;font-size:12px;color:var(--ink-3)}
+.hotcard .delta{flex-wrap:wrap}
+.hotcard .delta>span,.hotcard .delta>b{white-space:nowrap}
+.hotcard .delta svg{width:15px;height:15px;flex:none;color:var(--hot)}
+.hotcard .delta b{font-family:"Roboto Mono",monospace;font-size:13.5px;color:var(--ink);font-weight:700}
+footer .flink{color:var(--accent);font-weight:700;text-decoration:none;margin:0 9px}
+footer .flink:hover{text-decoration:underline}
+
+/* 説明ページ（/about/ など）の本文 */
+.doc{background:var(--card);border:1px solid var(--line);border-radius:var(--r);
+ box-shadow:var(--sh);padding:26px 30px 30px;max-width:100%}
+.doc h2{font-family:"Zen Kaku Gothic New",sans-serif;font-size:19px;font-weight:900;
+ margin:30px 0 10px;line-height:1.45}
+.doc h2:first-child{margin-top:0}
+.doc h1{font-family:"Zen Kaku Gothic New",sans-serif;font-size:24px;font-weight:900;
+ line-height:1.45;margin:0 0 14px;letter-spacing:-.01em}
+.doc .when{font-family:"Roboto Mono",monospace;font-size:12px;color:var(--ink-3);
+ font-weight:700;margin:0 0 7px}
+.doc ul li small{color:var(--ink-3);font-size:12px}
+.doc p{margin:0 0 13px;font-size:14.2px;line-height:1.95;color:var(--ink-2);max-width:62ch}
+.doc ul{margin:0 0 15px;padding-left:1.15em;color:var(--ink-2);font-size:14.2px;line-height:1.95}
+.doc li{margin-bottom:5px;max-width:60ch}
+.doc b,.doc strong{color:var(--ink);font-weight:700}
+.doc a{color:var(--accent);font-weight:700}
+.doc .lead{font-size:15px;color:var(--ink)}
+.doc dl{margin:0 0 15px;display:grid;grid-template-columns:auto 1fr;gap:6px 16px;
+ font-size:14.2px;line-height:1.9;color:var(--ink-2)}
+.doc dt{font-family:"Roboto Mono",monospace;font-size:12.5px;font-weight:700;color:var(--ink-3);
+ white-space:nowrap;padding-top:3px}
+.doc dd{margin:0}
+@media (max-width:560px){.doc{padding:20px 18px 24px}.doc dl{grid-template-columns:1fr;gap:2px 0}}
+
+.filters{display:flex;flex-wrap:wrap;gap:7px;margin-bottom:12px}
+.filters button{font:inherit;font-size:12px;font-weight:700;padding:5px 13px;border-radius:20px;cursor:pointer;
+ background:var(--card);color:var(--ink-2);border:1px solid var(--line)}
+.filters button[aria-pressed="true"]{background:var(--accent);border-color:var(--accent);color:#fff}
+.tw{overflow-x:auto;border:1px solid var(--line);border-radius:var(--r);background:var(--card);box-shadow:var(--sh)}
+table{border-collapse:collapse;width:100%;min-width:800px}
+thead th{font-family:"Roboto Mono",monospace;font-size:10px;letter-spacing:.1em;color:var(--ink-3);
+ font-weight:500;text-align:left;padding:10px 13px;border-bottom:1px solid var(--line);
+ background:var(--card-2);white-space:nowrap}
+tbody td{padding:9px 13px;border-bottom:1px solid var(--line-soft);vertical-align:middle}
+tbody tr.main{cursor:pointer}
+tbody tr.main:hover{background:var(--card-2)}
+.rk{font-family:"Roboto Mono",monospace;font-size:16px;font-weight:700;color:var(--ink-3);width:44px;text-align:center}
+tbody tr.main:nth-of-type(-n+6) .rk{color:var(--hot)}
+.gname{display:block;font-family:"Zen Kaku Gothic New",sans-serif;font-weight:700;font-size:14.5px;line-height:1.35}
+.chs{display:block;font-size:11px;color:var(--ink-3)}
+.ptcell{width:170px}
+.pt{display:flex;align-items:center;gap:9px}
+.pt .track{display:block;flex:1;height:8px;background:var(--line-soft);border-radius:4px;overflow:hidden}
+.pt .fill{display:block;height:100%;background:var(--accent);border-radius:0 4px 4px 0;min-width:3px}
+.pt .v{font-family:"Roboto Mono",monospace;font-size:14px;font-weight:700;width:38px;text-align:right}
+.brk{font-family:"Roboto Mono",monospace;font-size:11.5px;color:var(--ink-3);white-space:nowrap}
+.mv{font-family:"Roboto Mono",monospace;font-size:12px;font-weight:700;white-space:nowrap}
+.mv.up{color:var(--hot)}.mv.fl{color:var(--ink-3);font-weight:400}
+/* 購入ボタン。出典や配信者名のタグと同じ見た目だと埋もれてしまうので、
+   タグ（薄い枠）ではなく塗りのボタンにして、店ごとに色を変える。 */
+.buy{display:flex;gap:8px;flex-wrap:wrap}
+.buy a{display:inline-flex;align-items:center;gap:5px;text-decoration:none;
+ font-family:"Zen Kaku Gothic New",sans-serif;font-size:12px;font-weight:700;
+ border-radius:7px;padding:5px 11px;white-space:nowrap;
+ transition:transform .12s ease,box-shadow .12s ease,filter .12s ease}
+.buy a svg{width:13px;height:13px;flex:none}
+.buy a.st{background:var(--tipbg);color:#EAF3F2}
+.buy a.az{background:var(--hot);color:#fff}
+.buy a:hover{transform:translateY(-1px);filter:brightness(1.12);
+ box-shadow:0 4px 12px -5px rgba(17,27,29,.55)}
+tr.detail{display:none}
+tr.detail.open{display:table-row}
+tr.detail td{background:var(--card-2);padding:14px 18px}
+.streams{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:10px}
+.stream{display:flex;gap:10px;text-decoration:none;background:var(--card);border:1px solid var(--line);
+ border-radius:9px;padding:8px;align-items:flex-start}
+.stream:hover{border-color:var(--accent)}
+.stream img{width:72px;height:41px;object-fit:cover;border-radius:5px;flex:none;background:var(--line-soft)}
+.stream .t{font-size:11.5px;line-height:1.5;color:var(--ink);display:-webkit-box;-webkit-line-clamp:2;
+ -webkit-box-orient:vertical;overflow:hidden}
+.stream .c{font-size:10.5px;color:var(--ink-3)}
+.memo{background:var(--card);border:1px solid var(--line);border-radius:var(--r);box-shadow:var(--sh);overflow:hidden}
+.qrow{display:flex;gap:12px;padding:11px 15px;border-bottom:1px solid var(--line-soft);font-size:12.5px}
+.qrow:last-child{border-bottom:none}
+.qrow .t{flex:1;color:var(--ink-2);line-height:1.6}
+.qrow .g{flex:none;font-family:"Roboto Mono",monospace;font-size:10.5px;font-weight:700;
+ background:var(--wash);color:var(--accent);padding:3px 8px;border-radius:4px;white-space:nowrap}
+
+/* ---- 上位3件のカード ---- */
+.pick{position:relative}
+.pick.has-img{display:grid;grid-template-columns:1fr 268px;column-gap:22px;align-items:start}
+.ptxt{grid-column:1;grid-row:1;display:flex;flex-direction:column;gap:9px;min-width:0}
+.heroimg{grid-column:2;grid-row:1;width:100%;aspect-ratio:16/9;object-fit:cover;
+ border-radius:10px;background:var(--line-soft)}
+@media (max-width:760px){
+  .pick.has-img{grid-template-columns:1fr;gap:12px}
+  .heroimg{grid-column:1;grid-row:1}
+  .ptxt{grid-column:1;grid-row:2}}
+.cards{display:grid;grid-template-columns:1.35fr 1fr 1fr;gap:13px;margin-bottom:16px}
+.gcard{display:flex;flex-direction:column;background:var(--card);border:1px solid var(--line);
+ border-radius:13px;overflow:hidden;box-shadow:var(--sh);cursor:pointer;text-align:left;
+ font:inherit;color:inherit;padding:0;position:relative}
+.gcard:hover{border-color:var(--accent)}
+.gcard .th{position:relative;display:block;background:var(--line-soft)}
+.gcard .th img{width:100%;aspect-ratio:16/9;object-fit:cover;display:block}
+.gcard .rank{position:absolute;left:9px;top:9px;width:29px;height:29px;border-radius:9px;display:grid;
+ place-items:center;font-family:"Roboto Mono",monospace;font-weight:700;font-size:15px;color:#fff;
+ background:rgba(11,27,29,.72)}
+.gcard:first-child .rank{background:var(--hot)}
+.gcard .open{position:absolute;right:9px;bottom:9px;display:flex;align-items:center;gap:4px;
+ font-size:11px;font-weight:700;color:#fff;background:rgba(11,27,29,.72);border-radius:20px;padding:4px 10px}
+.gcard .gm{padding:11px 13px 13px;display:flex;flex-direction:column;gap:5px}
+.gcard .gm b{font-family:"Zen Kaku Gothic New",sans-serif;font-size:15.5px;font-weight:700;line-height:1.35}
+.gcard:first-child .gm b{font-size:19px}
+.nums{font-family:"Roboto Mono",monospace;font-size:11.5px;color:var(--ink-3)}
+.nums i{font-style:normal;font-weight:700;font-size:15px;color:var(--accent);margin-right:1px}
+.gcard .tp{font-size:11px;color:var(--ink-3);line-height:1.55;
+ display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+
+/* ---- 4位以下の一覧 ---- */
+.list{background:var(--card);border:1px solid var(--line);border-radius:13px;
+ box-shadow:var(--sh);overflow:hidden}
+.lrow{display:flex;align-items:center;gap:13px;width:100%;padding:9px 14px;
+ border-bottom:1px solid var(--line-soft);background:none;border-left:0;border-right:0;border-top:0;
+ font:inherit;color:inherit;cursor:pointer;text-align:left}
+.lrow:last-of-type{border-bottom:none}
+.lrow:hover{background:var(--card-2)}
+.lrow .rk2{font-family:"Roboto Mono",monospace;font-weight:700;font-size:14px;color:var(--ink-3);
+ width:26px;text-align:right;flex:none}
+.lrow img{width:62px;height:35px;object-fit:cover;border-radius:6px;flex:none;background:var(--line-soft)}
+.lrow .nm2{flex:1;min-width:0}
+.lrow .nm2 b{display:block;font-family:"Zen Kaku Gothic New",sans-serif;font-size:14px;font-weight:700;
+ line-height:1.35;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.lrow .nm2 span{display:block;font-family:"Roboto Mono",monospace;font-size:10.5px;color:var(--ink-3)}
+.lrow .bar2{flex:none;width:120px;height:7px;background:var(--line-soft);border-radius:4px;overflow:hidden}
+.lrow .bar2 i{display:block;height:100%;border-radius:4px;
+ background:linear-gradient(90deg,var(--accent),var(--accent-2))}
+.chev{flex:none;width:22px;height:22px;color:var(--ink-3);transition:transform .18s}
+.open-x .chev{transform:rotate(180deg);color:var(--accent)}
+/* 開いている急上昇カードを分かるようにする */
+.hotcard.on{border-color:var(--hot);box-shadow:0 0 0 1px var(--hot),var(--sh)}
+.hotcard.on .open{background:var(--hot)}
+.hotcard.on .open svg{transform:rotate(180deg)}
+.panel{display:none;padding:13px 15px;background:var(--card-2);border-bottom:1px solid var(--line-soft)}
+.panel.on{display:block}
+.hint{display:inline-flex;align-items:center;gap:5px;font-size:11.5px;font-weight:700;color:var(--accent);
+ background:var(--wash);border-radius:20px;padding:3px 11px}
+@media (max-width:720px){
+  .cards{grid-template-columns:1fr}
+  .gcard:first-child .gm b{font-size:17px}
+  .lrow .bar2{display:none}
+}
+footer{font-size:11.5px;color:var(--ink-3);text-align:center;border-top:1px solid var(--line);padding-top:20px;line-height:1.9}
+.nav{display:flex;flex-wrap:wrap;gap:8px;margin-left:auto;align-items:center}
+.nav a{font-size:12.5px;font-weight:700;text-decoration:none;color:var(--ink-2);
+ background:var(--card);border:1px solid var(--line);border-radius:20px;padding:5px 14px}
+.nav a:hover{border-color:var(--accent);color:var(--accent)}
+.banner{display:flex;gap:11px;align-items:center;background:var(--wash);
+ border:1px solid var(--line);border-radius:var(--r);padding:12px 16px;font-size:13.5px;color:var(--ink-2)}
+.banner b{color:var(--accent)}
+.pick{background:var(--card);border:1px solid var(--line);border-radius:var(--r);
+ box-shadow:var(--sh);padding:20px 22px;display:flex;flex-direction:column;gap:9px;
+ position:relative;overflow:hidden}
+.pick::before{content:"";position:absolute;inset:0 auto 0 0;width:3px;background:var(--hot)}
+.pick .badge{align-self:flex-start;font-family:"Roboto Mono",monospace;font-size:10px;
+ letter-spacing:.12em;font-weight:700;color:#fff;background:var(--hot);padding:4px 9px;border-radius:5px}
+.pick .g{font-family:"Zen Kaku Gothic New",sans-serif;font-weight:900;font-size:21px;line-height:1.3}
+.mt{display:flex;gap:14px;align-items:center;background:var(--card);border:1px solid var(--line);
+ border-radius:var(--r);box-shadow:var(--sh);padding:14px 16px;text-decoration:none;color:inherit;
+ position:relative;overflow:hidden}
+.mt::before{content:"";position:absolute;inset:0 auto 0 0;width:3px;background:var(--accent)}
+.mt img{width:104px;height:59px;object-fit:cover;border-radius:8px;flex:none;background:var(--card-2)}
+.mt .txt{min-width:0}
+.mt .kind{font-family:"Roboto Mono",monospace;font-size:10px;letter-spacing:.12em;font-weight:700;
+ color:#fff;background:var(--accent);padding:3px 8px;border-radius:5px;display:inline-block}
+.mt .tt{font-family:"Zen Kaku Gothic New",sans-serif;font-weight:900;font-size:16px;
+ line-height:1.45;margin-top:7px}
+.mt .sub{font-size:11.5px;color:var(--ink-3);margin-top:4px}
+.mt:hover .tt{color:var(--accent)}
+.doc .dochero{margin:0 0 16px}
+.doc .dochero img{width:100%;max-width:420px;border-radius:10px;border:1px solid var(--line);display:block}
+.doc .dochero figcaption{font-size:11.5px;color:var(--ink-3);margin-top:6px;font-weight:700}
+@media(max-width:560px){.mt img{width:84px;height:48px}.mt .tt{font-size:14.5px}}
+.pick .hl{font-family:"Zen Kaku Gothic New",sans-serif;font-weight:700;font-size:15px;
+ color:var(--hot);line-height:1.5;display:flex;gap:7px;align-items:flex-start}
+.pick .hl .pt{flex:none;width:1em;height:1em;margin-top:.24em;fill:currentColor}
+.pick p{margin:0;font-size:13.8px;line-height:1.95;color:var(--ink-2)}
+.pick .who{display:flex;flex-wrap:wrap;gap:6px;margin-top:2px}
+.pick .who span{font-size:11.5px;color:var(--ink-3);background:var(--card-2);
+ border:1px solid var(--line);border-radius:14px;padding:3px 10px}
+.pick .src{display:flex;flex-wrap:wrap;gap:7px;margin-top:4px}
+.pick .src a{font-size:11.5px;color:var(--ink-2);text-decoration:none;background:var(--card-2);
+ border:1px solid var(--line);border-radius:20px;padding:4px 11px}
+.pick .src a:hover{border-color:var(--accent);color:var(--accent)}
+.arch{display:grid;gap:11px}
+.day{display:flex;gap:16px;align-items:flex-start;background:var(--card);border:1px solid var(--line);
+ border-radius:var(--r);box-shadow:var(--sh);padding:15px 18px;text-decoration:none}
+.day:hover{border-color:var(--accent)}
+.day .dt{font-family:"Roboto Mono",monospace;font-weight:700;font-size:15px;flex:none;width:96px;color:var(--accent)}
+.day .bd{flex:1;min-width:0;display:block}
+.day .hl{display:block;font-family:"Zen Kaku Gothic New",sans-serif;font-weight:700;font-size:14.5px;line-height:1.5}
+.day .gs{display:block;font-size:12.5px;color:var(--ink-2);margin-top:3px}
+.day .st{display:block;font-family:"Roboto Mono",monospace;font-size:11px;color:var(--ink-3);margin-top:5px}
+.empty{background:var(--card);border:1px dashed var(--line);border-radius:var(--r);padding:26px;text-align:center;color:var(--ink-3)}
+@media (prefers-reduced-motion:reduce){*{transition:none!important}}
+</style><script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token": "5c1927ec521143aab2c201a7778accce"}'></script></head><body>
+
+<div class="wrap">
+  <header class="top">
+    <div class="logo">
+      <img class="mark" src="../../logo.svg" alt="" width="46" height="46">
+      <div><h1>ハヤリゲー</h1><div class="tag">「次に流行るゲーム」がわかるサイト<span class="tag2">YouTubeのゲーム配信 2,025チャンネルを毎日数えています</span></div></div>
+    </div>
+    <div class="when"><b id="s-date">–</b><span id="s-meta">–</span></div>
+  </header>
+
+  <nav class="nav" id="nav" style="margin-left:0"><a href="../../">今日のランキングへ</a><a href="../../matome/">週・月のまとめ</a><a href="../../archive/">これまでの記録</a><a href="../../about/">このサイトについて</a></nav>
+  <div id="banner"></div>
+  <!-- __SSR_ から始まる場所には、build_site が中身をHTMLとして書き込む。
+       JavaScriptが動く環境では、同じ内容で描き直される。
+       検索エンジンやJSを実行しない読み手には、この静的な中身が渡る。 -->
+  <section id="mt-sec" style="display:none">
+    <a class="mt" id="mt" href="../../"></a>
+  </section>
+
+  <section id="pick-sec" style="">
+    <div class="head"><h2 id="pick-title">この日の注目ゲーム</h2>
+      <span class="note" id="pick-note">この日、数字が動いた理由</span></div>
+    <article class="pick" id="pick"><img class="heroimg" src="https://i.ytimg.com/vi/IeCjC5ikbGE/mqdefault.jpg" alt="" loading="lazy"><div class="ptxt"><span class="badge">PICK UP</span><div class="g">トルネコの大冒険 ちょっとステキなリマスター</div><div class="hl"><svg class="pt" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.6l2.9 6.2 6.8.8-5 4.6 1.4 6.7L12 17.5 5.9 20.9l1.4-6.7-5-4.6 6.8-.8z"/></svg>全ロスしました、という題ばかりが並ぶ日</div><p>並んでいる配信の題名は、うまくいったほうの話ではない。ぼんじゅうるは「全ロスしたから配信するわ」、蒼宮よづりは「25時間かけた装備🔥爆散🔥」と付けた。同じ日に、戌神ころねは「99階チャレンジ」、兎田ぺこらは「もっと不思議のダンジョンをマジでクリアしたい」と書いている。
+
+入るたびに地形の変わる迷宮を、ひとりで潜っていくゲームである。力尽きると、その冒険で拾ったアイテムはすべて失い、レベル1・地下1階からやり直しになる。全ロスは事故ではなく、ルールのほうだ。
+
+原作は1993年のスーパーファミコン用ソフト。リマスターの発売は9月10日で、当サイトの集計に入ったのも同じ日、そのときは10チャンネルだった。直近24時間では21チャンネルが配信している。</p><div class="who"><span>ぼんじゅうる</span><span>蒼宮よづり</span><span>戌神ころね</span><span>兎田ぺこら</span></div><div class="src"><a href="https://www.youtube.com/watch?v=Iq8oFbnbZOI" target="_blank" rel="noopener">ぼんじゅうる / ドズル社 — 全ロスしたから配信するわ【トルネコの大冒険 不思議のダンジョン ちょっとステキなリマスター】</a><a href="https://www.youtube.com/watch?v=9Nur6DitdRs" target="_blank" rel="noopener">蒼宮よづり — 【トルネコの大冒険不思議のダンジョン】初見！初心者🔰25時間かけた装備🔥爆散🔥</a><a href="https://www.youtube.com/watch?v=LyQJRzm0J9Q" target="_blank" rel="noopener">戌神ころね — 【トルネコの大冒険】９９階チャレンジ！！！！【１回目】</a><a href="https://www.youtube.com/watch?v=nKJpG9-zd6Y" target="_blank" rel="noopener">兎田ぺこら — 【初見】もっと不思議のダンジョンをマジでクリアしたい！</a><a href="https://www.dragonquest.jp/torneko_re/" target="_blank" rel="noopener">SQUARE ENIX 公式サイト — トルネコの大冒険 不思議のダンジョン ちょっとステキなリマスター（発売日・対応機種）</a><a href="https://store.steampowered.com/app/4027450/" target="_blank" rel="noopener">Steam ストアページ — ゲーム内容（入るたびに地形が変化／倒れるとアイテムをすべて失いレベル1・地下1階から）</a></div></div></article>
+  </section>
+
+  <section id="hot-sec">
+    <div class="head">
+      <h2><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="var(--hot)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2L4 14h7l-1 8 9-12h-7l1-8z"/></svg><span id="hot-title">今このゲームがアツい！</span></h2>
+      <span class="note" id="hot-note">ふだんの何倍に増えたかで並べています。まだ知られていないゲームほど上に来ます</span>
+    </div>
+    <div class="hot-grid" id="hot"><article class="hotcard"><span class="hbtn"><span class="hth"><img src="https://i.ytimg.com/vi/sC_7gRltqjg/mqdefault.jpg" alt="" loading="lazy"><span class="mul">×4.1</span></span><span class="hbody"><span class="n">Silent Hill: Townfall</span><span class="delta"><span>ふだん 5.8件</span><b>この日 24件</b></span><span class="f"><span>23チャンネルが配信</span><span>126万回 視聴</span></span></span></span></article><article class="hotcard"><span class="hbtn"><span class="hth"><img src="https://i.ytimg.com/vi/4O7_1Mqk0sE/mqdefault.jpg" alt="" loading="lazy"><span class="mul">×4.0</span></span><span class="hbody"><span class="n">アークナイツ：エンドフィールド</span><span class="delta"><span>ふだん 1.5件</span><b>この日 6件</b></span><span class="f"><span>5チャンネルが配信</span><span>2.1万回 視聴</span></span></span></span></article><article class="hotcard"><span class="hbtn"><span class="hth"><img src="https://i.ytimg.com/vi/QiS5ryHWIlk/mqdefault.jpg" alt="" loading="lazy"><span class="mul">×3.9</span></span><span class="hbody"><span class="n">Don&#x27;t Drop The Cake</span><span class="delta"><span>ふだん 1.3件</span><b>この日 5件</b></span><span class="f"><span>5チャンネルが配信</span><span>27万回 視聴</span></span></span></span></article><article class="hotcard"><span class="hbtn"><span class="hth"><img src="https://i.ytimg.com/vi/eAjrYabvHcY/mqdefault.jpg" alt="" loading="lazy"><span class="mul">×3.8</span></span><span class="hbody"><span class="n">RuneScape: Dragonwilds</span><span class="delta"><span>ふだん 0.7件</span><b>この日 3件</b></span><span class="f"><span>3チャンネルが配信</span><span>14万回 視聴</span></span></span></span></article><article class="hotcard"><span class="hbtn"><span class="hth"><img src="https://i.ytimg.com/vi/Leb6y6wRjv0/mqdefault.jpg" alt="" loading="lazy"><span class="mul">×3.8</span></span><span class="hbody"><span class="n">Poppy Playtime</span><span class="delta"><span>ふだん 0.7件</span><b>この日 3件</b></span><span class="f"><span>3チャンネルが配信</span><span>8.3万回 視聴</span></span></span></span></article><article class="hotcard"><span class="hbtn"><span class="hth"><img src="https://i.ytimg.com/vi/AE3T4cablzw/mqdefault.jpg" alt="" loading="lazy"><span class="mul">×3.8</span></span><span class="hbody"><span class="n">ドラゴンクエストモンスターズ</span><span class="delta"><span>ふだん 0.5件</span><b>この日 3件</b></span><span class="f"><span>3チャンネルが配信</span><span>8.6万回 視聴</span></span></span></span></article></div>
+  </section>
+
+  <section id="rank-sec">
+    <div class="head">
+      <h2>みんなが遊んでるゲーム</h2>
+      <span class="note">カードや行を押すと、そのゲームの配信一覧が開きます</span>
+    </div>
+    <div class="filters" id="filters"></div>
+    <div class="cards" id="cards"><div class="gcard"><span class="th"><img src="https://i.ytimg.com/vi/9zoJy4xSOBQ/mqdefault.jpg" alt="" loading="lazy"><span class="rank">1</span></span><span class="gm"><b>Apex Legends</b><span class="nums"><i>68</i>件 <i>58</i>ch <i>346万</i>回</span><span class="tp">ハセシン / HASESHIN「【APEXランク】集合！熱き3人組がただいま参戦ッス！さすがに全力で行こうぜェエ!!!!  関優太, SPYGEA → 二次会フルパ！バーチャルゴリラ【ハセシン】Apex Legends」</span></span></div><div class="gcard"><span class="th"><img src="https://i.ytimg.com/vi/S5OmFkH0M_U/mqdefault.jpg" alt="" loading="lazy"><span class="rank">2</span></span><span class="gm"><b>Minecraft</b><span class="nums"><i>40</i>件 <i>37</i>ch <i>216万</i>回</span><span class="tp">ドズル社「【マイクラ人狼】全員が敵に見える『人狼RPG』で生き残れ！【マイクラ】」</span></span></div><div class="gcard"><span class="th"><img src="https://i.ytimg.com/vi/kBy-9p_vEag/mqdefault.jpg" alt="" loading="lazy"><span class="rank">3</span></span><span class="gm"><b>ストリートファイター6</b><span class="nums"><i>36</i>件 <i>32</i>ch <i>109万</i>回</span><span class="tp">カワノKawano「LeSharとのエキシビジョンマッチでカワノ豪鬼出陣！今回用意した初めての試みとは【スト6】」</span></span></div></div>
+    <div class="list" id="rows"><div class="lrow"><span class="rk2">4</span><img src="https://i.ytimg.com/vi/sC_7gRltqjg/mqdefault.jpg" alt="" loading="lazy"><span class="nm2"><b>Silent Hill: Townfall</b><span>24件 ・ 23ch ・ 126万回</span></span></div><div class="lrow"><span class="rk2">5</span><img src="https://i.ytimg.com/vi/epBmQaP1JQk/mqdefault.jpg" alt="" loading="lazy"><span class="nm2"><b>原神</b><span>26件 ・ 18ch ・ 122万回</span></span></div><div class="lrow"><span class="rk2">6</span><img src="https://i.ytimg.com/vi/IeCjC5ikbGE/mqdefault.jpg" alt="" loading="lazy"><span class="nm2"><b>トルネコの大冒険 ちょっとステキなリマスター</b><span>17件 ・ 17ch ・ 145万回</span></span></div><div class="lrow"><span class="rk2">7</span><img src="https://i.ytimg.com/vi/q_qHF012pNo/mqdefault.jpg" alt="" loading="lazy"><span class="nm2"><b>Grand Theft Auto V</b><span>18件 ・ 17ch ・ 28万回</span></span></div><div class="lrow"><span class="rk2">8</span><img src="https://i.ytimg.com/vi/Fb3JYR5r6oU/mqdefault.jpg" alt="" loading="lazy"><span class="nm2"><b>フォートナイト</b><span>17件 ・ 13ch ・ 48万回</span></span></div><div class="lrow"><span class="rk2">9</span><img src="https://i.ytimg.com/vi/42X1u1MiI1U/mqdefault.jpg" alt="" loading="lazy"><span class="nm2"><b>スプラトゥーン3</b><span>16件 ・ 15ch ・ 30万回</span></span></div><div class="lrow"><span class="rk2">10</span><img src="https://i.ytimg.com/vi/zOAseMreWQE/mqdefault.jpg" alt="" loading="lazy"><span class="nm2"><b>実況パワフルプロ野球2026</b><span>12件 ・ 11ch ・ 85万回</span></span></div><div class="lrow"><span class="rk2">11</span><img src="https://i.ytimg.com/vi/L9Wmd4s4EK0/mqdefault.jpg" alt="" loading="lazy"><span class="nm2"><b>VALORANT</b><span>16件 ・ 14ch ・ 16万回</span></span></div><div class="lrow"><span class="rk2">12</span><img src="https://i.ytimg.com/vi/mLcwdttjGaI/mqdefault.jpg" alt="" loading="lazy"><span class="nm2"><b>ほの暮しの庭</b><span>12件 ・ 12ch ・ 33万回</span></span></div><div class="lrow"><span class="rk2">13</span><img src="https://i.ytimg.com/vi/Q_XKhVZZ8I8/mqdefault.jpg" alt="" loading="lazy"><span class="nm2"><b>Bombanana!</b><span>9件 ・ 9ch ・ 103万回</span></span></div><div class="lrow"><span class="rk2">14</span><img src="https://i.ytimg.com/vi/6Oeyu1TIzEw/mqdefault.jpg" alt="" loading="lazy"><span class="nm2"><b>Escape from Tarkov</b><span>12件 ・ 11ch ・ 29万回</span></span></div><div class="lrow"><span class="rk2">15</span><img src="https://i.ytimg.com/vi/4avZLEpdTGY/mqdefault.jpg" alt="" loading="lazy"><span class="nm2"><b>ELDEN RING</b><span>12件 ・ 12ch ・ 20万回</span></span></div><div class="lrow"><span class="rk2">16</span><img src="https://i.ytimg.com/vi/_MMqSOnq1zw/mqdefault.jpg" alt="" loading="lazy"><span class="nm2"><b>妹に運転を教える</b><span>8件 ・ 8ch ・ 70万回</span></span></div><div class="lrow"><span class="rk2">17</span><img src="https://i.ytimg.com/vi/2F2VO_Bs8pk/mqdefault.jpg" alt="" loading="lazy"><span class="nm2"><b>Wardogs</b><span>10件 ・ 9ch ・ 25万回</span></span></div><div class="lrow"><span class="rk2">18</span><img src="https://i.ytimg.com/vi/YV7FWe37aYk/mqdefault.jpg" alt="" loading="lazy"><span class="nm2"><b>Dead by Daylight</b><span>12件 ・ 11ch ・ 9.9万回</span></span></div><div class="lrow"><span class="rk2">19</span><img src="https://i.ytimg.com/vi/61kotVZ0Z1U/mqdefault.jpg" alt="" loading="lazy"><span class="nm2"><b>大乱闘スマッシュブラザーズ SPECIAL</b><span>9件 ・ 8ch ・ 23万回</span></span></div><div class="lrow"><span class="rk2">20</span><img src="https://i.ytimg.com/vi/RPACmISTkc4/mqdefault.jpg" alt="" loading="lazy"><span class="nm2"><b>ファイアーエムブレム 万紫千紅</b><span>9件 ・ 9ch ・ 9.4万回</span></span></div><div class="lrow"><span class="rk2">21</span><img src="https://i.ytimg.com/vi/n0NYvgFBVJg/mqdefault.jpg" alt="" loading="lazy"><span class="nm2"><b>7 Days to Die</b><span>5件 ・ 5ch ・ 51万回</span></span></div><div class="lrow"><span class="rk2">22</span><img src="https://i.ytimg.com/vi/z2lX2xLRSJc/mqdefault.jpg" alt="" loading="lazy"><span class="nm2"><b>モンスターストライク</b><span>6件 ・ 6ch ・ 22万回</span></span></div><div class="lrow"><span class="rk2">23</span><img src="https://i.ytimg.com/vi/dycPMZyRPd4/mqdefault.jpg" alt="" loading="lazy"><span class="nm2"><b>鳴潮</b><span>9件 ・ 8ch ・ 6.9万回</span></span></div><div class="lrow"><span class="rk2">24</span><img src="https://i.ytimg.com/vi/KhHuzPxO_eE/mqdefault.jpg" alt="" loading="lazy"><span class="nm2"><b>Among Us</b><span>6件 ・ 6ch ・ 20万回</span></span></div><div class="lrow"><span class="rk2">25</span><img src="https://i.ytimg.com/vi/epi8Hm8iPvo/mqdefault.jpg" alt="" loading="lazy"><span class="nm2"><b>遊戯王 マスターデュエル</b><span>5件 ・ 5ch ・ 26万回</span></span></div><div class="lrow"><span class="rk2">26</span><img src="https://i.ytimg.com/vi/QiS5ryHWIlk/mqdefault.jpg" alt="" loading="lazy"><span class="nm2"><b>Don&#x27;t Drop The Cake</b><span>5件 ・ 5ch ・ 27万回</span></span></div><div class="lrow"><span class="rk2">27</span><img src="https://i.ytimg.com/vi/Hsqds47436U/mqdefault.jpg" alt="" loading="lazy"><span class="nm2"><b>モンスターハンターワイルズ</b><span>8件 ・ 7ch ・ 9.8万回</span></span></div><div class="lrow"><span class="rk2">28</span><img src="https://i.ytimg.com/vi/3EXZVdv36ss/mqdefault.jpg" alt="" loading="lazy"><span class="nm2"><b>ARK: Survival Ascended</b><span>5件 ・ 5ch ・ 22万回</span></span></div><div class="lrow"><span class="rk2">29</span><img src="https://i.ytimg.com/vi/hqx6K1am7X0/mqdefault.jpg" alt="" loading="lazy"><span class="nm2"><b>にゃんこ大戦争</b><span>9件 ・ 6ch ・ 9.8万回</span></span></div><div class="lrow"><span class="rk2">30</span><img src="https://i.ytimg.com/vi/TskR9Wa_MfY/mqdefault.jpg" alt="" loading="lazy"><span class="nm2"><b>鬼武者 Way of the Sword</b><span>8件 ・ 7ch ・ 7.0万回</span></span></div></div>
+  </section>
+
+  <section id="page-sec" style="display:none">
+    <article class="doc" id="page-body"></article>
+  </section>
+
+  <section id="arch-sec" style="display:none">
+    <div class="head"><h2>これまでの記録</h2>
+      <span class="note">毎日のランキングとコラムは、すべて残しています</span></div>
+    <div class="arch" id="arch"></div>
+  </section>
+
+  <section id="lead-sec" style="display:none">
+    <div class="head"><h2>コラムの種</h2>
+      <span class="note">集めたデータから拾った「何か起きていそうな気配」。ここから一次ソースを当たる</span></div>
+    <div class="memo" id="leads"></div>
+  </section>
+
+  <!-- 管理用。公開ページには出しません（site/admin/ でだけ表示されます） -->
+  <section id="q-sec" style="display:none">
+    <div class="head"><h2>これ、なんのゲーム？</h2>
+      <span class="note">自動判定できなかったタイトル。辞書に足す候補です</span></div>
+    <div class="memo" id="queue"></div>
+  </section>
+
+  <footer>
+    <a class="flink" href="../../about/">このサイトについて</a>
+    <a class="flink" href="../../archive/">これまでの記録</a><br>
+    ハヤリゲー ｜ YouTubeの配信タイトルを毎日自動で解析しています<br>
+    同じ配信者が同じ日に出した続きものは1件として集計 ／ <span id="f-gen"></span><br>
+    <span style="opacity:.75">Amazonのアソシエイトとして、当サイトは適格販売により収入を得ています</span>
+  </footer>
+</div>
+
+<script>
+const DATA = {"mode": "day", "date": "2026-09-24", "column": {"game": "トルネコの大冒険 ちょっとステキなリマスター", "headline": "全ロスしました、という題ばかりが並ぶ日", "body": "並んでいる配信の題名は、うまくいったほうの話ではない。ぼんじゅうるは「全ロスしたから配信するわ」、蒼宮よづりは「25時間かけた装備🔥爆散🔥」と付けた。同じ日に、戌神ころねは「99階チャレンジ」、兎田ぺこらは「もっと不思議のダンジョンをマジでクリアしたい」と書いている。\n\n入るたびに地形の変わる迷宮を、ひとりで潜っていくゲームである。力尽きると、その冒険で拾ったアイテムはすべて失い、レベル1・地下1階からやり直しになる。全ロスは事故ではなく、ルールのほうだ。\n\n原作は1993年のスーパーファミコン用ソフト。リマスターの発売は9月10日で、当サイトの集計に入ったのも同じ日、そのときは10チャンネルだった。直近24時間では21チャンネルが配信している。", "people": ["ぼんじゅうる", "蒼宮よづり", "戌神ころね", "兎田ぺこら"], "sources": [{"t": "ぼんじゅうる / ドズル社 — 全ロスしたから配信するわ【トルネコの大冒険 不思議のダンジョン ちょっとステキなリマスター】", "u": "https://www.youtube.com/watch?v=Iq8oFbnbZOI"}, {"t": "蒼宮よづり — 【トルネコの大冒険不思議のダンジョン】初見！初心者🔰25時間かけた装備🔥爆散🔥", "u": "https://www.youtube.com/watch?v=9Nur6DitdRs"}, {"t": "戌神ころね — 【トルネコの大冒険】９９階チャレンジ！！！！【１回目】", "u": "https://www.youtube.com/watch?v=LyQJRzm0J9Q"}, {"t": "兎田ぺこら — 【初見】もっと不思議のダンジョンをマジでクリアしたい！", "u": "https://www.youtube.com/watch?v=nKJpG9-zd6Y"}, {"t": "SQUARE ENIX 公式サイト — トルネコの大冒険 不思議のダンジョン ちょっとステキなリマスター（発売日・対応機種）", "u": "https://www.dragonquest.jp/torneko_re/"}, {"t": "Steam ストアページ — ゲーム内容（入るたびに地形が変化／倒れるとアイテムをすべて失いレベル1・地下1階から）", "u": "https://store.steampowered.com/app/4027450/"}], "hero": "https://i.ytimg.com/vi/IeCjC5ikbGE/mqdefault.jpg", "hero_by": "Korone Ch. 戌神ころね", "pics": [{"th": "https://i.ytimg.com/vi/IeCjC5ikbGE/mqdefault.jpg", "by": "Korone Ch. 戌神ころね"}, {"th": "https://i.ytimg.com/vi/n1HKu8a_1qE/mqdefault.jpg", "by": "Okayu Ch. 猫又おかゆ"}, {"th": "https://i.ytimg.com/vi/u6p_oTaflb0/mqdefault.jpg", "by": "笹木咲 / Sasaki Saku"}], "steam": "https://store.steampowered.com/search/?term=%E3%83%88%E3%83%AB%E3%83%8D%E3%82%B3%E3%81%AE%E5%A4%A7%E5%86%92%E9%99%BA%20%E3%81%A1%E3%82%87%E3%81%A3%E3%81%A8%E3%82%B9%E3%83%86%E3%82%AD%E3%81%AA%E3%83%AA%E3%83%9E%E3%82%B9%E3%82%BF%E3%83%BC", "date": "2026-09-23"}, "matome": {"href": "w/2026-09-14/", "label": "週まとめ", "title": "犯罪の街で、いちばん見られたのは黒服の夜", "heading": "2026年9月14日〜9月20日の週まとめ", "th": "https://i.ytimg.com/vi/gCkznd2GvpU/mqdefault.jpg", "by": "Kanae Channel"}, "generated": "2026-09-24 07:12", "range": "直近24時間", "days": ["09/18", "09/19", "09/20", "09/21", "09/22", "09/23", "09/24"], "totals": {"videos": 1408, "games": 238, "channels": 918}, "rising": [{"game": "Silent Hill: Townfall", "canonical": "Silent Hill: Townfall", "videos": 24, "n": 24.0, "raw": 30, "channels": 23, "views": 1267903, "streams": [{"t": "【ネタバレあり】霧の孤島、その先へ『SILENT HILL: Townfall』#2【弟者】", "c": "兄者弟者", "u": "https://www.youtube.com/watch?v=sC_7gRltqjg", "th": "https://i.ytimg.com/vi/sC_7gRltqjg/mqdefault.jpg", "v": 383139}, {"t": "#2 さっくり進めるSILENT HILL: Townfall ※ネタバレあり", "c": "あまり驚かないガッチマンはホラーゲームばかりやっている", "u": "https://www.youtube.com/watch?v=77LNuXgDuWQ", "th": "https://i.ytimg.com/vi/77LNuXgDuWQ/mqdefault.jpg", "v": 207633}, {"t": "【 SILENT HILL: Townfall 】本日解禁！48時間前🎮先行アクセス！王覇山、恐怖体験。（ この社会は、不条理を赦す。 ）【 にじさんじ┊︎葉山舞鈴┊︎※ネタバレ注意 】", "c": "葉山舞鈴 / Ohayama Ch.", "u": "https://www.youtube.com/watch?v=rQSxN07atmY", "th": "https://i.ytimg.com/vi/rQSxN07atmY/mqdefault.jpg", "v": 163844}, {"t": "【サイレントヒル：タウンフォール】#2📻絶望の孤島に待つものとは…先行アクセス【おついちTube】", "c": "おついちTube", "u": "https://www.youtube.com/watch?v=1fxwieMCMmc", "th": "https://i.ytimg.com/vi/1fxwieMCMmc/mqdefault.jpg", "v": 114202}, {"t": "【先行配信】サイレントヒルタウンフォールを過去作の解説付きで実況プレイ＃２【SILENT HILL: Townfall 】ネタバレあり", "c": "コジマ店員のホラーは恐くない", "u": "https://www.youtube.com/watch?v=AFGQ7WqYoxA", "th": "https://i.ytimg.com/vi/AFGQ7WqYoxA/mqdefault.jpg", "v": 60990}, {"t": "霧に包まれた『絶望の孤島』で恐ろしい過去を暴きだすホラーゲーム【 SILENT HILL: Townfall 】_#1『VOICEROID実況/重音テト・宮舞モカ』", "c": "しまねげーむず / ホラーゲーム実況ch", "u": "https://www.youtube.com/watch?v=p9a2qaSVX1k", "th": "https://i.ytimg.com/vi/p9a2qaSVX1k/mqdefault.jpg", "v": 37135}, {"t": "【最新作】SILENT HILL: Townfall ─ サイレントヒルの新たな悪夢へ。完全初見 #1 ※ネタバレあり【ホラー声優Vtuber／初雪セツナ】", "c": "初雪セツナ | ホラー声優Vtuber", "u": "https://www.youtube.com/watch?v=Zj4aJ1Ry8JQ", "th": "https://i.ytimg.com/vi/Zj4aJ1Ry8JQ/mqdefault.jpg", "v": 28962}, {"t": "【 SILENT HILL: Townfall 】ゾーイを追うサイモン。サイモンの過去とゾーイが抱える闇とは…？ ※ネタバレ注意※ #03【 人生つみこ】", "c": "人生 つみこ (ホラーゲーム専門Vtuber)", "u": "https://www.youtube.com/watch?v=rE21SBLbO34", "th": "https://i.ytimg.com/vi/rE21SBLbO34/mqdefault.jpg", "v": 12325}], "orgs": {"個人・その他": 25, "にじさんじ": 2, "実況グループ": 2, "実況者": 1}, "spark": [1.0, 0, 0, 0, 7.0, 26.5, 24.0], "p_videos": 36, "p_channels": 40, "p_views": 93, "score": 57.3, "base": 5.8, "growth": 4.14, "steam": "https://store.steampowered.com/search/?term=Silent%20Hill%3A%20Townfall", "amazon": "https://www.amazon.co.jp/s?k=Silent+Hill%3A+Townfall&tag=tarochin-22", "rank": 4}, {"game": "アークナイツ：エンドフィールド", "canonical": "Arknights: Endfield", "videos": 6, "n": 5.5, "raw": 6, "channels": 5, "views": 21490, "streams": [{"t": "【エンドフィールド】今でも強い？限定★６オペレーター「イヴォンヌ」性能解説！ 再現スカウト/復刻/おすすめパーティー/装備/武器/ローテーション/最強【アークナイツEndfield】", "c": "キスケGAME", "u": "https://www.youtube.com/watch?v=4O7_1Mqk0sE", "th": "https://i.ytimg.com/vi/4O7_1Mqk0sE/mqdefault.jpg", "v": 9849}, {"t": "話題のダンスで魅力が増したイヴォンヌ！だがそれだけじゃないぞ？【エンドフィールド/ゆっくり】", "c": "ゆっくりアルトニウム", "u": "https://www.youtube.com/watch?v=z6VvUoyKX34", "th": "https://i.ytimg.com/vi/z6VvUoyKX34/mqdefault.jpg", "v": 7109}, {"t": "工業イベント龍泡泡出撃・重息壌の後半戦ッ！【 アークナイツ： #エンドフィールド｜公認クリエイター】", "c": "浅葱なぎ", "u": "https://www.youtube.com/watch?v=EZrfy36FpoU", "th": "https://i.ytimg.com/vi/EZrfy36FpoU/mqdefault.jpg", "v": 4532}, {"t": "【エンドフィールド】こんなに可愛い子が配布なの～！？【アークナイツ：エンドフィールド/Vtuber/春水レイ】", "c": "春水レイ / Shunsui Rei", "u": "https://www.youtube.com/watch?v=HzmlQWY1pGg", "th": "https://i.ytimg.com/vi/HzmlQWY1pGg/mqdefault_live.jpg", "v": 0}, {"t": "新オペレーターのプチエナは強いのか？実戦で研究する配信【Arknights Endfield】", "c": "Show_ty しょ同盟", "u": "https://www.youtube.com/watch?v=VdjuhwoDHr0", "th": "https://i.ytimg.com/vi/VdjuhwoDHr0/mqdefault_live.jpg", "v": 0}, {"t": "【ネタバレ注意】新エリアッ！遂明を満喫していくっ！【 アークナイツ： #エンドフィールド｜公認クリエイター】", "c": "浅葱なぎ", "u": "https://www.youtube.com/watch?v=nCCAQqcoNLw", "th": "https://i.ytimg.com/vi/nCCAQqcoNLw/mqdefault_live.jpg", "v": 0}], "orgs": {"個人・その他": 6}, "spark": [1.0, 0, 0, 2.0, 4.0, 2.0, 5.5], "p_videos": 8, "p_channels": 9, "p_views": 66, "score": 28.6, "base": 1.5, "growth": 4.0, "steam": "https://store.steampowered.com/search/?term=%E3%82%A2%E3%83%BC%E3%82%AF%E3%83%8A%E3%82%A4%E3%83%84%EF%BC%9A%E3%82%A8%E3%83%B3%E3%83%89%E3%83%95%E3%82%A3%E3%83%BC%E3%83%AB%E3%83%89", "amazon": "https://www.amazon.co.jp/s?k=%E3%82%A2%E3%83%BC%E3%82%AF%E3%83%8A%E3%82%A4%E3%83%84%EF%BC%9A%E3%82%A8%E3%83%B3%E3%83%89%E3%83%95%E3%82%A3%E3%83%BC%E3%83%AB%E3%83%89&tag=tarochin-22", "rank": 66}, {"game": "Don't Drop The Cake", "canonical": "Don't Drop The Cake", "videos": 5, "n": 5.0, "raw": 5, "channels": 5, "views": 272649, "streams": [{"t": "【Don't Drop The Cake 】ケーキを落としたら即死ってほんてょ？【にじさんじ/アンジュ・カトリーナ】", "c": "アンジュ・カトリーナ - Ange Katrina -", "u": "https://www.youtube.com/watch?v=QiS5ryHWIlk", "th": "https://i.ytimg.com/vi/QiS5ryHWIlk/mqdefault.jpg", "v": 112266}, {"t": "【Don't Drop The Cake】シルバーウィークありがとお！ケーキ持ってくねっ！！！！！！　【にじさんじ/鈴原るる】", "c": "鈴原るる【にじさんじ所属】", "u": "https://www.youtube.com/watch?v=K2iOTBl5f1Y", "th": "https://i.ytimg.com/vi/K2iOTBl5f1Y/mqdefault.jpg", "v": 82694}, {"t": "【 Don't Drop The Cake 】ケーキを落とすな！すぺしゃーれデリバリー編🎂【七瀬すず菜/にじさんじ】", "c": "七瀬 すず菜 / Nanase Suzuna【にじさんじ】", "u": "https://www.youtube.com/watch?v=XCTuraeWG8c", "th": "https://i.ytimg.com/vi/XCTuraeWG8c/mqdefault.jpg", "v": 53942}, {"t": "【Don't Drop The Cake】ケーキをおとさず運ぶホラーゲーム！驚かない俺には簡単かもｗ【歌衣メイカ】", "c": "メイカちゃんねる", "u": "https://www.youtube.com/watch?v=35f21WeRNtg", "th": "https://i.ytimg.com/vi/35f21WeRNtg/mqdefault.jpg", "v": 15672}, {"t": "【Don't Drop The Cake】ケーキを落とさなきゃいいの？簡単じゃん！！！【白雪巴/にじさんじ】", "c": "白雪 巴/Shirayuki Tomoe", "u": "https://www.youtube.com/watch?v=HRp0mrtdqPI", "th": "https://i.ytimg.com/vi/HRp0mrtdqPI/mqdefault.jpg", "v": 8075}], "orgs": {"にじさんじ": 3, "個人勢": 1, "個人・その他": 1}, "spark": [1.0, 3.0, 1.0, 1.0, 1.0, 1.0, 5.0], "p_videos": 7, "p_channels": 9, "p_views": 83, "score": 34.3, "base": 1.3, "growth": 3.85, "steam": "https://store.steampowered.com/search/?term=Don%27t%20Drop%20The%20Cake", "amazon": null, "rank": 26}, {"game": "RuneScape: Dragonwilds", "canonical": "RuneScape: Dragonwilds", "videos": 3, "n": 3.0, "raw": 3, "channels": 3, "views": 142474, "streams": [{"t": "リズム感が絶望的すぎてトラップに時間がかかるおなつにキレる日向まる【RuneScape: Dragonwilds/ルーンスケープ：ドラゴンワイルズ】", "c": "k4sen / かせん", "u": "https://www.youtube.com/watch?v=eAjrYabvHcY", "th": "https://i.ytimg.com/vi/eAjrYabvHcY/mqdefault.jpg", "v": 129208}, {"t": "k4senと一緒に日向まるを攻撃して大爆笑するおなつのにびたし【RuneScape: Dragonwilds/k4sen/夜よいち/日向まる/個人勢VTuber】", "c": "おなつのにびたし / Onatsu no Nibitashi", "u": "https://www.youtube.com/watch?v=4fYjXTpCtr8", "th": "https://i.ytimg.com/vi/4fYjXTpCtr8/mqdefault.jpg", "v": 12712}, {"t": "END ＃31【RuneScape Dragonwilds】神喰いクルドラとの決着をつける【ゲーム実況】", "c": "シムパパ", "u": "https://www.youtube.com/watch?v=-h0BJjQI-JQ", "th": "https://i.ytimg.com/vi/-h0BJjQI-JQ/mqdefault.jpg", "v": 554}], "orgs": {"個人・その他": 2, "ストリーマー": 1}, "spark": [1.0, 0, 0, 1.0, 0, 2.0, 3.0], "p_videos": 4, "p_channels": 5, "p_views": 79, "score": 30.6, "base": 0.7, "growth": 3.75, "steam": "https://store.steampowered.com/search/?term=RuneScape%3A%20Dragonwilds", "amazon": "https://www.amazon.co.jp/s?k=RuneScape%3A+Dragonwilds&tag=tarochin-22", "rank": 43}, {"game": "Poppy Playtime", "canonical": "Poppy Playtime", "videos": 3, "n": 3.0, "raw": 3, "channels": 3, "views": 82594, "streams": [{"t": "【リリースはいつ？】ポピープレイタイムチャプター6のリリース日が分かったかもしれません…【Poppy Playtime Chapter 6 】", "c": "コロンボさん GAMES", "u": "https://www.youtube.com/watch?v=Leb6y6wRjv0", "th": "https://i.ytimg.com/vi/Leb6y6wRjv0/mqdefault.jpg", "v": 66208}, {"t": "ポピープレイタイム「5」いくぞ！！【Poppy Playtime】", "c": "シャオメイ【ゲーム実況】", "u": "https://www.youtube.com/watch?v=arB1-wZWk7Y", "th": "https://i.ytimg.com/vi/arB1-wZWk7Y/mqdefault.jpg", "v": 16189}, {"t": "【 #poppyplaytime 】初めてのポピプレ…怖いですか…？ホラー無理なんですけど…　【 #朱雀ジュン #新人vtuber  】", "c": "朱雀ジュン - Suzaku Jun -", "u": "https://www.youtube.com/watch?v=OhihFTqsoOo", "th": "https://i.ytimg.com/vi/OhihFTqsoOo/mqdefault.jpg", "v": 197}], "orgs": {"個人・その他": 3}, "spark": [0, 0, 1.0, 0, 1.0, 2.0, 3.0], "p_videos": 4, "p_channels": 5, "p_views": 75, "score": 29.2, "base": 0.7, "growth": 3.75, "steam": "https://store.steampowered.com/search/?term=Poppy%20Playtime", "amazon": "https://www.amazon.co.jp/s?k=Poppy+Playtime&tag=tarochin-22", "rank": 59}, {"game": "ドラゴンクエストモンスターズ", "canonical": "Dragon Warrior Monsters", "videos": 3, "n": 3.0, "raw": 3, "channels": 3, "views": 86069, "streams": [{"t": "【ドラゴンクエストモンスターズ４】GBテリー世代おじさんのDQM4体験版※ネタバレあり【にじさんじ/舞元啓介】", "c": "舞元啓介", "u": "https://www.youtube.com/watch?v=AE3T4cablzw", "th": "https://i.ytimg.com/vi/AE3T4cablzw/mqdefault.jpg", "v": 44394}, {"t": "【ドラゴンクエストモンスターズ ジョーカー3 プロフェッショナル】黒鉄の監獄から！脱獄するぞ！！※ネタバレ注意【胡桃沢りりか】", "c": "胡桃沢りりか", "u": "https://www.youtube.com/watch?v=Q2XAvQdbnr8", "th": "https://i.ytimg.com/vi/Q2XAvQdbnr8/mqdefault_live.jpg", "v": 37530}, {"t": "【最終回】ついに開幕！最強パーティで挑む星降りの大会🏆【テリワン3D】＃１０（END）", "c": "くまゆちゃんねる", "u": "https://www.youtube.com/watch?v=a0Q7dF5u6qo", "th": "https://i.ytimg.com/vi/a0Q7dF5u6qo/mqdefault.jpg", "v": 4145}], "orgs": {"個人・その他": 2, "にじさんじ": 1}, "spark": [0, 1.0, 1.0, 1.0, 0, 0, 3.0], "p_videos": 4, "p_channels": 5, "p_views": 75, "score": 29.2, "base": 0.5, "growth": 3.75, "steam": null, "amazon": "https://www.amazon.co.jp/s?k=%E3%83%89%E3%83%A9%E3%82%B4%E3%83%B3%E3%82%AF%E3%82%A8%E3%82%B9%E3%83%88%E3%83%A2%E3%83%B3%E3%82%B9%E3%82%BF%E3%83%BC%E3%82%BA&tag=tarochin-22", "rank": 60}], "spread": [{"game": "Apex Legends", "canonical": "Apex Legends", "videos": 68, "n": 67.5, "raw": 83, "channels": 58, "views": 3467372, "streams": [{"t": "【APEXランク】集合！熱き3人組がただいま参戦ッス！さすがに全力で行こうぜェエ!!!!  関優太, SPYGEA → 二次会フルパ！バーチャルゴリラ【ハセシン】Apex Legends", "c": "ハセシン / HASESHIN", "u": "https://www.youtube.com/watch?v=9zoJy4xSOBQ", "th": "https://i.ytimg.com/vi/9zoJy4xSOBQ/mqdefault.jpg", "v": 192030}, {"t": "APEX中に乱入してきたSHAKAの子どもに癒されるボドカと橘ひなの達【Apex Legends】", "c": "SHAKAch", "u": "https://www.youtube.com/watch?v=RlE7ZrgEkC4", "th": "https://i.ytimg.com/vi/RlE7ZrgEkC4/mqdefault.jpg", "v": 189581}, {"t": "【 APEX 】オリンパスソロで少しやってみるか！【 ぶいすぽっ！胡桃のあ 】", "c": "胡桃のあ", "u": "https://www.youtube.com/watch?v=ymXxfMdZl04", "th": "https://i.ytimg.com/vi/ymXxfMdZl04/mqdefault.jpg", "v": 120209}, {"t": "ランクで見た事ないバグに遭遇しイライラが爆発するボドカ【APEX/関優太/じゃすぱー】", "c": "ボドカ / Riddle - ゲーム実況", "u": "https://www.youtube.com/watch?v=rxefsA1kuH4", "th": "https://i.ytimg.com/vi/rxefsA1kuH4/mqdefault.jpg", "v": 100893}, {"t": "超強化された『チャージライフル』の火力が大変な事になってる【APEX LEGENDS】", "c": "NIRU", "u": "https://www.youtube.com/watch?v=ZWUX6xxV1nQ", "th": "https://i.ytimg.com/vi/ZWUX6xxV1nQ/mqdefault.jpg", "v": 100336}, {"t": "机上の空論【 APEX LEGENDS 】【 SqLA 】", "c": "SqLA さくら / Riddle", "u": "https://www.youtube.com/watch?v=0L5SWTa8ZBU", "th": "https://i.ytimg.com/vi/0L5SWTa8ZBU/mqdefault.jpg", "v": 94612}, {"t": "【APEX】マジでキレないニコニコ穏やかソロランク", "c": "あかめいん", "u": "https://www.youtube.com/watch?v=39kd1NY6wFc", "th": "https://i.ytimg.com/vi/39kd1NY6wFc/mqdefault.jpg", "v": 83088}, {"t": "APEX格ゲー化！！ストリートファイターコラボがぶっ飛びすぎてて楽し過ぎた！！【Apex Legends】【エーペックスレジェンズ】【ゆっくり実況】part718", "c": "カニヨイ", "u": "https://www.youtube.com/watch?v=f1QpI3euyq0", "th": "https://i.ytimg.com/vi/f1QpI3euyq0/mqdefault.jpg", "v": 47291}], "orgs": {"個人・その他": 66, "ぶいすぽっ！": 6, "Neo-Porte": 4, "にじさんじ": 4, "ストリーマー": 3}, "spark": [45.5, 45.5, 36.0, 30.5, 53.0, 49.0, 67.5], "p_videos": 100, "p_channels": 100, "p_views": 100, "score": 100.0, "base": 43.2, "growth": 1.57, "steam": "https://store.steampowered.com/search/?term=Apex%20Legends", "amazon": "https://www.amazon.co.jp/s?k=Apex+Legends&tag=tarochin-22", "rank": 1}, {"game": "Minecraft", "canonical": "Minecraft", "videos": 40, "n": 39.5, "raw": 45, "channels": 37, "views": 2167361, "streams": [{"t": "【マイクラ人狼】全員が敵に見える『人狼RPG』で生き残れ！【マイクラ】", "c": "ドズル社", "u": "https://www.youtube.com/watch?v=S5OmFkH0M_U", "th": "https://i.ytimg.com/vi/S5OmFkH0M_U/mqdefault.jpg", "v": 223842}, {"t": "【 #マイクラ肝試し2026 】今日は、フレわたわちゃわちゃ肝試し？！【角巻わため/ホロライブ４期生】", "c": "Watame Ch. 角巻わため", "u": "https://www.youtube.com/watch?v=2Qvw9afY2jg", "th": "https://i.ytimg.com/vi/2Qvw9afY2jg/mqdefault.jpg", "v": 201467}, {"t": "ナポリの男たちinマイクラ肝試し2026【ナポリの男たち視点】", "c": "ナポリの男たち", "u": "https://www.youtube.com/watch?v=7UpIuI96J9g", "th": "https://i.ytimg.com/vi/7UpIuI96J9g/mqdefault.jpg", "v": 200622}, {"t": "MOBを切って食べれるマインクラフト【 マイクラ / マインクラフト 】", "c": "ウォーターチャレンジ", "u": "https://www.youtube.com/watch?v=WuqxNLtRNlg", "th": "https://i.ytimg.com/vi/WuqxNLtRNlg/mqdefault.jpg", "v": 184395}, {"t": "【Minecraft】#ミリキラハードコア ネザー行くぞ day3 【水宮枢／ホロライブ】", "c": "Su Ch. 水宮枢 - FLOW GLOW", "u": "https://www.youtube.com/watch?v=Xbz1v_kZ4dQ", "th": "https://i.ytimg.com/vi/Xbz1v_kZ4dQ/mqdefault.jpg", "v": 136084}, {"t": "【ドズル社×いんく】ドズル社人狼【マイクラ】【ドズル社一気見生放送】", "c": "ドズル社", "u": "https://www.youtube.com/watch?v=KbZ8GHhJZcA", "th": "https://i.ytimg.com/vi/KbZ8GHhJZcA/mqdefault_live.jpg", "v": 131405}, {"t": "ガチで最強の金庫作り対決をした結果！？【まいくら・マインクラフト】", "c": "まいぜんシスターズ", "u": "https://www.youtube.com/watch?v=RrtgKPeAvL0", "th": "https://i.ytimg.com/vi/RrtgKPeAvL0/mqdefault.jpg", "v": 86426}, {"t": "【#マイクラ肝試し2026】今日はとても騒がしい二人と参ります🔥【#あまかみらいぶ】", "c": "甘狼このみ / AmakamiKonomi🐺🍫", "u": "https://www.youtube.com/watch?v=xQq-zna-jAc", "th": "https://i.ytimg.com/vi/xQq-zna-jAc/mqdefault.jpg", "v": 52367}], "orgs": {"個人・その他": 25, "実況グループ": 4, "ホロライブ": 3, "hololive DEV_IS": 3, "にじさんじ": 3, "ミリプロ": 2, "ななしいんく": 2, "たろちん指定": 1, "追加指定": 1, "個人勢": 1}, "spark": [22.0, 24.5, 38.5, 41.5, 44.0, 34.5, 39.5], "p_videos": 59, "p_channels": 64, "p_views": 97, "score": 74.0, "base": 34.2, "growth": 1.17, "steam": "https://store.steampowered.com/search/?term=Minecraft", "amazon": "https://www.amazon.co.jp/s?k=Minecraft&tag=tarochin-22", "rank": 2}, {"game": "ストリートファイター6", "canonical": "ストリートファイター6", "videos": 36, "n": 36.0, "raw": 42, "channels": 32, "views": 1093792, "streams": [{"t": "LeSharとのエキシビジョンマッチでカワノ豪鬼出陣！今回用意した初めての試みとは【スト6】", "c": "カワノKawano", "u": "https://www.youtube.com/watch?v=kBy-9p_vEag", "th": "https://i.ytimg.com/vi/kBy-9p_vEag/mqdefault.jpg", "v": 229894}, {"t": "【スト6】ルークだけでも手一杯なのに豪鬼まで使いこなせってマジですか！？〜二人のメインキャラを極めようとした俺、気づけばコンボ練習だけで一日が終わっていた件〜", "c": "カワノKawano", "u": "https://www.youtube.com/watch?v=8nIJl0p96zg", "th": "https://i.ytimg.com/vi/8nIJl0p96zg/mqdefault.jpg", "v": 141310}, {"t": "【 スト6 】Mジュリ/D4~ / 日々鍛錬【 Rei7 / にじさんじ 】", "c": "Rei7【にじさんじ】", "u": "https://www.youtube.com/watch?v=94J-ocqyiis", "th": "https://i.ytimg.com/vi/94J-ocqyiis/mqdefault.jpg", "v": 103847}, {"t": "【スト6】１から始める特訓day4🔰プラチナに行きたいんだああああああああああああ！【星川サラ/にじさんじ】", "c": "星川サラ / Sara Hoshikawa", "u": "https://www.youtube.com/watch?v=UDKVpKIMBLE", "th": "https://i.ytimg.com/vi/UDKVpKIMBLE/mqdefault.jpg", "v": 77208}, {"t": "【スト6】10000点稼ぐ勢いのプレイがヤバすぎた!?  \"加点の鬼\" MenaRDの動きに驚愕するどぐらとガチくん【Red Bull Revengeミラー②】", "c": "どぐら 生駒デビル", "u": "https://www.youtube.com/watch?v=LS5PrflGN5s", "th": "https://i.ytimg.com/vi/LS5PrflGN5s/mqdefault.jpg", "v": 73633}, {"t": "【スト6】リュウも仕上げていこう", "c": "しゅーとチャンネル / Shuto", "u": "https://www.youtube.com/watch?v=lisDGkhXGuU", "th": "https://i.ytimg.com/vi/lisDGkhXGuU/mqdefault.jpg", "v": 72980}, {"t": "【スト6、SF6】ビッグニュース!? SFリーグ”ASIA”発足", "c": "ACQUA", "u": "https://www.youtube.com/watch?v=hZAzNHRc_3o", "th": "https://i.ytimg.com/vi/hZAzNHRc_3o/mqdefault.jpg", "v": 64886}, {"t": "【スト6】まぁどんとこいや【にじさんじ】", "c": "男虎 / Ono Tora【にじさんじ】", "u": "https://www.youtube.com/watch?v=AhyWeclwIbw", "th": "https://i.ytimg.com/vi/AhyWeclwIbw/mqdefault.jpg", "v": 44376}], "orgs": {"個人・その他": 40, "にじさんじ": 1, "たろちん指定": 1}, "spark": [34.0, 31.0, 22.5, 25.0, 42.0, 38.5, 36.0], "p_videos": 53, "p_channels": 55, "p_views": 92, "score": 67.3, "base": 32.2, "growth": 1.12, "steam": "https://store.steampowered.com/search/?term=%E3%82%B9%E3%83%88%E3%83%AA%E3%83%BC%E3%83%88%E3%83%95%E3%82%A1%E3%82%A4%E3%82%BF%E3%83%BC6", "amazon": "https://www.amazon.co.jp/s?k=%E3%82%B9%E3%83%88%E3%83%AA%E3%83%BC%E3%83%88%E3%83%95%E3%82%A1%E3%82%A4%E3%82%BF%E3%83%BC6&tag=tarochin-22", "rank": 3}], "momentum": {"ready": true, "days": 7, "need": 4}, "ranking": [{"game": "Apex Legends", "canonical": "Apex Legends", "videos": 68, "n": 67.5, "raw": 83, "channels": 58, "views": 3467372, "streams": [{"t": "【APEXランク】集合！熱き3人組がただいま参戦ッス！さすがに全力で行こうぜェエ!!!!  関優太, SPYGEA → 二次会フルパ！バーチャルゴリラ【ハセシン】Apex Legends", "c": "ハセシン / HASESHIN", "u": "https://www.youtube.com/watch?v=9zoJy4xSOBQ", "th": "https://i.ytimg.com/vi/9zoJy4xSOBQ/mqdefault.jpg", "v": 192030}, {"t": "APEX中に乱入してきたSHAKAの子どもに癒されるボドカと橘ひなの達【Apex Legends】", "c": "SHAKAch", "u": "https://www.youtube.com/watch?v=RlE7ZrgEkC4", "th": "https://i.ytimg.com/vi/RlE7ZrgEkC4/mqdefault.jpg", "v": 189581}, {"t": "【 APEX 】オリンパスソロで少しやってみるか！【 ぶいすぽっ！胡桃のあ 】", "c": "胡桃のあ", "u": "https://www.youtube.com/watch?v=ymXxfMdZl04", "th": "https://i.ytimg.com/vi/ymXxfMdZl04/mqdefault.jpg", "v": 120209}, {"t": "ランクで見た事ないバグに遭遇しイライラが爆発するボドカ【APEX/関優太/じゃすぱー】", "c": "ボドカ / Riddle - ゲーム実況", "u": "https://www.youtube.com/watch?v=rxefsA1kuH4", "th": "https://i.ytimg.com/vi/rxefsA1kuH4/mqdefault.jpg", "v": 100893}, {"t": "超強化された『チャージライフル』の火力が大変な事になってる【APEX LEGENDS】", "c": "NIRU", "u": "https://www.youtube.com/watch?v=ZWUX6xxV1nQ", "th": "https://i.ytimg.com/vi/ZWUX6xxV1nQ/mqdefault.jpg", "v": 100336}, {"t": "机上の空論【 APEX LEGENDS 】【 SqLA 】", "c": "SqLA さくら / Riddle", "u": "https://www.youtube.com/watch?v=0L5SWTa8ZBU", "th": "https://i.ytimg.com/vi/0L5SWTa8ZBU/mqdefault.jpg", "v": 94612}, {"t": "【APEX】マジでキレないニコニコ穏やかソロランク", "c": "あかめいん", "u": "https://www.youtube.com/watch?v=39kd1NY6wFc", "th": "https://i.ytimg.com/vi/39kd1NY6wFc/mqdefault.jpg", "v": 83088}, {"t": "APEX格ゲー化！！ストリートファイターコラボがぶっ飛びすぎてて楽し過ぎた！！【Apex Legends】【エーペックスレジェンズ】【ゆっくり実況】part718", "c": "カニヨイ", "u": "https://www.youtube.com/watch?v=f1QpI3euyq0", "th": "https://i.ytimg.com/vi/f1QpI3euyq0/mqdefault.jpg", "v": 47291}], "orgs": {"個人・その他": 66, "ぶいすぽっ！": 6, "Neo-Porte": 4, "にじさんじ": 4, "ストリーマー": 3}, "spark": [45.5, 45.5, 36.0, 30.5, 53.0, 49.0, 67.5], "p_videos": 100, "p_channels": 100, "p_views": 100, "score": 100.0, "base": 43.2, "growth": 1.57, "steam": "https://store.steampowered.com/search/?term=Apex%20Legends", "amazon": "https://www.amazon.co.jp/s?k=Apex+Legends&tag=tarochin-22", "rank": 1}, {"game": "Minecraft", "canonical": "Minecraft", "videos": 40, "n": 39.5, "raw": 45, "channels": 37, "views": 2167361, "streams": [{"t": "【マイクラ人狼】全員が敵に見える『人狼RPG』で生き残れ！【マイクラ】", "c": "ドズル社", "u": "https://www.youtube.com/watch?v=S5OmFkH0M_U", "th": "https://i.ytimg.com/vi/S5OmFkH0M_U/mqdefault.jpg", "v": 223842}, {"t": "【 #マイクラ肝試し2026 】今日は、フレわたわちゃわちゃ肝試し？！【角巻わため/ホロライブ４期生】", "c": "Watame Ch. 角巻わため", "u": "https://www.youtube.com/watch?v=2Qvw9afY2jg", "th": "https://i.ytimg.com/vi/2Qvw9afY2jg/mqdefault.jpg", "v": 201467}, {"t": "ナポリの男たちinマイクラ肝試し2026【ナポリの男たち視点】", "c": "ナポリの男たち", "u": "https://www.youtube.com/watch?v=7UpIuI96J9g", "th": "https://i.ytimg.com/vi/7UpIuI96J9g/mqdefault.jpg", "v": 200622}, {"t": "MOBを切って食べれるマインクラフト【 マイクラ / マインクラフト 】", "c": "ウォーターチャレンジ", "u": "https://www.youtube.com/watch?v=WuqxNLtRNlg", "th": "https://i.ytimg.com/vi/WuqxNLtRNlg/mqdefault.jpg", "v": 184395}, {"t": "【Minecraft】#ミリキラハードコア ネザー行くぞ day3 【水宮枢／ホロライブ】", "c": "Su Ch. 水宮枢 - FLOW GLOW", "u": "https://www.youtube.com/watch?v=Xbz1v_kZ4dQ", "th": "https://i.ytimg.com/vi/Xbz1v_kZ4dQ/mqdefault.jpg", "v": 136084}, {"t": "【ドズル社×いんく】ドズル社人狼【マイクラ】【ドズル社一気見生放送】", "c": "ドズル社", "u": "https://www.youtube.com/watch?v=KbZ8GHhJZcA", "th": "https://i.ytimg.com/vi/KbZ8GHhJZcA/mqdefault_live.jpg", "v": 131405}, {"t": "ガチで最強の金庫作り対決をした結果！？【まいくら・マインクラフト】", "c": "まいぜんシスターズ", "u": "https://www.youtube.com/watch?v=RrtgKPeAvL0", "th": "https://i.ytimg.com/vi/RrtgKPeAvL0/mqdefault.jpg", "v": 86426}, {"t": "【#マイクラ肝試し2026】今日はとても騒がしい二人と参ります🔥【#あまかみらいぶ】", "c": "甘狼このみ / AmakamiKonomi🐺🍫", "u": "https://www.youtube.com/watch?v=xQq-zna-jAc", "th": "https://i.ytimg.com/vi/xQq-zna-jAc/mqdefault.jpg", "v": 52367}], "orgs": {"個人・その他": 25, "実況グループ": 4, "ホロライブ": 3, "hololive DEV_IS": 3, "にじさんじ": 3, "ミリプロ": 2, "ななしいんく": 2, "たろちん指定": 1, "追加指定": 1, "個人勢": 1}, "spark": [22.0, 24.5, 38.5, 41.5, 44.0, 34.5, 39.5], "p_videos": 59, "p_channels": 64, "p_views": 97, "score": 74.0, "base": 34.2, "growth": 1.17, "steam": "https://store.steampowered.com/search/?term=Minecraft", "amazon": "https://www.amazon.co.jp/s?k=Minecraft&tag=tarochin-22", "rank": 2}, {"game": "ストリートファイター6", "canonical": "ストリートファイター6", "videos": 36, "n": 36.0, "raw": 42, "channels": 32, "views": 1093792, "streams": [{"t": "LeSharとのエキシビジョンマッチでカワノ豪鬼出陣！今回用意した初めての試みとは【スト6】", "c": "カワノKawano", "u": "https://www.youtube.com/watch?v=kBy-9p_vEag", "th": "https://i.ytimg.com/vi/kBy-9p_vEag/mqdefault.jpg", "v": 229894}, {"t": "【スト6】ルークだけでも手一杯なのに豪鬼まで使いこなせってマジですか！？〜二人のメインキャラを極めようとした俺、気づけばコンボ練習だけで一日が終わっていた件〜", "c": "カワノKawano", "u": "https://www.youtube.com/watch?v=8nIJl0p96zg", "th": "https://i.ytimg.com/vi/8nIJl0p96zg/mqdefault.jpg", "v": 141310}, {"t": "【 スト6 】Mジュリ/D4~ / 日々鍛錬【 Rei7 / にじさんじ 】", "c": "Rei7【にじさんじ】", "u": "https://www.youtube.com/watch?v=94J-ocqyiis", "th": "https://i.ytimg.com/vi/94J-ocqyiis/mqdefault.jpg", "v": 103847}, {"t": "【スト6】１から始める特訓day4🔰プラチナに行きたいんだああああああああああああ！【星川サラ/にじさんじ】", "c": "星川サラ / Sara Hoshikawa", "u": "https://www.youtube.com/watch?v=UDKVpKIMBLE", "th": "https://i.ytimg.com/vi/UDKVpKIMBLE/mqdefault.jpg", "v": 77208}, {"t": "【スト6】10000点稼ぐ勢いのプレイがヤバすぎた!?  \"加点の鬼\" MenaRDの動きに驚愕するどぐらとガチくん【Red Bull Revengeミラー②】", "c": "どぐら 生駒デビル", "u": "https://www.youtube.com/watch?v=LS5PrflGN5s", "th": "https://i.ytimg.com/vi/LS5PrflGN5s/mqdefault.jpg", "v": 73633}, {"t": "【スト6】リュウも仕上げていこう", "c": "しゅーとチャンネル / Shuto", "u": "https://www.youtube.com/watch?v=lisDGkhXGuU", "th": "https://i.ytimg.com/vi/lisDGkhXGuU/mqdefault.jpg", "v": 72980}, {"t": "【スト6、SF6】ビッグニュース!? SFリーグ”ASIA”発足", "c": "ACQUA", "u": "https://www.youtube.com/watch?v=hZAzNHRc_3o", "th": "https://i.ytimg.com/vi/hZAzNHRc_3o/mqdefault.jpg", "v": 64886}, {"t": "【スト6】まぁどんとこいや【にじさんじ】", "c": "男虎 / Ono Tora【にじさんじ】", "u": "https://www.youtube.com/watch?v=AhyWeclwIbw", "th": "https://i.ytimg.com/vi/AhyWeclwIbw/mqdefault.jpg", "v": 44376}], "orgs": {"個人・その他": 40, "にじさんじ": 1, "たろちん指定": 1}, "spark": [34.0, 31.0, 22.5, 25.0, 42.0, 38.5, 36.0], "p_videos": 53, "p_channels": 55, "p_views": 92, "score": 67.3, "base": 32.2, "growth": 1.12, "steam": "https://store.steampowered.com/search/?term=%E3%82%B9%E3%83%88%E3%83%AA%E3%83%BC%E3%83%88%E3%83%95%E3%82%A1%E3%82%A4%E3%82%BF%E3%83%BC6", "amazon": "https://www.amazon.co.jp/s?k=%E3%82%B9%E3%83%88%E3%83%AA%E3%83%BC%E3%83%88%E3%83%95%E3%82%A1%E3%82%A4%E3%82%BF%E3%83%BC6&tag=tarochin-22", "rank": 3}, {"game": "Silent Hill: Townfall", "canonical": "Silent Hill: Townfall", "videos": 24, "n": 24.0, "raw": 30, "channels": 23, "views": 1267903, "streams": [{"t": "【ネタバレあり】霧の孤島、その先へ『SILENT HILL: Townfall』#2【弟者】", "c": "兄者弟者", "u": "https://www.youtube.com/watch?v=sC_7gRltqjg", "th": "https://i.ytimg.com/vi/sC_7gRltqjg/mqdefault.jpg", "v": 383139}, {"t": "#2 さっくり進めるSILENT HILL: Townfall ※ネタバレあり", "c": "あまり驚かないガッチマンはホラーゲームばかりやっている", "u": "https://www.youtube.com/watch?v=77LNuXgDuWQ", "th": "https://i.ytimg.com/vi/77LNuXgDuWQ/mqdefault.jpg", "v": 207633}, {"t": "【 SILENT HILL: Townfall 】本日解禁！48時間前🎮先行アクセス！王覇山、恐怖体験。（ この社会は、不条理を赦す。 ）【 にじさんじ┊︎葉山舞鈴┊︎※ネタバレ注意 】", "c": "葉山舞鈴 / Ohayama Ch.", "u": "https://www.youtube.com/watch?v=rQSxN07atmY", "th": "https://i.ytimg.com/vi/rQSxN07atmY/mqdefault.jpg", "v": 163844}, {"t": "【サイレントヒル：タウンフォール】#2📻絶望の孤島に待つものとは…先行アクセス【おついちTube】", "c": "おついちTube", "u": "https://www.youtube.com/watch?v=1fxwieMCMmc", "th": "https://i.ytimg.com/vi/1fxwieMCMmc/mqdefault.jpg", "v": 114202}, {"t": "【先行配信】サイレントヒルタウンフォールを過去作の解説付きで実況プレイ＃２【SILENT HILL: Townfall 】ネタバレあり", "c": "コジマ店員のホラーは恐くない", "u": "https://www.youtube.com/watch?v=AFGQ7WqYoxA", "th": "https://i.ytimg.com/vi/AFGQ7WqYoxA/mqdefault.jpg", "v": 60990}, {"t": "霧に包まれた『絶望の孤島』で恐ろしい過去を暴きだすホラーゲーム【 SILENT HILL: Townfall 】_#1『VOICEROID実況/重音テト・宮舞モカ』", "c": "しまねげーむず / ホラーゲーム実況ch", "u": "https://www.youtube.com/watch?v=p9a2qaSVX1k", "th": "https://i.ytimg.com/vi/p9a2qaSVX1k/mqdefault.jpg", "v": 37135}, {"t": "【最新作】SILENT HILL: Townfall ─ サイレントヒルの新たな悪夢へ。完全初見 #1 ※ネタバレあり【ホラー声優Vtuber／初雪セツナ】", "c": "初雪セツナ | ホラー声優Vtuber", "u": "https://www.youtube.com/watch?v=Zj4aJ1Ry8JQ", "th": "https://i.ytimg.com/vi/Zj4aJ1Ry8JQ/mqdefault.jpg", "v": 28962}, {"t": "【 SILENT HILL: Townfall 】ゾーイを追うサイモン。サイモンの過去とゾーイが抱える闇とは…？ ※ネタバレ注意※ #03【 人生つみこ】", "c": "人生 つみこ (ホラーゲーム専門Vtuber)", "u": "https://www.youtube.com/watch?v=rE21SBLbO34", "th": "https://i.ytimg.com/vi/rE21SBLbO34/mqdefault.jpg", "v": 12325}], "orgs": {"個人・その他": 25, "にじさんじ": 2, "実況グループ": 2, "実況者": 1}, "spark": [1.0, 0, 0, 0, 7.0, 26.5, 24.0], "p_videos": 36, "p_channels": 40, "p_views": 93, "score": 57.3, "base": 5.8, "growth": 4.14, "steam": "https://store.steampowered.com/search/?term=Silent%20Hill%3A%20Townfall", "amazon": "https://www.amazon.co.jp/s?k=Silent+Hill%3A+Townfall&tag=tarochin-22", "rank": 4}, {"game": "原神", "canonical": "原神", "videos": 26, "n": 25.5, "raw": 33, "channels": 18, "views": 1226015, "streams": [{"t": "【原神】ヴェスナ/ヴォジャニーツァの結論。○○な人には超オススメ！", "c": "マグロヘッド", "u": "https://www.youtube.com/watch?v=epBmQaP1JQk", "th": "https://i.ytimg.com/vi/epBmQaP1JQk/mqdefault.jpg", "v": 369802}, {"t": "【原神】強い理由はバフだけじゃない！ヴォジャニーツァの性能・育成を解説【げんしん】", "c": "Somen Channel", "u": "https://www.youtube.com/watch?v=HxUqwhPrS7c", "th": "https://i.ytimg.com/vi/HxUqwhPrS7c/mqdefault.jpg", "v": 155845}, {"t": "【原神】ヴェスナは火力も探索も強い！武器・聖遺物・おすすめ編成を徹底解説【げんしん】", "c": "Somen Channel", "u": "https://www.youtube.com/watch?v=G6piePVynf4", "th": "https://i.ytimg.com/vi/G6piePVynf4/mqdefault.jpg", "v": 114256}, {"t": "【#原神 】魔神任務 第七章 第三幕「白夜の夢の覚めるが如く」をプレイ", "c": "麻酔 Masui", "u": "https://www.youtube.com/watch?v=vFoFRmShOZM", "th": "https://i.ytimg.com/vi/vFoFRmShOZM/mqdefault.jpg", "v": 61460}, {"t": "【#原神】アプデ待機からのヴェスナ＆ヴォジャニーツァお迎えガチャ♡", "c": "はなやま / ナギ", "u": "https://www.youtube.com/watch?v=fWPYmDWp9FE", "th": "https://i.ytimg.com/vi/fWPYmDWp9FE/mqdefault.jpg", "v": 57037}, {"t": "【#原神 】ver7.1アップデート！ヴェスナ＆ヴォジャニーツァを引くぞ！", "c": "麻酔 Masui", "u": "https://www.youtube.com/watch?v=qNYrsFVQVRk", "th": "https://i.ytimg.com/vi/qNYrsFVQVRk/mqdefault.jpg", "v": 56147}, {"t": "【原神】最速完凸真君によるヴェスナ&ヴォジャニーツァ&武器完凸ガチャ！何連で終わるかなｗ【Genshin Impact】C6 Vesna & Vodyanitsa & R5 Weapon GACHA!", "c": "変な親爺 Henna-Oyajii", "u": "https://www.youtube.com/watch?v=A95dPMzn3wo", "th": "https://i.ytimg.com/vi/A95dPMzn3wo/mqdefault.jpg", "v": 52234}, {"t": "【原神】Ver.7.1魔神任務第七章第四幕「冥府へのレクイエム」【Genshinimpact】", "c": "すりっぷらーゼツ", "u": "https://www.youtube.com/watch?v=puXwCm2XDAI", "th": "https://i.ytimg.com/vi/puXwCm2XDAI/mqdefault.jpg", "v": 39924}], "orgs": {"個人・その他": 30, "個人勢": 1, "ぶいすぽっ！": 1, "Neo-Porte": 1}, "spark": [12.0, 6.5, 9.0, 8.0, 10.0, 7.0, 25.5], "p_videos": 38, "p_channels": 31, "p_views": 93, "score": 54.8, "base": 8.8, "growth": 2.95, "steam": "https://store.steampowered.com/search/?term=%E5%8E%9F%E7%A5%9E", "amazon": "https://www.amazon.co.jp/s?k=%E5%8E%9F%E7%A5%9E&tag=tarochin-22", "rank": 5}, {"game": "トルネコの大冒険 ちょっとステキなリマスター", "canonical": "Dragon Quest Heroes: Torneko's Mystery Dungeon Classic HD", "videos": 17, "n": 17.0, "raw": 18, "channels": 17, "views": 1454639, "streams": [{"t": "【トルネコの大冒険】９９階チャレンジ！！！！【２回目】※ネタバレ注意", "c": "Korone Ch. 戌神ころね", "u": "https://www.youtube.com/watch?v=IeCjC5ikbGE", "th": "https://i.ytimg.com/vi/IeCjC5ikbGE/mqdefault.jpg", "v": 427139}, {"t": "【 🔵トルネコの大冒険 】 おい､転ぶな───‼️| トルネコの大冒険 ちょっとステキなリマスター【 猫又おかゆ/ホロライブ 】", "c": "Okayu Ch. 猫又おかゆ", "u": "https://www.youtube.com/watch?v=n1HKu8a_1qE", "th": "https://i.ytimg.com/vi/n1HKu8a_1qE/mqdefault.jpg", "v": 417726}, {"t": "トルネコの大冒険 ちょっとステキなリマスター 完全初見でやるやよ！ #02", "c": "笹木咲 / Sasaki Saku", "u": "https://www.youtube.com/watch?v=u6p_oTaflb0", "th": "https://i.ytimg.com/vi/u6p_oTaflb0/mqdefault.jpg", "v": 74393}, {"t": "【トルネコの大冒険2 初見プレイ】ラストダンジョン、不思議のダンジョン攻略から！シリーズ最高傑作とも名高い「トルネコの大冒険2 ～不思議のダンジョン～」初見実況プレイ！！ #2", "c": "つわはす", "u": "https://www.youtube.com/watch?v=Houm-Hoa7XA", "th": "https://i.ytimg.com/vi/Houm-Hoa7XA/mqdefault.jpg", "v": 25760}, {"t": "【しょしんしゃ】トルネコの大冒険 ちょっとステキなリマスター遊ぶ～！！！その３　しわよせの箱【#とまライブ】", "c": "Tomari Mari channel / 兎鞠まりちゃんねる", "u": "https://www.youtube.com/watch?v=DcHqPCdbhK0", "th": "https://i.ytimg.com/vi/DcHqPCdbhK0/mqdefault.jpg", "v": 15236}, {"t": "【トルネコの大冒険】完全初見！人生初のトルネコに挑戦！｜もっと不思議のダンジョン！99階を目指す！【水鞠まろな/VTuber】", "c": "Marona Ch. 水鞠まろな", "u": "https://www.youtube.com/watch?v=aPGkTCY6e7U", "th": "https://i.ytimg.com/vi/aPGkTCY6e7U/mqdefault.jpg", "v": 14888}, {"t": "#3 はじめての『トルネコの大冒険 不思議のダンジョン ちょっとステキなリマスター』実況プレイ", "c": "じんむ", "u": "https://www.youtube.com/watch?v=FeD28nMgMkQ", "th": "https://i.ytimg.com/vi/FeD28nMgMkQ/mqdefault.jpg", "v": 9927}, {"t": "【トルネコの大冒険 ちょっとステキなリマスター】初トルネコ🔰９９階チャレンジ！！【 #vtuber うりり】", "c": "うりり", "u": "https://www.youtube.com/watch?v=ABuZErGHW6c", "th": "https://i.ytimg.com/vi/ABuZErGHW6c/mqdefault.jpg", "v": 6127}], "orgs": {"個人・その他": 12, "ホロライブ": 2, "にじさんじ": 1, "個人勢": 1, "実況グループ": 1, "亀戸組": 1}, "spark": [10.0, 9.5, 14.0, 15.5, 22.0, 19.0, 17.0], "p_videos": 25, "p_channels": 29, "p_views": 94, "score": 50.5, "base": 15.0, "growth": 1.13, "steam": "https://store.steampowered.com/search/?term=%E3%83%88%E3%83%AB%E3%83%8D%E3%82%B3%E3%81%AE%E5%A4%A7%E5%86%92%E9%99%BA%20%E3%81%A1%E3%82%87%E3%81%A3%E3%81%A8%E3%82%B9%E3%83%86%E3%82%AD%E3%81%AA%E3%83%AA%E3%83%9E%E3%82%B9%E3%82%BF%E3%83%BC", "amazon": "https://www.amazon.co.jp/s?k=%E3%83%88%E3%83%AB%E3%83%8D%E3%82%B3%E3%81%AE%E5%A4%A7%E5%86%92%E9%99%BA+%E3%81%A1%E3%82%87%E3%81%A3%E3%81%A8%E3%82%B9%E3%83%86%E3%82%AD%E3%81%AA%E3%83%AA%E3%83%9E%E3%82%B9%E3%82%BF%E3%83%BC&tag=tarochin-22", "rank": 6}, {"game": "Grand Theft Auto V", "canonical": "Grand Theft Auto V", "videos": 18, "n": 18.5, "raw": 21, "channels": 17, "views": 289640, "streams": [{"t": "【ありえない手配度MAXからの逃げ方】GTA5小ネタ紹介", "c": "ジャモジャムのゲーム実況!（jamojam）", "u": "https://www.youtube.com/watch?v=q_qHF012pNo", "th": "https://i.ytimg.com/vi/q_qHF012pNo/mqdefault.jpg", "v": 49034}, {"t": "【#ストグラ】#ストグラSeason2 柚乃いずみの日常～156日目～【柚原いづみ / ななしいんく】", "c": "柚原いづみ / Izumi Channel 【ななしいんく】", "u": "https://www.youtube.com/watch?v=40V0sXSRxsI", "th": "https://i.ytimg.com/vi/40V0sXSRxsI/mqdefault.jpg", "v": 18712}, {"t": "【#ストグラ】手錠はどうなった？【バーバリアン田中】#ストグラSeason2", "c": "たけぉ", "u": "https://www.youtube.com/watch?v=lsuZSj_IJvY", "th": "https://i.ytimg.com/vi/lsuZSj_IJvY/mqdefault.jpg", "v": 18442}, {"t": "【GTA5】大型ギガ消防車で消防士になる！大型消防車でシミオンの店の大火災を消す！本当に消防ホースや放水ノズルを使うことができる！トレバーとジョニー君のお仕事【ほぅ】", "c": "ほぅ（Housan）", "u": "https://www.youtube.com/watch?v=uBoVIKAggwA", "th": "https://i.ytimg.com/vi/uBoVIKAggwA/mqdefault.jpg", "v": 12121}, {"t": "【サージタウン】大型現場に動物縛りで出撃するあどみん【GTA5】", "c": "あどみん", "u": "https://www.youtube.com/watch?v=RhysXB3e1eY", "th": "https://i.ytimg.com/vi/RhysXB3e1eY/mqdefault.jpg", "v": 9908}, {"t": "【#SURGETOWN】パシフィックの金回収がバグるも、謎の方法で利確するみつきwww【みつき/あどみん/GTA5】", "c": "みつき", "u": "https://www.youtube.com/watch?v=14DqRG8u-tI", "th": "https://i.ytimg.com/vi/14DqRG8u-tI/mqdefault.jpg", "v": 6914}, {"t": "【#ストグラ Season2】神アプデリーク界隈～なんと種まで1週間もない～【赤ちゃんキャップ】", "c": "ましゃかりさん", "u": "https://www.youtube.com/watch?v=T3TBaKYhrNg", "th": "https://i.ytimg.com/vi/T3TBaKYhrNg/mqdefault_live.jpg", "v": 2948}, {"t": "【DAY116】週明け撮影！⚓帆立ほたるのばりばり掛け持ち社員生活【#ストグラSeason2】", "c": "暁月ホタル AKATSUKI HOTARU", "u": "https://www.youtube.com/watch?v=MK8VEJh1GD4", "th": "https://i.ytimg.com/vi/MK8VEJh1GD4/mqdefault.jpg", "v": 2833}], "orgs": {"個人・その他": 17, "ななしいんく": 2, "高田村": 2}, "spark": [26.5, 23.0, 22.5, 28.0, 6.0, 8.0, 18.5], "p_videos": 27, "p_channels": 29, "p_views": 84, "score": 47.6, "base": 19.0, "growth": 0.95, "steam": "https://store.steampowered.com/search/?term=Grand%20Theft%20Auto%20V", "amazon": "https://www.amazon.co.jp/s?k=Grand+Theft+Auto+V&tag=tarochin-22", "rank": 7}, {"game": "フォートナイト", "canonical": "Fortnite", "videos": 17, "n": 17.0, "raw": 23, "channels": 13, "views": 484507, "streams": [{"t": "【神回】マジかよ、、復活のトリオ大会が\"プロ選手\"だらけで超ハイレベルに！？地獄のストームサージを乗り越え、衝撃の結末に、、【フォートナイト】【ゆっくり実況】【チャプター7】【シーズン4】", "c": "やわらちゃんねる", "u": "https://www.youtube.com/watch?v=Fb3JYR5r6oU", "th": "https://i.ytimg.com/vi/Fb3JYR5r6oU/mqdefault.jpg", "v": 94546}, {"t": "【世界大会スタート】会場が超特殊!?最速でベルギー行ってみたvlog【フォートナイト】", "c": "Polsポルス", "u": "https://www.youtube.com/watch?v=-8FtYxCizAU", "th": "https://i.ytimg.com/vi/-8FtYxCizAU/mqdefault.jpg", "v": 69806}, {"t": "🔴勝ったらギフト確定！参加型1v1で限定スキンをプレゼント🎁【フォートナイト】", "c": "お祭りくん", "u": "https://www.youtube.com/watch?v=K2vuc4pVvPM", "th": "https://i.ytimg.com/vi/K2vuc4pVvPM/mqdefault.jpg", "v": 43733}, {"t": "フォトナ界隈で一番人気なペアはどこだ！！！【フォートナイト/Fortnite】", "c": "ちゃんナギ🍟", "u": "https://www.youtube.com/watch?v=YJeO_qCnPms", "th": "https://i.ytimg.com/vi/YJeO_qCnPms/mqdefault.jpg", "v": 38403}, {"t": "『Fortnite』エリート3行けるまで耐久配信！", "c": "とち丸ちゃん【毎日19時配信】", "u": "https://www.youtube.com/watch?v=HAhG_cciURQ", "th": "https://i.ytimg.com/vi/HAhG_cciURQ/mqdefault.jpg", "v": 33943}, {"t": "【トレード再び!?】世界大会直前！EU最強選手たちが優勝に向けて準備万端です...【フォートナイト】", "c": "Polsポルス", "u": "https://www.youtube.com/watch?v=2Zx72r1ap4Q", "th": "https://i.ytimg.com/vi/2Zx72r1ap4Q/mqdefault.jpg", "v": 28648}, {"t": "ワンピコラボ確定!ネフライトスキン再配布!?新エモートが煽りで悪用!有名チームが◯◯で崩壊!無料報酬も来た!最新情報を解説!【フォートナイト】フォトナリーク情報考察ブレインロット配布無料スキンアプデ", "c": "シャッポ / SHAPO", "u": "https://www.youtube.com/watch?v=Jwmm_QRVfMU", "th": "https://i.ytimg.com/vi/Jwmm_QRVfMU/mqdefault.jpg", "v": 27795}, {"t": "ベッドウォーズで『ルーレット』で当たったランダムな”課金額”を使って戦ったら面白すぎたｗｗｗ【フォートナイト】", "c": "新兵シャウト", "u": "https://www.youtube.com/watch?v=R9KxjGcOH7c", "th": "https://i.ytimg.com/vi/R9KxjGcOH7c/mqdefault.jpg", "v": 22963}], "orgs": {"個人・その他": 23}, "spark": [15.0, 14.0, 15.5, 14.0, 13.5, 9.0, 17.0], "p_videos": 25, "p_channels": 22, "p_views": 87, "score": 45.6, "base": 13.5, "growth": 1.26, "steam": "https://store.steampowered.com/search/?term=%E3%83%95%E3%82%A9%E3%83%BC%E3%83%88%E3%83%8A%E3%82%A4%E3%83%88", "amazon": "https://www.amazon.co.jp/s?k=%E3%83%95%E3%82%A9%E3%83%BC%E3%83%88%E3%83%8A%E3%82%A4%E3%83%88&tag=tarochin-22", "rank": 8}, {"game": "スプラトゥーン3", "canonical": "スプラトゥーン3", "videos": 16, "n": 15.5, "raw": 16, "channels": 15, "views": 301383, "streams": [{"t": "いきなり上位帯に現れた85ダメージを連射できる武器が本当にヤバい【Splatoon3】", "c": "ティラミスちゃんねる", "u": "https://www.youtube.com/watch?v=42X1u1MiI1U", "th": "https://i.ytimg.com/vi/42X1u1MiI1U/mqdefault.jpg", "v": 69023}, {"t": "【スプラトゥーン3】激熱フィンセント【叢雲カゲツ/にじさんじ】", "c": "叢雲カゲツ / Murakumo Kagetsu【にじさんじ】", "u": "https://www.youtube.com/watch?v=FqW13iccfYo", "th": "https://i.ytimg.com/vi/FqW13iccfYo/mqdefault.jpg", "v": 54693}, {"t": "【 スプラ3 → APEX 】色塗った後は『 ペ 』の時間だろ！【 皇れお  / にじさんじ 】", "c": "皇れお / Sumeragi Reo【にじさんじ】", "u": "https://www.youtube.com/watch?v=UfZVKUrpZNE", "th": "https://i.ytimg.com/vi/UfZVKUrpZNE/mqdefault.jpg", "v": 54619}, {"t": "【革命】まじか…環境ブキ達をボコボコに出来るマイナー武器がエグすぎるんだがｗｗｗ【スプラトゥーン3】", "c": "ダークネス山本", "u": "https://www.youtube.com/watch?v=yYZMSFxszvg", "th": "https://i.ytimg.com/vi/yYZMSFxszvg/mqdefault.jpg", "v": 33308}, {"t": "【スプラトゥーン3 】あそびたりないよなああ！？【アルス・アルマル/にじさんじ】", "c": "アルス・アルマル -ars almal- 【にじさんじ】", "u": "https://www.youtube.com/watch?v=Rt_4gJQCzmw", "th": "https://i.ytimg.com/vi/Rt_4gJQCzmw/mqdefault_live.jpg", "v": 19470}, {"t": "【パブロ4050】早起きは3300の雰囲気・・・【スプラトゥーン3】", "c": "はたの htn", "u": "https://www.youtube.com/watch?v=lGfRP2x8e5g", "th": "https://i.ytimg.com/vi/lGfRP2x8e5g/mqdefault.jpg", "v": 11555}, {"t": "【最高XP2786】パワー上げたい！Xマッチ頑張るぞ！！【スプラトゥーン3】", "c": "ななぽこ*", "u": "https://www.youtube.com/watch?v=-uKAYSAJ_rk", "th": "https://i.ytimg.com/vi/-uKAYSAJ_rk/mqdefault.jpg", "v": 9647}, {"t": "【パブロ4050】これは・・雰囲気の上昇・・・【スプラトゥーン3】", "c": "はたの htn", "u": "https://www.youtube.com/watch?v=gOBM1j9msaM", "th": "https://i.ytimg.com/vi/gOBM1j9msaM/mqdefault.jpg", "v": 9229}], "orgs": {"個人・その他": 14, "にじさんじ": 2}, "spark": [7.0, 12.5, 11.0, 15.5, 8.5, 8.0, 15.5], "p_videos": 23, "p_channels": 26, "p_views": 84, "score": 45.4, "base": 10.4, "growth": 1.54, "steam": null, "amazon": "https://www.amazon.co.jp/s?k=%E3%82%B9%E3%83%97%E3%83%A9%E3%83%88%E3%82%A5%E3%83%BC%E3%83%B33&tag=tarochin-22", "rank": 9}, {"game": "実況パワフルプロ野球2026", "canonical": "実況パワフルプロ野球2026", "videos": 12, "n": 12.0, "raw": 13, "channels": 11, "views": 854914, "streams": [{"t": "【#ホロ甲2026】2年目夏甲子園から夏合宿へいくのだ！！！【ホロライブ/宝鐘マリン】", "c": "Marine Ch. 宝鐘マリン hololive3期生", "u": "https://www.youtube.com/watch?v=zOAseMreWQE", "th": "https://i.ytimg.com/vi/zOAseMreWQE/mqdefault.jpg", "v": 484024}, {"t": "【#ホロ甲2026】大分の白銀学院高校！２年目の夏！！！！！！甲子園優勝まであと２勝！！！【白銀ノエル/ホロライブ】", "c": "Noel Ch. 白銀ノエル", "u": "https://www.youtube.com/watch?v=FQY8Xh3amJI", "th": "https://i.ytimg.com/vi/FQY8Xh3amJI/mqdefault.jpg", "v": 257004}, {"t": "KONAMIのOB選手査定に気合を感じた！！固有特能かっけえ！！OB選手能力check【パワプロ2026】", "c": "ふなふな", "u": "https://www.youtube.com/watch?v=OtXH8W8o3EM", "th": "https://i.ytimg.com/vi/OtXH8W8o3EM/mqdefault.jpg", "v": 51350}, {"t": "【パワプロ2026】甲子園まであと2勝！頼むから打ってくれ関口。ミリ知ら監督、最後までキャプテンを信じます。#6【#ひなみ通信】#由比河ひなみ", "c": "ACHRORA - mekPark", "u": "https://www.youtube.com/watch?v=_SPW2mLPXGs", "th": "https://i.ytimg.com/vi/_SPW2mLPXGs/mqdefault.jpg", "v": 35447}, {"t": "\"天才\"出るまで無限リセマラ！天才限定スカウト！ 3人め～【栄冠ナイン】【パワプロ2026】", "c": "こーくAちゃんねる", "u": "https://www.youtube.com/watch?v=YQeqeSc789E", "th": "https://i.ytimg.com/vi/YQeqeSc789E/mqdefault.jpg", "v": 11712}, {"t": "【別verの別ver】厨二病全開の暗黒スバルが更なる暗黒化決定ｗｗ【パワプロアプリ】", "c": "りょーつー【パワプロサクセス研究部】", "u": "https://www.youtube.com/watch?v=21egcOet9r8", "th": "https://i.ytimg.com/vi/21egcOet9r8/mqdefault.jpg", "v": 9435}, {"t": "【感動】俺の活躍を心待ちにしている子供がいる件についてｗｗｗこいつのためにもオールスターでるわ！？コーミエ三冠王への道#43【パワプロ2026/マイライフ】", "c": "コーミエの実況", "u": "https://www.youtube.com/watch?v=2oO4fVgM9b4", "th": "https://i.ytimg.com/vi/2oO4fVgM9b4/mqdefault.jpg", "v": 2473}, {"t": "栄冠ナインが100倍面白くなる方法がこちらｗｗｗ【パワプロ2026】", "c": "おしるこ忍者", "u": "https://www.youtube.com/watch?v=jjWoDOjAW28", "th": "https://i.ytimg.com/vi/jjWoDOjAW28/mqdefault.jpg", "v": 1301}], "orgs": {"個人・その他": 11, "ホロライブ": 2}, "spark": [9.0, 12.0, 14.5, 14.5, 11.5, 14.0, 12.0], "p_videos": 18, "p_channels": 19, "p_views": 91, "score": 43.9, "base": 12.6, "growth": 0.95, "steam": null, "amazon": "https://www.amazon.co.jp/s?k=%E5%AE%9F%E6%B3%81%E3%83%91%E3%83%AF%E3%83%95%E3%83%AB%E3%83%97%E3%83%AD%E9%87%8E%E7%90%832026&tag=tarochin-22", "rank": 10}, {"game": "VALORANT", "canonical": "VALORANT", "videos": 16, "n": 15.5, "raw": 20, "channels": 14, "views": 168930, "streams": [{"t": "とある設定を戻してからエイムがド安定するLaz【VALORANT】", "c": "Lazvell", "u": "https://www.youtube.com/watch?v=L9Wmd4s4EK0", "th": "https://i.ytimg.com/vi/L9Wmd4s4EK0/mqdefault.jpg", "v": 55932}, {"t": "【Laz困惑】光のVALO代表のLazをデュオに誘った結果がガチでヤバすぎた…w【VALORANT】", "c": "SurugaMonkeyCH", "u": "https://www.youtube.com/watch?v=gielKDxqX5s", "th": "https://i.ytimg.com/vi/gielKDxqX5s/mqdefault.jpg", "v": 16474}, {"t": "【VALORANT】 #3 | 久々のデュオイモチャレンジ復活！ w/ Claude Clawmark 【久我レオ / ネオポルテ】", "c": "久我レオ / Kuga Leo", "u": "https://www.youtube.com/watch?v=NqAWcJ0Ru_I", "th": "https://i.ytimg.com/vi/NqAWcJ0Ru_I/mqdefault.jpg", "v": 13243}, {"t": "【VALO】新シーズンを破壊", "c": "音大生の頂点", "u": "https://www.youtube.com/watch?v=sb5VDTpzFHQ", "th": "https://i.ytimg.com/vi/sb5VDTpzFHQ/mqdefault.jpg", "v": 11470}, {"t": "【VALORANT】おもしれェ野良に会いに行く！【スイフトプレイ】", "c": "デイト // Deito", "u": "https://www.youtube.com/watch?v=PATsrqe0Cwc", "th": "https://i.ytimg.com/vi/PATsrqe0Cwc/mqdefault.jpg", "v": 9367}, {"t": "チャンピオンズファントム2026、ガチの神スキンで実装してくれた模様【VALORANT】【ゆっくり実況】", "c": "hydspvl", "u": "https://www.youtube.com/watch?v=QXQEGxTyl20", "th": "https://i.ytimg.com/vi/QXQEGxTyl20/mqdefault.jpg", "v": 8162}, {"t": "【VALORANT】おもしれェ野良に会いに行く！【スイフトプレイ】", "c": "デイト // Deito", "u": "https://www.youtube.com/watch?v=5gBDc3I07ck", "th": "https://i.ytimg.com/vi/5gBDc3I07ck/mqdefault.jpg", "v": 7646}, {"t": "【ソロコンペ】新武器、チャンピオンスキン、ナイトマーケット...新要素がいっぱいだぁ！※遅延あり【VALORANT】", "c": "ユウレイです", "u": "https://www.youtube.com/watch?v=uB3JGVCDHI4", "th": "https://i.ytimg.com/vi/uB3JGVCDHI4/mqdefault.jpg", "v": 6300}], "orgs": {"個人・その他": 18, "Neo-Porte": 2}, "spark": [14.5, 16.0, 9.0, 22.5, 16.0, 7.0, 15.5], "p_videos": 23, "p_channels": 24, "p_views": 80, "score": 43.3, "base": 14.2, "growth": 1.13, "steam": "https://store.steampowered.com/search/?term=VALORANT", "amazon": "https://www.amazon.co.jp/s?k=VALORANT&tag=tarochin-22", "rank": 11}, {"game": "ほの暮しの庭", "canonical": "ほの暮しの庭", "videos": 12, "n": 12.0, "raw": 12, "channels": 12, "views": 336735, "streams": [{"t": "異常な掟が残る不穏な村で田舎暮らしするホラーゲーム『ほの暮しの庭』#16(終)", "c": "レトルト", "u": "https://www.youtube.com/watch?v=mLcwdttjGaI", "th": "https://i.ytimg.com/vi/mLcwdttjGaI/mqdefault.jpg", "v": 162003}, {"t": "【#12 ほの暮しの庭】ほのぼのとした田舎暮らしへ🩷※ネタバレ注意【ニュイ・ソシエール / にじさんじ】", "c": "ニュイ・ソシエール //[Nui Sociere]", "u": "https://www.youtube.com/watch?v=7JRq6nZXNtQ", "th": "https://i.ytimg.com/vi/7JRq6nZXNtQ/mqdefault.jpg", "v": 111566}, {"t": "採掘おわりの温泉が最高すぎる田舎暮らし『 ほの暮しの庭 』#14", "c": "ハヤトの隠れ家", "u": "https://www.youtube.com/watch?v=vVmooDLmTNM", "th": "https://i.ytimg.com/vi/vVmooDLmTNM/mqdefault.jpg", "v": 36001}, {"t": "#16【ほの暮しの庭】いよいよ最終回‼この村の結末ハ・・・【にじさんじ/レヴィ・エリファ】※ネタバレあり", "c": "レヴィ・エリファ-Levi Elipha-", "u": "https://www.youtube.com/watch?v=XNa2YqZPkbE", "th": "https://i.ytimg.com/vi/XNa2YqZPkbE/mqdefault.jpg", "v": 12329}, {"t": "#10【 ほの暮しの庭 】ついに冬がやってきた【 幽乃うつろ / ネオポルテ 】", "c": "幽乃うつろ / Kasukano Utsuro", "u": "https://www.youtube.com/watch?v=0bFbR_Zva08", "th": "https://i.ytimg.com/vi/0bFbR_Zva08/mqdefault.jpg", "v": 5197}, {"t": "【ほの暮らしの庭 #4 】 久々にほのぼのホラー【鬼ヶ谷テン/ネオポルテ】", "c": "鬼ヶ谷 テン / Onigaya Ten", "u": "https://www.youtube.com/watch?v=rDnHQmrHOIQ", "th": "https://i.ytimg.com/vi/rDnHQmrHOIQ/mqdefault.jpg", "v": 4340}, {"t": "【ほの暮しの庭】9/23 不穏な農家をするおじさん　29", "c": "桃＋（とーたす）'s チェンネル", "u": "https://www.youtube.com/watch?v=WX7yPkan6eg", "th": "https://i.ytimg.com/vi/WX7yPkan6eg/mqdefault.jpg", "v": 1892}, {"t": "【新作】ホラゲー苦手実況者がほのぐらしでも効率求めて楽しんでみる！#46【ほの暮しの庭】【ぽんすけ】", "c": "ぽんすけ", "u": "https://www.youtube.com/watch?v=v9hRnekRx1I", "th": "https://i.ytimg.com/vi/v9hRnekRx1I/mqdefault.jpg", "v": 1199}], "orgs": {"個人・その他": 5, "実況者": 2, "にじさんじ": 2, "Neo-Porte": 2, "高田村": 1}, "spark": [15.0, 8.0, 7.0, 11.0, 11.0, 11.0, 12.0], "p_videos": 18, "p_channels": 21, "p_views": 85, "score": 42.5, "base": 10.5, "growth": 1.14, "steam": "https://store.steampowered.com/search/?term=%E3%81%BB%E3%81%AE%E6%9A%AE%E3%81%97%E3%81%AE%E5%BA%AD", "amazon": "https://www.amazon.co.jp/s?k=%E3%81%BB%E3%81%AE%E6%9A%AE%E3%81%97%E3%81%AE%E5%BA%AD&tag=tarochin-22", "rank": 12}, {"game": "Bombanana!", "canonical": "Bombanana!", "videos": 9, "n": 9.0, "raw": 9, "channels": 9, "views": 1031490, "streams": [{"t": "【BOMBANANA!】聞か猿見え猿言わ猿、きんじょーーーず！！！！！！！！【ホロライブ/さくらみこ】", "c": "Miko Ch. さくらみこ", "u": "https://www.youtube.com/watch?v=Q_XKhVZZ8I8", "th": "https://i.ytimg.com/vi/Q_XKhVZZ8I8/mqdefault.jpg", "v": 286838}, {"t": "【BOMBANANA!】きんじょーずでイライラ爆弾解除💣【星街すいせい / #ほしまちすたじお】", "c": "Suisei Channel", "u": "https://www.youtube.com/watch?v=s7bKx7jhHCc", "th": "https://i.ytimg.com/vi/s7bKx7jhHCc/mqdefault.jpg", "v": 223326}, {"t": "【BOMBANANA!】見ざる・聞かざる・言わざるで爆弾解除！💣💥with甘城家【海月雲ろあ/ 赤見かるび/ 甘城なつき】", "c": "Roa Ch. 海月雲ろあ", "u": "https://www.youtube.com/watch?v=RqWC6YzP7Yo", "th": "https://i.ytimg.com/vi/RqWC6YzP7Yo/mqdefault.jpg", "v": 133507}, {"t": "【BOMBANANA!】見ざる言わざる聞かざるで爆弾解除💣w/もかあかりん【ぶいすぽ/八雲べに】", "c": "八雲べに", "u": "https://www.youtube.com/watch?v=yAekXC0V0aY", "th": "https://i.ytimg.com/vi/yAekXC0V0aY/mqdefault.jpg", "v": 132997}, {"t": "【BOMBANANA!】きんじょーずのはいしんよていち【ホロライブ/鷹嶺ルイ】", "c": "Lui ch. 鷹嶺ルイ - holoX -", "u": "https://www.youtube.com/watch?v=Jq_6H1Zute4", "th": "https://i.ytimg.com/vi/Jq_6H1Zute4/mqdefault.jpg", "v": 122267}, {"t": "【 BOMBANANA! 】「見ざる」「聞かざる」「言わざる」のゲーム！/べに先輩　あかり先輩【 ぶいすぽっ！甘結もか 】", "c": "甘結もか / Amayui Moka", "u": "https://www.youtube.com/watch?v=2oilphxi2J0", "th": "https://i.ytimg.com/vi/2oilphxi2J0/mqdefault.jpg", "v": 97370}, {"t": "【BOMBANANA!】力を合わせて！？爆弾解除コラボ！う～ん、できんのか？【立伝都々視点/五十嵐梨花/ミラン・ケストレル/にじさんじ】", "c": "立伝都々 / Tachitsute Toto【にじさんじ】", "u": "https://www.youtube.com/watch?v=CTdsuEbvLKU", "th": "https://i.ytimg.com/vi/CTdsuEbvLKU/mqdefault.jpg", "v": 25657}, {"t": "【BOMBANANA!】友情破壊💥見えない聞こえない喋れない状態で爆弾解除いっくぞ～ッ🐒💣【緑青くれは・汐鳴みりね・アズリ / ななしいんく 】", "c": "緑青くれは / Kureha Channel【ななしいんく】", "u": "https://www.youtube.com/watch?v=UjHJS3QqhjU", "th": "https://i.ytimg.com/vi/UjHJS3QqhjU/mqdefault.jpg", "v": 6137}], "orgs": {"ホロライブ": 3, "ななしいんく": 2, "ぶいすぽっ！": 2, "個人勢": 1, "個人・その他": 1}, "spark": [7.0, 2.0, 3.0, 8.0, 7.0, 0, 9.0], "p_videos": 13, "p_channels": 16, "p_views": 92, "score": 41.7, "base": 4.5, "growth": 2.0, "steam": "https://store.steampowered.com/search/?term=Bombanana%21", "amazon": null, "rank": 13}, {"game": "Escape from Tarkov", "canonical": "Escape from Tarkov", "videos": 12, "n": 12.0, "raw": 13, "channels": 11, "views": 293560, "streams": [{"t": "相性抜群メンバーでのタルコフ雑談が面白すぎたwwww【タルコフ】", "c": "柊ツルギ / Hiiragi Tsurugi", "u": "https://www.youtube.com/watch?v=6Oeyu1TIzEw", "th": "https://i.ytimg.com/vi/6Oeyu1TIzEw/mqdefault.jpg", "v": 82635}, {"t": "【Escape From Tarkov】や lv54~【白雪レイド 光葉エニ】", "c": "白雪レイドーReid Channelー", "u": "https://www.youtube.com/watch?v=Z5hQWXlC4MM", "th": "https://i.ytimg.com/vi/Z5hQWXlC4MM/mqdefault.jpg", "v": 52196}, {"t": "あの時バニラの心を深く傷つけたフレア失敗のトラウマ【Escape from Tarkov/タルコフ】", "c": "ありさか/Arisakaaa", "u": "https://www.youtube.com/watch?v=FeRqpC6FaB0", "th": "https://i.ytimg.com/vi/FeRqpC6FaB0/mqdefault.jpg", "v": 44740}, {"t": "ハイゲまであと2ヶ月になり緊張感の中に期待感を感じ始めるらっしゃー【Escape from Tarkov/らっしゃー】", "c": "らっしゃー ch", "u": "https://www.youtube.com/watch?v=g-w9I5DRIvA", "th": "https://i.ytimg.com/vi/g-w9I5DRIvA/mqdefault.jpg", "v": 42552}, {"t": "【 Escape from Tarkov 】たぶんレイドくんとエニ。w/レイドくん【ネオポルテ / 光葉エニ】", "c": "光葉エニ", "u": "https://www.youtube.com/watch?v=C_nP2Kir7rI", "th": "https://i.ytimg.com/vi/C_nP2Kir7rI/mqdefault.jpg", "v": 23004}, {"t": "【EFT】パニッシャー豆。処刑人となるべくリゾートを荒らす【ずんだもん】", "c": "すわ", "u": "https://www.youtube.com/watch?v=KCJxTNeKkOM", "th": "https://i.ytimg.com/vi/KCJxTNeKkOM/mqdefault.jpg", "v": 19697}, {"t": "【EFT】Lv.47｜TGSグッズのスペシャルBOXがオンラインに登場！かもです！- Escape from Tarkov【猫麦とろろ/個人Vtuber】", "c": "Tororo Ch. 猫麦とろろ", "u": "https://www.youtube.com/watch?v=h0XI59pBjdY", "th": "https://i.ytimg.com/vi/h0XI59pBjdY/mqdefault.jpg", "v": 16442}, {"t": "【タルコフ】BDケース44連ガチャしたらスタッシュ爆発しました ＃EFT #Tarkov", "c": "絶滅危惧種のバンプ bump1p", "u": "https://www.youtube.com/watch?v=6JEMwAY9xCo", "th": "https://i.ytimg.com/vi/6JEMwAY9xCo/mqdefault.jpg", "v": 8965}], "orgs": {"個人・その他": 8, "Neo-Porte": 3, "ストリーマー": 1, "個人勢": 1}, "spark": [4.0, 11.0, 9.0, 5.0, 9.0, 4.5, 12.0], "p_videos": 18, "p_channels": 19, "p_views": 84, "score": 41.4, "base": 7.1, "growth": 1.69, "steam": "https://store.steampowered.com/search/?term=Escape%20from%20Tarkov", "amazon": null, "rank": 14}, {"game": "ELDEN RING", "canonical": "ELDEN RING", "videos": 12, "n": 12.0, "raw": 13, "channels": 12, "views": 204973, "streams": [{"t": "【ELDEN RING】祭りじゃ！　祭りじゃ！！　祭りじゃ！！！  #9【栞葉るり / にじさんじ】", "c": "栞葉るり / Shioriha Ruri【にじさんじ】", "u": "https://www.youtube.com/watch?v=4avZLEpdTGY", "th": "https://i.ytimg.com/vi/4avZLEpdTGY/mqdefault.jpg", "v": 112936}, {"t": "【ELDEN RING】恐らく、ラスボス #32【甲斐田晴/にじさんじ】", "c": "甲斐田 晴 / Kaida Haru【にじさんじ】", "u": "https://www.youtube.com/watch?v=rLgo85HifWI", "th": "https://i.ytimg.com/vi/rLgo85HifWI/mqdefault.jpg", "v": 51587}, {"t": "一番幸せになってほしい神ボス、ミドラー攻略【エルデンリングDLC/ナイトレイン勧誘部/ELDENRING SHADOW OF THE ERDTREE】", "c": "GAMEアダチ", "u": "https://www.youtube.com/watch?v=K36Ht-f8JWQ", "th": "https://i.ytimg.com/vi/K36Ht-f8JWQ/mqdefault.jpg", "v": 17709}, {"t": "【#17 親衛騎士ローレッタ】プロ褪せ人、愛の戦士と往くエルデンリング【ELDEN RING】", "c": "まお", "u": "https://www.youtube.com/watch?v=FRlz1IfiFrw", "th": "https://i.ytimg.com/vi/FRlz1IfiFrw/mqdefault.jpg", "v": 6823}, {"t": "死にゲー1ミリも知らん奴がラダーン撃破のために奮闘する【 ELDEN RING 】", "c": "ハンク", "u": "https://www.youtube.com/watch?v=W0c7YCnV1uQ", "th": "https://i.ytimg.com/vi/W0c7YCnV1uQ/mqdefault.jpg", "v": 6386}, {"t": "【エルデンリングDLC】必ず使いたくなる新武器全8種＆超強化された+4『秒殺無双ビルド』厳選まとめ！🔰観覧注意！【ELDEN RING Tarnished Edition】【最新アプデ1.17】", "c": "YOUDIEDちゃんねる", "u": "https://www.youtube.com/watch?v=FcmBwA8KP4I", "th": "https://i.ytimg.com/vi/FcmBwA8KP4I/mqdefault.jpg", "v": 4346}, {"t": "【ELDEN RING DLC】クソデカサソリムカデオババ　縦横同時配信", "c": "ジョルノ", "u": "https://www.youtube.com/watch?v=BHiL8Siphzc", "th": "https://i.ytimg.com/vi/BHiL8Siphzc/mqdefault.jpg", "v": 2775}, {"t": "#15【エルデンリング】（顔出し）初フロム✨初マルチ！「カラス落とし」を探しに　死にゲーをやらない私のELDENRING　初見【PS5/女性実況/ライブ配信中】※ネタバレあり", "c": "emma / えま", "u": "https://www.youtube.com/watch?v=qAnQoII_JlU", "th": "https://i.ytimg.com/vi/qAnQoII_JlU/mqdefault.jpg", "v": 1873}], "orgs": {"個人・その他": 10, "にじさんじ": 2, "亀戸組": 1}, "spark": [4.0, 9.0, 6.5, 4.0, 7.0, 4.5, 12.0], "p_videos": 18, "p_channels": 21, "p_views": 81, "score": 41.1, "base": 5.8, "growth": 2.07, "steam": "https://store.steampowered.com/search/?term=ELDEN%20RING", "amazon": "https://www.amazon.co.jp/s?k=ELDEN+RING&tag=tarochin-22", "rank": 15}, {"game": "妹に運転を教える", "canonical": "妹に運転を教える", "videos": 8, "n": 8.0, "raw": 8, "channels": 8, "views": 705691, "streams": [{"t": "【妹に運転を教える】運転免許なし、姉しかいない末っ子が教えます【戌亥とこ/にじさんじ】", "c": "戌亥とこ -Inui Toko-", "u": "https://www.youtube.com/watch?v=_MMqSOnq1zw", "th": "https://i.ytimg.com/vi/_MMqSOnq1zw/mqdefault.jpg", "v": 219343}, {"t": "【妹に運転を教える】現役BMW乗りが教える必勝！公道運転マニュアル【にじさんじ/社築】", "c": "社築", "u": "https://www.youtube.com/watch?v=8F5wNk477qQ", "th": "https://i.ytimg.com/vi/8F5wNk477qQ/mqdefault.jpg", "v": 192180}, {"t": "「自分の声」で妹に運転を教えるゲーム！｜妹に運転を教える", "c": "P-Pチャンネル", "u": "https://www.youtube.com/watch?v=-Lnu6du3v2I", "th": "https://i.ytimg.com/vi/-Lnu6du3v2I/mqdefault.jpg", "v": 150481}, {"t": "ガチで妹のいる俺が、妹に運転を教えるゲームをする。【柊ツルギ】", "c": "柊ツルギ / Hiiragi Tsurugi", "u": "https://www.youtube.com/watch?v=QDyFYFfPWd4", "th": "https://i.ytimg.com/vi/QDyFYFfPWd4/mqdefault.jpg", "v": 123118}, {"t": "【妹に運転を教える】命がいくつあれば足りるんだろう", "c": "jirai channel", "u": "https://www.youtube.com/watch?v=TYFprJCJSQU", "th": "https://i.ytimg.com/vi/TYFprJCJSQU/mqdefault.jpg", "v": 15454}, {"t": "【妹に運転を教える】妹を持つ兄として厳しく指導【塩】", "c": "塩", "u": "https://www.youtube.com/watch?v=35T9voqR30k", "th": "https://i.ytimg.com/vi/35T9voqR30k/mqdefault.jpg", "v": 4970}, {"t": "【妹に運転を教える】ペーパードライバーだけど・・・／ガロガロリ", "c": "ガ口ガ口リ", "u": "https://www.youtube.com/watch?v=iqq99Nbasx4", "th": "https://i.ytimg.com/vi/iqq99Nbasx4/mqdefault.jpg", "v": 145}, {"t": "【妹に運転を教える】妹免許取ったらしいからドライブ行くわ😁❤️‍🔥【レイン・パターソン/にじさんじ】", "c": "レイン・パターソン／Lain Paterson【にじさんじ】", "u": "https://www.youtube.com/watch?v=zz-a4NEnoMU", "th": "https://i.ytimg.com/vi/zz-a4NEnoMU/mqdefault_live.jpg", "v": 0}], "orgs": {"にじさんじ": 3, "個人・その他": 3, "Neo-Porte": 1, "亀戸組": 1}, "spark": [3.0, 4.0, 2.0, 4.0, 6.0, 6.0, 8.0], "p_videos": 12, "p_channels": 14, "p_views": 89, "score": 39.6, "base": 4.2, "growth": 1.9, "steam": "https://store.steampowered.com/search/?term=%E5%A6%B9%E3%81%AB%E9%81%8B%E8%BB%A2%E3%82%92%E6%95%99%E3%81%88%E3%82%8B", "amazon": null, "rank": 16}, {"game": "Wardogs", "canonical": "Wardogs", "videos": 10, "n": 9.5, "raw": 11, "channels": 9, "views": 259970, "streams": [{"t": "『バレたら即死』ギリースーツとMK22で隠密激キモスナイパープレイ『WARDOGS』", "c": "TIE Ru", "u": "https://www.youtube.com/watch?v=2F2VO_Bs8pk", "th": "https://i.ytimg.com/vi/2F2VO_Bs8pk/mqdefault.jpg", "v": 79813}, {"t": "初動最速ハンヴィーで敵拠点に殴り込み!!無防備な建築勢を大混乱に陥れる悪魔山本【WARDOGS】", "c": "sasatikk", "u": "https://www.youtube.com/watch?v=a8Q5hNbyHSo", "th": "https://i.ytimg.com/vi/a8Q5hNbyHSo/mqdefault.jpg", "v": 39949}, {"t": "【WARDOGS】本日もすっぽったーこはく【REJECT/秋雪こはく】", "c": "Syusetu kohaku/秋雪こはく", "u": "https://www.youtube.com/watch?v=zaboLXYsUM8", "th": "https://i.ytimg.com/vi/zaboLXYsUM8/mqdefault.jpg", "v": 39275}, {"t": "【最強兵器】$500,000の攻撃ヘリ ”ハボック” で世界征服したらセレブ確定 【 WARDOGS ウォードッグス 】", "c": "UMEBOSHI", "u": "https://www.youtube.com/watch?v=4tFNZgPZGnk", "th": "https://i.ytimg.com/vi/4tFNZgPZGnk/mqdefault.jpg", "v": 38032}, {"t": "【WARDOGS】配信 まだ覇権継続中な感じですかい？？", "c": "かずのこチャンネル", "u": "https://www.youtube.com/watch?v=oPwQVNfmiqQ", "th": "https://i.ytimg.com/vi/oPwQVNfmiqQ/mqdefault.jpg", "v": 34834}, {"t": "リアルな戦場でひたすらお金を稼ぐライブ配信【 WARDOGS ライブ配信 #16 】", "c": "アフロマスク", "u": "https://www.youtube.com/watch?v=M3wRBkN0LVs", "th": "https://i.ytimg.com/vi/M3wRBkN0LVs/mqdefault.jpg", "v": 14453}, {"t": "【WARDOGS】ワンマガジンでヘリ対空!!無ブレ瞬溶けLMG!?『M249にバイポッドで最強!!』【WARDOGS:甘果いちご】", "c": "甘果いちご", "u": "https://www.youtube.com/watch?v=zESUSuAWYug", "th": "https://i.ytimg.com/vi/zESUSuAWYug/mqdefault.jpg", "v": 6010}, {"t": "【WARDOGS】豆ヘリ×グレポンで荒稼ぎ！最前線攻略チャンネル #10【100人FPS】", "c": "はちぴ", "u": "https://www.youtube.com/watch?v=iZwp1HPvptE", "th": "https://i.ytimg.com/vi/iZwp1HPvptE/mqdefault.jpg", "v": 5239}], "orgs": {"個人・その他": 11}, "spark": [12.5, 11.5, 7.0, 10.5, 11.0, 7.0, 9.5], "p_videos": 14, "p_channels": 16, "p_views": 83, "score": 38.8, "base": 9.9, "growth": 1.01, "steam": "https://store.steampowered.com/search/?term=Wardogs", "amazon": "https://www.amazon.co.jp/s?k=Wardogs&tag=tarochin-22", "rank": 17}, {"game": "Dead by Daylight", "canonical": "Dead by Daylight", "videos": 12, "n": 11.5, "raw": 14, "channels": 11, "views": 98693, "streams": [{"t": "怒り中の鬼がバグり散らかしてヤバい格好になってしまった【Dead by Daylight #顔芸】", "c": "顔芸", "u": "https://www.youtube.com/watch?v=YV7FWe37aYk", "th": "https://i.ytimg.com/vi/YV7FWe37aYk/mqdefault.jpg", "v": 22022}, {"t": "【DBD】0時の練習までやる【デッドバイデイライト】", "c": "りぜる", "u": "https://www.youtube.com/watch?v=3sDldeskKSc", "th": "https://i.ytimg.com/vi/3sDldeskKSc/mqdefault.jpg", "v": 19140}, {"t": "【DBD】初心者おススメになりそうだけど爆速発電機にもなりそうな気がする強化『痛みも気から』", "c": "ちくのぼチャレンジ", "u": "https://www.youtube.com/watch?v=pgLlwjQbzRk", "th": "https://i.ytimg.com/vi/pgLlwjQbzRk/mqdefault.jpg", "v": 17359}, {"t": "【DBD】久しぶりにお昼からこんにちは【デッドバイデイライト】", "c": "ほいみぃ", "u": "https://www.youtube.com/watch?v=WAwgV9kzXso", "th": "https://i.ytimg.com/vi/WAwgV9kzXso/mqdefault.jpg", "v": 9629}, {"t": "【Dead by Daylight】通常モード多めのキラー【DETONATOR/顔芸】", "c": "顔芸", "u": "https://www.youtube.com/watch?v=2AXLsxWJTcE", "th": "https://i.ytimg.com/vi/2AXLsxWJTcE/mqdefault.jpg", "v": 7932}, {"t": "これより１人で吊ったことある人教えてくれ【DbD】【ヒルビリー】", "c": "ざわ氏/zawashi", "u": "https://www.youtube.com/watch?v=X8DL-Q8Bdjg", "th": "https://i.ytimg.com/vi/X8DL-Q8Bdjg/mqdefault.jpg", "v": 7299}, {"t": "「逃亡の飛躍」を救いたい【DBD】ライブ配信", "c": "うめみ", "u": "https://www.youtube.com/watch?v=myQ9RJiYeo4", "th": "https://i.ytimg.com/vi/myQ9RJiYeo4/mqdefault.jpg", "v": 5998}, {"t": "【DBD】リワークされる狩りの興奮が呪術を鉄壁に仕上げるデボ。", "c": "こなゆき.channel", "u": "https://www.youtube.com/watch?v=l6rg8cLiTjY", "th": "https://i.ytimg.com/vi/l6rg8cLiTjY/mqdefault.jpg", "v": 4807}], "orgs": {"個人・その他": 14}, "spark": [17.5, 17.0, 19.0, 14.5, 15.5, 12.0, 11.5], "p_videos": 17, "p_channels": 19, "p_views": 76, "score": 38.3, "base": 15.9, "growth": 0.75, "steam": "https://store.steampowered.com/search/?term=Dead%20by%20Daylight", "amazon": "https://www.amazon.co.jp/s?k=Dead+by+Daylight&tag=tarochin-22", "rank": 18}, {"game": "大乱闘スマッシュブラザーズ SPECIAL", "canonical": "大乱闘スマッシュブラザーズ SPECIAL", "videos": 9, "n": 9.0, "raw": 11, "channels": 8, "views": 233784, "streams": [{"t": "【スマブラSP】天才か？ダブルガノンの新たなる連携がめっちゃおもろかった件【ガノンドロフチームゆっくり実況part37】", "c": "ぐんぐにるチャンネル", "u": "https://www.youtube.com/watch?v=61kotVZ0Z1U", "th": "https://i.ytimg.com/vi/61kotVZ0Z1U/mqdefault.jpg", "v": 127464}, {"t": "ヨッシーで魔境卒業を目指す！ 5日目【スマブラSP】#全キャラ魔境卒業チャレンジ #スマブラsp", "c": "グリンカッツ", "u": "https://www.youtube.com/watch?v=TnS6NdGpF9w", "th": "https://i.ytimg.com/vi/TnS6NdGpF9w/mqdefault.jpg", "v": 51697}, {"t": "最強ゴリラ軍で大会出たら最上位カズヤ軍を破ってまさかの優勝した【スマブラSP】", "c": "マイルドなH.O", "u": "https://www.youtube.com/watch?v=aFkhKjk3Xm0", "th": "https://i.ytimg.com/vi/aFkhKjk3Xm0/mqdefault.jpg", "v": 30755}, {"t": "ヨッシーで魔境卒業を目指す！ 5日目②【スマブラSP】#全キャラ魔境卒業チャレンジ #スマブラsp", "c": "グリンカッツ", "u": "https://www.youtube.com/watch?v=N2-_HbnMMEU", "th": "https://i.ytimg.com/vi/N2-_HbnMMEU/mqdefault.jpg", "v": 17282}, {"t": "【スマブラSP配信】プロ級ロイクロムでVIP50連勝目指す【初見さん歓迎】", "c": "やくるてぃ【スマブラネタ&解説】", "u": "https://www.youtube.com/watch?v=f2Bu_entSxY", "th": "https://i.ytimg.com/vi/f2Bu_entSxY/mqdefault.jpg", "v": 8125}, {"t": "【スマブラSP／参加型】3タテされる度に５勝増える配信！！【Vtuberしまゆま】", "c": "しまゆま", "u": "https://www.youtube.com/watch?v=a6TUbt0-VJQ", "th": "https://i.ytimg.com/vi/a6TUbt0-VJQ/mqdefault.jpg", "v": 2686}, {"t": "【KING OF CPU 2026】歩く天下無敵 vs バーンナック | Losers 2-1【64スマブラCPUトナメ実況】", "c": "P channel", "u": "https://www.youtube.com/watch?v=5vGUwFdXUQk", "th": "https://i.ytimg.com/vi/5vGUwFdXUQk/mqdefault.jpg", "v": 2291}, {"t": "【縛りポケモン】ファイアレッド配信しまーす【スマブラ64】Pokemon | FRLG", "c": "P channel", "u": "https://www.youtube.com/watch?v=SuT-PgBNIUM", "th": "https://i.ytimg.com/vi/SuT-PgBNIUM/mqdefault.jpg", "v": 2048}], "orgs": {"個人・その他": 11}, "spark": [7.0, 9.5, 8.0, 9.0, 7.0, 14.0, 9.0], "p_videos": 13, "p_channels": 14, "p_views": 82, "score": 37.5, "base": 9.1, "growth": 0.99, "steam": null, "amazon": "https://www.amazon.co.jp/s?k=%E5%A4%A7%E4%B9%B1%E9%97%98%E3%82%B9%E3%83%9E%E3%83%83%E3%82%B7%E3%83%A5%E3%83%96%E3%83%A9%E3%82%B6%E3%83%BC%E3%82%BA+SPECIAL&tag=tarochin-22", "rank": 19}, {"game": "ファイアーエムブレム 万紫千紅", "canonical": "Fire Emblem: Fortune's Weave", "videos": 9, "n": 9.0, "raw": 9, "channels": 9, "views": 94060, "streams": [{"t": "【FE万紫千紅】カイ編中盤行くべき場所！素材&育成で差がつく魔力特化カイが話題！", "c": "ジョーカーのゲーム攻略チャンネル", "u": "https://www.youtube.com/watch?v=RPACmISTkc4", "th": "https://i.ytimg.com/vi/RPACmISTkc4/mqdefault.jpg", "v": 27382}, {"t": "#8【ファイアーエムブレム万紫千紅】FE最新作 レダ戦争編6章から 難易度: ハード×クラシック あなたが辿る４戦士の物語 ネタバレあり【Switch2】", "c": "GAMEゆうなch", "u": "https://www.youtube.com/watch?v=Rch3VFy0zj4", "th": "https://i.ytimg.com/vi/Rch3VFy0zj4/mqdefault.jpg", "v": 24109}, {"t": "【ファイアーエムブレム 万紫千紅：セオドラ編Live02】帰ってきたバーンバーン！仲間スカウトの始まりで戦力を充実させよう５章～因縁の激突", "c": "うどん高機動型", "u": "https://www.youtube.com/watch?v=gmX-ecKruRU", "th": "https://i.ytimg.com/vi/gmX-ecKruRU/mqdefault.jpg", "v": 18297}, {"t": "【FE万紫千紅】最初に見て！カイ編で絶対やるべき15選/動物リセマラ/おすすめ動物/野菜/稽古/スカウトキャラ", "c": "ワイトのゲーム攻略所", "u": "https://www.youtube.com/watch?v=36xffD064SA", "th": "https://i.ytimg.com/vi/36xffD064SA/mqdefault.jpg", "v": 9237}, {"t": "【実況】愛に生きるファイアーエムブレム万紫千紅 part6【2026/9/22】", "c": "ミノルch", "u": "https://www.youtube.com/watch?v=H5kFKaI2448", "th": "https://i.ytimg.com/vi/H5kFKaI2448/mqdefault.jpg", "v": 8169}, {"t": "【ディートリヒ編】FE万紫千紅を心ゆくまで楽しみたい #6", "c": "はるしげ - HARUSHIGE", "u": "https://www.youtube.com/watch?v=J12ix8ZpoUU", "th": "https://i.ytimg.com/vi/J12ix8ZpoUU/mqdefault.jpg", "v": 5415}, {"t": "【ファイアーエムブレム 万紫千紅】最高難易度鬼畜になる縛りプレイ…たすけて！Part5", "c": "如月ノイズ / noise【よにんぐみ。】", "u": "https://www.youtube.com/watch?v=yeXuhfH6Q3Q", "th": "https://i.ytimg.com/vi/yeXuhfH6Q3Q/mqdefault.jpg", "v": 920}, {"t": "ファイアーエムブレム 万紫千紅をクリアを目指して初見攻略！ #7 【Switch2】", "c": "こしゃじ", "u": "https://www.youtube.com/watch?v=6d2kxZ7t1Pg", "th": "https://i.ytimg.com/vi/6d2kxZ7t1Pg/mqdefault.jpg", "v": 531}], "orgs": {"個人・その他": 8, "亀戸組": 1}, "spark": [15.0, 10.5, 13.5, 10.0, 8.0, 9.5, 9.0], "p_videos": 13, "p_channels": 16, "p_views": 76, "score": 36.1, "base": 11.1, "growth": 0.81, "steam": null, "amazon": "https://www.amazon.co.jp/s?k=%E3%83%95%E3%82%A1%E3%82%A4%E3%82%A2%E3%83%BC%E3%82%A8%E3%83%A0%E3%83%96%E3%83%AC%E3%83%A0+%E4%B8%87%E7%B4%AB%E5%8D%83%E7%B4%85&tag=tarochin-22", "rank": 20}, {"game": "7 Days to Die", "canonical": "7 Days to Die", "videos": 5, "n": 5.0, "raw": 5, "channels": 5, "views": 514480, "streams": [{"t": "【 #ホロ7大豆劇場 】番外編！荒れ地高難易度を遊びにいく～！【常闇トワ/ホロライブ】", "c": "Towa Ch. 常闇トワ", "u": "https://www.youtube.com/watch?v=n0NYvgFBVJg", "th": "https://i.ytimg.com/vi/n0NYvgFBVJg/mqdefault.jpg", "v": 184841}, {"t": "【番外編！？】激ムズクエストがあるらしい。 #ホロ7大豆劇場【一条莉々華/hololive DEV_IS ReGLOSS】", "c": "Ririka Ch. 一条莉々華 ‐ ReGLOSS", "u": "https://www.youtube.com/watch?v=RARzpMkQ4ak", "th": "https://i.ytimg.com/vi/RARzpMkQ4ak/mqdefault.jpg", "v": 122424}, {"t": "【 7Days to Die 】番外編きちゃああ🔥まだまだゾンビやるぞおお🔥✨ 【ホロライブ FLOW GLOW 響咲リオナ】", "c": "Riona Ch. 響咲リオナ - FLOW GLOW", "u": "https://www.youtube.com/watch?v=Hf1TeFgu3YY", "th": "https://i.ytimg.com/vi/Hf1TeFgu3YY/mqdefault.jpg", "v": 93480}, {"t": "【7Days to Die】番外編！高難易度クエストいくぞ～！#ホロ7大豆劇場 【ホロライブ/夏色まつり】", "c": "Matsuri Channel 夏色まつり", "u": "https://www.youtube.com/watch?v=W4kIcPlxUTU", "th": "https://i.ytimg.com/vi/W4kIcPlxUTU/mqdefault.jpg", "v": 84002}, {"t": "【7DTDMOD】近未来な世界で砂漠に行ったら謎の建造物を発見！？「7DTD District Zero V3.2」実況プレイ #6", "c": "あきピヨ", "u": "https://www.youtube.com/watch?v=u5PnjLuJVcw", "th": "https://i.ytimg.com/vi/u5PnjLuJVcw/mqdefault.jpg", "v": 29733}], "orgs": {"ホロライブ": 2, "hololive DEV_IS": 2, "個人・その他": 1}, "spark": [9.0, 3.0, 13.0, 5.0, 1.0, 3.0, 5.0], "p_videos": 7, "p_channels": 9, "p_views": 87, "score": 35.7, "base": 5.7, "growth": 0.88, "steam": "https://store.steampowered.com/search/?term=7%20Days%20to%20Die", "amazon": "https://www.amazon.co.jp/s?k=7+Days+to+Die&tag=tarochin-22", "rank": 21}, {"game": "モンスターストライク", "canonical": "モンスターストライク", "videos": 6, "n": 6.0, "raw": 7, "channels": 6, "views": 227304, "streams": [{"t": "13周年獣神化。今年の環境を変える限定キャラはこの人です。【モンスト】", "c": "がみくん", "u": "https://www.youtube.com/watch?v=z2lX2xLRSJc", "th": "https://i.ytimg.com/vi/z2lX2xLRSJc/mqdefault.jpg", "v": 154287}, {"t": "【モンスト】今年は初日コラボ発表からの0時開催の可能性大！？絶賛盛り上がり中の映画＆アニメとの大型コラボは！？しろの大本命も現実的にありそう！？『モンフリ2026コラボ』願望も含めて予想！【しろ】", "c": "しろ", "u": "https://www.youtube.com/watch?v=p9BPOS44_u0", "th": "https://i.ytimg.com/vi/p9BPOS44_u0/mqdefault.jpg", "v": 50077}, {"t": "【モンスト】コラボ最難関！？ラブライブ！超究極「μ's」Lv3に挑戦！！", "c": "たっちアカデミー", "u": "https://www.youtube.com/watch?v=wLf00SjCecA", "th": "https://i.ytimg.com/vi/wLf00SjCecA/mqdefault.jpg", "v": 19197}, {"t": "【雑談】メダル【モンスト】", "c": "リフレクションズ", "u": "https://www.youtube.com/watch?v=eR_HkmSuMHA", "th": "https://i.ytimg.com/vi/eR_HkmSuMHA/mqdefault.jpg", "v": 3304}, {"t": "絆貯め【モンスト】", "c": "コーうのモンスト実況", "u": "https://www.youtube.com/watch?v=4iPYT_uH9R0", "th": "https://i.ytimg.com/vi/4iPYT_uH9R0/mqdefault_live.jpg", "v": 439}, {"t": "絆貯め【モンスト】", "c": "コーうのモンスト実況", "u": "https://www.youtube.com/watch?v=CGQTrZ4jCyc", "th": "https://i.ytimg.com/vi/CGQTrZ4jCyc/mqdefault.jpg", "v": 161}, {"t": "【🔴LIVE】13周年獣神化(性能)予想会【モンスト/ちょこ】", "c": "ちょこ", "u": "https://www.youtube.com/watch?v=Hdp0ZqOn_P0", "th": "https://i.ytimg.com/vi/Hdp0ZqOn_P0/mqdefault_live.jpg", "v": 0}], "orgs": {"個人・その他": 7}, "spark": [10.5, 9.5, 13.0, 8.5, 10.5, 8.5, 6.0], "p_videos": 9, "p_channels": 10, "p_views": 82, "score": 34.9, "base": 10.1, "growth": 0.59, "steam": null, "amazon": null, "rank": 22}, {"game": "鳴潮", "canonical": "鳴潮", "videos": 9, "n": 9.0, "raw": 10, "channels": 8, "views": 69066, "streams": [{"t": "【#鳴潮  】初心者・復帰勢必見👀✨ガチャは何を回したらいい？ガチャ大相談会！【#vtuber #鳴潮朝月会】", "c": "ノーラ Nora ch", "u": "https://www.youtube.com/watch?v=dycPMZyRPd4", "th": "https://i.ytimg.com/vi/dycPMZyRPd4/mqdefault.jpg", "v": 19525}, {"t": "【鳴潮】意外な凸で快適に!全キャラ「おすすめ凸まとめ」★共鳴チェーンに関しておすすめをデータ付きで解説! 火力/日常使い/編成の幅まで幅広く評価しました!【WuWa/めいちょう】", "c": "サブチぴょんぴょん", "u": "https://www.youtube.com/watch?v=OY4n2Og5W0Y", "th": "https://i.ytimg.com/vi/OY4n2Og5W0Y/mqdefault.jpg", "v": 13301}, {"t": "【#鳴潮  】ガチャ大相談会の話聞いたら緋雪ほしくなっちゃって…【#vtuber #鳴潮朝月会】", "c": "ノーラ Nora ch", "u": "https://www.youtube.com/watch?v=EZuh3jTGT2w", "th": "https://i.ytimg.com/vi/EZuh3jTGT2w/mqdefault.jpg", "v": 10748}, {"t": "【#鳴潮】 玄方編ストーリーレビュー見る！👀最終章へ考察・振り返りしていこう…！群響も⚔ / 2K1440p #812 #鳴潮朝月会【#Vtuber Yomi】", "c": "夜魅ちゃんねる", "u": "https://www.youtube.com/watch?v=V0mOoZ3tEns", "th": "https://i.ytimg.com/vi/V0mOoZ3tEns/mqdefault.jpg", "v": 9705}, {"t": "過去一泣かされた伝説のシーン【#鳴潮】", "c": "羅々華セーラ-Raraka Sera-", "u": "https://www.youtube.com/watch?v=BEnQQuyWzO4", "th": "https://i.ytimg.com/vi/BEnQQuyWzO4/mqdefault.jpg", "v": 8813}, {"t": "もうそろそろクリアしません？③【#鳴潮】 121　＃鳴潮朝月会", "c": "式神やしろ", "u": "https://www.youtube.com/watch?v=OLqFKnTIXL0", "th": "https://i.ytimg.com/vi/OLqFKnTIXL0/mqdefault.jpg", "v": 6421}, {"t": "【考察】Ver3.8で行く新地域は、花の海〇〇です【鳴潮】", "c": "ノタル", "u": "https://www.youtube.com/watch?v=_jbDoUW6ycw", "th": "https://i.ytimg.com/vi/_jbDoUW6ycw/mqdefault.jpg", "v": 3083}, {"t": "【 鳴潮 】参加型！マルチイベ！縛りプレイで攻略　#167【汐ゴマ】 #鳴潮 #心 #WutheringWaves #vtuber", "c": "汐ゴマ【鳴潮】", "u": "https://www.youtube.com/watch?v=OqjCfF6nN5Y", "th": "https://i.ytimg.com/vi/OqjCfF6nN5Y/mqdefault.jpg", "v": 2844}], "orgs": {"個人・その他": 10}, "spark": [5.0, 6.0, 5.5, 10.0, 5.5, 8.5, 9.0], "p_videos": 13, "p_channels": 14, "p_views": 74, "score": 34.7, "base": 6.8, "growth": 1.32, "steam": "https://store.steampowered.com/search/?term=%E9%B3%B4%E6%BD%AE", "amazon": "https://www.amazon.co.jp/s?k=%E9%B3%B4%E6%BD%AE&tag=tarochin-22", "rank": 23}, {"game": "Among Us", "canonical": "Among Us", "videos": 6, "n": 6.0, "raw": 6, "channels": 6, "views": 208321, "streams": [{"t": "【Among Us#356】スナイパー最強の戦術爆誕！反撃を許さない門番で無慈悲に5キルを決めるインポスター達【ゆっくり実況】", "c": "めめんともり", "u": "https://www.youtube.com/watch?v=KhHuzPxO_eE", "th": "https://i.ytimg.com/vi/KhHuzPxO_eE/mqdefault.jpg", "v": 152696}, {"t": "【Among Us】#191 突然すべてを託されたんだけど、どういうこと？？？【ゆっくり実況】【めめ村】", "c": "ウパパロン", "u": "https://www.youtube.com/watch?v=Blr_nH93jvk", "th": "https://i.ytimg.com/vi/Blr_nH93jvk/mqdefault.jpg", "v": 28585}, {"t": "【AmongUs】ここで何が起きたんでしょうかｗｗ【激戦動画#1236】", "c": "めーや", "u": "https://www.youtube.com/watch?v=0mUzMwdKn6U", "th": "https://i.ytimg.com/vi/0mUzMwdKn6U/mqdefault.jpg", "v": 15248}, {"t": "おい！その対抗はジジイすぎるだろ！！！！ｗｗｗ【Among Us】", "c": "プテラたかはし", "u": "https://www.youtube.com/watch?v=H02_ooN5rtQ", "th": "https://i.ytimg.com/vi/H02_ooN5rtQ/mqdefault.jpg", "v": 8027}, {"t": "斬ったのにアリバイ成立【AmongUs】", "c": "仙人のGEN", "u": "https://www.youtube.com/watch?v=ocJY48fwx74", "th": "https://i.ytimg.com/vi/ocJY48fwx74/mqdefault.jpg", "v": 3678}, {"t": "正義の波動マンｗｗｗ【AmongUs】", "c": "はたさこ / hatasako_flag", "u": "https://www.youtube.com/watch?v=DMSB2J949eo", "th": "https://i.ytimg.com/vi/DMSB2J949eo/mqdefault.jpg", "v": 87}], "orgs": {"高田村": 4, "個人・その他": 2}, "spark": [6.0, 7.0, 7.0, 4.0, 3.0, 6.0, 6.0], "p_videos": 9, "p_channels": 10, "p_views": 81, "score": 34.5, "base": 5.5, "growth": 1.09, "steam": "https://store.steampowered.com/search/?term=Among%20Us", "amazon": "https://www.amazon.co.jp/s?k=Among+Us&tag=tarochin-22", "rank": 24}, {"game": "遊戯王 マスターデュエル", "canonical": "Yu-Gi-Oh! Master Duel", "videos": 5, "n": 5.0, "raw": 5, "channels": 5, "views": 260339, "streams": [{"t": "花畑チャイカとにじさんじ遊戯王マスターデュエル祭2026 Day3：決勝トーナメント #にじ遊戯王祭 2026HALO-別々に路で出会った僕らは共に歩み、そして一人の道を征く- MADmaidLAND", "c": "花畑チャイカ", "u": "https://www.youtube.com/watch?v=epi8Hm8iPvo", "th": "https://i.ytimg.com/vi/epi8Hm8iPvo/mqdefault.jpg", "v": 170900}, {"t": "【未来融合】あらゆる機械族が暴れ回る『未来列車クリストロン』が最高に楽しい【遊戯王マスターデュエル】【Yu-Gi-Oh! Master Duel】", "c": "RYU 実況チャンネル", "u": "https://www.youtube.com/watch?v=MP5GchomFB4", "th": "https://i.ytimg.com/vi/MP5GchomFB4/mqdefault.jpg", "v": 44886}, {"t": "【遊戯王マスターデュエル】これは勝利の武者震いだぜ！ 本戦day3#にじ遊戯王祭2026 【にじさんじ / 伏見ガク】", "c": "伏見ガク【にじさんじ所属】", "u": "https://www.youtube.com/watch?v=fwToNGv6vmg", "th": "https://i.ytimg.com/vi/fwToNGv6vmg/mqdefault.jpg", "v": 22587}, {"t": "【遊戯王マスターデュエル】聖地巡礼やめろ【復帰勢】", "c": "チェーンバーン加藤", "u": "https://www.youtube.com/watch?v=IATQWTM4HOk", "th": "https://i.ytimg.com/vi/IATQWTM4HOk/mqdefault.jpg", "v": 21863}, {"t": "【MTGArena / Yu-Gi-Oh! Master Duel】MTG アリーナ／遊戯王マスターデュエル　最終日夜の部（シルバーウィークネトゲ祭り）【人工知能系Vtuberミュー】", "c": "ミュー☆人工知能系Vtuber", "u": "https://www.youtube.com/watch?v=QgBji34lctk", "th": "https://i.ytimg.com/vi/QgBji34lctk/mqdefault.jpg", "v": 103}], "orgs": {"個人・その他": 3, "にじさんじ": 2}, "spark": [1.0, 10.0, 4.0, 12.5, 18.0, 14.0, 5.0], "p_videos": 7, "p_channels": 9, "p_views": 83, "score": 34.3, "base": 9.9, "growth": 0.51, "steam": "https://store.steampowered.com/search/?term=%E9%81%8A%E6%88%AF%E7%8E%8B%20%E3%83%9E%E3%82%B9%E3%82%BF%E3%83%BC%E3%83%87%E3%83%A5%E3%82%A8%E3%83%AB", "amazon": "https://www.amazon.co.jp/s?k=%E9%81%8A%E6%88%AF%E7%8E%8B+%E3%83%9E%E3%82%B9%E3%82%BF%E3%83%BC%E3%83%87%E3%83%A5%E3%82%A8%E3%83%AB&tag=tarochin-22", "rank": 25}, {"game": "Don't Drop The Cake", "canonical": "Don't Drop The Cake", "videos": 5, "n": 5.0, "raw": 5, "channels": 5, "views": 272649, "streams": [{"t": "【Don't Drop The Cake 】ケーキを落としたら即死ってほんてょ？【にじさんじ/アンジュ・カトリーナ】", "c": "アンジュ・カトリーナ - Ange Katrina -", "u": "https://www.youtube.com/watch?v=QiS5ryHWIlk", "th": "https://i.ytimg.com/vi/QiS5ryHWIlk/mqdefault.jpg", "v": 112266}, {"t": "【Don't Drop The Cake】シルバーウィークありがとお！ケーキ持ってくねっ！！！！！！　【にじさんじ/鈴原るる】", "c": "鈴原るる【にじさんじ所属】", "u": "https://www.youtube.com/watch?v=K2iOTBl5f1Y", "th": "https://i.ytimg.com/vi/K2iOTBl5f1Y/mqdefault.jpg", "v": 82694}, {"t": "【 Don't Drop The Cake 】ケーキを落とすな！すぺしゃーれデリバリー編🎂【七瀬すず菜/にじさんじ】", "c": "七瀬 すず菜 / Nanase Suzuna【にじさんじ】", "u": "https://www.youtube.com/watch?v=XCTuraeWG8c", "th": "https://i.ytimg.com/vi/XCTuraeWG8c/mqdefault.jpg", "v": 53942}, {"t": "【Don't Drop The Cake】ケーキをおとさず運ぶホラーゲーム！驚かない俺には簡単かもｗ【歌衣メイカ】", "c": "メイカちゃんねる", "u": "https://www.youtube.com/watch?v=35f21WeRNtg", "th": "https://i.ytimg.com/vi/35f21WeRNtg/mqdefault.jpg", "v": 15672}, {"t": "【Don't Drop The Cake】ケーキを落とさなきゃいいの？簡単じゃん！！！【白雪巴/にじさんじ】", "c": "白雪 巴/Shirayuki Tomoe", "u": "https://www.youtube.com/watch?v=HRp0mrtdqPI", "th": "https://i.ytimg.com/vi/HRp0mrtdqPI/mqdefault.jpg", "v": 8075}], "orgs": {"にじさんじ": 3, "個人勢": 1, "個人・その他": 1}, "spark": [1.0, 3.0, 1.0, 1.0, 1.0, 1.0, 5.0], "p_videos": 7, "p_channels": 9, "p_views": 83, "score": 34.3, "base": 1.3, "growth": 3.85, "steam": "https://store.steampowered.com/search/?term=Don%27t%20Drop%20The%20Cake", "amazon": null, "rank": 26}, {"game": "モンスターハンターワイルズ", "canonical": "モンスターハンターワイルズ", "videos": 8, "n": 7.5, "raw": 9, "channels": 7, "views": 98167, "streams": [{"t": "【超難関】零式オメガ・プラネテスをヘビィボウガン ソロ（サポハンなし）アセンダンス発売の前に討伐させていただきます【モンハンワイルズ】", "c": "茶々茶(chachacha)", "u": "https://www.youtube.com/watch?v=Hsqds47436U", "th": "https://i.ytimg.com/vi/Hsqds47436U/mqdefault.jpg", "v": 33363}, {"t": "モンスターハンターワイルズをプレイします", "c": "あまみちゃんねる", "u": "https://www.youtube.com/watch?v=iw3TGtP6EJA", "th": "https://i.ytimg.com/vi/iw3TGtP6EJA/mqdefault.jpg", "v": 30999}, {"t": "新スキル【年金】を手に入れた、やり込みハンターに出会うあまみｗｗｗ【モンハンワイルズ】", "c": "あまみちゃんねる", "u": "https://www.youtube.com/watch?v=FJZVPTldfOk", "th": "https://i.ytimg.com/vi/FJZVPTldfOk/mqdefault.jpg", "v": 27782}, {"t": "連休暇だと思うので参加型お手伝いと雑談　モンハンワイルズアセンダンス", "c": "皆で一緒にモンハンライフ", "u": "https://www.youtube.com/watch?v=L1PEalUMVkk", "th": "https://i.ytimg.com/vi/L1PEalUMVkk/mqdefault.jpg", "v": 16777}, {"t": "”いつでも、どこでも、一狩りいこうぜ！”モンスターハンターワイルズを初プレイするぞ！#4【Monster Hunter Wilds】", "c": "おもち", "u": "https://www.youtube.com/watch?v=_ySA3xEksYM", "th": "https://i.ytimg.com/vi/_ySA3xEksYM/mqdefault.jpg", "v": 2215}, {"t": "”いつでも、どこでも、一狩りいこうぜ！”モンスターハンターワイルズを初プレイするぞ！#5【Monster Hunter Wilds】", "c": "おもち", "u": "https://www.youtube.com/watch?v=WqQMvhMCOQI", "th": "https://i.ytimg.com/vi/WqQMvhMCOQI/mqdefault.jpg", "v": 1025}, {"t": "参加者募集【モンスターハンターワイルズ】久しぶりにやるとオモロー！！　※ネタバレ注意【ゲーム実況】", "c": "SignDuck / サインダック", "u": "https://www.youtube.com/watch?v=DR7p96om3ig", "th": "https://i.ytimg.com/vi/DR7p96om3ig/mqdefault.jpg", "v": 454}, {"t": "【#モンハンワイルズ】【参加型】初見さん・初心者さん大歓迎🔥神おま周回行くぞーーーー！【#Vtuber /とまこ】", "c": "とまこのゲーム実況", "u": "https://www.youtube.com/watch?v=SVC9feLSSww", "th": "https://i.ytimg.com/vi/SVC9feLSSww/mqdefault.jpg", "v": 257}], "orgs": {"個人・その他": 9}, "spark": [17.5, 11.0, 11.0, 11.0, 9.0, 7.5, 7.5], "p_videos": 11, "p_channels": 12, "p_views": 76, "score": 34.1, "base": 11.2, "growth": 0.71, "steam": "https://store.steampowered.com/search/?term=%E3%83%A2%E3%83%B3%E3%82%B9%E3%82%BF%E3%83%BC%E3%83%8F%E3%83%B3%E3%82%BF%E3%83%BC%E3%83%AF%E3%82%A4%E3%83%AB%E3%82%BA", "amazon": "https://www.amazon.co.jp/s?k=%E3%83%A2%E3%83%B3%E3%82%B9%E3%82%BF%E3%83%BC%E3%83%8F%E3%83%B3%E3%82%BF%E3%83%BC%E3%83%AF%E3%82%A4%E3%83%AB%E3%82%BA&tag=tarochin-22", "rank": 27}, {"game": "ARK: Survival Ascended", "canonical": "ARK: Survival Ascended", "videos": 5, "n": 5.0, "raw": 5, "channels": 5, "views": 222970, "streams": [{"t": "新しく来たARK鯖で超久しぶりの新ラグナロク完全攻略目指すぞ！！『 ARK: Survival Ascended 』＃5【 エビオ/にじさんじ 】", "c": "エクス・アルビオ -Ex Albio-", "u": "https://www.youtube.com/watch?v=3EXZVdv36ss", "th": "https://i.ytimg.com/vi/3EXZVdv36ss/mqdefault.jpg", "v": 214095}, {"t": "すまねぇテリー オレ猫派なんだ…【ARK: Survival Ascended】【自分をトリコだと思い込んでいる男】【Part13】", "c": "テリア", "u": "https://www.youtube.com/watch?v=WuDqAAUSd4g", "th": "https://i.ytimg.com/vi/WuDqAAUSd4g/mqdefault.jpg", "v": 5914}, {"t": "恐竜無しで暴食の洞窟に挑んだら…マジで地獄だった！ クレート縛りバルゲロ編 9【 ARK: Survival Ascended / ASA】#169", "c": "ビッケGames", "u": "https://www.youtube.com/watch?v=axidBhTeHpU", "th": "https://i.ytimg.com/vi/axidBhTeHpU/mqdefault.jpg", "v": 1871}, {"t": "【 #天下無双ARK 】初心者ARK ～ グリフィン探しと次の文明に ～ Day5【ASA/ARK Survival Ascended /個人勢Vtuber /史門 】", "c": "史門 / Shimon ", "u": "https://www.youtube.com/watch?v=wIyA3phDHP4", "th": "https://i.ytimg.com/vi/wIyA3phDHP4/mqdefault.jpg", "v": 656}, {"t": "【ARK: Survival Ascended】#15遂に最終回！ボス戦配信🐧", "c": "Nosuke", "u": "https://www.youtube.com/watch?v=8rAVy9xsZ_k", "th": "https://i.ytimg.com/vi/8rAVy9xsZ_k/mqdefault.jpg", "v": 434}], "orgs": {"個人・その他": 4, "にじさんじ": 1}, "spark": [0, 1.0, 3.0, 4.0, 5.0, 3.0, 5.0], "p_videos": 7, "p_channels": 9, "p_views": 82, "score": 34.0, "base": 2.7, "growth": 1.85, "steam": "https://store.steampowered.com/search/?term=ARK%3A%20Survival%20Ascended", "amazon": "https://www.amazon.co.jp/s?k=ARK%3A+Survival+Ascended&tag=tarochin-22", "rank": 28}, {"game": "にゃんこ大戦争", "canonical": "The Battle Cats", "videos": 9, "n": 9.0, "raw": 13, "channels": 6, "views": 98110, "streams": [{"t": "何かすみませんw  奇跡起きました  にゃんこ大戦争", "c": "ネコレンジャー", "u": "https://www.youtube.com/watch?v=hqx6K1am7X0", "th": "https://i.ytimg.com/vi/hqx6K1am7X0/mqdefault.jpg", "v": 27442}, {"t": "【にゃんこ大戦争】なぜか当たった創造神ガイア！属性を持つ敵に極ダメージだと！？なんだか強そうだが果たして…？【本垢実況Re#2507】", "c": "こーた", "u": "https://www.youtube.com/watch?v=xZOaH2kUDJk", "th": "https://i.ytimg.com/vi/xZOaH2kUDJk/mqdefault.jpg", "v": 24025}, {"t": "0から始める！中級者への道！　#ゆっくり実況　#にゃんこ大戦争", "c": "ゆうハル", "u": "https://www.youtube.com/watch?v=QSVFpUoZozw", "th": "https://i.ytimg.com/vi/QSVFpUoZozw/mqdefault.jpg", "v": 17463}, {"t": "結局ロックスターこねこどうなの？ 更にワンチャンアレを無双が可能か！？  いろいろお話   にゃんこ大戦争", "c": "ネコレンジャー", "u": "https://www.youtube.com/watch?v=Er0lJrdA0p8", "th": "https://i.ytimg.com/vi/Er0lJrdA0p8/mqdefault.jpg", "v": 11673}, {"t": "にゃんこ大戦争　統率力なくなるまで", "c": "とあの3たん", "u": "https://www.youtube.com/watch?v=44D9iv2Ry6w", "th": "https://i.ytimg.com/vi/44D9iv2Ry6w/mqdefault.jpg", "v": 10324}, {"t": "#251【０レジェ ウルルブ島滞在記・編成をガチャで決めるにゃ！】 #にゃんこ大戦争  ＃レジェンドストーリー０　まそしんチャンネルがライブ配信中！", "c": "まそしんチャンネル", "u": "https://www.youtube.com/watch?v=Ly2iogdMgX0", "th": "https://i.ytimg.com/vi/Ly2iogdMgX0/mqdefault.jpg", "v": 6754}, {"t": "にゃんこ大戦争　水曜日だ！旧レジェ冠４統率力なくなるまで攻略だ！！", "c": "とあの3たん", "u": "https://www.youtube.com/watch?v=l2FL00dRtsI", "th": "https://i.ytimg.com/vi/l2FL00dRtsI/mqdefault.jpg", "v": 5413}, {"t": "#252【イベントステージやるにゃ！０レジェ 編成をガチャで決めるにゃ！】 #にゃんこ大戦争  ＃レジェンドストーリー０　まそしんチャンネルがライブ配信中！", "c": "まそしんチャンネル", "u": "https://www.youtube.com/watch?v=nfHQsv3jEBU", "th": "https://i.ytimg.com/vi/nfHQsv3jEBU/mqdefault.jpg", "v": 3198}], "orgs": {"個人・その他": 13}, "spark": [4.5, 6.5, 6.0, 6.5, 6.0, 7.0, 9.0], "p_videos": 13, "p_channels": 10, "p_views": 76, "score": 34.0, "base": 6.1, "growth": 1.48, "steam": null, "amazon": "https://www.amazon.co.jp/s?k=%E3%81%AB%E3%82%83%E3%82%93%E3%81%93%E5%A4%A7%E6%88%A6%E4%BA%89&tag=tarochin-22", "rank": 29}, {"game": "鬼武者 Way of the Sword", "canonical": "鬼武者 Way of the Sword", "videos": 8, "n": 7.5, "raw": 9, "channels": 7, "views": 69784, "streams": [{"t": "#7 鬼武者　Way of the Sword（初見プレイ）久々になってしまった", "c": "品川家の遊び場", "u": "https://www.youtube.com/watch?v=TskR9Wa_MfY", "th": "https://i.ytimg.com/vi/TskR9Wa_MfY/mqdefault.jpg", "v": 41791}, {"t": "まさかの縛りプレイでした！みんなのおかげで本当に覚醒したぞ！！！【鬼武者 Way of the Sword】2K画質実況 #7", "c": "荒木美鈴 ゲーミングMCちゃん", "u": "https://www.youtube.com/watch?v=DCZQ94epL64", "th": "https://i.ytimg.com/vi/DCZQ94epL64/mqdefault.jpg", "v": 12983}, {"t": "クリアまで【鬼武者 way of the sword】シリーズ完全初見！本格剣戟アクションの新作鬼武者に挑む！【めた氏 │ Vtuber】", "c": "Metashi Ch. めた氏", "u": "https://www.youtube.com/watch?v=rLuAqaOwf5E", "th": "https://i.ytimg.com/vi/rLuAqaOwf5E/mqdefault.jpg", "v": 8928}, {"t": "(縦) 👿鬼武者 way of the sword👿 巌ちゃんを救いたい！！  #4", "c": "あP3", "u": "https://www.youtube.com/watch?v=wmZ1mZK-GKU", "th": "https://i.ytimg.com/vi/wmZ1mZK-GKU/mqdefault.jpg", "v": 3787}, {"t": "【鬼武者 Way of the Sword】#4 もう、たけぞうじゃない。むさしです。⚔️👹⚔️【甘屑あまえ】#関西vtuber  #鬼武者 #CCJP", "c": "甘屑あまえ - Amakuzu Amae -", "u": "https://www.youtube.com/watch?v=UkiWRxZGZnk", "th": "https://i.ytimg.com/vi/UkiWRxZGZnk/mqdefault.jpg", "v": 1548}, {"t": "【実況】宮本武蔵のモデルは三船敏郎！鬼武者 Way of the Swordをツッコミ実況Part19【PS5】", "c": "しゅーや", "u": "https://www.youtube.com/watch?v=u7GerROEZo0", "th": "https://i.ytimg.com/vi/u7GerROEZo0/mqdefault.jpg", "v": 640}, {"t": "👿鬼武者 way of the sword👿 巌ちゃんを救いたい！！  #4", "c": "あP3", "u": "https://www.youtube.com/watch?v=BGsJREopcms", "th": "https://i.ytimg.com/vi/BGsJREopcms/mqdefault.jpg", "v": 115}, {"t": "鬼武者 way of the sword　ヤンキー風　風神雷神", "c": "格ゲーが如く", "u": "https://www.youtube.com/watch?v=2T0SxxeK3C8", "th": "https://i.ytimg.com/vi/2T0SxxeK3C8/mqdefault.jpg", "v": 49}], "orgs": {"個人・その他": 8, "実況者": 1}, "spark": [7.0, 6.0, 7.0, 14.0, 9.0, 13.0, 7.5], "p_videos": 11, "p_channels": 12, "p_views": 74, "score": 33.4, "base": 9.3, "growth": 0.86, "steam": "https://store.steampowered.com/search/?term=%E9%AC%BC%E6%AD%A6%E8%80%85%20Way%20of%20the%20Sword", "amazon": "https://www.amazon.co.jp/s?k=%E9%AC%BC%E6%AD%A6%E8%80%85+Way+of+the+Sword&tag=tarochin-22", "rank": 30}], "view": "archive", "paths": {"home": "../../", "archive": "../../archive/"}};
+const $ = s => document.querySelector(s);
+const esc = s => String(s ?? '').replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+const cssv = n => getComputedStyle(document.documentElement).getPropertyValue(n).trim();
+const fmt1 = n => n == null ? '?' : String(Math.round(n * 10) / 10);
+const man = n => n >= 10000 ? (n/10000).toFixed(n >= 100000 ? 0 : 1) + '万' : (n||0).toLocaleString();
+
+function spark(v, w, h, color){
+  if (!v || !v.length) return '';
+  v = v.filter(n => n !== null && n !== undefined);
+  if (v.length < 2) return '';
+  const mx = Math.max(...v, 1), dx = w / Math.max(1, v.length - 1);
+  const y = n => h - 3 - n / mx * (h - 6);
+  const p = v.map((n, i) => [i * dx, y(n)]);
+  const line = p.map((q, i) => (i ? 'L' : 'M') + q[0].toFixed(1) + ' ' + q[1].toFixed(1)).join(' ');
+  const last = p[p.length - 1];
+  return `<svg width="${w}" height="${h}" viewBox="0 0 ${w} ${h}" aria-hidden="true" style="display:block">
+    <path d="${line} L${w} ${h} L0 ${h} Z" fill="${color}" opacity=".13"/>
+    <path d="${line}" fill="none" stroke="${color}" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+    <circle cx="${last[0].toFixed(1)}" cy="${last[1].toFixed(1)}" r="3" fill="${color}"/></svg>`;
+}
+
+let orgFilter = null;
+
+// 実際にそのゲームを売っている店だけボタンを出す（無い店のボタンは出さない）
+  // 購入ボタンの先頭に付ける小さなカート。店へのリンクだと一目で分かるように。
+  // 見出しの頭に付ける印。ここだけ読めば今日の話が分かる、という目印。
+  const POINT = '<svg class="pt" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.6l2.9 6.2 6.8.8-5 4.6 1.4 6.7L12 17.5 5.9 20.9l1.4-6.7-5-4.6 6.8-.8z"/></svg>';
+  const CART = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="20" r="1.4"/><circle cx="18" cy="20" r="1.4"/><path d="M2 3h3l2.4 12.1a1.6 1.6 0 0 0 1.6 1.3h8.4a1.6 1.6 0 0 0 1.6-1.3L21 7H6"/></svg>';
+function buy(r){
+  const b = [];
+  // どちらも店の検索結果に飛ぶ。商品ページではないので「探す」と書く。
+  if (r.steam)  b.push(`<a class="st" href="${esc(r.steam)}" target="_blank" rel="noopener sponsored">${CART}Steamで探す</a>`);
+  if (r.amazon) b.push(`<a class="az" href="${esc(r.amazon)}" target="_blank" rel="noopener sponsored nofollow">${CART}Amazonで探す</a>`);
+  return b.join('') || '<span style="color:var(--ink-3);font-size:10px">—</span>';
+}
+
+function renderArchive(){
+  const P = DATA.paths || {home: './', archive: './archive/'};
+  ['#hot-sec', '#rank-sec', '#q-sec', '#pick-sec'].forEach(s => { const e = $(s); if (e) e.style.display = 'none'; });
+  $('#arch-sec').style.display = '';
+  $('#s-date').textContent = 'アーカイブ';
+  $('#s-meta').textContent = `${(DATA.archive || []).length}日分の記録`;
+  $('#nav').innerHTML = `<a href="${P.home}">今日のランキング</a>`
+    + `<a href="${P.home}matome/">週・月のまとめ</a>`
+    + `<a href="${P.home}about/">このサイトについて</a>`;
+  $('#arch').innerHTML = (DATA.archive || []).map(e => `
+    <a class="day" href="${P.home}d/${esc(e.date)}/">
+      <span class="dt">${esc(e.date.replace(/-/g, '.'))}</span>
+      <span class="bd">
+        ${e.column ? `<span class="hl">${esc(e.column.game)}｜${esc(e.column.headline)}</span>` : ''}
+        <span class="gs">${(e.top || []).map(g => esc(g.game)).join(' ・ ')}</span>
+        <span class="st">配信 ${e.videos}本 / ${e.channels}ch / ${e.games}ゲーム</span>
+      </span></a>`).join('') || '<div class="empty">まだ記録がありません。</div>';
+}
+
+function renderAdmin(){
+  // 管理ページ。トップからリンクしていないので、URLを知っている人しか見ません。
+  const P = DATA.paths || {home: './', archive: './archive/'};
+  const m = document.createElement('meta');
+  m.name = 'robots'; m.content = 'noindex,nofollow';
+  document.head.appendChild(m);          // 検索結果には出さない
+  ['#hot-sec', '#rank-sec', '#pick-sec', '#arch-sec'].forEach(s => { const e = $(s); if (e) e.style.display = 'none'; });
+  $('#q-sec').style.display = '';
+  $('#lead-sec').style.display = '';
+
+  const L = DATA.leads || {};
+  const row = (label, body) =>
+    `<div class="qrow"><span class="g">${esc(label)}</span><span class="t">${body}</span></div>`;
+  const parts = [];
+  // 企画タグから足したぶん。順位に足している数字なので、見えるところに出す
+  (DATA.tags || []).forEach(t => parts.push(row('タグから',
+    `<b>#${esc(t.tag)}</b> の配信 ${t.added}本を <b>${esc(t.game)}</b> として数えました
+     — ${t.channels}人が使用、うち ${t.evidence}本にゲーム名の記載`)));
+  // 続編が前作と同じ行に入っている疑い。いちばん上に出す（順位そのものが狂うため）
+  (DATA.drift || []).forEach(d => parts.push(row('名前のゆれ',
+    `<b>${esc(d.written)}</b> と書いている配信者が ${d.channels}人／${d.of}人。
+     いまは <b>${esc(d.game)}</b> として数えています。別のゲームなら
+     <code>data/aliases.json</code> に足してください`)));
+  (L.events || []).forEach(e => parts.push(row('同じタグ',
+    `<b>${esc(e.tag)}</b> — ${e.channels.length}人：${e.channels.map(esc).join('、')}`)));
+  (L.newcomers || []).forEach(n => parts.push(row('新顔',
+    `<b>${esc(n.game)}</b> — 直近では出ていなかったのに ${n.channels}人が配信`)));
+  (L.wide || []).forEach(w => parts.push(row('広がり',
+    `<b>${esc(w.game)}</b> — ${w.channels}チャンネル / ${w.videos}件`)));
+  (DATA.recent_columns || []).forEach(c => parts.push(row('既出',
+    `${esc(c.date)}　${esc(c.game)}｜${esc(c.headline)}`)));
+  $('#leads').innerHTML = parts.join('') || '<div class="empty">今日は目立った動きがありません。</div>';
+  const q = DATA.unknown || [];
+  $('#s-date').textContent = '管理用';
+  $('#s-meta').textContent = `${esc(DATA.date)} ／ 確認待ち ${q.length}件`;
+  $('#nav').innerHTML = `<a href="${P.home}">サイトを見る</a><a href="unknown.json">JSONで見る</a>`;
+  $('#banner').innerHTML = `<div class="banner" style="display:block;line-height:1.75">このページは公開ページからリンクされていません。ここに出たタイトルは<b>ランキングには一切入っていません</b>。よく出るものを <code>data/aliases.json</code> に足すと、次から正しく数えられます。</div>`;
+  // ゲーム名ごとにまとめて、何人が配信したかの多い順。新作ほど上に出る。
+  $('#queue').innerHTML = q.map(u => {
+    const ex = (u.examples || []).map(x =>
+      `<div style="font-size:11.5px;color:var(--ink-3);line-height:1.6">
+         <a href="${esc(x.u)}" target="_blank" rel="noopener">${esc(x.t)}</a> — ${esc(x.c)}</div>`).join('');
+    return `<div class="qrow"><span class="g" style="${u.channels >= 3 ? 'background:var(--hot);color:#fff' : ''}">${u.channels}ch</span>
+      <span class="t"><b>${esc(u.guess || '?')}</b>
+      <span style="color:var(--ink-3)"> ・ ${u.n}本</span>${ex}</span></div>`;
+  }).join('') || '<div class="empty">確認待ちはありません。</div>';
+  $('#f-gen').textContent = DATA.generated || '';
+}
+
+function renderPage(){
+  const P = DATA.paths || {home: './', archive: './archive/'};
+  ['#hot-sec', '#rank-sec', '#q-sec', '#pick-sec', '#arch-sec'].forEach(s => {
+    const e = $(s); if (e) e.style.display = 'none';
+  });
+  $('#page-sec').style.display = '';
+  $('#nav').innerHTML = `<a href="${P.home}">今日のランキングへ</a>`
+    + `<a href="${P.home}matome/">週・月のまとめ</a>`
+    + `<a href="${P.archive}">これまでの記録</a>`;
+  $('#s-date').textContent = '';
+  $('#s-meta').textContent = DATA.subtitle || '';
+  $('#f-gen').textContent = DATA.generated ? '最終更新 ' + DATA.generated : '';
+}
+
+function render(){
+  if (DATA.mode === 'page') return renderPage();
+  if (DATA.mode === 'admin') return renderAdmin();
+  if (DATA.mode === 'archive') return renderArchive();
+  const AC = cssv('--accent'), HOT = cssv('--hot'), t = DATA.totals || {};
+  const P = DATA.paths || {home: './', archive: './archive/'};
+  const isArchive = DATA.view === 'archive';
+
+  $('#nav').innerHTML = (isArchive ? `<a href="${P.home}">今日のランキングへ</a>` : '')
+    + `<a href="${P.home}matome/">週・月のまとめ</a>`
+    + `<a href="${P.archive}">これまでの記録</a>`
+    + `<a href="${P.home}about/">このサイトについて</a>`;
+  const MT = DATA.matome;
+  if (MT && !isArchive) {
+    $('#mt-sec').style.display = '';
+    $('#mt').href = P.home + MT.href;
+    $('#mt').innerHTML =
+      (MT.th ? `<img src="${esc(MT.th)}" alt="" loading="lazy">` : '')
+      + `<div class="txt"><span class="kind">${esc(MT.label)}</span>`
+      + `<div class="tt">${esc(MT.title)}</div>`
+      + `<div class="sub">${esc(MT.heading)}${MT.by ? ' ／ 画像 YouTube ' + esc(MT.by) : ''}</div></div>`;
+  } else {
+    $('#mt-sec').style.display = 'none';
+  }
+  $('#banner').innerHTML = isArchive
+    ? `<div class="banner">これは <b>${esc(DATA.date)}</b> の記録です。数字はこの日のもので、更新されません。</div>` : '';
+
+  const col = DATA.column;
+  $('#pick-sec').style.display = col ? '' : 'none';
+  if (col) {
+    // 今日のコラムがまだ無い日は、直近のものを出している。
+    // 今日のことのように見せないため、見出しに日付を入れる。
+    const cd = col.date || DATA.date;
+    const stale = cd && cd !== DATA.date;
+    const md = cd ? `${+cd.slice(5,7)}月${+cd.slice(8,10)}日の` : '';
+    $('#pick-title').textContent = isArchive ? 'この日の注目ゲーム'
+                                 : stale ? md + '注目ゲーム' : '今日の注目ゲーム';
+    $('#pick-note').textContent = (isArchive || stale) ? 'この日、数字が動いた理由'
+                                                       : 'なぜ今このゲームが伸びているのか';
+    // 画像とSteamリンクはコラム自身が持っている（build_site が入れる）。
+    // ランキング30位以内から探していた頃は、取り上げたゲームが順位を
+    // 落とすと画像が消えていた。古いデータのために従来の探索も残す。
+    const cr = (DATA.ranking || []).find(r => r.game === col.game);
+    const colSteam = col.steam || (cr && cr.steam) || '';
+    const colHero  = col.hero  || (cr && cr.streams && cr.streams[0] && cr.streams[0].th) || '';
+    // コラムには、人が実際に商品ページを確かめたリンクだけを置く
+    const links = [];
+    if (col.buy && col.buy.u)
+      links.push(`<a class="az" href="${esc(col.buy.u)}" target="_blank" rel="noopener sponsored nofollow">${CART}${esc(col.buy.t || '購入')}</a>`);
+    if (colSteam)
+      links.push(`<a class="st" href="${esc(colSteam)}" target="_blank" rel="noopener sponsored">${CART}Steamで探す</a>`);
+    const cbuy = links.length
+      ? `<div class="buy" style="margin-top:2px">${links.join('')}</div>` : '';
+    const hero = colHero;
+    $('#pick').classList.toggle('has-img', !!hero);
+    $('#pick').innerHTML = `
+      ${hero ? `<img class="heroimg" src="${esc(hero)}" alt="" loading="lazy">` : ''}
+      <div class="ptxt">
+        <span class="badge">PICK UP</span>
+        <div class="g">${esc(col.game)}</div>
+        <div class="hl">${POINT}${esc(col.headline)}</div>
+        <p>${esc(col.body)}</p>
+        ${cbuy}
+        ${(col.people || []).length ? `<div class="who">${col.people.map(p => `<span>${esc(p)}</span>`).join('')}</div>` : ''}
+        ${(col.sources || []).length ? `<div class="src">${col.sources.map(x => `<a href="${esc(x.u)}" target="_blank" rel="noopener">${esc(x.t)}</a>`).join('')}</div>` : ''}
+      </div>`;
+  }
+  $('#s-date').textContent = (DATA.date || '').replace(/-/g, '.');
+  $('#s-meta').textContent = (DATA.range && !isArchive ? DATA.range + ' ・ ' : '')
+    + `配信 ${t.videos||0}本 / ゲーム ${t.games||0}種 / ${t.channels||0}ch`;
+  $('#f-gen').textContent = DATA.generated ? '最終更新 ' + DATA.generated : '';
+
+  // 過去の日のページでは「今日」と書かない
+  const DAY = isArchive ? 'この日' : 'この24時間で';
+  const dayk = isArchive ? 'この日' : '24時間で';
+
+  const mo = DATA.momentum || {ready: true};
+
+  const orgs = {};
+  (DATA.ranking || []).forEach(r => Object.entries(r.orgs || {}).forEach(([k, v]) => orgs[k] = (orgs[k]||0) + v));
+  const keys = Object.entries(orgs).sort((a,b) => b[1]-a[1]).slice(0, 7).map(x => x[0]);
+  $('#filters').innerHTML = ['すべて', ...keys].map(k =>
+    `<button type="button" data-org="${esc(k)}" aria-pressed="${(orgFilter===null&&k==='すべて')||orgFilter===k}">${esc(k)}</button>`).join('');
+
+  const list = (DATA.ranking || []).filter(r => !orgFilter || (r.orgs && r.orgs[orgFilter]));
+  const top = Math.max(1, ...list.map(r => r.score || 0));
+  const CHEV = '<svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg>';
+  const PLUS = '<svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><path d="M6 9l6 6 6-6"/></svg>';
+
+  // 配信一覧のパネル。カードでも行でも中身は同じ
+  const panel = (r, key) => {
+    const st = (r.streams || []).map(s => `<a class="stream" href="${esc(s.u)}" target="_blank" rel="noopener">
+      ${s.th ? `<img src="${esc(s.th)}" alt="" loading="lazy">` : ''}
+      <span><span class="t">${esc(s.t)}</span><span class="c">${esc(s.c)} ・ ${man(s.v)}回</span></span></a>`).join('');
+    const mv = (r.growth && r.growth >= 1.25 && r.videos >= 3)
+      ? `<span class="mv up">▲ ×${r.growth.toFixed(1)}</span>` : '';
+    // key は文字列のときだけ使う。map(panel) のように添字が入っても壊れないように
+    return `<div class="panel" data-p="${esc(typeof key === 'string' ? key : r.game)}">
+      <div style="display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin-bottom:10px">
+        <span class="buy">${buy(r)}</span>${mv}
+        ${(() => { const sp = spark(r.spark, 90, 22, AC);
+          return sp ? `<span style="font-size:11.5px;color:var(--ink-3)">7日の推移</span>${sp}` : ''; })()}
+      </div>
+      ${st ? `<div class="streams">${st}</div>`
+           : `<span style="color:var(--ink-3);font-size:12.5px">${DATA.purged
+               ? '30日を過ぎたため、配信の一覧は表示していません（YouTubeの規約による）。ゲーム名と件数は残しています。'
+               : '配信の情報がありません'}</span>`}</div>`;
+  };
+  const thumb = r => (r.streams && r.streams[0] && r.streams[0].th) || '';
+  const topLine = r => {
+    const s0 = (r.streams || [])[0];
+    return s0 ? `${esc(s0.c)}「${esc(s0.t)}」` : '';
+  };
+
+  // ---- 今このゲームがアツい（このサイトの主役。ランキングより先に読ませる）
+  $('#hot-sec').style.display = mo.ready ? '' : 'none';
+  if (!mo.ready) {
+    // データが足りないうちは倍率を出さない。代わりに「広がり」を出す。
+    $('#hot-title').textContent = DAY + 'いちばん広がったゲーム';
+    const left = Math.max(0, (mo.need || 4) - (mo.days || 0));
+    $('#hot-note').textContent = '多くの配信者が同じ日に触ったタイトル'
+      + (isArchive ? '' : `（急上昇の判定はデータがあと${left}日分で始まります）`);
+    $('#hot').innerHTML = (DATA.spread || []).map(r => `<article class="hotcard"><div class="hbody">
+        <div class="n">${esc(r.game)}</div>
+        <div class="f"><span>${r.channels}チャンネルが配信</span><span>${man(r.views)}回 視聴</span></div>
+      </div></article>`).join('') || '<div class="empty">データがまだありません。</div>';
+  } else {
+    const hot = DATA.rising || [];
+    $('#hot').innerHTML = hot.length ? hot.map(r => {
+      const th = thumb(r), s0 = (r.streams || [])[0];
+      return `<article class="hotcard">
+        <button type="button" class="hbtn" data-g="hot:${esc(r.game)}">
+          <span class="hth">${th ? `<img src="${esc(th)}" alt="" loading="lazy">` : '<span class="ph"></span>'}
+            <span class="mul">×${(r.growth||1).toFixed(1)}</span>
+            ${s0 ? `<span class="open">${PLUS}配信一覧</span>` : ''}</span>
+          <span class="hbody">
+            <span class="n">${esc(r.game)}</span>
+            <span class="delta"><span>ふだん ${fmt1(r.base)}件</span>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"
+                stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h13M13 6l6 6-6 6"/></svg>
+              <b>${isArchive ? 'この日' : '今日'} ${r.videos}件</b></span>
+            <span class="f"><span>${r.channels}チャンネルが配信</span><span>${man(r.views)}回 視聴</span></span>
+          </span></button>
+        <div class="buy hbuy">${buy(r)}</div>
+      </article>`;
+    }).join('') : '<div class="empty">今日は目立った急上昇はありませんでした。</div>';
+    // パネルはグリッドの中に入れる。押したカードと同じ行のすぐ下に出したいので、
+    // グリッドの外（下）にまとめて置くのをやめた。閉じている間は display:none
+    // なので、並びには影響しない。
+    $('#hot').insertAdjacentHTML('beforeend',
+      hot.map(r => panel(r, 'hot:' + r.game)).join(''));
+  }
+
+  // 上位3件はカード
+  $('#cards').innerHTML = list.slice(0, 3).map((r, i) => {
+    const th = thumb(r);
+    return `<button type="button" class="gcard" data-g="${esc(r.game)}">
+      <span class="th">${th ? `<img src="${esc(th)}" alt="" loading="lazy">`
+        : '<span style="display:block;aspect-ratio:16/9"></span>'}
+        <span class="rank">${i + 1}</span>
+        <span class="open">${PLUS}配信一覧</span></span>
+      <span class="gm"><b>${esc(r.game)}</b>
+        <span class="nums"><i>${r.videos}</i>件 <i>${r.channels}</i>ch <i>${man(r.views)}</i>回</span>
+        <span class="tp">${topLine(r)}</span></span></button>`;
+  }).join('');
+
+  // 4位以下は一覧
+  $('#rows').innerHTML = list.slice(3).map((r, i) => {
+    const th = thumb(r);
+    return `<button type="button" class="lrow" data-g="${esc(r.game)}">
+      <span class="rk2">${i + 4}</span>
+      ${th ? `<img src="${esc(th)}" alt="" loading="lazy">` : '<img alt="">'}
+      <span class="nm2"><b>${esc(r.game)}</b><span>${r.videos}件 ・ ${r.channels}ch ・ ${man(r.views)}回</span></span>
+      <span class="bar2"><i style="width:${Math.max(6,(r.score||0)/top*100)}%"></i></span>
+      ${CHEV}</button>${panel(r)}`;
+  }).join('') || '<div class="empty" style="border:0">データがまだありません。</div>';
+
+  // カードを押したときのパネルは、カード群のすぐ下にまとめて置く
+  $('#cards').insertAdjacentHTML('afterend',
+    '<div id="cardpanels">' + list.slice(0, 3).map(r => panel(r)).join('') + '</div>');
+
+  // 「これ、なんのゲーム？」は公開ページには出しません（site/admin/ 側で表示）
+}
+
+// 急上昇のパネルを「押したカードと同じ行」の下へ動かす。
+// 横に何枚並ぶかは画面幅しだい（3列／2列）なので、位置は数えずに
+// 実際の縦位置（offsetTop）が同じものを1行とみなす。
+function placeHot(card, pane){
+  const grid = card.parentElement;
+  const top = card.offsetTop;
+  let last = card;
+  grid.querySelectorAll('.hotcard').forEach(c => {
+    if (Math.abs(c.offsetTop - top) < 6) last = c;
+  });
+  if (pane.previousElementSibling !== last) grid.insertBefore(pane, last.nextSibling);
+}
+
+document.addEventListener('click', e => {
+  const b = e.target.closest('#filters button');
+  if (b){ orgFilter = b.dataset.org === 'すべて' ? null : b.dataset.org; render(); return; }
+  const hit = e.target.closest('.gcard, .lrow, .hbtn');
+  if (!hit || e.target.closest('a')) return;
+  const name = hit.dataset.g;
+  const pane = [...document.querySelectorAll('.panel')].find(p => p.dataset.p === name);
+  if (!pane) return;
+  if (hit.classList.contains('hbtn')) placeHot(hit.closest('.hotcard'), pane);
+  const on = pane.classList.toggle('on');
+  hit.classList.toggle('open-x', on);
+  // 急上昇カードは、どれを開いているかカード全体で分かるようにする
+  hit.closest('.hotcard')?.classList.toggle('on', on);
+  hit.setAttribute('aria-expanded', on);
+});
+render();
+matchMedia('(prefers-color-scheme: dark)').addEventListener('change', render);
+// 画面幅が変わると1行の枚数が変わる。開いたままのパネルを行の下へ置き直す。
+let rsz;
+addEventListener('resize', () => {
+  clearTimeout(rsz);
+  rsz = setTimeout(() => document.querySelectorAll('#hot .panel.on').forEach(pane => {
+    const card = [...document.querySelectorAll('#hot .hotcard')]
+      .find(c => c.querySelector('.hbtn')?.dataset.g === pane.dataset.p);
+    if (card) placeHot(card, pane);
+  }), 150);
+});
+</script>
+</body></html>
