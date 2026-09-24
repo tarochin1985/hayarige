@@ -1,0 +1,29 @@
+# Cloudflare に「このファイルはこう返して」と伝える設定です。
+# site/ の中に置くと、公開時に読まれます（このファイル自体は公開されません）。
+#
+# なぜ要るか（2026-09-24）
+#   Search Console から「インデックスに登録されない要因」の通知が来ました。
+#   原因のひとつが、サイトの部品として site/ に置いてあるファイルが、
+#   そのまま外から見えて検索エンジンに拾われていたことです。
+#     /template.html … ページの型紙。canonical が __PAGEURL__ のまま入っている
+#     /card.html     … ツイート画像を作るための下書きHTML
+#     /data.json     … サイトが読む生データ
+#     /leads.json    … コラムの種
+#   どれも「読み物」ではないので、検索結果に出す意味がありません。
+#
+# noindex を robots.txt の Disallow で代用してはいけません。
+# Disallow すると Google はページを読みに来なくなるので、
+# **noindex という指示そのものを読めなくなり、消えません。**
+# 読ませたうえで「載せないで」と伝えるのが正しい順番です。
+
+/template.html
+  X-Robots-Tag: noindex
+
+/card.html
+  X-Robots-Tag: noindex
+
+/data.json
+  X-Robots-Tag: noindex
+
+/leads.json
+  X-Robots-Tag: noindex

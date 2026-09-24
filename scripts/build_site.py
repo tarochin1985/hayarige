@@ -62,12 +62,22 @@ MATCH_INPUTS = ("aliases.json", "display_names.json", "blocklist.json",
 
 
 def matcher_fingerprint():
-    """辞書まわりの中身をまとめた短い文字列。変わったかどうかだけを見る。"""
+    """辞書まわりとページの型紙をまとめた短い文字列。変わったかどうかだけを見る。
+
+    型紙（site/template.html）も入れている。中身は判定に関係ないが、
+    **型紙を直しても過去のページが古いままになる**のを防ぐため。
+    2026-09-24に、全ページに焼き込まれていた壊れたリンク（unknown.json）を
+    型紙で直したとき、たまたま同じ日に辞書も変えていたから作り直された。
+    辞書を触らない日に型紙だけ直すと、直らないままになる。
+    """
     h = hashlib.sha1()
     for name in MATCH_INPUTS:
         f = DATA / name
         h.update(name.encode())
         h.update(f.read_bytes() if f.is_file() else b"")
+    tpl = SITE / "template.html"
+    h.update(b"template.html")
+    h.update(tpl.read_bytes() if tpl.is_file() else b"")
     return h.hexdigest()[:16]
 
 
@@ -684,6 +694,65 @@ def analytics_html():
             f"data-cf-beacon='{json.dumps({'token': tok})}'></script>")
 
 
+def page_meta(data):
+    """そのページの題（title / og:title）と説明を作る。
+
+    2026-09-24まで、40ページ全部が同じ題と同じ説明を名乗っていた。
+    Search Consoleが記録ページ24枚を「検出 - インデックス未登録」にしていたのは
+    これが原因と思われる。Googleから見ると、同じことを名乗るページが
+    24枚並んでいたことになる。中身が違うなら、名乗りも違わなければならない。
+
+    title  … 検索結果に出る行。ゲーム名と日付を前に置く
+    og:title … XやDiscordのカードの見出し。短く読ませる
+    desc   … 検索結果の説明文。118字で切る
+    """
+    SITE_T = "ハヤリゲー"
+    # 呼び出し側が決め打ちしたいときは meta_title / meta_og / meta_desc を渡す
+    if data.get("meta_title"):
+        return (data["meta_title"], data.get("meta_og") or data["meta_title"],
+                (data.get("meta_desc") or "")[:118])
+
+    date = str(data.get("date") or "")
+    jp = f"{int(date[5:7])}月{int(date[8:10])}日" if len(date) >= 10 else ""
+    col = data.get("column") or {}
+    rows = data.get("ranking") or []
+    tops = "・".join([r.get("game") for r in rows[:3] if r.get("game")])
+    game = str(col.get("game") or "").strip()
+    head = str(col.get("headline") or "").strip()
+
+    if data.get("mode") == "archive":
+        return (f"これまでの記録 ｜ {SITE_T}", "これまでの記録",
+                "その日どのゲームが配信されていたかを、日ごとに残しています。"
+                "VTuber・ゲーム実況者のYouTube配信の記録。")
+
+    # トップページ。中身は「今日の記録ページ」と同じものだが、
+    # 同じ題を名乗らせると、Googleから見て同じページが2枚になる。
+    # トップは毎日中身が変わる「入口」なので、日付を入れない題にして、
+    # 日付つきの題は /d/YYYY-MM-DD/ のほうに持たせる。
+    if data.get("view") != "archive":
+        lead = (f"注目は『{game}』── {head}" if game and head else "")
+        return (f"{SITE_T} ｜ VTuber・ゲーム実況者がいま配信しているゲーム ランキング",
+                f"{SITE_T} ｜「次に流行るゲーム」がわかるサイト",
+                (f"YouTubeのゲーム配信を毎日数えています。{jp}は {tops} ほか。{lead}"
+                 if tops else
+                 "YouTubeのゲーム配信を毎日数えて、いま増えているゲームを出しています。")[:118])
+
+    # 日ごとの記録ページ
+    if not jp:
+        return (f"{SITE_T} ｜ VTuber・ゲーム実況者がいま配信しているゲーム ランキング",
+                f"{SITE_T} ｜「次に流行るゲーム」がわかるサイト",
+                "YouTubeのゲーム配信を毎日数えて、いま増えているゲームを出しています。")
+    title = (f"{jp}のゲーム配信ランキング ｜ {tops} ほか ｜ {SITE_T}" if tops
+             else f"{jp}のゲーム配信ランキング ｜ {SITE_T}")
+    if game and head:
+        og = f"{jp}｜{game} — {head}"
+        desc = f"{jp}、{tops} などが配信されていました。注目は『{game}』── {head}"
+    else:
+        og = f"{jp}のゲーム配信ランキング"
+        desc = f"{jp}にVTuber・ゲーム実況者が配信していたゲーム。{tops} ほか。"
+    return title, og, desc[:118]
+
+
 def render_page(path, data, depth, site_url=""):
     """1ページ書き出す。depth はサイト直下から何階層下か。
 
@@ -702,7 +771,11 @@ def render_page(path, data, depth, site_url=""):
     col_ = data.get("column")
     # まとめのカードはトップにだけ出す。過去の日のページには出さない
     mt = data.get("matome") if data.get("view") != "archive" else None
+    title, ogtitle, desc = page_meta(data)
     p.write_text(tpl.replace("__DATA__", json.dumps(d, ensure_ascii=False))
+                    .replace("__TITLE__", e(title))
+                    .replace("__OGTITLE__", e(ogtitle))
+                    .replace("__DESC__", e(desc))
                     .replace("__HOME__", home)
                     .replace("__PAGEURL__", f"{site_url}/{page}" if site_url else "")
                     .replace("__SITE__", site_url)
@@ -1279,6 +1352,10 @@ def main():
     admin = {"mode": "admin", "date": today(),
              "generated": payload["generated"], "unknown": unk_rows,
              "leads": leads, "drift": drift, "tags": tagnotes,
+             # robots.txt で検索避けしてあるが、題まで同じにしておく理由はない
+             "meta_title": "管理用 ｜ ハヤリゲー",
+             "meta_og": "管理用",
+             "meta_desc": "判定できなかった配信と、コラムの種。公開ページではありません。",
              "recent_columns": recent_cols[::-1]}
     render("admin/index.html", admin, 1)
     write_json(SITE / "admin" / "unknown.json", admin)
@@ -1377,13 +1454,23 @@ def main():
     # ---- 週・月のまとめ --------------------------------------------------
     # 読みものがこのサイトの本体なので、Xに流して消えるのはもったいない。
     for x in specials:
+        _t = str((x.get("col") or {}).get("title") or x["heading"])
+        _l = str((x.get("col") or {}).get("lead") or "")
         render(f'{x["slug"]}/{x["key"]}/index.html',
                {"mode": "page", "date": today(), "subtitle": x["heading"],
                 "generated": payload["generated"],
+                "meta_title": f'{_t} ｜ {x["heading"]} ｜ ハヤリゲー',
+                "meta_og": _t,
+                "meta_desc": _l or f'{x["heading"]}のまとめ。'
+                                   "VTuber・ゲーム実況者のYouTube配信から。",
                 "page_body": special_html(x)}, 2)
     render("matome/index.html",
            {"mode": "page", "date": today(), "subtitle": "週・月のまとめ",
             "generated": payload["generated"],
+            "meta_title": "週・月のまとめ ｜ ハヤリゲー",
+            "meta_og": "週・月のまとめ",
+            "meta_desc": "1日を見ているだけでは分からないことを書いた読みもの。"
+                         "その週・その月に配信界隈で何が起きたか。",
             "page_body": specials_index_html(specials)}, 1)
     if specials:
         log(f"週・月のまとめを {len(specials)} 本書き出しました")
@@ -1395,7 +1482,31 @@ def main():
     render("about/index.html",
            {"mode": "page", "date": today(), "subtitle": "このサイトについて",
             "generated": payload["generated"],
+            "meta_title": "このサイトについて ｜ ハヤリゲー",
+            "meta_og": "ハヤリゲーの作り方",
+            "meta_desc": "どのチャンネルを、どう数えて、どう順位を付けているか。"
+                         "集計の範囲と、数に入れていないものについて書いています。",
             "page_body": about_html(cfg, watched_channels())}, 1)
+
+    # ---- /d/ と /w/ の入口 ----------------------------------------------
+    # 記録は /d/2026-09-24/ に、まとめは /w/2026-09-14/ に置いてあるが、
+    # 親の /d/ と /w/ には何も無かった。人がURLを削って試すこともあるし、
+    # 検索エンジンは親の階層をたどりに来る。そこが404を返していた。
+    # 中身のある一覧（/archive/ と /matome/）へ送る。
+    # 検索結果には出さない（そこに出すべきは送り先のほうなので）。
+    for src, dst, name in (("d", "archive", "日ごとの記録"),
+                           ("w", "matome", "週・月のまとめ")):
+        to = f"{site_url}/{dst}/" if site_url else f"/{dst}/"
+        d = SITE / src
+        d.mkdir(parents=True, exist_ok=True)
+        (d / "index.html").write_text(
+            f'<!doctype html><html lang="ja"><head><meta charset="utf-8">'
+            f'<meta name="robots" content="noindex">'
+            f'<link rel="canonical" href="{to}">'
+            f'<meta http-equiv="refresh" content="0; url={to}">'
+            f'<title>{name}｜ハヤリゲー</title></head>'
+            f'<body><p><a href="{to}">{name}の一覧へ</a></p></body></html>\n',
+            encoding="utf-8")
 
     # ---- sitemap.xml ---------------------------------------------------
     # 日付ごとの記録は日が経つほど増える資産だが、たどり着く道が
