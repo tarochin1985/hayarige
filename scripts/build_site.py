@@ -448,9 +448,11 @@ def nav_html(data, home):
         a.append((home, "今日のランキングへ"))
         a.append((home + "matome/", "週・月のまとめ"))
         a.append((home + "archive/", "これまでの記録"))
+        a.append((home + "search/", "ゲームを探す"))
     elif data.get("mode") == "archive":
         a.append((home, "今日のランキング"))
         a.append((home + "matome/", "週・月のまとめ"))
+        a.append((home + "search/", "ゲームを探す"))
         a.append((home + "about/", "このサイトについて"))
     elif data.get("mode") == "admin":
         return ""
@@ -459,6 +461,7 @@ def nav_html(data, home):
             a.append((home, "今日のランキングへ"))
         a.append((home + "matome/", "週・月のまとめ"))
         a.append((home + "archive/", "これまでの記録"))
+        a.append((home + "search/", "ゲームを探す"))
         a.append((home + "about/", "このサイトについて"))
     return "".join(f'<a href="{e(u)}">{e(t)}</a>' for u, t in a)
 
@@ -763,6 +766,13 @@ def render_page(path, data, depth, site_url=""):
     tpl = (SITE / "template.html").read_text(encoding="utf-8")
     d = dict(data, paths={"home": "../" * depth or "./",
                           "archive": ("../" * depth or "./") + "archive/"})
+    # page_body はサーバー側で __PAGEBODY__ に入れるものなので、
+    # ページのJSからは読まない。DATAに入れておくと同じHTMLが2回入って重くなるうえ、
+    # 中に </script> があるとそこでDATAの読み込みが切れる（2026-09-25、
+    # ゲーム検索のページを足したときに実際に壊れた）。
+    d.pop("page_body", None)
+    for k in ("meta_title", "meta_og", "meta_desc"):
+        d.pop(k, None)
     p = SITE / path
     p.parent.mkdir(parents=True, exist_ok=True)
     home = "../" * depth or "./"
@@ -785,7 +795,10 @@ def render_page(path, data, depth, site_url=""):
         share_col = share_html(
             f"{col['headline']}｜『{col['game']}』 #ハヤリゲー",
             f"{site_url}/d/{cdate}/", "このコラムを共有")
-    p.write_text(tpl.replace("__DATA__", json.dumps(d, ensure_ascii=False))
+    # JSONの中に </script> や <!-- があると、HTMLの側が先に反応してしまう。
+    # 文字列の中身は変えずに、その並びだけ崩しておく（JSONとしては同じ値になる）。
+    blob = json.dumps(d, ensure_ascii=False).replace("</", "<\\/").replace("<!--", "<\\!--")
+    p.write_text(tpl.replace("__DATA__", blob)
                     .replace("__TITLE__", e(title))
                     .replace("__OGTITLE__", e(ogtitle))
                     .replace("__DESC__", e(desc))
@@ -1059,6 +1072,14 @@ ICON_BS = ('<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5.77 3.44C8.34
            '-4.6 4.72-6.61-1.19-7.13-2.7-.09-.28-.14-.41-.14-.3 0-.11-.05.02-.14.3-.52 '
            '1.51-2.53 7.42-7.13 2.7-2.42-2.49-1.3-4.97 3.11-5.72-2.52.43-5.36-.28-6.14'
            '-3.06C.98 9.89.6 4.96.6 4.29.6.96 3.52 2.05 5.37 3.44Z"/></svg>')
+ICON_HB = ('<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4.6 3.2h3.6c1.7 0 '
+           '2.9.3 3.7.9.8.6 1.2 1.5 1.2 2.7 0 .7-.2 1.3-.5 1.8-.3.5-.8.9-1.4 1.1.8.2 '
+           '1.4.6 1.8 1.2.4.6.6 1.3.6 2.2 0 1.3-.4 2.3-1.3 3-.9.7-2.1 1-3.7 1H4.6V3.2Zm3.4 '
+           '5.6c.7 0 1.2-.1 1.5-.4.3-.3.5-.7.5-1.2s-.2-.9-.5-1.2c-.4-.2-.9-.4-1.6-.4h-.8v3.2'
+           'h.9Zm.2 5.9c.8 0 1.3-.1 1.7-.4.4-.3.6-.8.6-1.4 0-.6-.2-1-.6-1.3-.4-.3-1-.4-1.8-.4'
+           'h-1v3.5h1.1ZM17.5 14.1c.6 0 1.1.2 1.5.6.4.4.6.9.6 1.5s-.2 1.1-.6 1.5c-.4.4-.9.6'
+           '-1.5.6s-1.1-.2-1.5-.6a2 2 0 0 1-.6-1.5c0-.6.2-1.1.6-1.5.4-.4.9-.6 1.5-.6Zm1.3-1.4'
+           'h-2.5V3.2h2.5v9.5Z"/></svg>')
 ICON_LN = ('<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.4c5.51 0 10 3.63 '
            '10 8.1 0 1.78-.7 3.39-2.22 4.98-2.2 2.53-7.12 5.62-8.24 6.09-1.07.45-.94-.29'
            '-.9-.55l.15-.88c.03-.27.07-.68-.03-.94-.11-.29-.57-.44-.9-.51C5 18.03 1.99 '
@@ -1111,8 +1132,12 @@ def share_html(text, url, label):
       X       https://x.com/intent/post?text=&url=
       Bluesky https://bsky.app/intent/compose?text=   ※urlの項目が無い。本文に含める
       LINE    https://social-plugins.line.me/lineit/share?url=&text=
-    はてなブックマークは、スクリプトを使わない形が公式に案内されていなかったので
-    入れていない。
+      はてブ  https://b.hatena.ne.jp/entry/ + ページのURL
+
+    はてなブックマークの公式のボタンはJavaScriptを読み込む形だが、
+    それが足すのは「何人がブックマークしたか」の吹き出しだけで、
+    リンク自体（上の形）はスクリプト無しでそのまま動く。
+    色 #00A4DE ははてな公式のブランドページに載っている値。
     """
     def q(v):
         # / も含めて全部エスケープする。クエリの中に生の / を残すと、
@@ -1121,12 +1146,15 @@ def share_html(text, url, label):
     x = f"https://x.com/intent/post?text={q(text)}&url={q(url)}"
     bs = f"https://bsky.app/intent/compose?text={q(text + chr(10) + url)}"
     ln = f"https://social-plugins.line.me/lineit/share?url={q(url)}&text={q(text)}"
+    # はてブだけURLを素のまま置く（公式のボタンがこの形）
+    hb = "https://b.hatena.ne.jp/entry/" + url
     btn = ('<a class="sh sh-{k}" href="{u}" target="_blank" '
            'rel="noopener nofollow">{i}{n}</a>')
     return ('<div class="share"><span class="sh-l">' + e(label) + "</span>"
             + btn.format(k="x", u=e(x), n="X", i=ICON_X)
             + btn.format(k="bs", u=e(bs), n="Bluesky", i=ICON_BS)
             + btn.format(k="ln", u=e(ln), n="LINE", i=ICON_LN)
+            + btn.format(k="hb", u=e(hb), n="はてブ", i=ICON_HB)
             + "</div>")
 
 
@@ -1180,6 +1208,202 @@ Amazonのアソシエイトとして、当サイトは適格販売により収�
 日本のゲーム配信のすべてではありません。判定の誤りや取りこぼしもあります。
 気づいたものは直していますが、内容の正確性を保証するものではありません。</p>
 """
+
+
+# ---------------------------------------------------------------- ゲームを探す
+# 「このゲーム、前はいつランキングに入っていた？」に答えるための索引。
+# （2026-09-25 利用者からの要望）
+#
+# 中身はゲーム名・日付・件数・チャンネル数だけ。**配信タイトルもチャンネル名も
+# 入れない。** あれはYouTubeから借りた文字で、30日で消す約束になっている。
+# ここに入れると、その約束を破ることになる。
+# こちらが数えた集計値は、公開してよいと開発者ポリシーが明示している。
+#
+# 32日ぶんで10KB。1年ぶんでも0.1MB程度なので、まるごと読み込んで
+# 手元で絞り込める。サーバー側の仕掛けは要らない。
+
+GAME_DAYS_MIN = 2      # その日2チャンネル以上が配信したものだけ残す
+
+def day_games(rows):
+    """その日の全ゲームを {ゲーム名: [件数, チャンネル数]} にする。
+
+    ランキングのページに残しているのは上位30件まで。だが、このサイトが
+    見つけたいのは**まだ小さいゲーム**のほうで、そちらは30位に入らない。
+    実際『Feign』は29日間・のべ7チャンネルが配信していたのに、
+    一度もランキングに入っていない（2026-09-25、検索を作って気づいた）。
+
+    元になる日別ファイルは30日で消える（YouTubeの規約）。
+    **今日ぶんを今日のうちに残しておかないと、あとから作れない。**
+    残すのは「どのゲームが何件あったか」という、こちらが数えた集計値だけ。
+    配信タイトルもチャンネル名も入れない。
+    """
+    return {r["game"]: [r["videos"], r["channels"]] for r in rows
+            if r.get("channels", 0) >= GAME_DAYS_MIN}
+
+
+def search_index():
+    """site/search.json を書く。
+
+    元にするのは記録ページ（site/d/*/index.html）そのもの。
+    その日作り直したぶんだけを見ると、作り直しが走らなかった日が抜ける。
+    ページは全期間ぶん残っているので、そちらから読むほうが確実。
+    """
+    gdays = read_json(DATA / "game_days.json", {}) or {}
+    dd = sorted(d.name for d in (SITE / "d").iterdir()
+                if d.is_dir() and re.fullmatch(r"\d{4}-\d{2}-\d{2}", d.name)) \
+        if (SITE / "d").is_dir() else []
+    at = {d: i for i, d in enumerate(dd)}
+    rows = {}
+    for day in dd:
+        f = SITE / "d" / day / "index.html"
+        try:
+            h = f.read_text(encoding="utf-8")
+            i = h.index("const DATA = ") + len("const DATA = ")
+            obj, _ = json.JSONDecoder().raw_decode(h[i:])
+        except (ValueError, OSError):
+            continue
+        rank = {r["game"] for r in obj.get("ranking", [])}
+        # その日の全ゲーム（記録があればそちら、無ければ上位30件だけ）
+        src = gdays.get(day) or {r["game"]: [r.get("videos", 0), r.get("channels", 0)]
+                                 for r in obj.get("ranking", [])}
+        for name, (v, c) in src.items():
+            g = rows.setdefault(name, {"n": name, "d": [], "v": [], "c": [], "r": []})
+            g["d"].append(at[day])
+            g["v"].append(v)
+            g["c"].append(c)
+            if name in rank:
+                g["r"].append(at[day])          # ランキングに入った日
+
+    # コラムで取り上げた日。コラムはこちらが書いたものなので、全期間残っている。
+    cd = DATA / "columns"
+    for f in sorted(cd.glob("*.json")) if cd.is_dir() else []:
+        day = f.stem
+        if day not in at:
+            continue
+        c = read_json(f, None) or {}
+        if c.get("game"):
+            g = rows.setdefault(c["game"], {"n": c["game"], "d": [], "v": [], "c": []})
+            g.setdefault("col", []).append({"i": at[day],
+                                            "h": str(c.get("headline", ""))})
+
+    # 検索用のキー。手で登録した別名とIGDBの別名を、詰めた形で並べる。
+    # 「マイクラ」と打って Minecraft に当たるのは、ここに入れているから。
+    al = read_json(DATA / "aliases.json", {}) or {}
+    cat = {}
+    try:
+        for x in M.catalogue():
+            cat[x["name"]] = [x.get("jp")] + list(x.get("alias") or [])
+    except Exception as err:
+        log(f"IGDBの別名を検索キーに入れられませんでした: {err}")
+    for name, g in rows.items():
+        keys = {M.compact(name)}
+        for nm in list(al.get(name) or []) + [x for x in cat.get(name) or [] if x]:
+            k = M.compact(str(nm))
+            if k:
+                keys.add(k)
+        g["k"] = " ".join(sorted(keys))
+        g["col"] = sorted(g.get("col", []), key=lambda x: x["i"])
+
+    out = {"days": dd,
+           "g": sorted(rows.values(), key=lambda x: (-len(x["d"]), x["n"]))}
+    write_json(SITE / "search.json", out)
+    size = (SITE / "search.json").stat().st_size
+    log(f"ゲームの索引を書き出しました: {len(out['g'])} 種 / "
+        f"{len(dd)} 日分 / {size // 1024} KB")
+
+
+def search_html(home):
+    """ゲームを探すページ。索引を読み込んで、手元で絞り込む。"""
+    return """
+<h2>ゲームを探す</h2>
+<p class="lead">ゲーム名を入れると、そのゲームが<b>いつランキングに入っていたか</b>、
+<b>コラムで取り上げた日があるか</b>が出ます。略称でも探せます（「マイクラ」など）。</p>
+<div class="sbox">
+  <input id="q" type="search" placeholder="ゲーム名を入力（例: マイクラ、スト6、ゴエモン）"
+         autocomplete="off" autocapitalize="off" spellcheck="false">
+</div>
+<p id="shint" class="shint">読み込んでいます…</p>
+<p class="slegend"><span class="sday">日付</span>数えた日
+  <span class="sday rk">日付</span>ランキング入り
+  <span class="sday col">日付</span>コラムで取り上げた日</p>
+<div id="sres" class="sres"></div>
+<script>
+(function(){
+  var HOME = "__H__";
+  // match.py の compact() と同じ詰め方。全角半角をそろえ、記号と長音を落とす。
+  var STRIP = /[\s・:：\-–—ー_'’‘"“”,、.。!！?？~〜/／|｜&＆#＃*＊+＋%％@＠^…♪♡★☆→←※=＝]/g;
+  function cp(s){ return String(s||'').normalize('NFKC').toLowerCase().replace(STRIP,''); }
+  function esc(s){ return String(s==null?'':s).replace(/[&<>"]/g,
+    function(c){ return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]; }); }
+  var IX = null, q = document.getElementById('q'),
+      hint = document.getElementById('shint'), res = document.getElementById('sres');
+  fetch(HOME + 'search.json').then(function(r){ return r.json(); }).then(function(j){
+    IX = j;
+    hint.textContent = j.g.length.toLocaleString() + '種のゲーム、'
+      + j.days.length + '日分の記録から探します。';
+    if (q.value) run();
+    var h = decodeURIComponent((location.hash||'').replace(/^#/,''));
+    if (h){ q.value = h; run(); }
+  }).catch(function(){ hint.textContent = '索引を読み込めませんでした。'; });
+
+  function card(g){
+    var dd = g.d.map(function(i){ return IX.days[i]; });
+    var last = dd[dd.length-1], first = dd[0];
+    var cols = {}; (g.col||[]).forEach(function(c){ cols[IX.days[c.i]] = c.h; });
+    var peak = 0, peakDay = '';
+    g.c.forEach(function(v, n){ if (v > peak){ peak = v; peakDay = dd[n]; } });
+    var rank = {}; (g.r||[]).forEach(function(i){ rank[IX.days[i]] = 1; });
+    var chips = g.d.map(function(i, n){
+      var d = IX.days[i], isCol = cols[d] != null, isR = rank[d] === 1;
+      return '<a class="sday' + (isCol ? ' col' : (isR ? ' rk' : '')) + '"'
+        + ' href="' + HOME + 'd/' + d + '/"'
+        + ' title="' + esc(d + ' ／ ' + g.v[n] + '件 ' + g.c[n] + 'チャンネル'
+            + (isR ? ' ／ ランキング入り' : '')
+            + (isCol ? ' ／ コラム: ' + cols[d] : '')) + '">'
+        + d.slice(5).replace('-', '/') + '</a>';
+    }).join('');
+    var colList = (g.col||[]).slice().reverse().map(function(c){
+      return '<a class="scol" href="' + HOME + 'd/' + IX.days[c.i] + '/">'
+        + '<span class="sd">' + IX.days[c.i] + '</span>' + esc(c.h) + '</a>';
+    }).join('');
+    return '<article class="scard"><h3>' + esc(g.n) + '</h3>'
+      + '<div class="smeta">'
+      + '<span><i>' + g.d.length + '</i>日、配信が数えられました</span>'
+      + ((g.r||[]).length
+          ? '<span>うち<i>' + g.r.length + '</i>日はランキング入り</span>'
+          : '<span class="nork">ランキング（上位30）には入っていません</span>')
+      + '<span>はじめて <i>' + first + '</i></span>'
+      + '<span>直近 <i>' + last + '</i></span>'
+      + '<span>最多 <i>' + peakDay + '</i>（' + peak + 'チャンネル）</span>'
+      + '</div>'
+      + (colList ? '<div class="scols"><b>コラムで取り上げた日</b>' + colList + '</div>' : '')
+      + '<div class="sdays">' + chips + '</div></article>';
+  }
+
+  function run(){
+    if (!IX) return;
+    var v = cp(q.value);
+    if (!v){ res.innerHTML = ''; return; }
+    var hit = IX.g.filter(function(g){ return (g.k||'').indexOf(v) >= 0; });
+    // 名前そのものが前から一致するものを上に
+    hit.sort(function(a, b){
+      var pa = cp(a.n).indexOf(v) === 0 ? 0 : 1, pb = cp(b.n).indexOf(v) === 0 ? 0 : 1;
+      return pa - pb || b.d.length - a.d.length;
+    });
+    res.innerHTML = hit.length
+      ? hit.slice(0, 40).map(card).join('')
+        + (hit.length > 40 ? '<p class="shint">ほか ' + (hit.length - 40) + '件。'
+            + 'もう少し詳しく入れてください。</p>' : '')
+      : '<div class="empty">「' + esc(q.value) + '」に当たるゲームは、'
+        + '記録の中にありませんでした。<br>'
+        + '<span style="font-size:12.5px">'
+        + '記録が残っているのは ' + IX.days[0] + ' から。'
+        + 'それ以前のことは分かりません。</span></div>';
+  }
+  var t; q.addEventListener('input', function(){ clearTimeout(t); t = setTimeout(run, 120); });
+})();
+</script>
+""".replace("__H__", home)
 
 
 def about_html(cfg, n_channels):
@@ -1573,10 +1797,18 @@ def main():
     # 作り直せるのは data/daily に元データが残っている30日ぶんだけ。
     # それより前は元データを消してある（YouTubeの規約）ので直せない。
     # だから、辞書に足すのは早いほうがよい。
+    gdays = read_json(DATA / "game_days.json", {}) or {}
     state = read_json(DATA / "build_state.json", {}) or {}
     fingerprint = matcher_fingerprint()
     remake_all = state.get("fingerprint") != fingerprint
-    recent = sorted(buckets) if remake_all else sorted(buckets)[-7:]
+    # 記録（game_days.json）が無い日は、元データが残っているうちに作り直す。
+    # 日別ファイルは30日で消えるので、取りこぼすと二度と作れない。
+    missing = [d for d in sorted(buckets) if d not in gdays]
+    recent = sorted(buckets) if remake_all else sorted(
+        set(sorted(buckets)[-7:]) | set(missing))
+    if missing and not remake_all:
+        log(f"ゲームの記録が無い日が {len(missing)} 日ありました。"
+            f"元データが残っているうちに作り直します")
     if remake_all:
         log(f"辞書まわりに変更がありました。手元に残っている "
             f"{len(buckets)} 日分の記録ページを作り直します")
@@ -1615,9 +1847,19 @@ def main():
                 "totals": {"videos": entries[day]["videos"], "games": len(past_rows),
                            "channels": entries[day]["channels"]},
                 "ranking": past_rows[:30]}, 2)
+        gdays[day] = day_games(past_rows)
         added += 1
     if added:
         log(f"過去 {added} 日分のページを作り直しました")
+    # 今日ぶんの全ゲームを記録に残す。日別ファイルは30日で消えるので、
+    # ここで残しておかないと、あとから数え直せない。
+    gdays[today()] = day_games(rows)
+    keep_days = {d.name for d in (SITE / "d").iterdir() if d.is_dir()} \
+        if (SITE / "d").is_dir() else set(gdays)
+    gdays = {k: v for k, v in gdays.items() if k in keep_days or k >= min(keep_days or {k})}
+    write_json(DATA / "game_days.json", dict(sorted(gdays.items())))
+    log(f"ゲームの日ごとの記録: {len(gdays)} 日分 "
+        f"／ 今日は {len(gdays[today()])} 種（2チャンネル以上）")
     write_json(DATA / "build_state.json",
                {"_説明": "辞書まわりのファイルが変わったかどうかを見るための印です。"
                          "変わっていれば、過去の記録ページも作り直します。"
@@ -1674,6 +1916,18 @@ def main():
                          "集計の範囲と、数に入れていないものについて書いています。",
             "page_body": about_html(cfg, watched_channels())}, 1)
 
+    # ---- ゲームを探す ----------------------------------------------------
+    # 「このゲーム、前はいつ入ってた？」に答える。記録が増えるほど価値が出る。
+    search_index()
+    render("search/index.html",
+           {"mode": "page", "date": today(), "subtitle": "ゲームを探す",
+            "generated": payload["generated"],
+            "meta_title": "ゲームを探す ｜ ハヤリゲー",
+            "meta_og": "ゲームを探す",
+            "meta_desc": "ゲーム名を入れると、そのゲームがいつランキングに入っていたか、"
+                         "コラムで取り上げた日があるかが分かります。",
+            "page_body": search_html("../")}, 1)
+
     # ---- /d/ と /w/ の入口 ----------------------------------------------
     # 記録は /d/2026-09-24/ に、まとめは /w/2026-09-14/ に置いてあるが、
     # 親の /d/ と /w/ には何も無かった。人がURLを削って試すこともあるし、
@@ -1702,6 +1956,7 @@ def main():
                 (f"{site_url}/about/", "monthly", "0.5"),
                 (f"{site_url}/privacy/", "yearly", "0.3"),
                 (f"{site_url}/archive/", "daily", "0.6"),
+                (f"{site_url}/search/", "weekly", "0.6"),
                 (f"{site_url}/matome/", "weekly", "0.8")]
         urls += [(f"{site_url}/{x['slug']}/{x['key']}/", "monthly", "0.7")
                  for x in specials]
