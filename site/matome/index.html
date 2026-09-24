@@ -2,10 +2,13 @@
 <html lang="ja"><head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>ハヤリゲー ｜ VTuber・ゲーム実況者がいま配信しているゲーム ランキング</title>
-<meta name="description" content="VTuber・ゲーム実況者のYouTube配信を毎日数えて、いま配信が増えているゲームを出しています。「次に流行るゲーム」探しに。">
-<meta property="og:title" content="ハヤリゲー ｜「次に流行るゲーム」がわかるサイト">
-<meta property="og:description" content="YouTubeのゲーム配信を毎日数えて、いま増えているゲームを出しています。">
+<!-- 題と説明はページごとに変える。2026-09-24まで40ページ全部が同じ文言で、
+     Search Consoleが記録ページ24枚を「検出 - インデックス未登録」にしていた。
+     Googleから見ると、同じことを名乗るページが24枚並んでいたことになる。 -->
+<title>週・月のまとめ ｜ ハヤリゲー</title>
+<meta name="description" content="1日を見ているだけでは分からないことを書いた読みもの。その週・その月に配信界隈で何が起きたか。">
+<meta property="og:title" content="週・月のまとめ">
+<meta property="og:description" content="1日を見ているだけでは分からないことを書いた読みもの。その週・その月に配信界隈で何が起きたか。">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="ハヤリゲー">
 <meta property="og:locale" content="ja_JP">
@@ -18,8 +21,8 @@
 <meta property="og:image:height" content="630">
 <meta property="og:image:alt" content="ハヤリゲー ｜「次に流行るゲーム」がわかるサイト">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="ハヤリゲー ｜「次に流行るゲーム」がわかるサイト">
-<meta name="twitter:description" content="VTuber・ゲーム実況者がいま配信しているゲームを毎日自動集計。">
+<meta name="twitter:title" content="週・月のまとめ">
+<meta name="twitter:description" content="1日を見ているだけでは分からないことを書いた読みもの。その週・その月に配信界隈で何が起きたか。">
 <meta name="twitter:image" content="https://hayarige.com/ogp.png">
 <link rel="canonical" href="https://hayarige.com/matome/">
 <link rel="icon" href="../icon.svg" type="image/svg+xml">
@@ -396,7 +399,7 @@ footer{font-size:11.5px;color:var(--ink-3);text-align:center;border-top:1px soli
 </div>
 
 <script>
-const DATA = {"mode": "page", "date": "2026-09-24", "subtitle": "週・月のまとめ", "generated": "2026-09-24 19:17", "page_body": "<h1>週・月のまとめ</h1>\n<p>毎日のコラムが「その日起きたこと」なのに対して、ここでは1日を見ているだけでは分からないことを書いています。</p>\n<h2>週まとめ</h2><ul>\n<li><a href=\"../w/2026-09-14/\">犯罪の街で、いちばん見られたのは黒服の夜</a><br><small>2026年9月14日〜9月20日の週まとめ</small></li>\n<li><a href=\"../w/2026-09-07/\">拠点を焼き合う企画で、いちばん見られたのは男3人の言い合い</a><br><small>2026年9月7日〜9月13日の週まとめ</small></li>\n</ul>", "paths": {"home": "../", "archive": "../archive/"}};
+const DATA = {"mode": "page", "date": "2026-09-24", "subtitle": "週・月のまとめ", "generated": "2026-09-24 19:32", "meta_title": "週・月のまとめ ｜ ハヤリゲー", "meta_og": "週・月のまとめ", "meta_desc": "1日を見ているだけでは分からないことを書いた読みもの。その週・その月に配信界隈で何が起きたか。", "page_body": "<h1>週・月のまとめ</h1>\n<p>毎日のコラムが「その日起きたこと」なのに対して、ここでは1日を見ているだけでは分からないことを書いています。</p>\n<h2>週まとめ</h2><ul>\n<li><a href=\"../w/2026-09-14/\">犯罪の街で、いちばん見られたのは黒服の夜</a><br><small>2026年9月14日〜9月20日の週まとめ</small></li>\n<li><a href=\"../w/2026-09-07/\">拠点を焼き合う企画で、いちばん見られたのは男3人の言い合い</a><br><small>2026年9月7日〜9月13日の週まとめ</small></li>\n</ul>", "paths": {"home": "../", "archive": "../archive/"}};
 const $ = s => document.querySelector(s);
 const esc = s => String(s ?? '').replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
 const cssv = n => getComputedStyle(document.documentElement).getPropertyValue(n).trim();
@@ -434,7 +437,7 @@ function buy(r){
 }
 
 function renderArchive(){
-  const P = DATA.paths || {home: './', archive: './archive/'};
+  const P = DATA.paths || {home: '../', archive: '../archive/'};  // 予備の値。ここを現在地からの相対で書くと、/matome/archive/ のような存在しないURLを検索エンジンが拾って404になる（2026-09-24）
   ['#hot-sec', '#rank-sec', '#q-sec', '#pick-sec'].forEach(s => { const e = $(s); if (e) e.style.display = 'none'; });
   $('#arch-sec').style.display = '';
   $('#s-date').textContent = 'アーカイブ';
@@ -454,7 +457,7 @@ function renderArchive(){
 
 function renderAdmin(){
   // 管理ページ。トップからリンクしていないので、URLを知っている人しか見ません。
-  const P = DATA.paths || {home: './', archive: './archive/'};
+  const P = DATA.paths || {home: '../', archive: '../archive/'};  // 予備の値。ここを現在地からの相対で書くと、/matome/archive/ のような存在しないURLを検索エンジンが拾って404になる（2026-09-24）
   const m = document.createElement('meta');
   m.name = 'robots'; m.content = 'noindex,nofollow';
   document.head.appendChild(m);          // 検索結果には出さない
@@ -487,7 +490,11 @@ function renderAdmin(){
   const q = DATA.unknown || [];
   $('#s-date').textContent = '管理用';
   $('#s-meta').textContent = `${esc(DATA.date)} ／ 確認待ち ${q.length}件`;
-  $('#nav').innerHTML = `<a href="${P.home}">サイトを見る</a><a href="unknown.json">JSONで見る</a>`;
+  // リンク先を相対（unknown.json）にしていたため、この1行がページの型紙として
+  // 全ページに焼き込まれ、Googleが /d/2026-09-01/unknown.json のような
+  // 存在しないURLをページの数だけ見つけて404にしていた（2026-09-24に判明）。
+  // 管理ページ以外では表示されない行だが、JSの中の文字列もクロールの対象になる。
+  $('#nav').innerHTML = `<a href="${P.home}">サイトを見る</a><a href="${P.home}admin/unknown.json">JSONで見る</a>`;
   $('#banner').innerHTML = `<div class="banner" style="display:block;line-height:1.75">このページは公開ページからリンクされていません。ここに出たタイトルは<b>ランキングには一切入っていません</b>。よく出るものを <code>data/aliases.json</code> に足すと、次から正しく数えられます。</div>`;
   // ゲーム名ごとにまとめて、何人が配信したかの多い順。新作ほど上に出る。
   $('#queue').innerHTML = q.map(u => {
@@ -502,7 +509,7 @@ function renderAdmin(){
 }
 
 function renderPage(){
-  const P = DATA.paths || {home: './', archive: './archive/'};
+  const P = DATA.paths || {home: '../', archive: '../archive/'};  // 予備の値。ここを現在地からの相対で書くと、/matome/archive/ のような存在しないURLを検索エンジンが拾って404になる（2026-09-24）
   ['#hot-sec', '#rank-sec', '#q-sec', '#pick-sec', '#arch-sec'].forEach(s => {
     const e = $(s); if (e) e.style.display = 'none';
   });
@@ -520,7 +527,7 @@ function render(){
   if (DATA.mode === 'admin') return renderAdmin();
   if (DATA.mode === 'archive') return renderArchive();
   const AC = cssv('--accent'), HOT = cssv('--hot'), t = DATA.totals || {};
-  const P = DATA.paths || {home: './', archive: './archive/'};
+  const P = DATA.paths || {home: '../', archive: '../archive/'};  // 予備の値。ここを現在地からの相対で書くと、/matome/archive/ のような存在しないURLを検索エンジンが拾って404になる（2026-09-24）
   const isArchive = DATA.view === 'archive';
 
   $('#nav').innerHTML = (isArchive ? `<a href="${P.home}">今日のランキングへ</a>` : '')
