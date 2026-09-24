@@ -6,6 +6,7 @@
 """
 import html
 import json
+import urllib.parse
 import hashlib
 import math, re
 from collections import defaultdict, Counter
@@ -772,6 +773,18 @@ def render_page(path, data, depth, site_url=""):
     # まとめのカードはトップにだけ出す。過去の日のページには出さない
     mt = data.get("matome") if data.get("view") != "archive" else None
     title, ogtitle, desc = page_meta(data)
+    # 共有ボタン。コラムのほうは「その日のページ」を指す。
+    # トップを指すと、明日には別のコラムになってしまうため。
+    share_site = share_html(
+        "VTuber・ゲーム実況者がいま配信しているゲームのランキング #ハヤリゲー",
+        f"{site_url}/" if site_url else "", "このサイトを共有") if site_url else ""
+    share_col = ""
+    col = data.get("column") or {}
+    cdate = str(col.get("date") or data.get("date") or "")
+    if site_url and col.get("game") and col.get("headline") and len(cdate) >= 10:
+        share_col = share_html(
+            f"{col['headline']}｜『{col['game']}』 #ハヤリゲー",
+            f"{site_url}/d/{cdate}/", "このコラムを共有")
     p.write_text(tpl.replace("__DATA__", json.dumps(d, ensure_ascii=False))
                     .replace("__TITLE__", e(title))
                     .replace("__OGTITLE__", e(ogtitle))
@@ -796,6 +809,12 @@ def render_page(path, data, depth, site_url=""):
                     .replace("__MTDISP__", "" if mt else "display:none")
                     .replace("__MTHREF__", home + (mt["href"] if mt else ""))
                     .replace("__SSR_MT__", ssr_matome(mt))
+                    .replace("__SHARE_COL__", share_col)
+                    .replace("__SHARE_SITE__", share_site)
+                    .replace("__FOLLOW__", follow_html(read_json(
+                        DATA / "site_config.json", {}) or {}))
+                    .replace("__SNS__", sns_html(read_json(
+                        DATA / "site_config.json", {}) or {}))
                     .replace("__ANALYTICS__", analytics_html()),
                  encoding="utf-8")
 
@@ -1002,6 +1021,165 @@ def specials_index_html(items):
                        f'<br><small>{e(x["heading"])}</small></li>')
         out.append("</ul>")
     return "\n".join(out)
+
+
+def sns_html(cfg):
+    """フッターに出す、ハヤリゲー自身のSNSへのリンク。
+
+    data/site_config.json の bluesky_handle / x_handle に書いたものだけ出す。
+    空なら出さない。Xのユーザー名が決まってからコードを直さずに済むように、
+    設定ファイル側で持たせている。
+
+    サイトとアカウントを相互にリンクしておくと、片方を見つけた人が
+    もう片方にたどり着ける。Blueskyはハンドルが hayarige.com なので、
+    ドメインを持っていること自体が本人証明にもなる。
+    """
+    out = []
+    bs = str(cfg.get("bluesky_handle") or "").strip().lstrip("@")
+    xh = str(cfg.get("x_handle") or "").strip().lstrip("@")
+    if bs:
+        out.append(f'<a class="flink" href="https://bsky.app/profile/{e(bs)}" '
+                   f'target="_blank" rel="noopener me">Bluesky</a>')
+    if xh:
+        out.append(f'<a class="flink" href="https://x.com/{e(xh)}" '
+                   f'target="_blank" rel="noopener me">X</a>')
+    return "".join(out)
+
+
+# 共有ボタンと公式アカウントのボタンに付ける印。
+# 各社のロゴをそのまま描き写すと、細部が違ったときに「偽物のロゴ」になる。
+# ここでは、どのサービスかが分かる程度の簡単な形にとどめて、
+# 見分けは色と名前（X / Bluesky / LINE）でつけている。
+ICON_X = ('<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M18.244 2.25h3.308'
+          'l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 '
+          '2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>')
+ICON_BS = ('<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5.77 3.44C8.34 5.37 '
+           '11.1 9.28 12 11.38c.9-2.1 3.66-6.01 6.23-7.94C20.08 2.05 23 .96 23 4.29c0 '
+           '.67-.38 5.6-.6 6.4-.78 2.78-3.62 3.49-6.14 3.06 4.41.75 5.53 3.23 3.11 5.72'
+           '-4.6 4.72-6.61-1.19-7.13-2.7-.09-.28-.14-.41-.14-.3 0-.11-.05.02-.14.3-.52 '
+           '1.51-2.53 7.42-7.13 2.7-2.42-2.49-1.3-4.97 3.11-5.72-2.52.43-5.36-.28-6.14'
+           '-3.06C.98 9.89.6 4.96.6 4.29.6.96 3.52 2.05 5.37 3.44Z"/></svg>')
+ICON_LN = ('<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.4c5.51 0 10 3.63 '
+           '10 8.1 0 1.78-.7 3.39-2.22 4.98-2.2 2.53-7.12 5.62-8.24 6.09-1.07.45-.94-.29'
+           '-.9-.55l.15-.88c.03-.27.07-.68-.03-.94-.11-.29-.57-.44-.9-.51C5 18.03 1.99 '
+           '14.8 1.99 10.5c0-4.47 4.5-8.1 10.01-8.1ZM8.2 8.2H6.78c-.22 0-.4.18-.4.39v4.8'
+           'c0 .22.18.39.4.39h2.96c.22 0 .4-.17.4-.39v-.72c0-.21-.18-.39-.4-.39H7.97V8.59'
+           'c0-.21-.17-.39-.39-.39Zm3.24 0h-.72c-.22 0-.39.18-.39.39v4.8c0 .22.17.39.39.39'
+           'h.72c.22 0 .4-.17.4-.39v-4.8c0-.21-.18-.39-.4-.39Zm5.35 0h-.72c-.22 0-.4.18-.4'
+           '.39v2.85L13.47 8.4a.4.4 0 0 0-.32-.2h-.76c-.22 0-.4.18-.4.39v4.8c0 .22.18.39.4'
+           '.39h.72c.22 0 .4-.17.4-.39v-2.85l2.2 2.97c.07.1.19.16.31.16h.77c.22 0 .39-.17'
+           '.39-.39v-4.8c0-.21-.17-.39-.39-.39Zm4.02 0h-2.96c-.22 0-.4.18-.4.39v4.8c0 .22'
+           '.18.39.4.39h2.96c.22 0 .39-.17.39-.39v-.72c0-.21-.17-.39-.39-.39h-1.85v-.72h1.85'
+           'c.22 0 .39-.17.39-.39v-.72c0-.22-.17-.39-.39-.39h-1.85V9.7h1.85c.22 0 .39-.17'
+           '.39-.39v-.72c0-.21-.17-.39-.39-.39Z"/></svg>')
+
+
+def follow_html(cfg):
+    """ハヤリゲー自身のSNSへのリンク。共有ボタンとは役割が違うので分けてある。
+
+    共有ボタン … 読んだ人が「これを広める」ためのもの
+    こちら     … 読んだ人が「次からも追う」ためのもの
+    混ぜると、どちらのつもりで押したのかが分からなくなる。
+
+    ハンドルは data/site_config.json から読む（bluesky_handle / x_handle）。
+    空のものは出さない。
+    """
+    bs = str(cfg.get("bluesky_handle") or "").strip().lstrip("@")
+    xh = str(cfg.get("x_handle") or "").strip().lstrip("@")
+    if not (bs or xh):
+        return ""
+    out = ['<div class="follow"><span class="fl-l">ハヤリゲーの更新を受け取る</span>']
+    if xh:
+        out.append(f'<a class="f-x" href="https://x.com/{e(xh)}" target="_blank" '
+                   f'rel="noopener me">{ICON_X}Xでフォロー</a>')
+    if bs:
+        out.append(f'<a class="f-bs" href="https://bsky.app/profile/{e(bs)}" '
+                   f'target="_blank" rel="noopener me">{ICON_BS}Blueskyでフォロー</a>')
+    return "".join(out) + "</div>"
+
+
+def share_html(text, url, label):
+    """共有ボタン。外部のスクリプトは1行も使わない。ただのリンクにする。
+
+    ボタンの正体はどのサービスも「本文とURLを載せた投稿画面を開くURL」なので、
+    JavaScriptを読み込む必要がない。外部スクリプトを貼ると、そのぶん
+    ページが重くなるうえ、読者がどのページを見たかが相手に伝わる。
+    このサイトは「Cookieを置かず、閲覧者を個人として追跡しない」と
+    説明ページに書いてある。書いたことは守る。
+
+    URLの形は各社の公式ドキュメントで確かめた（2026-09-24）。
+      X       https://x.com/intent/post?text=&url=
+      Bluesky https://bsky.app/intent/compose?text=   ※urlの項目が無い。本文に含める
+      LINE    https://social-plugins.line.me/lineit/share?url=&text=
+    はてなブックマークは、スクリプトを使わない形が公式に案内されていなかったので
+    入れていない。
+    """
+    def q(v):
+        # / も含めて全部エスケープする。クエリの中に生の / を残すと、
+        # 受け取る側の実装によっては途中で切られることがある。
+        return urllib.parse.quote(v, safe="")
+    x = f"https://x.com/intent/post?text={q(text)}&url={q(url)}"
+    bs = f"https://bsky.app/intent/compose?text={q(text + chr(10) + url)}"
+    ln = f"https://social-plugins.line.me/lineit/share?url={q(url)}&text={q(text)}"
+    btn = ('<a class="sh sh-{k}" href="{u}" target="_blank" '
+           'rel="noopener nofollow">{i}{n}</a>')
+    return ('<div class="share"><span class="sh-l">' + e(label) + "</span>"
+            + btn.format(k="x", u=e(x), n="X", i=ICON_X)
+            + btn.format(k="bs", u=e(bs), n="Bluesky", i=ICON_BS)
+            + btn.format(k="ln", u=e(ln), n="LINE", i=ICON_LN)
+            + "</div>")
+
+
+def privacy_html(cfg):
+    """プライバシーと問い合わせ先。広告や解析を入れるなら要るページ。
+
+    いま出している内容は、実際にやっていることだけ。将来AdSenseなどを
+    入れたら、ここと説明ページの「Cookieを置かず」の一文を必ず直すこと。
+    書いてあることと動いているものが食い違うのが、いちばん損をする。
+    """
+    mail = str(cfg.get("contact_email") or "").strip()
+    mail_html = (f'<p><a href="mailto:{e(mail)}">{e(mail)}</a></p>'
+                 if mail else
+                 "<p>準備中です。</p>")
+    return f"""
+<h2>お問い合わせ</h2>
+<p class="lead">数字の間違い、ゲーム名の取り違え、掲載についてのご相談など、
+こちらへお願いします。</p>
+{mail_html}
+<p>配信者・権利者の方へ。当サイトの集計に含めてほしくない場合や、
+コラムでの紹介について気になる点がある場合も、同じ窓口へご連絡ください。
+確認のうえ対応します。</p>
+
+<h2>アクセス解析について</h2>
+<p>ページの閲覧数を知るために <b>Cloudflare Web Analytics</b> を使っています。
+このしくみは <b>Cookieを置きません</b>。閲覧者を個人として識別したり、
+サイトをまたいで追いかけたりすることもありません。
+分かるのは「どのページが何回見られたか」「どこから来たか」といった
+まとまった数字だけです。</p>
+<h2>外部のサイトへのリンク</h2>
+<p>ランキングやコラムから、SteamやAmazonの商品ページへリンクしています。
+このうちAmazonへのリンクには紹介料の識別子が付いています。
+Amazonのアソシエイトとして、当サイトは適格販売により収入を得ています。</p>
+<p>リンク先での購入や登録について、当サイトは責任を負いません。
+リンク先のプライバシーの扱いは、それぞれのサイトの方針に従います。</p>
+
+<h2>集めているデータについて</h2>
+<p>当サイトはYouTubeのAPIを使って、公開されている配信・動画の
+タイトル・チャンネル名・再生数を取得しています。
+<b>配信タイトルとチャンネル名は30日で削除しています</b>
+（YouTubeの開発者ポリシーに沿った運用です）。
+30日を過ぎた日の記録に残るのは、こちらで数えた「どのゲームが何件」という
+集計値だけで、元のタイトルは残していません。</p>
+<p>当サイトはYouTube APIサービスを利用しています。利用にあたっては
+<a href="https://www.youtube.com/t/terms" target="_blank" rel="noopener">YouTube利用規約</a>および
+<a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Googleプライバシーポリシー</a>
+が適用されます。</p>
+
+<h2>免責</h2>
+<p>掲載している数字は、当サイトが登録しているチャンネルの範囲で数えたものです。
+日本のゲーム配信のすべてではありません。判定の誤りや取りこぼしもあります。
+気づいたものは直していますが、内容の正確性を保証するものではありません。</p>
+"""
 
 
 def about_html(cfg, n_channels):
@@ -1479,6 +1657,14 @@ def main():
     # 数字を出すサイトなので、どう数えているかが読めることが信用に直結する。
     # 「Shortsと切り抜きは除く」「連番は1件」などは、書いていなければ
     # 誰にも伝わらない。
+    render("privacy/index.html",
+           {"mode": "page", "date": today(), "subtitle": "お問い合わせ・プライバシー",
+            "generated": payload["generated"],
+            "meta_title": "お問い合わせ・プライバシー ｜ ハヤリゲー",
+            "meta_og": "お問い合わせ・プライバシー",
+            "meta_desc": "連絡先と、アクセス解析・外部リンク・集めているデータの扱いについて。",
+            "page_body": privacy_html(cfg)}, 1)
+
     render("about/index.html",
            {"mode": "page", "date": today(), "subtitle": "このサイトについて",
             "generated": payload["generated"],
@@ -1514,6 +1700,7 @@ def main():
     if site_url:
         urls = [(f"{site_url}/", "daily", "1.0"),
                 (f"{site_url}/about/", "monthly", "0.5"),
+                (f"{site_url}/privacy/", "yearly", "0.3"),
                 (f"{site_url}/archive/", "daily", "0.6"),
                 (f"{site_url}/matome/", "weekly", "0.8")]
         urls += [(f"{site_url}/{x['slug']}/{x['key']}/", "monthly", "0.7")

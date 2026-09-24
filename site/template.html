@@ -36,7 +36,7 @@
   --ink:#111B1D;--ink-2:#3E5457;--ink-3:#6F8688;
   --accent:#0B6B70;--accent-2:#0E8B90;--wash:#DFEFEE;
   --hot:#B4551C;--hot-wash:#FAEBDD;--down:#5C7683;
-  --tipbg:#1D2C2E;--tipfg:#EFF5F4;--r:12px;
+  --tipbg:#1D2C2E;--tipfg:#EFF5F4;--steam:#1B2838;--r:12px;
   --sh:0 1px 2px rgba(17,27,29,.05),0 10px 30px -22px rgba(17,27,29,.4);
 }
 @media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
@@ -44,14 +44,14 @@
   --ink:#E8EFEE;--ink-2:#A2B7B8;--ink-3:#7C9294;
   --accent:#48BEC2;--accent-2:#6BD2D5;--wash:#102C2E;
   --hot:#E8975C;--hot-wash:#2C2017;--down:#7E9DAA;
-  --tipbg:#E8EFEE;--tipfg:#101A1B;
+  --tipbg:#E8EFEE;--tipfg:#101A1B;--steam:#2A475E;
   --sh:0 1px 2px rgba(0,0,0,.45),0 12px 34px -24px #000;}}
 :root[data-theme="dark"]{
   --ground:#0D1415;--card:#141E1F;--card-2:#182324;--line:#27383A;--line-soft:#1E2B2C;
   --ink:#E8EFEE;--ink-2:#A2B7B8;--ink-3:#7C9294;
   --accent:#48BEC2;--accent-2:#6BD2D5;--wash:#102C2E;
   --hot:#E8975C;--hot-wash:#2C2017;--down:#7E9DAA;
-  --tipbg:#E8EFEE;--tipfg:#101A1B;
+  --tipbg:#E8EFEE;--tipfg:#101A1B;--steam:#2A475E;
   --sh:0 1px 2px rgba(0,0,0,.45),0 12px 34px -24px #000;}
 *{box-sizing:border-box}
 body{margin:0;background:var(--ground);color:var(--ink);font-size:15px;line-height:1.75;
@@ -178,7 +178,7 @@ tbody tr.main:nth-of-type(-n+6) .rk{color:var(--hot)}
  border-radius:7px;padding:5px 11px;white-space:nowrap;
  transition:transform .12s ease,box-shadow .12s ease,filter .12s ease}
 .buy a svg{width:13px;height:13px;flex:none}
-.buy a.st{background:var(--tipbg);color:#EAF3F2}
+.buy a.st{background:var(--steam);color:#EAF3F2}  /* ツールチップ用の色を流用していて、ダークだと白くなっていた（2026-09-24） */
 .buy a.az{background:var(--hot);color:#fff}
 .buy a:hover{transform:translateY(-1px);filter:brightness(1.12);
  box-shadow:0 4px 12px -5px rgba(17,27,29,.55)}
@@ -264,6 +264,46 @@ tr.detail td{background:var(--card-2);padding:14px 18px}
   .gcard:first-child .gm b{font-size:17px}
   .lrow .bar2{display:none}
 }
+.share{display:flex;align-items:center;gap:7px;flex-wrap:wrap;margin:14px 0 2px;
+ font-family:"Zen Kaku Gothic New","Noto Sans JP",sans-serif}
+.share .sh-l{font-size:11.5px;color:var(--ink-3);letter-spacing:.04em}
+/* 各サービスの色をそのまま使う。灰色のボタンが3つ並んでいるより、
+   どこに飛ぶのかが一目で分かる。色は各社が公開している値を使った。
+     X       #000000（ダークテーマでは白地に黒。Xのロゴ自体が反転する）
+     Bluesky #1185FE
+     LINE    #06C755（LINE Developersのボタン設計ガイドライン） */
+.share .sh{display:inline-flex;align-items:center;gap:5px;
+ font-size:11.5px;font-weight:700;line-height:1;text-decoration:none;color:#fff;
+ border-radius:999px;padding:6px 13px;border:1px solid transparent;
+ transition:filter .15s,transform .12s}
+.share .sh svg{width:12px;height:12px;flex:none;fill:currentColor}
+.share .sh:hover{filter:brightness(1.12);transform:translateY(-1px)}
+.share .sh-x{background:#000}
+.share .sh-bs{background:#1185FE}
+.share .sh-ln{background:#06C755}
+:root:not([data-theme="light"]) .share .sh-x{background:#fff;color:#000}
+@media (prefers-color-scheme:light){:root:not([data-theme="dark"]) .share .sh-x{background:#000;color:#fff}}
+:root[data-theme="dark"] .share .sh-x{background:#fff;color:#000}
+:root[data-theme="light"] .share .sh-x{background:#000;color:#fff}
+/* 公式アカウントへのリンク。共有ボタンとは役割が違うので、見た目も分ける */
+.follow{display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin:0 0 16px}
+.follow .fl-l{font-size:11.5px;color:var(--ink-3);letter-spacing:.04em}
+.follow a{display:inline-flex;align-items:center;gap:6px;text-decoration:none;
+ font-family:"Zen Kaku Gothic New",sans-serif;font-size:12px;font-weight:700;
+ color:#fff;border-radius:8px;padding:7px 13px;border:1px solid transparent;
+ transition:filter .15s,transform .12s}
+.follow a svg{width:13px;height:13px;flex:none;fill:currentColor}
+.follow a:hover{filter:brightness(1.12);transform:translateY(-1px)}
+/* 狭い画面では、見出しを1行使わせてボタン2つを横に並べる */
+@media (max-width:480px){.follow .fl-l{flex-basis:100%}}
+.follow .f-x{background:#000}
+.follow .f-bs{background:#1185FE}
+:root:not([data-theme="light"]) .follow .f-x{background:#fff;color:#000}
+@media (prefers-color-scheme:light){:root:not([data-theme="dark"]) .follow .f-x{background:#000;color:#fff}}
+:root[data-theme="dark"] .follow .f-x{background:#fff;color:#000}
+:root[data-theme="light"] .follow .f-x{background:#000;color:#fff}
+footer .share{justify-content:center;margin:0 0 12px}
+@media (max-width:480px){.share{gap:6px}.share .sh{padding:6px 11px}}
 footer{font-size:11.5px;color:var(--ink-3);text-align:center;border-top:1px solid var(--line);padding-top:20px;line-height:1.9}
 .nav{display:flex;flex-wrap:wrap;gap:8px;margin-left:auto;align-items:center}
 .nav a{font-size:12.5px;font-weight:700;text-decoration:none;color:var(--ink-2);
@@ -329,6 +369,7 @@ footer{font-size:11.5px;color:var(--ink-3);text-align:center;border-top:1px soli
   </header>
 
   <nav class="nav" id="nav" style="margin-left:0">__NAV__</nav>
+  __FOLLOW__
   <div id="banner"></div>
   <!-- __SSR_ から始まる場所には、build_site が中身をHTMLとして書き込む。
        JavaScriptが動く環境では、同じ内容で描き直される。
@@ -341,6 +382,7 @@ footer{font-size:11.5px;color:var(--ink-3);text-align:center;border-top:1px soli
     <div class="head"><h2 id="pick-title">__PICKTITLE__</h2>
       <span class="note" id="pick-note">__PICKNOTE__</span></div>
     <article class="pick" id="pick">__SSR_PICK__</article>
+    __SHARE_COL__
   </section>
 
   <section id="hot-sec">
@@ -385,8 +427,10 @@ footer{font-size:11.5px;color:var(--ink-3);text-align:center;border-top:1px soli
   </section>
 
   <footer>
+    __SHARE_SITE__
     <a class="flink" href="__HOME__about/">このサイトについて</a>
-    <a class="flink" href="__HOME__archive/">これまでの記録</a><br>
+    <a class="flink" href="__HOME__archive/">これまでの記録</a>
+    <a class="flink" href="__HOME__privacy/">お問い合わせ・プライバシー</a>__SNS__<br>
     ハヤリゲー ｜ YouTubeの配信タイトルを毎日自動で解析しています<br>
     同じ配信者が同じ日に出した続きものは1件として集計 ／ <span id="f-gen"></span><br>
     <span style="opacity:.75">Amazonのアソシエイトとして、当サイトは適格販売により収入を得ています</span>
@@ -694,7 +738,11 @@ function render(){
       ${CHEV}</button>${panel(r)}`;
   }).join('') || '<div class="empty" style="border:0">データがまだありません。</div>';
 
-  // カードを押したときのパネルは、カード群のすぐ下にまとめて置く
+  // カードを押したときのパネルは、カード群のすぐ下にまとめて置く。
+  // 先に前回ぶんを消す。消さずに足していたため、事務所のタブを切り替えるたびに
+  // #cardpanels が1つずつ増え、同じゲームの配信一覧が何個も開くようになっていた
+  // （2026-09-24、利用者からの報告）。idが重複するのもHTMLとして不正だった。
+  document.querySelectorAll('#cardpanels').forEach(n => n.remove());
   $('#cards').insertAdjacentHTML('afterend',
     '<div id="cardpanels">' + list.slice(0, 3).map(r => panel(r)).join('') + '</div>');
 
