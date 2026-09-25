@@ -1,38 +1,89 @@
 {
  "date": "2026-09-25",
- "generated": "2026-09-25 12:53",
+ "generated": "2026-09-25 19:15",
  "leads": {
   "events": [
    {
     "tag": "#マイクラ肝試し2026",
     "channels": [
      "Flare Ch. 不知火フレア",
+     "Iroha ch. 風真いろは - holoX -",
+     "Polka Ch. 尾丸ポルカ",
+     "Su Ch. 水宮枢 - FLOW GLOW",
+     "Watame Ch. 角巻わため",
+     "おおはらMEN / ドズル社",
+     "おめがシスターズ [Ω Sisters]",
+     "おんりー / ドズル社",
      "七瀬 すず菜 / Nanase Suzuna【にじさんじ】",
-     "羽渦ミウネル -Miuneru Haneuzu-"
+     "堰代ミコ / Mico Channel【ななしいんく】",
+     "小廻こま / Komawari Koma",
+     "甘狼このみ / AmakamiKonomi🐺🍫",
+     "羽渦ミウネル -Miuneru Haneuzu-",
+     "音ノ乃のの / NononoNono",
+     "音ノ瀬らこ / Otonose Raco"
     ]
    },
    {
-    "tag": "#minecraft",
+    "tag": "#ゲーム実況",
+    "channels": [
+     "Usagi Ch. 因幡兎",
+     "ぱんちき🥖🦃",
+     "星埜きぃ -Key Hoshino-",
+     "豚咲あおい_TomisakiAoi",
+     "週刊少年ゲームマガジン230円",
+     "雛乃ぴぴ / Hinano pipi"
+    ]
+   },
+   {
+    "tag": "#ストグラSeason2",
+    "channels": [
+     "たけぉ",
+     "バーチャル債務者youtuber天開司",
+     "天羽よつは",
+     "影。/かげまる",
+     "暁月ホタル AKATSUKI HOTARU"
+    ]
+   },
+   {
+    "tag": "#あおぎり高校D組",
     "channels": [
      "Rieru Ch. 我部りえる /あおぎり高校",
-     "まりも",
-     "ズズちゃんねる!!!"
+     "ぷわぷわぽぷら /あおぎり高校",
+     "エトラ / étraチャンネル",
+     "月赴ゐぶき / あおぎり高校"
     ]
    },
    {
     "tag": "#ストグラ",
     "channels": [
      "たけぉ",
+     "ましゃかりさん",
      "みつき",
      "闇乃あびす / Abyss"
     ]
    },
    {
-    "tag": "#ゲーム実況",
+    "tag": "#ストグラ救急隊",
     "channels": [
-     "SIANちゃんねる【ディズニー大好きVtuber】",
-     "Usagi Ch. 因幡兎",
-     "ジョアだよ"
+     "ノビーの遊び部屋",
+     "天羽よつは",
+     "影。/かげまる"
+    ]
+   },
+   {
+    "tag": "#ChampsCostream",
+    "channels": [
+     "Lazvell",
+     "crowfps",
+     "一ノ瀬とおる"
+    ]
+   },
+   {
+    "tag": "#minecraft",
+    "channels": [
+     "Rieru Ch. 我部りえる /あおぎり高校",
+     "中野テリー",
+     "鈴ノ時みぃ@新人Vtuber"
     ]
    }
   ],
@@ -40,53 +91,61 @@
   "wide": [
    {
     "game": "Minecraft",
-    "channels": 20,
-    "videos": 20
+    "channels": 48,
+    "videos": 51
    },
    {
     "game": "Apex Legends",
-    "channels": 18,
-    "videos": 18
+    "channels": 39,
+    "videos": 44
    },
    {
     "game": "ストリートファイター6",
-    "channels": 8,
-    "videos": 9
-   },
-   {
-    "game": "VALORANT",
-    "channels": 7,
-    "videos": 8
-   },
-   {
-    "game": "実況パワフルプロ野球2026",
-    "channels": 9,
-    "videos": 9
-   },
-   {
-    "game": "フォートナイト",
-    "channels": 7,
-    "videos": 8
-   },
-   {
-    "game": "Wardogs",
-    "channels": 6,
-    "videos": 6
+    "channels": 26,
+    "videos": 29
    },
    {
     "game": "Silent Hill: Townfall",
-    "channels": 6,
-    "videos": 6
+    "channels": 25,
+    "videos": 27
+   },
+   {
+    "game": "Grand Theft Auto V",
+    "channels": 16,
+    "videos": 18
+   },
+   {
+    "game": "VALORANT",
+    "channels": 11,
+    "videos": 12
+   },
+   {
+    "game": "原神",
+    "channels": 11,
+    "videos": 12
+   },
+   {
+    "game": "妹に運転を教える",
+    "channels": 11,
+    "videos": 11
    }
   ]
  },
  "drift": [],
- "tags": [],
+ "tags": [
+  {
+   "tag": "champscostream",
+   "game": "VALORANT",
+   "evidence": 3,
+   "added": 1,
+   "channels": 3
+  }
+ ],
  "misses": [
   {
    "word": "Starward",
    "channels": 1,
-   "n": 6,
+   "n": 9,
    "examples": [
     {
      "t": "【星の翼】エリシア空戦のPV見たり久々の優勝戦で遊んだりしたい【星之翼/Starward】【東和正】",
@@ -158,9 +217,25 @@
    ]
   },
   {
+   "word": "Linger",
+   "channels": 1,
+   "n": 1,
+   "examples": [
+    {
+     "t": "幽音しの/*Luna『 Linger 』 -Official Music Video-",
+     "c": "幽音しの Shino Channel - ななしいんく",
+     "u": "https://www.youtube.com/watch?v=S2CyR7ki_tw"
+    }
+   ],
+   "kind": "near",
+   "suggest": [
+    "Linger In Shadows"
+   ]
+  },
+  {
    "word": "＃天下無双ARK",
    "channels": 8,
-   "n": 43,
+   "n": 48,
    "examples": [
     {
      "t": "【＃天下無双ARK】初心者ARK：最強の恐竜を目指します＃１【猫宮ひなた】",
@@ -254,24 +329,96 @@
    "suggest": []
   },
   {
-   "word": "てあカノ　手垢のついたことしか言わない彼女",
+   "word": "VRINQトラブル配信脱出",
+   "channels": 3,
+   "n": 5,
+   "examples": [
+    {
+     "t": "【オンライン謎解き公演】トラブルまみれの記念配信からの脱出 by VRINQ【チーム：-23kg 月夜見レオ、あしさんり、あもこ】#VRINQ #VRINQトラブル配信脱出",
+     "c": "Amoko Ch. 甘乃あもこ",
+     "u": "https://www.youtube.com/watch?v=UdxHPLDwq90"
+    },
+    {
+     "t": "【 #VRINQトラブル配信脱出 】いくぞ！ #パわあパフパフガールズ ！！【 #新人vtuber / #宵吸あけル 】",
+     "c": "宵吸あけル / Yokyu Akeru",
+     "u": "https://www.youtube.com/watch?v=3cwsCA3BeLg"
+    },
+    {
+     "t": "【 #VRINQトラブル配信脱出 】いくぞ！ #パわあパフパフガールズ ！！【 #新人vtuber / #宵吸あけル 】",
+     "c": "宵吸あけル / Yokyu Akeru",
+     "u": "https://www.youtube.com/watch?v=3cwsCA3BeLg"
+    }
+   ],
+   "kind": "wide",
+   "suggest": []
+  },
+  {
+   "word": "ドラゴンボールZ:KAKAROT",
+   "channels": 3,
+   "n": 5,
+   "examples": [
+    {
+     "t": "【 ドラゴンボールZ:KAKAROT 】#03 完全初見！ベジータ、もう泣かないで。【にじさんじ/える】",
+     "c": "える / Elu【にじさんじ】",
+     "u": "https://www.youtube.com/watch?v=em1-DlOUID8"
+    },
+    {
+     "t": "【 ドラゴンボールZ:KAKAROT 】#04 完全初見！セルゲームが始まってしまうぞ。【にじさんじ/える】",
+     "c": "える / Elu【にじさんじ】",
+     "u": "https://www.youtube.com/watch?v=o6PMOQEYIvI"
+    },
+    {
+     "t": "【ドラゴンボールZ:KAKAROT】完全初見でDBゲットしちゃうよ~🐉【戸鎖くくり/個人勢Vtuber】",
+     "c": "kukuri ch * 戸鎖 くくり *",
+     "u": "https://www.youtube.com/watch?v=aSeyqIhL3LE"
+    }
+   ],
+   "kind": "wide",
+   "suggest": []
+  },
+  {
+   "word": "風来のシレン６",
+   "channels": 3,
+   "n": 4,
+   "examples": [
+    {
+     "t": "【風来のシレン６】爆売れ中のダンジョンRPG　風来のシレン６をやる",
+     "c": "プテラたかはし",
+     "u": "https://www.youtube.com/watch?v=YeDgP8Fr0vA"
+    },
+    {
+     "t": "【風来のシレン６】なぜか流行っている風来のシレン６　挑戦2回目！",
+     "c": "プテラたかはし",
+     "u": "https://www.youtube.com/watch?v=aibOUWh3JDw"
+    },
+    {
+     "t": "【風来のシレン６】アキコ風来人になるってよ #1",
+     "c": "アキコ@うさぎ島",
+     "u": "https://www.youtube.com/watch?v=fCTGNfgsHTM"
+    }
+   ],
+   "kind": "wide",
+   "suggest": []
+  },
+  {
+   "word": "奥ヶ淵商店街",
    "channels": 3,
    "n": 3,
    "examples": [
     {
-     "t": "インターネットを揺るがす問題作【てあカノ　手垢のついたことしか言わない彼女】",
-     "c": "卯月コウ",
-     "u": "https://www.youtube.com/watch?v=CwYJSaB5ZGw"
+     "t": "絶対に行ってはいけない「商店街」が舞台のホラーゲーム『 奥ヶ淵商店街 』",
+     "c": "キヨ。",
+     "u": "https://www.youtube.com/watch?v=dbAOZNki2i4"
     },
     {
-     "t": "ネットミームしか言わない女とのデートがつまらなかったら帰ってもいいゲーム【 てあカノ 手垢のついたことしか言わない彼女 】",
-     "c": "ピロ",
-     "u": "https://www.youtube.com/watch?v=GlUSyaMBAvI"
+     "t": "【奥ヶ淵商店街】廃商店街を歩き回るホラゲ",
+     "c": "リモーネ先生",
+     "u": "https://www.youtube.com/watch?v=vWiyH_R8gbI"
     },
     {
-     "t": "【てあカノ】会話がすべてネットミームの彼女がヤバすぎたｗｗｗ【てあカノ 手垢のついたことしか言わない彼女】",
-     "c": "とりしお。Torishio ch.",
-     "u": "https://www.youtube.com/watch?v=Zk5IDOln2sc"
+     "t": "呪われた商店街で『目を見ないと襲ってくる』バケモノが徘徊しているホラーゲーム。【奥ヶ淵商店街】",
+     "c": "いぬねこ",
+     "u": "https://www.youtube.com/watch?v=vPXhouVaQMg"
     }
    ],
    "kind": "wide",
@@ -296,6 +443,30 @@
      "t": "【本日発売】これはハマる！ドット絵美少女ローグライトRPG『プロジェクト・ソラリス』が面白すぎたｗ 【Steam】",
      "c": "くろろじちゃんねる",
      "u": "https://www.youtube.com/watch?v=4dQVJFcdjbU"
+    }
+   ],
+   "kind": "wide",
+   "suggest": []
+  },
+  {
+   "word": "作業雑談",
+   "channels": 3,
+   "n": 3,
+   "examples": [
+    {
+     "t": "【作業雑談】のんびりと作業する国民の休日（時々おしゃべり）【古代日本史VTuber きら子】",
+     "c": "きら子 / KirakoCh",
+     "u": "https://www.youtube.com/watch?v=po4tBqEzSRY"
+    },
+    {
+     "t": "【#朗読 | Day 10】【作業雑談】 #睡眠導入 過去の名作をリクエストに応じて！静かな夜に眠りに誘う「夜ノ朗読会」+作業雑談配信 #Vtuber",
+     "c": "ゼオ=シェリオン -Zeo=Sherion-",
+     "u": "https://www.youtube.com/watch?v=xrMef4bjmDs"
+    },
+    {
+     "t": "【作業雑談】OCG新リミのデッキを作ろう【遊戯王MD/OCG】",
+     "c": "シーアーチャー",
+     "u": "https://www.youtube.com/watch?v=0cDmRyt-BMk"
     }
    ],
    "kind": "wide",

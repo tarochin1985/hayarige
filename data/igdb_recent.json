@@ -6684,7 +6684,9 @@
  },
  {
   "name": "Blood Lily: Killers Can't Sink a Yuri Ship",
-  "alias": [],
+  "alias": [
+   "Game.exe"
+  ],
   "pop": 0,
   "p": [
    "pc"
@@ -7031,6 +7033,14 @@
    "Adventure",
    "Indie",
    "Card & Board Game"
+  ]
+ },
+ {
+  "name": "Bob-omb Blitz",
+  "alias": [],
+  "pop": 0,
+  "p": [
+   "pc"
   ]
  },
  {
@@ -14727,6 +14737,18 @@
   ]
  },
  {
+  "name": "Department of Collections",
+  "alias": [],
+  "pop": 0,
+  "p": [
+   "pc"
+  ],
+  "g": [
+   "Adventure",
+   "Indie"
+  ]
+ },
+ {
   "name": "Deperson",
   "alias": [],
   "pop": 0,
@@ -21570,6 +21592,20 @@
   ]
  },
  {
+  "name": "Foole's World",
+  "alias": [],
+  "pop": 0,
+  "p": [
+   "pc"
+  ],
+  "g": [
+   "Point-and-click",
+   "Quiz/Trivia",
+   "Indie",
+   "Visual Novel"
+  ]
+ },
+ {
   "name": "Football Club Builder",
   "alias": [],
   "pop": 0,
@@ -22457,20 +22493,6 @@
   ],
   "g": [
    "Simulator",
-   "Indie"
-  ]
- },
- {
-  "name": "Full Bet: Fighting Casino",
-  "alias": [
-   "FULL BET  - FIGHTING CASINO -"
-  ],
-  "pop": 0,
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Strategy",
    "Indie"
   ]
  },
@@ -25343,7 +25365,9 @@
  },
  {
   "name": "Hand Cooking Simulator: Multi-Chef",
-  "alias": [],
+  "alias": [
+   "Chef Hands.exe"
+  ],
   "pop": 0,
   "p": [
    "pc"
@@ -42962,23 +42986,6 @@
   ]
  },
  {
-  "name": "Potato Simulato",
-  "alias": [
-   "Potato Simulator | One Last Try",
-   "Potato Simulator",
-   "Potato Simulato: Together"
-  ],
-  "pop": 0,
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Simulator",
-   "Adventure",
-   "Indie"
-  ]
- },
- {
   "name": "Potential Man",
   "alias": [
    "POTENTIAL MAN"
@@ -46167,18 +46174,6 @@
   ],
   "g": [
    "Role-playing (RPG)",
-   "Indie"
-  ]
- },
- {
-  "name": "Rogue Drone",
-  "alias": [],
-  "pop": 0,
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Strategy",
    "Indie"
   ]
  },
@@ -54125,6 +54120,7 @@
    "pc"
   ],
   "g": [
+   "Shooter",
    "Adventure",
    "Indie"
   ]
