@@ -22,6 +22,10 @@ MIN_HISTORY = 4               # 急上昇を出すのに必要な「実データ
 RISING_MIN_CHANNELS = 3       # 急上昇に載せる最低チャンネル数（下の rising に理由）
 RISING_N = 6                  # 急上昇に出す件数
 UNKNOWN_ALERT = 3             # 未判定のタイトルを「辞書の穴」として知らせるチャンネル数
+MISS_DAYS = 7                 # 見落とし候補を何日ぶん合わせて数えるか
+MISS_ALERT = 3                # 「よく出る未知語」として知らせるチャンネル数
+MISS_NEAR = 12                # カタログ前方一致の候補を何件まで出すか
+MISS_WIDE = 20                # よく出る未知語を何件まで出すか
 W = {"videos": 0.30, "channels": 0.35, "views": 0.35}
 
 # 1人が同じゲームを1日に何本も出したときの数え方。
@@ -268,6 +272,157 @@ def find_drift(videos, idx, limit=12):
                             "of": n_all, "example": sorted(chans)[:3]})
     out.sort(key=lambda d: -d["channels"])
     return out[:limit]
+
+
+# ------------------------------------------------------------ 見落とし候補
+# なぜ要るか（2026-09-25）
+#
+#   たろちんさんから「Pogostuck は集計できているか」と聞かれて調べたところ、
+#   5チャンネルが配信していたのに1本も数えられていなかった。しかも
+#   **毎朝のアラートにも出ていなかった。** 理由は2つある。
+#
+#   (1) 「確認待ち」に入るのは、タイトルの**先頭**に【】があるものだけ。
+#       match.leading_bracket() が先頭しか見ないのは、末尾の【】が
+#       配信者名・事務所名であることが多いからで、これは正しい判断。
+#       だが結果として、
+#         「…ついに壊れる【Pogostuck/標準】」  → 末尾なので見ない
+#         「ポゴ2で一発アウト」               → 括弧が無いので見ない
+#       が、どこにも記録されないまま消えていた。
+#   (2) 先頭に【】があった2本は拾われたが、片方は「Pogostuck」、
+#       片方は「ポゴ」。**別の語として1chずつに分かれ、**
+#       3ch以上という知らせる条件に届かなかった。
+#
+#   つまり「確認待ち」だけでは、見落としは人が気付くまで残る。
+#   実際に『デスゲームの報告書』は19日間、Pogostuck は数か月それだった。
+#
+# そこで、括弧の位置を問わず、タイトルの中の「名前らしき部分」を全部見る
+# 見張りを別に置く。判定を変えるわけではないので、順位には一切影響しない。
+# 出るのは管理ページと leads.json だけで、辞書に足すかどうかは人が決める。
+#
+#   A案（near）カタログのゲーム名の頭と一致する語。
+#       「Pogostuck」→『Pogostuck: Rage With Your Friends』のように、
+#       **正式名を提案できる**ので確度が高い。1チャンネルでも出す。
+#   B案（wide）カタログに無い語で、3チャンネル以上が使っているもの。
+#       『デスゲームの報告書』『Feign』のように「英語名はカタログにあるが
+#       日本語名が無い」型と、そもそもカタログに無い新作がここに出る。
+#
+# ノイズ（配信のラベル・事務所名・配信者名）は、
+#   blocklist.json / match.CHANNEL_HINTS / 監視チャンネル名 で落とす。
+# 落としきれない語が出たら blocklist.json に足す。足すほど静かになる。
+
+MISS_BR = re.compile(r"[【〖『「《\[]([^】〗』」》\]]{2,40})[】〗』」》\]]")
+MISS_TAG = re.compile(r"[#＃]([^\s#＃【】、。,／/]{2,30})")
+MISS_SPLIT = re.compile(r"[/／|｜]")
+
+
+def miss_tokens(title):
+    """タイトルから「ゲーム名かもしれない部分」を取り出す。括弧の位置は問わない。
+
+    【Pogostuck/標準】のような「ゲーム名＋自分用の印」は / で割る。
+    割らないと『pogostuck標準』という一致しない語になってしまう。
+    """
+    out = []
+    for m in MISS_BR.finditer(title):
+        for part in MISS_SPLIT.split(m.group(1)):
+            part = part.strip()
+            if part:
+                out.append(part)
+    out += [m.group(1).strip() for m in MISS_TAG.finditer(title)]
+    return out
+
+
+def _miss_blocklist():
+    """見落とし候補の一覧からだけ消す語。判定には使わないので足しても安全。
+
+    blocklist.json のほうは判定にも使われる。そちらに短い英単語を足すと
+    looks_like_noise() がその語を全部取り除いてしまうため、たとえば "live" を
+    足すと『Live A Live』が『a』になって丸ごと捨てられる。だから
+    「一覧に出したくないだけ」の語は、判定に触らないこちらに分けてある。
+    """
+    words = (read_json(DATA / "miss_blocklist.json", {}) or {}).get("語", [])
+    exact, part = set(), set()
+    for w in words:
+        c = M.compact(w)
+        if len(c) >= 6:
+            part.add(c)
+        elif c:
+            exact.add(c)
+    return exact, part
+
+
+def _miss_noise():
+    """配信者名と事務所名（詰めた形）。ゲーム名でないものを落とすのに使う。"""
+    orgs, names = set(), set()
+    for c in read_json(DATA / "channels_enriched.json", []) or []:
+        a = M.compact(c.get("affiliation") or "")
+        if len(a) >= 3:
+            orgs.add(a)
+        for k in ("name", "title"):
+            n = M.compact(c.get(k) or "")
+            if len(n) >= 3:
+                names.add(n)
+    return orgs, names
+
+
+def find_misses(videos, idx, tagged=None):
+    """辞書に無いまま数えられていない語を探す。順位には影響しない見張り。"""
+    tagged = tagged or {}
+    orgs, names = _miss_noise()
+    ng_exact, ng_part = _miss_blocklist()
+    # 辞書に登録済みの表記（詰めた形）。ここに在る語は「辞書の穴」ではない
+    known = set(idx.exact)
+    for lst in idx.bucket.values():
+        for c, _sp, g, _p in lst:
+            known.add(c)
+    # カタログの正式名。前方一致で正式名を提案するのに使う
+    cat = {}
+    for g in M.catalogue():
+        cat.setdefault(M.compact(g["name"]), g["name"])
+
+    seen = defaultdict(lambda: {"word": "", "chs": set(), "n": 0, "ex": []})
+    for v in videos:
+        _g, how = M.extract(v["title"], idx, fallback=True)
+        if how == "dict" or v["id"] in tagged:
+            continue
+        for tk in miss_tokens(v["title"]):
+            c = M.compact(tk)
+            if len(c) < 3 or c.isdigit() or M.looks_like_noise(c, idx.ng):
+                continue
+            if c in known or c in names or c in cat or c in ng_exact:
+                continue
+            if any(o in c for o in orgs) or any(h in c for h in M.CHANNEL_HINTS):
+                continue
+            if any(w in c for w in ng_part):
+                continue
+            e = seen[c]
+            e["word"] = e["word"] or tk
+            e["chs"].add(v.get("channel") or "")
+            e["n"] += 1
+            if len(e["ex"]) < 3:
+                e["ex"].append({"t": v["title"], "c": v.get("channel") or "",
+                                "u": f"https://www.youtube.com/watch?v={v['id']}"})
+
+    near, wide = [], []
+    for c, e in seen.items():
+        sug = []
+        if len(c) >= 6:
+            for key, name in cat.items():
+                if not key.startswith(c) or key == c:
+                    continue
+                # 単語の切れ目で終わっているものだけ。『pogostuck』は
+                # 『pogostuck:rage…』の "rage" の直前で切れるので通る。
+                km, ks = M.compact_map(name)
+                if len(ks) > len(c) and ks[len(c)]:
+                    sug.append(name)
+        row = {"word": e["word"], "channels": len(e["chs"]), "n": e["n"],
+               "examples": e["ex"]}
+        if sug and len(sug) <= 3:
+            near.append(dict(row, kind="near", suggest=sorted(sug)[:2]))
+        elif len(e["chs"]) >= MISS_ALERT:
+            wide.append(dict(row, kind="wide", suggest=[]))
+    near.sort(key=lambda r: (-r["channels"], -r["n"]))
+    wide.sort(key=lambda r: (-r["channels"], -r["n"]))
+    return near[:MISS_NEAR] + wide[:MISS_WIDE]
 
 
 def series_sig(channel_id: str, title: str) -> str:
@@ -1738,6 +1893,23 @@ def main():
     leads = find_leads(today_videos, rows, hist, day_names)
     drift = find_drift(today_videos, idx)
     _, tagnotes = tag_games(today_videos, idx)
+    # 見落とし候補。1日だけだと2人ずつに散って埋もれるので、直近7日をまとめて数える。
+    # 『デスゲームの報告書』が19日間気付かれなかったのは、1日ぶんだけ見ていたため。
+    miss_win = {}
+    for _d, _vs, _ok in days[-MISS_DAYS:]:
+        for _v in _vs:
+            miss_win[_v["id"]] = _v
+    misses = find_misses(list(miss_win.values()), idx,
+                         tag_games(list(miss_win.values()), idx)[0])
+    for m in misses:
+        if m["kind"] == "near":
+            log(f"辞書に無いかもしれません（候補あり）: 「{m['word']}」"
+                f"{m['channels']}ch／{m['n']}本 → カタログの"
+                f"「{m['suggest'][0]}」かもしれません（data/aliases.json）")
+        else:
+            log(f"辞書に無いかもしれません（{MISS_DAYS}日で{m['channels']}ch）: "
+                f"「{m['word']}」{m['n']}本。ゲームなら data/aliases.json に、"
+                "配信のラベルや事務所名なら data/miss_blocklist.json に足してください")
     for t in tagnotes:
         log(f"企画タグ #{t['tag']} から {t['added']} 本を「{t['game']}」として数えました"
             f"（{t['channels']}人が使用、うち{t['evidence']}本にゲーム名の記載あり）")
@@ -1754,6 +1926,7 @@ def main():
     admin = {"mode": "admin", "date": today(),
              "generated": payload["generated"], "unknown": unk_rows,
              "leads": leads, "drift": drift, "tags": tagnotes,
+             "misses": misses, "miss_days": MISS_DAYS,
              # robots.txt で検索避けしてあるが、題まで同じにしておく理由はない
              "meta_title": "管理用 ｜ ハヤリゲー",
              "meta_og": "管理用",
@@ -1767,6 +1940,7 @@ def main():
     write_json(SITE / "leads.json",
                {"date": today(), "generated": payload["generated"],
                 "leads": leads, "drift": drift, "tags": tagnotes,
+                "misses": misses, "miss_days": MISS_DAYS,
                 "recent_columns": recent_cols[::-1]})
 
     # ---- アーカイブ一覧を更新する ----
@@ -1990,7 +2164,7 @@ def main():
     purge_old(site_url)
 
     log(f"サイトを書き出しました: {len(rows)} タイトル / 急上昇 {len(rising)} 件 "
-        f"/ 確認待ち {len(unknown)} 件")
+        f"/ 確認待ち {len(unknown)} 件 / 見落とし候補 {len(misses)} 件")
     log(f"アーカイブ: {len(archive)} 日分（site/d/{today()}/ に本日分を保存）")
 
 
