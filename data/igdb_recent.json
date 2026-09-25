@@ -1289,7 +1289,7 @@
   "alias": [
    "ACE COMBAT 8: WINGS OF THEVE"
   ],
-  "pop": 0,
+  "pop": 4,
   "p": [
    "pc",
    "console"
@@ -3348,6 +3348,17 @@
   ],
   "g": [
    "Racing",
+   "Arcade"
+  ]
+ },
+ {
+  "name": "Arcade Archives 2: Dacholer",
+  "alias": [],
+  "pop": 0,
+  "p": [
+   "console"
+  ],
+  "g": [
    "Arcade"
   ]
  },
@@ -8106,6 +8117,17 @@
   ]
  },
  {
+  "name": "Bullet Train",
+  "alias": [],
+  "pop": 0,
+  "p": [
+   "pc"
+  ],
+  "g": [
+   "Indie"
+  ]
+ },
+ {
   "name": "Bump Guardian",
   "alias": [
    "Bump Guardian.exe"
@@ -8269,18 +8291,6 @@
   "g": [
    "Role-playing (RPG)",
    "Simulator",
-   "Strategy",
-   "Indie"
-  ]
- },
- {
-  "name": "Burnstation",
-  "alias": [],
-  "pop": 0,
-  "p": [
-   "pc"
-  ],
-  "g": [
    "Strategy",
    "Indie"
   ]
@@ -13555,14 +13565,6 @@
   ]
  },
  {
-  "name": "Dark DieMansion",
-  "alias": [],
-  "pop": 0,
-  "p": [
-   "pc"
-  ]
- },
- {
   "name": "Dark Mass",
   "alias": [],
   "pop": 0,
@@ -14972,18 +14974,6 @@
   ]
  },
  {
-  "name": "Desperate Gambling",
-  "alias": [],
-  "pop": 0,
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Simulator",
-   "Indie"
-  ]
- },
- {
   "name": "Destined Notes: The Written Fate",
   "alias": [],
   "pop": 0,
@@ -15045,6 +15035,21 @@
  {
   "name": "Determinant",
   "alias": [],
+  "pop": 0,
+  "p": [
+   "pc"
+  ],
+  "g": [
+   "Simulator",
+   "Adventure",
+   "Indie"
+  ]
+ },
+ {
+  "name": "Detstvo",
+  "alias": [
+   "DETSTVO"
+  ],
   "pop": 0,
   "p": [
    "pc"
@@ -16236,23 +16241,6 @@
   ]
  },
  {
-  "name": "Dorts: A Darts Roguelike",
-  "alias": [
-   "dorts.exe",
-   "Dorts"
-  ],
-  "pop": 0,
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Simulator",
-   "Sport",
-   "Strategy",
-   "Indie"
-  ]
- },
- {
   "name": "Dosmic",
   "alias": [
    "DOSMIC",
@@ -16456,7 +16444,7 @@
    "Dragon Quest Heroes: Torneko‘s Mystery Dungeon -Classic HD-",
    "TornekosMysteryDungeon.exe"
   ],
-  "pop": 2,
+  "pop": 3,
   "p": [
    "pc",
    "console"
@@ -17147,6 +17135,17 @@
   "alias": [
    "DualVerse86.exe"
   ],
+  "pop": 0,
+  "p": [
+   "pc"
+  ],
+  "g": [
+   "Indie"
+  ]
+ },
+ {
+  "name": "Dub Party",
+  "alias": [],
   "pop": 0,
   "p": [
    "pc"
@@ -22704,21 +22703,6 @@
   ]
  },
  {
-  "name": "G.O.D. Global Orbital Defense",
-  "alias": [
-   "GOD Global Orbital Defense.exe"
-  ],
-  "pop": 0,
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Simulator",
-   "Strategy",
-   "Indie"
-  ]
- },
- {
   "name": "GON: God Of Nothing",
   "alias": [],
   "pop": 0,
@@ -23095,7 +23079,7 @@
   "alias": [
    "Garfield - Escape from Monday"
   ],
-  "pop": 1,
+  "pop": 2,
   "p": [
    "pc",
    "console"
@@ -23523,6 +23507,21 @@
   "g": [
    "Role-playing (RPG)",
    "Adventure"
+  ]
+ },
+ {
+  "name": "Ghosted",
+  "alias": [
+   "GHOSTED"
+  ],
+  "pop": 0,
+  "p": [
+   "pc",
+   "console"
+  ],
+  "g": [
+   "Adventure",
+   "Indie"
   ]
  },
  {
@@ -24015,20 +24014,6 @@
    "Turn-based strategy (TBS)",
    "Indie",
    "Card & Board Game"
-  ]
- },
- {
-  "name": "Gold Up",
-  "alias": [
-   "GoldUp.exe"
-  ],
-  "pop": 0,
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Adventure",
-   "Indie"
   ]
  },
  {
@@ -25292,20 +25277,6 @@
    "Role-playing (RPG)",
    "Adventure",
    "Visual Novel"
-  ]
- },
- {
-  "name": "Half Left",
-  "alias": [],
-  "pop": 0,
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Shooter",
-   "Simulator",
-   "Adventure",
-   "Indie"
   ]
  },
  {
@@ -27038,6 +27009,20 @@
   "pop": 0,
   "p": [
    "pc"
+  ]
+ },
+ {
+  "name": "Hostile Lands",
+  "alias": [
+   "HostileLands.exe"
+  ],
+  "pop": 0,
+  "p": [
+   "pc"
+  ],
+  "g": [
+   "Shooter",
+   "Indie"
   ]
  },
  {
@@ -32933,6 +32918,19 @@
   ]
  },
  {
+  "name": "Lucid Cats",
+  "alias": [
+   "Lucid Tax"
+  ],
+  "pop": 0,
+  "p": [
+   "pc"
+  ],
+  "g": [
+   "Strategy"
+  ]
+ },
+ {
   "name": "Ludus Deceptor",
   "alias": [],
   "pop": 0,
@@ -33971,7 +33969,7 @@
   "alias": [
    "Wolverine"
   ],
-  "pop": 30,
+  "pop": 32,
   "p": [
    "console"
   ],
@@ -35246,19 +35244,6 @@
   ]
  },
  {
-  "name": "Minerals: Deep Core Mining",
-  "alias": [],
-  "pop": 0,
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Simulator",
-   "Adventure",
-   "Indie"
-  ]
- },
- {
   "name": "Minesweeper 3D",
   "alias": [],
   "pop": 0,
@@ -36326,7 +36311,7 @@
    "MortalShell2.exe",
    "Mortal Shell 2"
   ],
-  "pop": 22,
+  "pop": 23,
   "p": [
    "pc",
    "console"
@@ -37133,6 +37118,17 @@
    "Sport",
    "Adventure",
    "Indie"
+  ]
+ },
+ {
+  "name": "Nature Hike",
+  "alias": [],
+  "pop": 0,
+  "p": [
+   "pc"
+  ],
+  "g": [
+   "Visual Novel"
   ]
  },
  {
@@ -39499,6 +39495,10 @@
   "p": [
    "pc",
    "console"
+  ],
+  "g": [
+   "Role-playing (RPG)",
+   "Adventure"
   ]
  },
  {
@@ -40921,6 +40921,9 @@
   "p": [
    "pc",
    "console"
+  ],
+  "g": [
+   "Hack and slash/Beat 'em up"
   ]
  },
  {
@@ -44442,6 +44445,7 @@
    "pc"
   ],
   "g": [
+   "Simulator",
    "Indie"
   ]
  },
@@ -46202,6 +46206,18 @@
    "Simulator",
    "Strategy",
    "Indie"
+  ]
+ },
+ {
+  "name": "Rogue Kingdom",
+  "alias": [],
+  "pop": 0,
+  "p": [
+   "pc"
+  ],
+  "g": [
+   "Role-playing (RPG)",
+   "Simulator"
   ]
  },
  {
@@ -48839,7 +48855,7 @@
    "SILENT HILL: townfall",
    "Cannula"
   ],
-  "pop": 3,
+  "pop": 4,
   "p": [
    "pc",
    "console"
@@ -48868,21 +48884,6 @@
   "pop": 0,
   "p": [
    "console"
-  ]
- },
- {
-  "name": "Silent Shark",
-  "alias": [
-   "Silent Shark.exe"
-  ],
-  "pop": 0,
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Simulator",
-   "Strategy",
-   "Indie"
   ]
  },
  {
@@ -52729,21 +52730,6 @@
   ]
  },
  {
-  "name": "Sunder Siege",
-  "alias": [
-   "SunderSiege.exe"
-  ],
-  "pop": 0,
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Simulator",
-   "Strategy",
-   "Indie"
-  ]
- },
- {
   "name": "Sunken Engine",
   "alias": [
    "Sunken Engine.exe"
@@ -53505,7 +53491,7 @@
  {
   "name": "TCG Card Shop Simulator",
   "alias": [],
-  "pop": 25,
+  "pop": 26,
   "p": [
    "pc",
    "console"
@@ -53958,20 +53944,6 @@
   ],
   "g": [
    "Adventure",
-   "Indie"
-  ]
- },
- {
-  "name": "Tango District",
-  "alias": [],
-  "pop": 0,
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Puzzle",
-   "Simulator",
-   "Strategy",
    "Indie"
   ]
  },
@@ -58019,6 +57991,15 @@
   ]
  },
  {
+  "name": "Thronefall: Craaghelm",
+  "alias": [],
+  "pop": 0,
+  "p": [
+   "pc",
+   "console"
+  ]
+ },
+ {
   "name": "Throttle Trace",
   "alias": [],
   "pop": 0,
@@ -60985,7 +60966,7 @@
    "瓦爾海姆",
    "英灵神殿"
   ],
-  "pop": 301,
+  "pop": 302,
   "p": [
    "pc",
    "console"
@@ -63943,6 +63924,19 @@
  },
  {
   "name": "Wrecked",
+  "alias": [],
+  "pop": 0,
+  "p": [
+   "pc"
+  ],
+  "g": [
+   "Adventure",
+   "Indie",
+   "Visual Novel"
+  ]
+ },
+ {
+  "name": "Wrenny Lee: Witch-for-Hire!",
   "alias": [],
   "pop": 0,
   "p": [
