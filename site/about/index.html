@@ -560,7 +560,7 @@ footer{font-size:11.5px;color:var(--ink-3);text-align:center;border-top:1px soli
 </div>
 
 <script>
-const DATA = {"mode": "page", "date": "2026-09-25", "subtitle": "このサイトについて", "generated": "2026-09-25 07:14", "paths": {"home": "../", "archive": "../archive/"}};
+const DATA = {"mode": "page", "date": "2026-09-25", "subtitle": "このサイトについて", "generated": "2026-09-25 12:53", "paths": {"home": "../", "archive": "../archive/"}};
 const $ = s => document.querySelector(s);
 const esc = s => String(s ?? '').replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
 const cssv = n => getComputedStyle(document.documentElement).getPropertyValue(n).trim();
@@ -635,6 +635,15 @@ function renderAdmin(){
   (DATA.tags || []).forEach(t => parts.push(row('タグから',
     `<b>#${esc(t.tag)}</b> の配信 ${t.added}本を <b>${esc(t.game)}</b> として数えました
      — ${t.channels}人が使用、うち ${t.evidence}本にゲーム名の記載`)));
+  // 見落とし候補。括弧の位置を問わずタイトル中の名前らしき語を拾ったもの。
+  // 「確認待ち」は先頭の【】しか見ないので、末尾に書かれたゲーム名はこちらに出る。
+  (DATA.misses || []).forEach(m => parts.push(row(m.kind === 'near' ? '候補あり' : '見落とし?',
+    `<b>${esc(m.word)}</b> — ${m.channels}ch / ${m.n}本（直近${DATA.miss_days || 7}日）
+     ${(m.suggest || []).length ? `→ カタログの <b>${esc(m.suggest[0])}</b> かもしれません` : ''}
+     ${(m.examples || []).map(x => `<div style="font-size:11.5px;color:var(--ink-3);line-height:1.6">
+        <a href="${esc(x.u)}" target="_blank" rel="noopener">${esc(x.t)}</a> — ${esc(x.c)}</div>`).join('')}
+     <div style="font-size:11.5px;color:var(--ink-3)">ゲームなら <code>data/aliases.json</code>、
+     配信のラベルや事務所名なら <code>data/miss_blocklist.json</code> に足してください</div>`)));
   // 続編が前作と同じ行に入っている疑い。いちばん上に出す（順位そのものが狂うため）
   (DATA.drift || []).forEach(d => parts.push(row('名前のゆれ',
     `<b>${esc(d.written)}</b> と書いている配信者が ${d.channels}人／${d.of}人。
@@ -651,7 +660,8 @@ function renderAdmin(){
   $('#leads').innerHTML = parts.join('') || '<div class="empty">今日は目立った動きがありません。</div>';
   const q = DATA.unknown || [];
   $('#s-date').textContent = '管理用';
-  $('#s-meta').textContent = `${esc(DATA.date)} ／ 確認待ち ${q.length}件`;
+  $('#s-meta').textContent = `${esc(DATA.date)} ／ 確認待ち ${q.length}件`
+    + ` ／ 見落とし候補 ${(DATA.misses || []).length}件`;
   // リンク先を相対（unknown.json）にしていたため、この1行がページの型紙として
   // 全ページに焼き込まれ、Googleが /d/2026-09-01/unknown.json のような
   // 存在しないURLをページの数だけ見つけて404にしていた（2026-09-24に判明）。

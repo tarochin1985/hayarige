@@ -825,21 +825,6 @@
   ]
  },
  {
-  "name": "A Hole in my Room",
-  "alias": [
-   "AHIMR.exe"
-  ],
-  "pop": 0,
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Puzzle",
-   "Adventure",
-   "Indie"
-  ]
- },
- {
   "name": "A Kingdom of Soil",
   "alias": [],
   "pop": 0,
@@ -1104,26 +1089,6 @@
   ]
  },
  {
-  "name": "AI2U: With You 'Til The End",
-  "alias": [
-   "AI2U",
-   "AI2U - With you til the end.exe"
-  ],
-  "pop": 0,
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Puzzle",
-   "Role-playing (RPG)",
-   "Simulator",
-   "Strategy",
-   "Adventure",
-   "Indie",
-   "Visual Novel"
-  ]
- },
- {
   "name": "Abductables",
   "alias": [],
   "pop": 0,
@@ -1301,20 +1266,6 @@
    "pc"
   ],
   "g": [
-   "Indie"
-  ]
- },
- {
-  "name": "Academy: Become a Hero",
-  "alias": [
-   "AcademyBAH.exe"
-  ],
-  "pop": 0,
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Platform",
    "Indie"
   ]
  },
@@ -1787,19 +1738,6 @@
   ]
  },
  {
-  "name": "Agefield High: Rock the School",
-  "alias": [],
-  "pop": 1,
-  "p": [
-   "pc",
-   "console"
-  ],
-  "g": [
-   "Adventure",
-   "Indie"
-  ]
- },
- {
   "name": "Aggelos 2",
   "alias": [],
   "pop": 0,
@@ -2082,6 +2020,18 @@
   ]
  },
  {
+  "name": "Alchemia Rogue: Mia and the Mystery Labyrinth",
+  "alias": [],
+  "pop": 0,
+  "p": [
+   "pc"
+  ],
+  "g": [
+   "Role-playing (RPG)",
+   "Indie"
+  ]
+ },
+ {
   "name": "Alchemy Factory",
   "alias": [
    "AlchemyFactory.exe",
@@ -2225,6 +2175,18 @@
   ],
   "g": [
    "Shooter"
+  ]
+ },
+ {
+  "name": "Aliens Go Home ReRun",
+  "alias": [],
+  "pop": 0,
+  "p": [
+   "pc"
+  ],
+  "g": [
+   "Indie",
+   "Arcade"
   ]
  },
  {
@@ -4389,6 +4351,18 @@
   ]
  },
  {
+  "name": "Atrum",
+  "alias": [],
+  "pop": 0,
+  "p": [
+   "pc"
+  ],
+  "g": [
+   "Role-playing (RPG)",
+   "Indie"
+  ]
+ },
+ {
   "name": "Attack of the Astrals",
   "alias": [],
   "pop": 0,
@@ -4423,21 +4397,6 @@
   ],
   "g": [
    "Point-and-click",
-   "Indie"
-  ]
- },
- {
-  "name": "Author Sim",
-  "alias": [
-   "Author Sim.exe"
-  ],
-  "pop": 0,
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Simulator",
-   "Strategy",
    "Indie"
   ]
  },
@@ -4764,6 +4723,17 @@
   "g": [
    "Simulator",
    "Strategy",
+   "Indie"
+  ]
+ },
+ {
+  "name": "Backpack Alchemist",
+  "alias": [],
+  "pop": 0,
+  "p": [
+   "pc"
+  ],
+  "g": [
    "Indie"
   ]
  },
@@ -5948,6 +5918,17 @@
   ]
  },
  {
+  "name": "Beyond The Blight",
+  "alias": [],
+  "pop": 0,
+  "p": [
+   "pc"
+  ],
+  "g": [
+   "Simulator"
+  ]
+ },
+ {
   "name": "Beyond The Cupola: ISS Simulator",
   "alias": [],
   "pop": 0,
@@ -6653,21 +6634,6 @@
   ],
   "g": [
    "Platform"
-  ]
- },
- {
-  "name": "Block Catching",
-  "alias": [
-   "Block Catching.exe"
-  ],
-  "pop": 0,
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Strategy",
-   "Adventure",
-   "Indie"
   ]
  },
  {
@@ -7844,6 +7810,18 @@
   ]
  },
  {
+  "name": "Brotato: Primal Dread",
+  "alias": [],
+  "pop": 0,
+  "p": [
+   "pc"
+  ],
+  "g": [
+   "Role-playing (RPG)",
+   "Indie"
+  ]
+ },
+ {
   "name": "Brothel Virgin: The Crimson Reverie",
   "alias": [],
   "pop": 0,
@@ -8139,6 +8117,21 @@
    "console"
   ],
   "g": [
+   "Indie"
+  ]
+ },
+ {
+  "name": "Bunker 1024",
+  "alias": [
+   "Bunker Simulator"
+  ],
+  "pop": 0,
+  "p": [
+   "pc"
+  ],
+  "g": [
+   "Simulator",
+   "Strategy",
    "Indie"
   ]
  },
@@ -9709,22 +9702,6 @@
   "pop": 0,
   "p": [
    "console"
-  ]
- },
- {
-  "name": "Chainsaw",
-  "alias": [
-   "CHAINSAW",
-   "Game.exe"
-  ],
-  "pop": 0,
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Role-playing (RPG)",
-   "Turn-based strategy (TBS)",
-   "Indie"
   ]
  },
  {
@@ -12122,6 +12099,19 @@
   ]
  },
  {
+  "name": "CrackSword",
+  "alias": [],
+  "pop": 0,
+  "p": [
+   "pc"
+  ],
+  "g": [
+   "Fighting",
+   "Adventure",
+   "Indie"
+  ]
+ },
+ {
   "name": "Craft. Sell. Goblin. Repeat.",
   "alias": [
    "Craft. Sell. Goblin. Repeat.exe"
@@ -14391,6 +14381,18 @@
   ]
  },
  {
+  "name": "Deeper Still",
+  "alias": [],
+  "pop": 0,
+  "p": [
+   "pc"
+  ],
+  "g": [
+   "Shooter",
+   "Indie"
+  ]
+ },
+ {
   "name": "Deeplanders",
   "alias": [
    "DEEPLANDERS"
@@ -15736,6 +15738,19 @@
   ]
  },
  {
+  "name": "Disquieted",
+  "alias": [],
+  "pop": 0,
+  "p": [
+   "pc"
+  ],
+  "g": [
+   "Platform",
+   "Adventure",
+   "Indie"
+  ]
+ },
+ {
   "name": "Dissolution of My Self",
   "alias": [],
   "pop": 0,
@@ -16818,7 +16833,7 @@
   "alias": [
    "针影裁梦"
   ],
-  "pop": 0,
+  "pop": 1,
   "p": [
    "pc"
   ],
@@ -17013,6 +17028,27 @@
    "Simulator",
    "Strategy",
    "Adventure",
+   "Indie"
+  ]
+ },
+ {
+  "name": "Drums Rock: Slipknot - 'Duality'",
+  "alias": [],
+  "pop": 0,
+  "p": [
+   "console"
+  ]
+ },
+ {
+  "name": "Drunk Woodcutter",
+  "alias": [],
+  "pop": 0,
+  "p": [
+   "pc",
+   "console"
+  ],
+  "g": [
+   "Simulator",
    "Indie"
   ]
  },
@@ -17562,21 +17598,6 @@
    "pc"
   ],
   "g": [
-   "Indie"
-  ]
- },
- {
-  "name": "Dwarven Rampart",
-  "alias": [
-   "TowerCity.exe"
-  ],
-  "pop": 0,
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Simulator",
-   "Strategy",
    "Indie"
   ]
  },
@@ -20737,6 +20758,17 @@
   ]
  },
  {
+  "name": "Financial Freedom",
+  "alias": [],
+  "pop": 0,
+  "p": [
+   "pc"
+  ],
+  "g": [
+   "Indie"
+  ]
+ },
+ {
   "name": "Find All 10: Greece",
   "alias": [],
   "pop": 0,
@@ -23041,7 +23073,7 @@
   "alias": [
    "Garfield - Escape from Monday"
   ],
-  "pop": 0,
+  "pop": 1,
   "p": [
    "pc",
    "console"
@@ -24165,20 +24197,6 @@
   ]
  },
  {
-  "name": "Grainhold",
-  "alias": [],
-  "pop": 0,
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Role-playing (RPG)",
-   "Strategy",
-   "Adventure",
-   "Indie"
-  ]
- },
- {
   "name": "Gran Turismo 7: Spec IV",
   "alias": [],
   "pop": 0,
@@ -25173,6 +25191,22 @@
   ]
  },
  {
+  "name": "Hack Fate",
+  "alias": [
+   "Ghost: Reborn",
+   "偷天换命"
+  ],
+  "pop": 0,
+  "p": [
+   "pc"
+  ],
+  "g": [
+   "Role-playing (RPG)",
+   "Adventure",
+   "Indie"
+  ]
+ },
+ {
   "name": "Hacker vs It",
   "alias": [
    "Hacker vs IT",
@@ -25236,6 +25270,20 @@
    "Role-playing (RPG)",
    "Adventure",
    "Visual Novel"
+  ]
+ },
+ {
+  "name": "Half Left",
+  "alias": [],
+  "pop": 0,
+  "p": [
+   "pc"
+  ],
+  "g": [
+   "Shooter",
+   "Simulator",
+   "Adventure",
+   "Indie"
   ]
  },
  {
@@ -25892,18 +25940,6 @@
   ]
  },
  {
-  "name": "Hell Galaxy",
-  "alias": [],
-  "pop": 0,
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Role-playing (RPG)",
-   "Indie"
-  ]
- },
- {
   "name": "Hell Let Loose: Vietnam",
   "alias": [
    "Launch_HLL.exe"
@@ -26153,6 +26189,21 @@
   "g": [
    "Role-playing (RPG)",
    "Indie"
+  ]
+ },
+ {
+  "name": "Heroic Musical Chairs",
+  "alias": [
+   "Epic Musical Chairs"
+  ],
+  "pop": 0,
+  "p": [
+   "pc"
+  ],
+  "g": [
+   "Sport",
+   "Indie",
+   "Arcade"
   ]
  },
  {
@@ -26966,6 +27017,20 @@
   ]
  },
  {
+  "name": "Hostyle",
+  "alias": [
+   "HOSTYLE"
+  ],
+  "pop": 0,
+  "p": [
+   "pc"
+  ],
+  "g": [
+   "Platform",
+   "Indie"
+  ]
+ },
+ {
   "name": "Hot Wheels Infinite Rush",
   "alias": [
    "HOT WHEELS Infinite Rush"
@@ -27090,19 +27155,6 @@
   ],
   "g": [
    "Adventure",
-   "Indie"
-  ]
- },
- {
-  "name": "Hovertron",
-  "alias": [],
-  "pop": 0,
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Platform",
-   "Racing",
    "Indie"
   ]
  },
@@ -27703,6 +27755,20 @@
   ]
  },
  {
+  "name": "Icarus-Bolt",
+  "alias": [
+   "ICARUS-BOLT"
+  ],
+  "pop": 0,
+  "p": [
+   "pc"
+  ],
+  "g": [
+   "Adventure",
+   "Indie"
+  ]
+ },
+ {
   "name": "Ice on the Edge",
   "alias": [
    "ICE on the EDGE"
@@ -27868,26 +27934,6 @@
    "Adventure",
    "Indie",
    "Visual Novel"
-  ]
- },
- {
-  "name": "Ignoble",
-  "alias": [
-   "IGNOBLE",
-   "Ignoble.exe"
-  ],
-  "pop": 0,
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Fighting",
-   "Platform",
-   "Simulator",
-   "Hack and slash/Beat 'em up",
-   "Adventure",
-   "Indie",
-   "Arcade"
   ]
  },
  {
@@ -28502,6 +28548,19 @@
   "g": [
    "Strategy",
    "Adventure",
+   "Indie"
+  ]
+ },
+ {
+  "name": "Inkremental",
+  "alias": [],
+  "pop": 0,
+  "p": [
+   "pc"
+  ],
+  "g": [
+   "Simulator",
+   "Strategy",
    "Indie"
   ]
  },
@@ -29377,6 +29436,19 @@
    "pc"
   ],
   "g": [
+   "Indie"
+  ]
+ },
+ {
+  "name": "Jirai-kei Girl: Vengeance",
+  "alias": [],
+  "pop": 0,
+  "p": [
+   "pc"
+  ],
+  "g": [
+   "Hack and slash/Beat 'em up",
+   "Adventure",
    "Indie"
   ]
  },
@@ -30579,21 +30651,6 @@
   ],
   "g": [
    "Simulator"
-  ]
- },
- {
-  "name": "Konekomi Castle",
-  "alias": [
-   "Konekomi Castle.exe"
-  ],
-  "pop": 0,
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Puzzle",
-   "Adventure",
-   "Indie"
   ]
  },
  {
@@ -33019,6 +33076,19 @@
   ]
  },
  {
+  "name": "Lurking",
+  "alias": [],
+  "pop": 0,
+  "p": [
+   "pc"
+  ],
+  "g": [
+   "Shooter",
+   "Adventure",
+   "Indie"
+  ]
+ },
+ {
   "name": "Lustpunk 69",
   "alias": [
    "Lustpunk 69.exe"
@@ -33678,21 +33748,6 @@
   ]
  },
  {
-  "name": "Mandate Order",
-  "alias": [
-   "MOProject.exe"
-  ],
-  "pop": 0,
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Simulator",
-   "Strategy",
-   "Indie"
-  ]
- },
- {
   "name": "Mandato",
   "alias": [],
   "pop": 0,
@@ -33892,7 +33947,7 @@
   "alias": [
    "Wolverine"
   ],
-  "pop": 28,
+  "pop": 30,
   "p": [
    "console"
   ],
@@ -36643,6 +36698,14 @@
   ]
  },
  {
+  "name": "My Hero Academia: United Survival",
+  "alias": [
+   "僕のヒーローアカデミア UNITED SURVIVAL"
+  ],
+  "pop": 0,
+  "jp": "僕のヒーローアカデミア UNITED SURVIVAL"
+ },
+ {
   "name": "My Life as a Vampire's Maid",
   "alias": [
    "My (♂) Life as a Vampire's Maid (♀)"
@@ -37978,18 +38041,6 @@
   ]
  },
  {
-  "name": "No Knock",
-  "alias": [],
-  "pop": 0,
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Simulator",
-   "Indie"
-  ]
- },
- {
   "name": "No Man's Sky: Cosmos",
   "alias": [],
   "pop": 0,
@@ -38210,6 +38261,18 @@
    "Puzzle",
    "Role-playing (RPG)",
    "Adventure",
+   "Indie"
+  ]
+ },
+ {
+  "name": "Non Eternals",
+  "alias": [],
+  "pop": 0,
+  "p": [
+   "pc"
+  ],
+  "g": [
+   "Role-playing (RPG)",
    "Indie"
   ]
  },
@@ -39528,6 +39591,10 @@
   "p": [
    "pc",
    "console"
+  ],
+  "g": [
+   "Role-playing (RPG)",
+   "Adventure"
   ]
  },
  {
@@ -39578,22 +39645,6 @@
   ],
   "g": [
    "Adventure",
-   "Indie"
-  ]
- },
- {
-  "name": "Oops! Simulator",
-  "alias": [
-   "oopssimulator.exe",
-   "OOPS! Simulator"
-  ],
-  "pop": 0,
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Puzzle",
-   "Simulator",
    "Indie"
   ]
  },
@@ -40410,21 +40461,6 @@
    "pc"
   ],
   "g": [
-   "Adventure",
-   "Indie"
-  ]
- },
- {
-  "name": "Palm Sugar: A Village Story",
-  "alias": [
-   "Palm Sugar A Village Story.exe"
-  ],
-  "pop": 0,
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Role-playing (RPG)",
    "Adventure",
    "Indie"
   ]
@@ -42466,6 +42502,23 @@
   ]
  },
  {
+  "name": "Pokor",
+  "alias": [
+   "POKOR"
+  ],
+  "pop": 0,
+  "p": [
+   "pc"
+  ],
+  "g": [
+   "Role-playing (RPG)",
+   "Simulator",
+   "Strategy",
+   "Indie",
+   "Card & Board Game"
+  ]
+ },
+ {
   "name": "Pokémon Go: Twilight Trails",
   "alias": [],
   "pop": 0
@@ -43186,19 +43239,6 @@
   ]
  },
  {
-  "name": "Pro Jank Footy",
-  "alias": [],
-  "pop": 0,
-  "p": [
-   "pc",
-   "console"
-  ],
-  "g": [
-   "Sport",
-   "Arcade"
-  ]
- },
- {
   "name": "Pro Soccer Manager 27",
   "alias": [],
   "pop": 0,
@@ -43775,6 +43815,11 @@
    "Strategy",
    "Indie"
   ]
+ },
+ {
+  "name": "Pufflings: Journey Through a Fantasy World",
+  "alias": [],
+  "pop": 0
  },
  {
   "name": "Pumpkin Woods",
@@ -44534,19 +44579,6 @@
   ]
  },
  {
-  "name": "Rage Bait",
-  "alias": [],
-  "pop": 0,
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Role-playing (RPG)",
-   "Simulator",
-   "Adventure"
-  ]
- },
- {
   "name": "Ragnar",
   "alias": [
    "Ragnar.exe"
@@ -45097,18 +45129,6 @@
   "g": [
    "Indie",
    "Arcade"
-  ]
- },
- {
-  "name": "Red Tape Rampage",
-  "alias": [],
-  "pop": 0,
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Strategy",
-   "Indie"
   ]
  },
  {
@@ -46584,21 +46604,6 @@
   ]
  },
  {
-  "name": "Ruin",
-  "alias": [
-   "Ruin.exe"
-  ],
-  "pop": 0,
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Role-playing (RPG)",
-   "Adventure",
-   "Indie"
-  ]
- },
- {
   "name": "Rules of Alchemy",
   "alias": [],
   "pop": 0,
@@ -46769,6 +46774,19 @@
   ],
   "g": [
    "Indie"
+  ]
+ },
+ {
+  "name": "Russian Village Business",
+  "alias": [
+   "Земский Бизнес"
+  ],
+  "pop": 0,
+  "p": [
+   "pc"
+  ],
+  "g": [
+   "Simulator"
   ]
  },
  {
@@ -47209,7 +47227,7 @@
   "alias": [
    "ScarletSkips.exe"
   ],
-  "pop": 7,
+  "pop": 8,
   "p": [
    "pc"
   ]
@@ -47574,25 +47592,6 @@
   ],
   "g": [
    "Role-playing (RPG)",
-   "Adventure"
-  ]
- },
- {
-  "name": "Security 51",
-  "alias": [
-   "51区安检站",
-   "51區安檢站",
-   "Security51.exe"
-  ],
-  "pop": 0,
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Point-and-click",
-   "Puzzle",
-   "Simulator",
-   "Strategy",
    "Adventure"
   ]
  },
@@ -51453,20 +51452,6 @@
   ]
  },
  {
-  "name": "Star Chef Simulator",
-  "alias": [
-   "StarChefSimulator.exe"
-  ],
-  "pop": 0,
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Simulator",
-   "Indie"
-  ]
- },
- {
   "name": "Star Child",
   "alias": [],
   "pop": 0,
@@ -53177,22 +53162,6 @@
   ]
  },
  {
-  "name": "Survival Log",
-  "alias": [
-   "SurvivalLog.exe"
-  ],
-  "pop": 0,
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Role-playing (RPG)",
-   "Simulator",
-   "Strategy",
-   "Adventure"
-  ]
- },
- {
   "name": "Survive the Apocalypse",
   "alias": [],
   "pop": 0,
@@ -53371,20 +53340,6 @@
   "g": [
    "Indie",
    "Visual Novel"
-  ]
- },
- {
-  "name": "Sweyet Dreaming Emulator the Familiar Discomfort of the Unpredictable",
-  "alias": [
-   "Sweyet (etc.)"
-  ],
-  "pop": 0,
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Adventure",
-   "Indie"
   ]
  },
  {
@@ -54008,6 +53963,20 @@
   ],
   "g": [
    "Adventure",
+   "Indie"
+  ]
+ },
+ {
+  "name": "Tango District",
+  "alias": [],
+  "pop": 0,
+  "p": [
+   "pc"
+  ],
+  "g": [
+   "Puzzle",
+   "Simulator",
+   "Strategy",
    "Indie"
   ]
  },
@@ -55098,18 +55067,6 @@
   "p": [
    "pc",
    "console"
-  ]
- },
- {
-  "name": "The Cave Diver",
-  "alias": [],
-  "pop": 0,
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Platform",
-   "Adventure"
   ]
  },
  {
@@ -56689,20 +56646,6 @@
   ],
   "g": [
    "Role-playing (RPG)",
-   "Strategy",
-   "Indie"
-  ]
- },
- {
-  "name": "The Merchant's Eden",
-  "alias": [
-   "The_Merchant's_Eden.exe"
-  ],
-  "pop": 0,
-  "p": [
-   "pc"
-  ],
-  "g": [
    "Strategy",
    "Indie"
   ]
@@ -58320,22 +58263,6 @@
   ]
  },
  {
-  "name": "Tileweaver",
-  "alias": [
-   "Tileweaver.exe"
-  ],
-  "pop": 0,
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Puzzle",
-   "Strategy",
-   "Adventure",
-   "Indie"
-  ]
- },
- {
   "name": "Time Gamers: Guardians of the Marble Man",
   "alias": [
    "Gaurdians1864.exe"
@@ -58912,6 +58839,18 @@
   ],
   "g": [
    "Platform",
+   "Adventure",
+   "Indie"
+  ]
+ },
+ {
+  "name": "Too Deep To Quit",
+  "alias": [],
+  "pop": 0,
+  "p": [
+   "pc"
+  ],
+  "g": [
    "Adventure",
    "Indie"
   ]
@@ -61225,21 +61164,6 @@
   ]
  },
  {
-  "name": "Vaulted Valor",
-  "alias": [
-   "VaultedValor.exe"
-  ],
-  "pop": 0,
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Role-playing (RPG)",
-   "Adventure",
-   "Indie"
-  ]
- },
- {
   "name": "Vector Surge",
   "alias": [
    "Vector Surge.exe"
@@ -61388,21 +61312,6 @@
    "Adventure",
    "Indie",
    "Visual Novel"
-  ]
- },
- {
-  "name": "Verde",
-  "alias": [
-   "Verde and the Echoing Water",
-   "Verde.exe"
-  ],
-  "pop": 0,
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Simulator",
-   "Indie"
   ]
  },
  {
@@ -62508,6 +62417,18 @@
   ]
  },
  {
+  "name": "Wavecrashers",
+  "alias": [],
+  "pop": 0,
+  "p": [
+   "pc"
+  ],
+  "g": [
+   "Role-playing (RPG)",
+   "Strategy"
+  ]
+ },
+ {
   "name": "Wayfarer Of Hydrangea",
   "alias": [],
   "pop": 0,
@@ -62600,18 +62521,6 @@
   ],
   "g": [
    "Puzzle",
-   "Indie"
-  ]
- },
- {
-  "name": "Weed Supermarket Simulator",
-  "alias": [],
-  "pop": 0,
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Simulator",
    "Indie"
   ]
  },
@@ -62714,6 +62623,18 @@
   ]
  },
  {
+  "name": "What We Bring",
+  "alias": [],
+  "pop": 0,
+  "p": [
+   "pc"
+  ],
+  "g": [
+   "Puzzle",
+   "Indie"
+  ]
+ },
+ {
   "name": "Wheel Make It",
   "alias": [],
   "pop": 0,
@@ -62756,6 +62677,19 @@
    "Simulator",
    "Sport",
    "Adventure",
+   "Indie"
+  ]
+ },
+ {
+  "name": "Wheelie Bad",
+  "alias": [],
+  "pop": 0,
+  "p": [
+   "pc"
+  ],
+  "g": [
+   "Platform",
+   "Racing",
    "Indie"
   ]
  },
@@ -63163,6 +63097,18 @@
   "g": [
    "Simulator",
    "Indie"
+  ]
+ },
+ {
+  "name": "Wild West Pioneers",
+  "alias": [],
+  "pop": 0,
+  "p": [
+   "pc"
+  ],
+  "g": [
+   "Simulator",
+   "Strategy"
   ]
  },
  {

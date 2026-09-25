@@ -1,68 +1,14 @@
 {
  "date": "2026-09-25",
- "generated": "2026-09-25 07:14",
+ "generated": "2026-09-25 12:53",
  "leads": {
   "events": [
    {
     "tag": "#マイクラ肝試し2026",
     "channels": [
      "Flare Ch. 不知火フレア",
-     "Iroha ch. 風真いろは - holoX -",
-     "Polka Ch. 尾丸ポルカ",
-     "Su Ch. 水宮枢 - FLOW GLOW",
-     "Watame Ch. 角巻わため",
-     "おおはらMEN / ドズル社",
-     "おんりー / ドズル社",
      "七瀬 すず菜 / Nanase Suzuna【にじさんじ】",
-     "堰代ミコ / Mico Channel【ななしいんく】",
      "羽渦ミウネル -Miuneru Haneuzu-"
-    ]
-   },
-   {
-    "tag": "#ゲーム実況",
-    "channels": [
-     "SIANちゃんねる【ディズニー大好きVtuber】",
-     "Usagi Ch. 因幡兎",
-     "ジョアだよ",
-     "星埜きぃ -Key Hoshino-",
-     "豚咲あおい_TomisakiAoi",
-     "雛乃ぴぴ / Hinano pipi"
-    ]
-   },
-   {
-    "tag": "#ストグラSeason2",
-    "channels": [
-     "たけぉ",
-     "バーチャル債務者youtuber天開司",
-     "天羽よつは",
-     "影。/かげまる",
-     "暁月ホタル AKATSUKI HOTARU"
-    ]
-   },
-   {
-    "tag": "#あおぎり高校D組",
-    "channels": [
-     "Rieru Ch. 我部りえる /あおぎり高校",
-     "ぷわぷわぽぷら /あおぎり高校",
-     "エトラ / étraチャンネル",
-     "月赴ゐぶき / あおぎり高校"
-    ]
-   },
-   {
-    "tag": "#ストグラ",
-    "channels": [
-     "たけぉ",
-     "ましゃかりさん",
-     "みつき",
-     "闇乃あびす / Abyss"
-    ]
-   },
-   {
-    "tag": "#Minecraft",
-    "channels": [
-     "せるひ",
-     "とまこのゲーム実況",
-     "月赴ゐぶき / あおぎり高校"
     ]
    },
    {
@@ -74,11 +20,19 @@
     ]
    },
    {
-    "tag": "#エンドフィールド",
+    "tag": "#ストグラ",
     "channels": [
-     "あかどらん",
-     "猫咲あんじ Nekosaki anji",
-     "羅々華セーラ-Raraka Sera-"
+     "たけぉ",
+     "みつき",
+     "闇乃あびす / Abyss"
+    ]
+   },
+   {
+    "tag": "#ゲーム実況",
+    "channels": [
+     "SIANちゃんねる【ディズニー大好きVtuber】",
+     "Usagi Ch. 因幡兎",
+     "ジョアだよ"
     ]
    }
   ],
@@ -86,49 +40,275 @@
   "wide": [
    {
     "game": "Minecraft",
-    "channels": 43,
-    "videos": 44
+    "channels": 20,
+    "videos": 20
    },
    {
     "game": "Apex Legends",
-    "channels": 38,
-    "videos": 42
-   },
-   {
-    "game": "ストリートファイター6",
-    "channels": 25,
-    "videos": 28
-   },
-   {
-    "game": "Silent Hill: Townfall",
-    "channels": 22,
-    "videos": 22
-   },
-   {
-    "game": "Grand Theft Auto V",
-    "channels": 16,
+    "channels": 18,
     "videos": 18
    },
    {
+    "game": "ストリートファイター6",
+    "channels": 8,
+    "videos": 9
+   },
+   {
     "game": "VALORANT",
-    "channels": 14,
-    "videos": 15
+    "channels": 7,
+    "videos": 8
    },
    {
-    "game": "Among Us",
-    "channels": 14,
-    "videos": 15
+    "game": "実況パワフルプロ野球2026",
+    "channels": 9,
+    "videos": 9
    },
    {
-    "game": "原神",
-    "channels": 12,
-    "videos": 12
+    "game": "フォートナイト",
+    "channels": 7,
+    "videos": 8
+   },
+   {
+    "game": "Wardogs",
+    "channels": 6,
+    "videos": 6
+   },
+   {
+    "game": "Silent Hill: Townfall",
+    "channels": 6,
+    "videos": 6
    }
   ]
  },
  "drift": [],
  "tags": [],
+ "misses": [
+  {
+   "word": "Starward",
+   "channels": 1,
+   "n": 6,
+   "examples": [
+    {
+     "t": "【星の翼】エリシア空戦のPV見たり久々の優勝戦で遊んだりしたい【星之翼/Starward】【東和正】",
+     "c": "東和正 / AzumaKazumasa",
+     "u": "https://www.youtube.com/watch?v=yBg-oOFREHA"
+    },
+    {
+     "t": "【星の翼】1ヒットよろけの薙ぎ払い射撃！？超強そうなエリシア空戦モードPV考察と今週の勝率データ見ながら雑談まとめ【星之翼/Starward】",
+     "c": "東和正 / AzumaKazumasa",
+     "u": "https://www.youtube.com/watch?v=rTwlG_hO4GU"
+    },
+    {
+     "t": "【星の翼】朝活ランクマ！今日エリシア陸戦だけは調整入れてほしいけど果たして⋯【星之翼/Starward】【東和正】",
+     "c": "東和正 / AzumaKazumasa",
+     "u": "https://www.youtube.com/watch?v=PCL7kp2cYR0"
+    }
+   ],
+   "kind": "near",
+   "suggest": [
+    "Starward Rogue"
+   ]
+  },
+  {
+   "word": "Wo Long 2",
+   "channels": 1,
+   "n": 1,
+   "examples": [
+    {
+     "t": "『Wo Long 2』TGS2026試遊版で曹仁を撃破する",
+     "c": "Ｖジャンプチャンネル",
+     "u": "https://www.youtube.com/watch?v=F3bmOi5JZ3A"
+    }
+   ],
+   "kind": "near",
+   "suggest": [
+    "Wo Long 2: Wings of Ember"
+   ]
+  },
+  {
+   "word": "Help Wanted",
+   "channels": 1,
+   "n": 1,
+   "examples": [
+    {
+     "t": "🔴【FNAF12周年】新作小説シリーズ？！Fazbear Frights新装＆日本語化MODサイト爆誕！『Help Wanted』『Cleithrophobia』【解説・考察】",
+     "c": "#CurryNiki カレーニキ (方舟のアルクティカ)",
+     "u": "https://www.youtube.com/watch?v=-k1v4chWvzg"
+    }
+   ],
+   "kind": "near",
+   "suggest": [
+    "Help Wanted: 50 Wacky Jobs!"
+   ]
+  },
+  {
+   "word": "ORDER 13",
+   "channels": 1,
+   "n": 1,
+   "examples": [
+    {
+     "t": "【ORDER 13】ねこゲーってルイルイにプレゼントしてもらったゲームの様子がおかしい【博衣こより/ホロライブ】",
+     "c": "Koyori ch. 博衣こより - holoX -",
+     "u": "https://www.youtube.com/watch?v=qZpO05cQXvw"
+    }
+   ],
+   "kind": "near",
+   "suggest": [
+    "Order 13 VR"
+   ]
+  },
+  {
+   "word": "＃天下無双ARK",
+   "channels": 8,
+   "n": 43,
+   "examples": [
+    {
+     "t": "【＃天下無双ARK】初心者ARK：最強の恐竜を目指します＃１【猫宮ひなた】",
+     "c": "ひなたチャンネル (Hinata Channel)",
+     "u": "https://www.youtube.com/watch?v=jjzov9KTR20"
+    },
+    {
+     "t": "【＃天下無双ARK】初心者ARK：最強の恐竜を目指します＃１【猫宮ひなた】",
+     "c": "ひなたチャンネル (Hinata Channel)",
+     "u": "https://www.youtube.com/watch?v=jjzov9KTR20"
+    },
+    {
+     "t": "恐竜初見です【 天下無双ARK / 1日目 】#山黒音玄",
+     "c": "ねくろちゃん -Yamaguro Nekuro- /あおぎり高校",
+     "u": "https://www.youtube.com/watch?v=N81-YZYmVUA"
+    }
+   ],
+   "kind": "wide",
+   "suggest": []
+  },
+  {
+   "word": "#あんスタ",
+   "channels": 3,
+   "n": 11,
+   "examples": [
+    {
+     "t": "【#あんスタ】初見様大歓迎の視聴者参加型！あなたの推しのキャラやMVを見せて！【寒糸ゆあむ/カピバラVtuber】",
+     "c": "寒糸ゆあむ - Samuito Yuam -",
+     "u": "https://www.youtube.com/watch?v=p4-HI7zMX3k"
+    },
+    {
+     "t": "【#あんスタ】初見様大歓迎の視聴者参加型！あなたの推しのキャラやMVを見せて！【寒糸ゆあむ/カピバラVtuber】",
+     "c": "寒糸ゆあむ - Samuito Yuam -",
+     "u": "https://www.youtube.com/watch?v=p4-HI7zMX3k"
+    },
+    {
+     "t": "【#あんスタ】推しコンビで観よう！『Trap For You』選手権！！【#あんさんぶるスターズ！！Music #初見  #男性配信者  #ソシャゲ 】",
+     "c": "和菓子のフランメ【わがフラch】",
+     "u": "https://www.youtube.com/watch?v=kT9hJwX1jdY"
+    }
+   ],
+   "kind": "wide",
+   "suggest": []
+  },
+  {
+   "word": "#シミュグラ4",
+   "channels": 3,
+   "n": 10,
+   "examples": [
+    {
+     "t": "【#シミュグラ4】Day15 / BlaM【BJ/ビージェイ】",
+     "c": "vii / ビー",
+     "u": "https://www.youtube.com/watch?v=z-XNGuczFXg"
+    },
+    {
+     "t": "【#シミュグラ4】Day15 / BlaM【BJ/ビージェイ】",
+     "c": "vii / ビー",
+     "u": "https://www.youtube.com/watch?v=z-XNGuczFXg"
+    },
+    {
+     "t": "【#SOG4】12日目 野住パイセン/ヴ＝ヴヴ #シミュグラ4",
+     "c": "ヴェルン=ヴレイヴ",
+     "u": "https://www.youtube.com/watch?v=asGfA-gq1Kg"
+    }
+   ],
+   "kind": "wide",
+   "suggest": []
+  },
+  {
+   "word": "ダンガンロンパ",
+   "channels": 3,
+   "n": 6,
+   "examples": [
+    {
+     "t": "【＃２】まさかの展開連発で頭がぐちゃぐちゃになるツルギ【ダンガンロンパ】",
+     "c": "柊ツルギ / Hiiragi Tsurugi",
+     "u": "https://www.youtube.com/watch?v=7E1yAnvv1mU"
+    },
+    {
+     "t": "\"希望の学園と絶望の高校生\" を完全初見プレイ、いきます。【ダンガンロンパ】",
+     "c": "但野リス / Tadano Risu",
+     "u": "https://www.youtube.com/watch?v=f--e_0xhIWk"
+    },
+    {
+     "t": "【ダンガンロンパ】完全初見！黒幕の内通者判明！＃12【個人勢Vtuber/楚桜ゆのあ】",
+     "c": "sozakura yunoa / 楚桜ゆのあ ch.",
+     "u": "https://www.youtube.com/watch?v=YK4LSbpcMO4"
+    }
+   ],
+   "kind": "wide",
+   "suggest": []
+  },
+  {
+   "word": "てあカノ　手垢のついたことしか言わない彼女",
+   "channels": 3,
+   "n": 3,
+   "examples": [
+    {
+     "t": "インターネットを揺るがす問題作【てあカノ　手垢のついたことしか言わない彼女】",
+     "c": "卯月コウ",
+     "u": "https://www.youtube.com/watch?v=CwYJSaB5ZGw"
+    },
+    {
+     "t": "ネットミームしか言わない女とのデートがつまらなかったら帰ってもいいゲーム【 てあカノ 手垢のついたことしか言わない彼女 】",
+     "c": "ピロ",
+     "u": "https://www.youtube.com/watch?v=GlUSyaMBAvI"
+    },
+    {
+     "t": "【てあカノ】会話がすべてネットミームの彼女がヤバすぎたｗｗｗ【てあカノ 手垢のついたことしか言わない彼女】",
+     "c": "とりしお。Torishio ch.",
+     "u": "https://www.youtube.com/watch?v=Zk5IDOln2sc"
+    }
+   ],
+   "kind": "wide",
+   "suggest": []
+  },
+  {
+   "word": "プロジェクト・ソラリス",
+   "channels": 3,
+   "n": 3,
+   "examples": [
+    {
+     "t": "【新作】これはハマる！100日間で相棒を育てるローグライトRPG『プロジェクト・ソラリス』【Steam】",
+     "c": "しろこりGames / インディーゲーム専門Vtuber",
+     "u": "https://www.youtube.com/watch?v=OEdIhhB5Fgg"
+    },
+    {
+     "t": "【プロジェクト・ソラリス】本日発売の高クオすぎるローグライク×RPGがヤバい...！？新しいシステムもりだくさんの神ゲー。トゲ特化ビルドでデッキビルダー攻略が面白いw10%セール予定【steam】",
+     "c": " なぎせいな / 凪世薙",
+     "u": "https://www.youtube.com/watch?v=CJOYV6sWEeE"
+    },
+    {
+     "t": "【本日発売】これはハマる！ドット絵美少女ローグライトRPG『プロジェクト・ソラリス』が面白すぎたｗ 【Steam】",
+     "c": "くろろじちゃんねる",
+     "u": "https://www.youtube.com/watch?v=4dQVJFcdjbU"
+    }
+   ],
+   "kind": "wide",
+   "suggest": []
+  }
+ ],
+ "miss_days": 7,
  "recent_columns": [
+  {
+   "date": "2026-09-25",
+   "game": "アークナイツ：エンドフィールド",
+   "headline": "無料で配られた新キャラ一人で、ひと晩が埋まった"
+  },
   {
    "date": "2026-09-24",
    "game": "Don't Drop The Cake",
@@ -193,11 +373,6 @@
    "date": "2026-09-12",
    "game": "How to Fish",
    "headline": "3週間、別の4人組が順番に流れ着いている"
-  },
-  {
-   "date": "2026-09-11",
-   "game": "hololive Dreams",
-   "headline": "王を決める配信の裏で、最弱も決めていた"
   }
  ]
 }
