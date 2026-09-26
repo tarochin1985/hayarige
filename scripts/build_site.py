@@ -27,6 +27,7 @@ MISS_DAYS = 7                 # 見落とし候補を何日ぶん合わせて数
 MISS_ALERT = 3                # 「よく出る未知語」として知らせるチャンネル数
 MISS_NEAR = 12                # カタログ前方一致の候補を何件まで出すか
 MISS_WIDE = 20                # よく出る未知語を何件まで出すか
+NOTES_MAX = 4                 # 「今日の見どころ」に並べる行数の上限
 W = {"videos": 0.30, "channels": 0.35, "views": 0.35}
 
 # 1人が同じゲームを1日に何本も出したときの数え方。
@@ -713,6 +714,19 @@ def ssr_pick(col):
     return ("".join(parts) + "".join(body))
 
 
+def ssr_notes(col):
+    """今日の見どころ。JavaScriptが動かなくても読めるようにする。
+
+    カードに出ているのは、サムネイル・ゲーム名・倍率・件数だけ。
+    **そこから読み取れないこと**を短い文で足す場所（2026-09-26 たろちんさん）。
+      「GAMEゆうなchの新作『ダービースタリオン2』配信に注目」
+      「2年以上前のゲームである『風来のシレン6』が上昇」
+    書くのは人（朝の定期実行）で、ここは受け取って並べるだけ。
+    """
+    ns = [str(x).strip() for x in ((col or {}).get("notes") or []) if str(x).strip()]
+    return "".join(f"<li>{e(n)}</li>" for n in ns[:NOTES_MAX])
+
+
 def ssr_hot(rising, archive=False):
     """急上昇のカード。JavaScriptが動かなくても読めるようにする。
 
@@ -1006,6 +1020,7 @@ def render_page(path, data, depth, site_url=""):
                     .replace("__SSR_PICK__", ssr_pick(col_))
                     .replace("__SSR_HOT__", ssr_hot(data.get("rising"),
                                                     data.get("view") == "archive"))
+                    .replace("__SSR_NOTES__", ssr_notes(col_))
                     # 記録のページは過去の話なので「今」と書かない。
                     # JSが動く前にも正しい見出しが出るように、ここで入れておく。
                     .replace("__HOTTITLE__",
@@ -1042,7 +1057,10 @@ def render_page(path, data, depth, site_url=""):
                         DATA / "site_config.json", {}) or {}))
                     .replace("__SNS__", sns_html(read_json(
                         DATA / "site_config.json", {}) or {}))
-                    .replace("__ANALYTICS__", analytics_html()),
+                    .replace("__ANALYTICS__", analytics_html())
+                    # AdSenseの所有権確認タグ／広告タグ。貼られたものをそのまま出す
+                    .replace("__HEADEXTRA__", head_extra(read_json(
+                        DATA / "site_config.json", {}) or {})),
                  encoding="utf-8")
 
 
@@ -1372,6 +1390,96 @@ def share_html(text, url, label):
             + "</div>")
 
 
+# ---------------------------------------------------------------- 広告（AdSense）
+# 2026-09-26 たろちんさんと相談して入れた。順番は「申請の下ごしらえ → 申請 →
+# 通ったら広告を出す」で、**そのどの段階にいるかを data/site_config.json の
+# "ads" 1語で切り替える。**
+#
+# なぜ1語にしたか: このサイトは説明ページに「Cookieを置かず、閲覧者を個人として
+# 追跡しない」と書いてある。広告を出せばそれは嘘になる。かといって、まだ広告が
+# 無いうちから「Google広告のCookieを使っています」と書くのも嘘である。
+# **書いてあることと動いているものが食い違うのが、いちばん損をする。**
+# 文面をひとつの印に紐づけておけば、切り替えを忘れられない。
+#
+# Googleが求めている開示（support.google.com/adsense/answer/1348695 で確認）
+#   ・第三者配信事業者（Googleを含む）がCookieを使って広告を配信すること
+#   ・Cookieによって、過去のアクセス情報に基づく広告が表示されること
+#   ・利用者が広告設定で パーソナライズ広告を無効にできること
+# 下の ADS_ON の文面は、この3つをそのまま日本語にしたもの。
+
+ADS_NONE, ADS_PENDING, ADS_ON = "none", "申請中", "掲載中"
+
+
+def ads_mode(cfg):
+    m = str((cfg or {}).get("ads") or ADS_NONE).strip()
+    return m if m in (ADS_NONE, ADS_PENDING, ADS_ON) else ADS_NONE
+
+
+def head_extra(cfg):
+    """AdSenseの管理画面から渡されるタグを、そのまま <head> に入れる。
+
+    所有権の確認に使うメタタグと、広告を出すためのスクリプトの両方が
+    ここを通る。どちらも文面はGoogleが指定するので、こちらで組み立てず
+    「貼られたものをそのまま出す」形にしてある。
+    まちがって本文やスタイルを貼っても事故らないよう、<meta> と <script> の
+    行だけ通す。
+    """
+    raw = str((cfg or {}).get("adsense_head") or "").strip()
+    if not raw:
+        return ""
+    ok = [ln.strip() for ln in raw.splitlines() if ln.strip()]
+    for ln in ok:
+        if not re.fullmatch(r"<(meta|script)\b[^<>]*>(</script>)?", ln):
+            log(f"site_config.json の adsense_head に、そのまま出せない行が"
+                f"ありました（無視します）: {ln[:60]}")
+            return ""
+    return "".join(ok)
+
+
+def ads_txt(cfg):
+    """ads.txt の中身。AdSenseのサイトIDを入れると出る。
+
+    必須ではないが、Googleが「入れることを強く推奨」している
+    （support.google.com/adsense/answer/12171612 で確認）。
+    自分の広告枠を売ってよい相手を宣言するファイルで、なりすましを防ぐ。
+    """
+    pid = str((cfg or {}).get("adsense_pub_id") or "").strip()
+    if not re.fullmatch(r"pub-\d{10,20}", pid):
+        return ""
+    return f"google.com, {pid}, DIRECT, f08c47fec0942fa0\n"
+
+
+def ads_privacy_html(cfg):
+    """プライバシーのページに出す、広告についての説明。"""
+    m = ads_mode(cfg)
+    if m == ADS_NONE:
+        return ""
+    if m == ADS_PENDING:
+        return """
+<h2>広告について</h2>
+<p>当サイトは現在、Google AdSense による広告の掲載を申請しています。
+<b>この文章を書いている時点では、広告は表示していません。</b>
+審査を通って広告を出し始めたときは、このページを同時に書き換え、
+どのCookieが使われるかをここに明記します。</p>
+"""
+    return """
+<h2>広告について</h2>
+<p>当サイトは第三者配信の広告サービス <b>Google AdSense</b> を利用しています。</p>
+<p>第三者配信事業者（Googleを含む）は、Cookie を使用して、
+利用者が過去に当サイトや他のサイトへアクセスした情報にもとづく広告を配信します。
+Google が広告 Cookie を使用することにより、Google やそのパートナーは、
+当サイトや他のサイトへのアクセス情報にもとづく広告を利用者に表示できます。</p>
+<p>パーソナライズ広告は、
+<a href="https://www.google.com/settings/ads" target="_blank" rel="noopener">広告設定</a>
+で無効にできます。第三者配信事業者による Cookie の使用を無効にする方法は
+<a href="https://www.aboutads.info/choices/" target="_blank" rel="noopener">www.aboutads.info</a>
+をご覧ください。</p>
+<p>広告の内容は配信事業者が決めており、当サイトが選んでいるものではありません。
+ランキングの順位や、コラムで取り上げるゲームの選び方は、
+広告とは一切関係ありません。</p>
+"""
+
+
 def privacy_html(cfg):
     """プライバシーと問い合わせ先。広告や解析を入れるなら要るページ。
 
@@ -1398,6 +1506,7 @@ def privacy_html(cfg):
 サイトをまたいで追いかけたりすることもありません。
 分かるのは「どのページが何回見られたか」「どこから来たか」といった
 まとまった数字だけです。</p>
+{ads_privacy_html(cfg)}
 <h2>外部のサイトへのリンク</h2>
 <p>ランキングやコラムから、SteamやAmazonの商品ページへリンクしています。
 このうちAmazonへのリンクには紹介料の識別子が付いています。
@@ -1709,8 +1818,13 @@ def about_html(cfg, n_channels):
 
 <h2>アクセス解析について</h2>
 <p>どのページがどれくらい見られているかを知るために、Cloudflare Web Analytics を
-使っています。Cookieを置かず、閲覧者を個人として追いかけない仕組みのものです。
+使っています。<b>この解析は</b>Cookieを置かず、閲覧者を個人として追いかけません。
 このサイトが名前・メールアドレスなどの個人情報を集めることはありません。</p>
+{"" if ads_mode(cfg) != ADS_ON else
+ '<p>ただし、当サイトは Google AdSense による広告を掲載しており、'
+ '<b>広告の配信にはCookieが使われます。</b>くわしくは'
+ '<a href="../privacy/">お問い合わせ・プライバシー</a>'
+ 'のページに書いています。</p>'}
 <p>集めた配信のデータ（タイトル・チャンネル名など）は、YouTubeの規約に従って
 30日を過ぎたら消しています。古い日の記録ページに配信の一覧が出ないのは
 そのためです。</p>
@@ -1748,6 +1862,54 @@ def store_links(name, plat, cfg):
         amazon = ("https://www.amazon.co.jp/s?k=" + quote_plus(name)
                   + "&tag=" + quote_plus(tag))
     return steam, amazon
+
+
+def hot_facts(rising, gdays):
+    """急上昇に入った各ゲームの「書くときに要る事実」を集める。
+
+    なぜ要るか（2026-09-26 たろちんさん）:
+      「『このゲームがアツい！』はサムネとタイトルと件数が並んでいるだけ。
+        ここに3行サマリーみたいなものを足すのは意味がある」
+
+    その3行を書くのは朝の定期実行（人の目が入る側）だが、**書く材料が
+    手元に無いと、書けるのは数字の言い換えだけになる。**
+    「2年以上前のゲームが上がっている」「同じ日に懐かしいRPGが2本並んだ」
+    のような一文は、発売年とジャンルと過去の登場日が分かって初めて書ける。
+    だからここで、判断に要る事実だけを leads.json に書き出しておく。
+
+    **ここでは文章を作らない。** 事実だけ渡して、何を書くかは人に任せる。
+    機械に「懐かしRPGが人気」と言わせると、当たっている日はよいが、
+    外した日にサイトが嘘をつくことになる。
+    """
+    cat = {}
+    for g in M.catalogue():
+        cat.setdefault(g["name"], g)
+    out = []
+    for r in rising or []:
+        # カタログは正式名で引く。日ごとの記録（game_days.json）は
+        # **画面に出している表記**で保存されているので、そちらは r["game"]。
+        # ここを取り違えると、前にも出ているゲームが毎日「初登場」になる。
+        meta = cat.get(r.get("canonical") or r["game"]) or {}
+        prev = sorted(d for d, games in (gdays or {}).items()
+                      if r["game"] in games and d < today())
+        out.append({
+            "game": r["game"],
+            "growth": r.get("growth"), "videos": r["videos"],
+            "base": r.get("base"),
+            "channels": r["channels"], "views": r["views"],
+            # 誰が配信したか。1行に固有名詞が1つあるだけで読み物になる
+            "who": [s["c"] for s in (r.get("streams") or [])][:5],
+            "titles": [s["t"] for s in (r.get("streams") or [])][:3],
+            "genres": meta.get("g") or [],
+            # IGDBの発売年。辞書を作り直したあとから入る（古い辞書には無い）
+            "year": meta.get("y"),
+            "platforms": meta.get("p") or [],
+            # 当サイトの記録。何日出たか・前はいつか・今日が初めてか
+            "days_seen": len(prev),
+            "last_seen": prev[-1] if prev else None,
+            "first_here": not prev,
+        })
+    return out
 
 
 def pick_rising(rows, momentum_ready):
@@ -2016,10 +2178,14 @@ def main():
     # robots.txt で /admin/ を検索避けしているが、それだと外から読む手段まで
     # 塞がってしまう。中身は公開データの集計でしかないので、機械で読む用は
     # 直下にも置く（トップからはリンクしない）。
+    # 「今日の見どころ」を書くための材料。文章はここでは作らない（hot_facts の説明）
+    hfacts = hot_facts(rising, read_json(DATA / "game_days.json", {}) or {})
     write_json(SITE / "leads.json",
                {"date": today(), "generated": payload["generated"],
                 "leads": leads, "drift": drift, "tags": tagnotes,
                 "misses": misses, "miss_days": MISS_DAYS,
+                "hot_facts": hfacts,
+                "notes_written": bool((column or {}).get("notes")),
                 "recent_columns": recent_cols[::-1]})
 
     # ---- アーカイブ一覧を更新する ----
@@ -2276,6 +2442,19 @@ def main():
         rb.write_text("\n".join(keep).rstrip()
                       + f"\n\nSitemap: {site_url}/sitemap.xml\n", encoding="utf-8")
         log(f"sitemap.xml を書き出しました（{len(urls)} ページ）")
+
+    # ---- ads.txt（AdSenseのサイトIDを入れたときだけ出す） ----
+    at, atp = ads_txt(cfg), SITE / "ads.txt"
+    if at:
+        if not atp.exists() or atp.read_text(encoding="utf-8") != at:
+            atp.write_text(at, encoding="utf-8")
+            log("ads.txt を書き出しました（AdSenseの広告枠の持ち主を宣言するファイル）")
+    elif atp.exists():
+        atp.unlink()
+        log("ads.txt を消しました（site_config.json の adsense_pub_id が空です）")
+    if ads_mode(cfg) == ADS_ON and not at:
+        log("広告を『掲載中』にしていますが、adsense_pub_id が空なので "
+            "ads.txt が出ません（data/site_config.json）")
 
     # YouTubeの規約で、配信タイトルなどを持てるのは30日まで
     purge_old(site_url)

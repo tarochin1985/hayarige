@@ -203,6 +203,15 @@ tr.detail td{background:var(--card-2);padding:14px 18px}
 /* ---- 上位3件のカード ---- */
 .pick{position:relative}
 .pick.has-img{display:grid;grid-template-columns:1fr 268px;column-gap:22px;align-items:start}
+/* 急上昇の「今日の見どころ」。カードの数字だけでは読み取れないことを短く足す */
+.hnotes{list-style:none;margin:0 0 14px;padding:11px 14px;background:var(--card);
+  border:1px solid var(--line);border-left:3px solid var(--hot);border-radius:0 10px 10px 0;
+  display:flex;flex-direction:column;gap:7px}
+.hnotes:empty{display:none}
+.hnotes li{font-size:13.5px;line-height:1.72;color:var(--ink-1);
+  padding-left:15px;position:relative}
+.hnotes li::before{content:"";position:absolute;left:0;top:.62em;width:6px;height:6px;
+  border-radius:50%;background:var(--hot)}
 .ptxt{grid-column:1;grid-row:1;display:flex;flex-direction:column;gap:9px;min-width:0}
 .heroimg{grid-column:2;grid-row:1;width:100%;aspect-ratio:16/9;object-fit:cover;
  border-radius:10px;background:var(--line-soft)}
@@ -394,7 +403,7 @@ footer{font-size:11.5px;color:var(--ink-3);text-align:center;border-top:1px soli
 .slegend .sday{pointer-events:none;margin-right:1px}
 .smeta .nork{color:var(--ink-3)}
 @media (prefers-reduced-motion:reduce){*{transition:none!important}}
-</style>__ANALYTICS__</head><body>
+</style>__ANALYTICS____HEADEXTRA__</head><body>
 
 <div class="wrap">
   <header class="top">
@@ -427,6 +436,7 @@ footer{font-size:11.5px;color:var(--ink-3);text-align:center;border-top:1px soli
       <h2><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="var(--hot)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2L4 14h7l-1 8 9-12h-7l1-8z"/></svg><span id="hot-title">__HOTTITLE__</span></h2>
       <span class="note" id="hot-note">ふだんの何倍に増えたかで並べています。まだ知られていないゲームほど上に来ます</span>
     </div>
+    <ul class="hnotes" id="hotnotes">__SSR_NOTES__</ul>
     <div class="hot-grid" id="hot">__SSR_HOT__</div>
   </section>
 
@@ -737,6 +747,10 @@ function render(){
   };
 
   // ---- 今このゲームがアツい（このサイトの主役。ランキングより先に読ませる）
+  // 今日の見どころ。カードの数字だけでは読み取れないことを短く足す。
+  // 中身はコラムのJSONの notes（人が書いたもの）。無い日は何も出ない。
+  $('#hotnotes').innerHTML = ((DATA.column || {}).notes || [])
+    .map(n => `<li>${esc(n)}</li>`).join('');
   $('#hot-sec').style.display = mo.ready ? '' : 'none';
   if (!mo.ready) {
     // データが足りないうちは倍率を出さない。代わりに「広がり」を出す。

@@ -74,6 +74,10 @@ BAD_SOURCE = [
 ]
 
 MIN_BODY, MAX_BODY = 120, 480
+# 「今日の見どころ」（notes）。急上昇のカードの上に並ぶ短い行。
+# 長くすると、そこだけで読み終わってしまってカードを見なくなる。
+# 1行で1つのことだけ書く長さに抑える（2026-09-26）。
+NOTES_MAX, MIN_NOTE, MAX_NOTE = 4, 12, 80
 
 
 def style(col, day=""):
@@ -202,8 +206,22 @@ def validate(col):
     if body and not (MIN_BODY <= len(body) <= MAX_BODY):
         bad.append(f"本文が {len(body)} 字です（{MIN_BODY}〜{MAX_BODY} 字にしてください）")
 
+    notes = col.get("notes")
+    if notes is not None:
+        if not isinstance(notes, list):
+            bad.append("notes はリストにしてください（[\"…\", \"…\"]）")
+            notes = []
+        elif len(notes) > NOTES_MAX:
+            bad.append(f"notes が {len(notes)} 行あります（{NOTES_MAX} 行までにしてください）")
+        for n in (notes or []):
+            n = str(n)
+            if not (MIN_NOTE <= len(n) <= MAX_NOTE):
+                bad.append(f"notes の行が {len(n)} 字です"
+                           f"（{MIN_NOTE}〜{MAX_NOTE} 字にしてください）: {n[:24]}")
+    note_text = " ".join(str(n) for n in (col.get("notes") or []))
+
     for w in HEDGE:
-        if w in body or w in str(col.get("headline", "")):
+        if w in body or w in note_text or w in str(col.get("headline", "")):
             bad.append(f"推測を含む言い回しがあります: 「{w}」")
 
     buy = col.get("buy")

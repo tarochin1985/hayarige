@@ -100,6 +100,12 @@ def main():
         rec = {"name": name,
                "alias": [a for a in alts if a and a != name],
                "pop": g.get("total_rating_count", 0)}
+        # 発売年。「2年以上前のゲームが上がっている」のような一文を
+        # 書くのに要る（2026-09-26）。IGDBはUTCの秒で返してくる。
+        ts = g.get("first_release_date")
+        if ts:
+            rec["y"] = datetime.fromtimestamp(int(ts), timezone.utc).year
+
         jp = japanese_title(alt_list, name)
         if jp:
             rec["jp"] = jp
@@ -121,7 +127,7 @@ def main():
     write_json(DATA / "igdb_games.json", out)
     # いつ作った辞書かを残す。新作の取りこぼしは辞書の古さで起きるので、
     # 「そろそろ作り直す時期か」を後から judge できるようにしておく。
-    from datetime import datetime
+    from datetime import datetime, timezone
     from common import JST
     write_json(DATA / "igdb_meta.json",
                {"built": datetime.now(JST).strftime("%Y-%m-%d"), "games": len(out)})

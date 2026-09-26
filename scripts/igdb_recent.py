@@ -94,6 +94,11 @@ def main():
                "alias": [a.get("name", "").strip() for a in alt
                          if a.get("name", "").strip() and a.get("name") != name],
                "pop": g.get("total_rating_count", 0) or 0}
+        # 発売年。「2年以上前のゲームが上がっている」のような一文を
+        # 書くのに要る（2026-09-26）。IGDBはUTCの秒で返してくる。
+        ts = g.get("first_release_date")
+        if ts:
+            rec["y"] = datetime.fromtimestamp(int(ts), timezone.utc).year
         jp = S.japanese_title(alt, name)
         if jp:
             rec["jp"] = jp
