@@ -35,6 +35,25 @@ on:
     - cron: "0 22 * * *"      # UTC 22:00 = 日本時間 翌 7:00
     - cron: "0 10 * * *"      # UTC 10:00 = 日本時間    19:00
   workflow_dispatch:
+    inputs:
+      fetch:
+        # ---- なぜこの選択肢があるか（2026-09-26） -------------------------
+        # サイトの作りを変えた日は、直すたびにここを回したくなる。だが
+        # 回すたびにYouTubeのクォータを約2,500ポイント使う。9月26日は
+        # 1日に5回回して上限に当たり、**その日の収集が0本になった。**
+        #
+        # よく考えると、作りを変えた日にやりたいのは「サイトを作り直す」
+        # ことだけで、**配信を取り直す必要はない。** 同じ日にもう一度
+        # 取っても、中身はほとんど変わらない。
+        #
+        # そこで「no」を選べるようにした。**no なら1ポイントも使わない。**
+        # 手元にあるデータでサイトだけ作り直す。
+        # コードや見た目を直したあとは、こちらを使うこと。
+        description: "配信を取り直す（サイトの作りを変えただけなら no でよい）"
+        required: true
+        default: "yes"
+        type: choice
+        options: ["yes", "no"]
 
 # 前の実行が詰まっていたら、新しい実行が引き継いで打ち切る
 concurrency:
@@ -65,10 +84,17 @@ jobs:
           TWITCH_CLIENT_SECRET: ${{ secrets.TWITCH_CLIENT_SECRET }}
         run: python scripts/igdb_recent.py
 
+      # 定期実行（schedule）のときは inputs が空になるので、この条件は必ず真。
+      # 手で「no」を選んだときだけ飛ばす。
       - name: 新着の配信を集める
+        if: ${{ inputs.fetch != 'no' }}
         env:
           YOUTUBE_API_KEY: ${{ secrets.YOUTUBE_API_KEY }}
         run: python scripts/fetch_daily.py
+
+      - name: 収集を飛ばしました
+        if: ${{ inputs.fetch == 'no' }}
+        run: echo "配信の取り直しは飛ばしました。YouTubeのクォータは使っていません。手元のデータでサイトだけ作り直します。"
 
       - name: 集計してサイトを作る
         run: python scripts/build_site.py
