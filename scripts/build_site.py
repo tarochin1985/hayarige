@@ -11,6 +11,7 @@ import hashlib
 import math, re
 from collections import defaultdict, Counter
 from datetime import datetime, timedelta, timezone
+from pathlib import Path
 from urllib.parse import quote, quote_plus
 from common import DATA, SITE, JST, log, read_json, write_json, today
 import match as M
@@ -74,15 +75,20 @@ def matcher_fingerprint():
     2026-09-24に、全ページに焼き込まれていた壊れたリンク（unknown.json）を
     型紙で直したとき、たまたま同じ日に辞書も変えていたから作り直された。
     辞書を触らない日に型紙だけ直すと、直らないままになる。
+
+    この書き出しプログラム自身（build_site.py）も入れる。2026-09-26に、
+    記録のページへ急上昇を残す直しを入れたとき、**型紙も一緒に直したから
+    作り直された**だけだと気づいた。中身の組み立て方だけを変えた日は、
+    同じ穴にはまる。作り直しは2分ほどかかるが、直したのに直らないほうが悪い。
     """
     h = hashlib.sha1()
     for name in MATCH_INPUTS:
         f = DATA / name
         h.update(name.encode())
         h.update(f.read_bytes() if f.is_file() else b"")
-    tpl = SITE / "template.html"
-    h.update(b"template.html")
-    h.update(tpl.read_bytes() if tpl.is_file() else b"")
+    for p in (SITE / "template.html", Path(__file__).resolve()):
+        h.update(p.name.encode())
+        h.update(p.read_bytes() if p.is_file() else b"")
     return h.hexdigest()[:16]
 
 
@@ -734,6 +740,38 @@ def ssr_hot(rising, archive=False):
     return "".join(out)
 
 
+def ssr_arch(archive, home):
+    """これまでの記録の一覧。JavaScriptが動かなくても読めるようにする。
+
+    ここに並べるのは、その日の上位ゲームではなく**その日の急上昇**。
+    32日ぶんで数えたところ、上位5に出たゲームは24種類しかなく、
+    Apexは32日中32日、ストリートファイター6は31日、マイクラは27日出ていた。
+    前日と同じ顔ぶれが平均3.7/5。**一覧に並べても、ほぼ同じ行が続くだけ**だった。
+    同じ日数で急上昇3に出たゲームは63種類、前日と同じ顔ぶれは平均0.4/3。
+    「次に流行るゲーム」を見にくるサイトの記録としては、こちらが中身になる
+    （2026-09-26 たろちんさん）。
+    """
+    out = []
+    for en in archive or []:
+        col = en.get("column") or {}
+        gs = "".join(
+            f'<span class="g">{e(g["game"])}'
+            f'<span class="mu">×{math.floor((g.get("growth") or 1) * 10 + 0.5) / 10:.1f}</span>'
+            '</span>' for g in (en.get("hot") or []))
+        if not gs:      # 倍率を出せない日（データが足りない古い日）は、これまでどおり上位を出す
+            gs = "".join(f'<span class="g">{e(g["game"])}</span>'
+                         for g in (en.get("top") or [])[:3])
+        out.append(
+            f'<a class="day" href="{home}d/{e(en["date"])}/">'
+            f'<span class="dt">{e(en["date"].replace("-", "."))}</span><span class="bd">'
+            + (f'<span class="hl">{e(col.get("game", ""))}｜{e(col.get("headline", ""))}</span>'
+               if col else "")
+            + f'<span class="gs">{gs}</span>'
+            f'<span class="st">配信 {en["videos"]}本 / {en["channels"]}ch / {en["games"]}ゲーム</span>'
+            '</span></a>')
+    return "".join(out)
+
+
 def ssr_cards(rows):
     """上位3件のカード。"""
     out = []
@@ -881,7 +919,7 @@ def page_meta(data):
 
     if data.get("mode") == "archive":
         return (f"これまでの記録 ｜ {SITE_T}", "これまでの記録",
-                "その日どのゲームが配信されていたかを、日ごとに残しています。"
+                "その日ふだんより配信が増えたゲームを、日ごとに残しています。"
                 "VTuber・ゲーム実況者のYouTube配信の記録。")
 
     # トップページ。中身は「今日の記録ページ」と同じものだが、
@@ -968,6 +1006,27 @@ def render_page(path, data, depth, site_url=""):
                     .replace("__SSR_PICK__", ssr_pick(col_))
                     .replace("__SSR_HOT__", ssr_hot(data.get("rising"),
                                                     data.get("view") == "archive"))
+                    # 記録のページは過去の話なので「今」と書かない。
+                    # JSが動く前にも正しい見出しが出るように、ここで入れておく。
+                    .replace("__HOTTITLE__",
+                             "この日アツかったゲーム"
+                             if data.get("view") == "archive"
+                             else "今このゲームがアツい！")
+                    .replace("__SSR_ARCH__",
+                             ssr_arch(data.get("archive"), home)
+                             if data.get("mode") == "archive" else "")
+                    # どの節を出すかは、これまでJavaScriptだけが決めていた。
+                    # そのため「これまでの記録」「このサイトについて」「ゲームを探す」は、
+                    # HTMLに中身が入っているのに display:none のまま隠れていた
+                    # （2026-09-26に、記録の一覧をHTMLにも書き出して気づいた）。
+                    # 最初から正しい状態で出す。JSが動けば同じ内容で描き直される。
+                    .replace("__MAINDISP__",
+                             "display:none"
+                             if data.get("mode") in ("archive", "page", "admin") else "")
+                    .replace("__ARCHDISP__",
+                             "" if data.get("mode") == "archive" else "display:none")
+                    .replace("__PAGEDISP__",
+                             "" if data.get("mode") == "page" else "display:none")
                     .replace("__SSR_CARDS__", ssr_cards(rows_))
                     .replace("__SSR_ROWS__", ssr_rows(rows_))
                     .replace("__PAGEBODY__", data.get("page_body", ""))
@@ -1691,6 +1750,31 @@ def store_links(name, plat, cfg):
     return steam, amazon
 
 
+def pick_rising(rows, momentum_ready):
+    """急上昇に出す行を選ぶ。今日のページでも過去の記録ページでも同じ基準を使う。
+
+    倍率の大きい順。小さくて誰も知らないゲームが上に来るようにする
+    （2026-09-19 たろちんさん）。品質は本数ではなく「何人が別々に始めたか」で取る。
+    """
+    if not momentum_ready:
+        return []
+    return sorted(
+        [r for r in rows
+         if r["videos"] >= MIN_FOR_MOMENTUM
+         and r["channels"] >= RISING_MIN_CHANNELS
+         and (r["growth"] or 0) > 1.25],
+        key=lambda r: -r["growth"])[:RISING_N]
+
+
+ARCH_HOT_N = 3        # これまでの記録の一覧に、その日の急上昇を何本並べるか
+
+
+def arch_hot(rising):
+    """これまでの記録の一覧に出す、その日の急上昇。名前と倍率だけ。"""
+    return [{"game": r["game"], "growth": r.get("growth"),
+             "channels": r["channels"]} for r in (rising or [])[:ARCH_HOT_N]]
+
+
 def compute_rows(videos, idx, disp, override, hist, day_names, momentum_ready,
                  plats=None, cfg=None):
     """その日の動画リストから、ランキングの行を作る。"""
@@ -1785,12 +1869,7 @@ def main():
     # 3人が同じ日に別々に触っているなら、それは見つけてよい兆しである。
     # 26日ぶんで数えたところ、3人以上の候補は1日あたり37件あり、6件出しても
     # 毎日3.5件が入れ替わる（22日間で68種類、件数の中央値4.5件）。
-    rising = sorted(
-        [r for r in rows
-         if r["videos"] >= MIN_FOR_MOMENTUM
-         and r["channels"] >= RISING_MIN_CHANNELS
-         and (r["growth"] or 0) > 1.25],
-        key=lambda r: -r["growth"])[:RISING_N] if momentum_ready else []
+    rising = pick_rising(rows, momentum_ready)
     # 急上昇が出せない間は「今日いちばん多くの配信者が触ったゲーム」を代わりに出す
     spread = sorted(rows, key=lambda r: (-r["channels"], -r["videos"]))[:3]
 
@@ -1951,6 +2030,7 @@ def main():
         "videos": payload["totals"]["videos"],
         "channels": payload["totals"]["channels"],
         "games": payload["totals"]["games"],
+        "hot": arch_hot(rising),
         "top": [{"game": r["game"], "videos": r["videos"], "channels": r["channels"]}
                 for r in rows[:5]],
         "column": {"game": column["game"], "headline": column["headline"]} if column else None,
@@ -1990,6 +2070,35 @@ def main():
     # 収集は48時間ぶんを取るが、控えめに1日ぶんだけ信用する。
     cover_from = ((datetime.strptime(runs[0], "%Y-%m-%d") - timedelta(days=1))
                   .strftime("%Y-%m-%d") if runs else "9999-12-31")
+
+    # 記録のページにも「アツい！」（急上昇）を残す（2026-09-26 たろちんさん）
+    #
+    #   「このサイトの核は『次に流行るゲーム』で、それはランキングよりも
+    #     毎日のコラムと急上昇の観測なのだから」
+    #
+    # これまで、過去の日のページは rising を空にして作り直していた。
+    # そのため辞書を直すたびに全ページが作り直され、**その日いちばん大事だった
+    # 情報だけが毎回消えていた。** 代わりに「いちばん広がったゲーム」（配信者数順）
+    # が出ていたが、それは順位表の言い換えでしかなく、兆しの記録にならない。
+    #
+    # 倍率は「その日の件数 ÷ 直前6日の平均」なので、手元に日別データが残って
+    # いれば後から同じ数字を出せる。前の日の集計は使い回す（下の cal_hist）。
+    cal_cache = {}
+
+    def cal_hist(d):
+        """その日のゲーム別本数。何度も呼ばれるので覚えておく。"""
+        if d not in cal_cache:
+            g, _ = tally(buckets.get(d, []), idx, per_channel(cfg))
+            cal_cache[d] = {k: round(v["n"], 1) for k, v in g.items()}
+        return cal_cache[d]
+
+    def past_window(d):
+        """(その日までの7日, 実データのある日の集計) を返す。"""
+        base = datetime.strptime(d, "%Y-%m-%d")
+        names = [(base - timedelta(days=k)).strftime("%Y-%m-%d")
+                 for k in range(DAYS - 1, -1, -1)]
+        return names, {n: cal_hist(n) for n in names if buckets.get(n)}
+
     added = 0
     for day in sorted(buckets):
         if day == today() or day < cover_from:
@@ -2000,24 +2109,32 @@ def main():
         vids = buckets[day]
         if not vids:
             continue
-        past_rows, _ = compute_rows(vids, idx, disp, override, {}, [], False,
+        # 今日のページと同じ形で倍率を出す。日別データが足りない古い日は
+        # momentum_ready が False になり、これまでどおり「広がり」を出す。
+        win, whist = past_window(day)
+        ready = len(whist) >= MIN_HISTORY
+        past_rows, _ = compute_rows(vids, idx, disp, override, whist, win, ready,
                                     plats, cfg)
         if not past_rows:
             continue
+        past_rising = pick_rising(past_rows, ready)
         col = read_json(DATA / "columns" / f"{day}.json", None)
         # 記録のページでも、今日のページと同じようにサムネイルを出す
         enrich_column(col, past_rows)
         entries[day] = {
             "date": day, "videos": len(vids), "games": len(past_rows),
             "channels": len({v["channel_id"] for v in vids}),
+            "hot": arch_hot(past_rising),
             "top": [{"game": r["game"], "videos": r["videos"], "channels": r["channels"]}
                     for r in past_rows[:5]],
             "column": {"game": col["game"], "headline": col["headline"]} if col else None,
         }
         render(f"d/{day}/index.html",
                {"mode": "day", "view": "archive", "date": day, "column": col,
-                "generated": "", "days": [], "rising": [], "spread": past_rows[:3],
-                "momentum": {"ready": False, "days": 0, "need": MIN_HISTORY},
+                "generated": "", "days": [], "rising": past_rising,
+                "spread": past_rows[:3],
+                "momentum": {"ready": ready, "days": len(whist),
+                             "need": MIN_HISTORY},
                 "totals": {"videos": entries[day]["videos"], "games": len(past_rows),
                            "channels": entries[day]["channels"]},
                 "ranking": past_rows[:30]}, 2)
