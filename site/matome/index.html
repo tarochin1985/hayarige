@@ -203,6 +203,15 @@ tr.detail td{background:var(--card-2);padding:14px 18px}
 /* ---- 上位3件のカード ---- */
 .pick{position:relative}
 .pick.has-img{display:grid;grid-template-columns:1fr 268px;column-gap:22px;align-items:start}
+/* 急上昇の「今日の見どころ」。カードの数字だけでは読み取れないことを短く足す */
+.hnotes{list-style:none;margin:0 0 14px;padding:11px 14px;background:var(--card);
+  border:1px solid var(--line);border-left:3px solid var(--hot);border-radius:0 10px 10px 0;
+  display:flex;flex-direction:column;gap:7px}
+.hnotes:empty{display:none}
+.hnotes li{font-size:13.5px;line-height:1.72;color:var(--ink-1);
+  padding-left:15px;position:relative}
+.hnotes li::before{content:"";position:absolute;left:0;top:.62em;width:6px;height:6px;
+  border-radius:50%;background:var(--hot)}
 .ptxt{grid-column:1;grid-row:1;display:flex;flex-direction:column;gap:9px;min-width:0}
 .heroimg{grid-column:2;grid-row:1;width:100%;aspect-ratio:16/9;object-fit:cover;
  border-radius:10px;background:var(--line-soft)}
@@ -354,7 +363,12 @@ footer{font-size:11.5px;color:var(--ink-3);text-align:center;border-top:1px soli
 .day .dt{font-family:"Roboto Mono",monospace;font-weight:700;font-size:15px;flex:none;width:96px;color:var(--accent)}
 .day .bd{flex:1;min-width:0;display:block}
 .day .hl{display:block;font-family:"Zen Kaku Gothic New",sans-serif;font-weight:700;font-size:14.5px;line-height:1.5}
-.day .gs{display:block;font-size:12.5px;color:var(--ink-2);margin-top:3px}
+.day .gs{display:flex;flex-wrap:wrap;gap:4px 10px;font-size:12.5px;
+  color:var(--ink-2);margin-top:4px}
+.day .gs .g{display:inline-flex;align-items:baseline;gap:4px;min-width:0}
+/* 倍率。ここが「その日の兆し」の強さなので、数字だけ色を変えて読み取れるようにする */
+.day .gs .mu{font-family:"Roboto Mono",monospace;font-size:11.5px;font-weight:700;
+  color:var(--hot);flex:none}
 .day .st{display:block;font-family:"Roboto Mono",monospace;font-size:11px;color:var(--ink-3);margin-top:5px}
 .empty{background:var(--card);border:1px dashed var(--line);border-radius:var(--r);padding:26px;text-align:center;color:var(--ink-3)}
 /* ゲームを探すページ */
@@ -417,15 +431,16 @@ footer{font-size:11.5px;color:var(--ink-3);text-align:center;border-top:1px soli
     
   </section>
 
-  <section id="hot-sec">
+  <section id="hot-sec" style="display:none">
     <div class="head">
       <h2><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="var(--hot)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2L4 14h7l-1 8 9-12h-7l1-8z"/></svg><span id="hot-title">今このゲームがアツい！</span></h2>
       <span class="note" id="hot-note">ふだんの何倍に増えたかで並べています。まだ知られていないゲームほど上に来ます</span>
     </div>
+    <ul class="hnotes" id="hotnotes"></ul>
     <div class="hot-grid" id="hot"></div>
   </section>
 
-  <section id="rank-sec">
+  <section id="rank-sec" style="display:none">
     <div class="head">
       <h2>みんなが遊んでるゲーム</h2>
       <span class="note">カードや行を押すと、そのゲームの配信一覧が開きます</span>
@@ -435,7 +450,7 @@ footer{font-size:11.5px;color:var(--ink-3);text-align:center;border-top:1px soli
     <div class="list" id="rows"></div>
   </section>
 
-  <section id="page-sec" style="display:none">
+  <section id="page-sec" style="">
     <article class="doc" id="page-body"><h1>週・月のまとめ</h1>
 <p>毎日のコラムが「その日起きたこと」なのに対して、ここでは1日を見ているだけでは分からないことを書いています。</p>
 <h2>週まとめ</h2><ul>
@@ -446,7 +461,7 @@ footer{font-size:11.5px;color:var(--ink-3);text-align:center;border-top:1px soli
 
   <section id="arch-sec" style="display:none">
     <div class="head"><h2>これまでの記録</h2>
-      <span class="note">毎日のランキングとコラムは、すべて残しています</span></div>
+      <span class="note">その日ふだんの何倍に増えたゲームと、その日のコラム。日付を押すとその日の記録に飛びます</span></div>
     <div class="arch" id="arch"></div>
   </section>
 
@@ -475,7 +490,7 @@ footer{font-size:11.5px;color:var(--ink-3);text-align:center;border-top:1px soli
 </div>
 
 <script>
-const DATA = {"mode": "page", "date": "2026-09-26", "subtitle": "週・月のまとめ", "generated": "2026-09-26 12:02", "paths": {"home": "../", "archive": "../archive/"}};
+const DATA = {"mode": "page", "date": "2026-09-26", "subtitle": "週・月のまとめ", "generated": "2026-09-26 14:13", "paths": {"home": "../", "archive": "../archive/"}};
 const $ = s => document.querySelector(s);
 const esc = s => String(s ?? '').replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
 const cssv = n => getComputedStyle(document.documentElement).getPropertyValue(n).trim();
@@ -522,14 +537,25 @@ function renderArchive(){
     + `<a href="${P.home}matome/">週・月のまとめ</a>`
     + `<a href="${P.home}search/">ゲームを探す</a>`
     + `<a href="${P.home}about/">このサイトについて</a>`;
-  $('#arch').innerHTML = (DATA.archive || []).map(e => `
-    <a class="day" href="${P.home}d/${esc(e.date)}/">
+  // 並べるのは、その日の上位ゲームではなく「その日の急上昇」。
+  // 上位は Apex・スト6・マイクラで毎日ほぼ同じ顔ぶれになり、一覧にすると
+  // 同じ行が続くだけだった（32日で24種類／前日と平均3.7が同じ）。
+  // 急上昇なら同じ32日で63種類、前日と同じなのは平均0.4。
+  // 「次に流行るゲーム」の記録としては、こちらが中身になる（2026-09-26）。
+  $('#arch').innerHTML = (DATA.archive || []).map(e => {
+    const hot = (e.hot || []).map(g =>
+      `<span class="g">${esc(g.game)}<span class="mu">×${(g.growth || 1).toFixed(1)}</span></span>`);
+    // 倍率を出せない日（データが足りない古い日）は、これまでどおり上位を出す
+    const gs = hot.length ? hot.join('')
+      : (e.top || []).slice(0, 3).map(g => `<span class="g">${esc(g.game)}</span>`).join('');
+    return `<a class="day" href="${P.home}d/${esc(e.date)}/">
       <span class="dt">${esc(e.date.replace(/-/g, '.'))}</span>
       <span class="bd">
         ${e.column ? `<span class="hl">${esc(e.column.game)}｜${esc(e.column.headline)}</span>` : ''}
-        <span class="gs">${(e.top || []).map(g => esc(g.game)).join(' ・ ')}</span>
+        <span class="gs">${gs}</span>
         <span class="st">配信 ${e.videos}本 / ${e.channels}ch / ${e.games}ゲーム</span>
-      </span></a>`).join('') || '<div class="empty">まだ記録がありません。</div>';
+      </span></a>`;
+  }).join('') || '<div class="empty">まだ記録がありません。</div>';
 }
 
 function renderAdmin(){
@@ -726,6 +752,10 @@ function render(){
   };
 
   // ---- 今このゲームがアツい（このサイトの主役。ランキングより先に読ませる）
+  // 今日の見どころ。カードの数字だけでは読み取れないことを短く足す。
+  // 中身はコラムのJSONの notes（人が書いたもの）。無い日は何も出ない。
+  $('#hotnotes').innerHTML = ((DATA.column || {}).notes || [])
+    .map(n => `<li>${esc(n)}</li>`).join('');
   $('#hot-sec').style.display = mo.ready ? '' : 'none';
   if (!mo.ready) {
     // データが足りないうちは倍率を出さない。代わりに「広がり」を出す。
@@ -738,6 +768,9 @@ function render(){
         <div class="f"><span>${r.channels}チャンネルが配信</span><span>${man(r.views)}回 視聴</span></div>
       </div></article>`).join('') || '<div class="empty">データがまだありません。</div>';
   } else {
+    // 記録のページでは「今このゲームが」ではなく「この日」。過去を見ているので
+    $('#hot-title').textContent = isArchive ? 'この日アツかったゲーム'
+                                            : '今このゲームがアツい！';
     const hot = DATA.rising || [];
     $('#hot').innerHTML = hot.length ? hot.map(r => {
       const th = thumb(r), s0 = (r.streams || [])[0];
