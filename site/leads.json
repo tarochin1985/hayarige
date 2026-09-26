@@ -1,32 +1,13 @@
 {
- "date": "2026-09-26",
- "generated": "2026-09-26 19:15",
+ "date": "2026-09-27",
+ "generated": "2026-09-27 02:41",
  "leads": {
   "events": [
-   {
-    "tag": "#マイクラ肝試し2026",
-    "channels": [
-     "Aoi ch.",
-     "Chihaya Ch. 輪堂 千速 - FLOW GLOW",
-     "Flare Ch. 不知火フレア",
-     "Su Ch. 水宮枢 - FLOW GLOW",
-     "Vivi Ch. 綺々羅々ヴィヴィ - FLOW GLOW",
-     "Watame Ch. 角巻わため",
-     "おめがシスターズ [Ω Sisters]",
-     "ぽんぽこちゃんねる",
-     "カラフルピーチ",
-     "堰代ミコ / Mico Channel【ななしいんく】",
-     "小廻こま / Komawari Koma",
-     "甘狼このみ / AmakamiKonomi🐺🍫",
-     "羽渦ミウネル -Miuneru Haneuzu-"
-    ]
-   },
    {
     "tag": "#ゲーム実況",
     "channels": [
      "CHECHE GAME【顔出し初見ゲーム実況】",
      "Usagi Ch. 因幡兎",
-     "こじちゃんねる【小嶋明梨】",
      "ごまっぷ_GameCh",
      "ぱんちき🥖🦃",
      "恋因ロス KoinRosu",
@@ -36,15 +17,13 @@
     ]
    },
    {
-    "tag": "#ストグラ",
+    "tag": "#マイクラ肝試し2026",
     "channels": [
-     "Tenten Ch. / 鳳玲天々",
-     "marunnn【まるーんチャンネル】",
-     "たけぉ",
-     "ましゃかりさん",
-     "みつき",
-     "ノビーの遊び部屋",
-     "魔光リサ - Lisa Makoh -"
+     "Chihaya Ch. 輪堂 千速 - FLOW GLOW",
+     "Flare Ch. 不知火フレア",
+     "Watame Ch. 角巻わため",
+     "カラフルピーチ",
+     "羽渦ミウネル -Miuneru Haneuzu-"
     ]
    },
    {
@@ -54,8 +33,17 @@
      "フルコンチャンネル",
      "中野あるま / Alma Nakano",
      "健屋花那【にじさんじ】KanaSukoya",
-     "影。/かげまる",
-     "猫元パト / Patoneko Ch."
+     "影。/かげまる"
+    ]
+   },
+   {
+    "tag": "#ストグラ",
+    "channels": [
+     "Tenten Ch. / 鳳玲天々",
+     "marunnn【まるーんチャンネル】",
+     "ましゃかりさん",
+     "みつき",
+     "ノビーの遊び部屋"
     ]
    },
    {
@@ -65,73 +53,49 @@
      "Mio Channel 大神ミオ",
      "Riona Ch. 響咲リオナ - FLOW GLOW"
     ]
-   },
-   {
-    "tag": "#ストグラSeason2",
-    "channels": [
-     "けんつめしと飯田けんつ【ストグラ】",
-     "たけぉ",
-     "暁月ホタル AKATSUKI HOTARU"
-    ]
-   },
-   {
-    "tag": "#あたなるRUST鯖",
-    "channels": [
-     "二代目・赤",
-     "影。/かげまる",
-     "藍月すりっぷ -Aotsuki Slip-"
-    ]
-   },
-   {
-    "tag": "#縦型配信",
-    "channels": [
-     "vii / ビー",
-     "かおりんごー",
-     "もみじビーム"
-    ]
    }
   ],
   "newcomers": [],
   "wide": [
    {
     "game": "Apex Legends",
-    "channels": 51,
-    "videos": 60
+    "channels": 41,
+    "videos": 48
    },
    {
     "game": "Minecraft",
-    "channels": 48,
-    "videos": 50
+    "channels": 28,
+    "videos": 29
    },
    {
     "game": "ストリートファイター6",
-    "channels": 37,
-    "videos": 40
-   },
-   {
-    "game": "Silent Hill: Townfall",
     "channels": 24,
-    "videos": 24
+    "videos": 25
    },
    {
     "game": "VALORANT",
-    "channels": 19,
-    "videos": 22
+    "channels": 14,
+    "videos": 15
    },
    {
-    "game": "スプラトゥーン3",
-    "channels": 19,
-    "videos": 21
-   },
-   {
-    "game": "トルネコの大冒険 ちょっとステキなリマスター",
+    "game": "Silent Hill: Townfall",
     "channels": 16,
     "videos": 16
    },
    {
+    "game": "モンスターストライク",
+    "channels": 13,
+    "videos": 14
+   },
+   {
     "game": "Grand Theft Auto V",
-    "channels": 15,
-    "videos": 20
+    "channels": 12,
+    "videos": 18
+   },
+   {
+    "game": "実況パワフルプロ野球2026",
+    "channels": 11,
+    "videos": 11
    }
   ]
  },
@@ -162,22 +126,6 @@
    "kind": "near",
    "suggest": [
     "Starward Rogue"
-   ]
-  },
-  {
-   "word": "Help Wanted",
-   "channels": 1,
-   "n": 1,
-   "examples": [
-    {
-     "t": "🔴【FNAF12周年】新作小説シリーズ？！Fazbear Frights新装＆日本語化MODサイト爆誕！『Help Wanted』『Cleithrophobia』【解説・考察】",
-     "c": "#CurryNiki カレーニキ (方舟のアルクティカ)",
-     "u": "https://www.youtube.com/watch?v=-k1v4chWvzg"
-    }
-   ],
-   "kind": "near",
-   "suggest": [
-    "Help Wanted: 50 Wacky Jobs!"
    ]
   },
   {
@@ -234,14 +182,14 @@
    "n": 6,
    "examples": [
     {
-     "t": "\"希望の学園と絶望の高校生\" を完全初見プレイ、いきます。【ダンガンロンパ】",
-     "c": "但野リス / Tadano Risu",
-     "u": "https://www.youtube.com/watch?v=f--e_0xhIWk"
-    },
-    {
      "t": "【ダンガンロンパ】完全初見！黒幕の内通者判明！＃12【個人勢Vtuber/楚桜ゆのあ】",
      "c": "sozakura yunoa / 楚桜ゆのあ ch.",
      "u": "https://www.youtube.com/watch?v=YK4LSbpcMO4"
+    },
+    {
+     "t": "\"希望の学園と絶望の高校生\" を完全初見プレイ、いきます。【ダンガンロンパ】",
+     "c": "但野リス / Tadano Risu",
+     "u": "https://www.youtube.com/watch?v=f--e_0xhIWk"
     },
     {
      "t": "【＃３】事件の真相と共に男のロマンも探求するツルギ【ダンガンロンパ】",
@@ -253,39 +201,10 @@
    "suggest": []
   },
   {
-   "word": "#あんスタ",
+   "word": "#シミュグラ4",
    "channels": 3,
-   "n": 11,
+   "n": 8,
    "examples": [
-    {
-     "t": "【#あんスタ】初見様大歓迎の視聴者参加型！あなたの推しのキャラやMVを見せて！【寒糸ゆあむ/カピバラVtuber】",
-     "c": "寒糸ゆあむ - Samuito Yuam -",
-     "u": "https://www.youtube.com/watch?v=p4-HI7zMX3k"
-    },
-    {
-     "t": "【#あんスタ】初見様大歓迎の視聴者参加型！あなたの推しのキャラやMVを見せて！【寒糸ゆあむ/カピバラVtuber】",
-     "c": "寒糸ゆあむ - Samuito Yuam -",
-     "u": "https://www.youtube.com/watch?v=p4-HI7zMX3k"
-    },
-    {
-     "t": "【#あんスタ】推しコンビで観よう！『Trap For You』選手権！！【#あんさんぶるスターズ！！Music #初見  #男性配信者  #ソシャゲ 】",
-     "c": "和菓子のフランメ【わがフラch】",
-     "u": "https://www.youtube.com/watch?v=kT9hJwX1jdY"
-    }
-   ],
-   "kind": "wide",
-   "suggest": []
-  },
-  {
-   "word": "シミュグラ4",
-   "channels": 3,
-   "n": 9,
-   "examples": [
-    {
-     "t": "【#SOG4】12日目 野住パイセン/ヴ＝ヴヴ #シミュグラ4",
-     "c": "ヴェルン=ヴレイヴ",
-     "u": "https://www.youtube.com/watch?v=asGfA-gq1Kg"
-    },
     {
      "t": "【#シミュグラ4】Day16 / VRゴーグルの恐怖【BJ/ビージェイ】",
      "c": "vii / ビー",
@@ -295,6 +214,11 @@
      "t": "【#シミュグラ4】Day16 / VRゴーグルの恐怖【BJ/ビージェイ】",
      "c": "vii / ビー",
      "u": "https://www.youtube.com/watch?v=YjFnq6jmxE8"
+    },
+    {
+     "t": "【シミュグラ4】そろそろ貯金が尽きそうだ...。【♯19】",
+     "c": "ゆんころのゲーム部屋",
+     "u": "https://www.youtube.com/watch?v=ZJBCKnEn0vY"
     }
    ],
    "kind": "wide",
@@ -425,65 +349,9 @@
    "platforms": [
     "pc"
    ],
-   "days_seen": 5,
-   "last_seen": "2026-09-22",
+   "days_seen": 6,
+   "last_seen": "2026-09-26",
    "first_here": false
-  },
-  {
-   "game": "ダービースタリオン2",
-   "growth": 3.75,
-   "videos": 3,
-   "base": 0.8,
-   "channels": 3,
-   "views": 82008,
-   "who": [
-    "GAMEゆうなch",
-    "ファミ通TUBE",
-    "GAMEゆうなch",
-    "てちび"
-   ],
-   "titles": [
-    "#2【 ダービースタリオン2 】目指せG1優勝!!新モード搭載で遊びやすさアップ!?ダートレースも増えてダート路線大充実!!【Switch2】",
-    "『ダービースタリオン2』人気競馬シミュレーション最新作を楽しく遊ぶ　#ファミラボ",
-    "【 ダービースタリオン2 】目指せG1優勝!!新モード搭載で遊びやすさアップ!?ダートレースも増えてダート路線大充実!!【Switch2】"
-   ],
-   "genres": [],
-   "year": 2026,
-   "platforms": [
-    "console"
-   ],
-   "days_seen": 2,
-   "last_seen": "2026-09-25",
-   "first_here": false
-  },
-  {
-   "game": "Japanese Ramen Simulator",
-   "growth": 3.75,
-   "videos": 3,
-   "base": 0.2,
-   "channels": 3,
-   "views": 50588,
-   "who": [
-    "アフロマスク",
-    "おぼ。",
-    "しろこりGames / インディーゲーム専門Vtuber"
-   ],
-   "titles": [
-    "日本のラーメン屋をリアル経営できる最新シミュレーターゲームの先行プレイ【 Japanese Ramen Simulator ライブ配信 】",
-    "話題になったラーメン屋シミュレーション、ワンオペ氏おぼが先行プレイ！【Japanese Ramen Simulator】",
-    "【先行プレイ】作りこみが凄まじい！ラーメン作りが本格的な経営シミュレーション『Japanese Ramen Simulator』【Steam】"
-   ],
-   "genres": [
-    "Simulator",
-    "Indie"
-   ],
-   "year": null,
-   "platforms": [
-    "pc"
-   ],
-   "days_seen": 0,
-   "last_seen": null,
-   "first_here": true
   },
   {
    "game": "風来のシレン6 とぐろ島探検録",
@@ -511,60 +379,58 @@
     "pc",
     "console"
    ],
-   "days_seen": 2,
-   "last_seen": "2026-09-25",
+   "days_seen": 3,
+   "last_seen": "2026-09-26",
    "first_here": false
   },
   {
-   "game": "めっちゃカメレオン",
-   "growth": 3.04,
-   "videos": 7,
-   "base": 2.3,
-   "channels": 7,
-   "views": 3058,
+   "game": "ファイナルファンタジーXIV",
+   "growth": 2.78,
+   "videos": 5,
+   "base": 1.8,
+   "channels": 5,
+   "views": 16245,
    "who": [
-    "宵吸あけル / Yokyu Akeru",
-    "ゾンちゅう〜ゾンビJKはゲーム配信中〜",
-    "コーリ",
-    "ゆぅぽたりあん",
-    "くれは"
+    "叶音にゃむ / Kanato Nyamu",
+    "LiLy💠りりねこゲーム中",
+    "さんみつ",
+    "らんぽ clearlamp_o",
+    "苺野みるきぃ🍓"
    ],
    "titles": [
-    "【 #めっちゃカメレオン 】女子会だ～～～💕いっぱい探すぞ～～～！！【 #新人vtuber / #宵吸あけル 】",
-    "【怪しい通販編】九尾のはじめてのおつかい！？【 #めっちゃカメレオン 】【アニメ】【ゲーム実況】",
-    "めっちゃカメレオンやります！"
+    "【 #FF14 】０から始めるFF14✨ティターニアに会いに行きたい🪄💕 漆黒編 #3【 #Vtuber / 叶音にゃむ 】",
+    "完全初見！【FF14】05深夜にこっそり。どうしてもマウントが欲しい！／#りりFF14配信 ファイナルファンタジー14 ヒカセン 初見新規プロ大歓迎！",
+    "【FF14】朝のレベリング＆金策！ギャザクラ全般のんびり作業雑談！ 【作業お供BGMにどうぞ】 #ff14"
    ],
    "genres": [
-    "Tactical",
-    "Indie"
+    "Role-playing (RPG)"
    ],
    "year": null,
    "platforms": [
     "pc",
     "console"
    ],
-   "days_seen": 24,
-   "last_seen": "2026-09-25",
+   "days_seen": 18,
+   "last_seen": "2026-09-26",
    "first_here": false
   },
   {
    "game": "Control Resonant",
-   "growth": 3.0,
+   "growth": 2.5,
    "videos": 3,
-   "base": 1.0,
+   "base": 1.2,
    "channels": 3,
-   "views": 40710,
+   "views": 38292,
    "who": [
     "おついちTube",
-    "フェイチャンネル【ゲーム実況】2000本クリアした男の軌跡",
     "フェイチャンネル【ゲーム実況】2000本クリアした男の軌跡",
     "おついちTube",
     "けいじチャンネル"
    ],
    "titles": [
     "【CONTROL Resonant】#3⚒️7年ぶりに帰ってきた！再びAWEの深淵に挑む【おついちTube】",
-    "【超常現象アクションRPG】サバイバルホラーから大幅な変化を遂げた結果はいかに！【CONTROL Resonant #1】",
-    "【超常現象アクションRPG】サバイバルホラーから大幅な変化を遂げた結果はいかに！【CONTROL Resonant #2】"
+    "【超常現象アクションRPG】サバイバルホラーから大幅な変化を遂げた結果はいかに！【CONTROL Resonant #2】",
+    "【CONTROL Resonant】#3⚒️7年ぶりに帰ってきた！再びAWEの深淵に挑む【おついちTube】"
    ],
    "genres": [
     "Role-playing (RPG)",
@@ -576,8 +442,63 @@
     "pc",
     "console"
    ],
-   "days_seen": 3,
-   "last_seen": "2026-09-25",
+   "days_seen": 4,
+   "last_seen": "2026-09-26",
+   "first_here": false
+  },
+  {
+   "game": "モンスターストライク",
+   "growth": 1.79,
+   "videos": 14,
+   "base": 7.8,
+   "channels": 13,
+   "views": 408051,
+   "who": [
+    "しろ",
+    "比宮じょーず",
+    "ちょこ",
+    "ごむひもチャンネル",
+    "ちょこ"
+   ],
+   "titles": [
+    "【モンスト】「もうすでに致命傷です...」気持ちよく周年を迎えるはずが属性ガチャの洗礼を受けてしまうww 新限定『アンダーワールド・トラベラーズ』狙いで引き散らかした結果！【しろ】",
+    "【モンストLIVE🔴】三途ちゃんに捧げる愛[オーブ]！「アンダーワールド・トラベラーズ」運極までガチャる！【モンスターストライク】",
+    "【🔴LIVE】13周年開幕。ガチャを引き散らかす。【モンスト/ちょこ】"
+   ],
+   "genres": [],
+   "year": null,
+   "platforms": [],
+   "days_seen": 29,
+   "last_seen": "2026-09-26",
+   "first_here": false
+  },
+  {
+   "game": "バイオハザード4",
+   "growth": 1.76,
+   "videos": 3,
+   "base": 1.7,
+   "channels": 3,
+   "views": 1517,
+   "who": [
+    "負け組ゆーちゃんねる",
+    "三明夜奏 / Miake Yakana",
+    "のどか"
+   ],
+   "titles": [
+    "【誕生日なので】バイオハザード4『縛りプレイ』ハンドガン四種＋回復拾い食いノーコンテニュー【バイオ4 ニコニコ生放送 ヤフミ世代】",
+    "【RE:4】トロコンへの道～苦手すぎる射撃～【#バイオハザードre4 】",
+    "巷で話題になったヒロインきたああああ【バイオハザードRE:4 06】"
+   ],
+   "genres": [
+    "Shooter",
+    "Adventure"
+   ],
+   "year": null,
+   "platforms": [
+    "console"
+   ],
+   "days_seen": 9,
+   "last_seen": "2026-09-26",
    "first_here": false
   }
  ],

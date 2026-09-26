@@ -61,7 +61,13 @@ h1,h2{font-family:"Zen Kaku Gothic New","Noto Sans JP",sans-serif;margin:0;text-
 a{color:inherit}
 .mono{font-family:"Roboto Mono",monospace;font-variant-numeric:tabular-nums}
 .top{display:flex;flex-wrap:wrap;align-items:center;gap:14px 22px}
-.logo{display:flex;align-items:center;gap:11px}
+/* ロゴはトップへのリンク。文字色も下線も、リンクにする前と同じに保つ */
+.logo{display:flex;align-items:center;gap:11px;color:inherit;text-decoration:none;
+  border-radius:12px;padding:4px 8px;margin:-4px -8px;   /* 押せる範囲を少し広げる */
+  transition:background .12s}
+.logo:hover{background:var(--line-soft)}
+.logo:hover h1{color:var(--accent)}
+.logo:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
 .mark{width:46px;height:46px;flex:none;object-fit:contain}
 .logo h1{font-size:27px;font-weight:900;line-height:1}
 .logo .tag{font-size:12.5px;font-weight:700;color:var(--ink-2);margin-top:4px;line-height:1.5}
@@ -407,10 +413,14 @@ footer{font-size:11.5px;color:var(--ink-3);text-align:center;border-top:1px soli
 
 <div class="wrap">
   <header class="top">
-    <div class="logo">
+    <!-- ロゴと題名を押すとトップに戻る（2026-09-26 たろちんさん）。
+         行き先は ../../（現在地からトップまでの相対パス）。
+         ここに "/" と書いてもいまは動くが、テンプレートの中に絶対パスを
+         書く癖をつけると、置き場所が変わったときに全ページが一度に壊れる。 -->
+    <a class="logo" href="../../" aria-label="ハヤリゲーのトップページへ">
       <img class="mark" src="../../logo.svg" alt="" width="46" height="46">
       <div><h1>ハヤリゲー</h1><div class="tag">「次に流行るゲーム」がわかるサイト<span class="tag2">YouTubeのゲーム配信 2,087チャンネルを毎日数えています</span></div></div>
-    </div>
+    </a>
     <div class="when"><b id="s-date">–</b><span id="s-meta">–</span></div>
   </header>
 
@@ -499,13 +509,19 @@ footer{font-size:11.5px;color:var(--ink-3);text-align:center;border-top:1px soli
          「自分が作ったものだと明示すること」を条件にしている。 -->
     ゲーム名の判定・件数・倍率は、<b>当サイトが配信タイトルから独自に集計したもの</b>です。
     YouTubeが提供する数値や分類ではありません<br>
+    <!-- YouTube利用規約へのリンクは /privacy/ にも置いてあるが、全ページから
+         1回で届くようにしておく。実際の審査で「規約へのリンクが無い」を
+         指摘された例が複数あるため（2026-09-26） -->
+    <span style="opacity:.75">配信データの取得には YouTube Data API を利用しています ｜
+    <a class="flink" style="display:inline;margin:0" href="https://www.youtube.com/t/terms" target="_blank" rel="noopener">YouTube利用規約</a> ｜
+    <a class="flink" style="display:inline;margin:0" href="https://policies.google.com/privacy" target="_blank" rel="noopener">Googleプライバシーポリシー</a></span><br>
     同じ配信者が同じ日に出した続きものは1件として集計 ／ <span id="f-gen"></span><br>
     <span style="opacity:.75">Amazonのアソシエイトとして、当サイトは適格販売により収入を得ています</span>
   </footer>
 </div>
 
 <script>
-const DATA = {"mode": "page", "date": "2026-09-26", "subtitle": "2026年9月7日〜9月13日の週まとめ", "generated": "2026-09-26 19:15", "paths": {"home": "../../", "archive": "../../archive/"}};
+const DATA = {"mode": "page", "date": "2026-09-27", "subtitle": "2026年9月7日〜9月13日の週まとめ", "generated": "2026-09-27 02:41", "paths": {"home": "../../", "archive": "../../archive/"}};
 const $ = s => document.querySelector(s);
 const esc = s => String(s ?? '').replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
 const cssv = n => getComputedStyle(document.documentElement).getPropertyValue(n).trim();
