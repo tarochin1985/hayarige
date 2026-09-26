@@ -9306,6 +9306,18 @@
   ]
  },
  {
+  "name": "Can Your Otaku Cabinet Grow a Beautiful Girl?",
+  "alias": [],
+  "pop": 0,
+  "y": 2026,
+  "p": [
+   "pc"
+  ],
+  "g": [
+   "Role-playing (RPG)"
+  ]
+ },
+ {
   "name": "Can't Even See the Sky",
   "alias": [],
   "pop": 0,
@@ -13556,7 +13568,9 @@
  },
  {
   "name": "Crown Siege",
-  "alias": [],
+  "alias": [
+   "CrownSiege.exe"
+  ],
   "pop": 0,
   "y": 2026,
   "p": [
@@ -17183,7 +17197,9 @@
  },
  {
   "name": "Doggy Don't Care",
-  "alias": [],
+  "alias": [
+   "Doggy Don't Care.exe"
+  ],
   "pop": 0,
   "y": 2026,
   "p": [
@@ -20156,7 +20172,9 @@
  },
  {
   "name": "Endless Isolation",
-  "alias": [],
+  "alias": [
+   "Endless Isolation.exe"
+  ],
   "pop": 0,
   "y": 2026,
   "p": [
@@ -25283,18 +25301,6 @@
   ]
  },
  {
-  "name": "Ghost Soul M",
-  "alias": [
-   "搞鬼M"
-  ],
-  "pop": 0,
-  "y": 2026,
-  "g": [
-   "Role-playing (RPG)",
-   "Adventure"
-  ]
- },
- {
   "name": "Ghost Vanguard",
   "alias": [],
   "pop": 0,
@@ -25335,6 +25341,7 @@
  {
   "name": "Ghosted",
   "alias": [
+   "GHOSTED.exe",
    "GHOSTED"
   ],
   "pop": 0,
@@ -29136,13 +29143,16 @@
  },
  {
   "name": "Hostile Paths",
-  "alias": [],
+  "alias": [
+   "Hostile Paths.exe"
+  ],
   "pop": 0,
   "y": 2026,
   "p": [
    "pc"
   ],
   "g": [
+   "Role-playing (RPG)",
    "Adventure"
   ]
  },
@@ -32481,7 +32491,9 @@
  },
  {
   "name": "Kick the Ball",
-  "alias": [],
+  "alias": [
+   "Kick The Ball.exe"
+  ],
   "pop": 0,
   "y": 2026,
   "p": [
@@ -32490,6 +32502,7 @@
   "g": [
    "Platform",
    "Sport",
+   "Adventure",
    "Indie"
   ]
  },
@@ -41277,6 +41290,7 @@
  {
   "name": "Normal Golf Game",
   "alias": [
+   "Normal Golf Game.exe",
    "Luke Muscat's Ultimate Golf Challenge"
   ],
   "pop": 0,
@@ -41717,7 +41731,8 @@
  {
   "name": "Obscurity: Unknown Threat",
   "alias": [
-   "ObsUT"
+   "ObsUT",
+   "Unth.exe"
   ],
   "pop": 0,
   "y": 2026,
@@ -55514,7 +55529,7 @@
   "alias": [
    "SWZeroCompany.exe"
   ],
-  "pop": 12,
+  "pop": 13,
   "y": 2026,
   "p": [
    "pc",
@@ -60126,6 +60141,7 @@
  {
   "name": "The Guild 1 Remake: Europa 1410",
   "alias": [
+   "Europa1410.exe",
    "The Guild - Europa 1410"
   ],
   "pop": 0,
