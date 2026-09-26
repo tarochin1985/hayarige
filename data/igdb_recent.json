@@ -11854,7 +11854,9 @@
  },
  {
   "name": "Code My Robot Vacuum",
-  "alias": [],
+  "alias": [
+   "code-my-robot-vacuum.exe"
+  ],
   "pop": 0,
   "y": 2026,
   "p": [
@@ -25298,6 +25300,18 @@
   "g": [
    "Role-playing (RPG)",
    "Indie"
+  ]
+ },
+ {
+  "name": "Ghost Soul M",
+  "alias": [
+   "搞鬼M"
+  ],
+  "pop": 0,
+  "y": 2026,
+  "g": [
+   "Role-playing (RPG)",
+   "Adventure"
   ]
  },
  {
@@ -39122,20 +39136,6 @@
   "g": [
    "Role-playing (RPG)",
    "Adventure"
-  ]
- },
- {
-  "name": "Mortality... Please",
-  "alias": [],
-  "pop": 0,
-  "y": 2026,
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Adventure",
-   "Indie",
-   "Visual Novel"
   ]
  },
  {
@@ -65330,18 +65330,6 @@
   ]
  },
  {
-  "name": "Unravel Trigger: Cold War",
-  "alias": [],
-  "pop": 0,
-  "y": 2026,
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Visual Novel"
-  ]
- },
- {
   "name": "Unseasonable Flowering",
   "alias": [],
   "pop": 0,
@@ -69196,6 +69184,21 @@
   ],
   "g": [
    "Indie"
+  ]
+ },
+ {
+  "name": "You're Nuts!",
+  "alias": [],
+  "pop": 0,
+  "y": 2026,
+  "p": [
+   "pc",
+   "console"
+  ],
+  "g": [
+   "Puzzle",
+   "Strategy",
+   "Adventure"
   ]
  },
  {

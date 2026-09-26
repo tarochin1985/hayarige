@@ -1,6 +1,6 @@
 {
  "date": "2026-09-26",
- "generated": "2026-09-26 16:42",
+ "generated": "2026-09-26 19:15",
  "leads": {
   "events": [
    {
@@ -8,6 +8,7 @@
     "channels": [
      "Aoi ch.",
      "Chihaya Ch. 輪堂 千速 - FLOW GLOW",
+     "Flare Ch. 不知火フレア",
      "Su Ch. 水宮枢 - FLOW GLOW",
      "Vivi Ch. 綺々羅々ヴィヴィ - FLOW GLOW",
      "Watame Ch. 角巻わため",
@@ -17,18 +18,17 @@
      "堰代ミコ / Mico Channel【ななしいんく】",
      "小廻こま / Komawari Koma",
      "甘狼このみ / AmakamiKonomi🐺🍫",
-     "羽渦ミウネル -Miuneru Haneuzu-",
-     "音ノ乃のの / NononoNono",
-     "音ノ瀬らこ / Otonose Raco"
+     "羽渦ミウネル -Miuneru Haneuzu-"
     ]
    },
    {
     "tag": "#ゲーム実況",
     "channels": [
+     "CHECHE GAME【顔出し初見ゲーム実況】",
      "Usagi Ch. 因幡兎",
      "こじちゃんねる【小嶋明梨】",
+     "ごまっぷ_GameCh",
      "ぱんちき🥖🦃",
-     "エラch",
      "恋因ロス KoinRosu",
      "星埜きぃ -Key Hoshino-",
      "週刊少年ゲームマガジン230円",
@@ -50,10 +50,11 @@
    {
     "tag": "#VRINQトラブル配信脱出",
     "channels": [
+     "サントスch",
      "フルコンチャンネル",
-     "人狼・マダミスGM【ガッちゃん】",
+     "中野あるま / Alma Nakano",
      "健屋花那【にじさんじ】KanaSukoya",
-     "宵吸あけル / Yokyu Akeru",
+     "影。/かげまる",
      "猫元パト / Patoneko Ch."
     ]
    },
@@ -63,6 +64,14 @@
      "Marine Ch. 宝鐘マリン hololive3期生",
      "Mio Channel 大神ミオ",
      "Riona Ch. 響咲リオナ - FLOW GLOW"
+    ]
+   },
+   {
+    "tag": "#ストグラSeason2",
+    "channels": [
+     "けんつめしと飯田けんつ【ストグラ】",
+     "たけぉ",
+     "暁月ホタル AKATSUKI HOTARU"
     ]
    },
    {
@@ -80,57 +89,49 @@
      "かおりんごー",
      "もみじビーム"
     ]
-   },
-   {
-    "tag": "#minecraft",
-    "channels": [
-     "三雲ヒカリ",
-     "中野テリー",
-     "鈴ノ時みぃ@新人Vtuber"
-    ]
    }
   ],
   "newcomers": [],
   "wide": [
    {
-    "game": "Minecraft",
-    "channels": 53,
-    "videos": 56
+    "game": "Apex Legends",
+    "channels": 51,
+    "videos": 60
    },
    {
-    "game": "Apex Legends",
-    "channels": 50,
-    "videos": 54
+    "game": "Minecraft",
+    "channels": 48,
+    "videos": 50
    },
    {
     "game": "ストリートファイター6",
-    "channels": 34,
-    "videos": 36
+    "channels": 37,
+    "videos": 40
    },
    {
     "game": "Silent Hill: Townfall",
-    "channels": 27,
-    "videos": 28
+    "channels": 24,
+    "videos": 24
    },
    {
     "game": "VALORANT",
-    "channels": 17,
-    "videos": 20
+    "channels": 19,
+    "videos": 22
    },
    {
     "game": "スプラトゥーン3",
-    "channels": 18,
-    "videos": 20
+    "channels": 19,
+    "videos": 21
+   },
+   {
+    "game": "トルネコの大冒険 ちょっとステキなリマスター",
+    "channels": 16,
+    "videos": 16
    },
    {
     "game": "Grand Theft Auto V",
     "channels": 15,
     "videos": 20
-   },
-   {
-    "game": "Dead by Daylight",
-    "channels": 17,
-    "videos": 18
    }
   ]
  },
@@ -226,6 +227,30 @@
    "suggest": [
     "DinoBones: Tidy Up the Museum"
    ]
+  },
+  {
+   "word": "ダンガンロンパ",
+   "channels": 4,
+   "n": 6,
+   "examples": [
+    {
+     "t": "\"希望の学園と絶望の高校生\" を完全初見プレイ、いきます。【ダンガンロンパ】",
+     "c": "但野リス / Tadano Risu",
+     "u": "https://www.youtube.com/watch?v=f--e_0xhIWk"
+    },
+    {
+     "t": "【ダンガンロンパ】完全初見！黒幕の内通者判明！＃12【個人勢Vtuber/楚桜ゆのあ】",
+     "c": "sozakura yunoa / 楚桜ゆのあ ch.",
+     "u": "https://www.youtube.com/watch?v=YK4LSbpcMO4"
+    },
+    {
+     "t": "【＃３】事件の真相と共に男のロマンも探求するツルギ【ダンガンロンパ】",
+     "c": "柊ツルギ / Hiiragi Tsurugi",
+     "u": "https://www.youtube.com/watch?v=tYmKv5sSPEQ"
+    }
+   ],
+   "kind": "wide",
+   "suggest": []
   },
   {
    "word": "#あんスタ",
@@ -324,30 +349,6 @@
    "suggest": []
   },
   {
-   "word": "ダンガンロンパ",
-   "channels": 3,
-   "n": 5,
-   "examples": [
-    {
-     "t": "\"希望の学園と絶望の高校生\" を完全初見プレイ、いきます。【ダンガンロンパ】",
-     "c": "但野リス / Tadano Risu",
-     "u": "https://www.youtube.com/watch?v=f--e_0xhIWk"
-    },
-    {
-     "t": "【ダンガンロンパ】完全初見！黒幕の内通者判明！＃12【個人勢Vtuber/楚桜ゆのあ】",
-     "c": "sozakura yunoa / 楚桜ゆのあ ch.",
-     "u": "https://www.youtube.com/watch?v=YK4LSbpcMO4"
-    },
-    {
-     "t": "【＃３】事件の真相と共に男のロマンも探求するツルギ【ダンガンロンパ】",
-     "c": "柊ツルギ / Hiiragi Tsurugi",
-     "u": "https://www.youtube.com/watch?v=tYmKv5sSPEQ"
-    }
-   ],
-   "kind": "wide",
-   "suggest": []
-  },
-  {
    "word": "ガーティックフォン",
    "channels": 3,
    "n": 4,
@@ -370,39 +371,62 @@
    ],
    "kind": "wide",
    "suggest": []
+  },
+  {
+   "word": "キタキタ王様",
+   "channels": 3,
+   "n": 3,
+   "examples": [
+    {
+     "t": "【キタキタ王様】私の中で現在大優勝過ぎる最新ゲームをCBTで遊んでいく！【 #PR 】",
+     "c": "鷺原鈴音【SagiharaRinne】",
+     "u": "https://www.youtube.com/watch?v=vX_C4UZbfMc"
+    },
+    {
+     "t": "【キタキタ王様】爆運×即断のヒリつき合成RPG！戦略と幸運で初代王になる！！",
+     "c": "わいちゃんねる@新兎わい",
+     "u": "https://www.youtube.com/watch?v=0HNMHJDTjYc"
+    },
+    {
+     "t": "【キタキタ王様】始めたら見て！序盤解説まとめ。お勧めキャラ/日課/コンテンツ紹介/厳選！育成優先順位。サンダー/べアリス/氷魔道士/フグロウ/マーメイド/ガチャのレベル上げ/新作リリース！最強効率",
+     "c": "ぺちょん",
+     "u": "https://www.youtube.com/watch?v=XxFz1JnnRE0"
+    }
+   ],
+   "kind": "wide",
+   "suggest": []
   }
  ],
  "miss_days": 7,
  "hot_facts": [
   {
-   "game": "風来のシレン6 とぐろ島探検録",
-   "growth": 4.17,
-   "videos": 5,
-   "base": 1.2,
-   "channels": 5,
-   "views": 20138,
+   "game": "タンポポは耐える。",
+   "growth": 4.0,
+   "videos": 4,
+   "base": 1.0,
+   "channels": 4,
+   "views": 8378,
    "who": [
-    "卯埜らび / Rabi Uno",
-    "天宿なげき Amayadori Nageki",
-    "スイッチ通【任天堂ニュース解説】",
-    "ミネイ",
-    "Aomiya Yozuri Ch. 蒼宮よづり"
+    "天絆ささは / Sasaha Channel【ななしいんく】",
+    "日裏クロ / Hiura Kuro",
+    "ニコ",
+    "とりしお。Torishio ch."
    ],
    "titles": [
-    "【 不思議のダンジョン 風来のシレン６ とぐろ島探検録 ￤#03 】完全初見🔰31階を目指すぞ!!【 卯埜らび￤ゆにれいど！ 】",
-    "【風来のシレン6】まずはストーリークリア目指すよ！【天宿なげき/りーさるぷらん】",
-    "【まさかの逆転】不評気味の『トルネコ』発売後、『シレン6』が過去最高を更新 #ゆっくり解説"
+    "【 タンポポは耐える。】どうも、昼下がりのタンポポです♫ いじめないでください。【 天絆ささは￤ななしいんく 】",
+    "【タンポポは耐える】タンポポでパリィするゲーム！？【日裏クロ / ネオポルテ】",
+    "「絶対に生き延びろ」猫やおっさんの猛攻に耐えるタンポポの過酷な一生【タンポポは耐える】"
    ],
    "genres": [
-    "Role-playing (RPG)"
+    "Simulator",
+    "Indie"
    ],
    "year": null,
    "platforms": [
-    "pc",
-    "console"
+    "pc"
    ],
-   "days_seen": 2,
-   "last_seen": "2026-09-25",
+   "days_seen": 5,
+   "last_seen": "2026-09-22",
    "first_here": false
   },
   {
@@ -411,7 +435,7 @@
    "videos": 3,
    "base": 0.8,
    "channels": 3,
-   "views": 80416,
+   "views": 82008,
    "who": [
     "GAMEゆうなch",
     "ファミ通TUBE",
@@ -438,7 +462,7 @@
    "videos": 3,
    "base": 0.2,
    "channels": 3,
-   "views": 37189,
+   "views": 50588,
    "who": [
     "アフロマスク",
     "おぼ。",
@@ -457,57 +481,61 @@
    "platforms": [
     "pc"
    ],
-   "days_seen": 1,
-   "last_seen": "2026-09-25",
-   "first_here": false
+   "days_seen": 0,
+   "last_seen": null,
+   "first_here": true
   },
   {
-   "game": "ウマ娘 プリティーダービー",
-   "growth": 3.12,
-   "videos": 5,
-   "base": 1.6,
-   "channels": 5,
-   "views": 2985,
+   "game": "風来のシレン6 とぐろ島探検録",
+   "growth": 3.08,
+   "videos": 4,
+   "base": 1.3,
+   "channels": 4,
+   "views": 12151,
    "who": [
-    "龍宮るり / Ryugu Ruri Ch.",
-    "空天（あてん）の時間",
-    "焼肉ちゃんちゃんねる。",
-    "Kenのゲーム実況",
-    "椿 くおん -Tsubaki Kuon-"
+    "天宿なげき Amayadori Nageki",
+    "スイッチ通【任天堂ニュース解説】",
+    "ミネイ",
+    "Aomiya Yozuri Ch. 蒼宮よづり"
    ],
    "titles": [
-    "【ウマ娘】完全初見🔰キャラストーリー見る！メインストーリー2部の予習だー！！【#新人vtuber / #龍宮るり】",
-    "【#ウマ娘】凱旋門ドンナ育成雑談【Vtuber】",
-    "【お絵描き】ウマ娘全員描きます４８【部位Tuber焼肉ちゃん】"
-   ],
-   "genres": [],
-   "year": null,
-   "platforms": [],
-   "days_seen": 10,
-   "last_seen": "2026-09-25",
-   "first_here": false
-  },
-  {
-   "game": "Among Us",
-   "growth": 2.37,
-   "videos": 14,
-   "base": 5.9,
-   "channels": 13,
-   "views": 63556,
-   "who": [
-    "たけぉ",
-    "中野あるま / Alma Nakano",
-    "うめけん",
-    "はたさこ / hatasako_flag",
-    "うめけん"
-   ],
-   "titles": [
-    "【Among Us】まさに外道！インポスター泳がせてみた",
-    "変なことが色々ありすぎて、意味不明な展開にｗｗｗｗｗ【AmongUs / 宇宙人狼】",
-    "白位置の人外、一瞬で捕まるｗｗｗ【AmongUs】"
+    "【風来のシレン6】まずはストーリークリア目指すよ！【天宿なげき/りーさるぷらん】",
+    "【まさかの逆転】不評気味の『トルネコ』発売後、『シレン6』が過去最高を更新 #ゆっくり解説",
+    "はじめての「シレン」 #22【不思議のダンジョン 風来のシレン６ とぐろ島探検録 実況プレイ】#SCPS"
    ],
    "genres": [
-    "Strategy",
+    "Role-playing (RPG)"
+   ],
+   "year": null,
+   "platforms": [
+    "pc",
+    "console"
+   ],
+   "days_seen": 2,
+   "last_seen": "2026-09-25",
+   "first_here": false
+  },
+  {
+   "game": "めっちゃカメレオン",
+   "growth": 3.04,
+   "videos": 7,
+   "base": 2.3,
+   "channels": 7,
+   "views": 3058,
+   "who": [
+    "宵吸あけル / Yokyu Akeru",
+    "ゾンちゅう〜ゾンビJKはゲーム配信中〜",
+    "コーリ",
+    "ゆぅぽたりあん",
+    "くれは"
+   ],
+   "titles": [
+    "【 #めっちゃカメレオン 】女子会だ～～～💕いっぱい探すぞ～～～！！【 #新人vtuber / #宵吸あけル 】",
+    "【怪しい通販編】九尾のはじめてのおつかい！？【 #めっちゃカメレオン 】【アニメ】【ゲーム実況】",
+    "めっちゃカメレオンやります！"
+   ],
+   "genres": [
+    "Tactical",
     "Indie"
    ],
    "year": null,
@@ -515,39 +543,41 @@
     "pc",
     "console"
    ],
-   "days_seen": 31,
+   "days_seen": 24,
    "last_seen": "2026-09-25",
    "first_here": false
   },
   {
-   "game": "デスゲームの報告書",
-   "growth": 2.35,
-   "videos": 4,
-   "base": 1.7,
-   "channels": 4,
-   "views": 180450,
+   "game": "Control Resonant",
+   "growth": 3.0,
+   "videos": 3,
+   "base": 1.0,
+   "channels": 3,
+   "views": 40710,
    "who": [
-    "石神のぞみ / Ishigami Nozomi【にじさんじ】",
-    "健屋花那【にじさんじ】KanaSukoya",
-    "ミネイ",
-    "Towa Ch. 常闇トワ"
+    "おついちTube",
+    "フェイチャンネル【ゲーム実況】2000本クリアした男の軌跡",
+    "フェイチャンネル【ゲーム実況】2000本クリアした男の軌跡",
+    "おついちTube",
+    "けいじチャンネル"
    ],
    "titles": [
-    "【 デスゲームの報告書 】ったく、管理職も楽じゃないっつーの・・・ｗ【 にじさんじ所属 ／ 石神のぞみ 】",
-    "【デスゲームの報告書】ここで一体何があったのか？報告します【健屋花那/にじさんじ】",
-    "はじめての「報告書作成」 #6 【デスゲームの報告書 実況プレイ】"
+    "【CONTROL Resonant】#3⚒️7年ぶりに帰ってきた！再びAWEの深淵に挑む【おついちTube】",
+    "【超常現象アクションRPG】サバイバルホラーから大幅な変化を遂げた結果はいかに！【CONTROL Resonant #1】",
+    "【超常現象アクションRPG】サバイバルホラーから大幅な変化を遂げた結果はいかに！【CONTROL Resonant #2】"
    ],
    "genres": [
-    "Puzzle",
-    "Adventure",
-    "Indie"
+    "Role-playing (RPG)",
+    "Hack and slash/Beat 'em up",
+    "Adventure"
    ],
-   "year": null,
+   "year": 2026,
    "platforms": [
-    "pc"
+    "pc",
+    "console"
    ],
-   "days_seen": 14,
-   "last_seen": "2026-09-24",
+   "days_seen": 3,
+   "last_seen": "2026-09-25",
    "first_here": false
   }
  ],

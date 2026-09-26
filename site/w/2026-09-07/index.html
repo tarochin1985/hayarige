@@ -493,13 +493,19 @@ footer{font-size:11.5px;color:var(--ink-3);text-align:center;border-top:1px soli
     <a class="flink" href="../../archive/">これまでの記録</a>
     <a class="flink" href="../../privacy/">お問い合わせ・プライバシー</a><a class="flink" href="https://bsky.app/profile/hayarige.com" target="_blank" rel="noopener me">Bluesky</a><a class="flink" href="https://x.com/hayarige" target="_blank" rel="noopener me">X</a><br>
     ハヤリゲー ｜ YouTubeの配信タイトルを毎日自動で解析しています<br>
+    <!-- 出どころの表示（2026-09-26）。ゲーム名の判定も件数も**当サイトが作った数字**で、
+         YouTubeが返したものではない。どちらなのかは読み手に分かるようにしておく。
+         YouTubeの開発者ポリシーも、独自に作った指標やタグは
+         「自分が作ったものだと明示すること」を条件にしている。 -->
+    ゲーム名の判定・件数・倍率は、<b>当サイトが配信タイトルから独自に集計したもの</b>です。
+    YouTubeが提供する数値や分類ではありません<br>
     同じ配信者が同じ日に出した続きものは1件として集計 ／ <span id="f-gen"></span><br>
     <span style="opacity:.75">Amazonのアソシエイトとして、当サイトは適格販売により収入を得ています</span>
   </footer>
 </div>
 
 <script>
-const DATA = {"mode": "page", "date": "2026-09-26", "subtitle": "2026年9月7日〜9月13日の週まとめ", "generated": "2026-09-26 16:42", "paths": {"home": "../../", "archive": "../../archive/"}};
+const DATA = {"mode": "page", "date": "2026-09-26", "subtitle": "2026年9月7日〜9月13日の週まとめ", "generated": "2026-09-26 19:15", "paths": {"home": "../../", "archive": "../../archive/"}};
 const $ = s => document.querySelector(s);
 const esc = s => String(s ?? '').replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
 const cssv = n => getComputedStyle(document.documentElement).getPropertyValue(n).trim();
