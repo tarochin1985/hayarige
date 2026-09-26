@@ -7560,6 +7560,7 @@
    "pc"
   ],
   "g": [
+   "Shooter",
    "Adventure"
   ]
  },
@@ -7751,6 +7752,19 @@
    "Adventure",
    "Indie",
    "Card & Board Game"
+  ]
+ },
+ {
+  "name": "Broken Spirit",
+  "alias": [],
+  "pop": 0,
+  "p": [
+   "pc"
+  ],
+  "g": [
+   "Role-playing (RPG)",
+   "Adventure",
+   "Indie"
   ]
  },
  {
@@ -15945,6 +15959,7 @@
   "alias": [],
   "pop": 0,
   "p": [
+   "pc",
    "console"
   ],
   "g": [
@@ -17532,11 +17547,26 @@
   ]
  },
  {
+  "name": "Dupery: A Game of Solo Deduction",
+  "alias": [
+   "Dupery"
+  ],
+  "pop": 0,
+  "p": [
+   "pc"
+  ],
+  "g": [
+   "Puzzle",
+   "Strategy",
+   "Indie"
+  ]
+ },
+ {
   "name": "Duskfade",
   "alias": [
    "Duskfade.exe"
   ],
-  "pop": 7,
+  "pop": 8,
   "p": [
    "pc",
    "console"
@@ -24693,6 +24723,23 @@
   ]
  },
  {
+  "name": "GrimKeep",
+  "alias": [
+   "Grim keep",
+   "Grimkeep"
+  ],
+  "pop": 0,
+  "p": [
+   "pc",
+   "console"
+  ],
+  "g": [
+   "Role-playing (RPG)",
+   "Adventure",
+   "Indie"
+  ]
+ },
+ {
   "name": "Grimmlins Tale",
   "alias": [],
   "pop": 0,
@@ -25280,6 +25327,20 @@
   ]
  },
  {
+  "name": "Half Left",
+  "alias": [],
+  "pop": 0,
+  "p": [
+   "pc"
+  ],
+  "g": [
+   "Shooter",
+   "Simulator",
+   "Adventure",
+   "Indie"
+  ]
+ },
+ {
   "name": "Halftime Manager",
   "alias": [
    "HALFTIME Manager",
@@ -25438,21 +25499,6 @@
   "g": [
    "Shooter",
    "Tactical",
-   "Indie"
-  ]
- },
- {
-  "name": "Hariti",
-  "alias": [],
-  "pop": 0,
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Puzzle",
-   "Role-playing (RPG)",
-   "Simulator",
-   "Adventure",
    "Indie"
   ]
  },
@@ -28073,18 +28119,6 @@
   ]
  },
  {
-  "name": "Impious",
-  "alias": [],
-  "pop": 0,
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Role-playing (RPG)",
-   "Indie"
-  ]
- },
- {
   "name": "Important People of History: Presidents - Abraham Lincoln",
   "alias": [
    "Important People of History - Abraham Lincoln"
@@ -29615,20 +29649,6 @@
   ]
  },
  {
-  "name": "Junkyard Saints: Scrapstorm",
-  "alias": [],
-  "pop": 0,
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Shooter",
-   "Role-playing (RPG)",
-   "Indie",
-   "Arcade"
-  ]
- },
- {
   "name": "Junkyard Space Agency",
   "alias": [],
   "pop": 0,
@@ -30417,19 +30437,6 @@
    "Role-playing (RPG)",
    "Indie",
    "Visual Novel"
-  ]
- },
- {
-  "name": "Kitman",
-  "alias": [],
-  "pop": 0,
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Simulator",
-   "Sport",
-   "Indie"
   ]
  },
  {
@@ -33415,20 +33422,6 @@
   ]
  },
  {
-  "name": "Magic Cards Duel",
-  "alias": [],
-  "pop": 0,
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Puzzle",
-   "Strategy",
-   "Indie",
-   "Card & Board Game"
-  ]
- },
- {
   "name": "Magic Chess",
   "alias": [],
   "pop": 0,
@@ -33969,7 +33962,7 @@
   "alias": [
    "Wolverine"
   ],
-  "pop": 32,
+  "pop": 33,
   "p": [
    "console"
   ],
@@ -36802,22 +36795,6 @@
   ],
   "g": [
    "Indie"
-  ]
- },
- {
-  "name": "My Tsundere Sister",
-  "alias": [
-   "MyTsundereSisterLauncher.exe"
-  ],
-  "pop": 0,
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Role-playing (RPG)",
-   "Adventure",
-   "Indie",
-   "Visual Novel"
   ]
  },
  {
@@ -42952,6 +42929,17 @@
   ]
  },
  {
+  "name": "Possessed Kingdom",
+  "alias": [],
+  "pop": 0,
+  "p": [
+   "pc"
+  ],
+  "g": [
+   "Strategy"
+  ]
+ },
+ {
   "name": "Postcard Through Time",
   "alias": [],
   "pop": 0,
@@ -45492,7 +45480,7 @@
   "alias": [
    "Resonance.exe"
   ],
-  "pop": 36,
+  "pop": 37,
   "p": [
    "pc",
    "console"
@@ -47238,7 +47226,7 @@
   "alias": [
    "ScarletSkips.exe"
   ],
-  "pop": 8,
+  "pop": 9,
   "p": [
    "pc"
   ]
@@ -53944,6 +53932,20 @@
   ],
   "g": [
    "Adventure",
+   "Indie"
+  ]
+ },
+ {
+  "name": "Tango District",
+  "alias": [],
+  "pop": 0,
+  "p": [
+   "pc"
+  ],
+  "g": [
+   "Puzzle",
+   "Simulator",
+   "Strategy",
    "Indie"
   ]
  },
