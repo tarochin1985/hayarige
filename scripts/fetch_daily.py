@@ -8,7 +8,7 @@
 """
 import os
 from datetime import datetime, timedelta, timezone
-from common import (YouTube, QuotaExhausted, DATA, JST, log,
+from common import (YouTube, QuotaExhausted, DATA, JST, log, QUOTA_LIMIT,
                     read_json, write_json, today, is_countable, iso_seconds)
 
 # 毎回見るチャンネル数（登録者順）。ここに入らなかったチャンネルは曜日で分けて週1回。
@@ -53,6 +53,36 @@ def main():
     targets = pick_targets()
     if not targets:
         log("対象チャンネルがありません。先に enrich_channels.py を実行してください。")
+        return
+
+    # ---- 今日すでに取った分を読む（2026-09-26に入れた） ----
+    #
+    # なぜ要るか。この日、サイトに出るゲームが229種から120種まで落ちた。
+    # 原因は「1日のうちに『3. 毎日の更新』を4回回してクォータを使い切り、
+    # **5回目が0本で保存して、それまでに取れていた2,442本を上書きした**」。
+    #   09-25 19:16 ／ 09-26 07:14 ／ 12:04 ／ 14:18 … 4回で約9,600
+    #   09-26 15:00 … 171使ったところで上限。動画0本で保存 ← ここで消えた
+    #
+    # **取れなかったことより、取れていたものを消したことのほうが悪い。**
+    # 直し方は2つ入れた。
+    #   (1) 上書きせず**混ぜる**（下の write のところ）
+    #   (2) 使い切りそうなら**取りに行かない**。0本で保存する事故が起きない
+    #
+    # クォータは日本時間の16時（太平洋時間の0時）に戻る。
+    day_path = DATA / "daily" / f"{today()}.json"
+    prev = read_json(day_path, None) or {}
+    kept = {v["id"]: v for v in (prev.get("videos") or []) if v.get("id")}
+    spent = int(prev.get("quota_today") or prev.get("quota_used") or 0)
+    runs = int(prev.get("runs") or (1 if prev else 0))
+    # 1回の取得にかかるおよその量。対象チャンネル数 × 1.2 に少し余裕を足す
+    need = int(len(targets) * 1.2) + 100
+    if kept and spent + need > QUOTA_LIMIT:
+        log(f"今日はすでに {runs} 回取得していて、使ったクォータは約 {spent} です。"
+            f"あと {need} ぶんの余裕が無いので、今回は取りに行きません。")
+        log(f"すでに取れている {len(kept)} 本をそのまま使います。"
+            "クォータは日本時間の16時に戻ります。それ以降に"
+            "『3. 毎日の更新』をもう一度回すと取り直せます。")
+        write_json(day_path, dict(prev, runs=runs + 1, skipped=True))
         return
 
     # 以前は「一度見た動画は二度と取らない」ようにしていたが、これをやめた。
@@ -128,11 +158,24 @@ def main():
                 "shape": shape,
             })
 
+    # 今日すでに取れていた分と混ぜる。同じ動画は**新しいほうを採る**
+    # （再生数が伸びているため）。こうしておけば、途中で打ち切られた回があっても
+    # 前に取れていた分が消えない。
+    merged = dict(kept)
+    merged.update({v["id"]: v for v in videos})
+    out = list(merged.values())
+    added = len(out) - len(kept)
     write_json(DATA / "daily" / f"{today()}.json",
                {"date": today(), "quota_used": yt.used,
-                "channels_checked": len(targets), "videos": videos})
-    tall = [v for v in videos if (v.get("shape") or 0) > 1.2]
-    log(f"保存しました: data/daily/{today()}.json （{len(videos)} 本 ／ Shorts・切り抜き {skipped} 本を除外）")
+                "quota_today": spent + yt.used, "runs": runs + 1,
+                "channels_checked": len(targets), "videos": out})
+    tall = [v for v in out if (v.get("shape") or 0) > 1.2]
+    log(f"保存しました: data/daily/{today()}.json （{len(out)} 本 ／ "
+        f"今回取れたのは {len(videos)} 本、新しく増えたのは {added} 本 ／ "
+        f"Shorts・切り抜き {skipped} 本を除外）")
+    if kept and len(videos) < len(kept) * 0.5:
+        log(f"※ 今回取れた本数が、すでにあった {len(kept)} 本よりかなり少なめです。"
+            "クォータが足りなかった可能性があります（前の分は残してあります）。")
     if tall:
         log(f"  うち縦長の動画 {len(tall)} 本（いまは数に入れている。様子を見る）")
         for v in sorted(tall, key=lambda x: -x["views"])[:5]:
