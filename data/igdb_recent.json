@@ -1758,19 +1758,6 @@
   ]
  },
  {
-  "name": "AfterMove",
-  "alias": [],
-  "pop": 0,
-  "y": 2026,
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Puzzle",
-   "Strategy"
-  ]
- },
- {
   "name": "Afterlight: The Apartment",
   "alias": [
    "AFTERLIGHT: The Apartment"
@@ -6535,20 +6522,6 @@
   ]
  },
  {
-  "name": "Big Bad Pharma",
-  "alias": [
-   "BigBadPharma.exe"
-  ],
-  "pop": 0,
-  "y": 2026,
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Simulator"
-  ]
- },
- {
   "name": "Big Breakfast 2",
   "alias": [
    "Big Breakfast 2.exe"
@@ -8811,6 +8784,19 @@
   "g": [
    "Simulator",
    "Indie"
+  ]
+ },
+ {
+  "name": "Bunker Tidy Up",
+  "alias": [],
+  "pop": 0,
+  "y": 2026,
+  "p": [
+   "pc"
+  ],
+  "g": [
+   "Puzzle",
+   "Simulator"
   ]
  },
  {
@@ -26471,6 +26457,19 @@
   "g": [
    "Simulator",
    "Strategy",
+   "Indie"
+  ]
+ },
+ {
+  "name": "Greenhouse: Tidy Up!",
+  "alias": [],
+  "pop": 0,
+  "y": 2026,
+  "p": [
+   "pc"
+  ],
+  "g": [
+   "Simulator",
    "Indie"
   ]
  },
@@ -50415,20 +50414,6 @@
   ]
  },
  {
-  "name": "S.O.L School Of Labyrinth",
-  "alias": [
-   "SORDungeons2026.exe"
-  ],
-  "pop": 0,
-  "y": 2026,
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Role-playing (RPG)"
-  ]
- },
- {
   "name": "S.T.A.L.K.E.R. 2: Cost of Hope",
   "alias": [],
   "pop": 5,
@@ -54837,6 +54822,19 @@
    "pc"
   ],
   "g": [
+   "Indie"
+  ]
+ },
+ {
+  "name": "Spellbound & Shelved",
+  "alias": [],
+  "pop": 0,
+  "y": 2026,
+  "p": [
+   "pc"
+  ],
+  "g": [
+   "Simulator",
    "Indie"
   ]
  },
