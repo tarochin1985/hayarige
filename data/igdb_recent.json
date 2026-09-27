@@ -444,18 +444,6 @@
   ]
  },
  {
-  "name": "2x2",
-  "alias": [],
-  "pop": 0,
-  "y": 2026,
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Shooter"
-  ]
- },
- {
   "name": "3 Last Chances",
   "alias": [],
   "pop": 0,
@@ -1174,6 +1162,18 @@
   ]
  },
  {
+  "name": "Abandoned Gameshop",
+  "alias": [],
+  "pop": 0,
+  "y": 2026,
+  "p": [
+   "pc"
+  ],
+  "g": [
+   "Simulator"
+  ]
+ },
+ {
   "name": "Abductables",
   "alias": [],
   "pop": 0,
@@ -1465,21 +1465,6 @@
    "Shooter",
    "Simulator",
    "Tactical"
-  ]
- },
- {
-  "name": "Acts of Blood",
-  "alias": [],
-  "pop": 0,
-  "y": 2026,
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Fighting",
-   "Hack and slash/Beat 'em up",
-   "Adventure",
-   "Indie"
   ]
  },
  {
@@ -2952,7 +2937,7 @@
   "alias": [
    "Aniimo.exe"
   ],
-  "pop": 8,
+  "pop": 9,
   "y": 2026,
   "p": [
    "pc",
@@ -6270,21 +6255,6 @@
   ]
  },
  {
-  "name": "Beware of the Cartographer!",
-  "alias": [],
-  "pop": 0,
-  "y": 2026,
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Puzzle",
-   "Adventure",
-   "Indie",
-   "Visual Novel"
-  ]
- },
- {
   "name": "Beware the Depths",
   "alias": [
    "BewareTheDepths.exe"
@@ -7590,20 +7560,6 @@
   ]
  },
  {
-  "name": "Boil Cabbage Make Soup",
-  "alias": [
-   "Boil Cabbage Make Soup.exe"
-  ],
-  "pop": 0,
-  "y": 2026,
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Indie"
-  ]
- },
- {
   "name": "Bojan",
   "alias": [],
   "pop": 0,
@@ -7805,6 +7761,22 @@
   "y": 2026,
   "p": [
    "pc"
+  ]
+ },
+ {
+  "name": "Booked",
+  "alias": [
+   "BOOKED"
+  ],
+  "pop": 0,
+  "y": 2026,
+  "p": [
+   "pc"
+  ],
+  "g": [
+   "Puzzle",
+   "Simulator",
+   "Adventure"
   ]
  },
  {
@@ -8526,21 +8498,6 @@
   ]
  },
  {
-  "name": "Bubsy 4D: The Black Hole Update",
-  "alias": [],
-  "pop": 0,
-  "y": 2026,
-  "p": [
-   "pc",
-   "console"
-  ],
-  "g": [
-   "Platform",
-   "Adventure",
-   "Indie"
-  ]
- },
- {
   "name": "Budget Renovation Simulator",
   "alias": [],
   "pop": 0,
@@ -8615,15 +8572,18 @@
   ]
  },
  {
-  "name": "Build & Putt",
-  "alias": [],
+  "name": "Bugs. Billions of Bugs.",
+  "alias": [
+   "Bugs Billions of Bugs.exe"
+  ],
   "pop": 0,
   "y": 2026,
   "p": [
    "pc"
   ],
   "g": [
-   "Sport",
+   "Simulator",
+   "Strategy",
    "Indie"
   ]
  },
@@ -8650,6 +8610,21 @@
    "pc"
   ],
   "g": [
+   "Indie"
+  ]
+ },
+ {
+  "name": "Build the Hole",
+  "alias": [
+   "Build & Putt"
+  ],
+  "pop": 0,
+  "y": 2026,
+  "p": [
+   "pc"
+  ],
+  "g": [
+   "Sport",
    "Indie"
   ]
  },
@@ -10481,6 +10456,7 @@
  {
   "name": "Chaos Front",
   "alias": [
+   "Chaos Front.exe",
    "混沌兵团",
    "混沌兵團"
   ],
@@ -14000,7 +13976,9 @@
  },
  {
   "name": "Curve Fever",
-  "alias": [],
+  "alias": [
+   "CurveFever.exe"
+  ],
   "pop": 0,
   "y": 2026,
   "p": [
@@ -14583,19 +14561,6 @@
   "g": [
    "Platform",
    "Adventure",
-   "Indie"
-  ]
- },
- {
-  "name": "Daredevil Crank Canyon",
-  "alias": [],
-  "pop": 0,
-  "y": 2026,
-  "p": [
-   "console"
-  ],
-  "g": [
-   "Racing",
    "Indie"
   ]
  },
@@ -15720,7 +15685,9 @@
  },
  {
   "name": "Delverium",
-  "alias": [],
+  "alias": [
+   "Delverium.exe"
+  ],
   "pop": 0,
   "y": 2026,
   "p": [
@@ -16236,6 +16203,21 @@
   ]
  },
  {
+  "name": "Deunocta",
+  "alias": [],
+  "pop": 0,
+  "y": 2026,
+  "p": [
+   "pc"
+  ],
+  "g": [
+   "Shooter",
+   "Strategy",
+   "Adventure",
+   "Indie"
+  ]
+ },
+ {
   "name": "Deus Mantle",
   "alias": [],
   "pop": 0,
@@ -16365,7 +16347,8 @@
   "pop": 0,
   "y": 2026,
   "p": [
-   "pc"
+   "pc",
+   "console"
   ],
   "g": [
    "Strategy",
@@ -16658,6 +16641,18 @@
    "Strategy",
    "Adventure",
    "Indie"
+  ]
+ },
+ {
+  "name": "Dimond Hunt",
+  "alias": [],
+  "pop": 0,
+  "y": 2026,
+  "p": [
+   "pc"
+  ],
+  "g": [
+   "Adventure"
   ]
  },
  {
@@ -19176,6 +19171,22 @@
   ]
  },
  {
+  "name": "Eagle Knight Paradox",
+  "alias": [],
+  "pop": 0,
+  "y": 2026,
+  "p": [
+   "pc",
+   "console"
+  ],
+  "g": [
+   "Platform",
+   "Simulator",
+   "Adventure",
+   "Indie"
+  ]
+ },
+ {
   "name": "Earth Defense Force 5: Air Raider Piloted Weapon - Blacker Number 5",
   "alias": [],
   "pop": 0,
@@ -20835,6 +20846,15 @@
   "y": 2026,
   "p": [
    "pc"
+  ]
+ },
+ {
+  "name": "EuroDrive",
+  "alias": [],
+  "pop": 0,
+  "y": 2026,
+  "g": [
+   "Simulator"
   ]
  },
  {
@@ -24388,13 +24408,16 @@
  },
  {
   "name": "Furyball: Rogue Revenge",
-  "alias": [],
+  "alias": [
+   "FRRRelease-Win64-Shipping.exe"
+  ],
   "pop": 0,
   "y": 2026,
   "p": [
    "pc"
   ],
   "g": [
+   "Role-playing (RPG)",
    "Sport",
    "Indie"
   ]
@@ -29934,21 +29957,6 @@
   ]
  },
  {
-  "name": "Icarus-Bolt",
-  "alias": [
-   "ICARUS-BOLT"
-  ],
-  "pop": 0,
-  "y": 2026,
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Adventure",
-   "Indie"
-  ]
- },
- {
   "name": "Ice on the Edge",
   "alias": [
    "ICE on the EDGE"
@@ -34318,6 +34326,7 @@
  {
   "name": "Liminal Sorting",
   "alias": [
+   "Liminal Sorting.exe",
    "LIMINAL SORTING"
   ],
   "pop": 0,
@@ -35249,6 +35258,20 @@
   ]
  },
  {
+  "name": "Lostbound",
+  "alias": [],
+  "pop": 0,
+  "y": 2026,
+  "p": [
+   "pc"
+  ],
+  "g": [
+   "Role-playing (RPG)",
+   "Adventure",
+   "Indie"
+  ]
+ },
+ {
   "name": "Lou's Lagoon",
   "alias": [
    "卢湖快递",
@@ -35843,6 +35866,25 @@
   ]
  },
  {
+  "name": "Mad Metal",
+  "alias": [
+   "Mad Mechs",
+   "Mad Metal.exe"
+  ],
+  "pop": 0,
+  "y": 2026,
+  "p": [
+   "pc"
+  ],
+  "g": [
+   "Racing",
+   "Simulator",
+   "Strategy",
+   "Adventure",
+   "Indie"
+  ]
+ },
+ {
   "name": "Mad Mojo",
   "alias": [
    "Mad MOJO"
@@ -36329,19 +36371,6 @@
   ],
   "g": [
    "Adventure"
-  ]
- },
- {
-  "name": "Mana Rush",
-  "alias": [],
-  "pop": 0,
-  "y": 2026,
-  "p": [
-   "console"
-  ],
-  "g": [
-   "Racing",
-   "Indie"
   ]
  },
  {
@@ -37422,6 +37451,21 @@
   "name": "Mess",
   "alias": [
    "MESS"
+  ],
+  "pop": 0,
+  "y": 2026,
+  "p": [
+   "pc"
+  ],
+  "g": [
+   "Simulator",
+   "Indie"
+  ]
+ },
+ {
+  "name": "Mess in the Toy Shop",
+  "alias": [
+   "MessInTheToyShop.exe"
   ],
   "pop": 0,
   "y": 2026,
@@ -39358,7 +39402,9 @@
  },
  {
   "name": "Museologist: Tidy Up the Museum!",
-  "alias": [],
+  "alias": [
+   "Museologist Tidy Up the Museum!.exe"
+  ],
   "pop": 0,
   "y": 2026,
   "p": [
@@ -40667,18 +40713,6 @@
   "g": [
    "Simulator",
    "Indie"
-  ]
- },
- {
-  "name": "Night of Restoration",
-  "alias": [],
-  "pop": 0,
-  "y": 2026,
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Adventure"
   ]
  },
  {
@@ -45322,6 +45356,21 @@
   ]
  },
  {
+  "name": "PlanetOrbit",
+  "alias": [
+   "SpaceCasino"
+  ],
+  "pop": 0,
+  "y": 2026,
+  "p": [
+   "pc"
+  ],
+  "g": [
+   "Simulator",
+   "Indie"
+  ]
+ },
+ {
   "name": "PlantUp",
   "alias": [],
   "pop": 0,
@@ -47017,22 +47066,6 @@
   ]
  },
  {
-  "name": "Province: Suroste",
-  "alias": [
-   "province_suroste.exe"
-  ],
-  "pop": 0,
-  "y": 2026,
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Role-playing (RPG)",
-   "Adventure",
-   "Indie"
-  ]
- },
- {
   "name": "Provoron",
   "alias": [
    "Provoron.exe"
@@ -47445,20 +47478,6 @@
   ],
   "g": [
    "Shooter",
-   "Indie"
-  ]
- },
- {
-  "name": "Quantum Hell",
-  "alias": [],
-  "pop": 0,
-  "y": 2026,
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Shooter",
-   "Puzzle",
    "Indie"
   ]
  },
@@ -50528,6 +50547,19 @@
   ]
  },
  {
+  "name": "Sakurairo Prism: Beyond the Bloom",
+  "alias": [],
+  "pop": 0,
+  "y": 2026,
+  "p": [
+   "pc"
+  ],
+  "g": [
+   "Indie",
+   "Visual Novel"
+  ]
+ },
+ {
   "name": "Salmon",
   "alias": [
    "SALMON"
@@ -51996,6 +52028,18 @@
   ]
  },
  {
+  "name": "Shelf Happens",
+  "alias": [],
+  "pop": 0,
+  "y": 2026,
+  "p": [
+   "pc"
+  ],
+  "g": [
+   "Simulator"
+  ]
+ },
+ {
   "name": "Shelfbound",
   "alias": [],
   "pop": 0,
@@ -52023,20 +52067,6 @@
    "Puzzle",
    "Simulator",
    "Indie"
-  ]
- },
- {
-  "name": "Shenmue I & II VR Mod",
-  "alias": [],
-  "pop": 0,
-  "y": 2026,
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Role-playing (RPG)",
-   "Hack and slash/Beat 'em up",
-   "Adventure"
   ]
  },
  {
@@ -53942,6 +53972,20 @@
   ]
  },
  {
+  "name": "Sole Mates: Tidy Up the Shoe Store",
+  "alias": [],
+  "pop": 0,
+  "y": 2026,
+  "p": [
+   "pc"
+  ],
+  "g": [
+   "Puzzle",
+   "Simulator",
+   "Indie"
+  ]
+ },
+ {
   "name": "Solemnfable",
   "alias": [
    "SOLEMNFABLE"
@@ -54539,19 +54583,6 @@
    "Real Time Strategy (RTS)",
    "Strategy",
    "Adventure",
-   "Indie"
-  ]
- },
- {
-  "name": "SpaceCasino",
-  "alias": [],
-  "pop": 0,
-  "y": 2026,
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Simulator",
    "Indie"
   ]
  },
@@ -56163,21 +56194,6 @@
   ]
  },
  {
-  "name": "Storehand",
-  "alias": [
-   "Storehand.exe"
-  ],
-  "pop": 0,
-  "y": 2026,
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Simulator",
-   "Indie"
-  ]
- },
- {
   "name": "Stories of Somnia",
   "alias": [],
   "pop": 0,
@@ -57306,9 +57322,10 @@
   ]
  },
  {
-  "name": "Susanoo",
+  "name": "Susanoo: Typing Action",
   "alias": [
-   "Susanoo: Typing Soulslike"
+   "Susanoo: Typing Soulslike",
+   "Susanoo"
   ],
   "pop": 0,
   "y": 2026,
@@ -60933,6 +60950,18 @@
    "Shooter",
    "Adventure",
    "Arcade"
+  ]
+ },
+ {
+  "name": "The Magus Circle",
+  "alias": [],
+  "pop": 0,
+  "y": 2026,
+  "p": [
+   "pc"
+  ],
+  "g": [
+   "Indie"
   ]
  },
  {
@@ -64624,21 +64653,6 @@
   ]
  },
  {
-  "name": "Tung",
-  "alias": [
-   "TUNG.exe"
-  ],
-  "pop": 0,
-  "y": 2026,
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Puzzle",
-   "Indie"
-  ]
- },
- {
   "name": "Tunnel Escape Fates Entwined",
   "alias": [],
   "pop": 0,
@@ -66273,23 +66287,6 @@
   ]
  },
  {
-  "name": "Vice Undercover",
-  "alias": [
-   "Vice Ndrcvr"
-  ],
-  "pop": 0,
-  "y": 2026,
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Simulator",
-   "Strategy",
-   "Adventure",
-   "Indie"
-  ]
- },
- {
   "name": "Vice Vision Runner",
   "alias": [
    "ViceVisionRunner.exe"
@@ -66699,6 +66696,22 @@
   ]
  },
  {
+  "name": "Waaaaaa: A Prehistoric Adventure With Aliens",
+  "alias": [],
+  "pop": 0,
+  "y": 2026,
+  "p": [
+   "pc"
+  ],
+  "g": [
+   "Puzzle",
+   "Role-playing (RPG)",
+   "Strategy",
+   "Adventure",
+   "Indie"
+  ]
+ },
+ {
   "name": "Wail of Despair",
   "alias": [],
   "pop": 0,
@@ -66847,6 +66860,20 @@
    "Strategy",
    "Adventure",
    "Indie"
+  ]
+ },
+ {
+  "name": "War of Genesis: Idle Loot",
+  "alias": [
+   "Genesis.exe"
+  ],
+  "pop": 0,
+  "y": 2026,
+  "p": [
+   "pc"
+  ],
+  "g": [
+   "Role-playing (RPG)"
   ]
  },
  {
@@ -67112,6 +67139,20 @@
   "y": 2026,
   "p": [
    "console"
+  ]
+ },
+ {
+  "name": "Warrior Quest",
+  "alias": [],
+  "pop": 0,
+  "y": 2026,
+  "p": [
+   "pc"
+  ],
+  "g": [
+   "Role-playing (RPG)",
+   "Adventure",
+   "Indie"
   ]
  },
  {
@@ -67438,19 +67479,6 @@
   ],
   "g": [
    "Adventure",
-   "Indie"
-  ]
- },
- {
-  "name": "What We Bring",
-  "alias": [],
-  "pop": 0,
-  "y": 2026,
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Puzzle",
    "Indie"
   ]
  },
@@ -68048,19 +68076,6 @@
   ],
   "g": [
    "Simulator",
-   "Indie"
-  ]
- },
- {
-  "name": "Wind Runners",
-  "alias": [],
-  "pop": 0,
-  "y": 2026,
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Adventure",
    "Indie"
   ]
  },
@@ -68995,18 +69010,6 @@
   ]
  },
  {
-  "name": "Xam Delivery",
-  "alias": [],
-  "pop": 0,
-  "y": 2026,
-  "p": [
-   "console"
-  ],
-  "g": [
-   "Indie"
-  ]
- },
- {
   "name": "Xanniban",
   "alias": [
    "XANNIBAN"
@@ -69508,6 +69511,18 @@
   ],
   "g": [
    "Indie"
+  ]
+ },
+ {
+  "name": "Zombie Police: Midsummer Unhappy New Year",
+  "alias": [
+   "Zombie Police 2"
+  ],
+  "pop": 0,
+  "y": 2026,
+  "p": [
+   "pc",
+   "console"
   ]
  },
  {
