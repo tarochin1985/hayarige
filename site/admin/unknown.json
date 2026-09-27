@@ -1,7 +1,7 @@
 {
  "mode": "admin",
  "date": "2026-09-27",
- "generated": "2026-09-27 10:52",
+ "generated": "2026-09-27 11:24",
  "unknown": [
   {
    "guess": "顔出し",
@@ -85,23 +85,6 @@
      "t": "【isle】オヴィラプトルがきた",
      "c": "おーい顔面さん",
      "u": "https://www.youtube.com/watch?v=XYpTylRLAwM"
-    }
-   ]
-  },
-  {
-   "guess": "偏差値130",
-   "channels": 1,
-   "n": 2,
-   "examples": [
-    {
-     "t": "【偏差値130】東大医学部卒麻雀プレイヤーが雀魂しながら雑談する",
-     "c": "【偏差値130】東大医学部卒麻雀プレイヤー杉村健太ちゃんねる",
-     "u": "https://www.youtube.com/watch?v=PMAC5Wko8ts"
-    },
-    {
-     "t": "【偏差値130】東大医学部卒麻雀プレイヤーがスプリンターズステークスを予想する",
-     "c": "【偏差値130】東大医学部卒麻雀プレイヤー杉村健太ちゃんねる",
-     "u": "https://www.youtube.com/watch?v=p7Qmz95Fp7Q"
     }
    ]
   },
@@ -449,18 +432,6 @@
      "t": "【女子マラソン ハイライト】矢田みくに！日本勢2大会ぶりの表彰台【アジア大会 愛知・名古屋】",
      "c": "【公式】TBS スポーツ",
      "u": "https://www.youtube.com/watch?v=QuDRGElO3Vg"
-    }
-   ]
-  },
-  {
-   "guess": "男子マラソン ハイライト",
-   "channels": 1,
-   "n": 1,
-   "examples": [
-    {
-     "t": "【男子マラソン ハイライト】山下一貴！日本勢8年ぶりの金メダル【アジア大会 愛知・名古屋】",
-     "c": "【公式】TBS スポーツ",
-     "u": "https://www.youtube.com/watch?v=bcPSGcoMoNA"
     }
    ]
   },
@@ -1869,6 +1840,18 @@
    ]
   },
   {
+   "guess": "偏差値130",
+   "channels": 1,
+   "n": 1,
+   "examples": [
+    {
+     "t": "【偏差値130】東大医学部卒麻雀プレイヤーがスプリンターズステークスを予想する",
+     "c": "【偏差値130】東大医学部卒麻雀プレイヤー杉村健太ちゃんねる",
+     "u": "https://www.youtube.com/watch?v=p7Qmz95Fp7Q"
+    }
+   ]
+  },
+  {
    "guess": "gogh",
    "channels": 1,
    "n": 1,
@@ -2134,7 +2117,6 @@
    {
     "tag": "#ストグラ",
     "channels": [
-     "marunnn【まるーんチャンネル】",
      "たけぉ",
      "ましゃかりさん",
      "みつき",
@@ -2197,7 +2179,7 @@
   "wide": [
    {
     "game": "Apex Legends",
-    "channels": 58,
+    "channels": 57,
     "videos": 66
    },
    {
@@ -2212,8 +2194,8 @@
    },
    {
     "game": "Grand Theft Auto V",
-    "channels": 20,
-    "videos": 26
+    "channels": 19,
+    "videos": 25
    },
    {
     "game": "トルネコの大冒険 ちょっとステキなリマスター",
