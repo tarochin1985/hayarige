@@ -970,6 +970,24 @@ def render_page(path, data, depth, site_url=""):
     30日を過ぎた記録を作り直すときにも使うので、main() の中ではなく
     モジュールの直下に置いてある。
     """
+    p = SITE / path
+    p.parent.mkdir(parents=True, exist_ok=True)
+    p.write_text(page_html(path, data, depth, site_url), encoding="utf-8")
+
+
+def page_html(path, data, depth, site_url="", home=None):
+    """1ページぶんのHTMLを文字列で返す。ファイルには書き出さない。
+
+    render_page から切り出したもの（2026-09-27）。site/ の外にも1枚だけ
+    組み立てられるようにするため。コラムのプレビュー
+    （scripts/preview_column.py）がこれを使う。手で書いたプレビューでは
+    「今日の見どころ」がサイトでどう出るかが確かめられなかった。
+
+    home … 画像やリンクの起点。既定は現在地からの相対パス（本番はこれ）。
+            site/ の外に置く1枚もののプレビューでは
+            "https://hayarige.com/" のような住所を渡す。そうしないと
+            ロゴや書体を取りに行けず、見た目が本番と違ってしまう。
+    """
     tpl = (SITE / "template.html").read_text(encoding="utf-8")
     d = dict(data, paths={"home": "../" * depth or "./",
                           "archive": ("../" * depth or "./") + "archive/"})
@@ -980,9 +998,11 @@ def render_page(path, data, depth, site_url=""):
     d.pop("page_body", None)
     for k in ("meta_title", "meta_og", "meta_desc"):
         d.pop(k, None)
-    p = SITE / path
-    p.parent.mkdir(parents=True, exist_ok=True)
-    home = "../" * depth or "./"
+    if home:
+        # プレビュー用。本文のリンクもJS側の起点も、渡された住所に揃える
+        d["paths"] = {"home": home, "archive": home + "archive/"}
+    else:
+        home = "../" * depth or "./"
     # そのページ自身のURL。index.html は省いて、ディレクトリの形にする。
     page = "" if path == "index.html" else path.replace("index.html", "")
     rows_ = data.get("ranking") or []
@@ -1005,7 +1025,7 @@ def render_page(path, data, depth, site_url=""):
     # JSONの中に </script> や <!-- があると、HTMLの側が先に反応してしまう。
     # 文字列の中身は変えずに、その並びだけ崩しておく（JSONとしては同じ値になる）。
     blob = json.dumps(d, ensure_ascii=False).replace("</", "<\\/").replace("<!--", "<\\!--")
-    p.write_text(tpl.replace("__DATA__", blob)
+    return (tpl.replace("__DATA__", blob)
                     .replace("__TITLE__", e(title))
                     .replace("__OGTITLE__", e(ogtitle))
                     .replace("__DESC__", e(desc))
@@ -1060,8 +1080,7 @@ def render_page(path, data, depth, site_url=""):
                     .replace("__ANALYTICS__", analytics_html())
                     # AdSenseの所有権確認タグ／広告タグ。貼られたものをそのまま出す
                     .replace("__HEADEXTRA__", head_extra(read_json(
-                        DATA / "site_config.json", {}) or {})),
-                 encoding="utf-8")
+                        DATA / "site_config.json", {}) or {})))
 
 
 _NCH = []

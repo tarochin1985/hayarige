@@ -304,6 +304,9 @@ def main():
     # 辞書の穴。コラムの合否とは関係ないが、順位のほうが狂っている話なので出す
     for d in drift_notes():
         print(f"🔧 {d}")
+    # 文字数を数えても、サイトでどう見えるかは分からない。
+    # とくに「今日の見どころ」（notes）は、急上昇のカードと並んで初めて形になる。
+    print(f"👀 見え方の確認: python3 scripts/preview_column.py {sys.argv[1]}")
     return 0 if ok else 1
 
 
