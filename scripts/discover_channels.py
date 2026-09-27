@@ -13,6 +13,7 @@ enrich_channels.py が（登録者数・最終投稿日・ゲーム動画率を�
 import csv
 import os
 import re
+import time
 from collections import Counter
 from datetime import datetime, timedelta, timezone
 
@@ -23,6 +24,8 @@ CH_TSV = DATA / "channels.tsv"
 OUT_CSV = DATA / "channels_discovered.csv"
 
 MAX_SEARCHES = int(os.environ.get("MAX_SEARCHES", "40"))   # 40回 = 4,000ユニット
+# 検索と検索のあいだをあける秒数。1分あたりのピークを抑えるため（下の for 文に理由）。
+SEARCH_INTERVAL = float(os.environ.get("SEARCH_INTERVAL", "3"))
 MIN_HITS = 1              # 何回ヒットしたら候補にするか
 DAYS_BACK = 30
 
@@ -116,6 +119,17 @@ def main():
 
     hits, found, skipped_lang = Counter(), {}, set()
     for i, q in enumerate(queries, 1):
+        # 1語ずつ間隔をあける（2026-09-27）。
+        #
+        # 検索は1回100ユニットと高い。間を置かずに投げると、40語でも
+        # 1〜2分のあいだに4,000ユニットが集中する。クォータの申請では
+        # 「1分あたりのピーク」も申告することになっていて、**一気に使うほど
+        # 大きな数字を申告することになる。**
+        # 間隔を置けば、申告する数字も実際の負荷も小さくできる。
+        # 3秒おき＝1分あたり20語＝2,000ユニット。裏で動く処理なので遅くて困らない
+        # （100語でも5分）。
+        if i > 1:
+            time.sleep(SEARCH_INTERVAL)
         try:
             r = yt.search_videos(q, published_after=after)
         except QuotaExhausted as e:
