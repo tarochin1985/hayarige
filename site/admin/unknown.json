@@ -1,7 +1,7 @@
 {
  "mode": "admin",
  "date": "2026-09-28",
- "generated": "2026-09-28 11:08",
+ "generated": "2026-09-28 11:57",
  "unknown": [
   {
    "guess": "リズム天国",
@@ -287,18 +287,6 @@
    ]
   },
   {
-   "guess": "3dお披露目振り返り",
-   "channels": 1,
-   "n": 1,
-   "examples": [
-    {
-     "t": "【3Dお披露目振り返り】実は本番中......【きつねさん】",
-     "c": "きつねさん / Kitune-san",
-     "u": "https://www.youtube.com/watch?v=dEWBgblz3Nk"
-    }
-   ]
-  },
-  {
    "guess": "まったり",
    "channels": 1,
    "n": 1,
@@ -367,18 +355,6 @@
      "t": "【ガンプラ制作 雑談 No.41】～MGSD クシャトリヤ～　【マルチゲーム系Vtuber/うにか】【ガンプラ】",
      "c": "うにか",
      "u": "https://www.youtube.com/watch?v=KIX6gGDzWfI"
-    }
-   ]
-  },
-  {
-   "guess": "偏差値130",
-   "channels": 1,
-   "n": 1,
-   "examples": [
-    {
-     "t": "【偏差値130】東大医学部卒麻雀プレイヤーがスプリンターズステークスを予想する",
-     "c": "【偏差値130】東大医学部卒麻雀プレイヤー杉村健太ちゃんねる",
-     "u": "https://www.youtube.com/watch?v=p7Qmz95Fp7Q"
     }
    ]
   },
@@ -983,18 +959,6 @@
    ]
   },
   {
-   "guess": "ved:リキュア",
-   "channels": 1,
-   "n": 1,
-   "examples": [
-    {
-     "t": "【Ved：リキュア】「ユニークな技の発動」で敵をガシガシ倒す系の3Dローグライクアクションゲーム！(CeVIO,ゆっくり音声)",
-     "c": "Nogi's - のぎーず",
-     "u": "https://www.youtube.com/watch?v=qBhIST_ppZs"
-    }
-   ]
-  },
-  {
    "guess": "女神異聞録ペルソナ",
    "channels": 1,
    "n": 1,
@@ -1051,18 +1015,6 @@
      "t": "【maimai】 Antikythera [Vocal Version] (Lv.14) ‪★5 初理論値AP (101.0000%)",
      "c": "けいたの動画保管庫",
      "u": "https://www.youtube.com/watch?v=MEwePzyAYvs"
-    }
-   ]
-  },
-  {
-   "guess": "exvs2ib",
-   "channels": 1,
-   "n": 1,
-   "examples": [
-    {
-     "t": "【EXVS2IB】20260927 ガンダムEXVS2インフィニットブースト 固定8on8 第11回スポラン杯【イニブ】",
-     "c": "なかお",
-     "u": "https://www.youtube.com/watch?v=DzU6onmbkMQ"
     }
    ]
   },
@@ -1737,7 +1689,6 @@
     "tag": "#ストグラ",
     "channels": [
      "Tenten Ch. / 鳳玲天々",
-     "marunnn【まるーんチャンネル】",
      "【琵琶ちゃぷ】なな湖なな湖",
      "たけぉ",
      "ましゃかりさん",
@@ -1753,7 +1704,6 @@
     "tag": "#ゲーム実況",
     "channels": [
      "Usagi Ch. 因幡兎",
-     "zakimiya / ザキミヤ",
      "ごまっぷ_GameCh",
      "みほち",
      "ジョアだよ",
@@ -1784,15 +1734,6 @@
     ]
    },
    {
-    "tag": "#apex",
-    "channels": [
-     "HIKARU SHIDA @SHIDAtube",
-     "てつぽんげーむず",
-     "のったんちゃんねる",
-     "トルテ【ゆっくり実況】"
-    ]
-   },
-   {
     "tag": "#apexlegends",
     "channels": [
      "Kira Ch. 月百合鬼ら",
@@ -1809,14 +1750,22 @@
      "コーうのモンスト実況",
      "空友ちあ / ゆるちあちゃんねる"
     ]
+   },
+   {
+    "tag": "#スタレゾ",
+    "channels": [
+     "ゆーたん",
+     "星園ゆい Hoshizono Yui",
+     "狐森ろべ / Komori Ch."
+    ]
    }
   ],
   "newcomers": [],
   "wide": [
    {
     "game": "Apex Legends",
-    "channels": 58,
-    "videos": 61
+    "channels": 55,
+    "videos": 58
    },
    {
     "game": "Minecraft",
@@ -1825,18 +1774,18 @@
    },
    {
     "game": "Grand Theft Auto V",
-    "channels": 20,
-    "videos": 22
+    "channels": 19,
+    "videos": 21
    },
    {
     "game": "ストリートファイター6",
-    "channels": 18,
-    "videos": 20
+    "channels": 16,
+    "videos": 18
    },
    {
     "game": "フォートナイト",
-    "channels": 16,
-    "videos": 18
+    "channels": 15,
+    "videos": 17
    },
    {
     "game": "VALORANT",
@@ -1844,14 +1793,14 @@
     "videos": 14
    },
    {
-    "game": "モンスターストライク",
-    "channels": 11,
-    "videos": 16
-   },
-   {
     "game": "トルネコの大冒険 ちょっとステキなリマスター",
     "channels": 14,
     "videos": 14
+   },
+   {
+    "game": "モンスターストライク",
+    "channels": 11,
+    "videos": 16
    }
   ]
  },
@@ -1952,239 +1901,23 @@
   },
   {
    "word": "#リズム天国",
-   "channels": 5,
-   "n": 6,
-   "examples": [
-    {
-     "t": "🐬【#リズム天国 】人生で初めてのリズム天国 【#vtuber #海伽はく】",
-     "c": "海伽はく Mitogi_Haku",
-     "u": "https://www.youtube.com/watch?v=RxOfxDUoQCo"
-    },
-    {
-     "t": "🐬【#リズム天国 】人生で初めてのリズム天国 【#vtuber #海伽はく】",
-     "c": "海伽はく Mitogi_Haku",
-     "u": "https://www.youtube.com/watch?v=RxOfxDUoQCo"
-    },
-    {
-     "t": "【リズム天国】パーフェクトチャレンジ６１個目から！【ミラクルスターズ】",
-     "c": "もみじビーム",
-     "u": "https://www.youtube.com/watch?v=T1fmcrllEO8"
-    }
-   ],
-   "kind": "wide",
-   "suggest": []
-  },
-  {
-   "word": "デス桃太郎",
    "channels": 4,
-   "n": 4,
-   "examples": [
-    {
-     "t": "【デス昔話】昔々あるところに\"デス桃太郎\"がおりましたとさ【デス桃太郎】",
-     "c": "らっこ侍",
-     "u": "https://www.youtube.com/watch?v=zeg8U5DPf7s"
-    },
-    {
-     "t": "コント「桃太郎」  みたいなゲーム【 デス桃太郎 】",
-     "c": "ピロ",
-     "u": "https://www.youtube.com/watch?v=Y81cxh8iKfA"
-    },
-    {
-     "t": "知りたくなかった...本当は怖いデス桃太郎のホラーゲームが怖いけど実は面白い【デス桃太郎】",
-     "c": "どぉも。主にホラーゲーム実況してます。",
-     "u": "https://www.youtube.com/watch?v=whY7doiN1YA"
-    }
-   ],
-   "kind": "wide",
-   "suggest": []
-  },
-  {
-   "word": "#ねぽっくす",
-   "channels": 3,
    "n": 5,
    "examples": [
     {
-     "t": "【#ねぽっくす】ねぽらぼ×秘密結社holoXから重大発表‼️【ねぽらぼ/holoX】",
-     "c": "Laplus ch. ラプラス・ダークネス - holoX -",
-     "u": "https://www.youtube.com/watch?v=7YArsF1RdXs"
+     "t": "🐬【#リズム天国 】人生で初めてのリズム天国 【#vtuber #海伽はく】",
+     "c": "海伽はく Mitogi_Haku",
+     "u": "https://www.youtube.com/watch?v=RxOfxDUoQCo"
     },
     {
-     "t": "【#ねぽっくす】ねぽらぼ×秘密結社holoXから重大発表‼️【ねぽらぼ/holoX】",
-     "c": "Laplus ch. ラプラス・ダークネス - holoX -",
-     "u": "https://www.youtube.com/watch?v=7YArsF1RdXs"
+     "t": "🐬【#リズム天国 】人生で初めてのリズム天国 【#vtuber #海伽はく】",
+     "c": "海伽はく Mitogi_Haku",
+     "u": "https://www.youtube.com/watch?v=RxOfxDUoQCo"
     },
     {
-     "t": "【#ねぽっくす！】告知あり！！ねぽっくす！振り返り雑談【​雪花ラミィ /ホロライブ】",
-     "c": "Lamy Ch. 雪花ラミィ",
-     "u": "https://www.youtube.com/watch?v=2UMrw0y88oQ"
-    }
-   ],
-   "kind": "wide",
-   "suggest": []
-  },
-  {
-   "word": "Ved：リキュア",
-   "channels": 3,
-   "n": 5,
-   "examples": [
-    {
-     "t": "【初見さん歓迎！】1周 クリアまで！期待の新作が遂に発売！アニメ調美少女高速ローグライト3Dアクションゲーム『Ved：リキュア』を遊んでみる配信！【新作検証】",
-     "c": "ほーだん×ゲーマーズ / ほぼ毎日更新ゲーム総合情報ch",
-     "u": "https://www.youtube.com/watch?v=9gLfYaVmUvY"
-    },
-    {
-     "t": "【Ved：リキュア】本日発売のアクション×ローグライトがヤバすぎる...！？6種類のアクショントリガーで最強スキルを発動。ドパれる新作デッキビルダー攻略が面白いw今だけ15%セール【steam】",
-     "c": " なぎせいな / 凪世薙",
-     "u": "https://www.youtube.com/watch?v=tVSCXUlJZAA"
-    },
-    {
-     "t": "【クリア感想】ドパガキ絶頂！コスパ最強！無法ビルドなバフが気持ちよすぎるアニメ調美少女×ローグライト×爽快パリィアクション最新作『Ved：リキュア』プレイ感想【Steam】【H×GT vol.152】",
-     "c": "ほーだん×ゲーマーズ / ほぼ毎日更新ゲーム総合情報ch",
-     "u": "https://www.youtube.com/watch?v=ZN5PWUjORTE"
-    }
-   ],
-   "kind": "wide",
-   "suggest": []
-  },
-  {
-   "word": "ガーティックフォン",
-   "channels": 3,
-   "n": 4,
-   "examples": [
-    {
-     "t": "GEN村でお絵かきして遊ぶ(^_-)-☆【ガーティックフォン】",
-     "c": "もるてん",
-     "u": "https://www.youtube.com/watch?v=keGM_oAc8bg"
-    },
-    {
-     "t": "【ガーティックフォン】GEN村お絵描きバトル 2026/9/21",
-     "c": "怪傑がみちゃんねる",
-     "u": "https://www.youtube.com/watch?v=NtbVfwOwXJU"
-    },
-    {
-     "t": "【ガーティックフォン】絵は伝わればいいです",
-     "c": "うめけん",
-     "u": "https://www.youtube.com/watch?v=YH0tz13GoWk"
-    }
-   ],
-   "kind": "wide",
-   "suggest": []
-  },
-  {
-   "word": "イニブ",
-   "channels": 3,
-   "n": 3,
-   "examples": [
-    {
-     "t": "【EXVSIB】ちょっと遊んで帰る新機体もきたらしい 【イニブ】",
-     "c": "いっしー",
-     "u": "https://www.youtube.com/watch?v=oW8mGMcMBG4"
-    },
-    {
-     "t": "【イニブ】配信 ゲーセンにて久しぶりの w/なかお",
-     "c": "かずのこチャンネル",
-     "u": "https://www.youtube.com/watch?v=V5Nsix1SK38"
-    },
-    {
-     "t": "【EXVS2IB】20260927 ガンダムEXVS2インフィニットブースト 固定8on8 第11回スポラン杯【イニブ】",
-     "c": "なかお",
-     "u": "https://www.youtube.com/watch?v=DzU6onmbkMQ"
-    }
-   ],
-   "kind": "wide",
-   "suggest": []
-  },
-  {
-   "word": "キタキタ王様",
-   "channels": 3,
-   "n": 3,
-   "examples": [
-    {
-     "t": "【キタキタ王様】私の中で現在大優勝過ぎる最新ゲームをCBTで遊んでいく！【 #PR 】",
-     "c": "鷺原鈴音【SagiharaRinne】",
-     "u": "https://www.youtube.com/watch?v=vX_C4UZbfMc"
-    },
-    {
-     "t": "【キタキタ王様】爆運×即断のヒリつき合成RPG！戦略と幸運で初代王になる！！",
-     "c": "わいちゃんねる@新兎わい",
-     "u": "https://www.youtube.com/watch?v=0HNMHJDTjYc"
-    },
-    {
-     "t": "【キタキタ王様】始めたら見て！序盤解説まとめ。お勧めキャラ/日課/コンテンツ紹介/厳選！育成優先順位。サンダー/べアリス/氷魔道士/フグロウ/マーメイド/ガチャのレベル上げ/新作リリース！最強効率",
-     "c": "ぺちょん",
-     "u": "https://www.youtube.com/watch?v=XxFz1JnnRE0"
-    }
-   ],
-   "kind": "wide",
-   "suggest": []
-  },
-  {
-   "word": "マダミス",
-   "channels": 3,
-   "n": 3,
-   "examples": [
-    {
-     "t": "【マダミス】龍神様の祟り：北条 辰彦【ぞ】【篝蛇いおラー】",
-     "c": "篝蛇いおラー【Kagachi ioLer】",
-     "u": "https://www.youtube.com/watch?v=i8ro2_0mJw8"
-    },
-    {
-     "t": "【マダミス】龍神様の祟り- 千龍恭一郎視点 -【にじさんじ／空星きらめ】",
-     "c": "空星きらめ/Sorahoshi Kirame【にじさんじ】",
-     "u": "https://www.youtube.com/watch?v=mJP0jA-NMEw"
-    },
-    {
-     "t": "『 マダミス 』ホームズ視点「J・モリアーティの暗躍」Sherlock Murder Mystery Night 🔍 Holmes POV『 V4Mirai | Ao WuWu 』",
-     "c": "Ao WuWu Ch.【V4Mirai】",
-     "u": "https://www.youtube.com/watch?v=Wulbn4jNNgk"
-    }
-   ],
-   "kind": "wide",
-   "suggest": []
-  },
-  {
-   "word": "RPG",
-   "channels": 3,
-   "n": 3,
-   "examples": [
-    {
-     "t": "Switch2でおすすめのオープンワールド10選【RPG/サバイバルクラフト/探索】",
-     "c": "くろろじちゃんねる",
-     "u": "https://www.youtube.com/watch?v=U53vUXSIh_M"
-    },
-    {
-     "t": "【天外魔境Ⅱ 卍MARU】PCE 初見＃16［里城はな］#vtuber #ゲーム実況  #rpg  #hudsonsoft  #pcengine",
-     "c": "里城はな",
-     "u": "https://www.youtube.com/watch?v=DtySms7LaeE"
-    },
-    {
-     "t": "【ゆっくり実況】【SDガンダム】 SDガンダム外伝2 円卓の騎士 スーパーファミコン 【レトロゲーム 】【RPG】",
-     "c": "タッカルビのレトロゲームゆっくり実況",
-     "u": "https://www.youtube.com/watch?v=e2Cg7KOO8js"
-    }
-   ],
-   "kind": "wide",
-   "suggest": []
-  },
-  {
-   "word": "ガンプラ",
-   "channels": 3,
-   "n": 3,
-   "examples": [
-    {
-     "t": "【プラモデル/ガンプラ】初見さん歓迎！楽しくみんなのプラモ見ていくぞ～！【 灰音シャル/個人勢 】",
-     "c": "灰音シャル -hainesharu-",
-     "u": "https://www.youtube.com/watch?v=aHl7RUEiXUs"
-    },
-    {
-     "t": "【ガンプラ制作 雑談 No.41】～MGSD クシャトリヤ～　【マルチゲーム系Vtuber/うにか】【ガンプラ】",
-     "c": "うにか",
-     "u": "https://www.youtube.com/watch?v=KIX6gGDzWfI"
-    },
-    {
-     "t": "【ガンプラ】MGSDクシャトリヤが手に入ったので作る",
-     "c": "猫元パト / Patoneko Ch.",
-     "u": "https://www.youtube.com/watch?v=wWldzjphyvE"
+     "t": "【リズム天国】ドラマーの本気見せてやるよ",
+     "c": "ジョルノ",
+     "u": "https://www.youtube.com/watch?v=-PbZz5gXl5c"
     }
    ],
    "kind": "wide",
