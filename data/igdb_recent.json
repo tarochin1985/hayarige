@@ -11363,18 +11363,6 @@
   ]
  },
  {
-  "name": "Clawed",
-  "alias": [],
-  "pop": 0,
-  "y": 2026,
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Adventure"
-  ]
- },
- {
   "name": "Clawless Coin",
   "alias": [],
   "pop": 0,
@@ -12310,7 +12298,7 @@
    "Control 2",
    "CONTROL RESONANT"
   ],
-  "pop": 4,
+  "pop": 9,
   "y": 2026,
   "p": [
    "pc",
@@ -27658,20 +27646,6 @@
   ]
  },
  {
-  "name": "He-Man and the Masters of the Universe: Dragon Pearl of Destruction",
-  "alias": [],
-  "pop": 0,
-  "y": 2026,
-  "p": [
-   "pc",
-   "console"
-  ],
-  "g": [
-   "Hack and slash/Beat 'em up",
-   "Arcade"
-  ]
- },
- {
   "name": "Headlice",
   "alias": [],
   "pop": 0,
@@ -31528,6 +31502,19 @@
   "g": [
    "Simulator",
    "Adventure"
+  ]
+ },
+ {
+  "name": "Japanese Ramen Simulator",
+  "alias": [],
+  "pop": 0,
+  "y": 2026,
+  "p": [
+   "pc"
+  ],
+  "g": [
+   "Simulator",
+   "Indie"
   ]
  },
  {
@@ -40342,6 +40329,19 @@
   "g": [
    "Simulator",
    "Indie"
+  ]
+ },
+ {
+  "name": "Never Trust a Girl in a Portal",
+  "alias": [],
+  "pop": 0,
+  "y": 2026,
+  "p": [
+   "console"
+  ],
+  "g": [
+   "Indie",
+   "Visual Novel"
   ]
  },
  {
@@ -67833,24 +67833,6 @@
   ]
  },
  {
-  "name": "Wild Blue Skies",
-  "alias": [
-   "Wild Blue",
-   "Wild Blue Skies.exe"
-  ],
-  "pop": 1,
-  "y": 2026,
-  "p": [
-   "pc",
-   "console"
-  ],
-  "g": [
-   "Shooter",
-   "Adventure",
-   "Indie"
-  ]
- },
- {
   "name": "Wild Haven",
   "alias": [],
   "pop": 0,
@@ -69602,6 +69584,18 @@
   ],
   "g": [
    "Simulator"
+  ]
+ },
+ {
+  "name": "shatAAAAp!",
+  "alias": [],
+  "pop": 0,
+  "y": 2026,
+  "p": [
+   "pc"
+  ],
+  "g": [
+   "Indie"
   ]
  },
  {

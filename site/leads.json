@@ -1,6 +1,6 @@
 {
  "date": "2026-09-28",
- "generated": "2026-09-28 09:05",
+ "generated": "2026-09-28 11:08",
  "leads": {
   "events": [
    {
@@ -70,15 +70,6 @@
     ]
    },
    {
-    "tag": "#モンスト",
-    "channels": [
-     "しめじ",
-     "しょーとちゃん寝る",
-     "コーうのモンスト実況",
-     "空友ちあ / ゆるちあちゃんねる"
-    ]
-   },
-   {
     "tag": "#apex",
     "channels": [
      "HIKARU SHIDA @SHIDAtube",
@@ -95,24 +86,28 @@
      "のったんちゃんねる",
      "ひろたむ(あやたむ)ちゃんねる"
     ]
+   },
+   {
+    "tag": "#モンスト",
+    "channels": [
+     "しめじ",
+     "しょーとちゃん寝る",
+     "コーうのモンスト実況",
+     "空友ちあ / ゆるちあちゃんねる"
+    ]
    }
   ],
   "newcomers": [],
   "wide": [
    {
     "game": "Apex Legends",
-    "channels": 60,
-    "videos": 64
+    "channels": 58,
+    "videos": 61
    },
    {
     "game": "Minecraft",
-    "channels": 38,
-    "videos": 39
-   },
-   {
-    "game": "ストリートファイター6",
-    "channels": 19,
-    "videos": 21
+    "channels": 37,
+    "videos": 38
    },
    {
     "game": "Grand Theft Auto V",
@@ -120,19 +115,24 @@
     "videos": 22
    },
    {
-    "game": "フォートナイト",
+    "game": "ストリートファイター6",
     "channels": 18,
-    "videos": 21
+    "videos": 20
    },
    {
-    "game": "モンスターストライク",
-    "channels": 12,
+    "game": "フォートナイト",
+    "channels": 16,
     "videos": 18
    },
    {
     "game": "VALORANT",
     "channels": 13,
-    "videos": 15
+    "videos": 14
+   },
+   {
+    "game": "モンスターストライク",
+    "channels": 11,
+    "videos": 16
    },
    {
     "game": "トルネコの大冒険 ちょっとステキなリマスター",
@@ -142,15 +142,7 @@
   ]
  },
  "drift": [],
- "tags": [
-  {
-   "tag": "モンスト",
-   "game": "モンスターストライク",
-   "evidence": 5,
-   "added": 1,
-   "channels": 4
-  }
- ],
+ "tags": [],
  "misses": [
   {
    "word": "Starward",
@@ -489,22 +481,22 @@
  "hot_facts": [
   {
    "game": "Japanese Ramen Simulator",
-   "growth": 6.0,
-   "videos": 6,
-   "base": 1.0,
-   "channels": 5,
-   "views": 217109,
+   "growth": 3.33,
+   "videos": 4,
+   "base": 1.2,
+   "channels": 4,
+   "views": 188759,
    "who": [
     "ドズル社",
     "おぼ。",
-    "フルコンチャンネル",
     "電撃オンライン",
+    "しゅーや",
     "しゅーや"
    ],
    "titles": [
     "【話題ゲーム】こだわりのラーメン屋を経営します【Japanese Ramen Simulator】",
     "トンデモ時給なレジと麵ゆでバイトを雇い、不安がありつつも営業し売上を伸ばすおぼ【Japanese Ramen Simulator】",
-    "発売前からXで話題のラーメン屋経営ゲームを先行プレイ【Japanese Ramen Simulator】"
+    "【先行配信！『Japanese Ramen Simulator』】ラーメン三銃士を連れてきたよ。【電撃インディー】"
    ],
    "genres": [
     "Simulator",
@@ -545,32 +537,6 @@
    "first_here": false
   },
   {
-   "game": "崩壊：スターレイル",
-   "growth": 2.38,
-   "videos": 10,
-   "base": 4.2,
-   "channels": 8,
-   "views": 88775,
-   "who": [
-    "藍沢エマ / Aizawa Ema",
-    "狐森ろべ / Komori Ch.",
-    "メロジカ",
-    "CIS･Channel   ",
-    "星園ゆい Hoshizono Yui"
-   ],
-   "titles": [
-    "【崩壊:スターレイル】滑り込みアベンチュリン完凸ガチャ＆PV鑑賞！【ぶいすぽっ！/ 藍沢エマ】",
-    "【#スタレゾ】S3レイド｢悖逆の機骸･始｣ナイトメア🔰リベンジ【狐森ろべ／VTuber】 2026,09 #11",
-    "【崩壊スターレイル】ちょっと変な推しの火力見てみたい！参加型っぽい配信【概要欄を見てね】"
-   ],
-   "genres": [],
-   "year": null,
-   "platforms": [],
-   "days_seen": 26,
-   "last_seen": "2026-09-27",
-   "first_here": false
-  },
-  {
    "game": "Detroit: Become Human",
    "growth": 2.31,
    "videos": 3,
@@ -596,31 +562,6 @@
     "console"
    ],
    "days_seen": 4,
-   "last_seen": "2026-09-27",
-   "first_here": false
-  },
-  {
-   "game": "ぷよぷよテトリス2",
-   "growth": 2.22,
-   "videos": 4,
-   "base": 1.8,
-   "channels": 3,
-   "views": 69485,
-   "who": [
-    "もみじビーム",
-    "たいようあめみや",
-    "ナリクラちゃんねる",
-    "ナリクラちゃんねる"
-   ],
-   "titles": [
-    "【ぷよテト】今度こそ最強AIに勝つ！！【個人勢Vtuber】#縦型配信",
-    "最強タッグ杯決勝トーナメント【ぷよぷよテトリス2】",
-    "【ぷよテト2】究極召喚された男たちの4人戦orタイマン"
-   ],
-   "genres": [],
-   "year": null,
-   "platforms": [],
-   "days_seen": 28,
    "last_seen": "2026-09-27",
    "first_here": false
   },
@@ -655,10 +596,72 @@
    "days_seen": 16,
    "last_seen": "2026-09-27",
    "first_here": false
+  },
+  {
+   "game": "崩壊：スターレイル",
+   "growth": 1.86,
+   "videos": 8,
+   "base": 4.3,
+   "channels": 7,
+   "views": 88329,
+   "who": [
+    "藍沢エマ / Aizawa Ema",
+    "狐森ろべ / Komori Ch.",
+    "メロジカ",
+    "星園ゆい Hoshizono Yui",
+    "アル」"
+   ],
+   "titles": [
+    "【崩壊:スターレイル】滑り込みアベンチュリン完凸ガチャ＆PV鑑賞！【ぶいすぽっ！/ 藍沢エマ】",
+    "【#スタレゾ】S3レイド｢悖逆の機骸･始｣ナイトメア🔰リベンジ【狐森ろべ／VTuber】 2026,09 #11",
+    "【崩壊スターレイル】ちょっと変な推しの火力見てみたい！参加型っぽい配信【概要欄を見てね】"
+   ],
+   "genres": [],
+   "year": null,
+   "platforms": [],
+   "days_seen": 26,
+   "last_seen": "2026-09-27",
+   "first_here": false
+  },
+  {
+   "game": "Bombanana!",
+   "growth": 1.67,
+   "videos": 7,
+   "base": 4.2,
+   "channels": 7,
+   "views": 368527,
+   "who": [
+    "剣持刀也",
+    "フブキCh。白上フブキ",
+    "伏見ガク【にじさんじ所属】",
+    "アキロゼCh。Vtuber/ホロライブ所属",
+    "Matsuri Channel 夏色まつり"
+   ],
+   "titles": [
+    "【BOMBANANA!】絶対に生き残りたいトリガーくん【剣持視点】",
+    "【BOMBANANA!】　ホロライブ１期生で爆弾猿してみたら多分アキロゼが一番ヤバイ【ホロライブ/白上フブキ】",
+    "【BOMBANANA!】「見ざる」「聞かざる」「言わざる」で意思疎通なんてトリガーには余裕っすよね！？【ネタバレあり / にじさんじ / 伏見ガク】"
+   ],
+   "genres": [
+    "Puzzle",
+    "Indie"
+   ],
+   "year": null,
+   "platforms": [
+    "pc"
+   ],
+   "days_seen": 21,
+   "last_seen": "2026-09-27",
+   "first_here": false
   }
  ],
  "notes_written": true,
  "recent_columns": [
+  {
+   "date": "2026-09-28",
+   "game": "Japanese Ramen Simulator",
+   "headline": "発売の3日前から、厨房はもう回っていた"
+  },
   {
    "date": "2026-09-27",
    "game": "タンポポは耐える。",
@@ -723,11 +726,6 @@
    "date": "2026-09-15",
    "game": "Super Battle Golf",
    "headline": "勝った夜は解散せず、日付をまたいで二次会へ"
-  },
-  {
-   "date": "2026-09-14",
-   "game": "クレイジータクシー",
-   "headline": "窓が閉じる前の夜に、5人が走り出した"
   }
  ]
 }
