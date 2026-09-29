@@ -1,40 +1,57 @@
 {
- "date": "2026-09-29",
- "generated": "2026-09-29 12:17",
+ "date": "2026-09-30",
+ "generated": "2026-09-30 01:29",
  "leads": {
   "events": [
+   {
+    "tag": "#ゲーム実況",
+    "channels": [
+     "CHECHE GAME【顔出し初見ゲーム実況】",
+     "M家の休日マサ",
+     "Usagi Ch. 因幡兎",
+     "えりんぎ Games",
+     "てぃーけぇー",
+     "エラch",
+     "ジョアだよ",
+     "太刀ひろし　【Uncle gamer】 ",
+     "恋因ロス KoinRosu",
+     "星埜きぃ -Key Hoshino-",
+     "里城はな"
+    ]
+   },
    {
     "tag": "#マイクラ肝試し2026",
     "channels": [
      "Anya Melfissa Ch. hololive",
+     "Hajime Ch. 轟はじめ ‐ ReGLOSS",
+     "Iroha ch. 風真いろは - holoX -",
      "Watame Ch. 角巻わため",
+     "おんりー / ドズル社",
+     "ひなたチャンネル (Hinata Channel)",
+     "人生 つみこ (ホラーゲーム専門Vtuber)",
      "堰代ミコ / Mico Channel【ななしいんく】",
      "島村シャルロット / Charlotte Channel【ななしいんく】",
-     "羽渦ミウネル -Miuneru Haneuzu-",
-     "莉犬くん【すとぷり】"
-    ]
-   },
-   {
-    "tag": "#apexlegends",
-    "channels": [
-     "Kira Ch. 月百合鬼ら",
-     "てつぽんげーむず",
-     "のったんちゃんねる",
-     "無名のおにぎり@Apex沼クリップ製造機"
+     "星川サラ / Sara Hoshikawa",
+     "羽渦ミウネル -Miuneru Haneuzu-"
     ]
    },
    {
     "tag": "#ホロドリ",
     "channels": [
+     "AZKi Channel",
      "Iroha ch. 風真いろは - holoX -",
      "Koyori ch. 博衣こより - holoX -",
      "Roboco Ch. - ロボ子",
-     "フブキCh。白上フブキ"
+     "Vivi Ch. 綺々羅々ヴィヴィ - FLOW GLOW",
+     "フブキCh。白上フブキ",
+     "宵吸あけル / Yokyu Akeru",
+     "隅川かど"
     ]
    },
    {
     "tag": "#天下無双ARK",
     "channels": [
+     "ひなたチャンネル (Hinata Channel)",
      "ダナ",
      "史門 / Shimon ",
      "家入ポポ / Popo Channel【ななしいんく】",
@@ -42,20 +59,11 @@
     ]
    },
    {
-    "tag": "#ゲーム実況",
+    "tag": "#apex",
     "channels": [
-     "Usagi Ch. 因幡兎",
-     "ジョアだよ",
-     "恋因ロス KoinRosu",
-     "星埜きぃ -Key Hoshino-"
-    ]
-   },
-   {
-    "tag": "#崩壊スターレイル",
-    "channels": [
-     "あかどらん",
-     "あず / 猫耳親善大使",
-     "麻酔 Masui"
+     "HIKARU SHIDA @SHIDAtube",
+     "てつぽんげーむず",
+     "のったんちゃんねる"
     ]
    },
    {
@@ -65,49 +73,65 @@
      "狐森ろべ / Komori Ch.",
      "鷺原鈴音【SagiharaRinne】"
     ]
+   },
+   {
+    "tag": "#ストグラseason2",
+    "channels": [
+     "HYBRID SENSE",
+     "けんつめしと飯田けんつ【ストグラ】",
+     "スナパイ"
+    ]
+   },
+   {
+    "tag": "#ストグラ",
+    "channels": [
+     "Tenten Ch. / 鳳玲天々",
+     "marunnn【まるーんチャンネル】",
+     "みつき"
+    ]
    }
   ],
   "newcomers": [],
   "wide": [
    {
     "game": "Apex Legends",
-    "channels": 49,
-    "videos": 54
+    "channels": 58,
+    "videos": 68
    },
    {
     "game": "ストリートファイター6",
-    "channels": 31,
-    "videos": 34
+    "channels": 36,
+    "videos": 44
    },
    {
     "game": "Minecraft",
-    "channels": 24,
-    "videos": 25
+    "channels": 36,
+    "videos": 37
    },
    {
-    "game": "モンスターストライク",
-    "channels": 13,
-    "videos": 15
+    "game": "hololive Dreams",
+    "channels": 22,
+    "videos": 26
    },
    {
     "game": "妹に運転を教える",
-    "channels": 13,
-    "videos": 13
+    "channels": 19,
+    "videos": 19
+   },
+   {
+    "game": "エースコンバット8 ウイングス・オブ・シーヴ",
+    "channels": 17,
+    "videos": 18
    },
    {
     "game": "フォートナイト",
-    "channels": 13,
-    "videos": 14
-   },
-   {
-    "game": "VALORANT",
-    "channels": 11,
-    "videos": 12
+    "channels": 14,
+    "videos": 17
    },
    {
     "game": "Silent Hill: Townfall",
-    "channels": 10,
-    "videos": 11
+    "channels": 14,
+    "videos": 15
    }
   ]
  },
@@ -117,7 +141,7 @@
   {
    "word": "Starward",
    "channels": 1,
-   "n": 9,
+   "n": 10,
    "examples": [
     {
      "t": "【星の翼】朝活ランクマ！今日エリシア陸戦だけは調整入れてほしいけど果たして⋯【星之翼/Starward】【東和正】",
@@ -207,6 +231,150 @@
    ]
   },
   {
+   "word": "にじ遊戯王祭2026",
+   "channels": 6,
+   "n": 20,
+   "examples": [
+    {
+     "t": "#にじ遊戯王祭2026 DAY3 ✦ 準決勝！？王伏やぶ蛇姫♡ ✦壱百満天原サロメですわ～",
+     "c": "壱百満天原サロメ / Hyakumantenbara Salome",
+     "u": "https://www.youtube.com/watch?v=7DPcfIDXLtg"
+    },
+    {
+     "t": "【 #にじ遊戯王祭2026 】決勝トーナメント【にじさんじ/イブラヒム】",
+     "c": "イブラヒム【にじさんじ】",
+     "u": "https://www.youtube.com/watch?v=8ER0sDHQ2ZY"
+    },
+    {
+     "t": "【 #にじ遊戯王祭2026 】決勝トーナメント【にじさんじ/イブラヒム】",
+     "c": "イブラヒム【にじさんじ】",
+     "u": "https://www.youtube.com/watch?v=8ER0sDHQ2ZY"
+    }
+   ],
+   "kind": "wide",
+   "suggest": []
+  },
+  {
+   "word": "#ツイステ",
+   "channels": 3,
+   "n": 6,
+   "examples": [
+    {
+     "t": "【#ツイステ】すみません我慢できませんエース誕生日ガチャ｜布教された結果、完全に刺さった男の人生初プレイ",
+     "c": "やよい",
+     "u": "https://www.youtube.com/watch?v=lSyzqo0apPU"
+    },
+    {
+     "t": "【#ツイステ】すみません我慢できませんエース誕生日ガチャ｜布教された結果、完全に刺さった男の人生初プレイ",
+     "c": "やよい",
+     "u": "https://www.youtube.com/watch?v=lSyzqo0apPU"
+    },
+    {
+     "t": "【ツイステ/完全初見】工口漫画みたいなセリフの夢が終わったところから…そうハーツラビュルに行くぞ！！【ストーリー実況配信/ツイステッドワンダーランド/Vtuber】",
+     "c": "月夜猟介 -Ryosuke Tsukiyo-",
+     "u": "https://www.youtube.com/watch?v=wpkglOE9TKg"
+    }
+   ],
+   "kind": "wide",
+   "suggest": []
+  },
+  {
+   "word": "妖怪ウォッチ1",
+   "channels": 3,
+   "n": 6,
+   "examples": [
+    {
+     "t": "脱線しすぎてストーリー全然進まない男による初見実況【妖怪ウォッチ1】②",
+     "c": "きじむなーの実況",
+     "u": "https://www.youtube.com/watch?v=m1XUrXZ22Kc"
+    },
+    {
+     "t": "【妖怪ウォッチ 完全初見プレイ #1】「妖怪ワールド」ここに誕生。社会現象にもなった大人気シリーズ第一弾「妖怪ウォッチ1」初見実況プレイ！！！",
+     "c": "つわはす",
+     "u": "https://www.youtube.com/watch?v=FTyRhJoZgUk"
+    },
+    {
+     "t": "【妖怪ウォッチ 完全初見プレイ #2】「妖怪ワールド」ここに誕生。社会現象にもなった大人気シリーズ第一弾「妖怪ウォッチ1」初見実況プレイ！！！【第5章から】",
+     "c": "つわはす",
+     "u": "https://www.youtube.com/watch?v=nJC5o6GedRY"
+    }
+   ],
+   "kind": "wide",
+   "suggest": []
+  },
+  {
+   "word": "牧場物語 Let's！風のグランドバザール",
+   "channels": 3,
+   "n": 5,
+   "examples": [
+    {
+     "t": "【ふゆの月11日～】世界一のバザールを目指す「牧物」シリーズ最新作【牧場物語 Let's！風のグランドバザール】",
+     "c": "ヒラ",
+     "u": "https://www.youtube.com/watch?v=HGdN6bZEO5E"
+    },
+    {
+     "t": "【牧場物語 Let’s 風のグランドバザール】#65 ついに冬のアレが完成⁉早速設置するぞ～！【初見プレイ】名前はハリポタ縛りで遊びます！",
+     "c": "ゆぅぽたりあん",
+     "u": "https://www.youtube.com/watch?v=x3JKhvTHBYM"
+    },
+    {
+     "t": "【ふゆの月18日～】世界一のバザールを目指す「牧物」シリーズ最新作【牧場物語 Let's！風のグランドバザール】",
+     "c": "ヒラ",
+     "u": "https://www.youtube.com/watch?v=Ptgtt68n3xw"
+    }
+   ],
+   "kind": "wide",
+   "suggest": []
+  },
+  {
+   "word": "真・三國無双2 with 猛将伝 Remastered",
+   "channels": 3,
+   "n": 5,
+   "examples": [
+    {
+     "t": "『真・三國無双2 猛将伝』オリジナル版とリマスター版の画面比較をしてみた！ リマスターでどこまで生まれ変わったのか見てみよう『真・三國無双2 with 猛将伝 Remastered』",
+     "c": "電撃オンライン",
+     "u": "https://www.youtube.com/watch?v=Lxq57wQMCcY"
+    },
+    {
+     "t": "【真・三國無双2 with 猛将伝 Remastered】体験版｜遂に来た！やるぞ！",
+     "c": "あくてん ゲームと心の癒し空間",
+     "u": "https://www.youtube.com/watch?v=V2uxL41p4bg"
+    },
+    {
+     "t": "『真・三國無双2 with 猛将伝 Remastered』先行プレイ。8人の武将アクションを見てみよう！ 張飛、諸葛亮、張遼、司馬懿、陸遜、大喬、呂布、貂蝉",
+     "c": "電撃オンライン",
+     "u": "https://www.youtube.com/watch?v=q1rRUh7CHac"
+    }
+   ],
+   "kind": "wide",
+   "suggest": []
+  },
+  {
+   "word": "作業配信",
+   "channels": 3,
+   "n": 4,
+   "examples": [
+    {
+     "t": "【作業配信】朝活/ひっそりと作業したり勉強したりする#作業 #雑談 #初見さん大歓迎",
+     "c": "ミロ",
+     "u": "https://www.youtube.com/watch?v=2CwSDxzrWRE"
+    },
+    {
+     "t": "【作業配信】この時期大事な機械毎回壊れるお兄さん買ったおにゅーのスマホのせっとあっぷやら入ってたアプリ入れなおしたりするだけの配信#作業 #雑談 #初見さん大歓迎",
+     "c": "ミロ",
+     "u": "https://www.youtube.com/watch?v=cX578ddRPtw"
+    },
+    {
+     "t": "【作業配信】雑談しながら一緒に作業しませんか？！【無所属個人VTuber】",
+     "c": "ケナ氏",
+     "u": "https://www.youtube.com/watch?v=xI7_BQlJzio"
+    }
+   ],
+   "kind": "wide",
+   "suggest": []
+  },
+  {
    "word": "生命！宇宙！レストラン！",
    "channels": 3,
    "n": 3,
@@ -217,14 +385,14 @@
      "u": "https://www.youtube.com/watch?v=mf2f1JsSIbM"
     },
     {
-     "t": "【無料デモ】ヤバすぎる！神様を接客、キレたら合法的に倒す。宇宙のレストラン経営シム『生命！宇宙！レストラン！』【Steam】",
-     "c": "しろこりGames / インディーゲーム専門Vtuber",
-     "u": "https://www.youtube.com/watch?v=Er50YEZIYow"
-    },
-    {
      "t": "【生命！宇宙！レストラン！】オーバークック風×工場自動化×基地建設ってなんだ...！？神々を怒らせて合法的に〇害→脳を入手して厨房自動化。ドパれる新作料理ゲーム攻略が面白いwデモ版！無料【steam】",
      "c": " なぎせいな / 凪世薙",
      "u": "https://www.youtube.com/watch?v=JCNfCCVwCEc"
+    },
+    {
+     "t": "【無料デモ】ヤバすぎる！神様を接客、キレたら合法的に倒す。宇宙のレストラン経営シム『生命！宇宙！レストラン！』【Steam】",
+     "c": "しろこりGames / インディーゲーム専門Vtuber",
+     "u": "https://www.youtube.com/watch?v=Er50YEZIYow"
     }
    ],
    "kind": "wide",
@@ -235,22 +403,22 @@
  "hot_facts": [
   {
    "game": "エースコンバット8 ウイングス・オブ・シーヴ",
-   "growth": 10.0,
-   "videos": 8,
-   "base": 0.8,
-   "channels": 8,
-   "views": 407008,
+   "growth": 13.85,
+   "videos": 18,
+   "base": 1.3,
+   "channels": 17,
+   "views": 332182,
    "who": [
-    "キャベツの人【ゲーム紹介】",
-    "けいじチャンネル",
     "兄者のゲーム事務所",
+    "兄者のゲーム事務所",
+    "キャベツの人【ゲーム紹介】",
     "GAMEゆうなch",
-    "NiShiKeN"
+    "GAMEゆうなch"
    ],
    "titles": [
-    "遂に来る..10月発売注目の新作ゲーム15選！大賛否だったドグマ2ダークアリズンとして爆誕/エースコンバット8に紅の砂漠DLC＆爆裂アクションのファントムブレードゼロ＆FFレゾナンスも登場で大豊作過ぎ",
-    "エスコン8が高評価！日本のゲームが凄い事に！｜PSポータルの嬉しいアプデとPS5Proが抽選販売に【ゲームニュースまとめ】",
-    "※ネタバレ注意【祝アーリースタート】兄者の「ACE COMBAT 8: WINGS OF THEVE」【2BRO.】"
+    "※ネタバレ注意【祝アーリースタート】兄者の「ACE COMBAT 8: WINGS OF THEVE」【2BRO.】",
+    "※ネタバレ注意【祝アーリースタート】兄者の「ACE COMBAT 8: WINGS OF THEVE」【2BRO.】",
+    "バンナム渾身のエースコンバット8めちゃくちゃ高評価でよさげ/ぷよぷよのアジア大会で１時間しか練習しない11歳の天才が優勝/裁縫するだけのゲームが突如爆誕で爆売れする"
    ],
    "genres": [
     "Shooter",
@@ -262,57 +430,52 @@
     "pc",
     "console"
    ],
-   "days_seen": 4,
-   "last_seen": "2026-09-28",
+   "days_seen": 5,
+   "last_seen": "2026-09-29",
    "first_here": false
   },
   {
-   "game": "バイオハザード2",
-   "growth": 3.75,
-   "videos": 3,
-   "base": 0.7,
-   "channels": 3,
-   "views": 84111,
+   "game": "hololive Dreams",
+   "growth": 8.97,
+   "videos": 26,
+   "base": 2.9,
+   "channels": 22,
+   "views": 1742193,
    "who": [
-    "つなまぐろ",
-    "Tomari Mari channel / 兎鞠まりちゃんねる",
-    "きらり☆ももんが"
+    "Koyori ch. 博衣こより - holoX -",
+    "フブキCh。白上フブキ",
+    "Noel Ch. 白銀ノエル",
+    "Miko Ch. さくらみこ",
+    "Iroha ch. 風真いろは - holoX -"
    ],
    "titles": [
-    "【バイオ RE2】クレア編：地獄のラクーンに無限武器で無双しにいく！PART1【超高難易度mod】",
-    "【BIOHAZARD RE:2】初見プレイが征く！バイオRE:2クレア編スタート！【#とまライブ】",
-    "【バイオハザード2　PS1】ナイフ1本あればいい！ 豆腐さんもクリアしたい！！  #7【Vtuber きらり☆ももんが】"
+    "【 #ホロドリ 】新エリア＆新水着ガチャきちゃああ！遂にこより水着‼️コンプ＆完凸したいぞ‼️【博衣こより/ホロライブ】",
+    "【#ホロドリ】　ホロドリガチ対談!!!　新要素！魚釣りもしつつ質問募集や編成話等【ホロライブ/白上フブキ/不知火フレア】",
+    "【ホロドリ】新エリアきたあああ！！ストーリー進めて釣りゲーしたい太郎ッ！！！【白銀ノエル/ホロライブ】"
    ],
-   "genres": [
-    "Shooter",
-    "Puzzle",
-    "Adventure"
-   ],
+   "genres": [],
    "year": null,
-   "platforms": [
-    "pc",
-    "console"
-   ],
-   "days_seen": 14,
-   "last_seen": "2026-09-28",
+   "platforms": [],
+   "days_seen": 29,
+   "last_seen": "2026-09-29",
    "first_here": false
   },
   {
    "game": "狂い咲き",
    "growth": 3.75,
    "videos": 3,
-   "base": 0.5,
+   "base": 0.7,
    "channels": 3,
-   "views": 3471,
+   "views": 60292,
    "who": [
     "布団ちゃん【魔神の戯れ】",
-    "ゼオ=シェリオン -Zeo=Sherion-",
-    "白雪 巴/Shirayuki Tomoe"
+    "白雪 巴/Shirayuki Tomoe",
+    "ゼオ=シェリオン -Zeo=Sherion-"
    ],
    "titles": [
     "布団ちゃんの『狂い咲き』実況プレイ",
-    "【#狂い咲き | Day02】日本が舞台の一人称ホラゲ！不気味な住民と不可解な現象に立ち向かう #KuruiZaki 初見攻略実況 #Vtuber",
-    "【狂い咲き】は な が …… 咲 い た ヨ【白雪巴/にじさんじ】"
+    "【狂い咲き】霊障()に邪魔されたので立て直しました【白雪巴/にじさんじ】",
+    "【#狂い咲き | Day02】日本が舞台の一人称ホラゲ！不気味な住民と不可解な現象に立ち向かう #KuruiZaki 初見攻略実況 #Vtuber"
    ],
    "genres": [
     "Adventure",
@@ -322,91 +485,96 @@
    "platforms": [
     "pc"
    ],
-   "days_seen": 9,
-   "last_seen": "2026-09-27",
+   "days_seen": 10,
+   "last_seen": "2026-09-29",
    "first_here": false
   },
   {
-   "game": "崩壊：スターレイル",
-   "growth": 3.44,
-   "videos": 11,
-   "base": 3.2,
-   "channels": 9,
-   "views": 157911,
+   "game": "ロードモバイル",
+   "growth": 3.75,
+   "videos": 3,
+   "base": 0.8,
+   "channels": 3,
+   "views": 7947,
    "who": [
-    "麻酔 Masui",
-    "麻酔 Masui",
-    "サマオイch",
-    "シューレン",
-    "藍沢エマ / Aizawa Ema"
+    "顔芸",
+    "聖帝タイチのゲーム実況チャンネル",
+    "ゆんちゅる@宝石彫留職人・VPL5期生麻雀新人VTuber"
    ],
    "titles": [
-    "【#崩壊スターレイル】愉悦編成強化になるか！？『パール』ついに実装",
-    "【#崩壊スターレイル】開拓クエスト「月立つ前に獣と踊れ」をプレイ",
-    "【ガチャ】仮天井分だけで勝つさ【崩壊スターレイル】"
+    "【ローモバ #PR】生きている【DETONATOR/顔芸】",
+    "【ロードモバイル】対抗戦イベント優勝！！みんなへのお礼！",
+    "【#ロードモバイル 】明日まで！！同盟あと2人…！！なんとか…！！【VPL5期生/ゆんちゅる】 #初見歓迎 #PR"
    ],
    "genres": [
+    "Real Time Strategy (RTS)",
     "Role-playing (RPG)",
-    "Turn-based strategy (TBS)",
-    "Adventure"
+    "Strategy"
+   ],
+   "year": null,
+   "platforms": [
+    "pc"
+   ],
+   "days_seen": 3,
+   "last_seen": "2026-09-29",
+   "first_here": false
+  },
+  {
+   "game": "Big Walk",
+   "growth": 2.5,
+   "videos": 5,
+   "base": 2.0,
+   "channels": 4,
+   "views": 676013,
+   "who": [
+    "千燈ゆうひ",
+    "Uruca ch /うるか",
+    "Uruca ch /うるか",
+    "SHAKAch",
+    "SHAKAch"
+   ],
+   "titles": [
+    "【Big Walk】デ　　カ　　歩　　き　　部　#3 【 ぶいすぽっ！ / 千燈ゆうひ 】",
+    "【BIG walk】デ     カ     歩    き    ファイナルシーズン  w/千燈さん釈迦ノリアキ【うるか】",
+    "女性の扱い方に差がありすぎるうるかと既婚者男性たち【釈迦/鈴木ノリアキ/千燈ゆうひ/BigWalk】"
+   ],
+   "genres": [
+    "Platform",
+    "Puzzle",
+    "Adventure",
+    "Indie"
    ],
    "year": null,
    "platforms": [
     "pc",
     "console"
    ],
-   "days_seen": 21,
-   "last_seen": "2026-09-28",
+   "days_seen": 17,
+   "last_seen": "2026-09-29",
    "first_here": false
   },
   {
    "game": "学園アイドルマスター",
-   "growth": 3.33,
-   "videos": 4,
+   "growth": 2.5,
+   "videos": 3,
    "base": 1.2,
    "channels": 3,
-   "views": 12151,
+   "views": 3772,
    "who": [
-    "愛幸Pプロデュースch. / aisachiP",
     "愛幸Pプロデュースch. / aisachiP",
     "とあの3たん",
     "Mimoza Ch. 華咲みもざ"
    ],
    "titles": [
-    "うひょおおおおお小悪魔ガシャじゃあああああああ【学マスHRミラー配信】#初星学園HR",
-    "【学マス速報】小悪魔リーリヤ強そう！10月のガシャやイベントのスケジュールも来た！【初星HR情報まとめ】",
-    "バトスピが学マスとコラボするらしいけどポケユナをチルく遊ぶ"
+    "【学マス】並走したら欲しいメモリーが出るあさりゼミ【雑談配信/質問OK】",
+    "バトスピが学マスとコラボするらしいけどポケユナをチルく遊ぶ",
+    "【#学園アイドルマスター】「Agitato」リーリヤガシャに挑む！＃４【 #華咲みもざ / ネタバレ注意 】"
    ],
    "genres": [],
    "year": null,
    "platforms": [],
-   "days_seen": 4,
-   "last_seen": "2026-09-28",
-   "first_here": false
-  },
-  {
-   "game": "ウマ娘 プリティーダービー",
-   "growth": 2.67,
-   "videos": 4,
-   "base": 1.5,
-   "channels": 3,
-   "views": 90103,
-   "who": [
-    "ニュイ・ソシエール //[Nui Sociere]",
-    "れも / LemoCh.",
-    "椿 くおん -Tsubaki Kuon-",
-    "れも / LemoCh."
-   ],
-   "titles": [
-    "【ウマ娘プリティーダービー】枷を薙ぎ、苛烈に咲くは、戦場の華 ～ファレノプシス育成～ 【ニュイ・ソシエール/にじさんじ】",
-    "【ウマ娘】チャンミが終わるとチャンミが始まる！凱旋門本育成＆ルムマ生配信！【れも】",
-    "【#ウマ娘 】完全初見🔰ウマ娘のモデルを知る🐎シーキングザパール・アストンマーチャン・マルシュロレーヌ編 #vtuber #ウマ娘プリティーダービー #競馬"
-   ],
-   "genres": [],
-   "year": null,
-   "platforms": [],
-   "days_seen": 11,
-   "last_seen": "2026-09-28",
+   "days_seen": 5,
+   "last_seen": "2026-09-29",
    "first_here": false
   }
  ],
