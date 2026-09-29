@@ -134,9 +134,15 @@ header .d{font-family:"Roboto Mono",monospace;font-size:27px;font-weight:700;
   color:var(--accent);line-height:1}
 header .c{font-size:13px;color:var(--ink2);margin-top:6px;font-weight:700}
 
-.body{flex:1;display:grid;grid-template-columns:1fr 560px;gap:26px;min-height:0}
+.body{flex:1;display:grid;grid-template-columns:minmax(0,1fr) 560px;gap:26px;min-height:0}
+/* min-width:0 が要る理由（2026-09-29）。
+   グリッドや横並びの升目は、既定で「中身の最小幅より狭くならない」。
+   そのため『エースコンバット8 ウイングス・オブ・シーヴ』のような長い名前が
+   1つあるだけで、右の列ごと1600pxの外へ押し出され、件数とグラフが
+   画像から切れていた（たろちんさんが原因まで切り分けて報告）。
+   0を指定して初めて overflow や折り返しの指定が効くようになる。 */
 .card{background:var(--card);border:1px solid var(--line);border-radius:18px;
-  padding:24px 26px;display:flex;flex-direction:column;min-height:0}
+  padding:24px 26px;display:flex;flex-direction:column;min-height:0;min-width:0}
 .eye{align-self:flex-start;display:inline-flex;align-items:center;gap:8px;
   font-family:%(titlefont)s;font-weight:%(titleweight)s;font-size:16px;color:var(--on);background:var(--hot);
   padding:6px 14px 6px 12px;border-radius:8px}
@@ -173,13 +179,13 @@ header .c{font-size:13px;color:var(--ink2);margin-top:6px;font-weight:700}
   overflow:hidden;text-overflow:ellipsis;white-space:nowrap;font-weight:700}
 .pics.sm figcaption{font-size:11px}
 
-.side{display:grid;grid-template-rows:1fr 1fr;gap:26px;min-height:0}
+.side{display:grid;grid-template-rows:1fr 1fr;gap:26px;min-height:0;min-width:0}
 .row{display:grid;grid-template-columns:42px 1fr auto;align-items:center;gap:12px;
   padding:14px 0 12px;border-bottom:1px solid var(--line)}
 .row:last-child{border-bottom:none}
 .row .rk{font-family:%(titlefont)s;font-weight:%(titleweight)s;font-size:32px;color:var(--ink3);text-align:center;line-height:1}
 .row.t1 .rk{color:var(--hot);font-size:40px}
-.row .nm{font-size:24px;font-weight:800;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.row .nm{font-size:24px;font-weight:800;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;min-width:0}
 .row .ct{font-family:"Roboto Mono",monospace;font-size:17px;color:var(--ink2);white-space:nowrap}
 .row .ct em{font-style:normal;font-size:13px;color:var(--ink3)}
 .row .bar{grid-column:2/4;height:7px;background:var(--rail);border-radius:4px;
@@ -188,8 +194,14 @@ header .c{font-size:13px;color:var(--ink2);margin-top:6px;font-weight:700}
 .row.t1 .bar i{background:var(--hot)}
 
 .hot{display:flex;flex-direction:column}
-.hot .g{font-family:%(titlefont)s;font-weight:%(titleweight)s;font-size:32px;margin-top:14px;line-height:1.25;
-  overflow:hidden;text-overflow:ellipsis;white-space:nowrap;color:var(--ink)}
+/* 急上昇のゲーム名。ここは主役の1つなので、1行で切らずに2行まで折り返す。
+   2行で収まらないときだけ末尾を「…」にする（-webkit-line-clamp）。 */
+.hot .g{font-family:%(titlefont)s;font-weight:%(titleweight)s;font-size:32px;margin-top:14px;
+  line-height:1.24;color:var(--ink);min-width:0;overflow-wrap:anywhere;
+  display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+.hot .g.long{font-size:27px}
+.hot .g.xlong{font-size:23px}
+.hot .delta span{min-width:0;overflow-wrap:anywhere}
 .hot .delta{display:flex;align-items:baseline;gap:12px;margin-top:12px}
 .hot .delta b{font-family:%(titlefont)s;font-weight:%(titleweight)s;font-size:44px;
   color:var(--hot);line-height:1%(numstroke)s}
@@ -280,6 +292,15 @@ FIT = """
         }
         t.textContent=full.slice(0,lo)+'…';
       }
+    }
+    // 急上昇のゲーム名。2行に収まらなければ1段ずつ小さくする。
+    var g=document.querySelector('.hot .g');
+    if(g){
+      var gs=[32,29,27,25,23,21,19];
+      var now=parseFloat(getComputedStyle(g).fontSize);
+      gs=gs.filter(function(v){ return v<=now; });
+      for(var k=0;k<gs.length && g.scrollHeight>g.clientHeight+1;k++)
+        g.style.fontSize=gs[k]+'px';
     }
     window.__fit=true;
   }
@@ -388,12 +409,12 @@ def hot_html(data):
                  f'<span>ふだん {base:g}件 → 今日 {r.get("videos", 0)}件</span>'
                  if base is not None else f'<b>{r.get("videos", 0)}件</b>')
         return (f'<span class="eye">{UP}今日いちばん伸びた</span>'
-                f'<div class="g">{e(r.get("game"))}</div>'
+                f'<div class="g{size_class(r.get("game"), 14, 24)}">{e(r.get("game"))}</div>'
                 f'<div class="delta">{delta}</div>'
                 + bars_html(r.get("spark") or [], days))
     sp = (data.get("spread") or [{}])[0]
     return (f'<span class="eye">{UP}多くの配信者が触った</span>'
-            f'<div class="g">{e(sp.get("game"))}</div>'
+            f'<div class="g{size_class(sp.get("game"), 14, 24)}">{e(sp.get("game"))}</div>'
             f'<div class="delta"><b>{sp.get("channels", 0)}</b>'
             f'<span>チャンネルが配信</span></div>'
             + bars_html(sp.get("spark") or [], days))
