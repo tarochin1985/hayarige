@@ -1,32 +1,8 @@
 {
  "date": "2026-09-29",
- "generated": "2026-09-29 03:08",
+ "generated": "2026-09-29 10:32",
  "leads": {
   "events": [
-   {
-    "tag": "#ストグラ",
-    "channels": [
-     "marunnn【まるーんチャンネル】",
-     "【琵琶ちゃぷ】なな湖なな湖",
-     "たけぉ",
-     "みつき",
-     "ノビーの遊び部屋",
-     "影。/かげまる",
-     "闇乃あびす / Abyss",
-     "魔光リサ - Lisa Makoh -"
-    ]
-   },
-   {
-    "tag": "#ストグラSeason2",
-    "channels": [
-     "けんつめしと飯田けんつ【ストグラ】",
-     "たけぉ",
-     "天羽よつは",
-     "影。/かげまる",
-     "暁月ホタル AKATSUKI HOTARU",
-     "稲荷いろはInari Iroha"
-    ]
-   },
    {
     "tag": "#マイクラ肝試し2026",
     "channels": [
@@ -39,23 +15,30 @@
     ]
    },
    {
-    "tag": "#天下無双ARK",
-    "channels": [
-     "ひなたチャンネル (Hinata Channel)",
-     "ダナ",
-     "史門 / Shimon ",
-     "家入ポポ / Popo Channel【ななしいんく】",
-     "扇名いだ"
-    ]
-   },
-   {
     "tag": "#apexlegends",
     "channels": [
      "Kira Ch. 月百合鬼ら",
      "てつぽんげーむず",
      "のったんちゃんねる",
-     "ひろたむ(あやたむ)ちゃんねる",
      "無名のおにぎり@Apex沼クリップ製造機"
+    ]
+   },
+   {
+    "tag": "#ホロドリ",
+    "channels": [
+     "Iroha ch. 風真いろは - holoX -",
+     "Koyori ch. 博衣こより - holoX -",
+     "Roboco Ch. - ロボ子",
+     "フブキCh。白上フブキ"
+    ]
+   },
+   {
+    "tag": "#天下無双ARK",
+    "channels": [
+     "ダナ",
+     "史門 / Shimon ",
+     "家入ポポ / Popo Channel【ななしいんく】",
+     "扇名いだ"
     ]
    },
    {
@@ -68,11 +51,19 @@
     ]
    },
    {
-    "tag": "#ホロドリ",
+    "tag": "#崩壊スターレイル",
     "channels": [
-     "Iroha ch. 風真いろは - holoX -",
-     "Koyori ch. 博衣こより - holoX -",
-     "Roboco Ch. - ロボ子"
+     "あかどらん",
+     "あず / 猫耳親善大使",
+     "麻酔 Masui"
+    ]
+   },
+   {
+    "tag": "#スタレゾ",
+    "channels": [
+     "ゆーたん",
+     "狐森ろべ / Komori Ch.",
+     "鷺原鈴音【SagiharaRinne】"
     ]
    }
   ],
@@ -80,43 +71,43 @@
   "wide": [
    {
     "game": "Apex Legends",
-    "channels": 54,
-    "videos": 62
+    "channels": 50,
+    "videos": 57
    },
    {
     "game": "ストリートファイター6",
-    "channels": 31,
-    "videos": 34
+    "channels": 30,
+    "videos": 33
    },
    {
     "game": "Minecraft",
-    "channels": 27,
-    "videos": 28
-   },
-   {
-    "game": "Grand Theft Auto V",
-    "channels": 18,
-    "videos": 20
+    "channels": 24,
+    "videos": 25
    },
    {
     "game": "モンスターストライク",
-    "channels": 14,
-    "videos": 18
-   },
-   {
-    "game": "フォートナイト",
-    "channels": 14,
-    "videos": 17
+    "channels": 13,
+    "videos": 16
    },
    {
     "game": "妹に運転を教える",
-    "channels": 13,
-    "videos": 13
+    "channels": 14,
+    "videos": 14
    },
    {
-    "game": "ARK: Survival Ascended",
+    "game": "フォートナイト",
+    "channels": 13,
+    "videos": 14
+   },
+   {
+    "game": "Silent Hill: Townfall",
     "channels": 11,
     "videos": 12
+   },
+   {
+    "game": "崩壊：スターレイル",
+    "channels": 12,
+    "videos": 16
    }
   ]
  },
@@ -197,22 +188,6 @@
    "suggest": [
     "Konami Krazy Racers",
     "Konami's Ping Pong"
-   ]
-  },
-  {
-   "word": "DinoBones",
-   "channels": 1,
-   "n": 1,
-   "examples": [
-    {
-     "t": "【DinoBones】恐竜解説しながら骨のお片付け🦖睡眠導入・作業用BGMに┊︎DinoBones: Tidy Up the Museum【ゲーム実況 / Vtuber】",
-     "c": "スーピー / Soopy【JP】",
-     "u": "https://www.youtube.com/watch?v=I-yp0MzKLI4"
-    }
-   ],
-   "kind": "near",
-   "suggest": [
-    "DinoBones: Tidy Up the Museum"
    ]
   },
   {
@@ -322,7 +297,7 @@
   {
    "word": "縦型配信",
    "channels": 3,
-   "n": 3,
+   "n": 4,
    "examples": [
     {
      "t": "【カービィのエアライダー】ランクマッチやる！ラスト3戦は参加型！#縦型配信 #short #カービィのエアライダー",
@@ -335,7 +310,7 @@
      "u": "https://www.youtube.com/watch?v=T6TMS_rCY4g"
     },
     {
-     "t": "【縦型配信】/ランクリセットまで残り10日！初心者は60日でアンリアルに到達できるのか？",
+     "t": "【縦型配信】/ランクリセットまで残り10日！アンリアルに到達できるのか？",
      "c": "とち丸ちゃん【毎日19時配信】",
      "u": "https://www.youtube.com/watch?v=cz7HSUZobiU"
     }
@@ -390,17 +365,73 @@
    ],
    "kind": "wide",
    "suggest": []
+  },
+  {
+   "word": "生命！宇宙！レストラン！",
+   "channels": 3,
+   "n": 3,
+   "examples": [
+    {
+     "t": "【10月12日発売予定】このゲームはヤバいｗ 建築×レストラン経営『生命！宇宙！レストラン！』が面白すぎたｗ 【Steam】【おすすめ/ゲーム紹介・序盤実況】",
+     "c": "くろろじちゃんねる",
+     "u": "https://www.youtube.com/watch?v=mf2f1JsSIbM"
+    },
+    {
+     "t": "【無料デモ】ヤバすぎる！神様を接客、キレたら合法的に倒す。宇宙のレストラン経営シム『生命！宇宙！レストラン！』【Steam】",
+     "c": "しろこりGames / インディーゲーム専門Vtuber",
+     "u": "https://www.youtube.com/watch?v=Er50YEZIYow"
+    },
+    {
+     "t": "【生命！宇宙！レストラン！】オーバークック風×工場自動化×基地建設ってなんだ...！？神々を怒らせて合法的に〇害→脳を入手して厨房自動化。ドパれる新作料理ゲーム攻略が面白いwデモ版！無料【steam】",
+     "c": " なぎせいな / 凪世薙",
+     "u": "https://www.youtube.com/watch?v=JCNfCCVwCEc"
+    }
+   ],
+   "kind": "wide",
+   "suggest": []
   }
  ],
  "miss_days": 7,
  "hot_facts": [
+  {
+   "game": "Ace Combat 8: Wings of Theve",
+   "growth": 5.0,
+   "videos": 4,
+   "base": 0.5,
+   "channels": 4,
+   "views": 47561,
+   "who": [
+    "兄者のゲーム事務所",
+    "GAMEゆうなch",
+    "電撃オンライン",
+    "フェイチャンネル【ゲーム実況】2000本クリアした男の軌跡"
+   ],
+   "titles": [
+    "※ネタバレ注意【祝アーリースタート】兄者の「ACE COMBAT 8: WINGS OF THEVE」【2BRO.】",
+    "【ACE COMBAT 8: WINGS OF THEVE】本日先行アクセス解禁！エースコンバット８ ネタバレあり【PS5】",
+    "『エースコンバット8』アーリーアクセス【ネタバレあり】最高峰の空の戦いを体感せよ！きよし、29年ぶりの空へ【きよしとタダツグの実況立志伝】ACE COMBAT 8: WINGS OF THEVE"
+   ],
+   "genres": [
+    "Shooter",
+    "Simulator",
+    "Arcade"
+   ],
+   "year": 2026,
+   "platforms": [
+    "pc",
+    "console"
+   ],
+   "days_seen": 1,
+   "last_seen": "2026-09-28",
+   "first_here": false
+  },
   {
    "game": "バイオハザード2",
    "growth": 3.75,
    "videos": 3,
    "base": 0.7,
    "channels": 3,
-   "views": 67954,
+   "views": 83005,
    "who": [
     "つなまぐろ",
     "Tomari Mari channel / 兎鞠まりちゃんねる",
@@ -421,88 +452,26 @@
     "pc",
     "console"
    ],
-   "days_seen": 13,
-   "last_seen": "2026-09-27",
-   "first_here": false
-  },
-  {
-   "game": "Elden Ring Nightreign",
-   "growth": 3.75,
-   "videos": 3,
-   "base": 0.5,
-   "channels": 3,
-   "views": 19652,
-   "who": [
-    "らっこ侍",
-    "GAMEアダチ",
-    "Uzuki Haruka channel / 兎月はるかch"
-   ],
-   "titles": [
-    "守護者の使い方忘れたので思い出しながらみんなでナイトレインを楽しむ配信【ELDENRING NIGHTREIGN / エルデンリング ナイトレイン】",
-    "通信エラー地獄 VS あぐらストラゲス無頼漢【エルデンリングナイトレイン/ELDENRING NIGHTREIGN】",
-    "【ナイトレイン】葬儀屋兎が深き夜３でがんばります♡🐇⚔【ELDEN RING NIGHTREIGN】"
-   ],
-   "genres": [
-    "Role-playing (RPG)",
-    "Hack and slash/Beat 'em up"
-   ],
-   "year": null,
-   "platforms": [
-    "pc",
-    "console"
-   ],
-   "days_seen": 3,
+   "days_seen": 14,
    "last_seen": "2026-09-28",
-   "first_here": false
-  },
-  {
-   "game": "Dinkum",
-   "growth": 3.75,
-   "videos": 3,
-   "base": 0.5,
-   "channels": 3,
-   "views": 1192,
-   "who": [
-    "れふれん",
-    "saoriの癒し系ゲームチャンネル",
-    "ジョアだよ"
-   ],
-   "titles": [
-    "皆でお祝い！島生活は2年目へ【Dinkum】【ゆっくり実況】#09(終)",
-    "【Dinkum】ルビーの欠片がないのでディープマインに行く🌞【Switch実況】",
-    "【🪵Dinkum #76】黒い懐中時計を使って早朝から活動する!!!🔥｜#ディンカム #スローライフ #Dinkumpartner"
-   ],
-   "genres": [
-    "Role-playing (RPG)",
-    "Simulator",
-    "Adventure",
-    "Indie"
-   ],
-   "year": null,
-   "platforms": [
-    "pc",
-    "console"
-   ],
-   "days_seen": 5,
-   "last_seen": "2026-09-23",
    "first_here": false
   },
   {
    "game": "Air Combat",
    "growth": 3.75,
    "videos": 3,
-   "base": 0.5,
+   "base": 0.4,
    "channels": 3,
-   "views": 0,
+   "views": 493,
    "who": [
+    "NiShiKeN",
     "星屑ぷらね / Planei Hoshikuzu",
-    "季沙 / Kisa",
-    "NiShiKeN"
+    "季沙 / Kisa"
    ],
    "titles": [
+    "【ACE COMBAT 8】ネタバレ注意 エースコンバット8祝リリース 最速ストーリー進行",
     "#01【ACE COMBAT 8】シリーズ完全初見✨アーリーアクセスでいち早くプレイしちゃうよ🎵※ネタバレあり【星屑ぷらね/すぺしゃりて】#すぺしゃりて #acecombat8 #エースコンバット8",
-    "ロボ好きが初めてのエースコンバット！完全初見で名作を関西人がプレイ！#1  #季沙のお茶会 【ACE COMBAT ZERO/エースコンバット・ゼロ ザ・ベルカン・ウォー】 ※ネタバレ注意",
-    "【ACE COMBAT 8】ネタバレ注意 エースコンバット8祝リリース 最速ストーリー進行"
+    "ロボ好きが初めてのエースコンバット！完全初見で名作を関西人がプレイ！#1  #季沙のお茶会 【ACE COMBAT ZERO/エースコンバット・ゼロ ザ・ベルカン・ウォー】 ※ネタバレ注意"
    ],
    "genres": [
     "Shooter",
@@ -512,42 +481,17 @@
    "platforms": [
     "console"
    ],
-   "days_seen": 0,
-   "last_seen": null,
-   "first_here": true
-  },
-  {
-   "game": "学園アイドルマスター",
-   "growth": 3.33,
-   "videos": 4,
-   "base": 1.2,
-   "channels": 3,
-   "views": 9840,
-   "who": [
-    "愛幸Pプロデュースch. / aisachiP",
-    "愛幸Pプロデュースch. / aisachiP",
-    "とあの3たん",
-    "Mimoza Ch. 華咲みもざ"
-   ],
-   "titles": [
-    "うひょおおおおお小悪魔ガシャじゃあああああああ【学マスHRミラー配信】#初星学園HR",
-    "【学マス速報】小悪魔リーリヤ強そう！10月のガシャやイベントのスケジュールも来た！【初星HR情報まとめ】",
-    "バトスピが学マスとコラボするらしいけどポケユナをチルく遊ぶ"
-   ],
-   "genres": [],
-   "year": null,
-   "platforms": [],
-   "days_seen": 3,
-   "last_seen": "2026-09-24",
+   "days_seen": 1,
+   "last_seen": "2026-09-28",
    "first_here": false
   },
   {
    "game": "崩壊：スターレイル",
-   "growth": 3.26,
-   "videos": 15,
-   "base": 4.6,
+   "growth": 3.4,
+   "videos": 16,
+   "base": 4.7,
    "channels": 12,
-   "views": 126116,
+   "views": 143511,
    "who": [
     "麻酔 Masui",
     "麻酔 Masui",
@@ -564,6 +508,57 @@
    "year": null,
    "platforms": [],
    "days_seen": 27,
+   "last_seen": "2026-09-28",
+   "first_here": false
+  },
+  {
+   "game": "学園アイドルマスター",
+   "growth": 3.33,
+   "videos": 4,
+   "base": 1.2,
+   "channels": 3,
+   "views": 11901,
+   "who": [
+    "愛幸Pプロデュースch. / aisachiP",
+    "愛幸Pプロデュースch. / aisachiP",
+    "とあの3たん",
+    "Mimoza Ch. 華咲みもざ"
+   ],
+   "titles": [
+    "うひょおおおおお小悪魔ガシャじゃあああああああ【学マスHRミラー配信】#初星学園HR",
+    "【学マス速報】小悪魔リーリヤ強そう！10月のガシャやイベントのスケジュールも来た！【初星HR情報まとめ】",
+    "バトスピが学マスとコラボするらしいけどポケユナをチルく遊ぶ"
+   ],
+   "genres": [],
+   "year": null,
+   "platforms": [],
+   "days_seen": 4,
+   "last_seen": "2026-09-28",
+   "first_here": false
+  },
+  {
+   "game": "がんばれゴエモン大集合！",
+   "growth": 3.0,
+   "videos": 3,
+   "base": 1.0,
+   "channels": 3,
+   "views": 2054,
+   "who": [
+    "馬小屋ねる子レトロゲームCh.",
+    "Hiromi Ch. 白河ひろみ",
+    "勅使河原めめこ",
+    "Hiromi Ch. 白河ひろみ",
+    "勅使河原めめこ"
+   ],
+   "titles": [
+    "【がんばれゴエモン 黒船党の謎  #2】ゴエモン大集合13タイトル全て攻略！【Steam/レトロゲーム/VTuber】",
+    "【がんばれゴエモン大集合！】初見 ～ゆき姫救出絵巻～ 実況プレイ配信2",
+    "【がんばれゴエモン大集合！】完全初見で挑む！目指せシリーズ全制覇✨9作品目！GBCソフト「がんばれゴエモン 星空士ダイナマイッツあらわる!!」やっていく💫【 #vtuber / #勅使河原めめこ 】"
+   ],
+   "genres": [],
+   "year": null,
+   "platforms": [],
+   "days_seen": 11,
    "last_seen": "2026-09-28",
    "first_here": false
   }
