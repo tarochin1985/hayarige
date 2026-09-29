@@ -3661,6 +3661,9 @@
   "y": 2026,
   "p": [
    "console"
+  ],
+  "g": [
+   "Arcade"
   ]
  },
  {
@@ -3808,21 +3811,6 @@
    "Strategy",
    "Indie",
    "Card & Board Game"
-  ]
- },
- {
-  "name": "Archivist: Tidy Up & Sort",
-  "alias": [
-   "ARCHIVIST: Tidy Up & Sort",
-   "Cozy Archivist Simulator"
-  ],
-  "pop": 0,
-  "y": 2026,
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Simulator"
   ]
  },
  {
@@ -7074,6 +7062,10 @@
   "y": 2026,
   "p": [
    "console"
+  ],
+  "g": [
+   "Puzzle",
+   "Strategy"
   ]
  },
  {
@@ -16632,6 +16624,7 @@
    "console"
   ],
   "g": [
+   "Platform",
    "Adventure"
   ]
  },
@@ -28627,6 +28620,11 @@
   "y": 2026,
   "p": [
    "console"
+  ],
+  "g": [
+   "Platform",
+   "Adventure",
+   "Arcade"
   ]
  },
  {
@@ -37785,6 +37783,9 @@
   "y": 2026,
   "p": [
    "console"
+  ],
+  "g": [
+   "Puzzle"
   ]
  },
  {
@@ -44896,20 +44897,6 @@
   ]
  },
  {
-  "name": "Pin Money",
-  "alias": [],
-  "pop": 0,
-  "y": 2026,
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Simulator",
-   "Sport",
-   "Indie"
-  ]
- },
- {
   "name": "PinKeep",
   "alias": [],
   "pop": 0,
@@ -45130,6 +45117,20 @@
    "pc"
   ],
   "g": [
+   "Indie"
+  ]
+ },
+ {
+  "name": "PixelHeroScramble Plus",
+  "alias": [],
+  "pop": 0,
+  "y": 2026,
+  "p": [
+   "pc"
+  ],
+  "g": [
+   "Simulator",
+   "Strategy",
    "Indie"
   ]
  },
@@ -49151,6 +49152,9 @@
   "y": 2026,
   "p": [
    "console"
+  ],
+  "g": [
+   "Music"
   ]
  },
  {
@@ -54566,18 +54570,6 @@
   ],
   "g": [
    "Simulator",
-   "Indie"
-  ]
- },
- {
-  "name": "Spear of the Sky",
-  "alias": [],
-  "pop": 0,
-  "y": 2026,
-  "p": [
-   "pc"
-  ],
-  "g": [
    "Indie"
   ]
  },
@@ -60626,6 +60618,19 @@
   ]
  },
  {
+  "name": "The Legend of Heroes: Trails from Zero / The Legend of Heroes: Trails to Azure",
+  "alias": [],
+  "pop": 0,
+  "y": 2026,
+  "p": [
+   "console"
+  ],
+  "g": [
+   "Role-playing (RPG)",
+   "Turn-based strategy (TBS)"
+  ]
+ },
+ {
   "name": "The Legend of Mala Tokmachka",
   "alias": [],
   "pop": 0,
@@ -60883,6 +60888,8 @@
    "console"
   ],
   "g": [
+   "Platform",
+   "Puzzle",
    "Adventure",
    "Indie"
   ]
@@ -63499,6 +63506,10 @@
   "p": [
    "pc",
    "console"
+  ],
+  "g": [
+   "Shooter",
+   "Music"
   ]
  },
  {
@@ -66976,6 +66987,9 @@
   "y": 2026,
   "p": [
    "console"
+  ],
+  "g": [
+   "Simulator"
   ]
  },
  {
@@ -67151,6 +67165,24 @@
   ]
  },
  {
+  "name": "Way of the Hunter 2",
+  "alias": [
+   "Next Hunting Adventure",
+   "WOTH2.exe"
+  ],
+  "pop": 0,
+  "y": 2026,
+  "p": [
+   "pc",
+   "console"
+  ],
+  "g": [
+   "Shooter",
+   "Simulator",
+   "Adventure"
+  ]
+ },
+ {
   "name": "Wayfarer Of Hydrangea",
   "alias": [],
   "pop": 0,
@@ -67250,6 +67282,7 @@
   ],
   "g": [
    "Puzzle",
+   "Adventure",
    "Indie"
   ]
  },
