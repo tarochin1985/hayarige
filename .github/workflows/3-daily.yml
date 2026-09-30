@@ -112,6 +112,18 @@ jobs:
           python -m playwright install --with-deps chromium
           python scripts/make_card.py --png
 
+      # Blueskyへの自動投稿。文と画像は上で作ったものをそのまま使う。
+      # **鍵（アプリパスワード）が入っていなければ、何もせず終わる。**
+      # 同じコラムを2回投稿しないよう data/bluesky_posted.json に記録を残すので、
+      # このステップは「保存して公開」より前に置くこと。
+      # ここが失敗しても、サイトの更新は止めない。
+      - name: Blueskyに投稿する
+        continue-on-error: true
+        env:
+          BLUESKY_HANDLE: ${{ secrets.BLUESKY_HANDLE }}
+          BLUESKY_APP_PASSWORD: ${{ secrets.BLUESKY_APP_PASSWORD }}
+        run: python scripts/post_bluesky.py
+
       - name: 保存して公開
         run: |
           git config user.name "hayarige-bot"
