@@ -152,19 +152,6 @@
   ]
  },
  {
-  "name": "100 Goblin Cats",
-  "alias": [],
-  "pop": 0,
-  "y": 2026,
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Puzzle",
-   "Indie"
-  ]
- },
- {
   "name": "100 Goldmine Cats",
   "alias": [
    "100 Goldmine Cats.exe"
@@ -292,6 +279,15 @@
    "Strategy",
    "Indie",
    "Card & Board Game"
+  ]
+ },
+ {
+  "name": "16 Faces: School HP!",
+  "alias": [],
+  "pop": 0,
+  "y": 2026,
+  "p": [
+   "console"
   ]
  },
  {
@@ -1758,20 +1754,6 @@
   ]
  },
  {
-  "name": "After Inc: Revival",
-  "alias": [
-   "After Inc. Revival.exe"
-  ],
-  "pop": 0,
-  "y": 2026,
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Strategy"
-  ]
- },
- {
   "name": "After Work",
   "alias": [
    "After Work.exe"
@@ -2967,6 +2949,21 @@
   ]
  },
  {
+  "name": "Angle of Attack",
+  "alias": [],
+  "pop": 0,
+  "y": 2026,
+  "p": [
+   "pc",
+   "console"
+  ],
+  "g": [
+   "Simulator",
+   "Indie",
+   "Arcade"
+  ]
+ },
+ {
   "name": "Angry Chef World Tour",
   "alias": [
    "Angry Chef World Tour.exe"
@@ -3637,6 +3634,15 @@
   ]
  },
  {
+  "name": "Arcade Archives 2: Mr.Do!'s Castle",
+  "alias": [],
+  "pop": 0,
+  "y": 2026,
+  "p": [
+   "console"
+  ]
+ },
+ {
   "name": "Arcade Archives 2: Ninja Emaki",
   "alias": [
    "Arcade Archives 2 NINJA EMAKI"
@@ -3699,6 +3705,27 @@
   ]
  },
  {
+  "name": "Arcade Archives: Karnov",
+  "alias": [],
+  "pop": 0,
+  "y": 2026,
+  "p": [
+   "console"
+  ]
+ },
+ {
+  "name": "Arcade Archives: Mr.Do!'s Castle",
+  "alias": [],
+  "pop": 0,
+  "y": 2026,
+  "p": [
+   "console"
+  ],
+  "g": [
+   "Arcade"
+  ]
+ },
+ {
   "name": "Arcade Archives: Satan of Saturn",
   "alias": [],
   "pop": 0,
@@ -3735,20 +3762,6 @@
   "g": [
    "Platform",
    "Racing",
-   "Indie",
-   "Arcade"
-  ]
- },
- {
-  "name": "Arcade Shop Simulator",
-  "alias": [],
-  "pop": 0,
-  "y": 2026,
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Simulator",
    "Indie",
    "Arcade"
   ]
@@ -4035,6 +4048,20 @@
   ]
  },
  {
+  "name": "Art Rally Simulator",
+  "alias": [],
+  "pop": 0,
+  "y": 2026,
+  "p": [
+   "console"
+  ],
+  "g": [
+   "Racing",
+   "Simulator",
+   "Strategy"
+  ]
+ },
+ {
   "name": "Art Studio Simulator",
   "alias": [],
   "pop": 0,
@@ -4081,15 +4108,6 @@
   ],
   "g": [
    "Simulator"
-  ]
- },
- {
-  "name": "Arthur’s Tale",
-  "alias": [],
-  "pop": 0,
-  "y": 2026,
-  "p": [
-   "pc"
   ]
  },
  {
@@ -4243,21 +4261,6 @@
   ]
  },
  {
-  "name": "Ashes of the Damned: The Forgotten Ward",
-  "alias": [
-   "AshesTFW.exe"
-  ],
-  "pop": 0,
-  "y": 2026,
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Adventure",
-   "Indie"
-  ]
- },
- {
   "name": "Ashes: Death Zone",
   "alias": [],
   "pop": 0,
@@ -4306,6 +4309,20 @@
   ]
  },
  {
+  "name": "Asphalt: Car Racing Game",
+  "alias": [],
+  "pop": 0,
+  "y": 2026,
+  "p": [
+   "console"
+  ],
+  "g": [
+   "Racing",
+   "Adventure",
+   "Arcade"
+  ]
+ },
+ {
   "name": "Aspiel: Edge of Chaos",
   "alias": [],
   "pop": 0,
@@ -4317,20 +4334,6 @@
    "Role-playing (RPG)",
    "Adventure",
    "Indie"
-  ]
- },
- {
-  "name": "Assault Wing 3",
-  "alias": [],
-  "pop": 0,
-  "y": 2026,
-  "p": [
-   "pc",
-   "console"
-  ],
-  "g": [
-   "Shooter",
-   "Arcade"
   ]
  },
  {
@@ -4731,6 +4734,20 @@
   ]
  },
  {
+  "name": "Avante! Atlantis",
+  "alias": [],
+  "pop": 0,
+  "y": 2026,
+  "p": [
+   "pc"
+  ],
+  "g": [
+   "Strategy",
+   "Turn-based strategy (TBS)",
+   "Indie"
+  ]
+ },
+ {
   "name": "Avemary Rocket: Captain Patchwork",
   "alias": [
    "Avemary Rocket -Captain Patchwork-"
@@ -4824,22 +4841,6 @@
   "g": [
    "Platform",
    "Adventure"
-  ]
- },
- {
-  "name": "Ayakashi Yokocho no Natsuyasumi",
-  "alias": [
-   "The Summer Vacation at Ayakashi Street",
-   "Project Sekai: Ayakashi Yokochou no Natsuyasumi"
-  ],
-  "pop": 0,
-  "y": 2026,
-  "p": [
-   "console"
-  ],
-  "g": [
-   "Adventure",
-   "Visual Novel"
   ]
  },
  {
@@ -5344,6 +5345,20 @@
   "g": [
    "Shooter",
    "Indie"
+  ]
+ },
+ {
+  "name": "Banchou Tactics: Lion Heart",
+  "alias": [],
+  "pop": 0,
+  "y": 2026,
+  "p": [
+   "console"
+  ],
+  "g": [
+   "Role-playing (RPG)",
+   "Strategy",
+   "Turn-based strategy (TBS)"
   ]
  },
  {
@@ -5860,6 +5875,18 @@
   ]
  },
  {
+  "name": "Beautiful Girls on Campus: Memories of Youth",
+  "alias": [],
+  "pop": 0,
+  "y": 2026,
+  "p": [
+   "console"
+  ],
+  "g": [
+   "Puzzle"
+  ]
+ },
+ {
   "name": "Bebe Miner",
   "alias": [],
   "pop": 0,
@@ -6020,6 +6047,21 @@
    "Shooter",
    "Strategy",
    "Tactical",
+   "Indie"
+  ]
+ },
+ {
+  "name": "Below the Stone",
+  "alias": [
+   "Below The Stone.exe"
+  ],
+  "pop": 0,
+  "y": 2026,
+  "p": [
+   "pc"
+  ],
+  "g": [
+   "Adventure",
    "Indie"
   ]
  },
@@ -6453,6 +6495,15 @@
   "y": 2026,
   "p": [
    "pc"
+  ]
+ },
+ {
+  "name": "Big Watermelon Galaxy",
+  "alias": [],
+  "pop": 0,
+  "y": 2026,
+  "p": [
+   "console"
   ]
  },
  {
@@ -7086,22 +7137,6 @@
   ],
   "g": [
    "Strategy",
-   "Indie"
-  ]
- },
- {
-  "name": "Blood in the Panopticon",
-  "alias": [
-   "Blood in the Panopticon.exe"
-  ],
-  "pop": 0,
-  "y": 2026,
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Role-playing (RPG)",
-   "Adventure",
    "Indie"
   ]
  },
@@ -7998,19 +8033,6 @@
    "Role-playing (RPG)",
    "Simulator",
    "Indie"
-  ]
- },
- {
-  "name": "Break Point: Brace & Breach",
-  "alias": [],
-  "pop": 0,
-  "y": 2026,
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Role-playing (RPG)",
-   "Strategy"
   ]
  },
  {
@@ -8919,20 +8941,6 @@
   ]
  },
  {
-  "name": "Café Machina",
-  "alias": [
-   "Cafe Machina"
-  ],
-  "pop": 0,
-  "y": 2026,
-  "p": [
-   "console"
-  ],
-  "g": [
-   "Indie"
-  ]
- },
- {
   "name": "Cage Grind",
   "alias": [],
   "pop": 0,
@@ -9399,6 +9407,20 @@
   ],
   "g": [
    "Indie"
+  ]
+ },
+ {
+  "name": "Car & Moto Simulator Bundle: Racing & Driving",
+  "alias": [],
+  "pop": 0,
+  "y": 2026,
+  "p": [
+   "console"
+  ],
+  "g": [
+   "Racing",
+   "Simulator",
+   "Adventure"
   ]
  },
  {
@@ -10616,21 +10638,6 @@
   ]
  },
  {
-  "name": "Chiaroscuro Lovers",
-  "alias": [
-   "ChiaroscuroLovers.exe"
-  ],
-  "pop": 0,
-  "y": 2026,
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Indie",
-   "Visual Novel"
-  ]
- },
- {
   "name": "Chiasmus",
   "alias": [],
   "pop": 0,
@@ -10756,12 +10763,22 @@
   ]
  },
  {
+  "name": "Chit Chat Party!",
+  "alias": [],
+  "pop": 0,
+  "y": 2026,
+  "p": [
+   "console"
+  ]
+ },
+ {
   "name": "Chivalware",
   "alias": [],
   "pop": 0,
   "y": 2026,
   "p": [
-   "pc"
+   "pc",
+   "console"
   ],
   "g": [
    "Adventure",
@@ -10906,6 +10923,20 @@
    "Simulator",
    "Strategy",
    "Indie"
+  ]
+ },
+ {
+  "name": "Chromascape",
+  "alias": [],
+  "pop": 0,
+  "y": 2026,
+  "p": [
+   "console"
+  ],
+  "g": [
+   "Puzzle",
+   "Role-playing (RPG)",
+   "Adventure"
   ]
  },
  {
@@ -11272,6 +11303,19 @@
   ],
   "g": [
    "Strategy"
+  ]
+ },
+ {
+  "name": "Classroom Mystery Secrets Behind the Lessons",
+  "alias": [],
+  "pop": 0,
+  "y": 2026,
+  "p": [
+   "console"
+  ],
+  "g": [
+   "Role-playing (RPG)",
+   "Adventure"
   ]
  },
  {
@@ -11986,6 +12030,19 @@
   "g": [
    "Puzzle",
    "Adventure"
+  ]
+ },
+ {
+  "name": "Computer Manufacturer",
+  "alias": [],
+  "pop": 0,
+  "y": 2026,
+  "p": [
+   "pc"
+  ],
+  "g": [
+   "Simulator",
+   "Strategy"
   ]
  },
  {
@@ -13450,21 +13507,6 @@
   ]
  },
  {
-  "name": "Crown Chase",
-  "alias": [
-   "Crown.exe"
-  ],
-  "pop": 0,
-  "y": 2026,
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Racing",
-   "Indie"
-  ]
- },
- {
   "name": "Crown Of Blight",
   "alias": [],
   "pop": 0,
@@ -13525,21 +13567,6 @@
    "Role-playing (RPG)",
    "Adventure",
    "Indie"
-  ]
- },
- {
-  "name": "Crownrats",
-  "alias": [],
-  "pop": 0,
-  "y": 2026,
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Shooter",
-   "Strategy",
-   "Indie",
-   "Arcade"
   ]
  },
  {
@@ -13764,6 +13791,18 @@
   "g": [
    "Role-playing (RPG)",
    "Indie"
+  ]
+ },
+ {
+  "name": "Curse of Resthaven",
+  "alias": [],
+  "pop": 0,
+  "y": 2026,
+  "p": [
+   "pc"
+  ],
+  "g": [
+   "Adventure"
   ]
  },
  {
@@ -14761,23 +14800,6 @@
    "Strategy",
    "Adventure",
    "Indie"
-  ]
- },
- {
-  "name": "Deadlock Station",
-  "alias": [
-   "Deadlock Station.exe"
-  ],
-  "pop": 0,
-  "y": 2026,
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Role-playing (RPG)",
-   "Strategy",
-   "Tactical",
-   "Adventure"
   ]
  },
  {
@@ -15933,21 +15955,6 @@
   ]
  },
  {
-  "name": "Desktop Detective",
-  "alias": [
-   "Desktop Detective.exe"
-  ],
-  "pop": 0,
-  "y": 2026,
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Role-playing (RPG)",
-   "Indie"
-  ]
- },
- {
   "name": "Desktop Plinko",
   "alias": [],
   "pop": 0,
@@ -15957,6 +15964,23 @@
   ],
   "g": [
    "Simulator",
+   "Indie"
+  ]
+ },
+ {
+  "name": "Desolus",
+  "alias": [
+   "DESOLUS"
+  ],
+  "pop": 0,
+  "y": 2026,
+  "p": [
+   "pc",
+   "console"
+  ],
+  "g": [
+   "Puzzle",
+   "Adventure",
    "Indie"
   ]
  },
@@ -16173,18 +16197,6 @@
   ]
  },
  {
-  "name": "Dice Deluge",
-  "alias": [],
-  "pop": 0,
-  "y": 2026,
-  "p": [
-   "console"
-  ],
-  "g": [
-   "Indie"
-  ]
- },
- {
   "name": "Dice Nights",
   "alias": [],
   "pop": 0,
@@ -16275,18 +16287,6 @@
   ],
   "g": [
    "Strategy",
-   "Indie"
-  ]
- },
- {
-  "name": "Dicewood",
-  "alias": [],
-  "pop": 0,
-  "y": 2026,
-  "p": [
-   "pc"
-  ],
-  "g": [
    "Indie"
   ]
  },
@@ -16776,6 +16776,19 @@
   ]
  },
  {
+  "name": "Disconnected",
+  "alias": [],
+  "pop": 0,
+  "y": 2026,
+  "p": [
+   "pc"
+  ],
+  "g": [
+   "Puzzle",
+   "Indie"
+  ]
+ },
+ {
   "name": "Discremental",
   "alias": [],
   "pop": 0,
@@ -16840,20 +16853,6 @@
   ]
  },
  {
-  "name": "Disney's Atlantis: The Lost Empire",
-  "alias": [],
-  "pop": 0,
-  "y": 2026,
-  "p": [
-   "console"
-  ],
-  "g": [
-   "Platform",
-   "Puzzle",
-   "Adventure"
-  ]
- },
- {
   "name": "Disquieted",
   "alias": [],
   "pop": 0,
@@ -16895,6 +16894,20 @@
    "Simulator",
    "Adventure",
    "Indie"
+  ]
+ },
+ {
+  "name": "Distorted: Night Shift Anomalies",
+  "alias": [],
+  "pop": 0,
+  "y": 2026,
+  "p": [
+   "console"
+  ],
+  "g": [
+   "Puzzle",
+   "Simulator",
+   "Adventure"
   ]
  },
  {
@@ -17355,6 +17368,20 @@
   "g": [
    "Simulator",
    "Indie"
+  ]
+ },
+ {
+  "name": "Doorway to Nightmares: Terrifying Tales",
+  "alias": [],
+  "pop": 0,
+  "y": 2026,
+  "p": [
+   "console"
+  ],
+  "g": [
+   "Puzzle",
+   "Simulator",
+   "Adventure"
   ]
  },
  {
@@ -17878,6 +17905,19 @@
   ]
  },
  {
+  "name": "Dream Hike",
+  "alias": [],
+  "pop": 0,
+  "y": 2026,
+  "p": [
+   "console"
+  ],
+  "g": [
+   "Adventure",
+   "Arcade"
+  ]
+ },
+ {
   "name": "Dream Village",
   "alias": [],
   "pop": 0,
@@ -17903,23 +17943,6 @@
   ],
   "g": [
    "Adventure"
-  ]
- },
- {
-  "name": "Dreamcards",
-  "alias": [
-   "梦魇牌",
-   "夢魘牌",
-   "Dreamcards.exe"
-  ],
-  "pop": 0,
-  "y": 2026,
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Strategy",
-   "Indie"
   ]
  },
  {
@@ -19634,6 +19657,18 @@
   ]
  },
  {
+  "name": "Eggconsole Deep Dungeon II MSX",
+  "alias": [],
+  "pop": 0,
+  "y": 2026,
+  "p": [
+   "console"
+  ],
+  "g": [
+   "Role-playing (RPG)"
+  ]
+ },
+ {
   "name": "Eggconsole The Legend of Heroes III: \"White Witch\" Renewal PC-9801",
   "alias": [],
   "pop": 0,
@@ -19692,21 +19727,6 @@
    "pc"
   ],
   "g": [
-   "Indie"
-  ]
- },
- {
-  "name": "Eggventure",
-  "alias": [
-   "Eggventure.exe"
-  ],
-  "pop": 0,
-  "y": 2026,
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Adventure",
    "Indie"
   ]
  },
@@ -20349,22 +20369,6 @@
   ]
  },
  {
-  "name": "Escape Sequence",
-  "alias": [
-   "EscapeSequence.exe"
-  ],
-  "pop": 0,
-  "y": 2026,
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Racing",
-   "Indie",
-   "Arcade"
-  ]
- },
- {
   "name": "Escape Simulator 2: Apocalypse DLC",
   "alias": [],
   "pop": 0,
@@ -20468,6 +20472,19 @@
   ]
  },
  {
+  "name": "Escape game R00m17",
+  "alias": [],
+  "pop": 0,
+  "y": 2026,
+  "p": [
+   "console"
+  ],
+  "g": [
+   "Puzzle",
+   "Adventure"
+  ]
+ },
+ {
   "name": "Escape the Baby Alarm",
   "alias": [],
   "pop": 0,
@@ -20493,22 +20510,6 @@
    "Racing",
    "Indie",
    "Arcade"
-  ]
- },
- {
-  "name": "Escape the Grind",
-  "alias": [
-   "Escape the Grind.exe"
-  ],
-  "pop": 0,
-  "y": 2026,
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Simulator",
-   "Strategy",
-   "Indie"
   ]
  },
  {
@@ -22249,22 +22250,6 @@
   ]
  },
  {
-  "name": "Finding Ruby",
-  "alias": [
-   "Finding Ruby: Hidden Object Adventure"
-  ],
-  "pop": 0,
-  "y": 2026,
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Point-and-click",
-   "Adventure",
-   "Indie"
-  ]
- },
- {
   "name": "Fire Emblem: Fortune's Weave",
   "alias": [
    "Fire Emblem: Ten Thousand Purples, One Thousand Reds",
@@ -22638,6 +22623,20 @@
   ]
  },
  {
+  "name": "Flipi Rivals",
+  "alias": [],
+  "pop": 0,
+  "y": 2026,
+  "p": [
+   "console"
+  ],
+  "g": [
+   "Puzzle",
+   "Sport",
+   "Arcade"
+  ]
+ },
+ {
   "name": "Flipper & Unboxing House 2-in-1",
   "alias": [],
   "pop": 0,
@@ -22736,6 +22735,18 @@
   "g": [
    "Adventure",
    "Indie"
+  ]
+ },
+ {
+  "name": "Floor Wiping Race",
+  "alias": [],
+  "pop": 0,
+  "y": 2026,
+  "p": [
+   "console"
+  ],
+  "g": [
+   "Racing"
   ]
  },
  {
@@ -24190,18 +24201,6 @@
   ]
  },
  {
-  "name": "Furniture Fu",
-  "alias": [],
-  "pop": 0,
-  "y": 2026,
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Indie"
-  ]
- },
- {
   "name": "Furyball: Rogue Revenge",
   "alias": [
    "FRRRelease-Win64-Shipping.exe"
@@ -24675,6 +24674,18 @@
   ]
  },
  {
+  "name": "Garden and a Goat",
+  "alias": [],
+  "pop": 0,
+  "y": 2026,
+  "p": [
+   "pc"
+  ],
+  "g": [
+   "Indie"
+  ]
+ },
+ {
   "name": "Garden of Witches",
   "alias": [
    "魔女庭园",
@@ -24946,6 +24957,19 @@
    "console"
   ],
   "g": [
+   "Sport"
+  ]
+ },
+ {
+  "name": "Get Fit: K-Pop Fitness",
+  "alias": [],
+  "pop": 0,
+  "y": 2026,
+  "p": [
+   "console"
+  ],
+  "g": [
+   "Music",
    "Sport"
   ]
  },
@@ -26336,22 +26360,6 @@
   ]
  },
  {
-  "name": "Gridiron Football League",
-  "alias": [
-   "GridironFootball.exe"
-  ],
-  "pop": 0,
-  "y": 2026,
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Simulator",
-   "Sport",
-   "Indie"
-  ]
- },
- {
   "name": "Gridlords",
   "alias": [],
   "pop": 0,
@@ -26375,20 +26383,6 @@
   "g": [
    "Strategy",
    "Indie"
-  ]
- },
- {
-  "name": "Grim Hand",
-  "alias": [
-   "Grim Hand: Card Roguelike RPG"
-  ],
-  "pop": 0,
-  "y": 2026,
-  "g": [
-   "Role-playing (RPG)",
-   "Turn-based strategy (TBS)",
-   "Indie",
-   "Visual Novel"
   ]
  },
  {
@@ -26660,21 +26654,6 @@
   ]
  },
  {
-  "name": "Guildmaker",
-  "alias": [],
-  "pop": 0,
-  "y": 2026,
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Simulator",
-   "Strategy",
-   "Adventure",
-   "Indie"
-  ]
- },
- {
   "name": "Guilds of Mountgate",
   "alias": [],
   "pop": 0,
@@ -26790,18 +26769,6 @@
    "Adventure",
    "Indie",
    "Visual Novel"
-  ]
- },
- {
-  "name": "GunCrank",
-  "alias": [],
-  "pop": 0,
-  "y": 2026,
-  "p": [
-   "console"
-  ],
-  "g": [
-   "Indie"
   ]
  },
  {
@@ -27633,22 +27600,6 @@
   ]
  },
  {
-  "name": "Hearth and Hamlet",
-  "alias": [
-   "放置领主：财富之城",
-   "放置領主：財富之城",
-   "Hearth and Hamlet.exe"
-  ],
-  "pop": 0,
-  "y": 2026,
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Strategy"
-  ]
- },
- {
   "name": "Hearthwater",
   "alias": [],
   "pop": 0,
@@ -28236,6 +28187,18 @@
   ]
  },
  {
+  "name": "Highway Blossoms: Gold Rush Edition",
+  "alias": [],
+  "pop": 0,
+  "y": 2026,
+  "p": [
+   "console"
+  ],
+  "g": [
+   "Adventure"
+  ]
+ },
+ {
   "name": "Highway Legends: Gold Edition",
   "alias": [],
   "pop": 0,
@@ -28284,6 +28247,18 @@
   "g": [
    "Adventure",
    "Visual Novel"
+  ]
+ },
+ {
+  "name": "Hiragana Word Challenge",
+  "alias": [],
+  "pop": 0,
+  "y": 2026,
+  "p": [
+   "console"
+  ],
+  "g": [
+   "Puzzle"
   ]
  },
  {
@@ -28415,21 +28390,6 @@
   "g": [
    "Simulator",
    "Strategy"
-  ]
- },
- {
-  "name": "Holey",
-  "alias": [
-   "Holey.exe"
-  ],
-  "pop": 0,
-  "y": 2026,
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Adventure",
-   "Indie"
   ]
  },
  {
@@ -28631,20 +28591,6 @@
   "p": [
    "pc",
    "console"
-  ]
- },
- {
-  "name": "Hook Party Arena",
-  "alias": [
-   "HookPartyArena.exe"
-  ],
-  "pop": 0,
-  "y": 2026,
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Indie"
   ]
  },
  {
@@ -29692,18 +29638,6 @@
   ]
  },
  {
-  "name": "ICU: Intensive Care Unit 8",
-  "alias": [],
-  "pop": 0,
-  "y": 2026,
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Indie"
-  ]
- },
- {
   "name": "IGTAP: An Incremental Game That's Also a Platformer",
   "alias": [],
   "pop": 0,
@@ -30337,6 +30271,21 @@
   ]
  },
  {
+  "name": "Industronaut",
+  "alias": [],
+  "pop": 0,
+  "y": 2026,
+  "p": [
+   "pc"
+  ],
+  "g": [
+   "Simulator",
+   "Strategy",
+   "Adventure",
+   "Indie"
+  ]
+ },
+ {
   "name": "Infected Escaped",
   "alias": [
    "Infected Escaped.exe"
@@ -30426,21 +30375,6 @@
   "g": [
    "Role-playing (RPG)",
    "Simulator",
-   "Indie"
-  ]
- },
- {
-  "name": "Infinite Museum",
-  "alias": [],
-  "pop": 0,
-  "y": 2026,
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Puzzle",
-   "Simulator",
-   "Adventure",
    "Indie"
   ]
  },
@@ -31319,6 +31253,15 @@
   ],
   "g": [
    "Sport"
+  ]
+ },
+ {
+  "name": "Jalecolle Famicom Ver. Shatterhand",
+  "alias": [],
+  "pop": 0,
+  "y": 2026,
+  "p": [
+   "console"
   ]
  },
  {
@@ -32210,7 +32153,8 @@
   "pop": 0,
   "y": 2026,
   "p": [
-   "pc"
+   "pc",
+   "console"
   ],
   "g": [
    "Shooter",
@@ -32626,6 +32570,18 @@
   ]
  },
  {
+  "name": "Knightbane",
+  "alias": [],
+  "pop": 0,
+  "y": 2026,
+  "p": [
+   "pc"
+  ],
+  "g": [
+   "Indie"
+  ]
+ },
+ {
   "name": "Knights & Guns: VIP Edition",
   "alias": [],
   "pop": 0,
@@ -32818,6 +32774,18 @@
   ]
  },
  {
+  "name": "Kpop idol Dress Up",
+  "alias": [],
+  "pop": 0,
+  "y": 2026,
+  "p": [
+   "console"
+  ],
+  "g": [
+   "Simulator"
+  ]
+ },
+ {
   "name": "Kritzel Krieg",
   "alias": [
    "KritzelKrieg.exe"
@@ -33006,21 +32974,6 @@
   ],
   "g": [
    "Indie"
-  ]
- },
- {
-  "name": "Lablue Horror",
-  "alias": [
-   "LaBlueBackroomsAlphaTest.exe"
-  ],
-  "pop": 0,
-  "y": 2026,
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Simulator",
-   "Adventure"
   ]
  },
  {
@@ -34119,18 +34072,6 @@
   ]
  },
  {
-  "name": "Linerunner",
-  "alias": [],
-  "pop": 0,
-  "y": 2026,
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Racing"
-  ]
- },
- {
   "name": "Ling House: Echoes Within",
   "alias": [
    "Ling House Echoes Within.exe"
@@ -34576,21 +34517,6 @@
   ]
  },
  {
-  "name": "Loop",
-  "alias": [],
-  "pop": 0,
-  "y": 2026,
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Puzzle",
-   "Role-playing (RPG)",
-   "Adventure",
-   "Indie"
-  ]
- },
- {
   "name": "Loop Miner",
   "alias": [],
   "pop": 0,
@@ -34791,6 +34717,21 @@
   ]
  },
  {
+  "name": "Lordcraft",
+  "alias": [],
+  "pop": 0,
+  "y": 2026,
+  "p": [
+   "console"
+  ],
+  "g": [
+   "Role-playing (RPG)",
+   "Simulator",
+   "Strategy",
+   "Adventure"
+  ]
+ },
+ {
   "name": "Lorne",
   "alias": [],
   "pop": 0,
@@ -34843,21 +34784,6 @@
   ],
   "g": [
    "Strategy",
-   "Indie"
-  ]
- },
- {
-  "name": "Lost Exit",
-  "alias": [],
-  "pop": 0,
-  "y": 2026,
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Puzzle",
-   "Simulator",
-   "Adventure",
    "Indie"
   ]
  },
@@ -36403,6 +36329,18 @@
   ]
  },
  {
+  "name": "Math Pals: Monster Mania",
+  "alias": [],
+  "pop": 0,
+  "y": 2026,
+  "p": [
+   "console"
+  ],
+  "g": [
+   "Puzzle"
+  ]
+ },
+ {
   "name": "Matrioshkas On a Roll!",
   "alias": [],
   "pop": 0,
@@ -36781,6 +36719,18 @@
   "g": [
    "Simulator",
    "Indie"
+  ]
+ },
+ {
+  "name": "Meiji Tokyo Renka Twilight Kiss",
+  "alias": [],
+  "pop": 0,
+  "y": 2026,
+  "p": [
+   "console"
+  ],
+  "g": [
+   "Adventure"
   ]
  },
  {
@@ -37712,26 +37662,6 @@
   ]
  },
  {
-  "name": "Ministry of Truth: False Memory",
-  "alias": [
-   "Ministry of Truth.exe",
-   "Ministry of Truth: 1984",
-   "真理部：虚假记忆",
-   "真理部：虛假記憶",
-   "Міністерство Правди: Хибна пам'ять",
-   "Ministry of Truth: 1964"
-  ],
-  "pop": 0,
-  "y": 2026,
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Simulator",
-   "Adventure"
-  ]
- },
- {
   "name": "Minsgon Simulator",
   "alias": [],
   "pop": 0,
@@ -38208,20 +38138,6 @@
   ]
  },
  {
-  "name": "Money Trails",
-  "alias": [],
-  "pop": 0,
-  "y": 2026,
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Simulator",
-   "Adventure",
-   "Indie"
-  ]
- },
- {
   "name": "Money for Girls: Amortized",
   "alias": [
    "money_for_girls.exe"
@@ -38693,24 +38609,6 @@
   ],
   "g": [
    "Simulator"
-  ]
- },
- {
-  "name": "Morningstar",
-  "alias": [
-   "MORNINGSTAR"
-  ],
-  "pop": 0,
-  "y": 2026,
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Puzzle",
-   "Role-playing (RPG)",
-   "Turn-based strategy (TBS)",
-   "Adventure",
-   "Indie"
   ]
  },
  {
@@ -39255,6 +39153,19 @@
   "jp": "僕のヒーローアカデミア UNITED SURVIVAL"
  },
  {
+  "name": "My Mart",
+  "alias": [],
+  "pop": 0,
+  "y": 2026,
+  "p": [
+   "console"
+  ],
+  "g": [
+   "Simulator",
+   "Arcade"
+  ]
+ },
+ {
   "name": "My New Paranormal Life",
   "alias": [],
   "pop": 0,
@@ -39280,6 +39191,18 @@
   ],
   "g": [
    "Role-playing (RPG)"
+  ]
+ },
+ {
+  "name": "My Sexy Boss: Office Romance Boys",
+  "alias": [],
+  "pop": 0,
+  "y": 2026,
+  "p": [
+   "console"
+  ],
+  "g": [
+   "Simulator"
   ]
  },
  {
@@ -39699,6 +39622,18 @@
   ]
  },
  {
+  "name": "Naughty Baby",
+  "alias": [],
+  "pop": 0,
+  "y": 2026,
+  "p": [
+   "console"
+  ],
+  "g": [
+   "Simulator"
+  ]
+ },
+ {
   "name": "Near the Sun: Chapter 1",
   "alias": [],
   "pop": 0,
@@ -39971,6 +39906,22 @@
   ]
  },
  {
+  "name": "Nero",
+  "alias": [
+   "NERO"
+  ],
+  "pop": 0,
+  "y": 2026,
+  "p": [
+   "pc"
+  ],
+  "g": [
+   "Simulator",
+   "Strategy",
+   "Indie"
+  ]
+ },
+ {
   "name": "Nested",
   "alias": [
    "Nested.exe"
@@ -40175,6 +40126,18 @@
    "Simulator",
    "Strategy",
    "Indie"
+  ]
+ },
+ {
+  "name": "Next of Kin: Epiphany",
+  "alias": [],
+  "pop": 0,
+  "y": 2026,
+  "p": [
+   "console"
+  ],
+  "g": [
+   "Adventure"
   ]
  },
  {
@@ -40584,19 +40547,6 @@
   ]
  },
  {
-  "name": "Nioh 3: Hell Rising",
-  "alias": [],
-  "pop": 0,
-  "y": 2026,
-  "p": [
-   "pc",
-   "console"
-  ],
-  "g": [
-   "Role-playing (RPG)"
-  ]
- },
- {
   "name": "Nitrokill",
   "alias": [
    "Nitrokill.exe"
@@ -40798,22 +40748,6 @@
    "Strategy",
    "Indie",
    "Card & Board Game"
-  ]
- },
- {
-  "name": "Nocturnal Echoes",
-  "alias": [
-   "NocturnalEchoes.exe"
-  ],
-  "pop": 0,
-  "y": 2026,
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Role-playing (RPG)",
-   "Adventure",
-   "Indie"
   ]
  },
  {
@@ -41059,19 +40993,6 @@
   ]
  },
  {
-  "name": "Not My Son",
-  "alias": [],
-  "pop": 0,
-  "y": 2026,
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Adventure",
-   "Indie"
-  ]
- },
- {
   "name": "Not Quite Dead",
   "alias": [
    "Not Quite Dead: Open World Survival",
@@ -41265,22 +41186,6 @@
   ]
  },
  {
-  "name": "Nudge",
-  "alias": [
-   "Nudge.exe",
-   "nudge"
-  ],
-  "pop": 0,
-  "y": 2026,
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Puzzle",
-   "Indie"
-  ]
- },
- {
   "name": "Nuktedan: The Forgotten Emotions",
   "alias": [
    "Nuktedan The Forgotten Emotions.exe"
@@ -41444,6 +41349,20 @@
   ]
  },
  {
+  "name": "Obby Sword Master",
+  "alias": [],
+  "pop": 0,
+  "y": 2026,
+  "p": [
+   "console"
+  ],
+  "g": [
+   "Role-playing (RPG)",
+   "Adventure",
+   "Arcade"
+  ]
+ },
+ {
   "name": "Obey Me! Sinner's Choice: Lucifer",
   "alias": [],
   "pop": 0,
@@ -41562,21 +41481,6 @@
    "console"
   ],
   "g": [
-   "Indie"
-  ]
- },
- {
-  "name": "October: Survivor's Guilt",
-  "alias": [
-   "October.exe"
-  ],
-  "pop": 0,
-  "y": 2026,
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Adventure",
    "Indie"
   ]
  },
@@ -41980,6 +41884,19 @@
    "Adventure",
    "Indie",
    "Arcade"
+  ]
+ },
+ {
+  "name": "One Dumb Wizard",
+  "alias": [],
+  "pop": 0,
+  "y": 2026,
+  "p": [
+   "pc"
+  ],
+  "g": [
+   "Role-playing (RPG)",
+   "Indie"
   ]
  },
  {
@@ -44365,6 +44282,15 @@
   ]
  },
  {
+  "name": "Phantom Thief Mirage and the Curious Clues",
+  "alias": [],
+  "pop": 0,
+  "y": 2026,
+  "p": [
+   "console"
+  ]
+ },
+ {
   "name": "Phantom: Phantom of Inferno - Nitro Archive",
   "alias": [
    "Phantom PHANTOM OF INFERNO NITRO ARCHIVE"
@@ -44868,21 +44794,8 @@
   "pop": 0,
   "y": 2026,
   "p": [
-   "pc"
-  ],
-  "g": [
-   "Simulator",
-   "Strategy",
-   "Indie"
-  ]
- },
- {
-  "name": "Pizza House Simulator",
-  "alias": [],
-  "pop": 0,
-  "y": 2026,
-  "p": [
-   "pc"
+   "pc",
+   "console"
   ],
   "g": [
    "Simulator",
@@ -45216,21 +45129,6 @@
   ]
  },
  {
-  "name": "Plodding Recovery",
-  "alias": [
-   "TobotoboRecovery.exe"
-  ],
-  "pop": 0,
-  "y": 2026,
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Simulator",
-   "Adventure"
-  ]
- },
- {
   "name": "Ploop",
   "alias": [],
   "pop": 0,
@@ -45540,18 +45438,6 @@
    "Platform",
    "Adventure",
    "Indie"
-  ]
- },
- {
-  "name": "Polluted Flesh",
-  "alias": [],
-  "pop": 0,
-  "y": 2026,
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Arcade"
   ]
  },
  {
@@ -46428,21 +46314,6 @@
   ]
  },
  {
-  "name": "Project P.I.T.T.",
-  "alias": [
-   "projectpitt.exe"
-  ],
-  "pop": 0,
-  "y": 2026,
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Simulator",
-   "Indie"
-  ]
- },
- {
   "name": "Project ReMind",
   "alias": [],
   "pop": 0,
@@ -46511,18 +46382,6 @@
   ]
  },
  {
-  "name": "Project Sekai: Ayakashi Yokochou no Natsuyasumi",
-  "alias": [],
-  "pop": 0,
-  "y": 2026,
-  "p": [
-   "console"
-  ],
-  "g": [
-   "Visual Novel"
-  ]
- },
- {
   "name": "Project TurboBlast",
   "alias": [],
   "pop": 0,
@@ -46576,6 +46435,19 @@
   "y": 2026,
   "g": [
    "Arcade"
+  ]
+ },
+ {
+  "name": "Prop Revolt",
+  "alias": [],
+  "pop": 0,
+  "y": 2026,
+  "p": [
+   "pc"
+  ],
+  "g": [
+   "Fighting",
+   "Indie"
   ]
  },
  {
@@ -46712,6 +46584,18 @@
   ]
  },
  {
+  "name": "Psychopath Mind Quiz: Unmask Their Dark Nature",
+  "alias": [],
+  "pop": 0,
+  "y": 2026,
+  "p": [
+   "console"
+  ],
+  "g": [
+   "Puzzle"
+  ]
+ },
+ {
   "name": "Psychotic Bathtub",
   "alias": [],
   "pop": 0,
@@ -46824,6 +46708,19 @@
    "Shooter",
    "Adventure",
    "Indie"
+  ]
+ },
+ {
+  "name": "Punch Monkey Revenge",
+  "alias": [],
+  "pop": 0,
+  "y": 2026,
+  "p": [
+   "console"
+  ],
+  "g": [
+   "Adventure",
+   "Arcade"
   ]
  },
  {
@@ -47631,6 +47528,20 @@
   ]
  },
  {
+  "name": "Ragdoll Kart Simulator 2026",
+  "alias": [],
+  "pop": 0,
+  "y": 2026,
+  "p": [
+   "console"
+  ],
+  "g": [
+   "Racing",
+   "Simulator",
+   "Adventure"
+  ]
+ },
+ {
   "name": "Ragnar",
   "alias": [
    "Ragnar.exe"
@@ -47643,19 +47554,6 @@
   "g": [
    "Role-playing (RPG)",
    "Indie"
-  ]
- },
- {
-  "name": "Ragnarok Zero: Global",
-  "alias": [],
-  "pop": 0,
-  "y": 2026,
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Role-playing (RPG)",
-   "Adventure"
   ]
  },
  {
@@ -47945,35 +47843,6 @@
   ]
  },
  {
-  "name": "Ready or Nowhere",
-  "alias": [],
-  "pop": 0,
-  "y": 2026,
-  "p": [
-   "console"
-  ],
-  "g": [
-   "Shooter",
-   "Simulator",
-   "Arcade"
-  ]
- },
- {
-  "name": "Real Backrooms",
-  "alias": [
-   "Real_Backrooms.exe"
-  ],
-  "pop": 0,
-  "y": 2026,
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Simulator",
-   "Adventure"
-  ]
- },
- {
   "name": "Realindustry",
   "alias": [],
   "pop": 0,
@@ -48242,19 +48111,6 @@
   ]
  },
  {
-  "name": "Red Tanks vs Lizard",
-  "alias": [],
-  "pop": 0,
-  "y": 2026,
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Indie",
-   "Arcade"
-  ]
- },
- {
   "name": "Redhowl",
   "alias": [],
   "pop": 0,
@@ -48263,6 +48119,20 @@
    "pc"
   ],
   "g": [
+   "Strategy",
+   "Indie"
+  ]
+ },
+ {
+  "name": "Reel Greed",
+  "alias": [],
+  "pop": 0,
+  "y": 2026,
+  "p": [
+   "pc"
+  ],
+  "g": [
+   "Simulator",
    "Strategy",
    "Indie"
   ]
@@ -48356,20 +48226,6 @@
   "g": [
    "Simulator",
    "Adventure",
-   "Indie"
-  ]
- },
- {
-  "name": "Rekindling",
-  "alias": [],
-  "pop": 1,
-  "y": 2026,
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Simulator",
-   "Strategy",
    "Indie"
   ]
  },
@@ -48934,6 +48790,20 @@
   "g": [
    "Role-playing (RPG)",
    "Indie"
+  ]
+ },
+ {
+  "name": "Rhythm Roll",
+  "alias": [],
+  "pop": 0,
+  "y": 2026,
+  "p": [
+   "console"
+  ],
+  "g": [
+   "Music",
+   "Racing",
+   "Arcade"
   ]
  },
  {
@@ -49515,6 +49385,18 @@
   ]
  },
  {
+  "name": "Rogue Vault",
+  "alias": [],
+  "pop": 0,
+  "y": 2026,
+  "p": [
+   "console"
+  ],
+  "g": [
+   "Shooter"
+  ]
+ },
+ {
   "name": "Roguebound Pirates",
   "alias": [],
   "pop": 0,
@@ -49777,18 +49659,6 @@
   ]
  },
  {
-  "name": "RotoCore",
-  "alias": [],
-  "pop": 0,
-  "y": 2026,
-  "p": [
-   "console"
-  ],
-  "g": [
-   "Indie"
-  ]
- },
- {
   "name": "Rotor Rescue Choplifter",
   "alias": [],
   "pop": 0,
@@ -49897,6 +49767,19 @@
    "Simulator",
    "Strategy",
    "Indie"
+  ]
+ },
+ {
+  "name": "Rudolph the Red-Nosed Reindeer: Holiday Play Edition",
+  "alias": [],
+  "pop": 0,
+  "y": 2026,
+  "p": [
+   "console"
+  ],
+  "g": [
+   "Platform",
+   "Puzzle"
   ]
  },
  {
@@ -50141,6 +50024,19 @@
   ]
  },
  {
+  "name": "Rusty Prison: Horror",
+  "alias": [],
+  "pop": 0,
+  "y": 2026,
+  "p": [
+   "console"
+  ],
+  "g": [
+   "Adventure",
+   "Arcade"
+  ]
+ },
+ {
   "name": "Rutrum",
   "alias": [
    "Rutrum.exe"
@@ -50287,6 +50183,19 @@
   ]
  },
  {
+  "name": "Sakura Branch: Blossom Puzzle",
+  "alias": [],
+  "pop": 0,
+  "y": 2026,
+  "p": [
+   "console"
+  ],
+  "g": [
+   "Puzzle",
+   "Arcade"
+  ]
+ },
+ {
   "name": "Sakurairo Prism: Beyond the Bloom",
   "alias": [],
   "pop": 0,
@@ -50427,6 +50336,19 @@
   "g": [
    "Simulator",
    "Strategy",
+   "Indie"
+  ]
+ },
+ {
+  "name": "Sandwich Shop Simulator",
+  "alias": [],
+  "pop": 0,
+  "y": 2026,
+  "p": [
+   "pc"
+  ],
+  "g": [
+   "Simulator",
    "Indie"
   ]
  },
@@ -50703,15 +50625,6 @@
   ],
   "g": [
    "Simulator"
-  ]
- },
- {
-  "name": "Schoolgirl vs. Fishman",
-  "alias": [],
-  "pop": 0,
-  "y": 2026,
-  "p": [
-   "pc"
   ]
  },
  {
@@ -51448,18 +51361,6 @@
   ]
  },
  {
-  "name": "Shadow & Steel",
-  "alias": [],
-  "pop": 0,
-  "y": 2026,
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Indie"
-  ]
- },
- {
   "name": "Shadow Corridor Zero",
   "alias": [],
   "pop": 0,
@@ -51645,20 +51546,6 @@
   "g": [
    "Platform",
    "Adventure",
-   "Indie"
-  ]
- },
- {
-  "name": "Shake It Co!",
-  "alias": [],
-  "pop": 0,
-  "y": 2026,
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Simulator",
-   "Strategy",
    "Indie"
   ]
  },
@@ -53768,6 +53655,20 @@
   ]
  },
  {
+  "name": "Solitaire Companions: Cats",
+  "alias": [],
+  "pop": 0,
+  "y": 2026,
+  "p": [
+   "console"
+  ],
+  "g": [
+   "Puzzle",
+   "Arcade",
+   "Card & Board Game"
+  ]
+ },
+ {
   "name": "Solitaire Paradise: Furry Waifus",
   "alias": [],
   "pop": 0,
@@ -54254,23 +54155,6 @@
   "g": [
    "Simulator",
    "Strategy",
-   "Indie"
-  ]
- },
- {
-  "name": "Space Tales",
-  "alias": [
-   "SpaceTale.exe"
-  ],
-  "pop": 0,
-  "y": 2026,
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Real Time Strategy (RTS)",
-   "Strategy",
-   "Adventure",
    "Indie"
   ]
  },
@@ -54794,15 +54678,6 @@
   ]
  },
  {
-  "name": "Spongebob Squarepants x One Piece",
-  "alias": [],
-  "pop": 0,
-  "y": 2026,
-  "p": [
-   "console"
-  ]
- },
- {
   "name": "Spook-A-Boo",
   "alias": [
    "Spookaboo"
@@ -54843,6 +54718,20 @@
    "Racing",
    "Adventure",
    "Indie"
+  ]
+ },
+ {
+  "name": "Spooky Tales and Mummy Trails",
+  "alias": [],
+  "pop": 0,
+  "y": 2026,
+  "p": [
+   "console"
+  ],
+  "g": [
+   "Platform",
+   "Adventure",
+   "Arcade"
   ]
  },
  {
@@ -54918,22 +54807,6 @@
   ],
   "g": [
    "Adventure"
-  ]
- },
- {
-  "name": "Spring at Dawn, I Am a Monster.",
-  "alias": [
-   "Haruake.exe"
-  ],
-  "pop": 0,
-  "y": 2026,
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Adventure",
-   "Indie",
-   "Visual Novel"
   ]
  },
  {
@@ -55554,24 +55427,6 @@
   ]
  },
  {
-  "name": "Steins;Gate Re:Boot",
-  "alias": [
-   "STEINS;GATE RE:BOOT",
-   "Steins Gate Reboot",
-   "sgre_steam.exe"
-  ],
-  "pop": 1,
-  "y": 2026,
-  "p": [
-   "pc",
-   "console"
-  ],
-  "g": [
-   "Adventure",
-   "Visual Novel"
-  ]
- },
- {
   "name": "Steins;Gate Re:Boot - Limited Edition",
   "alias": [],
   "pop": 0,
@@ -55781,33 +55636,6 @@
   ]
  },
  {
-  "name": "Still Warm",
-  "alias": [],
-  "pop": 0,
-  "y": 2026,
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Indie"
-  ]
- },
- {
-  "name": "Still in the Fog",
-  "alias": [
-   "StillinTheFog.exe"
-  ],
-  "pop": 0,
-  "y": 2026,
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Adventure",
-   "Indie"
-  ]
- },
- {
   "name": "Stillflow",
   "alias": [
    "Stillflow.exe"
@@ -55860,6 +55688,20 @@
   "g": [
    "Puzzle",
    "Indie"
+  ]
+ },
+ {
+  "name": "Stock Cars Racing",
+  "alias": [],
+  "pop": 0,
+  "y": 2026,
+  "p": [
+   "console"
+  ],
+  "g": [
+   "Racing",
+   "Simulator",
+   "Arcade"
   ]
  },
  {
@@ -57005,20 +56847,6 @@
   ]
  },
  {
-  "name": "Swarm of the Sea",
-  "alias": [
-   "Swarm of the Sea Demo (PC).exe"
-  ],
-  "pop": 0,
-  "y": 2026,
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Adventure"
-  ]
- },
- {
   "name": "Swarmdustry",
   "alias": [
    "Swarmdustry.exe"
@@ -57089,6 +56917,20 @@
   "g": [
    "Indie",
    "Visual Novel"
+  ]
+ },
+ {
+  "name": "Swing Shift",
+  "alias": [],
+  "pop": 0,
+  "y": 2026,
+  "p": [
+   "console"
+  ],
+  "g": [
+   "Platform",
+   "Adventure",
+   "Arcade"
   ]
  },
  {
@@ -57261,21 +57103,6 @@
   ]
  },
  {
-  "name": "T.W.I.R.L.",
-  "alias": [
-   "TWIRL.exe"
-  ],
-  "pop": 0,
-  "y": 2026,
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Adventure",
-   "Indie"
-  ]
- },
- {
   "name": "T7's Basics Plus",
   "alias": [],
   "pop": 0,
@@ -57396,22 +57223,6 @@
   "p": [
    "pc",
    "console"
-  ]
- },
- {
-  "name": "Tail and Сhaos",
-  "alias": [
-   "Хвост и Хаос",
-   "TailAndChaos.exe"
-  ],
-  "pop": 0,
-  "y": 2026,
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Indie",
-   "Arcade"
   ]
  },
  {
@@ -58027,6 +57838,20 @@
    "Strategy",
    "Indie",
    "Card & Board Game"
+  ]
+ },
+ {
+  "name": "Taxi Crew Simulator",
+  "alias": [],
+  "pop": 0,
+  "y": 2026,
+  "p": [
+   "console"
+  ],
+  "g": [
+   "Simulator",
+   "Adventure",
+   "Arcade"
   ]
  },
  {
@@ -59308,6 +59133,19 @@
   ]
  },
  {
+  "name": "The Doll Shop",
+  "alias": [],
+  "pop": 0,
+  "y": 2026,
+  "p": [
+   "pc"
+  ],
+  "g": [
+   "Adventure",
+   "Visual Novel"
+  ]
+ },
+ {
   "name": "The Doom Collection",
   "alias": [
    "Evercade Arcade 11"
@@ -59826,6 +59664,20 @@
   ]
  },
  {
+  "name": "The Guild Manager",
+  "alias": [],
+  "pop": 0,
+  "y": 2026,
+  "p": [
+   "pc"
+  ],
+  "g": [
+   "Simulator",
+   "Strategy",
+   "Indie"
+  ]
+ },
+ {
   "name": "The Gutter",
   "alias": [
    "TheGutter.exe"
@@ -60131,6 +59983,20 @@
   "g": [
    "Adventure",
    "Indie"
+  ]
+ },
+ {
+  "name": "The Intern: Temptation at Work",
+  "alias": [],
+  "pop": 0,
+  "y": 2026,
+  "p": [
+   "console"
+  ],
+  "g": [
+   "Puzzle",
+   "Simulator",
+   "Adventure"
   ]
  },
  {
@@ -60822,6 +60688,24 @@
   ]
  },
  {
+  "name": "The Midnight Walkers",
+  "alias": [
+   "午夜行者"
+  ],
+  "pop": 0,
+  "y": 2026,
+  "p": [
+   "pc",
+   "console"
+  ],
+  "g": [
+   "Shooter",
+   "Role-playing (RPG)",
+   "Hack and slash/Beat 'em up",
+   "Indie"
+  ]
+ },
+ {
   "name": "The Midnighters",
   "alias": [],
   "pop": 0,
@@ -61067,6 +60951,20 @@
    "Strategy",
    "Indie",
    "Visual Novel"
+  ]
+ },
+ {
+  "name": "The Pit Is Hungry",
+  "alias": [],
+  "pop": 0,
+  "y": 2026,
+  "p": [
+   "console"
+  ],
+  "g": [
+   "Simulator",
+   "Strategy",
+   "Adventure"
   ]
  },
  {
@@ -61418,18 +61316,6 @@
    "Puzzle",
    "Simulator",
    "Indie"
-  ]
- },
- {
-  "name": "The Sovereign's Board",
-  "alias": [],
-  "pop": 0,
-  "y": 2026,
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Strategy"
   ]
  },
  {
@@ -62163,19 +62049,6 @@
   ]
  },
  {
-  "name": "This Is Golf",
-  "alias": [],
-  "pop": 0,
-  "y": 2026,
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Sport",
-   "Arcade"
-  ]
- },
- {
   "name": "Thorgard",
   "alias": [],
   "pop": 0,
@@ -62416,21 +62289,17 @@
   ]
  },
  {
-  "name": "Tic-Tac: Twelve O’Clock",
-  "alias": [
-   "TIC-TAC: Twelve o'clock"
-  ],
+  "name": "Thunder Hoop Collection",
+  "alias": [],
   "pop": 0,
   "y": 2026,
   "p": [
-   "pc",
    "console"
   ],
   "g": [
-   "Simulator",
-   "Strategy",
-   "Adventure",
-   "Indie"
+   "Shooter",
+   "Platform",
+   "Arcade"
   ]
  },
  {
@@ -62554,6 +62423,18 @@
   "g": [
    "Strategy",
    "Card & Board Game"
+  ]
+ },
+ {
+  "name": "Tiles & Vials",
+  "alias": [],
+  "pop": 0,
+  "y": 2026,
+  "p": [
+   "pc"
+  ],
+  "g": [
+   "Strategy"
   ]
  },
  {
@@ -62808,6 +62689,19 @@
   ]
  },
  {
+  "name": "Tiny Tank Showdown",
+  "alias": [],
+  "pop": 0,
+  "y": 2026,
+  "p": [
+   "console"
+  ],
+  "g": [
+   "Shooter",
+   "Arcade"
+  ]
+ },
+ {
   "name": "Tiny Tree Talk",
   "alias": [
    "Bonsai' 98"
@@ -63001,23 +62895,6 @@
   ]
  },
  {
-  "name": "Toll: The Ferryman's Ledger",
-  "alias": [
-   "TOLL.exe"
-  ],
-  "pop": 0,
-  "y": 2026,
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Point-and-click",
-   "Simulator",
-   "Indie",
-   "Visual Novel"
-  ]
- },
- {
   "name": "Tom Clancy's Rainbow Six Siege: Operation Splitfire",
   "alias": [
    "Tom Clancy's Rainbow Six Siege: Year 11, Season 3"
@@ -63073,21 +62950,6 @@
   ],
   "g": [
    "Adventure",
-   "Indie"
-  ]
- },
- {
-  "name": "Tomato Dealer",
-  "alias": [
-   "Tomato Dealer.exe"
-  ],
-  "pop": 0,
-  "y": 2026,
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Simulator",
    "Indie"
   ]
  },
@@ -64081,6 +63943,18 @@
   "g": [
    "Music",
    "Indie"
+  ]
+ },
+ {
+  "name": "Trinity Trigger DX",
+  "alias": [],
+  "pop": 0,
+  "y": 2026,
+  "p": [
+   "console"
+  ],
+  "g": [
+   "Role-playing (RPG)"
   ]
  },
  {
@@ -65141,23 +65015,6 @@
   ]
  },
  {
-  "name": "Untergrund Raceways: Arena",
-  "alias": [
-   "Untergrund Raceways - Arena.exe"
-  ],
-  "pop": 0,
-  "y": 2026,
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Fighting",
-   "Racing",
-   "Indie",
-   "Arcade"
-  ]
- },
- {
   "name": "Until Death Do We Part",
   "alias": [],
   "pop": 0,
@@ -65555,19 +65412,6 @@
   ]
  },
  {
-  "name": "Vanguard Tides",
-  "alias": [],
-  "pop": 0,
-  "y": 2026,
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Role-playing (RPG)",
-   "Indie"
-  ]
- },
- {
   "name": "Vanishing Evidence: Mystery Cases",
   "alias": [],
   "pop": 0,
@@ -65878,6 +65722,18 @@
   ]
  },
  {
+  "name": "Very Scary Game",
+  "alias": [],
+  "pop": 0,
+  "y": 2026,
+  "p": [
+   "console"
+  ],
+  "g": [
+   "Adventure"
+  ]
+ },
+ {
   "name": "Vespera",
   "alias": [],
   "pop": 0,
@@ -66055,6 +65911,18 @@
   ]
  },
  {
+  "name": "Villain Boys: Date the Dark Side",
+  "alias": [],
+  "pop": 0,
+  "y": 2026,
+  "p": [
+   "console"
+  ],
+  "g": [
+   "Simulator"
+  ]
+ },
+ {
   "name": "Villain Girls: Date the Dark Side",
   "alias": [],
   "pop": 0,
@@ -66122,21 +65990,6 @@
    "Role-playing (RPG)",
    "Adventure",
    "Indie"
-  ]
- },
- {
-  "name": "Vitalis",
-  "alias": [
-   "Vitalis.exe"
-  ],
-  "pop": 0,
-  "y": 2026,
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Role-playing (RPG)",
-   "Strategy"
   ]
  },
  {
@@ -66396,16 +66249,6 @@
  },
  {
   "name": "WWE 2K26: Ringside Pass Premium Season 6",
-  "alias": [],
-  "pop": 0,
-  "y": 2026,
-  "p": [
-   "pc",
-   "console"
-  ]
- },
- {
-  "name": "WWE 2K26: WrestleMania 42 Pack",
   "alias": [],
   "pop": 0,
   "y": 2026,
@@ -67216,6 +67059,15 @@
   ]
  },
  {
+  "name": "Werewolf Online",
+  "alias": [],
+  "pop": 0,
+  "y": 2026,
+  "p": [
+   "console"
+  ]
+ },
+ {
   "name": "Western Rye",
   "alias": [
    "WesternRye.exe"
@@ -67242,6 +67094,18 @@
   "g": [
    "Adventure",
    "Indie"
+  ]
+ },
+ {
+  "name": "What Was Here? 1-Minute Memory Quiz!!",
+  "alias": [],
+  "pop": 0,
+  "y": 2026,
+  "p": [
+   "console"
+  ],
+  "g": [
+   "Puzzle"
   ]
  },
  {
@@ -67456,6 +67320,19 @@
   "p": [
    "pc",
    "console"
+  ]
+ },
+ {
+  "name": "Where are Leo and Mia? Pirate Island",
+  "alias": [],
+  "pop": 0,
+  "y": 2026,
+  "p": [
+   "console"
+  ],
+  "g": [
+   "Puzzle",
+   "Card & Board Game"
   ]
  },
  {
@@ -67729,22 +67606,6 @@
   "g": [
    "Simulator",
    "Strategy"
-  ]
- },
- {
-  "name": "Wild Ice",
-  "alias": [
-   "Wild Ice.exe"
-  ],
-  "pop": 0,
-  "y": 2026,
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Strategy",
-   "Adventure",
-   "Indie"
   ]
  },
  {
@@ -68367,6 +68228,18 @@
   "y": 2026,
   "p": [
    "pc"
+  ]
+ },
+ {
+  "name": "WordBuzz 4",
+  "alias": [],
+  "pop": 0,
+  "y": 2026,
+  "p": [
+   "console"
+  ],
+  "g": [
+   "Puzzle"
   ]
  },
  {
@@ -69306,6 +69179,18 @@
   "p": [
    "pc",
    "console"
+  ]
+ },
+ {
+  "name": "Zombie Siege",
+  "alias": [],
+  "pop": 0,
+  "y": 2026,
+  "p": [
+   "console"
+  ],
+  "g": [
+   "Strategy"
   ]
  },
  {
