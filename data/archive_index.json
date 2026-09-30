@@ -1,51 +1,105 @@
 [
  {
-  "date": "2026-09-30",
-  "videos": 1265,
-  "channels": 877,
-  "games": 230,
+  "date": "2026-10-01",
+  "videos": 543,
+  "channels": 433,
+  "games": 137,
   "hot": [
    {
+    "game": "ゼンレスゾーンゼロ",
+    "growth": 2.67,
+    "channels": 3
+   },
+   {
     "game": "エースコンバット8 ウイングス・オブ・シーヴ",
-    "growth": 9.0,
-    "channels": 17
+    "growth": 2.5,
+    "channels": 9
    },
    {
     "game": "hololive Dreams",
-    "growth": 6.86,
-    "channels": 22
-   },
-   {
-    "game": "妖怪ウォッチ1",
-    "growth": 4.0,
-    "channels": 3
+    "growth": 1.64,
+    "channels": 9
    }
   ],
   "top": [
    {
     "game": "Apex Legends",
-    "videos": 60,
-    "channels": 55
-   },
-   {
-    "game": "Minecraft",
-    "videos": 40,
-    "channels": 39
-   },
-   {
-    "game": "ストリートファイター6",
-    "videos": 40,
+    "videos": 36,
     "channels": 35
    },
    {
-    "game": "hololive Dreams",
+    "game": "ストリートファイター6",
     "videos": 24,
     "channels": 22
    },
    {
-    "game": "妹に運転を教える",
-    "videos": 20,
-    "channels": 20
+    "game": "Minecraft",
+    "videos": 18,
+    "channels": 18
+   },
+   {
+    "game": "hololive Dreams",
+    "videos": 9,
+    "channels": 9
+   },
+   {
+    "game": "トルネコの大冒険 ちょっとステキなリマスター",
+    "videos": 12,
+    "channels": 11
+   }
+  ],
+  "column": {
+   "game": "めっちゃカメレオン",
+   "headline": "二次会に呼ばれて、全員で壁になる"
+  }
+ },
+ {
+  "date": "2026-09-30",
+  "videos": 628,
+  "games": 153,
+  "channels": 484,
+  "hot": [
+   {
+    "game": "エースコンバット8 ウイングス・オブ・シーヴ",
+    "growth": 3.03,
+    "channels": 9
+   },
+   {
+    "game": "ゼンレスゾーンゼロ",
+    "growth": 2.67,
+    "channels": 3
+   },
+   {
+    "game": "hololive Dreams",
+    "growth": 2.2,
+    "channels": 10
+   }
+  ],
+  "top": [
+   {
+    "game": "Apex Legends",
+    "videos": 40,
+    "channels": 38
+   },
+   {
+    "game": "ストリートファイター6",
+    "videos": 26,
+    "channels": 23
+   },
+   {
+    "game": "Minecraft",
+    "videos": 22,
+    "channels": 21
+   },
+   {
+    "game": "hololive Dreams",
+    "videos": 11,
+    "channels": 10
+   },
+   {
+    "game": "トルネコの大冒険 ちょっとステキなリマスター",
+    "videos": 14,
+    "channels": 13
    }
   ],
   "column": {

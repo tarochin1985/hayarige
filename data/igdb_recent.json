@@ -2423,7 +2423,9 @@
  },
  {
   "name": "All Roads Connected",
-  "alias": [],
+  "alias": [
+   "Project 0.7.exe"
+  ],
   "pop": 0,
   "y": 2026,
   "p": [
@@ -2785,7 +2787,9 @@
  },
  {
   "name": "Ammossum",
-  "alias": [],
+  "alias": [
+   "Ammossum.exe"
+  ],
   "pop": 0,
   "y": 2026,
   "p": [
@@ -3384,7 +3388,9 @@
  },
  {
   "name": "Antivirus Survivors 2003 Professional",
-  "alias": [],
+  "alias": [
+   "AVS03Pro.exe"
+  ],
   "pop": 0,
   "y": 2026,
   "p": [
@@ -4518,7 +4524,9 @@
  },
  {
   "name": "Astromental Incremental",
-  "alias": [],
+  "alias": [
+   "Astromental.exe"
+  ],
   "pop": 0,
   "y": 2026,
   "p": [
@@ -6066,18 +6074,6 @@
   ]
  },
  {
-  "name": "Bendy's Nightmare Run",
-  "alias": [
-   "Bendy Run"
-  ],
-  "pop": 0,
-  "y": 2026,
-  "g": [
-   "Platform",
-   "Indie"
-  ]
- },
- {
   "name": "Bendy: The Cage",
   "alias": [
    "B:TC"
@@ -6145,6 +6141,20 @@
    "pc"
   ],
   "g": [
+   "Simulator",
+   "Indie"
+  ]
+ },
+ {
+  "name": "Better Chaos",
+  "alias": [],
+  "pop": 0,
+  "y": 2026,
+  "p": [
+   "pc"
+  ],
+  "g": [
+   "Puzzle",
    "Simulator",
    "Indie"
   ]
@@ -8053,7 +8063,9 @@
  },
  {
   "name": "Breakout Garage",
-  "alias": [],
+  "alias": [
+   "Breakout Garage.exe"
+  ],
   "pop": 0,
   "y": 2026,
   "p": [
@@ -10022,6 +10034,20 @@
   ]
  },
  {
+  "name": "Catch Meow if You Can",
+  "alias": [],
+  "pop": 0,
+  "y": 2026,
+  "p": [
+   "pc"
+  ],
+  "g": [
+   "Puzzle",
+   "Adventure",
+   "Indie"
+  ]
+ },
+ {
   "name": "Category 6",
   "alias": [],
   "pop": 0,
@@ -10663,7 +10689,8 @@
  {
   "name": "Chief Cenab: Şahmaran",
   "alias": [
-   "Chief Cenab  Sahmaran"
+   "Chief Cenab  Sahmaran",
+   "Chief Cenab Sahmaran.exe"
   ],
   "pop": 0,
   "y": 2026,
@@ -11303,6 +11330,15 @@
   ],
   "g": [
    "Strategy"
+  ]
+ },
+ {
+  "name": "Classic Sonic Collection",
+  "alias": [],
+  "pop": 0,
+  "y": 2026,
+  "p": [
+   "console"
   ]
  },
  {
@@ -12488,19 +12524,6 @@
   ]
  },
  {
-  "name": "Corrupted Dice",
-  "alias": [],
-  "pop": 0,
-  "y": 2026,
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Strategy",
-   "Indie"
-  ]
- },
- {
   "name": "Corvette",
   "alias": [],
   "pop": 0,
@@ -13149,6 +13172,26 @@
   "g": [
    "Platform",
    "Puzzle",
+   "Adventure",
+   "Indie"
+  ]
+ },
+ {
+  "name": "Creovia",
+  "alias": [
+   "Creo",
+   "Creovia Game",
+   "Creovia MMO"
+  ],
+  "pop": 0,
+  "y": 2026,
+  "p": [
+   "pc"
+  ],
+  "g": [
+   "Platform",
+   "Role-playing (RPG)",
+   "Simulator",
    "Adventure",
    "Indie"
   ]
@@ -15700,6 +15743,18 @@
   ]
  },
  {
+  "name": "Demonology: Incubus - Chapter 9",
+  "alias": [],
+  "pop": 0,
+  "y": 2026,
+  "p": [
+   "pc"
+  ],
+  "g": [
+   "Indie"
+  ]
+ },
+ {
   "name": "Demons' Night Fever",
   "alias": [],
   "pop": 0,
@@ -17049,6 +17104,22 @@
   ]
  },
  {
+  "name": "Dodgebrawl",
+  "alias": [
+   "DODGEBRAWL"
+  ],
+  "pop": 0,
+  "y": 2026,
+  "p": [
+   "pc"
+  ],
+  "g": [
+   "Shooter",
+   "Sport",
+   "Indie"
+  ]
+ },
+ {
   "name": "Dog Man: Bark in Action",
   "alias": [],
   "pop": 0,
@@ -17065,7 +17136,9 @@
  },
  {
   "name": "Dog in the Machine",
-  "alias": [],
+  "alias": [
+   "Dog in the Machine.exe"
+  ],
   "pop": 0,
   "y": 2026,
   "p": [
@@ -22255,7 +22328,7 @@
    "Fire Emblem: Ten Thousand Purples, One Thousand Reds",
    "Fire Emblem: Manshi Senkou"
   ],
-  "pop": 1,
+  "pop": 2,
   "y": 2026,
   "p": [
    "console"
@@ -22390,20 +22463,6 @@
   "g": [
    "Racing",
    "Indie"
-  ]
- },
- {
-  "name": "Five More Minutes",
-  "alias": [],
-  "pop": 0,
-  "y": 2026,
-  "p": [
-   "pc",
-   "console"
-  ],
-  "g": [
-   "Strategy",
-   "Card & Board Game"
   ]
  },
  {
@@ -27132,19 +27191,6 @@
   ]
  },
  {
-  "name": "Hannibal",
-  "alias": [],
-  "pop": 0,
-  "y": 2026,
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Strategy",
-   "Indie"
-  ]
- },
- {
   "name": "Happy Endings",
   "alias": [
    "Happy Endings.exe"
@@ -28713,6 +28759,22 @@
   ]
  },
  {
+  "name": "Horde Slayer",
+  "alias": [
+   "Horde Slayer.exe"
+  ],
+  "pop": 0,
+  "y": 2026,
+  "p": [
+   "pc"
+  ],
+  "g": [
+   "Role-playing (RPG)",
+   "Adventure",
+   "Indie"
+  ]
+ },
+ {
   "name": "Hordestomp",
   "alias": [
    "Hell Yeah: Gunslinger"
@@ -29199,19 +29261,6 @@
  },
  {
   "name": "Human Resources",
-  "alias": [],
-  "pop": 0,
-  "y": 2026,
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Simulator",
-   "Indie"
-  ]
- },
- {
-  "name": "Human: Profit",
   "alias": [],
   "pop": 0,
   "y": 2026,
@@ -30168,19 +30217,6 @@
   ]
  },
  {
-  "name": "Incident Archives: Flight 882",
-  "alias": [],
-  "pop": 0,
-  "y": 2026,
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Adventure",
-   "Indie"
-  ]
- },
- {
   "name": "Incoherence",
   "alias": [],
   "pop": 0,
@@ -30988,6 +31024,19 @@
    "Strategy",
    "Adventure",
    "Indie"
+  ]
+ },
+ {
+  "name": "Isekai: Waifu Overlord",
+  "alias": [],
+  "pop": 0,
+  "y": 2026,
+  "p": [
+   "pc"
+  ],
+  "g": [
+   "Role-playing (RPG)",
+   "Simulator"
   ]
  },
  {
@@ -32072,20 +32121,6 @@
    "pc"
   ],
   "g": [
-   "Indie"
-  ]
- },
- {
-  "name": "Keep Her Safe",
-  "alias": [],
-  "pop": 0,
-  "y": 2026,
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Role-playing (RPG)",
-   "Adventure",
    "Indie"
   ]
  },
@@ -33844,21 +33879,6 @@
   "g": [
    "Role-playing (RPG)",
    "Simulator",
-   "Indie"
-  ]
- },
- {
-  "name": "Light & Glory",
-  "alias": [
-   "Light&Glory.exe"
-  ],
-  "pop": 0,
-  "y": 2026,
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Strategy",
    "Indie"
   ]
  },
@@ -36024,19 +36044,6 @@
   ]
  },
  {
-  "name": "Manorism",
-  "alias": [],
-  "pop": 0,
-  "y": 2026,
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Adventure",
-   "Indie"
-  ]
- },
- {
   "name": "Marble Run Maker",
   "alias": [],
   "pop": 0,
@@ -38021,6 +38028,18 @@
   ]
  },
  {
+  "name": "Modern Sonic Collection",
+  "alias": [],
+  "pop": 0,
+  "y": 2026,
+  "p": [
+   "console"
+  ],
+  "g": [
+   "Adventure"
+  ]
+ },
+ {
   "name": "Modularis",
   "alias": [],
   "pop": 0,
@@ -39229,22 +39248,6 @@
   ]
  },
  {
-  "name": "My Singing Monsters Karaoke",
-  "alias": [
-   "Karaoke.exe"
-  ],
-  "pop": 0,
-  "y": 2026,
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Music",
-   "Indie",
-   "Arcade"
-  ]
- },
- {
   "name": "My Singing Monsters Karaoke: Day One Pack",
   "alias": [],
   "pop": 0,
@@ -39785,7 +39788,8 @@
   "pop": 0,
   "y": 2026,
   "p": [
-   "pc"
+   "pc",
+   "console"
   ],
   "g": [
    "Shooter",
@@ -40087,16 +40091,6 @@
    "Simulator",
    "Adventure",
    "Indie"
-  ]
- },
- {
-  "name": "Neverness to Everness: Rising from the Moonlit Fog",
-  "alias": [],
-  "pop": 0,
-  "y": 2026,
-  "p": [
-   "pc",
-   "console"
   ]
  },
  {
@@ -40547,6 +40541,19 @@
   ]
  },
  {
+  "name": "Nion Forge",
+  "alias": [],
+  "pop": 0,
+  "y": 2026,
+  "p": [
+   "pc"
+  ],
+  "g": [
+   "Indie",
+   "Arcade"
+  ]
+ },
+ {
   "name": "Nitrokill",
   "alias": [
    "Nitrokill.exe"
@@ -40723,16 +40730,6 @@
   ],
   "g": [
    "Indie"
-  ]
- },
- {
-  "name": "Nobunaga's Ambition: Hishou",
-  "alias": [],
-  "pop": 0,
-  "y": 2026,
-  "p": [
-   "pc",
-   "console"
   ]
  },
  {
@@ -41012,6 +41009,7 @@
  {
   "name": "Nothing Strange Here",
   "alias": [
+   "Nothing Strange Here.exe",
    "这里没有奇怪的事",
    "Nichts Seltsames hier",
    "Rien d’étrange ici",
@@ -42338,6 +42336,19 @@
    "Simulator",
    "Adventure",
    "Indie"
+  ]
+ },
+ {
+  "name": "Only Farms",
+  "alias": [],
+  "pop": 0,
+  "y": 2026,
+  "p": [
+   "pc"
+  ],
+  "g": [
+   "Adventure",
+   "Visual Novel"
   ]
  },
  {
@@ -44538,7 +44549,9 @@
  },
  {
   "name": "Pillagers: The Poisoned Throne",
-  "alias": [],
+  "alias": [
+   "Pillagers.exe"
+  ],
   "pop": 0,
   "y": 2026,
   "p": [
@@ -44886,21 +44899,6 @@
   ],
   "g": [
    "Simulator",
-   "Indie"
-  ]
- },
- {
-  "name": "Plant Game",
-  "alias": [],
-  "pop": 0,
-  "y": 2026,
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Role-playing (RPG)",
-   "Simulator",
-   "Strategy",
    "Indie"
   ]
  },
@@ -46924,6 +46922,19 @@
   ]
  },
  {
+  "name": "Puzzling Places: Monthly Pack #47",
+  "alias": [],
+  "pop": 0,
+  "y": 2026,
+  "p": [
+   "console"
+  ],
+  "g": [
+   "Simulator",
+   "Indie"
+  ]
+ },
+ {
   "name": "Pyro",
   "alias": [
    "PYRO",
@@ -48890,18 +48901,6 @@
   ]
  },
  {
-  "name": "Ringwold: The Last Collector",
-  "alias": [],
-  "pop": 0,
-  "y": 2026,
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Card & Board Game"
-  ]
- },
- {
   "name": "Rio Run",
   "alias": [],
   "pop": 0,
@@ -49285,7 +49284,8 @@
   "name": "Rogue Hanafuda",
   "alias": [
    "RogueHwatu",
-   "RogueHanafuda"
+   "RogueHanafuda",
+   "RogueHanafuda.exe"
   ],
   "pop": 0,
   "y": 2026,
@@ -50502,6 +50502,18 @@
   ]
  },
  {
+  "name": "Sayagatari: Promise of the Cursed Blade - First Press Limited Edition",
+  "alias": [],
+  "pop": 0,
+  "y": 2026,
+  "p": [
+   "pc"
+  ],
+  "g": [
+   "Visual Novel"
+  ]
+ },
+ {
   "name": "Scale2fit",
   "alias": [],
   "pop": 0,
@@ -51358,18 +51370,6 @@
   "y": 2026,
   "p": [
    "pc"
-  ]
- },
- {
-  "name": "Shadow Corridor Zero",
-  "alias": [],
-  "pop": 0,
-  "y": 2026,
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Adventure"
   ]
  },
  {
@@ -52291,7 +52291,7 @@
    "SILENT HILL: townfall",
    "Cannula"
   ],
-  "pop": 9,
+  "pop": 11,
   "y": 2026,
   "p": [
    "pc",
@@ -53945,6 +53945,22 @@
   ],
   "g": [
    "Strategy"
+  ]
+ },
+ {
+  "name": "Souls Runner",
+  "alias": [
+   "SoulsRunner.exe"
+  ],
+  "pop": 0,
+  "y": 2026,
+  "p": [
+   "pc"
+  ],
+  "g": [
+   "Strategy",
+   "Adventure",
+   "Indie"
   ]
  },
  {
@@ -56168,18 +56184,6 @@
   ]
  },
  {
-  "name": "Sudoku Mansion",
-  "alias": [],
-  "pop": 0,
-  "y": 2026,
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Indie"
-  ]
- },
- {
   "name": "Sugar Sling Showdown",
   "alias": [],
   "pop": 0,
@@ -58087,6 +58091,18 @@
    "Strategy",
    "Adventure",
    "Indie"
+  ]
+ },
+ {
+  "name": "Tengoku no Vinea: Saiyaku no Majo to Nanatsu no Tsumi",
+  "alias": [],
+  "pop": 0,
+  "y": 2026,
+  "p": [
+   "pc"
+  ],
+  "g": [
+   "Visual Novel"
   ]
  },
  {
@@ -61755,7 +61771,7 @@
   "alias": [
    "The Witcher 3 Remastered"
   ],
-  "pop": 0,
+  "pop": 6,
   "y": 2026,
   "p": [
    "pc",
@@ -63998,7 +64014,9 @@
  },
  {
   "name": "Trivia Murder Party 3",
-  "alias": [],
+  "alias": [
+   "TMP3.exe"
+  ],
   "pop": 0,
   "y": 2026,
   "p": [
@@ -64078,6 +64096,21 @@
   "g": [
    "Simulator",
    "Strategy",
+   "Indie"
+  ]
+ },
+ {
+  "name": "Truck Titans",
+  "alias": [],
+  "pop": 0,
+  "y": 2026,
+  "p": [
+   "pc"
+  ],
+  "g": [
+   "Racing",
+   "Simulator",
+   "Sport",
    "Indie"
   ]
  },
