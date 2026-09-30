@@ -648,6 +648,7 @@ function renderPage(){
   $('#nav').innerHTML = `<a href="${P.home}">今日のランキングへ</a>`
     + `<a href="${P.home}matome/">週・月のまとめ</a>`
     + `<a href="${P.archive}">これまでの記録</a>`
+    + `<a href="${P.home}g/">ゲーム別</a>`
     + `<a href="${P.home}search/">ゲームを探す</a>`;
   $('#s-date').textContent = '';
   $('#s-meta').textContent = DATA.subtitle || '';
@@ -665,6 +666,7 @@ function render(){
   $('#nav').innerHTML = (isArchive ? `<a href="${P.home}">今日のランキングへ</a>` : '')
     + `<a href="${P.home}matome/">週・月のまとめ</a>`
     + `<a href="${P.archive}">これまでの記録</a>`
+    + `<a href="${P.home}g/">ゲーム別</a>`
     + `<a href="${P.home}search/">ゲームを探す</a>`
     + `<a href="${P.home}about/">このサイトについて</a>`;
   const MT = DATA.matome;

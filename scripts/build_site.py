@@ -9,6 +9,7 @@ import json
 import urllib.parse
 import hashlib
 import math, re
+import unicodedata
 from collections import defaultdict, Counter
 from datetime import datetime, timedelta, timezone
 from pathlib import Path
@@ -610,6 +611,7 @@ def nav_html(data, home):
         a.append((home, "今日のランキングへ"))
         a.append((home + "matome/", "週・月のまとめ"))
         a.append((home + "archive/", "これまでの記録"))
+        a.append((home + "g/", "ゲーム別"))
         a.append((home + "search/", "ゲームを探す"))
     elif data.get("mode") == "archive":
         a.append((home, "今日のランキング"))
@@ -623,6 +625,7 @@ def nav_html(data, home):
             a.append((home, "今日のランキングへ"))
         a.append((home + "matome/", "週・月のまとめ"))
         a.append((home + "archive/", "これまでの記録"))
+        a.append((home + "g/", "ゲーム別"))
         a.append((home + "search/", "ゲームを探す"))
         a.append((home + "about/", "このサイトについて"))
     return "".join(f'<a href="{e(u)}">{e(t)}</a>' for u, t in a)
@@ -1663,7 +1666,7 @@ def search_index():
                 if d.is_dir() and re.fullmatch(r"\d{4}-\d{2}-\d{2}", d.name)) \
         if (SITE / "d").is_dir() else []
     at = {d: i for i, d in enumerate(dd)}
-    rows = {}
+    rows, day_streams = {}, {}
     for day in dd:
         f = SITE / "d" / day / "index.html"
         try:
@@ -1673,6 +1676,14 @@ def search_index():
         except (ValueError, OSError):
             continue
         rank = {r["game"] for r in obj.get("ranking", [])}
+        # ゲーム別ページの「最近の配信」用。30日を過ぎた記録ページからは
+        # 配信タイトルが外してあるので、ここに入るのは30日以内のものだけ
+        for r in obj.get("ranking", []):
+            for st in (r.get("streams") or [])[:3]:
+                if st.get("t"):
+                    day_streams.setdefault(r["game"], []).append(
+                        {"t": st["t"], "c": st.get("c", ""),
+                         "u": st.get("u", ""), "d": day})
         # その日の全ゲーム（記録があればそちら、無ければ上位30件だけ）
         src = gdays.get(day) or {r["game"]: [r.get("videos", 0), r.get("channels", 0)]
                                  for r in obj.get("ranking", [])}
@@ -1720,6 +1731,128 @@ def search_index():
     size = (SITE / "search.json").stat().st_size
     log(f"ゲームの索引を書き出しました: {len(out['g'])} 種 / "
         f"{len(dd)} 日分 / {size // 1024} KB")
+    # ゲーム別ページも同じ材料で作る。ここで返しておけば、記録ページを
+    # もう一度全部読み直さずに済む
+    return dd, out["g"], day_streams
+
+
+# ---------------------------------------------------------------- ゲーム別ページ
+# なぜ作るか（2026-10-01 たろちんさんと数字を見て決めた）
+#
+# Search Console では **インデックス登録済み10ページ・未登録26ページ**。
+# 日別の記録ページはほとんど登録されていない。Cloudflareのアクセス記録でも、
+# 見られているのはトップ（77件中73件）だけで、/d/ はほぼ0だった。
+#
+# 日別ページは中身が似ていて、毎日1枚ずつ増える。これを増やしても
+# 検索から人は来ない。**来ている9件/日のGoogle流入は、ゲーム名で
+# 探している人のはず**で、その受け皿がサイトに1枚も無い。
+#
+# ゲーム1本につき1ページなら、ページごとに中身が本当に違う。
+# 317種のうち3日以上出たのが186種あり、そこが受け皿になる。
+GAME_PAGE_MIN = 3      # 何日以上出たゲームにページを作るか
+GAME_PAGE_DAYS = 21    # 表に出す直近の日数
+GAME_PAGE_STREAMS = 8  # 「最近の配信」に並べる本数
+
+
+def game_slug(name, slugs):
+    """ゲーム名 → URLの一部。**一度決めたら変えない。**
+
+    表示名はあとから変わることがある（辞書を畳んだときなど）。そのたびに
+    URLが変わると、検索に載ったページが消えて404になる。だから決めた
+    組み合わせを data/game_slugs.json に残して、次からはそれを使う。
+    """
+    if name in slugs:
+        return slugs[name]
+    t = unicodedata.normalize("NFKC", str(name)).lower()
+    t = re.sub(r"[^0-9a-z\u3040-\u309f\u30a0-\u30ff\u4e00-\u9fff]+", "-", t)
+    t = t.strip("-")[:60] or "game"
+    used = set(slugs.values())
+    base, i = t, 2
+    while t in used:
+        t, i = f"{base}-{i}", i + 1
+    slugs[name] = t
+    return t
+
+
+def game_page_html(name, g, dd, streams, home):
+    """ゲーム1本ぶんのページ。
+
+    **出すのは、こちらが数えた集計値が主。** 配信タイトルとチャンネル名は
+    YouTubeから借りた文字なので、30日以内のものしか出さない。元にしている
+    記録ページ自体が30日で文字を外されるので、ここも自動でそうなる。
+    """
+    idx = g["d"]
+    days = [dd[i] for i in idx]
+    vs, cs = g["v"], g["c"]
+    first, last = days[0], days[-1]
+    fj = f"{int(first[5:7])}月{int(first[8:10])}日"
+    lj = f"{int(last[5:7])}月{int(last[8:10])}日"
+    best = max(range(len(idx)), key=lambda i: cs[i])
+    ranked = len(g.get("r") or [])
+
+    out = [f"<h2>『{e(name)}』はどれだけ配信されているか</h2>",
+           f'<p class="lead">当サイトの集計では、{fj}から{lj}までの間に'
+           f"<b>{len(days)}日</b>、『{e(name)}』の配信が見つかりました。"
+           f"のべ<b>{sum(vs):,}本</b>・のべ<b>{sum(cs):,}チャンネル</b>です。"
+           f"いちばん多かったのは{int(days[best][5:7])}月{int(days[best][8:10])}日で、"
+           f"{cs[best]}チャンネルが配信していました。</p>"]
+    if ranked:
+        out.append(f"<p>このうち<b>{ranked}日</b>は、その日のランキング"
+                   f"（上位30件）に入っています。</p>")
+
+    # コラムで取り上げた日。こちらが書いた文章なので、全期間残っている
+    cols = g.get("col") or []
+    if cols:
+        out.append("<h2>コラムで取り上げた日</h2><ul>")
+        for c in cols[-8:][::-1]:
+            d = dd[c["i"]]
+            out.append(f'<li><a href="{home}d/{d}/">{d}</a>　{e(c["h"])}</li>')
+        out.append("</ul>")
+
+    # 日ごとの数。多い日が一目で分かるように棒を添える
+    out.append(f"<h2>日ごとの配信数（直近{GAME_PAGE_DAYS}日）</h2>")
+    tail = list(zip(days, vs, cs))[-GAME_PAGE_DAYS:]
+    top = max((c for _, _, c in tail), default=1) or 1
+    out.append('<table><tr><th>日</th><th>配信</th><th>チャンネル</th>'
+               '<th style="width:38%">　</th></tr>')
+    for d, v, c in tail[::-1]:
+        w = max(4, round(c / top * 100))
+        out.append(f'<tr><td><a href="{home}d/{d}/">{d}</a></td>'
+                   f"<td>{v}本</td><td>{c}ch</td>"
+                   f'<td><span style="display:block;height:8px;border-radius:4px;'
+                   f'background:var(--accent);width:{w}%"></span></td></tr>')
+    out.append("</table>")
+
+    if streams:
+        out.append("<h2>最近の配信</h2>"
+                   "<p>直近30日ぶんだけを出しています。"
+                   "それより前の配信タイトルは残していません。</p><ul>")
+        for st in streams[:GAME_PAGE_STREAMS]:
+            u = e(st.get("u", ""))
+            out.append(f'<li><a href="{u}" rel="nofollow">{e(st.get("t", ""))}</a>'
+                       f'　<span class="muted">{e(st.get("c", ""))}</span></li>')
+        out.append("</ul>")
+
+    out.append(f'<p class="lead"><a href="{home}search/">ほかのゲームを探す</a>　'
+               f'<a href="{home}g/">ゲーム別のページ一覧</a>　'
+               f'<a href="{home}">今日のランキングへ</a></p>')
+    return "".join(out)
+
+
+def games_index_html(items, home):
+    """ゲーム別ページの一覧。ここが無いと、作ったページへの入口が
+    サイトマップしか無くなる。"""
+    out = ["<h2>ゲーム別のページ</h2>",
+           f'<p class="lead">当サイトの集計に{GAME_PAGE_MIN}日以上出たゲームを、'
+           f"出た日数の多い順に並べています（{len(items)}種）。</p><ul>"]
+    for name, slug, n in items:
+        out.append(f'<li><a href="{home}g/{slug}/">{e(name)}</a>'
+                   f'　<span class="muted">{n}日</span></li>')
+    out.append("</ul>")
+    return "".join(out)
+
+
+
 
 
 def search_html(home):
@@ -2485,7 +2618,7 @@ def main():
 
     # ---- ゲームを探す ----------------------------------------------------
     # 「このゲーム、前はいつ入ってた？」に答える。記録が増えるほど価値が出る。
-    search_index()
+    _dd, _games, _streams = search_index()
     render("search/index.html",
            {"mode": "page", "date": today(), "subtitle": "ゲームを探す",
             "generated": payload["generated"],
@@ -2494,6 +2627,46 @@ def main():
             "meta_desc": "ゲーム名を入れると、そのゲームがいつランキングに入っていたか、"
                          "コラムで取り上げた日があるかが分かります。",
             "page_body": search_html("../")}, 1)
+
+    # ---- ゲーム別ページ --------------------------------------------------
+    # 「風来のシレン6 実況」のように、**ゲーム名で探している人**の受け皿。
+    # 日別ページは毎日ほぼ同じ形で、Googleもほとんど登録していなかった
+    # （2026-10-01の時点で登録済み10・未登録26）。ページごとに中身が
+    # 本当に違うものを増やす。
+    slugs = read_json(DATA / "game_slugs.json", {}) or {}
+    slugs.pop("_説明", None)
+    made, index_items = 0, []
+    for g in _games:
+        if len(g["d"]) < GAME_PAGE_MIN:
+            continue
+        name = g["n"]
+        slug = game_slug(name, slugs)
+        st = sorted(_streams.get(name, []), key=lambda x: x["d"], reverse=True)
+        n_days, n_ch = len(g["d"]), sum(g["c"])
+        render(f"g/{slug}/index.html",
+               {"mode": "page", "date": today(), "subtitle": f"『{name}』の配信",
+                "generated": payload["generated"],
+                "meta_title": f"『{name}』を配信しているVTuber・ゲーム実況者 ｜ ハヤリゲー",
+                "meta_og": f"『{name}』の配信",
+                "meta_desc": f"当サイトの集計では、『{name}』の配信が{n_days}日・"
+                             f"のべ{n_ch:,}チャンネル見つかっています。"
+                             "日ごとの配信数と、取り上げたコラムをまとめています。",
+                "page_body": game_page_html(name, g, _dd, st, "../../")}, 2)
+        index_items.append((name, slug, n_days))
+        made += 1
+    write_json(DATA / "game_slugs.json",
+               dict({"_説明": "ゲーム名 → ページのURL。**一度決めたら変えません。**"
+                             "表示名を直したときにURLまで変わると、検索に載った"
+                             "ページが消えて404になるためです。"}, **slugs))
+    render("g/index.html",
+           {"mode": "page", "date": today(), "subtitle": "ゲーム別のページ",
+            "generated": payload["generated"],
+            "meta_title": "ゲーム別のページ ｜ ハヤリゲー",
+            "meta_og": "ゲーム別のページ",
+            "meta_desc": "VTuber・ゲーム実況者がどのゲームを何日配信したか。"
+                         "ゲームごとのページを一覧にしています。",
+            "page_body": games_index_html(index_items, "../")}, 1)
+    log(f"ゲーム別のページを {made} 枚書き出しました（{GAME_PAGE_MIN}日以上出たゲーム）")
 
     # ---- /d/ と /w/ の入口 ----------------------------------------------
     # 記録は /d/2026-09-24/ に、まとめは /w/2026-09-14/ に置いてあるが、
@@ -2529,6 +2702,10 @@ def main():
         urls += [(f"{site_url}/{x['slug']}/{x['key']}/", "monthly", "0.7")
                  for x in specials]
         urls += [(f"{site_url}/d/{a['date']}/", "monthly", "0.4") for a in archive]
+        # ゲーム別ページ。日本語のURLはそのままだと読めないので符号化する
+        urls += [(f"{site_url}/g/", "weekly", "0.7")]
+        urls += [(f"{site_url}/g/{quote(sl)}/", "weekly", "0.6")
+                 for _n, sl, _d in index_items]
         body = "".join(
             f"<url><loc>{u}</loc><changefreq>{f}</changefreq><priority>{pr}</priority></url>"
             for u, f, pr in urls)
