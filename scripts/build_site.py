@@ -1839,6 +1839,94 @@ def game_page_html(name, g, dd, streams, home):
     return "".join(out)
 
 
+# ---------------------------------------------------------------- RSS
+# なぜ作るか（2026-10-01）
+#
+# X・Blueskyは「流れていく」場所で、その時間に見ていない人には届かない。
+# RSSは**読み手の側が取りに来る**ので、一度登録されればずっと届く。
+# ニュースをまとめて配る側（個人のまとめ、自動投稿のbot）にとっても、
+# RSSがあるかどうかで扱いやすさがまったく違う。作るのは一度きりで、
+# あとは毎日の更新に乗る。
+#
+# 中身は**読みものだけ**にする。毎日のコラムと、週・月のまとめ。
+# ランキングは1日2回変わるので、入れると購読者の画面が埋まる。
+#
+# 配信タイトル・チャンネル名の一覧は入れない。あれはYouTubeから借りた文字で
+# 30日で消すものなので、配って歩く形にはしない（コラムの本文中の引用は、
+# こちらが書いた記事の一部なのでそのまま）。
+RSS_MAX = 40
+
+# 曜日と月の名前は英語で書く決まり（RFC 822）。strftime の %a / %b は
+# 動かす場所の言語設定で変わるので、取り違えないよう自分で持つ。
+_WD = ("Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun")
+_MO = ("Jan", "Feb", "Mar", "Apr", "May", "Jun",
+       "Jul", "Aug", "Sep", "Oct", "Nov", "Dec")
+
+
+def _rfc822(day, hour=7):
+    d = datetime.strptime(day, "%Y-%m-%d")
+    return (f"{_WD[d.weekday()]}, {d.day:02d} {_MO[d.month - 1]} {d.year} "
+            f"{hour:02d}:00:00 +0900")
+
+
+def rss_xml(site_url, specials):
+    """site/feed.xml を作る。新しい順にコラムとまとめを並べる。"""
+    items = []
+    have = {d.name for d in (SITE / "d").iterdir() if d.is_dir()}         if (SITE / "d").is_dir() else set()
+    cd = DATA / "columns"
+    for f in sorted(cd.glob("*.json"), reverse=True) if cd.is_dir() else []:
+        day = f.stem
+        if day not in have or len(items) >= RSS_MAX:
+            continue
+        c = read_json(f, None) or {}
+        game, head = str(c.get("game", "")).strip(), str(c.get("headline", "")).strip()
+        if not game or not head:
+            continue
+        body = str(c.get("body", "")).strip()
+        notes = [str(x).strip() for x in (c.get("notes") or []) if str(x).strip()]
+        if notes:
+            body += "\n\n【今日の見どころ】\n" + "\n".join("・" + n for n in notes)
+        items.append({"t": f"『{game}』{head}", "u": f"{site_url}/d/{day}/",
+                      "d": _rfc822(day), "b": body, "k": day})
+    for x in specials:
+        c = x.get("col") or {}
+        body = str(c.get("lead", "")).strip()
+        for sec in (c.get("sections") or [])[:1]:
+            if isinstance(sec, dict) and sec.get("body"):
+                body = (body + "\n\n" + str(sec["body"])).strip()
+        day = x["key"] if x["kind"] == "weekly" else x["key"] + "-01"
+        items.append({"t": f"【{x['label']}】{x['title']}",
+                      "u": f"{site_url}/{x['slug']}/{x['key']}/",
+                      "d": _rfc822(day, 9), "b": body, "k": day})
+    items.sort(key=lambda i: i["k"], reverse=True)
+    items = items[:RSS_MAX]
+
+    body = "".join(
+        "<item>"
+        f"<title>{e(i['t'])}</title>"
+        f"<link>{e(i['u'])}</link>"
+        f"<guid isPermaLink=\"true\">{e(i['u'])}</guid>"
+        f"<pubDate>{i['d']}</pubDate>"
+        f"<description>{e(i['b'])}</description>"
+        "</item>" for i in items)
+    now = datetime.now(JST)
+    built = (f"{_WD[now.weekday()]}, {now.day:02d} {_MO[now.month - 1]} {now.year} "
+             f"{now.hour:02d}:{now.minute:02d}:00 +0900")
+    (SITE / "feed.xml").write_text(
+        '<?xml version="1.0" encoding="UTF-8"?>'
+        '<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel>'
+        "<title>ハヤリゲー</title>"
+        f"<link>{site_url}/</link>"
+        '<description>VTuber・ゲーム実況者がいま配信しているゲームのランキングと、'
+        '毎日のコラム。</description>'
+        "<language>ja</language>"
+        f"<lastBuildDate>{built}</lastBuildDate>"
+        f'<atom:link href="{site_url}/feed.xml" rel="self" '
+        'type="application/rss+xml"/>'
+        + body + "</channel></rss>", encoding="utf-8")
+    log(f"RSSを書き出しました: {len(items)} 件（site/feed.xml）")
+
+
 def games_index_html(items, home):
     """ゲーム別ページの一覧。ここが無いと、作ったページへの入口が
     サイトマップしか無くなる。"""
@@ -2687,6 +2775,10 @@ def main():
             f'<title>{name}｜ハヤリゲー</title></head>'
             f'<body><p><a href="{to}">{name}の一覧へ</a></p></body></html>\n',
             encoding="utf-8")
+
+    # ---- RSS -----------------------------------------------------------
+    if site_url:
+        rss_xml(site_url, specials)
 
     # ---- sitemap.xml ---------------------------------------------------
     # 日付ごとの記録は日が経つほど増える資産だが、たどり着く道が
