@@ -1,13 +1,35 @@
 {
  "date": "2026-10-01",
- "generated": "2026-10-01 00:44",
+ "generated": "2026-10-01 01:25",
  "leads": {
   "events": [
    {
+    "tag": "#マイクラ肝試し2026",
+    "channels": [
+     "Anya Melfissa Ch. hololive",
+     "Chihaya Ch. 輪堂 千速 - FLOW GLOW",
+     "Hajime Ch. 轟はじめ ‐ ReGLOSS",
+     "Iroha ch. 風真いろは - holoX -",
+     "Pekora Ch. 兎田ぺこら",
+     "Su Ch. 水宮枢 - FLOW GLOW",
+     "Vivi Ch. 綺々羅々ヴィヴィ - FLOW GLOW",
+     "ころんの実況【すとぷり】",
+     "ぽんぽこちゃんねる",
+     "ゆたくん【すにすて】",
+     "ピーナッツくん!オシャレになりたい!",
+     "人生 つみこ (ホラーゲーム専門Vtuber)",
+     "島村シャルロット / Charlotte Channel【ななしいんく】",
+     "羽渦ミウネル -Miuneru Haneuzu-",
+     "莉犬くん【すとぷり】"
+    ]
+   },
+   {
     "tag": "#ゲーム実況",
     "channels": [
+     "M家の休日マサ",
      "Usagi Ch. 因幡兎",
      "えりんぎ Games",
+     "てぃーけぇー",
      "太刀ひろし　【Uncle gamer】 ",
      "恋因ロス KoinRosu",
      "豚咲あおい_TomisakiAoi",
@@ -16,24 +38,28 @@
     ]
    },
    {
+    "tag": "#ストグラ",
+    "channels": [
+     "marunnn【まるーんチャンネル】",
+     "【琵琶ちゃぷ】なな湖なな湖",
+     "たけぉ",
+     "ましゃかりさん",
+     "みつき",
+     "ノビーの遊び部屋",
+     "闇乃あびす / Abyss",
+     "魔光リサ - Lisa Makoh -"
+    ]
+   },
+   {
     "tag": "#ホロドリ",
     "channels": [
      "AZKi Channel",
      "Iroha ch. 風真いろは - holoX -",
-     "Roboco Ch. - ロボ子",
-     "Su Ch. 水宮枢 - FLOW GLOW",
+     "Nene Ch.桃鈴ねね",
      "Towa Ch. 常闇トワ",
+     "Vivi Ch. 綺々羅々ヴィヴィ - FLOW GLOW",
+     "アキロゼCh。Vtuber/ホロライブ所属",
      "宵吸あけル / Yokyu Akeru"
-    ]
-   },
-   {
-    "tag": "#マイクラ肝試し2026",
-    "channels": [
-     "Iroha ch. 風真いろは - holoX -",
-     "ゆたくん【すにすて】",
-     "人生 つみこ (ホラーゲーム専門Vtuber)",
-     "島村シャルロット / Charlotte Channel【ななしいんく】",
-     "羽渦ミウネル -Miuneru Haneuzu-"
     ]
    },
    {
@@ -42,65 +68,112 @@
      "ひなたチャンネル (Hinata Channel)",
      "ダナ",
      "史門 / Shimon ",
+     "家入ポポ / Popo Channel【ななしいんく】",
      "扇名いだ"
     ]
    },
    {
-    "tag": "#マイクラ",
+    "tag": "#レトロゲーム",
     "channels": [
-     "いのちくん",
+     "どえむげーまーらうる",
+     "草蔦みかん / Kusatsuta Mikan",
+     "里城はな",
+     "雛乃ぴぴ / Hinano pipi"
+    ]
+   },
+   {
+    "tag": "#minecraft",
+    "channels": [
      "まこりんとゲーム",
-     "リベル"
+     "ズズちゃんねる!!!",
+     "監獄 ミハル - Miharu Kangoku -",
+     "葛ノ葉鈴撫　-Kuzunoha suzunade- Ch"
+    ]
+   },
+   {
+    "tag": "#縦型配信",
+    "channels": [
+     "vii / ビー",
+     "かおりんごー",
+     "ぺれ"
     ]
    }
   ],
-  "newcomers": [],
+  "newcomers": [
+   {
+    "game": "Minecraft Dungeons II",
+    "channels": 7,
+    "videos": 7
+   }
+  ],
   "wide": [
    {
     "game": "Apex Legends",
-    "channels": 35,
-    "videos": 36
-   },
-   {
-    "game": "ストリートファイター6",
-    "channels": 22,
-    "videos": 24
+    "channels": 72,
+    "videos": 87
    },
    {
     "game": "Minecraft",
+    "channels": 42,
+    "videos": 44
+   },
+   {
+    "game": "ストリートファイター6",
+    "channels": 36,
+    "videos": 43
+   },
+   {
+    "game": "鳴潮",
+    "channels": 21,
+    "videos": 27
+   },
+   {
+    "game": "hololive Dreams",
     "channels": 18,
     "videos": 18
    },
    {
-    "game": "hololive Dreams",
-    "channels": 9,
-    "videos": 9
-   },
-   {
     "game": "トルネコの大冒険 ちょっとステキなリマスター",
-    "channels": 11,
-    "videos": 12
+    "channels": 21,
+    "videos": 22
    },
    {
-    "game": "エースコンバット8 ウイングス・オブ・シーヴ",
-    "channels": 9,
-    "videos": 9
+    "game": "Grand Theft Auto V",
+    "channels": 18,
+    "videos": 20
    },
    {
-    "game": "ARK: Survival Ascended",
-    "channels": 8,
-    "videos": 8
-   },
-   {
-    "game": "鬼武者 Way of the Sword",
-    "channels": 8,
-    "videos": 8
+    "game": "VALORANT",
+    "channels": 16,
+    "videos": 18
    }
   ]
  },
  "drift": [],
  "tags": [],
  "misses": [
+  {
+   "word": "LIBRARIAN",
+   "channels": 2,
+   "n": 2,
+   "examples": [
+    {
+     "t": "【まったり】眠れるまでお片付けします【LIBRARIAN】",
+     "c": "電・A・ルーエ",
+     "u": "https://www.youtube.com/watch?v=_9q8y0Q9824"
+    },
+    {
+     "t": "【司書のお仕事】おしゃべりしながら図書館のお片付け！【＃1】#vtuber #新人vtuber #司書のお仕事 #librarian #おかたづけ #雑談 #初見さん大歓迎",
+     "c": "鈴ノ時みぃ@新人Vtuber",
+     "u": "https://www.youtube.com/watch?v=TyEfI08HnZw"
+    }
+   ],
+   "kind": "near",
+   "suggest": [
+    "Librarian of Aquademia: The Forbidden Grimoire",
+    "Librarian: Tidy Up the Arcane Library!"
+   ]
+  },
   {
    "word": "Starward",
    "channels": 1,
@@ -125,23 +198,6 @@
    "kind": "near",
    "suggest": [
     "Starward Rogue"
-   ]
-  },
-  {
-   "word": "LIBRARIAN",
-   "channels": 1,
-   "n": 1,
-   "examples": [
-    {
-     "t": "【まったり】眠れるまでお片付けします【LIBRARIAN】",
-     "c": "電・A・ルーエ",
-     "u": "https://www.youtube.com/watch?v=_9q8y0Q9824"
-    }
-   ],
-   "kind": "near",
-   "suggest": [
-    "Librarian of Aquademia: The Forbidden Grimoire",
-    "Librarian: Tidy Up the Arcane Library!"
    ]
   },
   {
@@ -176,28 +232,133 @@
    "suggest": [
     "EFootball 2026 by Felix Pro"
    ]
+  },
+  {
+   "word": "#あんスタ",
+   "channels": 3,
+   "n": 9,
+   "examples": [
+    {
+     "t": "【#あんスタ】初見様大歓迎の視聴者参加型！あなたの推しのキャラやMVを見せて！【寒糸ゆあむ/カピバラVtuber】",
+     "c": "寒糸ゆあむ - Samuito Yuam -",
+     "u": "https://www.youtube.com/watch?v=ZpxUrDr9ESo"
+    },
+    {
+     "t": "【#あんスタ】初見様大歓迎の視聴者参加型！あなたの推しのキャラやMVを見せて！【寒糸ゆあむ/カピバラVtuber】",
+     "c": "寒糸ゆあむ - Samuito Yuam -",
+     "u": "https://www.youtube.com/watch?v=ZpxUrDr9ESo"
+    },
+    {
+     "t": "【#あんスタ】『おいでよあんスタ萌え×２文化祭スカウト』を200連ガチャる！初見様もいつメン様も応援して！【寒糸ゆあむ/カピバラVtuber】",
+     "c": "寒糸ゆあむ - Samuito Yuam -",
+     "u": "https://www.youtube.com/watch?v=TpK8UTWNeZk"
+    }
+   ],
+   "kind": "wide",
+   "suggest": []
+  },
+  {
+   "word": "先行プレイ",
+   "channels": 3,
+   "n": 3,
+   "examples": [
+    {
+     "t": "【先行プレイ】オリジナル古龍『ルガ・エアルダ』きたああああ！【モンハンアウトランダーズ】",
+     "c": "よしなま",
+     "u": "https://www.youtube.com/watch?v=Rss50BaX1J8"
+    },
+    {
+     "t": "【先行プレイ】新古龍『光稜龍ルガ・エアルダ』を討伐させていただいたぞ！【MHO/モンスターハンターアウトランダーズ】",
+     "c": "ガンサーの抹茶",
+     "u": "https://www.youtube.com/watch?v=BL1Hf8zGmms"
+    },
+    {
+     "t": "【先行プレイ】大好きなやつ！お宝を集めて博物館を育てる発掘インクリメンタル『超大発掘』【Steam】",
+     "c": "しろこりGames / インディーゲーム専門Vtuber",
+     "u": "https://www.youtube.com/watch?v=4V7VACpEQCs"
+    }
+   ],
+   "kind": "wide",
+   "suggest": []
+  },
+  {
+   "word": "モンスターハンターアウトランダーズ",
+   "channels": 3,
+   "n": 3,
+   "examples": [
+    {
+     "t": "【先行プレイ】新古龍『光稜龍ルガ・エアルダ』を討伐させていただいたぞ！【MHO/モンスターハンターアウトランダーズ】",
+     "c": "ガンサーの抹茶",
+     "u": "https://www.youtube.com/watch?v=BL1Hf8zGmms"
+    },
+    {
+     "t": "『モンスターハンターアウトランダーズ』プレイ映像。新古龍「光稜龍ルガ・エアルダ」がカッコいい！「剣＆盾」を用いて（！？）中世騎士のような戦い方をするイケメンモンスター",
+     "c": "電ファミ公式チャンネル",
+     "u": "https://www.youtube.com/watch?v=_iNUA0n-3QE"
+    },
+    {
+     "t": "看板モンスターさん、まさかの『ギガランス』を使ってくる 【モンスターハンターアウトランダーズ】",
+     "c": "Mハシ",
+     "u": "https://www.youtube.com/watch?v=HcyQjpiYf-Q"
+    }
+   ],
+   "kind": "wide",
+   "suggest": []
   }
  ],
  "miss_days": 7,
  "hot_facts": [
   {
-   "game": "ゼンレスゾーンゼロ",
-   "growth": 2.67,
-   "videos": 4,
-   "base": 1.5,
-   "channels": 3,
-   "views": 11380,
+   "game": "Minecraft Dungeons II",
+   "growth": 8.75,
+   "videos": 7,
+   "base": 0.0,
+   "channels": 7,
+   "views": 467130,
    "who": [
-    "汰鳥ヨシダ",
-    "こへー / 古兵",
-    "Somen Channel",
-    "汰鳥ヨシダ",
-    "こへー / 古兵"
+    "一ノ瀬うるは",
+    "橘ひなの / Hinano Tachibana",
+    "リモーネ先生",
+    "兎咲ミミ / Tosaki Mimi",
+    "蝶屋はなび / Choya Hanabi"
    ],
    "titles": [
-    "週課を済ませてロクシーを見る【質問歓迎/ゼンレスゾーンゼロ】【ネタバレ注意】",
-    "【ゼンゼロ】ロクシーのモチーフ比較まとめ&1~6凸実演解説・危局新ボス炎獄もシグリッドで無凸実戦紹介【ゼンレスゾーンゼロ・攻略・考察・検証】ZZZ・創作体験サーバー",
-    "【ゼンゼロ】ロクシーは引くべき？既存撃破との違い・おすすめ編成を徹底解説【ゼンレスゾーンゼロ】"
+    "【Minecraft Dungeons II】初めてのダンジョンズだ！！！！【ぶいすぽ/一ノ瀬うるは】",
+    "【 Minecraft Dungeons II 】 めちゃくちゃ面白そうなゲームをぶいすぽメンバーとやる！！！【ぶいすぽっ！/橘ひなの】",
+    "【Minecraft Dungeons II】マイクラダンジョン味見【with ミントス】"
+   ],
+   "genres": [
+    "Role-playing (RPG)",
+    "Hack and slash/Beat 'em up",
+    "Adventure"
+   ],
+   "year": null,
+   "platforms": [
+    "pc",
+    "console"
+   ],
+   "days_seen": 1,
+   "last_seen": "2026-09-30",
+   "first_here": false
+  },
+  {
+   "game": "ゼンレスゾーンゼロ",
+   "growth": 5.0,
+   "videos": 6,
+   "base": 1.2,
+   "channels": 5,
+   "views": 65066,
+   "who": [
+    "Somen Channel",
+    "こへー / 古兵",
+    "こへー / 古兵",
+    "汰鳥ヨシダ",
+    "汰鳥ヨシダ"
+   ],
+   "titles": [
+    "【ゼンゼロ】ロクシーは引くべき？既存撃破との違い・おすすめ編成を徹底解説【ゼンレスゾーンゼロ】",
+    "【ゼンゼロ配信 】ロクシー育成&高難度消化・ご質問・コメントお気軽に 【ゼンレスゾーンゼロ】S無凸",
+    "【ゼンゼロ】ロクシーのモチーフ比較まとめ&1~6凸実演解説・危局新ボス炎獄もシグリッドで無凸実戦紹介【ゼンレスゾーンゼロ・攻略・考察・検証】ZZZ・創作体験サーバー"
    ],
    "genres": [],
    "year": null,
@@ -207,23 +368,53 @@
    "first_here": false
   },
   {
+   "game": "Marvel Tokon: Fighting Souls",
+   "growth": 5.0,
+   "videos": 4,
+   "base": 0.2,
+   "channels": 3,
+   "views": 50019,
+   "who": [
+    "飛良ひかり / Hikari Channel【ななしいんく】",
+    "家入ポポ / Popo Channel【ななしいんく】",
+    "フェンリっち(Fenritti)FGC",
+    "フェンリっち(Fenritti)FGC"
+   ],
+   "titles": [
+    "【MARVEL Tōkon: Fighting Souls】コーチに教わってチーム対抗戦するよ！【飛良ひかり / ななしいんく】",
+    "『MARVEL Tōkon: Fighting Souls』ロケットが好きポポです w/飛良ひかり3・SHAKA3・鈴木ノリアキ3・豆スパイダー3・ふぇんりっち3【家入ポポ / ななしいんく】",
+    "#PR『MARVEL Tōkon: Fighting Souls』で19 時からまめスパイダーさんとコーチングをさせていただきます！メンバーは家入ポポさん、釈迦さん、鈴木のりあきさん、飛良ひかりさん"
+   ],
+   "genres": [
+    "Fighting"
+   ],
+   "year": null,
+   "platforms": [
+    "pc",
+    "console"
+   ],
+   "days_seen": 0,
+   "last_seen": null,
+   "first_here": true
+  },
+  {
    "game": "エースコンバット8 ウイングス・オブ・シーヴ",
-   "growth": 2.5,
-   "videos": 9,
-   "base": 3.6,
-   "channels": 9,
-   "views": 212772,
+   "growth": 4.74,
+   "videos": 18,
+   "base": 3.8,
+   "channels": 17,
+   "views": 440316,
    "who": [
     "胡桃沢りりか",
+    "Patra Channel / 周防パトラ",
+    "兄者のゲーム事務所",
     "GAMEゆうなch",
-    "ぴろちゃん -ゲーム攻略・情報ch-",
-    "ピコピコちゃん / ゲームまとめ",
-    "明日葉よもぎの「よもぎ通信」"
+    "ピコピコちゃん / ゲームまとめ"
    ],
    "titles": [
     "【エースコンバット8 ACE COMBAT 8:WINGS OF THEVE】エスコン最新作！8やるぞ！！※ネタバレ注意【胡桃沢りりか】",
-    "#2【ACE COMBAT 8: WINGS OF THEVE】本日先行アクセス解禁！F-22乗るぞ！クリアまで！エースコンバット8 ウイングス・オブ・シーヴ ネタバレあり 【PS5】",
-    "【ACE COMBAT 8】新作フライトシューティングが神ゲーらしい？美女も出てくるので遊んでみるぞ！【エースコンバット８】"
+    "【エースコンバット8】はじめてのエスコンやってみる！ACE COMBAT 8: WINGS OF THEVE【周防パトラ】",
+    "#3 ※ネタバレ注意【祝アーリースタート】兄者の「ACE COMBAT 8: WINGS OF THEVE」【2BRO.】"
    ],
    "genres": [
     "Shooter",
@@ -240,53 +431,54 @@
    "first_here": false
   },
   {
-   "game": "hololive Dreams",
-   "growth": 1.64,
-   "videos": 9,
-   "base": 5.5,
-   "channels": 9,
-   "views": 692614,
+   "game": "ゼルダの伝説 ブレス オブ ザ ワイルド",
+   "growth": 4.62,
+   "videos": 6,
+   "base": 1.3,
+   "channels": 6,
+   "views": 27558,
    "who": [
-    "AZKi Channel",
-    "Su Ch. 水宮枢 - FLOW GLOW",
-    "Iroha ch. 風真いろは - holoX -",
-    "Roboco Ch. - ロボ子",
-    "Towa Ch. 常闇トワ"
+    "最強ゼルダGamesいかぼうず",
+    "汐鳴みりね / Mirine Shionari【ななしいんく】",
+    "たはたのゲーム",
+    "ゲーム実況シス",
+    "赫-アカ-"
    ],
    "titles": [
-    "【ホロライブ ドリームス】#ホロドリ 新エリア登場🌊 夏だ！海だ！釣りだ！hololive Dreams【ホロライブ / AZKi】",
-    "【 #ホロドリ 】ガチャ🌟お子様バッテリー100連対決❕天井はみない【水宮枢／ホロライブ】",
-    "【#ホロドリ】朝釣り雑談ストーリーを添えて【風真いろは/ホロライブ】"
+    "【新自己ベ30分25秒】古代兵装矢6000本＆料理無限の無双新ルートで30分切りを目指す#3【Any％RTA】【ゼルダの伝説ブレスオブザワイルド】【Switch2】",
+    "【ゼルダの伝説 ブレワイ】完全初見🔰ウツシエを全部見つけに行きます。残り６個# 16【汐鳴みりね / ななしいんく】",
+    "謎の負荷バグでハイラルが変になってやばい！【ブレワイ BotW】裏技 バグ 検証 ゆっくり実況 glitch"
    ],
    "genres": [],
    "year": null,
    "platforms": [],
-   "days_seen": 30,
+   "days_seen": 24,
    "last_seen": "2026-09-30",
    "first_here": false
   },
   {
-   "game": "Neverness to Everness",
-   "growth": 1.43,
-   "videos": 4,
-   "base": 2.8,
-   "channels": 4,
-   "views": 4830,
+   "game": "鳴潮",
+   "growth": 4.35,
+   "videos": 27,
+   "base": 6.2,
+   "channels": 21,
+   "views": 559899,
    "who": [
-    "いたとはチャンネル",
-    "びりQ",
-    "キスケGAME",
-    "孵卵リリス / Furan Lilith"
+    "Luna Ch. 姫森ルーナ",
+    "Polka Ch. 尾丸ポルカ",
+    "Matsuri Channel 夏色まつり",
+    "サブチぴょんぴょん",
+    "すりっぷらーゼツ"
    ],
    "titles": [
-    "【NTE先行1.4】クロバネのおすすめ編成3選！暗星強化を生かした組合せ＆浸染側は正直微妙？【Neverness To Everness】",
-    "【NTE】Ver.1.4「名もなき祈歌」クロバネ実装！ガチャと遊園地など遊んでいく【NTE: Neverness to Everness】",
-    "【NTE】強い？引くべき！？限定Sランクキャラクター「クロバネ」性能解説！ おすすめ弧盤武器/ギア/おすすめパーティー/凸/最強【ネバエバ】【Neverness to Everness】"
+    "【 鳴潮 】歳主「心」ガチャ✨ストーリーも進めていくのら！！！第4章第4幕 Ver.3.7 ＃28【姫森ルーナ/ホロライブ】",
+    "【鳴潮】ついに「Ver.3.7」が解禁…！！その時ポルカは。【尾丸ポルカ/ホロライブ】",
+    "【鳴潮】ストーリーとガチャいくぞ！！【ホロライブ/夏色まつり】"
    ],
    "genres": [],
    "year": null,
    "platforms": [],
-   "days_seen": 22,
+   "days_seen": 35,
    "last_seen": "2026-09-30",
    "first_here": false
   }
