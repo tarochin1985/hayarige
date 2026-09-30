@@ -179,7 +179,26 @@ header .c{font-size:13px;color:var(--ink2);margin-top:6px;font-weight:700}
   overflow:hidden;text-overflow:ellipsis;white-space:nowrap;font-weight:700}
 .pics.sm figcaption{font-size:11px}
 
-.side{display:grid;grid-template-rows:1fr 1fr;gap:26px;min-height:0;min-width:0}
+/* 上は「1位＋グラフ」で高さが決まっている。下の一覧は5行あって、
+   半分ずつに割ると入りきらず最後の行が切れる。上は中身ぶん、
+   残りを下に渡す（2026-10-01）。 */
+.side{display:grid;grid-template-rows:auto minmax(0,1fr);gap:26px;min-height:0;min-width:0}
+
+/* 右下。1位のほかに伸びたゲームを並べる（2026-10-01 たろちんさん）。
+   ここは長らく「今日のランキング」だったが、上位3つは前の日と
+   83%%が同じ顔ぶれで、毎日見る人には新しい情報がほとんど無かった。
+   急上昇のほうは同じ顔ぶれが16%%しかない。**毎日ちがうほうを出す。** */
+.rise{display:flex;flex-direction:column;min-width:0}
+.rise .list{display:flex;flex-direction:column;margin-top:8px;min-width:0}
+.rise .r{display:grid;grid-template-columns:auto minmax(0,1fr) auto;align-items:baseline;
+  gap:14px;padding:11px 0 10px;border-bottom:1px solid var(--line);min-width:0}
+.rise .r:last-child{border-bottom:none}
+.rise .x{font-family:"Roboto Mono",monospace;font-size:21px;font-weight:700;
+  color:var(--hot);white-space:nowrap;text-align:right;min-width:74px}
+.rise .nm{font-size:23px;font-weight:800;min-width:0;
+  overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.rise .ct{font-family:"Roboto Mono",monospace;font-size:15px;color:var(--ink2);white-space:nowrap}
+.rise .ct em{font-style:normal;font-size:12px;color:var(--ink3)}
 .row{display:grid;grid-template-columns:42px 1fr auto;align-items:center;gap:12px;
   padding:14px 0 12px;border-bottom:1px solid var(--line)}
 .row:last-child{border-bottom:none}
@@ -206,7 +225,7 @@ header .c{font-size:13px;color:var(--ink2);margin-top:6px;font-weight:700}
 .hot .delta b{font-family:%(titlefont)s;font-weight:%(titleweight)s;font-size:44px;
   color:var(--hot);line-height:1%(numstroke)s}
 .hot .delta span{font-size:16px;color:var(--ink2);font-weight:700}
-.bars{display:flex;align-items:flex-end;gap:9px;height:104px;margin-top:auto}
+.bars{display:flex;align-items:flex-end;gap:9px;height:104px;margin-top:20px}
 .bars .b{flex:1;display:flex;flex-direction:column;justify-content:flex-end;gap:6px;height:100%%}
 .bars .b i{display:block;background:var(--rail);border-radius:5px 5px 2px 2px}
 .bars .b.on i{background:var(--hot)}
@@ -235,11 +254,8 @@ PAGE = """<!doctype html>
 <div class="body">
   <section class="card lead">%(lead)s</section>
   <div class="side">
-    <section class="card rank">
-      <span class="eye tealx">%(crown)s今日のランキング</span>
-      %(rows)s
-    </section>
     <section class="card hot">%(hot)s</section>
+    <section class="card rise">%(rows)s</section>
   </div>
 </div>
 <footer>
@@ -381,10 +397,31 @@ def lead_html(col, ranking):
             + (f'<div class="pics">{figs}</div>' if figs else ""))
 
 
-def rows_html(ranking):
-    rows = ranking[:3]
+def rows_html(data):
+    """右下。1位のほかに伸びたゲームを並べる。
+
+    2026-10-01まで、ここは「今日のランキング」の上位3つだった。
+    37日ぶんを数えたところ、**上位3つは前の日と83%が同じ顔ぶれ**で、
+    毎日見る人には新しい情報がほとんど無かった（上位10でも71%）。
+    急上昇のほうは、同じ顔ぶれが16%しかない。
+
+    急上昇が出せない日（データの足りない日）だけ、これまでどおり順位を出す。
+    """
+    rising = data.get("rising") or []
+    if len(rising) > 1:
+        out = []
+        for r in rising[1:6]:
+            g = (f'<b>×{r["growth"]:.1f}</b>' if r.get("growth")
+                 else f'<b>{r.get("videos", 0)}</b>')
+            out.append(f'<div class="r"><span class="x">{g}</span>'
+                       f'<span class="nm">{e(r.get("game"))}</span>'
+                       f'<span class="ct">{r.get("channels", 0)}<em>ch</em></span></div>')
+        return (f'<span class="eye tealx">{UP}ほかに伸びたゲーム</span>'
+                f'<div class="list">{"".join(out)}</div>')
+    # 急上昇が無い日の受け皿。開設直後など、7日ぶんの記録がそろわない日に来る
+    rows = (data.get("ranking") or [])[:3]
     if not rows:
-        return '<div class="row"><span class="nm">データがありません</span></div>'
+        return '<div class="r"><span class="nm">データがありません</span></div>'
     top = max((r.get("videos") or 0) for r in rows) or 1
     out = []
     for i, r in enumerate(rows):
@@ -395,7 +432,7 @@ def rows_html(ranking):
             f'<span class="nm">{e(r.get("game"))}</span>'
             f'<span class="ct">{r.get("videos", 0)}<em>件</em> {r.get("channels", 0)}<em>ch</em></span>'
             f'<span class="bar"><i style="width:{w:.0f}%"></i></span></div>')
-    return "".join(out)
+    return f'<span class="eye tealx">{CROWN}今日のランキング</span>{"".join(out)}'
 
 
 def hot_html(data):
@@ -525,7 +562,7 @@ def build(data, theme="dark"):
         "date": e(str(data.get("date", "")).replace("-", ".")),
         "videos": t.get("videos", 0), "channels": t.get("channels", 0),
         "lead": lead_html(data.get("column"), data.get("ranking") or []),
-        "rows": rows_html(data.get("ranking") or []),
+        "rows": rows_html(data),
         "hot": hot_html(data),
         "note": note, "url": site_url(), "fit": FIT,
     }
