@@ -1,6 +1,6 @@
 {
  "date": "2026-10-01",
- "generated": "2026-10-01 19:29",
+ "generated": "2026-10-01 20:02",
  "leads": {
   "events": [
    {
@@ -48,22 +48,21 @@
     ]
    },
    {
-    "tag": "#ホロドリ",
-    "channels": [
-     "AZKi Channel",
-     "Iroha ch. 風真いろは - holoX -",
-     "Nene Ch.桃鈴ねね",
-     "Vivi Ch. 綺々羅々ヴィヴィ - FLOW GLOW",
-     "アキロゼCh。Vtuber/ホロライブ所属"
-    ]
-   },
-   {
     "tag": "#ストグラSeason2",
     "channels": [
      "たけぉ",
      "天羽よつは",
      "暁月ホタル AKATSUKI HOTARU",
      "柚原いづみ / Izumi Channel 【ななしいんく】"
+    ]
+   },
+   {
+    "tag": "#ホロドリ",
+    "channels": [
+     "AZKi Channel",
+     "Iroha ch. 風真いろは - holoX -",
+     "Vivi Ch. 綺々羅々ヴィヴィ - FLOW GLOW",
+     "アキロゼCh。Vtuber/ホロライブ所属"
     ]
    },
    {
@@ -87,8 +86,8 @@
   "wide": [
    {
     "game": "Apex Legends",
-    "channels": 60,
-    "videos": 62
+    "channels": 58,
+    "videos": 60
    },
    {
     "game": "Minecraft",
@@ -107,23 +106,23 @@
    },
    {
     "game": "鳴潮",
-    "channels": 16,
-    "videos": 18
+    "channels": 15,
+    "videos": 16
    },
    {
     "game": "hololive Dreams",
-    "channels": 14,
-    "videos": 14
-   },
-   {
-    "game": "エースコンバット8 ウイングス・オブ・シーヴ",
-    "channels": 11,
-    "videos": 11
+    "channels": 13,
+    "videos": 13
    },
    {
     "game": "妹に運転を教える",
     "channels": 11,
     "videos": 11
+   },
+   {
+    "game": "エースコンバット8 ウイングス・オブ・シーヴ",
+    "channels": 10,
+    "videos": 10
    }
   ]
  },
@@ -155,7 +154,7 @@
   {
    "word": "Starward",
    "channels": 1,
-   "n": 7,
+   "n": 6,
    "examples": [
     {
      "t": "【星の翼】過去最大リワークで一気に環境トップに躍り出たセラフィムの使い方を実況解説！【星之翼/Starward】",
@@ -163,14 +162,14 @@
      "u": "https://www.youtube.com/watch?v=ciwas3PsZqs"
     },
     {
-     "t": "【星の翼】まさかの3コストで実装されたエリシア空戦モードはかなりシンプルなPSが出る強キャラでした【星之翼/Starward】",
-     "c": "東和正 / AzumaKazumasa",
-     "u": "https://www.youtube.com/watch?v=rRCXWvAqiNQ"
-    },
-    {
      "t": "【星の翼】昨日触れなかった修正キャラ色々お試ししたい！プリシュカ終わった評判多いからお別れ会かも【星之翼/Starward】【東和正】",
      "c": "東和正 / AzumaKazumasa",
      "u": "https://www.youtube.com/watch?v=qmVVjGN11O0"
+    },
+    {
+     "t": "【星の翼】ついにプリシュカとお別れ！？各キャラの修正点と使ってみた総評まとめ【セイレン/エリシア陸戦/イーザー】【星之翼/Starward】",
+     "c": "東和正 / AzumaKazumasa",
+     "u": "https://www.youtube.com/watch?v=9aDz3nMRyLU"
     }
    ],
    "kind": "near",
