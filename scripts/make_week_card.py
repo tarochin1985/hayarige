@@ -1,9 +1,14 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
-"""週まとめのコラムから、Xに貼る画像（1600×900）と投稿文を作る。
+"""週まとめ・月まとめのコラムから、Xに貼る画像（1600×900）と投稿文を作る。
 
-    python3 scripts/make_week_card.py data/columns/weekly/2026-09-14.json
     python3 scripts/make_week_card.py data/columns/weekly/2026-09-14.json --png
+    python3 scripts/make_week_card.py data/columns/monthly/2026-09.json --png
+
+**週と月のどちらでも同じこれを使う**（2026-10-01に月も通した）。
+ファイル名で見分ける。`2026-09-14` なら週、`2026-09` なら月。
+中身の形も、出す3行も、両方いっしょ。名前は week のままだが、
+片方だけ別のプログラムにすると見た目がすぐ食い違うので1本にしてある。
 
 なぜ毎日のカード（make_card.py）と別なのか（2026-09-28 たろちんさん）
 --------------------------------------------------------------------
@@ -142,7 +147,7 @@ PAGE = """<!doctype html>
     <div class="c">%(counts)s</div></div>
 </header>
 <section class="card%(solo)s">
-  <span class="eye">%(bolt)s週まとめ</span>
+  <span class="eye">%(bolt)s%(label)s</span>
   <div class="lead">
     <div class="hd%(ttsize)s">%(point)s<span>%(title)s</span></div>
     %(sub)s
@@ -183,14 +188,22 @@ FIT = """
 """
 
 
-def week_range(key):
-    """月曜の日付から、その週の(月曜, 日曜)を返す。"""
+def period(key):
+    """ファイル名から (始まり, 終わり, 見出しの札, URLの一文字) を返す。
+
+      2026-09-14 … 週まとめ。その月曜から日曜まで
+      2026-09    … 月まとめ。その月の1日から末日まで
+    """
+    if re.fullmatch(r"\d{4}-\d{2}", key):
+        a = datetime.strptime(key + "-01", "%Y-%m-%d")
+        nxt = datetime(a.year + (a.month == 12), (a.month % 12) + 1, 1)
+        return a, nxt - timedelta(days=1), "月まとめ", "m"
     a = datetime.strptime(key, "%Y-%m-%d")
-    return a, a + timedelta(days=6)
+    return a, a + timedelta(days=6), "週まとめ", "w"
 
 
 def week_counts(a, b):
-    """その週、何日ぶん集計して、配信が何本あったか。
+    """その期間、何日ぶん集計して、配信が何本あったか。
     data/archive_index.json（日ごとの集計結果）から数える。
     取れなければ空文字を返して、header の右下を出さない。"""
     arch = read_json(DATA / "archive_index.json", []) or []
@@ -218,7 +231,7 @@ def card_parts(col):
 
 def build(col, key, theme="dark"):
     th = theme_css(theme)
-    a, b = week_range(key)
+    a, b, label, _slug = period(key)
     title = str(col.get("title") or "").strip()
     sub, also = card_parts(col)
     n = len(title)
@@ -234,7 +247,9 @@ def build(col, key, theme="dark"):
     return PAGE % {
         "css": css, "vars": th["vars"], "fontlink": font_link(th["fontq"]),
         "bolt": BOLT,
-        "range": f"{a.strftime('%Y.%m.%d')} – {b.strftime('%m.%d')}",
+        "range": (a.strftime("%Y.%m") if label == "月まとめ"
+                  else f"{a.strftime('%Y.%m.%d')} – {b.strftime('%m.%d')}"),
+        "label": label,
         "counts": e(week_counts(a, b)),
         "title": e(title),
         "point": POINT,
@@ -271,12 +286,15 @@ def tweet_text(col, key):
     title = str(col.get("title") or "").strip()
     if not title:
         return None
-    a, b = week_range(key)
+    a, b, label, slug = period(key)
     sub, also = card_parts(col)
     head = title if title.startswith("★") else "★" + title
-    url = f"https://{site_url()}/w/{key}/"
-    span = f"{a.month}/{a.day}〜{b.month}/{b.day}"
-    top = f"先週の #ハヤリゲー（{span}）🎮\n\n{head}"
+    url = f"https://{site_url()}/{slug}/{key}/"
+    if label == "月まとめ":
+        top = f"{a.month}月の #ハヤリゲー まとめ🎮\n\n{head}"
+    else:
+        span = f"{a.month}/{a.day}〜{b.month}/{b.day}"
+        top = f"先週の #ハヤリゲー（{span}）🎮\n\n{head}"
     tail = ""
     if also:
         tail = "\n\nこんなこともありました\n" + "\n".join("・" + x for x in also)
@@ -290,8 +308,10 @@ def tweet_text(col, key):
 
 
 def main():
-    ap = argparse.ArgumentParser(description="週まとめのカードと投稿文を作る")
-    ap.add_argument("column", help="data/columns/weekly/YYYY-MM-DD.json")
+    ap = argparse.ArgumentParser(description="週・月まとめのカードと投稿文を作る")
+    ap.add_argument("column",
+                    help="data/columns/weekly/YYYY-MM-DD.json または "
+                         "data/columns/monthly/YYYY-MM.json")
     ap.add_argument("--png", action="store_true", help="画像まで作る")
     ap.add_argument("--theme", default="", help="見た目（既定は site_config.json）")
     ap.add_argument("-o", "--out", default="", help="書き出し先のフォルダ")
@@ -304,9 +324,10 @@ def main():
         return 1
     key = p.stem
     try:
-        week_range(key)
+        period(key)
     except ValueError:
-        log(f"ファイル名が「その週の月曜の日付」になっていません: {p.name}")
+        log("ファイル名が「その週の月曜の日付」（2026-09-14）か"
+            f"「その月」（2026-09）になっていません: {p.name}")
         return 1
 
     theme = args.theme or (read_json(DATA / "site_config.json", {}) or {}
@@ -322,7 +343,8 @@ def main():
     if logo.is_file():
         (out / "logo.svg").write_bytes(logo.read_bytes())
 
-    html_path = out / f"week-card-{key}.html"
+    kind = period(key)[2]
+    html_path = out / f"{'month' if kind == '月まとめ' else 'week'}-card-{key}.html"
     html_path.write_text(build(col, key, theme), encoding="utf-8")
     log(f"カードのHTMLを書きました: {html_path}（見た目 {theme}）")
 
@@ -343,19 +365,26 @@ def main():
             log(f"    ⚠️ 長すぎます（{ALSO_MAX}字まで）")
 
     text = tweet_text(col, key)
-    tw = out / f"week-tweet-{key}.txt"
+    tw = out / f"{'month' if kind == '月まとめ' else 'week'}-tweet-{key}.txt"
     tw.write_text(text + "\n", encoding="utf-8")
     n = x_weight(text)
     log(f"投稿文を書きました: {tw}（約{n}文字ぶん／上限280）")
     if n > 280:
-        log("⚠️ Xの上限を超えています。見出しか「こんなこともありました」を短くしてください。")
+        # どれだけ削ればよいかまで出す。「超えています」だけだと、
+        # 何字詰めればいいのかが分からず、何度も作り直すことになる。
+        # 日本語は1字で2文字ぶん数えるので、超過の半分が削る字数の目安。
+        over = n - 280
+        log(f"⚠️ Xの上限を {over} 文字ぶん超えています（約{-(-over // 2)}字）。"
+            "見出しを短くするか、「こんなこともありました」の2行を詰めてください。")
+        log("   見出しにゲーム名を入れると長くなります。"
+            "そのぶん『こんなこともありました』は1行30字くらいに抑えると収まります。")
     log("---- ここから投稿文 ----")
     log(text)
     log("---- ここまで ----")
 
     if args.png:
         from playwright.sync_api import sync_playwright
-        png = out / f"week-card-{key}.png"
+        png = out / f"{'month' if kind == '月まとめ' else 'week'}-card-{key}.png"
         with sync_playwright() as p2:
             b = p2.chromium.launch()
             pg = b.new_page(viewport={"width": 1600, "height": 900},
