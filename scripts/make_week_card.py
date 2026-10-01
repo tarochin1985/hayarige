@@ -578,15 +578,133 @@ def tweet_text(col, key):
     return put("", also[:1] if also else [])
 
 
+# ------------------------------------------------- 画像にする
+def shoot(pages, theme):
+    """[(HTMLの場所, PNGの場所), …] をまとめて撮る。
+
+    ブラウザの起動が1回あたり1〜2秒かかるので、1本ずつ開き直さない
+    （--site は、まとめの本数ぶんここを通る）。
+    足りない書体があれば、その名前を返す。
+    """
+    from playwright.sync_api import sync_playwright
+    want = [f for f in theme_css(theme)["fontq"].split("&family=")]
+    want = [q.split(":")[0].replace("+", " ") for q in want]
+    miss = set()
+    with sync_playwright() as p2:
+        b = p2.chromium.launch()
+        pg = b.new_page(viewport={"width": 1600, "height": 900},
+                        device_scale_factor=1)
+        for html_path, png in pages:
+            pg.goto("file://" + str(Path(html_path).resolve()))
+            try:
+                pg.wait_for_function("window.__fit === true", timeout=FIT_WAIT)
+            except Exception:
+                log("文字の大きさを詰める処理が終わりませんでした。そのまま撮ります。")
+            pg.wait_for_timeout(300)
+            # 書体が当たっているかだけ確かめる。このカードは配信のサムネイルを
+            # 使わないので、確かめるところはここだけで済む。
+            loaded = pg.evaluate("""() => [...document.fonts]
+                .filter(f => f.status === 'loaded').map(f => f.family)""")
+            miss |= {f for f in want if f not in loaded}
+            Path(png).parent.mkdir(parents=True, exist_ok=True)
+            pg.screenshot(path=str(png))
+        b.close()
+    return sorted(miss)
+
+
+def all_columns():
+    """まとめのJSONを全部。[(種類, URLの一文字, Path), …]"""
+    out = []
+    for kind, slug in (("weekly", "w"), ("monthly", "m")):
+        d = DATA / "columns" / kind
+        if d.is_dir():
+            out += [(kind, slug, f) for f in sorted(d.glob("*.json"))]
+    return out
+
+
+def for_site(theme, force=False):
+    """まとめのページに置く画像を site/w/<key>/card.png などに作る。
+
+    なぜ要るか（2026-10-01 たろちんさん）
+    ------------------------------------
+    > 月まとめのページに画像が何もないのは寂しい。
+    > ツイート用に作ってくれた画像をサムネとして使うでもいいかもしれない。
+
+    月まとめの出典はSteamや4Gamerで、YouTubeの動画URLがほとんど無い。
+    build_site.py は出典からサムネイルを拾う作りなので、**月まとめには
+    どうやっても画像が付かなかった。** こちらで作ったカードを置けば、
+    借りものでもなく、動画が消えても壊れない画像が必ず1枚ある。
+
+    これは**GitHubのActionsの中で、build_site.py より先に**走らせる。
+    先に置いておけば、build_site はファイルの有無を見て貼るか決められる
+    （順番が逆だと、画像の無いHTMLを書いたあとに画像ができる）。
+
+    JSONより新しい画像があれば作り直さない（毎回全部撮ると時間がかかる）。
+    """
+    site = Path(__file__).resolve().parent.parent / "site"
+    tmp = Path(tempfile.mkdtemp(prefix="matome-card-"))
+    logo = site / "logo.svg"
+    if logo.is_file():
+        (tmp / "logo.svg").write_bytes(logo.read_bytes())
+    pages, made = [], []
+    for kind, slug, f in all_columns():
+        key = f.stem
+        try:
+            period(key)
+        except ValueError:
+            log(f"ファイル名が日付の形になっていないので飛ばします: {f.name}")
+            continue
+        col = read_json(f, None)
+        if not isinstance(col, dict) or not str(col.get("title") or "").strip():
+            log(f"title が無いので飛ばします: {f.name}")
+            continue
+        png = site / slug / key / "card.png"
+        if (not force and png.is_file()
+                and png.stat().st_mtime >= f.stat().st_mtime):
+            continue
+        html_path = tmp / f"{slug}-{key}.html"
+        html_path.write_text(build(col, key, theme), encoding="utf-8")
+        pages.append((html_path, png))
+        made.append(f"{slug}/{key}/card.png")
+    if not pages:
+        log("まとめの画像は全部そろっています（作り直しは --force-png）")
+        return 0
+    miss = shoot(pages, theme)
+    for x in made:
+        log(f"まとめの画像を作りました: site/{x}")
+    if miss:
+        log("⚠️ 書体が当たっていません: " + "・".join(miss))
+        log("   この画像は見本と違う書体で出ます。")
+    return 0
+
+
 def main():
     ap = argparse.ArgumentParser(description="週・月まとめのカードと投稿文を作る")
-    ap.add_argument("column",
+    ap.add_argument("column", nargs="?", default="",
                     help="data/columns/weekly/YYYY-MM-DD.json または "
                          "data/columns/monthly/YYYY-MM.json")
     ap.add_argument("--png", action="store_true", help="画像まで作る")
+    ap.add_argument("--site", action="store_true",
+                    help="まとめのページに置く画像を site/ の中に作る"
+                         "（全部まとめて。build_site.py より先に走らせる）")
+    ap.add_argument("--force-png", action="store_true",
+                    help="--site のとき、すでにある画像も作り直す")
     ap.add_argument("--theme", default="", help="見た目（既定は site_config.json）")
     ap.add_argument("-o", "--out", default="", help="書き出し先のフォルダ")
     args = ap.parse_args()
+
+    if args.site:
+        theme = args.theme or (read_json(DATA / "site_config.json", {}) or {}
+                               ).get("card_theme") or "dark"
+        if theme not in THEMES:
+            log(f"そんなテーマはありません: {theme}（{'・'.join(THEMES)}）")
+            return 1
+        return for_site(theme, args.force_png)
+
+    if not args.column:
+        log("どのまとめのカードを作るか、JSONの場所を指定してください"
+            "（サイト用の画像をまとめて作るなら --site）")
+        return 1
 
     p = Path(args.column)
     col = read_json(p, None)
@@ -691,27 +809,8 @@ def main():
     log("---- ここまで ----")
 
     if args.png:
-        from playwright.sync_api import sync_playwright
         png = out / f"{'month' if kind == '月まとめ' else 'week'}-card-{key}.png"
-        with sync_playwright() as p2:
-            b = p2.chromium.launch()
-            pg = b.new_page(viewport={"width": 1600, "height": 900},
-                            device_scale_factor=1)
-            pg.goto("file://" + str(html_path.resolve()))
-            try:
-                pg.wait_for_function("window.__fit === true", timeout=FIT_WAIT)
-            except Exception:
-                log("文字の大きさを詰める処理が終わりませんでした。そのまま撮ります。")
-            pg.wait_for_timeout(300)
-            # 書体が当たっているかだけ確かめる。このカードは配信のサムネイルを
-            # 使わないので、確かめるところはここだけで済む。
-            loaded = pg.evaluate("""() => [...document.fonts]
-                .filter(f => f.status === 'loaded').map(f => f.family)""")
-            miss = [f for f in (q.split(":")[0].replace("+", " ")
-                                for q in theme_css(theme)["fontq"].split("&family="))
-                    if f not in loaded]
-            pg.screenshot(path=str(png))
-            b.close()
+        miss = shoot([(html_path, png)], theme)
         if miss:
             log("⚠️ 書体が当たっていません: " + "・".join(miss))
             log("   この画像は見本と違う書体で出ます。投稿前に見て確かめてください。")

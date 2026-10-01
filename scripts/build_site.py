@@ -999,7 +999,7 @@ def page_html(path, data, depth, site_url="", home=None):
     # 中に </script> があるとそこでDATAの読み込みが切れる（2026-09-25、
     # ゲーム検索のページを足したときに実際に壊れた）。
     d.pop("page_body", None)
-    for k in ("meta_title", "meta_og", "meta_desc"):
+    for k in ("meta_title", "meta_og", "meta_desc", "og_image"):
         d.pop(k, None)
     if home:
         # プレビュー用。本文のリンクもJS側の起点も、渡された住所に揃える
@@ -1034,6 +1034,11 @@ def page_html(path, data, depth, site_url="", home=None):
                     .replace("__DESC__", e(desc))
                     .replace("__HOME__", home)
                     .replace("__PAGEURL__", f"{site_url}/{page}" if site_url else "")
+                    # XやDiscordに貼ったときの画像。まとめのページだけ、
+                    # そのまとめのカードを指す（og:image は絶対URLでないと出ない）
+                    .replace("__OGIMG__",
+                             f'{site_url}/{data["og_image"]}'
+                             if data.get("og_image") else f"{site_url}/ogp.png")
                     .replace("__SITE__", site_url)
                     # JavaScriptなしでも読める中身。JSが動けば同じ内容で描き直される
                     .replace("__PICKDISP__", "" if col_ else "display:none")
@@ -1072,8 +1077,7 @@ def page_html(path, data, depth, site_url="", home=None):
                     .replace("__POINT__", POINT)
                     .replace("__NCH__", f"{watched_channels():,}")
                     .replace("__MTDISP__", "" if mt else "display:none")
-                    .replace("__MTHREF__", home + (mt["href"] if mt else ""))
-                    .replace("__SSR_MT__", ssr_matome(mt))
+                    .replace("__SSR_MT__", ssr_matome(mt, home))
                     .replace("__SHARE_COL__", share_col)
                     .replace("__SHARE_SITE__", share_site)
                     .replace("__FOLLOW__", follow_html(read_json(
@@ -1188,21 +1192,43 @@ def check_special(c):
 YT_ID = re.compile(r"(?:youtube\.com/watch\?v=|youtu\.be/)([\w-]{11})")
 
 
-def special_thumb(c):
-    """まとめに載せる画像。YouTubeの動画URLからサムネイルを作る。
+def special_thumb(c, item=None, home=""):
+    """まとめに載せる画像。
 
-    JSONに "hero": {"u": "...", "by": "チャンネル名"} があればそれを使い、
-    無ければ出典のYouTube動画から拾う。借りた相手（by）は必ず一緒に持ち回る。
+    順番（2026-10-01 たろちんさんと決めました）
+    --------------------------------------------
+    1. JSONに "hero": {"u": "YouTubeの動画URL", "by": "チャンネル名"} があればそれ
+    2. **こちらで作ったツイート用のカード**（site/w/<key>/card.png）
+    3. 出典に混ざっているYouTubeの動画
+
+    2を足した理由。**月まとめのページには、画像が1枚も無かった。**
+    ここは3しか見ておらず、月まとめの出典はSteam・4Gamer・公式サイトで、
+    YouTubeの動画URLがまず入らない。構造として画像が付きようがなかった。
+
+    カードなら借りものではないので、
+      ・動画が消えても壊れない（i.ytimg.com への直リンクは消えると欠ける）
+      ・「画像 YouTube ◯◯」の断りが要らない
+      ・トップ・一覧・記事ページで、同じ絵がそろう
+    カードは make_week_card.py --site が作る（build_site より先に走らせる）。
+
+    1を2より先にしてあるのは、配信そのものを見せたい回があるため。
+    そのときだけJSONに hero を書けば、今までどおりサムネイルが出る。
     """
     hero = c.get("hero") or {}
-    cands = [(hero.get("u", ""), hero.get("by", ""))]
-    cands += [(str(s.get("u", "")), str(s.get("t", "")).split(" — ")[0])
-              for s in (c.get("sources") or [])]
-    for u, by in cands:
-        m = YT_ID.search(str(u))
+    m = YT_ID.search(str(hero.get("u", "")))
+    if m:
+        return {"th": f"https://i.ytimg.com/vi/{m.group(1)}/mqdefault.jpg",
+                "by": str(hero.get("by", "")), "own": False}
+    if item:
+        if (SITE / item["slug"] / item["key"] / "card.png").is_file():
+            return {"th": f'{home}{item["slug"]}/{item["key"]}/card.png',
+                    "by": "", "own": True}
+    for s in (c.get("sources") or []):
+        m = YT_ID.search(str(s.get("u", "")))
         if m:
-            return {"th": f"https://i.ytimg.com/vi/{m.group(1)}/mqdefault.jpg", "by": by}
-    return {"th": "", "by": ""}
+            return {"th": f"https://i.ytimg.com/vi/{m.group(1)}/mqdefault.jpg",
+                    "by": str(s.get("t", "")).split(" — ")[0], "own": False}
+    return {"th": "", "by": "", "own": False}
 
 
 def special_period_end(item):
@@ -1214,33 +1240,63 @@ def special_period_end(item):
     return datetime.strptime(item["key"], "%Y-%m-%d") + timedelta(days=6)
 
 
-def latest_special(items, days=14):
-    """トップに出す1本。期間が終わってから days 日までは出し続ける。
+# トップに出し続ける日数。期間が終わってから数える。
+# **週と月で違う**（2026-10-01 たろちんさん）:
+#
+#   > 毎月1日と週まとめが載る月曜日が被る日などもある。
+#   > 月まとめと週まとめは両方トップに出しておくか、一定期間は両方出して
+#   > ある程度経ったらトップから落とす運用にしてはどうだろう
+#
+# 前は「期間の終わりが新しいほう1本だけ」だったので、月まとめが出た日に
+# 週まとめがトップから消えていた。種類ごとに新しい1本を選ぶ形にした。
+# 月のほうが長いのは、1か月に1本しか出ないため。次が出るまで置いておきたい
+# （次が出れば、新しいほうが選ばれて自動的に入れ替わる）。
+SHOW_DAYS = {"weekly": 14, "monthly": 40}
+
+
+def top_specials(items):
+    """トップに出すまとめ。週から1本、月から1本（新しい期間のものが先）。
 
     「更新された日だけ」にすると、せっかく書いた読みものが翌日には
-    どこからも見えなくなる。次のまとめが出るまでは置いておく。
+    どこからも見えなくなる。しばらくは置いておく。
     """
     now = datetime.now(JST).replace(tzinfo=None)
-    fresh = [x for x in items
-             if (now - special_period_end(x)).days <= days]
-    if not fresh:
-        return None
-    x = max(fresh, key=lambda i: special_period_end(i))
-    th = special_thumb(x["col"])
-    return {"href": f'{x["slug"]}/{x["key"]}/', "label": x["label"],
-            "title": x["title"], "heading": x["heading"],
-            "th": th["th"], "by": th["by"]}
+    out = []
+    for kind, _slug, _label in SPECIALS:
+        fresh = [x for x in items if x["kind"] == kind
+                 and (now - special_period_end(x)).days <= SHOW_DAYS[kind]]
+        if not fresh:
+            continue
+        x = max(fresh, key=special_period_end)
+        th = special_thumb(x["col"], x)
+        out.append({"href": f'{x["slug"]}/{x["key"]}/', "label": x["label"],
+                    "title": x["title"], "heading": x["heading"],
+                    "th": th["th"], "by": th["by"], "own": th["own"],
+                    "_end": special_period_end(x)})
+    # 扱っている期間が新しいほうを左（スマホでは上）に。
+    # 10月1日なら、9月の月まとめが先で、先週の週まとめが後ろになる。
+    out.sort(key=lambda m: m["_end"], reverse=True)
+    for m in out:
+        m.pop("_end")
+    return out
 
 
-def ssr_matome(mt, home=""):
+def ssr_matome(mts, home=""):
     """JavaScriptなしでも読めるように、同じカードをHTMLでも書いておく。"""
-    if not mt:
-        return ""
-    img = (f'<img src="{e(mt["th"])}" alt="" loading="lazy">' if mt["th"] else "")
-    by = f' ／ 画像 YouTube {e(mt["by"])}' if mt["by"] else ""
-    return (f'{img}<div class="txt"><span class="kind">{e(mt["label"])}</span>'
-            f'<div class="tt">{e(mt["title"])}</div>'
-            f'<div class="sub">{e(mt["heading"])}{by}</div></div>')
+    out = []
+    for mt in mts or []:
+        # 画像は、こちらで作ったカードならそのまま貼れる（相対の住所）。
+        # YouTubeから借りたものは、断りを添える決まり。
+        src = mt["th"]
+        if src and not src.startswith("http"):
+            src = home + src
+        img = (f'<img src="{e(src)}" alt="" loading="lazy">' if src else "")
+        by = f' ／ 画像 YouTube {e(mt["by"])}' if mt["by"] else ""
+        out.append(f'<a class="mt" href="{e(home + mt["href"])}">{img}'
+                   f'<div class="txt"><span class="kind">{e(mt["label"])}</span>'
+                   f'<div class="tt">{e(mt["title"])}</div>'
+                   f'<div class="sub">{e(mt["heading"])}{by}</div></div></a>')
+    return "".join(out)
 
 
 def special_html(item):
@@ -1248,10 +1304,15 @@ def special_html(item):
     c = item["col"]
     out = [f'<p class="when">{e(item["heading"])}</p>',
            f'<h1>{e(c.get("title"))}</h1>']
-    th = special_thumb(c)
+    # 記事のページは /w/<key>/ の中なので、カードは隣に置いてある
+    th = special_thumb(c, item, home="")
     if th["th"]:
-        out.append(f'<figure class="dochero"><img src="{e(th["th"])}" alt="" loading="lazy">'
-                   f'<figcaption>YouTube ／ {e(th["by"])}</figcaption></figure>')
+        src = th["th"] if th["th"].startswith("http") else "card.png"
+        # 断りが要るのは借りた画像だけ。こちらで作ったカードには付けない
+        cap = ("" if th["own"]
+               else f'<figcaption>YouTube ／ {e(th["by"])}</figcaption>')
+        out.append(f'<figure class="dochero{" own" if th["own"] else ""}">'
+                   f'<img src="{e(src)}" alt="" loading="lazy">{cap}</figure>')
     if str(c.get("lead", "")).strip():
         out.append(f'<p class="lead">{e(c["lead"])}</p>')
     for sec in c.get("sections") or []:
@@ -1281,12 +1342,15 @@ def specials_index_html(items):
         rows = [x for x in items if x["kind"] == kind]
         if not rows:
             continue
-        out.append(f"<h2>{e(label)}</h2><ul>")
+        out.append(f'<h2>{e(label)}</h2><div class="mtlist">')
         for x in rows:
-            out.append(f'<li><a href="../{x["slug"]}/{e(x["key"])}/">'
-                       f'{e(x["title"])}</a>'
-                       f'<br><small>{e(x["heading"])}</small></li>')
-        out.append("</ul>")
+            th = special_thumb(x["col"], x, home="../")
+            img = (f'<img src="{e(th["th"])}" alt="" loading="lazy">'
+                   if th["th"] else "")
+            out.append(f'<a class="mt" href="../{x["slug"]}/{e(x["key"])}/">{img}'
+                       f'<div class="txt"><div class="tt">{e(x["title"])}</div>'
+                       f'<div class="sub">{e(x["heading"])}</div></div></a>')
+        out.append("</div>")
     return "\n".join(out)
 
 
@@ -2385,9 +2449,9 @@ def main():
     if column:
         column["date"] = column_day
 
-    # 週・月のまとめ。トップにも1本出すので、payload を作る前に読んでおく。
+    # 週・月のまとめ。トップにも出すので、payload を作る前に読んでおく。
     specials = load_specials()
-    matome = latest_special(specials)
+    matome = top_specials(specials)
 
     payload = {
         "mode": "day",
@@ -2655,6 +2719,9 @@ def main():
     for x in specials:
         _t = str((x.get("col") or {}).get("title") or x["heading"])
         _l = str((x.get("col") or {}).get("lead") or "")
+        # Xやnoteに貼ったときの画像。そのまとめのカードがあればそれを使う。
+        # 共通の ogp.png だと、どのまとめを貼っても同じ絵になってしまう。
+        _card = SITE / x["slug"] / x["key"] / "card.png"
         render(f'{x["slug"]}/{x["key"]}/index.html',
                {"mode": "page", "date": today(), "subtitle": x["heading"],
                 "generated": payload["generated"],
@@ -2662,6 +2729,8 @@ def main():
                 "meta_og": _t,
                 "meta_desc": _l or f'{x["heading"]}のまとめ。'
                                    "VTuber・ゲーム実況者のYouTube配信から。",
+                "og_image": (f'{x["slug"]}/{x["key"]}/card.png'
+                             if _card.is_file() else ""),
                 "page_body": special_html(x)}, 2)
     render("matome/index.html",
            {"mode": "page", "date": today(), "subtitle": "週・月のまとめ",
