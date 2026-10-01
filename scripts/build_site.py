@@ -1192,42 +1192,136 @@ def check_special(c):
 YT_ID = re.compile(r"(?:youtube\.com/watch\?v=|youtu\.be/)([\w-]{11})")
 
 
+RANK_H = re.compile(r"^\s*([1-3１-３])\s*位[\s　:：]*(.+?)\s*$")
+ART_CACHE = DATA / "matome_art.json"
+
+
+def _best_game(c):
+    """月まとめの1位のゲーム名。小見出し「1位 ◯◯」を先に見る。
+
+    card.best のほうは通称（「トルネコの大冒険」）で書いてよいことにしてあり、
+    集計に出てくる表示名（「トルネコの大冒険 ちょっとステキなリマスター」）
+    と一致しない。小見出しのほうが本名に近いので先に見る。
+    """
+    for sec in c.get("sections") or []:
+        m = RANK_H.match(str((sec or {}).get("h") or ""))
+        if m and unicodedata.normalize("NFKC", m.group(1)) == "1":
+            return m.group(2)
+    for x in (c.get("card") or {}).get("best") or []:
+        g = (x.get("g") if isinstance(x, dict) else x) or ""
+        if str(g).strip():
+            return str(g).strip()
+    return ""
+
+
+def game_art(item):
+    """月まとめの「ゲームのビジュアル」。
+
+    1位のゲームの、**その月いちばん見られた配信**のサムネイルを使う
+    （2026-10-01 たろちんさん）:
+
+      > 月まとめはゲームのベスト3などゲームの話がメインなのでゲームのビジュアル、
+      > 週まとめは配信企画などの話が多くなるので配信のサムネが表示されるのが望ましい
+
+    配信者が付けるサムネイルは、そのゲームのキービジュアルを使っていることが
+    多いので、結果として「そのゲームの絵」になる。**こちらで新しく何かを
+    借りてくる必要がない**（すでにサイト内で使っているものと同じ種類）。
+
+    ※ パッケージ画像（IGDBなど）は使っていません。絵そのものの著作権は
+      メーカーにあり、IGDBの画像利用規約を確認できなかったためです
+      （2026-10-01 たろちんさんと相談のうえ、配信のサムネだけで進める）。
+
+    見つけたら data/matome_art.json に残す。記録ページの配信タイトルは
+    30日で外すので、**あとから同じものを引き直すことができない。**
+    空の結果も残す（毎回30日ぶんのページを読み直さないため）。
+    """
+    key = f'{item["slug"]}/{item["key"]}'
+    cache = read_json(ART_CACHE, {}) or {}
+    if key in cache:
+        return cache[key]
+    name = _best_game(item.get("col") or {})
+    hit = {"th": "", "by": ""}
+    if name and (SITE / "d").is_dir():
+        end = special_period_end(item)
+        start = (datetime(int(item["key"][:4]), int(item["key"][5:7]), 1)
+                 if item["kind"] == "monthly"
+                 else datetime.strptime(item["key"], "%Y-%m-%d"))
+        want = M.compact(name)
+        best = None
+        for d in sorted((SITE / "d").iterdir()):
+            if not re.fullmatch(r"\d{4}-\d{2}-\d{2}", d.name):
+                continue
+            if not (start.strftime("%Y-%m-%d") <= d.name <= end.strftime("%Y-%m-%d")):
+                continue
+            try:
+                h = (d / "index.html").read_text(encoding="utf-8")
+                i = h.index("const DATA = ") + len("const DATA = ")
+                obj, _ = json.JSONDecoder().raw_decode(h[i:])
+            except (ValueError, OSError):
+                continue
+            for r in obj.get("ranking", []):
+                g = M.compact(str(r.get("game", "")))
+                # 表示名そのものか、片方がもう片方を含むか
+                # （小見出しが通称で書かれていることがあるため）
+                if not g or not (g == want or want in g or g in want):
+                    continue
+                for st in r.get("streams") or []:
+                    if not st.get("th"):
+                        continue
+                    v = int(st.get("v") or 0)
+                    if best is None or v > best[0]:
+                        best = (v, st["th"], str(st.get("c", "")))
+        if best:
+            hit = {"th": best[1], "by": best[2]}
+            log(f'まとめの画像を決めました（{key}）: 『{name}』の配信 '
+                f"{best[2]}（{best[0]:,}回）")
+    cache[key] = hit
+    write_json(ART_CACHE, cache)
+    return hit
+
+
 def special_thumb(c, item=None, home=""):
-    """まとめに載せる画像。
+    """まとめのページ・トップ・一覧に出す画像。
 
-    順番（2026-10-01 たろちんさんと決めました）
-    --------------------------------------------
+    順番（2026-10-01 たろちんさんと決めました。同日に一度入れ替えています）
+    ----------------------------------------------------------------------
     1. JSONに "hero": {"u": "YouTubeの動画URL", "by": "チャンネル名"} があればそれ
-    2. **こちらで作ったツイート用のカード**（site/w/<key>/card.png）
+    2. **月まとめだけ** … 1位のゲームの代表的な配信のサムネイル（game_art）
     3. 出典に混ざっているYouTubeの動画
+    4. **こちらで作ったツイート用のカード**（site/w/<key>/card.png）
 
-    2を足した理由。**月まとめのページには、画像が1枚も無かった。**
-    ここは3しか見ておらず、月まとめの出典はSteam・4Gamer・公式サイトで、
-    YouTubeの動画URLがまず入らない。構造として画像が付きようがなかった。
+    はじめは 1 → カード → 出典 の順にしていたが、たろちんさんから:
 
-    カードなら借りものではないので、
-      ・動画が消えても壊れない（i.ytimg.com への直リンクは消えると欠ける）
-      ・「画像 YouTube ◯◯」の断りが要らない
-      ・トップ・一覧・記事ページで、同じ絵がそろう
-    カードは make_week_card.py --site が作る（build_site より先に走らせる）。
+      > ツイート用カードだとどうしてもビジュアルが淡白で弱い。
+      > トップのサムネイルがどちらもツイート用カードだとあまりにも弱い。
+      > 出典に混ざっているYouTube動画とツイート用カードの順番を逆に。
 
-    1を2より先にしてあるのは、配信そのものを見せたい回があるため。
-    そのときだけJSONに hero を書けば、今までどおりサムネイルが出る。
+    **カードは最後の受け皿**にした。文字だけの絵なので、一覧で小さく並ぶと
+    何も伝わらない。配信のサムネイルのほうが、人の顔もゲームの絵も入る。
+
+    2を月まとめだけに入れたのも同じ話で、月まとめは「今月伸びたゲーム3本」の
+    記事なので、出したいのは企画の場面ではなくゲームの絵になる。
+
+    ※ Xの共有画像（og:image）は、ここと関係なく**いつもカード**です。
+      あちらは1200px級で出るので、文字が読めて中身が伝わる。
     """
     hero = c.get("hero") or {}
     m = YT_ID.search(str(hero.get("u", "")))
     if m:
         return {"th": f"https://i.ytimg.com/vi/{m.group(1)}/mqdefault.jpg",
                 "by": str(hero.get("by", "")), "own": False}
-    if item:
-        if (SITE / item["slug"] / item["key"] / "card.png").is_file():
-            return {"th": f'{home}{item["slug"]}/{item["key"]}/card.png',
-                    "by": "", "own": True}
+    if item and item["kind"] == "monthly":
+        art = game_art(item)
+        if art.get("th"):
+            return {"th": art["th"], "by": art.get("by", ""), "own": False}
     for s in (c.get("sources") or []):
         m = YT_ID.search(str(s.get("u", "")))
         if m:
             return {"th": f"https://i.ytimg.com/vi/{m.group(1)}/mqdefault.jpg",
                     "by": str(s.get("t", "")).split(" — ")[0], "own": False}
+    if item and (SITE / item["slug"] / item["key"] / "card.png").is_file():
+        return {"th": f'{home}{item["slug"]}/{item["key"]}/card.png',
+                "by": "", "own": True}
     return {"th": "", "by": "", "own": False}
 
 
