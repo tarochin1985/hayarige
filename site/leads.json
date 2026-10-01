@@ -1,6 +1,6 @@
 {
  "date": "2026-10-01",
- "generated": "2026-10-01 03:36",
+ "generated": "2026-10-01 10:05",
  "leads": {
   "events": [
    {
@@ -8,12 +8,16 @@
     "channels": [
      "Anya Melfissa Ch. hololive",
      "Chihaya Ch. 輪堂 千速 - FLOW GLOW",
+     "Flare Ch. 不知火フレア",
      "Hajime Ch. 轟はじめ ‐ ReGLOSS",
      "Iroha ch. 風真いろは - holoX -",
      "Pekora Ch. 兎田ぺこら",
      "Su Ch. 水宮枢 - FLOW GLOW",
+     "Suisei Channel",
      "Vivi Ch. 綺々羅々ヴィヴィ - FLOW GLOW",
+     "Watame Ch. 角巻わため",
      "ころんの実況【すとぷり】",
+     "ひなたチャンネル (Hinata Channel)",
      "ぽんぽこちゃんねる",
      "ゆたくん【すにすて】",
      "ピーナッツくん!オシャレになりたい!",
@@ -24,12 +28,14 @@
    {
     "tag": "#ストグラ",
     "channels": [
+     "Tenten Ch. / 鳳玲天々",
      "marunnn【まるーんチャンネル】",
      "【琵琶ちゃぷ】なな湖なな湖",
      "たけぉ",
      "ましゃかりさん",
      "みつき",
      "ノビーの遊び部屋",
+     "柚原いづみ / Izumi Channel 【ななしいんく】",
      "闇乃あびす / Abyss",
      "魔光リサ - Lisa Makoh -"
     ]
@@ -41,9 +47,11 @@
      "Usagi Ch. 因幡兎",
      "えりんぎ Games",
      "てぃーけぇー",
+     "太刀ひろし　【Uncle gamer】 ",
      "恋因ロス KoinRosu",
      "豚咲あおい_TomisakiAoi",
-     "里城はな"
+     "里城はな",
+     "雛乃ぴぴ / Hinano pipi"
     ]
    },
    {
@@ -67,12 +75,12 @@
     ]
    },
    {
-    "tag": "#天下無双ARK",
+    "tag": "#ストグラSeason2",
     "channels": [
-     "ひなたチャンネル (Hinata Channel)",
-     "ダナ",
-     "家入ポポ / Popo Channel【ななしいんく】",
-     "扇名いだ"
+     "たけぉ",
+     "天羽よつは",
+     "暁月ホタル AKATSUKI HOTARU",
+     "柚原いづみ / Izumi Channel 【ななしいんく】"
     ]
    },
    {
@@ -84,41 +92,40 @@
     ]
    },
    {
-    "tag": "#縦型配信",
+    "tag": "#ストグラseason2",
     "channels": [
-     "vii / ビー",
-     "かおりんごー",
-     "ぺれ"
+     "HYBRID SENSE",
+     "けんつめしと飯田けんつ【ストグラ】",
+     "碧輝りお /Aoki Rio"
     ]
    }
   ],
-  "newcomers": [
-   {
-    "game": "Minecraft Dungeons II",
-    "channels": 7,
-    "videos": 7
-   }
-  ],
+  "newcomers": [],
   "wide": [
    {
     "game": "Apex Legends",
-    "channels": 72,
-    "videos": 84
+    "channels": 76,
+    "videos": 83
    },
    {
     "game": "Minecraft",
-    "channels": 39,
-    "videos": 40
+    "channels": 45,
+    "videos": 48
    },
    {
     "game": "ストリートファイター6",
-    "channels": 34,
-    "videos": 40
+    "channels": 35,
+    "videos": 38
    },
    {
     "game": "鳴潮",
-    "channels": 21,
-    "videos": 27
+    "channels": 22,
+    "videos": 29
+   },
+   {
+    "game": "Grand Theft Auto V",
+    "channels": 23,
+    "videos": 25
    },
    {
     "game": "hololive Dreams",
@@ -126,19 +133,14 @@
     "videos": 17
    },
    {
-    "game": "エースコンバット8 ウイングス・オブ・シーヴ",
-    "channels": 17,
-    "videos": 18
-   },
-   {
-    "game": "Grand Theft Auto V",
-    "channels": 18,
-    "videos": 20
-   },
-   {
     "game": "実況パワフルプロ野球2026",
-    "channels": 16,
-    "videos": 18
+    "channels": 17,
+    "videos": 19
+   },
+   {
+    "game": "モンスターストライク",
+    "channels": 15,
+    "videos": 17
    }
   ]
  },
@@ -227,6 +229,22 @@
    ]
   },
   {
+   "word": "ShadowCorridor",
+   "channels": 1,
+   "n": 1,
+   "examples": [
+    {
+     "t": "弟にホラゲーをやらせる【ShadowCorridor】",
+     "c": "ちむらい",
+     "u": "https://www.youtube.com/watch?v=xPiwGCpjzQg"
+    }
+   ],
+   "kind": "near",
+   "suggest": [
+    "Shadow Corridor Zero"
+   ]
+  },
+  {
    "word": "#あんスタ",
    "channels": 3,
    "n": 9,
@@ -303,22 +321,22 @@
  "hot_facts": [
   {
    "game": "Minecraft Dungeons II",
-   "growth": 8.75,
-   "videos": 7,
-   "base": 0.0,
-   "channels": 7,
-   "views": 467130,
+   "growth": 7.5,
+   "videos": 6,
+   "base": 0.2,
+   "channels": 6,
+   "views": 457131,
    "who": [
     "一ノ瀬うるは",
     "橘ひなの / Hinano Tachibana",
-    "リモーネ先生",
     "兎咲ミミ / Tosaki Mimi",
-    "蝶屋はなび / Choya Hanabi"
+    "蝶屋はなび / Choya Hanabi",
+    "Tomari Mari channel / 兎鞠まりちゃんねる"
    ],
    "titles": [
     "【Minecraft Dungeons II】初めてのダンジョンズだ！！！！【ぶいすぽ/一ノ瀬うるは】",
     "【 Minecraft Dungeons II 】 めちゃくちゃ面白そうなゲームをぶいすぽメンバーとやる！！！【ぶいすぽっ！/橘ひなの】",
-    "【Minecraft Dungeons II】マイクラダンジョン味見【with ミントス】"
+    "【Minecraft Dungeons II】ぶいすぽメンバーと一緒にダンジョンへ！【ぶいすぽ/兎咲ミミ】"
    ],
    "genres": [
     "Role-playing (RPG)",
@@ -335,12 +353,38 @@
    "first_here": false
   },
   {
+   "game": "真・三國無双2 with 猛将伝 Remastered",
+   "growth": 5.0,
+   "videos": 6,
+   "base": 1.2,
+   "channels": 5,
+   "views": 144308,
+   "who": [
+    "ファミ通TUBE",
+    "GAMEゆうなch",
+    "キリヤのゲーム実況ch",
+    "桃桜華はる -Momosaka Haru-",
+    "桃桜華はる -Momosaka Haru-"
+   ],
+   "titles": [
+    "『真・三國無双2リマスター』無双モード＆紫鸞でフリーモードを先行プレイ。一般兵の数が増え、グラフィックも一新。無双武将のデザインなど当時の魅力も健在！",
+    "【真・三國無双２ with 猛将伝 】現代に鮮烈に蘇る!!一騎当千の極み！PS5proでやるぞ【Digital Deluxe Edition】",
+    "【三國無双2猛将伝 Remasterd】ついに発売された三國無双2リマスター！趙雲を使って無双の世界を斬りまくる実況プレイ！ Part 1"
+   ],
+   "genres": [],
+   "year": null,
+   "platforms": [],
+   "days_seen": 3,
+   "last_seen": "2026-09-30",
+   "first_here": false
+  },
+  {
    "game": "Marvel Tokon: Fighting Souls",
    "growth": 5.0,
    "videos": 4,
    "base": 0.2,
    "channels": 3,
-   "views": 50019,
+   "views": 57822,
    "who": [
     "飛良ひかり / Hikari Channel【ななしいんく】",
     "家入ポポ / Popo Channel【ななしいんく】",
@@ -350,7 +394,7 @@
    "titles": [
     "【MARVEL Tōkon: Fighting Souls】コーチに教わってチーム対抗戦するよ！【飛良ひかり / ななしいんく】",
     "『MARVEL Tōkon: Fighting Souls』ロケットが好きポポです w/飛良ひかり3・SHAKA3・鈴木ノリアキ3・豆スパイダー3・ふぇんりっち3【家入ポポ / ななしいんく】",
-    "#PR『MARVEL Tōkon: Fighting Souls』で19 時からまめスパイダーさんとコーチングをさせていただきます！メンバーは家入ポポさん、釈迦さん、鈴木のりあきさん、飛良ひかりさん"
+    "【MARVEL Tokon: Fighting Souls】大会に出て気づいた事と野試合で起きた悲劇"
    ],
    "genres": [
     "Fighting"
@@ -365,35 +409,28 @@
    "first_here": false
   },
   {
-   "game": "エースコンバット8 ウイングス・オブ・シーヴ",
-   "growth": 4.74,
-   "videos": 18,
-   "base": 3.8,
-   "channels": 17,
-   "views": 439694,
+   "game": "鳴潮",
+   "growth": 4.75,
+   "videos": 29,
+   "base": 6.1,
+   "channels": 22,
+   "views": 762720,
    "who": [
-    "胡桃沢りりか",
-    "Patra Channel / 周防パトラ",
-    "兄者のゲーム事務所",
-    "GAMEゆうなch",
-    "ピコピコちゃん / ゲームまとめ"
+    "Luna Ch. 姫森ルーナ",
+    "Polka Ch. 尾丸ポルカ",
+    "Matsuri Channel 夏色まつり",
+    "サブチぴょんぴょん",
+    "西園チグサ / Nishizono Chigusa"
    ],
    "titles": [
-    "【エースコンバット8 ACE COMBAT 8:WINGS OF THEVE】エスコン最新作！8やるぞ！！※ネタバレ注意【胡桃沢りりか】",
-    "【エースコンバット8】はじめてのエスコンやってみる！ACE COMBAT 8: WINGS OF THEVE【周防パトラ】",
-    "#3 ※ネタバレ注意【祝アーリースタート】兄者の「ACE COMBAT 8: WINGS OF THEVE」【2BRO.】"
+    "【 鳴潮 】歳主「心」ガチャ✨ストーリーも進めていくのら！！！第4章第4幕 Ver.3.7 ＃28【姫森ルーナ/ホロライブ】",
+    "【鳴潮】ついに「Ver.3.7」が解禁…！！その時ポルカは。【尾丸ポルカ/ホロライブ】",
+    "【鳴潮】ストーリーとガチャいくぞ！！【ホロライブ/夏色まつり】"
    ],
-   "genres": [
-    "Shooter",
-    "Simulator",
-    "Arcade"
-   ],
-   "year": 2026,
-   "platforms": [
-    "pc",
-    "console"
-   ],
-   "days_seen": 5,
+   "genres": [],
+   "year": null,
+   "platforms": [],
+   "days_seen": 35,
    "last_seen": "2026-09-30",
    "first_here": false
   },
@@ -403,18 +440,18 @@
    "videos": 6,
    "base": 1.3,
    "channels": 5,
-   "views": 60137,
+   "views": 76393,
    "who": [
     "Somen Channel",
     "こへー / 古兵",
-    "こへー / 古兵",
     "汰鳥ヨシダ",
+    "こへー / 古兵",
     "汰鳥ヨシダ"
    ],
    "titles": [
     "【ゼンゼロ】ロクシーは引くべき？既存撃破との違い・おすすめ編成を徹底解説【ゼンレスゾーンゼロ】",
-    "【ゼンゼロ配信 】ロクシー育成&高難度消化・ご質問・コメントお気軽に 【ゼンレスゾーンゼロ】S無凸",
-    "【ゼンゼロ】ロクシーのモチーフ比較まとめ&1~6凸実演解説・危局新ボス炎獄もシグリッドで無凸実戦紹介【ゼンレスゾーンゼロ・攻略・考察・検証】ZZZ・創作体験サーバー"
+    "【ゼンゼロ】ロクシーのモチーフ比較まとめ&1~6凸実演解説・危局新ボス炎獄もシグリッドで無凸実戦紹介【ゼンレスゾーンゼロ・攻略・考察・検証】ZZZ・創作体験サーバー",
+    "ゼンゼロに来てくれそうなスタレキャラ6選【ゼンレスゾーンゼロ】"
    ],
    "genres": [],
    "year": null,
@@ -429,7 +466,7 @@
    "videos": 6,
    "base": 1.3,
    "channels": 6,
-   "views": 27558,
+   "views": 44456,
    "who": [
     "最強ゼルダGamesいかぼうず",
     "汐鳴みりね / Mirine Shionari【ななしいんく】",
@@ -446,32 +483,6 @@
    "year": null,
    "platforms": [],
    "days_seen": 24,
-   "last_seen": "2026-09-30",
-   "first_here": false
-  },
-  {
-   "game": "鳴潮",
-   "growth": 4.43,
-   "videos": 27,
-   "base": 6.1,
-   "channels": 21,
-   "views": 559899,
-   "who": [
-    "Luna Ch. 姫森ルーナ",
-    "Polka Ch. 尾丸ポルカ",
-    "Matsuri Channel 夏色まつり",
-    "サブチぴょんぴょん",
-    "すりっぷらーゼツ"
-   ],
-   "titles": [
-    "【 鳴潮 】歳主「心」ガチャ✨ストーリーも進めていくのら！！！第4章第4幕 Ver.3.7 ＃28【姫森ルーナ/ホロライブ】",
-    "【鳴潮】ついに「Ver.3.7」が解禁…！！その時ポルカは。【尾丸ポルカ/ホロライブ】",
-    "【鳴潮】ストーリーとガチャいくぞ！！【ホロライブ/夏色まつり】"
-   ],
-   "genres": [],
-   "year": null,
-   "platforms": [],
-   "days_seen": 35,
    "last_seen": "2026-09-30",
    "first_here": false
   }
