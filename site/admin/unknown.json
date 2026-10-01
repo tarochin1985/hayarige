@@ -1,7 +1,7 @@
 {
  "mode": "admin",
  "date": "2026-10-01",
- "generated": "2026-10-01 10:05",
+ "generated": "2026-10-01 11:14",
  "unknown": [
   {
    "guess": "delipicks",
@@ -57,7 +57,7 @@
   {
    "guess": "偏差値130",
    "channels": 1,
-   "n": 6,
+   "n": 5,
    "examples": [
     {
      "t": "【偏差値130】東大医学部卒麻雀プレイヤーが雀魂しながら雑談する",
@@ -70,9 +70,9 @@
      "u": "https://www.youtube.com/watch?v=9wycc3FNC6U"
     },
     {
-     "t": "【偏差値130】東大医学部卒麻雀プレイヤーが雀魂しながら雑談する",
+     "t": "【偏差値130】東大医学部卒麻雀プレイヤーの雀魂ガチ段位戦",
      "c": "【偏差値130】東大医学部卒麻雀プレイヤー杉村健太ちゃんねる",
-     "u": "https://www.youtube.com/watch?v=cvhEJGkWeHY"
+     "u": "https://www.youtube.com/watch?v=ukmV7oimKr4"
     }
    ]
   },
@@ -314,18 +314,6 @@
    ]
   },
   {
-   "guess": "マロ・イラスト有り",
-   "channels": 1,
-   "n": 1,
-   "examples": [
-    {
-     "t": "【マロ・イラスト有り】お誕生日、サラリと雑談配信、日々に感謝を卍",
-     "c": "ロエマ Channel",
-     "u": "https://www.youtube.com/watch?v=n6nsbl2iU4Q"
-    }
-   ]
-  },
-  {
    "guess": "運ゲー",
    "channels": 1,
    "n": 1,
@@ -382,18 +370,6 @@
      "t": "【超魔界村】完全初見！人生初の魔界村に挑戦！｜伝説の激ムズゲーム！姫救出を目指す！【水鞠まろな/VTuber】",
      "c": "Marona Ch. 水鞠まろな",
      "u": "https://www.youtube.com/watch?v=IrXapqAx318"
-    }
-   ]
-  },
-  {
-   "guess": "ark:sa",
-   "channels": 1,
-   "n": 1,
-   "examples": [
-    {
-     "t": "【Ark:SA】 #103 おはよう世界 Good Morning World【#新人vtuber #みきりおんいぇあ】",
-     "c": "御霧音",
-     "u": "https://www.youtube.com/watch?v=o56Z5nTq01Y"
     }
    ]
   },
@@ -550,18 +526,6 @@
      "t": "【ドラゴンクエスト】10月登場の気になるアイテムをチェックしよう！【Vtuber / 猫実況】",
      "c": "身勝手なゆうちゃん",
      "u": "https://www.youtube.com/watch?v=3gscuQLXho8"
-    }
-   ]
-  },
-  {
-   "guess": "第7回",
-   "channels": 1,
-   "n": 1,
-   "examples": [
-    {
-     "t": "【第7回】村下小粒の１時間『コンティニューラジオ』",
-     "c": "村下小粒@レトロゲームアイドル",
-     "u": "https://www.youtube.com/watch?v=MI1UX-0oJdg"
     }
    ]
   },
@@ -1789,7 +1753,6 @@
      "えりんぎ Games",
      "てぃーけぇー",
      "太刀ひろし　【Uncle gamer】 ",
-     "恋因ロス KoinRosu",
      "豚咲あおい_TomisakiAoi",
      "里城はな",
      "雛乃ぴぴ / Hinano pipi"
@@ -1804,15 +1767,6 @@
      "Towa Ch. 常闇トワ",
      "Vivi Ch. 綺々羅々ヴィヴィ - FLOW GLOW",
      "アキロゼCh。Vtuber/ホロライブ所属"
-    ]
-   },
-   {
-    "tag": "#minecraft",
-    "channels": [
-     "まこりんとゲーム",
-     "ズズちゃんねる!!!",
-     "監獄 ミハル - Miharu Kangoku -",
-     "葛ノ葉鈴撫　-Kuzunoha suzunade- Ch"
     ]
    },
    {
@@ -1839,6 +1793,14 @@
      "けんつめしと飯田けんつ【ストグラ】",
      "碧輝りお /Aoki Rio"
     ]
+   },
+   {
+    "tag": "#ぶいきゃす",
+    "channels": [
+     "おいもパイちゃん / OimoPie ch.",
+     "孵卵リリス / Furan Lilith",
+     "星埜きぃ -Key Hoshino-"
+    ]
    }
   ],
   "newcomers": [],
@@ -1850,18 +1812,18 @@
    },
    {
     "game": "Minecraft",
-    "channels": 45,
-    "videos": 48
+    "channels": 43,
+    "videos": 46
    },
    {
     "game": "ストリートファイター6",
-    "channels": 35,
-    "videos": 38
+    "channels": 32,
+    "videos": 34
    },
    {
     "game": "鳴潮",
     "channels": 22,
-    "videos": 29
+    "videos": 28
    },
    {
     "game": "Grand Theft Auto V",
@@ -1879,9 +1841,9 @@
     "videos": 19
    },
    {
-    "game": "モンスターストライク",
+    "game": "エースコンバット8 ウイングス・オブ・シーヴ",
     "channels": 15,
-    "videos": 17
+    "videos": 15
    }
   ]
  },
@@ -2010,6 +1972,30 @@
    "suggest": []
   },
   {
+   "word": "モンスターハンターアウトランダーズ",
+   "channels": 3,
+   "n": 3,
+   "examples": [
+    {
+     "t": "『モンスターハンターアウトランダーズ』プレイ映像。新古龍「光稜龍ルガ・エアルダ」がカッコいい！「剣＆盾」を用いて（！？）中世騎士のような戦い方をするイケメンモンスター",
+     "c": "電ファミ公式チャンネル",
+     "u": "https://www.youtube.com/watch?v=_iNUA0n-3QE"
+    },
+    {
+     "t": "【先行プレイ】新古龍『光稜龍ルガ・エアルダ』を討伐させていただいたぞ！【MHO/モンスターハンターアウトランダーズ】",
+     "c": "ガンサーの抹茶",
+     "u": "https://www.youtube.com/watch?v=BL1Hf8zGmms"
+    },
+    {
+     "t": "看板モンスターさん、まさかの『ギガランス』を使ってくる 【モンスターハンターアウトランダーズ】",
+     "c": "Mハシ",
+     "u": "https://www.youtube.com/watch?v=HcyQjpiYf-Q"
+    }
+   ],
+   "kind": "wide",
+   "suggest": []
+  },
+  {
    "word": "先行プレイ",
    "channels": 3,
    "n": 3,
@@ -2032,30 +2018,6 @@
    ],
    "kind": "wide",
    "suggest": []
-  },
-  {
-   "word": "モンスターハンターアウトランダーズ",
-   "channels": 3,
-   "n": 3,
-   "examples": [
-    {
-     "t": "【先行プレイ】新古龍『光稜龍ルガ・エアルダ』を討伐させていただいたぞ！【MHO/モンスターハンターアウトランダーズ】",
-     "c": "ガンサーの抹茶",
-     "u": "https://www.youtube.com/watch?v=BL1Hf8zGmms"
-    },
-    {
-     "t": "『モンスターハンターアウトランダーズ』プレイ映像。新古龍「光稜龍ルガ・エアルダ」がカッコいい！「剣＆盾」を用いて（！？）中世騎士のような戦い方をするイケメンモンスター",
-     "c": "電ファミ公式チャンネル",
-     "u": "https://www.youtube.com/watch?v=_iNUA0n-3QE"
-    },
-    {
-     "t": "看板モンスターさん、まさかの『ギガランス』を使ってくる 【モンスターハンターアウトランダーズ】",
-     "c": "Mハシ",
-     "u": "https://www.youtube.com/watch?v=HcyQjpiYf-Q"
-    }
-   ],
-   "kind": "wide",
-   "suggest": []
   }
  ],
  "miss_days": 7,
@@ -2063,6 +2025,11 @@
  "meta_og": "管理用",
  "meta_desc": "判定できなかった配信と、コラムの種。公開ページではありません。",
  "recent_columns": [
+  {
+   "date": "2026-10-01",
+   "game": "真・三國無双2 with 猛将伝 Remastered",
+   "headline": "25年前のゲームなんだけど知ってる??"
+  },
   {
    "date": "2026-09-30",
    "game": "めっちゃカメレオン",
@@ -2127,11 +2094,6 @@
    "date": "2026-09-18",
    "game": "Bombanana!",
    "headline": "マニュアルを読める人は、喋れない"
-  },
-  {
-   "date": "2026-09-17",
-   "game": "Wardogs",
-   "headline": "100万ドル稼いで、全部使って、また稼ぐ"
   }
  ]
 }

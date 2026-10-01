@@ -1,6 +1,6 @@
 {
  "date": "2026-10-01",
- "generated": "2026-10-01 10:05",
+ "generated": "2026-10-01 11:14",
  "leads": {
   "events": [
    {
@@ -48,7 +48,6 @@
      "えりんぎ Games",
      "てぃーけぇー",
      "太刀ひろし　【Uncle gamer】 ",
-     "恋因ロス KoinRosu",
      "豚咲あおい_TomisakiAoi",
      "里城はな",
      "雛乃ぴぴ / Hinano pipi"
@@ -63,15 +62,6 @@
      "Towa Ch. 常闇トワ",
      "Vivi Ch. 綺々羅々ヴィヴィ - FLOW GLOW",
      "アキロゼCh。Vtuber/ホロライブ所属"
-    ]
-   },
-   {
-    "tag": "#minecraft",
-    "channels": [
-     "まこりんとゲーム",
-     "ズズちゃんねる!!!",
-     "監獄 ミハル - Miharu Kangoku -",
-     "葛ノ葉鈴撫　-Kuzunoha suzunade- Ch"
     ]
    },
    {
@@ -98,6 +88,14 @@
      "けんつめしと飯田けんつ【ストグラ】",
      "碧輝りお /Aoki Rio"
     ]
+   },
+   {
+    "tag": "#ぶいきゃす",
+    "channels": [
+     "おいもパイちゃん / OimoPie ch.",
+     "孵卵リリス / Furan Lilith",
+     "星埜きぃ -Key Hoshino-"
+    ]
    }
   ],
   "newcomers": [],
@@ -109,18 +107,18 @@
    },
    {
     "game": "Minecraft",
-    "channels": 45,
-    "videos": 48
+    "channels": 43,
+    "videos": 46
    },
    {
     "game": "ストリートファイター6",
-    "channels": 35,
-    "videos": 38
+    "channels": 32,
+    "videos": 34
    },
    {
     "game": "鳴潮",
     "channels": 22,
-    "videos": 29
+    "videos": 28
    },
    {
     "game": "Grand Theft Auto V",
@@ -138,9 +136,9 @@
     "videos": 19
    },
    {
-    "game": "モンスターストライク",
+    "game": "エースコンバット8 ウイングス・オブ・シーヴ",
     "channels": 15,
-    "videos": 17
+    "videos": 15
    }
   ]
  },
@@ -269,6 +267,30 @@
    "suggest": []
   },
   {
+   "word": "モンスターハンターアウトランダーズ",
+   "channels": 3,
+   "n": 3,
+   "examples": [
+    {
+     "t": "『モンスターハンターアウトランダーズ』プレイ映像。新古龍「光稜龍ルガ・エアルダ」がカッコいい！「剣＆盾」を用いて（！？）中世騎士のような戦い方をするイケメンモンスター",
+     "c": "電ファミ公式チャンネル",
+     "u": "https://www.youtube.com/watch?v=_iNUA0n-3QE"
+    },
+    {
+     "t": "【先行プレイ】新古龍『光稜龍ルガ・エアルダ』を討伐させていただいたぞ！【MHO/モンスターハンターアウトランダーズ】",
+     "c": "ガンサーの抹茶",
+     "u": "https://www.youtube.com/watch?v=BL1Hf8zGmms"
+    },
+    {
+     "t": "看板モンスターさん、まさかの『ギガランス』を使ってくる 【モンスターハンターアウトランダーズ】",
+     "c": "Mハシ",
+     "u": "https://www.youtube.com/watch?v=HcyQjpiYf-Q"
+    }
+   ],
+   "kind": "wide",
+   "suggest": []
+  },
+  {
    "word": "先行プレイ",
    "channels": 3,
    "n": 3,
@@ -287,30 +309,6 @@
      "t": "【先行プレイ】大好きなやつ！お宝を集めて博物館を育てる発掘インクリメンタル『超大発掘』【Steam】",
      "c": "しろこりGames / インディーゲーム専門Vtuber",
      "u": "https://www.youtube.com/watch?v=4V7VACpEQCs"
-    }
-   ],
-   "kind": "wide",
-   "suggest": []
-  },
-  {
-   "word": "モンスターハンターアウトランダーズ",
-   "channels": 3,
-   "n": 3,
-   "examples": [
-    {
-     "t": "【先行プレイ】新古龍『光稜龍ルガ・エアルダ』を討伐させていただいたぞ！【MHO/モンスターハンターアウトランダーズ】",
-     "c": "ガンサーの抹茶",
-     "u": "https://www.youtube.com/watch?v=BL1Hf8zGmms"
-    },
-    {
-     "t": "『モンスターハンターアウトランダーズ』プレイ映像。新古龍「光稜龍ルガ・エアルダ」がカッコいい！「剣＆盾」を用いて（！？）中世騎士のような戦い方をするイケメンモンスター",
-     "c": "電ファミ公式チャンネル",
-     "u": "https://www.youtube.com/watch?v=_iNUA0n-3QE"
-    },
-    {
-     "t": "看板モンスターさん、まさかの『ギガランス』を使ってくる 【モンスターハンターアウトランダーズ】",
-     "c": "Mハシ",
-     "u": "https://www.youtube.com/watch?v=HcyQjpiYf-Q"
     }
    ],
    "kind": "wide",
@@ -409,32 +407,6 @@
    "first_here": false
   },
   {
-   "game": "鳴潮",
-   "growth": 4.75,
-   "videos": 29,
-   "base": 6.1,
-   "channels": 22,
-   "views": 762720,
-   "who": [
-    "Luna Ch. 姫森ルーナ",
-    "Polka Ch. 尾丸ポルカ",
-    "Matsuri Channel 夏色まつり",
-    "サブチぴょんぴょん",
-    "西園チグサ / Nishizono Chigusa"
-   ],
-   "titles": [
-    "【 鳴潮 】歳主「心」ガチャ✨ストーリーも進めていくのら！！！第4章第4幕 Ver.3.7 ＃28【姫森ルーナ/ホロライブ】",
-    "【鳴潮】ついに「Ver.3.7」が解禁…！！その時ポルカは。【尾丸ポルカ/ホロライブ】",
-    "【鳴潮】ストーリーとガチャいくぞ！！【ホロライブ/夏色まつり】"
-   ],
-   "genres": [],
-   "year": null,
-   "platforms": [],
-   "days_seen": 35,
-   "last_seen": "2026-09-30",
-   "first_here": false
-  },
-  {
    "game": "ゼンレスゾーンゼロ",
    "growth": 4.62,
    "videos": 6,
@@ -485,10 +457,41 @@
    "days_seen": 24,
    "last_seen": "2026-09-30",
    "first_here": false
+  },
+  {
+   "game": "鳴潮",
+   "growth": 4.44,
+   "videos": 28,
+   "base": 6.3,
+   "channels": 22,
+   "views": 758437,
+   "who": [
+    "Luna Ch. 姫森ルーナ",
+    "Polka Ch. 尾丸ポルカ",
+    "Matsuri Channel 夏色まつり",
+    "サブチぴょんぴょん",
+    "西園チグサ / Nishizono Chigusa"
+   ],
+   "titles": [
+    "【 鳴潮 】歳主「心」ガチャ✨ストーリーも進めていくのら！！！第4章第4幕 Ver.3.7 ＃28【姫森ルーナ/ホロライブ】",
+    "【鳴潮】ついに「Ver.3.7」が解禁…！！その時ポルカは。【尾丸ポルカ/ホロライブ】",
+    "【鳴潮】ストーリーとガチャいくぞ！！【ホロライブ/夏色まつり】"
+   ],
+   "genres": [],
+   "year": null,
+   "platforms": [],
+   "days_seen": 35,
+   "last_seen": "2026-09-30",
+   "first_here": false
   }
  ],
  "notes_written": true,
  "recent_columns": [
+  {
+   "date": "2026-10-01",
+   "game": "真・三國無双2 with 猛将伝 Remastered",
+   "headline": "25年前のゲームなんだけど知ってる??"
+  },
   {
    "date": "2026-09-30",
    "game": "めっちゃカメレオン",
@@ -553,11 +556,6 @@
    "date": "2026-09-18",
    "game": "Bombanana!",
    "headline": "マニュアルを読める人は、喋れない"
-  },
-  {
-   "date": "2026-09-17",
-   "game": "Wardogs",
-   "headline": "100万ドル稼いで、全部使って、また稼ぐ"
   }
  ]
 }
