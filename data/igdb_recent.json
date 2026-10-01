@@ -3990,6 +3990,20 @@
   ]
  },
  {
+  "name": "Armorer: Tidy Up the Armory Before Dawn",
+  "alias": [],
+  "pop": 0,
+  "y": 2026,
+  "p": [
+   "pc"
+  ],
+  "g": [
+   "Puzzle",
+   "Simulator",
+   "Indie"
+  ]
+ },
+ {
   "name": "Armory Keeper",
   "alias": [],
   "pop": 0,
@@ -17296,19 +17310,6 @@
   "g": [
    "Simulator",
    "Strategy",
-   "Indie"
-  ]
- },
- {
-  "name": "Don't Lose Face!",
-  "alias": [],
-  "pop": 0,
-  "y": 2026,
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Simulator",
    "Indie"
   ]
  },
@@ -42039,7 +42040,7 @@
   "alias": [
    "OnimushaWotS.exe"
   ],
-  "pop": 15,
+  "pop": 16,
   "y": 2026,
   "p": [
    "pc",
@@ -61667,7 +61668,7 @@
   "alias": [
    "The Witcher 3 Remastered"
   ],
-  "pop": 7,
+  "pop": 8,
   "y": 2026,
   "p": [
    "pc",

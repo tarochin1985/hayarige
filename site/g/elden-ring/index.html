@@ -6,9 +6,9 @@
      Search Consoleが記録ページ24枚を「検出 - インデックス未登録」にしていた。
      Googleから見ると、同じことを名乗るページが24枚並んでいたことになる。 -->
 <title>『ELDEN RING』を配信しているVTuber・ゲーム実況者 ｜ ハヤリゲー</title>
-<meta name="description" content="当サイトの集計では、『ELDEN RING』の配信が34日・のべ238チャンネル見つかっています。日ごとの配信数と、取り上げたコラムをまとめています。">
+<meta name="description" content="当サイトの集計では、『ELDEN RING』の配信が34日・のべ237チャンネル見つかっています。日ごとの配信数と、取り上げたコラムをまとめています。">
 <meta property="og:title" content="『ELDEN RING』の配信">
-<meta property="og:description" content="当サイトの集計では、『ELDEN RING』の配信が34日・のべ238チャンネル見つかっています。日ごとの配信数と、取り上げたコラムをまとめています。">
+<meta property="og:description" content="当サイトの集計では、『ELDEN RING』の配信が34日・のべ237チャンネル見つかっています。日ごとの配信数と、取り上げたコラムをまとめています。">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="ハヤリゲー">
 <meta property="og:locale" content="ja_JP">
@@ -16,13 +16,13 @@
      https://hayarige.com / https://hayarige.com/g/elden-ring/ は build_site が data/site_config.json の
      site_url から埋める。独自ドメインに移すときは設定を1行変えるだけでよい。 -->
 <meta property="og:url" content="https://hayarige.com/g/elden-ring/">
+<!-- まとめのページだけ、そのまとめのカードが入る（2026-10-01）。
+     ほかのページは共通の ogp.png。https://hayarige.com/ogp.png は build_site が埋める。 -->
 <meta property="og:image" content="https://hayarige.com/ogp.png">
-<meta property="og:image:width" content="1200">
-<meta property="og:image:height" content="630">
-<meta property="og:image:alt" content="ハヤリゲー ｜「次に流行るゲーム」がわかるサイト">
+<meta property="og:image:alt" content="『ELDEN RING』の配信">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="『ELDEN RING』の配信">
-<meta name="twitter:description" content="当サイトの集計では、『ELDEN RING』の配信が34日・のべ238チャンネル見つかっています。日ごとの配信数と、取り上げたコラムをまとめています。">
+<meta name="twitter:description" content="当サイトの集計では、『ELDEN RING』の配信が34日・のべ237チャンネル見つかっています。日ごとの配信数と、取り上げたコラムをまとめています。">
 <meta name="twitter:image" content="https://hayarige.com/ogp.png">
 <link rel="canonical" href="https://hayarige.com/g/elden-ring/">
 <link rel="alternate" type="application/rss+xml" title="ハヤリゲー" href="https://hayarige.com/feed.xml">
@@ -336,11 +336,19 @@ footer{font-size:11.5px;color:var(--ink-3);text-align:center;border-top:1px soli
 .pick .badge{align-self:flex-start;font-family:"Roboto Mono",monospace;font-size:10px;
  letter-spacing:.12em;font-weight:700;color:#fff;background:var(--hot);padding:4px 9px;border-radius:5px}
 .pick .g{font-family:"Zen Kaku Gothic New",sans-serif;font-weight:900;font-size:21px;line-height:1.3}
+/* まとめのカード。週と月の2枚が並ぶ（2026-10-01 たろちんさん）。
+   前は「期間の終わりが新しいほう1本だけ」だったので、月まとめが出た日に
+   週まとめがトップから消えていた。
+   auto-fit を使うと、1枚のときは横いっぱい、2枚のときだけ半分ずつになる
+   （枚数を数えてクラスを足す必要がない）。 */
+.mtlist{display:grid;gap:12px;grid-template-columns:repeat(auto-fit,minmax(330px,1fr))}
 .mt{display:flex;gap:14px;align-items:center;background:var(--card);border:1px solid var(--line);
  border-radius:var(--r);box-shadow:var(--sh);padding:14px 16px;text-decoration:none;color:inherit;
  position:relative;overflow:hidden}
 .mt::before{content:"";position:absolute;inset:0 auto 0 0;width:3px;background:var(--accent)}
-.mt img{width:104px;height:59px;object-fit:cover;border-radius:8px;flex:none;background:var(--card-2)}
+/* 104pxだと、こちらで作ったカード（1600×900に文字が入っている）が
+   ただの色の板になって何も読めなかったので広げた（2026-10-01） */
+.mt img{width:148px;height:83px;object-fit:cover;border-radius:8px;flex:none;background:var(--card-2)}
 .mt .txt{min-width:0}
 .mt .kind{font-family:"Roboto Mono",monospace;font-size:10px;letter-spacing:.12em;font-weight:700;
  color:#fff;background:var(--accent);padding:3px 8px;border-radius:5px;display:inline-block}
@@ -350,8 +358,10 @@ footer{font-size:11.5px;color:var(--ink-3);text-align:center;border-top:1px soli
 .mt:hover .tt{color:var(--accent)}
 .doc .dochero{margin:0 0 16px}
 .doc .dochero img{width:100%;max-width:420px;border-radius:10px;border:1px solid var(--line);display:block}
+/* こちらで作ったカードのとき。中に文字が入っているので、小さいと読めない */
+.doc .dochero.own img{max-width:680px}
 .doc .dochero figcaption{font-size:11.5px;color:var(--ink-3);margin-top:6px;font-weight:700}
-@media(max-width:560px){.mt img{width:84px;height:48px}.mt .tt{font-size:14.5px}}
+@media(max-width:560px){.mt img{width:104px;height:59px}.mt .tt{font-size:14.5px}}
 .pick .hl{font-family:"Zen Kaku Gothic New",sans-serif;font-weight:700;font-size:15px;
  color:var(--hot);line-height:1.5;display:flex;gap:7px;align-items:flex-start}
 .pick .hl .pt{flex:none;width:1em;height:1em;margin-top:.24em;fill:currentColor}
@@ -431,9 +441,7 @@ footer{font-size:11.5px;color:var(--ink-3);text-align:center;border-top:1px soli
   <!-- __SSR_ から始まる場所には、build_site が中身をHTMLとして書き込む。
        JavaScriptが動く環境では、同じ内容で描き直される。
        検索エンジンやJSを実行しない読み手には、この静的な中身が渡る。 -->
-  <section id="mt-sec" style="display:none">
-    <a class="mt" id="mt" href="../../"></a>
-  </section>
+  <section class="mtlist" id="mt-sec" style="display:none"></section>
 
   <section id="pick-sec" style="display:none">
     <div class="head"><h2 id="pick-title">今日の注目ゲーム</h2>
@@ -462,7 +470,7 @@ footer{font-size:11.5px;color:var(--ink-3);text-align:center;border-top:1px soli
   </section>
 
   <section id="page-sec" style="">
-    <article class="doc" id="page-body"><h2>『ELDEN RING』はどれだけ配信されているか</h2><p class="lead">当サイトの集計では、8月28日から10月1日までの間に<b>34日</b>、『ELDEN RING』の配信が見つかりました。のべ<b>241本</b>・のべ<b>238チャンネル</b>です。いちばん多かったのは9月12日で、12チャンネルが配信していました。</p><p>このうち<b>27日</b>は、その日のランキング（上位30件）に入っています。</p><h2>日ごとの配信数（直近21日）</h2><table><tr><th>日</th><th>配信</th><th>チャンネル</th><th style="width:38%">　</th></tr><tr><td><a href="../../d/2026-10-01/">2026-10-01</a></td><td>7本</td><td>7ch</td><td><span style="display:block;height:8px;border-radius:4px;background:var(--accent);width:58%"></span></td></tr><tr><td><a href="../../d/2026-09-30/">2026-09-30</a></td><td>12本</td><td>11ch</td><td><span style="display:block;height:8px;border-radius:4px;background:var(--accent);width:92%"></span></td></tr><tr><td><a href="../../d/2026-09-29/">2026-09-29</a></td><td>4本</td><td>4ch</td><td><span style="display:block;height:8px;border-radius:4px;background:var(--accent);width:33%"></span></td></tr><tr><td><a href="../../d/2026-09-28/">2026-09-28</a></td><td>7本</td><td>7ch</td><td><span style="display:block;height:8px;border-radius:4px;background:var(--accent);width:58%"></span></td></tr><tr><td><a href="../../d/2026-09-27/">2026-09-27</a></td><td>9本</td><td>9ch</td><td><span style="display:block;height:8px;border-radius:4px;background:var(--accent);width:75%"></span></td></tr><tr><td><a href="../../d/2026-09-26/">2026-09-26</a></td><td>10本</td><td>10ch</td><td><span style="display:block;height:8px;border-radius:4px;background:var(--accent);width:83%"></span></td></tr><tr><td><a href="../../d/2026-09-25/">2026-09-25</a></td><td>4本</td><td>4ch</td><td><span style="display:block;height:8px;border-radius:4px;background:var(--accent);width:33%"></span></td></tr><tr><td><a href="../../d/2026-09-24/">2026-09-24</a></td><td>12本</td><td>12ch</td><td><span style="display:block;height:8px;border-radius:4px;background:var(--accent);width:100%"></span></td></tr><tr><td><a href="../../d/2026-09-23/">2026-09-23</a></td><td>5本</td><td>5ch</td><td><span style="display:block;height:8px;border-radius:4px;background:var(--accent);width:42%"></span></td></tr><tr><td><a href="../../d/2026-09-22/">2026-09-22</a></td><td>4本</td><td>4ch</td><td><span style="display:block;height:8px;border-radius:4px;background:var(--accent);width:33%"></span></td></tr><tr><td><a href="../../d/2026-09-21/">2026-09-21</a></td><td>7本</td><td>7ch</td><td><span style="display:block;height:8px;border-radius:4px;background:var(--accent);width:58%"></span></td></tr><tr><td><a href="../../d/2026-09-20/">2026-09-20</a></td><td>8本</td><td>7ch</td><td><span style="display:block;height:8px;border-radius:4px;background:var(--accent);width:58%"></span></td></tr><tr><td><a href="../../d/2026-09-19/">2026-09-19</a></td><td>5本</td><td>5ch</td><td><span style="display:block;height:8px;border-radius:4px;background:var(--accent);width:42%"></span></td></tr><tr><td><a href="../../d/2026-09-18/">2026-09-18</a></td><td>8本</td><td>8ch</td><td><span style="display:block;height:8px;border-radius:4px;background:var(--accent);width:67%"></span></td></tr><tr><td><a href="../../d/2026-09-17/">2026-09-17</a></td><td>5本</td><td>5ch</td><td><span style="display:block;height:8px;border-radius:4px;background:var(--accent);width:42%"></span></td></tr><tr><td><a href="../../d/2026-09-16/">2026-09-16</a></td><td>7本</td><td>7ch</td><td><span style="display:block;height:8px;border-radius:4px;background:var(--accent);width:58%"></span></td></tr><tr><td><a href="../../d/2026-09-15/">2026-09-15</a></td><td>8本</td><td>8ch</td><td><span style="display:block;height:8px;border-radius:4px;background:var(--accent);width:67%"></span></td></tr><tr><td><a href="../../d/2026-09-14/">2026-09-14</a></td><td>9本</td><td>9ch</td><td><span style="display:block;height:8px;border-radius:4px;background:var(--accent);width:75%"></span></td></tr><tr><td><a href="../../d/2026-09-13/">2026-09-13</a></td><td>11本</td><td>10ch</td><td><span style="display:block;height:8px;border-radius:4px;background:var(--accent);width:83%"></span></td></tr><tr><td><a href="../../d/2026-09-12/">2026-09-12</a></td><td>12本</td><td>12ch</td><td><span style="display:block;height:8px;border-radius:4px;background:var(--accent);width:100%"></span></td></tr><tr><td><a href="../../d/2026-09-11/">2026-09-11</a></td><td>6本</td><td>6ch</td><td><span style="display:block;height:8px;border-radius:4px;background:var(--accent);width:50%"></span></td></tr></table><h2>最近の配信</h2><p>直近30日ぶんだけを出しています。それより前の配信タイトルは残していません。</p><ul><li><a href="https://www.youtube.com/watch?v=cYCME6nl8Mw" rel="nofollow">【ELDEN RING】犬クラゲ人間連合軍 VS 鬼（鬼ではない）  #11【栞葉るり / にじさんじ】</a>　<span class="muted">栞葉るり / Shioriha Ruri【にじさんじ】</span></li><li><a href="https://www.youtube.com/watch?v=RZIyMWssvgY" rel="nofollow">『信仰・知力・神秘の能力値が足りて、います』それは奇跡の言葉であった【ELDENRING実況】</a>　<span class="muted">笑顔ニコ </span></li><li><a href="https://www.youtube.com/watch?v=4wmLEgihvGA" rel="nofollow">エルデンリングを有機ELで遊んでみたら、何か変わるのか？【27GX700A-B】</a>　<span class="muted">我が道を征くイカレタコ助</span></li><li><a href="https://www.youtube.com/watch?v=cYCME6nl8Mw" rel="nofollow">【ELDEN RING】犬クラゲ人間連合軍 VS 鬼（鬼ではない）  #11【栞葉るり / にじさんじ】</a>　<span class="muted">栞葉るり / Shioriha Ruri【にじさんじ】</span></li><li><a href="https://www.youtube.com/watch?v=RZIyMWssvgY" rel="nofollow">『信仰・知力・神秘の能力値が足りて、います』それは奇跡の言葉であった【ELDENRING実況】</a>　<span class="muted">笑顔ニコ </span></li><li><a href="https://www.youtube.com/watch?v=W003yaCwg5Y" rel="nofollow">【エルデンリングDLC】「何食ったら思いつくんだ」って思った設定語らない？【ELDEN RING Tarnished Edition】</a>　<span class="muted">volt ゲーム反応集</span></li><li><a href="https://www.youtube.com/watch?v=vvi25NnJaI0" rel="nofollow">『しろがねのラティナ』を人間として扱うべきか、狭間の地で議論は絶えない【ELDENRING実況】</a>　<span class="muted">笑顔ニコ </span></li><li><a href="https://www.youtube.com/watch?v=9t4DKjgd7aM" rel="nofollow">【#22 黄金の種子大好きチャンネル】プロ褪せ人、愛の戦士と往くエルデンリング【ELDEN RING】</a>　<span class="muted">まお</span></li></ul><p class="lead"><a href="../../search/">ほかのゲームを探す</a>　<a href="../../g/">ゲーム別のページ一覧</a>　<a href="../../">今日のランキングへ</a></p></article>
+    <article class="doc" id="page-body"><h2>『ELDEN RING』はどれだけ配信されているか</h2><p class="lead">当サイトの集計では、8月28日から10月1日までの間に<b>34日</b>、『ELDEN RING』の配信が見つかりました。のべ<b>240本</b>・のべ<b>237チャンネル</b>です。いちばん多かったのは9月12日で、12チャンネルが配信していました。</p><p>このうち<b>27日</b>は、その日のランキング（上位30件）に入っています。</p><h2>日ごとの配信数（直近21日）</h2><table><tr><th>日</th><th>配信</th><th>チャンネル</th><th style="width:38%">　</th></tr><tr><td><a href="../../d/2026-10-01/">2026-10-01</a></td><td>6本</td><td>6ch</td><td><span style="display:block;height:8px;border-radius:4px;background:var(--accent);width:50%"></span></td></tr><tr><td><a href="../../d/2026-09-30/">2026-09-30</a></td><td>12本</td><td>11ch</td><td><span style="display:block;height:8px;border-radius:4px;background:var(--accent);width:92%"></span></td></tr><tr><td><a href="../../d/2026-09-29/">2026-09-29</a></td><td>4本</td><td>4ch</td><td><span style="display:block;height:8px;border-radius:4px;background:var(--accent);width:33%"></span></td></tr><tr><td><a href="../../d/2026-09-28/">2026-09-28</a></td><td>7本</td><td>7ch</td><td><span style="display:block;height:8px;border-radius:4px;background:var(--accent);width:58%"></span></td></tr><tr><td><a href="../../d/2026-09-27/">2026-09-27</a></td><td>9本</td><td>9ch</td><td><span style="display:block;height:8px;border-radius:4px;background:var(--accent);width:75%"></span></td></tr><tr><td><a href="../../d/2026-09-26/">2026-09-26</a></td><td>10本</td><td>10ch</td><td><span style="display:block;height:8px;border-radius:4px;background:var(--accent);width:83%"></span></td></tr><tr><td><a href="../../d/2026-09-25/">2026-09-25</a></td><td>4本</td><td>4ch</td><td><span style="display:block;height:8px;border-radius:4px;background:var(--accent);width:33%"></span></td></tr><tr><td><a href="../../d/2026-09-24/">2026-09-24</a></td><td>12本</td><td>12ch</td><td><span style="display:block;height:8px;border-radius:4px;background:var(--accent);width:100%"></span></td></tr><tr><td><a href="../../d/2026-09-23/">2026-09-23</a></td><td>5本</td><td>5ch</td><td><span style="display:block;height:8px;border-radius:4px;background:var(--accent);width:42%"></span></td></tr><tr><td><a href="../../d/2026-09-22/">2026-09-22</a></td><td>4本</td><td>4ch</td><td><span style="display:block;height:8px;border-radius:4px;background:var(--accent);width:33%"></span></td></tr><tr><td><a href="../../d/2026-09-21/">2026-09-21</a></td><td>7本</td><td>7ch</td><td><span style="display:block;height:8px;border-radius:4px;background:var(--accent);width:58%"></span></td></tr><tr><td><a href="../../d/2026-09-20/">2026-09-20</a></td><td>8本</td><td>7ch</td><td><span style="display:block;height:8px;border-radius:4px;background:var(--accent);width:58%"></span></td></tr><tr><td><a href="../../d/2026-09-19/">2026-09-19</a></td><td>5本</td><td>5ch</td><td><span style="display:block;height:8px;border-radius:4px;background:var(--accent);width:42%"></span></td></tr><tr><td><a href="../../d/2026-09-18/">2026-09-18</a></td><td>8本</td><td>8ch</td><td><span style="display:block;height:8px;border-radius:4px;background:var(--accent);width:67%"></span></td></tr><tr><td><a href="../../d/2026-09-17/">2026-09-17</a></td><td>5本</td><td>5ch</td><td><span style="display:block;height:8px;border-radius:4px;background:var(--accent);width:42%"></span></td></tr><tr><td><a href="../../d/2026-09-16/">2026-09-16</a></td><td>7本</td><td>7ch</td><td><span style="display:block;height:8px;border-radius:4px;background:var(--accent);width:58%"></span></td></tr><tr><td><a href="../../d/2026-09-15/">2026-09-15</a></td><td>8本</td><td>8ch</td><td><span style="display:block;height:8px;border-radius:4px;background:var(--accent);width:67%"></span></td></tr><tr><td><a href="../../d/2026-09-14/">2026-09-14</a></td><td>9本</td><td>9ch</td><td><span style="display:block;height:8px;border-radius:4px;background:var(--accent);width:75%"></span></td></tr><tr><td><a href="../../d/2026-09-13/">2026-09-13</a></td><td>11本</td><td>10ch</td><td><span style="display:block;height:8px;border-radius:4px;background:var(--accent);width:83%"></span></td></tr><tr><td><a href="../../d/2026-09-12/">2026-09-12</a></td><td>12本</td><td>12ch</td><td><span style="display:block;height:8px;border-radius:4px;background:var(--accent);width:100%"></span></td></tr><tr><td><a href="../../d/2026-09-11/">2026-09-11</a></td><td>6本</td><td>6ch</td><td><span style="display:block;height:8px;border-radius:4px;background:var(--accent);width:50%"></span></td></tr></table><h2>最近の配信</h2><p>直近30日ぶんだけを出しています。それより前の配信タイトルは残していません。</p><ul><li><a href="https://www.youtube.com/watch?v=cYCME6nl8Mw" rel="nofollow">【ELDEN RING】犬クラゲ人間連合軍 VS 鬼（鬼ではない）  #11【栞葉るり / にじさんじ】</a>　<span class="muted">栞葉るり / Shioriha Ruri【にじさんじ】</span></li><li><a href="https://www.youtube.com/watch?v=RZIyMWssvgY" rel="nofollow">『信仰・知力・神秘の能力値が足りて、います』それは奇跡の言葉であった【ELDENRING実況】</a>　<span class="muted">笑顔ニコ </span></li><li><a href="https://www.youtube.com/watch?v=0ZKO4EuhAGQ" rel="nofollow">【ELDEN RING】2周目行くぞ！神秘マンで行ってみたい【最初から2周目#1】</a>　<span class="muted">平成ヒッピーGAMEチャンネル</span></li><li><a href="https://www.youtube.com/watch?v=cYCME6nl8Mw" rel="nofollow">【ELDEN RING】犬クラゲ人間連合軍 VS 鬼（鬼ではない）  #11【栞葉るり / にじさんじ】</a>　<span class="muted">栞葉るり / Shioriha Ruri【にじさんじ】</span></li><li><a href="https://www.youtube.com/watch?v=RZIyMWssvgY" rel="nofollow">『信仰・知力・神秘の能力値が足りて、います』それは奇跡の言葉であった【ELDENRING実況】</a>　<span class="muted">笑顔ニコ </span></li><li><a href="https://www.youtube.com/watch?v=W003yaCwg5Y" rel="nofollow">【エルデンリングDLC】「何食ったら思いつくんだ」って思った設定語らない？【ELDEN RING Tarnished Edition】</a>　<span class="muted">volt ゲーム反応集</span></li><li><a href="https://www.youtube.com/watch?v=vvi25NnJaI0" rel="nofollow">『しろがねのラティナ』を人間として扱うべきか、狭間の地で議論は絶えない【ELDENRING実況】</a>　<span class="muted">笑顔ニコ </span></li><li><a href="https://www.youtube.com/watch?v=9t4DKjgd7aM" rel="nofollow">【#22 黄金の種子大好きチャンネル】プロ褪せ人、愛の戦士と往くエルデンリング【ELDEN RING】</a>　<span class="muted">まお</span></li></ul><p class="lead"><a href="../../search/">ほかのゲームを探す</a>　<a href="../../g/">ゲーム別のページ一覧</a>　<a href="../../">今日のランキングへ</a></p></article>
   </section>
 
   <section id="arch-sec" style="display:none">
@@ -509,7 +517,7 @@ footer{font-size:11.5px;color:var(--ink-3);text-align:center;border-top:1px soli
 </div>
 
 <script>
-const DATA = {"mode": "page", "date": "2026-10-01", "subtitle": "『ELDEN RING』の配信", "generated": "2026-10-01 18:42", "paths": {"home": "../../", "archive": "../../archive/"}};
+const DATA = {"mode": "page", "date": "2026-10-01", "subtitle": "『ELDEN RING』の配信", "generated": "2026-10-01 19:29", "paths": {"home": "../../", "archive": "../../archive/"}};
 const $ = s => document.querySelector(s);
 const esc = s => String(s ?? '').replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
 const cssv = n => getComputedStyle(document.documentElement).getPropertyValue(n).trim();
@@ -670,15 +678,20 @@ function render(){
     + `<a href="${P.home}g/">ゲーム別</a>`
     + `<a href="${P.home}search/">ゲームを探す</a>`
     + `<a href="${P.home}about/">このサイトについて</a>`;
-  const MT = DATA.matome;
-  if (MT && !isArchive) {
+  // まとめは週と月の2本が並ぶことがある（2026-10-01）。
+  // 画像は、こちらで作ったカードならサイト内の相対の住所、
+  // YouTubeから借りたものは http から始まる。借りたほうだけ断りを付ける。
+  const MT = Array.isArray(DATA.matome) ? DATA.matome : (DATA.matome ? [DATA.matome] : []);
+  if (MT.length && !isArchive) {
     $('#mt-sec').style.display = '';
-    $('#mt').href = P.home + MT.href;
-    $('#mt').innerHTML =
-      (MT.th ? `<img src="${esc(MT.th)}" alt="" loading="lazy">` : '')
-      + `<div class="txt"><span class="kind">${esc(MT.label)}</span>`
-      + `<div class="tt">${esc(MT.title)}</div>`
-      + `<div class="sub">${esc(MT.heading)}${MT.by ? ' ／ 画像 YouTube ' + esc(MT.by) : ''}</div></div>`;
+    $('#mt-sec').innerHTML = MT.map(m => {
+      const src = m.th && !/^https?:/.test(m.th) ? P.home + m.th : m.th;
+      return `<a class="mt" href="${esc(P.home + m.href)}">`
+        + (src ? `<img src="${esc(src)}" alt="" loading="lazy">` : '')
+        + `<div class="txt"><span class="kind">${esc(m.label)}</span>`
+        + `<div class="tt">${esc(m.title)}</div>`
+        + `<div class="sub">${esc(m.heading)}${m.by ? ' ／ 画像 YouTube ' + esc(m.by) : ''}</div></div></a>`;
+    }).join('');
   } else {
     $('#mt-sec').style.display = 'none';
   }
