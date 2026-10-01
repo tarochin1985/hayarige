@@ -96,6 +96,23 @@ jobs:
         if: ${{ inputs.fetch == 'no' }}
         run: echo "配信の取り直しは飛ばしました。YouTubeのクォータは使っていません。手元のデータでサイトだけ作り直します。"
 
+      # 週・月のまとめのページに置く画像（site/w/<日付>/card.png）。
+      # Xに貼るカードと同じ絵を、記事のページ・トップ・一覧・SNSの共有画像で使う。
+      #
+      # **build_site.py より先に置くこと。** build_site は「その画像が
+      # あるかどうか」を見て貼るか決めるので、順番が逆だと、画像の無い
+      # HTMLを書いたあとに画像ができることになる（翌日まで出ない）。
+      #
+      # すでにある画像は作り直さないので、ふだんは数秒で終わる。
+      # YouTubeのクォータは1ポイントも使わない。
+      # ここが失敗しても、その日の更新は止めない（画像が無いだけ）。
+      - name: まとめのページの画像を作る
+        continue-on-error: true
+        run: |
+          pip install --quiet playwright
+          python -m playwright install --with-deps chromium
+          python scripts/make_week_card.py --site
+
       - name: 集計してサイトを作る
         run: python scripts/build_site.py
 
