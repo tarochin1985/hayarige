@@ -978,6 +978,37 @@ def render_page(path, data, depth, site_url=""):
     p.write_text(page_html(path, data, depth, site_url), encoding="utf-8")
 
 
+ADMIN_BLOCK = re.compile(
+    r"(?:<!--\s*)?/?\*?\s*__ADMIN0__.*?__ADMIN1__\s*\*?/?(?:\s*-->)?",
+    re.S)
+
+
+def strip_admin(tpl, keep):
+    """公開ページから、管理用の部分を丸ごと落とす。
+
+    なぜ（2026-10-02 読者からの指摘）
+    --------------------------------
+      > 見えても問題ない画面っぽいけど、
+      > ソース表示から辿ると管理用ページ(/admin)行けちゃう
+
+    そのとおりだった。**ページの型紙は1ファイルで全ページ共通**なので、
+    管理ページを描く部分（`renderAdmin()`、「コラムの種」「これ、なんのゲーム？」
+    の枠、`admin/unknown.json` へのリンク）が、トップにも記録ページにも
+    そのまま焼き込まれていた。画面には出ないが、ソースには出ていた。
+
+    中身自体は公開データの集計で、鍵も個人情報も入っていない。それでも
+    読む人に余計な心配をさせる筋合いは無いので、**公開ページには出さない。**
+    `__ADMIN0__` から `__ADMIN1__` までを消す。消すのは3か所:
+      ・本文の管理用セクション2つ（コラムの種／これ、なんのゲーム？）
+      ・`renderAdmin()` そのもの
+      ・`render()` の中の呼び出し1行
+
+    ※ これは「隠す」であって「守る」ではない。リポジトリが公開なので、
+      同じ中身は GitHub から読める。鍵をかけたいときは Cloudflare Access。
+    """
+    return tpl if keep else ADMIN_BLOCK.sub("", tpl)
+
+
 def page_html(path, data, depth, site_url="", home=None):
     """1ページぶんのHTMLを文字列で返す。ファイルには書き出さない。
 
@@ -991,7 +1022,8 @@ def page_html(path, data, depth, site_url="", home=None):
             "https://hayarige.com/" のような住所を渡す。そうしないと
             ロゴや書体を取りに行けず、見た目が本番と違ってしまう。
     """
-    tpl = (SITE / "template.html").read_text(encoding="utf-8")
+    tpl = strip_admin((SITE / "template.html").read_text(encoding="utf-8"),
+                      data.get("mode") == "admin")
     d = dict(data, paths={"home": "../" * depth or "./",
                           "archive": ("../" * depth or "./") + "archive/"})
     # page_body はサーバー側で __PAGEBODY__ に入れるものなので、

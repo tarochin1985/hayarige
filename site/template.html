@@ -479,6 +479,10 @@ footer{font-size:11.5px;color:var(--ink-3);text-align:center;border-top:1px soli
     <div class="arch" id="arch">__SSR_ARCH__</div>
   </section>
 
+  <!-- 下の2つの枠は管理用。公開ページでは build_site が丸ごと削って
+       書き出します（2026-10-02）。読者から「ソース表示から辿ると
+       管理用ページに行ける」と指摘があったため。印の間が削られます。 -->
+  <!-- __ADMIN0__ -->
   <section id="lead-sec" style="display:none">
     <div class="head"><h2>コラムの種</h2>
       <span class="note">集めたデータから拾った「何か起きていそうな気配」。ここから一次ソースを当たる</span></div>
@@ -491,6 +495,7 @@ footer{font-size:11.5px;color:var(--ink-3);text-align:center;border-top:1px soli
       <span class="note">自動判定できなかったタイトル。辞書に足す候補です</span></div>
     <div class="memo" id="queue"></div>
   </section>
+  <!-- __ADMIN1__ -->
 
   <footer>
     __SHARE_SITE__
@@ -585,6 +590,7 @@ function renderArchive(){
   }).join('') || '<div class="empty">まだ記録がありません。</div>';
 }
 
+/* __ADMIN0__ */
 function renderAdmin(){
   // 管理ページ。トップからリンクしていないので、URLを知っている人しか見ません。
   const P = DATA.paths || {home: '__HOME__', archive: '__HOME__archive/'};  // 予備の値。ここを現在地からの相対で書くと、/matome/archive/ のような存在しないURLを検索エンジンが拾って404になる（2026-09-24）
@@ -635,7 +641,9 @@ function renderAdmin(){
   // 存在しないURLをページの数だけ見つけて404にしていた（2026-09-24に判明）。
   // 管理ページ以外では表示されない行だが、JSの中の文字列もクロールの対象になる。
   $('#nav').innerHTML = `<a href="${P.home}">サイトを見る</a><a href="${P.home}admin/unknown.json">JSONで見る</a>`;
-  $('#banner').innerHTML = `<div class="banner" style="display:block;line-height:1.75">このページは公開ページからリンクされていません。ここに出たタイトルは<b>ランキングには一切入っていません</b>。よく出るものを <code>data/aliases.json</code> に足すと、次から正しく数えられます。</div>`;
+  // 読者がURLを見つけて開くことがある（2026-10-02に指摘があった）ので、
+  // 1行目は「これは何で、なぜ見えても困らないのか」から書く。
+  $('#banner').innerHTML = `<div class="banner" style="display:block;line-height:1.75"><b>これは運営の作業用のページです。</b>サイトの本体は <a href="${P.home}">こちら</a>。<br>出ているのは、ゲーム名を自動で判定できなかった配信のタイトルと、当サイトが数えた件数だけで、<b>非公開の情報は含みません</b>（このサイトは仕組みも中身も <a href="https://github.com/tarochin1985/hayarige" target="_blank" rel="noopener">GitHubで全部公開しています</a>）。<br>ここに出たタイトルは<b>ランキングには一切入っていません</b>。よく出るものを <code>data/aliases.json</code> に足すと、次から正しく数えられます。</div>`;
   // ゲーム名ごとにまとめて、何人が配信したかの多い順。新作ほど上に出る。
   $('#queue').innerHTML = q.map(u => {
     const ex = (u.examples || []).map(x =>
@@ -647,6 +655,7 @@ function renderAdmin(){
   }).join('') || '<div class="empty">確認待ちはありません。</div>';
   $('#f-gen').textContent = DATA.generated || '';
 }
+/* __ADMIN1__ */
 
 function renderPage(){
   const P = DATA.paths || {home: '__HOME__', archive: '__HOME__archive/'};  // 予備の値。ここを現在地からの相対で書くと、/matome/archive/ のような存在しないURLを検索エンジンが拾って404になる（2026-09-24）
@@ -666,7 +675,7 @@ function renderPage(){
 
 function render(){
   if (DATA.mode === 'page') return renderPage();
-  if (DATA.mode === 'admin') return renderAdmin();
+  /* __ADMIN0__ */ if (DATA.mode === 'admin') return renderAdmin(); /* __ADMIN1__ */
   if (DATA.mode === 'archive') return renderArchive();
   const AC = cssv('--accent'), HOT = cssv('--hot'), t = DATA.totals || {};
   const P = DATA.paths || {home: '__HOME__', archive: '__HOME__archive/'};  // 予備の値。ここを現在地からの相対で書くと、/matome/archive/ のような存在しないURLを検索エンジンが拾って404になる（2026-09-24）
@@ -863,7 +872,7 @@ function render(){
   $('#cards').insertAdjacentHTML('afterend',
     '<div id="cardpanels">' + list.slice(0, 3).map(r => panel(r)).join('') + '</div>');
 
-  // 「これ、なんのゲーム？」は公開ページには出しません（site/admin/ 側で表示）
+  // 判定できなかったタイトルの枠は、公開ページには出しません（管理用の側だけ）
 }
 
 // 急上昇のパネルを「押したカードと同じ行」の下へ動かす。
