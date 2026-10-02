@@ -1,8 +1,26 @@
 {
  "date": "2026-10-02",
- "generated": "2026-10-02 02:06",
+ "generated": "2026-10-02 10:22",
  "leads": {
   "events": [
+   {
+    "tag": "#ホロドリ",
+    "channels": [
+     "AZKi Channel",
+     "Iroha ch. 風真いろは - holoX -",
+     "Koyori ch. 博衣こより - holoX -",
+     "Matsuri Channel 夏色まつり",
+     "Polka Ch. 尾丸ポルカ",
+     "Riona Ch. 響咲リオナ - FLOW GLOW",
+     "Roboco Ch. - ロボ子",
+     "Su Ch. 水宮枢 - FLOW GLOW",
+     "Towa Ch. 常闇トワ",
+     "Watame Ch. 角巻わため",
+     "もう一度だけVTuberやってもいい? 🅥",
+     "アキロゼCh。Vtuber/ホロライブ所属",
+     "宵吸あけル / Yokyu Akeru"
+    ]
+   },
    {
     "tag": "#マイクラ肝試し2026",
     "channels": [
@@ -20,35 +38,6 @@
     ]
    },
    {
-    "tag": "#ホロドリ",
-    "channels": [
-     "AZKi Channel",
-     "Iroha ch. 風真いろは - holoX -",
-     "Koyori ch. 博衣こより - holoX -",
-     "Matsuri Channel 夏色まつり",
-     "Riona Ch. 響咲リオナ - FLOW GLOW",
-     "Roboco Ch. - ロボ子",
-     "Towa Ch. 常闇トワ",
-     "もう一度だけVTuberやってもいい? 🅥",
-     "アキロゼCh。Vtuber/ホロライブ所属",
-     "宵吸あけル / Yokyu Akeru"
-    ]
-   },
-   {
-    "tag": "#ゲーム実況",
-    "channels": [
-     "M家の休日マサ",
-     "Usagi Ch. 因幡兎",
-     "えりんぎ Games",
-     "ジョアだよ",
-     "太刀ひろし　【Uncle gamer】 ",
-     "恋因ロス KoinRosu",
-     "豚咲あおい_TomisakiAoi",
-     "里城はな",
-     "雛乃ぴぴ / Hinano pipi"
-    ]
-   },
-   {
     "tag": "#ストグラ",
     "channels": [
      "Tenten Ch. / 鳳玲天々",
@@ -63,6 +52,19 @@
     ]
    },
    {
+    "tag": "#ゲーム実況",
+    "channels": [
+     "M家の休日マサ",
+     "Usagi Ch. 因幡兎",
+     "えりんぎ Games",
+     "ジョアだよ",
+     "太刀ひろし　【Uncle gamer】 ",
+     "恋因ロス KoinRosu",
+     "里城はな",
+     "雛乃ぴぴ / Hinano pipi"
+    ]
+   },
+   {
     "tag": "#ストグラSeason2",
     "channels": [
      "neon",
@@ -74,30 +76,31 @@
     ]
    },
    {
-    "tag": "#縦型配信",
-    "channels": [
-     "vii / ビー",
-     "かおりんごー",
-     "ぺれ",
-     "もみじビーム",
-     "キムチキャット"
-    ]
-   },
-   {
     "tag": "#ぶいきゃす",
     "channels": [
      "えういん ∕ euin Ch.",
      "おいもパイちゃん / OimoPie ch.",
+     "こてつちゃんねる",
      "孵卵リリス / Furan Lilith",
      "星埜きぃ -Key Hoshino-"
     ]
    },
    {
-    "tag": "#レトロゲーム",
+    "tag": "#天下無双ARK",
     "channels": [
-     "どえむげーまーらうる",
-     "里城はな",
-     "雛乃ぴぴ / Hinano pipi"
+     "ひなたチャンネル (Hinata Channel)",
+     "ダナ",
+     "家入ポポ / Popo Channel【ななしいんく】",
+     "扇名いだ"
+    ]
+   },
+   {
+    "tag": "#縦型配信",
+    "channels": [
+     "vii / ビー",
+     "かおりんごー",
+     "もみじビーム",
+     "キムチキャット"
     ]
    }
   ],
@@ -105,28 +108,33 @@
   "wide": [
    {
     "game": "Apex Legends",
-    "channels": 70,
-    "videos": 88
+    "channels": 61,
+    "videos": 68
    },
    {
     "game": "Minecraft",
-    "channels": 40,
-    "videos": 44
+    "channels": 35,
+    "videos": 37
    },
    {
     "game": "ストリートファイター6",
-    "channels": 33,
-    "videos": 38
+    "channels": 29,
+    "videos": 33
    },
    {
     "game": "Grand Theft Auto V",
     "channels": 23,
-    "videos": 29
+    "videos": 24
+   },
+   {
+    "game": "hololive Dreams",
+    "channels": 18,
+    "videos": 20
    },
    {
     "game": "スプラトゥーン3",
-    "channels": 19,
-    "videos": 20
+    "channels": 18,
+    "videos": 19
    },
    {
     "game": "エースコンバット8 ウイングス・オブ・シーヴ",
@@ -134,13 +142,8 @@
     "videos": 18
    },
    {
-    "game": "hololive Dreams",
+    "game": "フォートナイト",
     "channels": 15,
-    "videos": 16
-   },
-   {
-    "game": "実況パワフルプロ野球2026",
-    "channels": 16,
     "videos": 18
    }
   ]
@@ -173,7 +176,7 @@
   {
    "word": "Starward",
    "channels": 1,
-   "n": 6,
+   "n": 7,
    "examples": [
     {
      "t": "【星の翼】昨日触れなかった修正キャラ色々お試ししたい！プリシュカ終わった評判多いからお別れ会かも【星之翼/Starward】【東和正】",
@@ -315,19 +318,19 @@
    "n": 4,
    "examples": [
     {
-     "t": "【DELIPICKS】ミシュラン経験シェフのシーフードパエリアに染み込むコクに感動するこく兄(2026/9/15) #デリピックス #DELIPICKS",
-     "c": "こくじんTV",
-     "u": "https://www.youtube.com/watch?v=WRdSreQPoEA"
-    },
-    {
-     "t": "【DELIPICKS】ミシュラン経験シェフのシーフードパエリアに染み込むコクに感動するこく兄(2026/9/15) #デリピックス #DELIPICKS",
-     "c": "こくじんTV",
-     "u": "https://www.youtube.com/watch?v=WRdSreQPoEA"
-    },
-    {
      "t": "【DELIPICKS】初めての食レポ！美味しくいただきます【ぶいすぽ/白波らむね】",
      "c": "白波らむね / Shiranami Ramune",
      "u": "https://www.youtube.com/watch?v=A7o_YZfllMo"
+    },
+    {
+     "t": "【DELIPICKS】ミシュラン経験シェフのシーフードパエリアに染み込むコクに感動するこく兄(2026/9/15) #デリピックス #DELIPICKS",
+     "c": "こくじんTV",
+     "u": "https://www.youtube.com/watch?v=WRdSreQPoEA"
+    },
+    {
+     "t": "【DELIPICKS】ミシュラン経験シェフのシーフードパエリアに染み込むコクに感動するこく兄(2026/9/15) #デリピックス #DELIPICKS",
+     "c": "こくじんTV",
+     "u": "https://www.youtube.com/watch?v=WRdSreQPoEA"
     }
    ],
    "kind": "wide",
@@ -386,22 +389,22 @@
  "hot_facts": [
   {
    "game": "真・三國無双2 with 猛将伝 Remastered",
-   "growth": 6.0,
+   "growth": 4.62,
    "videos": 6,
-   "base": 1.0,
-   "channels": 6,
-   "views": 119931,
+   "base": 1.3,
+   "channels": 5,
+   "views": 46288,
    "who": [
-    "GAMEゆうなch",
-    "キリヤのゲーム実況ch",
     "桃桜華はる -Momosaka Haru-",
     "たまチャンネル",
-    "桃桜華はる -Momosaka Haru-"
+    "キリヤのゲーム実況ch",
+    "桃桜華はる -Momosaka Haru-",
+    "ikku AQUA 低音女子訛りゲーム実況(いっく あくあ)"
    ],
    "titles": [
-    "【真・三國無双２ with 猛将伝 】現代に鮮烈に蘇る!!一騎当千の極み！PS5proでやるぞ【Digital Deluxe Edition】",
-    "【三國無双2猛将伝 Remasterd】ついに発売された三國無双2リマスター！趙雲を使って無双の世界を斬りまくる実況プレイ！ Part 1",
-    "【初見耐久】はじめての〜真・三國無双2with猛将伝Remastered〜初見プレイ【VTuber 桃桜華はる ゲーム実況 】※ネタバレあり"
+    "【初見耐久】はじめての〜真・三國無双2with猛将伝Remastered〜初見プレイ【VTuber 桃桜華はる ゲーム実況 】※ネタバレあり",
+    "【真・三國無双２ リマスター】国産ハクスラを決定づけたタイトルが25年ぶり要素山盛で復活：「Diabloみたいに遊べる」で当時話題のタイトルはどう進化した？【with 猛将伝 Remastered】",
+    "【三國無双2猛将伝 Remasterd】ついに発売された三國無双2リマスター！趙雲を使って無双の世界を斬りまくる実況プレイ！ Part 2"
    ],
    "genres": [],
    "year": null,
@@ -411,72 +414,119 @@
    "first_here": false
   },
   {
-   "game": "Aion 2",
-   "growth": 5.0,
-   "videos": 4,
-   "base": 0.2,
-   "channels": 3,
-   "views": 99939,
+   "game": "Neverness to Everness",
+   "growth": 3.43,
+   "videos": 12,
+   "base": 3.5,
+   "channels": 11,
+   "views": 55449,
    "who": [
-    "Tororo Ch. 猫麦とろろ",
-    "Tororo Ch. 猫麦とろろ",
-    "祢子丸きりや",
-    "祢子丸きりや",
-    "ぴろちゃん -ゲーム攻略・情報ch-"
+    "キスケGAME",
+    "すりっぷらーゼツ",
+    "Tomari Mari channel / 兎鞠まりちゃんねる",
+    "ゆるいカメ / YuruiKame",
+    "ほーだん×ゲーマーズ / ほぼ毎日更新ゲーム総合情報ch"
    ],
    "titles": [
-    "【AION 2】Lv.1｜チャンター｜1枠目！年単位で待ってたMMOのアーリーアクセスが来た！かもです！- Escape from Tarkov【猫麦とろろ/個人Vtuber】",
-    "【AION 2】Lv.1｜チャンター｜2枠目！年単位で待ってたMMOのアーリーアクセスが来た！かもです！- Escape from Tarkov【猫麦とろろ/個人Vtuber】",
-    "【#AION2】アーリーきたー✨今日から新作MMOを遊び尽くす！まずはLv45目指して冒険だ🌸レギオン設立🌸"
+    "【NTE】これで全てが分かる！限定Sランクキャラクター「クロバネ」最強パーティー編成解説！ おすすめ弧盤武器/明音凛/ローテーション/チーム【ネバエバ】【Neverness to Everness】",
+    "【NTE】Ver.1.4開幕！超万能キャラ「クロバネ」実装！【NTE: Neverness to Everness】",
+    "【NTE】Ver1.4アプデが来たー！！遂に新エリア「プカランド」に行けるらしいぞ！？【#とまライブ】"
    ],
-   "genres": [
-    "Role-playing (RPG)",
-    "Adventure"
-   ],
+   "genres": [],
    "year": null,
-   "platforms": [
-    "pc"
+   "platforms": [],
+   "days_seen": 23,
+   "last_seen": "2026-10-01",
+   "first_here": false
+  },
+  {
+   "game": "デス桃太郎",
+   "growth": 3.0,
+   "videos": 3,
+   "base": 1.0,
+   "channels": 3,
+   "views": 364809,
+   "who": [
+    "Subaru Ch. 大空スバル",
+    "慈悲の極み。",
+    "Su Ch. 水宮枢 - FLOW GLOW"
    ],
+   "titles": [
+    "【#生スバル】デス桃太郎やるしゅばあああああああああああああああああああああああああ！！！！！！！：Death Momotaro【ホロライブ/大空スバル】",
+    "桃太郎が主人公のホラゲがツッコミ所多すぎるww【デス桃太郎】",
+    "【デス桃太郎】桃太郎のホラゲらしい！デス太郎...？？？【水宮枢／ホロライブ】"
+   ],
+   "genres": [],
+   "year": null,
+   "platforms": [],
    "days_seen": 2,
    "last_seen": "2026-10-01",
    "first_here": false
   },
   {
-   "game": "Castlevania",
-   "growth": 3.75,
-   "videos": 3,
-   "base": 0.0,
-   "channels": 3,
-   "views": 15414,
+   "game": "エースコンバット8 ウイングス・オブ・シーヴ",
+   "growth": 2.95,
+   "videos": 18,
+   "base": 6.1,
+   "channels": 17,
+   "views": 520284,
    "who": [
-    "電撃オンライン",
-    "どえむげーまーらうる",
-    "馬小屋ねる子レトロゲームCh."
+    "Patra Channel / 周防パトラ",
+    "葉山舞鈴 / Ohayama Ch.",
+    "けいじチャンネル",
+    "おついちTube",
+    "兄者のゲーム事務所"
    ],
    "titles": [
-    "『キャッスルヴァニア』最新作体験版！ 探索型2Dアクションの傑作シリーズ、鞭を手にドラキュラとの血の戦いへ！【きよしとタダツグの実況立志伝】Castlevania: Belmont's Curse",
-    "【悪魔城ドラキュラ完全新作】CastleVania Belmont'sCurse体験版配信#レトロゲーム#40TH",
-    "【悪魔城ドラキュラ】『Castlevania: Belmont's Curse」体験版お試し配信【Switch/レトロゲーム/VTuber】"
+    "#2【エースコンバット8】ミッション９から！はじめてのエスコンやってみる！ACE COMBAT 8: WINGS OF THEVE【周防パトラ】",
+    "【 ACE COMBAT 8: WINGS OF THEVE 】本日発売！シリーズ最新作✈️王覇山、エースパイロット物語。（ 空よ、教えてくれ ）【 にじさんじ┊︎葉山舞鈴┊︎※ネタバレ注意 】",
+    "エスコン8にドハマり中です。PC版にクラッシュ報告？やっぱゲームするならコンソール安定なのか？ラスアスやアンチャの新作開発か！？【ゲームニュースまとめ】"
    ],
    "genres": [
-    "Platform",
-    "Hack and slash/Beat 'em up"
+    "Shooter",
+    "Simulator",
+    "Arcade"
    ],
-   "year": null,
+   "year": 2026,
    "platforms": [
+    "pc",
     "console"
    ],
-   "days_seen": 1,
+   "days_seen": 6,
    "last_seen": "2026-10-01",
    "first_here": false
   },
   {
-   "game": "Detroit: Become Human",
-   "growth": 3.0,
+   "game": "ドラゴンクエストVII Reimagined",
+   "growth": 2.5,
    "videos": 3,
-   "base": 1.0,
+   "base": 1.2,
    "channels": 3,
-   "views": 814,
+   "views": 58529,
+   "who": [
+    "千燈ゆうひ",
+    "たいじ/たいちゃんねる",
+    "海月シェル Shell Ch."
+   ],
+   "titles": [
+    "【ドラゴンクエストVII Reimagined】これ毒かも！？ #10【 ぶいすぽっ！ / 千燈ゆうひ 】",
+    "たいじの『ドラゴンクエストVII Reimagined』ダイジェスト Part8【コスタール～魔空間の神殿編】",
+    "#7【ドラゴンクエストVII Reimagined】人魚の月を探すぞ！ドラクエ7リメイクリイマジンド【#海月シェル /vtuber 】"
+   ],
+   "genres": [],
+   "year": null,
+   "platforms": [],
+   "days_seen": 18,
+   "last_seen": "2026-09-30",
+   "first_here": false
+  },
+  {
+   "game": "Detroit: Become Human",
+   "growth": 2.5,
+   "videos": 3,
+   "base": 1.2,
+   "channels": 3,
+   "views": 896,
    "who": [
     "星森みなみ",
     "鈴ノ時みぃ@新人Vtuber",
@@ -496,65 +546,6 @@
     "console"
    ],
    "days_seen": 6,
-   "last_seen": "2026-09-29",
-   "first_here": false
-  },
-  {
-   "game": "エースコンバット8 ウイングス・オブ・シーヴ",
-   "growth": 2.95,
-   "videos": 18,
-   "base": 6.1,
-   "channels": 17,
-   "views": 432582,
-   "who": [
-    "葉山舞鈴 / Ohayama Ch.",
-    "Patra Channel / 周防パトラ",
-    "かずのこチャンネル",
-    "おついちTube",
-    "兄者のゲーム事務所"
-   ],
-   "titles": [
-    "#01【 ACE COMBAT 8: WINGS OF THEVE 】ついに解禁！3日間🎮先行アクセス！王覇山、パイロット物語。（ 空よ、教えてくれ ）【 にじさんじ┊︎葉山舞鈴┊︎※ネタバレ注意 】",
-    "【エースコンバット8】ミッション９から！はじめてのエスコンやってみる！ACE COMBAT 8: WINGS OF THEVE【周防パトラ】",
-    "【エースコンバット８】配信 戦場を駆けるエースパイロットかず"
-   ],
-   "genres": [
-    "Shooter",
-    "Simulator",
-    "Arcade"
-   ],
-   "year": 2026,
-   "platforms": [
-    "pc",
-    "console"
-   ],
-   "days_seen": 6,
-   "last_seen": "2026-10-01",
-   "first_here": false
-  },
-  {
-   "game": "Neverness to Everness",
-   "growth": 2.86,
-   "videos": 10,
-   "base": 3.5,
-   "channels": 9,
-   "views": 36036,
-   "who": [
-    "キスケGAME",
-    "Tomari Mari channel / 兎鞠まりちゃんねる",
-    "ゆるいカメ / YuruiKame",
-    "孵卵リリス / Furan Lilith",
-    "ほーだん×ゲーマーズ / ほぼ毎日更新ゲーム総合情報ch"
-   ],
-   "titles": [
-    "【NTE】これで全てが分かる！限定Sランクキャラクター「クロバネ」最強パーティー編成解説！ おすすめ弧盤武器/明音凛/ローテーション/チーム【ネバエバ】【Neverness to Everness】",
-    "【NTE】Ver1.4アプデが来たー！！遂に新エリア「プカランド」に行けるらしいぞ！？【#とまライブ】",
-    "【朝活NTE】プカランド全アトラクション攻略！クロバネと一緒に！イベント「プカ遊園祭」進めていくよ！v1.4アプデ解説【Neverness to Everness:女性Vtuber:ゆるいカメ】"
-   ],
-   "genres": [],
-   "year": null,
-   "platforms": [],
-   "days_seen": 23,
    "last_seen": "2026-10-01",
    "first_here": false
   }
