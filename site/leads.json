@@ -1,20 +1,21 @@
 {
- "date": "2026-10-02",
- "generated": "2026-10-02 11:39",
+ "date": "2026-10-03",
+ "generated": "2026-10-03 01:17",
  "leads": {
   "events": [
    {
     "tag": "#ホロドリ",
     "channels": [
      "AZKi Channel",
+     "Flare Ch. 不知火フレア",
      "Iroha ch. 風真いろは - holoX -",
      "Koyori ch. 博衣こより - holoX -",
      "Matsuri Channel 夏色まつり",
      "Polka Ch. 尾丸ポルカ",
      "Riona Ch. 響咲リオナ - FLOW GLOW",
      "Roboco Ch. - ロボ子",
+     "SoraCh. ときのそらチャンネル",
      "Su Ch. 水宮枢 - FLOW GLOW",
-     "Towa Ch. 常闇トワ",
      "Watame Ch. 角巻わため",
      "もう一度だけVTuberやってもいい? 🅥",
      "アキロゼCh。Vtuber/ホロライブ所属",
@@ -22,19 +23,29 @@
     ]
    },
    {
+    "tag": "#ゲーム実況",
+    "channels": [
+     "CHECHE GAME【顔出し初見ゲーム実況】",
+     "M家の休日マサ",
+     "Usagi Ch. 因幡兎",
+     "ジョアだよ",
+     "太刀ひろし　【Uncle gamer】 ",
+     "豚咲あおい_TomisakiAoi",
+     "里城はな",
+     "雛乃ぴぴ / Hinano pipi"
+    ]
+   },
+   {
     "tag": "#マイクラ肝試し2026",
     "channels": [
-     "Anya Melfissa Ch. hololive",
-     "Flare Ch. 不知火フレア",
-     "Iroha ch. 風真いろは - holoX -",
-     "Miko Ch. さくらみこ",
-     "Suisei Channel",
-     "Watame Ch. 角巻わため",
-     "ひなたチャンネル (Hinata Channel)",
-     "フブキCh。白上フブキ",
+     "おんりー / ドズル社",
+     "さとみ【すとぷり】",
      "堰代ミコ / Mico Channel【ななしいんく】",
      "島村シャルロット / Charlotte Channel【ななしいんく】",
-     "羽渦ミウネル -Miuneru Haneuzu-"
+     "弦月 藤士郎 / Genzuki Tojiro【にじさんじ】",
+     "町田ちま【にじさんじ】",
+     "羽渦ミウネル -Miuneru Haneuzu-",
+     "赤髪のとものゲーム実況チャンネル!!"
     ]
    },
    {
@@ -42,55 +53,31 @@
     "channels": [
      "Tenten Ch. / 鳳玲天々",
      "marunnn【まるーんチャンネル】",
-     "たけぉ",
-     "ましゃかりさん",
      "みつき",
      "ノビーの遊び部屋",
      "柚原いづみ / Izumi Channel 【ななしいんく】",
-     "闇乃あびす / Abyss",
-     "魔光リサ - Lisa Makoh -"
-    ]
-   },
-   {
-    "tag": "#ゲーム実況",
-    "channels": [
-     "M家の休日マサ",
-     "Usagi Ch. 因幡兎",
-     "えりんぎ Games",
-     "ジョアだよ",
-     "太刀ひろし　【Uncle gamer】 ",
-     "恋因ロス KoinRosu",
-     "里城はな",
-     "雛乃ぴぴ / Hinano pipi"
+     "闇乃あびす / Abyss"
     ]
    },
    {
     "tag": "#ストグラSeason2",
     "channels": [
      "neon",
-     "たけぉ",
-     "バーチャル債務者youtuber天開司",
+     "はたさこ / hatasako_flag",
+     "天羽よつは",
      "影。/かげまる",
      "暁月ホタル AKATSUKI HOTARU",
      "柚原いづみ / Izumi Channel 【ななしいんく】"
     ]
    },
    {
-    "tag": "#天下無双ARK",
+    "tag": "#レトロゲーム",
     "channels": [
-     "ひなたチャンネル (Hinata Channel)",
-     "ダナ",
-     "家入ポポ / Popo Channel【ななしいんく】",
-     "扇名いだ"
-    ]
-   },
-   {
-    "tag": "#ぶいきゃす",
-    "channels": [
-     "えういん ∕ euin Ch.",
-     "おいもパイちゃん / OimoPie ch.",
-     "こてつちゃんねる",
-     "孵卵リリス / Furan Lilith"
+     "ロッキー先生",
+     "草蔦みかん / Kusatsuta Mikan",
+     "赤狐　朱里",
+     "里城はな",
+     "雛乃ぴぴ / Hinano pipi"
     ]
    },
    {
@@ -101,54 +88,71 @@
      "もみじビーム",
      "キムチキャット"
     ]
+   },
+   {
+    "tag": "#天下無双ARK",
+    "channels": [
+     "ひなたチャンネル (Hinata Channel)",
+     "ダナ",
+     "家入ポポ / Popo Channel【ななしいんく】",
+     "扇名いだ"
+    ]
    }
   ],
   "newcomers": [],
   "wide": [
    {
     "game": "Apex Legends",
-    "channels": 63,
-    "videos": 70
+    "channels": 66,
+    "videos": 82
    },
    {
     "game": "Minecraft",
-    "channels": 34,
-    "videos": 36
+    "channels": 38,
+    "videos": 40
    },
    {
     "game": "ストリートファイター6",
-    "channels": 28,
-    "videos": 32
+    "channels": 26,
+    "videos": 30
    },
    {
     "game": "Grand Theft Auto V",
-    "channels": 23,
-    "videos": 24
+    "channels": 22,
+    "videos": 26
    },
    {
     "game": "hololive Dreams",
-    "channels": 17,
+    "channels": 18,
     "videos": 18
    },
    {
-    "game": "スプラトゥーン3",
+    "game": "エースコンバット8 ウイングス・オブ・シーヴ",
     "channels": 18,
     "videos": 20
    },
    {
-    "game": "エースコンバット8 ウイングス・オブ・シーヴ",
+    "game": "フォートナイト",
     "channels": 17,
-    "videos": 18
+    "videos": 21
    },
    {
-    "game": "フォートナイト",
+    "game": "実況パワフルプロ野球2026",
     "channels": 16,
     "videos": 18
    }
   ]
  },
  "drift": [],
- "tags": [],
+ "tags": [
+  {
+   "tag": "鳴潮朝月会",
+   "game": "鳴潮",
+   "evidence": 3,
+   "added": 1,
+   "channels": 3
+  }
+ ],
  "misses": [
   {
    "word": "LIBRARIAN",
@@ -175,22 +179,22 @@
   {
    "word": "Starward",
    "channels": 1,
-   "n": 7,
+   "n": 5,
    "examples": [
-    {
-     "t": "【星の翼】昨日触れなかった修正キャラ色々お試ししたい！プリシュカ終わった評判多いからお別れ会かも【星之翼/Starward】【東和正】",
-     "c": "東和正 / AzumaKazumasa",
-     "u": "https://www.youtube.com/watch?v=qmVVjGN11O0"
-    },
-    {
-     "t": "【星の翼】過去最大リワークで一気に環境トップに躍り出たセラフィムの使い方を実況解説！【星之翼/Starward】",
-     "c": "東和正 / AzumaKazumasa",
-     "u": "https://www.youtube.com/watch?v=ciwas3PsZqs"
-    },
     {
      "t": "【星の翼】ついにプリシュカとお別れ！？各キャラの修正点と使ってみた総評まとめ【セイレン/エリシア陸戦/イーザー】【星之翼/Starward】",
      "c": "東和正 / AzumaKazumasa",
      "u": "https://www.youtube.com/watch?v=9aDz3nMRyLU"
+    },
+    {
+     "t": "【星の翼】新環境最速128人シャッフル大会！第16回星火燎原杯【星之翼/Starward】【東和正/茶入ロマン/三ノ下あるる】",
+     "c": "東和正 / AzumaKazumasa",
+     "u": "https://www.youtube.com/watch?v=p5iw78ZRkF8"
+    },
+    {
+     "t": "【星の翼】過去最多バリエーションのキャラが見れた良環境！？第16回星火燎原杯名試合ピックアップ 1回戦編【ランスロット/セラフィム/ロタ/轟雷改/稲】【星之翼/Starward】",
+     "c": "東和正 / AzumaKazumasa",
+     "u": "https://www.youtube.com/watch?v=fCoJTQT7dm4"
     }
    ],
    "kind": "near",
@@ -286,78 +290,210 @@
    ],
    "kind": "wide",
    "suggest": []
+  },
+  {
+   "word": "妹に運転教える",
+   "channels": 3,
+   "n": 4,
+   "examples": [
+    {
+     "t": "【妹に運転教える】大丈夫！！おねえちゃんに任してッ！！！！！！　【にじさんじ/鈴原るる】",
+     "c": "鈴原るる【にじさんじ所属】",
+     "u": "https://www.youtube.com/watch?v=NUSYWocXanU"
+    },
+    {
+     "t": "【 妹に運転教える 】無免許お姉ちゃんが教えてあげる！！【#綺々羅々ヴィヴィ #hololive  #FLOWGLOW】",
+     "c": "Vivi Ch. 綺々羅々ヴィヴィ - FLOW GLOW",
+     "u": "https://www.youtube.com/watch?v=PYgl9VP261g"
+    },
+    {
+     "t": "【 妹に運転教える 】怒ったらすぐ終了！無免許お姉ちゃんが教えてあげる！！【#綺々羅々ヴィヴィ #hololive  #FLOWGLOW】",
+     "c": "Vivi Ch. 綺々羅々ヴィヴィ - FLOW GLOW",
+     "u": "https://www.youtube.com/watch?v=c-Af4cnpEts"
+    }
+   ],
+   "kind": "wide",
+   "suggest": []
+  },
+  {
+   "word": "段位道場2026",
+   "channels": 3,
+   "n": 3,
+   "examples": [
+    {
+     "t": "【段位道場2026】 名人は神段位の予感しかしないから流石にキレない（フラグ）",
+     "c": "やざせろりバチ工房",
+     "u": "https://www.youtube.com/watch?v=C6pYVwMwW5A"
+    },
+    {
+     "t": "【段位道場2026】達人 合格 Player:わだかつ 【10作達人】",
+     "c": "team RNH【太鼓の達人】",
+     "u": "https://www.youtube.com/watch?v=BpFt4VJO91E"
+    },
+    {
+     "t": "【段位道場2026】達人3曲目 初到達",
+     "c": "こうちゃん",
+     "u": "https://www.youtube.com/watch?v=NDU8ugYR3zQ"
+    }
+   ],
+   "kind": "wide",
+   "suggest": []
+  },
+  {
+   "word": "m HOLD’EM",
+   "channels": 3,
+   "n": 3,
+   "examples": [
+    {
+     "t": "【 m HOLD’EM 】復刻コラボイベントがくるらしいぞ！【 ぶいすぽっ！胡桃のあ 】",
+     "c": "胡桃のあ",
+     "u": "https://www.youtube.com/watch?v=yTzkcFh_lgw"
+    },
+    {
+     "t": "【m HOLD’EM】m HOLD’EM×ぶいすぽの復刻コラボイベントが始まる！✨【ぶいすぽっ！/ 藍沢エマ】",
+     "c": "藍沢エマ / Aizawa Ema",
+     "u": "https://www.youtube.com/watch?v=dNoHoT0wsN4"
+    },
+    {
+     "t": "【m HOLD’EM】復刻コラボがくるらしいですよ！！【空澄セナ/ぶいすぽっ！】",
+     "c": "空澄セナ -Asumi Sena-",
+     "u": "https://www.youtube.com/watch?v=vMr5WfaLOi0"
+    }
+   ],
+   "kind": "wide",
+   "suggest": []
   }
  ],
  "miss_days": 7,
  "hot_facts": [
   {
-   "game": "真・三國無双2 with 猛将伝 Remastered",
-   "growth": 4.62,
-   "videos": 6,
-   "base": 1.3,
-   "channels": 5,
-   "views": 46856,
-   "who": [
-    "桃桜華はる -Momosaka Haru-",
-    "たまチャンネル",
-    "キリヤのゲーム実況ch",
-    "桃桜華はる -Momosaka Haru-",
-    "ikku AQUA 低音女子訛りゲーム実況(いっく あくあ)"
-   ],
-   "titles": [
-    "【初見耐久】はじめての〜真・三國無双2with猛将伝Remastered〜初見プレイ【VTuber 桃桜華はる ゲーム実況 】※ネタバレあり",
-    "【真・三國無双２ リマスター】国産ハクスラを決定づけたタイトルが25年ぶり要素山盛で復活：「Diabloみたいに遊べる」で当時話題のタイトルはどう進化した？【with 猛将伝 Remastered】",
-    "【三國無双2猛将伝 Remasterd】ついに発売された三國無双2リマスター！趙雲を使って無双の世界を斬りまくる実況プレイ！ Part 2"
-   ],
-   "genres": [],
-   "year": null,
-   "platforms": [],
-   "days_seen": 4,
-   "last_seen": "2026-10-01",
-   "first_here": false
-  },
-  {
    "game": "デス桃太郎",
-   "growth": 3.0,
-   "videos": 3,
-   "base": 1.0,
-   "channels": 3,
-   "views": 368594,
+   "growth": 4.17,
+   "videos": 5,
+   "base": 1.2,
+   "channels": 5,
+   "views": 261345,
    "who": [
-    "Subaru Ch. 大空スバル",
-    "慈悲の極み。",
-    "Su Ch. 水宮枢 - FLOW GLOW"
+    "Pekora Ch. 兎田ぺこら",
+    "加賀美 ハヤト/Hayato Kagami",
+    "Su Ch. 水宮枢 - FLOW GLOW",
+    "ベルモンド・バンデラス",
+    "赫-アカ-"
    ],
    "titles": [
-    "【#生スバル】デス桃太郎やるしゅばあああああああああああああああああああああああああ！！！！！！！：Death Momotaro【ホロライブ/大空スバル】",
-    "桃太郎が主人公のホラゲがツッコミ所多すぎるww【デス桃太郎】",
+    "【！？】『デス桃太郎』やる！！！！！！！！！！！！！！！！！！ぺこ！【ホロライブ/兎田ぺこら】",
+    "【デス桃太郎】　デスヶ島　加賀美　【にじさんじ/加賀美ハヤト】",
     "【デス桃太郎】桃太郎のホラゲらしい！デス太郎...？？？【水宮枢／ホロライブ】"
    ],
    "genres": [],
    "year": null,
    "platforms": [],
-   "days_seen": 2,
-   "last_seen": "2026-10-01",
+   "days_seen": 3,
+   "last_seen": "2026-10-02",
+   "first_here": false
+  },
+  {
+   "game": "Deadlock",
+   "growth": 3.75,
+   "videos": 3,
+   "base": 0.7,
+   "channels": 3,
+   "views": 49574,
+   "who": [
+    "sasatikk",
+    "風楽奏斗 / Fura Kanato ",
+    "YamatoN"
+   ],
+   "titles": [
+    "超大型アプデでビジュアルが劇的に進化した21世紀最高の対人ゲームをやるSasatikk【Deadlock】",
+    "【 Deadlock 】　慣れたぞ新マップ、ランク行くぞ【にじさんじ/風楽奏斗】",
+    "【Deadlock】招待制のMOBA×TPS「Deadlock」やります！プレイしたい人はこちら↓"
+   ],
+   "genres": [
+    "Shooter",
+    "Indie"
+   ],
+   "year": null,
+   "platforms": [
+    "console"
+   ],
+   "days_seen": 0,
+   "last_seen": null,
+   "first_here": true
+  },
+  {
+   "game": "ポケットモンスター スカーレット・バイオレット",
+   "growth": 3.75,
+   "videos": 3,
+   "base": 0.7,
+   "channels": 3,
+   "views": 4733,
+   "who": [
+    "冒険の熊吉【ポケモン実況者】🐻🎁",
+    "カーキのゲーム実況",
+    "なか爺【NAKAJI】channel"
+   ],
+   "titles": [
+    "【ポケモンSV】簡単ソロ攻略！復刻した最強バンギラスレイド対策ポケモンのオコリザルとワルビアルでお手軽立ち回り！捕獲場所や努力値振りを解説！ポケモンスカーレットバイオレット",
+    "【復刻最強バンギラス】ワルビアルで簡単ソロ攻略。いかりのつぼつけあがるが超火力！【ポケモンSV】",
+    "【ポケモンSV】600族最恐！？初見さんも大歓迎！『最強バンギラスレイド』攻略参加型配信！part330（レベル100必須・攻略用ポケモンも配布中・概要欄必読）"
+   ],
+   "genres": [],
+   "year": null,
+   "platforms": [],
+   "days_seen": 8,
+   "last_seen": "2026-10-02",
+   "first_here": false
+  },
+  {
+   "game": "勝利の女神：NIKKE",
+   "growth": 2.73,
+   "videos": 6,
+   "base": 2.2,
+   "channels": 6,
+   "views": 15313,
+   "who": [
+    "漆瀬レイ / Ray Nanase【ななしいんく】",
+    "たこすけ",
+    "たこすけ",
+    "朱羽美寧 / Akabane Minei ch",
+    "まごみちゃんねる。"
+   ],
+   "titles": [
+    "【 勝利の女神：NIKKE 】完全初見🔰イベントストーリー「OVER ZONE」STORY2を見る‼【漆瀬レイ / ななしいんく】",
+    "【メガニケ】悪は滅びたのか…？ソロレイド感想会【勝利の女神：NIKKE】",
+    "【メガニケ】別ver新キャラで不遇ロリ三銃士の一人ベロータが卒業してしまったｗｗｗｗｗｗｗｗｗｗ【勝利の女神：NIKKE】"
+   ],
+   "genres": [
+    "Shooter",
+    "Role-playing (RPG)"
+   ],
+   "year": null,
+   "platforms": [
+    "pc"
+   ],
+   "days_seen": 15,
+   "last_seen": "2026-10-02",
    "first_here": false
   },
   {
    "game": "エースコンバット8 ウイングス・オブ・シーヴ",
-   "growth": 2.9,
-   "videos": 18,
-   "base": 6.2,
-   "channels": 17,
-   "views": 533814,
+   "growth": 2.47,
+   "videos": 20,
+   "base": 8.1,
+   "channels": 18,
+   "views": 713901,
    "who": [
     "Patra Channel / 周防パトラ",
     "葉山舞鈴 / Ohayama Ch.",
-    "けいじチャンネル",
+    "Patra Channel / 周防パトラ",
     "おついちTube",
-    "兄者のゲーム事務所"
+    "胡桃沢りりか"
    ],
    "titles": [
     "#2【エースコンバット8】ミッション９から！はじめてのエスコンやってみる！ACE COMBAT 8: WINGS OF THEVE【周防パトラ】",
-    "【 ACE COMBAT 8: WINGS OF THEVE 】本日発売！シリーズ最新作✈️王覇山、エースパイロット物語。（ 空よ、教えてくれ ）【 にじさんじ┊︎葉山舞鈴┊︎※ネタバレ注意 】",
-    "エスコン8にドハマり中です。PC版にクラッシュ報告？やっぱゲームするならコンソール安定なのか？ラスアスやアンチャの新作開発か！？【ゲームニュースまとめ】"
+    "#02【 ACE COMBAT 8: WINGS OF THEVE 】本日発売！シリーズ最新作✈️王覇山、エースパイロット物語。（ 空よ、教えてくれ ）【 にじさんじ┊︎葉山舞鈴┊︎※ネタバレ注意 】",
+    "【エースコンバット8】クリアまで！はじめてのエスコンやってみる！ACE COMBAT 8: WINGS OF THEVE【周防パトラ】"
    ],
    "genres": [
     "Shooter",
@@ -369,84 +505,34 @@
     "pc",
     "console"
    ],
-   "days_seen": 6,
-   "last_seen": "2026-10-01",
+   "days_seen": 7,
+   "last_seen": "2026-10-02",
    "first_here": false
   },
   {
-   "game": "Neverness to Everness",
-   "growth": 2.63,
-   "videos": 10,
-   "base": 3.8,
-   "channels": 10,
-   "views": 51496,
-   "who": [
-    "キスケGAME",
-    "すりっぷらーゼツ",
-    "Tomari Mari channel / 兎鞠まりちゃんねる",
-    "ほーだん×ゲーマーズ / ほぼ毎日更新ゲーム総合情報ch",
-    "ゆるいカメ / YuruiKame"
-   ],
-   "titles": [
-    "【NTE】これで全てが分かる！限定Sランクキャラクター「クロバネ」最強パーティー編成解説！ おすすめ弧盤武器/明音凛/ローテーション/チーム【ネバエバ】【Neverness to Everness】",
-    "【NTE】Ver.1.4開幕！超万能キャラ「クロバネ」実装！【NTE: Neverness to Everness】",
-    "【NTE】Ver1.4アプデが来たー！！遂に新エリア「プカランド」に行けるらしいぞ！？【#とまライブ】"
-   ],
-   "genres": [],
-   "year": null,
-   "platforms": [],
-   "days_seen": 23,
-   "last_seen": "2026-10-01",
-   "first_here": false
-  },
-  {
-   "game": "ドラゴンクエストVII Reimagined",
-   "growth": 2.5,
-   "videos": 3,
-   "base": 1.2,
+   "game": "ドラゴンクエストXI",
+   "growth": 2.22,
+   "videos": 4,
+   "base": 1.8,
    "channels": 3,
-   "views": 59927,
+   "views": 36690,
    "who": [
-    "千燈ゆうひ",
-    "たいじ/たいちゃんねる",
-    "海月シェル Shell Ch."
+    "アオイゲーム【ドラクエ】",
+    "アオイゲーム【話題のゲーム紹介】",
+    "アオイゲーム【ドラクエ】",
+    "アオイゲーム【ドラクエ】",
+    "もんちゃんのゲーム実況チャンネル"
    ],
    "titles": [
-    "【ドラゴンクエストVII Reimagined】これ毒かも！？ #10【 ぶいすぽっ！ / 千燈ゆうひ 】",
-    "たいじの『ドラゴンクエストVII Reimagined』ダイジェスト Part8【コスタール～魔空間の神殿編】",
-    "#7【ドラゴンクエストVII Reimagined】人魚の月を探すぞ！ドラクエ7リメイクリイマジンド【#海月シェル /vtuber 】"
+    "【神ゲー】Switch2版ドラクエ11S買うべき！？数時間レビュー！買うならパッケージ版？携帯モードがヤバい！？",
+    "【緊急】Switch2版ドラクエ11S初週売上やばい！？Switch2で不具合修正アプデ！？トルネコ大冒険アプデキター！",
+    "【神ゲーふたたび】第3夜！Switch2版ドラクエ11Sセーニャ助けます実況"
    ],
    "genres": [],
    "year": null,
    "platforms": [],
-   "days_seen": 18,
+   "days_seen": 7,
    "last_seen": "2026-09-30",
-   "first_here": false
-  },
-  {
-   "game": "hololive Dreams",
-   "growth": 2.2,
-   "videos": 18,
-   "base": 8.2,
-   "channels": 17,
-   "views": 1352232,
-   "who": [
-    "Koyori ch. 博衣こより - holoX -",
-    "AZKi Channel",
-    "Noel Ch. 白銀ノエル",
-    "Towa Ch. 常闇トワ",
-    "AZKi Channel"
-   ],
-   "titles": [
-    "【 #ホロドリ 】出入り自由！夜釣りゆる凸待ち～ホロメンとまったりお話したい～【博衣こより/ホロライブ】",
-    "【ホロライブ ドリームス】#ホロドリ 新エリア登場🌊 夏だ！海だ！釣りだ！#3 hololive Dreams【ホロライブ / AZKi】",
-    "【ホロドリ】母上が好きなミニキャラむちむちノエルで魂の釣りッッ！目標40種類！！(現在31種類)(多分)(きっと)(メイビー)【白銀ノエル/ホロライブ】"
-   ],
-   "genres": [],
-   "year": null,
-   "platforms": [],
-   "days_seen": 31,
-   "last_seen": "2026-10-01",
    "first_here": false
   }
  ],
