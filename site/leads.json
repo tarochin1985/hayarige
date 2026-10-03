@@ -1,6 +1,6 @@
 {
  "date": "2026-10-03",
- "generated": "2026-10-03 10:02",
+ "generated": "2026-10-03 14:36",
  "leads": {
   "events": [
    {
@@ -41,20 +41,8 @@
      "Usagi Ch. 因幡兎",
      "ジョアだよ",
      "太刀ひろし　【Uncle gamer】 ",
-     "豚咲あおい_TomisakiAoi",
      "里城はな",
      "雛乃ぴぴ / Hinano pipi"
-    ]
-   },
-   {
-    "tag": "#ストグラ",
-    "channels": [
-     "Tenten Ch. / 鳳玲天々",
-     "marunnn【まるーんチャンネル】",
-     "みつき",
-     "ノビーの遊び部屋",
-     "柚原いづみ / Izumi Channel 【ななしいんく】",
-     "闇乃あびす / Abyss"
     ]
    },
    {
@@ -68,6 +56,16 @@
     ]
    },
    {
+    "tag": "#ストグラ",
+    "channels": [
+     "Tenten Ch. / 鳳玲天々",
+     "みつき",
+     "ノビーの遊び部屋",
+     "柚原いづみ / Izumi Channel 【ななしいんく】",
+     "闇乃あびす / Abyss"
+    ]
+   },
+   {
     "tag": "#ぶいきゃす",
     "channels": [
      "おいもパイちゃん / OimoPie ch.",
@@ -77,20 +75,19 @@
     ]
    },
    {
-    "tag": "#レトロゲーム",
-    "channels": [
-     "ロッキー先生",
-     "草蔦みかん / Kusatsuta Mikan",
-     "赤狐　朱里",
-     "里城はな"
-    ]
-   },
-   {
     "tag": "#ホロ甲2026",
     "channels": [
      "Koyori ch. 博衣こより - holoX -",
      "Noel Ch. 白銀ノエル",
      "Riona Ch. 響咲リオナ - FLOW GLOW"
+    ]
+   },
+   {
+    "tag": "#天下無双ARK",
+    "channels": [
+     "ダナ",
+     "家入ポポ / Popo Channel【ななしいんく】",
+     "扇名いだ"
     ]
    }
   ],
@@ -98,28 +95,18 @@
   "wide": [
    {
     "game": "Apex Legends",
-    "channels": 64,
-    "videos": 72
+    "channels": 61,
+    "videos": 67
    },
    {
     "game": "Minecraft",
-    "channels": 41,
-    "videos": 42
+    "channels": 39,
+    "videos": 40
    },
    {
     "game": "ストリートファイター6",
-    "channels": 21,
-    "videos": 24
-   },
-   {
-    "game": "Grand Theft Auto V",
     "channels": 19,
     "videos": 21
-   },
-   {
-    "game": "実況パワフルプロ野球2026",
-    "channels": 17,
-    "videos": 20
    },
    {
     "game": "フォートナイト",
@@ -127,27 +114,29 @@
     "videos": 22
    },
    {
-    "game": "エースコンバット8 ウイングス・オブ・シーヴ",
-    "channels": 17,
-    "videos": 17
+    "game": "実況パワフルプロ野球2026",
+    "channels": 16,
+    "videos": 18
    },
    {
-    "game": "モンスターストライク",
-    "channels": 14,
+    "game": "エースコンバット8 ウイングス・オブ・シーヴ",
+    "channels": 16,
     "videos": 16
+   },
+   {
+    "game": "Grand Theft Auto V",
+    "channels": 17,
+    "videos": 18
+   },
+   {
+    "game": "妹に運転を教える",
+    "channels": 14,
+    "videos": 14
    }
   ]
  },
  "drift": [],
- "tags": [
-  {
-   "tag": "鳴潮朝月会",
-   "game": "鳴潮",
-   "evidence": 3,
-   "added": 1,
-   "channels": 3
-  }
- ],
+ "tags": [],
  "misses": [
   {
    "word": "LIBRARIAN",
@@ -277,106 +266,35 @@
    "suggest": [
     "MXGP 26: The Official Game"
    ]
-  },
-  {
-   "word": "#あんスタ",
-   "channels": 3,
-   "n": 9,
-   "examples": [
-    {
-     "t": "【#あんスタ】初見様大歓迎の視聴者参加型！あなたの推しのキャラやMVを見せて！【寒糸ゆあむ/カピバラVtuber】",
-     "c": "寒糸ゆあむ - Samuito Yuam -",
-     "u": "https://www.youtube.com/watch?v=ZpxUrDr9ESo"
-    },
-    {
-     "t": "【#あんスタ】初見様大歓迎の視聴者参加型！あなたの推しのキャラやMVを見せて！【寒糸ゆあむ/カピバラVtuber】",
-     "c": "寒糸ゆあむ - Samuito Yuam -",
-     "u": "https://www.youtube.com/watch?v=ZpxUrDr9ESo"
-    },
-    {
-     "t": "【#あんスタ】『おいでよあんスタ萌え×２文化祭スカウト』を200連ガチャる！初見様もいつメン様も応援して！【寒糸ゆあむ/カピバラVtuber】",
-     "c": "寒糸ゆあむ - Samuito Yuam -",
-     "u": "https://www.youtube.com/watch?v=TpK8UTWNeZk"
-    }
-   ],
-   "kind": "wide",
-   "suggest": []
-  },
-  {
-   "word": "妹に運転教える",
-   "channels": 3,
-   "n": 4,
-   "examples": [
-    {
-     "t": "【妹に運転教える】大丈夫！！おねえちゃんに任してッ！！！！！！　【にじさんじ/鈴原るる】",
-     "c": "鈴原るる【にじさんじ所属】",
-     "u": "https://www.youtube.com/watch?v=NUSYWocXanU"
-    },
-    {
-     "t": "【 妹に運転教える 】無免許お姉ちゃんが教えてあげる！！【#綺々羅々ヴィヴィ #hololive  #FLOWGLOW】",
-     "c": "Vivi Ch. 綺々羅々ヴィヴィ - FLOW GLOW",
-     "u": "https://www.youtube.com/watch?v=PYgl9VP261g"
-    },
-    {
-     "t": "【 妹に運転教える 】怒ったらすぐ終了！無免許お姉ちゃんが教えてあげる！！【#綺々羅々ヴィヴィ #hololive  #FLOWGLOW】",
-     "c": "Vivi Ch. 綺々羅々ヴィヴィ - FLOW GLOW",
-     "u": "https://www.youtube.com/watch?v=c-Af4cnpEts"
-    }
-   ],
-   "kind": "wide",
-   "suggest": []
-  },
-  {
-   "word": "段位道場2026",
-   "channels": 3,
-   "n": 3,
-   "examples": [
-    {
-     "t": "【段位道場2026】 名人は神段位の予感しかしないから流石にキレない（フラグ）",
-     "c": "やざせろりバチ工房",
-     "u": "https://www.youtube.com/watch?v=C6pYVwMwW5A"
-    },
-    {
-     "t": "【段位道場2026】達人 合格 Player:わだかつ 【10作達人】",
-     "c": "team RNH【太鼓の達人】",
-     "u": "https://www.youtube.com/watch?v=BpFt4VJO91E"
-    },
-    {
-     "t": "【段位道場2026】達人3曲目 初到達",
-     "c": "こうちゃん",
-     "u": "https://www.youtube.com/watch?v=NDU8ugYR3zQ"
-    }
-   ],
-   "kind": "wide",
-   "suggest": []
-  },
-  {
-   "word": "m HOLD’EM",
-   "channels": 3,
-   "n": 3,
-   "examples": [
-    {
-     "t": "【 m HOLD’EM 】復刻コラボイベントがくるらしいぞ！【 ぶいすぽっ！胡桃のあ 】",
-     "c": "胡桃のあ",
-     "u": "https://www.youtube.com/watch?v=yTzkcFh_lgw"
-    },
-    {
-     "t": "【m HOLD’EM】m HOLD’EM×ぶいすぽの復刻コラボイベントが始まる！✨【ぶいすぽっ！/ 藍沢エマ】",
-     "c": "藍沢エマ / Aizawa Ema",
-     "u": "https://www.youtube.com/watch?v=dNoHoT0wsN4"
-    },
-    {
-     "t": "【m HOLD’EM】復刻コラボがくるらしいですよ！！【空澄セナ/ぶいすぽっ！】",
-     "c": "空澄セナ -Asumi Sena-",
-     "u": "https://www.youtube.com/watch?v=vMr5WfaLOi0"
-    }
-   ],
-   "kind": "wide",
-   "suggest": []
   }
  ],
  "miss_days": 7,
  "hot_facts": [
+  {
+   "game": "m HOLD'EM",
+   "growth": 5.0,
+   "videos": 4,
+   "base": 0.0,
+   "channels": 4,
+   "views": 143394,
+   "who": [
+    "一ノ瀬うるは",
+    "胡桃のあ",
+    "藍沢エマ / Aizawa Ema",
+    "空澄セナ -Asumi Sena-"
+   ],
+   "titles": [
+    "【#エムホールデム】復刻コラボイベント来るぞ！運も来い！！！！【ぶいすぽ/一ノ瀬うるは】",
+    "【 m HOLD’EM 】復刻コラボイベントがくるらしいぞ！【 ぶいすぽっ！胡桃のあ 】",
+    "【m HOLD’EM】m HOLD’EM×ぶいすぽの復刻コラボイベントが始まる！✨【ぶいすぽっ！/ 藍沢エマ】"
+   ],
+   "genres": [],
+   "year": null,
+   "platforms": [],
+   "days_seen": 0,
+   "last_seen": null,
+   "first_here": true
+  },
   {
    "game": "デス桃太郎",
    "growth": 4.17,
@@ -433,59 +351,10 @@
    "first_here": false
   },
   {
-   "game": "ポケットモンスター スカーレット・バイオレット",
-   "growth": 3.75,
-   "videos": 3,
-   "base": 0.3,
-   "channels": 3,
-   "views": 8143,
-   "who": [
-    "冒険の熊吉【ポケモン実況者】🐻🎁",
-    "カーキのゲーム実況",
-    "なか爺【NAKAJI】channel"
-   ],
-   "titles": [
-    "【ポケモンSV】簡単ソロ攻略！復刻した最強バンギラスレイド対策ポケモンのオコリザルとワルビアルでお手軽立ち回り！捕獲場所や努力値振りを解説！ポケモンスカーレットバイオレット",
-    "【復刻最強バンギラス】ワルビアルで簡単ソロ攻略。いかりのつぼつけあがるが超火力！【ポケモンSV】",
-    "【ポケモンSV】600族最恐！？初見さんも大歓迎！『最強バンギラスレイド』攻略参加型配信！part330（レベル100必須・攻略用ポケモンも配布中・概要欄必読）"
-   ],
-   "genres": [],
-   "year": null,
-   "platforms": [],
-   "days_seen": 8,
-   "last_seen": "2026-10-02",
-   "first_here": false
-  },
-  {
-   "game": "ウマ娘 プリティーダービー",
-   "growth": 3.08,
-   "videos": 4,
-   "base": 1.3,
-   "channels": 3,
-   "views": 1778,
-   "who": [
-    "れも / LemoCh.",
-    "Kenのゲーム実況",
-    "れも / LemoCh.",
-    "ゆーかのお部屋"
-   ],
-   "titles": [
-    "【ウマ娘】まじでなんとかなれ～？！凱旋門チャンミDay4生配信！【れも】",
-    "【ウマ娘】ウマ娘 プリティーダービー #57 初見 走れメカウマ娘 【ゲーム実況】本格育成シミュレーション エアグルーヴ",
-    "【ウマ娘】頼む勝ってくれええ！凱旋門チャンミ決勝生配信！【れも】"
-   ],
-   "genres": [],
-   "year": null,
-   "platforms": [],
-   "days_seen": 14,
-   "last_seen": "2026-10-02",
-   "first_here": false
-  },
-  {
    "game": "勝利の女神：NIKKE",
-   "growth": 2.73,
+   "growth": 2.86,
    "videos": 6,
-   "base": 2.2,
+   "base": 2.1,
    "channels": 6,
    "views": 20212,
    "who": [
@@ -513,34 +382,64 @@
    "first_here": false
   },
   {
-   "game": "空の軌跡 the 2nd",
-   "growth": 2.63,
-   "videos": 10,
-   "base": 3.8,
-   "channels": 9,
-   "views": 77567,
+   "game": "ウマ娘 プリティーダービー",
+   "growth": 2.86,
+   "videos": 4,
+   "base": 1.4,
+   "channels": 3,
+   "views": 1778,
    "who": [
-    "Mitora ch.紅羽ミトラ",
-    "兎桃みみこ /Mimiko Tomomo",
-    "くまのりんご Kumano Ringo",
-    "猫ヶ谷なすび / Nekogaya Nasubi",
-    "星園ゆい Hoshizono Yui"
+    "れも / LemoCh.",
+    "Kenのゲーム実況",
+    "れも / LemoCh.",
+    "ゆーかのお部屋"
    ],
    "titles": [
-    "【空の軌跡 the 2nd／PS5】5章メインストーリー始まる！！！【紅羽ミトラ/Vtuber】",
-    "#8【空の軌跡 the 2nd】7章「四輪の塔」──前作クリア直後の完全初見プレイ！【Trails in the SKy the 2nd/兎桃みみこ】",
-    "【 空の軌跡 the 2nd / 完全初見】※情緒崩壊※４章「霧魔の標的」ヨシュア～～～！！！！　※ネタバレ注意【VTuber／くまのりんご／配信中】【英雄伝説 空の軌跡SC】"
+    "【ウマ娘】まじでなんとかなれ～？！凱旋門チャンミDay4生配信！【れも】",
+    "【ウマ娘】ウマ娘 プリティーダービー #57 初見 走れメカウマ娘 【ゲーム実況】本格育成シミュレーション エアグルーヴ",
+    "【ウマ娘】頼む勝ってくれええ！凱旋門チャンミ決勝生配信！【れも】"
    ],
    "genres": [],
    "year": null,
    "platforms": [],
-   "days_seen": 23,
+   "days_seen": 14,
+   "last_seen": "2026-10-02",
+   "first_here": false
+  },
+  {
+   "game": "ドラゴンクエストXI",
+   "growth": 2.35,
+   "videos": 4,
+   "base": 1.7,
+   "channels": 3,
+   "views": 56356,
+   "who": [
+    "アオイゲーム【ドラクエ】",
+    "アオイゲーム【話題のゲーム紹介】",
+    "アオイゲーム【ドラクエ】",
+    "アオイゲーム【ドラクエ】",
+    "もんちゃんのゲーム実況チャンネル"
+   ],
+   "titles": [
+    "【神ゲー】Switch2版ドラクエ11S買うべき！？数時間レビュー！買うならパッケージ版？携帯モードがヤバい！？",
+    "【緊急】Switch2版ドラクエ11S初週売上やばい！？Switch2で不具合修正アプデ！？トルネコ大冒険アプデキター！",
+    "【神ゲーふたたび】第3夜！Switch2版ドラクエ11Sセーニャ助けます実況"
+   ],
+   "genres": [],
+   "year": null,
+   "platforms": [],
+   "days_seen": 8,
    "last_seen": "2026-10-02",
    "first_here": false
   }
  ],
  "notes_written": true,
  "recent_columns": [
+  {
+   "date": "2026-10-03",
+   "game": "ほの暮しの庭",
+   "headline": "95回目の配信の隣に、1回目の配信が並ぶ"
+  },
   {
    "date": "2026-10-02",
    "game": "デス桃太郎",
@@ -605,11 +504,6 @@
    "date": "2026-09-20",
    "game": "Minecraft",
    "headline": "同じ迷宮を、視点の数だけ歩いている"
-  },
-  {
-   "date": "2026-09-19",
-   "game": "遊戯王 マスターデュエル",
-   "headline": "デッキはくじ引き、まず覚えるところから"
   }
  ]
 }
