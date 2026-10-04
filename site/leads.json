@@ -1,6 +1,6 @@
 {
  "date": "2026-10-04",
- "generated": "2026-10-04 09:26",
+ "generated": "2026-10-04 13:10",
  "leads": {
   "events": [
    {
@@ -8,7 +8,6 @@
     "channels": [
      "M家の休日マサ",
      "Usagi Ch. 因幡兎",
-     "zakimiya / ザキミヤ",
      "たくちゃんねるず",
      "てぃーけぇー",
      "ぱんちき🥖🦃",
@@ -45,21 +44,9 @@
      "Iroha ch. 風真いろは - holoX -",
      "Riona Ch. 響咲リオナ - FLOW GLOW",
      "Roboco Ch. - ロボ子",
-     "SoraCh. ときのそらチャンネル",
      "Su Ch. 水宮枢 - FLOW GLOW",
      "Vivi Ch. 綺々羅々ヴィヴィ - FLOW GLOW",
      "アキロゼCh。Vtuber/ホロライブ所属"
-    ]
-   },
-   {
-    "tag": "#ストグラ",
-    "channels": [
-     "Tenten Ch. / 鳳玲天々",
-     "marunnn【まるーんチャンネル】",
-     "みつき",
-     "ノビーの遊び部屋",
-     "柚原いづみ / Izumi Channel 【ななしいんく】",
-     "闇乃あびす / Abyss"
     ]
    },
    {
@@ -70,6 +57,16 @@
      "史門 / Shimon ",
      "家入ポポ / Popo Channel【ななしいんく】",
      "扇名いだ"
+    ]
+   },
+   {
+    "tag": "#ストグラ",
+    "channels": [
+     "Tenten Ch. / 鳳玲天々",
+     "みつき",
+     "ノビーの遊び部屋",
+     "柚原いづみ / Izumi Channel 【ななしいんく】",
+     "闇乃あびす / Abyss"
     ]
    },
    {
@@ -91,12 +88,12 @@
     ]
    },
    {
-    "tag": "#フォートナイト",
+    "tag": "#ストグラSeason2",
     "channels": [
-     "mogすけちゃんネル",
-     "くろのす",
-     "めるとくん",
-     "ドパじんちゅーぶ"
+     "にーとちゃん",
+     "はたさこ / hatasako_flag",
+     "暁月ホタル AKATSUKI HOTARU",
+     "柚原いづみ / Izumi Channel 【ななしいんく】"
     ]
    }
   ],
@@ -104,38 +101,38 @@
   "wide": [
    {
     "game": "Apex Legends",
-    "channels": 63,
-    "videos": 72
+    "channels": 60,
+    "videos": 66
    },
    {
     "game": "Minecraft",
-    "channels": 51,
-    "videos": 55
+    "channels": 50,
+    "videos": 52
    },
    {
     "game": "ストリートファイター6",
-    "channels": 36,
-    "videos": 39
-   },
-   {
-    "game": "フォートナイト",
-    "channels": 20,
-    "videos": 24
+    "channels": 35,
+    "videos": 36
    },
    {
     "game": "実況パワフルプロ野球2026",
     "channels": 19,
-    "videos": 21
+    "videos": 20
    },
    {
-    "game": "Grand Theft Auto V",
-    "channels": 20,
-    "videos": 21
+    "game": "フォートナイト",
+    "channels": 18,
+    "videos": 22
    },
    {
     "game": "VALORANT",
     "channels": 18,
     "videos": 19
+   },
+   {
+    "game": "Grand Theft Auto V",
+    "channels": 18,
+    "videos": 18
    },
    {
     "game": "モンスターストライク",
@@ -145,15 +142,7 @@
   ]
  },
  "drift": [],
- "tags": [
-  {
-   "tag": "鳴潮朝月会",
-   "game": "鳴潮",
-   "evidence": 3,
-   "added": 1,
-   "channels": 3
-  }
- ],
+ "tags": [],
  "misses": [
   {
    "word": "LIBRARIAN",
@@ -317,54 +306,6 @@
    ]
   },
   {
-   "word": "アストラエ・オラティオ",
-   "channels": 4,
-   "n": 4,
-   "examples": [
-    {
-     "t": "#PR【アストラエ・オラティオ】TGSでも話題の新作RPGを先行プレイしていくよー！【AstraeoOratio】",
-     "c": "星森みなみ",
-     "u": "https://www.youtube.com/watch?v=vtYVUeT-hv4"
-    },
-    {
-     "t": "【アストラエ・オラティオ】美麗ビジュアル×唯一無二の世界観？！先行プレイさせていただきます生配信！【れも】",
-     "c": "れも / LemoCh.",
-     "u": "https://www.youtube.com/watch?v=NG8prrCQqxs"
-    },
-    {
-     "t": "【テストプレイ】1989年の東京が舞台の魔法少女ゲーをみてみよう #PR【アストラエ・オラティオ】",
-     "c": "ナカイドのゲーム情報チャンネル",
-     "u": "https://www.youtube.com/watch?v=cwWELYU6c5c"
-    }
-   ],
-   "kind": "wide",
-   "suggest": []
-  },
-  {
-   "word": "はるめろ学園ARK部",
-   "channels": 3,
-   "n": 7,
-   "examples": [
-    {
-     "t": "【#はるめろ学園ARK部 DAY13】※アドバイス歓迎ッ！ボス戦に向けて準備しはじめるかもしれない【歌衣メイカ】",
-     "c": "メイカちゃんねる",
-     "u": "https://www.youtube.com/watch?v=ncU_7-fYYq4"
-    },
-    {
-     "t": "【#はるめろ学園ARK部 DAY13】※アドバイス歓迎ッ！ボス戦に向けて準備していくで～！【歌衣メイカ】",
-     "c": "メイカちゃんねる",
-     "u": "https://www.youtube.com/watch?v=enWT5H3O65A"
-    },
-    {
-     "t": "【#はるめろ学園ARK部 DAY14】※アドバイス歓迎ッ！いよいよボス挑めるか？【歌衣メイカ】",
-     "c": "メイカちゃんねる",
-     "u": "https://www.youtube.com/watch?v=no_S7J3vndQ"
-    }
-   ],
-   "kind": "wide",
-   "suggest": []
-  },
-  {
    "word": "#にじポケミクリレー",
    "channels": 3,
    "n": 5,
@@ -383,54 +324,6 @@
      "t": "【#にじポケミクリレー】しいなゆいかが　勝負をしかけてきた！▼",
      "c": "椎名唯華 / Shiina Yuika",
      "u": "https://www.youtube.com/watch?v=F8o1e6bM26c"
-    }
-   ],
-   "kind": "wide",
-   "suggest": []
-  },
-  {
-   "word": "ゲームボーイ",
-   "channels": 3,
-   "n": 3,
-   "examples": [
-    {
-     "t": "毎月第4日曜日恒例！【レトロゲーム/実況】当日その場でいただいたゲームリクエストにお応え！30分x最大6~8名！今月のゲーム機は「ゲームボーイ」「ゲームボーイカラー」「ゲームボーイアドバンス」",
-     "c": "【レトロゲーム】RPGストーリーズ",
-     "u": "https://www.youtube.com/watch?v=W7qbCQQ_cN4"
-    },
-    {
-     "t": "【ゲームボーイ】ドルアーガの塔 実況プレイ配信  【レトロゲーム/vtuber】",
-     "c": "ごじゃるレトロゲームVtuber",
-     "u": "https://www.youtube.com/watch?v=Ghl92Wmd1oM"
-    },
-    {
-     "t": "幻の中国版ポケモン！舞台はヒスイ地方？！【ポケットモンスター翡翠版／ゲームボーイ】【レトロゲームゆっくり実況解説】",
-     "c": "ゆゆキチのレトロゲーム部屋",
-     "u": "https://www.youtube.com/watch?v=WGdLl6j0QQE"
-    }
-   ],
-   "kind": "wide",
-   "suggest": []
-  },
-  {
-   "word": "ご報告",
-   "channels": 3,
-   "n": 3,
-   "examples": [
-    {
-     "t": "【ご報告】ZETA DIVISION にハセシンが加入した件について。",
-     "c": "ハセシン / HASESHIN",
-     "u": "https://www.youtube.com/watch?v=F717jzCXoxo"
-    },
-    {
-     "t": "【ご報告】カプサイシンマンに改名しました｜フリー素材おじさん本人の雑談",
-     "c": "フリー素材おじさん段田【カプサイシンマン】",
-     "u": "https://www.youtube.com/watch?v=EPdD-TX7lIY"
-    },
-    {
-     "t": "【ご報告】くろろじ、38歳になりました。ゲーム紹介活動をする理由を話します。",
-     "c": "くろろじちゃんねる",
-     "u": "https://www.youtube.com/watch?v=p99h0tBrMW4"
     }
    ],
    "kind": "wide",
@@ -461,9 +354,36 @@
    "genres": [],
    "year": null,
    "platforms": [],
-   "days_seen": 20,
-   "last_seen": "2026-10-03",
+   "days_seen": 19,
+   "last_seen": "2026-09-27",
    "first_here": false
+  },
+  {
+   "game": "アストラエ・オラティオ",
+   "growth": 5.0,
+   "videos": 4,
+   "base": 0.0,
+   "channels": 4,
+   "views": 27350,
+   "who": [
+    "ナカイドのゲーム情報チャンネル",
+    "れも / LemoCh.",
+    "Hina Ch. 狼牙ヒナ",
+    "星森みなみ"
+   ],
+   "titles": [
+    "【テストプレイ】1989年の東京が舞台の魔法少女ゲーをみてみよう #PR【アストラエ・オラティオ】",
+    "【アストラエ・オラティオ】美麗ビジュアル×唯一無二の世界観？！先行プレイさせていただきます生配信！【れも】",
+    "【アストラエ・オラティオ】話題の新作スマホゲームを先行プレイ！【おおかみVtuber/#狼牙ヒナ】#新人vtuber #エアプロ #PR"
+   ],
+   "genres": [
+    "Role-playing (RPG)"
+   ],
+   "year": null,
+   "platforms": [],
+   "days_seen": 0,
+   "last_seen": null,
+   "first_here": true
   },
   {
    "game": "ポケットモンスター スカーレット・バイオレット",
@@ -486,30 +406,6 @@
    "year": null,
    "platforms": [],
    "days_seen": 9,
-   "last_seen": "2026-10-03",
-   "first_here": false
-  },
-  {
-   "game": "ゼルダの伝説 時のオカリナ",
-   "growth": 3.75,
-   "videos": 3,
-   "base": 0.3,
-   "channels": 3,
-   "views": 37516,
-   "who": [
-    "きらり☆ももんが",
-    "ゲームに恋する女子チャンネル♡",
-    "満月しお / Shio Mitsuki Ch."
-   ],
-   "titles": [
-    "【ゼルダの伝説 時のオカリナ】スタルチュラを集めたりやぶさめしたりする！！ #番外編【Vtuber きらり☆ももんが】",
-    "【初見】リメイク記念！64実機でゼルダの伝説 時のオカリナをクリアめざして楽しむぞ！女性実況 攻略ライブ配信Part4任天堂の名作3DアクションRPG【レトロゲーム】",
-    "【 時オカ 完全初見 】難関・水の神殿を突破！次なる冒険へる♯5【 ゼルダの伝説 時のオカリナ #満月しお #Vtuber 】"
-   ],
-   "genres": [],
-   "year": null,
-   "platforms": [],
-   "days_seen": 13,
    "last_seen": "2026-10-03",
    "first_here": false
   },
@@ -541,7 +437,7 @@
    "game": "Ghost of Yotei",
    "growth": 3.75,
    "videos": 3,
-   "base": 0.7,
+   "base": 0.5,
    "channels": 3,
    "views": 1553,
    "who": [
@@ -596,6 +492,11 @@
  ],
  "notes_written": true,
  "recent_columns": [
+  {
+   "date": "2026-10-04",
+   "game": "Minecraft",
+   "headline": "「#マイクラ肝試し2026」最終日、怖さより釣りの点数を競っている"
+  },
   {
    "date": "2026-10-03",
    "game": "ほの暮しの庭",
@@ -660,11 +561,6 @@
    "date": "2026-09-21",
    "game": "妹に運転を教える",
    "headline": "毎回ちがう顔ぶれが、同じ助手席に座る"
-  },
-  {
-   "date": "2026-09-20",
-   "game": "Minecraft",
-   "headline": "同じ迷宮を、視点の数だけ歩いている"
   }
  ]
 }
