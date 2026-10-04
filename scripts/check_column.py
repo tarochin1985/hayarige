@@ -15,6 +15,8 @@ from pathlib import Path
 
 # 記録ページの置き場所。「初めて」を確かめるのに使う。
 SITE_D = Path(__file__).resolve().parent.parent / "site" / "d"
+# 集めた配信そのもの。見出しに付けた企画のタグが実在するかを確かめるのに使う。
+DATA = Path(__file__).resolve().parent.parent / "data"
 
 # 「当サイトの集計に入ったのは今日が初めて」と書いてよいのは、
 # 本当に過去1日も出ていないときだけ。
@@ -80,6 +82,52 @@ MIN_BODY, MAX_BODY = 120, 480
 NOTES_MAX, MIN_NOTE, MAX_NOTE = 4, 12, 80
 
 
+# 見出しの先頭に付ける企画のタグ。「#タグ名」でも「『#タグ名』」でも拾う。
+HEAD_TAG = re.compile(r"^[「『【]?\s*[#＃]([^\s　」』】#＃]{2,40})\s*[」』】]?[\s　]*")
+
+
+def head_tag(head):
+    """見出しの先頭の「#タグ名」を (タグ, 残りの見出し) に分ける。
+
+    （2026-10-04 たろちんさんと決めました）
+    企画・大会の回は、見出しの頭に「#マイクラ肝試し2026」のように付けます。
+    Xの投稿文にはこの見出しがそのまま載るので、**そこでハッシュタグとして効く**。
+    タグを追っている人の目に入るのがねらいで、同時に読む人にも
+    何の企画の話かがすぐ伝わります。
+    """
+    m = HEAD_TAG.match(str(head or ""))
+    return (m.group(1), head[m.end():].strip()) if m else ("", str(head or "").strip())
+
+
+def tag_check(tag, day):
+    """そのタグが、その日の配信タイトルで本当に使われているかを数える。
+
+    **思い出して書いたタグは、たいてい少し違う。** 年号が違う、「！」が余る、
+    略されている。少し違うだけで、Xでは誰も居ないタグに投稿することになり、
+    付けないより悪い。そこで**その日集めたタイトルの中に実際にあるか**を見る。
+
+    data/daily/ は直近30日ぶんしか残らないので、その日のファイルが無ければ
+    何も言わない（古いコラムを後から確かめ直すときに、嘘の警告を出さないため）。
+    """
+    f = DATA / "daily" / f"{day}.json"
+    if not f.is_file():
+        return []
+    try:
+        vids = (json.loads(f.read_text(encoding="utf-8")) or {}).get("videos") or []
+    except (ValueError, OSError):
+        return []
+    low = tag.lower()
+    chans = {v.get("channel") for v in vids if low in str(v.get("title", "")).lower()}
+    if not chans:
+        return [f"「#{tag}」は、その日の配信タイトルに1件も出てきません。"
+                "綴りを配信タイトルからそのまま写してください"
+                "（居ないタグに投稿すると、付けないより悪くなります）"]
+    if len(chans) < 2:
+        return [f"「#{tag}」を使っているのは {len(chans)} チャンネルだけです。"
+                "企画のタグとして正しいか、配信タイトルで確かめてください"]
+    return []
+
+
 def style(col, day=""):
     """書き方の注意を返す。**これがあってもサイトには出す。**
 
@@ -95,14 +143,24 @@ def style(col, day=""):
     # Xの画像で2〜3行を食いつぶして本文が小さくなる。
     head = str(col.get("headline", "")).strip()
     if head:
-        if not (8 <= len(head) <= 30):
-            out.append(f"見出しが {len(head)} 字です（8〜30字のキャッチコピーにしてください）")
+        # 先頭の「#タグ名」は見出しの本体ではないので、長さに数えない。
+        # 「上限を30字から45字に上げる」ではなく**タグのぶんだけ外す**形にしてある。
+        # 上げてしまうと、タグが無い日まで長い見出しが通るようになる（2026-10-04）。
+        tag, body = head_tag(head)
+        if not (8 <= len(body) <= 30):
+            out.append(f"見出しが {len(body)} 字です（8〜30字のキャッチコピーにしてください）"
+                       + ("。先頭の「#タグ」は数えていません" if tag else ""))
         if head.endswith("。"):
             out.append("見出しが説明の一文になっています。句点で終わらない短い言葉にしてください")
+        # ゲーム名の重複はタグを外した本体だけで見る。企画のタグには
+        # 「#マイクラ肝試し2026」のようにゲーム名が入っていることがあり、
+        # それは企画の正式な名前なので直す必要がない。
         game = str(col.get("game", "")).strip()
-        if game and game in head:
+        if game and game in body:
             out.append(f"見出しにゲーム名が入っています（「{game}」）。"
                        "見出しのすぐ上にゲーム名が大きく出るので、重ねないでください")
+        if tag:
+            out += tag_check(tag, day or str(col.get("date", "")) or _today())
 
     # 「初めて」と書いているなら、本当に初めてかを数えて確かめる。
     # 書いていない日は記録ページを読みに行かないので、普段の負担はない。
@@ -149,7 +207,53 @@ def info(col, day=""):
         add = "常連です。読者も知っている前提で、何が起きたかから書き始めてよいです"
     else:
         add = "ときどき出てきます。どちらから書くかは中身で決めてください"
-    return [f"「{game}」は過去{len(days)}日ランキングに入っています（最初は{first}）。{add}"]
+    out = [f"「{game}」は過去{len(days)}日ランキングに入っています（最初は{first}）。{add}"]
+    out += tag_hint(col, day or str(col.get("date", "")) or _today())
+    return out
+
+
+# 一般語のタグ。企画の名前ではないので、見出しに付けても意味がない。
+TAG_SKIP = {"vtuber", "新人vtuber", "個人勢", "ゲーム実況", "ゲーム配信", "切り抜き",
+            "shorts", "live", "参加型", "視聴者参加型", "雑談", "初見歓迎", "顔出し",
+            "ホロライブ", "にじさんじ", "ぶいすぽ", "ななしいんく", "pr", "ゲーム",
+            "実況", "生配信", "配信", "ライブ", "歌枠", "作業用bgm"}
+TAG_FIND = re.compile(r"[#＃]([^\s　#＃、。，．！？!?,.()（）\[\]【】「」『』/／|｜:：]{3,40})")
+
+
+def tag_hint(col, day):
+    """その日いちばん使われている企画のタグを教える（2026-10-04 たろちんさん）。
+
+    企画・大会の回は、見出しの頭に「#タグ名」を付ける決まりにした
+    （EDITORIAL.md 5章）。Xの投稿文でハッシュタグとして効かせるため。
+
+    ただ**決まりを文章で書いただけでは、書く人が毎回思い出せない。**
+    その日の配信タイトルからタグを数えて、使えるものがあるときだけ
+    ここで名前を出す。綴りも実物をそのまま写したものになる。
+    """
+    head = str(col.get("headline", "")).strip()
+    if head_tag(head)[0]:
+        return []                      # もう付いている
+    f = DATA / "daily" / f"{day}.json"
+    if not f.is_file():
+        return []
+    try:
+        vids = (json.loads(f.read_text(encoding="utf-8")) or {}).get("videos") or []
+    except (ValueError, OSError):
+        return []
+    use = {}
+    for v in vids:
+        for t in set(TAG_FIND.findall(str(v.get("title", "")))):
+            if t.lower() in TAG_SKIP:
+                continue
+            use.setdefault(t, set()).add(v.get("channel"))
+    # 3チャンネル以上が同じタグを使っていれば、企画の可能性が高い
+    top = sorted(((len(c), t) for t, c in use.items() if len(c) >= 3), reverse=True)
+    if not top:
+        return []
+    names = "／".join(f"#{t}（{n}ch）" for n, t in top[:3])
+    return ["その日よく使われていたタグ: " + names
+            + "。企画の回なら、見出しの頭に「#タグ名」を付けてください"
+            + "（EDITORIAL.md 5章。Xでハッシュタグとして効きます）"]
 
 
 def drift_notes():
