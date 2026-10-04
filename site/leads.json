@@ -1,28 +1,8 @@
 {
- "date": "2026-10-03",
- "generated": "2026-10-03 23:45",
+ "date": "2026-10-04",
+ "generated": "2026-10-04 09:26",
  "leads": {
   "events": [
-   {
-    "tag": "#マイクラ肝試し2026",
-    "channels": [
-     "IRyS Ch. hololive",
-     "Iroha ch. 風真いろは - holoX -",
-     "おおはらMEN / ドズル社",
-     "おんりー / ドズル社",
-     "さとみ【すとぷり】",
-     "ひなたチャンネル (Hinata Channel)",
-     "七瀬 すず菜 / Nanase Suzuna【にじさんじ】",
-     "夢追翔のJUKE BOX",
-     "島村シャルロット / Charlotte Channel【ななしいんく】",
-     "早乙女 ベリー / Saotome Berry【にじさんじ】",
-     "甲斐田 晴 / Kaida Haru【にじさんじ】",
-     "町田ちま【にじさんじ】",
-     "羽渦ミウネル -Miuneru Haneuzu-",
-     "赤髪のとものゲーム実況チャンネル!!",
-     "長尾 景 / Nagao Kei【にじさんじ】"
-    ]
-   },
    {
     "tag": "#ゲーム実況",
     "channels": [
@@ -31,12 +11,31 @@
      "zakimiya / ザキミヤ",
      "たくちゃんねるず",
      "てぃーけぇー",
+     "ぱんちき🥖🦃",
      "ジョアだよ",
      "太刀ひろし　【Uncle gamer】 ",
      "恋因ロス KoinRosu",
      "星埜きぃ -Key Hoshino-",
+     "週刊少年ゲームマガジン230円",
      "里城はな",
      "雛乃ぴぴ / Hinano pipi"
+    ]
+   },
+   {
+    "tag": "#マイクラ肝試し2026",
+    "channels": [
+     "IRyS Ch. hololive",
+     "Iroha ch. 風真いろは - holoX -",
+     "Su Ch. 水宮枢 - FLOW GLOW",
+     "ひなたチャンネル (Hinata Channel)",
+     "七瀬 すず菜 / Nanase Suzuna【にじさんじ】",
+     "夢追翔のJUKE BOX",
+     "弦月 藤士郎 / Genzuki Tojiro【にじさんじ】",
+     "早乙女 ベリー / Saotome Berry【にじさんじ】",
+     "甲斐田 晴 / Kaida Haru【にじさんじ】",
+     "町田ちま【にじさんじ】",
+     "赤髪のとものゲーム実況チャンネル!!",
+     "長尾 景 / Nagao Kei【にじさんじ】"
     ]
    },
    {
@@ -47,21 +46,9 @@
      "Riona Ch. 響咲リオナ - FLOW GLOW",
      "Roboco Ch. - ロボ子",
      "SoraCh. ときのそらチャンネル",
+     "Su Ch. 水宮枢 - FLOW GLOW",
      "Vivi Ch. 綺々羅々ヴィヴィ - FLOW GLOW",
-     "Watame Ch. 角巻わため",
-     "アキロゼCh。Vtuber/ホロライブ所属",
-     "隅川かど"
-    ]
-   },
-   {
-    "tag": "#ストグラSeason2",
-    "channels": [
-     "にーとちゃん",
-     "はたさこ / hatasako_flag",
-     "天羽よつは",
-     "影。/かげまる",
-     "暁月ホタル AKATSUKI HOTARU",
-     "柚原いづみ / Izumi Channel 【ななしいんく】"
+     "アキロゼCh。Vtuber/ホロライブ所属"
     ]
    },
    {
@@ -95,6 +82,15 @@
     ]
    },
    {
+    "tag": "#ホロ甲2026",
+    "channels": [
+     "Koyori ch. 博衣こより - holoX -",
+     "Noel Ch. 白銀ノエル",
+     "Polka Ch. 尾丸ポルカ",
+     "Riona Ch. 響咲リオナ - FLOW GLOW"
+    ]
+   },
+   {
     "tag": "#フォートナイト",
     "channels": [
      "mogすけちゃんネル",
@@ -108,48 +104,56 @@
   "wide": [
    {
     "game": "Apex Legends",
-    "channels": 66,
-    "videos": 81
+    "channels": 63,
+    "videos": 72
    },
    {
     "game": "Minecraft",
-    "channels": 54,
-    "videos": 59
+    "channels": 51,
+    "videos": 55
    },
    {
     "game": "ストリートファイター6",
-    "channels": 34,
-    "videos": 38
-   },
-   {
-    "game": "Grand Theft Auto V",
-    "channels": 22,
-    "videos": 26
-   },
-   {
-    "game": "実況パワフルプロ野球2026",
-    "channels": 17,
-    "videos": 21
+    "channels": 36,
+    "videos": 39
    },
    {
     "game": "フォートナイト",
-    "channels": 19,
-    "videos": 22
+    "channels": 20,
+    "videos": 24
    },
    {
-    "game": "hololive Dreams",
-    "channels": 15,
-    "videos": 17
+    "game": "実況パワフルプロ野球2026",
+    "channels": 19,
+    "videos": 21
+   },
+   {
+    "game": "Grand Theft Auto V",
+    "channels": 20,
+    "videos": 21
+   },
+   {
+    "game": "VALORANT",
+    "channels": 18,
+    "videos": 19
    },
    {
     "game": "モンスターストライク",
-    "channels": 17,
-    "videos": 20
+    "channels": 15,
+    "videos": 18
    }
   ]
  },
  "drift": [],
- "tags": [],
+ "tags": [
+  {
+   "tag": "鳴潮朝月会",
+   "game": "鳴潮",
+   "evidence": 3,
+   "added": 1,
+   "channels": 3
+  }
+ ],
  "misses": [
   {
    "word": "LIBRARIAN",
@@ -265,22 +269,6 @@
    ]
   },
   {
-   "word": "Palette",
-   "channels": 1,
-   "n": 1,
-   "examples": [
-    {
-     "t": "ソロライブ『Palette』告知生配信【ドズル社/おらふくん】",
-     "c": "おらふくん / ドズル社",
-     "u": "https://www.youtube.com/watch?v=E8o9DXnynXc"
-    }
-   ],
-   "kind": "near",
-   "suggest": [
-    "Palette: Glass Shard Mosaic"
-   ]
-  },
-  {
    "word": "MXGP 26",
    "channels": 1,
    "n": 1,
@@ -297,19 +285,51 @@
    ]
   },
   {
+   "word": "Palette",
+   "channels": 1,
+   "n": 1,
+   "examples": [
+    {
+     "t": "ソロライブ『Palette』告知生配信【ドズル社/おらふくん】",
+     "c": "おらふくん / ドズル社",
+     "u": "https://www.youtube.com/watch?v=E8o9DXnynXc"
+    }
+   ],
+   "kind": "near",
+   "suggest": [
+    "Palette: Glass Shard Mosaic"
+   ]
+  },
+  {
+   "word": "Octbuster",
+   "channels": 1,
+   "n": 1,
+   "examples": [
+    {
+     "t": "タコになってビデオ屋の掃除をするゲームをのんびりやる【 Octbuster 】",
+     "c": "実況したいよまちょすさん!",
+     "u": "https://www.youtube.com/watch?v=u2uzgThdQvg"
+    }
+   ],
+   "kind": "near",
+   "suggest": [
+    "Octbuster: Video Rental Store Cleanup"
+   ]
+  },
+  {
    "word": "アストラエ・オラティオ",
    "channels": 4,
    "n": 4,
    "examples": [
     {
-     "t": "【アストラエ・オラティオ】美麗ビジュアル×唯一無二の世界観？！先行プレイさせていただきます生配信！【れも】",
-     "c": "れも / LemoCh.",
-     "u": "https://www.youtube.com/watch?v=NG8prrCQqxs"
-    },
-    {
      "t": "#PR【アストラエ・オラティオ】TGSでも話題の新作RPGを先行プレイしていくよー！【AstraeoOratio】",
      "c": "星森みなみ",
      "u": "https://www.youtube.com/watch?v=vtYVUeT-hv4"
+    },
+    {
+     "t": "【アストラエ・オラティオ】美麗ビジュアル×唯一無二の世界観？！先行プレイさせていただきます生配信！【れも】",
+     "c": "れも / LemoCh.",
+     "u": "https://www.youtube.com/watch?v=NG8prrCQqxs"
     },
     {
      "t": "【テストプレイ】1989年の東京が舞台の魔法少女ゲーをみてみよう #PR【アストラエ・オラティオ】",
@@ -323,13 +343,8 @@
   {
    "word": "はるめろ学園ARK部",
    "channels": 3,
-   "n": 8,
+   "n": 7,
    "examples": [
-    {
-     "t": "【 はるめろ学園ARK部 】# 03：今日という今日はトライブのために身を粉にします【 犬養 / 個人勢VTuber 】",
-     "c": "犬養　- INUKAI Ch. -",
-     "u": "https://www.youtube.com/watch?v=1EbRsectnMY"
-    },
     {
      "t": "【#はるめろ学園ARK部 DAY13】※アドバイス歓迎ッ！ボス戦に向けて準備しはじめるかもしれない【歌衣メイカ】",
      "c": "メイカちゃんねる",
@@ -339,6 +354,11 @@
      "t": "【#はるめろ学園ARK部 DAY13】※アドバイス歓迎ッ！ボス戦に向けて準備していくで～！【歌衣メイカ】",
      "c": "メイカちゃんねる",
      "u": "https://www.youtube.com/watch?v=enWT5H3O65A"
+    },
+    {
+     "t": "【#はるめろ学園ARK部 DAY14】※アドバイス歓迎ッ！いよいよボス挑めるか？【歌衣メイカ】",
+     "c": "メイカちゃんねる",
+     "u": "https://www.youtube.com/watch?v=no_S7J3vndQ"
     }
    ],
    "kind": "wide",
@@ -398,14 +418,14 @@
    "n": 3,
    "examples": [
     {
-     "t": "【ご報告】カプサイシンマンに改名しました｜フリー素材おじさん本人の雑談",
-     "c": "フリー素材おじさん段田【カプサイシンマン】",
-     "u": "https://www.youtube.com/watch?v=EPdD-TX7lIY"
-    },
-    {
      "t": "【ご報告】ZETA DIVISION にハセシンが加入した件について。",
      "c": "ハセシン / HASESHIN",
      "u": "https://www.youtube.com/watch?v=F717jzCXoxo"
+    },
+    {
+     "t": "【ご報告】カプサイシンマンに改名しました｜フリー素材おじさん本人の雑談",
+     "c": "フリー素材おじさん段田【カプサイシンマン】",
+     "u": "https://www.youtube.com/watch?v=EPdD-TX7lIY"
     },
     {
      "t": "【ご報告】くろろじ、38歳になりました。ゲーム紹介活動をする理由を話します。",
@@ -420,73 +440,120 @@
  "miss_days": 7,
  "hot_facts": [
   {
-   "game": "デス桃太郎",
-   "growth": 6.15,
-   "videos": 8,
-   "base": 1.3,
-   "channels": 8,
-   "views": 471332,
+   "game": "ペルソナ5 ザ・ロイヤル",
+   "growth": 5.0,
+   "videos": 4,
+   "base": 0.3,
+   "channels": 4,
+   "views": 175877,
    "who": [
-    "加賀美 ハヤト/Hayato Kagami",
-    "Vivi Ch. 綺々羅々ヴィヴィ - FLOW GLOW",
-    "Su Ch. 水宮枢 - FLOW GLOW",
-    "ベルモンド・バンデラス",
-    "しまねげーむず / ホラーゲーム実況ch"
+    "リゼ・ヘルエスタ -Lize Helesta-",
+    "漆瀬レイ / Ray Nanase【ななしいんく】",
+    "なつめやみや / Natsume Yamiya",
+    "椎名唯華 / Shiina Yuika",
+    "漆瀬レイ / Ray Nanase【ななしいんく】"
    ],
    "titles": [
-    "【デス桃太郎】　デスヶ島　加賀美　【にじさんじ/加賀美ハヤト】",
-    "【 デス桃太郎 】これはホラー！？挑戦してみる！！【#綺々羅々ヴィヴィ #hololive  #FLOWGLOW】",
-    "【デス桃太郎】桃太郎のホラゲらしい！デス太郎...？？？【水宮枢／ホロライブ】"
+    "【P5R/ペルソナ5 ザ・ロイヤル】奪え、その意志で。【にじさんじ/リゼ・ヘルエスタ】※ネタバレ注意",
+    "【 P5R/ペルソナ5 ザ・ロイヤル 】完全初見🔰人生初のペルソナ！！✨※ネタバレ注意 #05【漆瀬レイ / ななしいんく】",
+    "#02 【 P5R 】初見プレイ￤時止めマジック？！【 ゲーム実況 】"
    ],
    "genres": [],
    "year": null,
    "platforms": [],
-   "days_seen": 3,
-   "last_seen": "2026-10-02",
+   "days_seen": 20,
+   "last_seen": "2026-10-03",
    "first_here": false
   },
   {
    "game": "ポケットモンスター スカーレット・バイオレット",
-   "growth": 5.0,
-   "videos": 4,
-   "base": 0.7,
-   "channels": 4,
-   "views": 48091,
+   "growth": 3.75,
+   "videos": 3,
+   "base": 0.8,
+   "channels": 3,
+   "views": 177378,
    "who": [
     "ライバロリ",
     "カーキのゲーム実況",
-    "なか爺【NAKAJI】channel",
     "鈴ノ時みぃ@新人Vtuber"
    ],
    "titles": [
     "誰も使ってない『メガデンリュウ』、覚醒して３タテを量産する。【ポケモンSV】",
     "【ポケモンSV】タマゴ孵化雑談。クワッス色違い。【縦型配信】",
-    "【ポケモンSV】600族最恐！？初見さんも大歓迎！『最強バンギラスレイド』攻略参加型配信！part330（レベル100必須・攻略用ポケモンも配布中・概要欄必読）"
+    "【ポケモンSV】人生縛り☆ブルーベリー学園にカチコミじゃあ！【#14】#vtuber #新人vtuber #ポケモンsv #ポケモンスカーレット #ポケモン"
    ],
    "genres": [],
    "year": null,
    "platforms": [],
-   "days_seen": 8,
-   "last_seen": "2026-10-02",
+   "days_seen": 9,
+   "last_seen": "2026-10-03",
+   "first_here": false
+  },
+  {
+   "game": "ゼルダの伝説 時のオカリナ",
+   "growth": 3.75,
+   "videos": 3,
+   "base": 0.3,
+   "channels": 3,
+   "views": 37516,
+   "who": [
+    "きらり☆ももんが",
+    "ゲームに恋する女子チャンネル♡",
+    "満月しお / Shio Mitsuki Ch."
+   ],
+   "titles": [
+    "【ゼルダの伝説 時のオカリナ】スタルチュラを集めたりやぶさめしたりする！！ #番外編【Vtuber きらり☆ももんが】",
+    "【初見】リメイク記念！64実機でゼルダの伝説 時のオカリナをクリアめざして楽しむぞ！女性実況 攻略ライブ配信Part4任天堂の名作3DアクションRPG【レトロゲーム】",
+    "【 時オカ 完全初見 】難関・水の神殿を突破！次なる冒険へる♯5【 ゼルダの伝説 時のオカリナ #満月しお #Vtuber 】"
+   ],
+   "genres": [],
+   "year": null,
+   "platforms": [],
+   "days_seen": 13,
+   "last_seen": "2026-10-03",
+   "first_here": false
+  },
+  {
+   "game": "ファイナルファンタジーVI",
+   "growth": 3.75,
+   "videos": 3,
+   "base": 0.8,
+   "channels": 3,
+   "views": 6682,
+   "who": [
+    "いなちゃんネル",
+    "恋因ロス KoinRosu",
+    "あやたん3"
+   ],
+   "titles": [
+    "その４【初見ドット絵RPG巡り】帝国ＶＳ世界【４５作目：ファイナルファンタジーⅥ】",
+    "【 FINAL FANTASY VI #6 】FF6やる～！！いざ魔大陸へ！！ケフカを止めるぞおおおお【 FF6 ネタバレあり #ゲーム実況 #新人vtuber #恋因ロス 】",
+    "#最終回【ＦＦ６】初めてのＲＰＧ実況！ファイナルファンタジー６/いざラストダンジョンへ！打倒ケフカ✨"
+   ],
+   "genres": [],
+   "year": null,
+   "platforms": [],
+   "days_seen": 11,
+   "last_seen": "2026-10-03",
    "first_here": false
   },
   {
    "game": "Ghost of Yotei",
    "growth": 3.75,
    "videos": 3,
-   "base": 0.3,
+   "base": 0.7,
    "channels": 3,
-   "views": 2906,
+   "views": 1553,
    "who": [
     "おかまつゲーム実況",
-    "おかまつゲーム実況",
     "まいごん / Maigon『小ネタ 攻略』",
-    "Cocco&Mameko Channel"
+    "Cocco&Mameko Channel",
+    "おかまつゲーム実況"
    ],
    "titles": [
-    "#16【PS5Pro】関ケ原 慕情譚 Ghost of Yōtei（ゴースト・オブ・ヨウテイ） 初見実況【難易度：万死】【不撓の信繁戦】【オープンワールド時代劇AADV】",
     "#17【PS5Pro】関ケ原 慕情譚 Ghost of Yōtei（ゴースト・オブ・ヨウテイ） 初見実況【難易度：万死】【オープンワールド時代劇AADV】",
-    "【Ghost of Yōtei】DLC新ストーリー 『関ケ原 慕情譚』 エンディングまで プレイ動画【ゴーストオブヨウテイDLC】"
+    "【Ghost of Yōtei】DLC新ストーリー 『関ケ原 慕情譚』 エンディングまで プレイ動画【ゴーストオブヨウテイDLC】",
+    "【Ghost of Yotei】関ケ原慕情譚 #1"
    ],
    "genres": [
     "Role-playing (RPG)",
@@ -496,93 +563,34 @@
    "platforms": [
     "console"
    ],
-   "days_seen": 1,
-   "last_seen": "2026-10-02",
+   "days_seen": 2,
+   "last_seen": "2026-10-03",
    "first_here": false
   },
   {
-   "game": "風来のシレン6 とぐろ島探検録",
-   "growth": 2.96,
-   "videos": 8,
-   "base": 2.7,
-   "channels": 7,
-   "views": 107057,
-   "who": [
-    "SANNINSHOW",
-    "しらたきch",
-    "Aomiya Yozuri Ch. 蒼宮よづり",
-    "しらたきch",
-    "プテラたかはし"
-   ],
-   "titles": [
-    "初めてのシレンを堪能したい日【不思議のダンジョン 風来のシレン6 ~とぐろ島探検録~】",
-    "【#風来のシレン6】あと少しで勝率70％！超神髄 99F 2日目【#しらたきch】",
-    "【完全初見】0からはじめる『風来のシレン6 』不思議のダンジョン初心者🔰#2【 #蒼宮よづり #vtuber 】"
-   ],
-   "genres": [
-    "Role-playing (RPG)"
-   ],
-   "year": null,
-   "platforms": [
-    "pc",
-    "console"
-   ],
-   "days_seen": 9,
-   "last_seen": "2026-10-02",
-   "first_here": false
-  },
-  {
-   "game": "ダービースタリオン2",
-   "growth": 2.8,
-   "videos": 7,
-   "base": 2.5,
-   "channels": 6,
-   "views": 107855,
-   "who": [
-    "GAMEゆうなch",
-    "Lui ch. 鷹嶺ルイ - holoX -",
-    "ハヤトの野望",
-    "Lui ch. 鷹嶺ルイ - holoX -",
-    "ファミ通TUBE"
-   ],
-   "titles": [
-    "#8【 ダービースタリオン2 】レコード連発！砂の女王がケンタッキーダービー目指す！G1牝馬×ディープどうなる！ディープインパクト産駒 凱旋門賞狙う！/　ダビスタ2【Switch2】",
-    "【 ダービースタリオン２ 】推しジョッキー騎乗の馬をG1で活躍させたい！！！【鷹嶺ルイ/ホロライブ】",
-    "競走馬を育ててレースで優勝し稼ぐ！『 ダービースタリオン2 』"
-   ],
-   "genres": [],
-   "year": 2026,
-   "platforms": [
-    "console"
-   ],
-   "days_seen": 8,
-   "last_seen": "2026-10-02",
-   "first_here": false
-  },
-  {
-   "game": "真・三國無双2 with 猛将伝 Remastered",
-   "growth": 2.4,
-   "videos": 6,
-   "base": 2.5,
+   "game": "デス桃太郎",
+   "growth": 3.33,
+   "videos": 5,
+   "base": 1.5,
    "channels": 5,
-   "views": 23410,
+   "views": 230173,
    "who": [
-    "かずのこチャンネル",
-    "キリヤのゲーム実況ch",
-    "桃桜華はる -Momosaka Haru-",
-    "かめだる",
-    "かずのこチャンネル"
+    "Vivi Ch. 綺々羅々ヴィヴィ - FLOW GLOW",
+    "しまねげーむず / ホラーゲーム実況ch",
+    "リモーネ先生",
+    "魁星 / Kaisei【にじさんじ】",
+    "けい"
    ],
    "titles": [
-    "【真・三國無双２ リマスター版】配信 我慢出来ませんでした！",
-    "【三國無双2猛将伝 Remasterd】ついに発売された三國無双2リマスター！趙雲を使って無双の世界を斬りまくる実況プレイ！ Part 3",
-    "【耐久のその先へ】黄忠じいじの前に(笑)紫鸞を使ってみたい！！はじめての 真・三國無双2with猛将伝Remastered 【VTuber 桃桜華はる ゲーム実況 】※ネタバレあり"
+    "【 デス桃太郎 】これはホラー！？挑戦してみる！！【#綺々羅々ヴィヴィ #hololive  #FLOWGLOW】",
+    "治安が終わりすぎて激ヤバな『昔ばなし 桃太郎』のホラーゲーム【 デス桃太郎 】『VOICEROID実況/重音テト・宮舞モカ』",
+    "【デス桃太郎】桃太郎のホラゲ"
    ],
    "genres": [],
    "year": null,
    "platforms": [],
-   "days_seen": 5,
-   "last_seen": "2026-10-02",
+   "days_seen": 4,
+   "last_seen": "2026-10-03",
    "first_here": false
   }
  ],
