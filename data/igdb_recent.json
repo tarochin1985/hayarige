@@ -4012,20 +4012,6 @@
   ]
  },
  {
-  "name": "Around The Core",
-  "alias": [
-   "Around The Core.exe"
-  ],
-  "pop": 0,
-  "y": 2026,
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Indie"
-  ]
- },
- {
   "name": "Arrow Puzzle Games",
   "alias": [],
   "pop": 0,
@@ -6405,21 +6391,6 @@
   "g": [
    "Simulator",
    "Strategy",
-   "Indie"
-  ]
- },
- {
-  "name": "Big Adventure",
-  "alias": [
-   "Big Adventure.exe"
-  ],
-  "pop": 0,
-  "y": 2026,
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Platform",
    "Indie"
   ]
  },
@@ -8960,19 +8931,6 @@
   "g": [
    "Role-playing (RPG)",
    "Card & Board Game"
-  ]
- },
- {
-  "name": "C.U.B.E",
-  "alias": [],
-  "pop": 0,
-  "y": 2026,
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Adventure",
-   "Indie"
   ]
  },
  {
@@ -11584,22 +11542,6 @@
   ]
  },
  {
-  "name": "Clickbait Tycoon",
-  "alias": [
-   "Clickbait Tycoon.exe"
-  ],
-  "pop": 0,
-  "y": 2026,
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Simulator",
-   "Strategy",
-   "Indie"
-  ]
- },
- {
   "name": "Clicky Islands",
   "alias": [
    "点点岛",
@@ -12366,7 +12308,7 @@
    "Control 2",
    "CONTROL RESONANT"
   ],
-  "pop": 14,
+  "pop": 16,
   "y": 2026,
   "p": [
    "pc",
@@ -12779,6 +12721,20 @@
   ],
   "g": [
    "Racing"
+  ]
+ },
+ {
+  "name": "Counter Clash",
+  "alias": [
+   "CounterClash.exe"
+  ],
+  "pop": 0,
+  "y": 2026,
+  "p": [
+   "pc"
+  ],
+  "g": [
+   "Strategy"
   ]
  },
  {
@@ -13284,6 +13240,20 @@
   ]
  },
  {
+  "name": "Creator Shelter",
+  "alias": [],
+  "pop": 0,
+  "y": 2026,
+  "p": [
+   "pc"
+  ],
+  "g": [
+   "Simulator",
+   "Strategy",
+   "Indie"
+  ]
+ },
+ {
   "name": "Creator Shelter: DLC Cuisine",
   "alias": [],
   "pop": 0,
@@ -13677,6 +13647,7 @@
    "pc"
   ],
   "g": [
+   "Puzzle",
    "Role-playing (RPG)",
    "Hack and slash/Beat 'em up",
    "Adventure",
@@ -14671,6 +14642,7 @@
    "pc"
   ],
   "g": [
+   "Puzzle",
    "Adventure",
    "Indie"
   ]
@@ -15758,6 +15730,21 @@
   ]
  },
  {
+  "name": "Demon Lord: Clicker",
+  "alias": [],
+  "pop": 0,
+  "y": 2026,
+  "p": [
+   "pc"
+  ],
+  "g": [
+   "Role-playing (RPG)",
+   "Simulator",
+   "Strategy",
+   "Adventure"
+  ]
+ },
+ {
   "name": "Demon Slayer: Kimetsu no Yaiba - The Hinokami Chronicles: Akaza (Infinity Castle) Character Pack",
   "alias": [],
   "pop": 0,
@@ -16429,7 +16416,9 @@
  },
  {
   "name": "Dicevaders",
-  "alias": [],
+  "alias": [
+   "DiceVaders.exe"
+  ],
   "pop": 0,
   "y": 2026,
   "p": [
@@ -16900,7 +16889,9 @@
  },
  {
   "name": "Disaster Response Force",
-  "alias": [],
+  "alias": [
+   "Disaster Response Force.exe"
+  ],
   "pop": 0,
   "y": 2026,
   "p": [
@@ -17629,22 +17620,6 @@
   ]
  },
  {
-  "name": "Doppler",
-  "alias": [
-   "Doppler.exe"
-  ],
-  "pop": 0,
-  "y": 2026,
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Platform",
-   "Indie",
-   "Arcade"
-  ]
- },
- {
   "name": "Dosmic",
   "alias": [
    "DOSMIC",
@@ -18228,6 +18203,22 @@
    "pc"
   ],
   "g": [
+   "Adventure",
+   "Indie"
+  ]
+ },
+ {
+  "name": "Dreamspring",
+  "alias": [
+   "Dreamspring.exe"
+  ],
+  "pop": 0,
+  "y": 2026,
+  "p": [
+   "pc"
+  ],
+  "g": [
+   "Role-playing (RPG)",
    "Adventure",
    "Indie"
   ]
@@ -23736,20 +23727,6 @@
   ]
  },
  {
-  "name": "Four Lights: The 4th World - Märchen Route",
-  "alias": [],
-  "pop": 0,
-  "y": 2026,
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Adventure",
-   "Indie",
-   "Visual Novel"
-  ]
- },
- {
   "name": "Foursavent",
   "alias": [
    "FOURSAKEN",
@@ -24213,6 +24190,23 @@
   "g": [
    "Real Time Strategy (RTS)",
    "Strategy"
+  ]
+ },
+ {
+  "name": "Frontier Wars: Online",
+  "alias": [],
+  "pop": 0,
+  "y": 2026,
+  "p": [
+   "pc",
+   "console"
+  ],
+  "g": [
+   "Role-playing (RPG)",
+   "Simulator",
+   "Strategy",
+   "Adventure",
+   "Indie"
   ]
  },
  {
@@ -25124,6 +25118,20 @@
   "y": 2026,
   "p": [
    "pc"
+  ]
+ },
+ {
+  "name": "General Idler",
+  "alias": [],
+  "pop": 0,
+  "y": 2026,
+  "p": [
+   "pc"
+  ],
+  "g": [
+   "Simulator",
+   "Strategy",
+   "Indie"
   ]
  },
  {
@@ -27356,18 +27364,6 @@
   ]
  },
  {
-  "name": "Harvest Deadline",
-  "alias": [],
-  "pop": 0,
-  "y": 2026,
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Indie"
-  ]
- },
- {
   "name": "Harvest Moon: Echoes of Teradea",
   "alias": [],
   "pop": 0,
@@ -27694,19 +27690,6 @@
    "Puzzle",
    "Adventure",
    "Indie"
-  ]
- },
- {
-  "name": "Hearthwater",
-  "alias": [],
-  "pop": 0,
-  "y": 2026,
-  "p": [
-   "console"
-  ],
-  "g": [
-   "Adventure",
-   "Arcade"
   ]
  },
  {
@@ -29142,6 +29125,21 @@
   "p": [
    "pc",
    "console"
+  ],
+  "g": [
+   "Adventure",
+   "Indie"
+  ]
+ },
+ {
+  "name": "Huckleberry Fields Forever",
+  "alias": [
+   "javaw.exe"
+  ],
+  "pop": 0,
+  "y": 2026,
+  "p": [
+   "pc"
   ],
   "g": [
    "Adventure",
@@ -32051,6 +32049,21 @@
    "pc"
   ],
   "g": [
+   "Indie"
+  ]
+ },
+ {
+  "name": "Keine's Terakoya: A Schoolhouse in Gensokyo",
+  "alias": [],
+  "pop": 0,
+  "y": 2026,
+  "p": [
+   "pc"
+  ],
+  "g": [
+   "Role-playing (RPG)",
+   "Simulator",
+   "Strategy",
    "Indie"
   ]
  },
@@ -35914,21 +35927,6 @@
   "g": [
    "Simulator",
    "Arcade"
-  ]
- },
- {
-  "name": "Mall: Tidy Up Together",
-  "alias": [
-   "TidyUpMall.exe"
-  ],
-  "pop": 0,
-  "y": 2026,
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Simulator",
-   "Indie"
   ]
  },
  {
@@ -42933,7 +42931,8 @@
   "g": [
    "Shooter",
    "Adventure",
-   "Indie"
+   "Indie",
+   "Visual Novel"
   ]
  },
  {
@@ -43077,21 +43076,6 @@
   ],
   "g": [
    "Adventure",
-   "Indie"
-  ]
- },
- {
-  "name": "Overhatched",
-  "alias": [
-   "overhatched.exe"
-  ],
-  "pop": 0,
-  "y": 2026,
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Strategy",
    "Indie"
   ]
  },
@@ -45970,6 +45954,22 @@
   ]
  },
  {
+  "name": "Power Network Tycoon",
+  "alias": [
+   "Power Network Tycoon.exe"
+  ],
+  "pop": 0,
+  "y": 2026,
+  "p": [
+   "pc"
+  ],
+  "g": [
+   "Simulator",
+   "Strategy",
+   "Indie"
+  ]
+ },
+ {
   "name": "Power Racing Bundle 4",
   "alias": [],
   "pop": 0,
@@ -46076,6 +46076,23 @@
   "g": [
    "Adventure",
    "Indie"
+  ]
+ },
+ {
+  "name": "Princess Maker: Children of Revelation",
+  "alias": [
+   "Princess Maker: Karen",
+   "PrincessMakerKaren.exe"
+  ],
+  "pop": 0,
+  "y": 2026,
+  "p": [
+   "pc"
+  ],
+  "g": [
+   "Simulator",
+   "Strategy",
+   "Visual Novel"
   ]
  },
  {
@@ -46901,6 +46918,20 @@
   ],
   "g": [
    "Puzzle"
+  ]
+ },
+ {
+  "name": "Purr-fect Chef: Cats Can Cook",
+  "alias": [],
+  "pop": 0,
+  "y": 2026,
+  "p": [
+   "pc"
+  ],
+  "g": [
+   "Simulator",
+   "Strategy",
+   "Indie"
   ]
  },
  {
@@ -49592,7 +49623,9 @@
  },
  {
   "name": "Roman Sands RE:Build",
-  "alias": [],
+  "alias": [
+   "Roman Sands Rebuild.exe"
+  ],
   "pop": 0,
   "y": 2026,
   "p": [
@@ -50002,7 +50035,7 @@
  {
   "name": "RuneScape: Dragonwilds",
   "alias": [],
-  "pop": 9,
+  "pop": 10,
   "y": 2026,
   "p": [
    "pc",
@@ -51116,20 +51149,6 @@
   ]
  },
  {
-  "name": "Sectron",
-  "alias": [],
-  "pop": 0,
-  "y": 2026,
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Strategy",
-   "Turn-based strategy (TBS)",
-   "Indie"
-  ]
- },
- {
   "name": "Sediment",
   "alias": [],
   "pop": 0,
@@ -52009,6 +52028,20 @@
   ]
  },
  {
+  "name": "Shinjuku Anomaly",
+  "alias": [],
+  "pop": 0,
+  "y": 2026,
+  "p": [
+   "pc"
+  ],
+  "g": [
+   "Adventure",
+   "Indie",
+   "Visual Novel"
+  ]
+ },
+ {
   "name": "Ship Shape Slam!!!",
   "alias": [
    "Ship Shape Slam"
@@ -52021,6 +52054,21 @@
   "g": [
    "Indie",
    "Arcade"
+  ]
+ },
+ {
+  "name": "ShipCrafter",
+  "alias": [
+   "ShipCrafter.exe"
+  ],
+  "pop": 0,
+  "y": 2026,
+  "p": [
+   "pc"
+  ],
+  "g": [
+   "Simulator",
+   "Indie"
   ]
  },
  {
@@ -54083,6 +54131,7 @@
   ],
   "g": [
    "Platform",
+   "Puzzle",
    "Adventure",
    "Indie"
   ]
@@ -55048,6 +55097,21 @@
   ],
   "g": [
    "Adventure"
+  ]
+ },
+ {
+  "name": "SpringTale",
+  "alias": [],
+  "pop": 0,
+  "y": 2026,
+  "p": [
+   "pc"
+  ],
+  "g": [
+   "Platform",
+   "Role-playing (RPG)",
+   "Adventure",
+   "Indie"
   ]
  },
  {
@@ -56478,19 +56542,6 @@
    "Sport",
    "Adventure",
    "Indie"
-  ]
- },
- {
-  "name": "Suncroft",
-  "alias": [],
-  "pop": 0,
-  "y": 2026,
-  "p": [
-   "console"
-  ],
-  "g": [
-   "Adventure",
-   "Arcade"
   ]
  },
  {
@@ -59384,20 +59435,6 @@
   ]
  },
  {
-  "name": "The Expansion",
-  "alias": [],
-  "pop": 0,
-  "y": 2026,
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Simulator",
-   "Adventure",
-   "Indie"
-  ]
- },
- {
   "name": "The False Alice: Retold Tale",
   "alias": [
    "Itsuwari no Alice: Retold Tale"
@@ -60125,6 +60162,20 @@
   ]
  },
  {
+  "name": "The Last Camp: Dawn",
+  "alias": [],
+  "pop": 0,
+  "y": 2026,
+  "p": [
+   "pc"
+  ],
+  "g": [
+   "Shooter",
+   "Role-playing (RPG)",
+   "Adventure"
+  ]
+ },
+ {
   "name": "The Last Cosmonaut",
   "alias": [
    "The Last Cosmonaut.exe"
@@ -60284,20 +60335,6 @@
    "Adventure",
    "Indie",
    "Visual Novel"
-  ]
- },
- {
-  "name": "The Last Portal",
-  "alias": [
-   "The Last Portal.exe"
-  ],
-  "pop": 0,
-  "y": 2026,
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Strategy"
   ]
  },
  {
@@ -66835,19 +66872,6 @@
   ],
   "g": [
    "Adventure"
-  ]
- },
- {
-  "name": "Watering The Plant Girl: Roots & Rehydrated",
-  "alias": [],
-  "pop": 0,
-  "y": 2026,
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Role-playing (RPG)",
-   "Indie"
   ]
  },
  {
