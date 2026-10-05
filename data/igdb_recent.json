@@ -2913,20 +2913,6 @@
   ]
  },
  {
-  "name": "Angel in Inferno",
-  "alias": [],
-  "pop": 0,
-  "y": 2026,
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Adventure",
-   "Indie",
-   "Visual Novel"
-  ]
- },
- {
   "name": "Angelic Agency: Soul Salvation Unit",
   "alias": [
    "天使機構執行部魂救済課",
@@ -3574,6 +3560,18 @@
   "y": 2026,
   "p": [
    "console"
+  ]
+ },
+ {
+  "name": "Arcade Archives 2: Crazy Balloon",
+  "alias": [],
+  "pop": 0,
+  "y": 2026,
+  "p": [
+   "console"
+  ],
+  "g": [
+   "Arcade"
   ]
  },
  {
@@ -6513,19 +6511,6 @@
   ]
  },
  {
-  "name": "Bililitz",
-  "alias": [],
-  "pop": 0,
-  "y": 2026,
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Adventure",
-   "Indie"
-  ]
- },
- {
   "name": "Billion Egg Farm",
   "alias": [],
   "pop": 0,
@@ -8054,22 +8039,6 @@
   "g": [
    "Shooter",
    "Adventure"
-  ]
- },
- {
-  "name": "Breach Point",
-  "alias": [
-   "Breach Point.exe",
-   "Primal Reign : Tomb of the New Kings"
-  ],
-  "pop": 0,
-  "y": 2026,
-  "p": [
-   "console"
-  ],
-  "g": [
-   "Adventure",
-   "Indie"
   ]
  },
  {
@@ -18560,20 +18529,6 @@
   ]
  },
  {
-  "name": "DualVerse86",
-  "alias": [
-   "DualVerse86.exe"
-  ],
-  "pop": 0,
-  "y": 2026,
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Indie"
-  ]
- },
- {
   "name": "Dub Night Live",
   "alias": [],
   "pop": 0,
@@ -19762,20 +19717,6 @@
    "Simulator",
    "Strategy",
    "Indie"
-  ]
- },
- {
-  "name": "Ecrazeus Castle",
-  "alias": [],
-  "pop": 0,
-  "y": 2026,
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Role-playing (RPG)",
-   "Indie",
-   "Arcade"
   ]
  },
  {
@@ -21660,6 +21601,20 @@
    "pc"
   ],
   "g": [
+   "Adventure",
+   "Indie"
+  ]
+ },
+ {
+  "name": "Fairy Forge",
+  "alias": [],
+  "pop": 0,
+  "y": 2026,
+  "p": [
+   "pc"
+  ],
+  "g": [
+   "Hack and slash/Beat 'em up",
    "Adventure",
    "Indie"
   ]
@@ -29000,6 +28955,16 @@
   ]
  },
  {
+  "name": "Hot Wheels Infinite Rush: Just for Fun Pack",
+  "alias": [],
+  "pop": 0,
+  "y": 2026,
+  "p": [
+   "pc",
+   "console"
+  ]
+ },
+ {
   "name": "Hot Wheels Infinite Rush: Power & Pace Pack",
   "alias": [],
   "pop": 0,
@@ -30070,6 +30035,20 @@
   ],
   "g": [
    "Point-and-click",
+   "Puzzle",
+   "Adventure",
+   "Indie"
+  ]
+ },
+ {
+  "name": "In These Hallowed Halls",
+  "alias": [],
+  "pop": 0,
+  "y": 2026,
+  "p": [
+   "pc"
+  ],
+  "g": [
    "Puzzle",
    "Adventure",
    "Indie"
@@ -32098,6 +32077,19 @@
   ]
  },
  {
+  "name": "Keepshore: Hearth Seal",
+  "alias": [],
+  "pop": 0,
+  "y": 2026,
+  "p": [
+   "pc"
+  ],
+  "g": [
+   "Simulator",
+   "Strategy"
+  ]
+ },
+ {
   "name": "Keine's Terakoya: A Schoolhouse in Gensokyo",
   "alias": [],
   "pop": 0,
@@ -32388,6 +32380,21 @@
  {
   "name": "Kindling Hour",
   "alias": [],
+  "pop": 0,
+  "y": 2026,
+  "p": [
+   "pc"
+  ],
+  "g": [
+   "Adventure",
+   "Indie"
+  ]
+ },
+ {
+  "name": "King Assassination",
+  "alias": [
+   "King Assassination.exe"
+  ],
   "pop": 0,
   "y": 2026,
   "p": [
@@ -39343,6 +39350,22 @@
   ]
  },
  {
+  "name": "My Racing Car",
+  "alias": [
+   "RacerSim.exe"
+  ],
+  "pop": 0,
+  "y": 2026,
+  "p": [
+   "pc"
+  ],
+  "g": [
+   "Racing",
+   "Simulator",
+   "Indie"
+  ]
+ },
+ {
   "name": "My Sexy Boss: Office Romance Boys",
   "alias": [],
   "pop": 0,
@@ -43092,22 +43115,6 @@
   ]
  },
  {
-  "name": "Overtrick",
-  "alias": [
-   "overtrick.exe"
-  ],
-  "pop": 0,
-  "y": 2026,
-  "p": [
-   "pc",
-   "console"
-  ],
-  "g": [
-   "Strategy",
-   "Indie"
-  ]
- },
- {
   "name": "Owl Force",
   "alias": [],
   "pop": 0,
@@ -46041,6 +46048,23 @@
   ]
  },
  {
+  "name": "Primal Reign: The Age of New Kings",
+  "alias": [
+   "Breach Point.exe",
+   "Breach Point",
+   "Primal Reign : Tomb of the New Kings"
+  ],
+  "pop": 0,
+  "y": 2026,
+  "p": [
+   "console"
+  ],
+  "g": [
+   "Adventure",
+   "Indie"
+  ]
+ },
+ {
   "name": "Primal Survival",
   "alias": [],
   "pop": 0,
@@ -47988,23 +48012,6 @@
   ]
  },
  {
-  "name": "Re:cord Noah: Fractal of Oblivion",
-  "alias": [
-   "Re:cord NOAH Boukyaku no Fractal",
-   "Re:cord NOAH -Fractal of Oblivion-",
-   "Re:cord NOAH 忘却のフラクタル"
-  ],
-  "pop": 0,
-  "y": 2026,
-  "jp": "Re:cord NOAH 忘却のフラクタル",
-  "p": [
-   "console"
-  ],
-  "g": [
-   "Visual Novel"
-  ]
- },
- {
   "name": "Realindustry",
   "alias": [],
   "pop": 0,
@@ -49370,6 +49377,20 @@
   ],
   "g": [
    "Simulator"
+  ]
+ },
+ {
+  "name": "Rocket League: Season 24",
+  "alias": [],
+  "pop": 0,
+  "y": 2026,
+  "p": [
+   "pc",
+   "console"
+  ],
+  "g": [
+   "Racing",
+   "Sport"
   ]
  },
  {
@@ -52312,6 +52333,19 @@
   "y": 2026,
   "p": [
    "pc"
+  ]
+ },
+ {
+  "name": "Sid Meier's Civilization VII: George Washington Pack",
+  "alias": [],
+  "pop": 0,
+  "y": 2026,
+  "p": [
+   "pc"
+  ],
+  "g": [
+   "Simulator",
+   "Strategy"
   ]
  },
  {
@@ -57344,6 +57378,18 @@
   ]
  },
  {
+  "name": "System 21",
+  "alias": [],
+  "pop": 0,
+  "y": 2026,
+  "p": [
+   "pc"
+  ],
+  "g": [
+   "Strategy"
+  ]
+ },
+ {
   "name": "System Clues",
   "alias": [],
   "pop": 0,
@@ -57427,18 +57473,6 @@
    "Point-and-click",
    "Shooter",
    "Platform"
-  ]
- },
- {
-  "name": "Table Space: Board and Card Game Sandbox",
-  "alias": [],
-  "pop": 0,
-  "y": 2026,
-  "p": [
-   "console"
-  ],
-  "g": [
-   "Simulator"
   ]
  },
  {
@@ -58151,16 +58185,6 @@
   "g": [
    "Adventure",
    "Indie"
-  ]
- },
- {
-  "name": "Tekken 8: Bob",
-  "alias": [],
-  "pop": 0,
-  "y": 2026,
-  "p": [
-   "pc",
-   "console"
   ]
  },
  {
@@ -61244,19 +61268,6 @@
   ],
   "g": [
    "Role-playing (RPG)"
-  ]
- },
- {
-  "name": "The Shadow Cosmos",
-  "alias": [],
-  "pop": 0,
-  "y": 2026,
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Adventure",
-   "Indie"
   ]
  },
  {
@@ -65328,7 +65339,8 @@
   "name": "Valheim",
   "alias": [
    "瓦爾海姆",
-   "英灵神殿"
+   "英灵神殿",
+   "Валхейм"
   ],
   "pop": 303,
   "y": 2026,
@@ -67119,19 +67131,6 @@
    "Adventure",
    "Indie",
    "Arcade"
-  ]
- },
- {
-  "name": "Welcome, [Employee Name]",
-  "alias": [],
-  "pop": 0,
-  "y": 2026,
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Adventure",
-   "Indie"
   ]
  },
  {

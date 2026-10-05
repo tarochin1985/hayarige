@@ -1,6 +1,6 @@
 {
  "date": "2026-10-05",
- "generated": "2026-10-05 11:52",
+ "generated": "2026-10-05 12:42",
  "leads": {
   "events": [
    {
@@ -106,8 +106,8 @@
   "wide": [
    {
     "game": "Apex Legends",
-    "channels": 63,
-    "videos": 70
+    "channels": 59,
+    "videos": 65
    },
    {
     "game": "Minecraft",
@@ -116,18 +116,13 @@
    },
    {
     "game": "ストリートファイター6",
-    "channels": 28,
-    "videos": 31
+    "channels": 26,
+    "videos": 28
    },
    {
     "game": "Grand Theft Auto V",
     "channels": 17,
     "videos": 18
-   },
-   {
-    "game": "hololive Dreams",
-    "channels": 14,
-    "videos": 14
    },
    {
     "game": "エースコンバット8 ウイングス・オブ・シーヴ",
@@ -137,12 +132,17 @@
    {
     "game": "実況パワフルプロ野球2026",
     "channels": 14,
-    "videos": 15
+    "videos": 14
    },
    {
     "game": "スプラトゥーン3",
     "channels": 16,
     "videos": 16
+   },
+   {
+    "game": "hololive Dreams",
+    "channels": 13,
+    "videos": 14
    }
   ]
  },
@@ -257,22 +257,6 @@
    ]
   },
   {
-   "word": "Octbuster",
-   "channels": 1,
-   "n": 1,
-   "examples": [
-    {
-     "t": "タコになってビデオ屋の掃除をするゲームをのんびりやる【 Octbuster 】",
-     "c": "実況したいよまちょすさん!",
-     "u": "https://www.youtube.com/watch?v=u2uzgThdQvg"
-    }
-   ],
-   "kind": "near",
-   "suggest": [
-    "Octbuster: Video Rental Store Cleanup"
-   ]
-  },
-  {
    "word": "Palette",
    "channels": 1,
    "n": 1,
@@ -286,6 +270,22 @@
    "kind": "near",
    "suggest": [
     "Palette: Glass Shard Mosaic"
+   ]
+  },
+  {
+   "word": "Octbuster",
+   "channels": 1,
+   "n": 1,
+   "examples": [
+    {
+     "t": "タコになってビデオ屋の掃除をするゲームをのんびりやる【 Octbuster 】",
+     "c": "実況したいよまちょすさん!",
+     "u": "https://www.youtube.com/watch?v=u2uzgThdQvg"
+    }
+   ],
+   "kind": "near",
+   "suggest": [
+    "Octbuster: Video Rental Store Cleanup"
    ]
   },
   {
@@ -354,30 +354,6 @@
    "suggest": []
   },
   {
-   "word": "プチプラネット",
-   "channels": 4,
-   "n": 4,
-   "examples": [
-    {
-     "t": "【プチプラネット】自分だけの惑星を育ててもふもふの動物達を勧誘しまくる癒しのスローライフゲー【VOICEROID実況】",
-     "c": "Tama【ゲーム紹介ch】",
-     "u": "https://www.youtube.com/watch?v=x2VwvI_uvDA"
-    },
-    {
-     "t": "星を育てて自分だけの惑星を作るHoYoverse新作スローライフゲーム【プチプラネット】",
-     "c": "コーマ",
-     "u": "https://www.youtube.com/watch?v=DIPNJVnPsyY"
-    },
-    {
-     "t": "惑星を買ったので姉とスローライフ生活始めました。【プチプラネット】",
-     "c": "ぷちぷち【ぷちひなフレンズ】",
-     "u": "https://www.youtube.com/watch?v=nf6EHmW1bXU"
-    }
-   ],
-   "kind": "wide",
-   "suggest": []
-  },
-  {
    "word": "キングダムハーツ",
    "channels": 3,
    "n": 4,
@@ -426,78 +402,6 @@
    "suggest": []
   },
   {
-   "word": "スーパーマリオメーカー2",
-   "channels": 3,
-   "n": 3,
-   "examples": [
-    {
-     "t": "どうやってクリアするのこれ！？【スーパーマリオメーカー2】",
-     "c": "おかんちゃん",
-     "u": "https://www.youtube.com/watch?v=UIJOg2lBbzg"
-    },
-    {
-     "t": "7年前に発売された世界中で大人気のゲーム『スーパーマリオメーカー2』＆リズム天国＆マリカ＆マリオペイント",
-     "c": "コハード",
-     "u": "https://www.youtube.com/watch?v=bqaux06Ri5I"
-    },
-    {
-     "t": "こんなせまいあしばにのれるわけないやろ！【スーパーマリオメーカー2】",
-     "c": "のどか",
-     "u": "https://www.youtube.com/watch?v=MgHP2KSoEOA"
-    }
-   ],
-   "kind": "wide",
-   "suggest": []
-  },
-  {
-   "word": "テストプレイをサボりすぎたＲＰＧ",
-   "channels": 3,
-   "n": 3,
-   "examples": [
-    {
-     "t": "〖 テストプレイをサボりすぎたＲＰＧ 〗 サボるとどうなるかさすがにわかる 〖 心白てと / ネオポルテ 〗",
-     "c": "心白てと / Kohaku Teto",
-     "u": "https://www.youtube.com/watch?v=FySRprWBKMw"
-    },
-    {
-     "t": "【 テストプレイをサボりすぎたＲＰＧ 】いやサボんなよ。【漆瀬レイ / ななしいんく】",
-     "c": "漆瀬レイ / Ray Nanase【ななしいんく】",
-     "u": "https://www.youtube.com/watch?v=fJzL_xwGO7k"
-    },
-    {
-     "t": "世界中が爆笑した超大作のバカゲー『テストプレイをサボりすぎたＲＰＧ』",
-     "c": "コハード",
-     "u": "https://www.youtube.com/watch?v=TBeMKnc39oM"
-    }
-   ],
-   "kind": "wide",
-   "suggest": []
-  },
-  {
-   "word": "超魔界村",
-   "channels": 3,
-   "n": 3,
-   "examples": [
-    {
-     "t": "【超魔界村】完全初見！人生初の魔界村に挑戦！｜伝説の激ムズゲーム！姫救出を目指す！【水鞠まろな/VTuber】",
-     "c": "Marona Ch. 水鞠まろな",
-     "u": "https://www.youtube.com/watch?v=IrXapqAx318"
-    },
-    {
-     "t": "#01【 超魔界村 】完全初見.ᐟ 私、やれます。とりあえず1面クリア目指してみせる.ᐟ.ᐟ【向日守ぽた/ Varium】",
-     "c": "Pota Ch. 向日守ぽた",
-     "u": "https://www.youtube.com/watch?v=wd5Z3Wu_H8U"
-    },
-    {
-     "t": "【超魔界村】発売35周年❗️なので久しぶりに実家参りする【スーパーファミコン/レトロゲーム/VTuber】",
-     "c": "馬小屋ねる子レトロゲームCh.",
-     "u": "https://www.youtube.com/watch?v=sbZYMQB3ZOM"
-    }
-   ],
-   "kind": "wide",
-   "suggest": []
-  },
-  {
    "word": "5周年記念",
    "channels": 3,
    "n": 3,
@@ -516,54 +420,6 @@
      "t": "【５周年記念】みんなのお陰でここまでこれた！！【Vtuberしまゆま】",
      "c": "しまゆま",
      "u": "https://www.youtube.com/watch?v=Ly2ybvUtMBI"
-    }
-   ],
-   "kind": "wide",
-   "suggest": []
-  },
-  {
-   "word": "ネタバレあり",
-   "channels": 3,
-   "n": 3,
-   "examples": [
-    {
-     "t": "【ネタバレあり】紫鸞くんのレトロコスがいくらなんでも面白すぎるw【三無双2R】",
-     "c": "チーク無双CH",
-     "u": "https://www.youtube.com/watch?v=x49QN_T4j3k"
-    },
-    {
-     "t": "もうすぐ誕生日なんです…！！！【ネタバレあり / にじさんじ / 伏見ガク】",
-     "c": "伏見ガク【にじさんじ所属】",
-     "u": "https://www.youtube.com/watch?v=IrERyZ7Dtbo"
-    },
-    {
-     "t": "【ネタバレあり】47歳男性はじめてのときメモGS3 #12",
-     "c": "はるしげ - HARUSHIGE",
-     "u": "https://www.youtube.com/watch?v=UiJ-j23Y_0I"
-    }
-   ],
-   "kind": "wide",
-   "suggest": []
-  },
-  {
-   "word": "えかきうた大合戦",
-   "channels": 3,
-   "n": 3,
-   "examples": [
-    {
-     "t": "「﻿絵描き歌の歌詞」だけを頼りに絵を描くゲームが難しすぎる【 えかきうた大合戦 】",
-     "c": "ピロ",
-     "u": "https://www.youtube.com/watch?v=V9ZTZZk3CL8"
-    },
-    {
-     "t": "【えかきうた大合戦】✨絵心あるおれたちの戦い✨【ホロライブ/さくらみこ】",
-     "c": "Miko Ch. さくらみこ",
-     "u": "https://www.youtube.com/watch?v=hSJKa-b1VpM"
-    },
-    {
-     "t": "絵描き歌に合わせてイラストを描く対戦ゲームが鬼畜すぎて爆笑するおえちゃん【えかきうた大合戦】【2026/10/03】",
-     "c": "おおえのたかゆきプレミアム",
-     "u": "https://www.youtube.com/watch?v=ZYs_2ZbG7Gw"
     }
    ],
    "kind": "wide",
@@ -715,35 +571,28 @@
    "first_here": false
   },
   {
-   "game": "ダンガンロンパ 希望の学園と絶望の高校生",
+   "game": "えかきうた大合戦",
    "growth": 3.75,
    "videos": 3,
-   "base": 0.5,
+   "base": 0.2,
    "channels": 3,
-   "views": 672,
+   "views": 28201,
    "who": [
-    "sozakura yunoa / 楚桜ゆのあ ch.",
-    "SUZUNE",
-    "虚無人-創作者Vtuber-"
+    "おおえのたかゆきプレミアム",
+    "渋川式 麻雀通信",
+    "Miko Ch. さくらみこ"
    ],
    "titles": [
-    "【ダンガンロンパ】完全初見！見知らぬ誰かは仲間？敵？＃14【個人勢Vtuber/楚桜ゆのあ】",
-    "#1 【ダンガンロンパ】　自認名探偵なのでウルトラ解決する！",
-    "【#ザンキゼロ】#1 ダンガンロンパ制作陣による怪作RPGを実況【男性Vtuber】"
+    "絵描き歌に合わせてイラストを描く対戦ゲームが鬼畜すぎて爆笑するおえちゃん【えかきうた大合戦】【2026/10/03】",
+    "【りんかりんとゲーム】えかきうた大合戦をやってみるぞ！【童心にかえる】",
+    "【えかきうた大合戦】✨絵心あるおれたちの戦い✨【ホロライブ/さくらみこ】"
    ],
-   "genres": [
-    "Point-and-click",
-    "Adventure",
-    "Visual Novel"
-   ],
+   "genres": [],
    "year": null,
-   "platforms": [
-    "pc",
-    "console"
-   ],
-   "days_seen": 4,
-   "last_seen": "2026-10-04",
-   "first_here": false
+   "platforms": [],
+   "days_seen": 0,
+   "last_seen": null,
+   "first_here": true
   }
  ],
  "notes_written": true,
