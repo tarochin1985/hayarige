@@ -594,6 +594,29 @@ def e(s):
     return html.escape(str(s if s is not None else ""))
 
 
+# まとめ（週・月）の本文だけ、**ここ** を太字にする。
+# （2026-10-05 たろちんさん）
+#
+#   > 企画タグやゲーム名などは太字にしたほうが可読性が上がると思う。
+#   > 長文になると目が滑る
+#
+# まとめは毎日のコラムより長く、ゲーム名・企画名・配信者名が何度も出てくる。
+# そこに目印があると、読む人が「どこの話か」を拾い直せる。
+# **HTMLを書けるようにするわけではない。** 先にエスケープしてから、
+# この目印だけを戻す。だから本文に <b> と書いてもそのまま文字として出る。
+BOLD = re.compile(r"\*\*(.+?)\*\*", re.S)
+
+
+def rich(s):
+    """エスケープしたうえで、**ここ** だけ太字にする。"""
+    return BOLD.sub(r"<strong>\1</strong>", e(s))
+
+
+def plain(s):
+    """太字の目印を外す。RSSやメタ情報など、HTMLにしない場所用。"""
+    return BOLD.sub(r"\1", str(s if s is not None else ""))
+
+
 def man(n):
     n = int(n or 0)
     if n >= 100000:
@@ -1440,13 +1463,13 @@ def special_html(item):
         out.append(f'<figure class="dochero{" own" if th["own"] else ""}">'
                    f'<img src="{e(src)}" alt="" loading="lazy">{cap}</figure>')
     if str(c.get("lead", "")).strip():
-        out.append(f'<p class="lead">{e(c["lead"])}</p>')
+        out.append(f'<p class="lead">{rich(c["lead"])}</p>')
     for sec in c.get("sections") or []:
         if str(sec.get("h", "")).strip():
-            out.append(f'<h2>{e(sec["h"])}</h2>')
+            out.append(f'<h2>{e(plain(sec["h"]))}</h2>')
         for para in str(sec.get("body", "")).split("\n"):
             if para.strip():
-                out.append(f"<p>{e(para.strip())}</p>")
+                out.append(f"<p>{rich(para.strip())}</p>")
     srcs = c.get("sources") or []
     if srcs:
         out.append("<h2>出典</h2><ul>")
@@ -2080,10 +2103,10 @@ def rss_xml(site_url, specials):
                       "d": _rfc822(day), "b": body, "k": day})
     for x in specials:
         c = x.get("col") or {}
-        body = str(c.get("lead", "")).strip()
+        body = plain(c.get("lead", "")).strip()
         for sec in (c.get("sections") or [])[:1]:
             if isinstance(sec, dict) and sec.get("body"):
-                body = (body + "\n\n" + str(sec["body"])).strip()
+                body = (body + "\n\n" + plain(sec["body"])).strip()
         day = x["key"] if x["kind"] == "weekly" else x["key"] + "-01"
         items.append({"t": f"【{x['label']}】{x['title']}",
                       "u": f"{site_url}/{x['slug']}/{x['key']}/",
@@ -2843,8 +2866,8 @@ def main():
     # ---- 週・月のまとめ --------------------------------------------------
     # 読みものがこのサイトの本体なので、Xに流して消えるのはもったいない。
     for x in specials:
-        _t = str((x.get("col") or {}).get("title") or x["heading"])
-        _l = str((x.get("col") or {}).get("lead") or "")
+        _t = plain((x.get("col") or {}).get("title") or x["heading"])
+        _l = plain((x.get("col") or {}).get("lead") or "")
         # Xやnoteに貼ったときの画像。そのまとめのカードがあればそれを使う。
         # 共通の ogp.png だと、どのまとめを貼っても同じ絵になってしまう。
         _card = SITE / x["slug"] / x["key"] / "card.png"

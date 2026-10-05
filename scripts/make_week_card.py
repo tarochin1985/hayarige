@@ -331,7 +331,9 @@ def card_parts(col):
     card = col.get("card") or {}
     sub = str(card.get("sub") or "").strip() or first_sentence(col.get("lead"))
     also = [str(x).strip() for x in (card.get("also") or []) if str(x).strip()]
-    return sub, also[:ALSO_N]
+    # 本文の太字の目印（**ここ**）は、カードと投稿文には持ち込まない
+    strip_b = lambda s: re.sub(r"\*\*(.+?)\*\*", r"\1", s)  # noqa: E731
+    return strip_b(sub), [strip_b(x) for x in also[:ALSO_N]]
 
 
 # ------------------------------------------------- 月まとめの1位〜3位
