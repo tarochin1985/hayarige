@@ -1,6 +1,6 @@
 {
  "date": "2026-10-05",
- "generated": "2026-10-05 09:28",
+ "generated": "2026-10-05 11:52",
  "leads": {
   "events": [
    {
@@ -35,7 +35,6 @@
      "ジョアだよ",
      "太刀ひろし　【Uncle gamer】 ",
      "恋因ロス KoinRosu",
-     "星埜きぃ -Key Hoshino-",
      "豚咲あおい_TomisakiAoi",
      "週刊少年ゲームマガジン230円",
      "里城はな",
@@ -71,14 +70,6 @@
     ]
    },
    {
-    "tag": "#ぶいきゃす",
-    "channels": [
-     "こてつちゃんねる",
-     "孵卵リリス / Furan Lilith",
-     "星埜きぃ -Key Hoshino-"
-    ]
-   },
-   {
     "tag": "#ホロ甲2026",
     "channels": [
      "Koyori ch. 博衣こより - holoX -",
@@ -101,19 +92,27 @@
      "暁月ホタル AKATSUKI HOTARU",
      "柚原いづみ / Izumi Channel 【ななしいんく】"
     ]
+   },
+   {
+    "tag": "#縦型配信",
+    "channels": [
+     "vii / ビー",
+     "かおりんごー",
+     "もみじビーム"
+    ]
    }
   ],
   "newcomers": [],
   "wide": [
    {
     "game": "Apex Legends",
-    "channels": 64,
-    "videos": 72
+    "channels": 63,
+    "videos": 70
    },
    {
     "game": "Minecraft",
-    "channels": 48,
-    "videos": 50
+    "channels": 46,
+    "videos": 48
    },
    {
     "game": "ストリートファイター6",
@@ -128,16 +127,16 @@
    {
     "game": "hololive Dreams",
     "channels": 14,
+    "videos": 14
+   },
+   {
+    "game": "エースコンバット8 ウイングス・オブ・シーヴ",
+    "channels": 15,
     "videos": 15
    },
    {
     "game": "実況パワフルプロ野球2026",
     "channels": 14,
-    "videos": 15
-   },
-   {
-    "game": "エースコンバット8 ウイングス・オブ・シーヴ",
-    "channels": 15,
     "videos": 15
    },
    {
@@ -193,22 +192,6 @@
    ]
   },
   {
-   "word": "ShadowCorridor",
-   "channels": 1,
-   "n": 1,
-   "examples": [
-    {
-     "t": "弟にホラゲーをやらせる【ShadowCorridor】",
-     "c": "ちむらい",
-     "u": "https://www.youtube.com/watch?v=xPiwGCpjzQg"
-    }
-   ],
-   "kind": "near",
-   "suggest": [
-    "Shadow Corridor Zero"
-   ]
-  },
-  {
    "word": "librarian",
    "channels": 1,
    "n": 1,
@@ -223,6 +206,22 @@
    "suggest": [
     "Librarian of Aquademia: The Forbidden Grimoire",
     "Librarian: Tidy Up the Arcane Library!"
+   ]
+  },
+  {
+   "word": "ShadowCorridor",
+   "channels": 1,
+   "n": 1,
+   "examples": [
+    {
+     "t": "弟にホラゲーをやらせる【ShadowCorridor】",
+     "c": "ちむらい",
+     "u": "https://www.youtube.com/watch?v=xPiwGCpjzQg"
+    }
+   ],
+   "kind": "near",
+   "suggest": [
+    "Shadow Corridor Zero"
    ]
   },
   {
@@ -628,8 +627,8 @@
    "genres": [],
    "year": null,
    "platforms": [],
-   "days_seen": 5,
-   "last_seen": "2026-10-04",
+   "days_seen": 4,
+   "last_seen": "2026-09-29",
    "first_here": false
   },
   {
@@ -658,9 +657,9 @@
     "pc",
     "console"
    ],
-   "days_seen": 1,
-   "last_seen": "2026-10-04",
-   "first_here": false
+   "days_seen": 0,
+   "last_seen": null,
+   "first_here": true
   },
   {
    "game": "タンポポは耐える。",
@@ -750,6 +749,11 @@
  "notes_written": true,
  "recent_columns": [
   {
+   "date": "2026-10-05",
+   "game": "Bombanana!",
+   "headline": "悪いなのび太、このゲーム3人用なんだ"
+  },
+  {
    "date": "2026-10-04",
    "game": "Minecraft",
    "headline": "「#マイクラ肝試し2026」最終日、怖さより釣りの点数を競っている"
@@ -813,11 +817,6 @@
    "date": "2026-09-22",
    "game": "Silent Hill: Townfall",
    "headline": "予約した人だけが、二日早く霧の中にいる"
-  },
-  {
-   "date": "2026-09-21",
-   "game": "妹に運転を教える",
-   "headline": "毎回ちがう顔ぶれが、同じ助手席に座る"
   }
  ]
 }
