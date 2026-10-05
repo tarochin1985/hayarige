@@ -1,6 +1,6 @@
 {
  "date": "2026-10-05",
- "generated": "2026-10-05 00:18",
+ "generated": "2026-10-05 09:28",
  "leads": {
   "events": [
    {
@@ -13,12 +13,12 @@
      "おらふくん / ドズル社",
      "おんりー / ドズル社",
      "ひなたチャンネル (Hinata Channel)",
+     "ぼんじゅうる / ドズル社",
      "らっだぁ",
      "人生 つみこ (ホラーゲーム専門Vtuber)",
      "堰代ミコ / Mico Channel【ななしいんく】",
      "小廻こま / Komawari Koma",
      "島村シャルロット / Charlotte Channel【ななしいんく】",
-     "弦月 藤士郎 / Genzuki Tojiro【にじさんじ】",
      "羽渦ミウネル -Miuneru Haneuzu-",
      "赤髪のとものゲーム実況チャンネル!!"
     ]
@@ -29,9 +29,9 @@
      "M家の休日マサ",
      "Ren.ch戌月れん",
      "Usagi Ch. 因幡兎",
+     "えりんぎ Games",
      "ごまっぷ_GameCh",
      "たくちゃんねるず",
-     "ぱんちき🥖🦃",
      "ジョアだよ",
      "太刀ひろし　【Uncle gamer】 ",
      "恋因ロス KoinRosu",
@@ -45,7 +45,6 @@
    {
     "tag": "#ホロドリ",
     "channels": [
-     "Flare Ch. 不知火フレア",
      "Iroha ch. 風真いろは - holoX -",
      "Koyori ch. 博衣こより - holoX -",
      "Matsuri Channel 夏色まつり",
@@ -55,7 +54,8 @@
      "Vivi Ch. 綺々羅々ヴィヴィ - FLOW GLOW",
      "Watame Ch. 角巻わため",
      "ここっとスクエア【ここスク】",
-     "アキロゼCh。Vtuber/ホロライブ所属"
+     "アキロゼCh。Vtuber/ホロライブ所属",
+     "宵吸あけル / Yokyu Akeru"
     ]
    },
    {
@@ -71,19 +71,8 @@
     ]
    },
    {
-    "tag": "#天下無双ARK",
-    "channels": [
-     "ひなたチャンネル (Hinata Channel)",
-     "ダナ",
-     "史門 / Shimon ",
-     "家入ポポ / Popo Channel【ななしいんく】",
-     "扇名いだ"
-    ]
-   },
-   {
     "tag": "#ぶいきゃす",
     "channels": [
-     "おいもパイちゃん / OimoPie ch.",
      "こてつちゃんねる",
      "孵卵リリス / Furan Lilith",
      "星埜きぃ -Key Hoshino-"
@@ -98,11 +87,19 @@
     ]
    },
    {
-    "tag": "#わんちゃんWIN",
+    "tag": "#鳴潮朝月会",
     "channels": [
-     "1tappy / わんたっぴー",
-     "樋口楓【にじさんじ所属】",
-     "胡桃のあ"
+     "ノーラ Nora ch",
+     "夜魅ちゃんねる",
+     "式神やしろ"
+    ]
+   },
+   {
+    "tag": "#ストグラSeason2",
+    "channels": [
+     "天羽よつは",
+     "暁月ホタル AKATSUKI HOTARU",
+     "柚原いづみ / Izumi Channel 【ななしいんく】"
     ]
    }
   ],
@@ -110,56 +107,48 @@
   "wide": [
    {
     "game": "Apex Legends",
-    "channels": 70,
-    "videos": 91
+    "channels": 64,
+    "videos": 72
    },
    {
     "game": "Minecraft",
     "channels": 48,
-    "videos": 51
+    "videos": 50
    },
    {
     "game": "ストリートファイター6",
-    "channels": 33,
-    "videos": 38
+    "channels": 28,
+    "videos": 31
    },
    {
-    "game": "フォートナイト",
-    "channels": 16,
-    "videos": 22
-   },
-   {
-    "game": "実況パワフルプロ野球2026",
-    "channels": 15,
+    "game": "Grand Theft Auto V",
+    "channels": 17,
     "videos": 18
    },
    {
     "game": "hololive Dreams",
-    "channels": 15,
-    "videos": 16
+    "channels": 14,
+    "videos": 15
    },
    {
-    "game": "ARK: Survival Ascended",
-    "channels": 16,
-    "videos": 18
+    "game": "実況パワフルプロ野球2026",
+    "channels": 14,
+    "videos": 15
+   },
+   {
+    "game": "エースコンバット8 ウイングス・オブ・シーヴ",
+    "channels": 15,
+    "videos": 15
    },
    {
     "game": "スプラトゥーン3",
-    "channels": 18,
-    "videos": 19
+    "channels": 16,
+    "videos": 16
    }
   ]
  },
  "drift": [],
- "tags": [
-  {
-   "tag": "わんちゃんwin",
-   "game": "Apex Legends",
-   "evidence": 4,
-   "added": 1,
-   "channels": 3
-  }
- ],
+ "tags": [],
  "misses": [
   {
    "word": "Starward",
@@ -269,22 +258,6 @@
    ]
   },
   {
-   "word": "Palette",
-   "channels": 1,
-   "n": 1,
-   "examples": [
-    {
-     "t": "ソロライブ『Palette』告知生配信【ドズル社/おらふくん】",
-     "c": "おらふくん / ドズル社",
-     "u": "https://www.youtube.com/watch?v=E8o9DXnynXc"
-    }
-   ],
-   "kind": "near",
-   "suggest": [
-    "Palette: Glass Shard Mosaic"
-   ]
-  },
-  {
    "word": "Octbuster",
    "channels": 1,
    "n": 1,
@@ -298,6 +271,22 @@
    "kind": "near",
    "suggest": [
     "Octbuster: Video Rental Store Cleanup"
+   ]
+  },
+  {
+   "word": "Palette",
+   "channels": 1,
+   "n": 1,
+   "examples": [
+    {
+     "t": "ソロライブ『Palette』告知生配信【ドズル社/おらふくん】",
+     "c": "おらふくん / ドズル社",
+     "u": "https://www.youtube.com/watch?v=E8o9DXnynXc"
+    }
+   ],
+   "kind": "near",
+   "suggest": [
+    "Palette: Glass Shard Mosaic"
    ]
   },
   {
@@ -414,6 +403,30 @@
    "suggest": []
   },
   {
+   "word": "バーチャル物産展",
+   "channels": 3,
+   "n": 4,
+   "examples": [
+    {
+     "t": "【 #雑談 】謎解き×マラサダ.....？幻のマラサダを探しに行きましょう！ / #バーチャル物産展",
+     "c": "neon",
+     "u": "https://www.youtube.com/watch?v=dSGUrheDJ8Y"
+    },
+    {
+     "t": "【#バーチャル物産展】マラサダ×謎解き⁉　謎解きといえばみぃでしょ～～～！！【PR】 #vtuber #新人vtuber",
+     "c": "鈴ノ時みぃ@新人Vtuber",
+     "u": "https://www.youtube.com/watch?v=yMJDfid0QT4"
+    },
+    {
+     "t": "【#バーチャル物産展】マラサダ×謎解き⁉　謎解きといえばみぃでしょ～～～！！【PR】 #vtuber #新人vtuber",
+     "c": "鈴ノ時みぃ@新人Vtuber",
+     "u": "https://www.youtube.com/watch?v=yMJDfid0QT4"
+    }
+   ],
+   "kind": "wide",
+   "suggest": []
+  },
+  {
    "word": "スーパーマリオメーカー2",
    "channels": 3,
    "n": 3,
@@ -432,6 +445,30 @@
      "t": "こんなせまいあしばにのれるわけないやろ！【スーパーマリオメーカー2】",
      "c": "のどか",
      "u": "https://www.youtube.com/watch?v=MgHP2KSoEOA"
+    }
+   ],
+   "kind": "wide",
+   "suggest": []
+  },
+  {
+   "word": "テストプレイをサボりすぎたＲＰＧ",
+   "channels": 3,
+   "n": 3,
+   "examples": [
+    {
+     "t": "〖 テストプレイをサボりすぎたＲＰＧ 〗 サボるとどうなるかさすがにわかる 〖 心白てと / ネオポルテ 〗",
+     "c": "心白てと / Kohaku Teto",
+     "u": "https://www.youtube.com/watch?v=FySRprWBKMw"
+    },
+    {
+     "t": "【 テストプレイをサボりすぎたＲＰＧ 】いやサボんなよ。【漆瀬レイ / ななしいんく】",
+     "c": "漆瀬レイ / Ray Nanase【ななしいんく】",
+     "u": "https://www.youtube.com/watch?v=fJzL_xwGO7k"
+    },
+    {
+     "t": "世界中が爆笑した超大作のバカゲー『テストプレイをサボりすぎたＲＰＧ』",
+     "c": "コハード",
+     "u": "https://www.youtube.com/watch?v=TBeMKnc39oM"
     }
    ],
    "kind": "wide",
@@ -462,24 +499,24 @@
    "suggest": []
   },
   {
-   "word": "テストプレイをサボりすぎたＲＰＧ",
+   "word": "5周年記念",
    "channels": 3,
    "n": 3,
    "examples": [
     {
-     "t": "〖 テストプレイをサボりすぎたＲＰＧ 〗 サボるとどうなるかさすがにわかる 〖 心白てと / ネオポルテ 〗",
-     "c": "心白てと / Kohaku Teto",
-     "u": "https://www.youtube.com/watch?v=FySRprWBKMw"
+     "t": "【5周年記念／飲酒凸待ち】お酒を飲みながら、みんなとお祝い！【月音ゆき】",
+     "c": "月音ゆき - つくねゆき",
+     "u": "https://www.youtube.com/watch?v=fO4TUztDMD0"
     },
     {
-     "t": "【 テストプレイをサボりすぎたＲＰＧ 】いやサボんなよ。【漆瀬レイ / ななしいんく】",
-     "c": "漆瀬レイ / Ray Nanase【ななしいんく】",
-     "u": "https://www.youtube.com/watch?v=fJzL_xwGO7k"
+     "t": "【5周年記念】デザインよすぎ「○○Tシャツ」が出ます！本日デビュー5周年なので祝ってください【沙汰ナキア/VTuber】",
+     "c": "沙汰ナキアASMR - Nakia Ch.",
+     "u": "https://www.youtube.com/watch?v=3DkiaXkhxVU"
     },
     {
-     "t": "世界中が爆笑した超大作のバカゲー『テストプレイをサボりすぎたＲＰＧ』",
-     "c": "コハード",
-     "u": "https://www.youtube.com/watch?v=TBeMKnc39oM"
+     "t": "【５周年記念】みんなのお陰でここまでこれた！！【Vtuberしまゆま】",
+     "c": "しまゆま",
+     "u": "https://www.youtube.com/watch?v=Ly2ybvUtMBI"
     }
    ],
    "kind": "wide",
@@ -537,104 +574,23 @@
  "miss_days": 7,
  "hot_facts": [
   {
-   "game": "PUBG",
-   "growth": 6.25,
-   "videos": 5,
-   "base": 0.3,
-   "channels": 5,
-   "views": 43982,
-   "who": [
-    "藍沢エマ / Aizawa Ema",
-    "兎咲ミミ / Tosaki Mimi",
-    "神成きゅぴ / Kaminari Qpi",
-    "蝶屋はなび / Choya Hanabi",
-    "SurugaMonkeyCH"
-   ],
-   "titles": [
-    "【PUBG】ぱぶじベイビー練習します【ぶいすぽっ！/ 藍沢エマ】",
-    "【PUBG】メンバーとあそぶ会【ぶいすぽ/兎咲ミミ】",
-    "【PUBG】久しぶりにドンカツ食いに行きます🍳【ぶいすぽっ！/神成きゅぴ】"
-   ],
-   "genres": [],
-   "year": null,
-   "platforms": [],
-   "days_seen": 4,
-   "last_seen": "2026-09-29",
-   "first_here": false
-  },
-  {
-   "game": "タンポポは耐える。",
-   "growth": 5.0,
-   "videos": 4,
-   "base": 0.7,
-   "channels": 4,
-   "views": 104220,
-   "who": [
-    "鈴原るる【にじさんじ所属】",
-    "魁星 / Kaisei【にじさんじ】",
-    "五十嵐梨花 / Igarashi Rika 【にじさんじ】",
-    "まるたにあやの"
-   ],
-   "titles": [
-    "【タンポポは耐える。】雨ニモマケズ、風ニモマケズ、猫には負けるッ！！！！！！　【にじさんじ/鈴原るる】",
-    "【タンポポは耐える。】このタンポポは面構えが違う【魁星/にじさんじ】",
-    "タンポポは耐える┊︎耐えろ、俺の体ッッ！！！【 にじさんじ / 五十嵐梨花 】"
-   ],
-   "genres": [
-    "Simulator",
-    "Indie"
-   ],
-   "year": null,
-   "platforms": [
-    "pc"
-   ],
-   "days_seen": 7,
-   "last_seen": "2026-10-02",
-   "first_here": false
-  },
-  {
-   "game": "ゼルダの伝説 時のオカリナ",
-   "growth": 5.0,
-   "videos": 4,
-   "base": 0.5,
-   "channels": 4,
-   "views": 60612,
-   "who": [
-    "小々波いるか / Kokonami Iruka【にじさんじ】",
-    "ゲームに恋する女子チャンネル♡",
-    "ひろちんくん",
-    "満月しお / Shio Mitsuki Ch."
-   ],
-   "titles": [
-    "【 ゼルダの伝説 時のオカリナ 】#17 完全初見！最後の冒険いくぞ！【 にじさんじ  / 小々波いるか 】",
-    "【初見】リメイク記念！64実機でゼルダの伝説 時のオカリナをクリアめざして楽しむぞ！女性実況 攻略ライブ配信Part4任天堂の名作3DアクションRPG【レトロゲーム】",
-    "【時のオカリナ】ゲルドの神BGM聞きに行こう#6"
-   ],
-   "genres": [],
-   "year": null,
-   "platforms": [],
-   "days_seen": 13,
-   "last_seen": "2026-10-04",
-   "first_here": false
-  },
-  {
    "game": "Fall Guys",
-   "growth": 5.0,
+   "growth": 6.67,
    "videos": 6,
-   "base": 1.2,
-   "channels": 5,
-   "views": 4523,
+   "base": 0.9,
+   "channels": 6,
+   "views": 10774,
    "who": [
     "にゅう部【公認】",
     "gallope-ぎゃろっぺ-",
-    "実況したいよまちょすさん!",
     "gallope-ぎゃろっぺ-",
+    "実況したいよまちょすさん!",
     "あらかなチャンネル"
    ],
    "titles": [
     "天使いおとフォールガイズをするにゅう【2026/10/1】",
     "【参加型】デュオスナイプで遊ぶよ！初見さん初心者さん参加歓迎！【Fallguys/フォールガイズ】",
-    "【 視聴者参加型 】みんなでのんびりフォールガイズやろ～の回 【 Fallguys 】"
+    "お菓子ドロボーで遊ぶよ！初見さん初心者さん参加歓迎！【スナイプ参加型】【Fall guys/フォールガイズ】"
    ],
    "genres": [
     "Platform",
@@ -651,61 +607,142 @@
    "first_here": false
   },
   {
-   "game": "ゼルダの伝説 ティアーズ オブ ザ キングダム",
-   "growth": 4.17,
+   "game": "PUBG",
+   "growth": 6.25,
    "videos": 5,
-   "base": 1.2,
+   "base": 0.3,
    "channels": 5,
-   "views": 53131,
+   "views": 282575,
    "who": [
-    "桜ころみん coromin Ch",
-    "最高のゼルダクリップス",
-    "りぃちょ",
-    "雛乃ぴぴ / Hinano pipi",
-    "週刊少年ゲームマガジン230円"
+    "藍沢エマ / Aizawa Ema",
+    "兎咲ミミ / Tosaki Mimi",
+    "神成きゅぴ / Kaminari Qpi",
+    "蝶屋はなび / Choya Hanabi",
+    "SurugaMonkeyCH"
    ],
    "titles": [
-    "【#11】ストーリー リトの村：完全初見で『ゼルダの伝説 ティアーズ オブ ザ キングダム』の世界へ！【Switch2版 】",
-    "【天才】まじで欲しいｗｗ全ユーザーの願いを全て叶えた最強戦艦がこちらｗｗ【ティアキン】【面白クリップ集】",
-    "完全初見 2つ目の町へ向かうが･･･ # 5【ゼルダの伝説 ティアキン】"
+    "【PUBG】ぱぶじベイビー練習します→スト6【ぶいすぽっ！/ 藍沢エマ】",
+    "【PUBG】メンバーとあそぶ会【ぶいすぽ/兎咲ミミ】",
+    "【PUBG】久しぶりにドンカツ食いに行きます🍳【ぶいすぽっ！/神成きゅぴ】"
    ],
    "genres": [],
    "year": null,
    "platforms": [],
-   "days_seen": 21,
+   "days_seen": 5,
    "last_seen": "2026-10-04",
    "first_here": false
   },
   {
-   "game": "Rust",
-   "growth": 4.0,
-   "videos": 6,
-   "base": 1.5,
-   "channels": 5,
-   "views": 24585,
+   "game": "エースコンバット・ゼロ ザ・ベルカン・ウォー",
+   "growth": 3.75,
+   "videos": 3,
+   "base": 0.7,
+   "channels": 3,
+   "views": 116229,
    "who": [
-    "藍月すりっぷ -Aotsuki Slip-",
-    "影。/かげまる",
-    "めーや",
-    "藍月すりっぷ -Aotsuki Slip-",
-    "おまおじ"
+    "葉山舞鈴 / Ohayama Ch.",
+    "野々熊びこり / nonokuma bicori",
+    "季沙 / Kisa"
    ],
    "titles": [
-    "【#あたなるRUST鯖】悪童 Day.7",
-    "【#あたなるRUST鯖】(おそらく)すべてを失った男、サバゲーイベントで交流したひ #2",
-    "【RUST】今日は早寝、明日は早起き【#あたなるRUST鯖】"
+    "【 ACE COMBAT ZERO: THE BELKAN WAR┊︎移植版 】完全初見！王覇山、新たな空へ。（ エースによって語られる、エースの生き様。 ）【 にじさんじ┊︎葉山舞鈴 】",
+    "【ACE COMBAT ZERO】エースによって語られる、エースの生き様【移植版/ エースコンバット・ゼロ ザ・ベルカン・ウォー/ Vtuber】",
+    "ロボ好きが人生初めてのエースコンバット！ゼロ2週目！完全初見で名作を関西人がプレイ#5  【ACE COMBAT ZERO/エースコンバット・ゼロ ザ・ベルカン・ウォー】※ネタバレ注意"
    ],
    "genres": [
     "Shooter",
-    "Role-playing (RPG)",
-    "Adventure",
+    "Simulator"
+   ],
+   "year": null,
+   "platforms": [
+    "pc",
+    "console"
+   ],
+   "days_seen": 1,
+   "last_seen": "2026-10-04",
+   "first_here": false
+  },
+  {
+   "game": "タンポポは耐える。",
+   "growth": 3.75,
+   "videos": 3,
+   "base": 0.8,
+   "channels": 3,
+   "views": 62236,
+   "who": [
+    "五十嵐梨花 / Igarashi Rika 【にじさんじ】",
+    "魁星 / Kaisei【にじさんじ】",
+    "まるたにあやの"
+   ],
+   "titles": [
+    "タンポポは耐える┊︎耐えろ、俺の体ッッ！！！【 にじさんじ / 五十嵐梨花 】",
+    "【タンポポは耐える。】このタンポポは面構えが違う【魁星/にじさんじ】",
+    "【タンポポは耐える。】生き延びるぞおおお！！！【VTuber/まるたにあやの 】"
+   ],
+   "genres": [
+    "Simulator",
     "Indie"
    ],
    "year": null,
    "platforms": [
     "pc"
    ],
-   "days_seen": 28,
+   "days_seen": 8,
+   "last_seen": "2026-10-04",
+   "first_here": false
+  },
+  {
+   "game": "ゼルダの伝説 時のオカリナ",
+   "growth": 3.75,
+   "videos": 3,
+   "base": 0.7,
+   "channels": 3,
+   "views": 59815,
+   "who": [
+    "小々波いるか / Kokonami Iruka【にじさんじ】",
+    "ひろちんくん",
+    "満月しお / Shio Mitsuki Ch."
+   ],
+   "titles": [
+    "【 ゼルダの伝説 時のオカリナ 】#17 完全初見！最後の冒険いくぞ！【 にじさんじ  / 小々波いるか 】",
+    "【時のオカリナ】ゲルドの神BGM聞きに行こう#6",
+    "【 時オカ 完全初見 】最後の神殿？！魂の神殿攻略する✨♯6【 ゼルダの伝説 時のオカリナ #満月しお #Vtuber 】"
+   ],
+   "genres": [],
+   "year": null,
+   "platforms": [],
+   "days_seen": 13,
+   "last_seen": "2026-10-04",
+   "first_here": false
+  },
+  {
+   "game": "ダンガンロンパ 希望の学園と絶望の高校生",
+   "growth": 3.75,
+   "videos": 3,
+   "base": 0.5,
+   "channels": 3,
+   "views": 672,
+   "who": [
+    "sozakura yunoa / 楚桜ゆのあ ch.",
+    "SUZUNE",
+    "虚無人-創作者Vtuber-"
+   ],
+   "titles": [
+    "【ダンガンロンパ】完全初見！見知らぬ誰かは仲間？敵？＃14【個人勢Vtuber/楚桜ゆのあ】",
+    "#1 【ダンガンロンパ】　自認名探偵なのでウルトラ解決する！",
+    "【#ザンキゼロ】#1 ダンガンロンパ制作陣による怪作RPGを実況【男性Vtuber】"
+   ],
+   "genres": [
+    "Point-and-click",
+    "Adventure",
+    "Visual Novel"
+   ],
+   "year": null,
+   "platforms": [
+    "pc",
+    "console"
+   ],
+   "days_seen": 4,
    "last_seen": "2026-10-04",
    "first_here": false
   }
