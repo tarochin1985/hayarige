@@ -3,4 +3,24 @@ Allow: /
 Disallow: /admin/
 Disallow: /tweet.txt
 
+# AIに読ませるかどうか（2026-10-05 たろちんさんと決めた）
+#
+#   「Geminiの学習には使わせないが、読むのは許す」
+#
+# 上の「User-agent: *」で、AIのクローラーも含めて読むのは許している。
+# Google-Extended は、読み取り用のクローラーではない。
+# 独自のUser-Agentを持たず、「取ってきた内容を Gemini の学習と
+# Geminiアプリの回答の裏付けに使ってよいか」だけを決めるトークン
+# （Googleのクローラー一覧に明記あり）。
+# だから Disallow にしても、Googlebot が読みに来るのは止まらない。
+#
+# ここで止まらないもの
+#   ・Cloudflare側のAIボット設定。robots.txt より手前で弾くので、
+#     Geminiが読めないときはまずそちらを見る
+#   ・他社の学習クローラー（GPTBot など）。会社ごとにトークンが違い、
+#     「読む用」と「学習用」が分かれていない会社もある。
+#     揃えるなら1社ずつ現在のトークン名を確かめてから足す
+User-agent: Google-Extended
+Disallow: /
+
 Sitemap: https://hayarige.com/sitemap.xml
