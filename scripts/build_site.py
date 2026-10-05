@@ -617,6 +617,48 @@ def plain(s):
     return BOLD.sub(r"\1", str(s if s is not None else ""))
 
 
+def bold_warn(c):
+    """まとめの太字の書き方を見て、注意だけ返す。載せるかどうかには影響しない。
+
+    閉じ忘れが怖くて足した（2026-10-05）。`**` が奇数個あると、
+    BOLD は左から対にしていくので最後の `**` が対を失い、
+    **ページに `**` がそのまま文字として出る。** ビルドは成功するので
+    誰も気づかない。だからここで数えて、Actionsのログに出す。
+
+    title・card・小見出し(h) に書いても文字は出ない（plain を通してある）が、
+    書いた人は太字になると思っているので、そこも知らせる。
+    """
+    out = []
+
+    def count(label, s):
+        n = str(s or "").count("**")
+        if n % 2:
+            out.append(f"{label} の `**` が{n}個（奇数）です。閉じ忘れると "
+                       "`**` がそのまま出ます")
+        if n // 2 > 4:
+            out.append(f"{label} の太字が{n // 2}か所あります。"
+                       "1段落2〜4か所までの決まりです")
+
+    if str(c.get("lead") or "").strip():
+        count("lead", c["lead"])
+    for i, sec in enumerate(c.get("sections") or [], 1):
+        if not isinstance(sec, dict):
+            continue
+        for j, para in enumerate(str(sec.get("body") or "").split("\n"), 1):
+            if para.strip():
+                count(f"{i}番目の section の{j}段落目", para)
+        if "**" in str(sec.get("h") or ""):
+            out.append(f"{i}番目の section の小見出しに `**` があります。"
+                       "小見出しは太字にできません")
+    if "**" in str(c.get("title") or ""):
+        out.append("title に `**` があります。title は太字にできません")
+    card = c.get("card") or {}
+    for k, v in (card.items() if isinstance(card, dict) else []):
+        if "**" in json.dumps(v, ensure_ascii=False):
+            out.append(f"card.{k} に `**` があります。カードは太字にできません")
+    return out
+
+
 def man(n):
     n = int(n or 0)
     if n >= 100000:
@@ -1205,6 +1247,8 @@ def load_specials():
             if bad:
                 log(f"まとめを載せません（{kind}/{f.name}）: {bad[0]}")
                 continue
+            for w in bold_warn(c):
+                log(f"⚠️ 太字の書き方（{kind}/{f.name}）: {w}")
             out.append({"kind": kind, "slug": slug, "label": label,
                         "key": f.stem, "col": c,
                         "title": str(c.get("title", "")).strip(),
