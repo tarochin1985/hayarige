@@ -1,6 +1,6 @@
 {
  "date": "2026-10-07",
- "generated": "2026-10-07 11:30",
+ "generated": "2026-10-07 12:14",
  "leads": {
   "events": [
    {
@@ -62,8 +62,8 @@
    },
    {
     "game": "ストリートファイター6",
-    "channels": 31,
-    "videos": 32
+    "channels": 32,
+    "videos": 34
    },
    {
     "game": "Minecraft",
@@ -91,9 +91,9 @@
     "videos": 15
    },
    {
-    "game": "Dead by Daylight",
-    "channels": 14,
-    "videos": 16
+    "game": "スプラトゥーン3",
+    "channels": 12,
+    "videos": 12
    }
   ]
  },
@@ -127,22 +127,6 @@
    ]
   },
   {
-   "word": "ShadowCorridor",
-   "channels": 1,
-   "n": 1,
-   "examples": [
-    {
-     "t": "弟にホラゲーをやらせる【ShadowCorridor】",
-     "c": "ちむらい",
-     "u": "https://www.youtube.com/watch?v=xPiwGCpjzQg"
-    }
-   ],
-   "kind": "near",
-   "suggest": [
-    "Shadow Corridor Zero"
-   ]
-  },
-  {
    "word": "librarian",
    "channels": 1,
    "n": 1,
@@ -157,6 +141,22 @@
    "suggest": [
     "Librarian of Aquademia: The Forbidden Grimoire",
     "Librarian: Tidy Up the Arcane Library!"
+   ]
+  },
+  {
+   "word": "ShadowCorridor",
+   "channels": 1,
+   "n": 1,
+   "examples": [
+    {
+     "t": "弟にホラゲーをやらせる【ShadowCorridor】",
+     "c": "ちむらい",
+     "u": "https://www.youtube.com/watch?v=xPiwGCpjzQg"
+    }
+   ],
+   "kind": "near",
+   "suggest": [
+    "Shadow Corridor Zero"
    ]
   },
   {
@@ -192,22 +192,6 @@
    ]
   },
   {
-   "word": "Octbuster",
-   "channels": 1,
-   "n": 1,
-   "examples": [
-    {
-     "t": "タコになってビデオ屋の掃除をするゲームをのんびりやる【 Octbuster 】",
-     "c": "実況したいよまちょすさん!",
-     "u": "https://www.youtube.com/watch?v=u2uzgThdQvg"
-    }
-   ],
-   "kind": "near",
-   "suggest": [
-    "Octbuster: Video Rental Store Cleanup"
-   ]
-  },
-  {
    "word": "Palette",
    "channels": 1,
    "n": 1,
@@ -221,6 +205,22 @@
    "kind": "near",
    "suggest": [
     "Palette: Glass Shard Mosaic"
+   ]
+  },
+  {
+   "word": "Octbuster",
+   "channels": 1,
+   "n": 1,
+   "examples": [
+    {
+     "t": "タコになってビデオ屋の掃除をするゲームをのんびりやる【 Octbuster 】",
+     "c": "実況したいよまちょすさん!",
+     "u": "https://www.youtube.com/watch?v=u2uzgThdQvg"
+    }
+   ],
+   "kind": "near",
+   "suggest": [
+    "Octbuster: Video Rental Store Cleanup"
    ]
   },
   {
@@ -274,102 +274,6 @@
    ]
   },
   {
-   "word": "STEAMオータムセール",
-   "channels": 9,
-   "n": 14,
-   "examples": [
-    {
-     "t": "【STEAMオータムセール】最安値+各ジャンル 時間が熔ける厳選おすすめ作品 50選【メトロイドヴァニアとソウルライクやローグライクもある！絶対遊ぶべきおすすめ作品】",
-     "c": "ホビドワ",
-     "u": "https://www.youtube.com/watch?v=85hr9ybOa6o"
-    },
-    {
-     "t": "【 Steamオータムセール 】ついにセールがきた🍁！オススメの神ゲー買いまくるぞおおおおおおおおお【にじさんじ/椎名唯華】",
-     "c": "椎名唯華 / Shiina Yuika",
-     "u": "https://www.youtube.com/watch?v=lgFlQer8aJw"
-    },
-    {
-     "t": "【Steamオータムセール】全品1000円以下 コスパ最強のオススメ高評価作品30選【Pax Autocraticaが公式の設定ミスで80％オフ！今が買い時！】",
-     "c": "ホビドワ",
-     "u": "https://www.youtube.com/watch?v=wpTVL9lSepM"
-    }
-   ],
-   "kind": "wide",
-   "suggest": []
-  },
-  {
-   "word": "#にじポケミクリレー",
-   "channels": 4,
-   "n": 7,
-   "examples": [
-    {
-     "t": "【#にじポケミクリレー】加賀美ハヤトが　勝負を　しかけてきた！▼",
-     "c": "加賀美 ハヤト/Hayato Kagami",
-     "u": "https://www.youtube.com/watch?v=iWsLWfkFJUk"
-    },
-    {
-     "t": "【#にじポケミクリレー】加賀美ハヤトが　勝負を　しかけてきた！▼",
-     "c": "加賀美 ハヤト/Hayato Kagami",
-     "u": "https://www.youtube.com/watch?v=iWsLWfkFJUk"
-    },
-    {
-     "t": "【#にじポケミクリレー】しいなゆいかが　勝負をしかけてきた！▼",
-     "c": "椎名唯華 / Shiina Yuika",
-     "u": "https://www.youtube.com/watch?v=F8o1e6bM26c"
-    }
-   ],
-   "kind": "wide",
-   "suggest": []
-  },
-  {
-   "word": "レトロゲーム実況",
-   "channels": 3,
-   "n": 6,
-   "examples": [
-    {
-     "t": "プレイステーション　ウッチャンナンチャン　電流イライラ棒　【レトロゲーム実況】",
-     "c": "40代　無職　独身　貯金無し　レトロゲーム実況",
-     "u": "https://www.youtube.com/watch?v=hu_Vvr52TpU"
-    },
-    {
-     "t": "プレイステーション　THE　ボーリング　【レトロゲーム実況】",
-     "c": "40代　無職　独身　貯金無し　レトロゲーム実況",
-     "u": "https://www.youtube.com/watch?v=RsEofM2Pa_A"
-    },
-    {
-     "t": "プレイステーション　ゼルドナーシルト　【レトロゲーム実況】",
-     "c": "40代　無職　独身　貯金無し　レトロゲーム実況",
-     "u": "https://www.youtube.com/watch?v=WlobndQCYDk"
-    }
-   ],
-   "kind": "wide",
-   "suggest": []
-  },
-  {
-   "word": "#バーチャル物産展",
-   "channels": 3,
-   "n": 4,
-   "examples": [
-    {
-     "t": "【#バーチャル物産展】マラサダ×謎解き⁉　謎解きといえばみぃでしょ～～～！！【PR】 #vtuber #新人vtuber",
-     "c": "鈴ノ時みぃ@新人Vtuber",
-     "u": "https://www.youtube.com/watch?v=yMJDfid0QT4"
-    },
-    {
-     "t": "【#バーチャル物産展】マラサダ×謎解き⁉　謎解きといえばみぃでしょ～～～！！【PR】 #vtuber #新人vtuber",
-     "c": "鈴ノ時みぃ@新人Vtuber",
-     "u": "https://www.youtube.com/watch?v=yMJDfid0QT4"
-    },
-    {
-     "t": "(日程仮)【雑談配信】焼き鳥を食べる！串の宴 ～9月～【狐森ろべ／VTuber】#バーチャル物産展 / PR",
-     "c": "狐森ろべ / Komori Ch.",
-     "u": "https://www.youtube.com/watch?v=wcoaiXJctZg"
-    }
-   ],
-   "kind": "wide",
-   "suggest": []
-  },
-  {
    "word": "sega",
    "channels": 3,
    "n": 4,
@@ -394,54 +298,6 @@
    "suggest": []
   },
   {
-   "word": "5周年記念",
-   "channels": 3,
-   "n": 3,
-   "examples": [
-    {
-     "t": "【5周年記念／飲酒凸待ち】お酒を飲みながら、みんなとお祝い！【月音ゆき】",
-     "c": "月音ゆき - つくねゆき",
-     "u": "https://www.youtube.com/watch?v=fO4TUztDMD0"
-    },
-    {
-     "t": "【5周年記念】デザインよすぎ「○○Tシャツ」が出ます！本日デビュー5周年なので祝ってください【沙汰ナキア/VTuber】",
-     "c": "沙汰ナキアASMR - Nakia Ch.",
-     "u": "https://www.youtube.com/watch?v=3DkiaXkhxVU"
-    },
-    {
-     "t": "【５周年記念】みんなのお陰でここまでこれた！！【Vtuberしまゆま】",
-     "c": "しまゆま",
-     "u": "https://www.youtube.com/watch?v=Ly2ybvUtMBI"
-    }
-   ],
-   "kind": "wide",
-   "suggest": []
-  },
-  {
-   "word": "Sky 星を紡ぐ子どもたち",
-   "channels": 3,
-   "n": 3,
-   "examples": [
-    {
-     "t": "【雀】お口ゆるゆる禁止？？？？？【Sky 星を紡ぐ子どもたち】",
-     "c": "アミダ　ケイ / Amida Kei ch.",
-     "u": "https://www.youtube.com/watch?v=KdJAMSBpyx8"
-    },
-    {
-     "t": "【Sky 星を紡ぐ子どもたち】ゴッホの季節を巡りましょう！【儒烏風亭らでん #ReGLOSS 】",
-     "c": "Raden Ch. 儒烏風亭らでん ‐ ReGLOSS",
-     "u": "https://www.youtube.com/watch?v=d0dbaI1o2F4"
-    },
-    {
-     "t": "【雑談】超緊急！新シーズン『遥かなる真珠の季節』のティザーが公開！！映像を見た感想や予想を語っていく！！【Sky 星を紡ぐ子どもたち】",
-     "c": "ちゃんぴーの家",
-     "u": "https://www.youtube.com/watch?v=a4IctE77A7Y"
-    }
-   ],
-   "kind": "wide",
-   "suggest": []
-  },
-  {
    "word": "徹底解説",
    "channels": 3,
    "n": 3,
@@ -460,30 +316,6 @@
      "t": "【徹底解説】洗える？クサい？ドレッドヘア歴10年のMYがメリット・デメリット全て教えます",
      "c": "MY 宮本悠弥",
      "u": "https://www.youtube.com/watch?v=tO2zPagSQJA"
-    }
-   ],
-   "kind": "wide",
-   "suggest": []
-  },
-  {
-   "word": "ストリートファイターリーグ JAPAN 2026",
-   "channels": 3,
-   "n": 3,
-   "examples": [
-    {
-     "t": "【応援会場】「ストリートファイターリーグ JAPAN 2026」Division F 第3節【ミラー配信】",
-     "c": "SANNINSHOW",
-     "u": "https://www.youtube.com/watch?v=D3Dr0gJyGCo"
-    },
-    {
-     "t": "【ストリートファイターリーグ JAPAN 2026】　Div.F 第3節ミラー配信！！！！！！　【 ぶいすぽっ！ ⁠/蝶屋はなび 】",
-     "c": "蝶屋はなび / Choya Hanabi",
-     "u": "https://www.youtube.com/watch?v=sy-yMvD2g9Y"
-    },
-    {
-     "t": "ミラー配信「ストリートファイターリーグ JAPAN 2026」Division F 第3節",
-     "c": "ももち / Momochi",
-     "u": "https://www.youtube.com/watch?v=n0dSDOdF4N0"
     }
    ],
    "kind": "wide",

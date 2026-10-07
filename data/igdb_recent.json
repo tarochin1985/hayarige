@@ -642,22 +642,6 @@
   ]
  },
  {
-  "name": "99 Fails",
-  "alias": [],
-  "pop": 0,
-  "y": 2026,
-  "p": [
-   "pc",
-   "console"
-  ],
-  "g": [
-   "Platform",
-   "Adventure",
-   "Indie",
-   "Arcade"
-  ]
- },
- {
   "name": "999Seconds!Survivors",
   "alias": [],
   "pop": 0,
@@ -7882,6 +7866,19 @@
   ]
  },
  {
+  "name": "Break the Piñatas",
+  "alias": [],
+  "pop": 0,
+  "y": 2026,
+  "p": [
+   "pc"
+  ],
+  "g": [
+   "Simulator",
+   "Indie"
+  ]
+ },
+ {
   "name": "BreakEven: Idle",
   "alias": [
    "BreakEven.exe"
@@ -11992,6 +11989,21 @@
   ]
  },
  {
+  "name": "Console Archives: Karate Champ",
+  "alias": [
+   "Console Archives KARATE CHAMP"
+  ],
+  "pop": 0,
+  "y": 2026,
+  "p": [
+   "console"
+  ],
+  "g": [
+   "Fighting",
+   "Sport"
+  ]
+ },
+ {
   "name": "Console Archives: Nobunaga's Ambition II",
   "alias": [
    "Console Archives NOBUNAGA’S AMBITION II"
@@ -13765,24 +13777,6 @@
   ]
  },
  {
-  "name": "Curse of the Crimson Stag",
-  "alias": [
-   "血色鹿影",
-   "血色鹿影",
-   "The Fading of Nicole Wilson"
-  ],
-  "pop": 0,
-  "y": 2026,
-  "p": [
-   "pc",
-   "console"
-  ],
-  "g": [
-   "Adventure",
-   "Indie"
-  ]
- },
- {
   "name": "Cursed District: Horror",
   "alias": [],
   "pop": 0,
@@ -14735,6 +14729,21 @@
    "Simulator",
    "Adventure",
    "Indie"
+  ]
+ },
+ {
+  "name": "Dead Position",
+  "alias": [],
+  "pop": 0,
+  "y": 2026,
+  "p": [
+   "pc"
+  ],
+  "g": [
+   "Strategy",
+   "Turn-based strategy (TBS)",
+   "Indie",
+   "Card & Board Game"
   ]
  },
  {
@@ -18244,6 +18253,7 @@
    "pc"
   ],
   "g": [
+   "Puzzle",
    "Simulator",
    "Adventure",
    "Indie"
@@ -18697,6 +18707,15 @@
    "Strategy",
    "Adventure",
    "Indie"
+  ]
+ },
+ {
+  "name": "Dungeon Swipe",
+  "alias": [],
+  "pop": 0,
+  "y": 2026,
+  "g": [
+   "Role-playing (RPG)"
   ]
  },
  {
@@ -22293,20 +22312,6 @@
    "Point-and-click",
    "Puzzle",
    "Adventure",
-   "Indie"
-  ]
- },
- {
-  "name": "Find My Frogs: Branches",
-  "alias": [
-   "Find My Frogs Branches.exe"
-  ],
-  "pop": 0,
-  "y": 2026,
-  "p": [
-   "pc"
-  ],
-  "g": [
    "Indie"
   ]
  },
@@ -31673,6 +31678,20 @@
   ]
  },
  {
+  "name": "Just Until Morning",
+  "alias": [],
+  "pop": 0,
+  "y": 2026,
+  "p": [
+   "pc"
+  ],
+  "g": [
+   "Simulator",
+   "Adventure",
+   "Indie"
+  ]
+ },
+ {
   "name": "Just Volleyball",
   "alias": [
    "just volleyball"
@@ -32838,6 +32857,18 @@
   ]
  },
  {
+  "name": "L'Empire Banger V3",
+  "alias": [],
+  "pop": 0,
+  "y": 2026,
+  "p": [
+   "console"
+  ],
+  "g": [
+   "Arcade"
+  ]
+ },
+ {
   "name": "L.OD",
   "alias": [
    "LOVE.OVERDOSE"
@@ -33972,24 +34003,6 @@
    "pc"
   ],
   "g": [
-   "Indie"
-  ]
- },
- {
-  "name": "Little Chef: Cozy Cooking",
-  "alias": [
-   "Little Chef",
-   "Little Chef 2",
-   "Little Chef: Cosy Cooking",
-   "Little Chef.exe"
-  ],
-  "pop": 0,
-  "y": 2026,
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Puzzle",
    "Indie"
   ]
  },
@@ -39570,6 +39583,22 @@
   ]
  },
  {
+  "name": "Neebota: 99 Fails",
+  "alias": [],
+  "pop": 0,
+  "y": 2026,
+  "p": [
+   "pc",
+   "console"
+  ],
+  "g": [
+   "Platform",
+   "Adventure",
+   "Indie",
+   "Arcade"
+  ]
+ },
+ {
   "name": "Needle In A Haystack",
   "alias": [],
   "pop": 0,
@@ -43430,6 +43459,20 @@
   ],
   "g": [
    "Adventure"
+  ]
+ },
+ {
+  "name": "Parcel Inspector Simulator",
+  "alias": [],
+  "pop": 0,
+  "y": 2026,
+  "p": [
+   "pc"
+  ],
+  "g": [
+   "Puzzle",
+   "Simulator",
+   "Indie"
   ]
  },
  {
@@ -47491,7 +47534,9 @@
  },
  {
   "name": "Raccoon Valley Tycoon",
-  "alias": [],
+  "alias": [
+   "RVT"
+  ],
   "pop": 0,
   "y": 2026,
   "p": [
@@ -53013,21 +53058,6 @@
   ],
   "g": [
    "Adventure"
-  ]
- },
- {
-  "name": "Slay the Berserker",
-  "alias": [
-   "Slay The Berserker.exe"
-  ],
-  "pop": 0,
-  "y": 2026,
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Adventure",
-   "Indie"
   ]
  },
  {
@@ -64394,18 +64424,6 @@
   ]
  },
  {
-  "name": "Twinkle Seek",
-  "alias": [],
-  "pop": 0,
-  "y": 2026,
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Indie"
-  ]
- },
- {
   "name": "Two Dollar Suits",
   "alias": [],
   "pop": 0,
@@ -64490,23 +64508,6 @@
    "Shooter",
    "Strategy",
    "Indie"
-  ]
- },
- {
-  "name": "Tóng Dāo Yín Jiàn",
-  "alias": [
-   "铜刀银剑"
-  ],
-  "pop": 0,
-  "y": 2026,
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Role-playing (RPG)",
-   "Adventure",
-   "Indie",
-   "Visual Novel"
   ]
  },
  {
@@ -66402,25 +66403,6 @@
   ],
   "g": [
    "Shooter"
-  ]
- },
- {
-  "name": "Wanting Shock",
-  "alias": [
-   "WS",
-   "Urban Legend Murder Case"
-  ],
-  "pop": 0,
-  "y": 2026,
-  "p": [
-   "pc",
-   "console"
-  ],
-  "g": [
-   "Point-and-click",
-   "Quiz/Trivia",
-   "Indie",
-   "Visual Novel"
   ]
  },
  {
