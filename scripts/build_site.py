@@ -351,9 +351,16 @@ def _miss_blocklist():
     exact, part = set(), set()
     for w in words:
         c = M.compact(w)
-        if len(c) >= 6:
+        if not c:
+            continue
+        # **字数は「書いたとおりの字数」で数える。** 詰めた形で数えていたため、
+        # 2026-10-07に「オータムセール」が効かなかった。compact() は長音符「ー」も
+        # 落とすので7字が5字になり、6字の線を割って完全一致あつかいになっていた。
+        # 候補に出ていたのは「STEAMオータムセール」で、完全一致では消えない。
+        # 照合そのものは詰めた形で行うので、集合に入れるのは c のまま。
+        if len(M.norm(w).strip()) >= 6:
             part.add(c)
-        elif c:
+        else:
             exact.add(c)
     return exact, part
 
