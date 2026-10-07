@@ -1,8 +1,21 @@
 {
  "date": "2026-10-07",
- "generated": "2026-10-07 01:39",
+ "generated": "2026-10-07 10:16",
  "leads": {
   "events": [
+   {
+    "tag": "#ホロドリ",
+    "channels": [
+     "AZKi Channel",
+     "Iroha ch. 風真いろは - holoX -",
+     "Koyori ch. 博衣こより - holoX -",
+     "Roboco Ch. - ロボ子",
+     "Vivi Ch. 綺々羅々ヴィヴィ - FLOW GLOW",
+     "アキロゼCh。Vtuber/ホロライブ所属",
+     "宵吸あけル / Yokyu Akeru",
+     "隅川かど"
+    ]
+   },
    {
     "tag": "#ゲーム実況",
     "channels": [
@@ -13,27 +26,6 @@
      "豚咲あおい_TomisakiAoi",
      "里城はな",
      "雛乃ぴぴ / Hinano pipi"
-    ]
-   },
-   {
-    "tag": "#ホロドリ",
-    "channels": [
-     "AZKi Channel",
-     "Iroha ch. 風真いろは - holoX -",
-     "Koyori ch. 博衣こより - holoX -",
-     "Roboco Ch. - ロボ子",
-     "Vivi Ch. 綺々羅々ヴィヴィ - FLOW GLOW",
-     "アキロゼCh。Vtuber/ホロライブ所属",
-     "宵吸あけル / Yokyu Akeru"
-    ]
-   },
-   {
-    "tag": "#わちゃサバ",
-    "channels": [
-     "kaka🦊紺狐カカ",
-     "ノビーの遊び部屋",
-     "天羽よつは",
-     "小花衣 ももみ / Momomi Kohanai"
     ]
    },
    {
@@ -51,62 +43,70 @@
      "りーふちゃんねる【ポケモンチャンピオンズ】",
      "蛇目 欠番@Vtuber"
     ]
+   },
+   {
+    "tag": "#わちゃサバ",
+    "channels": [
+     "ノビーの遊び部屋",
+     "天羽よつは",
+     "小花衣 ももみ / Momomi Kohanai"
+    ]
+   },
+   {
+    "tag": "#縦型配信",
+    "channels": [
+     "かおりんごー",
+     "ぺれ",
+     "ミロ"
+    ]
    }
   ],
   "newcomers": [],
   "wide": [
    {
     "game": "Apex Legends",
-    "channels": 46,
-    "videos": 51
+    "channels": 42,
+    "videos": 45
    },
    {
     "game": "ストリートファイター6",
     "channels": 31,
-    "videos": 34
+    "videos": 32
    },
    {
     "game": "Minecraft",
-    "channels": 26,
-    "videos": 28
+    "channels": 24,
+    "videos": 24
    },
    {
     "game": "PUBG",
-    "channels": 19,
-    "videos": 20
+    "channels": 17,
+    "videos": 18
+   },
+   {
+    "game": "hololive Dreams",
+    "channels": 16,
+    "videos": 17
+   },
+   {
+    "game": "トルネコの大冒険 ちょっとステキなリマスター",
+    "channels": 14,
+    "videos": 14
    },
    {
     "game": "実況パワフルプロ野球2026",
-    "channels": 15,
-    "videos": 16
-   },
-   {
-    "game": "スプラトゥーン3",
-    "channels": 15,
-    "videos": 16
+    "channels": 14,
+    "videos": 15
    },
    {
     "game": "Dead by Daylight",
     "channels": 14,
-    "videos": 18
-   },
-   {
-    "game": "フォートナイト",
-    "channels": 13,
     "videos": 16
    }
   ]
  },
  "drift": [],
- "tags": [
-  {
-   "tag": "わちゃサバ",
-   "game": "Minecraft",
-   "evidence": 6,
-   "added": 2,
-   "channels": 4
-  }
- ],
+ "tags": [],
  "misses": [
   {
    "word": "Starward",
@@ -200,22 +200,6 @@
    ]
   },
   {
-   "word": "Palette",
-   "channels": 1,
-   "n": 1,
-   "examples": [
-    {
-     "t": "ソロライブ『Palette』告知生配信【ドズル社/おらふくん】",
-     "c": "おらふくん / ドズル社",
-     "u": "https://www.youtube.com/watch?v=E8o9DXnynXc"
-    }
-   ],
-   "kind": "near",
-   "suggest": [
-    "Palette: Glass Shard Mosaic"
-   ]
-  },
-  {
    "word": "Octbuster",
    "channels": 1,
    "n": 1,
@@ -229,6 +213,22 @@
    "kind": "near",
    "suggest": [
     "Octbuster: Video Rental Store Cleanup"
+   ]
+  },
+  {
+   "word": "Palette",
+   "channels": 1,
+   "n": 1,
+   "examples": [
+    {
+     "t": "ソロライブ『Palette』告知生配信【ドズル社/おらふくん】",
+     "c": "おらふくん / ドズル社",
+     "u": "https://www.youtube.com/watch?v=E8o9DXnynXc"
+    }
+   ],
+   "kind": "near",
+   "suggest": [
+    "Palette: Glass Shard Mosaic"
    ]
   },
   {
@@ -249,9 +249,42 @@
    ]
   },
   {
+   "word": "original",
+   "channels": 1,
+   "n": 1,
+   "examples": [
+    {
+     "t": "【Animation MV】リスポーン!!／角巻わため【original】(アニメ「#凶乱令嬢」オープニングテーマ)",
+     "c": "Watame Ch. 角巻わため",
+     "u": "https://www.youtube.com/watch?v=yhJ1yAqATmQ"
+    }
+   ],
+   "kind": "near",
+   "suggest": [
+    "Original Frisbee Disc Sports: Ultimate & Golf",
+    "Original Journey"
+   ]
+  },
+  {
+   "word": "Antivirus Survivors",
+   "channels": 1,
+   "n": 1,
+   "examples": [
+    {
+     "t": "【Antivirus Survivors】英語得意な人たすけて！レトロPCモチーフのヴァンサバライク【今永さらら/にぶヲタ】",
+     "c": "今さらちゃん ねる",
+     "u": "https://www.youtube.com/watch?v=vWebty1XMrM"
+    }
+   ],
+   "kind": "near",
+   "suggest": [
+    "Antivirus Survivors 2003 Professional"
+   ]
+  },
+  {
    "word": "STEAMオータムセール",
-   "channels": 8,
-   "n": 13,
+   "channels": 9,
+   "n": 14,
    "examples": [
     {
      "t": "【STEAMオータムセール】最安値+各ジャンル 時間が熔ける厳選おすすめ作品 50選【メトロイドヴァニアとソウルライクやローグライクもある！絶対遊ぶべきおすすめ作品】",
@@ -297,30 +330,6 @@
    "suggest": []
   },
   {
-   "word": "バーチャル物産展",
-   "channels": 4,
-   "n": 5,
-   "examples": [
-    {
-     "t": "【 #雑談 】謎解き×マラサダ.....？幻のマラサダを探しに行きましょう！ / #バーチャル物産展",
-     "c": "neon",
-     "u": "https://www.youtube.com/watch?v=dSGUrheDJ8Y"
-    },
-    {
-     "t": "【#バーチャル物産展】マラサダ×謎解き⁉　謎解きといえばみぃでしょ～～～！！【PR】 #vtuber #新人vtuber",
-     "c": "鈴ノ時みぃ@新人Vtuber",
-     "u": "https://www.youtube.com/watch?v=yMJDfid0QT4"
-    },
-    {
-     "t": "【#バーチャル物産展】マラサダ×謎解き⁉　謎解きといえばみぃでしょ～～～！！【PR】 #vtuber #新人vtuber",
-     "c": "鈴ノ時みぃ@新人Vtuber",
-     "u": "https://www.youtube.com/watch?v=yMJDfid0QT4"
-    }
-   ],
-   "kind": "wide",
-   "suggest": []
-  },
-  {
    "word": "レトロゲーム実況",
    "channels": 3,
    "n": 6,
@@ -345,6 +354,30 @@
    "suggest": []
   },
   {
+   "word": "#バーチャル物産展",
+   "channels": 3,
+   "n": 4,
+   "examples": [
+    {
+     "t": "【#バーチャル物産展】マラサダ×謎解き⁉　謎解きといえばみぃでしょ～～～！！【PR】 #vtuber #新人vtuber",
+     "c": "鈴ノ時みぃ@新人Vtuber",
+     "u": "https://www.youtube.com/watch?v=yMJDfid0QT4"
+    },
+    {
+     "t": "【#バーチャル物産展】マラサダ×謎解き⁉　謎解きといえばみぃでしょ～～～！！【PR】 #vtuber #新人vtuber",
+     "c": "鈴ノ時みぃ@新人Vtuber",
+     "u": "https://www.youtube.com/watch?v=yMJDfid0QT4"
+    },
+    {
+     "t": "(日程仮)【雑談配信】焼き鳥を食べる！串の宴 ～9月～【狐森ろべ／VTuber】#バーチャル物産展 / PR",
+     "c": "狐森ろべ / Komori Ch.",
+     "u": "https://www.youtube.com/watch?v=wcoaiXJctZg"
+    }
+   ],
+   "kind": "wide",
+   "suggest": []
+  },
+  {
    "word": "sega",
    "channels": 3,
    "n": 4,
@@ -355,62 +388,14 @@
      "u": "https://www.youtube.com/watch?v=Ydn7SHoU7xc"
     },
     {
-     "t": "【ソニックアドベンチャーDX】超音速アクションを初見クリア耐久！エンディングまで走り抜ける！【レトロゲーム / SEGA】#セガアトラス配信中",
-     "c": "モモツナ",
-     "u": "https://www.youtube.com/watch?v=WxALdTevB3Q"
-    },
-    {
      "t": "【ソニックアドベンチャーDX】②超音速アクションを初見クリア耐久！エンディングまで走り抜ける！【レトロゲーム / SEGA】#セガアトラス配信中",
      "c": "モモツナ",
      "u": "https://www.youtube.com/watch?v=ZLma34rYdO0"
-    }
-   ],
-   "kind": "wide",
-   "suggest": []
-  },
-  {
-   "word": "初見さん歓迎",
-   "channels": 3,
-   "n": 3,
-   "examples": [
-    {
-     "t": "【雑談】セプテンバーではじまりセプテンバーで終わる歌枠。歌うたうよ～まったり【雑談/初見さん歓迎/作業用BGM】",
-     "c": "やゆよwithチャイナメイドちゃん",
-     "u": "https://www.youtube.com/watch?v=J7eTdmAaR_o"
     },
     {
-     "t": "【初見さん歓迎】100日活動したので、改めて私のことを知ってほしい！【#ひなみ通信】#ACHRORA #由比河ひなみ",
-     "c": "ACHRORA - mekPark",
-     "u": "https://www.youtube.com/watch?v=drSgQsEHdBM"
-    },
-    {
-     "t": "【初見さん歓迎】30秒以内に初見さん来ないと即終了企画やります #もう一度だけVTuber",
-     "c": "もう一度だけVTuberやってもいい? 🅥",
-     "u": "https://www.youtube.com/watch?v=pbtQAdx1eIQ"
-    }
-   ],
-   "kind": "wide",
-   "suggest": []
-  },
-  {
-   "word": "Sky 星を紡ぐ子どもたち",
-   "channels": 3,
-   "n": 3,
-   "examples": [
-    {
-     "t": "【雀】お口ゆるゆる禁止？？？？？【Sky 星を紡ぐ子どもたち】",
-     "c": "アミダ　ケイ / Amida Kei ch.",
-     "u": "https://www.youtube.com/watch?v=KdJAMSBpyx8"
-    },
-    {
-     "t": "【Sky 星を紡ぐ子どもたち】ゴッホの季節を巡りましょう！【儒烏風亭らでん #ReGLOSS 】",
-     "c": "Raden Ch. 儒烏風亭らでん ‐ ReGLOSS",
-     "u": "https://www.youtube.com/watch?v=d0dbaI1o2F4"
-    },
-    {
-     "t": "【雑談】超緊急！新シーズン『遥かなる真珠の季節』のティザーが公開！！映像を見た感想や予想を語っていく！！【Sky 星を紡ぐ子どもたち】",
-     "c": "ちゃんぴーの家",
-     "u": "https://www.youtube.com/watch?v=a4IctE77A7Y"
+     "t": "【ソニックアドベンチャーDX】超音速アクションを初見クリア耐久！エンディングまで走り抜ける！【レトロゲーム / SEGA】#セガアトラス配信中",
+     "c": "モモツナ",
+     "u": "https://www.youtube.com/watch?v=WxALdTevB3Q"
     }
    ],
    "kind": "wide",
@@ -435,6 +420,30 @@
      "t": "【５周年記念】みんなのお陰でここまでこれた！！【Vtuberしまゆま】",
      "c": "しまゆま",
      "u": "https://www.youtube.com/watch?v=Ly2ybvUtMBI"
+    }
+   ],
+   "kind": "wide",
+   "suggest": []
+  },
+  {
+   "word": "Sky 星を紡ぐ子どもたち",
+   "channels": 3,
+   "n": 3,
+   "examples": [
+    {
+     "t": "【雀】お口ゆるゆる禁止？？？？？【Sky 星を紡ぐ子どもたち】",
+     "c": "アミダ　ケイ / Amida Kei ch.",
+     "u": "https://www.youtube.com/watch?v=KdJAMSBpyx8"
+    },
+    {
+     "t": "【Sky 星を紡ぐ子どもたち】ゴッホの季節を巡りましょう！【儒烏風亭らでん #ReGLOSS 】",
+     "c": "Raden Ch. 儒烏風亭らでん ‐ ReGLOSS",
+     "u": "https://www.youtube.com/watch?v=d0dbaI1o2F4"
+    },
+    {
+     "t": "【雑談】超緊急！新シーズン『遥かなる真珠の季節』のティザーが公開！！映像を見た感想や予想を語っていく！！【Sky 星を紡ぐ子どもたち】",
+     "c": "ちゃんぴーの家",
+     "u": "https://www.youtube.com/watch?v=a4IctE77A7Y"
     }
    ],
    "kind": "wide",
@@ -493,22 +502,22 @@
  "hot_facts": [
   {
    "game": "PUBG",
-   "growth": 18.18,
-   "videos": 20,
-   "base": 1.1,
-   "channels": 19,
-   "views": 1858499,
+   "growth": 9.0,
+   "videos": 18,
+   "base": 2.0,
+   "channels": 17,
+   "views": 2198211,
    "who": [
-    "橘ひなの / Hinano Tachibana",
     "ローレン・イロアス / Lauren Iroas【にじさんじ】",
     "一ノ瀬うるは",
-    "八雲べに",
-    "猫汰つな / Nekota Tsuna"
+    "英リサ.Hanabusa Lisa",
+    "Towa Ch. 常闇トワ",
+    "イブラヒム【にじさんじ】"
    ],
    "titles": [
-    "【 PUBG 】 あかちゃんです w/べにありさかレイド【ぶいすぽっ！/橘ひなの】",
     "【PUBG】ぶっちゃけ神ゲーなんだよな /w イブラヒム３ ツルギ３ バニラ３【ローレン・イロアス/にじさんじ】",
-    "【PUBG】ぴゆやるど～～～～～【ぶいすぽ/一ノ瀬うるは】"
+    "【PUBG】ぴゆやるど～～～～～【ぶいすぽ/一ノ瀬うるは】",
+    "【PUBG】明日に向けてのれんしう　参加型カスタム【ぶいすぽっ！/英リサ】"
    ],
    "genres": [],
    "year": null,
@@ -518,22 +527,55 @@
    "first_here": false
   },
   {
+   "game": "アークナイツ：エンドフィールド",
+   "growth": 5.45,
+   "videos": 12,
+   "base": 2.2,
+   "channels": 10,
+   "views": 416122,
+   "who": [
+    "アークナイツ：エンドフィールド",
+    "マグロヘッド",
+    "アークナイツ：エンドフィールド",
+    "アークナイツ：エンドフィールド",
+    "あまくだりアークナイツ"
+   ],
+   "titles": [
+    "『アークナイツ：エンドフィールド』「丹青渡」バージョン予告特別番組",
+    "エンドフィールド「ver1.6」アプデ情報まとめ。ついに「スー」実装、2.0新章についても一気に判明！！【アークナイツ：エンドフィールド】",
+    "『アークナイツ：エンドフィールド』コアバージョン「丹青渡」PV"
+   ],
+   "genres": [
+    "Role-playing (RPG)",
+    "Strategy",
+    "Adventure"
+   ],
+   "year": null,
+   "platforms": [
+    "pc",
+    "console"
+   ],
+   "days_seen": 27,
+   "last_seen": "2026-10-06",
+   "first_here": false
+  },
+  {
    "game": "オーバーウォッチ2",
    "growth": 5.0,
    "videos": 4,
-   "base": 0.5,
-   "channels": 4,
-   "views": 538529,
+   "base": 0.7,
+   "channels": 3,
+   "views": 1014445,
    "who": [
     "Tsuzuri Ch. 鈴鳴つづり ‐ アソビ★まわり隊!",
-    "加藤純一ロードショー",
     "関優太",
-    "たいじ/たいちゃんねる"
+    "たいじ/たいちゃんねる",
+    "Tsuzuri Ch. 鈴鳴つづり ‐ アソビ★まわり隊!"
    ],
    "titles": [
     "#１　50勝するまでオーバーウォッチ!!!!!　【鈴鳴つづり/ホロライブ/アソビ★まわり隊！】 #ホロライブ #アソビまわり隊  #つづり配達中",
-    "加藤純一のCRカップ二次会Overwatch ダイジェスト【2026/10/04】",
-    "【二次会】かつてOWプロとして一線を張った英傑関優太、まさかの大トロール【OverWatch】"
+    "【二次会】かつてOWプロとして一線を張った英傑関優太、まさかの大トロール【OverWatch】",
+    "CRカップで傷ついたメンタルを二次会OWで完全回復するたいじ【Overwatch2】【たいじ/加藤純一/すもも/Euriece/関優太/SHAKA/天月/ハセシン/SPYGEA/柊ツルギ】"
    ],
    "genres": [],
    "year": null,
@@ -546,9 +588,9 @@
    "game": "VRChat",
    "growth": 5.0,
    "videos": 4,
-   "base": 0.2,
+   "base": 0.0,
    "channels": 4,
-   "views": 55316,
+   "views": 132773,
    "who": [
     "赤髪のとものゲーム実況チャンネル!!",
     "ズズちゃんねる!!!",
@@ -570,38 +612,7 @@
     "pc",
     "console"
    ],
-   "days_seen": 1,
-   "last_seen": "2026-09-27",
-   "first_here": false
-  },
-  {
-   "game": "タンポポは耐える。",
-   "growth": 4.5,
-   "videos": 9,
-   "base": 2.0,
-   "channels": 9,
-   "views": 140228,
-   "who": [
-    "おんりー / ドズル社",
-    "御子神琴音 / Mikogami Kotone【にじさんじ】",
-    "Sakuna Ch. 結城さくな",
-    "ゾンちゅう〜ゾンビJKはゲーム配信中〜",
-    "実況したいよまちょすさん!"
-   ],
-   "titles": [
-    "【タンポポは耐える。】わたげを吸い込んだら耐えない→APEX",
-    "【タンポポは耐える。】エリートタンポポ御子神【御子神琴音 / にじさんじ】",
-    "転生したらタンポポだった件【タンポポは耐える。】"
-   ],
-   "genres": [
-    "Simulator",
-    "Indie"
-   ],
-   "year": null,
-   "platforms": [
-    "pc"
-   ],
-   "days_seen": 10,
+   "days_seen": 2,
    "last_seen": "2026-10-06",
    "first_here": false
   },
@@ -611,7 +622,7 @@
    "videos": 3,
    "base": 0.3,
    "channels": 3,
-   "views": 230298,
+   "views": 442193,
    "who": [
     "兄者弟者",
     "そらね",
@@ -630,36 +641,31 @@
    "platforms": [
     "pc"
    ],
-   "days_seen": 0,
-   "last_seen": null,
-   "first_here": true
+   "days_seen": 1,
+   "last_seen": "2026-10-06",
+   "first_here": false
   },
   {
-   "game": "DinoBones: Tidy Up the Museum",
+   "game": "ペルソナ5 ザ・ロイヤル",
    "growth": 3.75,
    "videos": 3,
-   "base": 0.3,
+   "base": 0.7,
    "channels": 3,
-   "views": 148538,
+   "views": 11009,
    "who": [
-    "エクス・アルビオ -Ex Albio-",
-    "Meloco Kyoran【NIJISANJI EN】",
-    "けっけさんのありがちなゲーム実況ちゃんねる"
+    "漆瀬レイ / Ray Nanase【ななしいんく】",
+    "くまのりんご Kumano Ringo",
+    "羽渦ミウネル -Miuneru Haneuzu-"
    ],
    "titles": [
-    "2000本に散らばった恐竜の骨を1から組み立てて完璧に復元するゲーム『 DinoBones: Tidy Up the Museum 』【 エビオ/にじさんじ 】",
-    "【DinoBones: Tidy Up the Museum】DINO 深夜に約2,000本の恐竜の骨を博物館で組み立てる【NIJISANJI EN￤Meloco Kyoran】",
-    "ねえ魔理沙、博物館に届いた1940個の恐竜の骨を今日中に復元して【DinoBones Tidy Up the Museum】【ゆっくり実況】"
+    "【 P5R/ペルソナ5 ザ・ロイヤル 】完全初見🔰人生初のペルソナ！！✨※ネタバレ注意 #06【漆瀬レイ / ななしいんく】",
+    "【ペルソナ5 ザ・ロイヤル】完全初見！10/21～怪盗団ピンチ！！正義を世間に示せるか！？「P5R」を初見プレイ！【くまのりんご/女性実況】※ネタバレ注意",
+    "【ペルソナ5ザ・ロイヤル】ニイジマパレス編3【羽渦ミウネル】"
    ],
-   "genres": [
-    "Simulator",
-    "Indie"
-   ],
+   "genres": [],
    "year": null,
-   "platforms": [
-    "pc"
-   ],
-   "days_seen": 1,
+   "platforms": [],
+   "days_seen": 21,
    "last_seen": "2026-10-06",
    "first_here": false
   }
