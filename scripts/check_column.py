@@ -128,6 +128,120 @@ def tag_check(tag, day):
     return []
 
 
+# ------------------------------------------------------------ 見出しの形
+# なぜ要るか（2026-10-08 たろちんさん）
+#
+#   > 「圧縮型」と「落差型」は型としてはいいけど、例として出しているものが
+#   > 単純に面白くない。理由としてはワードチョイスが硬すぎて
+#   > せっかくの面白さが消えている。構文や文体のせいかもしれない。
+#
+# 42本を数えたら、**38本（90%）が「A、B」の対句**だった。
+# 口語の縮約は9%、読者への話しかけは4%で、その4%は両方たろちんさんの指定。
+# **こちらが自分で出したものは0本。** 知らないのではなく、毎朝まっさらな状態から
+# 同じ安全な形に落ちている。朝の窓は前日に何を書いたかを知らないので、
+# **直近の見出しを並べて見せるのが、いちばん効く手当てになる。**
+# 「てる」「てた」だけを見ると、『建てる』『捨てた』のような普通の動詞まで
+# 口語と数えてしまう（2026-10-08に「まず工場を建てる」で出た）。
+# 縮約だと言い切れる形だけを見る。拾い逃しは害にならないが、
+# **札が嘘をつくのは害になる。**
+SHUKU = re.compile(r"って[たるん]|んでる|んでた|じゃ|ちゃ|とか|っぽい|すぎ|なきゃ|ねえ|やべ")
+YOBI = re.compile(r"[?？]$|[のねよなぞ]$|んだ$|かも$|でしょ$")
+IIKIRI = re.compile(r"(う|く|ぐ|す|つ|ぬ|ぶ|む|る|た|だ|ない|ます|ません)$")
+
+
+def head_shape(head):
+    """見出しの文の形を、短い札にする。中身の良し悪しは見ない。"""
+    _, body = head_tag(str(head or ""))
+    f = []
+    f.append("対句" if "、" in body else "一文")
+    if re.search(r"[「『]", body):
+        f.append("引用")
+    if YOBI.search(body):
+        f.append("話しかけ")
+    elif IIKIRI.search(body):
+        f.append("言い切り")
+    else:
+        f.append("体言止め")
+    if SHUKU.search(body):
+        f.append("口語")
+    return "＋".join(f)
+
+
+def recent_heads(day, n=5):
+    """直近の見出しを (日付, 見出し, 形) で返す。その日より前だけ。"""
+    out = []
+    d = DATA / "columns"
+    for f in sorted(d.glob("2026-*.json"), reverse=True) if d.is_dir() else []:
+        if f.stem >= str(day):
+            continue
+        try:
+            c = json.loads(f.read_text(encoding="utf-8"))
+        except (ValueError, OSError):
+            continue
+        h = str(c.get("headline") or "").strip()
+        if h:
+            out.append((f.stem, h, head_shape(h)))
+        if len(out) >= n:
+            break
+    return out
+
+
+def shape_check(head, day):
+    """直近と同じ形ばかりになっていないかを見る。"""
+    if not head or not day:
+        return []
+    mine = head_shape(head)
+    rec = recent_heads(day)
+    same = [r for r in rec if r[2] == mine]
+    out = []
+    if len(same) >= 3:
+        out.append(f"見出しが「{mine}」で、直近{len(rec)}日のうち{len(same)}日が同じ形です。"
+                   "読点で割らない／言い切りをやめる／口語にする／人を入れる、"
+                   "のどれかで形を変えてください")
+    elif mine.startswith("対句") and "口語" not in mine and "引用" not in mine:
+        out.append(f"見出しが「{mine}」です。**この形がいちばん出やすく、"
+                   "いちばん硬くなります。** ほかの形も1本作って見比べてください")
+    return out
+
+
+def quote_check(head, day):
+    """見出しの鍵括弧の中が、その日の配信タイトルに実在するかを見る。
+
+    **チャンネル数は条件にしない**（2026-10-08 たろちんさん）。
+
+      > 多数派の凡庸なコメント、フレーズよりもむしろ
+      > 12人中1人のパンチラインを引用するほうが強い
+
+    だから数では測らない。見るのは「その字が本当に在るか」だけ。
+    在れば誰の言葉かを出して、本文で明かせるようにする。
+    """
+    _, body = head_tag(str(head or ""))
+    qs = [q for q in re.findall(r"[「『]([^」』]{3,40})[」』]", body)]
+    if not qs or not day:
+        return [], []
+    f = DATA / "daily" / f"{day}.json"
+    if not f.exists():
+        return [], []
+    try:
+        vids = (json.loads(f.read_text(encoding="utf-8")) or {}).get("videos", [])
+    except (ValueError, OSError):
+        return [], []
+    warn, note = [], []
+    for q in qs:
+        hit = [v for v in vids if q in str(v.get("title") or "")]
+        if hit:
+            chs = sorted({str(v.get("channel") or "") for v in hit})
+            note.append(f"「{q}」は{chs[0]}さんの題にあります"
+                        + (f"（ほか{len(chs) - 1}チャンネルも同じ字）" if len(chs) > 1 else "")
+                        + "。本文で誰の言葉か分かるように書いてください")
+        else:
+            warn.append(f"見出しの「{q}」が、その日の配信タイトルに見つかりません。"
+                        "引用のつもりなら綴りを確かめてください。"
+                        "ネタ（ミーム）として使っているなら、"
+                        "その土台になる事実が本文にあるか確かめてください")
+    return warn, note
+
+
 def style(col, day=""):
     """書き方の注意を返す。**これがあってもサイトには出す。**
 
@@ -161,6 +275,9 @@ def style(col, day=""):
                        "見出しのすぐ上にゲーム名が大きく出るので、重ねないでください")
         if tag:
             out += tag_check(tag, day or str(col.get("date", "")) or _today())
+        _day = day or str(col.get("date", "")) or _today()
+        out += shape_check(head, _day)
+        out += quote_check(head, _day)[0]
 
     # 「初めて」と書いているなら、本当に初めてかを数えて確かめる。
     # 書いていない日は記録ページを読みに行かないので、普段の負担はない。
@@ -197,9 +314,17 @@ def info(col, day=""):
         return []
     game = str(col.get("game", "")).strip()
     days = seen_days(game, day or str(col.get("date", "")) or _today())
+    _day = day or str(col.get("date", "")) or _today()
+    # 見出しの手当て（直近の見出し・引用の裏取り）は、**初登場の日にも必ず出す。**
+    # 初登場の日はいちばん形が固まりやすいのに、ここで早く返していたため
+    # 出ていなかった（2026-10-08）。
+    tail = (tag_hint(col, _day)
+            + quote_check(str(col.get("headline") or ""), _day)[1]
+            + head_history(_day))
     if not days:
         return [f"「{game}」が当サイトのランキングに入るのは今日が初めてです。"
-                "読者も知らない可能性が高いので、どんなゲームかの説明から始めるのが無難です"]
+                "読者も知らない可能性が高いので、どんなゲームかの説明から始めるのが無難です"
+                ] + tail
     first = f"{int(days[0][5:7])}月{int(days[0][8:10])}日"
     if len(days) <= 3:
         add = "まだ数日しか出ていません。どんなゲームかの説明から始めるのが無難です"
@@ -207,8 +332,25 @@ def info(col, day=""):
         add = "常連です。読者も知っている前提で、何が起きたかから書き始めてよいです"
     else:
         add = "ときどき出てきます。どちらから書くかは中身で決めてください"
-    out = [f"「{game}」は過去{len(days)}日ランキングに入っています（最初は{first}）。{add}"]
-    out += tag_hint(col, day or str(col.get("date", "")) or _today())
+    return [f"「{game}」は過去{len(days)}日ランキングに入っています"
+            f"（最初は{first}）。{add}"] + tail
+
+
+def head_history(day):
+    """直近5日の見出しと、その形を並べる。**毎回必ず出す。**
+
+    朝の窓は前の日に何を書いたかを知らない。だから見本も注意書きも無しで
+    毎日書くと、同じ形に戻る（42本で90%が「A、B」になっていた）。
+    **並べて見せるだけで、少なくとも「また同じだ」には気づける。**
+    """
+    rec = recent_heads(day)
+    if not rec:
+        return []
+    out = ["直近の見出しと、その文の形:"]
+    for d, h, sh in rec:
+        out.append(f"      {d[5:]} [{sh}] {h}")
+    out.append("      ★今日はこれと違う形にしてください。"
+               "型は EDITORIAL.md の見出しの章（引用型・圧縮型・落差型・ネタ型）")
     return out
 
 
