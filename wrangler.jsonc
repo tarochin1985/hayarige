@@ -3,7 +3,11 @@
   "name": "hayarige",
   "compatibility_date": "2026-08-01",
   "assets": {
-    "directory": "./site"
+    "directory": "./site",
+    // 存在しないURLに来たとき site/404.html を返す（2026-10-09）。
+    // これが無いと素のエラーが出る。ゲーム名の書き方を直して
+    // 住所が変わったとき、古いURLへ来た人が行き止まりに落ちていた。
+    "not_found_handling": "404-page"
   },
   // 公開用のURL（hayarige.〇〇.workers.dev）を有効にする。
   // これが無いと、デプロイは成功しても「No URLs enabled」のまま誰も見られない。

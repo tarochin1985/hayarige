@@ -1132,7 +1132,11 @@ def page_html(path, data, depth, site_url="", home=None):
     # JSONの中に </script> や <!-- があると、HTMLの側が先に反応してしまう。
     # 文字列の中身は変えずに、その並びだけ崩しておく（JSONとしては同じ値になる）。
     blob = json.dumps(d, ensure_ascii=False).replace("</", "<\\/").replace("<!--", "<\\!--")
+    crumb = crumb_html(path, data, home)
+    ld = jsonld_html(path, data, site_url)
     return (tpl.replace("__DATA__", blob)
+            .replace("__CRUMB__", crumb)
+            .replace("__JSONLD__", ld)
                     .replace("__TITLE__", e(title))
                     .replace("__OGTITLE__", e(ogtitle))
                     .replace("__DESC__", e(desc))
@@ -1185,7 +1189,7 @@ def page_html(path, data, depth, site_url="", home=None):
                     .replace("__SHARE_COL__", share_col)
                     .replace("__SHARE_SITE__", share_site)
                     .replace("__FOLLOW__", follow_html(read_json(
-                        DATA / "site_config.json", {}) or {}))
+                        DATA / "site_config.json", {}) or {}, home))
                     .replace("__SNS__", sns_html(read_json(
                         DATA / "site_config.json", {}) or {}))
                     .replace("__ANALYTICS__", analytics_html())
@@ -1590,6 +1594,13 @@ ICON_BS = ('<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5.77 3.44C8.34
            '-4.6 4.72-6.61-1.19-7.13-2.7-.09-.28-.14-.41-.14-.3 0-.11-.05.02-.14.3-.52 '
            '1.51-2.53 7.42-7.13 2.7-2.42-2.49-1.3-4.97 3.11-5.72-2.52.43-5.36-.28-6.14'
            '-3.06C.98 9.89.6 4.96.6 4.29.6.96 3.52 2.05 5.37 3.44Z"/></svg>')
+# RSSの印。各社のロゴではなく、RSSの共通の記号（点と2本の弧）。
+# これは誰かの商標ではないので、そのまま描いてよい。
+ICON_RSS = ('<svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="6.2" cy="17.8" '
+            'r="2.2"/><path d="M4 10.1v3.1a6.8 6.8 0 0 1 6.8 6.8h3.1C13.9 14.6 '
+            '9.4 10.1 4 10.1Zm0-6.1v3.1c7 0 12.8 5.7 12.8 12.9H20C20 11.1 12.9 4 '
+            '4 4Z"/></svg>')
+
 ICON_HB = ('<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4.6 3.2h3.6c1.7 0 '
            '2.9.3 3.7.9.8.6 1.2 1.5 1.2 2.7 0 .7-.2 1.3-.5 1.8-.3.5-.8.9-1.4 1.1.8.2 '
            '1.4.6 1.8 1.2.4.6.6 1.3.6 2.2 0 1.3-.4 2.3-1.3 3-.9.7-2.1 1-3.7 1H4.6V3.2Zm3.4 '
@@ -1613,7 +1624,7 @@ ICON_LN = ('<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.4c5.51 0 
            '.39-.39v-.72c0-.21-.17-.39-.39-.39Z"/></svg>')
 
 
-def follow_html(cfg):
+def follow_html(cfg, home=""):
     """ハヤリゲー自身のSNSへのリンク。共有ボタンとは役割が違うので分けてある。
 
     共有ボタン … 読んだ人が「これを広める」ためのもの
@@ -1634,6 +1645,18 @@ def follow_html(cfg):
     if bs:
         out.append(f'<a class="f-bs" href="https://bsky.app/profile/{e(bs)}" '
                    f'target="_blank" rel="noopener me">{ICON_BS}Blueskyでフォロー</a>')
+    # RSSもここに並べる（2026-10-09 たろちんさん）。
+    #
+    #   > サイト下部のテキストリンクは知ってる。ここは誰も見てないので、
+    #   > トップページ上部の（略）並びにRSSのボタンが並んでいるほうがよい
+    #
+    # フッターのリンクは前からあるが、**追う手段を選ぶ場所は上の1か所**に
+    # まとまっていないと意味がない。RSSはX・Blueskyと違って
+    # 「流れていかない」ので、いちばん長く届く。
+    # home は呼び出し側から渡す。__HOME__ の置き換えはこれより前に
+    # 走るので、ここで書いても置き換わらない（2026-10-09に踏んだ）
+    out.append(f'<a class="f-rss" href="{home}feed.xml">' + ICON_RSS
+               + 'RSSで購読</a>')
     return "".join(out) + "</div>"
 
 
@@ -1947,7 +1970,8 @@ def search_index():
                 if st.get("t"):
                     day_streams.setdefault(r["game"], []).append(
                         {"t": st["t"], "c": st.get("c", ""),
-                         "u": st.get("u", ""), "d": day})
+                         "u": st.get("u", ""), "th": st.get("th", ""),
+                         "d": day})
         # その日の全ゲーム（記録があればそちら、無ければ上位30件だけ）
         src = gdays.get(day) or {r["game"]: [r.get("videos", 0), r.get("channels", 0)]
                                  for r in obj.get("ranking", [])}
@@ -2038,7 +2062,242 @@ def game_slug(name, slugs):
     return t
 
 
-def game_page_html(name, g, dd, streams, home):
+# ------------------------------------------------- パンくずと構造化データ
+# なぜ要るか（2026-10-09 たろちんさん）
+#
+# いままで `application/ld+json` が1件も無かった。構造化データは
+# **検索結果での見え方**と、**AIがページを読むときの手がかり**になる。
+#
+# **書いていないことは書かない。** とくに：
+#  ・`SearchAction`（サイト内検索）は足していない。/search/ は
+#    ページを開いてから絞り込む作りで、`?q=` のURLを持っていない。
+#    持っていないものを「ここで検索できます」と宣言すると嘘になる
+#  ・ゲーム別ページは `BreadcrumbList` だけ。あれは集計値のページで、
+#    `Article` でも `Product` でもない。無理に当てはめない
+#  ・記事（`Article`）を出すのは**人が書いた文章があるページだけ**
+#    （毎日のコラム、週・月のまとめ）
+CRUMB_ROOT = "ハヤリゲー"
+
+
+def crumb_parts(path, data):
+    """(表示名, そのページからの相対URL) の並び。最後の1つが現在地。"""
+    sub = str(data.get("subtitle") or "")
+    if path == "index.html":
+        return []
+    if path.startswith("d/"):
+        day = path.split("/")[1]
+        return [("これまでの記録", "archive/"), (day, "")]
+    if path.startswith("g/") and path != "g/index.html":
+        return [("ゲーム別", "g/"), (sub or path.split("/")[1], "")]
+    if path == "g/index.html":
+        return [("ゲーム別", "")]
+    if path.startswith(("w/", "m/")):
+        return [("週・月のまとめ", "matome/"), (sub or "まとめ", "")]
+    fixed = {"about/index.html": "このサイトについて",
+             "privacy/index.html": "お問い合わせ・プライバシー",
+             "terms/index.html": "利用規約",
+             "search/index.html": "ゲームを探す",
+             "archive/index.html": "これまでの記録",
+             "matome/index.html": "週・月のまとめ"}
+    if path in fixed:
+        return [(fixed[path], "")]
+    return [(sub, "")] if sub else []
+
+
+def crumb_html(path, data, home):
+    """見えるパンくず。最後の1つはリンクにしない（現在地なので）。"""
+    parts = crumb_parts(path, data)
+    if not parts:
+        return ""
+    out = [f'<p class="crumb"><a href="{home}">{CRUMB_ROOT}</a>']
+    for i, (label, rel) in enumerate(parts):
+        out.append("<span>›</span>")
+        if i == len(parts) - 1 or not rel:
+            out.append(e(label))
+        else:
+            out.append(f'<a href="{home}{rel}">{e(label)}</a>')
+    out.append("</p>")
+    return "".join(out)
+
+
+def jsonld_html(path, data, site_url):
+    """<head> に入れる構造化データ。site_url が無いときは何も出さない
+    （絶対URLで書けないものは、書かないほうがよい）。"""
+    if not site_url:
+        return ""
+    u = site_url.rstrip("/")
+    blocks = []
+
+    # パンくず。どのページにも出す
+    parts = crumb_parts(path, data)
+    if parts:
+        items, acc = [{"@type": "ListItem", "position": 1,
+                       "name": CRUMB_ROOT, "item": u + "/"}], ""
+        for i, (label, rel) in enumerate(parts, start=2):
+            here = (path.replace("index.html", "")
+                    if i == len(parts) + 1 else (rel or ""))
+            items.append({"@type": "ListItem", "position": i, "name": str(label),
+                          "item": f"{u}/{here}"})
+        blocks.append({"@context": "https://schema.org",
+                       "@type": "BreadcrumbList", "itemListElement": items})
+
+    # トップだけ、サイトそのものの情報
+    if path == "index.html":
+        cfg = read_json(DATA / "site_config.json", {}) or {}
+        same = []
+        xh = str(cfg.get("x_handle") or "").strip().lstrip("@")
+        bs = str(cfg.get("bluesky_handle") or "").strip().lstrip("@")
+        if xh:
+            same.append(f"https://x.com/{xh}")
+        if bs:
+            same.append(f"https://bsky.app/profile/{bs}")
+        blocks.append({"@context": "https://schema.org", "@type": "WebSite",
+                       "name": "ハヤリゲー", "url": u + "/",
+                       "inLanguage": "ja",
+                       "description": "VTuber・ゲーム実況者のYouTube配信を"
+                                      "毎日数えて、いま配信されているゲームを"
+                                      "ランキングにするサイト。",
+                       **({"sameAs": same} if same else {})})
+
+    # 人が書いた文章があるページだけ、記事として出す
+    col = data.get("column") or {}
+    day = str(col.get("date") or data.get("date") or "")
+    if path.startswith("d/") and col.get("headline") and len(day) >= 10:
+        blocks.append({
+            "@context": "https://schema.org", "@type": "Article",
+            "headline": str(col["headline"])[:110],
+            "datePublished": day, "dateModified": day,
+            "inLanguage": "ja",
+            "mainEntityOfPage": f"{u}/d/{day}/",
+            "author": {"@type": "Organization", "name": "ハヤリゲー",
+                       "url": u + "/"},
+            "publisher": {"@type": "Organization", "name": "ハヤリゲー",
+                          "url": u + "/"},
+            **({"about": {"@type": "VideoGame", "name": str(col["game"])}}
+               if col.get("game") else {})})
+    # まとめのページ。題は meta_og に入っている（page_html が d から
+    # 外す前の data を見ているので読める）
+    if path.startswith(("w/", "m/")):
+        mt = str(data.get("meta_og") or "").strip()
+        key = path.split("/")[1] if "/" in path else ""
+        pub = key if len(key) == 10 else (key + "-01" if len(key) == 7 else "")
+        if mt:
+            blocks.append({
+                "@context": "https://schema.org", "@type": "Article",
+                "headline": mt[:110], "inLanguage": "ja",
+                "mainEntityOfPage": u + "/" + path.replace("index.html", ""),
+                **({"datePublished": pub, "dateModified": pub} if pub else {}),
+                "author": {"@type": "Organization", "name": "ハヤリゲー",
+                           "url": u + "/"},
+                "publisher": {"@type": "Organization", "name": "ハヤリゲー",
+                              "url": u + "/"}})
+    if not blocks:
+        return ""
+    body = json.dumps(blocks[0] if len(blocks) == 1 else blocks,
+                      ensure_ascii=False)
+    body = body.replace("</", "<\\/")
+    return f'<script type="application/ld+json">{body}</script>'
+
+
+def related_games(g, allg, slugs, n=6):
+    """そのゲームと「同じ日に出ていた」ゲーム。手元の記録だけで作れる。
+
+    なぜ要るか（2026-10-09 たろちんさん）: ゲーム別ページが217枚あるのに、
+    **ページ同士がつながっていなかった。** 読者も、検索エンジンも、
+    1枚ずつ入って1枚ずつ出ていくしかない。
+
+    数え方は**重なりの割合**（Jaccard）。同じ日数で割る。
+      重なった日数 ÷（Aの日数 ＋ Bの日数 − 重なった日数）
+
+    単純に「同じ日に出た回数」で並べると、毎日出ているApexとマイクラが
+    どのページでも1位になる。割合にすると、**同じ時期に現れて同じ時期に
+    消えたゲーム**が上に来る。新作の週に一緒に出たもの、同じ企画で
+    並んで遊ばれたものが拾える。
+    """
+    mine = set(g["d"])
+    if len(mine) < 2:
+        return []
+    out = []
+    for o in allg:
+        if o["n"] == g["n"] or o["n"] not in slugs:
+            continue
+        od = set(o["d"])
+        co = len(mine & od)
+        if co < 2:
+            continue
+        j = co / (len(mine) + len(od) - co)
+        out.append((j, co, o["n"], slugs[o["n"]]))
+    out.sort(reverse=True)
+    return out[:n]
+
+
+def day_chart(days, cs, w=680, h=120):
+    """1日ごとの配信チャンネル数を、1枚の折れ線にする。**全期間ぶん。**
+
+    サーバー側で作るインラインSVG。JavaScriptは使わない。
+    色はサイトの `--accent` をそのまま使う。**ダークはサイト側で
+    別の色に差し替えてあるので、ここで反転させる必要がない。**
+
+    決め方（dataviz の手順に沿って）:
+      ・やることは「時間に沿った変化」なので折れ線。系列は1つだけなので
+        凡例は出さない（見出しが系列の名前を兼ねる）
+      ・直接の数字は**いちばん多い日といちばん新しい日だけ**に置く。
+        全点に数字を振ると線が読めなくなる
+      ・軸と目盛りは引っ込める。主役は線の形
+      ・表の代わりは要らない。**このページには日ごとの表が下にある**
+      ・マウスを乗せた時の表示は `<title>` で出す（JS無しで効く）
+    """
+    n = len(cs)
+    if n < 2:
+        return ""
+    pad_l, pad_r, pad_t, pad_b = 6, 44, 16, 18
+    iw, ih = w - pad_l - pad_r, h - pad_t - pad_b
+    top = max(cs) or 1
+    xs = [pad_l + (iw * i / (n - 1)) for i in range(n)]
+    ys = [pad_t + ih - (ih * c / top) for c in cs]
+    line = " ".join(f"{'M' if i == 0 else 'L'}{x:.1f},{y:.1f}"
+                    for i, (x, y) in enumerate(zip(xs, ys)))
+    area = (line + f" L{xs[-1]:.1f},{pad_t + ih:.1f} "
+            f"L{xs[0]:.1f},{pad_t + ih:.1f} Z")
+    best = max(range(n), key=lambda i: cs[i])
+    out = [f'<svg class="gchart" viewBox="0 0 {w} {h}" role="img" '
+           f'aria-label="1日ごとの配信チャンネル数の推移。'
+           f'いちばん多かったのは{days[best]}の{cs[best]}チャンネル">',
+           '<defs><linearGradient id="gcg" x1="0" y1="0" x2="0" y2="1">'
+           '<stop offset="0" stop-color="var(--accent)" stop-opacity=".22"/>'
+           '<stop offset="1" stop-color="var(--accent)" stop-opacity="0"/>'
+           '</linearGradient></defs>',
+           f'<line x1="{pad_l}" y1="{pad_t + ih:.1f}" x2="{pad_l + iw}" '
+           f'y2="{pad_t + ih:.1f}" stroke="var(--line)" stroke-width="1"/>',
+           f'<path d="{area}" fill="url(#gcg)"/>',
+           f'<path d="{line}" fill="none" stroke="var(--accent)" '
+           f'stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/>']
+    # マウスを乗せたときの表示。見えない広い帯にして、点より当てやすくする
+    step = iw / (n - 1)
+    for i, (x, y) in enumerate(zip(xs, ys)):
+        out.append(f'<rect x="{max(pad_l, x - step / 2):.1f}" y="{pad_t}" '
+                   f'width="{step:.1f}" height="{ih:.1f}" fill="transparent">'
+                   f'<title>{days[i]}　{cs[i]}チャンネル</title></rect>')
+    # 数字を置くのは2点だけ
+    for i, anchor in ((best, "middle"), (n - 1, "end")):
+        out.append(f'<circle cx="{xs[i]:.1f}" cy="{ys[i]:.1f}" r="3.4" '
+                   f'fill="var(--accent)" stroke="var(--card)" stroke-width="2"/>')
+    out.append(f'<text x="{xs[best]:.1f}" y="{max(11.0, ys[best] - 8):.1f}" '
+               f'text-anchor="middle" font-size="11" font-weight="700" '
+               f'fill="var(--ink-2)">{cs[best]}ch</text>')
+    out.append(f'<text x="{pad_l + iw + 6:.1f}" y="{ys[-1] + 4:.1f}" '
+               f'font-size="11" font-weight="700" fill="var(--ink-2)">'
+               f'{cs[-1]}ch</text>')
+    out.append(f'<text x="{pad_l}" y="{h - 4}" font-size="10.5" '
+               f'fill="var(--ink-3)">{days[0]}</text>')
+    out.append(f'<text x="{pad_l + iw:.1f}" y="{h - 4}" text-anchor="end" '
+               f'font-size="10.5" fill="var(--ink-3)">{days[-1]}</text>')
+    out.append("</svg>")
+    return "".join(out)
+
+
+def game_page_html(name, g, dd, streams, home, plat=None, cfg=None,
+                   related=()):
     """ゲーム1本ぶんのページ。
 
     **出すのは、こちらが数えた集計値が主。** 配信タイトルとチャンネル名は
@@ -2054,8 +2313,45 @@ def game_page_html(name, g, dd, streams, home):
     best = max(range(len(idx)), key=lambda i: cs[i])
     ranked = len(g.get("r") or [])
 
-    out = [f"<h2>『{e(name)}』はどれだけ配信されているか</h2>",
-           f'<p class="lead">当サイトの集計では、{fj}から{lj}までの間に'
+    cfg = cfg or {}
+    out = []
+
+    # ---- 見た目の手がかり（2026-10-09 たろちんさん）
+    # サムネイルは**配信から借りた画像**なので、30日を過ぎると
+    # 配信一覧と一緒に外れる。古いゲームのページでは絵が無くなる。
+    # だから**グラフのほうを本体**にしてある。あちらはこちらが数えた
+    # 数字なので、何年たっても残る。
+    th = next((st.get("th") for st in streams if st.get("th")), "")
+    chart = day_chart(days, cs)
+    if th or chart:
+        out.append('<div class="ghero">')
+        if th:
+            out.append(f'<figure><img src="{e(th)}" alt="" loading="lazy">'
+                       f'<figcaption>YouTube ／ '
+                       f'{e(next((st.get("c", "") for st in streams if st.get("th")), ""))}'
+                       f'</figcaption></figure>')
+        if chart:
+            out.append(f'<div class="gchart-wrap">'
+                       f'<div class="gchart-t">1日ごとの配信チャンネル数</div>'
+                       f'{chart}</div>')
+        out.append("</div>")
+
+    # ---- 店へのリンク
+    st_url, az_url = store_links(name, plat, cfg, force_amazon=True)
+    if st_url or az_url:
+        b = ['<p class="gbuy">']
+        if st_url:
+            b.append(f'<a class="st" href="{e(st_url)}" target="_blank" '
+                     f'rel="noopener sponsored">Steamで探す</a>')
+        if az_url:
+            b.append(f'<a class="az" href="{e(az_url)}" target="_blank" '
+                     f'rel="noopener sponsored nofollow">Amazonで探す</a>')
+        b.append('<span class="gbuy-n">店の検索結果に飛びます。'
+                 '商品ページではありません</span></p>')
+        out.append("".join(b))
+
+    out += [f"<h2>『{e(name)}』はどれだけ配信されているか</h2>",
+            f'<p class="lead">当サイトの集計では、{fj}から{lj}までの間に'
            f"<b>{len(days)}日</b>、『{e(name)}』の配信が見つかりました。"
            f"のべ<b>{sum(vs):,}本</b>・のべ<b>{sum(cs):,}チャンネル</b>です。"
            f"いちばん多かったのは{int(days[best][5:7])}月{int(days[best][8:10])}日で、"
@@ -2097,10 +2393,93 @@ def game_page_html(name, g, dd, streams, home):
                        f'　<span class="muted">{e(st.get("c", ""))}</span></li>')
         out.append("</ul>")
 
+    if related:
+        out.append("<h2>同じ日に、一緒に配信されていたゲーム</h2>"
+                   "<p>このゲームが出ていた日に、どれだけ重なって出ていたかの順です。"
+                   "毎日出ている定番より、<b>同じ時期に現れて同じ時期に消えたもの</b>が"
+                   "上に来ます。</p><ul class=\"grel\">")
+        for j, co, rn, rs in related:
+            out.append(f'<li><a href="{home}g/{quote(rs)}/">{e(rn)}</a>'
+                       f'<span class="muted">同じ日に{co}日</span></li>')
+        out.append("</ul>")
+
     out.append(f'<p class="lead"><a href="{home}search/">ほかのゲームを探す</a>　'
                f'<a href="{home}g/">ゲーム別のページ一覧</a>　'
                f'<a href="{home}">今日のランキングへ</a></p>')
     return "".join(out)
+
+
+def day_neighbors(day):
+    """その日の前後の記録ページの日付。無ければ空。
+
+    なぜ要るか（2026-10-09 たろちんさん）: 10月5日のページから
+    10月4日へ行く道が無かった。アーカイブに戻るしかない。
+    **読者だけでなくGoogleも同じで、45枚の記録ページが
+    アーカイブ1枚からしか辿れていなかった。** 前後がつながれば、
+    どの1枚からでも全部に行き着く。
+
+    ※ `<link rel="prev">` は足していない。Googleは2019年に
+      インデックス用の手がかりとして使うのをやめたと公表しているので、
+      **本文の中の普通のリンクのほうが確実。**
+    """
+    d = SITE / "d"
+    ds = sorted(x.name for x in d.iterdir()
+                if x.is_dir() and re.fullmatch(r"\d{4}-\d{2}-\d{2}", x.name)) \
+        if d.is_dir() else []
+    if day not in ds:
+        ds = sorted(set(ds) | {day})
+    i = ds.index(day)
+    return {"prev": ds[i - 1] if i > 0 else "",
+            "next": ds[i + 1] if i + 1 < len(ds) else ""}
+
+
+def page_404(site_url):
+    """見つからなかったときのページ。**型紙は使わない。**
+
+    404は「存在しないどのURLでも」出る。型紙のナビやフッターは
+    `__HOME__` を現在地からの相対で書いているので、
+    /g/消えたゲーム/ のような深い住所で出ると、リンクが全部ずれる。
+    だからここだけは1枚で完結させて、リンクは `/` から書く。
+
+    なぜ要るか（2026-10-09）: いままで wrangler.jsonc に指定が無く、
+    存在しないURLは素のエラーだった。ゲーム名を変えたときに
+    古いURLへ来た人が、行き止まりに落ちる。
+    """
+    u = (site_url or "").rstrip("/")
+    return f"""<!doctype html>
+<html lang="ja"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex">
+<title>ページが見つかりません ｜ ハヤリゲー</title>
+<link rel="icon" href="/icon.svg" type="image/svg+xml">
+<style>
+:root{{--ground:#F3F5F4;--card:#FFF;--line:#DBE4E2;--ink:#111B1D;--ink-3:#6F8688;
+ --accent:#0B6B70}}
+@media (prefers-color-scheme:dark){{:root{{--ground:#0E1718;--card:#152122;
+ --line:#24383A;--ink:#EAF2F1;--ink-3:#8FA7A8;--accent:#4FB3B8}}}}
+*{{box-sizing:border-box}}
+body{{margin:0;min-height:100vh;display:grid;place-items:center;padding:24px;
+ background:var(--ground);color:var(--ink);
+ font-family:"Zen Kaku Gothic New","Hiragino Kaku Gothic ProN",system-ui,sans-serif}}
+.box{{background:var(--card);border:1px solid var(--line);border-radius:12px;
+ padding:28px 24px;max-width:560px;width:100%}}
+h1{{font-size:19px;margin:0 0 10px}}
+p{{font-size:14px;line-height:1.85;color:var(--ink-3);margin:0 0 18px}}
+a{{color:var(--accent);font-weight:700;text-decoration:none;margin-right:14px;
+ font-size:13.5px;display:inline-block;margin-bottom:6px}}
+a:hover{{text-decoration:underline}}
+</style></head><body><div class="box">
+<h1>ページが見つかりませんでした</h1>
+<p>住所が変わったか、もう無いページです。<br>
+ゲーム別のページは、名前の書き方を直したときに住所が変わることがあります。
+下から探し直してください。</p>
+<a href="/">今日のランキング</a>
+<a href="/search/">ゲームを探す</a>
+<a href="/g/">ゲーム別のページ一覧</a>
+<a href="/archive/">これまでの記録</a>
+<a href="/matome/">週・月のまとめ</a>
+</div></body></html>
+"""
 
 
 # ---------------------------------------------------------------- RSS
@@ -2424,7 +2803,7 @@ def amazon_tagged(url, tag):
     return url if "tag=" in url else url + ("&" if "?" in url else "?") + "tag=" + quote_plus(tag)
 
 
-def store_links(name, plat, cfg):
+def store_links(name, plat, cfg, force_amazon=False):
     """そのゲームを「実際に売っている店」へのリンクだけを作る。
 
     Amazonはランキング表には出さない（既定）。ゲーム名でキーワード検索を
@@ -2444,7 +2823,16 @@ def store_links(name, plat, cfg):
     steam = ("https://store.steampowered.com/search/?term=" + quote(name)) if on_pc else None
     amazon = None
     tag = (cfg.get("amazon_tag") or "").strip()
-    if tag and on_console and cfg.get("amazon_in_ranking"):
+    # force_amazon … ゲーム別ページ用（2026-10-09 たろちんさん）。
+    #
+    #   > Amazonリンクは毎日のコラムと同様にパッケージ版があると思われる
+    #   > ものだけ追加してください。間違ってるものに気付いたら
+    #   > あとから僕が指摘するので迷ったらとりあえず入れる運用でよいです
+    #
+    # ランキング（1日2回入れ替わる30行）では出さないままにしてある。
+    # あちらは流し読みされる場所で、間違ったリンクが並ぶと目立つ。
+    # ゲーム別ページは1ゲーム1枚なので、見つけたら直せる。
+    if tag and on_console and (force_amazon or cfg.get("amazon_in_ranking")):
         amazon = ("https://www.amazon.co.jp/s?k=" + quote_plus(name)
                   + "&tag=" + quote_plus(tag))
     return steam, amazon
@@ -2681,12 +3069,42 @@ def main():
     # サイトの住所を data/site_config.json から持ってくる。
     site_url = (cfg.get("site_url") or "").strip().rstrip("/")
 
-    def render(path, data, depth):
-        render_page(path, data, depth, site_url)
+    # ランキングから、そのゲームのページへ行く道（2026-10-09 たろちんさん）。
+    #
+    # **ページが在るときだけリンクを出す。** ゲーム別ページは
+    # 「3日以上出たゲーム」にしか作らない（GAME_PAGE_MIN）ので、
+    # 発売初日の新作にはまだ無い。無いところへリンクすると404になる。
+    #
+    # 在るかどうかは game_days.json（全期間の日ごとの記録）の日数と、
+    # game_slugs.json（住所の台帳）の両方が揃っているかで決める。
+    # HTMLを読み直す必要がなく、**ページを書き出す前に分かる。**
+    # 今日ちょうど3日目になったゲームは、住所がこの回で決まるので
+    # 明日からリンクが出る（404を作らないほうを選んだ）。
+    _gd = read_json(DATA / "game_days.json", {}) or {}
+    _seen = Counter()
+    for _games_of_day in _gd.values():
+        for _n in _games_of_day:
+            _seen[_n] += 1
+    _slugs_now = read_json(DATA / "game_slugs.json", {}) or {}
+    gslug_all = {n: _slugs_now[n] for n, c in _seen.items()
+                 if c >= GAME_PAGE_MIN and n in _slugs_now}
+    log(f"ゲーム別ページへのリンクを出せるゲーム: {len(gslug_all)}件")
 
-    render("index.html", payload, 0)
+    def render(path, data, depth):
+        # そのページの順位表に出ているゲームぶんだけ渡す。
+        # 全部（200件超）を毎ページに埋めると、276ページぶんで無駄に重くなる
+        gs = {r["game"]: gslug_all[r["game"]]
+              for r in (data.get("ranking") or []) if r.get("game") in gslug_all}
+        render_page(path, dict(data, gslug=gs) if gs else data, depth, site_url)
+
+    # 見つからなかったときのページ。型紙を通さないので render は使わない
+    (SITE / "404.html").write_text(page_404(site_url), encoding="utf-8")
+
+    _adj = day_neighbors(today())
+    render("index.html", dict(payload, adj=_adj), 0)
     # その日の記録を、消えない住所に残す
-    render(f"d/{today()}/index.html", dict(payload, view="archive"), 2)
+    render(f"d/{today()}/index.html",
+           dict(payload, view="archive", adj=_adj), 2)
 
     # ---- 管理用ページ（トップからはリンクしない） ----
     # よく出るタイトルを data/aliases.json に足していくための作業台。
@@ -2889,6 +3307,7 @@ def main():
                              "need": MIN_HISTORY},
                 "totals": {"videos": entries[day]["videos"], "games": len(past_rows),
                            "channels": entries[day]["channels"]},
+                "adj": day_neighbors(day),
                 "ranking": past_rows[:30]}, 2)
         gdays[day] = day_games(past_rows)
         added += 1
@@ -2975,6 +3394,12 @@ def main():
 
     # ---- ゲームを探す ----------------------------------------------------
     # 「このゲーム、前はいつ入ってた？」に答える。記録が増えるほど価値が出る。
+    # 表示名 → 正式名。機種（platforms）は正式名で持っているので、
+    # 表示名しか持っていないゲーム別ページから引くために要る
+    _canon = {}
+    for _c, _d in list(disp.items()) + list(override.items()):
+        _canon.setdefault(str(_d), _c)
+
     _dd, _games, _streams = search_index()
     render("search/index.html",
            {"mode": "page", "date": today(), "subtitle": "ゲームを探す",
@@ -2999,6 +3424,12 @@ def main():
         name = g["n"]
         slug = game_slug(name, slugs)
         st = sorted(_streams.get(name, []), key=lambda x: x["d"], reverse=True)
+        rel = related_games(g, _games, slugs)
+        # **機種は正式名で引く。** ゲーム別ページの name は画面に出している
+        # 表示名なので、そのまま引くと空になり「機種が分からない」扱いで
+        # PC専用でないゲームにSteamのリンクが出てしまう（2026-09-19に
+        # スプラトゥーン3で起きたのと同じ形）。
+        _plat = plats.get(_canon.get(name, name))
         n_days, n_ch = len(g["d"]), sum(g["c"])
         render(f"g/{slug}/index.html",
                {"mode": "page", "date": today(), "subtitle": f"『{name}』の配信",
@@ -3008,7 +3439,8 @@ def main():
                 "meta_desc": f"当サイトの集計では、『{name}』の配信が{n_days}日・"
                              f"のべ{n_ch:,}チャンネル見つかっています。"
                              "日ごとの配信数と、取り上げたコラムをまとめています。",
-                "page_body": game_page_html(name, g, _dd, st, "../../")}, 2)
+                "page_body": game_page_html(name, g, _dd, st, "../../",
+                                            _plat, cfg, rel)}, 2)
         index_items.append((name, slug, n_days))
         made += 1
     write_json(DATA / "game_slugs.json",
