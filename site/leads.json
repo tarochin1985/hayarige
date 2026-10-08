@@ -1,6 +1,6 @@
 {
  "date": "2026-10-08",
- "generated": "2026-10-08 10:37",
+ "generated": "2026-10-08 11:54",
  "leads": {
   "events": [
    {
@@ -104,8 +104,8 @@
    },
    {
     "game": "Minecraft",
-    "channels": 35,
-    "videos": 36
+    "channels": 33,
+    "videos": 34
    },
    {
     "game": "PUBG",
@@ -115,7 +115,7 @@
    {
     "game": "ストリートファイター6",
     "channels": 26,
-    "videos": 30
+    "videos": 29
    },
    {
     "game": "hololive Dreams",
@@ -124,13 +124,13 @@
    },
    {
     "game": "Grand Theft Auto V",
-    "channels": 18,
-    "videos": 19
+    "channels": 17,
+    "videos": 18
    },
    {
     "game": "フォートナイト",
     "channels": 15,
-    "videos": 17
+    "videos": 16
    },
    {
     "game": "Dead by Daylight",
@@ -190,23 +190,6 @@
    "kind": "near",
    "suggest": [
     "Shadow Corridor Zero"
-   ]
-  },
-  {
-   "word": "librarian",
-   "channels": 1,
-   "n": 1,
-   "examples": [
-    {
-     "t": "【司書のお仕事】おしゃべりしながら図書館のお片付け！【＃1】#vtuber #新人vtuber #司書のお仕事 #librarian #おかたづけ #雑談 #初見さん大歓迎",
-     "c": "鈴ノ時みぃ@新人Vtuber",
-     "u": "https://www.youtube.com/watch?v=TyEfI08HnZw"
-    }
-   ],
-   "kind": "near",
-   "suggest": [
-    "Librarian of Aquademia: The Forbidden Grimoire",
-    "Librarian: Tidy Up the Arcane Library!"
    ]
   },
   {
@@ -553,9 +536,9 @@
   },
   {
    "game": "幻想水滸伝 STAR LEAP",
-   "growth": 3.0,
+   "growth": 2.86,
    "videos": 6,
-   "base": 2.0,
+   "base": 2.1,
    "channels": 5,
    "views": 39345,
    "who": [
@@ -578,32 +561,46 @@
    "first_here": false
   },
   {
-   "game": "ゼルダの伝説 時のオカリナ",
-   "growth": 3.0,
-   "videos": 3,
-   "base": 1.0,
-   "channels": 3,
-   "views": 14292,
+   "game": "アークナイツ：エンドフィールド",
+   "growth": 2.35,
+   "videos": 8,
+   "base": 3.4,
+   "channels": 7,
+   "views": 100132,
    "who": [
-    "ひろちんくん",
-    "HIKARU SHIDA @SHIDAtube",
-    "一色茶利"
+    "草の人",
+    "羅々華セーラ-Raraka Sera-",
+    "キスケGAME",
+    "あかどらん",
+    "あかどらん"
    ],
    "titles": [
-    "【時のオカリナ】改めてやると結構重めの大人リンク編【後編ダイジェスト】",
-    "Pro Wrestler Hikaru Shida Takes on Ocarina of Time! From Childhood to the Final Battle",
-    "【ゼルダの伝説 時のオカリナ】 実況プレイ #10"
+    "【エンフィ】コミュニティが炎上するほど待望された女、満を持して実装!!【アークナイツ:エンドフィールド/草の人/ゆっくり実況プレイ】",
+    "まさかの超サプライズ発表でテンションぶち壊れる【アークナイツ：エンドフィールド】",
+    "【エンドフィールド】引くべき？強い？限定★６オペレーター「代理人スー」性能解説！ おすすめパーティー/新キャラクター/モチーフ武器【アークナイツEndfield】"
    ],
-   "genres": [],
+   "genres": [
+    "Role-playing (RPG)",
+    "Strategy",
+    "Adventure"
+   ],
    "year": null,
-   "platforms": [],
-   "days_seen": 15,
+   "platforms": [
+    "pc",
+    "console"
+   ],
+   "days_seen": 27,
    "last_seen": "2026-10-07",
    "first_here": false
   }
  ],
  "notes_written": true,
  "recent_columns": [
+  {
+   "date": "2026-10-08",
+   "game": "PUBG",
+   "headline": "「#ぶいすぽGG」まだ誰も勝っていないのに、夕飯の話"
+  },
   {
    "date": "2026-10-07",
    "game": "Find The Needle",
@@ -668,11 +665,6 @@
    "date": "2026-09-25",
    "game": "アークナイツ：エンドフィールド",
    "headline": "無料で配られた新キャラ一人で、ひと晩が埋まった"
-  },
-  {
-   "date": "2026-09-24",
-   "game": "Don't Drop The Cake",
-   "headline": "「簡単じゃん」と言って入り、3時間出てこない"
   }
  ]
 }

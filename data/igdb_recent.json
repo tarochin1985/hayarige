@@ -7940,22 +7940,6 @@
   ]
  },
  {
-  "name": "BreakEven: Idle",
-  "alias": [
-   "BreakEven.exe"
-  ],
-  "pop": 0,
-  "y": 2026,
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Role-playing (RPG)",
-   "Adventure",
-   "Indie"
-  ]
- },
- {
   "name": "Breakout Garage",
   "alias": [
    "Breakout Garage.exe"
@@ -14331,6 +14315,19 @@
   ],
   "g": [
    "Adventure",
+   "Indie"
+  ]
+ },
+ {
+  "name": "Dancing with Ghosts",
+  "alias": [],
+  "pop": 0,
+  "y": 2026,
+  "p": [
+   "pc"
+  ],
+  "g": [
+   "Simulator",
    "Indie"
   ]
  },
@@ -25581,23 +25578,6 @@
   ]
  },
  {
-  "name": "Glow Box",
-  "alias": [
-   "Glow Box.exe",
-   "只擁有發光功能的裝置",
-   "只拥有发光功能的装置"
-  ],
-  "pop": 0,
-  "y": 2026,
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Adventure",
-   "Indie"
-  ]
- },
- {
   "name": "Glow in the Shadows",
   "alias": [],
   "pop": 0,
@@ -30720,6 +30700,19 @@
  },
  {
   "name": "Invisum Piscium",
+  "alias": [],
+  "pop": 0,
+  "y": 2026,
+  "p": [
+   "pc"
+  ],
+  "g": [
+   "Adventure",
+   "Indie"
+  ]
+ },
+ {
+  "name": "Invokyr",
   "alias": [],
   "pop": 0,
   "y": 2026,
@@ -39634,6 +39627,23 @@
   ]
  },
  {
+  "name": "Neon Abyss 2",
+  "alias": [
+   "NeonAbyss2.exe"
+  ],
+  "pop": 0,
+  "y": 2026,
+  "p": [
+   "pc",
+   "console"
+  ],
+  "g": [
+   "Role-playing (RPG)",
+   "Adventure",
+   "Indie"
+  ]
+ },
+ {
   "name": "Neon Auto Party",
   "alias": [],
   "pop": 0,
@@ -42875,18 +42885,6 @@
   ]
  },
  {
-  "name": "PNR: Point of No return",
-  "alias": [],
-  "pop": 0,
-  "y": 2026,
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Indie"
-  ]
- },
- {
   "name": "PSI: Pressure Climbing",
   "alias": [],
   "pop": 0,
@@ -44065,21 +44063,6 @@
   ],
   "g": [
    "Strategy",
-   "Indie"
-  ]
- },
- {
-  "name": "Peter The Stash Hunter",
-  "alias": [],
-  "pop": 0,
-  "y": 2026,
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Role-playing (RPG)",
-   "Simulator",
-   "Adventure",
    "Indie"
   ]
  },
@@ -56737,25 +56720,6 @@
   ]
  },
  {
-  "name": "Super Real Mahjong Venus Returns",
-  "alias": [
-   "SRM-VR.exe",
-   "超擬真麻將 Venus Returns",
-   "超真实麻将 Venus Returns"
-  ],
-  "pop": 0,
-  "y": 2026,
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Simulator",
-   "Strategy",
-   "Adventure",
-   "Card & Board Game"
-  ]
- },
- {
   "name": "Super Takoyaki Battle",
   "alias": [],
   "pop": 0,
@@ -63259,6 +63223,19 @@
   ]
  },
  {
+  "name": "Tower Tactics 2",
+  "alias": [],
+  "pop": 0,
+  "y": 2026,
+  "p": [
+   "pc"
+  ],
+  "g": [
+   "Strategy",
+   "Indie"
+  ]
+ },
+ {
   "name": "Tower of Insolence",
   "alias": [],
   "pop": 0,
@@ -67630,6 +67607,22 @@
   "g": [
    "Simulator",
    "Strategy",
+   "Indie"
+  ]
+ },
+ {
+  "name": "Wildaria",
+  "alias": [
+   "PixelWorld"
+  ],
+  "pop": 0,
+  "y": 2026,
+  "p": [
+   "pc"
+  ],
+  "g": [
+   "Role-playing (RPG)",
+   "Adventure",
    "Indie"
   ]
  },
