@@ -1,19 +1,16 @@
 {
  "date": "2026-10-08",
- "generated": "2026-10-08 11:54",
+ "generated": "2026-10-08 22:38",
  "leads": {
   "events": [
    {
     "tag": "#ホロドリ",
     "channels": [
-     "Chihaya Ch. 輪堂 千速 - FLOW GLOW",
      "Flare Ch. 不知火フレア",
-     "Koyori ch. 博衣こより - holoX -",
      "Polka Ch. 尾丸ポルカ",
      "Riona Ch. 響咲リオナ - FLOW GLOW",
      "Roboco Ch. - ロボ子",
      "Su Ch. 水宮枢 - FLOW GLOW",
-     "Vivi Ch. 綺々羅々ヴィヴィ - FLOW GLOW",
      "Watame Ch. 角巻わため",
      "ここっとスクエア【ここスク】",
      "アキロゼCh。Vtuber/ホロライブ所属"
@@ -46,20 +43,9 @@
     "channels": [
      "Tenten Ch. / 鳳玲天々",
      "たけぉ",
-     "みつき",
      "クラウン【探検家の記録】",
      "ノビーの遊び部屋",
      "柚原いづみ / Izumi Channel 【ななしいんく】"
-    ]
-   },
-   {
-    "tag": "#ゲーム実況",
-    "channels": [
-     "M家の休日マサ",
-     "Usagi Ch. 因幡兎",
-     "えりんぎ Games",
-     "豚咲あおい_TomisakiAoi",
-     "里城はな"
     ]
    },
    {
@@ -81,61 +67,55 @@
     ]
    },
    {
-    "tag": "#FF14",
+    "tag": "#ぶいきゃす",
     "channels": [
-     "emma / えま",
-     "えりんぎ Games",
-     "叶音にゃむ / Kanato Nyamu"
+     "えういん ∕ euin Ch.",
+     "おいもパイちゃん / OimoPie ch.",
+     "孵卵リリス / Furan Lilith"
     ]
    }
   ],
-  "newcomers": [
-   {
-    "game": "マビノギモバイル",
-    "channels": 6,
-    "videos": 6
-   }
-  ],
+  "newcomers": [],
   "wide": [
    {
-    "game": "Apex Legends",
-    "channels": 37,
-    "videos": 42
-   },
-   {
-    "game": "Minecraft",
-    "channels": 33,
-    "videos": 34
-   },
-   {
     "game": "PUBG",
-    "channels": 29,
-    "videos": 30
+    "channels": 27,
+    "videos": 28
    },
    {
-    "game": "ストリートファイター6",
-    "channels": 26,
-    "videos": 29
+    "game": "Apex Legends",
+    "channels": 27,
+    "videos": 28
    },
    {
     "game": "hololive Dreams",
-    "channels": 19,
-    "videos": 21
-   },
-   {
-    "game": "Grand Theft Auto V",
-    "channels": 17,
-    "videos": 18
-   },
-   {
-    "game": "フォートナイト",
     "channels": 15,
     "videos": 16
    },
    {
-    "game": "Dead by Daylight",
-    "channels": 14,
-    "videos": 18
+    "game": "Minecraft",
+    "channels": 15,
+    "videos": 16
+   },
+   {
+    "game": "ストリートファイター6",
+    "channels": 12,
+    "videos": 12
+   },
+   {
+    "game": "Among Us",
+    "channels": 11,
+    "videos": 12
+   },
+   {
+    "game": "Grand Theft Auto V",
+    "channels": 10,
+    "videos": 10
+   },
+   {
+    "game": "トルネコの大冒険 ちょっとステキなリマスター",
+    "channels": 8,
+    "videos": 8
    }
   ]
  },
@@ -144,7 +124,7 @@
   {
    "tag": "わちゃサバ",
    "game": "Minecraft",
-   "evidence": 5,
+   "evidence": 4,
    "added": 1,
    "channels": 5
   }
@@ -177,38 +157,6 @@
    ]
   },
   {
-   "word": "ShadowCorridor",
-   "channels": 1,
-   "n": 1,
-   "examples": [
-    {
-     "t": "弟にホラゲーをやらせる【ShadowCorridor】",
-     "c": "ちむらい",
-     "u": "https://www.youtube.com/watch?v=xPiwGCpjzQg"
-    }
-   ],
-   "kind": "near",
-   "suggest": [
-    "Shadow Corridor Zero"
-   ]
-  },
-  {
-   "word": "MIMESIS",
-   "channels": 1,
-   "n": 1,
-   "examples": [
-    {
-     "t": "ミメシス の歴史  【MIMESIS】【ゲーム解説】【ゲームの歴史】",
-     "c": "ペイン【ゲーム史】",
-     "u": "https://www.youtube.com/watch?v=2Hf_TpqgWGQ"
-    }
-   ],
-   "kind": "near",
-   "suggest": [
-    "Mimesis Online"
-   ]
-  },
-  {
    "word": "MXGP 26",
    "channels": 1,
    "n": 1,
@@ -222,22 +170,6 @@
    "kind": "near",
    "suggest": [
     "MXGP 26: The Official Game"
-   ]
-  },
-  {
-   "word": "Octbuster",
-   "channels": 1,
-   "n": 1,
-   "examples": [
-    {
-     "t": "タコになってビデオ屋の掃除をするゲームをのんびりやる【 Octbuster 】",
-     "c": "実況したいよまちょすさん!",
-     "u": "https://www.youtube.com/watch?v=u2uzgThdQvg"
-    }
-   ],
-   "kind": "near",
-   "suggest": [
-    "Octbuster: Video Rental Store Cleanup"
    ]
   },
   {
@@ -257,6 +189,39 @@
    ]
   },
   {
+   "word": "Octbuster",
+   "channels": 1,
+   "n": 1,
+   "examples": [
+    {
+     "t": "タコになってビデオ屋の掃除をするゲームをのんびりやる【 Octbuster 】",
+     "c": "実況したいよまちょすさん!",
+     "u": "https://www.youtube.com/watch?v=u2uzgThdQvg"
+    }
+   ],
+   "kind": "near",
+   "suggest": [
+    "Octbuster: Video Rental Store Cleanup"
+   ]
+  },
+  {
+   "word": "original",
+   "channels": 1,
+   "n": 1,
+   "examples": [
+    {
+     "t": "【Animation MV】リスポーン!!／角巻わため【original】(アニメ「#凶乱令嬢」オープニングテーマ)",
+     "c": "Watame Ch. 角巻わため",
+     "u": "https://www.youtube.com/watch?v=yhJ1yAqATmQ"
+    }
+   ],
+   "kind": "near",
+   "suggest": [
+    "Original Frisbee Disc Sports: Ultimate & Golf",
+    "Original Journey"
+   ]
+  },
+  {
    "word": "Antivirus Survivors",
    "channels": 1,
    "n": 1,
@@ -265,6 +230,22 @@
      "t": "【Antivirus Survivors】英語得意な人たすけて！レトロPCモチーフのヴァンサバライク【今永さらら/にぶヲタ】",
      "c": "今さらちゃん ねる",
      "u": "https://www.youtube.com/watch?v=vWebty1XMrM"
+    }
+   ],
+   "kind": "near",
+   "suggest": [
+    "Antivirus Survivors 2003 Professional"
+   ]
+  },
+  {
+   "word": "Antivirus Survivors 2003",
+   "channels": 1,
+   "n": 1,
+   "examples": [
+    {
+     "t": "古のPC環境が舞台のヴァンサバライク!!怪しいソフトを解凍してウイルスを駆逐するSasatikk【Antivirus Survivors 2003】",
+     "c": "sasatikk",
+     "u": "https://www.youtube.com/watch?v=mVlpNFpkZgg"
     }
    ],
    "kind": "near",
@@ -288,63 +269,6 @@
     "Konami Krazy Racers",
     "Konami's Ping Pong"
    ]
-  },
-  {
-   "word": "original",
-   "channels": 1,
-   "n": 1,
-   "examples": [
-    {
-     "t": "【Animation MV】リスポーン!!／角巻わため【original】(アニメ「#凶乱令嬢」オープニングテーマ)",
-     "c": "Watame Ch. 角巻わため",
-     "u": "https://www.youtube.com/watch?v=yhJ1yAqATmQ"
-    }
-   ],
-   "kind": "near",
-   "suggest": [
-    "Original Frisbee Disc Sports: Ultimate & Golf",
-    "Original Journey"
-   ]
-  },
-  {
-   "word": "Antivirus Survivors 2003",
-   "channels": 1,
-   "n": 1,
-   "examples": [
-    {
-     "t": "古のPC環境が舞台のヴァンサバライク!!怪しいソフトを解凍してウイルスを駆逐するSasatikk【Antivirus Survivors 2003】",
-     "c": "sasatikk",
-     "u": "https://www.youtube.com/watch?v=mVlpNFpkZgg"
-    }
-   ],
-   "kind": "near",
-   "suggest": [
-    "Antivirus Survivors 2003 Professional"
-   ]
-  },
-  {
-   "word": "sega",
-   "channels": 3,
-   "n": 4,
-   "examples": [
-    {
-     "t": "【ギャラクシーフォースⅡ】AC 初見プレイ！［VTuber/里城はな］#レトロゲーム #vtuber #ゲーム実況  #sega",
-     "c": "里城はな",
-     "u": "https://www.youtube.com/watch?v=Ydn7SHoU7xc"
-    },
-    {
-     "t": "【ソニックアドベンチャーDX】②超音速アクションを初見クリア耐久！エンディングまで走り抜ける！【レトロゲーム / SEGA】#セガアトラス配信中",
-     "c": "モモツナ",
-     "u": "https://www.youtube.com/watch?v=ZLma34rYdO0"
-    },
-    {
-     "t": "【ソニックアドベンチャーDX】超音速アクションを初見クリア耐久！エンディングまで走り抜ける！【レトロゲーム / SEGA】#セガアトラス配信中",
-     "c": "モモツナ",
-     "u": "https://www.youtube.com/watch?v=WxALdTevB3Q"
-    }
-   ],
-   "kind": "wide",
-   "suggest": []
   },
   {
    "word": "#デュエプレ",
@@ -405,14 +329,14 @@
      "u": "https://www.youtube.com/watch?v=YaVBC4HkCx4"
     },
     {
-     "t": "【アソビ大全】そーまとアソビ大全でバトル！！なんと告知もあります🎉【早乙女ベリー/ 酒寄颯馬/にじさんじ】",
-     "c": "早乙女 ベリー / Saotome Berry【にじさんじ】",
-     "u": "https://www.youtube.com/watch?v=GM9gim11SGo"
-    },
-    {
      "t": "【 アソビ大全 】鴉 VS 天使！アソビ大全10先勝負【 あいうらら 鴉羽そら 】",
      "c": "あいうらら / Urara Ai",
      "u": "https://www.youtube.com/watch?v=VbwzXboeSNI"
+    },
+    {
+     "t": "【アソビ大全】そーまとアソビ大全でバトル！！なんと告知もあります🎉【早乙女ベリー/ 酒寄颯馬/にじさんじ】",
+     "c": "早乙女 ベリー / Saotome Berry【にじさんじ】",
+     "u": "https://www.youtube.com/watch?v=GM9gim11SGo"
     }
    ],
    "kind": "wide",
@@ -422,38 +346,12 @@
  "miss_days": 7,
  "hot_facts": [
   {
-   "game": "マビノギモバイル",
-   "growth": 7.5,
-   "videos": 6,
-   "base": 0.0,
-   "channels": 6,
-   "views": 380733,
-   "who": [
-    "樋口楓【にじさんじ所属】",
-    "キャベツの人【ゲーム紹介】",
-    "びりQ",
-    "いちごうのゲームビート",
-    "びりQ"
-   ],
-   "titles": [
-    "【マビノギモバイル】リリースおめでとう🎊スタートダッシュする！！【にじさんじ / 樋口楓】",
-    "一世を風靡したあのマビノギ、現代向けに新作としてリリースされる...想像以上に面白くて「これでいいんだよ」と言いたくなる一作だった【マビノギモバイル】",
-    "【マビノギ】真の覇権MMOはこっちなのか？「マビノギモバイル」リセマラは多分ない攻略配信【NEXON】【マビモバ】"
-   ],
-   "genres": [],
-   "year": null,
-   "platforms": [],
-   "days_seen": 1,
-   "last_seen": "2026-10-07",
-   "first_here": false
-  },
-  {
    "game": "PUBG",
-   "growth": 6.38,
-   "videos": 30,
-   "base": 4.7,
-   "channels": 29,
-   "views": 4331630,
+   "growth": 5.71,
+   "videos": 28,
+   "base": 4.9,
+   "channels": 27,
+   "views": 4124162,
    "who": [
     "Kuzuha Channel",
     "英リサ.Hanabusa Lisa",
@@ -474,84 +372,77 @@
    "first_here": false
   },
   {
-   "game": "Overwatch",
+   "game": "マビノギモバイル",
    "growth": 5.0,
    "videos": 4,
-   "base": 0.7,
-   "channels": 4,
-   "views": 101429,
+   "base": 0.5,
+   "channels": 3,
+   "views": 281527,
    "who": [
-    "夜乃くろむ / Yano Kuromu",
-    "ラトナ・プティ -Ratna Petit -にじさんじ所属",
-    "幽乃うつろ / Kasukano Utsuro",
-    "こなゆき.channel"
+    "樋口楓【にじさんじ所属】",
+    "びりQ",
+    "びりQ",
+    "Amoko Ch. 甘乃あもこ"
    ],
    "titles": [
-    "〖 OW 〗プティさん＆しすこさんと遊ぶ🎵の巻〖 ぶいすぽっ！ / 夜乃くろむ 〗",
-    "【OW】ランク！ソンブラサポート化まじ？ w/しすこ・くろむ【ラトナ・プティ/にじさんじ】",
-    "【 OW 】新シーズンきたーーー！！！！さっそく遊ぶ【 幽乃うつろ / ネオポルテ 】"
+    "【マビノギモバイル】リリースおめでとう🎊スタートダッシュする！！【にじさんじ / 樋口楓】",
+    "【マビノギ】真の覇権MMOはこっちなのか？「マビノギモバイル」リセマラは多分ない攻略配信【NEXON】【マビモバ】",
+    "AION2戦力上げないと！！！←真の覇権MMOはこっちなのか？「マビノギモバイル」リセマラは多分ない攻略配信【NEXON】【マビモバ】"
    ],
-   "genres": [
-    "Shooter",
-    "Strategy"
-   ],
+   "genres": [],
    "year": null,
-   "platforms": [
-    "pc",
-    "console"
-   ],
-   "days_seen": 5,
+   "platforms": [],
+   "days_seen": 1,
    "last_seen": "2026-10-07",
    "first_here": false
   },
   {
-   "game": "Waterpark Simulator",
-   "growth": 3.75,
+   "game": "グランツーリスモ7",
+   "growth": 2.31,
    "videos": 3,
-   "base": 0.0,
+   "base": 1.3,
    "channels": 3,
-   "views": 531291,
+   "views": 7197,
    "who": [
-    "Subaru Ch. 大空スバル",
-    "エクス・アルビオ -Ex Albio-",
-    "Kanade Ch. 音乃瀬奏 ‐ ReGLOSS"
+    "あかねのゲーム実況",
+    "にうふぁ【StellArt.】",
+    "キャサ夫のどんな感じ？"
    ],
    "titles": [
-    "【#アヒヨコ】プールを経営して爆稼ぎしゅばああああああああああああああああああああああああああああああああ！！！！！！：Waterpark Simulator【ホロライブ/大空スバル】",
-    "お金を稼ぎまくってとにかくデカいプール施設を作る経営シミュレーションゲーム『 Waterpark Simulator 』【 エビオ/にじさんじ 】",
-    "【 Waterpark Simulator 】アヒヨコでプール経営！！！【音乃瀬奏】#ReGLOSS"
+    "【GT7】デイリーBとロビー練習参加歓迎🥰【T300RS】#雑談 #livestream #gt7 #racing #グランツーリスモ7",
+    "【グランツーリスモ７ GT7】メニューブック回～☕🚙【にうふぁ/StellArt.】",
+    "【GRAN TURISMO 7】おは！めちゃ快晴！"
    ],
    "genres": [
+    "Racing",
     "Simulator",
-    "Indie"
+    "Sport"
    ],
    "year": null,
    "platforms": [
-    "pc",
     "console"
    ],
-   "days_seen": 3,
-   "last_seen": "2026-10-07",
+   "days_seen": 15,
+   "last_seen": "2026-10-06",
    "first_here": false
   },
   {
    "game": "幻想水滸伝 STAR LEAP",
-   "growth": 2.86,
-   "videos": 6,
-   "base": 2.1,
-   "channels": 5,
-   "views": 39345,
+   "growth": 2.11,
+   "videos": 4,
+   "base": 1.9,
+   "channels": 4,
+   "views": 30519,
    "who": [
     "ルート幻想水滸伝SP無課金初心者攻略",
     "ぺちょん",
-    "たろわん。",
-    "たろわん。",
-    "桃川 らいち ch / RaiChannel"
+    "桃川 らいち ch / RaiChannel",
+    "Kuu Ch. 朱舞くぅ"
    ],
    "titles": [
     "【テッドとナナミとジョウイがヤバすぎる】無課金目線で最新ガチャどっち引く？！新キャラの具体的な編成+上方修正組の評価も含めて、具体的な編成例までがっつり解説！【幻想水滸伝 STAR LEAP】",
     "【幻想水滸伝SP】第2弾ガチャ神性能！レイ/テッド/ナナミ/上方修正ジョウイ/マリエ/オデッサ！怒り速攻が縦列/雑魚召喚/坊ちゃんパーツ【幻想水滸伝 STAR LEAP/幻水スターリープ】最強Tier",
-    "【幻想水滸伝 STAR LEAP】新ガチャ レイ・テッド・ナナミ引くべき！？高火力雷智AT、激強デバフかつ闘属性AT、強力闘火サポキャラ登場！性能レビュー【スターリープ】"
+    "【幻水SP】帝国に仇なす山賊 42手 プラチナ/バルカス&シドニア｜【  桃川らいち / 幻想水滸伝 / 幻想水滸伝starleap 】"
    ],
    "genres": [],
    "year": null,
@@ -561,35 +452,60 @@
    "first_here": false
   },
   {
-   "game": "アークナイツ：エンドフィールド",
-   "growth": 2.35,
-   "videos": 8,
-   "base": 3.4,
-   "channels": 7,
-   "views": 100132,
+   "game": "Valheim",
+   "growth": 1.48,
+   "videos": 4,
+   "base": 2.7,
+   "channels": 4,
+   "views": 11783,
    "who": [
-    "草の人",
-    "羅々華セーラ-Raraka Sera-",
-    "キスケGAME",
-    "あかどらん",
-    "あかどらん"
+    "中野あるま / Alma Nakano",
+    "プテラたかはし",
+    "怪傑がみちゃんねる",
+    "さかな"
    ],
    "titles": [
-    "【エンフィ】コミュニティが炎上するほど待望された女、満を持して実装!!【アークナイツ:エンドフィールド/草の人/ゆっくり実況プレイ】",
-    "まさかの超サプライズ発表でテンションぶち壊れる【アークナイツ：エンドフィールド】",
-    "【エンドフィールド】引くべき？強い？限定★６オペレーター「代理人スー」性能解説！ おすすめパーティー/新キャラクター/モチーフ武器【アークナイツEndfield】"
+    "【その16】高田村メンバーで超サバイバル【VALHEIM】",
+    "10/6【Valheim】　高田村valheim部 灰の地のボス討伐編！16日目",
+    "【Valheim】高田村北欧神話サバイバルその15 2026/10/07"
    ],
    "genres": [
     "Role-playing (RPG)",
-    "Strategy",
-    "Adventure"
+    "Adventure",
+    "Indie"
    ],
    "year": null,
    "platforms": [
     "pc",
     "console"
    ],
-   "days_seen": 27,
+   "days_seen": 18,
+   "last_seen": "2026-10-07",
+   "first_here": false
+  },
+  {
+   "game": "真・三國無双2 with 猛将伝 Remastered",
+   "growth": 1.45,
+   "videos": 9,
+   "base": 6.2,
+   "channels": 9,
+   "views": 118256,
+   "who": [
+    "かずのこチャンネル",
+    "電撃オンライン",
+    "キリヤのゲーム実況ch",
+    "桃桜華はる -Momosaka Haru-",
+    "お湯さんち/oyuGAMEHOUSE"
+   ],
+   "titles": [
+    "【真・三國無双２ リマスター版】配信 趙雲最後の戦い ※ネタバレあり",
+    "【うどんのいない野望】『真・三國無双2 with 猛将伝 Remastered』思い出トークしながらいろいろな武将触っちゃおう！【うどんの野望】",
+    "【三國無双2猛将伝 Remasterd】ついに発売された三國無双2リマスター！趙雲を使って無双の世界を斬りまくる実況プレイ！※ネタバレあり Part 8"
+   ],
+   "genres": [],
+   "year": null,
+   "platforms": [],
+   "days_seen": 10,
    "last_seen": "2026-10-07",
    "first_here": false
   }
