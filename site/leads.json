@@ -1,6 +1,6 @@
 {
  "date": "2026-10-08",
- "generated": "2026-10-08 02:21",
+ "generated": "2026-10-08 10:37",
  "leads": {
   "events": [
    {
@@ -8,7 +8,6 @@
     "channels": [
      "Chihaya Ch. 輪堂 千速 - FLOW GLOW",
      "Flare Ch. 不知火フレア",
-     "Iroha ch. 風真いろは - holoX -",
      "Koyori ch. 博衣こより - holoX -",
      "Polka Ch. 尾丸ポルカ",
      "Riona Ch. 響咲リオナ - FLOW GLOW",
@@ -17,9 +16,18 @@
      "Vivi Ch. 綺々羅々ヴィヴィ - FLOW GLOW",
      "Watame Ch. 角巻わため",
      "ここっとスクエア【ここスク】",
-     "アキロゼCh。Vtuber/ホロライブ所属",
-     "宵吸あけル / Yokyu Akeru",
-     "隅川かど"
+     "アキロゼCh。Vtuber/ホロライブ所属"
+    ]
+   },
+   {
+    "tag": "#ストグラSeason2",
+    "channels": [
+     "たけぉ",
+     "クラウン【探検家の記録】",
+     "天羽よつは",
+     "影。/かげまる",
+     "暁月ホタル AKATSUKI HOTARU",
+     "柚原いづみ / Izumi Channel 【ななしいんく】"
     ]
    },
    {
@@ -34,14 +42,14 @@
     ]
    },
    {
-    "tag": "#わちゃサバ",
+    "tag": "#ストグラ",
     "channels": [
-     "kaka🦊紺狐カカ",
+     "Tenten Ch. / 鳳玲天々",
+     "たけぉ",
+     "みつき",
+     "クラウン【探検家の記録】",
      "ノビーの遊び部屋",
-     "天羽よつは",
-     "小花衣 ももみ / Momomi Kohanai",
-     "影。/かげまる",
-     "扇名いだ"
+     "柚原いづみ / Izumi Channel 【ななしいんく】"
     ]
    },
    {
@@ -55,30 +63,21 @@
     ]
    },
    {
-    "tag": "#ストグラ",
+    "tag": "#わちゃサバ",
     "channels": [
-     "Tenten Ch. / 鳳玲天々",
-     "たけぉ",
-     "みつき",
-     "クラウン【探検家の記録】",
-     "ノビーの遊び部屋"
-    ]
-   },
-   {
-    "tag": "#ストグラSeason2",
-    "channels": [
-     "たけぉ",
-     "クラウン【探検家の記録】",
+     "kaka🦊紺狐カカ",
      "天羽よつは",
-     "影。/かげまる"
+     "小花衣 ももみ / Momomi Kohanai",
+     "影。/かげまる",
+     "扇名いだ"
     ]
    },
    {
-    "tag": "#縦型配信",
+    "tag": "#鳴潮朝月会",
     "channels": [
-     "かおりんごー",
-     "ぺれ",
-     "ミロ"
+     "ノーラ Nora ch",
+     "夜魅ちゃんねる",
+     "式神やしろ"
     ]
    },
    {
@@ -90,46 +89,52 @@
     ]
    }
   ],
-  "newcomers": [],
+  "newcomers": [
+   {
+    "game": "マビノギモバイル",
+    "channels": 6,
+    "videos": 6
+   }
+  ],
   "wide": [
    {
     "game": "Apex Legends",
-    "channels": 40,
-    "videos": 46
+    "channels": 37,
+    "videos": 42
    },
    {
     "game": "Minecraft",
-    "channels": 37,
-    "videos": 38
-   },
-   {
-    "game": "PUBG",
-    "channels": 30,
-    "videos": 34
-   },
-   {
-    "game": "ストリートファイター6",
-    "channels": 31,
+    "channels": 35,
     "videos": 36
    },
    {
+    "game": "PUBG",
+    "channels": 29,
+    "videos": 30
+   },
+   {
+    "game": "ストリートファイター6",
+    "channels": 26,
+    "videos": 30
+   },
+   {
     "game": "hololive Dreams",
-    "channels": 23,
-    "videos": 26
+    "channels": 19,
+    "videos": 21
    },
    {
     "game": "Grand Theft Auto V",
-    "channels": 17,
-    "videos": 18
-   },
-   {
-    "game": "Dead by Daylight",
-    "channels": 15,
-    "videos": 20
+    "channels": 18,
+    "videos": 19
    },
    {
     "game": "フォートナイト",
     "channels": 15,
+    "videos": 17
+   },
+   {
+    "game": "Dead by Daylight",
+    "channels": 14,
     "videos": 18
    }
   ]
@@ -139,9 +144,9 @@
   {
    "tag": "わちゃサバ",
    "game": "Minecraft",
-   "evidence": 6,
-   "added": 2,
-   "channels": 6
+   "evidence": 5,
+   "added": 1,
+   "channels": 5
   }
  ],
  "misses": [
@@ -269,6 +274,22 @@
    ]
   },
   {
+   "word": "Antivirus Survivors",
+   "channels": 1,
+   "n": 1,
+   "examples": [
+    {
+     "t": "【Antivirus Survivors】英語得意な人たすけて！レトロPCモチーフのヴァンサバライク【今永さらら/にぶヲタ】",
+     "c": "今さらちゃん ねる",
+     "u": "https://www.youtube.com/watch?v=vWebty1XMrM"
+    }
+   ],
+   "kind": "near",
+   "suggest": [
+    "Antivirus Survivors 2003 Professional"
+   ]
+  },
+  {
    "word": "konami",
    "channels": 1,
    "n": 1,
@@ -303,22 +324,6 @@
    ]
   },
   {
-   "word": "Antivirus Survivors",
-   "channels": 1,
-   "n": 1,
-   "examples": [
-    {
-     "t": "【Antivirus Survivors】英語得意な人たすけて！レトロPCモチーフのヴァンサバライク【今永さらら/にぶヲタ】",
-     "c": "今さらちゃん ねる",
-     "u": "https://www.youtube.com/watch?v=vWebty1XMrM"
-    }
-   ],
-   "kind": "near",
-   "suggest": [
-    "Antivirus Survivors 2003 Professional"
-   ]
-  },
-  {
    "word": "Antivirus Survivors 2003",
    "channels": 1,
    "n": 1,
@@ -345,14 +350,14 @@
      "u": "https://www.youtube.com/watch?v=Ydn7SHoU7xc"
     },
     {
-     "t": "【ソニックアドベンチャーDX】超音速アクションを初見クリア耐久！エンディングまで走り抜ける！【レトロゲーム / SEGA】#セガアトラス配信中",
-     "c": "モモツナ",
-     "u": "https://www.youtube.com/watch?v=WxALdTevB3Q"
-    },
-    {
      "t": "【ソニックアドベンチャーDX】②超音速アクションを初見クリア耐久！エンディングまで走り抜ける！【レトロゲーム / SEGA】#セガアトラス配信中",
      "c": "モモツナ",
      "u": "https://www.youtube.com/watch?v=ZLma34rYdO0"
+    },
+    {
+     "t": "【ソニックアドベンチャーDX】超音速アクションを初見クリア耐久！エンディングまで走り抜ける！【レトロゲーム / SEGA】#セガアトラス配信中",
+     "c": "モモツナ",
+     "u": "https://www.youtube.com/watch?v=WxALdTevB3Q"
     }
    ],
    "kind": "wide",
@@ -434,49 +439,23 @@
  "miss_days": 7,
  "hot_facts": [
   {
-   "game": "PUBG",
-   "growth": 10.62,
-   "videos": 34,
-   "base": 3.2,
-   "channels": 30,
-   "views": 4741499,
-   "who": [
-    "Kuzuha Channel",
-    "ローレン・イロアス / Lauren Iroas【にじさんじ】",
-    "英リサ.Hanabusa Lisa",
-    "一ノ瀬うるは",
-    "英リサ.Hanabusa Lisa"
-   ],
-   "titles": [
-    "【PUBG】誰も勝てると思ってないだろ【りりむ アルス イブラヒム】英リサさんのPUBGイベント",
-    "【PUBG】ぶっちゃけ神ゲーなんだよな /w イブラヒム３ ツルギ３ バニラ３【ローレン・イロアス/にじさんじ】",
-    "【神視点】ぶいすぽGG 英リサ presents PUBG【#ぶいすぽGG】"
-   ],
-   "genres": [],
-   "year": null,
-   "platforms": [],
-   "days_seen": 7,
-   "last_seen": "2026-10-07",
-   "first_here": false
-  },
-  {
    "game": "マビノギモバイル",
    "growth": 7.5,
    "videos": 6,
-   "base": 0.2,
-   "channels": 5,
-   "views": 111984,
+   "base": 0.0,
+   "channels": 6,
+   "views": 380733,
    "who": [
-    "びりQ",
+    "樋口楓【にじさんじ所属】",
     "キャベツの人【ゲーム紹介】",
+    "びりQ",
     "いちごうのゲームビート",
-    "あめしこうR2🍅",
     "びりQ"
    ],
    "titles": [
-    "【マビノギ】真の覇権MMOはこっちなのか？「マビノギモバイル」リセマラは多分ない攻略配信【NEXON】【マビモバ】",
+    "【マビノギモバイル】リリースおめでとう🎊スタートダッシュする！！【にじさんじ / 樋口楓】",
     "一世を風靡したあのマビノギ、現代向けに新作としてリリースされる...想像以上に面白くて「これでいいんだよ」と言いたくなる一作だった【マビノギモバイル】",
-    "【プレイレビュー】『マビノギモバイル』RPG初心者も遊んで欲しい！懐かしくも新しい秀作"
+    "【マビノギ】真の覇権MMOはこっちなのか？「マビノギモバイル」リセマラは多分ない攻略配信【NEXON】【マビモバ】"
    ],
    "genres": [],
    "year": null,
@@ -486,12 +465,38 @@
    "first_here": false
   },
   {
+   "game": "PUBG",
+   "growth": 6.38,
+   "videos": 30,
+   "base": 4.7,
+   "channels": 29,
+   "views": 4331630,
+   "who": [
+    "Kuzuha Channel",
+    "英リサ.Hanabusa Lisa",
+    "ローレン・イロアス / Lauren Iroas【にじさんじ】",
+    "一ノ瀬うるは",
+    "橘ひなの / Hinano Tachibana"
+   ],
+   "titles": [
+    "【PUBG】誰も勝てると思ってないだろ【りりむ アルス イブラヒム】英リサさんのPUBGイベント",
+    "【神視点】ぶいすぽGG 英リサ presents PUBG【#ぶいすぽGG】",
+    "【PUBG】ぶいすぽGG PUBGカスタム 勝つぞ！勝つぞ！夕飯はドン勝だ！！ /w バニ３モンド３コヤ３【ローレン・イロアス/にじさんじ】"
+   ],
+   "genres": [],
+   "year": null,
+   "platforms": [],
+   "days_seen": 7,
+   "last_seen": "2026-10-07",
+   "first_here": false
+  },
+  {
    "game": "Overwatch",
    "growth": 5.0,
    "videos": 4,
    "base": 0.7,
    "channels": 4,
-   "views": 89769,
+   "views": 101429,
    "who": [
     "夜乃くろむ / Yano Kuromu",
     "ラトナ・プティ -Ratna Petit -にじさんじ所属",
@@ -512,70 +517,7 @@
     "pc",
     "console"
    ],
-   "days_seen": 4,
-   "last_seen": "2026-09-13",
-   "first_here": false
-  },
-  {
-   "game": "アークナイツ：エンドフィールド",
-   "growth": 3.93,
-   "videos": 11,
-   "base": 2.8,
-   "channels": 10,
-   "views": 116636,
-   "who": [
-    "Somen Channel",
-    "草の人",
-    "羅々華セーラ-Raraka Sera-",
-    "Somen Channel",
-    "キスケGAME"
-   ],
-   "titles": [
-    "【エンドフィールド】これを用意すれば完璧！スーと相性がいいキャラ・武器・防具の準備ガイド【アークナイツ】",
-    "【エンフィ】コミュニティが炎上するほど待望された女、満を持して実装!!【アークナイツ:エンドフィールド/草の人/ゆっくり実況プレイ】",
-    "まさかの超サプライズ発表でテンションぶち壊れる【アークナイツ：エンドフィールド】"
-   ],
-   "genres": [
-    "Role-playing (RPG)",
-    "Strategy",
-    "Adventure"
-   ],
-   "year": null,
-   "platforms": [
-    "pc",
-    "console"
-   ],
-   "days_seen": 27,
-   "last_seen": "2026-10-07",
-   "first_here": false
-  },
-  {
-   "game": "バイオハザード6",
-   "growth": 3.75,
-   "videos": 3,
-   "base": 0.2,
-   "channels": 3,
-   "views": 1295346,
-   "who": [
-    "Miko Ch. さくらみこ",
-    "Lui ch. 鷹嶺ルイ - holoX -",
-    "SANNINSHOW"
-   ],
-   "titles": [
-    "【バイオハザード６】ポンコツバイオでゆくレオン・ヘレナ編クリア耐久【ホロライブ/#みこったかにぇ】",
-    "【 バイオハザード6 】ポンコツ同士でも1日でクリアできるんですか？レオン・ヘレナ編【#みこったかにぇ/ホロライブ】ネタバレあり",
-    "#13 何かと脇が気になるジェイクとキュートなシェリー【BIOHAZARD/バイオハザード6】"
-   ],
-   "genres": [
-    "Shooter",
-    "Adventure"
-   ],
-   "year": null,
-   "platforms": [
-    "pc",
-    "console"
-   ],
-   "days_seen": 6,
+   "days_seen": 5,
    "last_seen": "2026-10-07",
    "first_here": false
   },
@@ -585,16 +527,16 @@
    "videos": 3,
    "base": 0.0,
    "channels": 3,
-   "views": 415071,
+   "views": 531291,
    "who": [
     "Subaru Ch. 大空スバル",
-    "Kanade Ch. 音乃瀬奏 ‐ ReGLOSS",
-    "エクス・アルビオ -Ex Albio-"
+    "エクス・アルビオ -Ex Albio-",
+    "Kanade Ch. 音乃瀬奏 ‐ ReGLOSS"
    ],
    "titles": [
     "【#アヒヨコ】プールを経営して爆稼ぎしゅばああああああああああああああああああああああああああああああああ！！！！！！：Waterpark Simulator【ホロライブ/大空スバル】",
-    "【 Waterpark Simulator 】アヒヨコでプール経営！！！【音乃瀬奏】#ReGLOSS",
-    "お金を稼ぎまくってとにかくデカいプール施設を作る経営シミュレーションゲーム『 Waterpark Simulator 』【 エビオ/にじさんじ 】"
+    "お金を稼ぎまくってとにかくデカいプール施設を作る経営シミュレーションゲーム『 Waterpark Simulator 』【 エビオ/にじさんじ 】",
+    "【 Waterpark Simulator 】アヒヨコでプール経営！！！【音乃瀬奏】#ReGLOSS"
    ],
    "genres": [
     "Simulator",
@@ -605,8 +547,58 @@
     "pc",
     "console"
    ],
-   "days_seen": 2,
-   "last_seen": "2026-09-06",
+   "days_seen": 3,
+   "last_seen": "2026-10-07",
+   "first_here": false
+  },
+  {
+   "game": "幻想水滸伝 STAR LEAP",
+   "growth": 3.0,
+   "videos": 6,
+   "base": 2.0,
+   "channels": 5,
+   "views": 39345,
+   "who": [
+    "ルート幻想水滸伝SP無課金初心者攻略",
+    "ぺちょん",
+    "たろわん。",
+    "たろわん。",
+    "桃川 らいち ch / RaiChannel"
+   ],
+   "titles": [
+    "【テッドとナナミとジョウイがヤバすぎる】無課金目線で最新ガチャどっち引く？！新キャラの具体的な編成+上方修正組の評価も含めて、具体的な編成例までがっつり解説！【幻想水滸伝 STAR LEAP】",
+    "【幻想水滸伝SP】第2弾ガチャ神性能！レイ/テッド/ナナミ/上方修正ジョウイ/マリエ/オデッサ！怒り速攻が縦列/雑魚召喚/坊ちゃんパーツ【幻想水滸伝 STAR LEAP/幻水スターリープ】最強Tier",
+    "【幻想水滸伝 STAR LEAP】新ガチャ レイ・テッド・ナナミ引くべき！？高火力雷智AT、激強デバフかつ闘属性AT、強力闘火サポキャラ登場！性能レビュー【スターリープ】"
+   ],
+   "genres": [],
+   "year": null,
+   "platforms": [],
+   "days_seen": 25,
+   "last_seen": "2026-10-07",
+   "first_here": false
+  },
+  {
+   "game": "ゼルダの伝説 時のオカリナ",
+   "growth": 3.0,
+   "videos": 3,
+   "base": 1.0,
+   "channels": 3,
+   "views": 14292,
+   "who": [
+    "ひろちんくん",
+    "HIKARU SHIDA @SHIDAtube",
+    "一色茶利"
+   ],
+   "titles": [
+    "【時のオカリナ】改めてやると結構重めの大人リンク編【後編ダイジェスト】",
+    "Pro Wrestler Hikaru Shida Takes on Ocarina of Time! From Childhood to the Final Battle",
+    "【ゼルダの伝説 時のオカリナ】 実況プレイ #10"
+   ],
+   "genres": [],
+   "year": null,
+   "platforms": [],
+   "days_seen": 15,
+   "last_seen": "2026-10-07",
    "first_here": false
   }
  ],
