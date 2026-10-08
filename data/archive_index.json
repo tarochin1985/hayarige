@@ -1,51 +1,105 @@
 [
  {
-  "date": "2026-10-08",
-  "videos": 636,
-  "channels": 506,
-  "games": 164,
+  "date": "2026-10-09",
+  "videos": 1310,
+  "channels": 879,
+  "games": 252,
   "hot": [
-   {
-    "game": "PUBG",
-    "growth": 5.71,
-    "channels": 27
-   },
    {
     "game": "マビノギモバイル",
     "growth": 5.0,
-    "channels": 3
+    "channels": 4
    },
    {
-    "game": "グランツーリスモ7",
-    "growth": 2.31,
+    "game": "Overwatch",
+    "growth": 4.0,
+    "channels": 4
+   },
+   {
+    "game": "都市伝説解体センター",
+    "growth": 3.75,
     "channels": 3
    }
   ],
   "top": [
    {
-    "game": "PUBG",
-    "videos": 28,
-    "channels": 27
-   },
-   {
     "game": "Apex Legends",
-    "videos": 28,
-    "channels": 27
-   },
-   {
-    "game": "hololive Dreams",
-    "videos": 16,
-    "channels": 15
-   },
-   {
-    "game": "Minecraft",
-    "videos": 16,
-    "channels": 15
+    "videos": 52,
+    "channels": 46
    },
    {
     "game": "ストリートファイター6",
-    "videos": 12,
-    "channels": 12
+    "videos": 34,
+    "channels": 30
+   },
+   {
+    "game": "Minecraft",
+    "videos": 27,
+    "channels": 26
+   },
+   {
+    "game": "hololive Dreams",
+    "videos": 19,
+    "channels": 18
+   },
+   {
+    "game": "Grand Theft Auto V",
+    "videos": 20,
+    "channels": 18
+   }
+  ],
+  "column": {
+   "game": "PUBG",
+   "headline": "「#ぶいすぽGG」まだ誰も勝っていないのに、夕飯の話"
+  }
+ },
+ {
+  "date": "2026-10-08",
+  "videos": 1290,
+  "games": 251,
+  "channels": 869,
+  "hot": [
+   {
+    "game": "Overwatch",
+    "growth": 6.25,
+    "channels": 5
+   },
+   {
+    "game": "マビノギモバイル",
+    "growth": 5.0,
+    "channels": 4
+   },
+   {
+    "game": "オーバーウォッチ2",
+    "growth": 2.67,
+    "channels": 4
+   }
+  ],
+  "top": [
+   {
+    "game": "Apex Legends",
+    "videos": 50,
+    "channels": 44
+   },
+   {
+    "game": "ストリートファイター6",
+    "videos": 32,
+    "channels": 29
+   },
+   {
+    "game": "Minecraft",
+    "videos": 24,
+    "channels": 23
+   },
+   {
+    "game": "hololive Dreams",
+    "videos": 20,
+    "channels": 20
+   },
+   {
+    "game": "PUBG",
+    "videos": 14,
+    "channels": 13
    }
   ],
   "column": {
@@ -55,9 +109,9 @@
  },
  {
   "date": "2026-10-07",
-  "videos": 1261,
-  "games": 248,
-  "channels": 863,
+  "videos": 1211,
+  "games": 250,
+  "channels": 867,
   "hot": [
    {
     "game": "PUBG",
@@ -70,7 +124,7 @@
     "channels": 10
    },
    {
-    "game": "VRChat",
+    "game": "マビノギモバイル",
     "growth": 5.0,
     "channels": 4
    }
@@ -79,12 +133,7 @@
    {
     "game": "Apex Legends",
     "videos": 40,
-    "channels": 36
-   },
-   {
-    "game": "ストリートファイター6",
-    "videos": 38,
-    "channels": 33
+    "channels": 35
    },
    {
     "game": "PUBG",
@@ -92,14 +141,19 @@
     "channels": 30
    },
    {
+    "game": "ストリートファイター6",
+    "videos": 36,
+    "channels": 31
+   },
+   {
     "game": "Minecraft",
-    "videos": 32,
-    "channels": 32
+    "videos": 34,
+    "channels": 34
    },
    {
     "game": "hololive Dreams",
-    "videos": 19,
-    "channels": 17
+    "videos": 16,
+    "channels": 15
    }
   ],
   "column": {
@@ -109,9 +163,9 @@
  },
  {
   "date": "2026-10-06",
-  "videos": 1077,
-  "games": 248,
-  "channels": 814,
+  "videos": 1060,
+  "games": 247,
+  "channels": 809,
   "hot": [
    {
     "game": "PUBG",
@@ -163,9 +217,9 @@
  },
  {
   "date": "2026-10-05",
-  "videos": 1069,
-  "games": 222,
-  "channels": 790,
+  "videos": 1058,
+  "games": 221,
+  "channels": 787,
   "hot": [
    {
     "game": "PUBG",
@@ -217,9 +271,9 @@
  },
  {
   "date": "2026-10-04",
-  "videos": 1256,
-  "games": 231,
-  "channels": 895,
+  "videos": 1251,
+  "games": 230,
+  "channels": 894,
   "hot": [
    {
     "game": "ゼルダの伝説 ティアーズ オブ ザ キングダム",
@@ -271,9 +325,9 @@
  },
  {
   "date": "2026-10-03",
-  "videos": 1240,
+  "videos": 1239,
   "games": 230,
-  "channels": 905,
+  "channels": 904,
   "hot": [
    {
     "game": "デス桃太郎",

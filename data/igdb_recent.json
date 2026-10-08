@@ -4228,6 +4228,16 @@
   ]
  },
  {
+  "name": "Astral Ascent: Expedition33 - For those who come after",
+  "alias": [],
+  "pop": 0,
+  "y": 2026,
+  "p": [
+   "pc",
+   "console"
+  ]
+ },
+ {
   "name": "Astralis: Dawnblades",
   "alias": [
    "astralis.exe"
@@ -7117,7 +7127,9 @@
  },
  {
   "name": "BloomKeeper",
-  "alias": [],
+  "alias": [
+   "Bloomkeeper.exe"
+  ],
   "pop": 0,
   "y": 2026,
   "p": [
@@ -7776,6 +7788,18 @@
   ],
   "g": [
    "Role-playing (RPG)"
+  ]
+ },
+ {
+  "name": "Bowling Mayhem",
+  "alias": [],
+  "pop": 0,
+  "y": 2026,
+  "p": [
+   "console"
+  ],
+  "g": [
+   "Sport"
   ]
  },
  {
@@ -12588,19 +12612,6 @@
   ]
  },
  {
-  "name": "Court of Darkness: Adoration's Kiss",
-  "alias": [],
-  "pop": 0,
-  "y": 2026,
-  "p": [
-   "console"
-  ],
-  "g": [
-   "Simulator",
-   "Adventure"
-  ]
- },
- {
   "name": "Cow Abduction Frenzy",
   "alias": [],
   "pop": 0,
@@ -12883,6 +12894,18 @@
   ]
  },
  {
+  "name": "Cranium Planet",
+  "alias": [],
+  "pop": 0,
+  "y": 2026,
+  "p": [
+   "console"
+  ],
+  "g": [
+   "Puzzle"
+  ]
+ },
+ {
   "name": "Cranky Jump",
   "alias": [],
   "pop": 0,
@@ -12918,18 +12941,6 @@
   "g": [
    "Adventure",
    "Indie"
-  ]
- },
- {
-  "name": "Crayon Story: Thumbelina",
-  "alias": [],
-  "pop": 0,
-  "y": 2026,
-  "p": [
-   "console"
-  ],
-  "g": [
-   "Arcade"
   ]
  },
  {
@@ -13786,18 +13797,6 @@
    "Adventure",
    "Indie",
    "Visual Novel"
-  ]
- },
- {
-  "name": "Cursed Objects: Find and Seal",
-  "alias": [],
-  "pop": 0,
-  "y": 2026,
-  "p": [
-   "console"
-  ],
-  "g": [
-   "Arcade"
   ]
  },
  {
@@ -17717,7 +17716,9 @@
  },
  {
   "name": "Dragon Dinner",
-  "alias": [],
+  "alias": [
+   "DragonDinner.exe"
+  ],
   "pop": 0,
   "y": 2026,
   "p": [
@@ -18464,6 +18465,23 @@
   ],
   "g": [
    "Simulator",
+   "Indie"
+  ]
+ },
+ {
+  "name": "Drunken Goddess Reflux",
+  "alias": [
+   "PUKEY GODDESS SHOT TRICK"
+  ],
+  "pop": 0,
+  "y": 2026,
+  "p": [
+   "pc"
+  ],
+  "g": [
+   "Simulator",
+   "Strategy",
+   "Adventure",
    "Indie"
   ]
  },
@@ -19559,7 +19577,9 @@
  },
  {
   "name": "Echo Weaver",
-  "alias": [],
+  "alias": [
+   "Echo Weaver.exe"
+  ],
   "pop": 0,
   "y": 2026,
   "p": [
@@ -34142,24 +34162,6 @@
   ]
  },
  {
-  "name": "Living Hell",
-  "alias": [
-   "LIVING HELL",
-   "SUNBORN",
-   "DAYBREAK",
-   "DECAY"
-  ],
-  "pop": 0,
-  "y": 2026,
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Shooter",
-   "Indie"
-  ]
- },
- {
   "name": "Living on Plain Pasta",
   "alias": [
    "Living_on_Plain_Pasta.exe"
@@ -39131,18 +39133,6 @@
    "Simulator",
    "Strategy",
    "Indie"
-  ]
- },
- {
-  "name": "Mythical Creature Personality Quiz: 16 Types",
-  "alias": [],
-  "pop": 0,
-  "y": 2026,
-  "p": [
-   "console"
-  ],
-  "g": [
-   "Simulator"
   ]
  },
  {
@@ -46627,6 +46617,21 @@
   ]
  },
  {
+  "name": "Pup & Mole: Gold Rush",
+  "alias": [],
+  "pop": 0,
+  "y": 2026,
+  "p": [
+   "pc"
+  ],
+  "g": [
+   "Role-playing (RPG)",
+   "Simulator",
+   "Strategy",
+   "Indie"
+  ]
+ },
+ {
   "name": "Puppeteer: No Strings Attached",
   "alias": [
    "Puppet’s Last Act",
@@ -46978,21 +46983,6 @@
   "g": [
    "Indie",
    "Visual Novel"
-  ]
- },
- {
-  "name": "Quest of Dungeons",
-  "alias": [],
-  "pop": 0,
-  "y": 2026,
-  "p": [
-   "console"
-  ],
-  "g": [
-   "Role-playing (RPG)",
-   "Strategy",
-   "Adventure",
-   "Arcade"
   ]
  },
  {
@@ -49090,22 +49080,6 @@
   ]
  },
  {
-  "name": "RockBeasts",
-  "alias": [
-   "ROCKBEASTS"
-  ],
-  "pop": 0,
-  "y": 2026,
-  "p": [
-   "pc",
-   "console"
-  ],
-  "g": [
-   "Role-playing (RPG)",
-   "Indie"
-  ]
- },
- {
   "name": "Rocket Engineer",
   "alias": [],
   "pop": 0,
@@ -49687,7 +49661,9 @@
  },
  {
   "name": "Run Giraffe Run",
-  "alias": [],
+  "alias": [
+   "giraffe.exe"
+  ],
   "pop": 0,
   "y": 2026,
   "p": [
@@ -51801,7 +51777,8 @@
  {
   "name": "Ship Shape Slam!!!",
   "alias": [
-   "Ship Shape Slam"
+   "Ship Shape Slam",
+   "Ship_Shape_Slam.exe"
   ],
   "pop": 0,
   "y": 2026,
@@ -54221,6 +54198,20 @@
   ]
  },
  {
+  "name": "Space Metal Mania",
+  "alias": [],
+  "pop": 0,
+  "y": 2026,
+  "p": [
+   "console"
+  ],
+  "g": [
+   "Shooter",
+   "Adventure",
+   "Arcade"
+  ]
+ },
+ {
   "name": "Space Parkour Obby",
   "alias": [],
   "pop": 0,
@@ -56229,7 +56220,9 @@
  },
  {
   "name": "Stuntboost",
-  "alias": [],
+  "alias": [
+   "STUNTBOOST.exe"
+  ],
   "pop": 0,
   "y": 2026,
   "p": [
@@ -62079,6 +62072,7 @@
   "pop": 0,
   "y": 2026,
   "p": [
+   "pc",
    "console"
   ],
   "g": [
@@ -66987,6 +66981,19 @@
   "y": 2026,
   "p": [
    "console"
+  ]
+ },
+ {
+  "name": "Werfast",
+  "alias": [],
+  "pop": 0,
+  "y": 2026,
+  "p": [
+   "pc"
+  ],
+  "g": [
+   "Adventure",
+   "Indie"
   ]
  },
  {
