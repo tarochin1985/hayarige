@@ -1,7 +1,7 @@
 {
  "mode": "admin",
  "date": "2026-10-09",
- "generated": "2026-10-09 10:46",
+ "generated": "2026-10-09 10:52",
  "unknown": [
   {
    "guess": "縦型配信",
@@ -134,23 +134,6 @@
      "t": "【横型配信】サーモンランNW",
      "c": "ズンチャカワドミン",
      "u": "https://www.youtube.com/watch?v=4QdumIxQSZ4"
-    }
-   ]
-  },
-  {
-   "guess": "ライブ実況",
-   "channels": 1,
-   "n": 2,
-   "examples": [
-    {
-     "t": "【ライブ実況】ハクスラｘトレハンｘコズミックホラー！80年代ノスタルジックアクションRPG【Kingdom of Night】【アクションRPG/ハクスラ/トレハン/インディーゲーム/Steam】",
-     "c": "ホビドワ",
-     "u": "https://www.youtube.com/watch?v=-7SkxB-wEIQ"
-    },
-    {
-     "t": "【ライブ実況】ハクスラｘトレハンｘコズミックホラー！80年代ノスタルジックアクションRPG【Kingdom of Night】【アクションRPG/ハクスラ/トレハン/インディーゲーム/Steam】",
-     "c": "ホビドワ",
-     "u": "https://www.youtube.com/watch?v=OUf9f31FXdE"
     }
    ]
   },
@@ -421,6 +404,18 @@
      "t": "【ダライアス EXTRA Ver.】祝・ダライアス40周年❗️なのでEXTRA VERSIONをゆるーく遊ぶ【Steam/レトロゲーム/VTuber】",
      "c": "馬小屋ねる子レトロゲームCh.",
      "u": "https://www.youtube.com/watch?v=LW0kov8yQrI"
+    }
+   ]
+  },
+  {
+   "guess": "ライブ実況",
+   "channels": 1,
+   "n": 1,
+   "examples": [
+    {
+     "t": "【ライブ実況】ハクスラｘトレハンｘコズミックホラー！80年代ノスタルジックアクションRPG【Kingdom of Night】【アクションRPG/ハクスラ/トレハン/インディーゲーム/Steam】",
+     "c": "ホビドワ",
+     "u": "https://www.youtube.com/watch?v=-7SkxB-wEIQ"
     }
    ]
   },
@@ -2339,6 +2334,11 @@
  "meta_desc": "判定できなかった配信と、コラムの種。公開ページではありません。",
  "recent_columns": [
   {
+   "date": "2026-10-09",
+   "game": "Valheim",
+   "headline": "5年半かけて増えた最後の土地へ"
+  },
+  {
    "date": "2026-10-08",
    "game": "PUBG",
    "headline": "「#ぶいすぽGG」まだ誰も勝っていないのに、夕飯の話"
@@ -2402,11 +2402,6 @@
    "date": "2026-09-26",
    "game": "風来のシレン6",
    "headline": "「トルネコ」の影響で再び人気に？"
-  },
-  {
-   "date": "2026-09-25",
-   "game": "アークナイツ：エンドフィールド",
-   "headline": "無料で配られた新キャラ一人で、ひと晩が埋まった"
   }
  ]
 }
