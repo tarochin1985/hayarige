@@ -1,45 +1,18 @@
 {
  "date": "2026-10-09",
- "generated": "2026-10-09 02:20",
+ "generated": "2026-10-09 10:17",
  "leads": {
   "events": [
    {
     "tag": "#ホロドリ",
     "channels": [
      "AZKi Channel",
-     "Flare Ch. 不知火フレア",
      "Iroha ch. 風真いろは - holoX -",
-     "Polka Ch. 尾丸ポルカ",
      "Riona Ch. 響咲リオナ - FLOW GLOW",
      "Roboco Ch. - ロボ子",
      "SoraCh. ときのそらチャンネル",
      "Vivi Ch. 綺々羅々ヴィヴィ - FLOW GLOW",
-     "ここっとスクエア【ここスク】",
      "アキロゼCh。Vtuber/ホロライブ所属"
-    ]
-   },
-   {
-    "tag": "#ストグラ",
-    "channels": [
-     "Tenten Ch. / 鳳玲天々",
-     "たけぉ",
-     "まお",
-     "みつき",
-     "クラウン【探検家の記録】",
-     "ノビーの遊び部屋",
-     "柚原いづみ / Izumi Channel 【ななしいんく】",
-     "魔光リサ - Lisa Makoh -"
-    ]
-   },
-   {
-    "tag": "#ストグラSeason2",
-    "channels": [
-     "neon",
-     "たけぉ",
-     "クラウン【探検家の記録】",
-     "天羽よつは",
-     "暁月ホタル AKATSUKI HOTARU",
-     "柚原いづみ / Izumi Channel 【ななしいんく】"
     ]
    },
    {
@@ -54,37 +27,39 @@
     ]
    },
    {
-    "tag": "#わちゃサバ",
+    "tag": "#ストグラ",
     "channels": [
-     "kaka🦊紺狐カカ",
-     "天羽よつは",
-     "小花衣 ももみ / Momomi Kohanai",
-     "影。/かげまる"
+     "Tenten Ch. / 鳳玲天々",
+     "たけぉ",
+     "まお",
+     "みつき",
+     "クラウン【探検家の記録】",
+     "魔光リサ - Lisa Makoh -"
+    ]
+   },
+   {
+    "tag": "#ストグラSeason2",
+    "channels": [
+     "neon",
+     "たけぉ",
+     "クラウン【探検家の記録】",
+     "天羽よつは"
     ]
    },
    {
     "tag": "#SURGECity",
     "channels": [
      "Ao WuWu Ch.【V4Mirai】",
-     "やよい",
      "史門 / Shimon ",
      "赤彩みあ / Akairo Mia Ch.【すずみあ】"
     ]
    },
    {
-    "tag": "#ぶいきゃす",
+    "tag": "#スプラトゥーン3",
     "channels": [
-     "えういん ∕ euin Ch.",
-     "孵卵リリス / Furan Lilith",
-     "星埜きぃ -Key Hoshino-"
-    ]
-   },
-   {
-    "tag": "#鳴潮朝月会",
-    "channels": [
-     "ノーラ Nora ch",
-     "夜魅ちゃんねる",
-     "式神やしろ"
+     "773ちゃんねる。-スプラ-",
+     "きさらぎ【下手ゲーム実況】",
+     "まりも"
     ]
    }
   ],
@@ -92,38 +67,38 @@
   "wide": [
    {
     "game": "Apex Legends",
-    "channels": 46,
-    "videos": 52
+    "channels": 38,
+    "videos": 41
    },
    {
     "game": "ストリートファイター6",
-    "channels": 30,
-    "videos": 34
+    "channels": 28,
+    "videos": 31
    },
    {
     "game": "Minecraft",
-    "channels": 26,
-    "videos": 27
+    "channels": 17,
+    "videos": 18
    },
    {
     "game": "hololive Dreams",
-    "channels": 18,
-    "videos": 19
-   },
-   {
-    "game": "Grand Theft Auto V",
-    "channels": 18,
-    "videos": 20
+    "channels": 14,
+    "videos": 15
    },
    {
     "game": "フォートナイト",
+    "channels": 14,
+    "videos": 15
+   },
+   {
+    "game": "Grand Theft Auto V",
     "channels": 15,
     "videos": 16
    },
    {
     "game": "Dead by Daylight",
-    "channels": 15,
-    "videos": 17
+    "channels": 14,
+    "videos": 16
    },
    {
     "game": "スプラトゥーン3",
@@ -133,26 +108,13 @@
   ]
  },
  "drift": [],
- "tags": [
-  {
-   "tag": "わちゃサバ",
-   "game": "Minecraft",
-   "evidence": 3,
-   "added": 2,
-   "channels": 4
-  }
- ],
+ "tags": [],
  "misses": [
   {
    "word": "Starward",
    "channels": 1,
-   "n": 4,
+   "n": 3,
    "examples": [
-    {
-     "t": "【星の翼】地味に今シーズン固定1回もやってなかったシャフ勢の朝活固定ランクマ→シャフに移行【星之翼/Starward】【東和正】",
-     "c": "東和正 / AzumaKazumasa",
-     "u": "https://www.youtube.com/watch?v=uP6Y_LytsKk"
-    },
     {
      "t": "【星の翼】コストバランスより練度！128人規模シャフ大会第16回星火燎原杯名試合ピックアップ 準決勝【パラス/チンニ/ランスロット】【星之翼/Starward】",
      "c": "東和正 / AzumaKazumasa",
@@ -162,6 +124,11 @@
      "t": "【星の翼】てきとー固定でパラパラしたい【星之翼/Starward】【東和正】",
      "c": "東和正 / AzumaKazumasa",
      "u": "https://www.youtube.com/watch?v=-BF_zVqAsFo"
+    },
+    {
+     "t": "【星の翼】最後の低コスト枠をランスロット・ハルカ・エミカ・レミエル・パラスあたりが取り合ってるランクマ【星之翼/Starward】【東和正】",
+     "c": "東和正 / AzumaKazumasa",
+     "u": "https://www.youtube.com/watch?v=XUXXwubhOsQ"
     }
    ],
    "kind": "near",
@@ -218,6 +185,22 @@
    ]
   },
   {
+   "word": "Antivirus Survivors",
+   "channels": 1,
+   "n": 1,
+   "examples": [
+    {
+     "t": "【Antivirus Survivors】英語得意な人たすけて！レトロPCモチーフのヴァンサバライク【今永さらら/にぶヲタ】",
+     "c": "今さらちゃん ねる",
+     "u": "https://www.youtube.com/watch?v=vWebty1XMrM"
+    }
+   ],
+   "kind": "near",
+   "suggest": [
+    "Antivirus Survivors 2003 Professional"
+   ]
+  },
+  {
    "word": "konami",
    "channels": 1,
    "n": 1,
@@ -249,22 +232,6 @@
    "suggest": [
     "Original Frisbee Disc Sports: Ultimate & Golf",
     "Original Journey"
-   ]
-  },
-  {
-   "word": "Antivirus Survivors",
-   "channels": 1,
-   "n": 1,
-   "examples": [
-    {
-     "t": "【Antivirus Survivors】英語得意な人たすけて！レトロPCモチーフのヴァンサバライク【今永さらら/にぶヲタ】",
-     "c": "今さらちゃん ねる",
-     "u": "https://www.youtube.com/watch?v=vWebty1XMrM"
-    }
-   ],
-   "kind": "near",
-   "suggest": [
-    "Antivirus Survivors 2003 Professional"
    ]
   },
   {
@@ -315,9 +282,9 @@
      "u": "https://www.youtube.com/watch?v=DocW6kzUSqA"
     },
     {
-     "t": "【 #SURGECity  ￤＃１ 】逮捕じゃコラ～～～～～～～～～！！！！🚓🚨【 すずみあ / 赤彩みあ 】",
-     "c": "赤彩みあ / Akairo Mia Ch.【すずみあ】",
-     "u": "https://www.youtube.com/watch?v=HwfM4YfYz7g"
+     "t": "【スト鯖GTA】心拍数90超えたら罰金縛りで100億円稼ぎます…！｜#SURGECity 1日目",
+     "c": "やよい",
+     "u": "https://www.youtube.com/watch?v=sLMicJDwwIQ"
     }
    ],
    "kind": "wide",
@@ -519,63 +486,6 @@
  "miss_days": 7,
  "hot_facts": [
   {
-   "game": "マビノギモバイル",
-   "growth": 5.0,
-   "videos": 4,
-   "base": 0.7,
-   "channels": 4,
-   "views": 265532,
-   "who": [
-    "樋口楓【にじさんじ所属】",
-    "びりQ",
-    "びりQ",
-    "Amoko Ch. 甘乃あもこ",
-    "あめしこうR2🍅"
-   ],
-   "titles": [
-    "【マビノギモバイル】リリースおめでとう🎊スタートダッシュする！！【にじさんじ / 樋口楓】",
-    "AION2戦力上げないと！！！←真の覇権MMOはこっちなのか？「マビノギモバイル」リセマラは多分ない攻略配信【NEXON】【マビモバ】",
-    "【マビノギ】”クロスボウLv60～”たまにAION2「マビノギモバイル」リセマラは多分ない攻略配信【NEXON】【マビモバ】"
-   ],
-   "genres": [],
-   "year": null,
-   "platforms": [],
-   "days_seen": 2,
-   "last_seen": "2026-10-08",
-   "first_here": false
-  },
-  {
-   "game": "Overwatch",
-   "growth": 4.0,
-   "videos": 4,
-   "base": 1.0,
-   "channels": 4,
-   "views": 164301,
-   "who": [
-    "小柳ロウ / Koyanagi Rou【にじさんじ】",
-    "ラトナ・プティ -Ratna Petit -にじさんじ所属",
-    "Kazaki Ch. ‐ 森中花咲 ‐",
-    "こなゆき.channel"
-   ],
-   "titles": [
-    "【OW】にじカスタム【小柳ロウ/にじさんじ】",
-    "【OW】カスタム！にじさんじの皆さんと遊ぶ【ラトナ・プティ/にじさんじ】",
-    "【OW】新シーズン‼にじさんじOWカスタム🔫ｗにじさんじライバー9名【森中花咲/にじさんじ所属】"
-   ],
-   "genres": [
-    "Shooter",
-    "Strategy"
-   ],
-   "year": null,
-   "platforms": [
-    "pc",
-    "console"
-   ],
-   "days_seen": 6,
-   "last_seen": "2026-10-08",
-   "first_here": false
-  },
-  {
    "game": "都市伝説解体センター",
    "growth": 3.75,
    "videos": 3,
@@ -602,92 +512,152 @@
     "pc",
     "console"
    ],
-   "days_seen": 10,
-   "last_seen": "2026-09-25",
+   "days_seen": 11,
+   "last_seen": "2026-10-08",
    "first_here": false
   },
   {
    "game": "オーバーウォッチ2",
-   "growth": 2.67,
-   "videos": 4,
-   "base": 1.5,
-   "channels": 4,
-   "views": 282831,
+   "growth": 3.33,
+   "videos": 8,
+   "base": 2.4,
+   "channels": 8,
+   "views": 447132,
    "who": [
     "柊ツルギ / Hiiragi Tsurugi",
+    "小柳ロウ / Koyanagi Rou【にじさんじ】",
     "星導ショウ / Hoshirube Sho【にじさんじ】",
-    "ta1yo_tv",
-    "弦月 藤士郎 / Genzuki Tojiro【にじさんじ】"
+    "ラトナ・プティ -Ratna Petit -にじさんじ所属",
+    "ta1yo_tv"
    ],
    "titles": [
     "あまりに豪華すぎるメンバーに囲まれ喋れなくなるツルギ【Overwatch】",
-    "【オーバーウォッチ】新キャラを使おうにじさんじカスタム【星導ショウ/にじさんじ】",
-    "新シーズン開幕！初ランクでオリーサ×新サポ・ドクトリンのウルトコンボを見てドパるta1yo【Overwatch】"
+    "【OW】にじカスタム【小柳ロウ/にじさんじ】",
+    "【オーバーウォッチ】新キャラを使おうにじさんじカスタム【星導ショウ/にじさんじ】"
    ],
    "genres": [],
    "year": null,
    "platforms": [],
-   "days_seen": 11,
-   "last_seen": "2026-10-06",
+   "days_seen": 13,
+   "last_seen": "2026-10-08",
    "first_here": false
   },
   {
-   "game": "Elden Ring Nightreign",
-   "growth": 2.5,
+   "game": "マビノギモバイル",
+   "growth": 3.33,
    "videos": 3,
-   "base": 1.2,
+   "base": 0.9,
    "channels": 3,
-   "views": 31502,
+   "views": 29882,
    "who": [
-    "ドチタオ",
-    "らっこ侍",
-    "Uzuki Haruka channel / 兎月はるかch"
+    "びりQ",
+    "Amoko Ch. 甘乃あもこ",
+    "あめしこうR2🍅"
    ],
    "titles": [
-    "【検証】一番使用数の低い夜渡りでカンストに行けるのか？【ナイトレイン/ELDEN RING NIGHTREIGN】",
-    "みんなともっさりナイトレインを楽しむ配信【ELDENRING NIGHTREIGN / エルデンリング ナイトレイン】",
-    "【ナイトレイン】絶対深度４に返り咲く❢❢♡🐇⚔【ELDEN RING NIGHTREIGN】"
+    "【マビノギ】”クロスボウLv60～”たまにAION2「マビノギモバイル」リセマラは多分ない攻略配信【NEXON】【マビモバ】",
+    "【朝活雑談→マビノギモバイル】初めて遊んだオンラインゲームがモバイルになった！！！！【NEXON】【マビモバ】",
+    "【実写Vlog】東京ゲームショウでマビノギモバイルのブースに行ってきたよー【TGS2026】マビモバ"
+   ],
+   "genres": [],
+   "year": null,
+   "platforms": [],
+   "days_seen": 2,
+   "last_seen": "2026-10-08",
+   "first_here": false
+  },
+  {
+   "game": "アークナイツ",
+   "growth": 2.0,
+   "videos": 4,
+   "base": 2.0,
+   "channels": 3,
+   "views": 29836,
+   "who": [
+    "あまくだりアークナイツ",
+    "春水レイ / Shunsui Rei",
+    "アギちゃんねる / AGITO",
+    "春水レイ / Shunsui Rei",
+    "アギちゃんねる / AGITO"
+   ],
+   "titles": [
+    "秋の限定イベの新情報見るぜ【アークナイツ】",
+    "【迫真アークナイツ】ケルイベ『遺塵の道を』読むぞーー！！【朗読/Vtuber/春水レイ 】",
+    "【アークナイツ】今から始める初心者が超お得な理由！？異格ケルシーとクロージャが実装される祭限定後半があまりにも豪華すぎたｗ【Arknights】"
+   ],
+   "genres": [
+    "Real Time Strategy (RTS)",
+    "Role-playing (RPG)",
+    "Simulator",
+    "Strategy",
+    "Tactical",
+    "Adventure"
+   ],
+   "year": null,
+   "platforms": [
+    "pc"
+   ],
+   "days_seen": 18,
+   "last_seen": "2026-10-08",
+   "first_here": false
+  },
+  {
+   "game": "幻想水滸伝 STAR LEAP",
+   "growth": 1.92,
+   "videos": 5,
+   "base": 2.6,
+   "channels": 5,
+   "views": 18389,
+   "who": [
+    "たろわん。",
+    "小花衣 ももみ / Momomi Kohanai",
+    "ルート幻想水滸伝SP無課金初心者攻略",
+    "【声優Vtuber】皇みかど",
+    "桃川 らいち ch / RaiChannel"
+   ],
+   "titles": [
+    "【幻想水滸伝 STAR LEAP】主人公Ⅱリリュウが欲しい！リリュウ追いガチャ！ピックとは、、、ビッキーさん頼みます！【スターリープ】",
+    "🎮 幻想水滸伝 STAR LEAP┊テッド！ナナミ！レイ！2凸するまでガチャ【 #小花衣ももみ / #Vtuber 】",
+    "【アニメ化ミッション/山賊42行動配布編成で攻略！】RPGはこれ真似すればOK!!アプデイベントガイド徹底解説！【幻想水滸伝 STAR LEAP】"
+   ],
+   "genres": [],
+   "year": null,
+   "platforms": [],
+   "days_seen": 26,
+   "last_seen": "2026-10-08",
+   "first_here": false
+  },
+  {
+   "game": "Valheim",
+   "growth": 1.85,
+   "videos": 5,
+   "base": 2.7,
+   "channels": 5,
+   "views": 4477,
+   "who": [
+    "中野あるま / Alma Nakano",
+    "プテラたかはし",
+    "怪傑がみちゃんねる",
+    "シムパパ",
+    "さかな"
+   ],
+   "titles": [
+    "【その17】高田村メンバーで超サバイバル【VALHEIM】",
+    "10/8【Valheim】　高田村valheim部 極北編！17日目",
+    "【Valheim】高田村北欧神話サバイバルその16 2026/10/08"
    ],
    "genres": [
     "Role-playing (RPG)",
-    "Hack and slash/Beat 'em up"
+    "Adventure",
+    "Indie"
    ],
    "year": null,
    "platforms": [
     "pc",
     "console"
    ],
-   "days_seen": 4,
-   "last_seen": "2026-10-06",
-   "first_here": false
-  },
-  {
-   "game": "ぽこ あ ポケモン",
-   "growth": 2.0,
-   "videos": 3,
-   "base": 1.5,
-   "channels": 3,
-   "views": 50105,
-   "who": [
-    "ちささこ",
-    "うめみ",
-    "コノ豆腐"
-   ],
-   "titles": [
-    "すべてのエリアを環境レベルMAXにしたい✨｜1日目【ぽこあポケモン】",
-    "ドンヨリうみべの街にカラフルな一軒家つくるぞ！【ぽこあポケモン】",
-    "【ぽこあポケモン】楽しくやってます！マイクラ脳が遊ぶぽこポケ part10【VOICEROID実況】"
-   ],
-   "genres": [
-    "Simulator",
-    "Adventure"
-   ],
-   "year": null,
-   "platforms": [
-    "console"
-   ],
-   "days_seen": 21,
-   "last_seen": "2026-10-07",
+   "days_seen": 19,
+   "last_seen": "2026-10-08",
    "first_here": false
   }
  ],
