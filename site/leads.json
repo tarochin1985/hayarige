@@ -1,8 +1,20 @@
 {
  "date": "2026-10-09",
- "generated": "2026-10-09 10:17",
+ "generated": "2026-10-09 10:44",
  "leads": {
   "events": [
+   {
+    "tag": "#ゲーム実況",
+    "channels": [
+     "M家の休日マサ",
+     "Usagi Ch. 因幡兎",
+     "えりんぎ Games",
+     "ジョアだよ",
+     "恋因ロス KoinRosu",
+     "星埜きぃ -Key Hoshino-",
+     "雛乃ぴぴ / Hinano pipi"
+    ]
+   },
    {
     "tag": "#ホロドリ",
     "channels": [
@@ -16,17 +28,6 @@
     ]
    },
    {
-    "tag": "#ゲーム実況",
-    "channels": [
-     "M家の休日マサ",
-     "Usagi Ch. 因幡兎",
-     "ジョアだよ",
-     "恋因ロス KoinRosu",
-     "星埜きぃ -Key Hoshino-",
-     "雛乃ぴぴ / Hinano pipi"
-    ]
-   },
-   {
     "tag": "#ストグラ",
     "channels": [
      "Tenten Ch. / 鳳玲天々",
@@ -34,6 +35,7 @@
      "まお",
      "みつき",
      "クラウン【探検家の記録】",
+     "柚原いづみ / Izumi Channel 【ななしいんく】",
      "魔光リサ - Lisa Makoh -"
     ]
    },
@@ -43,13 +45,17 @@
      "neon",
      "たけぉ",
      "クラウン【探検家の記録】",
-     "天羽よつは"
+     "天羽よつは",
+     "暁月ホタル AKATSUKI HOTARU",
+     "柚原いづみ / Izumi Channel 【ななしいんく】"
     ]
    },
    {
     "tag": "#SURGECity",
     "channels": [
      "Ao WuWu Ch.【V4Mirai】",
+     "どぅんどぅくどぅんどぅんどぅん",
+     "なるる / naruru",
      "史門 / Shimon ",
      "赤彩みあ / Akairo Mia Ch.【すずみあ】"
     ]
@@ -67,42 +73,42 @@
   "wide": [
    {
     "game": "Apex Legends",
-    "channels": 38,
-    "videos": 41
+    "channels": 37,
+    "videos": 42
    },
    {
     "game": "ストリートファイター6",
-    "channels": 28,
-    "videos": 31
+    "channels": 29,
+    "videos": 32
    },
    {
     "game": "Minecraft",
-    "channels": 17,
-    "videos": 18
-   },
-   {
-    "game": "hololive Dreams",
-    "channels": 14,
-    "videos": 15
-   },
-   {
-    "game": "フォートナイト",
-    "channels": 14,
-    "videos": 15
+    "channels": 21,
+    "videos": 22
    },
    {
     "game": "Grand Theft Auto V",
+    "channels": 18,
+    "videos": 20
+   },
+   {
+    "game": "hololive Dreams",
+    "channels": 16,
+    "videos": 17
+   },
+   {
+    "game": "スプラトゥーン3",
+    "channels": 18,
+    "videos": 19
+   },
+   {
+    "game": "フォートナイト",
     "channels": 15,
     "videos": 16
    },
    {
     "game": "Dead by Daylight",
     "channels": 14,
-    "videos": 16
-   },
-   {
-    "game": "スプラトゥーン3",
-    "channels": 15,
     "videos": 16
    }
   ]
@@ -267,9 +273,25 @@
    ]
   },
   {
+   "word": "Goonect",
+   "channels": 1,
+   "n": 1,
+   "examples": [
+    {
+     "t": "【Goonect】同僚警察官が手を繋ぎながら一緒にゴールを目指す！【竜煌ニズナ/鳩乃はろん/#新人VTuber】",
+     "c": "鳩乃はろん / Hatono Haron / 新人VTuber",
+     "u": "https://www.youtube.com/watch?v=MQviCIETNtc"
+    }
+   ],
+   "kind": "near",
+   "suggest": [
+    "Goonect 2"
+   ]
+  },
+  {
    "word": "#SURGECity",
-   "channels": 6,
-   "n": 9,
+   "channels": 8,
+   "n": 13,
    "examples": [
     {
      "t": "【 #SURGECity 】Day1 ⁝ 今回はなにをするんでしょうか？【 碧輝りお/個人勢VTuber 】",
@@ -292,8 +314,8 @@
   },
   {
    "word": "ドラゴンズドグマ2ダークアリズン",
-   "channels": 4,
-   "n": 4,
+   "channels": 5,
+   "n": 5,
    "examples": [
     {
      "t": "【ドラゴンズドグマ2ダークアリズン】ネタバレ注意！とりあえずソーサラーで行きます！【DDDA/ドグマ２/vtuber/女性実況】",
@@ -317,7 +339,7 @@
   {
    "word": "eFootball2027",
    "channels": 3,
-   "n": 5,
+   "n": 6,
    "examples": [
     {
      "t": "【神回】無料配布限定EPICカントナガチャ3アカウント合計100連神引きチャレンジ【eFootball2027/イーフト2027アプリ】フリット ライカールト バステン 育成解説 ベイル",
@@ -486,12 +508,37 @@
  "miss_days": 7,
  "hot_facts": [
   {
+   "game": "マビノギモバイル",
+   "growth": 4.44,
+   "videos": 4,
+   "base": 0.9,
+   "channels": 3,
+   "views": 38330,
+   "who": [
+    "びりQ",
+    "Amoko Ch. 甘乃あもこ",
+    "あめしこうR2🍅",
+    "Amoko Ch. 甘乃あもこ"
+   ],
+   "titles": [
+    "【マビノギ】”クロスボウLv60～”たまにAION2「マビノギモバイル」リセマラは多分ない攻略配信【NEXON】【マビモバ】",
+    "【朝活雑談→マビノギモバイル】初めて遊んだオンラインゲームがモバイルになった！！！！【NEXON】【マビモバ】",
+    "【実写Vlog】東京ゲームショウでマビノギモバイルのブースに行ってきたよー【TGS2026】マビモバ"
+   ],
+   "genres": [],
+   "year": null,
+   "platforms": [],
+   "days_seen": 2,
+   "last_seen": "2026-10-08",
+   "first_here": false
+  },
+  {
    "game": "都市伝説解体センター",
    "growth": 3.75,
    "videos": 3,
    "base": 0.7,
    "channels": 3,
-   "views": 147086,
+   "views": 167709,
    "who": [
     "花畑チャイカ",
     "おんりー / ドズル社",
@@ -522,7 +569,7 @@
    "videos": 8,
    "base": 2.4,
    "channels": 8,
-   "views": 447132,
+   "views": 511128,
    "who": [
     "柊ツルギ / Hiiragi Tsurugi",
     "小柳ロウ / Koyanagi Rou【にじさんじ】",
@@ -538,30 +585,66 @@
    "genres": [],
    "year": null,
    "platforms": [],
-   "days_seen": 13,
+   "days_seen": 22,
    "last_seen": "2026-10-08",
    "first_here": false
   },
   {
-   "game": "マビノギモバイル",
-   "growth": 3.33,
+   "game": "Elden Ring Nightreign",
+   "growth": 2.5,
    "videos": 3,
-   "base": 0.9,
+   "base": 1.2,
    "channels": 3,
-   "views": 29882,
+   "views": 33943,
    "who": [
-    "びりQ",
-    "Amoko Ch. 甘乃あもこ",
-    "あめしこうR2🍅"
+    "らっこ侍",
+    "ドチタオ",
+    "Uzuki Haruka channel / 兎月はるかch",
+    "ドチタオ"
    ],
    "titles": [
-    "【マビノギ】”クロスボウLv60～”たまにAION2「マビノギモバイル」リセマラは多分ない攻略配信【NEXON】【マビモバ】",
-    "【朝活雑談→マビノギモバイル】初めて遊んだオンラインゲームがモバイルになった！！！！【NEXON】【マビモバ】",
-    "【実写Vlog】東京ゲームショウでマビノギモバイルのブースに行ってきたよー【TGS2026】マビモバ"
+    "みんなともっさりナイトレインを楽しむ配信【ELDENRING NIGHTREIGN / エルデンリング ナイトレイン】",
+    "深夜渡り苦手キャラ武者修行【ナイトレイン/ELDEN RING NIGHTREIGN】",
+    "【ナイトレイン】絶対深度４に返り咲く❢❢♡🐇⚔【ELDEN RING NIGHTREIGN】"
    ],
-   "genres": [],
+   "genres": [
+    "Role-playing (RPG)",
+    "Hack and slash/Beat 'em up"
+   ],
    "year": null,
-   "platforms": [],
+   "platforms": [
+    "pc",
+    "console"
+   ],
+   "days_seen": 5,
+   "last_seen": "2026-10-08",
+   "first_here": false
+  },
+  {
+   "game": "Find The Needle",
+   "growth": 2.5,
+   "videos": 3,
+   "base": 1.2,
+   "channels": 3,
+   "views": 14079,
+   "who": [
+    "おおえのたかゆきプレミアム",
+    "ここっとスクエア【ここスク】",
+    "実況したいよまちょすさん!"
+   ],
+   "titles": [
+    "地獄の藁山から\"1本の針\"を探すゲームで絶望するおえちゃん【Find The Needle】【2026/10/06】",
+    "1億本の中から1本の針を探す鬼畜ゲー！【find the needle】#茜猫こるに",
+    "【※ゲリラ枠日時未定】たった1本の針を探す作業ゲームやる【 FIND THE NEEDLE 】"
+   ],
+   "genres": [
+    "Simulator",
+    "Indie"
+   ],
+   "year": null,
+   "platforms": [
+    "pc"
+   ],
    "days_seen": 2,
    "last_seen": "2026-10-08",
    "first_here": false
@@ -572,18 +655,18 @@
    "videos": 4,
    "base": 2.0,
    "channels": 3,
-   "views": 29836,
+   "views": 31882,
    "who": [
     "あまくだりアークナイツ",
-    "春水レイ / Shunsui Rei",
     "アギちゃんねる / AGITO",
+    "春水レイ / Shunsui Rei",
     "春水レイ / Shunsui Rei",
     "アギちゃんねる / AGITO"
    ],
    "titles": [
     "秋の限定イベの新情報見るぜ【アークナイツ】",
-    "【迫真アークナイツ】ケルイベ『遺塵の道を』読むぞーー！！【朗読/Vtuber/春水レイ 】",
-    "【アークナイツ】今から始める初心者が超お得な理由！？異格ケルシーとクロージャが実装される祭限定後半があまりにも豪華すぎたｗ【Arknights】"
+    "【アークナイツ】今から始める初心者が超お得な理由！？異格ケルシーとクロージャが実装される祭限定後半があまりにも豪華すぎたｗ【Arknights】",
+    "【迫真アークナイツ】ケルイベ『遺塵の道を』読むぞーー！！【朗読/Vtuber/春水レイ 】"
    ],
    "genres": [
     "Real Time Strategy (RTS)",
@@ -598,65 +681,6 @@
     "pc"
    ],
    "days_seen": 18,
-   "last_seen": "2026-10-08",
-   "first_here": false
-  },
-  {
-   "game": "幻想水滸伝 STAR LEAP",
-   "growth": 1.92,
-   "videos": 5,
-   "base": 2.6,
-   "channels": 5,
-   "views": 18389,
-   "who": [
-    "たろわん。",
-    "小花衣 ももみ / Momomi Kohanai",
-    "ルート幻想水滸伝SP無課金初心者攻略",
-    "【声優Vtuber】皇みかど",
-    "桃川 らいち ch / RaiChannel"
-   ],
-   "titles": [
-    "【幻想水滸伝 STAR LEAP】主人公Ⅱリリュウが欲しい！リリュウ追いガチャ！ピックとは、、、ビッキーさん頼みます！【スターリープ】",
-    "🎮 幻想水滸伝 STAR LEAP┊テッド！ナナミ！レイ！2凸するまでガチャ【 #小花衣ももみ / #Vtuber 】",
-    "【アニメ化ミッション/山賊42行動配布編成で攻略！】RPGはこれ真似すればOK!!アプデイベントガイド徹底解説！【幻想水滸伝 STAR LEAP】"
-   ],
-   "genres": [],
-   "year": null,
-   "platforms": [],
-   "days_seen": 26,
-   "last_seen": "2026-10-08",
-   "first_here": false
-  },
-  {
-   "game": "Valheim",
-   "growth": 1.85,
-   "videos": 5,
-   "base": 2.7,
-   "channels": 5,
-   "views": 4477,
-   "who": [
-    "中野あるま / Alma Nakano",
-    "プテラたかはし",
-    "怪傑がみちゃんねる",
-    "シムパパ",
-    "さかな"
-   ],
-   "titles": [
-    "【その17】高田村メンバーで超サバイバル【VALHEIM】",
-    "10/8【Valheim】　高田村valheim部 極北編！17日目",
-    "【Valheim】高田村北欧神話サバイバルその16 2026/10/08"
-   ],
-   "genres": [
-    "Role-playing (RPG)",
-    "Adventure",
-    "Indie"
-   ],
-   "year": null,
-   "platforms": [
-    "pc",
-    "console"
-   ],
-   "days_seen": 19,
    "last_seen": "2026-10-08",
    "first_here": false
   }
