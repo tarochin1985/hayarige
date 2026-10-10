@@ -1,6 +1,6 @@
 {
  "date": "2026-10-10",
- "generated": "2026-10-10 14:00",
+ "generated": "2026-10-10 18:28",
  "leads": {
   "events": [
    {
@@ -42,8 +42,6 @@
    {
     "tag": "#ゲーム実況",
     "channels": [
-     "M家の休日マサ",
-     "Usagi Ch. 因幡兎",
      "えりんぎ Games",
      "太刀ひろし　【Uncle gamer】 ",
      "恋因ロス KoinRosu",
@@ -83,20 +81,19 @@
     ]
    },
    {
-    "tag": "#ゼンゼロ",
-    "channels": [
-     "あかどらん",
-     "みらす",
-     "フクー",
-     "姫々あんよ"
-    ]
-   },
-   {
     "tag": "#ぶいきゃす",
     "channels": [
      "おいもパイちゃん / OimoPie ch.",
      "こてつちゃんねる",
      "星埜きぃ -Key Hoshino-"
+    ]
+   },
+   {
+    "tag": "#スプラトゥーン3",
+    "channels": [
+     "773ちゃんねる。-スプラ-",
+     "きさらぎ【下手ゲーム実況】",
+     "ジョアだよ"
     ]
    }
   ],
@@ -110,28 +107,18 @@
   "wide": [
    {
     "game": "Grand Theft Auto V",
-    "channels": 33,
-    "videos": 37
-   },
-   {
-    "game": "Minecraft",
-    "channels": 32,
-    "videos": 33
+    "channels": 31,
+    "videos": 34
    },
    {
     "game": "Apex Legends",
-    "channels": 29,
-    "videos": 32
+    "channels": 25,
+    "videos": 27
    },
    {
     "game": "ストリートファイター6",
-    "channels": 23,
-    "videos": 24
-   },
-   {
-    "game": "フォートナイト",
-    "channels": 18,
-    "videos": 27
+    "channels": 20,
+    "videos": 21
    },
    {
     "game": "モンスターストライク",
@@ -139,14 +126,24 @@
     "videos": 20
    },
    {
-    "game": "hololive Dreams",
-    "channels": 16,
-    "videos": 18
+    "game": "Minecraft",
+    "channels": 18,
+    "videos": 19
    },
    {
-    "game": "Dead by Daylight",
-    "channels": 17,
-    "videos": 18
+    "game": "hololive Dreams",
+    "channels": 15,
+    "videos": 16
+   },
+   {
+    "game": "フォートナイト",
+    "channels": 14,
+    "videos": 20
+   },
+   {
+    "game": "ドラゴンズドグマ 2:ダークアリズン",
+    "channels": 13,
+    "videos": 14
    }
   ]
  },
@@ -156,13 +153,13 @@
    "tag": "surgecity",
    "game": "Grand Theft Auto V",
    "evidence": 3,
-   "added": 22,
-   "channels": 17
+   "added": 21,
+   "channels": 16
   },
   {
    "tag": "ホロドリ",
    "game": "hololive Dreams",
-   "evidence": 11,
+   "evidence": 10,
    "added": 1,
    "channels": 10
   }
@@ -516,30 +513,6 @@
    "suggest": []
   },
   {
-   "word": "スーパーマリオワールド",
-   "channels": 3,
-   "n": 4,
-   "examples": [
-    {
-     "t": "〖 スーパーマリオワールド 〗完全クリアを目指して、アイドル行きます〖 #むいるらいぶ #Vtuber ベルプロ 〗",
-     "c": "心恋音むいる / Kokone Muiru【ベルプロ】",
-     "u": "https://www.youtube.com/watch?v=lzlLFtg6px4"
-    },
-    {
-     "t": "【急募】オカンプレイにもっと耐えられる人【スーパーマリオワールド】新人VTuber悠針れい #ゆうばりタイム",
-     "c": "Rei Ch. 悠針れい",
-     "u": "https://www.youtube.com/watch?v=dGlxVRFyJg4"
-    },
-    {
-     "t": "【スーパーマリオワールド】チルタイムマリオ／ROM歓迎・もちろん雑談もOK【ゲーム実況】",
-     "c": "アキコ@うさぎ島",
-     "u": "https://www.youtube.com/watch?v=Wg3ZigzUnVY"
-    }
-   ],
-   "kind": "wide",
-   "suggest": []
-  },
-  {
    "word": "#デュエプレ",
    "channels": 3,
    "n": 4,
@@ -667,8 +640,8 @@
    "growth": 14.0,
    "videos": 14,
    "base": 1.0,
-   "channels": 14,
-   "views": 295615,
+   "channels": 13,
+   "views": 294238,
    "who": [
     "おついちTube",
     "茶々茶(chachacha)",
@@ -725,63 +698,6 @@
    "first_here": false
   },
   {
-   "game": "Silver Pines",
-   "growth": 5.0,
-   "videos": 4,
-   "base": 0.0,
-   "channels": 3,
-   "views": 31001,
-   "who": [
-    "キャシーさんはホラーゲームで遊びたい",
-    "ほとんどホラーゲーム実況ですが何か?",
-    "LamNot",
-    "LamNot"
-   ],
-   "titles": [
-    "【ホラー】#1 待望の製品版がついにリリース！贖罪の鍵を握る秘密を暴くため「悪夢のような恐怖」に立ち向かうサバイバルホラーゲーム『 Silver Pines 』【Vキャシー/Vtuber】実況",
-    "#1【Silver Pines】この町…何かがおかしい！失踪事件を追う私立探偵となり、悪夢のような恐怖に立ち向かえ【サバイバルホラーゲーム シルバーパインズ】",
-    "Silver Pines【ホラー】不気味な田舎町で行方不明者を探す超期待の新作ついに発売！サイレントヒルやアランウェイク好きは絶対プレイすべき！#1"
-   ],
-   "genres": [
-    "Adventure",
-    "Indie"
-   ],
-   "year": 2026,
-   "platforms": [
-    "pc",
-    "console"
-   ],
-   "days_seen": 1,
-   "last_seen": "2026-10-09",
-   "first_here": false
-  },
-  {
-   "game": "ゼンレスゾーンゼロ",
-   "growth": 4.71,
-   "videos": 8,
-   "base": 1.7,
-   "channels": 7,
-   "views": 153774,
-   "who": [
-    "マグロヘッド",
-    "こへー / 古兵",
-    "フクー",
-    "汰鳥ヨシダ",
-    "フクー"
-   ],
-   "titles": [
-    "ゼンレスゾーンゼロ「ver3.3」アプデ情報まとめ。S級アタッカー２名実装、スタレコラボ判明！！",
-    "【ゼンゼロ】フィオニー&セヴェリアン性能・Ver3.3公式放送まとめ解説【ゼンレスゾーンゼロ・攻略・考察・検証】ZZZ・崩壊スターレイルコラボ情報・カフカ・ロビン",
-    "【#ゼンゼロ #308】クソ雑ver3.3ミラー配信枠  【ZZZ/ゼンレスゾーンゼロ】"
-   ],
-   "genres": [],
-   "year": null,
-   "platforms": [],
-   "days_seen": 21,
-   "last_seen": "2026-10-09",
-   "first_here": false
-  },
-  {
    "game": "Cyan Heart",
    "growth": 3.75,
    "videos": 3,
@@ -832,6 +748,58 @@
    "year": null,
    "platforms": [],
    "days_seen": 7,
+   "last_seen": "2026-10-09",
+   "first_here": false
+  },
+  {
+   "game": "ゼンレスゾーンゼロ",
+   "growth": 3.33,
+   "videos": 6,
+   "base": 1.8,
+   "channels": 6,
+   "views": 153774,
+   "who": [
+    "マグロヘッド",
+    "こへー / 古兵",
+    "フクー",
+    "汰鳥ヨシダ",
+    "フクー"
+   ],
+   "titles": [
+    "ゼンレスゾーンゼロ「ver3.3」アプデ情報まとめ。S級アタッカー２名実装、スタレコラボ判明！！",
+    "【ゼンゼロ】フィオニー&セヴェリアン性能・Ver3.3公式放送まとめ解説【ゼンレスゾーンゼロ・攻略・考察・検証】ZZZ・崩壊スターレイルコラボ情報・カフカ・ロビン",
+    "【#ゼンゼロ #308】クソ雑ver3.3ミラー配信枠  【ZZZ/ゼンレスゾーンゼロ】"
+   ],
+   "genres": [],
+   "year": null,
+   "platforms": [],
+   "days_seen": 21,
+   "last_seen": "2026-10-09",
+   "first_here": false
+  },
+  {
+   "game": "ゼルダの伝説 ブレス オブ ザ ワイルド",
+   "growth": 2.5,
+   "videos": 5,
+   "base": 2.0,
+   "channels": 5,
+   "views": 24200,
+   "who": [
+    "いかぼうず",
+    "島村シャルロット / Charlotte Channel【ななしいんく】",
+    "キムチキャット",
+    "うっほい聖人",
+    "絲依とい / Itoi Toi"
+   ],
+   "titles": [
+    "【新自己ベ28分35秒】古代兵装矢6000本＆料理無限の無双新ルートで28分台を目指す#1【Any％RTA】【ゼルダの伝説ブレスオブザワイルド】【Switch2】",
+    "【 ゼルダの伝説 ブレス オブ ザ ワイルド 】人生初ゼルダ✨　⑫ボスがいる城に突撃できるのか！？　#シャルのひつじ【島村シャルロット / ななしいんく】",
+    "【ゼルダの伝説 ブレワイ】＃１３ ガノン戦に向けて最後の準備⚔️やりたいこと全部やる【ゼルダの伝説 ブレス オブ ザ ワイルド/Vtuber/個人Vtuber】"
+   ],
+   "genres": [],
+   "year": null,
+   "platforms": [],
+   "days_seen": 29,
    "last_seen": "2026-10-09",
    "first_here": false
   }
