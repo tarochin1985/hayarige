@@ -44,6 +44,7 @@ import argparse
 import collections
 import datetime
 import json
+import statistics
 import sys
 from pathlib import Path
 
@@ -113,6 +114,21 @@ def mid_day(a, b):
     return (da + (db - da) / 2).strftime("%Y-%m-%d")
 
 
+def prior_days(a):
+    """その日より前に、各ゲームが何日ぶん記録に入っていたか。
+
+    game_days.json は**件数だけの台帳で、消さずに残している**ので、
+    日別ファイルが30日で消えたあとも「前からあったゲームか」は分かる。
+    """
+    gd = read_json(DATA / "game_days.json", {}) or {}
+    cnt = collections.Counter()
+    for d, games in gd.items():
+        if d < a:
+            for n in games:
+                cnt[n] += 1
+    return cnt, (min(gd) if gd else a)
+
+
 def tally_period(videos, idx, disp, override, a=None, b=None):
     """ゲームごとに実数を数える。build_site の tally と同じ判定を使う。"""
     by_tag, _ = tag_games(videos, idx)
@@ -120,7 +136,8 @@ def tally_period(videos, idx, disp, override, a=None, b=None):
     g = collections.defaultdict(
         lambda: {"n": 0, "ch": collections.Counter(), "days": set(),
                  "first": {}, "titles": [], "views": 0,
-                 "h1": set(), "h2": set()})
+                 "h1": set(), "h2": set(),
+                 "byday": collections.defaultdict(set)})
     for v in videos:
         name, how = M.extract(v["title"], idx, fallback=True)
         if how != "dict" and v["id"] in by_tag:
@@ -134,6 +151,7 @@ def tally_period(videos, idx, disp, override, a=None, b=None):
         e["days"].add(v["_day"])
         e["views"] += int(v.get("views") or 0)
         (e["h1"] if v["_day"] <= mid else e["h2"]).add(cid)
+        e["byday"][v["_day"]].add(cid)
         if cid not in e["first"] or v["_day"] < e["first"][cid]:
             e["first"][cid] = v["_day"]
         if len(e["titles"]) < 40:
@@ -150,6 +168,7 @@ def tally_period(videos, idx, disp, override, a=None, b=None):
             "rep3_pct": round(100 * rep / uch, 1) if uch else 0,
             "first": sorted(e["first"].values()),
             "h1": len(e["h1"]), "h2": len(e["h2"]),
+            "byday": {d: len(c) for d, c in e["byday"].items()},
             # 後半が前半の何倍か。前半0人は「0から立ち上がった」ので
             # 割り算にせず、後半の人数をそのまま伸びの大きさとして使う。
             "lift": round(len(e["h2"]) / len(e["h1"]), 2) if e["h1"] else None,
@@ -238,52 +257,131 @@ def main():
 
     if o.rising:
         mid = mid_day(a, b)
-        # 分母を半分ずつ数える。**監視しているチャンネルは増え続けている**ので
-        # （8/26は343、10/9は4,098）、人数をそのまま前半後半で比べると
-        # 何もしていないゲームまで伸びて見える。EDITORIAL 7-3章と同じ直し方で、
-        # 「その半分の期間に1本以上出した人のうち何%か」に直してから比べる。
-        d1 = len({v.get("channel_id") or v.get("channel") or ""
-                  for v in videos if v["_day"] <= mid})
-        d2 = len({v.get("channel_id") or v.get("channel") or ""
-                  for v in videos if v["_day"] > mid})
-        adj = (d2 / d1) if d1 else 1.0
-        log(f"分母: 前半 {d1}人 / 後半 {d2}人（補正 ×{adj:.2f}）")
+        # 日ごとの分母（その日1本でも出した人の数）。
+        # **監視しているチャンネルは増え続けている**ので（8/26は343、10/9は4,098）、
+        # 人数をそのまま日どうしで比べると、何もしていないゲームまで伸びて見える。
+        # EDITORIAL 7-3章と同じ直し方で、「その日配信した人のうち何%か」に
+        # 直してから比べる。
+        dtot = collections.Counter()
+        for v in videos:
+            dtot[v["_day"]] = dtot[v["_day"]]
+        seen_day = collections.defaultdict(set)
+        for v in videos:
+            seen_day[v["_day"]].add(v.get("channel_id") or v.get("channel") or "")
+        dtot = {d: len(c) for d, c in seen_day.items()}
+        days_all = [d for d in daterange(a, b) if d in dtot]
+        # **分母が極端に小さい日は捨てる。** 日別ファイルは48時間ぶん取るので、
+        # 残っている最初のファイルの「2日前」が数本だけ入ってくる。
+        # その日を同じ物差しで扱うと、11人のゲームが「その日の全体の1割」に
+        # なってしまい、ピークを取り違える（2026-10-10に実際にやった。
+        # ストリートファイター6のピークが、ふだん27人なのに11人の日と出た）。
+        if days_all:
+            med_den = statistics.median(dtot[d] for d in days_all)
+            thin = [d for d in days_all if dtot[d] < med_den * 0.5]
+            if thin:
+                log(f"配信者の数が極端に少ない {len(thin)}日は比較から外します"
+                    f"（{thin[0]}〜{thin[-1]}）")
+            days_all = [d for d in days_all if dtot[d] >= med_den * 0.5]
+        base_den = statistics.median(dtot[d] for d in days_all) if days_all else 1
+
+        # 「山の高さ」で並べる。前半／後半で比べる形だと、
+        #   月の前半に火が付いて後半に落ちたゲームが落ちる（2026-10-10 たろちんさん）
+        # ので、**月のどこで跳ねても拾える形**にした。
+        #   ピーク  … その月のいちばん人が多かった日
+        #   ふだん  … その月の全日の中央値（出ていない日は0として数える）
+        # 差が「その日だけ余計に来た人数」。定番は毎日高いので差が小さく、
+        # 跳ねたゲームだけが上に来る。
         out = []
         for r in rows:
-            if r["h2"] < o.min_ch:
+            sh = {d: (r["byday"].get(d, 0) / dtot[d]) for d in days_all}
+            pk_day = max(sh, key=lambda d: sh[d])
+            pk_share = sh[pk_day]
+            med_share = statistics.median(sh[d] for d in days_all)
+            pk_ch = r["byday"].get(pk_day, 0)
+            if pk_ch < o.min_ch:
                 continue
-            # 前半の人数を「後半の分母」に合わせてから引く
-            exp = r["h1"] * adj
-            gain = r["h2"] - exp
-            lift = (r["h2"] / exp) if exp else None
-            if lift is not None and lift < 1.3:
+            gain = (pk_share - med_share) * base_den
+            if gain < 2:
                 continue
-            out.append(dict(r, gain=round(gain, 1), lift2=lift))
+            out.append(dict(r, pk_day=pk_day, pk_ch=pk_ch,
+                            usual=round(med_share * base_den, 1),
+                            gain=round(gain, 1),
+                            burst=(pk_share / med_share) if med_share else None))
         out.sort(key=lambda r: -r["gain"])
+
+        # ---- 表A「今月の新顔」-------------------------------------------
+        # 山の高さだけだと、**1日に集中したもの（発売日・企画）が強く、
+        # じわじわ広がったものが弱く出る**（2026-10-10 たろちんさん）。
+        # 拾いたいのは後者なので、「前からあったか」で先に分けてしまう。
+        #   新顔   … 実人数順。じわじわも発売日ドカンも、どちらもここに入る
+        #   既存   … 山の高さ順。マイクラ肝試しのような「跳ねた日」はこちら
+        # 1つの点数に混ぜない。混ぜると、どちらの話も読めなくなる。
+        pri, ledger_from = prior_days(a)
+        NEWCOMER = 3        # 前に2日までしか出ていなければ「新顔」とみなす
+        def before_days(r):
+            return max(pri.get(r["game"], 0), pri.get(r["key"], 0))
+        fresh = [r for r in rows if before_days(r) < NEWCOMER and r["uch"] >= o.min_ch]
+        fresh.sort(key=lambda r: -r["uch"])
         print()
-        print(f"=== {a}〜{b} 期間の急上昇 ===")
-        print(f"前半 {a}〜{mid} ／ 後半 {mid}〜{b}"
-              f"（配信した人の数が {d1}人→{d2}人 なので、前半を ×{adj:.2f} して比べています）")
-        print(f"※ 後半の実人数が{o.min_ch}人以上、かつ補正後に1.3倍以上のものだけ")
-        print("※ 両方の半分に出した人は前半・後半の両方に数えるので、"
-              "前半＋後半は上の表の実人数より多くなります")
+        print(f"=== {a}〜{b} 今月の新顔（実人数順）===")
+        print(f"台帳 {ledger_from} 以降で、この期間より前に{NEWCOMER}日以上"
+              "出ていないゲーム")
+        # 「見え始めた日」と「出始めた日」は違う。日別ファイルが残っている
+        # いちばん古い日に初登場しているものは、**その前から出ていたのが
+        # 見えていないだけ**（辞書に後から足したゲームも同じ顔をする）。
+        # 2026-10-10に、モンスターハンターワイルズが新顔として並んだ。
+        first_obs = min(dtot) if dtot else a
+        print(f"※ 印（!）は、元データのいちばん古い日（{first_obs}）に"
+              "初登場しているもの。**その前から出ていたのが見えていないだけ**の"
+              "可能性が高いので、落としてください"
+              "（辞書に後から足したゲームも同じ顔をします）")
         if o.md:
             print()
-            print("| ゲーム | 前半に出した人 | 後半に出した人 | 増えた人数 | 倍率 |")
-            print("|---|---|---|---|---|")
-            for r in out[:o.top]:
-                lf = ("新規" if r["lift2"] is None
-                      else "×%.1f" % r["lift2"])
-                print("| %s | %d人 | %d人 | **+%.0f人** | %s |"
-                      % (r["game"], r["h1"], r["h2"], r["gain"], lf))
+            print("| ゲーム | 実人数 | 本数 | 1人あたり | 出た日数 | 初登場 |")
+            print("|---|---|---|---|---|---|")
+            for r in fresh[:o.top]:
+                fd = min(r["byday"]) if r["byday"] else "-"
+                mk = " **!**" if fd <= first_obs else ""
+                print("| %s%s | **%d人** | %d本 | %.2f本 | %d日 | %s（%d人） |"
+                      % (r["game"], mk, r["uch"], r["n"], r["per_ch"],
+                         r["days"], fd[5:].replace("-", "/"),
+                         r["byday"].get(fd, 0)))
         else:
-            print("%3s %-34s %5s %5s %8s %6s %7s"
-                  % ("順", "ゲーム", "前半人", "後半人", "増えた", "倍率", "1人あたり"))
+            print("%3s %-32s %6s %5s %7s %6s %14s"
+                  % ("順", "ゲーム", "実人数", "本数", "1人あたり", "日数",
+                     "初登場"))
+            for i2, r in enumerate(fresh[:o.top], 1):
+                fd = min(r["byday"]) if r["byday"] else "-"
+                mk = "!" if fd <= first_obs else " "
+                print("%s%2d %-32s %5d人 %4d本 %6.2f本 %4d日 %9s(%d人)"
+                      % (mk, i2, r["game"][:30], r["uch"], r["n"], r["per_ch"],
+                         r["days"], fd[5:].replace("-", "/"),
+                         r["byday"].get(fd, 0)))
+
+        # ---- 表B「前からあるゲームが跳ねた日」----------------------------
+        out = [r for r in out if before_days(r) >= NEWCOMER]
+        print()
+        print(f"=== {a}〜{b} 前からあるゲームが跳ねた日（山の高さ順）===")
+        print(f"ピーク＝いちばん人が多かった日 ／ ふだん＝{len(days_all)}日の中央値"
+              f"（出ていない日は0）。日ごとの分母で補正しています")
+        print(f"※ ピークが{o.min_ch}人以上、かつ「ふだん」より2人以上多いものだけ")
+        if o.md:
+            print()
+            print("| ゲーム | ピーク | その日 | ふだん | 増えた人数 | 前半→後半 |")
+            print("|---|---|---|---|---|---|")
+            for r in out[:o.top]:
+                print("| %s | **%d人** | %s | %.1f人 | +%.0f人 | %d→%d人 |"
+                      % (r["game"], r["pk_ch"], r["pk_day"][5:].replace("-", "/"),
+                         r["usual"], r["gain"], r["h1"], r["h2"]))
+        else:
+            print("%3s %-32s %6s %7s %7s %8s %11s"
+                  % ("順", "ゲーム", "ピーク", "その日", "ふだん", "増えた",
+                     "前半→後半"))
             for i2, r in enumerate(out[:o.top], 1):
-                lf = "  新規" if r["lift2"] is None else "×%4.1f" % r["lift2"]
-                print("%3d %-34s %5d %5d %+8.0f %6s %7.2f"
-                      % (i2, r["game"][:32], r["h1"], r["h2"], r["gain"], lf,
-                         r["per_ch"]))
+                print("%3d %-32s %5d人 %7s %6.1f人 %+7.0f %5d→%-5d"
+                      % (i2, r["game"][:30], r["pk_ch"],
+                         r["pk_day"][5:].replace("-", "/"), r["usual"],
+                         r["gain"], r["h1"], r["h2"]))
 
     if o.save:
         led = read_json(LEDGER, {}) or {}
