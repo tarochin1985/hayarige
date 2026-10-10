@@ -5972,7 +5972,9 @@
  },
  {
   "name": "Better Chaos",
-  "alias": [],
+  "alias": [
+   "BetterChaos.exe"
+  ],
   "pop": 0,
   "y": 2026,
   "p": [
@@ -6402,7 +6404,9 @@
  },
  {
   "name": "Birb",
-  "alias": [],
+  "alias": [
+   "birb.exe"
+  ],
   "pop": 0,
   "y": 2026,
   "p": [
@@ -7712,19 +7716,6 @@
    "Simulator",
    "Sport",
    "Indie"
-  ]
- },
- {
-  "name": "Brain Hack Squad",
-  "alias": [],
-  "pop": 0,
-  "y": 2026,
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Strategy",
-   "Tactical"
   ]
  },
  {
@@ -10002,6 +9993,23 @@
   ]
  },
  {
+  "name": "Cauldron Chaos: Brew Potions & Tidy Up",
+  "alias": [
+   "Cauldron Chaos Brew Potions & Tidy Up.exe",
+   "Catchemist: Brew The Right Potion"
+  ],
+  "pop": 0,
+  "y": 2026,
+  "p": [
+   "pc"
+  ],
+  "g": [
+   "Puzzle",
+   "Simulator",
+   "Indie"
+  ]
+ },
+ {
   "name": "Cavern",
   "alias": [],
   "pop": 0,
@@ -10598,7 +10606,9 @@
  },
  {
   "name": "Chomp Garden",
-  "alias": [],
+  "alias": [
+   "Chomp Garden.exe"
+  ],
   "pop": 0,
   "y": 2026,
   "p": [
@@ -10606,6 +10616,7 @@
   ],
   "g": [
    "Puzzle",
+   "Strategy",
    "Indie"
   ]
  },
@@ -11959,7 +11970,7 @@
    "Control 2",
    "CONTROL RESONANT"
   ],
-  "pop": 19,
+  "pop": 22,
   "y": 2026,
   "p": [
    "pc",
@@ -12077,6 +12088,11 @@
   "p": [
    "pc",
    "console"
+  ],
+  "g": [
+   "Role-playing (RPG)",
+   "Adventure",
+   "Indie"
   ]
  },
  {
@@ -13249,7 +13265,9 @@
  },
  {
   "name": "Crown of Hispania",
-  "alias": [],
+  "alias": [
+   "Crown of Hispania.exe"
+  ],
   "pop": 0,
   "y": 2026,
   "p": [
@@ -13841,7 +13859,9 @@
  },
  {
   "name": "CyberSprawl: Survivors",
-  "alias": [],
+  "alias": [
+   "CyberSprawlSurvivors.exe"
+  ],
   "pop": 0,
   "y": 2026,
   "p": [
@@ -14762,7 +14782,9 @@
  },
  {
   "name": "Dear Journey...",
-  "alias": [],
+  "alias": [
+   "dear-journey.exe"
+  ],
   "pop": 0,
   "y": 2026,
   "p": [
@@ -17104,7 +17126,9 @@
  },
  {
   "name": "Doamari",
-  "alias": [],
+  "alias": [
+   "Game.exe"
+  ],
   "pop": 0,
   "y": 2026,
   "p": [
@@ -19005,22 +19029,6 @@
   ]
  },
  {
-  "name": "Dungeons of Dusk",
-  "alias": [
-   "Dungeons of DUSK"
-  ],
-  "pop": 0,
-  "y": 2026,
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Shooter",
-   "Role-playing (RPG)",
-   "Adventure"
-  ]
- },
- {
   "name": "Dungeons of the Amber Griffin",
   "alias": [],
   "pop": 0,
@@ -20653,6 +20661,7 @@
    "pc"
   ],
   "g": [
+   "Point-and-click",
    "Adventure"
   ]
  },
@@ -23018,6 +23027,8 @@
    "pc"
   ],
   "g": [
+   "Platform",
+   "Puzzle",
    "Indie"
   ]
  },
@@ -23506,6 +23517,20 @@
   ],
   "g": [
    "Strategy",
+   "Indie"
+  ]
+ },
+ {
+  "name": "Forged Cards",
+  "alias": [],
+  "pop": 0,
+  "y": 2026,
+  "p": [
+   "pc"
+  ],
+  "g": [
+   "Strategy",
+   "Adventure",
    "Indie"
   ]
  },
@@ -26202,6 +26227,7 @@
  {
   "name": "Graveyard Keeper II",
   "alias": [
+   "GraveyardKeeper2.exe",
    "Graveyard Keeper 2"
   ],
   "pop": 0,
@@ -28433,6 +28459,7 @@
    "pc"
   ],
   "g": [
+   "Simulator",
    "Indie",
    "Arcade"
   ]
@@ -30080,21 +30107,6 @@
   ]
  },
  {
-  "name": "Indoors: Trespasser",
-  "alias": [
-   "INDOORS: Trespasser"
-  ],
-  "pop": 0,
-  "y": 2026,
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Adventure",
-   "Indie"
-  ]
- },
- {
   "name": "Industrix",
   "alias": [],
   "pop": 0,
@@ -30133,21 +30145,6 @@
   ],
   "g": [
    "Shooter"
-  ]
- },
- {
-  "name": "Inferno Protocol",
-  "alias": [
-   "Inferno Protocol.exe"
-  ],
-  "pop": 0,
-  "y": 2026,
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Adventure",
-   "Indie"
   ]
  },
  {
@@ -32065,23 +32062,6 @@
   ]
  },
  {
-  "name": "Keykruncher",
-  "alias": [
-   "KEYKRUNCHER"
-  ],
-  "pop": 0,
-  "y": 2026,
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Puzzle",
-   "Simulator",
-   "Adventure",
-   "Indie"
-  ]
- },
- {
   "name": "Keysaster",
   "alias": [],
   "pop": 0,
@@ -32496,6 +32476,19 @@
   ],
   "g": [
    "Arcade"
+  ]
+ },
+ {
+  "name": "Kleromancy",
+  "alias": [],
+  "pop": 0,
+  "y": 2026,
+  "p": [
+   "pc"
+  ],
+  "g": [
+   "Strategy",
+   "Indie"
   ]
  },
  {
@@ -34504,7 +34497,8 @@
  {
   "name": "Lost & Found",
   "alias": [
-   "LOST & FOUND"
+   "LOST & FOUND",
+   "LAF.exe"
   ],
   "pop": 0,
   "y": 2026,
@@ -35967,7 +35961,7 @@
   "alias": [
    "Wolverine"
   ],
-  "pop": 43,
+  "pop": 44,
   "y": 2026,
   "p": [
    "console"
@@ -37915,7 +37909,7 @@
    "莫诺微步 MONOWAVE",
    "莫諾微步 MONOWAVE"
   ],
-  "pop": 0,
+  "pop": 1,
   "y": 2026,
   "p": [
    "pc",
@@ -39139,7 +39133,7 @@
    "iRacing® Studios NASCAR 26",
    "iRacing Studios NASCAR 26"
   ],
-  "pop": 0,
+  "pop": 1,
   "y": 2026,
   "p": [
    "pc",
@@ -40691,6 +40685,35 @@
   ]
  },
  {
+  "name": "Norn Saber: The Guardian's Oath",
+  "alias": [
+   "女神：守護之約"
+  ],
+  "pop": 0,
+  "y": 2026,
+  "p": [
+   "pc"
+  ],
+  "g": [
+   "Role-playing (RPG)",
+   "Strategy"
+  ]
+ },
+ {
+  "name": "North Pole Workshop",
+  "alias": [],
+  "pop": 0,
+  "y": 2026,
+  "p": [
+   "pc"
+  ],
+  "g": [
+   "Simulator",
+   "Strategy",
+   "Indie"
+  ]
+ },
+ {
   "name": "Northanda Chronicles",
   "alias": [
    "Talis"
@@ -40904,21 +40927,6 @@
   ],
   "g": [
    "Adventure",
-   "Indie"
-  ]
- },
- {
-  "name": "Nowhere Road",
-  "alias": [
-   "Project Noch"
-  ],
-  "pop": 0,
-  "y": 2026,
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Simulator",
    "Indie"
   ]
  },
@@ -41805,7 +41813,7 @@
   "alias": [
    "OnimushaWotS.exe"
   ],
-  "pop": 16,
+  "pop": 18,
   "y": 2026,
   "p": [
    "pc",
@@ -46311,20 +46319,6 @@
   ]
  },
  {
-  "name": "Project: Station",
-  "alias": [
-   "projectstation.exe"
-  ],
-  "pop": 0,
-  "y": 2026,
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Indie"
-  ]
- },
- {
   "name": "Project; Virai: Doomer's Life Escape",
   "alias": [
    "//project:VIRAI: DOOMER’s LIFE ESCAPE",
@@ -48362,21 +48356,6 @@
   ]
  },
  {
-  "name": "Resort Island Simulator",
-  "alias": [
-   "ResortIslandSim.exe"
-  ],
-  "pop": 0,
-  "y": 2026,
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Simulator",
-   "Indie"
-  ]
- },
- {
   "name": "Rest Stop",
   "alias": [
    "REST STOP"
@@ -49724,7 +49703,7 @@
   ]
  },
  {
-  "name": "Runback",
+  "name": "Rune Caves: Eternal Echo",
   "alias": [],
   "pop": 0,
   "y": 2026,
@@ -49732,8 +49711,9 @@
    "pc"
   ],
   "g": [
-   "Fighting",
-   "Platform",
+   "Puzzle",
+   "Strategy",
+   "Adventure",
    "Indie"
   ]
  },
@@ -50379,7 +50359,7 @@
   "alias": [
    "ScarletSkips.exe"
   ],
-  "pop": 11,
+  "pop": 12,
   "y": 2026,
   "p": [
    "pc"
@@ -51968,6 +51948,19 @@
   ]
  },
  {
+  "name": "ShredDead",
+  "alias": [],
+  "pop": 0,
+  "y": 2026,
+  "p": [
+   "pc"
+  ],
+  "g": [
+   "Strategy",
+   "Indie"
+  ]
+ },
+ {
   "name": "Shrine Protectors",
   "alias": [],
   "pop": 0,
@@ -52245,7 +52238,7 @@
    "SILENT HILL: townfall",
    "Cannula"
   ],
-  "pop": 21,
+  "pop": 23,
   "y": 2026,
   "p": [
    "pc",
@@ -54808,6 +54801,21 @@
   ]
  },
  {
+  "name": "Split Out",
+  "alias": [
+   "SplitOut"
+  ],
+  "pop": 0,
+  "y": 2026,
+  "p": [
+   "pc"
+  ],
+  "g": [
+   "Racing",
+   "Indie"
+  ]
+ },
+ {
   "name": "Sponge Hospital. Five Nights at Bob-Verse",
   "alias": [],
   "pop": 0,
@@ -55508,6 +55516,19 @@
    "Role-playing (RPG)",
    "Strategy",
    "Indie"
+  ]
+ },
+ {
+  "name": "Stay With Me",
+  "alias": [],
+  "pop": 0,
+  "y": 2026,
+  "p": [
+   "pc"
+  ],
+  "g": [
+   "Puzzle",
+   "Adventure"
   ]
  },
  {
@@ -57986,19 +58007,6 @@
   ]
  },
  {
-  "name": "Teaching Simulator: Elite Class",
-  "alias": [],
-  "pop": 0,
-  "y": 2026,
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Simulator",
-   "Indie"
-  ]
- },
- {
   "name": "Tear Them All",
   "alias": [
    "TearThemAll.exe"
@@ -58743,7 +58751,7 @@
   "alias": [
    "Dawnwalker.exe"
   ],
-  "pop": 31,
+  "pop": 32,
   "y": 2026,
   "p": [
    "pc",
@@ -61717,7 +61725,7 @@
   "alias": [
    "The Witcher 3 Remastered"
   ],
-  "pop": 15,
+  "pop": 16,
   "y": 2026,
   "p": [
    "pc",
@@ -63045,7 +63053,8 @@
   "name": "ToonSouls Maker",
   "alias": [
    "Toonsouls",
-   "TOONSOULS"
+   "TOONSOULS",
+   "ToonSoulsMaker.exe"
   ],
   "pop": 0,
   "y": 2026,
@@ -63157,6 +63166,21 @@
   "g": [
    "Simulator",
    "Arcade"
+  ]
+ },
+ {
+  "name": "Total War: Shogun 2 - Complete Edition",
+  "alias": [],
+  "pop": 0,
+  "y": 2026,
+  "p": [
+   "pc"
+  ],
+  "g": [
+   "Real Time Strategy (RTS)",
+   "Simulator",
+   "Strategy",
+   "Tactical"
   ]
  },
  {
@@ -64078,7 +64102,9 @@
  },
  {
   "name": "Truckful",
-  "alias": [],
+  "alias": [
+   "Truckful.exe"
+  ],
   "pop": 0,
   "y": 2026,
   "p": [
@@ -65035,6 +65061,19 @@
   ]
  },
  {
+  "name": "Uppercase",
+  "alias": [],
+  "pop": 0,
+  "y": 2026,
+  "p": [
+   "console"
+  ],
+  "g": [
+   "Puzzle",
+   "Indie"
+  ]
+ },
+ {
   "name": "Uppercute",
   "alias": [],
   "pop": 0,
@@ -65235,7 +65274,7 @@
    "英灵神殿",
    "Валхейм"
   ],
-  "pop": 307,
+  "pop": 308,
   "y": 2026,
   "p": [
    "pc",
@@ -65619,19 +65658,6 @@
    "Adventure",
    "Indie",
    "Visual Novel"
-  ]
- },
- {
-  "name": "Veriventure",
-  "alias": [],
-  "pop": 0,
-  "y": 2026,
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Adventure",
-   "Indie"
   ]
  },
  {

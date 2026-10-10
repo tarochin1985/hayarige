@@ -1,10 +1,15 @@
 [
  {
   "date": "2026-10-10",
-  "videos": 1432,
-  "channels": 966,
-  "games": 263,
+  "videos": 1161,
+  "channels": 867,
+  "games": 235,
   "hot": [
+   {
+    "game": "ドラゴンズドグマ 2:ダークアリズン",
+    "growth": 10.0,
+    "channels": 10
+   },
    {
     "game": "Lethal Company",
     "growth": 10.0,
@@ -14,38 +19,33 @@
     "game": "Silver Pines",
     "growth": 5.0,
     "channels": 3
-   },
-   {
-    "game": "トモダチコレクション わくわく生活",
-    "growth": 3.75,
-    "channels": 3
    }
   ],
   "top": [
    {
-    "game": "Apex Legends",
-    "videos": 38,
-    "channels": 33
+    "game": "Minecraft",
+    "videos": 30,
+    "channels": 29
    },
    {
-    "game": "Minecraft",
-    "videos": 33,
-    "channels": 32
+    "game": "Apex Legends",
+    "videos": 28,
+    "channels": 26
    },
    {
     "game": "ストリートファイター6",
-    "videos": 27,
-    "channels": 25
-   },
-   {
-    "game": "Grand Theft Auto V",
-    "videos": 23,
+    "videos": 22,
     "channels": 21
    },
    {
-    "game": "hololive Dreams",
+    "game": "VALORANT",
     "videos": 18,
     "channels": 17
+   },
+   {
+    "game": "フォートナイト",
+    "videos": 20,
+    "channels": 16
    }
   ],
   "column": {
@@ -65,13 +65,13 @@
     "channels": 8
    },
    {
-    "game": "Silver Pines",
-    "growth": 5.0,
-    "channels": 3
+    "game": "ドラゴンズドグマ 2:ダークアリズン",
+    "growth": 8.75,
+    "channels": 7
    },
    {
-    "game": "トモダチコレクション わくわく生活",
-    "growth": 3.75,
+    "game": "Silver Pines",
+    "growth": 5.0,
     "channels": 3
    }
   ],
@@ -110,7 +110,7 @@
  {
   "date": "2026-10-08",
   "videos": 1132,
-  "games": 234,
+  "games": 235,
   "channels": 835,
   "hot": [
    {
@@ -164,7 +164,7 @@
  {
   "date": "2026-10-07",
   "videos": 1185,
-  "games": 245,
+  "games": 246,
   "channels": 862,
   "hot": [
    {
@@ -272,7 +272,7 @@
  {
   "date": "2026-10-05",
   "videos": 1048,
-  "games": 218,
+  "games": 219,
   "channels": 785,
   "hot": [
    {
@@ -379,9 +379,9 @@
  },
  {
   "date": "2026-10-03",
-  "videos": 1239,
+  "videos": 1238,
   "games": 231,
-  "channels": 904,
+  "channels": 903,
   "hot": [
    {
     "game": "デス桃太郎",
@@ -433,9 +433,9 @@
  },
  {
   "date": "2026-10-02",
-  "videos": 1137,
+  "videos": 1133,
   "games": 225,
-  "channels": 856,
+  "channels": 855,
   "hot": [
    {
     "game": "m HOLD'EM",
@@ -487,7 +487,7 @@
  },
  {
   "date": "2026-10-01",
-  "videos": 1145,
+  "videos": 1144,
   "games": 216,
   "channels": 841,
   "hot": [
@@ -541,7 +541,7 @@
  },
  {
   "date": "2026-09-30",
-  "videos": 1145,
+  "videos": 1144,
   "games": 231,
   "channels": 843,
   "hot": [
@@ -649,8 +649,8 @@
  },
  {
   "date": "2026-09-28",
-  "videos": 1000,
-  "games": 213,
+  "videos": 998,
+  "games": 214,
   "channels": 764,
   "hot": [
    {
@@ -757,8 +757,8 @@
  },
  {
   "date": "2026-09-26",
-  "videos": 1208,
-  "games": 245,
+  "videos": 1207,
+  "games": 244,
   "channels": 899,
   "hot": [
    {
@@ -811,7 +811,7 @@
  },
  {
   "date": "2026-09-25",
-  "videos": 985,
+  "videos": 984,
   "games": 222,
   "channels": 758,
   "hot": [
@@ -866,7 +866,7 @@
  {
   "date": "2026-09-24",
   "videos": 1038,
-  "games": 222,
+  "games": 223,
   "channels": 792,
   "hot": [
    {
@@ -973,8 +973,8 @@
  },
  {
   "date": "2026-09-22",
-  "videos": 1102,
-  "games": 238,
+  "videos": 1101,
+  "games": 239,
   "channels": 808,
   "hot": [
    {
@@ -1081,7 +1081,7 @@
  },
  {
   "date": "2026-09-20",
-  "videos": 1150,
+  "videos": 1149,
   "games": 233,
   "channels": 853,
   "hot": [
@@ -1136,7 +1136,7 @@
  {
   "date": "2026-09-19",
   "videos": 1110,
-  "games": 224,
+  "games": 225,
   "channels": 835,
   "hot": [
    {
@@ -1244,7 +1244,7 @@
  {
   "date": "2026-09-17",
   "videos": 1023,
-  "games": 201,
+  "games": 202,
   "channels": 750,
   "hot": [
    {
@@ -1258,8 +1258,8 @@
     "channels": 10
    },
    {
-    "game": "グランツーリスモ7",
-    "growth": 3.75,
+    "game": "ドラゴンズドグマ 2:ダークアリズン",
+    "growth": 5.0,
     "channels": 3
    }
   ],
@@ -1352,7 +1352,7 @@
  {
   "date": "2026-09-15",
   "videos": 944,
-  "games": 210,
+  "games": 211,
   "channels": 717,
   "hot": [
    {
@@ -1411,7 +1411,7 @@
   "hot": [
    {
     "game": "ブループロトコル：スターレゾナンス",
-    "growth": 4.0,
+    "growth": 5.0,
     "channels": 4
    },
    {
@@ -1420,7 +1420,7 @@
     "channels": 3
    },
    {
-    "game": "勝利の女神：NIKKE",
+    "game": "キャプテン翼2 WORLD FIGHTERS",
     "growth": 3.75,
     "channels": 3
    }
@@ -1465,12 +1465,12 @@
   "hot": [
    {
     "game": "原神",
-    "growth": 7.5,
+    "growth": 6.32,
     "channels": 10
    },
    {
     "game": "妹に運転を教える",
-    "growth": 5.0,
+    "growth": 6.25,
     "channels": 5
    },
    {
@@ -1529,7 +1529,7 @@
    },
    {
     "game": "太鼓の達人",
-    "growth": 7.0,
+    "growth": 5.83,
     "channels": 4
    }
   ],
@@ -1572,19 +1572,19 @@
   "channels": 736,
   "hot": [
    {
-    "game": "Don't Drop The Cake",
-    "growth": 7.5,
-    "channels": 9
-   },
-   {
     "game": "R.E.P.O.",
     "growth": 6.25,
     "channels": 5
    },
    {
-    "game": "ポケモンチャンピオンズ",
-    "growth": 3.89,
-    "channels": 13
+    "game": "Don't Drop The Cake",
+    "growth": 5.29,
+    "channels": 9
+   },
+   {
+    "game": "Among Us",
+    "growth": 4.44,
+    "channels": 10
    }
   ],
   "top": [
@@ -1624,23 +1624,7 @@
   "videos": 991,
   "games": 184,
   "channels": 707,
-  "hot": [
-   {
-    "game": "トルネコの大冒険 ちょっとステキなリマスター",
-    "growth": 12.5,
-    "channels": 10
-   },
-   {
-    "game": "ファイナルファンタジーXIV",
-    "growth": 7.5,
-    "channels": 5
-   },
-   {
-    "game": "Touhou Koumakyou: The Embodiment of Scarlet Devil",
-    "growth": 6.25,
-    "channels": 5
-   }
-  ],
+  "hot": [],
   "top": [
    {
     "game": "Apex Legends",
@@ -1675,9 +1659,9 @@
  },
  {
   "date": "2026-09-09",
-  "videos": 951,
-  "games": 188,
-  "channels": 690,
+  "videos": 927,
+  "games": 187,
+  "channels": 685,
   "hot": [],
   "top": [
    {
@@ -1687,8 +1671,8 @@
    },
    {
     "game": "Apex Legends",
-    "videos": 36,
-    "channels": 32
+    "videos": 34,
+    "channels": 30
    },
    {
     "game": "Minecraft",
@@ -1696,13 +1680,13 @@
     "channels": 20
    },
    {
-    "game": "Grand Theft Auto V",
-    "videos": 20,
-    "channels": 18
-   },
-   {
     "game": "Rust",
     "videos": 18,
+    "channels": 17
+   },
+   {
+    "game": "Grand Theft Auto V",
+    "videos": 19,
     "channels": 17
    }
   ],

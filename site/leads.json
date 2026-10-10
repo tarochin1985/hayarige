@@ -1,59 +1,19 @@
 {
  "date": "2026-10-10",
- "generated": "2026-10-10 01:58",
+ "generated": "2026-10-10 10:34",
  "leads": {
   "events": [
    {
     "tag": "#ホロドリ",
     "channels": [
-     "AZKi Channel",
      "Flare Ch. 不知火フレア",
      "Iroha ch. 風真いろは - holoX -",
      "Koyori ch. 博衣こより - holoX -",
      "Ririka Ch. 一条莉々華 ‐ ReGLOSS",
      "Roboco Ch. - ロボ子",
-     "SoraCh. ときのそらチャンネル",
      "Towa Ch. 常闇トワ",
      "Vivi Ch. 綺々羅々ヴィヴィ - FLOW GLOW",
      "アキロゼCh。Vtuber/ホロライブ所属"
-    ]
-   },
-   {
-    "tag": "#ストグラ",
-    "channels": [
-     "Tenten Ch. / 鳳玲天々",
-     "marunnn【まるーんチャンネル】",
-     "たけぉ",
-     "クラウン【探検家の記録】",
-     "ノビーの遊び部屋",
-     "影。/かげまる",
-     "柚原いづみ / Izumi Channel 【ななしいんく】",
-     "魔光リサ - Lisa Makoh -"
-    ]
-   },
-   {
-    "tag": "#SURGECity",
-    "channels": [
-     "どぅんどぅくどぅんどぅんどぅん",
-     "なるる / naruru",
-     "はちぴ",
-     "史門 / Shimon ",
-     "夏芽川アキ / Natsumegawa Aki",
-     "姫崎クト -himesaki kuto-",
-     "貴様まさか🦈",
-     "闇乃あびす / Abyss"
-    ]
-   },
-   {
-    "tag": "#ストグラSeason2",
-    "channels": [
-     "neon",
-     "たけぉ",
-     "クラウン【探検家の記録】",
-     "天羽よつは",
-     "影。/かげまる",
-     "暁月ホタル AKATSUKI HOTARU",
-     "柚原いづみ / Izumi Channel 【ななしいんく】"
     ]
    },
    {
@@ -89,6 +49,35 @@
     ]
    },
    {
+    "tag": "#ストグラ",
+    "channels": [
+     "marunnn【まるーんチャンネル】",
+     "たけぉ",
+     "クラウン【探検家の記録】",
+     "ノビーの遊び部屋",
+     "影。/かげまる"
+    ]
+   },
+   {
+    "tag": "#SURGECity",
+    "channels": [
+     "はちぴ",
+     "夏芽川アキ / Natsumegawa Aki",
+     "姫崎クト -himesaki kuto-",
+     "貴様まさか🦈",
+     "闇乃あびす / Abyss"
+    ]
+   },
+   {
+    "tag": "#ストグラSeason2",
+    "channels": [
+     "neon",
+     "たけぉ",
+     "クラウン【探検家の記録】",
+     "影。/かげまる"
+    ]
+   },
+   {
     "tag": "#ゼンゼロ",
     "channels": [
      "あかどらん",
@@ -107,44 +96,44 @@
   ],
   "wide": [
    {
-    "game": "Apex Legends",
-    "channels": 33,
-    "videos": 38
+    "game": "Minecraft",
+    "channels": 29,
+    "videos": 30
    },
    {
-    "game": "Minecraft",
-    "channels": 32,
-    "videos": 33
+    "game": "Apex Legends",
+    "channels": 26,
+    "videos": 28
    },
    {
     "game": "ストリートファイター6",
-    "channels": 25,
-    "videos": 27
-   },
-   {
-    "game": "Grand Theft Auto V",
     "channels": 21,
-    "videos": 23
-   },
-   {
-    "game": "hololive Dreams",
-    "channels": 17,
-    "videos": 18
-   },
-   {
-    "game": "フォートナイト",
-    "channels": 17,
     "videos": 22
-   },
-   {
-    "game": "モンスターストライク",
-    "channels": 17,
-    "videos": 20
    },
    {
     "game": "VALORANT",
     "channels": 17,
     "videos": 18
+   },
+   {
+    "game": "フォートナイト",
+    "channels": 16,
+    "videos": 20
+   },
+   {
+    "game": "モンスターストライク",
+    "channels": 16,
+    "videos": 18
+   },
+   {
+    "game": "hololive Dreams",
+    "channels": 14,
+    "videos": 15
+   },
+   {
+    "game": "Grand Theft Auto V",
+    "channels": 15,
+    "videos": 16
    }
   ]
  },
@@ -153,9 +142,9 @@
   {
    "tag": "ホロドリ",
    "game": "hololive Dreams",
-   "evidence": 11,
+   "evidence": 8,
    "added": 1,
-   "channels": 10
+   "channels": 8
   }
  ],
  "misses": [
@@ -250,22 +239,6 @@
    ]
   },
   {
-   "word": "MXGP 26",
-   "channels": 1,
-   "n": 1,
-   "examples": [
-    {
-     "t": "【MXGP 26】世間は低評価だが十分楽しい！ただし「人を選ぶ」理由をガチ解説 [Game Impression]",
-     "c": "[GFnR] ギョフノリ eMotorsports Club - WRC世界5位が選ぶレースゲーム",
-     "u": "https://www.youtube.com/watch?v=FUm-OHqr6_w"
-    }
-   ],
-   "kind": "near",
-   "suggest": [
-    "MXGP 26: The Official Game"
-   ]
-  },
-  {
    "word": "Octbuster",
    "channels": 1,
    "n": 1,
@@ -298,6 +271,22 @@
    ]
   },
   {
+   "word": "Antivirus Survivors",
+   "channels": 1,
+   "n": 1,
+   "examples": [
+    {
+     "t": "【Antivirus Survivors】英語得意な人たすけて！レトロPCモチーフのヴァンサバライク【今永さらら/にぶヲタ】",
+     "c": "今さらちゃん ねる",
+     "u": "https://www.youtube.com/watch?v=vWebty1XMrM"
+    }
+   ],
+   "kind": "near",
+   "suggest": [
+    "Antivirus Survivors 2003 Professional"
+   ]
+  },
+  {
    "word": "original",
    "channels": 1,
    "n": 1,
@@ -312,22 +301,6 @@
    "suggest": [
     "Original Frisbee Disc Sports: Ultimate & Golf",
     "Original Journey"
-   ]
-  },
-  {
-   "word": "Antivirus Survivors",
-   "channels": 1,
-   "n": 1,
-   "examples": [
-    {
-     "t": "【Antivirus Survivors】英語得意な人たすけて！レトロPCモチーフのヴァンサバライク【今永さらら/にぶヲタ】",
-     "c": "今さらちゃん ねる",
-     "u": "https://www.youtube.com/watch?v=vWebty1XMrM"
-    }
-   ],
-   "kind": "near",
-   "suggest": [
-    "Antivirus Survivors 2003 Professional"
    ]
   },
   {
@@ -394,33 +367,9 @@
      "u": "https://www.youtube.com/watch?v=DocW6kzUSqA"
     },
     {
-     "t": "【 #SURGECity  ￤＃１ 】逮捕じゃコラ～～～～～～～～～！！！！🚓🚨【 すずみあ / 赤彩みあ 】",
-     "c": "赤彩みあ / Akairo Mia Ch.【すずみあ】",
-     "u": "https://www.youtube.com/watch?v=HwfM4YfYz7g"
-    }
-   ],
-   "kind": "wide",
-   "suggest": []
-  },
-  {
-   "word": "ドラゴンズドグマ 2：ダークアリズン",
-   "channels": 8,
-   "n": 9,
-   "examples": [
-    {
-     "t": "『ドラゴンズドグマ 2：ダークアリズン』先行プレイ。新アイテムのフックロープの使い心地は？ 極北の地・ノルガンでの冒険の流れをチェック【DD2DA】",
-     "c": "ファミ通TUBE",
-     "u": "https://www.youtube.com/watch?v=Nc9obSraJM4"
-    },
-    {
-     "t": "【ドラゴンズドグマ2：ダークアリズン】待ちに待ったダークアリズン！本日発売",
-     "c": "よも木 / yomogi",
-     "u": "https://www.youtube.com/watch?v=oCNexw9G58E"
-    },
-    {
-     "t": "【ドラゴンズドグマ2ダークアリズン】ネタバレ注意！とりあえずソーサラーで行きます！【DDDA/ドグマ２/vtuber/女性実況】",
-     "c": "パン耳姉妹 / Panmimi Sisters",
-     "u": "https://www.youtube.com/watch?v=RMbVhTkTfW4"
+     "t": "【#SURGECity】心拍数90超えたら罰金縛りで街一番の大金持ちになる男｜1日目【スト鯖GTA】",
+     "c": "やよい",
+     "u": "https://www.youtube.com/watch?v=sLMicJDwwIQ"
     }
    ],
    "kind": "wide",
@@ -451,16 +400,11 @@
    "suggest": []
   },
   {
-   "word": "LTK",
+   "word": "#LTK",
    "channels": 3,
    "n": 9,
    "examples": [
     {
-     "t": "【LoL #LTK】一緒にJGを練習せい ~LTK CORE JGの道はあるか~【Alpha Azur/UltraLMTM】",
-     "c": "Alpha Azur - UltraLMTM",
-     "u": "https://www.youtube.com/watch?v=pKf84rvWxvw"
-    },
-    {
      "t": "【#LTK】LTKに向けてそろQする【 ぶいすぽっ！ / 千燈ゆうひ 】",
      "c": "千燈ゆうひ",
      "u": "https://www.youtube.com/watch?v=rbZo9UB7G74"
@@ -469,6 +413,11 @@
      "t": "【#LTK】LTKに向けてそろQする【 ぶいすぽっ！ / 千燈ゆうひ 】",
      "c": "千燈ゆうひ",
      "u": "https://www.youtube.com/watch?v=rbZo9UB7G74"
+    },
+    {
+     "t": "【#LTK】顔合わせー！初日ー！（ほぼ）無限！【 ぶいすぽっ！ / 千燈ゆうひ 】",
+     "c": "千燈ゆうひ",
+     "u": "https://www.youtube.com/watch?v=AZbkNH5Z5-I"
     }
    ],
    "kind": "wide",
@@ -571,24 +520,24 @@
    "suggest": []
   },
   {
-   "word": "デュエプレ",
+   "word": "#デュエプレ",
    "channels": 3,
    "n": 4,
    "examples": [
     {
+     "t": "【 #デュエプレ 】第37弾「虹帝∞命動」を開封‼【にじさんじ/加賀美ハヤト】",
+     "c": "加賀美 ハヤト/Hayato Kagami",
+     "u": "https://www.youtube.com/watch?v=PiDiwaookgk"
+    },
+    {
+     "t": "【 #デュエプレ 】第37弾「虹帝∞命動」を開封‼【にじさんじ/加賀美ハヤト】",
+     "c": "加賀美 ハヤト/Hayato Kagami",
+     "u": "https://www.youtube.com/watch?v=PiDiwaookgk"
+    },
+    {
      "t": "【デュエプレ】第37弾「虹帝∞命動」　～天門！天門！天門！～【榊ネス/にじさんじ】",
      "c": "榊ネス / Sakaki Ness【にじさんじ】",
      "u": "https://www.youtube.com/watch?v=eES6gHnublI"
-    },
-    {
-     "t": "【 #デュエプレ 】第37弾「虹帝∞命動」を開封‼【にじさんじ/加賀美ハヤト】",
-     "c": "加賀美 ハヤト/Hayato Kagami",
-     "u": "https://www.youtube.com/watch?v=PiDiwaookgk"
-    },
-    {
-     "t": "【 #デュエプレ 】第37弾「虹帝∞命動」を開封‼【にじさんじ/加賀美ハヤト】",
-     "c": "加賀美 ハヤト/Hayato Kagami",
-     "u": "https://www.youtube.com/watch?v=PiDiwaookgk"
     }
    ],
    "kind": "wide",
@@ -694,6 +643,38 @@
  "miss_days": 7,
  "hot_facts": [
   {
+   "game": "ドラゴンズドグマ 2:ダークアリズン",
+   "growth": 10.0,
+   "videos": 10,
+   "base": 1.0,
+   "channels": 10,
+   "views": 230530,
+   "who": [
+    "茶々茶(chachacha)",
+    "おついちTube",
+    "皆で一緒にモンハンライフ",
+    "茶々茶(chachacha)",
+    "ピコピコちゃん / ゲームまとめ"
+   ],
+   "titles": [
+    "#01【本日発売】トロコン覚者がノルガンへ！エンディング＆ラスボスまでストーリー攻略を目指す初見プレイ【ドラゴンズドグマ2 ダークアリズン】",
+    "【ドラゴンズドグマ2：ダークアリズン】🐲いざポーンと共にノルガンの地へ！【おついちTube】",
+    "#1　神ゲーの予感がするドラゴンズドグマ 2：ダークアリズン"
+   ],
+   "genres": [
+    "Role-playing (RPG)",
+    "Adventure"
+   ],
+   "year": 2026,
+   "platforms": [
+    "pc",
+    "console"
+   ],
+   "days_seen": 0,
+   "last_seen": null,
+   "first_here": true
+  },
+  {
    "game": "Lethal Company",
    "growth": 10.0,
    "videos": 8,
@@ -719,9 +700,9 @@
    "platforms": [
     "pc"
    ],
-   "days_seen": 0,
-   "last_seen": null,
-   "first_here": true
+   "days_seen": 1,
+   "last_seen": "2026-10-09",
+   "first_here": false
   },
   {
    "game": "Silver Pines",
@@ -750,93 +731,9 @@
     "pc",
     "console"
    ],
-   "days_seen": 0,
-   "last_seen": null,
-   "first_here": true
-  },
-  {
-   "game": "トモダチコレクション わくわく生活",
-   "growth": 3.75,
-   "videos": 3,
-   "base": 0.5,
-   "channels": 3,
-   "views": 109066,
-   "who": [
-    "TAMAchan",
-    "ちささこ",
-    "タナカノナカ"
-   ],
-   "titles": [
-    "ついに鬼舞辻無惨との『赤ちゃん』が生まれました…😨【トモダチコレクションわくわく生活】【たまちゃん】",
-    "【生配信】#41｜朝のさわやかな時間【トモダチコレクションわくわく生活】",
-    "【ゆっくり実況】付きまといから恋に発展する稀有なパターン【トモダチコレクションわくわく生活】"
-   ],
-   "genres": [
-    "Simulator"
-   ],
-   "year": null,
-   "platforms": [
-    "console"
-   ],
-   "days_seen": 8,
+   "days_seen": 1,
    "last_seen": "2026-10-09",
    "first_here": false
-  },
-  {
-   "game": "スーパーマリオサンシャイン",
-   "growth": 3.75,
-   "videos": 3,
-   "base": 0.7,
-   "channels": 3,
-   "views": 37751,
-   "who": [
-    "笹木咲 / Sasaki Saku",
-    "めんミ / MENMI",
-    "いかぽぽ"
-   ],
-   "titles": [
-    "やられたら即終了の『スーパーマリオサンシャイン』やよ〜。#07",
-    "〖ライブ配信〗完全初見❗ヨッシーを乗りこなしてみせる🦖全部で40個シャインを集たい🌴🌟﻿〖 #スーパーマリオサンシャイン ④〗",
-    "【スーパーマリオサンシャイン】そろそろバカンスしたいと思ってたんですよ＃３ #いかぽぽ #スーパーマリオサンシャイン"
-   ],
-   "genres": [],
-   "year": null,
-   "platforms": [],
-   "days_seen": 7,
-   "last_seen": "2026-10-07",
-   "first_here": false
-  },
-  {
-   "game": "Dragon's Dogma II: Dark Arisen",
-   "growth": 3.75,
-   "videos": 3,
-   "base": 0.0,
-   "channels": 3,
-   "views": 14700,
-   "who": [
-    "ピコピコちゃん / ゲームまとめ",
-    "おかまつゲーム実況",
-    "ピコピコちゃん / ゲームまとめ",
-    "らいふ",
-    "ピコピコちゃん / ゲームまとめ"
-   ],
-   "titles": [
-    "【ドラゴンズドグマ２ ダークアリズン】ラスボス戦・エンディング【DLC】【Dragon's Dogma 2: Dark Arisen】【新作】【ネタバレ注意】",
-    "#1【PS5PRO】-ダークアリズン-ドラゴンズドグマ2（Dragon's Dogma 2: Dark Arisen） 初見実況【ポーンと共に再び無二の冒険へと踏み出す】",
-    "【ドラゴンズドグマ２ ダークアリズン】真ラスボス戦・真エンディング【DLC】【Dragon's Dogma 2: Dark Arisen】【新作】【ネタバレ注意】"
-   ],
-   "genres": [
-    "Role-playing (RPG)",
-    "Adventure"
-   ],
-   "year": 2026,
-   "platforms": [
-    "pc",
-    "console"
-   ],
-   "days_seen": 0,
-   "last_seen": null,
-   "first_here": true
   },
   {
    "game": "Dinkum",
@@ -866,8 +763,59 @@
     "pc",
     "console"
    ],
-   "days_seen": 7,
-   "last_seen": "2026-10-06",
+   "days_seen": 8,
+   "last_seen": "2026-10-09",
+   "first_here": false
+  },
+  {
+   "game": "ゼンレスゾーンゼロ",
+   "growth": 3.53,
+   "videos": 6,
+   "base": 1.7,
+   "channels": 6,
+   "views": 39197,
+   "who": [
+    "フクー",
+    "マグロヘッド",
+    "こへー / 古兵",
+    "あかどらん",
+    "みらす"
+   ],
+   "titles": [
+    "【#ゼンゼロ #308】クソ雑ver3.3ミラー配信枠  【ZZZ/ゼンレスゾーンゼロ】",
+    "ゼンレスゾーンゼロ「ver3.3」アプデ情報まとめ。S級アタッカー２名実装、スタレコラボ判明！！",
+    "【ゼンゼロ】フィオニー&セヴェリアン性能・Ver3.3公式放送まとめ解説【ゼンレスゾーンゼロ・攻略・考察・検証】ZZZ・崩壊スターレイルコラボ情報・カフカ・ロビン"
+   ],
+   "genres": [],
+   "year": null,
+   "platforms": [],
+   "days_seen": 21,
+   "last_seen": "2026-10-09",
+   "first_here": false
+  },
+  {
+   "game": "マビノギモバイル",
+   "growth": 2.86,
+   "videos": 4,
+   "base": 1.4,
+   "channels": 3,
+   "views": 144046,
+   "who": [
+    "樋口楓【にじさんじ所属】",
+    "Amoko Ch. 甘乃あもこ",
+    "びりQ",
+    "樋口楓【にじさんじ所属】"
+   ],
+   "titles": [
+    "【マビノギモバイル】弓使い→司祭に転職しました！！【にじさんじ / 樋口楓】",
+    "【マビノギモバイル】ダンバートン鯖でギルドを立てる！！！！！！！！【NEXON】【マビモバ】",
+    "【マビノギ】取引所産最強ウマ購入できた！！”クロスボウLv62～”たまにAION2「マビノギモバイル」リセマラは多分ない攻略配信【NEXON】【マビモバ】"
+   ],
+   "genres": [],
+   "year": null,
+   "platforms": [],
+   "days_seen": 3,
+   "last_seen": "2026-10-09",
    "first_here": false
   }
  ],
