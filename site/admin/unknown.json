@@ -1,8 +1,30 @@
 {
  "mode": "admin",
  "date": "2026-10-10",
- "generated": "2026-10-10 10:34",
+ "generated": "2026-10-10 10:57",
  "unknown": [
+  {
+   "guess": "surge city",
+   "channels": 3,
+   "n": 4,
+   "examples": [
+    {
+     "t": "【 SURGE CITY 】新しいこの街で1番の『アイドル』になるぞ！！！！【くに/すたぽら】",
+     "c": "くにくんOfficial",
+     "u": "https://www.youtube.com/watch?v=7-zsWCEhan8"
+    },
+    {
+     "t": "【SURGE City 】なにしようか",
+     "c": "さぶ郎。",
+     "u": "https://www.youtube.com/watch?v=u6Y55F8O6YE"
+    },
+    {
+     "t": "【SURGECITY】＃1 メイドカフェ王に俺はなる【瀬尾カザリ / ネオポルテ】",
+     "c": "瀬尾カザリ / Ceo Kazari",
+     "u": "https://www.youtube.com/watch?v=H-SsP7VEmxE"
+    }
+   ]
+  },
   {
    "guess": "ロマサガ2",
    "channels": 2,
@@ -38,23 +60,6 @@
    ]
   },
   {
-   "guess": "surge city",
-   "channels": 2,
-   "n": 2,
-   "examples": [
-    {
-     "t": "【SURGE City 】なにしようか",
-     "c": "さぶ郎。",
-     "u": "https://www.youtube.com/watch?v=u6Y55F8O6YE"
-    },
-    {
-     "t": "【SURGECITY】＃1 メイドカフェ王に俺はなる【瀬尾カザリ / ネオポルテ】",
-     "c": "瀬尾カザリ / Ceo Kazari",
-     "u": "https://www.youtube.com/watch?v=H-SsP7VEmxE"
-    }
-   ]
-  },
-  {
    "guess": "lol #ltk",
    "channels": 1,
    "n": 3,
@@ -73,28 +78,6 @@
      "t": "【LoL #LTK】ITの絆 w/橘さん、たかスぺ、天帝さん、kamito ~LTK CORE JGの道はあるか~【Alpha Azur/UltraLMTM】",
      "c": "Alpha Azur - UltraLMTM",
      "u": "https://www.youtube.com/watch?v=I0CT0N5xkSw"
-    }
-   ]
-  },
-  {
-   "guess": "偏差値130",
-   "channels": 1,
-   "n": 3,
-   "examples": [
-    {
-     "t": "【偏差値130】東大医学部卒麻雀プレイヤーが雀魂しながら雑談する",
-     "c": "【偏差値130】東大医学部卒麻雀プレイヤー杉村健太ちゃんねる",
-     "u": "https://www.youtube.com/watch?v=dxxkp3nIRzI"
-    },
-    {
-     "t": "【偏差値130】東大医学部卒麻雀プレイヤーの雀魂ガチ段位戦",
-     "c": "【偏差値130】東大医学部卒麻雀プレイヤー杉村健太ちゃんねる",
-     "u": "https://www.youtube.com/watch?v=IKtXPv7rB_Y"
-    },
-    {
-     "t": "【偏差値130】東大医学部卒麻雀プレイヤーが雀魂しながら雑談する",
-     "c": "【偏差値130】東大医学部卒麻雀プレイヤー杉村健太ちゃんねる",
-     "u": "https://www.youtube.com/watch?v=Cdwm8dBs3a0"
     }
    ]
   },
@@ -155,6 +138,40 @@
    ]
   },
   {
+   "guess": "偏差値130",
+   "channels": 1,
+   "n": 2,
+   "examples": [
+    {
+     "t": "【偏差値130】東大医学部卒麻雀プレイヤーが雀魂しながら雑談する",
+     "c": "【偏差値130】東大医学部卒麻雀プレイヤー杉村健太ちゃんねる",
+     "u": "https://www.youtube.com/watch?v=dxxkp3nIRzI"
+    },
+    {
+     "t": "【偏差値130】東大医学部卒麻雀プレイヤーの雀魂ガチ段位戦",
+     "c": "【偏差値130】東大医学部卒麻雀プレイヤー杉村健太ちゃんねる",
+     "u": "https://www.youtube.com/watch?v=IKtXPv7rB_Y"
+    }
+   ]
+  },
+  {
+   "guess": "英傑大戦:全国対戦",
+   "channels": 1,
+   "n": 2,
+   "examples": [
+    {
+     "t": "【英傑大戦:全国対戦】誕生日なので歳の数だけ勝つとしますか、絆も引くぞ～！  (26/10/9)【きつね配信1407】",
+     "c": "羽衣狐あっと京おんぷ",
+     "u": "https://www.youtube.com/watch?v=um1Gowb96CY"
+    },
+    {
+     "t": "【英傑大戦:全国対戦】土曜朝活。  (26/10/10)【きつね配信1408】",
+     "c": "羽衣狐あっと京おんぷ",
+     "u": "https://www.youtube.com/watch?v=BpeNmkQ0OP4"
+    }
+   ]
+  },
+  {
    "guess": "ウィズダフネ",
    "channels": 1,
    "n": 2,
@@ -184,6 +201,18 @@
    ]
   },
   {
+   "guess": "語り合おう",
+   "channels": 1,
+   "n": 1,
+   "examples": [
+    {
+     "t": "【語り合おう】スナフキンの名言を学び習得し競馬場の自認スナフキンを目指す【 鳩乃はろん / #新人VTuber】",
+     "c": "鳩乃はろん / Hatono Haron / 新人VTuber",
+     "u": "https://www.youtube.com/watch?v=JMS_6auoLjo"
+    }
+   ]
+  },
+  {
    "guess": "5周年記念",
    "channels": 1,
    "n": 1,
@@ -208,6 +237,30 @@
    ]
   },
   {
+   "guess": "メタルスラッグ3・x",
+   "channels": 1,
+   "n": 1,
+   "examples": [
+    {
+     "t": "【メタルスラッグ3・X】#2 銃火器ガンガンぶっ放せ!!協力プレイで挑む名作アクション【コラボ/レトロゲーム実況/のぺるにくす/てじり】",
+     "c": "のぺるにくす「青のぺちゃんの配信小部屋」",
+     "u": "https://www.youtube.com/watch?v=kUP-AU_KYKE"
+    }
+   ]
+  },
+  {
+   "guess": "天外魔境ii 卍maru",
+   "channels": 1,
+   "n": 1,
+   "examples": [
+    {
+     "t": "【天外魔境Ⅱ 卍MARU】PCE 初見＃18［里城はな］#vtuber #ゲーム実況  #rpg  #hudsonsoft  #pcengine",
+     "c": "里城はな",
+     "u": "https://www.youtube.com/watch?v=pY9naW48YoM"
+    }
+   ]
+  },
+  {
    "guess": "エモクロアtrpg",
    "channels": 1,
    "n": 1,
@@ -216,6 +269,18 @@
      "t": "【エモクロアTRPG】アブダクション・パニック!!　#むつパニック",
      "c": "むつー / mutuu gaming",
      "u": "https://www.youtube.com/watch?v=P4idTCH4wHU"
+    }
+   ]
+  },
+  {
+   "guess": "新衣装 お披露目",
+   "channels": 1,
+   "n": 1,
+   "examples": [
+    {
+     "t": "【 新衣装 お披露目 】ママから新しいお洋服を頂きました✨【 #満月しお #Vtuber 】",
+     "c": "満月しお / Shio Mitsuki Ch.",
+     "u": "https://www.youtube.com/watch?v=hs5zAcimpKU"
     }
    ]
   },
@@ -916,6 +981,18 @@
    ]
   },
   {
+   "guess": "スプラトゥーン",
+   "channels": 1,
+   "n": 1,
+   "examples": [
+    {
+     "t": "『スプラトゥーン』シリーズの小ネタ100選【永久保存版】",
+     "c": "フグ,",
+     "u": "https://www.youtube.com/watch?v=555fzHxupDI"
+    }
+   ]
+  },
+  {
    "guess": "バイオハザード",
    "channels": 1,
    "n": 1,
@@ -1077,7 +1154,7 @@
    "n": 1,
    "examples": [
     {
-     "t": "【これって浮気？判定シート】VTuberで1番全肯定です。【#蒼宮よづり #vtuber 】",
+     "t": "【これって浮気？判定シート】✨ VTuberで1番、全肯定✨ あなたを赦します【#蒼宮よづり #vtuber 】",
      "c": "Aomiya Yozuri Ch. 蒼宮よづり",
      "u": "https://www.youtube.com/watch?v=Be21C_SqOvM"
     }
@@ -1284,18 +1361,6 @@
      "t": "【PS1神宮寺 灯火が消えぬ間に#3】 実機で嗜む実況ライブ【ネタバレ禁止！レトロゲームADV】",
      "c": "Toneのゲームちゃんねる",
      "u": "https://www.youtube.com/watch?v=qi5V4ney-Yk"
-    }
-   ]
-  },
-  {
-   "guess": "英傑大戦:全国対戦",
-   "channels": 1,
-   "n": 1,
-   "examples": [
-    {
-     "t": "【英傑大戦:全国対戦】誕生日なので歳の数だけ勝つとしますか、絆も引くぞ～！  (26/10/9)【きつね配信1407】",
-     "c": "羽衣狐あっと京おんぷ",
-     "u": "https://www.youtube.com/watch?v=um1Gowb96CY"
     }
    ]
   },
@@ -1593,7 +1658,7 @@
    "n": 1,
    "examples": [
     {
-     "t": "【FF7EC】FF7アドベントチルドレン～ＥＣエディション～【エバクラ/サ終】",
+     "t": "【FF7EC】FF7アドベントチルドレン～ＥＣエディション～【エバクラ/サ終/観るゲーム】",
      "c": "ホイミんの部屋",
      "u": "https://www.youtube.com/watch?v=9AaRPNtq49k"
     }
@@ -1744,20 +1809,209 @@
    ]
   },
   {
-   "guess": "スーパーマリオrpg",
+   "guess": "120万人耐久",
    "channels": 1,
    "n": 1,
    "examples": [
     {
-     "t": "#２【スーパーマリオRPG】※ネタバレあります！クリア目指してやるぞ！#レトロゲーム#任天堂",
-     "c": "ロッキー先生",
-     "u": "https://www.youtube.com/watch?v=KTRXwv7sfpM"
+     "t": "【 120万人耐久】120万人達成で重大告知解禁!??　新アプリを使ってうたっちゃお！！【ホロライブ/ ロボ子さん 】",
+     "c": "Roboco Ch. - ロボ子",
+     "u": "https://www.youtube.com/watch?v=jCy5SoVLZqo"
+    }
+   ]
+  },
+  {
+   "guess": "お絵描き",
+   "channels": 1,
+   "n": 1,
+   "examples": [
+    {
+     "t": "【お絵描き】ミリプロメンバーの衣装交換をするの巻。【 #あまかみらいぶ / #ミリプロ 】",
+     "c": "甘狼このみ / AmakamiKonomi🐺🍫",
+     "u": "https://www.youtube.com/watch?v=uKblURWBBQE"
+    }
+   ]
+  },
+  {
+   "guess": "雑談/talk",
+   "channels": 1,
+   "n": 1,
+   "examples": [
+    {
+     "t": "【雑談/talk】朝活成功の世界線、ダウナーな鷹宮とチルい曲(Chill MIX)【にじさんじ/鷹宮リオン】",
+     "c": "鷹宮リオン / Rion Takamiya",
+     "u": "https://www.youtube.com/watch?v=u2nsomPq9-c"
+    }
+   ]
+  },
+  {
+   "guess": "上位ランクで流行",
+   "channels": 1,
+   "n": 1,
+   "examples": [
+    {
+     "t": "【上位ランクで流行】元々最強だったのに更に新アイテムで覚醒した『アシレーヌ』一生強すぎんだろ…【ポケチャン】",
+     "c": "くろこ",
+     "u": "https://www.youtube.com/watch?v=oXGmPCQ58RU"
+    }
+   ]
+  },
+  {
+   "guess": "ソンブラサポ",
+   "channels": 1,
+   "n": 1,
+   "examples": [
+    {
+     "t": "【ソンブラサポ】新シーズンで環境が激変したプロシーン初試合、新時代のダイブが炸裂【OWCS KOREA】",
+     "c": "ta1yo_tv",
+     "u": "https://www.youtube.com/watch?v=citZX3pd4Rk"
+    }
+   ]
+  },
+  {
+   "guess": "ととの日",
+   "channels": 1,
+   "n": 1,
+   "examples": [
+    {
+     "t": "【ととの日】とと王になれ👑ととクイズに君は難問正解できるかな！？【立伝都々/にじさんじ】",
+     "c": "立伝都々 / Tachitsute Toto【にじさんじ】",
+     "u": "https://www.youtube.com/watch?v=PunV6xm1S5E"
+    }
+   ]
+  },
+  {
+   "guess": "総集編",
+   "channels": 1,
+   "n": 1,
+   "examples": [
+    {
+     "t": "【総集編】月刊マノニキ！マイクラ爆笑まとめ【2026年9月】",
+     "c": "マイクラランド",
+     "u": "https://www.youtube.com/watch?v=3p7dpiT3yhQ"
+    }
+   ]
+  },
+  {
+   "guess": "あさひか!",
+   "channels": 1,
+   "n": 1,
+   "examples": [
+    {
+     "t": "【あさひか！】活動6周年の朝【飛良ひかり / ななしいんく】",
+     "c": "飛良ひかり / Hikari Channel【ななしいんく】",
+     "u": "https://www.youtube.com/watch?v=TibF-cNnrqY"
+    }
+   ]
+  },
+  {
+   "guess": "縦型配信",
+   "channels": 1,
+   "n": 1,
+   "examples": [
+    {
+     "t": "【縦型配信】本日限定スパチャが来たら髪切ります！リスナーと組んで目指せデュオアンリアル！",
+     "c": "とち丸ちゃん【毎日19時配信】",
+     "u": "https://www.youtube.com/watch?v=eQuT5GpikLE"
+    }
+   ]
+  },
+  {
+   "guess": "星のカービィスーパーデラックス",
+   "channels": 1,
+   "n": 1,
+   "examples": [
+    {
+     "t": "#2【星のカービィスーパーデラックス】完全初見❕大洞窟ですべてのお宝をコンプするぞッッ🍅🌟【緑青くれは / ななしいんく】",
+     "c": "緑青くれは / Kureha Channel【ななしいんく】",
+     "u": "https://www.youtube.com/watch?v=DJ0ZBq_dOmU"
+    }
+   ]
+  },
+  {
+   "guess": "ライブ配信/朝活配信",
+   "channels": 1,
+   "n": 1,
+   "examples": [
+    {
+     "t": "【ライブ配信／朝活配信】#雪兎ちゃう4周年 感謝！！！元気に「おはよう」「いってらっしゃい」雑談 配信！【雪兎ちゃう／個人勢vtuber／配信中】",
+     "c": "Chau Ch.雪兎ちゃう",
+     "u": "https://www.youtube.com/watch?v=y6Vj96sV96w"
+    }
+   ]
+  },
+  {
+   "guess": "d71話",
+   "channels": 1,
+   "n": 1,
+   "examples": [
+    {
+     "t": "【D71話】PS版スーパーロボット大戦F完結編(スパロボF完)_TASさんが「先にDCを叩く」ルートの最短ターンクリアに挑みます",
+     "c": "プラズマのゲーム動画",
+     "u": "https://www.youtube.com/watch?v=t1XyqjjOFfY"
+    }
+   ]
+  },
+  {
+   "guess": "第9期 #nanaリーグ",
+   "channels": 1,
+   "n": 1,
+   "examples": [
+    {
+     "t": "【第９期 #NANAリーグ】 レギュラーシーズン第22節『ドラポンクエストⅡ』淡雪花奏視点#07【#雀魂 #麻雀 /淡雪花奏 】",
+     "c": "淡雪 花奏(かなで)",
+     "u": "https://www.youtube.com/watch?v=dH-J3_cHTzw"
+    }
+   ]
+  },
+  {
+   "guess": "ゲームニュース",
+   "channels": 1,
+   "n": 1,
+   "examples": [
+    {
+     "t": "【ゲームニュース】レトロゲームニュース＋α #257 (2026.10.10)【レトロゲーム/VTuber】",
+     "c": "馬小屋ねる子レトロゲームCh.",
+     "u": "https://www.youtube.com/watch?v=ct0ENEY588g"
+    }
+   ]
+  },
+  {
+   "guess": "メタルマックスリターンズ",
+   "channels": 1,
+   "n": 1,
+   "examples": [
+    {
+     "t": "【メタルマックスリターンズ】＃01 リターンズ初見プレイ！【ゲーム実況／草蔦みかん（Vtuber）】#レトロゲーム",
+     "c": "草蔦みかん / Kusatsuta Mikan",
+     "u": "https://www.youtube.com/watch?v=ni8aN3qwhA8"
     }
    ]
   }
  ],
  "leads": {
   "events": [
+   {
+    "tag": "#SURGECity",
+    "channels": [
+     "Ao WuWu Ch.【V4Mirai】",
+     "KAMIU / かみゆう : 脱出シューター",
+     "Mimoza Ch. 華咲みもざ",
+     "おなつのにびたし / Onatsu no Nibitashi",
+     "くにくんOfficial",
+     "どぅんどぅくどぅんどぅんどぅん",
+     "なるる / naruru",
+     "はちぴ",
+     "やよい",
+     "史門 / Shimon ",
+     "夏芽川アキ / Natsumegawa Aki",
+     "姫崎クト -himesaki kuto-",
+     "碧輝りお /Aoki Rio",
+     "貴様まさか🦈",
+     "赤彩みあ / Akairo Mia Ch.【すずみあ】",
+     "闇乃あびす / Abyss"
+    ]
+   },
    {
     "tag": "#ホロドリ",
     "channels": [
@@ -1768,7 +2022,9 @@
      "Roboco Ch. - ロボ子",
      "Towa Ch. 常闇トワ",
      "Vivi Ch. 綺々羅々ヴィヴィ - FLOW GLOW",
-     "アキロゼCh。Vtuber/ホロライブ所属"
+     "アキロゼCh。Vtuber/ホロライブ所属",
+     "宵吸あけル / Yokyu Akeru",
+     "隅川かど"
     ]
    },
    {
@@ -1778,9 +2034,32 @@
      "Usagi Ch. 因幡兎",
      "えりんぎ Games",
      "太刀ひろし　【Uncle gamer】 ",
+     "恋因ロス KoinRosu",
      "星埜きぃ -Key Hoshino-",
      "里城はな",
      "雛乃ぴぴ / Hinano pipi"
+    ]
+   },
+   {
+    "tag": "#ストグラSeason2",
+    "channels": [
+     "neon",
+     "たけぉ",
+     "クラウン【探検家の記録】",
+     "影。/かげまる",
+     "暁月ホタル AKATSUKI HOTARU",
+     "柚原いづみ / Izumi Channel 【ななしいんく】"
+    ]
+   },
+   {
+    "tag": "#ストグラ",
+    "channels": [
+     "marunnn【まるーんチャンネル】",
+     "たけぉ",
+     "クラウン【探検家の記録】",
+     "ノビーの遊び部屋",
+     "影。/かげまる",
+     "柚原いづみ / Izumi Channel 【ななしいんく】"
     ]
    },
    {
@@ -1797,39 +2076,9 @@
     "tag": "#レトロゲーム",
     "channels": [
      "どえむげーまーらうる",
-     "ロッキー先生",
      "草蔦みかん / Kusatsuta Mikan",
      "里城はな",
      "雛乃ぴぴ / Hinano pipi"
-    ]
-   },
-   {
-    "tag": "#ストグラ",
-    "channels": [
-     "marunnn【まるーんチャンネル】",
-     "たけぉ",
-     "クラウン【探検家の記録】",
-     "ノビーの遊び部屋",
-     "影。/かげまる"
-    ]
-   },
-   {
-    "tag": "#SURGECity",
-    "channels": [
-     "はちぴ",
-     "夏芽川アキ / Natsumegawa Aki",
-     "姫崎クト -himesaki kuto-",
-     "貴様まさか🦈",
-     "闇乃あびす / Abyss"
-    ]
-   },
-   {
-    "tag": "#ストグラSeason2",
-    "channels": [
-     "neon",
-     "たけぉ",
-     "クラウン【探検家の記録】",
-     "影。/かげまる"
     ]
    },
    {
@@ -1851,55 +2100,62 @@
   ],
   "wide": [
    {
+    "game": "Grand Theft Auto V",
+    "channels": 34,
+    "videos": 38
+   },
+   {
     "game": "Minecraft",
-    "channels": 29,
-    "videos": 30
+    "channels": 32,
+    "videos": 33
    },
    {
     "game": "Apex Legends",
-    "channels": 26,
-    "videos": 28
+    "channels": 29,
+    "videos": 33
    },
    {
     "game": "ストリートファイター6",
-    "channels": 21,
-    "videos": 22
+    "channels": 23,
+    "videos": 24
+   },
+   {
+    "game": "フォートナイト",
+    "channels": 18,
+    "videos": 27
+   },
+   {
+    "game": "モンスターストライク",
+    "channels": 17,
+    "videos": 21
+   },
+   {
+    "game": "hololive Dreams",
+    "channels": 16,
+    "videos": 18
    },
    {
     "game": "VALORANT",
     "channels": 17,
     "videos": 18
-   },
-   {
-    "game": "フォートナイト",
-    "channels": 16,
-    "videos": 20
-   },
-   {
-    "game": "モンスターストライク",
-    "channels": 16,
-    "videos": 18
-   },
-   {
-    "game": "hololive Dreams",
-    "channels": 14,
-    "videos": 15
-   },
-   {
-    "game": "Grand Theft Auto V",
-    "channels": 15,
-    "videos": 16
    }
   ]
  },
  "drift": [],
  "tags": [
   {
+   "tag": "surgecity",
+   "game": "Grand Theft Auto V",
+   "evidence": 3,
+   "added": 22,
+   "channels": 17
+  },
+  {
    "tag": "ホロドリ",
    "game": "hololive Dreams",
-   "evidence": 8,
+   "evidence": 12,
    "added": 1,
-   "channels": 8
+   "channels": 10
   }
  ],
  "misses": [
@@ -2107,24 +2363,48 @@
    ]
   },
   {
-   "word": "#SURGECity",
-   "channels": 18,
-   "n": 31,
+   "word": "#LTK",
+   "channels": 4,
+   "n": 11,
    "examples": [
     {
-     "t": "【 #SURGECity 】Day1 ⁝ 今回はなにをするんでしょうか？【 碧輝りお/個人勢VTuber 】",
-     "c": "碧輝りお /Aoki Rio",
-     "u": "https://www.youtube.com/watch?v=DocW6kzUSqA"
+     "t": "【#LTK】LTKに向けてそろQする【 ぶいすぽっ！ / 千燈ゆうひ 】",
+     "c": "千燈ゆうひ",
+     "u": "https://www.youtube.com/watch?v=rbZo9UB7G74"
     },
     {
-     "t": "【 #SURGECity 】Day1 ⁝ 今回はなにをするんでしょうか？【 碧輝りお/個人勢VTuber 】",
-     "c": "碧輝りお /Aoki Rio",
-     "u": "https://www.youtube.com/watch?v=DocW6kzUSqA"
+     "t": "【#LTK】LTKに向けてそろQする【 ぶいすぽっ！ / 千燈ゆうひ 】",
+     "c": "千燈ゆうひ",
+     "u": "https://www.youtube.com/watch?v=rbZo9UB7G74"
     },
     {
-     "t": "【#SURGECity】心拍数90超えたら罰金縛りで街一番の大金持ちになる男｜1日目【スト鯖GTA】",
-     "c": "やよい",
-     "u": "https://www.youtube.com/watch?v=sLMicJDwwIQ"
+     "t": "【LoL #LTK】一緒にJGを練習せい ~LTK CORE JGの道はあるか~【Alpha Azur/UltraLMTM】",
+     "c": "Alpha Azur - UltraLMTM",
+     "u": "https://www.youtube.com/watch?v=pKf84rvWxvw"
+    }
+   ],
+   "kind": "wide",
+   "suggest": []
+  },
+  {
+   "word": "SURGE CITY",
+   "channels": 4,
+   "n": 6,
+   "examples": [
+    {
+     "t": "【 SURGE CITY 】新しいこの街で1番の『アイドル』になるぞ！！！！【くに/すたぽら】",
+     "c": "くにくんOfficial",
+     "u": "https://www.youtube.com/watch?v=7-zsWCEhan8"
+    },
+    {
+     "t": "新たな街で、したことない事やってみたい【 SURGE CITY / 1日目 】#山黒音玄",
+     "c": "ねくろちゃん -Yamaguro Nekuro- /あおぎり高校",
+     "u": "https://www.youtube.com/watch?v=JJixjVeOwZ0"
+    },
+    {
+     "t": "【SURGE City 】なにしようか",
+     "c": "さぶ郎。",
+     "u": "https://www.youtube.com/watch?v=u6Y55F8O6YE"
     }
    ],
    "kind": "wide",
@@ -2133,7 +2413,7 @@
   {
    "word": "#ポケモン",
    "channels": 3,
-   "n": 14,
+   "n": 18,
    "examples": [
     {
      "t": "【#ポケモン】～朝活雑談バトルタワー1000連勝目指す～【#ポケモンエメラルド】",
@@ -2149,30 +2429,6 @@
      "t": "【#ポケモン】～朝活雑談バトルタワー1000連勝目指す～【#ポケモンエメラルド】",
      "c": "蛇目 欠番@Vtuber",
      "u": "https://www.youtube.com/watch?v=I_cYcM6lvTY"
-    }
-   ],
-   "kind": "wide",
-   "suggest": []
-  },
-  {
-   "word": "#LTK",
-   "channels": 3,
-   "n": 9,
-   "examples": [
-    {
-     "t": "【#LTK】LTKに向けてそろQする【 ぶいすぽっ！ / 千燈ゆうひ 】",
-     "c": "千燈ゆうひ",
-     "u": "https://www.youtube.com/watch?v=rbZo9UB7G74"
-    },
-    {
-     "t": "【#LTK】LTKに向けてそろQする【 ぶいすぽっ！ / 千燈ゆうひ 】",
-     "c": "千燈ゆうひ",
-     "u": "https://www.youtube.com/watch?v=rbZo9UB7G74"
-    },
-    {
-     "t": "【#LTK】顔合わせー！初日ー！（ほぼ）無限！【 ぶいすぽっ！ / 千燈ゆうひ 】",
-     "c": "千燈ゆうひ",
-     "u": "https://www.youtube.com/watch?v=AZbkNH5Z5-I"
     }
    ],
    "kind": "wide",

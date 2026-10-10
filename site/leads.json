@@ -1,8 +1,29 @@
 {
  "date": "2026-10-10",
- "generated": "2026-10-10 10:34",
+ "generated": "2026-10-10 10:57",
  "leads": {
   "events": [
+   {
+    "tag": "#SURGECity",
+    "channels": [
+     "Ao WuWu Ch.【V4Mirai】",
+     "KAMIU / かみゆう : 脱出シューター",
+     "Mimoza Ch. 華咲みもざ",
+     "おなつのにびたし / Onatsu no Nibitashi",
+     "くにくんOfficial",
+     "どぅんどぅくどぅんどぅんどぅん",
+     "なるる / naruru",
+     "はちぴ",
+     "やよい",
+     "史門 / Shimon ",
+     "夏芽川アキ / Natsumegawa Aki",
+     "姫崎クト -himesaki kuto-",
+     "碧輝りお /Aoki Rio",
+     "貴様まさか🦈",
+     "赤彩みあ / Akairo Mia Ch.【すずみあ】",
+     "闇乃あびす / Abyss"
+    ]
+   },
    {
     "tag": "#ホロドリ",
     "channels": [
@@ -13,7 +34,9 @@
      "Roboco Ch. - ロボ子",
      "Towa Ch. 常闇トワ",
      "Vivi Ch. 綺々羅々ヴィヴィ - FLOW GLOW",
-     "アキロゼCh。Vtuber/ホロライブ所属"
+     "アキロゼCh。Vtuber/ホロライブ所属",
+     "宵吸あけル / Yokyu Akeru",
+     "隅川かど"
     ]
    },
    {
@@ -23,9 +46,32 @@
      "Usagi Ch. 因幡兎",
      "えりんぎ Games",
      "太刀ひろし　【Uncle gamer】 ",
+     "恋因ロス KoinRosu",
      "星埜きぃ -Key Hoshino-",
      "里城はな",
      "雛乃ぴぴ / Hinano pipi"
+    ]
+   },
+   {
+    "tag": "#ストグラSeason2",
+    "channels": [
+     "neon",
+     "たけぉ",
+     "クラウン【探検家の記録】",
+     "影。/かげまる",
+     "暁月ホタル AKATSUKI HOTARU",
+     "柚原いづみ / Izumi Channel 【ななしいんく】"
+    ]
+   },
+   {
+    "tag": "#ストグラ",
+    "channels": [
+     "marunnn【まるーんチャンネル】",
+     "たけぉ",
+     "クラウン【探検家の記録】",
+     "ノビーの遊び部屋",
+     "影。/かげまる",
+     "柚原いづみ / Izumi Channel 【ななしいんく】"
     ]
    },
    {
@@ -42,39 +88,9 @@
     "tag": "#レトロゲーム",
     "channels": [
      "どえむげーまーらうる",
-     "ロッキー先生",
      "草蔦みかん / Kusatsuta Mikan",
      "里城はな",
      "雛乃ぴぴ / Hinano pipi"
-    ]
-   },
-   {
-    "tag": "#ストグラ",
-    "channels": [
-     "marunnn【まるーんチャンネル】",
-     "たけぉ",
-     "クラウン【探検家の記録】",
-     "ノビーの遊び部屋",
-     "影。/かげまる"
-    ]
-   },
-   {
-    "tag": "#SURGECity",
-    "channels": [
-     "はちぴ",
-     "夏芽川アキ / Natsumegawa Aki",
-     "姫崎クト -himesaki kuto-",
-     "貴様まさか🦈",
-     "闇乃あびす / Abyss"
-    ]
-   },
-   {
-    "tag": "#ストグラSeason2",
-    "channels": [
-     "neon",
-     "たけぉ",
-     "クラウン【探検家の記録】",
-     "影。/かげまる"
     ]
    },
    {
@@ -96,55 +112,62 @@
   ],
   "wide": [
    {
+    "game": "Grand Theft Auto V",
+    "channels": 34,
+    "videos": 38
+   },
+   {
     "game": "Minecraft",
-    "channels": 29,
-    "videos": 30
+    "channels": 32,
+    "videos": 33
    },
    {
     "game": "Apex Legends",
-    "channels": 26,
-    "videos": 28
+    "channels": 29,
+    "videos": 33
    },
    {
     "game": "ストリートファイター6",
-    "channels": 21,
-    "videos": 22
+    "channels": 23,
+    "videos": 24
+   },
+   {
+    "game": "フォートナイト",
+    "channels": 18,
+    "videos": 27
+   },
+   {
+    "game": "モンスターストライク",
+    "channels": 17,
+    "videos": 21
+   },
+   {
+    "game": "hololive Dreams",
+    "channels": 16,
+    "videos": 18
    },
    {
     "game": "VALORANT",
     "channels": 17,
     "videos": 18
-   },
-   {
-    "game": "フォートナイト",
-    "channels": 16,
-    "videos": 20
-   },
-   {
-    "game": "モンスターストライク",
-    "channels": 16,
-    "videos": 18
-   },
-   {
-    "game": "hololive Dreams",
-    "channels": 14,
-    "videos": 15
-   },
-   {
-    "game": "Grand Theft Auto V",
-    "channels": 15,
-    "videos": 16
    }
   ]
  },
  "drift": [],
  "tags": [
   {
+   "tag": "surgecity",
+   "game": "Grand Theft Auto V",
+   "evidence": 3,
+   "added": 22,
+   "channels": 17
+  },
+  {
    "tag": "ホロドリ",
    "game": "hololive Dreams",
-   "evidence": 8,
+   "evidence": 12,
    "added": 1,
-   "channels": 8
+   "channels": 10
   }
  ],
  "misses": [
@@ -352,24 +375,48 @@
    ]
   },
   {
-   "word": "#SURGECity",
-   "channels": 18,
-   "n": 31,
+   "word": "#LTK",
+   "channels": 4,
+   "n": 11,
    "examples": [
     {
-     "t": "【 #SURGECity 】Day1 ⁝ 今回はなにをするんでしょうか？【 碧輝りお/個人勢VTuber 】",
-     "c": "碧輝りお /Aoki Rio",
-     "u": "https://www.youtube.com/watch?v=DocW6kzUSqA"
+     "t": "【#LTK】LTKに向けてそろQする【 ぶいすぽっ！ / 千燈ゆうひ 】",
+     "c": "千燈ゆうひ",
+     "u": "https://www.youtube.com/watch?v=rbZo9UB7G74"
     },
     {
-     "t": "【 #SURGECity 】Day1 ⁝ 今回はなにをするんでしょうか？【 碧輝りお/個人勢VTuber 】",
-     "c": "碧輝りお /Aoki Rio",
-     "u": "https://www.youtube.com/watch?v=DocW6kzUSqA"
+     "t": "【#LTK】LTKに向けてそろQする【 ぶいすぽっ！ / 千燈ゆうひ 】",
+     "c": "千燈ゆうひ",
+     "u": "https://www.youtube.com/watch?v=rbZo9UB7G74"
     },
     {
-     "t": "【#SURGECity】心拍数90超えたら罰金縛りで街一番の大金持ちになる男｜1日目【スト鯖GTA】",
-     "c": "やよい",
-     "u": "https://www.youtube.com/watch?v=sLMicJDwwIQ"
+     "t": "【LoL #LTK】一緒にJGを練習せい ~LTK CORE JGの道はあるか~【Alpha Azur/UltraLMTM】",
+     "c": "Alpha Azur - UltraLMTM",
+     "u": "https://www.youtube.com/watch?v=pKf84rvWxvw"
+    }
+   ],
+   "kind": "wide",
+   "suggest": []
+  },
+  {
+   "word": "SURGE CITY",
+   "channels": 4,
+   "n": 6,
+   "examples": [
+    {
+     "t": "【 SURGE CITY 】新しいこの街で1番の『アイドル』になるぞ！！！！【くに/すたぽら】",
+     "c": "くにくんOfficial",
+     "u": "https://www.youtube.com/watch?v=7-zsWCEhan8"
+    },
+    {
+     "t": "新たな街で、したことない事やってみたい【 SURGE CITY / 1日目 】#山黒音玄",
+     "c": "ねくろちゃん -Yamaguro Nekuro- /あおぎり高校",
+     "u": "https://www.youtube.com/watch?v=JJixjVeOwZ0"
+    },
+    {
+     "t": "【SURGE City 】なにしようか",
+     "c": "さぶ郎。",
+     "u": "https://www.youtube.com/watch?v=u6Y55F8O6YE"
     }
    ],
    "kind": "wide",
@@ -378,7 +425,7 @@
   {
    "word": "#ポケモン",
    "channels": 3,
-   "n": 14,
+   "n": 18,
    "examples": [
     {
      "t": "【#ポケモン】～朝活雑談バトルタワー1000連勝目指す～【#ポケモンエメラルド】",
@@ -394,30 +441,6 @@
      "t": "【#ポケモン】～朝活雑談バトルタワー1000連勝目指す～【#ポケモンエメラルド】",
      "c": "蛇目 欠番@Vtuber",
      "u": "https://www.youtube.com/watch?v=I_cYcM6lvTY"
-    }
-   ],
-   "kind": "wide",
-   "suggest": []
-  },
-  {
-   "word": "#LTK",
-   "channels": 3,
-   "n": 9,
-   "examples": [
-    {
-     "t": "【#LTK】LTKに向けてそろQする【 ぶいすぽっ！ / 千燈ゆうひ 】",
-     "c": "千燈ゆうひ",
-     "u": "https://www.youtube.com/watch?v=rbZo9UB7G74"
-    },
-    {
-     "t": "【#LTK】LTKに向けてそろQする【 ぶいすぽっ！ / 千燈ゆうひ 】",
-     "c": "千燈ゆうひ",
-     "u": "https://www.youtube.com/watch?v=rbZo9UB7G74"
-    },
-    {
-     "t": "【#LTK】顔合わせー！初日ー！（ほぼ）無限！【 ぶいすぽっ！ / 千燈ゆうひ 】",
-     "c": "千燈ゆうひ",
-     "u": "https://www.youtube.com/watch?v=AZbkNH5Z5-I"
     }
    ],
    "kind": "wide",
@@ -644,22 +667,22 @@
  "hot_facts": [
   {
    "game": "ドラゴンズドグマ 2:ダークアリズン",
-   "growth": 10.0,
-   "videos": 10,
-   "base": 1.0,
-   "channels": 10,
-   "views": 230530,
+   "growth": 17.5,
+   "videos": 14,
+   "base": 0.7,
+   "channels": 14,
+   "views": 322439,
    "who": [
     "茶々茶(chachacha)",
     "おついちTube",
-    "皆で一緒にモンハンライフ",
     "茶々茶(chachacha)",
-    "ピコピコちゃん / ゲームまとめ"
+    "我が道を征くイカレタコ助",
+    "皆で一緒にモンハンライフ"
    ],
    "titles": [
     "#01【本日発売】トロコン覚者がノルガンへ！エンディング＆ラスボスまでストーリー攻略を目指す初見プレイ【ドラゴンズドグマ2 ダークアリズン】",
     "【ドラゴンズドグマ2：ダークアリズン】🐲いざポーンと共にノルガンの地へ！【おついちTube】",
-    "#1　神ゲーの予感がするドラゴンズドグマ 2：ダークアリズン"
+    "【本日発売】トロコン覚者がノルガンへ！エンディング＆ラスボスまでストーリー攻略を目指す初見プレイ【ドラゴンズドグマ2 ダークアリズン】"
    ],
    "genres": [
     "Role-playing (RPG)",
@@ -670,9 +693,9 @@
     "pc",
     "console"
    ],
-   "days_seen": 0,
-   "last_seen": null,
-   "first_here": true
+   "days_seen": 3,
+   "last_seen": "2026-10-09",
+   "first_here": false
   },
   {
    "game": "Lethal Company",
@@ -680,13 +703,13 @@
    "videos": 8,
    "base": 0.0,
    "channels": 8,
-   "views": 546163,
+   "views": 803490,
    "who": [
     "英リサ.Hanabusa Lisa",
     "兎咲ミミ / Tosaki Mimi",
     "龍巻ちせ / Tatsumaki Chise",
     "小雀とと / Toto Kogara",
-    "猫汰つな / Nekota Tsuna"
+    "蝶屋はなび / Choya Hanabi"
    ],
    "titles": [
     "【Lethal Company】８人でゴミ拾い会社就職【ぶいすぽっ！/英リサ】",
@@ -710,7 +733,7 @@
    "videos": 4,
    "base": 0.0,
    "channels": 3,
-   "views": 18531,
+   "views": 31001,
    "who": [
     "キャシーさんはホラーゲームで遊びたい",
     "ほとんどホラーゲーム実況ですが何か?",
@@ -736,55 +759,23 @@
    "first_here": false
   },
   {
-   "game": "Dinkum",
-   "growth": 3.75,
-   "videos": 3,
-   "base": 0.7,
-   "channels": 3,
-   "views": 4276,
-   "who": [
-    "Yuzari",
-    "まこりんとゲーム",
-    "ジョアだよ"
-   ],
-   "titles": [
-    "【Dinkum】楽しすぎて大興奮！スプーキーイベント開催！10月アプデで追加された新要素をチェック！🎃",
-    "【Dinkum】ハロウィンイベントキター※steam版　#ディンカム  #dinkum",
-    "【🪵Dinkum #78】ハロウィンリアルイベントが来た🎃｜#ディンカム #スローライフ #Dinkumpartner"
-   ],
-   "genres": [
-    "Role-playing (RPG)",
-    "Simulator",
-    "Adventure",
-    "Indie"
-   ],
-   "year": null,
-   "platforms": [
-    "pc",
-    "console"
-   ],
-   "days_seen": 8,
-   "last_seen": "2026-10-09",
-   "first_here": false
-  },
-  {
    "game": "ゼンレスゾーンゼロ",
-   "growth": 3.53,
-   "videos": 6,
+   "growth": 4.71,
+   "videos": 8,
    "base": 1.7,
-   "channels": 6,
-   "views": 39197,
+   "channels": 7,
+   "views": 153774,
    "who": [
-    "フクー",
     "マグロヘッド",
     "こへー / 古兵",
-    "あかどらん",
-    "みらす"
+    "フクー",
+    "汰鳥ヨシダ",
+    "フクー"
    ],
    "titles": [
-    "【#ゼンゼロ #308】クソ雑ver3.3ミラー配信枠  【ZZZ/ゼンレスゾーンゼロ】",
     "ゼンレスゾーンゼロ「ver3.3」アプデ情報まとめ。S級アタッカー２名実装、スタレコラボ判明！！",
-    "【ゼンゼロ】フィオニー&セヴェリアン性能・Ver3.3公式放送まとめ解説【ゼンレスゾーンゼロ・攻略・考察・検証】ZZZ・崩壊スターレイルコラボ情報・カフカ・ロビン"
+    "【ゼンゼロ】フィオニー&セヴェリアン性能・Ver3.3公式放送まとめ解説【ゼンレスゾーンゼロ・攻略・考察・検証】ZZZ・崩壊スターレイルコラボ情報・カフカ・ロビン",
+    "【#ゼンゼロ #308】クソ雑ver3.3ミラー配信枠  【ZZZ/ゼンレスゾーンゼロ】"
    ],
    "genres": [],
    "year": null,
@@ -794,27 +785,56 @@
    "first_here": false
   },
   {
-   "game": "マビノギモバイル",
-   "growth": 2.86,
-   "videos": 4,
-   "base": 1.4,
+   "game": "Cyan Heart",
+   "growth": 3.75,
+   "videos": 3,
+   "base": 0.0,
    "channels": 3,
-   "views": 144046,
+   "views": 23765,
    "who": [
-    "樋口楓【にじさんじ所属】",
-    "Amoko Ch. 甘乃あもこ",
-    "びりQ",
-    "樋口楓【にじさんじ所属】"
+    "リモーネ先生",
+    "ホラーゲーム専門配信┊Vtuber Akino",
+    "しろこりGames / インディーゲーム専門Vtuber"
    ],
    "titles": [
-    "【マビノギモバイル】弓使い→司祭に転職しました！！【にじさんじ / 樋口楓】",
-    "【マビノギモバイル】ダンバートン鯖でギルドを立てる！！！！！！！！【NEXON】【マビモバ】",
-    "【マビノギ】取引所産最強ウマ購入できた！！”クロスボウLv62～”たまにAION2「マビノギモバイル」リセマラは多分ない攻略配信【NEXON】【マビモバ】"
+    "【Cyan Heart】自撮り視点で展開するホラゲ",
+    "【ホラー】自撮り視点で探索していくホラーゲームが新鮮で不思議。「Cyan Heart」【Akino】",
+    "【新作発売】自撮り視点！？で進む探索ホラー『Cyan Heart』【Steam】"
+   ],
+   "genres": [
+    "Puzzle",
+    "Adventure",
+    "Indie"
+   ],
+   "year": 2026,
+   "platforms": [
+    "pc"
+   ],
+   "days_seen": 0,
+   "last_seen": null,
+   "first_here": true
+  },
+  {
+   "game": "空の軌跡 the 1st",
+   "growth": 3.75,
+   "videos": 3,
+   "base": 0.0,
+   "channels": 3,
+   "views": 10569,
+   "who": [
+    "えふお Games",
+    "ゆみめろCh. ゆみるメロン",
+    "時羽しう / tokiha shiu"
+   ],
+   "titles": [
+    "【軌跡シリーズ】来年はどっち！？ 界の軌跡Ⅱ・空の軌跡 the3rd【Trails series】",
+    "【完全初見🔰】1st 2ndクリア後、物語の原点へ───。【空の軌跡FC】＃２",
+    "【空の軌跡 the 2st】# 01┊大号泣の結末から覚悟の旅へ/シリーズ完全初見【時羽しう/ゆにれいど！】※ネタバレ注意"
    ],
    "genres": [],
    "year": null,
    "platforms": [],
-   "days_seen": 3,
+   "days_seen": 7,
    "last_seen": "2026-10-09",
    "first_here": false
   }
