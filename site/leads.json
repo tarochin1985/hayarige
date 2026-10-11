@@ -1,6 +1,6 @@
 {
- "date": "2026-10-11",
- "generated": "2026-10-11 12:28",
+ "date": "2026-10-12",
+ "generated": "2026-10-12 01:18",
  "leads": {
   "events": [
    {
@@ -8,6 +8,7 @@
     "channels": [
      "Ao WuWu Ch.【V4Mirai】",
      "Mimoza Ch. 華咲みもざ",
+     "おなつのにびたし / Onatsu no Nibitashi",
      "くにくんOfficial",
      "どぅんどぅくどぅんどぅんどぅん",
      "なるる / naruru",
@@ -24,12 +25,13 @@
    {
     "tag": "#ゲーム実況",
     "channels": [
-     "CHECHE GAME【顔出し初見ゲーム実況】",
      "M家の休日マサ",
      "Usagi Ch. 因幡兎",
-     "儚視まちこVTuber Hakanashi Matiko",
+     "えりんぎ Games",
+     "ジョアだよ",
      "太刀ひろし　【Uncle gamer】 ",
      "恋因ロス KoinRosu",
+     "星埜きぃ -Key Hoshino-",
      "豚咲あおい_TomisakiAoi",
      "里城はな",
      "雛乃ぴぴ / Hinano pipi"
@@ -38,14 +40,13 @@
    {
     "tag": "#ホロドリ",
     "channels": [
-     "AZKi Channel",
      "Flare Ch. 不知火フレア",
      "Iroha ch. 風真いろは - holoX -",
-     "Lui ch. 鷹嶺ルイ - holoX -",
-     "Ririka Ch. 一条莉々華 ‐ ReGLOSS",
+     "Riona Ch. 響咲リオナ - FLOW GLOW",
      "Roboco Ch. - ロボ子",
-     "Towa Ch. 常闇トワ",
      "Vivi Ch. 綺々羅々ヴィヴィ - FLOW GLOW",
+     "ここっとスクエア【ここスク】",
+     "もう一度だけVTuberやってもいい? 🅥",
      "アキロゼCh。Vtuber/ホロライブ所属"
     ]
    },
@@ -53,20 +54,28 @@
     "tag": "#ストグラ",
     "channels": [
      "Tenten Ch. / 鳳玲天々",
+     "marunnn【まるーんチャンネル】",
      "たけぉ",
      "ましゃかりさん",
-     "みつき",
      "ノビーの遊び部屋",
-     "影。/かげまる",
      "柚原いづみ / Izumi Channel 【ななしいんく】"
+    ]
+   },
+   {
+    "tag": "#ホロ鯖ARK",
+    "channels": [
+     "Koyori ch. 博衣こより - holoX -",
+     "Miko Ch. さくらみこ",
+     "Nene Ch.桃鈴ねね",
+     "Pekora Ch. 兎田ぺこら",
+     "Towa Ch. 常闇トワ"
     ]
    },
    {
     "tag": "#ストグラSeason2",
     "channels": [
      "たけぉ",
-     "天羽よつは",
-     "影。/かげまる",
+     "にーとちゃん",
      "暁月ホタル AKATSUKI HOTARU",
      "柚原いづみ / Izumi Channel 【ななしいんく】"
     ]
@@ -77,25 +86,16 @@
      "かおりんご(44歳児)",
      "なつめやみや / Natsume Yamiya",
      "ぺれ",
-     "もみじビーム",
      "知性派天使ちゃんねる【神眼みや / KamigaMiya】"
     ]
    },
    {
-    "tag": "#ホロARK",
+    "tag": "#レトロゲーム",
     "channels": [
-     "Iroha ch. 風真いろは - holoX -",
-     "Miko Ch. さくらみこ",
-     "Vivi Ch. 綺々羅々ヴィヴィ - FLOW GLOW",
-     "アキロゼCh。Vtuber/ホロライブ所属"
-    ]
-   },
-   {
-    "tag": "#初見さん大歓迎",
-    "channels": [
-     "KORIN.鈴ノ音コリン",
-     "儚視まちこVTuber Hakanashi Matiko",
-     "紺月らぎ -Koduki ragi-"
+     "ロッキー先生",
+     "草蔦みかん / Kusatsuta Mikan",
+     "里城はな",
+     "雛乃ぴぴ / Hinano pipi"
     ]
    }
   ],
@@ -103,56 +103,48 @@
   "wide": [
    {
     "game": "Apex Legends",
-    "channels": 34,
-    "videos": 36
+    "channels": 35,
+    "videos": 40
+   },
+   {
+    "game": "ストリートファイター6",
+    "channels": 32,
+    "videos": 38
    },
    {
     "game": "Grand Theft Auto V",
-    "channels": 31,
-    "videos": 34
+    "channels": 32,
+    "videos": 39
    },
    {
     "game": "Minecraft",
     "channels": 28,
-    "videos": 30
-   },
-   {
-    "game": "モンスターストライク",
-    "channels": 18,
-    "videos": 25
-   },
-   {
-    "game": "ストリートファイター6",
-    "channels": 20,
-    "videos": 24
-   },
-   {
-    "game": "hololive Dreams",
-    "channels": 16,
-    "videos": 16
+    "videos": 29
    },
    {
     "game": "フォートナイト",
-    "channels": 13,
-    "videos": 18
+    "channels": 16,
+    "videos": 23
    },
    {
     "game": "VALORANT",
-    "channels": 14,
+    "channels": 15,
+    "videos": 17
+   },
+   {
+    "game": "モンスターストライク",
+    "channels": 13,
+    "videos": 16
+   },
+   {
+    "game": "雀魂",
+    "channels": 15,
     "videos": 16
    }
   ]
  },
  "drift": [],
- "tags": [
-  {
-   "tag": "ホロドリ",
-   "game": "hololive Dreams",
-   "evidence": 8,
-   "added": 1,
-   "channels": 9
-  }
- ],
+ "tags": [],
  "misses": [
   {
    "word": "original",
@@ -203,11 +195,6 @@
    "n": 4,
    "examples": [
     {
-     "t": "【星の翼】てきとー固定でパラパラしたい【星之翼/Starward】【東和正】",
-     "c": "東和正 / AzumaKazumasa",
-     "u": "https://www.youtube.com/watch?v=-BF_zVqAsFo"
-    },
-    {
      "t": "【星の翼】最後の低コスト枠をランスロット・ハルカ・エミカ・レミエル・パラスあたりが取り合ってるランクマ【星之翼/Starward】【東和正】",
      "c": "東和正 / AzumaKazumasa",
      "u": "https://www.youtube.com/watch?v=XUXXwubhOsQ"
@@ -216,6 +203,11 @@
      "t": "【星の翼】SAC予選も始まるので今週の勝率見つつ今の強キャラや環境について色々考察！【星之翼/Starward】",
      "c": "東和正 / AzumaKazumasa",
      "u": "https://www.youtube.com/watch?v=DPHbS0C15AQ"
+    },
+    {
+     "t": "【星の翼】近距離戦の読み合いに負けない方法？強さは加点方式？初中級者向けの質問回答まとめ【星之翼/Starward】",
+     "c": "東和正 / AzumaKazumasa",
+     "u": "https://www.youtube.com/watch?v=3fyWnIrfDXE"
     }
    ],
    "kind": "near",
@@ -299,22 +291,6 @@
    ]
   },
   {
-   "word": "Goonect",
-   "channels": 1,
-   "n": 1,
-   "examples": [
-    {
-     "t": "【Goonect】同僚警察官が手を繋ぎながら一緒にゴールを目指す！【竜煌ニズナ/鳩乃はろん/#新人VTuber】",
-     "c": "鳩乃はろん / Hatono Haron / 新人VTuber",
-     "u": "https://www.youtube.com/watch?v=MQviCIETNtc"
-    }
-   ],
-   "kind": "near",
-   "suggest": [
-    "Goonect 2"
-   ]
-  },
-  {
    "word": "MIMESIS",
    "channels": 1,
    "n": 1,
@@ -331,9 +307,97 @@
    ]
   },
   {
+   "word": "Goonect",
+   "channels": 1,
+   "n": 1,
+   "examples": [
+    {
+     "t": "【Goonect】同僚警察官が手を繋ぎながら一緒にゴールを目指す！【竜煌ニズナ/鳩乃はろん/#新人VTuber】",
+     "c": "鳩乃はろん / Hatono Haron / 新人VTuber",
+     "u": "https://www.youtube.com/watch?v=MQviCIETNtc"
+    }
+   ],
+   "kind": "near",
+   "suggest": [
+    "Goonect 2"
+   ]
+  },
+  {
+   "word": "LTK",
+   "channels": 8,
+   "n": 24,
+   "examples": [
+    {
+     "t": "【LoL #LTK】一緒にJGを練習せい ~LTK CORE JGの道はあるか~【Alpha Azur/UltraLMTM】",
+     "c": "Alpha Azur - UltraLMTM",
+     "u": "https://www.youtube.com/watch?v=pKf84rvWxvw"
+    },
+    {
+     "t": "【#LTK】LTKに向けてそろQする【 ぶいすぽっ！ / 千燈ゆうひ 】",
+     "c": "千燈ゆうひ",
+     "u": "https://www.youtube.com/watch?v=rbZo9UB7G74"
+    },
+    {
+     "t": "【#LTK】LTKに向けてそろQする【 ぶいすぽっ！ / 千燈ゆうひ 】",
+     "c": "千燈ゆうひ",
+     "u": "https://www.youtube.com/watch?v=rbZo9UB7G74"
+    }
+   ],
+   "kind": "wide",
+   "suggest": []
+  },
+  {
+   "word": "#ホロ鯖ARK",
+   "channels": 6,
+   "n": 16,
+   "examples": [
+    {
+     "t": "【#ホロ鯖ARK】DAY1🦖きｔらああああああああああああああああああああ！！！【ホロライブ/兎田ぺこら】",
+     "c": "Pekora Ch. 兎田ぺこら",
+     "u": "https://www.youtube.com/watch?v=tqzLShTKJkk"
+    },
+    {
+     "t": "【#ホロ鯖ARK】DAY1🦖きｔらああああああああああああああああああああ！！！【ホロライブ/兎田ぺこら】",
+     "c": "Pekora Ch. 兎田ぺこら",
+     "u": "https://www.youtube.com/watch?v=tqzLShTKJkk"
+    },
+    {
+     "t": "【#ホロ鯖ARK】DAY2🦖きｔらああああああああああああああああああああ！！！【ホロライブ/兎田ぺこら】",
+     "c": "Pekora Ch. 兎田ぺこら",
+     "u": "https://www.youtube.com/watch?v=UjdcDg3mPnY"
+    }
+   ],
+   "kind": "wide",
+   "suggest": []
+  },
+  {
+   "word": "スター・ウォーズ：ギャラクティック・レーサー",
+   "channels": 5,
+   "n": 6,
+   "examples": [
+    {
+     "t": "【本日発売】やるしかない。『スター・ウォーズ：ギャラクティック・レーサー』初見プレイ 【PS5/Xbox/Steam】",
+     "c": "くろろじちゃんねる",
+     "u": "https://www.youtube.com/watch?v=rECTszfUq3k"
+    },
+    {
+     "t": "【 スター・ウォーズ：ギャラクティック・レーサー 】▷1 目指せ銀河最速、スター・ウォーズゲームサーガの記録を塗り替えた高評価作【 夢咲刻夜Vliver 】",
+     "c": "夢咲 刻夜-Tokiya Yumesaki",
+     "u": "https://www.youtube.com/watch?v=HRcHRc1PE7c"
+    },
+    {
+     "t": "【スター・ウォーズ】24年ぶり新作レースゲーム！ゲームとしては神だがレース屋には賛否両論な理由 [スター・ウォーズ：ギャラクティック・レーサー][Game Impression]",
+     "c": "[GFnR] ギョフノリ eMotorsports Club - WRC世界5位が選ぶレースゲーム",
+     "u": "https://www.youtube.com/watch?v=_9D0lEvlAGs"
+    }
+   ],
+   "kind": "wide",
+   "suggest": []
+  },
+  {
    "word": "#ホロARK",
    "channels": 4,
-   "n": 16,
+   "n": 18,
    "examples": [
     {
      "t": "【#ホロARK】ARKホロ鯖きちゃああああああああああああ！？【ホロライブ/さくらみこ】",
@@ -349,30 +413,6 @@
      "t": "【 #ホロARK 】DAY1│MAPはラグナロク！1か月間まったり生活！？【ホロライブ/アキロゼ】",
      "c": "アキロゼCh。Vtuber/ホロライブ所属",
      "u": "https://www.youtube.com/watch?v=k9SsOQrUGCc"
-    }
-   ],
-   "kind": "wide",
-   "suggest": []
-  },
-  {
-   "word": "#LTK",
-   "channels": 4,
-   "n": 11,
-   "examples": [
-    {
-     "t": "【#LTK】LTKに向けてそろQする【 ぶいすぽっ！ / 千燈ゆうひ 】",
-     "c": "千燈ゆうひ",
-     "u": "https://www.youtube.com/watch?v=rbZo9UB7G74"
-    },
-    {
-     "t": "【#LTK】LTKに向けてそろQする【 ぶいすぽっ！ / 千燈ゆうひ 】",
-     "c": "千燈ゆうひ",
-     "u": "https://www.youtube.com/watch?v=rbZo9UB7G74"
-    },
-    {
-     "t": "【LoL #LTK】一緒にJGを練習せい ~LTK CORE JGの道はあるか~【Alpha Azur/UltraLMTM】",
-     "c": "Alpha Azur - UltraLMTM",
-     "u": "https://www.youtube.com/watch?v=pKf84rvWxvw"
     }
    ],
    "kind": "wide",
@@ -403,30 +443,6 @@
    "suggest": []
   },
   {
-   "word": "スター・ウォーズ：ギャラクティック・レーサー",
-   "channels": 4,
-   "n": 4,
-   "examples": [
-    {
-     "t": "【本日発売】やるしかない。『スター・ウォーズ：ギャラクティック・レーサー』初見プレイ 【PS5/Xbox/Steam】",
-     "c": "くろろじちゃんねる",
-     "u": "https://www.youtube.com/watch?v=rECTszfUq3k"
-    },
-    {
-     "t": "【 スター・ウォーズ：ギャラクティック・レーサー 】▷1 目指せ銀河最速、スター・ウォーズゲームサーガの記録を塗り替えた高評価作【 夢咲刻夜Vliver 】",
-     "c": "夢咲 刻夜-Tokiya Yumesaki",
-     "u": "https://www.youtube.com/watch?v=HRcHRc1PE7c"
-    },
-    {
-     "t": "【スター・ウォーズ】24年ぶり新作レースゲーム！ゲームとしては神だがレース屋には賛否両論な理由 [スター・ウォーズ：ギャラクティック・レーサー][Game Impression]",
-     "c": "[GFnR] ギョフノリ eMotorsports Club - WRC世界5位が選ぶレースゲーム",
-     "u": "https://www.youtube.com/watch?v=_9D0lEvlAGs"
-    }
-   ],
-   "kind": "wide",
-   "suggest": []
-  },
-  {
    "word": "#ポケモン",
    "channels": 3,
    "n": 14,
@@ -451,15 +467,34 @@
    "suggest": []
   },
   {
-   "word": "eFootball2027",
+   "word": "#デュエプレ",
    "channels": 3,
-   "n": 7,
+   "n": 6,
    "examples": [
     {
-     "t": "【神回】無料配布限定EPICカントナガチャ3アカウント合計100連神引きチャレンジ【eFootball2027/イーフト2027アプリ】フリット ライカールト バステン 育成解説 ベイル",
-     "c": "ドラゴンアローの部室",
-     "u": "https://www.youtube.com/watch?v=T3z0Z3LS9Os"
+     "t": "【 #デュエプレ 】第37弾「虹帝∞命動」を開封‼【にじさんじ/加賀美ハヤト】",
+     "c": "加賀美 ハヤト/Hayato Kagami",
+     "u": "https://www.youtube.com/watch?v=PiDiwaookgk"
     },
+    {
+     "t": "【 #デュエプレ 】第37弾「虹帝∞命動」を開封‼【にじさんじ/加賀美ハヤト】",
+     "c": "加賀美 ハヤト/Hayato Kagami",
+     "u": "https://www.youtube.com/watch?v=PiDiwaookgk"
+    },
+    {
+     "t": "【デュエプレ】第37弾「虹帝∞命動」　～天門！天門！天門！～【榊ネス/にじさんじ】",
+     "c": "榊ネス / Sakaki Ness【にじさんじ】",
+     "u": "https://www.youtube.com/watch?v=eES6gHnublI"
+    }
+   ],
+   "kind": "wide",
+   "suggest": []
+  },
+  {
+   "word": "eFootball2027",
+   "channels": 3,
+   "n": 6,
+   "examples": [
     {
      "t": "史上最強EPICカカ搭載ラリーガEPICガチャ神引きチャレンジ【eFootball2027/イーフト2027アプリ】フリット ラリーガエピックガチャ 育成解説 ベイル",
      "c": "ドラゴンアローの部室",
@@ -469,30 +504,11 @@
      "t": "弱いと言われてるグティがDiv2で活躍できなければ放出。【eFootball2027】",
      "c": "極限リミットTV※高岡",
      "u": "https://www.youtube.com/watch?v=kYOxzVeQxJ0"
-    }
-   ],
-   "kind": "wide",
-   "suggest": []
-  },
-  {
-   "word": "#ホロ鯖ARK",
-   "channels": 3,
-   "n": 7,
-   "examples": [
-    {
-     "t": "【#ホロ鯖ARK】DAY1🦖きｔらああああああああああああああああああああ！！！【ホロライブ/兎田ぺこら】",
-     "c": "Pekora Ch. 兎田ぺこら",
-     "u": "https://www.youtube.com/watch?v=tqzLShTKJkk"
     },
     {
-     "t": "【#ホロ鯖ARK】DAY1🦖きｔらああああああああああああああああああああ！！！【ホロライブ/兎田ぺこら】",
-     "c": "Pekora Ch. 兎田ぺこら",
-     "u": "https://www.youtube.com/watch?v=tqzLShTKJkk"
-    },
-    {
-     "t": "【#ホロ鯖ARK】DAY2🦖きｔらああああああああああああああああああああ！！！【ホロライブ/兎田ぺこら】",
-     "c": "Pekora Ch. 兎田ぺこら",
-     "u": "https://www.youtube.com/watch?v=UjdcDg3mPnY"
+     "t": "【超絶神回】史上最強EPICマルセロ＆ペペガチャ無課金コイン最高の神引きチャレンジ【eFootball2027/イーフト2027アプリ】 ラリーガエピックガチャ 育成解説 ベイル",
+     "c": "ドラゴンアローの部室",
+     "u": "https://www.youtube.com/watch?v=97FGYueflQo"
     }
    ],
    "kind": "wide",
@@ -547,24 +563,48 @@
    "suggest": []
   },
   {
-   "word": "#デュエプレ",
+   "word": "遊戯王",
+   "channels": 3,
+   "n": 5,
+   "examples": [
+    {
+     "t": "MANGA-STYLEカードだけのデッキで原作再現デュエル！【遊戯王】",
+     "c": "あまくだり",
+     "u": "https://www.youtube.com/watch?v=uU3-UBGmMhY"
+    },
+    {
+     "t": "攻撃の無力化、26年ぶりリメイクで神を呼ぶ魔法カードに進化！！【遊戯王】",
+     "c": "あまくだり",
+     "u": "https://www.youtube.com/watch?v=z2CSFnyB-IM"
+    },
+    {
+     "t": "手札から飛んでくる「神の宣告」！？新手札誘発「災禍の根絶者」で時代が変わるか！？【遊戯王】",
+     "c": "あまくだり",
+     "u": "https://www.youtube.com/watch?v=cb11mzFobww"
+    }
+   ],
+   "kind": "wide",
+   "suggest": []
+  },
+  {
+   "word": "告知あり",
    "channels": 3,
    "n": 4,
    "examples": [
     {
-     "t": "【 #デュエプレ 】第37弾「虹帝∞命動」を開封‼【にじさんじ/加賀美ハヤト】",
-     "c": "加賀美 ハヤト/Hayato Kagami",
-     "u": "https://www.youtube.com/watch?v=PiDiwaookgk"
+     "t": "【カウントダウン】俺、誕生‼️【告知あり】",
+     "c": "Rieru Ch. 我部りえる /あおぎり高校",
+     "u": "https://www.youtube.com/watch?v=N5sED82PS48"
     },
     {
-     "t": "【 #デュエプレ 】第37弾「虹帝∞命動」を開封‼【にじさんじ/加賀美ハヤト】",
-     "c": "加賀美 ハヤト/Hayato Kagami",
-     "u": "https://www.youtube.com/watch?v=PiDiwaookgk"
+     "t": "【実写】我部りえる生誕祭2026🎂✨️ お祝いするよ～‼️【告知あり】",
+     "c": "Rieru Ch. 我部りえる /あおぎり高校",
+     "u": "https://www.youtube.com/watch?v=XUFbYxnuVbw"
     },
     {
-     "t": "【デュエプレ】第37弾「虹帝∞命動」　～天門！天門！天門！～【榊ネス/にじさんじ】",
-     "c": "榊ネス / Sakaki Ness【にじさんじ】",
-     "u": "https://www.youtube.com/watch?v=eES6gHnublI"
+     "t": "【告知あり】動画投稿はすこし遅れます。【雑談】",
+     "c": "サメビーバーりょう",
+     "u": "https://www.youtube.com/watch?v=Vbx5m6j1pdk"
     }
    ],
    "kind": "wide",
@@ -665,27 +705,85 @@
    ],
    "kind": "wide",
    "suggest": []
+  },
+  {
+   "word": "闇鍋人狼",
+   "channels": 3,
+   "n": 3,
+   "examples": [
+    {
+     "t": "【 闇鍋人狼 】食材混ぜ混ぜ人狼するななよ with 小々波いるか,男虎,塚原大地【 Rei7 / にじさんじ 】",
+     "c": "Rei7【にじさんじ】",
+     "u": "https://www.youtube.com/watch?v=o-kgBtPsclU"
+    },
+    {
+     "t": "【闇鍋人狼】人狼？闇鍋？やろうや【 にじさんじ / 男虎】",
+     "c": "男虎 / Ono Tora【にじさんじ】",
+     "u": "https://www.youtube.com/watch?v=zC9PSkhVjNA"
+    },
+    {
+     "t": "【 闇鍋人狼 】この中に1人、鍋を失敗させようと企んでいる人がいます【 にじさんじ  / 小々波いるか 】",
+     "c": "小々波いるか / Kokonami Iruka【にじさんじ】",
+     "u": "https://www.youtube.com/watch?v=Sk259hHfcMs"
+    }
+   ],
+   "kind": "wide",
+   "suggest": []
   }
  ],
  "miss_days": 7,
  "hot_facts": [
   {
-   "game": "ARC Raiders",
-   "growth": 5.0,
-   "videos": 4,
-   "base": 0.4,
-   "channels": 3,
-   "views": 95900,
+   "game": "都市伝説解体センター",
+   "growth": 6.67,
+   "videos": 6,
+   "base": 0.9,
+   "channels": 5,
+   "views": 108341,
    "who": [
-    "渋谷ハル",
-    "YamatoN",
-    "YamatoN",
-    "ぬるぬる"
+    "おんりー / ドズル社",
+    "花畑チャイカ",
+    "おんりー / ドズル社",
+    "緑青くれは / Kureha Channel【ななしいんく】",
+    "椿 くおん -Tsubaki Kuon-"
    ],
    "titles": [
-    "【ARC Raiders】こく兄さん、BijuさんとFrozen Trail アップデート記念PR配信 　#PR",
-    "【ARC Raiders】5カ月ぶりに復帰したら、内容が変わりすぎてARC Raiders2になってた",
-    "【ARC Raiders】過去最大アプデがきた！"
+    "【都市伝説解体センター】インタカネッツリテラセーって知ってる??? #3 →マイクラ",
+    "花畑チャイカと都市伝説解体センター第二話 鏡に「中の世界」なんてありませんよ…ファンタジーやメルヘンじゃあないんですから 解体院！ ネタバレ注意",
+    "【都市伝説解体センター】にんげんがいっちゃん怖いんだから #4"
+   ],
+   "genres": [
+    "Puzzle",
+    "Adventure",
+    "Visual Novel"
+   ],
+   "year": null,
+   "platforms": [
+    "pc",
+    "console"
+   ],
+   "days_seen": 11,
+   "last_seen": "2026-10-11",
+   "first_here": false
+  },
+  {
+   "game": "ARC Raiders",
+   "growth": 6.0,
+   "videos": 6,
+   "base": 1.0,
+   "channels": 5,
+   "views": 94745,
+   "who": [
+    "sasatikk",
+    "YamatoN",
+    "異形の地母神エキドナ",
+    "Alpha Azur - UltraLMTM",
+    "YamatoN"
+   ],
+   "titles": [
+    "盛り沢山の大型パッチ到来!!心機一転セルフワイプで新要素を確認するSasatikk【ARC Raiders】",
+    "【ARC Raiders】過去最大アプデがきた！",
+    "【ARC Raiders】新MAPが来ようがステラ・モンタナスに魂を引き寄せられる男【PvPvE】【アークレイダース】"
    ],
    "genres": [
     "Shooter"
@@ -695,27 +793,61 @@
     "pc",
     "console"
    ],
-   "days_seen": 2,
-   "last_seen": "2026-10-10",
+   "days_seen": 3,
+   "last_seen": "2026-10-11",
+   "first_here": false
+  },
+  {
+   "game": "ドラゴンクエストV",
+   "growth": 5.0,
+   "videos": 6,
+   "base": 1.2,
+   "channels": 6,
+   "views": 412635,
+   "who": [
+    "笹木咲 / Sasaki Saku",
+    "Patra Channel / 周防パトラ",
+    "葛籠おり / Tsuzura Ori",
+    "夢咲ひぽぽ / Yumesaki Hipopo",
+    "ユウナのゆ♨️ / Yuuna"
+   ],
+   "titles": [
+    "ドラクエV┊︎完全初見！ドラゴンクエスト５クリア後の世界いくやよ！ ※ネタバレあり",
+    "【ドラクエV】嫁捜索！はじめてのドラゴンクエストV 天空の花嫁をやってみる！DragonQuestⅤ【周防パトラ】",
+    "【SFC版ドラクエ5】モンスター人生縛りDQ5！天空の城を目指して！人間がPTにいるの大変だあ🔴8【葛籠おり/すたすぺ所属┆ドラゴンクエスト5天空の花嫁/スーファミ】"
+   ],
+   "genres": [
+    "Racing",
+    "Role-playing (RPG)",
+    "Turn-based strategy (TBS)",
+    "Adventure"
+   ],
+   "year": null,
+   "platforms": [
+    "console"
+   ],
+   "days_seen": 20,
+   "last_seen": "2026-10-11",
    "first_here": false
   },
   {
    "game": "Silver Pines",
    "growth": 5.0,
    "videos": 4,
-   "base": 0.6,
+   "base": 0.8,
    "channels": 4,
-   "views": 20308,
+   "views": 26141,
    "who": [
     "キャシーさんはホラーゲームで遊びたい",
-    "ほとんどホラーゲーム実況ですが何か?",
     "LamNot",
-    "うにか"
+    "ほとんどホラーゲーム実況ですが何か?",
+    "キャシーさんはホラーゲームで遊びたい",
+    "LamNot"
    ],
    "titles": [
     "【ホラー】#2 行方不明の男と事件の関係は？贖罪の鍵を握る秘密を暴くため「悪夢のような恐怖」に立ち向かうサバイバルホラーゲーム『 Silver Pines 』【Vキャシー/Vtuber】実況",
-    "#2【Silver Pines】懐中電灯で行動範囲拡大…！保安官事務所に隠された秘密と待ち受ける新たな恐怖【サバイバルホラーゲーム】",
-    "Silver Pines【ホラー】今年絶対遊ぶべきホラーゲームついに発売！裏世界からさらに異世界!?過去の記憶が混在する謎世界 #3"
+    "Silver Pines【ホラー】今年絶対遊ぶべきホラーゲームついに発売！裏世界からさらに異世界!?過去の記憶が混在する謎世界 #3",
+    "#3【Silver Pines】何かが臭う…！過去の憎悪に満ちたユニオンアパートが最悪の場所だった【サバイバルホラーゲーム シルバーパインズ】"
    ],
    "genres": [
     "Adventure",
@@ -726,119 +858,58 @@
     "pc",
     "console"
    ],
-   "days_seen": 2,
-   "last_seen": "2026-10-10",
-   "first_here": false
-  },
-  {
-   "game": "Japanese Ramen Simulator",
-   "growth": 3.93,
-   "videos": 11,
-   "base": 2.8,
-   "channels": 11,
-   "views": 307929,
-   "who": [
-    "加賀美 ハヤト/Hayato Kagami",
-    "但野リス / Tadano Risu",
-    "皇れお / Sumeragi Reo【にじさんじ】",
-    "ろじゃすぶらざーず",
-    "ぽんすけ"
-   ],
-   "titles": [
-    "【Japanese Ramen Simulator】　麺の覇道を歩むもの　＃１【にじさんじ/加賀美ハヤト】",
-    "開店！2人でラーメン屋を経営することになりました！！【Japanese Ramen Simulator】with そらびび",
-    "【 Japanese Ramen Simulator 】ニンニクどうされますか！？ w / すぷれあ × えりぶり【 皇れお  / にじさんじ 】"
-   ],
-   "genres": [
-    "Simulator",
-    "Indie"
-   ],
-   "year": null,
-   "platforms": [
-    "pc"
-   ],
-   "days_seen": 13,
-   "last_seen": "2026-10-10",
+   "days_seen": 3,
+   "last_seen": "2026-10-11",
    "first_here": false
   },
   {
    "game": "ペルソナ5 ザ・ロイヤル",
-   "growth": 3.75,
-   "videos": 3,
-   "base": 0.8,
-   "channels": 3,
-   "views": 175231,
+   "growth": 4.0,
+   "videos": 4,
+   "base": 1.0,
+   "channels": 4,
+   "views": 301626,
    "who": [
-    "リゼ・ヘルエスタ -Lize Helesta-",
-    "なつめやみや / Natsume Yamiya",
-    "椎名唯華 / Shiina Yuika"
+    "猫汰つな / Nekota Tsuna",
+    "椎名唯華 / Shiina Yuika",
+    "くまのりんご Kumano Ringo",
+    "羽渦ミウネル -Miuneru Haneuzu-"
    ],
    "titles": [
-    "【P5R/ペルソナ5 ザ・ロイヤル】奪え、その意志で。【にじさんじ/リゼ・ヘルエスタ】※ネタバレ注意",
-    "#03 【 P5R 】初見プレイ￤いなかもんには乗り換えがキツい【 ゲーム実況 】",
-    "#25【 P5R 】人生初のペルソナ🎩！完全初見で『ペルソナ5 ザ・ロイヤル』やるぞおおおおおおおお※ネタバレあり【 椎名唯華/にじさんじ】"
+    "【ペルソナ５ ザ・ロイヤル】#１ 完全初見！やるよおおおお　※ネタバレ注意【ぶいすぽ / 猫汰つな】",
+    "#25【 P5R 】人生初のペルソナ🎩！完全初見で『ペルソナ5 ザ・ロイヤル』やるぞおおおおおおおお※ネタバレあり【 椎名唯華/にじさんじ】",
+    "【ペルソナ5 ザ・ロイヤル】完全初見！11/6～運命の時か！？ニイジマパレス…いくぞ！「P5R」を初見プレイ！【くまのりんご/女性実況】※ネタバレ注意"
    ],
    "genres": [],
    "year": null,
    "platforms": [],
-   "days_seen": 22,
-   "last_seen": "2026-10-10",
+   "days_seen": 23,
+   "last_seen": "2026-10-11",
    "first_here": false
   },
   {
-   "game": "ファイナルファンタジーVI",
-   "growth": 3.75,
-   "videos": 3,
-   "base": 0.3,
+   "game": "ウマ娘 プリティーダービー",
+   "growth": 4.0,
+   "videos": 4,
+   "base": 1.0,
    "channels": 3,
-   "views": 32603,
+   "views": 18075,
    "who": [
-    "ゲームに恋する女子チャンネル♡",
-    "いなちゃんネル",
-    "恋因ロス KoinRosu"
+    "フミ/にじさんじ",
+    "れも / LemoCh.",
+    "れも / LemoCh.",
+    "椿 くおん -Tsubaki Kuon-"
    ],
    "titles": [
-    "【初見】スーファミ実機でファイナルファンタジーVIを2人プレイで楽しく遊ぶ！女性実況 攻略ライブ配信Part6スクウェアの名作JRPG！FF6【レトロゲーム】",
-    "その６【初見ドット絵RPG巡り】世界崩壊ケフカ神【４５作目：ファイナルファンタジーⅥ】",
-    "【 FINAL FANTASY VI #7 】FF6続き！世界が崩壊した！仲間たちは！？これから世界はどうなる！？【 FF6 ネタバレあり #ゲーム実況 #新人vtuber #恋因ロス 】"
+    "【ウマ娘プリティーダービー】新衣装ルドルフガチャ🎊 ５年ぶりの ｶｲﾁｮｰ新衣装💚イベスト読むオタク【 にじさんじフミ 】",
+    "【ウマ娘】行き過ぎた愛で衣装考察ショート動画まとめ16連発②【未公開あり】 #ウマ娘 #フサイチパンドラ #シュヴァルグラン #ファレノプシス",
+    "【ウマ娘】大事なお知らせあり！！ファレノプシスの本育成始めていく～！生配信！【れも】"
    ],
    "genres": [],
    "year": null,
    "platforms": [],
-   "days_seen": 11,
-   "last_seen": "2026-10-03",
-   "first_here": false
-  },
-  {
-   "game": "ドラゴンズドグマ 2:ダークアリズン",
-   "growth": 3.33,
-   "videos": 10,
-   "base": 3.0,
-   "channels": 10,
-   "views": 190276,
-   "who": [
-    "おついちTube",
-    "茶々茶(chachacha)",
-    "皆で一緒にモンハンライフ",
-    "孵卵リリス / Furan Lilith",
-    "皆で一緒にモンハンライフ"
-   ],
-   "titles": [
-    "【ドラゴンズドグマ2：ダークアリズン】#2🐲いざポーンと共にノルガンの地へ！【おついちTube】",
-    "【ラスボス戦】トロコン覚者がノルガンへ！エンディングまでストーリー攻略を目指す初見プレイ【ドラゴンズドグマ2 ダークアリズン】※ネタバレ注意",
-    "#2　神ゲーの予感がするドラゴンズドグマ 2：ダークアリズン 3時間～"
-   ],
-   "genres": [
-    "Role-playing (RPG)",
-    "Adventure"
-   ],
-   "year": 2026,
-   "platforms": [
-    "pc",
-    "console"
-   ],
-   "days_seen": 3,
-   "last_seen": "2026-10-10",
+   "days_seen": 18,
+   "last_seen": "2026-10-11",
    "first_here": false
   }
  ],

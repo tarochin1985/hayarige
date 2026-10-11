@@ -319,7 +319,9 @@
  },
  {
   "name": "13 Playing Cards of Demon",
-  "alias": [],
+  "alias": [
+   "13PlayingCardsOfDemon.exe"
+  ],
   "pop": 0,
   "y": 2026,
   "p": [
@@ -7881,6 +7883,22 @@
   ]
  },
  {
+  "name": "Brick by Brick: Tidy Up the Small Town!",
+  "alias": [
+   "Brick by Brick"
+  ],
+  "pop": 0,
+  "y": 2026,
+  "p": [
+   "pc"
+  ],
+  "g": [
+   "Puzzle",
+   "Simulator",
+   "Indie"
+  ]
+ },
+ {
   "name": "Brightfall",
   "alias": [],
   "pop": 0,
@@ -15318,6 +15336,21 @@
   ]
  },
  {
+  "name": "Defenders of Cinderkeep",
+  "alias": [],
+  "pop": 0,
+  "y": 2026,
+  "p": [
+   "pc"
+  ],
+  "g": [
+   "Role-playing (RPG)",
+   "Simulator",
+   "Adventure",
+   "Indie"
+  ]
+ },
+ {
   "name": "Deg",
   "alias": [
    "DEG"
@@ -18515,7 +18548,9 @@
  },
  {
   "name": "Dub Rumble",
-  "alias": [],
+  "alias": [
+   "Dub Rumble.exe"
+  ],
   "pop": 0,
   "y": 2026,
   "p": [
@@ -18657,6 +18692,22 @@
   "p": [
    "pc",
    "console"
+  ]
+ },
+ {
+  "name": "Dumpling Delight",
+  "alias": [
+   "Knödel-Freude"
+  ],
+  "pop": 0,
+  "y": 2026,
+  "p": [
+   "pc"
+  ],
+  "g": [
+   "Puzzle",
+   "Strategy",
+   "Indie"
   ]
  },
  {
@@ -22669,6 +22720,10 @@
   "p": [
    "pc",
    "console"
+  ],
+  "g": [
+   "Puzzle",
+   "Strategy"
   ]
  },
  {
@@ -27130,7 +27185,7 @@
    "Halloween",
    "start_protected_game.exe"
   ],
-  "pop": 6,
+  "pop": 7,
   "y": 2026,
   "p": [
    "pc",
@@ -36317,7 +36372,9 @@
  },
  {
   "name": "Medieval Squad Tactics",
-  "alias": [],
+  "alias": [
+   "game.exe"
+  ],
   "pop": 0,
   "y": 2026,
   "p": [
@@ -38112,7 +38169,9 @@
  },
  {
   "name": "Moonbringer",
-  "alias": [],
+  "alias": [
+   "Moonbringer.exe"
+  ],
   "pop": 0,
   "y": 2026,
   "p": [
@@ -41720,6 +41779,21 @@
   ],
   "g": [
    "Simulator"
+  ]
+ },
+ {
+  "name": "One More Floor",
+  "alias": [
+   "OneMoreFloor.exe"
+  ],
+  "pop": 0,
+  "y": 2026,
+  "p": [
+   "pc"
+  ],
+  "g": [
+   "Role-playing (RPG)",
+   "Indie"
   ]
  },
  {
@@ -45695,7 +45769,9 @@
  },
  {
   "name": "Potions Tidy",
-  "alias": [],
+  "alias": [
+   "PotionsTidy.exe"
+  ],
   "pop": 0,
   "y": 2026,
   "p": [
@@ -46048,19 +46124,6 @@
    "Simulator",
    "Sport",
    "Strategy"
-  ]
- },
- {
-  "name": "ProTax 98",
-  "alias": [],
-  "pop": 0,
-  "y": 2026,
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Puzzle",
-   "Adventure"
   ]
  },
  {
@@ -48446,7 +48509,9 @@
  },
  {
   "name": "Restart Zero",
-  "alias": [],
+  "alias": [
+   "restart_zero.exe"
+  ],
   "pop": 0,
   "y": 2026,
   "p": [
@@ -48729,21 +48794,6 @@
   ],
   "g": [
    "Simulator",
-   "Indie"
-  ]
- },
- {
-  "name": "Rich Flavors",
-  "alias": [],
-  "pop": 0,
-  "y": 2026,
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Point-and-click",
-   "Role-playing (RPG)",
-   "Adventure",
    "Indie"
   ]
  },
@@ -49562,20 +49612,6 @@
    "pc"
   ],
   "g": [
-   "Indie"
-  ]
- },
- {
-  "name": "Rotten Chamber",
-  "alias": [],
-  "pop": 0,
-  "y": 2026,
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Puzzle",
-   "Strategy",
    "Indie"
   ]
  },
@@ -52354,15 +52390,6 @@
   ]
  },
  {
-  "name": "Silent Raid",
-  "alias": [],
-  "pop": 0,
-  "y": 2026,
-  "p": [
-   "console"
-  ]
- },
- {
   "name": "Silent Wounds: The Doll",
   "alias": [],
   "pop": 0,
@@ -52431,6 +52458,21 @@
   "g": [
    "Strategy",
    "Adventure",
+   "Indie"
+  ]
+ },
+ {
+  "name": "Silly Potato: Home-Run Edition",
+  "alias": [
+   "SillyPotato.exe"
+  ],
+  "pop": 0,
+  "y": 2026,
+  "p": [
+   "pc"
+  ],
+  "g": [
+   "Sport",
    "Indie"
   ]
  },
@@ -57359,7 +57401,8 @@
  {
   "name": "SystemCrash92",
   "alias": [
-   "SYSTEMCRASH92"
+   "SYSTEMCRASH92",
+   "SYSTEMCRASH92.exe"
   ],
   "pop": 0,
   "y": 2026,
@@ -58726,6 +58769,7 @@
  {
   "name": "The Bird of the North",
   "alias": [
+   "BOTN_win.exe",
    "The bird of the North"
   ],
   "pop": 0,
@@ -61819,7 +61863,8 @@
   "pop": 0,
   "y": 2026,
   "p": [
-   "pc"
+   "pc",
+   "console"
   ],
   "g": [
    "Strategy",
@@ -63481,6 +63526,21 @@
   ]
  },
  {
+  "name": "Towermouth",
+  "alias": [
+   "TOWERMOUTH"
+  ],
+  "pop": 0,
+  "y": 2026,
+  "p": [
+   "pc"
+  ],
+  "g": [
+   "Shooter",
+   "Indie"
+  ]
+ },
+ {
   "name": "Town Diggers",
   "alias": [],
   "pop": 0,
@@ -63989,19 +64049,6 @@
    "Puzzle",
    "Strategy",
    "Adventure",
-   "Indie"
-  ]
- },
- {
-  "name": "Trigonometric Equations",
-  "alias": [],
-  "pop": 0,
-  "y": 2026,
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Music",
    "Indie"
   ]
  },
@@ -65401,20 +65448,6 @@
   ]
  },
  {
-  "name": "Vampire Survivors: Legacy of the Bloodmoon",
-  "alias": [],
-  "pop": 0,
-  "y": 2026,
-  "p": [
-   "pc",
-   "console"
-  ],
-  "g": [
-   "Role-playing (RPG)",
-   "Indie"
-  ]
- },
- {
   "name": "Vampires Die",
   "alias": [],
   "pop": 0,
@@ -66674,22 +66707,6 @@
   ],
   "g": [
    "Simulator"
-  ]
- },
- {
-  "name": "Warota: I Live Next to The Demon King's Castle LOL",
-  "alias": [],
-  "pop": 0,
-  "y": 2026,
-  "p": [
-   "pc",
-   "console"
-  ],
-  "g": [
-   "Role-playing (RPG)",
-   "Simulator",
-   "Adventure",
-   "Indie"
   ]
  },
  {
@@ -68066,7 +68083,9 @@
  },
  {
   "name": "Within",
-  "alias": [],
+  "alias": [
+   "Within.exe"
+  ],
   "pop": 0,
   "y": 2026,
   "p": [
@@ -68547,7 +68566,9 @@
  },
  {
   "name": "Worm in Village",
-  "alias": [],
+  "alias": [
+   "wormvillage.exe"
+  ],
   "pop": 0,
   "y": 2026,
   "p": [
