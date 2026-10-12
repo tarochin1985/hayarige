@@ -990,18 +990,6 @@
   ]
  },
  {
-  "name": "A-01's Voyage.Logs",
-  "alias": [],
-  "pop": 0,
-  "y": 2026,
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Indie"
-  ]
- },
- {
   "name": "AE: Archeological Expedition",
   "alias": [
    "Archeological Emergency"
@@ -1397,6 +1385,11 @@
   "y": 2026,
   "p": [
    "pc"
+  ],
+  "g": [
+   "Strategy",
+   "Indie",
+   "Card & Board Game"
   ]
  },
  {
@@ -6338,6 +6331,7 @@
   ],
   "g": [
    "Shooter",
+   "Indie",
    "Arcade"
   ]
  },
@@ -11527,6 +11521,23 @@
   ]
  },
  {
+  "name": "Cold Aisle: Data Center Tycoon",
+  "alias": [
+   "COLD AISLE: Data Center Tycoon",
+   "ColdAisleDataCenterTycoon.exe"
+  ],
+  "pop": 0,
+  "y": 2026,
+  "p": [
+   "pc"
+  ],
+  "g": [
+   "Simulator",
+   "Strategy",
+   "Indie"
+  ]
+ },
+ {
   "name": "Collapsed Horizon",
   "alias": [],
   "pop": 0,
@@ -11568,7 +11579,9 @@
  },
  {
   "name": "Colorbound",
-  "alias": [],
+  "alias": [
+   "Colorbound.exe"
+  ],
   "pop": 0,
   "y": 2026,
   "p": [
@@ -11911,7 +11924,9 @@
  },
  {
   "name": "Contract Cooks",
-  "alias": [],
+  "alias": [
+   "ContractCooks.exe"
+  ],
   "pop": 0,
   "y": 2026,
   "p": [
@@ -14175,6 +14190,21 @@
   ]
  },
  {
+  "name": "Daily War Online",
+  "alias": [
+   "dailywar.exe"
+  ],
+  "pop": 0,
+  "y": 2026,
+  "p": [
+   "pc"
+  ],
+  "g": [
+   "Strategy",
+   "Turn-based strategy (TBS)"
+  ]
+ },
+ {
   "name": "Daisy's Dead",
   "alias": [],
   "pop": 0,
@@ -15005,6 +15035,19 @@
   ]
  },
  {
+  "name": "Deathly Delights",
+  "alias": [],
+  "pop": 0,
+  "y": 2026,
+  "p": [
+   "pc"
+  ],
+  "g": [
+   "Adventure",
+   "Indie"
+  ]
+ },
+ {
   "name": "Debt of Life",
   "alias": [],
   "pop": 0,
@@ -15013,6 +15056,7 @@
    "pc"
   ],
   "g": [
+   "Simulator",
    "Adventure",
    "Indie"
   ]
@@ -15988,7 +16032,9 @@
  },
  {
   "name": "Desire's Burgers",
-  "alias": [],
+  "alias": [
+   "DesiresBurgers.exe"
+  ],
   "pop": 0,
   "y": 2026,
   "p": [
@@ -26718,6 +26764,21 @@
   ]
  },
  {
+  "name": "Grimoire of Blanks",
+  "alias": [],
+  "pop": 0,
+  "y": 2026,
+  "p": [
+   "pc"
+  ],
+  "g": [
+   "Strategy",
+   "Turn-based strategy (TBS)",
+   "Indie",
+   "Card & Board Game"
+  ]
+ },
+ {
   "name": "Grinville",
   "alias": [
    "Spleezy Park"
@@ -27884,21 +27945,6 @@
   ]
  },
  {
-  "name": "Hell Apartment",
-  "alias": [
-   "hell-apartment.exe"
-  ],
-  "pop": 0,
-  "y": 2026,
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Adventure",
-   "Indie"
-  ]
- },
- {
   "name": "Hell Of War: Combined Arms",
   "alias": [
    "HellOfWar.exe"
@@ -28453,6 +28499,19 @@
   "g": [
    "Puzzle",
    "Adventure"
+  ]
+ },
+ {
+  "name": "Hoard",
+  "alias": [],
+  "pop": 0,
+  "y": 2026,
+  "p": [
+   "pc"
+  ],
+  "g": [
+   "Simulator",
+   "Indie"
   ]
  },
  {
@@ -29481,7 +29540,9 @@
  },
  {
   "name": "Hyperfight 2",
-  "alias": [],
+  "alias": [
+   "HYPERFIGHT 2.exe"
+  ],
   "pop": 0,
   "y": 2026,
   "p": [
@@ -33262,6 +33323,21 @@
   ]
  },
  {
+  "name": "Last Round at the End of the World",
+  "alias": [
+   "Last Round.exe"
+  ],
+  "pop": 0,
+  "y": 2026,
+  "p": [
+   "pc"
+  ],
+  "g": [
+   "Role-playing (RPG)",
+   "Indie"
+  ]
+ },
+ {
   "name": "Last Term, First Love",
   "alias": [
    "LastTermFirstLove.exe"
@@ -34765,20 +34841,6 @@
   ]
  },
  {
-  "name": "Lost Hopes: Day of Betrayal",
-  "alias": [],
-  "pop": 0,
-  "y": 2026,
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Simulator",
-   "Adventure",
-   "Indie"
-  ]
- },
- {
   "name": "Lost Host",
   "alias": [],
   "pop": 0,
@@ -36131,7 +36193,7 @@
   "alias": [
    "Wolverine"
   ],
-  "pop": 45,
+  "pop": 46,
   "y": 2026,
   "p": [
    "console"
@@ -38292,7 +38354,9 @@
  },
  {
   "name": "Moonfrost",
-  "alias": [],
+  "alias": [
+   "Moonfrost.exe"
+  ],
   "pop": 0,
   "y": 2026,
   "p": [
@@ -41796,20 +41860,6 @@
   ]
  },
  {
-  "name": "On the Rocks",
-  "alias": [],
-  "pop": 0,
-  "y": 2026,
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Simulator",
-   "Adventure",
-   "Indie"
-  ]
- },
- {
   "name": "Once Before Us",
   "alias": [],
   "pop": 0,
@@ -43621,15 +43671,6 @@
    "Role-playing (RPG)",
    "Simulator",
    "Indie"
-  ]
- },
- {
-  "name": "Pathos",
-  "alias": [],
-  "pop": 0,
-  "y": 2026,
-  "p": [
-   "pc"
   ]
  },
  {
@@ -57642,19 +57683,6 @@
   ]
  },
  {
-  "name": "Take Us North",
-  "alias": [],
-  "pop": 0,
-  "y": 2026,
-  "p": [
-   "pc",
-   "console"
-  ],
-  "g": [
-   "Adventure"
-  ]
- },
- {
   "name": "Takeover 2",
   "alias": [],
   "pop": 0,
@@ -60022,15 +60050,6 @@
   ]
  },
  {
-  "name": "The Idolmaster: Shiny Colors - Itsuka Kaze ga Yamu Sono Hi made",
-  "alias": [],
-  "pop": 0,
-  "y": 2026,
-  "g": [
-   "Visual Novel"
-  ]
- },
- {
   "name": "The Industrial Council",
   "alias": [],
   "pop": 0,
@@ -61867,7 +61886,7 @@
   "alias": [
    "The Witcher 3 Remastered"
   ],
-  "pop": 16,
+  "pop": 17,
   "y": 2026,
   "p": [
    "pc",
@@ -63114,7 +63133,8 @@
   "pop": 0,
   "y": 2026,
   "p": [
-   "pc"
+   "pc",
+   "console"
   ],
   "g": [
    "Adventure",
@@ -64819,6 +64839,19 @@
   ]
  },
  {
+  "name": "UnderMire",
+  "alias": [],
+  "pop": 0,
+  "y": 2026,
+  "p": [
+   "pc"
+  ],
+  "g": [
+   "Adventure",
+   "Indie"
+  ]
+ },
+ {
   "name": "Undergone: Before",
   "alias": [],
   "pop": 0,
@@ -65234,18 +65267,6 @@
   "g": [
    "Simulator",
    "Indie"
-  ]
- },
- {
-  "name": "Usual June",
-  "alias": [],
-  "pop": 0,
-  "y": 2026,
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Hack and slash/Beat 'em up"
   ]
  },
  {
@@ -65961,7 +65982,9 @@
  },
  {
   "name": "Vicarius",
-  "alias": [],
+  "alias": [
+   "Vicarius.exe"
+  ],
   "pop": 0,
   "y": 2026,
   "p": [
@@ -66460,6 +66483,19 @@
   "alias": [
    "WANDERSTATE"
   ],
+  "pop": 0,
+  "y": 2026,
+  "p": [
+   "pc"
+  ],
+  "g": [
+   "Adventure",
+   "Indie"
+  ]
+ },
+ {
+  "name": "Want a Bomb?",
+  "alias": [],
   "pop": 0,
   "y": 2026,
   "p": [

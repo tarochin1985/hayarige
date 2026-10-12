@@ -1,11 +1,12 @@
 {
  "date": "2026-10-13",
- "generated": "2026-10-13 02:11",
+ "generated": "2026-10-13 04:43",
  "leads": {
   "events": [
    {
     "tag": "#SURGECity",
     "channels": [
+     "Ao WuWu Ch.【V4Mirai】",
      "Mimoza Ch. 華咲みもざ",
      "くにくんOfficial",
      "どぅんどぅくどぅんどぅんどぅん",
@@ -13,56 +14,147 @@
      "はちぴ",
      "やよい",
      "史門 / Shimon ",
+     "姫崎クト -himesaki kuto-",
+     "柚原いづみ / Izumi Channel 【ななしいんく】",
      "碧輝りお /Aoki Rio",
+     "蛇宵ティア / Tier Channel【ななしいんく】",
      "貴様まさか🦈",
-     "赤彩みあ / Akairo Mia Ch.【すずみあ】"
+     "赤彩みあ / Akairo Mia Ch.【すずみあ】",
+     "銀灰まお Mao Ch.",
+     "闇乃あびす / Abyss"
     ]
    },
    {
-    "tag": "#ホロARK",
+    "tag": "#ゲーム実況",
     "channels": [
+     "M家の休日マサ",
+     "Usagi Ch. 因幡兎",
+     "ジョアだよ",
+     "太刀ひろし　【Uncle gamer】 ",
+     "恋因ロス KoinRosu",
+     "星埜きぃ -Key Hoshino-",
+     "豚咲あおい_TomisakiAoi"
+    ]
+   },
+   {
+    "tag": "#ホロ鯖ARK",
+    "channels": [
+     "Koyori ch. 博衣こより - holoX -",
+     "Miko Ch. さくらみこ",
+     "Nene Ch.桃鈴ねね",
+     "Pekora Ch. 兎田ぺこら",
+     "Towa Ch. 常闇トワ",
+     "アキロゼCh。Vtuber/ホロライブ所属",
+     "フブキCh。白上フブキ"
+    ]
+   },
+   {
+    "tag": "#ホロドリ",
+    "channels": [
+     "AZKi Channel",
      "Iroha ch. 風真いろは - holoX -",
+     "Riona Ch. 響咲リオナ - FLOW GLOW",
+     "Roboco Ch. - ロボ子",
      "Vivi Ch. 綺々羅々ヴィヴィ - FLOW GLOW",
-     "アキロゼCh。Vtuber/ホロライブ所属"
+     "アキロゼCh。Vtuber/ホロライブ所属",
+     "宵吸あけル / Yokyu Akeru"
+    ]
+   },
+   {
+    "tag": "#わちゃサバ",
+    "channels": [
+     "ノビーの遊び部屋",
+     "天羽よつは",
+     "小花衣 ももみ / Momomi Kohanai",
+     "影。/かげまる"
+    ]
+   },
+   {
+    "tag": "#スポソン歌枠リレー",
+    "channels": [
+     "Rica Ch. / 花宮莉歌",
+     "獅子神レオナ/レオナちゃんねる",
+     "神楽すず"
+    ]
+   },
+   {
+    "tag": "#鳴潮朝月会",
+    "channels": [
+     "ノーラ Nora ch",
+     "夜魅ちゃんねる",
+     "式神やしろ"
+    ]
+   },
+   {
+    "tag": "#vsinger",
+    "channels": [
+     "ちよみch. 千代浦蝶美 /あおぎり高校",
+     "アイリナ・ゼファリオ【StellArt.】",
+     "葛ノ葉鈴撫　-Kuzunoha suzunade- Ch"
     ]
    }
   ],
   "newcomers": [],
   "wide": [
    {
+    "game": "Apex Legends",
+    "channels": 39,
+    "videos": 42
+   },
+   {
+    "game": "ストリートファイター6",
+    "channels": 31,
+    "videos": 36
+   },
+   {
+    "game": "Minecraft",
+    "channels": 29,
+    "videos": 30
+   },
+   {
     "game": "Grand Theft Auto V",
+    "channels": 25,
+    "videos": 28
+   },
+   {
+    "game": "VALORANT",
+    "channels": 20,
+    "videos": 22
+   },
+   {
+    "game": "Japanese Ramen Simulator",
+    "channels": 19,
+    "videos": 20
+   },
+   {
+    "game": "ドラゴンズドグマ 2:ダークアリズン",
     "channels": 16,
     "videos": 18
    },
    {
-    "game": "Apex Legends",
-    "channels": 13,
-    "videos": 14
-   },
-   {
-    "game": "ストリートファイター6",
-    "channels": 8,
-    "videos": 8
-   },
-   {
-    "game": "ドラゴンズドグマ 2:ダークアリズン",
-    "channels": 5,
-    "videos": 5
-   },
-   {
-    "game": "VALORANT",
-    "channels": 4,
-    "videos": 4
-   },
-   {
-    "game": "Minecraft",
-    "channels": 5,
-    "videos": 6
+    "game": "フォートナイト",
+    "channels": 14,
+    "videos": 17
    }
   ]
  },
  "drift": [],
- "tags": [],
+ "tags": [
+  {
+   "tag": "わちゃサバ",
+   "game": "Minecraft",
+   "evidence": 3,
+   "added": 2,
+   "channels": 4
+  },
+  {
+   "tag": "鳴潮朝月会",
+   "game": "鳴潮",
+   "evidence": 3,
+   "added": 1,
+   "channels": 3
+  }
+ ],
  "misses": [
   {
    "word": "original",
@@ -108,9 +200,51 @@
    ]
   },
   {
+   "word": "MIMESIS",
+   "channels": 2,
+   "n": 2,
+   "examples": [
+    {
+     "t": "【四次会】若干ホラーなミメシスで絶叫と大爆笑が止まらくなる関優太達【MIMESIS】",
+     "c": "関優太",
+     "u": "https://www.youtube.com/watch?v=JVy7ZtVMu50"
+    },
+    {
+     "t": "今日も真面目に偽MSSPを見抜け！協力ホラーサバイバルを4人でプレイ！【MIMESIS】",
+     "c": "M.S.S Project ライブ",
+     "u": "https://www.youtube.com/watch?v=EumYhptE1yk"
+    }
+   ],
+   "kind": "near",
+   "suggest": [
+    "Mimesis Online"
+   ]
+  },
+  {
+   "word": "Ratatan🎶",
+   "channels": 2,
+   "n": 2,
+   "examples": [
+    {
+     "t": "【#ラタタン #Ratatan🎶】正式サービス開始おめでと🎉視聴者マルチ参加型🎶【ネタバレ注意 】",
+     "c": "ゆるふわまったり勢のゆかりさん",
+     "u": "https://www.youtube.com/watch?v=EbAV5Bc9tOM"
+    },
+    {
+     "t": "#PR【 #Ratatan #ラタタン】朝活🌞おはよ！正式リリース待ってた！【狐森ろべ／VTuber】",
+     "c": "狐森ろべ / Komori Ch.",
+     "u": "https://www.youtube.com/watch?v=meDnBHR5O2k"
+    }
+   ],
+   "kind": "near",
+   "suggest": [
+    "Ratatan: Digital Deluxe Edition"
+   ]
+  },
+  {
    "word": "Starward",
    "channels": 1,
-   "n": 4,
+   "n": 5,
    "examples": [
     {
      "t": "【星の翼】最後の低コスト枠をランスロット・ハルカ・エミカ・レミエル・パラスあたりが取り合ってるランクマ【星之翼/Starward】【東和正】",
@@ -209,22 +343,6 @@
    ]
   },
   {
-   "word": "MIMESIS",
-   "channels": 1,
-   "n": 1,
-   "examples": [
-    {
-     "t": "【四次会】若干ホラーなミメシスで絶叫と大爆笑が止まらくなる関優太達【MIMESIS】",
-     "c": "関優太",
-     "u": "https://www.youtube.com/watch?v=JVy7ZtVMu50"
-    }
-   ],
-   "kind": "near",
-   "suggest": [
-    "Mimesis Online"
-   ]
-  },
-  {
    "word": "Goonect",
    "channels": 1,
    "n": 1,
@@ -241,9 +359,42 @@
    ]
   },
   {
+   "word": "DinoBones",
+   "channels": 1,
+   "n": 1,
+   "examples": [
+    {
+     "t": "【DinoBones】　2000個の恐竜の骨を組み立てて化石を復元するぞ！！　【八神ツクモ／ネオポルテ】",
+     "c": "八神ツクモ / Yagami Tsukumo",
+     "u": "https://www.youtube.com/watch?v=NZotbrJ1ewI"
+    }
+   ],
+   "kind": "near",
+   "suggest": [
+    "DinoBones: Tidy Up the Museum"
+   ]
+  },
+  {
+   "word": "FANTASY WORLD",
+   "channels": 1,
+   "n": 1,
+   "examples": [
+    {
+     "t": "【#ファンワ 】初見プレイ～魔王の想いと真実と～￤PR【FANTASY WORLD】",
+     "c": "ゆるふわまったり勢のゆかりさん",
+     "u": "https://www.youtube.com/watch?v=-KSSAqibhx8"
+    }
+   ],
+   "kind": "near",
+   "suggest": [
+    "Fantasy World Dizzy",
+    "Fantasy World Manager"
+   ]
+  },
+  {
    "word": "LTK",
-   "channels": 9,
-   "n": 25,
+   "channels": 11,
+   "n": 34,
    "examples": [
     {
      "t": "【LoL #LTK】一緒にJGを練習せい ~LTK CORE JGの道はあるか~【Alpha Azur/UltraLMTM】",
@@ -266,8 +417,8 @@
   },
   {
    "word": "#ホロ鯖ARK",
-   "channels": 6,
-   "n": 17,
+   "channels": 8,
+   "n": 33,
    "examples": [
     {
      "t": "【#ホロ鯖ARK】DAY1🦖きｔらああああああああああああああああああああ！！！【ホロライブ/兎田ぺこら】",
@@ -291,7 +442,7 @@
   {
    "word": "スター・ウォーズ：ギャラクティック・レーサー",
    "channels": 5,
-   "n": 7,
+   "n": 6,
    "examples": [
     {
      "t": "【本日発売】やるしかない。『スター・ウォーズ：ギャラクティック・レーサー』初見プレイ 【PS5/Xbox/Steam】",
@@ -313,24 +464,48 @@
    "suggest": []
   },
   {
+   "word": "この家には４人しか住んでいません",
+   "channels": 5,
+   "n": 5,
+   "examples": [
+    {
+     "t": "意味がわかったら怖すぎるゲーム「この家には４人しか住んでいません」がヤバい。実況プレイ",
+     "c": "もこうの実況",
+     "u": "https://www.youtube.com/watch?v=BZzQRm-yodY"
+    },
+    {
+     "t": "「4人しか住んでいない家」にいる5人目の「だれか」を見つけるホラーゲーム【 この家には4人しか住んでいません 】",
+     "c": "ピロ",
+     "u": "https://www.youtube.com/watch?v=309krOW7BOU"
+    },
+    {
+     "t": "「この家には4人しか住んでいません」を先輩とやる【琵琶ちゃぷ】",
+     "c": "【琵琶ちゃぷ】なな湖なな湖",
+     "u": "https://www.youtube.com/watch?v=R2jQts14LfE"
+    }
+   ],
+   "kind": "wide",
+   "suggest": []
+  },
+  {
    "word": "#ホロARK",
    "channels": 4,
    "n": 20,
    "examples": [
     {
-     "t": "【 #ホロARK 】DAY1│MAPはラグナロク！1か月間まったり生活！？【ホロライブ/アキロゼ】",
-     "c": "アキロゼCh。Vtuber/ホロライブ所属",
-     "u": "https://www.youtube.com/watch?v=k9SsOQrUGCc"
-    },
-    {
-     "t": "【 #ホロARK 】DAY1│MAPはラグナロク！1か月間まったり生活！？【ホロライブ/アキロゼ】",
-     "c": "アキロゼCh。Vtuber/ホロライブ所属",
-     "u": "https://www.youtube.com/watch?v=k9SsOQrUGCc"
+     "t": "【#ホロARK】ARKホロ鯖きちゃああああああああああああ！？【ホロライブ/さくらみこ】",
+     "c": "Miko Ch. さくらみこ",
+     "u": "https://www.youtube.com/watch?v=y-8p5lgHGG0"
     },
     {
      "t": "【#ホロARK】ARKホロ鯖きちゃああああああああああああ！？【ホロライブ/さくらみこ】",
      "c": "Miko Ch. さくらみこ",
      "u": "https://www.youtube.com/watch?v=y-8p5lgHGG0"
+    },
+    {
+     "t": "【 #ホロARK 】DAY1│MAPはラグナロク！1か月間まったり生活！？【ホロライブ/アキロゼ】",
+     "c": "アキロゼCh。Vtuber/ホロライブ所属",
+     "u": "https://www.youtube.com/watch?v=k9SsOQrUGCc"
     }
    ],
    "kind": "wide",
@@ -339,7 +514,7 @@
   {
    "word": "バイオハザード",
    "channels": 4,
-   "n": 4,
+   "n": 5,
    "examples": [
     {
      "t": "【映画紹介】映画『バイオハザード』最新作レビュー！！《現代ホラー界の鬼才》ザック・クレッガー監督に特別インタビューしてきた！",
@@ -385,6 +560,30 @@
    "suggest": []
   },
   {
+   "word": "遊戯王",
+   "channels": 3,
+   "n": 6,
+   "examples": [
+    {
+     "t": "MANGA-STYLEカードだけのデッキで原作再現デュエル！【遊戯王】",
+     "c": "あまくだり",
+     "u": "https://www.youtube.com/watch?v=uU3-UBGmMhY"
+    },
+    {
+     "t": "攻撃の無力化、26年ぶりリメイクで神を呼ぶ魔法カードに進化！！【遊戯王】",
+     "c": "あまくだり",
+     "u": "https://www.youtube.com/watch?v=z2CSFnyB-IM"
+    },
+    {
+     "t": "手札から飛んでくる「神の宣告」！？新手札誘発「災禍の根絶者」で時代が変わるか！？【遊戯王】",
+     "c": "あまくだり",
+     "u": "https://www.youtube.com/watch?v=cb11mzFobww"
+    }
+   ],
+   "kind": "wide",
+   "suggest": []
+  },
+  {
    "word": "#あおぎりゆうぎり歌枠リレー",
    "channels": 3,
    "n": 6,
@@ -409,24 +608,72 @@
    "suggest": []
   },
   {
-   "word": "遊戯王",
+   "word": "#スポソン歌枠リレー",
+   "channels": 3,
+   "n": 6,
+   "examples": [
+    {
+     "t": "【#スポソン歌枠リレー】秋だ！歌はスポーツ！熱いスポーツソング歌うよ！🏀【#花宮莉歌】",
+     "c": "Rica Ch. / 花宮莉歌",
+     "u": "https://www.youtube.com/watch?v=hwgvbEylBT8"
+    },
+    {
+     "t": "【#スポソン歌枠リレー】秋だ！歌はスポーツ！熱いスポーツソング歌うよ！🏀【#花宮莉歌】",
+     "c": "Rica Ch. / 花宮莉歌",
+     "u": "https://www.youtube.com/watch?v=hwgvbEylBT8"
+    },
+    {
+     "t": "【 #スポソン歌枠リレー】スポーツの秋！歌の秋！【 獅子神レオナ┆Re:AcT】",
+     "c": "獅子神レオナ/レオナちゃんねる",
+     "u": "https://www.youtube.com/watch?v=ZspC9F4T6Lc"
+    }
+   ],
+   "kind": "wide",
+   "suggest": []
+  },
+  {
+   "word": "#インボキア",
+   "channels": 3,
+   "n": 6,
+   "examples": [
+    {
+     "t": "【#インボキア】呪いのダイスゲーム開催！！！！【ホロライブ/白上フブキ】",
+     "c": "フブキCh。白上フブキ",
+     "u": "https://www.youtube.com/watch?v=jYaN2U7Lx_4"
+    },
+    {
+     "t": "【#インボキア】呪いのダイスゲーム開催！！！！【ホロライブ/白上フブキ】",
+     "c": "フブキCh。白上フブキ",
+     "u": "https://www.youtube.com/watch?v=jYaN2U7Lx_4"
+    },
+    {
+     "t": "【#インボキア】こわこわなボドゲ・・・？【ホロライブ/夏色まつり】",
+     "c": "Matsuri Channel 夏色まつり",
+     "u": "https://www.youtube.com/watch?v=p56RdgclIB4"
+    }
+   ],
+   "kind": "wide",
+   "suggest": []
+  },
+  {
+   "word": "プロスピ2026",
    "channels": 3,
    "n": 5,
    "examples": [
     {
-     "t": "MANGA-STYLEカードだけのデッキで原作再現デュエル！【遊戯王】",
-     "c": "あまくだり",
-     "u": "https://www.youtube.com/watch?v=uU3-UBGmMhY"
+     "t": "ついにミート以外全て99の究極の選手に！最高のシーズンへ... ミート1縛りでプロに挑戦する物語#13【プロスピ2026】【アカgames】",
+     "c": "アカgames",
+     "u": "https://www.youtube.com/watch?v=EtOYlVAuWJs"
     },
     {
-     "t": "攻撃の無力化、26年ぶりリメイクで神を呼ぶ魔法カードに進化！！【遊戯王】",
-     "c": "あまくだり",
-     "u": "https://www.youtube.com/watch?v=z2CSFnyB-IM"
+     "t": "助っ人捕手が大活躍！ 2年目にして早くも優勝なるか... 中日ドラゴンズを日本一に導くペナント#2【プロスピ2026】【アカgames】",
+     "c": "アカgames",
+     "u": "https://www.youtube.com/watch?v=8ts91LfaVrg"
     },
     {
-     "t": "手札から飛んでくる「神の宣告」！？新手札誘発「災禍の根絶者」で時代が変わるか！？【遊戯王】",
-     "c": "あまくだり",
-     "u": "https://www.youtube.com/watch?v=cb11mzFobww"
+     "t": "【大量修正】10/8アプデ紹介！顔モデル修正で多くの選手が激似に…【プロスピ2026】",
+     "c": "きんつば【ゆっくりパワスピ】",
+     "u": "https://www.youtube.com/watch?v=mbik4pVMooI"
     }
    ],
    "kind": "wide",
@@ -529,30 +776,6 @@
    "suggest": []
   },
   {
-   "word": "この家には４人しか住んでいません",
-   "channels": 3,
-   "n": 3,
-   "examples": [
-    {
-     "t": "意味がわかったら怖すぎるゲーム「この家には４人しか住んでいません」がヤバい。実況プレイ",
-     "c": "もこうの実況",
-     "u": "https://www.youtube.com/watch?v=BZzQRm-yodY"
-    },
-    {
-     "t": "「4人しか住んでいない家」にいる5人目の「だれか」を見つけるホラーゲーム【 この家には4人しか住んでいません 】",
-     "c": "ピロ",
-     "u": "https://www.youtube.com/watch?v=309krOW7BOU"
-    },
-    {
-     "t": "「この家には4人しか住んでいません」を先輩とやる【琵琶ちゃぷ】",
-     "c": "【琵琶ちゃぷ】なな湖なな湖",
-     "u": "https://www.youtube.com/watch?v=R2jQts14LfE"
-    }
-   ],
-   "kind": "wide",
-   "suggest": []
-  },
-  {
    "word": "闇鍋人狼",
    "channels": 3,
    "n": 3,
@@ -578,7 +801,187 @@
   }
  ],
  "miss_days": 7,
- "hot_facts": [],
+ "hot_facts": [
+  {
+   "game": "Big Walk",
+   "growth": 6.25,
+   "videos": 5,
+   "base": 0.7,
+   "channels": 5,
+   "views": 113944,
+   "who": [
+    "アルス・アルマル -ars almal- 【にじさんじ】",
+    "夜見れな/yorumi rena【にじさんじ所属】",
+    "葉山舞鈴 / Ohayama Ch.",
+    "おなつのにびたし / Onatsu no Nibitashi",
+    "ロウひなんゲーミング"
+   ],
+   "titles": [
+    "#02【 Big Walk →R.E.P.O】謎解きだああ！！深夜ふれんず。【アルス・アルマル/夜見れな/葉山舞鈴/にじさんじ】",
+    "【 Big Walk 】#2 広大な世界へ！深夜ふれんずのチームワークみてみな！➡二次会R.E.P.O.【 にじさんじ / 夜見れな 】",
+    "【 Big Walk → R.E.P.O. 】クリア記念二次会 with 深夜ふれんず。（ 夜はまだ終わらない ）【 にじさんじ┊︎葉山舞鈴/アルス・アルマル/夜見れな/コラボ 】"
+   ],
+   "genres": [
+    "Platform",
+    "Puzzle",
+    "Adventure",
+    "Indie"
+   ],
+   "year": null,
+   "platforms": [
+    "pc",
+    "console"
+   ],
+   "days_seen": 19,
+   "last_seen": "2026-10-11",
+   "first_here": false
+  },
+  {
+   "game": "Japanese Ramen Simulator",
+   "growth": 4.08,
+   "videos": 20,
+   "base": 4.9,
+   "channels": 19,
+   "views": 607376,
+   "who": [
+    "石神のぞみ / Ishigami Nozomi【にじさんじ】",
+    "ドコムスチャンネル",
+    "もこうの実況",
+    "Roberu Ch. 夕刻ロベル",
+    "ひろちんくん"
+   ],
+   "titles": [
+    "【 Japanese Ramen Simulator 】ついに、開店【 にじさんじ所属 ／ 石神のぞみ 】",
+    "【生放送】ラーメン屋になるゲーム「Japanese Ramen Simulator」実況プレイ",
+    "俺の作ったラーメン黙って食え。 実況プレイ【Japanese Ramen Simulator】"
+   ],
+   "genres": [
+    "Simulator",
+    "Indie"
+   ],
+   "year": null,
+   "platforms": [
+    "pc"
+   ],
+   "days_seen": 15,
+   "last_seen": "2026-10-12",
+   "first_here": false
+  },
+  {
+   "game": "プロジェクトセカイ",
+   "growth": 4.0,
+   "videos": 6,
+   "base": 1.5,
+   "channels": 5,
+   "views": 101355,
+   "who": [
+    "翡翠はくあ【すごい自己肯定感高い奴】",
+    "翡翠はくあ【すごい自己肯定感高い奴】",
+    "ルウ【ゲーム情報局】",
+    "なのふらわー / nanoflower",
+    "なのふらわー / nanoflower"
+   ],
+   "titles": [
+    "【#プロセカ】オレの休みが終わってしまう……。やる事無いのでAP詰めor視聴者参加型配信！【#翡翠はくあ】",
+    "【#プロセカ】なんか黒魔さんの高難易度「at」追加されたらしいから初見からやる！【#翡翠はくあ】",
+    "終わらないKAITO騒動、MVの低評価数がヤバいことになっている模様【KAITO】【高橋海人】【プロジェクトセカイ】"
+   ],
+   "genres": [],
+   "year": null,
+   "platforms": [],
+   "days_seen": 16,
+   "last_seen": "2026-10-11",
+   "first_here": false
+  },
+  {
+   "game": "Dressmaker",
+   "growth": 3.75,
+   "videos": 3,
+   "base": 0.8,
+   "channels": 3,
+   "views": 130624,
+   "who": [
+    "Su Ch. 水宮枢 - FLOW GLOW",
+    "ぽみ / Pomi",
+    "鵺本ねむ / Nuemoto Nemu"
+   ],
+   "titles": [
+    "【dressmaker】Chill🩵センス◎をみせます【水宮枢／ホロライブ】",
+    "🌈💙【 DressMaker 】話題沸騰中の「ドレス作りゲーム」ものづくり大好きなので超楽しみ❣",
+    "【Dressmaker】玉留めが出来なくてもどうにかなるよネ【鵺本ねむ】"
+   ],
+   "genres": [
+    "Simulator",
+    "Indie"
+   ],
+   "year": 2026,
+   "platforms": [
+    "pc"
+   ],
+   "days_seen": 8,
+   "last_seen": "2026-10-11",
+   "first_here": false
+  },
+  {
+   "game": "Lost Judgment",
+   "growth": 3.75,
+   "videos": 3,
+   "base": 0.8,
+   "channels": 3,
+   "views": 49690,
+   "who": [
+    "本間ひまわり - Himawari Honma -",
+    "Vunny Ch",
+    "うさぼく姉妹"
+   ],
+   "titles": [
+    "#DLC ꒰LOST JUDGMENT：裁かれざる記憶꒱　海藤正治の事件簿　！　˹ 本間ひまわり にじさんじ ˼　※ネタバレあり",
+    "【#1】エペとかいう島から脱獄してキムタクが如くやるぞ！【LOST JUDGMENT】",
+    "#最終回【LOST JUDGMENT:裁かれざる記憶】初見プレイ！姉妹のロストジャッジメント！※ネタバレ注意【女性実況】"
+   ],
+   "genres": [
+    "Role-playing (RPG)",
+    "Hack and slash/Beat 'em up",
+    "Adventure"
+   ],
+   "year": null,
+   "platforms": [
+    "pc",
+    "console"
+   ],
+   "days_seen": 0,
+   "last_seen": null,
+   "first_here": true
+  },
+  {
+   "game": "リズム天国 ミラクルスターズ",
+   "growth": 3.75,
+   "videos": 3,
+   "base": 0.8,
+   "channels": 3,
+   "views": 9100,
+   "who": [
+    "心白てと / Kohaku Teto",
+    "うささのゲーム実況ch-ノベルゲームetc.-",
+    "Aoi ch."
+   ],
+   "titles": [
+    "〖 リズム天国 ミラクルスターズ 〗 リズムにのるZE⁺₊✦〖 心白てと / ネオポルテ 〗",
+    "【実況】ミス連発でお姉さんが豹変！？【リズム天国 ミラクルスターズ】Part10",
+    "【リズム天国ミラクルスターズ】玉ねぎよりムズいの見つけたかもしれない…！！ 【#葵の生放送 】"
+   ],
+   "genres": [
+    "Music"
+   ],
+   "year": null,
+   "platforms": [
+    "console"
+   ],
+   "days_seen": 17,
+   "last_seen": "2026-10-10",
+   "first_here": false
+  }
+ ],
  "notes_written": true,
  "recent_columns": [
   {
