@@ -386,19 +386,6 @@
   ]
  },
  {
-  "name": "2007",
-  "alias": [],
-  "pop": 0,
-  "y": 2026,
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Adventure",
-   "Indie"
-  ]
- },
- {
   "name": "2048 Battles: Sylvan Sirens",
   "alias": [],
   "pop": 0,
@@ -1096,23 +1083,6 @@
    "Puzzle",
    "Adventure",
    "Indie"
-  ]
- },
- {
-  "name": "Ability Roulette: Last Round Express",
-  "alias": [
-   "Ability Roulette: Game for Two",
-   "Ability Roulette - Last Round Express"
-  ],
-  "pop": 0,
-  "y": 2026,
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Strategy",
-   "Indie",
-   "Card & Board Game"
   ]
  },
  {
@@ -6736,15 +6706,17 @@
  },
  {
   "name": "Bless You Again",
-  "alias": [],
+  "alias": [
+   "天祝我也"
+  ],
   "pop": 0,
   "y": 2026,
   "p": [
    "pc"
   ],
   "g": [
-   "Shooter",
-   "Adventure",
+   "Role-playing (RPG)",
+   "Hack and slash/Beat 'em up",
    "Indie"
   ]
  },
@@ -7098,7 +7070,7 @@
  {
   "name": "Bluey's Happy Snaps",
   "alias": [],
-  "pop": 0,
+  "pop": 1,
   "y": 2026,
   "p": [
    "pc",
@@ -8820,6 +8792,22 @@
   ],
   "g": [
    "Simulator"
+  ]
+ },
+ {
+  "name": "Calmaria: Wild Growth",
+  "alias": [],
+  "pop": 0,
+  "y": 2026,
+  "p": [
+   "pc"
+  ],
+  "g": [
+   "Role-playing (RPG)",
+   "Simulator",
+   "Strategy",
+   "Adventure",
+   "Indie"
   ]
  },
  {
@@ -11114,7 +11102,7 @@
   "alias": [
    "Hellraiser.exe"
   ],
-  "pop": 0,
+  "pop": 5,
   "y": 2026,
   "p": [
    "pc",
@@ -15357,8 +15345,10 @@
   ]
  },
  {
-  "name": "Deiity",
-  "alias": [],
+  "name": "Deiity (Under Ice)",
+  "alias": [
+   "Deiity"
+  ],
   "pop": 0,
   "y": 2026,
   "p": [
@@ -15831,21 +15821,6 @@
   ]
  },
  {
-  "name": "Der Anzeigenhauptmeister",
-  "alias": [
-   "AnzeigenHauptmeister.exe"
-  ],
-  "pop": 0,
-  "y": 2026,
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Simulator",
-   "Indie"
-  ]
- },
- {
   "name": "Derail",
   "alias": [
    "DERAIL",
@@ -16239,6 +16214,17 @@
   ],
   "g": [
    "Adventure"
+  ]
+ },
+ {
+  "name": "Dibaro: CryptoHunter Dice Battle Royal",
+  "alias": [
+   "DIBARO: CryptoHunter Dice Battle Royal"
+  ],
+  "pop": 0,
+  "y": 2026,
+  "p": [
+   "pc"
   ]
  },
  {
@@ -16956,6 +16942,20 @@
   ]
  },
  {
+  "name": "Divergence: Fracture",
+  "alias": [],
+  "pop": 0,
+  "y": 2026,
+  "p": [
+   "pc"
+  ],
+  "g": [
+   "Simulator",
+   "Tactical",
+   "Indie"
+  ]
+ },
+ {
   "name": "Divided Land",
   "alias": [],
   "pop": 0,
@@ -17527,6 +17527,19 @@
    "Simulator",
    "Sport",
    "Arcade"
+  ]
+ },
+ {
+  "name": "Double Dealers",
+  "alias": [],
+  "pop": 0,
+  "y": 2026,
+  "p": [
+   "pc"
+  ],
+  "g": [
+   "Strategy",
+   "Indie"
   ]
  },
  {
@@ -22599,20 +22612,6 @@
   ]
  },
  {
-  "name": "Firefighting Simulator: Be a Hero",
-  "alias": [],
-  "pop": 0,
-  "y": 2026,
-  "p": [
-   "pc",
-   "console"
-  ],
-  "g": [
-   "Simulator",
-   "Indie"
-  ]
- },
- {
   "name": "Fireworks Incremental",
   "alias": [],
   "pop": 0,
@@ -22925,7 +22924,9 @@
  },
  {
   "name": "Flecto",
-  "alias": [],
+  "alias": [
+   "弹弹折射"
+  ],
   "pop": 0,
   "y": 2026,
   "p": [
@@ -30086,22 +30087,6 @@
   ]
  },
  {
-  "name": "In Search of Freedom",
-  "alias": [
-   "En busca de la libertad",
-   "En busca de la libertad.exe"
-  ],
-  "pop": 0,
-  "y": 2026,
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Adventure",
-   "Indie"
-  ]
- },
- {
   "name": "In Silico",
   "alias": [
    "IN SILICO"
@@ -34448,7 +34433,7 @@
   ]
  },
  {
-  "name": "Log Away - Halloween DLC",
+  "name": "Log Away: Halloween DLC",
   "alias": [],
   "pop": 0,
   "y": 2026,
@@ -39031,19 +39016,6 @@
   ]
  },
  {
-  "name": "My Helpers",
-  "alias": [],
-  "pop": 0,
-  "y": 2026,
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Simulator",
-   "Indie"
-  ]
- },
- {
   "name": "My Hero Academia: All's Justice - Playable Character Izuku Midoriya Overlay Full Style",
   "alias": [],
   "pop": 0,
@@ -41648,6 +41620,20 @@
   ]
  },
  {
+  "name": "Office Manager",
+  "alias": [],
+  "pop": 0,
+  "y": 2026,
+  "p": [
+   "pc"
+  ],
+  "g": [
+   "Simulator",
+   "Strategy",
+   "Indie"
+  ]
+ },
+ {
   "name": "Oh Ship!",
   "alias": [],
   "pop": 0,
@@ -44024,6 +44010,20 @@
   ]
  },
  {
+  "name": "Pelloche",
+  "alias": [],
+  "pop": 0,
+  "y": 2026,
+  "p": [
+   "console"
+  ],
+  "g": [
+   "Strategy",
+   "Indie",
+   "Card & Board Game"
+  ]
+ },
+ {
   "name": "Pencils Down",
   "alias": [
    "PENCILS DOWN"
@@ -44963,6 +44963,19 @@
   ]
  },
  {
+  "name": "Pixel Survivors: Defense",
+  "alias": [],
+  "pop": 0,
+  "y": 2026,
+  "p": [
+   "pc"
+  ],
+  "g": [
+   "Strategy",
+   "Indie"
+  ]
+ },
+ {
   "name": "PixelHeroScramble Plus",
   "alias": [],
   "pop": 0,
@@ -45519,6 +45532,23 @@
    "Platform",
    "Adventure",
    "Indie"
+  ]
+ },
+ {
+  "name": "Poly Fighter",
+  "alias": [
+   "PolyFighter",
+   "Poly Fighter: Roguelike Fighting Game"
+  ],
+  "pop": 0,
+  "y": 2026,
+  "p": [
+   "pc"
+  ],
+  "g": [
+   "Fighting",
+   "Indie",
+   "Arcade"
   ]
  },
  {
@@ -49507,6 +49537,18 @@
   "g": [
    "Adventure",
    "Indie"
+  ]
+ },
+ {
+  "name": "Roguefort",
+  "alias": [],
+  "pop": 0,
+  "y": 2026,
+  "p": [
+   "pc"
+  ],
+  "g": [
+   "Role-playing (RPG)"
   ]
  },
  {
@@ -55010,23 +55052,6 @@
   ],
   "g": [
    "Adventure",
-   "Indie"
-  ]
- },
- {
-  "name": "Split FPV: Drone Racing",
-  "alias": [
-   "SPLIT FPV Drone Racing.exe"
-  ],
-  "pop": 0,
-  "y": 2026,
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Racing",
-   "Simulator",
-   "Sport",
    "Indie"
   ]
  },
@@ -62974,21 +62999,6 @@
   ]
  },
  {
-  "name": "Toby's Carrot Patch",
-  "alias": [
-   "TobysCarrotPatch.exe"
-  ],
-  "pop": 0,
-  "y": 2026,
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Simulator",
-   "Indie"
-  ]
- },
- {
   "name": "TocoToco",
   "alias": [],
   "pop": 0,
@@ -69319,21 +69329,6 @@
    "pc"
   ],
   "g": [
-   "Indie"
-  ]
- },
- {
-  "name": "ZeroPrompt",
-  "alias": [],
-  "pop": 0,
-  "y": 2026,
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Point-and-click",
-   "Simulator",
-   "Strategy",
    "Indie"
   ]
  },

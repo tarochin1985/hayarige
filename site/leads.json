@@ -1,6 +1,6 @@
 {
  "date": "2026-10-13",
- "generated": "2026-10-13 09:16",
+ "generated": "2026-10-13 11:57",
  "leads": {
   "events": [
    {
@@ -18,6 +18,7 @@
      "柚原いづみ / Izumi Channel 【ななしいんく】",
      "碧輝りお /Aoki Rio",
      "蛇宵ティア / Tier Channel【ななしいんく】",
+     "貴様まさか🦈",
      "赤彩みあ / Akairo Mia Ch.【すずみあ】",
      "銀灰まお Mao Ch.",
      "闇乃あびす / Abyss"
@@ -52,7 +53,6 @@
     "channels": [
      "AZKi Channel",
      "Iroha ch. 風真いろは - holoX -",
-     "Riona Ch. 響咲リオナ - FLOW GLOW",
      "Roboco Ch. - ロボ子",
      "Vivi Ch. 綺々羅々ヴィヴィ - FLOW GLOW",
      "アキロゼCh。Vtuber/ホロライブ所属",
@@ -65,7 +65,8 @@
      "ノビーの遊び部屋",
      "天羽よつは",
      "小花衣 ももみ / Momomi Kohanai",
-     "影。/かげまる"
+     "影。/かげまる",
+     "稲荷いろはInari Iroha"
     ]
    },
    {
@@ -98,60 +99,60 @@
    {
     "game": "Apex Legends",
     "channels": 36,
-    "videos": 38
+    "videos": 40
    },
    {
     "game": "ストリートファイター6",
-    "channels": 29,
-    "videos": 31
+    "channels": 31,
+    "videos": 34
    },
    {
     "game": "Minecraft",
-    "channels": 27,
-    "videos": 28
+    "channels": 30,
+    "videos": 30
    },
    {
     "game": "Grand Theft Auto V",
-    "channels": 22,
-    "videos": 24
+    "channels": 23,
+    "videos": 26
    },
    {
-    "game": "VALORANT",
+    "game": "Japanese Ramen Simulator",
     "channels": 20,
     "videos": 20
    },
    {
-    "game": "Japanese Ramen Simulator",
-    "channels": 19,
-    "videos": 20
+    "game": "VALORANT",
+    "channels": 17,
+    "videos": 18
    },
    {
     "game": "ドラゴンズドグマ 2:ダークアリズン",
-    "channels": 15,
-    "videos": 17
+    "channels": 16,
+    "videos": 18
    },
    {
     "game": "フォートナイト",
-    "channels": 14,
-    "videos": 16
+    "channels": 13,
+    "videos": 14
    }
   ]
  },
  "drift": [],
  "tags": [
   {
+   "tag": "わちゃサバ",
+   "game": "Minecraft",
+   "evidence": 3,
+   "added": 2,
+   "channels": 5
+  },
+  {
    "tag": "鳴潮朝月会",
    "game": "鳴潮",
    "evidence": 3,
    "added": 1,
    "channels": 3
-  },
-  {
-   "tag": "わちゃサバ",
-   "game": "Minecraft",
-   "evidence": 3,
-   "added": 1,
-   "channels": 4
   }
  ],
  "misses": [
@@ -537,22 +538,22 @@
   {
    "word": "#ポケモン",
    "channels": 3,
-   "n": 14,
+   "n": 10,
    "examples": [
     {
      "t": "【#ポケモン】～朝活雑談バトルタワー1000連勝目指す～【#ポケモンエメラルド】",
      "c": "蛇目 欠番@Vtuber",
-     "u": "https://www.youtube.com/watch?v=z_EulpA4P-I"
+     "u": "https://www.youtube.com/watch?v=fS0dyp_p0gI"
     },
     {
      "t": "【#ポケモン】～朝活雑談バトルタワー1000連勝目指す～【#ポケモンエメラルド】",
      "c": "蛇目 欠番@Vtuber",
-     "u": "https://www.youtube.com/watch?v=z_EulpA4P-I"
+     "u": "https://www.youtube.com/watch?v=fS0dyp_p0gI"
     },
     {
      "t": "【#ポケモン】～朝活雑談バトルタワー1000連勝目指す～【#ポケモンエメラルド】",
      "c": "蛇目 欠番@Vtuber",
-     "u": "https://www.youtube.com/watch?v=WibVFpyJlVg"
+     "u": "https://www.youtube.com/watch?v=BdHs6L4SRyo"
     }
    ],
    "kind": "wide",
@@ -689,14 +690,14 @@
      "u": "https://www.youtube.com/watch?v=kYOxzVeQxJ0"
     },
     {
-     "t": "【超絶神回】史上最強EPICマルセロ＆ペペガチャ無課金コイン最高の神引きチャレンジ【eFootball2027/イーフト2027アプリ】 ラリーガエピックガチャ 育成解説 ベイル",
-     "c": "ドラゴンアローの部室",
-     "u": "https://www.youtube.com/watch?v=97FGYueflQo"
-    },
-    {
      "t": "【久しぶり】マルセロ出るまでガチャ引いて使う配信！ぺぺも当たったら嬉しい！【efootball2027/イーフト】",
      "c": "発狂マシンガン",
      "u": "https://www.youtube.com/watch?v=vFyxjgt9nAo"
+    },
+    {
+     "t": "【超絶神回】史上最強EPICマルセロ＆ペペガチャ無課金コイン最高の神引きチャレンジ【eFootball2027/イーフト2027アプリ】 ラリーガエピックガチャ 育成解説 ベイル",
+     "c": "ドラゴンアローの部室",
+     "u": "https://www.youtube.com/watch?v=97FGYueflQo"
     }
    ],
    "kind": "wide",
@@ -803,11 +804,11 @@
  "hot_facts": [
   {
    "game": "Big Walk",
-   "growth": 6.25,
-   "videos": 5,
+   "growth": 7.5,
+   "videos": 6,
    "base": 0.7,
-   "channels": 5,
-   "views": 113944,
+   "channels": 6,
+   "views": 265577,
    "who": [
     "アルス・アルマル -ars almal- 【にじさんじ】",
     "夜見れな/yorumi rena【にじさんじ所属】",
@@ -818,7 +819,7 @@
    "titles": [
     "#02【 Big Walk →R.E.P.O】謎解きだああ！！深夜ふれんず。【アルス・アルマル/夜見れな/葉山舞鈴/にじさんじ】",
     "【 Big Walk 】#2 広大な世界へ！深夜ふれんずのチームワークみてみな！➡二次会R.E.P.O.【 にじさんじ / 夜見れな 】",
-    "【 Big Walk → R.E.P.O. 】クリア記念二次会 with 深夜ふれんず。（ 夜はまだ終わらない ）【 にじさんじ┊︎葉山舞鈴/アルス・アルマル/夜見れな/コラボ 】"
+    "【 Big Walk → R.E.P.O. 】Big Walk クリアまで！→ 二次会 R.E.P.O. with 深夜ふれんず。【 にじさんじ┊︎葉山舞鈴/アルス・アルマル/夜見れな/コラボ 】"
    ],
    "genres": [
     "Platform",
@@ -837,11 +838,11 @@
   },
   {
    "game": "Japanese Ramen Simulator",
-   "growth": 4.08,
+   "growth": 3.92,
    "videos": 20,
-   "base": 4.9,
-   "channels": 19,
-   "views": 607376,
+   "base": 5.1,
+   "channels": 20,
+   "views": 713852,
    "who": [
     "石神のぞみ / Ishigami Nozomi【にじさんじ】",
     "ドコムスチャンネル",
@@ -867,38 +868,12 @@
    "first_here": false
   },
   {
-   "game": "プロジェクトセカイ",
-   "growth": 4.0,
-   "videos": 6,
-   "base": 1.5,
-   "channels": 5,
-   "views": 97770,
-   "who": [
-    "翡翠はくあ【すごい自己肯定感高い奴】",
-    "翡翠はくあ【すごい自己肯定感高い奴】",
-    "ルウ【ゲーム情報局】",
-    "なのふらわー / nanoflower",
-    "てくのGTちゃんねる"
-   ],
-   "titles": [
-    "【#プロセカ】オレの休みが終わってしまう……。やる事無いのでAP詰めor視聴者参加型配信！【#翡翠はくあ】",
-    "【#プロセカ】なんか黒魔さんの高難易度「at」追加されたらしいから初見からやる！【#翡翠はくあ】",
-    "終わらないKAITO騒動、MVの低評価数がヤバいことになっている模様【KAITO】【高橋海人】【プロジェクトセカイ】"
-   ],
-   "genres": [],
-   "year": null,
-   "platforms": [],
-   "days_seen": 17,
-   "last_seen": "2026-10-12",
-   "first_here": false
-  },
-  {
    "game": "Dressmaker",
    "growth": 3.75,
    "videos": 3,
    "base": 0.8,
    "channels": 3,
-   "views": 130624,
+   "views": 159973,
    "who": [
     "Su Ch. 水宮枢 - FLOW GLOW",
     "ぽみ / Pomi",
@@ -927,7 +902,7 @@
    "videos": 3,
    "base": 0.8,
    "channels": 3,
-   "views": 49690,
+   "views": 48229,
    "who": [
     "本間ひまわり - Himawari Honma -",
     "Vunny Ch",
@@ -958,7 +933,7 @@
    "videos": 3,
    "base": 0.8,
    "channels": 3,
-   "views": 9100,
+   "views": 9381,
    "who": [
     "心白てと / Kohaku Teto",
     "うささのゲーム実況ch-ノベルゲームetc.-",
@@ -978,6 +953,38 @@
    ],
    "days_seen": 17,
    "last_seen": "2026-10-10",
+   "first_here": false
+  },
+  {
+   "game": "Silver Pines",
+   "growth": 3.53,
+   "videos": 6,
+   "base": 1.7,
+   "channels": 6,
+   "views": 32999,
+   "who": [
+    "人生 つみこ (ホラーゲーム専門Vtuber)",
+    "キャシーさんはホラーゲームで遊びたい",
+    "ほとんどホラーゲーム実況ですが何か?",
+    "LamNot",
+    "カニ🦀"
+   ],
+   "titles": [
+    "【 Silver Pines 】私立探偵は行方不明のミュージシャンを探すために、シルバー・パインズを訪れる… #01【 人生つみこ】",
+    "【ホラー】#4(終) 全END3種＆達成率100%！贖罪の鍵を握る秘密を暴くため「悪夢のような恐怖」に立ち向かうサバイバルホラーゲーム『 Silver Pines 』【Vキャシー/Vtuber】実況",
+    "#4【Silver Pines】市庁舎を探索するも異形の大男が襲来…！さらなる惨劇が幕を開ける【サバイバルホラーゲーム】"
+   ],
+   "genres": [
+    "Adventure",
+    "Indie"
+   ],
+   "year": 2026,
+   "platforms": [
+    "pc",
+    "console"
+   ],
+   "days_seen": 4,
+   "last_seen": "2026-10-12",
    "first_here": false
   }
  ],
