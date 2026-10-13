@@ -318,7 +318,8 @@ def info(col, day=""):
     # 見出しの手当て（直近の見出し・引用の裏取り）は、**初登場の日にも必ず出す。**
     # 初登場の日はいちばん形が固まりやすいのに、ここで早く返していたため
     # 出ていなかった（2026-10-08）。
-    tail = (tag_hint(col, _day)
+    tail = (past_columns(col.get("game"), _day)
+            + tag_hint(col, _day)
             + quote_check(str(col.get("headline") or ""), _day)[1]
             + head_history(_day))
     if not days:
@@ -334,6 +335,54 @@ def info(col, day=""):
         add = "ときどき出てきます。どちらから書くかは中身で決めてください"
     return [f"「{game}」は過去{len(days)}日ランキングに入っています"
             f"（最初は{first}）。{add}"] + tail
+
+
+def past_columns(game, day):
+    """**同じゲームを前にもコラムの主役にしていないか。**
+
+    なぜ要るか（2026-10-13 たろちんさん）
+    ------------------------------------
+        > このゲームの場合は「ラーメン屋の経営シム」という点が魅力であり、
+        > **先月末もコラムに取り上げていたけどまた盛り上がりがきている**
+        > という点のほうが重要かなと自分は思った
+
+    10月13日の『Japanese Ramen Simulator』は、**9月28日にも主役にしていた**
+    （見出し「発売の3日前から、厨房はもう回っていた」）。
+    朝の窓はそれを知らないまま10本の見出しを作り、**10本とも
+    「ワンオペか4人か」という、その日の題の割れ方だけ**を見ていた。
+
+    `info()` は「過去何日ランキングに入っていたか」は出していたが、
+    **「前にも書いたか」は出していなかった。** 一度書いたゲームが戻ってくるのは
+    それ自体が出来事なので、必ず出す。
+    """
+    game = str(game or "").strip()
+    if not game:
+        return []
+    from datetime import datetime
+    out = []
+    for f in sorted((DATA / "columns").glob("*.json")):
+        if f.stem >= str(day):
+            continue
+        try:
+            c = json.load(open(f, encoding="utf-8"))
+        except Exception:
+            continue
+        if not isinstance(c, dict) or str(c.get("game", "")).strip() != game:
+            continue
+        out.append((f.stem, str(c.get("headline") or "")))
+    if not out:
+        return []
+    lines = [f"⚠️ 「{game}」は**前にもコラムの主役にしています**"
+             f"（{len(out)}回）。**戻ってきたこと自体が今日の材料**です。"
+             "前の回と同じ角度で書かないこと"]
+    for d, h in out[-3:]:
+        lines.append(f"      {d} 「{h}」")
+    if len(out) >= 1:
+        gap = (datetime.strptime(str(day), "%Y-%m-%d")
+               - datetime.strptime(out[-1][0], "%Y-%m-%d")).days
+        lines.append(f"      前回から {gap}日。"
+                     "「一度落ち着いたものが戻ってきた」と書けるかを確かめる")
+    return lines
 
 
 def head_history(day):
