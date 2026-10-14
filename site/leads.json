@@ -1,20 +1,20 @@
 {
  "date": "2026-10-14",
- "generated": "2026-10-14 02:28",
+ "generated": "2026-10-14 09:56",
  "leads": {
   "events": [
    {
     "tag": "#SURGECity",
     "channels": [
+     "Ao WuWu Ch.【V4Mirai】",
      "Mimoza Ch. 華咲みもざ",
      "くにくんOfficial",
      "どぅんどぅくどぅんどぅんどぅん",
      "なるる / naruru",
      "はちぴ",
      "やよい",
+     "史門 / Shimon ",
      "姫崎クト -himesaki kuto-",
-     "柚原いづみ / Izumi Channel 【ななしいんく】",
-     "碧輝りお /Aoki Rio",
      "貴様まさか🦈",
      "赤彩みあ / Akairo Mia Ch.【すずみあ】",
      "銀灰まお Mao Ch.",
@@ -24,11 +24,11 @@
    {
     "tag": "#ゲーム実況",
     "channels": [
+     "KORIN.鈴ノ音コリン",
      "M家の休日マサ",
      "Usagi Ch. 因幡兎",
      "ジョアだよ",
      "ルベルフゲームチャンネル",
-     "太刀ひろし　【Uncle gamer】 ",
      "恋因ロス KoinRosu",
      "星埜きぃ -Key Hoshino-",
      "豚咲あおい_TomisakiAoi"
@@ -43,8 +43,7 @@
      "Roboco Ch. - ロボ子",
      "SoraCh. ときのそらチャンネル",
      "Vivi Ch. 綺々羅々ヴィヴィ - FLOW GLOW",
-     "アキロゼCh。Vtuber/ホロライブ所属",
-     "宵吸あけル / Yokyu Akeru"
+     "アキロゼCh。Vtuber/ホロライブ所属"
     ]
    },
    {
@@ -69,27 +68,28 @@
     ]
    },
    {
-    "tag": "#ぶいきゃす",
-    "channels": [
-     "えういん ∕ euin Ch.",
-     "孵卵リリス / Furan Lilith",
-     "星埜きぃ -Key Hoshino-"
-    ]
-   },
-   {
-    "tag": "#minecraft",
-    "channels": [
-     "ゆるふわまったり勢のゆかりさん",
-     "葛ノ葉鈴撫　-Kuzunoha suzunade- Ch",
-     "鈴ノ時みぃ@新人Vtuber"
-    ]
-   },
-   {
     "tag": "#ホロ鯖ARK",
     "channels": [
      "Pekora Ch. 兎田ぺこら",
      "Towa Ch. 常闇トワ",
+     "Watame Ch. 角巻わため",
      "アキロゼCh。Vtuber/ホロライブ所属"
+    ]
+   },
+   {
+    "tag": "#スプラトゥーン3",
+    "channels": [
+     "きさらぎ【下手ゲーム実況】",
+     "なつめやみや / Natsume Yamiya",
+     "まりも"
+    ]
+   },
+   {
+    "tag": "#ストグラ",
+    "channels": [
+     "Tenten Ch. / 鳳玲天々",
+     "marunnn【まるーんチャンネル】",
+     "柚原いづみ / Izumi Channel 【ななしいんく】"
     ]
    }
   ],
@@ -97,23 +97,23 @@
   "wide": [
    {
     "game": "ストリートファイター6",
-    "channels": 40,
-    "videos": 46
+    "channels": 41,
+    "videos": 48
    },
    {
     "game": "Apex Legends",
-    "channels": 39,
-    "videos": 46
+    "channels": 38,
+    "videos": 42
    },
    {
     "game": "Minecraft",
-    "channels": 32,
-    "videos": 35
+    "channels": 33,
+    "videos": 34
    },
    {
     "game": "Grand Theft Auto V",
     "channels": 25,
-    "videos": 29
+    "videos": 26
    },
    {
     "game": "Dead by Daylight",
@@ -126,14 +126,14 @@
     "videos": 18
    },
    {
-    "game": "ドラゴンズドグマ 2:ダークアリズン",
+    "game": "Japanese Ramen Simulator",
     "channels": 15,
     "videos": 16
    },
    {
-    "game": "フォートナイト",
-    "channels": 14,
-    "videos": 15
+    "game": "hololive Dreams",
+    "channels": 11,
+    "videos": 12
    }
   ]
  },
@@ -142,8 +142,8 @@
   {
    "tag": "わちゃサバ",
    "game": "Minecraft",
-   "evidence": 6,
-   "added": 4,
+   "evidence": 3,
+   "added": 3,
    "channels": 5
   },
   {
@@ -310,22 +310,6 @@
    ]
   },
   {
-   "word": "Antivirus Survivors",
-   "channels": 1,
-   "n": 1,
-   "examples": [
-    {
-     "t": "【Antivirus Survivors】英語得意な人たすけて！レトロPCモチーフのヴァンサバライク【今永さらら/にぶヲタ】",
-     "c": "今さらちゃん ねる",
-     "u": "https://www.youtube.com/watch?v=vWebty1XMrM"
-    }
-   ],
-   "kind": "near",
-   "suggest": [
-    "Antivirus Survivors 2003 Professional"
-   ]
-  },
-  {
    "word": "Antivirus Survivors 2003",
    "channels": 1,
    "n": 1,
@@ -358,6 +342,22 @@
    ]
   },
   {
+   "word": "DinoBones",
+   "channels": 1,
+   "n": 1,
+   "examples": [
+    {
+     "t": "【DinoBones】　2000個の恐竜の骨を組み立てて化石を復元するぞ！！　【八神ツクモ／ネオポルテ】",
+     "c": "八神ツクモ / Yagami Tsukumo",
+     "u": "https://www.youtube.com/watch?v=NZotbrJ1ewI"
+    }
+   ],
+   "kind": "near",
+   "suggest": [
+    "DinoBones: Tidy Up the Museum"
+   ]
+  },
+  {
    "word": "FANTASY WORLD",
    "channels": 1,
    "n": 1,
@@ -375,40 +375,24 @@
    ]
   },
   {
-   "word": "DinoBones",
-   "channels": 1,
-   "n": 1,
+   "word": "#LTK",
+   "channels": 11,
+   "n": 41,
    "examples": [
     {
-     "t": "【DinoBones】　2000個の恐竜の骨を組み立てて化石を復元するぞ！！　【八神ツクモ／ネオポルテ】",
-     "c": "八神ツクモ / Yagami Tsukumo",
-     "u": "https://www.youtube.com/watch?v=NZotbrJ1ewI"
-    }
-   ],
-   "kind": "near",
-   "suggest": [
-    "DinoBones: Tidy Up the Museum"
-   ]
-  },
-  {
-   "word": "LTK",
-   "channels": 11,
-   "n": 40,
-   "examples": [
+     "t": "【#LTK】LTKに向けてそろQする【 ぶいすぽっ！ / 千燈ゆうひ 】",
+     "c": "千燈ゆうひ",
+     "u": "https://www.youtube.com/watch?v=rbZo9UB7G74"
+    },
+    {
+     "t": "【#LTK】LTKに向けてそろQする【 ぶいすぽっ！ / 千燈ゆうひ 】",
+     "c": "千燈ゆうひ",
+     "u": "https://www.youtube.com/watch?v=rbZo9UB7G74"
+    },
     {
      "t": "【LoL #LTK】一緒にJGを練習せい ~LTK CORE JGの道はあるか~【Alpha Azur/UltraLMTM】",
      "c": "Alpha Azur - UltraLMTM",
      "u": "https://www.youtube.com/watch?v=pKf84rvWxvw"
-    },
-    {
-     "t": "【#LTK】LTKに向けてそろQする【 ぶいすぽっ！ / 千燈ゆうひ 】",
-     "c": "千燈ゆうひ",
-     "u": "https://www.youtube.com/watch?v=rbZo9UB7G74"
-    },
-    {
-     "t": "【#LTK】LTKに向けてそろQする【 ぶいすぽっ！ / 千燈ゆうひ 】",
-     "c": "千燈ゆうひ",
-     "u": "https://www.youtube.com/watch?v=rbZo9UB7G74"
     }
    ],
    "kind": "wide",
@@ -416,8 +400,8 @@
   },
   {
    "word": "#ホロ鯖ARK",
-   "channels": 8,
-   "n": 40,
+   "channels": 9,
+   "n": 43,
    "examples": [
     {
      "t": "【#ホロ鯖ARK】DAY1🦖きｔらああああああああああああああああああああ！！！【ホロライブ/兎田ぺこら】",
@@ -463,30 +447,6 @@
    "suggest": []
   },
   {
-   "word": "スター・ウォーズ：ギャラクティック・レーサー",
-   "channels": 5,
-   "n": 6,
-   "examples": [
-    {
-     "t": "【本日発売】やるしかない。『スター・ウォーズ：ギャラクティック・レーサー』初見プレイ 【PS5/Xbox/Steam】",
-     "c": "くろろじちゃんねる",
-     "u": "https://www.youtube.com/watch?v=rECTszfUq3k"
-    },
-    {
-     "t": "【 スター・ウォーズ：ギャラクティック・レーサー 】▷1 目指せ銀河最速、スター・ウォーズゲームサーガの記録を塗り替えた高評価作【 夢咲刻夜Vliver 】",
-     "c": "夢咲 刻夜-Tokiya Yumesaki",
-     "u": "https://www.youtube.com/watch?v=HRcHRc1PE7c"
-    },
-    {
-     "t": "【スター・ウォーズ】24年ぶり新作レースゲーム！ゲームとしては神だがレース屋には賛否両論な理由 [スター・ウォーズ：ギャラクティック・レーサー][Game Impression]",
-     "c": "[GFnR] ギョフノリ eMotorsports Club - WRC世界5位が選ぶレースゲーム",
-     "u": "https://www.youtube.com/watch?v=_9D0lEvlAGs"
-    }
-   ],
-   "kind": "wide",
-   "suggest": []
-  },
-  {
    "word": "この家には４人しか住んでいません",
    "channels": 5,
    "n": 5,
@@ -516,19 +476,43 @@
    "n": 20,
    "examples": [
     {
-     "t": "【 #ホロARK 】DAY1│MAPはラグナロク！1か月間まったり生活！？【ホロライブ/アキロゼ】",
-     "c": "アキロゼCh。Vtuber/ホロライブ所属",
-     "u": "https://www.youtube.com/watch?v=k9SsOQrUGCc"
-    },
-    {
-     "t": "【 #ホロARK 】DAY1│MAPはラグナロク！1か月間まったり生活！？【ホロライブ/アキロゼ】",
-     "c": "アキロゼCh。Vtuber/ホロライブ所属",
-     "u": "https://www.youtube.com/watch?v=k9SsOQrUGCc"
+     "t": "【#ホロARK】ARKホロ鯖きちゃああああああああああああ！？【ホロライブ/さくらみこ】",
+     "c": "Miko Ch. さくらみこ",
+     "u": "https://www.youtube.com/watch?v=y-8p5lgHGG0"
     },
     {
      "t": "【#ホロARK】ARKホロ鯖きちゃああああああああああああ！？【ホロライブ/さくらみこ】",
      "c": "Miko Ch. さくらみこ",
      "u": "https://www.youtube.com/watch?v=y-8p5lgHGG0"
+    },
+    {
+     "t": "【 #ホロARK 】DAY1│MAPはラグナロク！1か月間まったり生活！？【ホロライブ/アキロゼ】",
+     "c": "アキロゼCh。Vtuber/ホロライブ所属",
+     "u": "https://www.youtube.com/watch?v=k9SsOQrUGCc"
+    }
+   ],
+   "kind": "wide",
+   "suggest": []
+  },
+  {
+   "word": "スター・ウォーズ：ギャラクティック・レーサー",
+   "channels": 4,
+   "n": 5,
+   "examples": [
+    {
+     "t": "【 スター・ウォーズ：ギャラクティック・レーサー 】▷1 目指せ銀河最速、スター・ウォーズゲームサーガの記録を塗り替えた高評価作【 夢咲刻夜Vliver 】",
+     "c": "夢咲 刻夜-Tokiya Yumesaki",
+     "u": "https://www.youtube.com/watch?v=HRcHRc1PE7c"
+    },
+    {
+     "t": "【スター・ウォーズ】24年ぶり新作レースゲーム！ゲームとしては神だがレース屋には賛否両論な理由 [スター・ウォーズ：ギャラクティック・レーサー][Game Impression]",
+     "c": "[GFnR] ギョフノリ eMotorsports Club - WRC世界5位が選ぶレースゲーム",
+     "u": "https://www.youtube.com/watch?v=_9D0lEvlAGs"
+    },
+    {
+     "t": "【10時間プレイ感想】『スター・ウォーズ：ギャラクティック・レーサー』最強のレースゲーム爆誕か！？【ギャラクティック・レーサー / PS5 / XBOX / PC】",
+     "c": "いちごうのゲームビート",
+     "u": "https://www.youtube.com/watch?v=isgBOXbCsV4"
     }
    ],
    "kind": "wide",
@@ -775,6 +759,30 @@
    "suggest": []
   },
   {
+   "word": "#お絵描き配信",
+   "channels": 3,
+   "n": 4,
+   "examples": [
+    {
+     "t": "【 #お絵描き配信 】漫画描くよすこしだけ【 #ゲーム実況 】#新人VTuber,",
+     "c": "ぱんちき🥖🦃",
+     "u": "https://www.youtube.com/watch?v=2zDeHrjMByQ"
+    },
+    {
+     "t": "【 #お絵描き配信 】漫画描くよすこしだけ【 #ゲーム実況 】#新人VTuber,",
+     "c": "ぱんちき🥖🦃",
+     "u": "https://www.youtube.com/watch?v=2zDeHrjMByQ"
+    },
+    {
+     "t": "【♯お絵描き配信】　雑談しながらイケメンを描きたい！　　♯CIS #drawing",
+     "c": "CIS･Channel   ",
+     "u": "https://www.youtube.com/watch?v=JFfyoWY5-Hw"
+    }
+   ],
+   "kind": "wide",
+   "suggest": []
+  },
+  {
    "word": "Re:Life",
    "channels": 3,
    "n": 4,
@@ -845,52 +853,28 @@
    ],
    "kind": "wide",
    "suggest": []
-  },
-  {
-   "word": "テイルズ オブ エターニア リマスター",
-   "channels": 3,
-   "n": 3,
-   "examples": [
-    {
-     "t": "『テイルズ オブ エターニア リマスター』火晶霊の谷を先行プレイ！ メルニクス語も学ぼう【MC：中島由貴】",
-     "c": "電撃オンライン",
-     "u": "https://www.youtube.com/watch?v=o0xdoGX4a8s"
-    },
-    {
-     "t": "#1【テイルズオブエターニア リマスター】完全初見！名作と噂の『エターニア』を初プレイ！一体どんな物語なの…！？【兎桃みみこ】",
-     "c": "兎桃みみこ /Mimiko Tomomo",
-     "u": "https://www.youtube.com/watch?v=sdqpwYzlRGg"
-    },
-    {
-     "t": "【テイルズオブエターニアリマスター】本日発売✨️ずっとやってみたかった名作RPG❣️ほぼ初見で遊ぶゆるゆる配信〜Vol.1〜",
-     "c": "夜勤明けのなかちゃん🌙",
-     "u": "https://www.youtube.com/watch?v=al_u7snJUmI"
-    }
-   ],
-   "kind": "wide",
-   "suggest": []
   }
  ],
  "miss_days": 7,
  "hot_facts": [
   {
    "game": "Big Walk",
-   "growth": 8.75,
-   "videos": 7,
-   "base": 0.7,
-   "channels": 7,
-   "views": 304125,
+   "growth": 5.0,
+   "videos": 5,
+   "base": 1.0,
+   "channels": 5,
+   "views": 52641,
    "who": [
-    "アルス・アルマル -ars almal- 【にじさんじ】",
-    "夜見れな/yorumi rena【にじさんじ所属】",
-    "葉山舞鈴 / Ohayama Ch.",
+    "おなつのにびたし / Onatsu no Nibitashi",
     "上水流 宇宙 / Cosmo Kamizuru 【ヴイアラ】【876プロ】",
-    "家入ポポ / Popo Channel【ななしいんく】"
+    "水無瀬 / Minase",
+    "家入ポポ / Popo Channel【ななしいんく】",
+    "ロウひなんゲーミング"
    ],
    "titles": [
-    "#02【 Big Walk →R.E.P.O】謎解きだああ！！深夜ふれんず。【アルス・アルマル/夜見れな/葉山舞鈴/にじさんじ】",
-    "【 Big Walk 】#2 広大な世界へ！深夜ふれんずのチームワークみてみな！➡二次会R.E.P.O.【 にじさんじ / 夜見れな 】",
-    "【 Big Walk → R.E.P.O. 】Big Walk クリアまで！→ 二次会 R.E.P.O. with 深夜ふれんず。【 にじさんじ┊︎葉山舞鈴/アルス・アルマル/夜見れな/コラボ 】"
+    "【BigWalk】弟が空から落ちてきたので陸を歩かせる歓迎会【おなつのにびたし/個人勢Vtuber/#おなつのなま】",
+    "【Big Walk】新メンバー登場✨６人で広大な世界を探索＆協力＆謎解き！我ら #みつあみ部 !【#ヴイアラ / 上水流宇宙】",
+    "【 Big Walk 】世界を好きに歩くゲームらしい￤ はじめましてコラボ【 Neo-Porte / 水無瀬 】"
    ],
    "genres": [
     "Platform",
@@ -903,27 +887,89 @@
     "pc",
     "console"
    ],
-   "days_seen": 21,
+   "days_seen": 20,
    "last_seen": "2026-10-13",
    "first_here": false
   },
   {
-   "game": "JUDGE EYES：死神の遺言",
-   "growth": 4.0,
-   "videos": 4,
-   "base": 1.0,
-   "channels": 4,
-   "views": 117319,
+   "game": "Touhou Koumakyou: The Embodiment of Scarlet Devil",
+   "growth": 3.75,
+   "videos": 3,
+   "base": 0.8,
+   "channels": 3,
+   "views": 369694,
    "who": [
-    "鈴原るる【にじさんじ所属】",
+    "社築",
+    "石神のぞみ / Ishigami Nozomi【にじさんじ】",
+    "ケナ氏"
+   ],
+   "titles": [
+    "【東方紅魔郷：New Classic】令和に人生初紅魔郷～ノーマルノーコンクリアを狙う男～【にじさんじ/社築】",
+    "今日は東方紅魔郷NCを遊んでいくわよ【 にじさんじ所属 ／ 石神のぞみ 】",
+    "【東方紅魔郷】#3 メイドさんを倒して次のステージいきたいのです！ - 東方紅魔郷 New Classic【無所属個人VTuber】"
+   ],
+   "genres": [
+    "Shooter",
+    "Adventure",
+    "Indie",
+    "Arcade"
+   ],
+   "year": null,
+   "platforms": [
+    "pc"
+   ],
+   "days_seen": 15,
+   "last_seen": "2026-10-13",
+   "first_here": false
+  },
+  {
+   "game": "Castlevania: Belmont's Curse",
+   "growth": 3.75,
+   "videos": 3,
+   "base": 0.2,
+   "channels": 3,
+   "views": 55522,
+   "who": [
+    "おついちTube",
+    "ファミ通TUBE",
+    "電撃オンライン"
+   ],
+   "titles": [
+    "【Castlevania: Belmont's Curse：特別先行プレイ】🦇その赤き呪いは、絶望か希望か。【おついちTube】",
+    "『キャッスルヴァニア ベルモンドカース』体験版より先の展開を先行プレイ。硬派なアクション×探索の楽しさを両立する“悪魔城”最新作【Castlevania: Belmont's Curse】",
+    "『キャッスルヴァニア』最新作の体験版以降をプレイ！ 探索型2Dアクションの傑作シリーズ、ついに発売【きよしとタダツグの実況立志伝】Castlevania: Belmont's Curse"
+   ],
+   "genres": [
+    "Platform",
+    "Role-playing (RPG)",
+    "Hack and slash/Beat 'em up",
+    "Adventure"
+   ],
+   "year": 2026,
+   "platforms": [
+    "pc",
+    "console"
+   ],
+   "days_seen": 0,
+   "last_seen": null,
+   "first_here": true
+  },
+  {
+   "game": "JUDGE EYES：死神の遺言",
+   "growth": 2.5,
+   "videos": 3,
+   "base": 1.2,
+   "channels": 3,
+   "views": 16977,
+   "who": [
     "レヴィ・エリファ-Levi Elipha-",
     "ゆうしゃ",
     "千凛あゆむ / Senri Ayumu【にじさんじ】"
    ],
    "titles": [
-    "【JUDGE EYES：死神の遺言 Remastered】#02　初見プレイ！正義というなの凶器！？狂気！　【にじさんじ/鈴原るる】※ネタバレあり",
     "#12【JUDGE EYES：死神の遺言 Remastered】いよいよ最終回‼物語の結末を見届けるゾウ🐘　※ネタバレあり【にじさんじ/レヴィ・エリファ】",
-    "#76【実況】衝撃のデートプラン【ゆうしゃ・ジャッジアイズJUDGE EYES:死神の遺言】"
+    "#76【実況】衝撃のデートプラン【ゆうしゃ・ジャッジアイズJUDGE EYES:死神の遺言】",
+    "【 JUDGE EYES：死神の遺言 】完全初見 ✦︎ 犯人が分かった。仇とるぞ、真の正義で。※ネタバレあり【にじさんじ / 千凛あゆむ】"
    ],
    "genres": [
     "Role-playing (RPG)",
@@ -938,98 +984,12 @@
    "first_here": false
   },
   {
-   "game": "Touhou Koumakyou: The Embodiment of Scarlet Devil",
-   "growth": 3.0,
-   "videos": 3,
-   "base": 1.0,
-   "channels": 3,
-   "views": 233026,
-   "who": [
-    "石神のぞみ / Ishigami Nozomi【にじさんじ】",
-    "社築",
-    "ケナ氏"
-   ],
-   "titles": [
-    "今日は東方紅魔郷NCを遊んでいくわよ【 にじさんじ所属 ／ 石神のぞみ 】",
-    "【東方紅魔郷：New Classic】令和に人生初紅魔郷～ノーマルノーコンクリアを狙う男～【にじさんじ/社築】",
-    "【東方紅魔郷】#3 メイドさんを倒して次のステージいきたいのです！ - 東方紅魔郷 New Classic【無所属個人VTuber】"
-   ],
-   "genres": [
-    "Shooter",
-    "Adventure",
-    "Indie",
-    "Arcade"
-   ],
-   "year": null,
-   "platforms": [
-    "pc"
-   ],
-   "days_seen": 14,
-   "last_seen": "2026-10-08",
-   "first_here": false
-  },
-  {
-   "game": "あつまれ どうぶつの森",
-   "growth": 2.63,
-   "videos": 5,
-   "base": 1.9,
-   "channels": 5,
-   "views": 51543,
-   "who": [
-    "ちささこ",
-    "じんむ",
-    "カーキのゲーム実況",
-    "ぷに",
-    "ぷに"
-   ],
-   "titles": [
-    "【あつ森】つり大会の金トロフィーが欲しい🎣🏆",
-    "島クリします🐄朝活🐓おはようあつ森！10/13(火)",
-    "【あつ森雑談】更地にしようか迷い中。毎朝ルーティン雑談。【ACNH】【あつまれどうぶつの森】"
-   ],
-   "genres": [],
-   "year": null,
-   "platforms": [],
-   "days_seen": 28,
-   "last_seen": "2026-10-13",
-   "first_here": false
-  },
-  {
-   "game": "Dressmaker",
-   "growth": 2.5,
-   "videos": 3,
-   "base": 1.2,
-   "channels": 3,
-   "views": 199452,
-   "who": [
-    "Su Ch. 水宮枢 - FLOW GLOW",
-    "バーチャルおばあちゃんねる",
-    "amiami Hobby Channel"
-   ],
-   "titles": [
-    "【dressmaker】Chill🩵センス◎をみせます【水宮枢／ホロライブ】",
-    "憧れのドレス職人になれるゲーム！【Dressmaker/ドレスメーカー】#2",
-    "《Dressmaker #02》湊みやのStreaming Club（第99回配信）"
-   ],
-   "genres": [
-    "Simulator",
-    "Indie"
-   ],
-   "year": 2026,
-   "platforms": [
-    "pc"
-   ],
-   "days_seen": 8,
-   "last_seen": "2026-10-13",
-   "first_here": false
-  },
-  {
    "game": "ドラゴンクエストXI",
    "growth": 2.5,
    "videos": 3,
    "base": 1.2,
    "channels": 3,
-   "views": 1057,
+   "views": 1078,
    "who": [
     "ふるってぃ～",
     "ルベルフゲームチャンネル",
@@ -1043,7 +1003,37 @@
    "genres": [],
    "year": null,
    "platforms": [],
-   "days_seen": 12,
+   "days_seen": 11,
+   "last_seen": "2026-10-13",
+   "first_here": false
+  },
+  {
+   "game": "マリオカート",
+   "growth": 2.35,
+   "videos": 4,
+   "base": 1.7,
+   "channels": 4,
+   "views": 106583,
+   "who": [
+    "SAWAYAN GAMES / サワヤン ゲームズ",
+    "最高のマリカークリップス",
+    "らりほん",
+    "ふんさん《ゲーム実況》"
+   ],
+   "titles": [
+    "３１歳誕生日まで命懸けのカウントダウン生配信【マリオカート8DX】",
+    "【天才】なんだこれ！？絶望的状況から編み出された新走法がヤバいｗｗ【マリオカート】【面白クリップ集】",
+    "【緊急】スタートダッシュしない「タイムアタック世界記録」が話題な件ｗｗ【マリオカート8DX】"
+   ],
+   "genres": [
+    "Racing",
+    "Arcade"
+   ],
+   "year": null,
+   "platforms": [
+    "console"
+   ],
+   "days_seen": 30,
    "last_seen": "2026-10-13",
    "first_here": false
   }
