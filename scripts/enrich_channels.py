@@ -232,11 +232,16 @@ def main():
         p = prev.get(c["channel_id"])
         if p and p.get("long_videos") is not None and p.get("jp_ratio") is not None and \
            abs(p.get("subscribers", 0) - rec["subscribers"]) < rec["subscribers"] * 0.02:
+            # probed は「直近動画を実際に見に行った日」。使い回した行は
+            # 前の日付をそのまま引き継ぐ。**今日に書き換えないこと。**
+            # これが30日を過ぎると build_site.py が last_upload を外す
+            # （開発者ポリシー III.E.4d の30日制限。2026-10-14）
             rec.update(last_upload=p.get("last_upload"),
                        game_ratio=p.get("game_ratio"),
                        long_videos=p.get("long_videos"),
                        jp_ratio=p.get("jp_ratio"), genre=p.get("genre", ""),
-                       sample=p.get("sample"), status=p.get("status", ""))
+                       sample=p.get("sample"), status=p.get("status", ""),
+                       probed=p.get("probed"))
             rec["auto"] = judge(rec, cutoff_day, min_subs, min_jp)
             out.append(rec)
             continue
@@ -263,9 +268,10 @@ def main():
                                          / len(titles), 2) if titles else 0.0)
                 rec["genre"] = main_genre(games, genres)
                 rec["sample"] = titles[0][:60] if titles else ""
+                rec["probed"] = today()
             else:
                 rec.update(last_upload="", game_ratio=0.0, jp_ratio=0.0,
-                           genre="", sample="")
+                           genre="", sample="", probed=today())
         except QuotaExhausted:
             log(f"クォータ上限のため {n} 件目で調査を打ち切ります")
             rec.update(status="未調査")

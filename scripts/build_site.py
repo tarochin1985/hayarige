@@ -965,6 +965,42 @@ def purge_old(site_url):
     if fixed:
         log(f"30日を過ぎた記録 {fixed} 日分から、配信タイトルを外しました")
 
+    # ---- チャンネル表（2026-10-14 追加）
+    #
+    # data/channels_enriched.json にも、YouTubeから借りた欄が4つある。
+    #   title（チャンネル名） subscribers（登録者数） … 毎日 fetch_daily.py が
+    #     取り直して refreshed に日付を押す
+    #   last_upload（最終投稿日） … 月1回の「2. チャンネル情報を集める」でしか
+    #     取り直せない。そのとき probed に日付が押される
+    #   sample（直近の配信タイトル1本） … **残さない。** 配信タイトルそのもので、
+    #     調べ直したその場でCSVに出せば足りる
+    #
+    # ここは「取り直しが30日届かなかった行」の受け皿。消えたチャンネルや、
+    # 長く調べ直していないチャンネルがこれに当たる。
+    #
+    # ★**channel_id と、たろちんさんが決めた欄（name / affiliation / auto /
+    #   status / genre / handle）は消さない。** 登録チャンネルの一覧そのものは
+    #   YouTubeから借りたものではなく、このサイトが積み上げた資産。
+    cpath = DATA / "channels_enriched.json"
+    chans = read_json(cpath, []) or []
+    dropped, cleared = 0, 0
+    for c in chans:
+        if c.pop("sample", None):
+            dropped += 1
+        if str(c.get("refreshed") or "") < limit:
+            for k in ("title", "subscribers"):
+                if c.get(k):
+                    c[k] = 0 if k == "subscribers" else ""
+                    cleared += 1
+        if str(c.get("probed") or "") < limit:
+            if c.get("last_upload"):
+                c["last_upload"] = ""
+                cleared += 1
+    if chans and (dropped or cleared):
+        write_json(cpath, chans)
+        log(f"チャンネル表から、30日を過ぎたYouTube由来の情報を外しました"
+            f"（タイトル見本 {dropped} 件 / 欄 {cleared} か所）")
+
 
 def analytics_html():
     """アクセス解析のタグ。data/site_config.json に token を入れると出る。
@@ -1758,6 +1794,26 @@ def ads_txt(cfg):
     return f"google.com, {pid}, DIRECT, f08c47fec0942fa0\n"
 
 
+def ads_party_li(cfg):
+    """第三者の一覧に入れる、広告事業者の1行。
+
+    **ここは必ず1行出す。** YouTubeの審査（III.A.2f）は
+    「第三者が広告を含むコンテンツを配信することを開示していない」が違反。
+    申請中でまだ出していない段階でも、何をどうするつもりかは書いておく。
+    """
+    m = ads_mode(cfg)
+    if m == ADS_NONE:
+        return ""
+    if m == ADS_PENDING:
+        return ("  <li><b>Google AdSense</b> … 広告の配信を申請中です。"
+                "<b>現在は広告を表示していません。</b>"
+                "掲載を始めるときは、この欄と下の「広告について」を"
+                "同じ日に書き換えます</li>\n")
+    return ("  <li><b>Google AdSense</b>（Google LLC） … 広告の配信。"
+            "Cookieを使用して、利用者の過去のアクセスにもとづく広告を"
+            "表示します</li>\n")
+
+
 def ads_privacy_html(cfg):
     """プライバシーのページに出す、広告についての説明。"""
     m = ads_mode(cfg)
@@ -1765,14 +1821,14 @@ def ads_privacy_html(cfg):
         return ""
     if m == ADS_PENDING:
         return """
-<h2>広告について</h2>
+<h3>広告について</h3>
 <p>当サイトは現在、Google AdSense による広告の掲載を申請しています。
 <b>この文章を書いている時点では、広告は表示していません。</b>
 審査を通って広告を出し始めたときは、このページを同時に書き換え、
 どのCookieが使われるかをここに明記します。</p>
 """
     return """
-<h2>広告について</h2>
+<h3>広告について</h3>
 <p>当サイトは第三者配信の広告サービス <b>Google AdSense</b> を利用しています。</p>
 <p>第三者配信事業者（Googleを含む）は、Cookie を使用して、
 利用者が過去に当サイトや他のサイトへアクセスした情報にもとづく広告を配信します。
@@ -1860,14 +1916,33 @@ Amazonへのリンクには紹介料の識別子が付いています。
 def privacy_html(cfg):
     """プライバシーと問い合わせ先。広告や解析を入れるなら要るページ。
 
-    いま出している内容は、実際にやっていることだけ。将来AdSenseなどを
-    入れたら、ここと説明ページの「Cookieを置かず」の一文を必ず直すこと。
-    書いてあることと動いているものが食い違うのが、いちばん損をする。
+    **2026-10-14 全面改稿。** きっかけは YouTube API Services の
+    コンプライアンス審査で、プライバシーポリシーに4点の違反を指摘されたこと
+    （ToS Violations Report V.1、Project 1022007135224）。
+
+      III.A.2b … YouTube API サービスを使っていると利用者に知らせていない
+      III.A.2d … どんなデータを取得・保存・利用しているか説明していない
+      III.A.2f … 第三者が広告などを配信することを開示していない
+      III.A.2h … 保存データの削除手順と、Googleのセキュリティ設定ページから
+                 アクセスを取り消す方法を書いていない
+      III.D.2c.i … 認可の取り消し方法を分かりやすく示していない
+
+    **4つとも「書いていないこと」への指摘で、やっていることを変える必要は
+    なかった。** だから内容は実際の動作そのままで、書き方だけ足している。
+
+    ★ **英語の節を最後に置いてある。** 審査しているのは英語話者で、
+      機械翻訳で読まれると要件を満たしているかが伝わらない。消さないこと。
+
+    ★ **ここに書いたことは、動いているものと必ず一致させる。**
+      AdSenseの審査が通ったとき、取得する項目を増やしたとき、
+      保存期間を変えたときは、このページを同じ日に直す。
     """
     mail = str(cfg.get("contact_email") or "").strip()
     mail_html = (f'<p><a href="mailto:{e(mail)}">{e(mail)}</a></p>'
                  if mail else
                  "<p>準備中です。</p>")
+    mail_in = (f'<a href="mailto:{e(mail)}">{e(mail)}</a>'
+               if mail else "上のお問い合わせ先")
     return f"""
 <h2>お問い合わせ</h2>
 <p class="lead">数字の間違い、ゲーム名の取り違え、掲載についてのご相談など、
@@ -1877,13 +1952,80 @@ def privacy_html(cfg):
 コラムでの紹介について気になる点がある場合も、同じ窓口へご連絡ください。
 確認のうえ対応します。</p>
 
-<h2>アクセス解析について</h2>
+<h2>YouTube API サービスの利用について</h2>
+<p><b>当サイトは YouTube API サービス（YouTube Data API v3）を利用しています。</b>
+当サイトのご利用にあたっては、
+<a href="https://www.youtube.com/t/terms" target="_blank" rel="noopener">YouTube利用規約</a>
+および
+<a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Googleプライバシーポリシー</a>
+が適用されます。あわせてお読みください。</p>
+
+<h3>当サイトがログインを求めないこと</h3>
+<p><b>当サイトには会員登録もログインもありません。</b>
+閲覧者のYouTubeアカウントやGoogleアカウントに接続することはなく、
+<b>認可（OAuth）を求めたことは一度もありません。</b>
+したがって当サイトは、閲覧者のアカウントに属する情報
+（視聴履歴、登録チャンネル、非公開の動画、プレイリスト、コメントなど）を
+<b>取得も保存もしていません。</b></p>
+
+<h3>当サイトが取得しているもの</h3>
+<p>当サイトが YouTube API から取得しているのは、
+<b>誰でも見られる形で公開されている動画・チャンネルの情報だけ</b>です。
+具体的には次の項目です。</p>
+<ul>
+  <li>動画ID・動画のタイトル・公開日時・再生回数・動画のサムネイル画像のURL</li>
+  <li>チャンネルID・チャンネル名・チャンネルのサムネイル画像のURL・登録者数</li>
+  <li>その動画が配信（ライブ）かどうかの区別</li>
+</ul>
+<p>これらを使って、当サイトは<b>配信タイトルを読んでゲーム名を判定し、
+その日に何件・何チャンネルが配信したかを数えています。</b>
+この判定と集計は当サイトが独自に行っているもので、
+YouTubeが提供する数値や分類ではありません。</p>
+
+<h3>保存している期間と、消し方</h3>
+<p>取得したデータは<b>1日2回（日本時間 7:00 と 19:00）に取り直して</b>います。</p>
+<p><b>配信タイトル・チャンネル名・サムネイル・動画IDなど、YouTubeから取得した
+情報は、取得から30日を過ぎた時点ですべて自動的に削除しています。</b>
+30日を過ぎた日の記録に残るのは、当サイトが数えた「その日どのゲームが何件」
+という集計値だけで、元のタイトルや動画の情報は残していません。
+これは YouTube の開発者ポリシー（III.E.4）に沿った運用です。</p>
+<p>個別の削除のご希望にも応じます。{mail_in} へご連絡いただければ、
+<b>7日以内に該当するデータを削除</b>します。</p>
+
+<h3>Googleのアカウント側から接続を切る方法</h3>
+<p>上に書いたとおり、当サイトは閲覧者のアカウントへの接続を求めていないため、
+通常は取り消すものがありません。それでもご自身のGoogleアカウントに
+接続されているアプリを確認・解除したい場合は、Googleのセキュリティ設定ページ
+から、いつでもご自身で行えます。</p>
+<p><a href="https://myaccount.google.com/connections?filters=3,4"
+ target="_blank" rel="noopener">https://myaccount.google.com/connections?filters=3,4</a></p>
+<p>このページを開き、取り消したいサービスを選んで「アクセス権を削除」を押すと、
+そのサービスからアカウントへの接続が解除されます。</p>
+
+<h2>閲覧者について集めていること</h2>
 <p>ページの閲覧数を知るために <b>Cloudflare Web Analytics</b> を使っています。
 このしくみは <b>Cookieを置きません</b>。閲覧者を個人として識別したり、
 サイトをまたいで追いかけたりすることもありません。
 分かるのは「どのページが何回見られたか」「どこから来たか」といった
 まとまった数字だけです。</p>
+<p>当サイトが、閲覧者の氏名・メールアドレス・電話番号などを
+入力させて集めることはありません。お問い合わせをメールでいただいた場合、
+その内容と差出人のアドレスは、返信と対応のためだけに使います。</p>
+
+<h2>第三者が配信するコンテンツ・広告について</h2>
+<p><b>当サイトのページには、当サイト以外の事業者が配信するコンテンツが
+含まれています。</b>これらの事業者は、それぞれの方針にもとづいて
+Cookieなどの技術を使用することがあります。</p>
+<ul>
+  <li><b>YouTube（Google LLC）</b> … 配信のサムネイル画像は、
+      当サイトが保存したものではなく、YouTubeのサーバーから直接表示しています</li>
+  <li><b>Cloudflare, Inc.</b> … サイトの配信とアクセス解析</li>
+  <li><b>Amazon</b> … 商品ページへのリンク（紹介料の識別子が付いています）</li>
+{ads_party_li(cfg)}</ul>
+<p>各事業者がどのような情報を扱うかは、それぞれの事業者の
+プライバシーポリシーに従います。</p>
 {ads_privacy_html(cfg)}
+
 <h2>外部のサイトへのリンク</h2>
 <p>ランキングやコラムから、SteamやAmazonの商品ページへリンクしています。
 このうちAmazonへのリンクには紹介料の識別子が付いています。
@@ -1891,22 +2033,92 @@ Amazonのアソシエイトとして、当サイトは適格販売により収�
 <p>リンク先での購入や登録について、当サイトは責任を負いません。
 リンク先のプライバシーの扱いは、それぞれのサイトの方針に従います。</p>
 
-<h2>集めているデータについて</h2>
-<p>当サイトはYouTubeのAPIを使って、公開されている配信・動画の
-タイトル・チャンネル名・再生数を取得しています。
-<b>配信タイトルとチャンネル名は30日で削除しています</b>
-（YouTubeの開発者ポリシーに沿った運用です）。
-30日を過ぎた日の記録に残るのは、こちらで数えた「どのゲームが何件」という
-集計値だけで、元のタイトルは残していません。</p>
-<p>当サイトはYouTube APIサービスを利用しています。利用にあたっては
-<a href="https://www.youtube.com/t/terms" target="_blank" rel="noopener">YouTube利用規約</a>および
-<a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Googleプライバシーポリシー</a>
-が適用されます。</p>
-
 <h2>免責</h2>
 <p>掲載している数字は、当サイトが登録しているチャンネルの範囲で数えたものです。
 日本のゲーム配信のすべてではありません。判定の誤りや取りこぼしもあります。
 気づいたものは直していますが、内容の正確性を保証するものではありません。</p>
+
+<h2 id="en">Privacy Policy (English)</h2>
+<p class="lead">This is the English version of the privacy policy above,
+provided for readers who do not read Japanese. Both versions describe the
+same practices.</p>
+
+<h3>Use of YouTube API Services</h3>
+<p><b>This website uses YouTube API Services</b> (YouTube Data API v3).
+By using this website you are agreeing to be bound by the
+<a href="https://www.youtube.com/t/terms" target="_blank" rel="noopener">YouTube Terms of Service</a>,
+and your information is handled in accordance with the
+<a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google Privacy Policy</a>.</p>
+
+<h3>No sign-in, and no Authorized Data</h3>
+<p><b>This website has no user accounts and no sign-in.</b> It never connects
+to a visitor's YouTube or Google account, and <b>it has never requested OAuth
+authorization from any user.</b> It therefore does not access, collect or store
+any Authorized Data, including watch history, subscriptions, private videos,
+playlists or comments.</p>
+
+<h3>What information this website accesses, collects, stores and uses</h3>
+<p>From the YouTube API this website retrieves <b>only publicly available
+information about public videos and channels:</b></p>
+<ul>
+  <li>Video ID, video title, publication time, view count, thumbnail URL</li>
+  <li>Channel ID, channel name, channel thumbnail URL, subscriber count</li>
+  <li>Whether the video is a live broadcast</li>
+</ul>
+<p>This website uses that information to identify, from the wording of the
+video title, which game is being streamed, and to count how many videos and
+how many distinct channels streamed each game on each day. <b>That
+identification and those counts are calculated independently by this website.
+They are not YouTube metrics and are not provided by YouTube.</b></p>
+<p>This website does not ask visitors for any personal information. No name,
+e-mail address or telephone number is collected from visitors. If you send us
+an e-mail, we use your message and address only to reply and to act on it.</p>
+
+<h3>Refreshing and deleting stored data</h3>
+<p>Stored API Data is refreshed <b>twice every day</b> (07:00 and 19:00 Japan
+Standard Time). <b>All data retrieved from YouTube — video titles, channel
+names, thumbnails and video IDs — is automatically deleted 30 calendar days
+after it is retrieved.</b> What remains after 30 days is only this website's
+own tally of how many videos and channels were counted for each game on each
+day; no YouTube-sourced text or identifiers are kept.</p>
+<p>If you would like data relating to you deleted, write to {mail_in} and
+<b>we will delete it within 7 calendar days.</b></p>
+
+<h3>Revoking access</h3>
+<p>Because this website never requests authorization, there is normally
+nothing to revoke. You can nevertheless review and remove any third-party
+application's access to your Google account at any time, through the Google
+security settings page:</p>
+<p><a href="https://myaccount.google.com/connections?filters=3,4"
+ target="_blank" rel="noopener">https://myaccount.google.com/connections?filters=3,4</a></p>
+<p>Open that page, select the service you wish to disconnect, and choose
+"Remove access".</p>
+
+<h3>Third parties serving content, including advertisements</h3>
+<p><b>Pages on this website include content served by third parties</b>, which
+may use cookies and similar technologies in accordance with their own
+policies: <b>YouTube (Google LLC)</b>, whose servers serve the stream
+thumbnails directly rather than copies stored by us; <b>Cloudflare, Inc.</b>,
+which delivers this site and provides cookieless analytics; <b>Amazon</b>,
+through affiliate links; and <b>Google AdSense</b>, for advertising. (Our
+AdSense application is still pending and no advertisements are displayed at
+this time; this page will be updated on the day serving begins.) Handling of
+information by each of these is governed by that company's own privacy
+policy.</p>
+
+<h3>Independently calculated figures</h3>
+<p>Rankings, video counts, channel counts, multipliers and the daily trend
+charts shown on this website are <b>calculated independently by this website
+from public video titles.</b> They are clearly labelled as such where they
+appear. <b>They are not provided by YouTube and are not YouTube metrics.</b>
+View counts shown next to individual videos are the figures returned by the
+YouTube API.</p>
+
+<h3>Contact</h3>
+<p>{mail_in}</p>
+
+<p style="color:var(--ink-3);font-size:12.5px;margin-top:22px">
+最終更新 2026年10月14日 ／ Last updated October 14, 2026</p>
 """
 
 
@@ -2331,9 +2543,19 @@ def game_page_html(name, g, dd, streams, home, plat=None, cfg=None,
                        f'{e(next((st.get("c", "") for st in streams if st.get("th")), ""))}'
                        f'</figcaption></figure>')
         if chart:
+            # ★ グラフのすぐ横に「独自集計」と出す（2026-10-14）。
+            # YouTubeの審査（III.E.4h）で、この折れ線が
+            # 「独自に計算した指標」として指摘された。ポリシーは併記を
+            # 認めているが、**明確かつ目立つ形での明示**を求めている。
+            # フッターの一文だけでは足りない。ここから外さないこと。
             out.append(f'<div class="gchart-wrap">'
-                       f'<div class="gchart-t">1日ごとの配信チャンネル数</div>'
-                       f'{chart}</div>')
+                       f'<div class="gchart-t">1日ごとの配信チャンネル数'
+                       f'<b class="own">当サイト独自集計</b></div>'
+                       f'{chart}'
+                       f'<p class="gchart-n">この折れ線は、当サイトが公開中の'
+                       f'配信タイトルを読んで数えた独自の集計です。'
+                       f'<b>YouTubeが提供する数値・指標ではありません。</b></p>'
+                       f'</div>')
         out.append("</div>")
 
     # ---- 店へのリンク

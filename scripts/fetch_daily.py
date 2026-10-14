@@ -48,8 +48,63 @@ def pick_targets():
     return daily + weekly
 
 
+# ---------------------------------------------------------------- チャンネル表
+# YouTubeの開発者ポリシー III.E.4b / III.E.4d は、YouTubeから取った情報を
+# **30日を超えて持ち続けてはいけない**（削除するか、取り直すか）と定めている。
+#
+# data/channels_enriched.json には、チャンネル名と登録者数が入っている。
+# どちらもYouTubeから借りた情報で、これまで期限なしに残っていた。
+# 2026-10-14、コンプライアンス審査の返答を書いている最中に気づいた。
+#
+# **消すのではなく、取り直す。** 消すと登録者順の並びが崩れて、毎日見に行く
+# 2,000件の選び方が壊れる。登録チャンネルの一覧はこのサイトの資産なので、
+# channel_id と、手で決めた欄（name / affiliation / auto / status / genre）には
+# 一切触らない。借りている2つだけを毎日新しくする。
+#
+# 値段は安い。channels は50件で1ユニットなので、4,000チャンネルでも約80。
+# 1日の上限10,000に対してほぼ無視できる。
+#
+# **この関数を main() の先頭、pick_targets() より前に置くこと。**
+#   ・pick_targets() が登録者数で並べるので、取り直しが先でないと
+#     古い数字で選ぶことになる
+#   ・「配信を取り直す: no」の日はこの関数ごと動かない。
+#     no の日は1ポイントも使わない、という約束を守るため
+def refresh_channel_table(yt):
+    """チャンネル表のYouTube由来の欄（名前・登録者数）を取り直し、日付を押す。"""
+    path = DATA / "channels_enriched.json"
+    chans = read_json(path, []) or []
+    ids = [c.get("channel_id") for c in chans if c.get("channel_id")]
+    if not ids:
+        return
+    got, day, spent = {}, today(), 0
+    try:
+        for i in range(0, len(ids), 50):
+            for it in yt.channels(ids[i:i + 50]).get("items", []):
+                got[it["id"]] = it
+            spent += 1
+    except QuotaExhausted:
+        log("クォータの都合で、チャンネル表の取り直しを途中で止めました")
+    except Exception as ex:
+        log(f"チャンネル表の取り直しに失敗しました（この日は飛ばします）: {ex}")
+        return
+    if not got:
+        return
+    n = 0
+    for c in chans:
+        it = got.get(c.get("channel_id"))
+        if not it:
+            continue
+        c["title"] = (it.get("snippet") or {}).get("title") or c.get("title") or ""
+        c["subscribers"] = int((it.get("statistics") or {}).get("subscriberCount", 0) or 0)
+        c["refreshed"] = day
+        n += 1
+    write_json(path, chans)
+    log(f"チャンネル表を取り直しました: {n}/{len(chans)} 件（{spent} ポイント）")
+
+
 def main():
     yt = YouTube()
+    refresh_channel_table(yt)
     targets = pick_targets()
     if not targets:
         log("対象チャンネルがありません。先に enrich_channels.py を実行してください。")
