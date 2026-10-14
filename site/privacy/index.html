@@ -202,8 +202,16 @@ tbody tr.main:nth-of-type(-n+6) .rk{color:var(--hot)}
 .ghero figcaption{font-size:10.5px;color:var(--ink-3);margin-top:4px}
 .gchart-wrap{flex:1 1 300px;min-width:0;background:var(--card-2);
  border:1px solid var(--line-soft);border-radius:10px;padding:10px 12px 4px}
-.gchart-t{font-size:11.5px;color:var(--ink-3);letter-spacing:.04em;margin-bottom:2px}
+.gchart-t{font-size:11.5px;color:var(--ink-3);letter-spacing:.04em;margin-bottom:2px;
+ display:flex;align-items:center;gap:7px;flex-wrap:wrap}
 .gchart{display:block;width:100%;height:auto}
+.gchart-n{font-size:10.5px;line-height:1.5;color:var(--ink-3);margin:2px 0 6px}
+/* 「独自集計」の札。YouTubeの数値ではないことを、グラフのすぐ横で示す札。
+   審査（III.E.4h）の条件なので、目立たなくしないこと */
+.own{display:inline-block;font-size:10px;font-weight:700;letter-spacing:.04em;
+ line-height:1;padding:4px 7px;border-radius:999px;white-space:nowrap;
+ color:var(--accent);background:color-mix(in srgb, var(--accent) 13%, transparent);
+ border:1px solid color-mix(in srgb, var(--accent) 34%, transparent)}
 /* 店のリンク。ランキングのボタンと同じ見た目をここでも使う */
 .gbuy{display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin:0 0 16px}
 .gbuy a{display:inline-flex;align-items:center;text-decoration:none;font-size:12px;
@@ -524,18 +532,86 @@ footer{font-size:11.5px;color:var(--ink-3);text-align:center;border-top:1px soli
 コラムでの紹介について気になる点がある場合も、同じ窓口へご連絡ください。
 確認のうえ対応します。</p>
 
-<h2>アクセス解析について</h2>
+<h2>YouTube API サービスの利用について</h2>
+<p><b>当サイトは YouTube API サービス（YouTube Data API v3）を利用しています。</b>
+当サイトのご利用にあたっては、
+<a href="https://www.youtube.com/t/terms" target="_blank" rel="noopener">YouTube利用規約</a>
+および
+<a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Googleプライバシーポリシー</a>
+が適用されます。あわせてお読みください。</p>
+
+<h3>当サイトがログインを求めないこと</h3>
+<p><b>当サイトには会員登録もログインもありません。</b>
+閲覧者のYouTubeアカウントやGoogleアカウントに接続することはなく、
+<b>認可（OAuth）を求めたことは一度もありません。</b>
+したがって当サイトは、閲覧者のアカウントに属する情報
+（視聴履歴、登録チャンネル、非公開の動画、プレイリスト、コメントなど）を
+<b>取得も保存もしていません。</b></p>
+
+<h3>当サイトが取得しているもの</h3>
+<p>当サイトが YouTube API から取得しているのは、
+<b>誰でも見られる形で公開されている動画・チャンネルの情報だけ</b>です。
+具体的には次の項目です。</p>
+<ul>
+  <li>動画ID・動画のタイトル・公開日時・再生回数・動画のサムネイル画像のURL</li>
+  <li>チャンネルID・チャンネル名・チャンネルのサムネイル画像のURL・登録者数</li>
+  <li>その動画が配信（ライブ）かどうかの区別</li>
+</ul>
+<p>これらを使って、当サイトは<b>配信タイトルを読んでゲーム名を判定し、
+その日に何件・何チャンネルが配信したかを数えています。</b>
+この判定と集計は当サイトが独自に行っているもので、
+YouTubeが提供する数値や分類ではありません。</p>
+
+<h3>保存している期間と、消し方</h3>
+<p>取得したデータは<b>1日2回（日本時間 7:00 と 19:00）に取り直して</b>います。</p>
+<p><b>配信タイトル・チャンネル名・サムネイル・動画IDなど、YouTubeから取得した
+情報は、取得から30日を過ぎた時点ですべて自動的に削除しています。</b>
+30日を過ぎた日の記録に残るのは、当サイトが数えた「その日どのゲームが何件」
+という集計値だけで、元のタイトルや動画の情報は残していません。
+これは YouTube の開発者ポリシー（III.E.4）に沿った運用です。</p>
+<p>個別の削除のご希望にも応じます。<a href="mailto:info@hayarige.com">info@hayarige.com</a> へご連絡いただければ、
+<b>7日以内に該当するデータを削除</b>します。</p>
+
+<h3>Googleのアカウント側から接続を切る方法</h3>
+<p>上に書いたとおり、当サイトは閲覧者のアカウントへの接続を求めていないため、
+通常は取り消すものがありません。それでもご自身のGoogleアカウントに
+接続されているアプリを確認・解除したい場合は、Googleのセキュリティ設定ページ
+から、いつでもご自身で行えます。</p>
+<p><a href="https://myaccount.google.com/connections?filters=3,4"
+ target="_blank" rel="noopener">https://myaccount.google.com/connections?filters=3,4</a></p>
+<p>このページを開き、取り消したいサービスを選んで「アクセス権を削除」を押すと、
+そのサービスからアカウントへの接続が解除されます。</p>
+
+<h2>閲覧者について集めていること</h2>
 <p>ページの閲覧数を知るために <b>Cloudflare Web Analytics</b> を使っています。
 このしくみは <b>Cookieを置きません</b>。閲覧者を個人として識別したり、
 サイトをまたいで追いかけたりすることもありません。
 分かるのは「どのページが何回見られたか」「どこから来たか」といった
 まとまった数字だけです。</p>
+<p>当サイトが、閲覧者の氏名・メールアドレス・電話番号などを
+入力させて集めることはありません。お問い合わせをメールでいただいた場合、
+その内容と差出人のアドレスは、返信と対応のためだけに使います。</p>
 
-<h2>広告について</h2>
+<h2>第三者が配信するコンテンツ・広告について</h2>
+<p><b>当サイトのページには、当サイト以外の事業者が配信するコンテンツが
+含まれています。</b>これらの事業者は、それぞれの方針にもとづいて
+Cookieなどの技術を使用することがあります。</p>
+<ul>
+  <li><b>YouTube（Google LLC）</b> … 配信のサムネイル画像は、
+      当サイトが保存したものではなく、YouTubeのサーバーから直接表示しています</li>
+  <li><b>Cloudflare, Inc.</b> … サイトの配信とアクセス解析</li>
+  <li><b>Amazon</b> … 商品ページへのリンク（紹介料の識別子が付いています）</li>
+  <li><b>Google AdSense</b> … 広告の配信を申請中です。<b>現在は広告を表示していません。</b>掲載を始めるときは、この欄と下の「広告について」を同じ日に書き換えます</li>
+</ul>
+<p>各事業者がどのような情報を扱うかは、それぞれの事業者の
+プライバシーポリシーに従います。</p>
+
+<h3>広告について</h3>
 <p>当サイトは現在、Google AdSense による広告の掲載を申請しています。
 <b>この文章を書いている時点では、広告は表示していません。</b>
 審査を通って広告を出し始めたときは、このページを同時に書き換え、
 どのCookieが使われるかをここに明記します。</p>
+
 
 <h2>外部のサイトへのリンク</h2>
 <p>ランキングやコラムから、SteamやAmazonの商品ページへリンクしています。
@@ -544,22 +620,92 @@ Amazonのアソシエイトとして、当サイトは適格販売により収�
 <p>リンク先での購入や登録について、当サイトは責任を負いません。
 リンク先のプライバシーの扱いは、それぞれのサイトの方針に従います。</p>
 
-<h2>集めているデータについて</h2>
-<p>当サイトはYouTubeのAPIを使って、公開されている配信・動画の
-タイトル・チャンネル名・再生数を取得しています。
-<b>配信タイトルとチャンネル名は30日で削除しています</b>
-（YouTubeの開発者ポリシーに沿った運用です）。
-30日を過ぎた日の記録に残るのは、こちらで数えた「どのゲームが何件」という
-集計値だけで、元のタイトルは残していません。</p>
-<p>当サイトはYouTube APIサービスを利用しています。利用にあたっては
-<a href="https://www.youtube.com/t/terms" target="_blank" rel="noopener">YouTube利用規約</a>および
-<a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Googleプライバシーポリシー</a>
-が適用されます。</p>
-
 <h2>免責</h2>
 <p>掲載している数字は、当サイトが登録しているチャンネルの範囲で数えたものです。
 日本のゲーム配信のすべてではありません。判定の誤りや取りこぼしもあります。
 気づいたものは直していますが、内容の正確性を保証するものではありません。</p>
+
+<h2 id="en">Privacy Policy (English)</h2>
+<p class="lead">This is the English version of the privacy policy above,
+provided for readers who do not read Japanese. Both versions describe the
+same practices.</p>
+
+<h3>Use of YouTube API Services</h3>
+<p><b>This website uses YouTube API Services</b> (YouTube Data API v3).
+By using this website you are agreeing to be bound by the
+<a href="https://www.youtube.com/t/terms" target="_blank" rel="noopener">YouTube Terms of Service</a>,
+and your information is handled in accordance with the
+<a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google Privacy Policy</a>.</p>
+
+<h3>No sign-in, and no Authorized Data</h3>
+<p><b>This website has no user accounts and no sign-in.</b> It never connects
+to a visitor's YouTube or Google account, and <b>it has never requested OAuth
+authorization from any user.</b> It therefore does not access, collect or store
+any Authorized Data, including watch history, subscriptions, private videos,
+playlists or comments.</p>
+
+<h3>What information this website accesses, collects, stores and uses</h3>
+<p>From the YouTube API this website retrieves <b>only publicly available
+information about public videos and channels:</b></p>
+<ul>
+  <li>Video ID, video title, publication time, view count, thumbnail URL</li>
+  <li>Channel ID, channel name, channel thumbnail URL, subscriber count</li>
+  <li>Whether the video is a live broadcast</li>
+</ul>
+<p>This website uses that information to identify, from the wording of the
+video title, which game is being streamed, and to count how many videos and
+how many distinct channels streamed each game on each day. <b>That
+identification and those counts are calculated independently by this website.
+They are not YouTube metrics and are not provided by YouTube.</b></p>
+<p>This website does not ask visitors for any personal information. No name,
+e-mail address or telephone number is collected from visitors. If you send us
+an e-mail, we use your message and address only to reply and to act on it.</p>
+
+<h3>Refreshing and deleting stored data</h3>
+<p>Stored API Data is refreshed <b>twice every day</b> (07:00 and 19:00 Japan
+Standard Time). <b>All data retrieved from YouTube — video titles, channel
+names, thumbnails and video IDs — is automatically deleted 30 calendar days
+after it is retrieved.</b> What remains after 30 days is only this website's
+own tally of how many videos and channels were counted for each game on each
+day; no YouTube-sourced text or identifiers are kept.</p>
+<p>If you would like data relating to you deleted, write to <a href="mailto:info@hayarige.com">info@hayarige.com</a> and
+<b>we will delete it within 7 calendar days.</b></p>
+
+<h3>Revoking access</h3>
+<p>Because this website never requests authorization, there is normally
+nothing to revoke. You can nevertheless review and remove any third-party
+application's access to your Google account at any time, through the Google
+security settings page:</p>
+<p><a href="https://myaccount.google.com/connections?filters=3,4"
+ target="_blank" rel="noopener">https://myaccount.google.com/connections?filters=3,4</a></p>
+<p>Open that page, select the service you wish to disconnect, and choose
+"Remove access".</p>
+
+<h3>Third parties serving content, including advertisements</h3>
+<p><b>Pages on this website include content served by third parties</b>, which
+may use cookies and similar technologies in accordance with their own
+policies: <b>YouTube (Google LLC)</b>, whose servers serve the stream
+thumbnails directly rather than copies stored by us; <b>Cloudflare, Inc.</b>,
+which delivers this site and provides cookieless analytics; <b>Amazon</b>,
+through affiliate links; and <b>Google AdSense</b>, for advertising. (Our
+AdSense application is still pending and no advertisements are displayed at
+this time; this page will be updated on the day serving begins.) Handling of
+information by each of these is governed by that company's own privacy
+policy.</p>
+
+<h3>Independently calculated figures</h3>
+<p>Rankings, video counts, channel counts, multipliers and the daily trend
+charts shown on this website are <b>calculated independently by this website
+from public video titles.</b> They are clearly labelled as such where they
+appear. <b>They are not provided by YouTube and are not YouTube metrics.</b>
+View counts shown next to individual videos are the figures returned by the
+YouTube API.</p>
+
+<h3>Contact</h3>
+<p><a href="mailto:info@hayarige.com">info@hayarige.com</a></p>
+
+<p style="color:var(--ink-3);font-size:12.5px;margin-top:22px">
+最終更新 2026年10月14日 ／ Last updated October 14, 2026</p>
 </article>
   </section>
 
@@ -599,7 +745,7 @@ Amazonのアソシエイトとして、当サイトは適格販売により収�
 </div>
 
 <script>
-const DATA = {"mode": "page", "date": "2026-10-14", "subtitle": "お問い合わせ・プライバシー", "generated": "2026-10-14 11:30", "paths": {"home": "../", "archive": "../archive/"}};
+const DATA = {"mode": "page", "date": "2026-10-14", "subtitle": "お問い合わせ・プライバシー", "generated": "2026-10-14 12:35", "paths": {"home": "../", "archive": "../archive/"}};
 const $ = s => document.querySelector(s);
 const esc = s => String(s ?? '').replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
 const cssv = n => getComputedStyle(document.documentElement).getPropertyValue(n).trim();
@@ -809,7 +955,11 @@ function render(){
       <div style="display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin-bottom:10px">
         <span class="buy">${buy(r)}${gpage(r)}</span>${mv}
         ${(() => { const sp = spark(r.spark, 90, 22, AC);
-          return sp ? `<span style="font-size:11.5px;color:var(--ink-3)">7日の推移</span>${sp}` : ''; })()}
+          /* ★ 「独自集計」の札はグラフから外さないこと（2026-10-14）。
+             YouTubeの審査 III.E.4h で、この折れ線が「独自に計算した指標」
+             として指摘された。併記は認められているが、明確かつ目立つ形で
+             YouTubeの数値ではないと示すことが条件になっている。 */
+          return sp ? `<span class="own">独自集計</span><span style="font-size:11.5px;color:var(--ink-3)">7日の推移・配信チャンネル数（YouTube提供の数値ではありません）</span>${sp}` : ''; })()}
       </div>
       ${st ? `<div class="streams">${st}</div>`
            : `<span style="color:var(--ink-3);font-size:12.5px">${DATA.purged

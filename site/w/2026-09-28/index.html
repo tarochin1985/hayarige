@@ -202,8 +202,16 @@ tbody tr.main:nth-of-type(-n+6) .rk{color:var(--hot)}
 .ghero figcaption{font-size:10.5px;color:var(--ink-3);margin-top:4px}
 .gchart-wrap{flex:1 1 300px;min-width:0;background:var(--card-2);
  border:1px solid var(--line-soft);border-radius:10px;padding:10px 12px 4px}
-.gchart-t{font-size:11.5px;color:var(--ink-3);letter-spacing:.04em;margin-bottom:2px}
+.gchart-t{font-size:11.5px;color:var(--ink-3);letter-spacing:.04em;margin-bottom:2px;
+ display:flex;align-items:center;gap:7px;flex-wrap:wrap}
 .gchart{display:block;width:100%;height:auto}
+.gchart-n{font-size:10.5px;line-height:1.5;color:var(--ink-3);margin:2px 0 6px}
+/* 「独自集計」の札。YouTubeの数値ではないことを、グラフのすぐ横で示す札。
+   審査（III.E.4h）の条件なので、目立たなくしないこと */
+.own{display:inline-block;font-size:10px;font-weight:700;letter-spacing:.04em;
+ line-height:1;padding:4px 7px;border-radius:999px;white-space:nowrap;
+ color:var(--accent);background:color-mix(in srgb, var(--accent) 13%, transparent);
+ border:1px solid color-mix(in srgb, var(--accent) 34%, transparent)}
 /* 店のリンク。ランキングのボタンと同じ見た目をここでも使う */
 .gbuy{display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin:0 0 16px}
 .gbuy a{display:inline-flex;align-items:center;text-decoration:none;font-size:12px;
@@ -592,7 +600,7 @@ footer{font-size:11.5px;color:var(--ink-3);text-align:center;border-top:1px soli
 </div>
 
 <script>
-const DATA = {"mode": "page", "date": "2026-10-14", "subtitle": "2026年9月28日〜10月4日の週まとめ", "generated": "2026-10-14 11:30", "paths": {"home": "../../", "archive": "../../archive/"}};
+const DATA = {"mode": "page", "date": "2026-10-14", "subtitle": "2026年9月28日〜10月4日の週まとめ", "generated": "2026-10-14 12:35", "paths": {"home": "../../", "archive": "../../archive/"}};
 const $ = s => document.querySelector(s);
 const esc = s => String(s ?? '').replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
 const cssv = n => getComputedStyle(document.documentElement).getPropertyValue(n).trim();
@@ -802,7 +810,11 @@ function render(){
       <div style="display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin-bottom:10px">
         <span class="buy">${buy(r)}${gpage(r)}</span>${mv}
         ${(() => { const sp = spark(r.spark, 90, 22, AC);
-          return sp ? `<span style="font-size:11.5px;color:var(--ink-3)">7日の推移</span>${sp}` : ''; })()}
+          /* ★ 「独自集計」の札はグラフから外さないこと（2026-10-14）。
+             YouTubeの審査 III.E.4h で、この折れ線が「独自に計算した指標」
+             として指摘された。併記は認められているが、明確かつ目立つ形で
+             YouTubeの数値ではないと示すことが条件になっている。 */
+          return sp ? `<span class="own">独自集計</span><span style="font-size:11.5px;color:var(--ink-3)">7日の推移・配信チャンネル数（YouTube提供の数値ではありません）</span>${sp}` : ''; })()}
       </div>
       ${st ? `<div class="streams">${st}</div>`
            : `<span style="color:var(--ink-3);font-size:12.5px">${DATA.purged
