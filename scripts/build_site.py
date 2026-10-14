@@ -1001,6 +1001,34 @@ def purge_old(site_url):
         log(f"チャンネル表から、30日を過ぎたYouTube由来の情報を外しました"
             f"（タイトル見本 {dropped} 件 / 欄 {cleared} か所）")
 
+    # ---- 投稿用のまとめカード（2026-10-14 追加）
+    #
+    # site/card_w.png（週まとめ）と site/card_m.png（月まとめ）には、
+    # **配信のサムネイルが焼き込んである。** YouTubeから借りた画像なので、
+    # ここも30日で消す。消したあと作り直されないよう、make_week_card.py の
+    # ほうでも「期間の終わりから30日を過ぎたものは作らない」ことにしてある。
+    #
+    # ★ アーカイブのカード（site/w/<key>/card.png）にはサムネイルを
+    #   入れていないので、こちらは消さない。分け方の理由は
+    #   make_week_card.py の冒頭に書いてある。
+    lpath = DATA / "matome_card.json"
+    led = read_json(lpath, {}) or {}
+    gone_card = False
+    for slug, nm in (("w", "週まとめ"), ("m", "月まとめ")):
+        png = SITE / f"card_{slug}.png"
+        if not png.is_file():
+            continue
+        # 作った日が分からないものも消す（分からない＝古い、に倒す）
+        if str((led.get(slug) or {}).get("made") or "") >= limit:
+            continue
+        png.unlink()
+        key = (led.pop(slug, None) or {}).get("key") or "作った日が不明"
+        gone_card = True
+        log(f"30日を過ぎたので site/card_{slug}.png を削除しました"
+            f"（{nm} {key}）")
+    if gone_card:
+        write_json(lpath, led)
+
 
 def analytics_html():
     """アクセス解析のタグ。data/site_config.json に token を入れると出る。

@@ -25,10 +25,24 @@
   その説明 … 50〜100字。何が起きたのかは、ここを読めば分かるようにする
   「こんなこともありました」 … その他の出来事を2行
 
-配信のサムネイルは載せない。毎日のカードは「どの配信の話か」を見せるために
-借りているが、こちらに載るのは見出しと、こちらが数えた数字だけ。
-借りものが無いぶん、画像の生成がサムネイルの取得に左右されない
-（毎日のカードが手元で card_preview.png にしかならない原因がこれ）。
+配信のサムネイルは**2026-10-14に入れた**（たろちんさん）。ただし置き場所を
+2つに分けてある。**ここを崩さないこと。**
+
+    site/w/<key>/card.png   … アーカイブ。**サムネイル無し。** 何年も残る
+    site/card_w.png         … 投稿用。**サムネイル入り。** いちばん新しい週まとめ
+    site/card_m.png         … 同じく、いちばん新しい月まとめ
+
+分けた理由は、YouTubeの開発者ポリシー III.E.4d が「YouTubeから取ったものを
+30日を超えて持たない」と定めていること。アーカイブのカードに焼き込むと、
+その画像が何年も残る。2026-10-14のコンプライアンス審査で
+「YouTubeから取ったものは30日で全部消している」と回答した直後でもある。
+投稿用の2枚は build_site.py が30日で消し、**30日を過ぎた期間のぶんは
+作り直さない**ので、残り続けることがない。
+
+なお**サムネイル入りは手元では作れない。** Claudeの作業環境からは
+i.ytimg.com に出られないので、出るのはActionsの中（--site）だけ。
+手元で `--png` を回したときはサムネイル無しで出て、その旨を画面に出す
+（毎日のカードが手元で card_preview.png にしかならないのと同じ事情）。
 
 JSONに足す欄
 ------------
@@ -36,8 +50,13 @@ JSONに足す欄
       "sub":  "見出しの中身を説明する文。50〜100字。2〜3行になる",
       "also": ["ほかの出来事（20〜44字）", "もう1つ"]   ← 週まとめ
       "best": [{"g": "1位のゲーム名", "n": "ひとこと"},  ← 月まとめ
-               {"g": "2位", "n": "…"}, {"g": "3位", "n": "…"}]
+               {"g": "2位", "n": "…"}, {"g": "3位", "n": "…"}],
+      "pics": [{"u": "https://www.youtube.com/watch?v=…", "by": "チャンネル名"}]
     }
+
+`pics` は投稿用のカードに並べる配信のサムネイル（最大3枚）。省いてよく、
+省いたときは `hero` と `sources` の中のYouTubeの動画URLから拾う。
+**`by`（誰の配信か）が無いものは使わない。**
 
 省いてもよい。sub が無ければ lead の1文目を使い、also が無ければ
 「こんなこともありました」の枠ごと出さない（そのぶん見出しが大きくなる）。
@@ -71,8 +90,8 @@ from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 
-from build_site import POINT  # noqa: E402
-from common import DATA, log, read_json  # noqa: E402
+from build_site import KEEP_DAYS, POINT  # noqa: E402
+from common import DATA, JST, log, read_json, write_json  # noqa: E402
 from make_card import (THEMES, e, font_link, ico, site_url,  # noqa: E402
                        theme_css, x_weight)
 
@@ -226,6 +245,25 @@ header .c{font-size:13px;color:var(--ink2);margin-top:6px;font-weight:700}
   display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
 .b23 .nt{margin-top:10px;font-size:22px;font-weight:700;line-height:1.5;color:var(--ink2)}
 
+/* 配信のサムネイル（2026-10-14 たろちんさん）
+   > 週まとめ、月まとめのツイート用カードにも毎日のコラムと同様に
+   > 配信のサムネを入れてください
+   毎日のカード（make_card.py）と同じ作りにしてある。3枚並べるのは、
+   1枚を大きく使うより**借りている度合いが下がる**から。
+   出どころ（チャンネル名）は1枚ずつ必ず添える。
+   .sm は、札が900pxからはみ出したときに FIT が付ける。 */
+.pics{flex:none;padding-top:20px;display:flex;gap:16px}
+.pics figure{width:232px;flex:none}
+.pics.sm figure{width:170px}
+.pics figure img{width:100%%;aspect-ratio:16/9;object-fit:cover;border-radius:10px;
+  border:1px solid var(--line);display:block;background:var(--card)}
+.pics figcaption{font-size:12px;color:var(--ink3);margin-top:6px;line-height:1.45;
+  overflow:hidden;text-overflow:ellipsis;white-space:nowrap;font-weight:700}
+.pics.sm figcaption{font-size:11px}
+/* 月まとめは札の中身が多い（1位・見出し・説明・2位3位）ので、
+   はじめから小さいほうで置く。 */
+.best .pics{padding-top:18px}
+
 footer{flex:none;display:flex;align-items:center;gap:20px}
 .note{font-size:13px;color:var(--ink3);line-height:1.7;font-weight:700}
 .url{margin-left:auto;font-family:"Roboto Mono",monospace;font-size:20px;font-weight:700;
@@ -266,8 +304,22 @@ FIT = """
 (function(){
   var steps=%(steps)s;
   function run(){
-    // 札は中身ぶんの高さなので、あふれるとしたら画像（900px）のほう
-    function over(){ return document.body.scrollHeight > 901; }
+    // あふれ方が2通りある。
+    //   (1) 札が画像（900px）からはみ出す
+    //   (2) 札の中で .hd / .sub が潰されて、字が切れる
+    // (2) は2026-10-14にサムネイルを足して出てきた。サムネイルは flex:none
+    // なので、縮むのは隣の .hd と .sub のほう。あちらは overflow:hidden
+    // なので**切れるだけで body は900pxのまま**で、(1) だけ見ていると
+    // 「収まっている」と誤判定して、見出しの2行目が消えた画像ができる。
+    function clipped(){
+      return [].slice.call(document.querySelectorAll('.hd, .sub'))
+        .some(function(n){ return n.scrollHeight > n.clientHeight + 1; });
+    }
+    function over(){ return document.body.scrollHeight > 901 || clipped(); }
+    // 文字を縮める前に、まずサムネイルを小さくする。
+    // 文は読むもの、サムネイルは雰囲気なので、削る順番はこちらが先。
+    var pics=document.querySelector('.pics');
+    if(pics && over()) pics.classList.add('sm');
     steps.forEach(function(st){
       var els=[].slice.call(document.querySelectorAll(st[0]));
       if(!els.length || !over()) return;
@@ -334,6 +386,168 @@ def card_parts(col):
     # 本文の太字の目印（**ここ**）は、カードと投稿文には持ち込まない
     strip_b = lambda s: re.sub(r"\*\*(.+?)\*\*", r"\1", s)  # noqa: E731
     return strip_b(sub), [strip_b(x) for x in also[:ALSO_N]]
+
+
+# ------------------------------------------------- 配信のサムネイル
+# 2026-10-14 たろちんさん。毎日のカードには前から入っていた。
+#
+#   > 週まとめ、月まとめのツイート用カードにも毎日のコラムと同様に
+#   > 配信のサムネを入れてください。カードを出力するURLは
+#   > 毎日のコラムとは違うものになってかまいません
+#
+# ★**サムネイルを焼き込んだ画像は、アーカイブには置かない。**
+#   site/w/<key>/card.png は一覧の受け皿として何年も残る。あそこに
+#   YouTubeの画像を焼き込むと、**30日を超えて持ち続けることになる**
+#   （開発者ポリシー III.E.4d）。2026-10-14のコンプライアンス審査で
+#   「YouTubeから取ったものは30日で全部消している」と回答している。
+#   サムネイル入りは site/card_w.png / site/card_m.png に置き、
+#   30日で build_site.py が消す。**この分け方を崩さないこと。**
+YT_ID = re.compile(r"(?:youtube\.com/watch\?v=|youtu\.be/|"
+                   r"youtube\.com/live/|youtube\.com/shorts/)([\w-]{11})")
+
+
+BY_PAREN = re.compile(r"[（(]([^（）()]{1,24})[）)]\s*$")
+
+
+def channel_of(t):
+    """出典の見出しから「誰の配信か」を取り出す。
+
+    書き方が2通りある（どちらも実際のまとめで使われている）。
+
+        風真いろは — 【#ホロドリ】昼釣り～仕事おわりの癒しのひと時～
+        【#ホロ甲2026】最終回！こんこよ高校2026 3年目夏の甲子園！（博衣こより）
+
+    どちらでもなければ**空を返す。** 当てずっぽうで入れない。
+    出どころを間違えて書くくらいなら、その1枚を出さないほうがよい
+    （2026-10-14。見出しをまるごとチャンネル名として出しかけた）。
+    """
+    t = str(t or "").strip()
+    if " — " in t:
+        head = t.split(" — ")[0].strip()
+        return head if 0 < len(head) <= 24 else ""
+    m = BY_PAREN.search(t)
+    return m.group(1).strip() if m else ""
+
+
+def pics_parts(col, key=""):
+    """カードに並べる配信のサムネイルを、最大3枚まで集める。
+
+    出どころの順（サイトの special_thumb と同じ考え方）
+      1. card.pics … 書いた人が選んだ配信 [{"u": 動画URL, "by": チャンネル名}]
+      2. hero      … まとめのページの見出し画像に使う配信
+      3. sources   … 出典に混ざっているYouTubeの動画
+      4. 月まとめだけ … 1位〜3位のゲームの代表的な配信（best_pics）
+
+    **誰の配信か（by）が取れないものは入れない。** 画像だけ借りて
+    出どころを書かないのは、このサイトではやらないことにしている。
+    """
+    out, seen = [], set()
+
+    def add(u, by):
+        m = YT_ID.search(str(u or ""))
+        by = str(by or "").strip()
+        if not m or not by or m.group(1) in seen:
+            return
+        seen.add(m.group(1))
+        out.append({"th": f"https://i.ytimg.com/vi/{m.group(1)}/mqdefault.jpg",
+                    "by": by})
+
+    card = col.get("card") or {}
+    for x in (card.get("pics") or []):
+        if isinstance(x, dict):
+            add(x.get("u"), x.get("by"))
+    hero = col.get("hero") or {}
+    if isinstance(hero, dict):
+        add(hero.get("u"), hero.get("by"))
+    for src in (col.get("sources") or []):
+        if isinstance(src, dict):
+            add(src.get("u"), channel_of(src.get("t")))
+    if len(out) < 3 and key and period(key)[2] == "月まとめ":
+        for x in best_pics(col, key):
+            if x["th"] not in {y["th"] for y in out}:
+                out.append(x)
+    # **同じチャンネルの配信を2枚並べない。** 3枚にするのは「いろんな人が
+    # 配信している」を見せるためなので、同じ人が並ぶと意味が薄くなる。
+    # どうしても3枚に足りないときだけ、重複を許して埋める。
+    picked, used = [], set()
+    for x in out:
+        if x["by"] in used:
+            continue
+        picked.append(x)
+        used.add(x["by"])
+        if len(picked) == 3:
+            return picked
+    for x in out:
+        if x not in picked:
+            picked.append(x)
+            if len(picked) == 3:
+                break
+    return picked
+
+
+def best_pics(col, key):
+    """月まとめ用。1位〜3位のゲームそれぞれについて、**その月いちばん
+    見られた配信**のサムネイルを1枚ずつ拾う。
+
+    なぜ要るか（2026-10-14）
+    ------------------------
+    月まとめの出典はSteamや4Gamerで、**YouTubeの動画URLがほとんど無い。**
+    2026-09のまとめは出典7本が全部プレスリリースで、sources から拾う作りでは
+    1枚も出なかった。build_site.py の game_art が同じ問題に先にぶつかっていて、
+    そちらは「1位のゲームの代表的な配信」を site/d から引いている。
+    ここは**1位〜3位ぶんを1枚ずつ**引く（カードが順位表の形なので、
+    3枚が1位・2位・3位に対応しているほうが読める）。
+
+    site/d/<日>/index.html の `streams` は30日で外れるので、
+    **古い月はここでも何も取れない。** それでよい（30日の約束と同じ線）。
+    """
+    import match as M
+    site = Path(__file__).resolve().parent.parent / "site"
+    if not (site / "d").is_dir():
+        return []
+    a, b, _label, _slug = period(key)
+    names = [g for g, _n in best_parts(col)][:3]
+    if not names:
+        return []
+    want = [M.compact(n) for n in names]
+    best = [None] * len(want)          # (再生数, サムネイル, チャンネル名)
+    for d in sorted((site / "d").iterdir()):
+        if not re.fullmatch(r"\d{4}-\d{2}-\d{2}", d.name):
+            continue
+        if not (a.strftime("%Y-%m-%d") <= d.name <= b.strftime("%Y-%m-%d")):
+            continue
+        try:
+            h = (d / "index.html").read_text(encoding="utf-8")
+            i = h.index("const DATA = ") + len("const DATA = ")
+            obj, _ = json.JSONDecoder().raw_decode(h[i:])
+        except (ValueError, OSError):
+            continue
+        for r in obj.get("ranking", []):
+            g = M.compact(str(r.get("game", "")))
+            if not g:
+                continue
+            # 小見出しが通称で書かれていることがあるので、どちらかが
+            # もう片方を含んでいれば同じゲームとみなす（game_art と同じ）
+            for j, w in enumerate(want):
+                if not (g == w or w in g or g in w):
+                    continue
+                for st in (r.get("streams") or []):
+                    if not st.get("th") or not st.get("c"):
+                        continue
+                    v = int(st.get("v") or 0)
+                    if best[j] is None or v > best[j][0]:
+                        best[j] = (v, st["th"], str(st["c"]))
+    return [{"th": x[1], "by": x[2]} for x in best if x]
+
+
+def pics_html(pics):
+    """サムネイルの並び。空なら何も出さない（枠だけ残さない）。"""
+    if not pics:
+        return ""
+    figs = "".join(f'<figure><img src="{e(x["th"])}" alt="">'
+                   f'<figcaption>YouTube ／ {e(x["by"])}</figcaption></figure>'
+                   for x in pics)
+    return f'<div class="pics">{figs}</div>'
 
 
 # ------------------------------------------------- 月まとめの1位〜3位
@@ -414,7 +628,7 @@ def g1_class(name):
     return " xxlong"
 
 
-def best_html(col, title, sub):
+def best_html(col, title, sub, pics=""):
     """月まとめの札の中身。1位が取れなければ None（週と同じ形に戻る）。"""
     best = best_parts(col)
     if not best:
@@ -436,10 +650,10 @@ def best_html(col, title, sub):
             f'<div class="g1{g1_class(g1)}">{e(g1)}</div>'
             + (f'<div class="hd">{POINT}<span>{e(hd)}</span></div>' if hd else "")
             + (f'<div class="sub">{e(sub)}</div>' if sub else "")
-            + f"</div></div>{rest}</section>")
+            + f"</div></div>{rest}{pics}</section>")
 
 
-def week_html(label, title, sub, also):
+def week_html(label, title, sub, also, pics=""):
     """週まとめの札の中身（月で1位が取れなかったときもこちら）。"""
     n = len(title)
     ttsize = " long" if n > 24 else (" short" if n <= 15 else "")
@@ -454,21 +668,28 @@ def week_html(label, title, sub, also):
             f'<div class="lead"><div class="hd{ttsize}">{POINT}'
             f"<span>{e(title)}</span></div>"
             + (f'<div class="sub">{e(sub)}</div>' if sub else "")
-            + f"</div>{rest}</section>")
+            + f"</div>{rest}{pics}</section>")
 
 
-def build(col, key, theme="dark"):
+def build(col, key, theme="dark", pics=False):
+    """カードのHTML。
+
+    pics=True のときだけ配信のサムネイルを焼き込む。
+    **アーカイブ（site/w/<key>/card.png）は pics=False のまま。**
+    理由は pics_parts の上のコメント（30日を超えて持たない）。
+    """
     th = theme_css(theme)
     a, b, label, _slug = period(key)
     title = str(col.get("title") or "").strip()
     sub, also = card_parts(col)
+    ph = pics_html(pics_parts(col, key)) if pics else ""
     css = CSS % {"bg": th["bg"], "titlefont": th["titlefont"],
                  "textfont": th["textfont"], "titleweight": th["titleweight"],
                  "gamestroke": th["gamestroke"]}
-    card = best_html(col, title, sub) if label == "月まとめ" else None
+    card = best_html(col, title, sub, ph) if label == "月まとめ" else None
     steps = STEPS_MONTH if card else STEPS_WEEK
     if card is None:
-        card = week_html(label, title, sub, also)
+        card = week_html(label, title, sub, also, ph)
     return PAGE % {
         "css": css, "vars": th["vars"], "fontlink": font_link(th["fontq"]),
         "range": (a.strftime("%Y.%m") if label == "月まとめ"
@@ -603,11 +824,21 @@ def shoot(pages, theme):
             except Exception:
                 log("文字の大きさを詰める処理が終わりませんでした。そのまま撮ります。")
             pg.wait_for_timeout(300)
-            # 書体が当たっているかだけ確かめる。このカードは配信のサムネイルを
-            # 使わないので、確かめるところはここだけで済む。
+            # 書体が当たっているかを確かめる。サムネイル入りの投稿用カードは
+            # Actionsの中でしか作らないので、画像が空になる心配はここには無い。
             loaded = pg.evaluate("""() => [...document.fonts]
                 .filter(f => f.status === 'loaded').map(f => f.family)""")
             miss |= {f for f in want if f not in loaded}
+            # サムネイルが本当に出ているかを見る。i.ytimg.com に出られない
+            # 環境で作ると、**枠だけ並んだ画像**ができあがる。黙って出すと
+            # そのまま投稿されるので、ここで気づけるようにしておく
+            # （2026-10-14。毎日のカードが card_preview.png を分けているのと同じ話）。
+            blank = pg.evaluate("""() => [...document.querySelectorAll('.pics img')]
+                .filter(i => !i.naturalWidth).length""")
+            if blank:
+                log(f"⚠️ サムネイルが {blank} 枚、読み込めませんでした: {png}")
+                log("   この画像は枠だけが並びます。"
+                    "i.ytimg.com に出られる場所で作り直してください。")
             Path(png).parent.mkdir(parents=True, exist_ok=True)
             pg.screenshot(path=str(png))
         b.close()
@@ -668,10 +899,57 @@ def for_site(theme, force=False):
         html_path.write_text(build(col, key, theme), encoding="utf-8")
         pages.append((html_path, png))
         made.append(f"{slug}/{key}/card.png")
+    # ---- 投稿用の1枚（サムネイル入り）。2026-10-14 たろちんさん
+    #
+    # 毎日のカード（site/card.png）と同じ置き方で、**いちばん新しい**
+    # 週まとめ・月まとめのぶんを上書きしていく。たろちんさんの言葉:
+    #
+    #   > カードを出力するURLは毎日のコラムとは違うものになってかまいません
+    #
+    #   https://hayarige.com/card_w.png   週まとめ
+    #   https://hayarige.com/card_m.png   月まとめ
+    #
+    # ★**期間の終わりから30日を過ぎたものは作らない。** これが30日の約束を
+    #   守る仕掛けで、build_site.py が消したあと二度と戻らないようにしている。
+    #   「古いのが消えたから作り直そう」としてはいけない（時計が戻る）。
+    ledger = read_json(DATA / "matome_card.json", {}) or {}
+    today_d = datetime.now(JST).date()
+    latest = {}
+    for _kind, slug, f in all_columns():
+        try:
+            latest[slug] = (f, period(f.stem)[1])
+        except ValueError:
+            continue
+    for slug, (f, end) in sorted(latest.items()):
+        old_days = (today_d - end.date()).days
+        if old_days > KEEP_DAYS:
+            log(f"投稿用の card_{slug}.png は作りません"
+                f"（{f.stem} は期間の終わりから{old_days}日。30日を過ぎています）")
+            continue
+        col = read_json(f, None)
+        if not isinstance(col, dict) or not str(col.get("title") or "").strip():
+            continue
+        pics = pics_parts(col, f.stem)
+        if not pics:
+            log(f"投稿用の card_{slug}.png は作りません（{f.name} に配信の"
+                "サムネイルが見つかりません。card.pics か hero か sources に"
+                "YouTubeの動画URLと、誰の配信かを入れてください）")
+            continue
+        png = site / f"card_{slug}.png"
+        if (not force and png.is_file()
+                and png.stat().st_mtime >= f.stat().st_mtime):
+            continue
+        hp = tmp / f"post-{slug}.html"
+        hp.write_text(build(col, f.stem, theme, pics=True), encoding="utf-8")
+        pages.append((hp, png))
+        made.append(f"card_{slug}.png（{f.stem}／サムネイル{len(pics)}枚）")
+        ledger[slug] = {"key": f.stem, "made": str(today_d)}
+
     if not pages:
         log("まとめの画像は全部そろっています（作り直しは --force-png）")
         return 0
     miss = shoot(pages, theme)
+    write_json(DATA / "matome_card.json", ledger)
     for x in made:
         log(f"まとめの画像を作りました: site/{x}")
     if miss:
@@ -738,6 +1016,25 @@ def main():
     html_path = out / f"{'month' if kind == '月まとめ' else 'week'}-card-{key}.html"
     html_path.write_text(build(col, key, theme), encoding="utf-8")
     log(f"カードのHTMLを書きました: {html_path}（見た目 {theme}）")
+
+    # ---- 配信のサムネイルについて（2026-10-14）
+    # ここ（Claudeの作業環境）からは i.ytimg.com に出られないので、
+    # サムネイルを入れると**空の枠だけが並ぶ。** だから手元では入れない。
+    # 入るのはActionsの中（--site）だけ。渡すときに必ず添えてもらう。
+    _pics = pics_parts(col, key)
+    _slug = period(key)[3]
+    if _pics:
+        log(f"⚠️ この画像には配信のサムネイルが入っていません"
+            f"（{len(_pics)}枚ぶん見つかりましたが、"
+            "この環境からYouTubeの画像に出られないためです）。")
+        log(f"   サムネイル入りの投稿用の画像は、JSONをアップして"
+            f"「3. 毎日の更新」を回したあと "
+            f"https://{site_url()}/card_{_slug}.png に出ます。")
+        log("   たろちんさんに渡すときは、この2行をそのまま添えてください。")
+    else:
+        log("※ 配信のサムネイルが1枚も見つかりません。"
+            "card.pics か hero か sources に、YouTubeの動画URLと"
+            "「誰の配信か」を入れると、投稿用のカードに3枚まで並びます。")
 
     sub, also = card_parts(col)
     title = str(col.get("title") or "")
