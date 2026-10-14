@@ -1,6 +1,6 @@
 {
- "date": "2026-10-14",
- "generated": "2026-10-14 12:35",
+ "date": "2026-10-15",
+ "generated": "2026-10-15 00:01",
  "leads": {
   "events": [
    {
@@ -14,7 +14,6 @@
      "はちぴ",
      "やよい",
      "史門 / Shimon ",
-     "姫崎クト -himesaki kuto-",
      "貴様まさか🦈",
      "赤彩みあ / Akairo Mia Ch.【すずみあ】",
      "銀灰まお Mao Ch.",
@@ -25,10 +24,12 @@
     "tag": "#ホロドリ",
     "channels": [
      "AZKi Channel",
+     "Choco Ch. 癒月ちょこ",
      "Iroha ch. 風真いろは - holoX -",
-     "Koyori ch. 博衣こより - holoX -",
      "Roboco Ch. - ロボ子",
      "SoraCh. ときのそらチャンネル",
+     "Su Ch. 水宮枢 - FLOW GLOW",
+     "Towa Ch. 常闇トワ",
      "Vivi Ch. 綺々羅々ヴィヴィ - FLOW GLOW",
      "アキロゼCh。Vtuber/ホロライブ所属"
     ]
@@ -37,37 +38,18 @@
     "tag": "#ゲーム実況",
     "channels": [
      "KORIN.鈴ノ音コリン",
-     "M家の休日マサ",
-     "Usagi Ch. 因幡兎",
+     "あトもドり",
+     "ごまっぷ_GameCh",
      "ジョアだよ",
-     "ルベルフゲームチャンネル",
-     "恋因ロス KoinRosu"
-    ]
-   },
-   {
-    "tag": "#にじクラおにごっこ",
-    "channels": [
-     "える / Elu【にじさんじ】",
-     "オリバー・エバンス / Oliver Evans 【にじさんじ】",
-     "レイン・パターソン／Lain Paterson【にじさんじ】",
-     "北小路ヒスイ / Kitakoji Hisui 【にじさんじ】",
-     "弦月 藤士郎 / Genzuki Tojiro【にじさんじ】",
-     "長尾 景 / Nagao Kei【にじさんじ】"
-    ]
-   },
-   {
-    "tag": "#わちゃサバ",
-    "channels": [
-     "ノビーの遊び部屋",
-     "天羽よつは",
-     "小花衣 ももみ / Momomi Kohanai",
-     "影。/かげまる",
-     "稲荷いろはInari Iroha"
+     "恋因ロス KoinRosu",
+     "運天りらん",
+     "雛乃ぴぴ / Hinano pipi"
     ]
    },
    {
     "tag": "#ホロ鯖ARK",
     "channels": [
+     "Koyori ch. 博衣こより - holoX -",
      "Pekora Ch. 兎田ぺこら",
      "Towa Ch. 常闇トワ",
      "Watame Ch. 角巻わため",
@@ -75,19 +57,37 @@
     ]
    },
    {
-    "tag": "#スプラトゥーン3",
+    "tag": "#ストグラ",
     "channels": [
-     "きさらぎ【下手ゲーム実況】",
-     "なつめやみや / Natsume Yamiya",
-     "まりも"
+     "Tenten Ch. / 鳳玲天々",
+     "marunnn【まるーんチャンネル】",
+     "【琵琶ちゃぷ】なな湖なな湖",
+     "たけぉ",
+     "ノビーの遊び部屋"
+    ]
+   },
+   {
+    "tag": "#わちゃサバ",
+    "channels": [
+     "ノビーの遊び部屋",
+     "小花衣 ももみ / Momomi Kohanai",
+     "稲荷いろはInari Iroha"
     ]
    },
    {
     "tag": "#縦型配信",
     "channels": [
      "かおりんご(44歳児)",
-     "なつめやみや / Natsume Yamiya",
-     "ぺれ"
+     "ぺれ",
+     "もみじビーム"
+    ]
+   },
+   {
+    "tag": "#ストグラseason2",
+    "channels": [
+     "HYBRID SENSE",
+     "けんつめしと飯田けんつ【ストグラ】",
+     "健屋花那【にじさんじ】KanaSukoya"
     ]
    }
   ],
@@ -95,64 +95,75 @@
   "wide": [
    {
     "game": "ストリートファイター6",
-    "channels": 40,
-    "videos": 46
+    "channels": 41,
+    "videos": 51
    },
    {
     "game": "Apex Legends",
     "channels": 36,
-    "videos": 39
-   },
-   {
-    "game": "Minecraft",
-    "channels": 32,
-    "videos": 32
+    "videos": 44
    },
    {
     "game": "Grand Theft Auto V",
+    "channels": 33,
+    "videos": 38
+   },
+   {
+    "game": "Minecraft",
+    "channels": 28,
+    "videos": 30
+   },
+   {
+    "game": "スプラトゥーン3",
     "channels": 24,
     "videos": 25
    },
    {
-    "game": "Dead by Daylight",
-    "channels": 16,
-    "videos": 18
-   },
-   {
-    "game": "スプラトゥーン3",
+    "game": "モンスターストライク",
     "channels": 17,
-    "videos": 18
-   },
-   {
-    "game": "League of Legends",
-    "channels": 14,
-    "videos": 14
+    "videos": 20
    },
    {
     "game": "Japanese Ramen Simulator",
-    "channels": 14,
-    "videos": 14
+    "channels": 18,
+    "videos": 18
+   },
+   {
+    "game": "hololive Dreams",
+    "channels": 16,
+    "videos": 16
    }
   ]
  },
  "drift": [],
- "tags": [
-  {
-   "tag": "わちゃサバ",
-   "game": "Minecraft",
-   "evidence": 3,
-   "added": 3,
-   "channels": 5
-  },
-  {
-   "tag": "にじクラおにごっこ",
-   "game": "Minecraft",
-   "evidence": 3,
-   "added": 3,
-   "channels": 6
-  }
- ],
+ "tags": [],
  "misses": [
+  {
+   "word": "Ratatan🎶",
+   "channels": 3,
+   "n": 4,
+   "examples": [
+    {
+     "t": "【#ラタタン #Ratatan🎶】正式サービス開始おめでと🎉視聴者マルチ参加型🎶【ネタバレ注意 】",
+     "c": "ゆるふわまったり勢のゆかりさん",
+     "u": "https://www.youtube.com/watch?v=EbAV5Bc9tOM"
+    },
+    {
+     "t": "#PR【 #Ratatan #ラタタン】朝活🌞おはよ！正式リリース待ってた！【狐森ろべ／VTuber】",
+     "c": "狐森ろべ / Komori Ch.",
+     "u": "https://www.youtube.com/watch?v=meDnBHR5O2k"
+    },
+    {
+     "t": "【#PR/#Ratatan/#ラタタン】私に続け！初見Ratatan【樹つつき/Ratatan実況】",
+     "c": "樹つつき -Itsuki Tsutsuki Ch-",
+     "u": "https://www.youtube.com/watch?v=5qxc-x4HTEI"
+    }
+   ],
+   "kind": "near",
+   "suggest": [
+    "Ratatan: Digital Deluxe Edition"
+   ]
+  },
   {
    "word": "MIMESIS",
    "channels": 2,
@@ -175,30 +186,9 @@
    ]
   },
   {
-   "word": "Ratatan🎶",
-   "channels": 2,
-   "n": 2,
-   "examples": [
-    {
-     "t": "【#ラタタン #Ratatan🎶】正式サービス開始おめでと🎉視聴者マルチ参加型🎶【ネタバレ注意 】",
-     "c": "ゆるふわまったり勢のゆかりさん",
-     "u": "https://www.youtube.com/watch?v=EbAV5Bc9tOM"
-    },
-    {
-     "t": "#PR【 #Ratatan #ラタタン】朝活🌞おはよ！正式リリース待ってた！【狐森ろべ／VTuber】",
-     "c": "狐森ろべ / Komori Ch.",
-     "u": "https://www.youtube.com/watch?v=meDnBHR5O2k"
-    }
-   ],
-   "kind": "near",
-   "suggest": [
-    "Ratatan: Digital Deluxe Edition"
-   ]
-  },
-  {
    "word": "Starward",
    "channels": 1,
-   "n": 6,
+   "n": 7,
    "examples": [
     {
      "t": "【星の翼】最後の低コスト枠をランスロット・ハルカ・エミカ・レミエル・パラスあたりが取り合ってるランクマ【星之翼/Starward】【東和正】",
@@ -240,22 +230,6 @@
    "kind": "near",
    "suggest": [
     "Split Brain Samsara"
-   ]
-  },
-  {
-   "word": "Antivirus Survivors 2003",
-   "channels": 1,
-   "n": 1,
-   "examples": [
-    {
-     "t": "古のPC環境が舞台のヴァンサバライク!!怪しいソフトを解凍してウイルスを駆逐するSasatikk【Antivirus Survivors 2003】",
-     "c": "sasatikk",
-     "u": "https://www.youtube.com/watch?v=mVlpNFpkZgg"
-    }
-   ],
-   "kind": "near",
-   "suggest": [
-    "Antivirus Survivors 2003 Professional"
    ]
   },
   {
@@ -308,9 +282,25 @@
    ]
   },
   {
+   "word": "16Personalities",
+   "channels": 1,
+   "n": 1,
+   "examples": [
+    {
+     "t": "【MBIT】『16Personalities』はMBTIじゃないらしい！AI予想と診断テスト！みんなはどの性格タイプ？【尾幡りあん】#イラストレーター",
+     "c": "尾幡りあん / Obata Lian お絵描き",
+     "u": "https://www.youtube.com/watch?v=EUvcDz2o0t8"
+    }
+   ],
+   "kind": "near",
+   "suggest": [
+    "16 Personalities Simulator"
+   ]
+  },
+  {
    "word": "バイオハザード",
-   "channels": 4,
-   "n": 5,
+   "channels": 5,
+   "n": 7,
    "examples": [
     {
      "t": "【バイオハザード】新作映画の正直レビュー！面白いけど惜しいところも…【ネタバレ注意】",
@@ -326,6 +316,78 @@
      "t": "『バイオハザード』が面白すぎたので帰宅してすぐ感想語ってみた【CCJP】",
      "c": "カクブロ",
      "u": "https://www.youtube.com/watch?v=pK078aE315Y"
+    }
+   ],
+   "kind": "wide",
+   "suggest": []
+  },
+  {
+   "word": "ドラクエウォーク",
+   "channels": 4,
+   "n": 11,
+   "examples": [
+    {
+     "t": "【ドラクエウォーク】地底探鉱のジュエルモンスターの秘めたる可能性…まさかの仕様が判明しました!!【DQW】",
+     "c": "NAITO Game Channel",
+     "u": "https://www.youtube.com/watch?v=hsdXGWEvh8U"
+    },
+    {
+     "t": "【ドラクエウォーク】プラコン集め捗ってる？",
+     "c": "AOmaxTV",
+     "u": "https://www.youtube.com/watch?v=4KC6XIRASDE"
+    },
+    {
+     "t": "【ドラクエウォーク】実は今後1番重要な職業になる！？",
+     "c": "シルバーアロワナ",
+     "u": "https://www.youtube.com/watch?v=yd3QKbgv2OY"
+    }
+   ],
+   "kind": "wide",
+   "suggest": []
+  },
+  {
+   "word": "遊戯王",
+   "channels": 4,
+   "n": 9,
+   "examples": [
+    {
+     "t": "手札から飛んでくる「神の宣告」！？新手札誘発「災禍の根絶者」で時代が変わるか！？【遊戯王】",
+     "c": "あまくだり",
+     "u": "https://www.youtube.com/watch?v=cb11mzFobww"
+    },
+    {
+     "t": "【繋がる世界】CROSS ART COLLECTION 開封 #遊戯王",
+     "c": "たすく",
+     "u": "https://www.youtube.com/watch?v=vFcYt1eDER0"
+    },
+    {
+     "t": "【遊戯王】オレはまだあきらめない。追加で5箱開封するぜ！！！",
+     "c": "はじめしゃちょー2 (hajime)",
+     "u": "https://www.youtube.com/watch?v=AenXaWtHsGM"
+    }
+   ],
+   "kind": "wide",
+   "suggest": []
+  },
+  {
+   "word": "Varium",
+   "channels": 3,
+   "n": 17,
+   "examples": [
+    {
+     "t": "#01【 絶体絶命都市2 】完全初見.ᐟ 自分の選択で生き延びたい.ᐟ.ᐟ ※ネタバレ注意.ᐟ【向日守ぽた/ Varium】",
+     "c": "Pota Ch. 向日守ぽた",
+     "u": "https://www.youtube.com/watch?v=ZP8jv5q02nY"
+    },
+    {
+     "t": "#02【 絶体絶命都市2 】完全初見.ᐟ 自分の選択で生き延びたい.ᐟ.ᐟ ※ネタバレ注意.ᐟ【向日守ぽた/ Varium】",
+     "c": "Pota Ch. 向日守ぽた",
+     "u": "https://www.youtube.com/watch?v=WbN1EK1dvFg"
+    },
+    {
+     "t": "【朝活】初見さん大歓迎☀ ねーねー喋ろっ.ᐟ【向日守ぽた/ Varium】",
+     "c": "Pota Ch. 向日守ぽた",
+     "u": "https://www.youtube.com/watch?v=Xe9CVi5_oT0"
     }
    ],
    "kind": "wide",
@@ -356,24 +418,96 @@
    "suggest": []
   },
   {
-   "word": "遊戯王",
+   "word": "ブロスタ",
+   "channels": 3,
+   "n": 9,
+   "examples": [
+    {
+     "t": "【参加型】初心者🔰大歓迎！タイマン勝ったら豪華景品が！？【ブロスタ】#23",
+     "c": "キィホープ【キィのゲーム実況】",
+     "u": "https://www.youtube.com/watch?v=kO-BsonbiJ0"
+    },
+    {
+     "t": "【初心者】録音した音声だけでガチバしたら戦犯かましましたＷ【ブロスタ】",
+     "c": "キィホープ【キィのゲーム実況】",
+     "u": "https://www.youtube.com/watch?v=eQeDVSDkxYg"
+    },
+    {
+     "t": "【参加型】初心者🔰大歓迎！タイマン勝ったら豪華景品が！？【ブロスタ】#24",
+     "c": "キィホープ【キィのゲーム実況】",
+     "u": "https://www.youtube.com/watch?v=Md11lIapvvw"
+    }
+   ],
+   "kind": "wide",
+   "suggest": []
+  },
+  {
+   "word": "スーパーマリオRPG",
+   "channels": 3,
+   "n": 8,
+   "examples": [
+    {
+     "t": "#１【スーパーマリオRPG】※ネタバレあります！クリア目指してやるぞ！#レトロゲーム#任天堂",
+     "c": "ロッキー先生",
+     "u": "https://www.youtube.com/watch?v=MWpvNqID_8g"
+    },
+    {
+     "t": "#２【スーパーマリオRPG】※ネタバレあります！クリア目指してやるぞ！#レトロゲーム#任天堂",
+     "c": "ロッキー先生",
+     "u": "https://www.youtube.com/watch?v=KTRXwv7sfpM"
+    },
+    {
+     "t": "#３【スーパーマリオRPG】※ネタバレあります！クリア目指してやるぞ！#レトロゲーム#任天堂",
+     "c": "ロッキー先生",
+     "u": "https://www.youtube.com/watch?v=cn-PKEMvXBk"
+    }
+   ],
+   "kind": "wide",
+   "suggest": []
+  },
+  {
+   "word": "ポケカ",
+   "channels": 3,
+   "n": 8,
+   "examples": [
+    {
+     "t": "【ポケカ】30周年ピカニキを活躍させたい！！大空洞ピカチュウ過多デッキの盤面が最高すぎる件【とりっぴぃVS愛の戦士】",
+     "c": "とりっぴぃ",
+     "u": "https://www.youtube.com/watch?v=xRRgFPGCH1E"
+    },
+    {
+     "t": "【ポケカ】友達が絶望する嫌がらせデッキ！！家族の力で山札を０枚にするイッカネズミが鬼畜すぎるwwwww【とりっぴぃVS愛の戦士】",
+     "c": "とりっぴぃ",
+     "u": "https://www.youtube.com/watch?v=bkbATnaIlO8"
+    },
+    {
+     "t": "【ポケカ】脅威のHP500vsエネ過多の愛ゴリ！！非ルールなのにHPが高すぎるアローラナッシーデッキで全てを破壊したいwww【とりっぴぃVS愛の戦士】",
+     "c": "とりっぴぃ",
+     "u": "https://www.youtube.com/watch?v=yeCOQZl0yGo"
+    }
+   ],
+   "kind": "wide",
+   "suggest": []
+  },
+  {
+   "word": "Re:Life",
    "channels": 3,
    "n": 6,
    "examples": [
     {
-     "t": "攻撃の無力化、26年ぶりリメイクで神を呼ぶ魔法カードに進化！！【遊戯王】",
-     "c": "あまくだり",
-     "u": "https://www.youtube.com/watch?v=z2CSFnyB-IM"
+     "t": "【 Re:Life 】# 01：どしたん。話聞こうか。【 花敷紅華 / 犬養 】",
+     "c": "犬養　- INUKAI Ch. -",
+     "u": "https://www.youtube.com/watch?v=rnowYMnxEh0"
     },
     {
-     "t": "手札から飛んでくる「神の宣告」！？新手札誘発「災禍の根絶者」で時代が変わるか！？【遊戯王】",
-     "c": "あまくだり",
-     "u": "https://www.youtube.com/watch?v=cb11mzFobww"
+     "t": "【 #ReLife #リライフ 】🌸初めまして！1日目🌸街を探検する！【 GTA / リライフ / 花束ゆいは】",
+     "c": "花束 ゆいは / Hanataba Yuiha",
+     "u": "https://www.youtube.com/watch?v=r319zIXLWrY"
     },
     {
-     "t": "【繋がる世界】CROSS ART COLLECTION 開封 #遊戯王",
-     "c": "たすく",
-     "u": "https://www.youtube.com/watch?v=vFcYt1eDER0"
+     "t": "【 Re:Life 】# 02：どし担々麺【 花敷紅華 / 犬養 】",
+     "c": "犬養　- INUKAI Ch. -",
+     "u": "https://www.youtube.com/watch?v=tQY1ibcaKK0"
     }
    ],
    "kind": "wide",
@@ -382,7 +516,7 @@
   {
    "word": "#お絵描き配信",
    "channels": 3,
-   "n": 4,
+   "n": 5,
    "examples": [
     {
      "t": "【 #お絵描き配信 】漫画描くよすこしだけ【 #ゲーム実況 】#新人VTuber,",
@@ -404,24 +538,48 @@
    "suggest": []
   },
   {
-   "word": "Re:Life",
+   "word": "ラタタン",
    "channels": 3,
    "n": 4,
    "examples": [
     {
-     "t": "【 Re:Life 】# 01：どしたん。話聞こうか。【 花敷紅華 / 犬養 】",
-     "c": "犬養　- INUKAI Ch. -",
-     "u": "https://www.youtube.com/watch?v=rnowYMnxEh0"
+     "t": "【#ラタタン #Ratatan🎶】正式サービス開始おめでと🎉視聴者マルチ参加型🎶【ネタバレ注意 】",
+     "c": "ゆるふわまったり勢のゆかりさん",
+     "u": "https://www.youtube.com/watch?v=EbAV5Bc9tOM"
     },
     {
-     "t": "【 #ReLife #リライフ 】🌸初めまして！1日目🌸街を探検する！【 GTA / リライフ / 花束ゆいは】",
-     "c": "花束 ゆいは / Hanataba Yuiha",
-     "u": "https://www.youtube.com/watch?v=r319zIXLWrY"
+     "t": "#PR【 #Ratatan #ラタタン】朝活🌞おはよ！正式リリース待ってた！【狐森ろべ／VTuber】",
+     "c": "狐森ろべ / Komori Ch.",
+     "u": "https://www.youtube.com/watch?v=meDnBHR5O2k"
     },
     {
-     "t": "【 Re:Life 】# 02：どし担々麺【 花敷紅華 / 犬養 】",
-     "c": "犬養　- INUKAI Ch. -",
-     "u": "https://www.youtube.com/watch?v=tQY1ibcaKK0"
+     "t": "【#PR/#Ratatan/#ラタタン】私に続け！初見Ratatan【樹つつき/Ratatan実況】",
+     "c": "樹つつき -Itsuki Tsutsuki Ch-",
+     "u": "https://www.youtube.com/watch?v=5qxc-x4HTEI"
+    }
+   ],
+   "kind": "wide",
+   "suggest": []
+  },
+  {
+   "word": "クリア！",
+   "channels": 3,
+   "n": 3,
+   "examples": [
+    {
+     "t": "【初見プレイ】-叫- ワンダと巨像 #クリア！【生放送】",
+     "c": "マツコング元帥",
+     "u": "https://www.youtube.com/watch?v=zb9z9wdnYQg"
+    },
+    {
+     "t": "【 #デジモンアドベンチャー 】#7 #クリア #耐久 PSP実機配信 ！本当のラスト！待ってろピエモン～！【 #新人vtuber / #宵吸あけル 】",
+     "c": "宵吸あけル / Yokyu Akeru",
+     "u": "https://www.youtube.com/watch?v=q6bnzKb-hbY"
+    },
+    {
+     "t": "【クリア】草統一でシングルマスボ級目指す！！",
+     "c": "ぽこぱらわかめのゲーム実況",
+     "u": "https://www.youtube.com/watch?v=jpD10aKtvuE"
     }
    ],
    "kind": "wide",
@@ -450,27 +608,141 @@
    ],
    "kind": "wide",
    "suggest": []
+  },
+  {
+   "word": "80億分の1",
+   "channels": 3,
+   "n": 3,
+   "examples": [
+    {
+     "t": "世界中のどこかで生まれるゲーム　【80億分の1】",
+     "c": "しゅうゲームズ",
+     "u": "https://www.youtube.com/watch?v=cmlhVL9qDEo"
+    },
+    {
+     "t": "【80億分の1】「誰かの人生」を体験するシミュレーションゲーム",
+     "c": "たろちんDB",
+     "u": "https://www.youtube.com/watch?v=AJhxuH95oao"
+    },
+    {
+     "t": "【80億分の1】”誰かの人生”を体験するリアル人生シミュレーター！【#Vtuber / トムヤム】",
+     "c": "トムヤム ch / TOMUYAMU ch",
+     "u": "https://www.youtube.com/watch?v=O7qy-hUesXo"
+    }
+   ],
+   "kind": "wide",
+   "suggest": []
   }
  ],
  "miss_days": 7,
  "hot_facts": [
   {
-   "game": "Big Walk",
+   "game": "妖怪ウォッチ1",
+   "growth": 5.0,
+   "videos": 4,
+   "base": 0.5,
+   "channels": 3,
+   "views": 62042,
+   "who": [
+    "エクス・アルビオ -Ex Albio-",
+    "砂利ボーイ",
+    "きじむなーの実況",
+    "砂利ボーイ",
+    "砂利ボーイ"
+   ],
+   "titles": [
+    "俺ら世代であまりにも流行った、妖怪を探して仲間にし一緒に戦う神ゲー『 妖怪ウォッチ1 』＃3【 エビオ/にじさんじ 】",
+    "【妖怪ウォッチ1】\"鬼畜縛り\"で妖怪ウォッチを全クリしたい。＃１２",
+    "【破産】ミスって全財産を高級肉に使い果たしてまった初見実況【妖怪ウォッチ1】#4"
+   ],
+   "genres": [
+    "Puzzle",
+    "Role-playing (RPG)"
+   ],
+   "year": null,
+   "platforms": [
+    "console"
+   ],
+   "days_seen": 7,
+   "last_seen": "2026-09-30",
+   "first_here": false
+  },
+  {
+   "game": "Castlevania: Belmont's Curse",
+   "growth": 5.0,
+   "videos": 4,
+   "base": 0.5,
+   "channels": 4,
+   "views": 18239,
+   "who": [
+    "ファミ通TUBE",
+    "胡桃沢りりか",
+    "GAMEゆうなch",
+    "フェイチャンネル【ゲーム実況】2000本クリアした男の軌跡"
+   ],
+   "titles": [
+    "『キャッスルヴァニア ベルモンドカース』体験版より先の展開を先行プレイ。硬派なアクション×探索の楽しさを両立する“悪魔城”最新作【Castlevania: Belmont's Curse】",
+    "【Castlevania: Belmont's Curse キャッスルヴァニア:ベルモンドカース/PS5】最新作悪魔城！ベルモンドカースやるぞ！！【胡桃沢りりか】",
+    "『悪魔城ドラキュラ ベルモンドカース』本日発売 悪魔城ドラキュラ シリーズ完全新作やる！ Castlevania: Belmont's Curse 【PS5pro】"
+   ],
+   "genres": [
+    "Platform",
+    "Role-playing (RPG)",
+    "Hack and slash/Beat 'em up",
+    "Adventure"
+   ],
+   "year": 2026,
+   "platforms": [
+    "pc",
+    "console"
+   ],
+   "days_seen": 3,
+   "last_seen": "2026-10-14",
+   "first_here": false
+  },
+  {
+   "game": "Feign",
    "growth": 5.0,
    "videos": 5,
    "base": 1.0,
    "channels": 5,
-   "views": 52641,
+   "views": 3932,
    "who": [
-    "おなつのにびたし / Onatsu no Nibitashi",
-    "上水流 宇宙 / Cosmo Kamizuru 【ヴイアラ】【876プロ】",
-    "水無瀬 / Minase",
-    "家入ポポ / Popo Channel【ななしいんく】",
-    "ロウひなんゲーミング"
+    "スナパイ",
+    "怪傑がみちゃんねる",
+    "さかな",
+    "仙人のGEN",
+    "HYBRID SENSE"
    ],
    "titles": [
+    "みんなでFEIGNやるよ！ #ぺぇいん青年会　26.10.14",
+    "【Feign】ぺぇいん青年会 2026/10/14",
+    "【FEIGN】ぺぇいん青年会 おはよう【10/14】"
+   ],
+   "genres": [],
+   "year": null,
+   "platforms": [],
+   "days_seen": 15,
+   "last_seen": "2026-10-08",
+   "first_here": false
+  },
+  {
+   "game": "Big Walk",
+   "growth": 4.62,
+   "videos": 6,
+   "base": 1.3,
+   "channels": 6,
+   "views": 259044,
+   "who": [
+    "らっだぁ",
+    "おなつのにびたし / Onatsu no Nibitashi",
+    "水無瀬 / Minase",
+    "ロウひなんゲーミング",
+    "パノラマゲームス　Panorama Games "
+   ],
+   "titles": [
+    "謎解きまみれの広大な島に放り出されるゲーム、迷子になったら二度と出会えない【BigWalk】",
     "【BigWalk】弟が空から落ちてきたので陸を歩かせる歓迎会【おなつのにびたし/個人勢Vtuber/#おなつのなま】",
-    "【Big Walk】新メンバー登場✨６人で広大な世界を探索＆協力＆謎解き！我ら #みつあみ部 !【#ヴイアラ / 上水流宇宙】",
     "【 Big Walk 】世界を好きに歩くゲームらしい￤ はじめましてコラボ【 Neo-Porte / 水無瀬 】"
    ],
    "genres": [
@@ -484,8 +756,8 @@
     "pc",
     "console"
    ],
-   "days_seen": 20,
-   "last_seen": "2026-10-13",
+   "days_seen": 21,
+   "last_seen": "2026-10-14",
    "first_here": false
   },
   {
@@ -494,7 +766,7 @@
    "videos": 3,
    "base": 0.8,
    "channels": 3,
-   "views": 369694,
+   "views": 412353,
    "who": [
     "社築",
     "石神のぞみ / Ishigami Nozomi【にじさんじ】",
@@ -515,31 +787,30 @@
    "platforms": [
     "pc"
    ],
-   "days_seen": 14,
-   "last_seen": "2026-10-08",
+   "days_seen": 15,
+   "last_seen": "2026-10-14",
    "first_here": false
   },
   {
-   "game": "Castlevania: Belmont's Curse",
+   "game": "Valor Mortis",
    "growth": 3.75,
    "videos": 3,
-   "base": 0.2,
+   "base": 0.0,
    "channels": 3,
-   "views": 55522,
+   "views": 234294,
    "who": [
-    "おついちTube",
-    "ファミ通TUBE",
-    "電撃オンライン"
+    "兄者弟者",
+    "ホビドワ",
+    "おかまつゲーム実況"
    ],
    "titles": [
-    "【Castlevania: Belmont's Curse：特別先行プレイ】🦇その赤き呪いは、絶望か希望か。【おついちTube】",
-    "『キャッスルヴァニア ベルモンドカース』体験版より先の展開を先行プレイ。硬派なアクション×探索の楽しさを両立する“悪魔城”最新作【Castlevania: Belmont's Curse】",
-    "『キャッスルヴァニア』最新作の体験版以降をプレイ！ 探索型2Dアクションの傑作シリーズ、ついに発売【きよしとタダツグの実況立志伝】Castlevania: Belmont's Curse"
+    "新作一人称ソウルライク【Valor Mortis】死してなお、戦え。【弟者】",
+    "【ライブ実況】バイオショックxブラッドボーン！銃は剣よりも強しなソウルライク！【Valor Mortis】【ソウルライク/FPS/アクションRPG/インディーゲーム/Steam】",
+    "#1【XBOXSX】Valor Mortis 初見実況【ナポレオン戦争を題材とした一人称視点のソウルライク】"
    ],
    "genres": [
-    "Platform",
+    "Shooter",
     "Role-playing (RPG)",
-    "Hack and slash/Beat 'em up",
     "Adventure"
    ],
    "year": 2026,
@@ -547,99 +818,9 @@
     "pc",
     "console"
    ],
-   "days_seen": 2,
-   "last_seen": "2026-10-13",
-   "first_here": false
-  },
-  {
-   "game": "JUDGE EYES：死神の遺言",
-   "growth": 2.5,
-   "videos": 3,
-   "base": 1.2,
-   "channels": 3,
-   "views": 16977,
-   "who": [
-    "レヴィ・エリファ-Levi Elipha-",
-    "ゆうしゃ",
-    "千凛あゆむ / Senri Ayumu【にじさんじ】"
-   ],
-   "titles": [
-    "#12【JUDGE EYES：死神の遺言 Remastered】いよいよ最終回‼物語の結末を見届けるゾウ🐘　※ネタバレあり【にじさんじ/レヴィ・エリファ】",
-    "#76【実況】衝撃のデートプラン【ゆうしゃ・ジャッジアイズJUDGE EYES:死神の遺言】",
-    "【 JUDGE EYES：死神の遺言 】完全初見 ✦︎ 犯人が分かった。仇とるぞ、真の正義で。※ネタバレあり【にじさんじ / 千凛あゆむ】"
-   ],
-   "genres": [
-    "Role-playing (RPG)",
-    "Adventure"
-   ],
-   "year": null,
-   "platforms": [
-    "console"
-   ],
-   "days_seen": 15,
-   "last_seen": "2026-10-13",
-   "first_here": false
-  },
-  {
-   "game": "マリオカート",
-   "growth": 2.35,
-   "videos": 4,
-   "base": 1.7,
-   "channels": 4,
-   "views": 106583,
-   "who": [
-    "SAWAYAN GAMES / サワヤン ゲームズ",
-    "最高のマリカークリップス",
-    "らりほん",
-    "ふんさん《ゲーム実況》"
-   ],
-   "titles": [
-    "３１歳誕生日まで命懸けのカウントダウン生配信【マリオカート8DX】",
-    "【天才】なんだこれ！？絶望的状況から編み出された新走法がヤバいｗｗ【マリオカート】【面白クリップ集】",
-    "【緊急】スタートダッシュしない「タイムアタック世界記録」が話題な件ｗｗ【マリオカート8DX】"
-   ],
-   "genres": [
-    "Racing",
-    "Arcade"
-   ],
-   "year": null,
-   "platforms": [
-    "console"
-   ],
-   "days_seen": 30,
-   "last_seen": "2026-10-13",
-   "first_here": false
-  },
-  {
-   "game": "Lost Judgment",
-   "growth": 2.31,
-   "videos": 3,
-   "base": 1.3,
-   "channels": 3,
-   "views": 7441,
-   "who": [
-    "ホン・ユニのホラゲ実況",
-    "Vunny Ch",
-    "Su Ch. 水宮枢 - FLOW GLOW"
-   ],
-   "titles": [
-    "【キムタクが如く２】桑名の正体が判明！間宮に事情聴取にゆく！！完全初見！ロストジャッジメント【LOST JUDGMENT 裁かれざる記憶 / 顔出し実況プレイ】#8",
-    "【#2】いつか俺も痴漢冤罪で捕まるかもと怖く、今日も家から出られなかったです…【LOST JUDGMENT】",
-    "【#4】LOST JUDGMENT：裁かれざる記憶 ※ネタバレ有【水宮枢／ホロライブ】"
-   ],
-   "genres": [
-    "Role-playing (RPG)",
-    "Hack and slash/Beat 'em up",
-    "Adventure"
-   ],
-   "year": null,
-   "platforms": [
-    "pc",
-    "console"
-   ],
-   "days_seen": 1,
-   "last_seen": "2026-10-13",
-   "first_here": false
+   "days_seen": 0,
+   "last_seen": null,
+   "first_here": true
   }
  ],
  "notes_written": true,
