@@ -575,6 +575,41 @@ def load_valid(path, log=print):
     return col
 
 
+DAY_RE = re.compile(r"\d{4}-\d{2}-\d{2}")
+
+
+def name_problem(arg):
+    """ファイル名が「その日の日付」になっているかを見る（2026-10-15 追加）。
+
+    たろちんさん ──
+
+      > 毎朝のコラムを書く窓が「column-2026-10-15.json」といった
+      > githubで読めないファイル名でコラムのファイルを出力してきた。
+      > ここ数日何度かそういうことがある
+
+    **これは「アップしづらい」だけの話ではない。** 2つ壊れる。
+
+    1. `build_site.py` は `data/columns/<日付>.json` を**決め打ちで開く**。
+       名前が違うファイルは黙って無視され、前の日のコラムがそのまま出る。
+       **エラーも出ないので、見た目では気づけない。**
+    2. このチェック自体が狂う。下の `day` はファイル名から取っていて、
+       「初めて」の数え直しも、過去のコラム探しも、タグの実在確認も、
+       全部この日付で日々のファイルを引いている。
+       `column-2026-10-15` のままだと、どれも違うものを見る。
+
+    だから警告ではなく**不合格**にする。渡す前にここで止める。
+    """
+    stem = Path(arg).stem
+    if re.fullmatch(r"\d{4}-\d{2}-\d{2}", stem):
+        return None
+    m = DAY_RE.search(stem)
+    fix = f"{m.group(0)}.json" if m else "（その日の日付）.json"
+    return (f"ファイル名が日付だけになっていません: {Path(arg).name}"
+            f" → {fix} に変えてから渡してください。"
+            "サイトは data/columns/<日付>.json しか読まないので、"
+            "この名前のまま上げても、その日はコラム無しになります")
+
+
 def main():
     if len(sys.argv) < 2:
         print("使い方: python scripts/check_column.py <コラムのJSON>")
@@ -584,6 +619,14 @@ def main():
         col = json.loads(Path(arg).read_text(encoding="utf-8"))
         day = Path(arg).stem
         bad, warn = validate(col), style(col, day)
+        nm = name_problem(arg)
+        if nm:
+            bad = [nm] + list(bad)
+            m = DAY_RE.search(day)
+            if m:                      # 以降の確認は正しい日付で続ける
+                day = m.group(0)
+                bad = [nm] + list(validate(col))
+                warn = style(col, day)
         if bad or warn:
             ok = False
             print(("❌ " if bad else "⚠️  ") + arg)

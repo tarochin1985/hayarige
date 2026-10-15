@@ -897,6 +897,35 @@ def ssr_rows(rows):
 KEEP_DAYS = 30      # YouTubeのAPI規約で、配信タイトルなどを保存できる上限
 
 
+def warn_bad_column_names():
+    """data/columns/ に、日付でない名前のJSONが混ざっていないか（2026-10-15 追加）。
+
+    たろちんさん ──
+
+      > 毎朝のコラムを書く窓が「column-2026-10-15.json」といった
+      > githubで読めないファイル名でコラムのファイルを出力してきた
+
+    **ここが黙っているのが一番まずい。** build_site は
+    `data/columns/<日付>.json` を決め打ちで開くので、名前が違うファイルは
+    無視され、`COLUMN_FALLBACK_DAYS` の仕組みで**前の日のコラムがそのまま出る。**
+    エラーも空白も出ないので、サイトを見ても気づけない。
+    上がってしまったときに気づけるよう、ここで名指しする。
+
+    渡す前に止めるほうは `check_column.py` の `name_problem()`。
+    """
+    pats = (("columns", r"\d{4}-\d{2}-\d{2}", "<その日>.json（例 2026-10-15.json）"),
+            ("columns/weekly", r"\d{4}-\d{2}-\d{2}", "<その週の月曜>.json"),
+            ("columns/monthly", r"\d{4}-\d{2}", "<その月>.json（例 2026-10.json）"))
+    for sub, pat, how in pats:
+        d = DATA / sub
+        if not d.is_dir():
+            continue
+        for f in sorted(d.glob("*.json")):
+            if not re.fullmatch(pat, f.stem):
+                log(f"⚠️ data/{sub}/{f.name} は名前が日付になっていないので"
+                    f"読み込まれません。{how} に変えてください")
+
+
 def purge_old(site_url):
     """30日を過ぎた記録から、YouTubeから取った文字（配信タイトル・チャンネル名・
     サムネイル）を消す。ゲーム名と件数──こちらが数えた結果──だけを残す。
@@ -3310,6 +3339,7 @@ def main():
     # 今日の分が用意できるまでは、直近に書いたものをそのまま出す。
     # そのかわり見出しに日付を入れて、いつ書いたものかを必ず示す
     # （今日のことのように見せない）。
+    warn_bad_column_names()
     column, column_day = None, today()
     for back in range(0, COLUMN_FALLBACK_DAYS + 1):
         day = (datetime.now(JST) - timedelta(days=back)).strftime("%Y-%m-%d")
@@ -3457,7 +3487,11 @@ def main():
             f"{d['channels']}人が書いていますが、"
             f"「{d['game']}」として数えています（data/aliases.json）")
     recent_cols = []
-    for f in sorted((DATA / "columns").glob("*.json"))[-14:]:
+    # 日付の名前のものだけ。`column-2026-10-15.json` のような名前は
+    # 並べ替えで後ろに回り、14件の枠を食ってしまう（2026-10-15）
+    _cols = [f for f in sorted((DATA / "columns").glob("*.json"))
+             if re.fullmatch(r"\d{4}-\d{2}-\d{2}", f.stem)]
+    for f in _cols[-14:]:
         c = read_json(f, None) or {}
         if c.get("game"):
             recent_cols.append({"date": f.stem, "game": c["game"],
