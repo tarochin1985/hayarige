@@ -1,7 +1,7 @@
 {
  "mode": "admin",
  "date": "2026-10-15",
- "generated": "2026-10-15 10:58",
+ "generated": "2026-10-15 11:35",
  "unknown": [
   {
    "guess": "ドラクエウォーク",
@@ -79,7 +79,7 @@
   {
    "guess": "桃鉄ワールド",
    "channels": 1,
-   "n": 6,
+   "n": 5,
    "examples": [
     {
      "t": "【桃鉄ワールド】ヒストリーモードのボンビラス星も額が異常すぎて笑い転げない程泣くレベルに…ヒストリーモード！IT長者をめざせ！ part3",
@@ -95,23 +95,6 @@
      "t": "【桃鉄ワールド】ガチンコ10年対決！マイナス物件を買いまくれ！ヒストリーモード！IT長者をめざせ！ part1",
      "c": "怪盗パピヨン",
      "u": "https://www.youtube.com/watch?v=gQ0wYjkQEOg"
-    }
-   ]
-  },
-  {
-   "guess": "横型配信",
-   "channels": 1,
-   "n": 2,
-   "examples": [
-    {
-     "t": "【横型配信】サーモンランNW",
-     "c": "ズンチャカワドミン",
-     "u": "https://www.youtube.com/watch?v=3Im4DiJmYCk"
-    },
-    {
-     "t": "【横型配信】サーモンランNW",
-     "c": "ズンチャカワドミン",
-     "u": "https://www.youtube.com/watch?v=AFXZI7J-2vs"
     }
    ]
   },
@@ -1343,18 +1326,6 @@
    ]
   },
   {
-   "guess": "推し土地語りjapan",
-   "channels": 1,
-   "n": 1,
-   "examples": [
-    {
-     "t": "【推し土地語りJAPAN】ゲスト：越後屋ときな / 新潟県🗾｜まだ知らない日本に、会いに行こう！ #推し土地語り 【乙奈りの】",
-     "c": "乙奈りの / Rino Otona",
-     "u": "https://www.youtube.com/watch?v=2JFfPwNooE4"
-    }
-   ]
-  },
-  {
    "guess": "鋼嵐 メカラシ",
    "channels": 1,
    "n": 1,
@@ -1643,18 +1614,6 @@
    ]
   },
   {
-   "guess": "コメント大歓迎!!!",
-   "channels": 1,
-   "n": 1,
-   "examples": [
-    {
-     "t": "【コメント大歓迎!!!】自由すぎる雑談を縦型配信でやりたい 17回目",
-     "c": "はるまぎん",
-     "u": "https://www.youtube.com/watch?v=Ba5_Ycx94yg"
-    }
-   ]
-  },
-  {
    "guess": "sdvx",
    "channels": 1,
    "n": 1,
@@ -1829,8 +1788,8 @@
    },
    {
     "game": "Minecraft",
-    "channels": 21,
-    "videos": 21
+    "channels": 19,
+    "videos": 19
    },
    {
     "game": "スプラトゥーン3",
@@ -2087,30 +2046,6 @@
    "suggest": []
   },
   {
-   "word": "スーパーマリオRPG",
-   "channels": 3,
-   "n": 8,
-   "examples": [
-    {
-     "t": "#２【スーパーマリオRPG】※ネタバレあります！クリア目指してやるぞ！#レトロゲーム#任天堂",
-     "c": "ロッキー先生",
-     "u": "https://www.youtube.com/watch?v=KTRXwv7sfpM"
-    },
-    {
-     "t": "#１【スーパーマリオRPG】※ネタバレあります！クリア目指してやるぞ！#レトロゲーム#任天堂",
-     "c": "ロッキー先生",
-     "u": "https://www.youtube.com/watch?v=MWpvNqID_8g"
-    },
-    {
-     "t": "【比宮のLIVE🔴】4歳のころからやってた神ゲー「スーパーマリオRPG」リメイクを遊ぶ",
-     "c": "比宮じょーず",
-     "u": "https://www.youtube.com/watch?v=7xOWWRzsEjs"
-    }
-   ],
-   "kind": "wide",
-   "suggest": []
-  },
-  {
    "word": "ブロスタ",
    "channels": 3,
    "n": 8,
@@ -2159,6 +2094,30 @@
    "suggest": []
   },
   {
+   "word": "スーパーマリオRPG",
+   "channels": 3,
+   "n": 7,
+   "examples": [
+    {
+     "t": "#２【スーパーマリオRPG】※ネタバレあります！クリア目指してやるぞ！#レトロゲーム#任天堂",
+     "c": "ロッキー先生",
+     "u": "https://www.youtube.com/watch?v=KTRXwv7sfpM"
+    },
+    {
+     "t": "【比宮のLIVE🔴】4歳のころからやってた神ゲー「スーパーマリオRPG」リメイクを遊ぶ",
+     "c": "比宮じょーず",
+     "u": "https://www.youtube.com/watch?v=7xOWWRzsEjs"
+    },
+    {
+     "t": "#３【スーパーマリオRPG】※ネタバレあります！クリア目指してやるぞ！#レトロゲーム#任天堂",
+     "c": "ロッキー先生",
+     "u": "https://www.youtube.com/watch?v=cn-PKEMvXBk"
+    }
+   ],
+   "kind": "wide",
+   "suggest": []
+  },
+  {
    "word": "ポケモン",
    "channels": 3,
    "n": 6,
@@ -2169,9 +2128,9 @@
      "u": "https://www.youtube.com/watch?v=OFeZrtLwDhk"
     },
     {
-     "t": "世紀末イカ伝説【ポケモン】",
-     "c": "ちむらい",
-     "u": "https://www.youtube.com/watch?v=kbsbydDzyno"
+     "t": "【#ポケモン】～朝活雑談バトルタワー1000連勝目指す～【#ポケモンエメラルド】",
+     "c": "蛇目 欠番@Vtuber",
+     "u": "https://www.youtube.com/watch?v=1GD3q6vEhJc"
     },
     {
      "t": "【#ポケモン】～朝活雑談バトルタワー1000連勝目指す～【#ポケモンエメラルド】",
@@ -2285,6 +2244,11 @@
  "meta_desc": "判定できなかった配信と、コラムの種。公開ページではありません。",
  "recent_columns": [
   {
+   "date": "2026-10-15",
+   "game": "80億分の1",
+   "headline": "141か国の実際の統計から生まれる「人生シミュレーション」 ブラウザで無料"
+  },
+  {
    "date": "2026-10-14",
    "game": "ストリートファイター6",
    "headline": "“ステゴロヨガ”の新キャラ「アルジュン」は正義か、悪か"
@@ -2348,11 +2312,6 @@
    "date": "2026-10-02",
    "game": "デス桃太郎",
    "headline": "怖がらせるより、ツッコませる"
-  },
-  {
-   "date": "2026-10-01",
-   "game": "真・三國無双2 with 猛将伝 Remastered",
-   "headline": "25年前のゲームなんだけど知ってる??"
   }
  ]
 }
