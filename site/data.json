@@ -76,7 +76,7 @@
    "own": false
   }
  ],
- "generated": "2026-10-15 11:35",
+ "generated": "2026-10-15 11:54",
  "range": "直近24時間",
  "days": [
   "10/09",
@@ -88,9 +88,9 @@
   "10/15"
  ],
  "totals": {
-  "videos": 1047,
+  "videos": 1041,
   "games": 226,
-  "channels": 809
+  "channels": 807
  },
  "rising": [
   {
@@ -158,60 +158,7 @@
    "growth": 5.0,
    "steam": "https://store.steampowered.com/search/?term=Feign",
    "amazon": null,
-   "rank": 66
-  },
-  {
-   "game": "R.E.P.O.",
-   "canonical": "R.E.P.O.",
-   "videos": 3,
-   "n": 3.0,
-   "raw": 3,
-   "channels": 3,
-   "views": 205379,
-   "streams": [
-    {
-     "t": "ホロライブ新人ユニットで【R.E.P.O  with.アソビ★まわり隊！】#ホロライブ #アソビまわり隊",
-     "c": "Tsuzuri Ch. 鈴鳴つづり ‐ アソビ★まわり隊!",
-     "u": "https://www.youtube.com/watch?v=xl-CTTXCekc",
-     "th": "https://i.ytimg.com/vi/xl-CTTXCekc/mqdefault.jpg",
-     "v": 200518
-    },
-    {
-     "t": "【R.E.P.O.コラボ】つづりが本物かどうかを見分ける方法に『ありえんスマート』で本人確認をしてくるメンバー達にブチギレるつづりw【鈴鳴つづり/熱千めら/百灯キョーコ/宙科そぴあ/アソビまわり隊】",
-     "c": "ホロライブ切り抜きSAI【Vtuber切り抜き】",
-     "u": "https://www.youtube.com/watch?v=Ctx-jYmz5U8",
-     "th": "https://i.ytimg.com/vi/Ctx-jYmz5U8/mqdefault.jpg",
-     "v": 3443
-    },
-    {
-     "t": "【REPO】ブキータニキにREPOを盗難を教える。",
-     "c": "こなゆき.channel",
-     "u": "https://www.youtube.com/watch?v=uw4cb4AHtDE",
-     "th": "https://i.ytimg.com/vi/uw4cb4AHtDE/mqdefault.jpg",
-     "v": 1418
-    }
-   ],
-   "orgs": {
-    "個人・その他": 3
-   },
-   "spark": [
-    0,
-    0,
-    1.0,
-    2.0,
-    1.0,
-    0,
-    3.0
-   ],
-   "p_videos": 9,
-   "p_channels": 10,
-   "p_views": 87,
-   "score": 36.6,
-   "base": 0.7,
-   "growth": 3.75,
-   "steam": "https://store.steampowered.com/search/?term=R.E.P.O.",
-   "amazon": null,
-   "rank": 38
+   "rank": 65
   },
   {
    "game": "妖怪ウォッチ1",
@@ -440,6 +387,88 @@
    "steam": null,
    "amazon": "https://www.amazon.co.jp/s?k=%E3%82%B9%E3%83%97%E3%83%A9%E3%83%88%E3%82%A5%E3%83%BC%E3%83%B3+%E3%83%AC%E3%82%A4%E3%83%80%E3%83%BC%E3%82%B9&tag=tarochin-22",
    "rank": 70
+  },
+  {
+   "game": "アークナイツ：エンドフィールド",
+   "canonical": "Arknights: Endfield",
+   "videos": 6,
+   "n": 6.5,
+   "raw": 7,
+   "channels": 6,
+   "views": 118958,
+   "streams": [
+    {
+     "t": "『アークナイツ：エンドフィールド』オペレーターファイル [スー：もてなしの支度]",
+     "c": "アークナイツ：エンドフィールド",
+     "u": "https://www.youtube.com/watch?v=V_JT2TimLz0",
+     "th": "https://i.ytimg.com/vi/V_JT2TimLz0/mqdefault.jpg",
+     "v": 118958
+    },
+    {
+     "t": "【アークナイツ：エンドフィールド】時代に置いていかれている工場長、追いつきたい #15【にじさんじ/ドーラ】",
+     "c": "ドーラ",
+     "u": "https://www.youtube.com/watch?v=UJtZRkDxNNQ",
+     "th": "https://i.ytimg.com/vi/UJtZRkDxNNQ/mqdefault_live.jpg",
+     "v": 0
+    },
+    {
+     "t": "【アークナイツ：エンドフィールド】ver.1.6「丹青渡」　スーをお迎えしたい工場長 #16【にじさんじ/ドーラ】",
+     "c": "ドーラ",
+     "u": "https://www.youtube.com/watch?v=JdM3lxDAayw",
+     "th": "https://i.ytimg.com/vi/JdM3lxDAayw/mqdefault_live.jpg",
+     "v": 0
+    },
+    {
+     "t": "【エンドフィールド】遂に巨獣の代理人「スー」実装！ぶっ壊れなのか？【アークナイツ：エンドフィールド】",
+     "c": "すりっぷらーゼツ",
+     "u": "https://www.youtube.com/watch?v=MdP0cuyxjas",
+     "th": "https://i.ytimg.com/vi/MdP0cuyxjas/mqdefault_live.jpg",
+     "v": 0
+    },
+    {
+     "t": "【エンドフィールド】メンテ明けまで待機!「スー」参戦! 質問・コメント大歓迎!★DPSシミュを触りつつ、アップデート待機!　最新情報を確認して編成考察するぞ【endfiled/アークナイツ】",
+     "c": "サブチぴょんぴょん",
+     "u": "https://www.youtube.com/watch?v=MuFY7pIzqj8",
+     "th": "https://i.ytimg.com/vi/MuFY7pIzqj8/mqdefault_live.jpg",
+     "v": 0
+    },
+    {
+     "t": "新オペレーターのスーは強いのか？実戦で研究する配信【Arknights Endfield】",
+     "c": "Show_ty しょ同盟",
+     "u": "https://www.youtube.com/watch?v=gA8f-OhxKEk",
+     "th": "https://i.ytimg.com/vi/gA8f-OhxKEk/mqdefault_live.jpg",
+     "v": 0
+    },
+    {
+     "t": "【#エンドフィールド】絶対にすり抜けないスーガチャ",
+     "c": "あかどらん",
+     "u": "https://www.youtube.com/watch?v=DrU9623V4aM",
+     "th": "https://i.ytimg.com/vi/DrU9623V4aM/mqdefault_live.jpg",
+     "v": 0
+    }
+   ],
+   "orgs": {
+    "個人・その他": 5,
+    "にじさんじ": 2
+   },
+   "spark": [
+    2.0,
+    1.0,
+    3.0,
+    4.0,
+    4.0,
+    2.0,
+    6.5
+   ],
+   "p_videos": 19,
+   "p_channels": 19,
+   "p_views": 83,
+   "score": 41.4,
+   "base": 2.7,
+   "growth": 2.22,
+   "steam": "https://store.steampowered.com/search/?term=%E3%82%A2%E3%83%BC%E3%82%AF%E3%83%8A%E3%82%A4%E3%83%84%EF%BC%9A%E3%82%A8%E3%83%B3%E3%83%89%E3%83%95%E3%82%A3%E3%83%BC%E3%83%AB%E3%83%89",
+   "amazon": "https://www.amazon.co.jp/s?k=%E3%82%A2%E3%83%BC%E3%82%AF%E3%83%8A%E3%82%A4%E3%83%84%EF%BC%9A%E3%82%A8%E3%83%B3%E3%83%89%E3%83%95%E3%82%A3%E3%83%BC%E3%83%AB%E3%83%89&tag=tarochin-22",
+   "rank": 20
   }
  ],
  "spread": [
@@ -518,10 +547,10 @@
     "亀戸組": 1
    },
    "spark": [
-    34.5,
-    24.0,
-    21.5,
-    34.5,
+    35.5,
+    23.5,
+    22.5,
+    33.5,
     31.5,
     48.0,
     34.5
@@ -530,7 +559,7 @@
    "p_channels": 100,
    "p_views": 100,
    "score": 100.0,
-   "base": 32.3,
+   "base": 32.4,
    "growth": 1.05,
    "steam": "https://store.steampowered.com/search/?term=%E3%82%B9%E3%83%88%E3%83%AA%E3%83%BC%E3%83%88%E3%83%95%E3%82%A1%E3%82%A4%E3%82%BF%E3%83%BC6",
    "amazon": "https://www.amazon.co.jp/s?k=%E3%82%B9%E3%83%88%E3%83%AA%E3%83%BC%E3%83%88%E3%83%95%E3%82%A1%E3%82%A4%E3%82%BF%E3%83%BC6&tag=tarochin-22",
@@ -699,9 +728,9 @@
     "Neo-Porte": 1
    },
    "spark": [
-    20.5,
-    38.0,
-    34.0,
+    19.5,
+    39.0,
+    33.0,
     31.0,
     28.5,
     27.0,
@@ -711,8 +740,8 @@
    "p_channels": 81,
    "p_views": 87,
    "score": 81.0,
-   "base": 29.8,
-   "growth": 0.87,
+   "base": 29.7,
+   "growth": 0.88,
    "steam": "https://store.steampowered.com/search/?term=Grand%20Theft%20Auto%20V",
    "amazon": "https://www.amazon.co.jp/s?k=Grand+Theft+Auto+V&tag=tarochin-22",
    "rank": 3
@@ -799,10 +828,10 @@
     "亀戸組": 1
    },
    "spark": [
-    34.5,
-    24.0,
-    21.5,
-    34.5,
+    35.5,
+    23.5,
+    22.5,
+    33.5,
     31.5,
     48.0,
     34.5
@@ -811,7 +840,7 @@
    "p_channels": 100,
    "p_views": 100,
    "score": 100.0,
-   "base": 32.3,
+   "base": 32.4,
    "growth": 1.05,
    "steam": "https://store.steampowered.com/search/?term=%E3%82%B9%E3%83%88%E3%83%AA%E3%83%BC%E3%83%88%E3%83%95%E3%82%A1%E3%82%A4%E3%82%BF%E3%83%BC6",
    "amazon": "https://www.amazon.co.jp/s?k=%E3%82%B9%E3%83%88%E3%83%AA%E3%83%BC%E3%83%88%E3%83%95%E3%82%A1%E3%82%A4%E3%82%BF%E3%83%BC6&tag=tarochin-22",
@@ -980,9 +1009,9 @@
     "Neo-Porte": 1
    },
    "spark": [
-    20.5,
-    38.0,
-    34.0,
+    19.5,
+    39.0,
+    33.0,
     31.0,
     28.5,
     27.0,
@@ -992,8 +1021,8 @@
    "p_channels": 81,
    "p_views": 87,
    "score": 81.0,
-   "base": 29.8,
-   "growth": 0.87,
+   "base": 29.7,
+   "growth": 0.88,
    "steam": "https://store.steampowered.com/search/?term=Grand%20Theft%20Auto%20V",
    "amazon": "https://www.amazon.co.jp/s?k=Grand+Theft+Auto+V&tag=tarochin-22",
    "rank": 3
@@ -1003,9 +1032,9 @@
    "canonical": "Minecraft",
    "videos": 19,
    "n": 19.0,
-   "raw": 21,
+   "raw": 20,
    "channels": 19,
-   "views": 323016,
+   "views": 322766,
    "streams": [
     {
      "t": "【マイクラ人狼】電話でハッカーと内通！人外同士の連携で乗客たちを始末せよ！！！【めめ村】【ゆっくり実況】",
@@ -1065,15 +1094,15 @@
     }
    ],
    "orgs": {
-    "個人・その他": 19,
+    "個人・その他": 18,
     "高田村": 1,
     "ななしいんく": 1
    },
    "spark": [
     22.5,
     30.5,
-    32.0,
-    23.0,
+    33.0,
+    22.0,
     32.0,
     37.5,
     19.0
@@ -1430,8 +1459,8 @@
    "spark": [
     8.5,
     20.0,
-    24.0,
-    12.5,
+    25.0,
+    11.5,
     6.0,
     13.0,
     13.5
@@ -1449,11 +1478,11 @@
   {
    "game": "Among Us",
    "canonical": "Among Us",
-   "videos": 15,
-   "n": 15.0,
-   "raw": 16,
-   "channels": 14,
-   "views": 43795,
+   "videos": 14,
+   "n": 14.0,
+   "raw": 15,
+   "channels": 13,
+   "views": 43365,
    "streams": [
     {
      "t": "【2026/10/14】高田村でアモアス配信！【AmongUs / 宇宙人狼】",
@@ -1505,15 +1534,15 @@
      "v": 3058
     },
     {
-     "t": "10/14【Among Us】高田村！プテラたかはし視点",
-     "c": "プテラたかはし",
-     "u": "https://www.youtube.com/watch?v=jbCTrhgw_YA",
-     "th": "https://i.ytimg.com/vi/jbCTrhgw_YA/mqdefault.jpg",
-     "v": 1819
+     "t": "あ・る・ま・♪　あ・る・ま・♪【among us】",
+     "c": "スナパイ",
+     "u": "https://www.youtube.com/watch?v=wIyMKp5uF8o",
+     "th": "https://i.ytimg.com/vi/wIyMKp5uF8o/mqdefault.jpg",
+     "v": 1840
     }
    ],
    "orgs": {
-    "高田村": 14,
+    "高田村": 13,
     "個人・その他": 2
    },
    "spark": [
@@ -1522,15 +1551,15 @@
     6.0,
     4.0,
     12.0,
-    6.0,
-    15.0
+    7.0,
+    14.0
    ],
-   "p_videos": 43,
-   "p_channels": 45,
+   "p_videos": 41,
+   "p_channels": 42,
    "p_views": 76,
-   "score": 55.2,
-   "base": 8.2,
-   "growth": 1.83,
+   "score": 53.6,
+   "base": 8.4,
+   "growth": 1.67,
    "steam": "https://store.steampowered.com/search/?term=Among%20Us",
    "amazon": "https://www.amazon.co.jp/s?k=Among+Us&tag=tarochin-22",
    "rank": 9
@@ -1788,7 +1817,7 @@
    },
    "spark": [
     1.0,
-    13.0,
+    14.0,
     11.0,
     16.0,
     16.0,
@@ -1799,8 +1828,8 @@
    "p_channels": 32,
    "p_views": 77,
    "score": 46.8,
-   "base": 11.5,
-   "growth": 0.87,
+   "base": 11.7,
+   "growth": 0.85,
    "steam": "https://store.steampowered.com/search/?term=%E3%83%89%E3%83%A9%E3%82%B4%E3%83%B3%E3%82%BA%E3%83%89%E3%82%B0%E3%83%9E%202%3A%E3%83%80%E3%83%BC%E3%82%AF%E3%82%A2%E3%83%AA%E3%82%BA%E3%83%B3",
    "amazon": "https://www.amazon.co.jp/s?k=%E3%83%89%E3%83%A9%E3%82%B4%E3%83%B3%E3%82%BA%E3%83%89%E3%82%B0%E3%83%9E+2%3A%E3%83%80%E3%83%BC%E3%82%AF%E3%82%A2%E3%83%AA%E3%82%BA%E3%83%B3&tag=tarochin-22",
    "rank": 12
@@ -1958,8 +1987,8 @@
    },
    "spark": [
     13.5,
-    23.0,
-    20.5,
+    24.5,
+    19.0,
     17.0,
     14.0,
     13.0,
