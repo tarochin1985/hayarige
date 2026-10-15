@@ -1029,6 +1029,30 @@ def purge_old(site_url):
     if gone_card:
         write_json(lpath, led)
 
+    # ---- まとめの見出し画像のおぼえ書き（2026-10-14 追加）
+    #
+    # data/matome_art.json には、まとめのページに出す配信のサムネイルのURL
+    # （＝動画のID）とチャンネル名が入っている。30日を過ぎたまとめのぶんは
+    # もう画像として出さない（special_thumb の★を読むこと）ので、
+    # **おぼえ書きのほうも残さない。** 動画のIDもYouTubeから取ったもの。
+    apath = DATA / "matome_art.json"
+    art = read_json(apath, {}) or {}
+    drop = []
+    for k in list(art):
+        key = k.split("/")[-1]
+        try:
+            end = special_period_end(
+                {"kind": "monthly" if len(key) == 7 else "weekly", "key": key})
+        except (ValueError, IndexError):
+            continue
+        if (datetime.now(JST).replace(tzinfo=None) - end).days > KEEP_DAYS:
+            drop.append(k)
+    if drop:
+        for k in drop:
+            art.pop(k, None)
+        write_json(apath, art)
+        log(f"30日を過ぎたまとめの見出し画像を {len(drop)} 件、記録から外しました")
+
 
 def analytics_html():
     """アクセス解析のタグ。data/site_config.json に token を入れると出る。
@@ -1479,20 +1503,40 @@ def special_thumb(c, item=None, home=""):
     ※ Xの共有画像（og:image）は、ここと関係なく**いつもカード**です。
       あちらは1200px級で出るので、文字が読めて中身が伝わる。
     """
-    hero = c.get("hero") or {}
-    m = YT_ID.search(str(hero.get("u", "")))
-    if m:
-        return {"th": f"https://i.ytimg.com/vi/{m.group(1)}/mqdefault.jpg",
-                "by": str(hero.get("by", "")), "own": False}
-    if item and item["kind"] == "monthly":
-        art = game_art(item)
-        if art.get("th"):
-            return {"th": art["th"], "by": art.get("by", ""), "own": False}
-    for s in (c.get("sources") or []):
-        m = YT_ID.search(str(s.get("u", "")))
+    # ★ 30日を過ぎたまとめには、YouTubeの画像を出さない（2026-10-14 追加）
+    #
+    # 下の3つ（hero / game_art / sources）は、どれも i.ytimg.com の画像を
+    # そのまま貼る。**まとめのページは何年も残る**ので、放っておくと
+    # YouTubeから借りた絵を何年も出し続けることになる。
+    # 毎日の記録ページは purge_old が30日でサムネイルを外していて、
+    # **まとめのページだけが外れていなかった**（コンプライアンス審査の
+    # 返答に「YouTubeから取ったものは30日で全部消す」と書いた日に気づいた）。
+    #
+    # 30日を過ぎたら、こちらで作ったカード（card.png）に落とす。
+    # ★**出典のリンクは消さない。** あれは引用の出どころで、記事の一部。
+    #   やめるのは「画像として出し続けること」のほうだけ。
+    old = False
+    if item:
+        try:
+            old = (datetime.now(JST).replace(tzinfo=None)
+                   - special_period_end(item)).days > KEEP_DAYS
+        except (ValueError, KeyError, TypeError):
+            old = False
+    if not old:
+        hero = c.get("hero") or {}
+        m = YT_ID.search(str(hero.get("u", "")))
         if m:
             return {"th": f"https://i.ytimg.com/vi/{m.group(1)}/mqdefault.jpg",
-                    "by": str(s.get("t", "")).split(" — ")[0], "own": False}
+                    "by": str(hero.get("by", "")), "own": False}
+        if item and item["kind"] == "monthly":
+            art = game_art(item)
+            if art.get("th"):
+                return {"th": art["th"], "by": art.get("by", ""), "own": False}
+        for s in (c.get("sources") or []):
+            m = YT_ID.search(str(s.get("u", "")))
+            if m:
+                return {"th": f"https://i.ytimg.com/vi/{m.group(1)}/mqdefault.jpg",
+                        "by": str(s.get("t", "")).split(" — ")[0], "own": False}
     if item and (SITE / item["slug"] / item["key"] / "card.png").is_file():
         return {"th": f'{home}{item["slug"]}/{item["key"]}/card.png',
                 "by": "", "own": True}
