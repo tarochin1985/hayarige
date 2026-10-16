@@ -28,6 +28,28 @@ FIRST_RE = re.compile(
     r"|(初めて|初登場|今回が初)[^。]{0,40}?(集計|ランキング)")
 
 
+# 出典の見せ方（2026-10-16 たろちんさん）。EDITORIAL.md 5章
+# 「出典の見せ方 ── 毎日・週・月のすべてに共通」に決まりがある。
+#
+#   ✗ 公式サイトは、…と説明している。
+#   ○ シリーズの象徴である鞭のアクションがさらに進化し、…している。
+#
+# 引用元を主語にした文を作ると、**肝心のゲームの話が後ろにずれて、
+# 紹介文ではなく報告書の口調になる。** 2026-10-16のコラムを直したら、
+# 内容を減らさずに414字→364字（50字減）になった。
+#
+# ★**1つなら出さない。** 「誰が言ったか」が中身になる文は正しい書き方で
+#   （引用型の見出しを本文で受けるときなど）、そこまで止めると書けなくなる。
+#   2つ以上並んだら、それは口調の問題。
+SRC_END_RE = re.compile(
+    r"(?:と(?:説明|紹介|記載|明記)している|と書(?:いている|かれている)|"
+    r"と(?:ある|されている)|によると)[。、]")
+# 本文に出典の名前が何度も出てくるのも同じ症状。URLは sources に入っている。
+SRC_NAME_RE = re.compile(
+    r"公式サイト|公式ページ|ストアページ|Steam|4Gamer|AUTOMATON|ファミ通|"
+    r"電ファミ|プレスリリース|ねとらぼ|Game\*Spark")
+
+
 def _today():
     from datetime import datetime, timedelta, timezone
     return (datetime.now(timezone.utc) + timedelta(hours=9)).strftime("%Y-%m-%d")
@@ -299,6 +321,24 @@ def style(col, day=""):
                 f"{first}が最初で、直近は{last}、全部で{len(days)}日あります。"
                 "書いた内容と合っているか確かめてください"
                 "（本当に今日が初めてなら、この行は出ません）")
+
+    # ---- 出典の見せ方（2026-10-16 たろちんさん）
+    body = str(col.get("body", ""))
+    ends = SRC_END_RE.findall(body)
+    if len(ends) >= 2:
+        out.append(
+            f"「{'」「'.join(sorted(set(x.rstrip('。、') for x in ends)))}」"
+            f"で終わる文が{len(ends)}つあります。"
+            "引用元を主語にすると、ゲームの話が後ろにずれて報告書の口調になります。"
+            "公式サイトやSteamの文は地の文に直して、"
+            "出典は sources のURLに任せてください（EDITORIAL.md 5章）")
+    names = SRC_NAME_RE.findall(body)
+    if len(names) >= 3:
+        out.append(
+            f"本文に出典の名前が{len(names)}回出ています"
+            f"（{'・'.join(sorted(set(names)))}）。"
+            "多くて2つまで。3つ以上要るなら、それは sources の仕事です"
+            "（EDITORIAL.md 5章）")
     return out
 
 
