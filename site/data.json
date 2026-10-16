@@ -84,7 +84,7 @@
    "own": false
   }
  ],
- "generated": "2026-10-16 11:32",
+ "generated": "2026-10-16 11:56",
  "range": "直近24時間",
  "days": [
   "10/10",
@@ -96,9 +96,9 @@
   "10/16"
  ],
  "totals": {
-  "videos": 1202,
-  "games": 243,
-  "channels": 870
+  "videos": 1184,
+  "games": 241,
+  "channels": 863
  },
  "rising": [
   {
@@ -439,10 +439,10 @@
    "game": "グランツーリスモ7",
    "canonical": "Gran Turismo 7",
    "videos": 4,
-   "n": 4.0,
-   "raw": 5,
+   "n": 3.5,
+   "raw": 4,
    "channels": 3,
-   "views": 19958,
+   "views": 18946,
    "streams": [
     {
      "t": "【グランツーリスモ７】日本戦ハイライト&決勝3レース【アジア大会 愛知・名古屋 Eスポーツ競技】",
@@ -457,13 +457,6 @@
      "u": "https://www.youtube.com/watch?v=k9gtOwfK8ds",
      "th": "https://i.ytimg.com/vi/k9gtOwfK8ds/mqdefault.jpg",
      "v": 3322
-    },
-    {
-     "t": "🌈💙# 340【 グランツーリスモ 7 】鉄壁のガードのぽみです！　ウィークリー　デイリーレースA&C　楽しんで走るよ～GOGO！ #GT7　＃グランツーリスモ7",
-     "c": "ぽみ / Pomi",
-     "u": "https://www.youtube.com/watch?v=eA23QdgKD3A",
-     "th": "https://i.ytimg.com/vi/eA23QdgKD3A/mqdefault.jpg",
-     "v": 1972
     },
     {
      "t": "🌈💙# 341【 グランツーリスモ 7 】SPECIV アップデート（1.72）　SUGOを走ってみた 楽しんで走るよ～GOGO！ #GT7　＃グランツーリスモ7",
@@ -481,7 +474,7 @@
     }
    ],
    "orgs": {
-    "個人・その他": 5
+    "個人・その他": 4
    },
    "spark": [
     0,
@@ -489,18 +482,18 @@
     0,
     1.0,
     0,
-    0,
-    4.0
+    1.0,
+    3.5
    ],
-   "p_videos": 11,
+   "p_videos": 10,
    "p_channels": 10,
-   "p_views": 68,
-   "score": 30.6,
-   "base": 0.2,
+   "p_views": 67,
+   "score": 29.9,
+   "base": 0.3,
    "growth": 5.0,
    "steam": null,
    "amazon": "https://www.amazon.co.jp/s?k=%E3%82%B0%E3%83%A9%E3%83%B3%E3%83%84%E3%83%BC%E3%83%AA%E3%82%B9%E3%83%A27&tag=tarochin-22",
-   "rank": 65
+   "rank": 70
   },
   {
    "game": "Ratatan",
@@ -560,7 +553,7 @@
    "growth": 5.0,
    "steam": "https://store.steampowered.com/search/?term=Ratatan",
    "amazon": "https://www.amazon.co.jp/s?k=Ratatan&tag=tarochin-22",
-   "rank": 84
+   "rank": 83
   }
  ],
  "spread": [
@@ -639,10 +632,10 @@
     "Neo-Porte": 1
    },
    "spark": [
-    38.0,
-    34.0,
-    31.0,
-    26.5,
+    39.0,
+    33.0,
+    32.0,
+    25.5,
     24.0,
     38.0,
     35.5
@@ -660,11 +653,11 @@
   {
    "game": "Apex Legends",
    "canonical": "Apex Legends",
-   "videos": 31,
-   "n": 31.0,
-   "raw": 36,
-   "channels": 27,
-   "views": 1014639,
+   "videos": 30,
+   "n": 30.0,
+   "raw": 35,
+   "channels": 26,
+   "views": 1009567,
    "streams": [
     {
      "t": "【APEX】久しぶりだね、APEXくん/ボディ、ツルギさん【ぶいすぽっ！/英リサ】",
@@ -724,7 +717,7 @@
     }
    ],
    "orgs": {
-    "個人・その他": 32,
+    "個人・その他": 31,
     "ぶいすぽっ！": 2,
     "Neo-Porte": 2
    },
@@ -734,15 +727,15 @@
     38.0,
     39.0,
     38.5,
-    34.5,
-    31.0
+    35.5,
+    30.0
    ],
-   "p_videos": 87,
-   "p_channels": 87,
+   "p_videos": 85,
+   "p_channels": 84,
    "p_views": 95,
-   "score": 89.8,
-   "base": 36.7,
-   "growth": 0.84,
+   "score": 88.2,
+   "base": 36.8,
+   "growth": 0.82,
    "steam": "https://store.steampowered.com/search/?term=Apex%20Legends",
    "amazon": "https://www.amazon.co.jp/s?k=Apex+Legends&tag=tarochin-22",
    "rank": 2
@@ -751,10 +744,10 @@
    "game": "ストリートファイター6",
    "canonical": "ストリートファイター6",
    "videos": 26,
-   "n": 26.0,
-   "raw": 29,
+   "n": 25.5,
+   "raw": 28,
    "channels": 25,
-   "views": 1239594,
+   "views": 1224592,
    "streams": [
     {
      "t": "【スト6】張り手と白ダメのヤバさについ踊りだしてしまうキャラ『アルジュン』を初プレイするどぐら",
@@ -814,26 +807,26 @@
     }
    ],
    "orgs": {
-    "個人・その他": 24,
+    "個人・その他": 23,
     "ぶいすぽっ！": 2,
     "Neo-Porte": 1,
     "にじさんじ": 1,
     "たろちん指定": 1
    },
    "spark": [
-    24.0,
-    21.5,
-    34.5,
+    23.5,
+    22.5,
+    33.5,
     31.5,
     46.0,
-    40.0,
-    26.0
+    41.0,
+    25.5
    ],
-   "p_videos": 73,
+   "p_videos": 72,
    "p_channels": 81,
    "p_views": 96,
-   "score": 83.8,
-   "base": 32.9,
+   "score": 83.5,
+   "base": 33.0,
    "growth": 0.79,
    "steam": "https://store.steampowered.com/search/?term=%E3%82%B9%E3%83%88%E3%83%AA%E3%83%BC%E3%83%88%E3%83%95%E3%82%A1%E3%82%A4%E3%82%BF%E3%83%BC6",
    "amazon": "https://www.amazon.co.jp/s?k=%E3%82%B9%E3%83%88%E3%83%AA%E3%83%BC%E3%83%88%E3%83%95%E3%82%A1%E3%82%A4%E3%82%BF%E3%83%BC6&tag=tarochin-22",
@@ -921,10 +914,10 @@
     "Neo-Porte": 1
    },
    "spark": [
-    38.0,
-    34.0,
-    31.0,
-    26.5,
+    39.0,
+    33.0,
+    32.0,
+    25.5,
     24.0,
     38.0,
     35.5
@@ -942,11 +935,11 @@
   {
    "game": "Apex Legends",
    "canonical": "Apex Legends",
-   "videos": 31,
-   "n": 31.0,
-   "raw": 36,
-   "channels": 27,
-   "views": 1014639,
+   "videos": 30,
+   "n": 30.0,
+   "raw": 35,
+   "channels": 26,
+   "views": 1009567,
    "streams": [
     {
      "t": "【APEX】久しぶりだね、APEXくん/ボディ、ツルギさん【ぶいすぽっ！/英リサ】",
@@ -1006,7 +999,7 @@
     }
    ],
    "orgs": {
-    "個人・その他": 32,
+    "個人・その他": 31,
     "ぶいすぽっ！": 2,
     "Neo-Porte": 2
    },
@@ -1016,15 +1009,15 @@
     38.0,
     39.0,
     38.5,
-    34.5,
-    31.0
+    35.5,
+    30.0
    ],
-   "p_videos": 87,
-   "p_channels": 87,
+   "p_videos": 85,
+   "p_channels": 84,
    "p_views": 95,
-   "score": 89.8,
-   "base": 36.7,
-   "growth": 0.84,
+   "score": 88.2,
+   "base": 36.8,
+   "growth": 0.82,
    "steam": "https://store.steampowered.com/search/?term=Apex%20Legends",
    "amazon": "https://www.amazon.co.jp/s?k=Apex+Legends&tag=tarochin-22",
    "rank": 2
@@ -1033,10 +1026,10 @@
    "game": "ストリートファイター6",
    "canonical": "ストリートファイター6",
    "videos": 26,
-   "n": 26.0,
-   "raw": 29,
+   "n": 25.5,
+   "raw": 28,
    "channels": 25,
-   "views": 1239594,
+   "views": 1224592,
    "streams": [
     {
      "t": "【スト6】張り手と白ダメのヤバさについ踊りだしてしまうキャラ『アルジュン』を初プレイするどぐら",
@@ -1096,26 +1089,26 @@
     }
    ],
    "orgs": {
-    "個人・その他": 24,
+    "個人・その他": 23,
     "ぶいすぽっ！": 2,
     "Neo-Porte": 1,
     "にじさんじ": 1,
     "たろちん指定": 1
    },
    "spark": [
-    24.0,
-    21.5,
-    34.5,
+    23.5,
+    22.5,
+    33.5,
     31.5,
     46.0,
-    40.0,
-    26.0
+    41.0,
+    25.5
    ],
-   "p_videos": 73,
+   "p_videos": 72,
    "p_channels": 81,
    "p_views": 96,
-   "score": 83.8,
-   "base": 32.9,
+   "score": 83.5,
+   "base": 33.0,
    "growth": 0.79,
    "steam": "https://store.steampowered.com/search/?term=%E3%82%B9%E3%83%88%E3%83%AA%E3%83%BC%E3%83%88%E3%83%95%E3%82%A1%E3%82%A4%E3%82%BF%E3%83%BC6",
    "amazon": "https://www.amazon.co.jp/s?k=%E3%82%B9%E3%83%88%E3%83%AA%E3%83%BC%E3%83%88%E3%83%95%E3%82%A1%E3%82%A4%E3%82%BF%E3%83%BC6&tag=tarochin-22",
@@ -1124,11 +1117,11 @@
   {
    "game": "League of Legends",
    "canonical": "League of Legends",
-   "videos": 24,
-   "n": 24.0,
-   "raw": 27,
-   "channels": 22,
-   "views": 2169990,
+   "videos": 23,
+   "n": 23.0,
+   "raw": 26,
+   "channels": 21,
+   "views": 2168210,
    "streams": [
     {
      "t": "【LOL】青とスクリム→オレンジと本番【LTK レギュラーステージ Day1】",
@@ -1188,7 +1181,7 @@
     }
    ],
    "orgs": {
-    "個人・その他": 14,
+    "個人・その他": 13,
     "ぶいすぽっ！": 5,
     "Neo-Porte": 4,
     "にじさんじ": 2,
@@ -1201,15 +1194,15 @@
     15.0,
     13.5,
     16.5,
-    11.0,
-    24.0
+    12.0,
+    23.0
    ],
-   "p_videos": 68,
-   "p_channels": 71,
+   "p_videos": 65,
+   "p_channels": 68,
    "p_views": 100,
-   "score": 80.2,
-   "base": 13.2,
-   "growth": 1.82,
+   "score": 78.3,
+   "base": 13.3,
+   "growth": 1.73,
    "steam": "https://store.steampowered.com/search/?term=League%20of%20Legends",
    "amazon": null,
    "rank": 4
@@ -1287,8 +1280,8 @@
    },
    "spark": [
     12.5,
-    7.0,
-    12.5,
+    8.0,
+    11.5,
     15.0,
     16.5,
     17.5,
@@ -1398,9 +1391,9 @@
    "canonical": "Minecraft",
    "videos": 17,
    "n": 17.0,
-   "raw": 19,
+   "raw": 18,
    "channels": 17,
-   "views": 612841,
+   "views": 610669,
    "streams": [
     {
      "t": "【危険すぎ】怪異SCPだらけの施設から脱出せよ！【マイクラ】",
@@ -1452,32 +1445,32 @@
      "v": 2772
     },
     {
-     "t": "【#minecraft/#まほろばマイクラ】#5╎探検探索、新メニュー！【葛ノ葉鈴撫/#jpvtuber #Vtuber 】",
-     "c": "葛ノ葉鈴撫　-Kuzunoha suzunade- Ch",
-     "u": "https://www.youtube.com/watch?v=MKQeuRSj1Xs",
-     "th": "https://i.ytimg.com/vi/MKQeuRSj1Xs/mqdefault.jpg",
-     "v": 2487
+     "t": "【マイクラ】久しぶりにエンドラを倒しにいきますか～！【 #若魔藤あんず / #にゃんたじあ！ 】",
+     "c": "若魔藤あんず",
+     "u": "https://www.youtube.com/watch?v=3cxefOKxmRM",
+     "th": "https://i.ytimg.com/vi/3cxefOKxmRM/mqdefault.jpg",
+     "v": 2364
     }
    ],
    "orgs": {
-    "個人・その他": 16,
+    "個人・その他": 15,
     "実況グループ": 2,
     "追加指定": 1
    },
    "spark": [
     30.5,
-    32.0,
-    23.0,
+    33.0,
+    22.0,
     32.0,
     34.5,
-    23.0,
+    24.0,
     17.0
    ],
    "p_videos": 48,
    "p_channels": 55,
    "p_views": 91,
    "score": 65.5,
-   "base": 29.2,
+   "base": 29.3,
    "growth": 0.58,
    "steam": "https://store.steampowered.com/search/?term=Minecraft",
    "amazon": "https://www.amazon.co.jp/s?k=Minecraft&tag=tarochin-22",
@@ -1644,8 +1637,8 @@
     "個人・その他": 22
    },
    "spark": [
-    23.0,
-    20.5,
+    24.5,
+    19.0,
     17.0,
     14.0,
     11.5,
@@ -1821,9 +1814,9 @@
     "個人・その他": 15
    },
    "spark": [
-    19.0,
+    20.0,
     25.0,
-    12.5,
+    11.5,
     6.0,
     13.0,
     14.5,
@@ -2018,94 +2011,6 @@
    "rank": 13
   },
   {
-   "game": "eFootball",
-   "canonical": "eFootball",
-   "videos": 11,
-   "n": 11.0,
-   "raw": 13,
-   "channels": 9,
-   "views": 476114,
-   "streams": [
-    {
-     "t": "EPIC?ST?熱いのが来てほしい木曜メンテ待機配信【eFootballアプリ2027/イーフト】",
-     "c": "シュート。",
-     "u": "https://www.youtube.com/watch?v=Q-5EVs_k_bI",
-     "th": "https://i.ytimg.com/vi/Q-5EVs_k_bI/mqdefault.jpg",
-     "v": 170086
-    },
-    {
-     "t": "【超絶必見】最強2人!!守備ショータイム能力育成解説!!ファンデフェン&クルトワが超やべえ【eFootballアプリ2027/イーフト】",
-     "c": "シュート。",
-     "u": "https://www.youtube.com/watch?v=ecFY5YC1Qgc",
-     "th": "https://i.ytimg.com/vi/ecFY5YC1Qgc/mqdefault.jpg",
-     "v": 82266
-    },
-    {
-     "t": "【最新】最強クルトワ登場！ファンデフェンも超強い！このガチャ引くべき？選手評価＆レべマ能力まで徹底解説！【eFootball,イーフットボール,イーフト,ウェズレイ】",
-     "c": "ちょぶり【イーフト解説】",
-     "u": "https://www.youtube.com/watch?v=pYqiKDpPPU4",
-     "th": "https://i.ytimg.com/vi/pYqiKDpPPU4/mqdefault.jpg",
-     "v": 81071
-    },
-    {
-     "t": "【大量更新】今すぐログインして、●●を絶対やってください！クロップ監督が新要素\"守備リンクアップ\"持ちで登場！無料ガチャ券も貰える10/15最新情報まとめ【eFootball/イーフト2027アプリ】",
-     "c": "HikacGamesヒカックゲームズ",
-     "u": "https://www.youtube.com/watch?v=l9HwaanhryM",
-     "th": "https://i.ytimg.com/vi/l9HwaanhryM/mqdefault.jpg",
-     "v": 66668
-    },
-    {
-     "t": "【神ガチャ!?】クルトワ,ミッキー,ウェズレイ3選手メイン使用したら○○大活躍で神ガチャ説濃厚かも!?引く価値あり【eFootballアプリ2027/イーフト】",
-     "c": "シュート。",
-     "u": "https://www.youtube.com/watch?v=Bw0qu4sjqe4",
-     "th": "https://i.ytimg.com/vi/Bw0qu4sjqe4/mqdefault.jpg",
-     "v": 52366
-    },
-    {
-     "t": "【最新】クロップ監督登場！新リンクアップが熱い！これ買うべき？能力＆リンクアップまで徹底解説！【eFootball,イーフットボール,イーフト】",
-     "c": "ちょぶり【イーフト解説】",
-     "u": "https://www.youtube.com/watch?v=KGU_2yGCla4",
-     "th": "https://i.ytimg.com/vi/KGU_2yGCla4/mqdefault.jpg",
-     "v": 48739
-    },
-    {
-     "t": "【最新】50BOXクアレスマ登場！BTバゴット＆トルコガチャまで徹底解説！このガチャ引くべき？選手評価＆レべマ能力まで徹底解説！【eFootball,イーフットボール,イーフト】",
-     "c": "ちょぶり【イーフト解説】",
-     "u": "https://www.youtube.com/watch?v=pyfHBoyAok4",
-     "th": "https://i.ytimg.com/vi/pyfHBoyAok4/mqdefault.jpg",
-     "v": 45140
-    },
-    {
-     "t": "守備リンクアップをがっつり試す！！【イーフトアプリ2027】",
-     "c": "メロンパン（ゲーム実況）",
-     "u": "https://www.youtube.com/watch?v=y2l5yZ_tAug",
-     "th": "https://i.ytimg.com/vi/y2l5yZ_tAug/mqdefault.jpg",
-     "v": 29644
-    }
-   ],
-   "orgs": {
-    "個人・その他": 13
-   },
-   "spark": [
-    7.5,
-    8.0,
-    4.0,
-    8.5,
-    7.0,
-    6.0,
-    11.0
-   ],
-   "p_videos": 31,
-   "p_channels": 29,
-   "p_views": 89,
-   "score": 50.6,
-   "base": 6.8,
-   "growth": 1.62,
-   "steam": "https://store.steampowered.com/search/?term=eFootball",
-   "amazon": "https://www.amazon.co.jp/s?k=eFootball&tag=tarochin-22",
-   "rank": 14
-  },
-  {
    "game": "大乱闘スマッシュブラザーズ SPECIAL",
    "canonical": "大乱闘スマッシュブラザーズ SPECIAL",
    "videos": 10,
@@ -2176,9 +2081,9 @@
    },
    "spark": [
     13.5,
-    11.0,
     12.0,
-    12.5,
+    12.0,
+    11.5,
     12.0,
     6.0,
     10.5
@@ -2191,7 +2096,7 @@
    "growth": 0.89,
    "steam": null,
    "amazon": "https://www.amazon.co.jp/s?k=%E5%A4%A7%E4%B9%B1%E9%97%98%E3%82%B9%E3%83%9E%E3%83%83%E3%82%B7%E3%83%A5%E3%83%96%E3%83%A9%E3%82%B6%E3%83%BC%E3%82%BA+SPECIAL&tag=tarochin-22",
-   "rank": 15
+   "rank": 14
   },
   {
    "game": "hololive Dreams",
@@ -2281,6 +2186,94 @@
    "growth": 0.83,
    "steam": "https://store.steampowered.com/search/?term=hololive%20Dreams",
    "amazon": "https://www.amazon.co.jp/s?k=hololive+Dreams&tag=tarochin-22",
+   "rank": 15
+  },
+  {
+   "game": "eFootball",
+   "canonical": "eFootball",
+   "videos": 10,
+   "n": 10.0,
+   "raw": 12,
+   "channels": 8,
+   "views": 472462,
+   "streams": [
+    {
+     "t": "EPIC?ST?熱いのが来てほしい木曜メンテ待機配信【eFootballアプリ2027/イーフト】",
+     "c": "シュート。",
+     "u": "https://www.youtube.com/watch?v=Q-5EVs_k_bI",
+     "th": "https://i.ytimg.com/vi/Q-5EVs_k_bI/mqdefault.jpg",
+     "v": 170086
+    },
+    {
+     "t": "【超絶必見】最強2人!!守備ショータイム能力育成解説!!ファンデフェン&クルトワが超やべえ【eFootballアプリ2027/イーフト】",
+     "c": "シュート。",
+     "u": "https://www.youtube.com/watch?v=ecFY5YC1Qgc",
+     "th": "https://i.ytimg.com/vi/ecFY5YC1Qgc/mqdefault.jpg",
+     "v": 82266
+    },
+    {
+     "t": "【最新】最強クルトワ登場！ファンデフェンも超強い！このガチャ引くべき？選手評価＆レべマ能力まで徹底解説！【eFootball,イーフットボール,イーフト,ウェズレイ】",
+     "c": "ちょぶり【イーフト解説】",
+     "u": "https://www.youtube.com/watch?v=pYqiKDpPPU4",
+     "th": "https://i.ytimg.com/vi/pYqiKDpPPU4/mqdefault.jpg",
+     "v": 81071
+    },
+    {
+     "t": "【大量更新】今すぐログインして、●●を絶対やってください！クロップ監督が新要素\"守備リンクアップ\"持ちで登場！無料ガチャ券も貰える10/15最新情報まとめ【eFootball/イーフト2027アプリ】",
+     "c": "HikacGamesヒカックゲームズ",
+     "u": "https://www.youtube.com/watch?v=l9HwaanhryM",
+     "th": "https://i.ytimg.com/vi/l9HwaanhryM/mqdefault.jpg",
+     "v": 66668
+    },
+    {
+     "t": "【神ガチャ!?】クルトワ,ミッキー,ウェズレイ3選手メイン使用したら○○大活躍で神ガチャ説濃厚かも!?引く価値あり【eFootballアプリ2027/イーフト】",
+     "c": "シュート。",
+     "u": "https://www.youtube.com/watch?v=Bw0qu4sjqe4",
+     "th": "https://i.ytimg.com/vi/Bw0qu4sjqe4/mqdefault.jpg",
+     "v": 52366
+    },
+    {
+     "t": "【最新】クロップ監督登場！新リンクアップが熱い！これ買うべき？能力＆リンクアップまで徹底解説！【eFootball,イーフットボール,イーフト】",
+     "c": "ちょぶり【イーフト解説】",
+     "u": "https://www.youtube.com/watch?v=KGU_2yGCla4",
+     "th": "https://i.ytimg.com/vi/KGU_2yGCla4/mqdefault.jpg",
+     "v": 48739
+    },
+    {
+     "t": "【最新】50BOXクアレスマ登場！BTバゴット＆トルコガチャまで徹底解説！このガチャ引くべき？選手評価＆レべマ能力まで徹底解説！【eFootball,イーフットボール,イーフト】",
+     "c": "ちょぶり【イーフト解説】",
+     "u": "https://www.youtube.com/watch?v=pyfHBoyAok4",
+     "th": "https://i.ytimg.com/vi/pyfHBoyAok4/mqdefault.jpg",
+     "v": 45140
+    },
+    {
+     "t": "守備リンクアップをがっつり試す！！【イーフトアプリ2027】",
+     "c": "メロンパン（ゲーム実況）",
+     "u": "https://www.youtube.com/watch?v=y2l5yZ_tAug",
+     "th": "https://i.ytimg.com/vi/y2l5yZ_tAug/mqdefault.jpg",
+     "v": 29644
+    }
+   ],
+   "orgs": {
+    "個人・その他": 12
+   },
+   "spark": [
+    7.5,
+    8.0,
+    4.0,
+    8.5,
+    7.0,
+    7.0,
+    10.0
+   ],
+   "p_videos": 28,
+   "p_channels": 26,
+   "p_views": 89,
+   "score": 48.6,
+   "base": 7.0,
+   "growth": 1.43,
+   "steam": "https://store.steampowered.com/search/?term=eFootball",
+   "amazon": "https://www.amazon.co.jp/s?k=eFootball&tag=tarochin-22",
    "rank": 16
   },
   {
@@ -2449,8 +2442,8 @@
     6.0,
     4.0,
     12.0,
-    6.0,
-    16.0,
+    7.0,
+    15.0,
     12.0
    ],
    "p_videos": 34,
@@ -3155,7 +3148,7 @@
     "個人・その他": 8
    },
    "spark": [
-    13.0,
+    14.0,
     11.0,
     16.0,
     16.0,
@@ -3167,8 +3160,8 @@
    "p_channels": 26,
    "p_views": 75,
    "score": 42.2,
-   "base": 13.2,
-   "growth": 0.61,
+   "base": 13.3,
+   "growth": 0.6,
    "steam": "https://store.steampowered.com/search/?term=%E3%83%89%E3%83%A9%E3%82%B4%E3%83%B3%E3%82%BA%E3%83%89%E3%82%B0%E3%83%9E%202%3A%E3%83%80%E3%83%BC%E3%82%AF%E3%82%A2%E3%83%AA%E3%82%BA%E3%83%B3",
    "amazon": "https://www.amazon.co.jp/s?k=%E3%83%89%E3%83%A9%E3%82%B4%E3%83%B3%E3%82%BA%E3%83%89%E3%82%B0%E3%83%9E+2%3A%E3%83%80%E3%83%BC%E3%82%AF%E3%82%A2%E3%83%AA%E3%82%BA%E3%83%B3&tag=tarochin-22",
    "rank": 26
@@ -3262,97 +3255,6 @@
    "rank": 27
   },
   {
-   "game": "雀魂",
-   "canonical": "雀魂",
-   "videos": 8,
-   "n": 8.5,
-   "raw": 9,
-   "channels": 8,
-   "views": 45935,
-   "streams": [
-    {
-     "t": "【雀魂】とんでもないエピソードトークを持つ奴らに囲まれて爆笑が止まらない歌衣メイカ【歌衣メイカ/米将軍/湖南みあ/緑青くれは】",
-     "c": "メイカちゃんねる",
-     "u": "https://www.youtube.com/watch?v=17ZJAud5sNM",
-     "th": "https://i.ytimg.com/vi/17ZJAud5sNM/mqdefault.jpg",
-     "v": 16189
-    },
-    {
-     "t": "【雀魂】喉をいたわるチル麻雀。熱意は熱いうちに打て【歌衣メイカ】",
-     "c": "メイカちゃんねる",
-     "u": "https://www.youtube.com/watch?v=HPcSqC_MUnw",
-     "th": "https://i.ytimg.com/vi/HPcSqC_MUnw/mqdefault.jpg",
-     "v": 14114
-    },
-    {
-     "t": "【雀魂】今日こそ。【段位戦】",
-     "c": "トリス10",
-     "u": "https://www.youtube.com/watch?v=stbYzgopIWE",
-     "th": "https://i.ytimg.com/vi/stbYzgopIWE/mqdefault.jpg",
-     "v": 7445
-    },
-    {
-     "t": "【雀魂】指示厨が泡吹いて倒れない麻雀【柚原いづみ / ななしいんく】",
-     "c": "柚原いづみ / Izumi Channel 【ななしいんく】",
-     "u": "https://www.youtube.com/watch?v=9WG4wnitC1Q",
-     "th": "https://i.ytimg.com/vi/9WG4wnitC1Q/mqdefault.jpg",
-     "v": 5395
-    },
-    {
-     "t": "※顔出し注意※【雀魂】国士無双上がったから褒めてもらう段位戦配信【VPL5期生/ゆんちゅる】 #初見歓迎 #雀魂  #麻雀",
-     "c": "ゆんちゅる@宝石彫留職人・VPL5期生麻雀新人VTuber",
-     "u": "https://www.youtube.com/watch?v=3FhBHDlk9U4",
-     "th": "https://i.ytimg.com/vi/3FhBHDlk9U4/mqdefault.jpg",
-     "v": 4660
-    },
-    {
-     "t": "【#雀魂 】ようこそVPL8期生コラボ【まるげりちゃ/おしたらあたる/西乃うるりp/神野莉子】",
-     "c": "神野莉子(じんじん)",
-     "u": "https://www.youtube.com/watch?v=wV_4hQEteEA",
-     "th": "https://i.ytimg.com/vi/wV_4hQEteEA/mqdefault.jpg",
-     "v": 1711
-    },
-    {
-     "t": "LIVE│じゃんたま　#うぉんちゅー宮村",
-     "c": "スナパイ",
-     "u": "https://www.youtube.com/watch?v=Xb08Uc3SUXs",
-     "th": "https://i.ytimg.com/vi/Xb08Uc3SUXs/mqdefault.jpg",
-     "v": 1550
-    },
-    {
-     "t": "【#うぉんちゅー宮村 #118】バンドマンがわいわいやってみた『雀魂』【HYBRID SENSE視点】",
-     "c": "HYBRID SENSE",
-     "u": "https://www.youtube.com/watch?v=nOoKggnaSzE",
-     "th": "https://i.ytimg.com/vi/nOoKggnaSzE/mqdefault.jpg",
-     "v": 1097
-    }
-   ],
-   "orgs": {
-    "個人・その他": 4,
-    "高田村": 2,
-    "個人勢": 2,
-    "ななしいんく": 1
-   },
-   "spark": [
-    14.0,
-    6.0,
-    14.5,
-    5.0,
-    5.5,
-    5.0,
-    8.5
-   ],
-   "p_videos": 24,
-   "p_channels": 26,
-   "p_views": 73,
-   "score": 41.8,
-   "base": 8.3,
-   "growth": 0.96,
-   "steam": "https://store.steampowered.com/search/?term=%E9%9B%80%E9%AD%82",
-   "amazon": "https://www.amazon.co.jp/s?k=%E9%9B%80%E9%AD%82&tag=tarochin-22",
-   "rank": 28
-  },
-  {
    "game": "ELDEN RING",
    "canonical": "ELDEN RING",
    "videos": 6,
@@ -3426,7 +3328,7 @@
    "growth": 0.76,
    "steam": "https://store.steampowered.com/search/?term=ELDEN%20RING",
    "amazon": "https://www.amazon.co.jp/s?k=ELDEN+RING&tag=tarochin-22",
-   "rank": 29
+   "rank": 28
   },
   {
    "game": "エースコンバット8 ウイングス・オブ・シーヴ",
@@ -3501,6 +3403,97 @@
    "growth": 0.56,
    "steam": "https://store.steampowered.com/search/?term=%E3%82%A8%E3%83%BC%E3%82%B9%E3%82%B3%E3%83%B3%E3%83%90%E3%83%83%E3%83%888%20%E3%82%A6%E3%82%A4%E3%83%B3%E3%82%B0%E3%82%B9%E3%83%BB%E3%82%AA%E3%83%96%E3%83%BB%E3%82%B7%E3%83%BC%E3%83%B4",
    "amazon": "https://www.amazon.co.jp/s?k=%E3%82%A8%E3%83%BC%E3%82%B9%E3%82%B3%E3%83%B3%E3%83%90%E3%83%83%E3%83%888+%E3%82%A6%E3%82%A4%E3%83%B3%E3%82%B0%E3%82%B9%E3%83%BB%E3%82%AA%E3%83%96%E3%83%BB%E3%82%B7%E3%83%BC%E3%83%B4&tag=tarochin-22",
+   "rank": 29
+  },
+  {
+   "game": "雀魂",
+   "canonical": "雀魂",
+   "videos": 8,
+   "n": 7.5,
+   "raw": 8,
+   "channels": 7,
+   "views": 44224,
+   "streams": [
+    {
+     "t": "【雀魂】とんでもないエピソードトークを持つ奴らに囲まれて爆笑が止まらない歌衣メイカ【歌衣メイカ/米将軍/湖南みあ/緑青くれは】",
+     "c": "メイカちゃんねる",
+     "u": "https://www.youtube.com/watch?v=17ZJAud5sNM",
+     "th": "https://i.ytimg.com/vi/17ZJAud5sNM/mqdefault.jpg",
+     "v": 16189
+    },
+    {
+     "t": "【雀魂】喉をいたわるチル麻雀。熱意は熱いうちに打て【歌衣メイカ】",
+     "c": "メイカちゃんねる",
+     "u": "https://www.youtube.com/watch?v=HPcSqC_MUnw",
+     "th": "https://i.ytimg.com/vi/HPcSqC_MUnw/mqdefault.jpg",
+     "v": 14114
+    },
+    {
+     "t": "【雀魂】今日こそ。【段位戦】",
+     "c": "トリス10",
+     "u": "https://www.youtube.com/watch?v=stbYzgopIWE",
+     "th": "https://i.ytimg.com/vi/stbYzgopIWE/mqdefault.jpg",
+     "v": 7445
+    },
+    {
+     "t": "【雀魂】指示厨が泡吹いて倒れない麻雀【柚原いづみ / ななしいんく】",
+     "c": "柚原いづみ / Izumi Channel 【ななしいんく】",
+     "u": "https://www.youtube.com/watch?v=9WG4wnitC1Q",
+     "th": "https://i.ytimg.com/vi/9WG4wnitC1Q/mqdefault.jpg",
+     "v": 5395
+    },
+    {
+     "t": "※顔出し注意※【雀魂】国士無双上がったから褒めてもらう段位戦配信【VPL5期生/ゆんちゅる】 #初見歓迎 #雀魂  #麻雀",
+     "c": "ゆんちゅる@宝石彫留職人・VPL5期生麻雀新人VTuber",
+     "u": "https://www.youtube.com/watch?v=3FhBHDlk9U4",
+     "th": "https://i.ytimg.com/vi/3FhBHDlk9U4/mqdefault.jpg",
+     "v": 4660
+    },
+    {
+     "t": "LIVE│じゃんたま　#うぉんちゅー宮村",
+     "c": "スナパイ",
+     "u": "https://www.youtube.com/watch?v=Xb08Uc3SUXs",
+     "th": "https://i.ytimg.com/vi/Xb08Uc3SUXs/mqdefault.jpg",
+     "v": 1550
+    },
+    {
+     "t": "【#うぉんちゅー宮村 #118】バンドマンがわいわいやってみた『雀魂』【HYBRID SENSE視点】",
+     "c": "HYBRID SENSE",
+     "u": "https://www.youtube.com/watch?v=nOoKggnaSzE",
+     "th": "https://i.ytimg.com/vi/nOoKggnaSzE/mqdefault.jpg",
+     "v": 1097
+    },
+    {
+     "t": "【雀魂】7:30開始！毎日朝活🍋おはよう段位戦【藍坂れも】",
+     "c": "藍坂れも🍋",
+     "u": "https://www.youtube.com/watch?v=ZNUL8yjHPwA",
+     "th": "https://i.ytimg.com/vi/ZNUL8yjHPwA/mqdefault.jpg",
+     "v": 831
+    }
+   ],
+   "orgs": {
+    "個人・その他": 3,
+    "高田村": 2,
+    "個人勢": 2,
+    "ななしいんく": 1
+   },
+   "spark": [
+    14.0,
+    6.0,
+    14.5,
+    5.0,
+    5.5,
+    6.0,
+    7.5
+   ],
+   "p_videos": 21,
+   "p_channels": 23,
+   "p_views": 73,
+   "score": 39.9,
+   "base": 8.5,
+   "growth": 0.94,
+   "steam": "https://store.steampowered.com/search/?term=%E9%9B%80%E9%AD%82",
+   "amazon": "https://www.amazon.co.jp/s?k=%E9%9B%80%E9%AD%82&tag=tarochin-22",
    "rank": 30
   }
  ]
