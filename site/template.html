@@ -348,6 +348,17 @@ tr.detail td{background:var(--card-2);padding:14px 18px}
 .share .sh-bs{background:#1185FE}
 .share .sh-ln{background:#06C755}
 .share .sh-hb{background:#00A4DE}
+/* 「リンクをコピー」。どこのサービスでもないので、サイトの色を使う。
+   文字は --card（＝紙の色）にしてある。明るいときは濃い地に白、
+   暗いときは明るい地に黒が自動で当たる（2026-10-15 読者からの要望）。
+   ここだけ <button> なので、<a> と同じ見た目にそろえる指定が要る。 */
+.share .sh-cp{background:var(--accent);color:var(--card);
+ font-family:inherit;font-size:11.5px;cursor:pointer;
+ -webkit-appearance:none;appearance:none}
+/* コピーできなかったときだけ出る逃げ道。長押し・Ctrl+Cで写してもらう */
+.share .sh-cp-f{flex:1 1 100%;margin-top:6px;font-size:12px;padding:7px 10px;
+ border:1px solid var(--line);border-radius:8px;
+ background:var(--card-2);color:var(--ink);font-family:inherit}
 :root:not([data-theme="light"]) .share .sh-x{background:#fff;color:#000}
 @media (prefers-color-scheme:light){:root:not([data-theme="dark"]) .share .sh-x{background:#000;color:#fff}}
 :root[data-theme="dark"] .share .sh-x{background:#fff;color:#000}
@@ -979,6 +990,57 @@ document.addEventListener('click', e => {
 render();
 matchMedia('(prefers-color-scheme: dark)').addEventListener('change', render);
 // 画面幅が変わると1行の枚数が変わる。開いたままのパネルを行の下へ置き直す。
+/* 「リンクをコピー」（2026-10-15 読者からの要望）
+   ---------------------------------------------------------------
+   > リンク共有をX、ブルスカだけじゃなくて『URLをコピー』みたいなので
+   > 他のSNSにも気軽に貼れるようにURLと文言みたいなのセットで
+
+   ★**外部のスクリプトは読まない。** ここに書いたこれだけで、
+     どこにも何も送らない。説明ページの約束（Cookieを置かない・
+     閲覧者を個人として追跡しない）はそのまま。
+   ★ 写す中身は <button data-copy> に入っている（build_site.py の share_html）。
+     「文＋改行＋URL」の2行。貼った先で勝手にリンクになる形。 */
+addEventListener('click', async ev => {
+  const b = ev.target.closest('.sh-cp');
+  if (!b) return;
+  const text = b.dataset.copy || '';
+  const lbl = b.querySelector('.sh-cp-t');
+  const say = m => {
+    if (!lbl) return;
+    if (!b.dataset.orig) b.dataset.orig = lbl.textContent;
+    lbl.textContent = m;
+    clearTimeout(b.__t);
+    b.__t = setTimeout(() => { lbl.textContent = b.dataset.orig; }, 2000);
+  };
+  // いまのブラウザはこれで終わる。httpsのページでしか使えない決まり
+  try {
+    await navigator.clipboard.writeText(text);
+    say('コピーしました');
+    return;
+  } catch (_) { /* 下の古いやり方を試す */ }
+  // 古いブラウザ・権限が無いとき。画面の外に置いた入力欄を選んで写す
+  const ta = document.createElement('textarea');
+  ta.value = text;
+  ta.readOnly = true;
+  ta.style.cssText = 'position:fixed;top:-9999px;left:0;opacity:0';
+  document.body.appendChild(ta);
+  ta.select();
+  let ok = false;
+  try { ok = document.execCommand('copy'); } catch (_) {}
+  ta.remove();
+  if (ok) { say('コピーしました'); return; }
+  // どちらも駄目なときだけ、自分で写せる形で出す。黙って失敗しない
+  say('下の文を長押しでコピー');
+  if (!b.nextElementSibling?.classList.contains('sh-cp-f')) {
+    const inp = document.createElement('input');
+    inp.className = 'sh-cp-f';
+    inp.value = text.replace(/\n/g, ' ');
+    inp.readOnly = true;
+    b.after(inp);
+    inp.select();
+  }
+});
+
 let rsz;
 addEventListener('resize', () => {
   clearTimeout(rsz);

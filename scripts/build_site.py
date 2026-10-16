@@ -1234,18 +1234,51 @@ def page_html(path, data, depth, site_url="", home=None):
     # まとめのカードはトップにだけ出す。過去の日のページには出さない
     mt = data.get("matome") if data.get("view") != "archive" else None
     title, ogtitle, desc = page_meta(data)
-    # 共有ボタン。コラムのほうは「その日のページ」を指す。
-    # トップを指すと、明日には別のコラムになってしまうため。
-    share_site = share_html(
-        "VTuber・ゲーム実況者がいま配信しているゲームのランキング #ハヤリゲー",
-        f"{site_url}/" if site_url else "", "このサイトを共有") if site_url else ""
+
+    # ---- 共有ボタン
+    #
+    # コラムの行は「その日のページ」を指す。トップを指すと、明日には
+    # 別のコラムになってしまうため。
+    #
+    # ★**フッターの行は「いま見ているページ」を共有する**（2026-10-16 たろちんさん）。
+    #   それまでは、どのページで押してもトップのURLが入っていた。
+    #   ゲーム別ページで「このゲームのページを貼りたい」と思った人に合わない。
+    #
+    #   文は `og:title` を使い回す。あれは「XやDiscordのカードの見出し」として
+    #   page_meta がページごとに作り分けているもので、**共有したい相手に
+    #   見せたい一言と、要るものが同じ**。二重に書き分けると必ずずれる。
+    #     /g/ratatan/   → 『Ratatan』の配信 #ハヤリゲー
+    #     /d/2026-10-13/ → 10月13日｜… — … #ハヤリゲー
+    #     /privacy/     → お問い合わせ・プライバシー #ハヤリゲー
+    #
+    #   トップだけは別の文にする。og:title は「ハヤリゲー ｜「次に流行るゲーム」が
+    #   わかるサイト」で、名乗りとしては正しいが、貼られた先で何のサイトかが
+    #   伝わらない。前から使っている説明文のほうを残す。
+    SITE_TEXT = "VTuber・ゲーム実況者がいま配信しているゲームのランキング #ハヤリゲー"
+    site_root = f"{site_url}/" if site_url else ""
+    page_url = f"{site_url}/{page}" if site_url else ""
+
     share_col = ""
     col = data.get("column") or {}
     cdate = str(col.get("date") or data.get("date") or "")
-    if site_url and col.get("game") and col.get("headline") and len(cdate) >= 10:
+    col_url = (f"{site_url}/d/{cdate}/"
+               if site_url and col.get("game") and col.get("headline")
+               and len(cdate) >= 10 else "")
+    if col_url:
         share_col = share_html(
             f"{col['headline']}｜『{col['game']}』 #ハヤリゲー",
-            f"{site_url}/d/{cdate}/", "このコラムを共有")
+            col_url, "このコラムを共有")
+
+    if not site_url:
+        share_site = ""
+    elif not page or page_url == col_url or data.get("mode") == "admin":
+        # トップ／管理用、それに「コラムの行と同じURLになる日の記録ページ」。
+        # 同じURLの行が2本並ぶと、押す側は選べない。あちらを記事の行、
+        # こちらをサイトの行、と役割を分ける。
+        share_site = share_html(SITE_TEXT, site_root, "このサイトを共有")
+    else:
+        share_site = share_html(f"{ogtitle} #ハヤリゲー", page_url,
+                                "このページを共有")
     # JSONの中に </script> や <!-- があると、HTMLの側が先に反応してしまう。
     # 文字列の中身は変えずに、その並びだけ崩しておく（JSONとしては同じ値になる）。
     blob = json.dumps(d, ensure_ascii=False).replace("</", "<\\/").replace("<!--", "<\\!--")
@@ -1733,6 +1766,15 @@ ICON_BS = ('<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5.77 3.44C8.34
            '-3.06C.98 9.89.6 4.96.6 4.29.6.96 3.52 2.05 5.37 3.44Z"/></svg>')
 # RSSの印。各社のロゴではなく、RSSの共通の記号（点と2本の弧）。
 # これは誰かの商標ではないので、そのまま描いてよい。
+# 「リンクをコピー」のアイコン（2026-10-15）。紙が2枚重なった形。
+# .share .sh svg が fill:currentColor なので、線ではなく塗りで描く。
+ICON_CP = ('<svg viewBox="0 0 24 24" aria-hidden="true">'
+           '<path d="M9 1.6h9.4A3 3 0 0 1 21.4 4.6V16h-2.2V4.6a.8.8 0 0 0-.8-.8H9z"/>'
+           '<path d="M5.6 6h9.2a3 3 0 0 1 3 3v10.4a3 3 0 0 1-3 3H5.6a3 3 0 0 1-3-3V9'
+           'a3 3 0 0 1 3-3zm0 2.2a.8.8 0 0 0-.8.8v10.4c0 .44.36.8.8.8h9.2a.8.8 0 0 0 '
+           '.8-.8V9a.8.8 0 0 0-.8-.8z"/></svg>')
+
+
 ICON_RSS = ('<svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="6.2" cy="17.8" '
             'r="2.2"/><path d="M4 10.1v3.1a6.8 6.8 0 0 1 6.8 6.8h3.1C13.9 14.6 '
             '9.4 10.1 4 10.1Zm0-6.1v3.1c7 0 12.8 5.7 12.8 12.9H20C20 11.1 12.9 4 '
@@ -1798,7 +1840,11 @@ def follow_html(cfg, home=""):
 
 
 def share_html(text, url, label):
-    """共有ボタン。外部のスクリプトは1行も使わない。ただのリンクにする。
+    """共有ボタン。**外部のスクリプトは1行も使わない。**
+
+    X・Bluesky・LINE・はてブの4つはただのリンク。
+    「リンクをコピー」だけ <button> で、site/template.html に直接書いた
+    十数行のJavaScriptで動く（2026-10-15 に追加。下の★を読むこと）。
 
     ボタンの正体はどのサービスも「本文とURLを載せた投稿画面を開くURL」なので、
     JavaScriptを読み込む必要がない。外部スクリプトを貼ると、そのぶん
@@ -1826,6 +1872,24 @@ def share_html(text, url, label):
     ln = f"https://social-plugins.line.me/lineit/share?url={q(url)}&text={q(text)}"
     # はてブだけURLを素のまま置く（公式のボタンがこの形）
     hb = "https://b.hatena.ne.jp/entry/" + url
+    # ★「リンクをコピー」（2026-10-15 読者からの要望）
+    #
+    #   > リンク共有をX、ブルスカだけじゃなくて『URLをコピー』みたいなので
+    #   > 他のSNSにも気軽に貼れるようにURLと文言みたいなのセットで
+    #   > 出せるようにしてもらえたら
+    #
+    # Discord・Threads・Slack・Mastodon・各種DM…**投稿画面を開くURLが
+    # 用意されていない場所のほうが多い。** 一つずつボタンを足していっても
+    # 追いつかないので、「文とURLをまとめて写す」1つに寄せた。
+    #
+    # ここだけ <a> ではなく <button> で、JavaScriptが要る
+    # （クリップボードはリンクでは扱えない）。ただし**外部のスクリプトは
+    # 1行も読まない。** 中身は site/template.html に直接書いた十数行で、
+    # どこにも何も送らない。「Cookieを置かず、閲覧者を個人として追跡しない」
+    # という説明ページの約束は、これまでどおり守る。
+    #
+    # 改行を属性に生で書くと、環境によっては空白に潰れる。&#10; で入れる。
+    cp = e(text + chr(10) + url).replace(chr(10), "&#10;")
     btn = ('<a class="sh sh-{k}" href="{u}" target="_blank" '
            'rel="noopener nofollow">{i}{n}</a>')
     return ('<div class="share"><span class="sh-l">' + e(label) + "</span>"
@@ -1833,6 +1897,8 @@ def share_html(text, url, label):
             + btn.format(k="bs", u=e(bs), n="Bluesky", i=ICON_BS)
             + btn.format(k="ln", u=e(ln), n="LINE", i=ICON_LN)
             + btn.format(k="hb", u=e(hb), n="はてブ", i=ICON_HB)
+            + f'<button type="button" class="sh sh-cp" data-copy="{cp}">'
+            + ICON_CP + '<span class="sh-cp-t">リンクをコピー</span></button>'
             + "</div>")
 
 
