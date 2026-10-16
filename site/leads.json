@@ -1,6 +1,6 @@
 {
  "date": "2026-10-16",
- "generated": "2026-10-16 10:20",
+ "generated": "2026-10-16 11:32",
  "leads": {
   "events": [
    {
@@ -8,7 +8,6 @@
     "channels": [
      "Ao WuWu Ch.【V4Mirai】",
      "Mimoza Ch. 華咲みもざ",
-     "marunnn【まるーんチャンネル】",
      "おなつのにびたし / Onatsu no Nibitashi",
      "くにくんOfficial",
      "どぅんどぅくどぅんどぅんどぅん",
@@ -30,16 +29,6 @@
      "Nene Ch.桃鈴ねね",
      "Towa Ch. 常闇トワ",
      "Watame Ch. 角巻わため",
-     "アキロゼCh。Vtuber/ホロライブ所属"
-    ]
-   },
-   {
-    "tag": "#ホロドリ",
-    "channels": [
-     "AZKi Channel",
-     "Choco Ch. 癒月ちょこ",
-     "Riona Ch. 響咲リオナ - FLOW GLOW",
-     "Vivi Ch. 綺々羅々ヴィヴィ - FLOW GLOW",
      "アキロゼCh。Vtuber/ホロライブ所属"
     ]
    },
@@ -71,6 +60,15 @@
     ]
    },
    {
+    "tag": "#ホロドリ",
+    "channels": [
+     "AZKi Channel",
+     "Choco Ch. 癒月ちょこ",
+     "Vivi Ch. 綺々羅々ヴィヴィ - FLOW GLOW",
+     "アキロゼCh。Vtuber/ホロライブ所属"
+    ]
+   },
+   {
     "tag": "#ラタタン",
     "channels": [
      "ゆるふわまったり勢のゆかりさん",
@@ -91,18 +89,18 @@
   "wide": [
    {
     "game": "Grand Theft Auto V",
-    "channels": 32,
-    "videos": 37
+    "channels": 31,
+    "videos": 36
    },
    {
     "game": "Apex Legends",
-    "channels": 28,
-    "videos": 32
+    "channels": 27,
+    "videos": 31
    },
    {
     "game": "ストリートファイター6",
-    "channels": 26,
-    "videos": 28
+    "channels": 25,
+    "videos": 26
    },
    {
     "game": "League of Legends",
@@ -120,14 +118,14 @@
     "videos": 20
    },
    {
-    "game": "Japanese Ramen Simulator",
+    "game": "Minecraft",
     "channels": 17,
     "videos": 17
    },
    {
-    "game": "Minecraft",
-    "channels": 17,
-    "videos": 17
+    "game": "Japanese Ramen Simulator",
+    "channels": 16,
+    "videos": 16
    }
   ]
  },
@@ -388,30 +386,6 @@
    "suggest": []
   },
   {
-   "word": "スーパーマリオRPG",
-   "channels": 3,
-   "n": 8,
-   "examples": [
-    {
-     "t": "#２【スーパーマリオRPG】※ネタバレあります！クリア目指してやるぞ！#レトロゲーム#任天堂",
-     "c": "ロッキー先生",
-     "u": "https://www.youtube.com/watch?v=KTRXwv7sfpM"
-    },
-    {
-     "t": "【比宮のLIVE🔴】4歳のころからやってた神ゲー「スーパーマリオRPG」リメイクを遊ぶ",
-     "c": "比宮じょーず",
-     "u": "https://www.youtube.com/watch?v=7xOWWRzsEjs"
-    },
-    {
-     "t": "#３【スーパーマリオRPG】※ネタバレあります！クリア目指してやるぞ！#レトロゲーム#任天堂",
-     "c": "ロッキー先生",
-     "u": "https://www.youtube.com/watch?v=cn-PKEMvXBk"
-    }
-   ],
-   "kind": "wide",
-   "suggest": []
-  },
-  {
    "word": "ポケカ",
    "channels": 3,
    "n": 8,
@@ -430,6 +404,30 @@
      "t": "【ポケカ】脅威のHP500vsエネ過多の愛ゴリ！！非ルールなのにHPが高すぎるアローラナッシーデッキで全てを破壊したいwww【とりっぴぃVS愛の戦士】",
      "c": "とりっぴぃ",
      "u": "https://www.youtube.com/watch?v=yeCOQZl0yGo"
+    }
+   ],
+   "kind": "wide",
+   "suggest": []
+  },
+  {
+   "word": "スーパーマリオRPG",
+   "channels": 3,
+   "n": 7,
+   "examples": [
+    {
+     "t": "【比宮のLIVE🔴】4歳のころからやってた神ゲー「スーパーマリオRPG」リメイクを遊ぶ",
+     "c": "比宮じょーず",
+     "u": "https://www.youtube.com/watch?v=7xOWWRzsEjs"
+    },
+    {
+     "t": "#３【スーパーマリオRPG】※ネタバレあります！クリア目指してやるぞ！#レトロゲーム#任天堂",
+     "c": "ロッキー先生",
+     "u": "https://www.youtube.com/watch?v=cn-PKEMvXBk"
+    },
+    {
+     "t": "【比宮のLIVE🔴】今日でクリア行けるか？「スーパーマリオRPG」リメイクを遊ぶ",
+     "c": "比宮じょーず",
+     "u": "https://www.youtube.com/watch?v=rflM2PDqpNA"
     }
    ],
    "kind": "wide",
@@ -685,31 +683,6 @@
    "first_here": false
   },
   {
-   "game": "ゼルダの伝説 時のオカリナ",
-   "growth": 5.0,
-   "videos": 4,
-   "base": 0.7,
-   "channels": 4,
-   "views": 85219,
-   "who": [
-    "いかぼうず",
-    "ポカオスのUZAちゃんねる【ゲーム情報紹介】",
-    "けんたたZ【熱血ゲーム界隈代表】",
-    "一色茶利"
-   ],
-   "titles": [
-    "【新情報】新モード”万魔殿”が凄すぎる！ぐるぐるさんの正式名など新映像で判明したヤバすぎる事実をガチ勢が徹底考察【ゼルダの伝説時のオカリナリメイク】",
-    "【荒れる・荒れない🔥】新規・変更点判明！『ゼルダの伝説 時のオカリナ』ファンの評価はどうなる！？【Switch2 vs PS5 ゲームハード戦争】",
-    "【時のオカリナリメイク】ついに‼︎先行プレイで判明、見た目以上にめっちゃ変わってる【新要素まとめ】【ゼルダの伝説】"
-   ],
-   "genres": [],
-   "year": null,
-   "platforms": [],
-   "days_seen": 17,
-   "last_seen": "2026-10-15",
-   "first_here": false
-  },
-  {
    "game": "グランツーリスモ7",
    "growth": 5.0,
    "videos": 4,
@@ -740,10 +713,49 @@
    "days_seen": 17,
    "last_seen": "2026-10-15",
    "first_here": false
+  },
+  {
+   "game": "Ratatan",
+   "growth": 5.0,
+   "videos": 4,
+   "base": 0.3,
+   "channels": 4,
+   "views": 4503,
+   "who": [
+    "狐森ろべ / Komori Ch.",
+    "樹つつき -Itsuki Tsutsuki Ch-",
+    " なぎせいな / 凪世薙",
+    "ゆるふわまったり勢のゆかりさん"
+   ],
+   "titles": [
+    "#PR【 #Ratatan #ラタタン】朝活🌞おはよ！正式リリース待ってた！【狐森ろべ／VTuber】",
+    "【#PR/#Ratatan/#ラタタン】私に続け！初見Ratatan【樹つつき/Ratatan実況】",
+    "【Ratatan】本日発売のパタポン×ローグライク×ハクスラは反則だろ...！？音ゲーとアクションまさかの同時進行。新作デッキビルダー攻略が面白いw【switch2,steam,ps5,xbox】"
+   ],
+   "genres": [
+    "Music",
+    "Role-playing (RPG)",
+    "Strategy",
+    "Adventure",
+    "Indie"
+   ],
+   "year": 2026,
+   "platforms": [
+    "pc",
+    "console"
+   ],
+   "days_seen": 0,
+   "last_seen": null,
+   "first_here": true
   }
  ],
  "notes_written": true,
  "recent_columns": [
+  {
+   "date": "2026-10-16",
+   "game": "Castlevania: Belmont's Curse",
+   "headline": "「悪魔城ドラキュラ」シリーズ40周年の完全新作"
+  },
   {
    "date": "2026-10-15",
    "game": "80億分の1",
@@ -808,11 +820,6 @@
    "date": "2026-10-03",
    "game": "ほの暮しの庭",
    "headline": "95回目の配信の隣に、1回目の配信が並ぶ"
-  },
-  {
-   "date": "2026-10-02",
-   "game": "デス桃太郎",
-   "headline": "怖がらせるより、ツッコませる"
   }
  ]
 }
