@@ -1395,6 +1395,22 @@
   ]
  },
  {
+  "name": "Acts of Blood",
+  "alias": [],
+  "pop": 0,
+  "y": 2026,
+  "p": [
+   "pc",
+   "console"
+  ],
+  "g": [
+   "Fighting",
+   "Hack and slash/Beat 'em up",
+   "Adventure",
+   "Indie"
+  ]
+ },
+ {
   "name": "Ad Iterum",
   "alias": [],
   "pop": 0,
@@ -4633,7 +4649,9 @@
  },
  {
   "name": "Axiomatik",
-  "alias": [],
+  "alias": [
+   "Axiomatic.exe"
+  ],
   "pop": 0,
   "y": 2026,
   "p": [
@@ -5758,7 +5776,9 @@
  },
  {
   "name": "Bebe Miner",
-  "alias": [],
+  "alias": [
+   "Bebe Miner.exe"
+  ],
   "pop": 0,
   "y": 2026,
   "p": [
@@ -7619,6 +7639,7 @@
  {
   "name": "Bound by Destiny",
   "alias": [
+   "Game.exe",
    "命运束缚的公主",
    "命運束縛的公主"
   ],
@@ -11818,19 +11839,6 @@
   ]
  },
  {
-  "name": "Construction Simulator: Evolution",
-  "alias": [],
-  "pop": 0,
-  "y": 2026,
-  "p": [
-   "pc",
-   "console"
-  ],
-  "g": [
-   "Simulator"
-  ]
- },
- {
   "name": "Container Terminal Simulator",
   "alias": [
    "CTS.exe"
@@ -11896,7 +11904,7 @@
    "Control 2",
    "CONTROL RESONANT"
   ],
-  "pop": 31,
+  "pop": 33,
   "y": 2026,
   "p": [
    "pc",
@@ -16090,6 +16098,16 @@
   ]
  },
  {
+  "name": "Diablo IV: Season of Hell's Legacy",
+  "alias": [],
+  "pop": 0,
+  "y": 2026,
+  "p": [
+   "pc",
+   "console"
+  ]
+ },
+ {
   "name": "Dialshift",
   "alias": [],
   "pop": 0,
@@ -17166,19 +17184,6 @@
   ]
  },
  {
-  "name": "Don't Forget the Phone",
-  "alias": [],
-  "pop": 0,
-  "y": 2026,
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Point-and-click",
-   "Indie"
-  ]
- },
- {
   "name": "Don't Get Caught",
   "alias": [],
   "pop": 0,
@@ -17300,21 +17305,6 @@
   "g": [
    "Simulator",
    "Adventure"
-  ]
- },
- {
-  "name": "Doom ChessMaster",
-  "alias": [],
-  "pop": 0,
-  "y": 2026,
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Role-playing (RPG)",
-   "Strategy",
-   "Adventure",
-   "Indie"
   ]
  },
  {
@@ -17819,6 +17809,21 @@
    "pc"
   ],
   "g": [
+   "Adventure",
+   "Indie"
+  ]
+ },
+ {
+  "name": "Dravora",
+  "alias": [],
+  "pop": 0,
+  "y": 2026,
+  "p": [
+   "pc"
+  ],
+  "g": [
+   "Role-playing (RPG)",
+   "Strategy",
    "Adventure",
    "Indie"
   ]
@@ -20205,7 +20210,7 @@
    "雾锁王国 (Enshrouded)",
    "Enshrouded~霧の王国~"
   ],
-  "pop": 69,
+  "pop": 70,
   "y": 2026,
   "jp": "Enshrouded~霧の王国~",
   "p": [
@@ -23641,20 +23646,6 @@
   ]
  },
  {
-  "name": "Fractured: Snowpine Strangers",
-  "alias": [],
-  "pop": 0,
-  "y": 2026,
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Simulator",
-   "Adventure",
-   "Indie"
-  ]
- },
- {
   "name": "Fragile Existence",
   "alias": [],
   "pop": 0,
@@ -24204,19 +24195,6 @@
    "console"
   ],
   "g": [
-   "Indie"
-  ]
- },
- {
-  "name": "Fuman Ghoul",
-  "alias": [],
-  "pop": 0,
-  "y": 2026,
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Adventure",
    "Indie"
   ]
  },
@@ -24887,7 +24865,7 @@
   "alias": [
    "start_protected_game.exe"
   ],
-  "pop": 8,
+  "pop": 9,
   "y": 2026,
   "p": [
    "pc",
@@ -28262,24 +28240,6 @@
    "Strategy",
    "Turn-based strategy (TBS)",
    "Tactical"
-  ]
- },
- {
-  "name": "Hitoriasobi",
-  "alias": [
-   "Hitori Asobi"
-  ],
-  "pop": 0,
-  "y": 2026,
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Role-playing (RPG)",
-   "Strategy",
-   "Adventure",
-   "Indie",
-   "Card & Board Game"
   ]
  },
  {
@@ -32700,6 +32660,19 @@
   ]
  },
  {
+  "name": "Kobayakawa-san Is a Soulslike 5",
+  "alias": [],
+  "pop": 0,
+  "y": 2026,
+  "p": [
+   "console"
+  ],
+  "g": [
+   "Indie",
+   "Visual Novel"
+  ]
+ },
+ {
   "name": "Koganei-sou to Konjiki no Agehachou",
   "alias": [],
   "pop": 0,
@@ -33695,20 +33668,6 @@
   ],
   "g": [
    "Role-playing (RPG)",
-   "Indie"
-  ]
- },
- {
-  "name": "Life of a Cockroach",
-  "alias": [],
-  "pop": 0,
-  "y": 2026,
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Simulator",
-   "Adventure",
    "Indie"
   ]
  },
@@ -35161,6 +35120,19 @@
   "g": [
    "Simulator",
    "Adventure",
+   "Indie"
+  ]
+ },
+ {
+  "name": "MMOS: MMO Simulator",
+  "alias": [],
+  "pop": 0,
+  "y": 2026,
+  "p": [
+   "pc"
+  ],
+  "g": [
+   "Simulator",
    "Indie"
   ]
  },
@@ -37115,20 +37087,6 @@
   ]
  },
  {
-  "name": "Mind Vessel",
-  "alias": [],
-  "pop": 0,
-  "y": 2026,
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Role-playing (RPG)",
-   "Strategy",
-   "Indie"
-  ]
- },
- {
   "name": "Mind the Clown: Reborn",
   "alias": [],
   "pop": 0,
@@ -37160,7 +37118,7 @@
    "Minecraft Dungeons 2",
    "Spicewood"
   ],
-  "pop": 11,
+  "pop": 12,
   "y": 2026,
   "p": [
    "pc",
@@ -37693,6 +37651,19 @@
   ],
   "g": [
    "Fighting"
+  ]
+ },
+ {
+  "name": "Mojo Is Loved",
+  "alias": [],
+  "pop": 0,
+  "y": 2026,
+  "p": [
+   "pc"
+  ],
+  "g": [
+   "Adventure",
+   "Indie"
   ]
  },
  {
@@ -42475,7 +42446,7 @@
  {
   "name": "Orbitals",
   "alias": [],
-  "pop": 5,
+  "pop": 6,
   "y": 2026,
   "p": [
    "console"
@@ -42821,23 +42792,6 @@
   "g": [
    "Strategy",
    "Indie"
-  ]
- },
- {
-  "name": "Overserved: Food Fighters!",
-  "alias": [],
-  "pop": 0,
-  "y": 2026,
-  "p": [
-   "pc",
-   "console"
-  ],
-  "g": [
-   "Puzzle",
-   "Sport",
-   "Strategy",
-   "Indie",
-   "Arcade"
   ]
  },
  {
@@ -44775,7 +44729,9 @@
  },
  {
   "name": "Pixel Chess",
-  "alias": [],
+  "alias": [
+   "Pixel_Chess.exe"
+  ],
   "pop": 0,
   "y": 2026,
   "p": [
@@ -46274,21 +46230,6 @@
    "Role-playing (RPG)",
    "Strategy",
    "Adventure"
-  ]
- },
- {
-  "name": "Project Accipiter",
-  "alias": [
-   "Project ACCIPITER"
-  ],
-  "pop": 0,
-  "y": 2026,
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Shooter",
-   "Indie"
   ]
  },
  {
@@ -48505,6 +48446,19 @@
   "g": [
    "Real Time Strategy (RTS)",
    "Strategy",
+   "Indie"
+  ]
+ },
+ {
+  "name": "Reshine",
+  "alias": [],
+  "pop": 0,
+  "y": 2026,
+  "p": [
+   "pc"
+  ],
+  "g": [
+   "Simulator",
    "Indie"
   ]
  },
@@ -51385,6 +51339,20 @@
   ]
  },
  {
+  "name": "Senti Metrica",
+  "alias": [],
+  "pop": 0,
+  "y": 2026,
+  "p": [
+   "pc"
+  ],
+  "g": [
+   "Simulator",
+   "Adventure",
+   "Visual Novel"
+  ]
+ },
+ {
   "name": "Sepium",
   "alias": [],
   "pop": 0,
@@ -52942,20 +52910,6 @@
   ]
  },
  {
-  "name": "Skingdom",
-  "alias": [],
-  "pop": 0,
-  "y": 2026,
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Simulator",
-   "Strategy",
-   "Indie"
-  ]
- },
- {
   "name": "Sky Scaffold",
   "alias": [
    "SkyScaffold.exe"
@@ -53166,21 +53120,6 @@
   "g": [
    "Point-and-click",
    "Adventure"
-  ]
- },
- {
-  "name": "Slendyjan",
-  "alias": [
-   "SLENDYJAN"
-  ],
-  "pop": 0,
-  "y": 2026,
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Shooter",
-   "Indie"
   ]
  },
  {
@@ -53781,6 +53720,7 @@
  {
   "name": "Sockpuppet Noir",
   "alias": [
+   "SockpuppetNoir.exe",
    "Sockpuppet Noire"
   ],
   "pop": 0,
@@ -55613,6 +55553,15 @@
   ]
  },
  {
+  "name": "SquirrelTower",
+  "alias": [],
+  "pop": 0,
+  "y": 2026,
+  "g": [
+   "Arcade"
+  ]
+ },
+ {
   "name": "Squomb",
   "alias": [],
   "pop": 0,
@@ -56409,6 +56358,22 @@
    "Role-playing (RPG)",
    "Strategy",
    "Indie"
+  ]
+ },
+ {
+  "name": "Strato Alto",
+  "alias": [],
+  "pop": 0,
+  "y": 2026,
+  "p": [
+   "pc"
+  ],
+  "g": [
+   "Shooter",
+   "Tactical",
+   "Adventure",
+   "Indie",
+   "Arcade"
   ]
  },
  {
@@ -57707,6 +57672,19 @@
   ]
  },
  {
+  "name": "TO-KAY: Thailand Quest",
+  "alias": [
+   "TO-KAY: Путь по Таиланду"
+  ],
+  "pop": 0,
+  "y": 2026,
+  "g": [
+   "Platform",
+   "Adventure",
+   "Indie"
+  ]
+ },
+ {
   "name": "Table for None",
   "alias": [],
   "pop": 0,
@@ -58040,6 +58018,19 @@
   "y": 2026,
   "p": [
    "pc"
+  ]
+ },
+ {
+  "name": "Tanks Sweet Tanks",
+  "alias": [],
+  "pop": 0,
+  "y": 2026,
+  "p": [
+   "console"
+  ],
+  "g": [
+   "Shooter",
+   "Indie"
   ]
  },
  {
@@ -59391,6 +59382,19 @@
   ]
  },
  {
+  "name": "The Debtician",
+  "alias": [],
+  "pop": 0,
+  "y": 2026,
+  "p": [
+   "pc"
+  ],
+  "g": [
+   "Strategy",
+   "Indie"
+  ]
+ },
+ {
   "name": "The Decree",
   "alias": [],
   "pop": 0,
@@ -59658,7 +59662,9 @@
  },
  {
   "name": "The Event",
-  "alias": [],
+  "alias": [
+   "TheEvent.exe"
+  ],
   "pop": 0,
   "y": 2026,
   "p": [
@@ -60981,19 +60987,6 @@
   ]
  },
  {
-  "name": "The Mystery of Doomsday Valley",
-  "alias": [],
-  "pop": 0,
-  "y": 2026,
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Puzzle",
-   "Adventure"
-  ]
- },
- {
   "name": "The Name of the Night",
   "alias": [
    "Yoru no Namae"
@@ -61165,6 +61158,20 @@
   ],
   "g": [
    "Simulator",
+   "Adventure",
+   "Indie"
+  ]
+ },
+ {
+  "name": "The Pogo Witch",
+  "alias": [],
+  "pop": 0,
+  "y": 2026,
+  "p": [
+   "pc"
+  ],
+  "g": [
+   "Platform",
    "Adventure",
    "Indie"
   ]
@@ -63689,20 +63696,6 @@
   ]
  },
  {
-  "name": "Tower of Insolence",
-  "alias": [],
-  "pop": 0,
-  "y": 2026,
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Puzzle",
-   "Adventure",
-   "Indie"
-  ]
- },
- {
   "name": "Tower of Pestilence",
   "alias": [
    "Game.exe"
@@ -63785,6 +63778,20 @@
    "Simulator",
    "Adventure",
    "Indie"
+  ]
+ },
+ {
+  "name": "Town of Tinysville",
+  "alias": [],
+  "pop": 0,
+  "y": 2026,
+  "p": [
+   "pc"
+  ],
+  "g": [
+   "Strategy",
+   "Turn-based strategy (TBS)",
+   "Card & Board Game"
   ]
  },
  {
@@ -65183,7 +65190,9 @@
  },
  {
   "name": "United Heist: Facility Zero",
-  "alias": [],
+  "alias": [
+   "UnitedHeistFacilityZero.exe"
+  ],
   "pop": 0,
   "y": 2026,
   "p": [
@@ -67852,19 +67861,6 @@
   ],
   "g": [
    "Shooter",
-   "Indie"
-  ]
- },
- {
-  "name": "Whispers of the Tallgrass",
-  "alias": [],
-  "pop": 0,
-  "y": 2026,
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Adventure",
    "Indie"
   ]
  },
