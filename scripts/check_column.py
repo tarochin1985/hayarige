@@ -339,6 +339,15 @@ def style(col, day=""):
             f"（{'・'.join(sorted(set(names)))}）。"
             "多くて2つまで。3つ以上要るなら、それは sources の仕事です"
             "（EDITORIAL.md 5章）")
+
+    # 「直し」の形（2026-10-17 追加）。**警告であって不合格ではない。**
+    # あれはリポジトリの中だけの覚え書きで、読者には出ない。
+    # 形が崩れていてもコラムは出してよい（validate() ではなくこちら）。
+    try:
+        from column_fixes import check as _fix_check
+        out += _fix_check(col)
+    except ImportError:
+        pass
     return out
 
 

@@ -715,6 +715,19 @@ def enrich_column(column, rows):
     """
     if not column:
         return column
+
+    # ★「直し」は**サイトに出さない**（2026-10-17 たろちんさん）。
+    #
+    # コラムのJSONに、その日たろちんさんが直した所を書き残している
+    # （どこ／前／後／なぜ）。あれは**リポジトリの中だけの覚え書き**で、
+    # 読者に見せるものではない。下の blob でページに丸ごと埋め込まれるので、
+    # ここで外す。外し忘れると、**没にした見出しと、没にした理由が
+    # ページのソースに出る。**
+    #
+    # 集めるのは scripts/column_fixes.py。元のJSONは書き換えないので、
+    # ここで pop しても記録は消えない（読み込んだ辞書から外すだけ）。
+    column.pop("直し", None)
+
     cr = next((r for r in rows if r["game"] == column.get("game")), None)
     if cr:
         st = cr.get("streams") or []
