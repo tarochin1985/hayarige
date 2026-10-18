@@ -10143,25 +10143,6 @@
   ]
  },
  {
-  "name": "Chaos Front",
-  "alias": [
-   "Chaos Front.exe",
-   "混沌兵团",
-   "混沌兵團"
-  ],
-  "pop": 0,
-  "y": 2026,
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Role-playing (RPG)",
-   "Strategy",
-   "Turn-based strategy (TBS)",
-   "Indie"
-  ]
- },
- {
   "name": "Chaos the Devil",
   "alias": [],
   "pop": 0,
@@ -10712,24 +10693,6 @@
    "Role-playing (RPG)",
    "Simulator",
    "Adventure"
-  ]
- },
- {
-  "name": "Chunky Jump!",
-  "alias": [
-   "Chunky JUMP!"
-  ],
-  "pop": 0,
-  "y": 2026,
-  "p": [
-   "pc",
-   "console"
-  ],
-  "g": [
-   "Strategy",
-   "Adventure",
-   "Indie",
-   "Visual Novel"
   ]
  },
  {
@@ -22183,6 +22146,22 @@
   ]
  },
  {
+  "name": "Finals Week",
+  "alias": [
+   "Finals Week"
+  ],
+  "pop": 0,
+  "y": 2026,
+  "p": [
+   "pc"
+  ],
+  "g": [
+   "Simulator",
+   "Adventure",
+   "Indie"
+  ]
+ },
+ {
   "name": "Financial Freedom",
   "alias": [],
   "pop": 0,
@@ -23705,7 +23684,9 @@
  },
  {
   "name": "Free Time Puzzle",
-  "alias": [],
+  "alias": [
+   "Free_Time_Puzzle.exe"
+  ],
   "pop": 0,
   "y": 2026,
   "p": [
@@ -26422,7 +26403,9 @@
  },
  {
   "name": "Gridlords",
-  "alias": [],
+  "alias": [
+   "Gridlords.exe"
+  ],
   "pop": 0,
   "y": 2026,
   "p": [
@@ -32414,6 +32397,23 @@
   ]
  },
  {
+  "name": "Kirr",
+  "alias": [
+   "KIRR.exe",
+   "KIRR"
+  ],
+  "pop": 0,
+  "y": 2026,
+  "p": [
+   "pc"
+  ],
+  "g": [
+   "Strategy",
+   "Adventure",
+   "Indie"
+  ]
+ },
+ {
   "name": "Kitten Airsoft",
   "alias": [],
   "pop": 0,
@@ -33110,6 +33110,19 @@
   ],
   "g": [
    "Adventure",
+   "Indie"
+  ]
+ },
+ {
+  "name": "Last Watchtower",
+  "alias": [],
+  "pop": 0,
+  "y": 2026,
+  "p": [
+   "pc"
+  ],
+  "g": [
+   "Strategy",
    "Indie"
   ]
  },
@@ -33997,19 +34010,6 @@
   "g": [
    "Platform",
    "Puzzle",
-   "Adventure"
-  ]
- },
- {
-  "name": "Little Samson",
-  "alias": [],
-  "pop": 0,
-  "y": 2026,
-  "p": [
-   "pc",
-   "console"
-  ],
-  "g": [
    "Adventure"
   ]
  },
@@ -35926,18 +35926,6 @@
   "g": [
    "Shooter",
    "Adventure",
-   "Indie"
-  ]
- },
- {
-  "name": "Master of Chaos",
-  "alias": [],
-  "pop": 0,
-  "y": 2026,
-  "p": [
-   "pc"
-  ],
-  "g": [
    "Indie"
   ]
  },
@@ -40565,7 +40553,9 @@
  },
  {
   "name": "Noir",
-  "alias": [],
+  "alias": [
+   "Noir.exe"
+  ],
   "pop": 0,
   "y": 2026,
   "p": [
@@ -41767,6 +41757,20 @@
   ],
   "g": [
    "Strategy"
+  ]
+ },
+ {
+  "name": "One Million Coins",
+  "alias": [
+   "One Million Coins.exe"
+  ],
+  "pop": 0,
+  "y": 2026,
+  "p": [
+   "pc"
+  ],
+  "g": [
+   "Indie"
   ]
  },
  {
@@ -44007,7 +44011,9 @@
  },
  {
   "name": "Petal Crash 2",
-  "alias": [],
+  "alias": [
+   "Petal Crash 2.exe"
+  ],
   "pop": 0,
   "y": 2026,
   "p": [
@@ -45216,6 +45222,25 @@
   ]
  },
  {
+  "name": "Poem for the Caged",
+  "alias": [
+   "game.exe",
+   "囚笼之诗",
+   "Das Gedicht des Käfigs"
+  ],
+  "pop": 0,
+  "y": 2026,
+  "p": [
+   "pc"
+  ],
+  "g": [
+   "Role-playing (RPG)",
+   "Adventure",
+   "Indie",
+   "Visual Novel"
+  ]
+ },
+ {
   "name": "Poker: Texas & Omaha Hold'em - Silver Edition",
   "alias": [],
   "pop": 0,
@@ -45741,19 +45766,6 @@
   "alias": [
    "PotionsTidy.exe"
   ],
-  "pop": 0,
-  "y": 2026,
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Simulator",
-   "Indie"
-  ]
- },
- {
-  "name": "Potions of Veldenkeep",
-  "alias": [],
   "pop": 0,
   "y": 2026,
   "p": [
@@ -47483,7 +47495,9 @@
  },
  {
   "name": "Raiders 1941",
-  "alias": [],
+  "alias": [
+   "Raiders 1941.exe"
+  ],
   "pop": 0,
   "y": 2026,
   "p": [
@@ -47624,7 +47638,7 @@
    "game.exe",
    "Project JabberWocky"
   ],
-  "pop": 0,
+  "pop": 1,
   "y": 2026,
   "p": [
    "pc",
@@ -52058,24 +52072,6 @@
   ]
  },
  {
-  "name": "Shoe it All!",
-  "alias": [
-   "ShoeItAll.exe"
-  ],
-  "pop": 0,
-  "y": 2026,
-  "p": [
-   "pc",
-   "console"
-  ],
-  "g": [
-   "Puzzle",
-   "Sport",
-   "Adventure",
-   "Indie"
-  ]
- },
- {
   "name": "Shop Crush",
   "alias": [],
   "pop": 0,
@@ -54046,6 +54042,15 @@
   ],
   "g": [
    "Role-playing (RPG)"
+  ]
+ },
+ {
+  "name": "Sort Inc.",
+  "alias": [],
+  "pop": 0,
+  "y": 2026,
+  "p": [
+   "pc"
   ]
  },
  {
@@ -56657,6 +56662,9 @@
   "y": 2026,
   "p": [
    "pc"
+  ],
+  "g": [
+   "Adventure"
   ]
  },
  {
@@ -58887,22 +58895,6 @@
    "Strategy",
    "Adventure",
    "Indie"
-  ]
- },
- {
-  "name": "The Blood of Dawnwalker",
-  "alias": [
-   "Dawnwalker.exe"
-  ],
-  "pop": 38,
-  "y": 2026,
-  "p": [
-   "pc",
-   "console"
-  ],
-  "g": [
-   "Role-playing (RPG)",
-   "Adventure"
   ]
  },
  {
@@ -63107,7 +63099,8 @@
  {
   "name": "Toem 2",
   "alias": [
-   "TOEM 2"
+   "TOEM 2",
+   "TOEM 2.exe"
   ],
   "pop": 1,
   "y": 2026,
@@ -64968,6 +64961,21 @@
    "Adventure",
    "Indie",
    "Visual Novel"
+  ]
+ },
+ {
+  "name": "Under Review",
+  "alias": [
+   "UnderReview-Win64-Shipping.exe"
+  ],
+  "pop": 0,
+  "y": 2026,
+  "p": [
+   "pc"
+  ],
+  "g": [
+   "Puzzle",
+   "Adventure"
   ]
  },
  {
