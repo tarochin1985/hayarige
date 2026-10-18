@@ -1,6 +1,6 @@
 {
  "date": "2026-10-18",
- "generated": "2026-10-18 08:47",
+ "generated": "2026-10-18 13:11",
  "leads": {
   "events": [
    {
@@ -8,7 +8,6 @@
     "channels": [
      "Ao WuWu Ch.【V4Mirai】",
      "Mimoza Ch. 華咲みもざ",
-     "marunnn【まるーんチャンネル】",
      "おなつのにびたし / Onatsu no Nibitashi",
      "くにくんOfficial",
      "どぅんどぅくどぅんどぅんどぅん",
@@ -25,31 +24,6 @@
     ]
    },
    {
-    "tag": "#ホロドリ",
-    "channels": [
-     "AZKi Channel",
-     "Choco Ch. 癒月ちょこ",
-     "Iroha ch. 風真いろは - holoX -",
-     "Ririka Ch. 一条莉々華 ‐ ReGLOSS",
-     "Roboco Ch. - ロボ子",
-     "Su Ch. 水宮枢 - FLOW GLOW",
-     "Vivi Ch. 綺々羅々ヴィヴィ - FLOW GLOW",
-     "アキロゼCh。Vtuber/ホロライブ所属"
-    ]
-   },
-   {
-    "tag": "#ゲーム実況",
-    "channels": [
-     "KORIN.鈴ノ音コリン",
-     "Usagi Ch. 因幡兎",
-     "ルベルフゲームチャンネル",
-     "恋因ロス KoinRosu",
-     "星埜きぃ -Key Hoshino-",
-     "豚咲あおい_TomisakiAoi",
-     "里城はな"
-    ]
-   },
-   {
     "tag": "#ぶいきゃす",
     "channels": [
      "こてつちゃんねる",
@@ -59,6 +33,28 @@
      "星埜きぃ -Key Hoshino-",
      "汐ゴマ【鳴潮】",
      "浅葱なぎ"
+    ]
+   },
+   {
+    "tag": "#ゲーム実況",
+    "channels": [
+     "KORIN.鈴ノ音コリン",
+     "Usagi Ch. 因幡兎",
+     "恋因ロス KoinRosu",
+     "星埜きぃ -Key Hoshino-",
+     "豚咲あおい_TomisakiAoi",
+     "里城はな"
+    ]
+   },
+   {
+    "tag": "#ホロドリ",
+    "channels": [
+     "Choco Ch. 癒月ちょこ",
+     "Iroha ch. 風真いろは - holoX -",
+     "Ririka Ch. 一条莉々華 ‐ ReGLOSS",
+     "Roboco Ch. - ロボ子",
+     "Su Ch. 水宮枢 - FLOW GLOW",
+     "アキロゼCh。Vtuber/ホロライブ所属"
     ]
    },
    {
@@ -87,11 +83,11 @@
     ]
    },
    {
-    "tag": "#フォートナイト",
+    "tag": "#ホロ鯖ARK",
     "channels": [
-     "mogすけちゃんネル",
-     "くろのす",
-     "めるとくん"
+     "Choco Ch. 癒月ちょこ",
+     "Pekora Ch. 兎田ぺこら",
+     "アキロゼCh。Vtuber/ホロライブ所属"
     ]
    }
   ],
@@ -100,22 +96,17 @@
    {
     "game": "Apex Legends",
     "channels": 32,
-    "videos": 36
+    "videos": 34
    },
    {
     "game": "Grand Theft Auto V",
-    "channels": 34,
-    "videos": 36
+    "channels": 33,
+    "videos": 34
    },
    {
     "game": "Minecraft",
-    "channels": 26,
-    "videos": 26
-   },
-   {
-    "game": "フォートナイト",
-    "channels": 24,
-    "videos": 30
+    "channels": 23,
+    "videos": 24
    },
    {
     "game": "League of Legends",
@@ -124,18 +115,23 @@
    },
    {
     "game": "スプラトゥーン3",
-    "channels": 21,
-    "videos": 22
-   },
-   {
-    "game": "ストリートファイター6",
-    "channels": 18,
+    "channels": 19,
     "videos": 20
    },
    {
-    "game": "実況パワフルプロ野球2026",
+    "game": "フォートナイト",
     "channels": 16,
-    "videos": 17
+    "videos": 19
+   },
+   {
+    "game": "実況パワフルプロ野球2026",
+    "channels": 14,
+    "videos": 15
+   },
+   {
+    "game": "ストリートファイター6",
+    "channels": 14,
+    "videos": 16
    }
   ]
  },
@@ -144,9 +140,9 @@
   {
    "tag": "ホロドリ",
    "game": "hololive Dreams",
-   "evidence": 9,
+   "evidence": 6,
    "added": 1,
-   "channels": 8
+   "channels": 6
   }
  ],
  "misses": [
@@ -195,22 +191,6 @@
    "kind": "near",
    "suggest": [
     "Split Brain Samsara"
-   ]
-  },
-  {
-   "word": "Goonect",
-   "channels": 1,
-   "n": 1,
-   "examples": [
-    {
-     "t": "【Goonect】同僚警察官が手を繋ぎながら一緒にゴールを目指す！【竜煌ニズナ/鳩乃はろん/#新人VTuber】",
-     "c": "鳩乃はろん / Hatono Haron / 新人VTuber",
-     "u": "https://www.youtube.com/watch?v=MQviCIETNtc"
-    }
-   ],
-   "kind": "near",
-   "suggest": [
-    "Goonect 2"
    ]
   },
   {
@@ -327,81 +307,9 @@
    ]
   },
   {
-   "word": "浮気判定シート!?",
-   "channels": 5,
-   "n": 6,
-   "examples": [
-    {
-     "t": "【浮気判定シート!?】正反対の二人で女子会だ！まつりりかコラボ【一条莉々華/hololive ReGLOSS】",
-     "c": "Ririka Ch. 一条莉々華 ‐ ReGLOSS",
-     "u": "https://www.youtube.com/watch?v=xRlvKp55xIs"
-    },
-    {
-     "t": "【浮気判定シート】チョロ女、どこまで許せるのか検証。【ここ・じぇす汰 / ななしいんく】",
-     "c": "ここ・じぇす汰 / Coco･Jester【ななしいんく】",
-     "u": "https://www.youtube.com/watch?v=zNrXzI2AoBk"
-    },
-    {
-     "t": "🐬【#浮気判定シート 】話題の浮気判定シート！彼氏いない歴〇年🤔【#Vtuber / #海伽はく 】",
-     "c": "海伽はく Mitogi_Haku",
-     "u": "https://www.youtube.com/watch?v=8FWcZV6Bj6U"
-    }
-   ],
-   "kind": "wide",
-   "suggest": []
-  },
-  {
-   "word": "遊戯王",
-   "channels": 4,
-   "n": 9,
-   "examples": [
-    {
-     "t": "【遊戯王】オレはまだあきらめない。追加で5箱開封するぜ！！！",
-     "c": "はじめしゃちょー2 (hajime)",
-     "u": "https://www.youtube.com/watch?v=AenXaWtHsGM"
-    },
-    {
-     "t": "【朗報】マリンセス、超絶強化で美少女版アクセスコードトーカー登場！？【遊戯王】",
-     "c": "あまくだり",
-     "u": "https://www.youtube.com/watch?v=8EqmnLFq7sM"
-    },
-    {
-     "t": "大邪神レシェフ、公式の暴走でマジでゴエモンインパクトになってしまう【遊戯王】",
-     "c": "あまくだり",
-     "u": "https://www.youtube.com/watch?v=ZP98KNpfBQc"
-    }
-   ],
-   "kind": "wide",
-   "suggest": []
-  },
-  {
-   "word": "ブロスタ",
-   "channels": 4,
-   "n": 6,
-   "examples": [
-    {
-     "t": "【初心者】昨日の深夜完全ノリで集まる事が決まったドブオールスターズ達によるガチバ配信Ｗ【ブロスタ】",
-     "c": "キィホープ【キィのゲーム実況】",
-     "u": "https://www.youtube.com/watch?v=zZivWVuvXTQ"
-    },
-    {
-     "t": "【初心者】ドブオールスターズ集結【ブロスタ】",
-     "c": "キィホープ【キィのゲーム実況】",
-     "u": "https://www.youtube.com/watch?v=nPO6lvcghSo"
-    },
-    {
-     "t": "【ブロスタ】新キャラ\"ヴィンス\"と棺ボックスが無料で貰える神イベ来るか！？これは絶対に見逃すな！【最新アプデ情報まとめ】",
-     "c": "Sou*【そう】",
-     "u": "https://www.youtube.com/watch?v=hrj3aEckqX4"
-    }
-   ],
-   "kind": "wide",
-   "suggest": []
-  },
-  {
    "word": "バイオハザード",
-   "channels": 4,
-   "n": 6,
+   "channels": 3,
+   "n": 5,
    "examples": [
     {
      "t": "ネタバレあり感想「バイオハザード実写映画」下手なプレイヤーの動きとゲームの再現度で満足度高いｗｗｗ#バイオハザード #反応集",
@@ -414,249 +322,9 @@
      "u": "https://www.youtube.com/watch?v=K9LSgmAgC5c"
     },
     {
-     "t": "【バイオハザード】あの悪夢再び！ガンシューティングでEIKOが神プレイ連発！【アンブレラ・クロニクルズ】",
-     "c": "狩野英孝【公式チャンネル】EIKO!GO!!",
-     "u": "https://www.youtube.com/watch?v=WFrjWWumpZo"
-    }
-   ],
-   "kind": "wide",
-   "suggest": []
-  },
-  {
-   "word": "ギルド探求団へようこそ！",
-   "channels": 4,
-   "n": 5,
-   "examples": [
-    {
-     "t": "ギルド名簿を完成させる名作推理ゲーム、情報よりも見た目で判断を進める標準と口が悪い助手【ギルド探求団へようこそ！/標準】",
-     "c": "標準野郎",
-     "u": "https://www.youtube.com/watch?v=Mg6e_TsicH8"
-    },
-    {
-     "t": "遂に終盤を迎えたギルド推理パズル、見た目で判断を進める標準に襲い掛かる既視感のある癖強野郎【ギルド探求団へようこそ！/標準】",
-     "c": "標準野郎",
-     "u": "https://www.youtube.com/watch?v=pnmUGV0n97k"
-    },
-    {
-     "t": "【ギルド探求団へようこそ！】パーティ情報を復旧させる推理パズルゲーム",
-     "c": "ロウひなんゲーミング",
-     "u": "https://www.youtube.com/watch?v=WrJEIXqWK-M"
-    }
-   ],
-   "kind": "wide",
-   "suggest": []
-  },
-  {
-   "word": "Varium",
-   "channels": 3,
-   "n": 21,
-   "examples": [
-    {
-     "t": "#02【 初代 風来のシレン 】実機プレイ.ᐟ SFCの傑作ローグライク、初代シレンに挑戦.ᐟ.ᐟ【向日守ぽた/ Varium】",
-     "c": "Pota Ch. 向日守ぽた",
-     "u": "https://www.youtube.com/watch?v=Rb2SPQBvl_U"
-    },
-    {
-     "t": "【旅行レポ雑談】はじめての1人旅！大阪・京都で2泊3日！【海汐もるふ/Varium】",
-     "c": "Molf Ch. 海汐もるふ",
-     "u": "https://www.youtube.com/watch?v=s668c_O-sPc"
-    },
-    {
-     "t": "【 メン限 / 黒dio 】こそこそ、おはなしするー？【向日守ぽた/ Varium】",
-     "c": "Pota Ch. 向日守ぽた",
-     "u": "https://www.youtube.com/watch?v=Q0s7pu8eIT8"
-    }
-   ],
-   "kind": "wide",
-   "suggest": []
-  },
-  {
-   "word": "リライフ",
-   "channels": 3,
-   "n": 11,
-   "examples": [
-    {
-     "t": "【 #ReLife #リライフ 】🌸初めまして！1日目🌸街を探検する！【 GTA / リライフ / 花束ゆいは】",
-     "c": "花束 ゆいは / Hanataba Yuiha",
-     "u": "https://www.youtube.com/watch?v=r319zIXLWrY"
-    },
-    {
-     "t": "【 #ReLife #リライフ 】🌸初めまして！1日目🌸街を探検する！【 GTA / リライフ / 花束ゆいは】",
-     "c": "花束 ゆいは / Hanataba Yuiha",
-     "u": "https://www.youtube.com/watch?v=r319zIXLWrY"
-    },
-    {
-     "t": "【#GTA RP/#リライフ】#1╎初めまして、鈴ノ撫子です！何しよう？【Re:Life/#スト鯖GTA】【葛ノ葉鈴撫/＃新人Vtuber】",
-     "c": "葛ノ葉鈴撫　-Kuzunoha suzunade- Ch",
-     "u": "https://www.youtube.com/watch?v=JUhBLMkiyXw"
-    }
-   ],
-   "kind": "wide",
-   "suggest": []
-  },
-  {
-   "word": "ポケカ",
-   "channels": 3,
-   "n": 9,
-   "examples": [
-    {
-     "t": "【ポケカ】30周年ピカニキを活躍させたい！！大空洞ピカチュウ過多デッキの盤面が最高すぎる件【とりっぴぃVS愛の戦士】",
-     "c": "とりっぴぃ",
-     "u": "https://www.youtube.com/watch?v=xRRgFPGCH1E"
-    },
-    {
-     "t": "【ポケカ】友達が絶望する嫌がらせデッキ！！家族の力で山札を０枚にするイッカネズミが鬼畜すぎるwwwww【とりっぴぃVS愛の戦士】",
-     "c": "とりっぴぃ",
-     "u": "https://www.youtube.com/watch?v=bkbATnaIlO8"
-    },
-    {
-     "t": "【ポケカ】脅威のHP500vsエネ過多の愛ゴリ！！非ルールなのにHPが高すぎるアローラナッシーデッキで全てを破壊したいwww【とりっぴぃVS愛の戦士】",
-     "c": "とりっぴぃ",
-     "u": "https://www.youtube.com/watch?v=yeCOQZl0yGo"
-    }
-   ],
-   "kind": "wide",
-   "suggest": []
-  },
-  {
-   "word": "Re:Life",
-   "channels": 3,
-   "n": 9,
-   "examples": [
-    {
-     "t": "【 Re:Life 】# 01：どしたん。話聞こうか。【 花敷紅華 / 犬養 】",
-     "c": "犬養　- INUKAI Ch. -",
-     "u": "https://www.youtube.com/watch?v=rnowYMnxEh0"
-    },
-    {
-     "t": "【 #ReLife #リライフ 】🌸初めまして！1日目🌸街を探検する！【 GTA / リライフ / 花束ゆいは】",
-     "c": "花束 ゆいは / Hanataba Yuiha",
-     "u": "https://www.youtube.com/watch?v=r319zIXLWrY"
-    },
-    {
-     "t": "【 Re:Life 】# 02：どし担々麺【 花敷紅華 / 犬養 】",
-     "c": "犬養　- INUKAI Ch. -",
-     "u": "https://www.youtube.com/watch?v=tQY1ibcaKK0"
-    }
-   ],
-   "kind": "wide",
-   "suggest": []
-  },
-  {
-   "word": "ウィズダフネ",
-   "channels": 3,
-   "n": 6,
-   "examples": [
-    {
-     "t": "【 ウィズダフネ 】廃人転生  2週目・灯回収　ゼロから始める無課金ダフネ  ｜桃川らいち / Wizardry Variants Daphne  / ウィザードリィダフネ",
-     "c": "桃川 らいち ch / RaiChannel",
-     "u": "https://www.youtube.com/watch?v=wNpMzhTnY6g"
-    },
-    {
-     "t": "【Wizardry Variants Daphne】ダナクエとかモルグス様とかウィザードリィ ヴァリアンツ ダフネ配信255【ウィズダフネ】",
-     "c": "ぷらちな!白金 麗愛",
-     "u": "https://www.youtube.com/watch?v=7Nd5q78MI00"
-    },
-    {
-     "t": "【 ウィズダフネ 】爆速で断絶の砦チャレンジやで！新伝説キャラ…？ついに２周年だぞー！(・ω・)｜桃川らいち / Wizardry Variants Daphne  / ウィザードリィダフネ",
-     "c": "桃川 らいち ch / RaiChannel",
-     "u": "https://www.youtube.com/watch?v=r-2T3_4n5OQ"
-    }
-   ],
-   "kind": "wide",
-   "suggest": []
-  },
-  {
-   "word": "スーパーマリオRPG",
-   "channels": 3,
-   "n": 6,
-   "examples": [
-    {
-     "t": "【比宮のLIVE🔴】今日でクリア行けるか？「スーパーマリオRPG」リメイクを遊ぶ",
-     "c": "比宮じょーず",
-     "u": "https://www.youtube.com/watch?v=rflM2PDqpNA"
-    },
-    {
-     "t": "#４【スーパーマリオRPG】※ネタバレあります！クリア目指してやるぞ！#レトロゲーム#任天堂",
-     "c": "ロッキー先生",
-     "u": "https://www.youtube.com/watch?v=ngGx3Lz_U2Q"
-    },
-    {
-     "t": "#４【スーパーマリオRPG】※ネタバレあります！クリア目指してやるぞ！#レトロゲーム#任天堂",
-     "c": "ロッキー先生",
-     "u": "https://www.youtube.com/watch?v=EjLxU81uI0Y"
-    }
-   ],
-   "kind": "wide",
-   "suggest": []
-  },
-  {
-   "word": "ガチャ",
-   "channels": 3,
-   "n": 6,
-   "examples": [
-    {
-     "t": "【ウイコレ】奇跡オブザ大事件【ガチャ】",
-     "c": "鈴木すず",
-     "u": "https://www.youtube.com/watch?v=PLsLiziyjjM"
-    },
-    {
-     "t": "【ウイコレ】俺の★5キラ確定2枚引き見て【ガチャ】",
-     "c": "鈴木すず",
-     "u": "https://www.youtube.com/watch?v=fawR9b4lBg4"
-    },
-    {
-     "t": "【ガチャ】新紫デク実装狙いでガチャ引いたら虹箱運がプルスウルトラ！？",
-     "c": "アチーブ【ゲーム実況】",
-     "u": "https://www.youtube.com/watch?v=C3R82MmLkDg"
-    }
-   ],
-   "kind": "wide",
-   "suggest": []
-  },
-  {
-   "word": "スーパーマリオブラザーズ2",
-   "channels": 3,
-   "n": 4,
-   "examples": [
-    {
-     "t": "【スーパーマリオブラザーズ2】#6 8面初チャレンジ.ᐟ.ᐟ 進化したマリオを攻略しますっ.ᐟ.ᐟ.ᐟ.ᐟ【モニカ・メロディア / Varium】",
-     "c": "Monica Ch. モニカ・メロディア",
-     "u": "https://www.youtube.com/watch?v=wXnPg02Bi0w"
-    },
-    {
-     "t": "【スーパーマリオブラザーズ2】完全初見！人生初のマリオ2に挑戦！｜セーブ＆ワープなし！クリアを目指す！【水鞠まろな/VTuber】",
-     "c": "Marona Ch. 水鞠まろな",
-     "u": "https://www.youtube.com/watch?v=y6gHM7yY8bM"
-    },
-    {
-     "t": "【顔出し】土曜日だしムズいマリオやろうよ【スーパーマリオブラザーズ2】",
-     "c": "SANNINSHOW",
-     "u": "https://www.youtube.com/watch?v=vYBVBFm4X3c"
-    }
-   ],
-   "kind": "wide",
-   "suggest": []
-  },
-  {
-   "word": "STPR",
-   "channels": 3,
-   "n": 3,
-   "examples": [
-    {
-     "t": "【ドパガキ】SNSでバズってたゲームをやりまくるだけ。【STPR / すにすて / ゆたくん】",
-     "c": "ゆたくん【すにすて】",
-     "u": "https://www.youtube.com/watch?v=pro-ElwKbPw"
-    },
-    {
-     "t": "【浮気判定シート】どこからが浮気なんだって話【莉犬／STPR】",
-     "c": "莉犬くん【すとぷり】",
-     "u": "https://www.youtube.com/watch?v=_s4XQK1Idvs"
-    },
-    {
-     "t": "【カラオケ】【録画禁止】ガチのゲリラ飲酒カラオケ。気分で終わります。【STPR】【ころん 】【すとぷり】",
-     "c": "ころんの実況【すとぷり】",
-     "u": "https://www.youtube.com/watch?v=l00IFkX-RC0"
+     "t": "ネタバレあり感想「バイオハザード実写映画」揃いも揃ってみんなダメな人しかいないｗｗｗ#バイオハザード #反応集",
+     "c": "アニゲー部「ゲームアニメ反応集」",
+     "u": "https://www.youtube.com/watch?v=HKS8uT9stYU"
     }
    ],
    "kind": "wide",
@@ -685,108 +353,10 @@
    ],
    "kind": "wide",
    "suggest": []
-  },
-  {
-   "word": "AMBIQUE",
-   "channels": 3,
-   "n": 3,
-   "examples": [
-    {
-     "t": "【 AMBIQUE 】手元カメラで事前お届けグッズのポストカードにサインしながら活力チャージ🔥【 蛇宵ティア / ななしいんく 】",
-     "c": "蛇宵ティア / Tier Channel【ななしいんく】",
-     "u": "https://www.youtube.com/watch?v=HVZHssAWB-Q"
-    },
-    {
-     "t": "【 AMBiQUE 】おうち3D 活力チャージしながらライブに向けて作業雑談💜",
-     "c": "羽流鷲りりり / Ririri Channel【ななしいんく】",
-     "u": "https://www.youtube.com/watch?v=GIfnMoardIg"
-    },
-    {
-     "t": "【AMBiQUE/エナジードリンク】天開司のお疲れマシュマロ相談室【Vtuber】",
-     "c": "バーチャル債務者youtuber天開司",
-     "u": "https://www.youtube.com/watch?v=amQWfCya1VE"
-    }
-   ],
-   "kind": "wide",
-   "suggest": []
-  },
-  {
-   "word": "みんなでティア表!",
-   "channels": 3,
-   "n": 3,
-   "examples": [
-    {
-     "t": "【みんなでティア表!】飲酒しながら適切なティア表を作る【ぶいすぽっ！/英リサ】",
-     "c": "英リサ.Hanabusa Lisa",
-     "u": "https://www.youtube.com/watch?v=fk_9HpCuq5w"
-    },
-    {
-     "t": "【みんなでティア表! 】月1飲酒部やってまいりました【ぶいすぽ/兎咲ミミ】",
-     "c": "兎咲ミミ / Tosaki Mimi",
-     "u": "https://www.youtube.com/watch?v=MxrY1RBeaFM"
-    },
-    {
-     "t": "炎上しないでください【 みんなでティア表！ 】【 SqLA 】",
-     "c": "SqLA さくら / Riddle",
-     "u": "https://www.youtube.com/watch?v=aHaSIx9zyXc"
-    }
-   ],
-   "kind": "wide",
-   "suggest": []
-  },
-  {
-   "word": "VPL",
-   "channels": 3,
-   "n": 3,
-   "examples": [
-    {
-     "t": "【VPL】第8期！Aリーグ第2節！！頑張るぞー！！※５分ディレイあり【VPL5期生/ゆんちゅる】 #初見歓迎 #雀魂 ＃vtuber #麻雀",
-     "c": "ゆんちゅる@宝石彫留職人・VPL5期生麻雀新人VTuber",
-     "u": "https://www.youtube.com/watch?v=Cih7n7xGeLY"
-    },
-    {
-     "t": "〖 VPL 〗　第2節 勝ちましょう #麻雀 #vtuber #あかるん",
-     "c": "あかるん / Akarun Ch.",
-     "u": "https://www.youtube.com/watch?v=UBLuoTonTlk"
-    },
-    {
-     "t": "【VPL】第８期リーグ戦第二節【Vance/7期生】",
-     "c": "Vance🩸",
-     "u": "https://www.youtube.com/watch?v=50nto7-q-Zk"
-    }
-   ],
-   "kind": "wide",
-   "suggest": []
   }
  ],
  "miss_days": 7,
  "hot_facts": [
-  {
-   "game": "80億分の1",
-   "growth": 5.0,
-   "videos": 10,
-   "base": 2.0,
-   "channels": 9,
-   "views": 113556,
-   "who": [
-    "もこうの実況",
-    "にゅう部【公認】",
-    "はうはる",
-    "にゅう部【公認】",
-    "ミノルch"
-   ],
-   "titles": [
-    "全世界80億人の「誰か」になって人生を送るゲーム\"80億分の1\"が凄すぎて鳥肌立ちました",
-    "まさかの「隣人に騒音トラブル」を起こしてしまうインド版にゅう 今話題の『80億分の1』をプレイ！",
-    "受験も夢も仕事も全滅して70歳でギャンブル依存になる人生ww【80億分の1】"
-   ],
-   "genres": [],
-   "year": null,
-   "platforms": [],
-   "days_seen": 4,
-   "last_seen": "2026-10-17",
-   "first_here": false
-  },
   {
    "game": "Deep Dish Dungeon",
    "growth": 5.0,
@@ -820,72 +390,10 @@
    "first_here": false
   },
   {
-   "game": "Call of Duty: Modern Warfare 4",
-   "growth": 5.0,
-   "videos": 4,
-   "base": 0.3,
-   "channels": 3,
-   "views": 17791,
-   "who": [
-    "癒しのあいろん雑学ゲーム実況",
-    "癒しのあいろん雑学ゲーム実況",
-    "甘果いちご",
-    "寝恋　しらす",
-    "癒しのあいろん雑学ゲーム実況"
-   ],
-   "titles": [
-    "#2【4K/CoDMW4キャンペーン】Call of Duty：Modern Warfare 4 解説攻略【雇われ・失われる戦線】",
-    "#3【4K/CoDMW4キャンペーン】Call of Duty：Modern Warfare 4 解説攻略【運び屋・闇に沈む・暗殺】",
-    "【CoD:MW4】新作MW4！キャンペーンでリアルな現代戦とMWのストーリーを楽しむ！【CallofDutyModernWarfare4:甘果いちご】"
-   ],
-   "genres": [
-    "Shooter"
-   ],
-   "year": null,
-   "platforms": [
-    "pc",
-    "console"
-   ],
-   "days_seen": 4,
-   "last_seen": "2026-10-17",
-   "first_here": false
-  },
-  {
-   "game": "Bombanana!",
-   "growth": 4.0,
-   "videos": 6,
-   "base": 1.5,
-   "channels": 6,
-   "views": 512841,
-   "who": [
-    "Miko Ch. さくらみこ",
-    "Su Ch. 水宮枢 - FLOW GLOW",
-    "Roboco Ch. - ロボ子",
-    "長尾 景 / Nagao Kei【にじさんじ】",
-    "うらめちゃんねる /あおぎり高校"
-   ],
-   "titles": [
-    "【BOMBANANA!】PONだけのPONBANANAやるにぇ！！！！！！！！！【ホロライブ/さくらみこ】",
-    "【BOMBANANA!】PONとPON(偽)とPONの爆弾解除…💣【水宮枢／ホロライブ】",
-    "【BOMBANANA!】信じていいん…信じるのは己のみ…！？チーム #PONBANANA 【ホロライブ/ ロボ子さん 】"
-   ],
-   "genres": [
-    "Puzzle",
-    "Indie"
-   ],
-   "year": null,
-   "platforms": [
-    "pc"
-   ],
-   "days_seen": 35,
-   "last_seen": "2026-10-17",
-   "first_here": false
-  },
-  {
    "game": "オーバーウォッチ2",
-   "growth": 3.94,
+   "growth": 4.06,
    "videos": 13,
-   "base": 3.3,
+   "base": 3.2,
    "channels": 12,
    "views": 1227570,
    "who": [
@@ -933,6 +441,91 @@
     "console"
    ],
    "days_seen": 4,
+   "last_seen": "2026-10-17",
+   "first_here": false
+  },
+  {
+   "game": "ファイナルファンタジーVI",
+   "growth": 3.75,
+   "videos": 3,
+   "base": 0.7,
+   "channels": 3,
+   "views": 34098,
+   "who": [
+    "ゲームに恋する女子チャンネル♡",
+    "いなちゃんネル",
+    "恋因ロス KoinRosu"
+   ],
+   "titles": [
+    "【初見】スーファミ実機でファイナルファンタジーVIを2人プレイで楽しく遊ぶ！女性実況 攻略ライブ配信Part8スクウェアの名作JRPG！FF6【レトロゲーム】",
+    "その８【初見ドット絵RPG巡り】集合！【４５作目：ファイナルファンタジーⅥ】",
+    "【 FINAL FANTASY VI #8 】FF6続き！世界が崩壊した後の仲間たちを探しに行く！！【 FF6 ネタバレあり #ゲーム実況 #新人vtuber #恋因ロス 】"
+   ],
+   "genres": [],
+   "year": null,
+   "platforms": [],
+   "days_seen": 13,
+   "last_seen": "2026-10-12",
+   "first_here": false
+  },
+  {
+   "game": "Tenebris Somnia",
+   "growth": 3.75,
+   "videos": 3,
+   "base": 0.0,
+   "channels": 3,
+   "views": 20952,
+   "who": [
+    "キャシーさんはホラーゲームで遊びたい",
+    "サンキュームービー",
+    "スーピー / Soopy【JP】"
+   ],
+   "titles": [
+    "【ホラー】注目作がついにリリース！不気味な物語の奥底を暴く実写と2Dを融合した狂気のホラーゲーム『 Tenebris Somnia 』【Vキャシー/Vtuber】実況",
+    "【ホラー】実写×2D レトロ風かと思ったら実写映像の新感覚ホラー 生配信【Tenebris Somnia】",
+    "【Tenebris Somnia】2Dドットなのに実写ありの新作ホラゲー⁉️Nuevo juego de terror pixel art ! ＃１【ホラーゲーム実況 / Vtuber】"
+   ],
+   "genres": [
+    "Adventure",
+    "Indie"
+   ],
+   "year": 2026,
+   "platforms": [
+    "pc",
+    "console"
+   ],
+   "days_seen": 0,
+   "last_seen": null,
+   "first_here": true
+  },
+  {
+   "game": "Bombanana!",
+   "growth": 3.33,
+   "videos": 5,
+   "base": 1.5,
+   "channels": 5,
+   "views": 512748,
+   "who": [
+    "Miko Ch. さくらみこ",
+    "Su Ch. 水宮枢 - FLOW GLOW",
+    "Roboco Ch. - ロボ子",
+    "長尾 景 / Nagao Kei【にじさんじ】",
+    "うらめちゃんねる /あおぎり高校"
+   ],
+   "titles": [
+    "【BOMBANANA!】PONだけのPONBANANAやるにぇ！！！！！！！！！【ホロライブ/さくらみこ】",
+    "【BOMBANANA!】PONとPON(偽)とPONの爆弾解除…💣【水宮枢／ホロライブ】",
+    "【BOMBANANA!】信じていいん…信じるのは己のみ…！？チーム #PONBANANA 【ホロライブ/ ロボ子さん 】"
+   ],
+   "genres": [
+    "Puzzle",
+    "Indie"
+   ],
+   "year": null,
+   "platforms": [
+    "pc"
+   ],
+   "days_seen": 35,
    "last_seen": "2026-10-17",
    "first_here": false
   }
