@@ -1,26 +1,19 @@
 {
- "date": "2026-10-18",
- "generated": "2026-10-18 22:55",
+ "date": "2026-10-19",
+ "generated": "2026-10-19 08:59",
  "leads": {
   "events": [
    {
-    "tag": "#SURGECity",
+    "tag": "#ゲーム実況",
     "channels": [
-     "Ao WuWu Ch.【V4Mirai】",
-     "Mimoza Ch. 華咲みもざ",
-     "marunnn【まるーんチャンネル】",
-     "くにくんOfficial",
-     "どぅんどぅくどぅんどぅんどぅん",
-     "なるる / naruru",
-     "はちぴ",
-     "やよい",
-     "史門 / Shimon ",
-     "姫崎クト -himesaki kuto-",
-     "碧輝りお /Aoki Rio",
-     "貴様まさか🦈",
-     "赤彩みあ / Akairo Mia Ch.【すずみあ】",
-     "銀灰まお Mao Ch.",
-     "闇乃あびす / Abyss"
+     "KORIN.鈴ノ音コリン",
+     "M家の休日マサ",
+     "Usagi Ch. 因幡兎",
+     "たくちゃんねるず",
+     "みほち",
+     "ジョアだよ",
+     "恋因ロス KoinRosu",
+     "豚咲あおい_TomisakiAoi"
     ]
    },
    {
@@ -37,47 +30,14 @@
     ]
    },
    {
-    "tag": "#ゲーム実況",
-    "channels": [
-     "KORIN.鈴ノ音コリン",
-     "Usagi Ch. 因幡兎",
-     "たくちゃんねるず",
-     "ジョアだよ",
-     "恋因ロス KoinRosu",
-     "豚咲あおい_TomisakiAoi",
-     "里城はな"
-    ]
-   },
-   {
     "tag": "#ホロドリ",
     "channels": [
+     "Choco Ch. 癒月ちょこ",
      "Iroha ch. 風真いろは - holoX -",
-     "Ririka Ch. 一条莉々華 ‐ ReGLOSS",
      "Roboco Ch. - ロボ子",
-     "Su Ch. 水宮枢 - FLOW GLOW",
      "Vivi Ch. 綺々羅々ヴィヴィ - FLOW GLOW",
-     "アキロゼCh。Vtuber/ホロライブ所属"
-    ]
-   },
-   {
-    "tag": "#ストグラSeason2",
-    "channels": [
-     "neon",
-     "たけぉ",
-     "にーとちゃん",
-     "天羽よつは",
-     "影。/かげまる",
-     "暁月ホタル AKATSUKI HOTARU"
-    ]
-   },
-   {
-    "tag": "#ぶいきゃす",
-    "channels": [
-     "ちゃい・ふにえる",
-     "孵卵リリス / Furan Lilith",
-     "式神やしろ",
-     "汐ゴマ【鳴潮】",
-     "浅葱なぎ"
+     "アキロゼCh。Vtuber/ホロライブ所属",
+     "宵吸あけル / Yokyu Akeru"
     ]
    },
    {
@@ -86,41 +46,58 @@
      "Choco Ch. 癒月ちょこ",
      "Pekora Ch. 兎田ぺこら",
      "Towa Ch. 常闇トワ",
+     "Watame Ch. 角巻わため",
      "アキロゼCh。Vtuber/ホロライブ所属",
      "フブキCh。白上フブキ"
     ]
    },
    {
-    "tag": "#ポケモン",
+    "tag": "#ぶいきゃす",
     "channels": [
-     "すーぱーぽしゅ汰【ポケモン情報 ポケポケ最強デッキ】",
-     "でみあ@マイナーポケモン使い",
-     "蛇目 欠番@Vtuber",
-     "鈴ノ時みぃ@新人Vtuber"
+     "こてつちゃんねる",
+     "孵卵リリス / Furan Lilith",
+     "式神やしろ",
+     "汐ゴマ【鳴潮】",
+     "浅葱なぎ"
+    ]
+   },
+   {
+    "tag": "#ストグラSeason2",
+    "channels": [
+     "たけぉ",
+     "天羽よつは",
+     "影。/かげまる",
+     "暁月ホタル AKATSUKI HOTARU"
+    ]
+   },
+   {
+    "tag": "#縦型配信",
+    "channels": [
+     "かおりんご(44歳児)",
+     "もみじビーム",
+     "樋口楓【にじさんじ所属】"
+    ]
+   },
+   {
+    "tag": "#初見さん大歓迎",
+    "channels": [
+     "KORIN.鈴ノ音コリン",
+     "たべるうみゃ",
+     "ルルナ"
     ]
    }
   ],
   "newcomers": [],
   "wide": [
    {
-    "game": "Grand Theft Auto V",
-    "channels": 41,
-    "videos": 46
-   },
-   {
-    "game": "Apex Legends",
-    "channels": 34,
-    "videos": 40
-   },
-   {
     "game": "ストリートファイター6",
-    "channels": 31,
-    "videos": 38
+    "channels": 29,
+    "videos": 34
    },
    {
-    "game": "League of Legends",
-    "channels": 24,
-    "videos": 26
+    "game": "Grand Theft Auto V",
+    "channels": 27,
+    "videos": 28
    },
    {
     "game": "Minecraft",
@@ -128,32 +105,34 @@
     "videos": 27
    },
    {
-    "game": "スプラトゥーン3",
-    "channels": 21,
-    "videos": 23
-   },
-   {
-    "game": "オーバーウォッチ2",
-    "channels": 18,
-    "videos": 21
+    "game": "Apex Legends",
+    "channels": 24,
+    "videos": 26
    },
    {
     "game": "VALORANT",
+    "channels": 22,
+    "videos": 23
+   },
+   {
+    "game": "League of Legends",
     "channels": 19,
-    "videos": 20
+    "videos": 21
+   },
+   {
+    "game": "スプラトゥーン3",
+    "channels": 18,
+    "videos": 19
+   },
+   {
+    "game": "実況パワフルプロ野球2026",
+    "channels": 15,
+    "videos": 16
    }
   ]
  },
  "drift": [],
- "tags": [
-  {
-   "tag": "ホロドリ",
-   "game": "hololive Dreams",
-   "evidence": 6,
-   "added": 1,
-   "channels": 6
-  }
- ],
+ "tags": [],
  "misses": [
   {
    "word": "Starward",
@@ -306,6 +285,22 @@
    ]
   },
   {
+   "word": "pop'n music",
+   "channels": 1,
+   "n": 1,
+   "examples": [
+    {
+     "t": "【夢と魔法がテーマ】CSポップン10を初体験！！！グランヂや禅ジャズなどいよいよ知ってる曲が増えてきた！解禁イベントが大変らしいので\"電撃PS2\"のデータ使うよ【音ゲー / pop'n music】",
+     "c": "DOLCE. / dolce_iwate Channel",
+     "u": "https://www.youtube.com/watch?v=ELKPn5B21qY"
+    }
+   ],
+   "kind": "near",
+   "suggest": [
+    "Pop'n Music 13 Carnival"
+   ]
+  },
+  {
    "word": "SYNDUALITY",
    "channels": 1,
    "n": 1,
@@ -322,20 +317,28 @@
    ]
   },
   {
-   "word": "pop'n music",
-   "channels": 1,
-   "n": 1,
+   "word": "#歌うまスンギ歌枠リレー",
+   "channels": 4,
+   "n": 7,
    "examples": [
     {
-     "t": "【夢と魔法がテーマ】CSポップン10を初体験！！！グランヂや禅ジャズなどいよいよ知ってる曲が増えてきた！解禁イベントが大変らしいので\"電撃PS2\"のデータ使うよ【音ゲー / pop'n music】",
-     "c": "DOLCE. / dolce_iwate Channel",
-     "u": "https://www.youtube.com/watch?v=ELKPn5B21qY"
+     "t": "【#歌うまスンギ歌枠リレー】歌い繫げます！Singing Stream【にじさんじ/町田ちま】",
+     "c": "町田ちま【にじさんじ】",
+     "u": "https://www.youtube.com/watch?v=c9ZiLsVG4mU"
+    },
+    {
+     "t": "【#歌うまスンギ歌枠リレー】歌い繫げます！Singing Stream【にじさんじ/町田ちま】",
+     "c": "町田ちま【にじさんじ】",
+     "u": "https://www.youtube.com/watch?v=c9ZiLsVG4mU"
+    },
+    {
+     "t": "【#歌うまスンギ歌枠リレー】楽しく歌わせていただきます【星導ショウ/にじさんじ】",
+     "c": "星導ショウ / Hoshirube Sho【にじさんじ】",
+     "u": "https://www.youtube.com/watch?v=kn3xwLDwQ-0"
     }
    ],
-   "kind": "near",
-   "suggest": [
-    "Pop'n Music 13 Carnival"
-   ]
+   "kind": "wide",
+   "suggest": []
   },
   {
    "word": "ぷにぷに",
@@ -386,30 +389,6 @@
    "suggest": []
   },
   {
-   "word": "振り返り",
-   "channels": 3,
-   "n": 3,
-   "examples": [
-    {
-     "t": "【 振り返り 】ライブ直後！13th LIVE ありがとうございました！【 #千石ユノ / #バンドリ 】",
-     "c": "千石ユノ -Sengoku Yuno- / 夢限大みゅーたいぷ",
-     "u": "https://www.youtube.com/watch?v=wgweoKfjCPo"
-    },
-    {
-     "t": "【ふりかけ】振り向きAIM【振り返り】",
-     "c": "Kuzuha Channel",
-     "u": "https://www.youtube.com/watch?v=plc0Cz_y3rQ"
-    },
-    {
-     "t": "【振り返り】すぺしゃりて加入1周年！【安心院みさ/すぺしゃりて】",
-     "c": "安心院みさ / ANSHININ MISA",
-     "u": "https://www.youtube.com/watch?v=KLz2-JBDrhQ"
-    }
-   ],
-   "kind": "wide",
-   "suggest": []
-  },
-  {
    "word": "文字ブレード",
    "channels": 3,
    "n": 3,
@@ -434,6 +413,30 @@
    "suggest": []
   },
   {
+   "word": "浮気判定",
+   "channels": 3,
+   "n": 3,
+   "examples": [
+    {
+     "t": "【浮気判定】めぐちゃんと二人でこれって浮気？判定シート💜【#朔夜トバリ #めぐ】",
+     "c": "-朔夜トバリ-Virtual BAR-lumen lunae-",
+     "u": "https://www.youtube.com/watch?v=dJGx8xuWCBo"
+    },
+    {
+     "t": "【浮気判定】渚トラウトに聞いてみた！これって浮気？判定シート【渚トラウト&健屋花那/にじさんじ】",
+     "c": "健屋花那【にじさんじ】KanaSukoya",
+     "u": "https://www.youtube.com/watch?v=0pYgbgCyG1A"
+    },
+    {
+     "t": "【浮気判定】ライブありがとう浮気判定シート雑談【柚原いづみ / ななしいんく】",
+     "c": "柚原いづみ / Izumi Channel 【ななしいんく】",
+     "u": "https://www.youtube.com/watch?v=vhkP1R5F29M"
+    }
+   ],
+   "kind": "wide",
+   "suggest": []
+  },
+  {
    "word": "回転寿司シミュレーター",
    "channels": 3,
    "n": 3,
@@ -452,6 +455,54 @@
      "t": "【回転寿司シミュレーター】寿司職人爆誕【うるか】",
      "c": "Uruca ch /うるか",
      "u": "https://www.youtube.com/watch?v=90HyjidaKCQ"
+    }
+   ],
+   "kind": "wide",
+   "suggest": []
+  },
+  {
+   "word": "初見さん歓迎",
+   "channels": 3,
+   "n": 3,
+   "examples": [
+    {
+     "t": "【初見さん歓迎】リスナーさんのためにサモラン猛特訓！",
+     "c": "虹夢メゼフィル👑😈 -Mezefiru-",
+     "u": "https://www.youtube.com/watch?v=SEDGt0b3KbQ"
+    },
+    {
+     "t": "【初見さん歓迎】GWも最終日…雑談しながらランク戦【プロスピA】",
+     "c": "ねこマンちゃんねる",
+     "u": "https://www.youtube.com/watch?v=ZQnW0egDBk8"
+    },
+    {
+     "t": "【初見さん歓迎】白狛のえって何なの！？ #白狛のえ",
+     "c": "白狛のえ",
+     "u": "https://www.youtube.com/watch?v=HFqksRvhakY"
+    }
+   ],
+   "kind": "wide",
+   "suggest": []
+  },
+  {
+   "word": "GCG",
+   "channels": 3,
+   "n": 3,
+   "examples": [
+    {
+     "t": "【GCG】Link Station #64 「『Stardust Trails[GD06]』強化バトル！」 / 『Stardust Trails[GD06]』Buff Battle!",
+     "c": "【OFFICIAL】GUNDAM CARD GAME CHANNEL",
+     "u": "https://www.youtube.com/watch?v=A_2q88pG414"
+    },
+    {
+     "t": "【ガンダムカードゲーム】ST11～ST14発売！新旧ミラー対決！紫緑ハマーンvs紫緑アグロ【GCG】",
+     "c": "K.C.P -Kansai Climax Party- 関西頂同好会",
+     "u": "https://www.youtube.com/watch?v=Tjon2UoKnDE"
+    },
+    {
+     "t": "【優勝デッキ対戦】GD05環境：緑白Wvs赤白ネオジオング【ガンダムカードゲームGCG対戦動画】【GCG】",
+     "c": "横入れシャッフル同盟",
+     "u": "https://www.youtube.com/watch?v=b9kCI2IPNc0"
     }
    ],
    "kind": "wide",
@@ -485,53 +536,21 @@
  "miss_days": 7,
  "hot_facts": [
   {
-   "game": "Bombanana!",
-   "growth": 7.69,
-   "videos": 10,
-   "base": 1.3,
-   "channels": 10,
-   "views": 668988,
-   "who": [
-    "Miko Ch. さくらみこ",
-    "Su Ch. 水宮枢 - FLOW GLOW",
-    "Roboco Ch. - ロボ子",
-    "星川サラ / Sara Hoshikawa",
-    "長尾 景 / Nagao Kei【にじさんじ】"
-   ],
-   "titles": [
-    "【BOMBANANA!】PONだけのPONBANANAやるにぇ！！！！！！！！！【ホロライブ/さくらみこ】",
-    "【BOMBANANA!】PONとPON(偽)とPONの爆弾解除…💣【水宮枢／ホロライブ】",
-    "【BOMBANANA!】信じていいん…信じるのは己のみ…！？チーム #PONBANANA 【ホロライブ/ ロボ子さん 】"
-   ],
-   "genres": [
-    "Puzzle",
-    "Indie"
-   ],
-   "year": null,
-   "platforms": [
-    "pc"
-   ],
-   "days_seen": 35,
-   "last_seen": "2026-10-17",
-   "first_here": false
-  },
-  {
    "game": "Tenebris Somnia",
-   "growth": 6.25,
-   "videos": 5,
-   "base": 0.0,
+   "growth": 5.0,
+   "videos": 4,
+   "base": 0.5,
    "channels": 4,
-   "views": 30722,
+   "views": 33251,
    "who": [
+    "人生 つみこ (ホラーゲーム専門Vtuber)",
     "キャシーさんはホラーゲームで遊びたい",
     "サンキュームービー",
-    "サンキュームービー",
-    "キャシーさんはホラーゲームで遊びたい",
-    "スーピー / Soopy【JP】"
+    "朱羽美寧 / ビビリ探偵のホラーゲーム調査ch"
    ],
    "titles": [
-    "【ホラー】注目作がついにリリース！不気味な物語の奥底を暴く実写と2Dを融合した狂気のホラーゲーム『 Tenebris Somnia 』【Vキャシー/Vtuber】実況",
-    "【ホラー】実写×2D レトロ風かと思ったら実写映像の新感覚ホラー END 1 2 4 生配信【Tenebris Somnia】",
+    "【 Tenebris Somnia 】まるで映画！実写とレトロホラーの融合が面白いサバイバルホラーゲーム遂にリリース！#01【 人生つみこ】",
+    "【ホラー】全エンディング4種達成！不気味な物語の奥底を暴く実写と2Dを融合した狂気のホラーゲーム『 Tenebris Somnia 』【Vキャシー/Vtuber】実況",
     "【ホラー】全END達成！ 実写と2Dが織りなすサバイバルホラーの真エンドとは 生配信【Tenebris Somnia】"
    ],
    "genres": [
@@ -543,49 +562,53 @@
     "pc",
     "console"
    ],
-   "days_seen": 0,
-   "last_seen": null,
-   "first_here": true
+   "days_seen": 1,
+   "last_seen": "2026-10-18",
+   "first_here": false
   },
   {
-   "game": "オーバーウォッチ2",
-   "growth": 5.83,
-   "videos": 21,
-   "base": 3.6,
-   "channels": 18,
-   "views": 1638659,
+   "game": "都市伝説解体センター",
+   "growth": 4.0,
+   "videos": 4,
+   "base": 1.0,
+   "channels": 4,
+   "views": 82928,
    "who": [
-    "御子神琴音 / Mikogami Kotone【にじさんじ】",
-    "イブラヒム【にじさんじ】",
-    "星導ショウ / Hoshirube Sho【にじさんじ】",
-    "小柳ロウ / Koyanagi Rou【にじさんじ】",
-    "伊波ライ / Inami Rai【にじさんじ】"
+    "花畑チャイカ",
+    "但野リス / Tadano Risu",
+    "すねこしゅり",
+    "まーぼの大剣一閃-乙式-"
    ],
    "titles": [
-    "【Overwatch】#にじEX_OW チーム1初顔合わせ！御子神・タンク・琴音、参ります。【御子神琴音 / にじさんじ】",
-    "【OVERWATCH】顔合わせず【にじさんじ/イブラヒム】",
-    "【オーバーウォッチ】NIJISANJI Extreme Match 顔合わせ【星導ショウ/にじさんじ】"
+    "花畑チャイカと都市伝説解体センター第四話 呪物転売ヤー現る！対策に身分証明！大量増産！受注生産します！キャーーーーーーーーーーー！ ネタバレ注意",
+    "第二話「鏡像から迫る死」いきます。【都市伝説解体センター】",
+    "都市伝説解体センター 完全初見！大妖怪、都市伝説の謎に挑む長時間実況【都市伝説解体センター】"
    ],
-   "genres": [],
+   "genres": [
+    "Puzzle",
+    "Adventure",
+    "Visual Novel"
+   ],
    "year": null,
-   "platforms": [],
-   "days_seen": 29,
-   "last_seen": "2026-10-17",
+   "platforms": [
+    "pc",
+    "console"
+   ],
+   "days_seen": 15,
+   "last_seen": "2026-10-18",
    "first_here": false
   },
   {
    "game": "Peak",
-   "growth": 5.0,
-   "videos": 4,
-   "base": 0.2,
-   "channels": 4,
-   "views": 49142,
+   "growth": 3.75,
+   "videos": 3,
+   "base": 0.3,
+   "channels": 3,
+   "views": 101489,
    "who": [
     "ぷりっつ",
     "小廻こま / Komawari Koma",
-    "夕霧レイ / YugiriRay",
-    "ちむらい",
-    "ちむらい"
+    "夕霧レイ / YugiriRay"
    ],
    "titles": [
     "【PEAK】温泉メンツで山登ります。【ぷりっつ/STPR】",
@@ -601,28 +624,27 @@
    "platforms": [
     "pc"
    ],
-   "days_seen": 3,
-   "last_seen": "2026-10-01",
+   "days_seen": 4,
+   "last_seen": "2026-10-18",
    "first_here": false
   },
   {
    "game": "Call of Duty: Modern Warfare 4",
-   "growth": 5.0,
-   "videos": 4,
-   "base": 0.5,
+   "growth": 3.75,
+   "videos": 3,
+   "base": 0.8,
    "channels": 3,
-   "views": 18034,
+   "views": 28605,
    "who": [
-    "癒しのあいろん雑学ゲーム実況",
+    "実況者ジャンヌ",
     "癒しのあいろん雑学ゲーム実況",
     "寝恋　しらす",
-    "実況者ジャンヌ",
-    "寝恋　しらす"
+    "癒しのあいろん雑学ゲーム実況"
    ],
    "titles": [
-    "#4【4K/CoDMW4キャンペーン】Call of Duty：Modern Warfare 4 解説攻略【生存者たち・孤立無援（バンカー）】",
+    "【CoD:MW4】全キャンペーンまとめ解説!『MW最終回でプライス大尉・ゴーストの結末は...』【吹き替え版 : CallofDuty:ModernWarfare4 : 実況者ジャンヌ】",
     "#5【4K/CoDMW4キャンペーン】Call of Duty：Modern Warfare 4 解説攻略【孤立無援・反逆】",
-    "【CoD:MW4】新作MW4！！『高画質になってるストーリー気になりすぎる‼』後半【CallofDutyModernWarfare4】【女性VTuber】"
+    "【CoD:MW4】新作MW4後半！！『高画質になってるストーリー気になりすぎる‼』【CallofDutyModernWarfare4】【女性VTuber】"
    ],
    "genres": [
     "Shooter"
@@ -632,32 +654,65 @@
     "pc",
     "console"
    ],
-   "days_seen": 4,
-   "last_seen": "2026-10-17",
+   "days_seen": 5,
+   "last_seen": "2026-10-18",
    "first_here": false
   },
   {
-   "game": "ドラゴンクエストVII Reimagined",
-   "growth": 3.75,
-   "videos": 3,
-   "base": 0.7,
-   "channels": 3,
-   "views": 39746,
+   "game": "あつまれ どうぶつの森",
+   "growth": 3.33,
+   "videos": 8,
+   "base": 2.4,
+   "channels": 7,
+   "views": 79265,
    "who": [
-    "よしなま",
-    "桜井ユイVTuber 【ゲーム実況】",
-    "うさぎん🐰レトロゲームを楽しく遊ぶch"
+    "山田龍一郎 / Yamada Ryuichiro【にじさんじ】",
+    "弦月 藤士郎 / Genzuki Tojiro【にじさんじ】",
+    "皇れお / Sumeragi Reo【にじさんじ】",
+    "ちささこ",
+    "氷川つきチャンネル"
    ],
    "titles": [
-    "神ゲーと名高い『ドラクエ７リメイク』を実況プレイ #1",
-    "【ドラゴンクエストVII Reimagined】目指せ転職!ダーマ神殿編後半/のんびり進めるドラクエⅦの旅!【ネタバレ注意】",
-    "#60【ドラクエ7R初見プレイ】ティラノス復活ッ‼️【ストーリー攻略】"
+    "【あつまれどうぶつの森 #9】お試し朝活番外編！早起きは100アサリの得【にじさんじ / 山田龍一郎】",
+    "⋙ あつまれどうぶつの森 ⋮❙⋮ ぽやぽや土日寝起きタイムリープ ⋮❙⋮ 弦月藤士郎 / にじさんじ ⋘",
+    "【 あつまれどうぶつの森】昼活あつ森！島の評価を上げたいッ！【 皇れお  / にじさんじ 】"
    ],
    "genres": [],
    "year": null,
    "platforms": [],
-   "days_seen": 22,
-   "last_seen": "2026-10-11",
+   "days_seen": 32,
+   "last_seen": "2026-10-18",
+   "first_here": false
+  },
+  {
+   "game": "Bombanana!",
+   "growth": 3.18,
+   "videos": 7,
+   "base": 2.2,
+   "channels": 7,
+   "views": 133993,
+   "who": [
+    "星川サラ / Sara Hoshikawa",
+    "天羽よつは",
+    "影。/かげまる",
+    "フミ/にじさんじ",
+    "Roberu Ch. 夕刻ロベル"
+   ],
+   "titles": [
+    "【BOMBANANA!】告知あり！織姫星7周年✨爆弾解除するぞおおおおおおおおおおお！【星川サラ/にじさんじ】",
+    "【BOMBANANA!】見ざる聞かざる言わざる!? ハチャメチャな爆弾解除！",
+    "見ざる聞かざる言わざるで爆弾解除するにょ～ w/天羽よつは,おらんじ～な【BOMBANANA!】"
+   ],
+   "genres": [
+    "Puzzle",
+    "Indie"
+   ],
+   "year": null,
+   "platforms": [
+    "pc"
+   ],
+   "days_seen": 36,
+   "last_seen": "2026-10-18",
    "first_here": false
   }
  ],
