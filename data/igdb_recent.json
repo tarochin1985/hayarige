@@ -2657,6 +2657,18 @@
   ]
  },
  {
+  "name": "Amusement Factory",
+  "alias": [],
+  "pop": 0,
+  "y": 2026,
+  "p": [
+   "pc"
+  ],
+  "g": [
+   "Simulator"
+  ]
+ },
+ {
   "name": "An Ecospace of Epochs",
   "alias": [],
   "pop": 0,
@@ -5287,6 +5299,20 @@
   "y": 2026,
   "p": [
    "console"
+  ]
+ },
+ {
+  "name": "Banneret",
+  "alias": [],
+  "pop": 0,
+  "y": 2026,
+  "p": [
+   "pc"
+  ],
+  "g": [
+   "Role-playing (RPG)",
+   "Strategy",
+   "Indie"
   ]
  },
  {
@@ -8293,20 +8319,6 @@
   "g": [
    "Role-playing (RPG)",
    "Adventure",
-   "Indie"
-  ]
- },
- {
-  "name": "Bulk",
-  "alias": [
-   "BULK"
-  ],
-  "pop": 0,
-  "y": 2026,
-  "p": [
-   "pc"
-  ],
-  "g": [
    "Indie"
   ]
  },
@@ -11802,6 +11814,19 @@
   "y": 2026,
   "p": [
    "pc"
+  ],
+  "g": [
+   "Simulator"
+  ]
+ },
+ {
+  "name": "Construction Simulator: Evolution",
+  "alias": [],
+  "pop": 0,
+  "y": 2026,
+  "p": [
+   "pc",
+   "console"
   ],
   "g": [
    "Simulator"
@@ -15325,21 +15350,6 @@
   ]
  },
  {
-  "name": "Deliria",
-  "alias": [
-   "Deliria.exe"
-  ],
-  "pop": 0,
-  "y": 2026,
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Adventure",
-   "Indie"
-  ]
- },
- {
   "name": "Deliverance Protocol: Ironrot",
   "alias": [],
   "pop": 0,
@@ -17126,6 +17136,19 @@
   ]
  },
  {
+  "name": "Don't Forget the Phone",
+  "alias": [],
+  "pop": 0,
+  "y": 2026,
+  "p": [
+   "pc"
+  ],
+  "g": [
+   "Point-and-click",
+   "Indie"
+  ]
+ },
+ {
   "name": "Don't Get Caught",
   "alias": [],
   "pop": 0,
@@ -17234,19 +17257,18 @@
   ]
  },
  {
-  "name": "Donutal",
-  "alias": [
-   "ドーナタル"
-  ],
+  "name": "Doom ChessMaster",
+  "alias": [],
   "pop": 0,
   "y": 2026,
-  "jp": "ドーナタル",
   "p": [
    "pc"
   ],
   "g": [
-   "Simulator",
-   "Adventure"
+   "Role-playing (RPG)",
+   "Strategy",
+   "Adventure",
+   "Indie"
   ]
  },
  {
@@ -17805,19 +17827,6 @@
   "g": [
    "Role-playing (RPG)",
    "Adventure",
-   "Indie"
-  ]
- },
- {
-  "name": "Dread Admiral",
-  "alias": [],
-  "pop": 0,
-  "y": 2026,
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Strategy",
    "Indie"
   ]
  },
@@ -23831,22 +23840,6 @@
   ]
  },
  {
-  "name": "Friendly Steps",
-  "alias": [
-   "Friendly Steps.exe"
-  ],
-  "pop": 0,
-  "y": 2026,
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Role-playing (RPG)",
-   "Simulator",
-   "Adventure"
-  ]
- },
- {
   "name": "Friends of a Feather",
   "alias": [],
   "pop": 0,
@@ -27021,6 +27014,21 @@
    "Role-playing (RPG)",
    "Adventure",
    "Visual Novel"
+  ]
+ },
+ {
+  "name": "Half Left",
+  "alias": [],
+  "pop": 0,
+  "y": 2026,
+  "p": [
+   "pc"
+  ],
+  "g": [
+   "Shooter",
+   "Simulator",
+   "Adventure",
+   "Indie"
   ]
  },
  {
@@ -30308,6 +30316,20 @@
   ]
  },
  {
+  "name": "Infinitory",
+  "alias": [],
+  "pop": 0,
+  "y": 2026,
+  "p": [
+   "pc"
+  ],
+  "g": [
+   "Simulator",
+   "Strategy",
+   "Indie"
+  ]
+ },
+ {
   "name": "Infinity Ship",
   "alias": [],
   "pop": 0,
@@ -32604,21 +32626,6 @@
   ]
  },
  {
-  "name": "Knights of Fiona",
-  "alias": [],
-  "pop": 0,
-  "y": 2026,
-  "p": [
-   "console"
-  ],
-  "g": [
-   "Shooter",
-   "Role-playing (RPG)",
-   "Adventure",
-   "Indie"
-  ]
- },
- {
   "name": "Knights of Fresco",
   "alias": [],
   "pop": 0,
@@ -34199,23 +34206,6 @@
   "g": [
    "Simulator",
    "Indie"
-  ]
- },
- {
-  "name": "Logbook: Beneath the Storm",
-  "alias": [
-   "LOGBOOK-BeneathTheStorm.exe"
-  ],
-  "pop": 0,
-  "y": 2026,
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Puzzle",
-   "Adventure",
-   "Indie",
-   "Visual Novel"
   ]
  },
  {
@@ -35820,23 +35810,6 @@
   ]
  },
  {
-  "name": "Marsupilami 2: Salsa Palombia",
-  "alias": [
-   "Marsu2Steam.exe"
-  ],
-  "pop": 1,
-  "y": 2026,
-  "p": [
-   "pc",
-   "console"
-  ],
-  "g": [
-   "Platform",
-   "Adventure",
-   "Arcade"
-  ]
- },
- {
   "name": "Martyr",
   "alias": [],
   "pop": 0,
@@ -35964,6 +35937,18 @@
   "g": [
    "Shooter",
    "Adventure",
+   "Indie"
+  ]
+ },
+ {
+  "name": "Master of Chaos",
+  "alias": [],
+  "pop": 0,
+  "y": 2026,
+  "p": [
+   "pc"
+  ],
+  "g": [
    "Indie"
   ]
  },
@@ -36389,6 +36374,21 @@
   ],
   "g": [
    "Platform"
+  ]
+ },
+ {
+  "name": "Megapain",
+  "alias": [
+   "MEGAPAIN"
+  ],
+  "pop": 0,
+  "y": 2026,
+  "p": [
+   "pc"
+  ],
+  "g": [
+   "Shooter",
+   "Indie"
   ]
  },
  {
@@ -37735,20 +37735,6 @@
    "pc"
   ],
   "g": [
-   "Simulator",
-   "Indie"
-  ]
- },
- {
-  "name": "Monk Took Book",
-  "alias": [],
-  "pop": 0,
-  "y": 2026,
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Puzzle",
    "Simulator",
    "Indie"
   ]
@@ -41796,6 +41782,21 @@
   ]
  },
  {
+  "name": "One Coin Museum",
+  "alias": [],
+  "pop": 0,
+  "y": 2026,
+  "p": [
+   "pc"
+  ],
+  "g": [
+   "Simulator",
+   "Adventure",
+   "Indie",
+   "Arcade"
+  ]
+ },
+ {
   "name": "One Fenix Down",
   "alias": [],
   "pop": 0,
@@ -42463,20 +42464,6 @@
   ],
   "g": [
    "Indie"
-  ]
- },
- {
-  "name": "Orbitals",
-  "alias": [],
-  "pop": 6,
-  "y": 2026,
-  "p": [
-   "console"
-  ],
-  "g": [
-   "Platform",
-   "Puzzle",
-   "Adventure"
   ]
  },
  {
@@ -49040,6 +49027,21 @@
   ]
  },
  {
+  "name": "Ritterschlag",
+  "alias": [],
+  "pop": 0,
+  "y": 2026,
+  "p": [
+   "pc"
+  ],
+  "g": [
+   "Fighting",
+   "Role-playing (RPG)",
+   "Strategy",
+   "Indie"
+  ]
+ },
+ {
   "name": "Rivage",
   "alias": [],
   "pop": 1,
@@ -49354,22 +49356,6 @@
   "g": [
    "Role-playing (RPG)",
    "Strategy",
-   "Adventure",
-   "Indie"
-  ]
- },
- {
-  "name": "Rogue Runner",
-  "alias": [
-   "RogueRunner.exe"
-  ],
-  "pop": 0,
-  "y": 2026,
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Role-playing (RPG)",
    "Adventure",
    "Indie"
   ]
@@ -50631,17 +50617,6 @@
   "g": [
    "Indie",
    "Visual Novel"
-  ]
- },
- {
-  "name": "Scarlet Skips",
-  "alias": [
-   "ScarletSkips.exe"
-  ],
-  "pop": 12,
-  "y": 2026,
-  "p": [
-   "pc"
   ]
  },
  {
@@ -52776,20 +52751,6 @@
   ]
  },
  {
-  "name": "Sins of a Solar Empire II: Harbinger",
-  "alias": [],
-  "pop": 0,
-  "y": 2026,
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Real Time Strategy (RTS)",
-   "Simulator",
-   "Strategy"
-  ]
- },
- {
   "name": "Sir Galgano: A Medieval Tale",
   "alias": [
    "Sir Galgano - A Medieval Tale.exe"
@@ -52888,6 +52849,20 @@
   ],
   "g": [
    "Adventure"
+  ]
+ },
+ {
+  "name": "Skingdom",
+  "alias": [],
+  "pop": 0,
+  "y": 2026,
+  "p": [
+   "pc"
+  ],
+  "g": [
+   "Simulator",
+   "Strategy",
+   "Indie"
   ]
  },
  {
@@ -57923,6 +57898,21 @@
   ]
  },
  {
+  "name": "Tango District",
+  "alias": [],
+  "pop": 0,
+  "y": 2026,
+  "p": [
+   "pc"
+  ],
+  "g": [
+   "Puzzle",
+   "Simulator",
+   "Strategy",
+   "Indie"
+  ]
+ },
+ {
   "name": "Tank Core",
   "alias": [
    "坦克核心"
@@ -58666,6 +58656,20 @@
   "y": 2026,
   "p": [
    "pc"
+  ]
+ },
+ {
+  "name": "The Adventures of Graham",
+  "alias": [],
+  "pop": 0,
+  "y": 2026,
+  "p": [
+   "pc"
+  ],
+  "g": [
+   "Platform",
+   "Adventure",
+   "Indie"
   ]
  },
  {
@@ -65267,19 +65271,6 @@
   ]
  },
  {
-  "name": "Unseasonable Flowering",
-  "alias": [],
-  "pop": 0,
-  "y": 2026,
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Adventure",
-   "Indie"
-  ]
- },
- {
   "name": "Unshine Arcade",
   "alias": [
    "月光游戏厅"
@@ -67347,19 +67338,6 @@
   ]
  },
  {
-  "name": "Welcome Demon",
-  "alias": [],
-  "pop": 0,
-  "y": 2026,
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Simulator",
-   "Indie"
-  ]
- },
- {
   "name": "Welcome to Elderfield",
   "alias": [
    "Game.exe"
@@ -69193,6 +69171,21 @@
   "g": [
    "Platform",
    "Indie"
+  ]
+ },
+ {
+  "name": "You're Nuts!",
+  "alias": [],
+  "pop": 0,
+  "y": 2026,
+  "p": [
+   "pc",
+   "console"
+  ],
+  "g": [
+   "Puzzle",
+   "Strategy",
+   "Adventure"
   ]
  },
  {
