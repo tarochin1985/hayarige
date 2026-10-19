@@ -2154,6 +2154,18 @@
   ]
  },
  {
+  "name": "Alice Nation",
+  "alias": [
+   "爱丽丝与彼岸",
+   "愛麗絲與彼岸"
+  ],
+  "pop": 0,
+  "y": 2026,
+  "p": [
+   "pc"
+  ]
+ },
+ {
   "name": "Alice in Pumpkinland",
   "alias": [],
   "pop": 0,
@@ -2326,7 +2338,9 @@
  },
  {
   "name": "Alonitaire",
-  "alias": [],
+  "alias": [
+   "Alonitaire.exe"
+  ],
   "pop": 0,
   "y": 2026,
   "p": [
@@ -4441,6 +4455,19 @@
   ]
  },
  {
+  "name": "Athanasia",
+  "alias": [],
+  "pop": 0,
+  "y": 2026,
+  "p": [
+   "pc"
+  ],
+  "g": [
+   "Shooter",
+   "Indie"
+  ]
+ },
+ {
   "name": "Athelan Battlegrounds",
   "alias": [
    "Athelan"
@@ -5299,20 +5326,6 @@
   "y": 2026,
   "p": [
    "console"
-  ]
- },
- {
-  "name": "Banneret",
-  "alias": [],
-  "pop": 0,
-  "y": 2026,
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Role-playing (RPG)",
-   "Strategy",
-   "Indie"
   ]
  },
  {
@@ -6348,22 +6361,6 @@
    "Shooter",
    "Indie",
    "Arcade"
-  ]
- },
- {
-  "name": "BioEden",
-  "alias": [],
-  "pop": 0,
-  "y": 2026,
-  "p": [
-   "pc",
-   "console"
-  ],
-  "g": [
-   "Real Time Strategy (RTS)",
-   "Simulator",
-   "Strategy",
-   "Adventure"
   ]
  },
  {
@@ -9693,6 +9690,20 @@
   ]
  },
  {
+  "name": "Cat Pipes: More Meow",
+  "alias": [],
+  "pop": 0,
+  "y": 2026,
+  "p": [
+   "pc",
+   "console"
+  ],
+  "g": [
+   "Puzzle",
+   "Indie"
+  ]
+ },
+ {
   "name": "Cat Rooms: Sticker Decor!",
   "alias": [],
   "pop": 0,
@@ -10460,6 +10471,19 @@
   ],
   "g": [
    "Racing",
+   "Simulator",
+   "Indie"
+  ]
+ },
+ {
+  "name": "Chimpy Protects",
+  "alias": [],
+  "pop": 0,
+  "y": 2026,
+  "p": [
+   "pc"
+  ],
+  "g": [
    "Simulator",
    "Indie"
   ]
@@ -11820,19 +11844,6 @@
   ]
  },
  {
-  "name": "Construction Simulator: Evolution",
-  "alias": [],
-  "pop": 0,
-  "y": 2026,
-  "p": [
-   "pc",
-   "console"
-  ],
-  "g": [
-   "Simulator"
-  ]
- },
- {
   "name": "Container Terminal Simulator",
   "alias": [
    "CTS.exe"
@@ -11898,7 +11909,7 @@
    "Control 2",
    "CONTROL RESONANT"
   ],
-  "pop": 34,
+  "pop": 35,
   "y": 2026,
   "p": [
    "pc",
@@ -16139,7 +16150,9 @@
  },
  {
   "name": "Dice Tavern: Farkle Roguelike",
-  "alias": [],
+  "alias": [
+   "DiceTavern.exe"
+  ],
   "pop": 0,
   "y": 2026,
   "p": [
@@ -16613,6 +16626,7 @@
    "Strategy",
    "Turn-based strategy (TBS)",
    "Tactical",
+   "Indie",
    "Card & Board Game"
   ]
  },
@@ -17095,6 +17109,19 @@
   ]
  },
  {
+  "name": "Don Bradman Cricket Jr",
+  "alias": [],
+  "pop": 0,
+  "y": 2026,
+  "p": [
+   "pc",
+   "console"
+  ],
+  "g": [
+   "Sport"
+  ]
+ },
+ {
   "name": "Don Memo",
   "alias": [
    "Donmemo"
@@ -17132,19 +17159,6 @@
    "pc"
   ],
   "g": [
-   "Indie"
-  ]
- },
- {
-  "name": "Don't Forget the Phone",
-  "alias": [],
-  "pop": 0,
-  "y": 2026,
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Point-and-click",
    "Indie"
   ]
  },
@@ -17254,21 +17268,6 @@
    "Adventure",
    "Indie",
    "Visual Novel"
-  ]
- },
- {
-  "name": "Doom ChessMaster",
-  "alias": [],
-  "pop": 0,
-  "y": 2026,
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Role-playing (RPG)",
-   "Strategy",
-   "Adventure",
-   "Indie"
   ]
  },
  {
@@ -18225,6 +18224,18 @@
   "g": [
    "Simulator",
    "Strategy",
+   "Indie"
+  ]
+ },
+ {
+  "name": "Drop Dead Party",
+  "alias": [],
+  "pop": 0,
+  "y": 2026,
+  "p": [
+   "pc"
+  ],
+  "g": [
    "Indie"
   ]
  },
@@ -19614,15 +19625,6 @@
   ]
  },
  {
-  "name": "Educational Family Games",
-  "alias": [],
-  "pop": 0,
-  "y": 2026,
-  "p": [
-   "console"
-  ]
- },
- {
   "name": "Effective Immediately",
   "alias": [],
   "pop": 0,
@@ -20028,22 +20030,6 @@
    "pc"
   ],
   "g": [
-   "Adventure",
-   "Indie"
-  ]
- },
- {
-  "name": "Endless Isolation",
-  "alias": [
-   "Endless Isolation.exe"
-  ],
-  "pop": 0,
-  "y": 2026,
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Puzzle",
    "Adventure",
    "Indie"
   ]
@@ -21575,7 +21561,9 @@
  },
  {
   "name": "Fangtopia",
-  "alias": [],
+  "alias": [
+   "Fang Topia"
+  ],
   "pop": 0,
   "y": 2026,
   "p": [
@@ -22094,6 +22082,20 @@
   ]
  },
  {
+  "name": "Fieldmade",
+  "alias": [],
+  "pop": 0,
+  "y": 2026,
+  "p": [
+   "pc"
+  ],
+  "g": [
+   "Role-playing (RPG)",
+   "Simulator",
+   "Indie"
+  ]
+ },
+ {
   "name": "Figure Me Out",
   "alias": [],
   "pop": 0,
@@ -22406,6 +22408,20 @@
   ]
  },
  {
+  "name": "FirstPlate",
+  "alias": [],
+  "pop": 0,
+  "y": 2026,
+  "p": [
+   "pc"
+  ],
+  "g": [
+   "Simulator",
+   "Strategy",
+   "Indie"
+  ]
+ },
+ {
   "name": "Fish Lab",
   "alias": [],
   "pop": 0,
@@ -22554,6 +22570,21 @@
   ],
   "g": [
    "Racing",
+   "Indie"
+  ]
+ },
+ {
+  "name": "Five Nights at Frickbear's 3: Four Layers Down",
+  "alias": [],
+  "pop": 0,
+  "y": 2026,
+  "p": [
+   "pc"
+  ],
+  "g": [
+   "Point-and-click",
+   "Simulator",
+   "Strategy",
    "Indie"
   ]
  },
@@ -22927,18 +22958,6 @@
   "g": [
    "Tactical",
    "Indie"
-  ]
- },
- {
-  "name": "Florence Mirror",
-  "alias": [],
-  "pop": 0,
-  "y": 2026,
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Role-playing (RPG)"
   ]
  },
  {
@@ -23371,20 +23390,6 @@
   "g": [
    "Puzzle",
    "Adventure",
-   "Indie"
-  ]
- },
- {
-  "name": "Forgotten House",
-  "alias": [
-   "被遗忘的房屋"
-  ],
-  "pop": 0,
-  "y": 2026,
-  "p": [
-   "pc"
-  ],
-  "g": [
    "Indie"
   ]
  },
@@ -24770,6 +24775,20 @@
   ]
  },
  {
+  "name": "Gassed Up!",
+  "alias": [
+   "gassedup.exe"
+  ],
+  "pop": 0,
+  "y": 2026,
+  "p": [
+   "pc"
+  ],
+  "g": [
+   "Indie"
+  ]
+ },
+ {
   "name": "Gata Guressi",
   "alias": [],
   "pop": 0,
@@ -25281,21 +25300,6 @@
   ]
  },
  {
-  "name": "Gilded Destiny",
-  "alias": [
-   "镀金天命"
-  ],
-  "pop": 0,
-  "y": 2026,
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Simulator",
-   "Strategy"
-  ]
- },
- {
   "name": "Gingerbread Holiday",
   "alias": [],
   "pop": 0,
@@ -25541,6 +25545,20 @@
   ]
  },
  {
+  "name": "Gnom",
+  "alias": [],
+  "pop": 0,
+  "y": 2026,
+  "p": [
+   "pc"
+  ],
+  "g": [
+   "Real Time Strategy (RTS)",
+   "Strategy",
+   "Indie"
+  ]
+ },
+ {
   "name": "Gnomicide",
   "alias": [
    "GNOMICIDE.exe"
@@ -25654,21 +25672,6 @@
   ],
   "g": [
    "Adventure",
-   "Indie"
-  ]
- },
- {
-  "name": "God of Chaos",
-  "alias": [
-   "GodOfChaos.exe"
-  ],
-  "pop": 0,
-  "y": 2026,
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Role-playing (RPG)",
    "Indie"
   ]
  },
@@ -27631,6 +27634,18 @@
   ]
  },
  {
+  "name": "Hehehe Game",
+  "alias": [],
+  "pop": 0,
+  "y": 2026,
+  "p": [
+   "pc"
+  ],
+  "g": [
+   "Puzzle"
+  ]
+ },
+ {
   "name": "Heir of the Dog",
   "alias": [],
   "pop": 0,
@@ -28983,6 +28998,21 @@
   ]
  },
  {
+  "name": "House Music Incremental",
+  "alias": [
+   "HouseMusicIncremental.exe"
+  ],
+  "pop": 0,
+  "y": 2026,
+  "p": [
+   "pc"
+  ],
+  "g": [
+   "Simulator",
+   "Indie"
+  ]
+ },
+ {
   "name": "House Rules",
   "alias": [],
   "pop": 0,
@@ -29086,6 +29116,19 @@
   ],
   "g": [
    "Puzzle",
+   "Indie"
+  ]
+ },
+ {
+  "name": "Howling Woods",
+  "alias": [],
+  "pop": 0,
+  "y": 2026,
+  "p": [
+   "pc"
+  ],
+  "g": [
+   "Simulator",
    "Indie"
   ]
  },
@@ -32146,6 +32189,15 @@
   ]
  },
  {
+  "name": "Keyboard Chaos",
+  "alias": [],
+  "pop": 0,
+  "y": 2026,
+  "p": [
+   "pc"
+  ]
+ },
+ {
   "name": "Keysaster",
   "alias": [
    "Keysaster.exe"
@@ -32515,6 +32567,20 @@
   ],
   "g": [
    "Strategy",
+   "Indie"
+  ]
+ },
+ {
+  "name": "Kitties on Planets",
+  "alias": [],
+  "pop": 0,
+  "y": 2026,
+  "p": [
+   "pc",
+   "console"
+  ],
+  "g": [
+   "Puzzle",
    "Indie"
   ]
  },
@@ -35941,18 +36007,6 @@
   ]
  },
  {
-  "name": "Master of Chaos",
-  "alias": [],
-  "pop": 0,
-  "y": 2026,
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Indie"
-  ]
- },
- {
   "name": "Master of Pottery",
   "alias": [
    "MasterOfPottery.exe"
@@ -36374,21 +36428,6 @@
   ],
   "g": [
    "Platform"
-  ]
- },
- {
-  "name": "Megapain",
-  "alias": [
-   "MEGAPAIN"
-  ],
-  "pop": 0,
-  "y": 2026,
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Shooter",
-   "Indie"
   ]
  },
  {
@@ -38280,6 +38319,18 @@
   ]
  },
  {
+  "name": "Moto X",
+  "alias": [],
+  "pop": 0,
+  "y": 2026,
+  "p": [
+   "console"
+  ],
+  "g": [
+   "Racing"
+  ]
+ },
+ {
   "name": "Mount Noire",
   "alias": [],
   "pop": 0,
@@ -39682,22 +39733,6 @@
   ]
  },
  {
-  "name": "Next Reign: Kingdom",
-  "alias": [
-   "无尽王权"
-  ],
-  "pop": 0,
-  "y": 2026,
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Simulator",
-   "Strategy",
-   "Indie"
-  ]
- },
- {
   "name": "Next Station is...",
   "alias": [],
   "pop": 0,
@@ -40246,6 +40281,21 @@
    "pc"
   ],
   "g": [
+   "Adventure",
+   "Indie"
+  ]
+ },
+ {
+  "name": "No Elevator",
+  "alias": [],
+  "pop": 0,
+  "y": 2026,
+  "p": [
+   "pc"
+  ],
+  "g": [
+   "Platform",
+   "Puzzle",
    "Adventure",
    "Indie"
   ]
@@ -41782,21 +41832,6 @@
   ]
  },
  {
-  "name": "One Coin Museum",
-  "alias": [],
-  "pop": 0,
-  "y": 2026,
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Simulator",
-   "Adventure",
-   "Indie",
-   "Arcade"
-  ]
- },
- {
   "name": "One Fenix Down",
   "alias": [],
   "pop": 0,
@@ -42467,15 +42502,6 @@
   ]
  },
  {
-  "name": "Orbitals: Deluxe Edition",
-  "alias": [],
-  "pop": 0,
-  "y": 2026,
-  "p": [
-   "console"
-  ]
- },
- {
   "name": "Orbrix",
   "alias": [],
   "pop": 0,
@@ -43092,18 +43118,6 @@
   ]
  },
  {
-  "name": "Panic in Puzzle World",
-  "alias": [],
-  "pop": 0,
-  "y": 2026,
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Indie"
-  ]
- },
- {
   "name": "PanzenTD",
   "alias": [
    "Panzen Tower Defence"
@@ -43474,6 +43488,21 @@
    "Platform",
    "Racing",
    "Indie"
+  ]
+ },
+ {
+  "name": "PartyCade",
+  "alias": [],
+  "pop": 0,
+  "y": 2026,
+  "p": [
+   "console"
+  ],
+  "g": [
+   "Quiz/Trivia",
+   "Indie",
+   "Arcade",
+   "Card & Board Game"
   ]
  },
  {
@@ -45909,6 +45938,19 @@
   ]
  },
  {
+  "name": "Prehistoric Pit",
+  "alias": [],
+  "pop": 0,
+  "y": 2026,
+  "p": [
+   "pc"
+  ],
+  "g": [
+   "Indie",
+   "Arcade"
+  ]
+ },
+ {
   "name": "Pretty Home Run Derby: Re - Return of Kusogaki",
   "alias": [],
   "pop": 0,
@@ -47189,6 +47231,19 @@
   ]
  },
  {
+  "name": "QuizLobby",
+  "alias": [],
+  "pop": 0,
+  "y": 2026,
+  "p": [
+   "pc",
+   "console"
+  ],
+  "g": [
+   "Quiz/Trivia"
+  ]
+ },
+ {
   "name": "Qumino",
   "alias": [],
   "pop": 0,
@@ -48395,21 +48450,6 @@
   ]
  },
  {
-  "name": "Rescue the Hostages: Misaligned Fate",
-  "alias": [
-   "Rescue the Hostages Misaligned Fate.exe"
-  ],
-  "pop": 0,
-  "y": 2026,
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Puzzle",
-   "Indie"
-  ]
- },
- {
   "name": "Resequence: The Orchard",
   "alias": [],
   "pop": 0,
@@ -49027,21 +49067,6 @@
   ]
  },
  {
-  "name": "Ritterschlag",
-  "alias": [],
-  "pop": 0,
-  "y": 2026,
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Fighting",
-   "Role-playing (RPG)",
-   "Strategy",
-   "Indie"
-  ]
- },
- {
   "name": "Rivage",
   "alias": [],
   "pop": 1,
@@ -49203,7 +49228,9 @@
  },
  {
   "name": "Rock and Found",
-  "alias": [],
+  "alias": [
+   "Rock & Found"
+  ],
   "pop": 0,
   "y": 2026,
   "p": [
@@ -50069,22 +50096,6 @@
   "g": [
    "Adventure",
    "Arcade"
-  ]
- },
- {
-  "name": "Rutrum",
-  "alias": [
-   "Rutrum.exe"
-  ],
-  "pop": 0,
-  "y": 2026,
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Role-playing (RPG)",
-   "Strategy",
-   "Indie"
   ]
  },
  {
@@ -52110,20 +52121,6 @@
   ]
  },
  {
-  "name": "ShoreTiles",
-  "alias": [],
-  "pop": 0,
-  "y": 2026,
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Puzzle",
-   "Strategy",
-   "Indie"
-  ]
- },
- {
   "name": "Short Short Fictions",
   "alias": [],
   "pop": 0,
@@ -52707,7 +52704,7 @@
    "SiN: Reloaded",
    "SiNReloaded.exe"
   ],
-  "pop": 0,
+  "pop": 1,
   "y": 2026,
   "p": [
    "pc",
@@ -52849,20 +52846,6 @@
   ],
   "g": [
    "Adventure"
-  ]
- },
- {
-  "name": "Skingdom",
-  "alias": [],
-  "pop": 0,
-  "y": 2026,
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Simulator",
-   "Strategy",
-   "Indie"
   ]
  },
  {
@@ -56652,21 +56635,6 @@
   ]
  },
  {
-  "name": "Summer Delusion: The Girl Only I Can See",
-  "alias": [],
-  "pop": 0,
-  "y": 2026,
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Role-playing (RPG)",
-   "Adventure",
-   "Indie",
-   "Visual Novel"
-  ]
- },
- {
   "name": "Summer Road",
   "alias": [],
   "pop": 0,
@@ -57759,7 +57727,7 @@
   "alias": [
    "Tales of Eternia Remastered.exe"
   ],
-  "pop": 1,
+  "pop": 2,
   "y": 2026,
   "p": [
    "pc",
@@ -58492,6 +58460,23 @@
   ]
  },
  {
+  "name": "Terry's Terraforming",
+  "alias": [
+   "Janet's Planets"
+  ],
+  "pop": 0,
+  "y": 2026,
+  "p": [
+   "pc",
+   "console"
+  ],
+  "g": [
+   "Puzzle",
+   "Adventure",
+   "Indie"
+  ]
+ },
+ {
   "name": "Tetric",
   "alias": [
    "TETRIC"
@@ -58656,20 +58641,6 @@
   "y": 2026,
   "p": [
    "pc"
-  ]
- },
- {
-  "name": "The Adventures of Graham",
-  "alias": [],
-  "pop": 0,
-  "y": 2026,
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Platform",
-   "Adventure",
-   "Indie"
   ]
  },
  {
@@ -59534,6 +59505,19 @@
   "y": 2026,
   "p": [
    "console"
+  ]
+ },
+ {
+  "name": "The Edutainment Vortex Diner",
+  "alias": [],
+  "pop": 0,
+  "y": 2026,
+  "p": [
+   "pc"
+  ],
+  "g": [
+   "Indie",
+   "Visual Novel"
   ]
  },
  {
@@ -64881,6 +64865,21 @@
   ]
  },
  {
+  "name": "Ultracapitalism",
+  "alias": [],
+  "pop": 0,
+  "y": 2026,
+  "p": [
+   "pc",
+   "console"
+  ],
+  "g": [
+   "Role-playing (RPG)",
+   "Strategy",
+   "Card & Board Game"
+  ]
+ },
+ {
   "name": "Umblight",
   "alias": [],
   "pop": 0,
@@ -66111,7 +66110,8 @@
   "pop": 0,
   "y": 2026,
   "p": [
-   "pc"
+   "pc",
+   "console"
   ],
   "g": [
    "Adventure"
@@ -66535,8 +66535,10 @@
   ]
  },
  {
-  "name": "Wand & Order: Tidy up the magic shop!",
-  "alias": [],
+  "name": "Wand & Order: Tidy Up the Magic Shop!",
+  "alias": [
+   "Wand & Order: Tidy up the magic shop!"
+  ],
   "pop": 0,
   "y": 2026,
   "p": [
@@ -67855,6 +67857,18 @@
    "Adventure",
    "Indie",
    "Visual Novel"
+  ]
+ },
+ {
+  "name": "Whitopia",
+  "alias": [],
+  "pop": 0,
+  "y": 2026,
+  "p": [
+   "pc"
+  ],
+  "g": [
+   "Simulator"
   ]
  },
  {
@@ -69198,19 +69212,6 @@
   ],
   "g": [
    "Visual Novel"
-  ]
- },
- {
-  "name": "Your Forever Friend",
-  "alias": [],
-  "pop": 0,
-  "y": 2026,
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Point-and-click",
-   "Indie"
   ]
  },
  {
