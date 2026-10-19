@@ -307,6 +307,7 @@ tr.detail td{background:var(--card-2);padding:14px 18px}
 .lrow:hover{background:var(--card-2)}
 .lrow .rk2{font-family:"Roboto Mono",monospace;font-weight:700;font-size:14px;color:var(--ink-3);
  width:26px;text-align:right;flex:none}
+.lrow .rkw .rk2{width:auto}
 .lrow img{width:62px;height:35px;object-fit:cover;border-radius:6px;flex:none;background:var(--line-soft)}
 .lrow .nm2{flex:1;min-width:0}
 .lrow .nm2 b{display:block;font-family:"Zen Kaku Gothic New",sans-serif;font-size:14px;font-weight:700;
@@ -315,6 +316,35 @@ tr.detail td{background:var(--card-2);padding:14px 18px}
 .lrow .bar2{flex:none;width:120px;height:7px;background:var(--line-soft);border-radius:4px;overflow:hidden}
 .lrow .bar2 i{display:block;height:100%;border-radius:4px;
  background:linear-gradient(90deg,var(--accent),var(--accent-2))}
+/* ---- 順位の上下（2026-10-19 たろちんさん） ----
+   色は「後押し」でしかない。**矢印の向きと数字だけで読める**ようにしてある
+   （赤と青が見分けにくい人にも同じ情報が届く）。色は新しく足していない。
+   --hot（上）と --down（下）は、このサイトがもともと持っている印。 */
+.rkw{flex:none;width:36px;display:flex;flex-direction:column;align-items:center;gap:3px}
+/* 地のまま置く（下地を敷かない）。白の上なら --hot も --down も
+   コントラストが 4.9:1 / 5.3:1 あって読めるが、薄い下地を敷くと
+   3.9:1 まで落ちてしまう。**読みやすさのほうを取る。** */
+.rkmv{font-family:"Roboto Mono",monospace;font-weight:700;font-size:11.5px;line-height:1.1;
+ letter-spacing:-.3px;white-space:nowrap}
+.rkmv.up{color:var(--hot)}
+.rkmv.down{color:var(--down)}
+.rkmv.same{color:var(--ink-3)}
+/* 大きく上がったものと初登場だけ、色を塗って目を留める。
+   1日あたり「10以上上がった」1.8件＋「初登場」1.1件で、30行のうち3行ほど。
+   これ以上塗ると、一覧がうるさくなって印の意味が薄れる。 */
+.rkmv.hot,.rkmv.new{color:#fff;background:var(--hot);border-radius:5px;padding:1.5px 4px;
+ letter-spacing:0;font-size:10.5px}
+.rkmv.new{font-size:9.5px}
+/* 凡例。印そのものを並べて見せる（言葉で説明するより短い） */
+.mvkey{display:flex;align-items:center;gap:5px;flex-wrap:wrap}
+.mvkey .rkmv{font-size:9.5px}
+/* カードの側。サムネイルの上に乗るので、下地を敷いて読めるようにする */
+.gcard .mvc{position:absolute;left:9px;top:42px;display:flex}
+.gcard .mvc .rkmv{background:rgba(11,27,29,.72);color:#fff;border-radius:6px;padding:2px 5px;
+ font-size:10.5px}
+.gcard .mvc .rkmv.up{color:#FFD2AE}
+.gcard .mvc .rkmv.down{color:#CFE2EA}
+.gcard .mvc .rkmv.hot,.gcard .mvc .rkmv.new{background:var(--hot);color:#fff}
 .chev{flex:none;width:22px;height:22px;color:var(--ink-3);transition:transform .18s}
 .open-x .chev{transform:rotate(180deg);color:var(--accent)}
 /* 開いている急上昇カードを分かるようにする */
@@ -527,6 +557,7 @@ footer{font-size:11.5px;color:var(--ink-3);text-align:center;border-top:1px soli
     <div class="head">
       <h2>みんなが遊んでるゲーム</h2>
       <span class="note">カードや行を押すと、そのゲームの配信一覧が開きます</span>
+      <span class="note mvkey" id="mvkey"></span>
     </div>
     <div class="filters" id="filters"></div>
     <div class="cards" id="cards"></div>
@@ -534,7 +565,7 @@ footer{font-size:11.5px;color:var(--ink-3);text-align:center;border-top:1px soli
   </section>
 
   <section id="page-sec" style="">
-    <article class="doc" id="page-body"><div class="ghero"><div class="gchart-wrap"><div class="gchart-t">1日ごとの配信チャンネル数<b class="own">当サイト独自集計</b></div><svg class="gchart" viewBox="0 0 680 120" role="img" aria-label="1日ごとの配信チャンネル数の推移。いちばん多かったのは2026-08-30の3チャンネル"><defs><linearGradient id="gcg" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="var(--accent)" stop-opacity=".22"/><stop offset="1" stop-color="var(--accent)" stop-opacity="0"/></linearGradient></defs><line x1="6" y1="102.0" x2="636" y2="102.0" stroke="var(--line)" stroke-width="1"/><path d="M6.0,44.7 L96.0,16.0 L186.0,16.0 L276.0,44.7 L366.0,44.7 L456.0,44.7 L546.0,44.7 L636.0,44.7 L636.0,102.0 L6.0,102.0 Z" fill="url(#gcg)"/><path d="M6.0,44.7 L96.0,16.0 L186.0,16.0 L276.0,44.7 L366.0,44.7 L456.0,44.7 L546.0,44.7 L636.0,44.7" fill="none" stroke="var(--accent)" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/><rect x="6.0" y="16" width="90.0" height="86.0" fill="transparent"><title>2026-08-29　2チャンネル</title></rect><rect x="51.0" y="16" width="90.0" height="86.0" fill="transparent"><title>2026-08-30　3チャンネル</title></rect><rect x="141.0" y="16" width="90.0" height="86.0" fill="transparent"><title>2026-09-25　3チャンネル</title></rect><rect x="231.0" y="16" width="90.0" height="86.0" fill="transparent"><title>2026-09-30　2チャンネル</title></rect><rect x="321.0" y="16" width="90.0" height="86.0" fill="transparent"><title>2026-10-06　2チャンネル</title></rect><rect x="411.0" y="16" width="90.0" height="86.0" fill="transparent"><title>2026-10-11　2チャンネル</title></rect><rect x="501.0" y="16" width="90.0" height="86.0" fill="transparent"><title>2026-10-13　2チャンネル</title></rect><rect x="591.0" y="16" width="90.0" height="86.0" fill="transparent"><title>2026-10-20　2チャンネル</title></rect><circle cx="96.0" cy="16.0" r="3.4" fill="var(--accent)" stroke="var(--card)" stroke-width="2"/><circle cx="636.0" cy="44.7" r="3.4" fill="var(--accent)" stroke="var(--card)" stroke-width="2"/><text x="96.0" y="11.0" text-anchor="middle" font-size="11" font-weight="700" fill="var(--ink-2)">3ch</text><text x="642.0" y="48.7" font-size="11" font-weight="700" fill="var(--ink-2)">2ch</text><text x="6" y="116" font-size="10.5" fill="var(--ink-3)">2026-08-29</text><text x="636.0" y="116" text-anchor="end" font-size="10.5" fill="var(--ink-3)">2026-10-20</text></svg><p class="gchart-n">この折れ線は、当サイトが公開中の配信タイトルを読んで数えた独自の集計です。<b>YouTubeが提供する数値・指標ではありません。</b></p></div></div><p class="gbuy"><a class="st" href="https://store.steampowered.com/search/?term=%E3%83%89%E3%83%A9%E3%82%B4%E3%83%B3%E3%83%9C%E3%83%BC%E3%83%ABZ%20KAKAROT" target="_blank" rel="noopener sponsored">Steamで探す</a><a class="az" href="https://www.amazon.co.jp/s?k=%E3%83%89%E3%83%A9%E3%82%B4%E3%83%B3%E3%83%9C%E3%83%BC%E3%83%ABZ+KAKAROT&amp;tag=tarochin-22" target="_blank" rel="noopener sponsored nofollow">Amazonで探す</a><span class="gbuy-n">店の検索結果に飛びます。商品ページではありません</span></p><h2>『ドラゴンボールZ KAKAROT』はどれだけ配信されているか</h2><p class="lead">当サイトの集計では、8月29日から10月20日までの間に<b>8日</b>、『ドラゴンボールZ KAKAROT』の配信が見つかりました。のべ<b>18本</b>・のべ<b>18チャンネル</b>です。いちばん多かったのは8月30日で、3チャンネルが配信していました。</p><p>このうち<b>2日</b>は、その日のランキング（上位30件）に入っています。</p><h2>日ごとの配信数（直近21日）</h2><table><tr><th>日</th><th>配信</th><th>チャンネル</th><th style="width:38%">　</th></tr><tr><td><a href="../../d/2026-10-20/">2026-10-20</a></td><td>2本</td><td>2ch</td><td><span style="display:block;height:8px;border-radius:4px;background:var(--accent);width:67%"></span></td></tr><tr><td><a href="../../d/2026-10-13/">2026-10-13</a></td><td>2本</td><td>2ch</td><td><span style="display:block;height:8px;border-radius:4px;background:var(--accent);width:67%"></span></td></tr><tr><td><a href="../../d/2026-10-11/">2026-10-11</a></td><td>2本</td><td>2ch</td><td><span style="display:block;height:8px;border-radius:4px;background:var(--accent);width:67%"></span></td></tr><tr><td><a href="../../d/2026-10-06/">2026-10-06</a></td><td>2本</td><td>2ch</td><td><span style="display:block;height:8px;border-radius:4px;background:var(--accent);width:67%"></span></td></tr><tr><td><a href="../../d/2026-09-30/">2026-09-30</a></td><td>2本</td><td>2ch</td><td><span style="display:block;height:8px;border-radius:4px;background:var(--accent);width:67%"></span></td></tr><tr><td><a href="../../d/2026-09-25/">2026-09-25</a></td><td>3本</td><td>3ch</td><td><span style="display:block;height:8px;border-radius:4px;background:var(--accent);width:100%"></span></td></tr><tr><td><a href="../../d/2026-08-30/">2026-08-30</a></td><td>3本</td><td>3ch</td><td><span style="display:block;height:8px;border-radius:4px;background:var(--accent);width:100%"></span></td></tr><tr><td><a href="../../d/2026-08-29/">2026-08-29</a></td><td>2本</td><td>2ch</td><td><span style="display:block;height:8px;border-radius:4px;background:var(--accent);width:67%"></span></td></tr></table><h2>同じ日に、一緒に配信されていたゲーム</h2><p>このゲームが出ていた日に、どれだけ重なって出ていたかの順です。毎日出ている定番より、<b>同じ時期に現れて同じ時期に消えたもの</b>が上に来ます。</p><ul class="grel"><li><a href="../../g/%E9%83%BD%E5%B8%82%E4%BC%9D%E8%AA%AC%E8%A7%A3%E4%BD%93%E3%82%BB%E3%83%B3%E3%82%BF%E3%83%BC/">都市伝説解体センター</a><span class="muted">同じ日に5日</span></li><li><a href="../../g/dressmaker/">Dressmaker</a><span class="muted">同じ日に4日</span></li><li><a href="../../g/transport-fever-3/">Transport Fever 3</a><span class="muted">同じ日に5日</span></li><li><a href="../../g/%E3%83%80%E3%83%BC%E3%83%93%E3%83%BC%E3%82%B9%E3%82%BF%E3%83%AA%E3%82%AA%E3%83%B32/">ダービースタリオン2</a><span class="muted">同じ日に6日</span></li><li><a href="../../g/%E9%BE%8D%E3%81%8C%E5%A6%82%E3%81%8F8%E5%A4%96%E4%BC%9D/">龍が如く8外伝</a><span class="muted">同じ日に3日</span></li><li><a href="../../g/machine-party/">Machine Party</a><span class="muted">同じ日に3日</span></li></ul><p class="lead"><a href="../../search/">ほかのゲームを探す</a>　<a href="../../g/">ゲーム別のページ一覧</a>　<a href="../../">今日のランキングへ</a></p></article>
+    <article class="doc" id="page-body"><div class="ghero"><div class="gchart-wrap"><div class="gchart-t">1日ごとの配信チャンネル数<b class="own">当サイト独自集計</b></div><svg class="gchart" viewBox="0 0 680 120" role="img" aria-label="1日ごとの配信チャンネル数の推移。いちばん多かったのは2026-08-30の3チャンネル"><defs><linearGradient id="gcg" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="var(--accent)" stop-opacity=".22"/><stop offset="1" stop-color="var(--accent)" stop-opacity="0"/></linearGradient></defs><line x1="6" y1="102.0" x2="636" y2="102.0" stroke="var(--line)" stroke-width="1"/><path d="M6.0,44.7 L96.0,16.0 L186.0,16.0 L276.0,44.7 L366.0,44.7 L456.0,44.7 L546.0,44.7 L636.0,44.7 L636.0,102.0 L6.0,102.0 Z" fill="url(#gcg)"/><path d="M6.0,44.7 L96.0,16.0 L186.0,16.0 L276.0,44.7 L366.0,44.7 L456.0,44.7 L546.0,44.7 L636.0,44.7" fill="none" stroke="var(--accent)" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/><rect x="6.0" y="16" width="90.0" height="86.0" fill="transparent"><title>2026-08-29　2チャンネル</title></rect><rect x="51.0" y="16" width="90.0" height="86.0" fill="transparent"><title>2026-08-30　3チャンネル</title></rect><rect x="141.0" y="16" width="90.0" height="86.0" fill="transparent"><title>2026-09-25　3チャンネル</title></rect><rect x="231.0" y="16" width="90.0" height="86.0" fill="transparent"><title>2026-09-30　2チャンネル</title></rect><rect x="321.0" y="16" width="90.0" height="86.0" fill="transparent"><title>2026-10-06　2チャンネル</title></rect><rect x="411.0" y="16" width="90.0" height="86.0" fill="transparent"><title>2026-10-11　2チャンネル</title></rect><rect x="501.0" y="16" width="90.0" height="86.0" fill="transparent"><title>2026-10-13　2チャンネル</title></rect><rect x="591.0" y="16" width="90.0" height="86.0" fill="transparent"><title>2026-10-20　2チャンネル</title></rect><circle cx="96.0" cy="16.0" r="3.4" fill="var(--accent)" stroke="var(--card)" stroke-width="2"/><circle cx="636.0" cy="44.7" r="3.4" fill="var(--accent)" stroke="var(--card)" stroke-width="2"/><text x="96.0" y="11.0" text-anchor="middle" font-size="11" font-weight="700" fill="var(--ink-2)">3ch</text><text x="642.0" y="48.7" font-size="11" font-weight="700" fill="var(--ink-2)">2ch</text><text x="6" y="116" font-size="10.5" fill="var(--ink-3)">2026-08-29</text><text x="636.0" y="116" text-anchor="end" font-size="10.5" fill="var(--ink-3)">2026-10-20</text></svg><p class="gchart-n">この折れ線は、当サイトが公開中の配信タイトルを読んで数えた独自の集計です。<b>YouTubeが提供する数値・指標ではありません。</b></p></div></div><p class="gbuy"><a class="st" href="https://store.steampowered.com/search/?term=%E3%83%89%E3%83%A9%E3%82%B4%E3%83%B3%E3%83%9C%E3%83%BC%E3%83%ABZ%20KAKAROT" target="_blank" rel="noopener sponsored">Steamで探す</a><a class="az" href="https://www.amazon.co.jp/s?k=%E3%83%89%E3%83%A9%E3%82%B4%E3%83%B3%E3%83%9C%E3%83%BC%E3%83%ABZ+KAKAROT&amp;tag=tarochin-22" target="_blank" rel="noopener sponsored nofollow">Amazonで探す</a><span class="gbuy-n">店の検索結果に飛びます。商品ページではありません</span></p><h2>『ドラゴンボールZ KAKAROT』はどれだけ配信されているか</h2><p class="lead">当サイトの集計では、8月29日から10月20日までの間に<b>8日</b>、『ドラゴンボールZ KAKAROT』の配信が見つかりました。のべ<b>18本</b>・のべ<b>18チャンネル</b>です。いちばん多かったのは8月30日で、3チャンネルが配信していました。</p><p>このうち<b>2日</b>は、その日のランキング（上位30件）に入っています。</p><h2>日ごとの配信数（直近21日）</h2><table><tr><th>日</th><th>配信</th><th>チャンネル</th><th style="width:38%">　</th></tr><tr><td><a href="../../d/2026-10-20/">2026-10-20</a></td><td>2本</td><td>2ch</td><td><span style="display:block;height:8px;border-radius:4px;background:var(--accent);width:67%"></span></td></tr><tr><td><a href="../../d/2026-10-13/">2026-10-13</a></td><td>2本</td><td>2ch</td><td><span style="display:block;height:8px;border-radius:4px;background:var(--accent);width:67%"></span></td></tr><tr><td><a href="../../d/2026-10-11/">2026-10-11</a></td><td>2本</td><td>2ch</td><td><span style="display:block;height:8px;border-radius:4px;background:var(--accent);width:67%"></span></td></tr><tr><td><a href="../../d/2026-10-06/">2026-10-06</a></td><td>2本</td><td>2ch</td><td><span style="display:block;height:8px;border-radius:4px;background:var(--accent);width:67%"></span></td></tr><tr><td><a href="../../d/2026-09-30/">2026-09-30</a></td><td>2本</td><td>2ch</td><td><span style="display:block;height:8px;border-radius:4px;background:var(--accent);width:67%"></span></td></tr><tr><td><a href="../../d/2026-09-25/">2026-09-25</a></td><td>3本</td><td>3ch</td><td><span style="display:block;height:8px;border-radius:4px;background:var(--accent);width:100%"></span></td></tr><tr><td><a href="../../d/2026-08-30/">2026-08-30</a></td><td>3本</td><td>3ch</td><td><span style="display:block;height:8px;border-radius:4px;background:var(--accent);width:100%"></span></td></tr><tr><td><a href="../../d/2026-08-29/">2026-08-29</a></td><td>2本</td><td>2ch</td><td><span style="display:block;height:8px;border-radius:4px;background:var(--accent);width:67%"></span></td></tr></table><h2>同じ日に、一緒に配信されていたゲーム</h2><p>このゲームが出ていた日に、どれだけ重なって出ていたかの順です。毎日出ている定番より、<b>同じ時期に現れて同じ時期に消えたもの</b>が上に来ます。</p><ul class="grel"><li><a href="../../g/%E9%83%BD%E5%B8%82%E4%BC%9D%E8%AA%AC%E8%A7%A3%E4%BD%93%E3%82%BB%E3%83%B3%E3%82%BF%E3%83%BC/">都市伝説解体センター</a><span class="muted">同じ日に5日</span></li><li><a href="../../g/dressmaker/">Dressmaker</a><span class="muted">同じ日に4日</span></li><li><a href="../../g/transport-fever-3/">Transport Fever 3</a><span class="muted">同じ日に5日</span></li><li><a href="../../g/%E3%83%80%E3%83%BC%E3%83%93%E3%83%BC%E3%82%B9%E3%82%BF%E3%83%AA%E3%82%AA%E3%83%B32/">ダービースタリオン2</a><span class="muted">同じ日に6日</span></li><li><a href="../../g/machine-party/">Machine Party</a><span class="muted">同じ日に3日</span></li><li><a href="../../g/%E5%B9%BB%E6%83%B3%E6%B0%B4%E6%BB%B8%E4%BC%9D-star-leap/">幻想水滸伝 STAR LEAP</a><span class="muted">同じ日に8日</span></li></ul><p class="lead"><a href="../../search/">ほかのゲームを探す</a>　<a href="../../g/">ゲーム別のページ一覧</a>　<a href="../../">今日のランキングへ</a></p></article>
   </section>
 
   <section id="arch-sec" style="display:none">
@@ -573,9 +604,25 @@ footer{font-size:11.5px;color:var(--ink-3);text-align:center;border-top:1px soli
 </div>
 
 <script>
-const DATA = {"mode": "page", "date": "2026-10-20", "subtitle": "『ドラゴンボールZ KAKAROT』の配信", "generated": "2026-10-20 01:56", "paths": {"home": "../../", "archive": "../../archive/"}};
+const DATA = {"mode": "page", "date": "2026-10-20", "subtitle": "『ドラゴンボールZ KAKAROT』の配信", "generated": "2026-10-20 08:45", "paths": {"home": "../../", "archive": "../../archive/"}};
 const $ = s => document.querySelector(s);
 const esc = s => String(s ?? '').replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+
+// 順位の上下の印。build_site.py の rank_moves() が r.mv を入れている。
+// 入っていない日（クォータ切れ・比べる窓が無い）は**何も出さない**。
+// 事務所で絞っているときも出さない（順位を振り直すので差が嘘になる）。
+function rkmv(r){
+  const m = r && r.mv;
+  if (!m || orgFilter) return '';
+  if (m.t === 'new')
+    return '<span class="rkmv new" title="当サイトの集計に入ったのは今回が初めてです">NEW</span>';
+  const was = m.p ? `前の24時間は${m.p}位` : '前の24時間は30位より下';
+  if (m.t === 'in')  return `<span class="rkmv up" title="${was}でした">↑</span>`;
+  if (m.t === 'same') return `<span class="rkmv same" title="${was}。同じ順位です">−</span>`;
+  const up = m.t === 'up';
+  return `<span class="rkmv ${up ? 'up' : 'down'}${m.hot ? ' hot' : ''}"`
+    + ` title="${was}でした">${up ? '↑' : '↓'}${m.d}</span>`;
+}
 const cssv = n => getComputedStyle(document.documentElement).getPropertyValue(n).trim();
 const fmt1 = n => n == null ? '?' : String(Math.round(n * 10) / 10);
 const man = n => n >= 10000 ? (n/10000).toFixed(n >= 100000 ? 0 : 1) + '万' : (n||0).toLocaleString();
@@ -846,13 +893,22 @@ function render(){
       hot.map(r => panel(r, 'hot:' + r.game)).join(''));
   }
 
+  // 順位の上下の印。**事務所で絞っているときは出さない。**
+  // 絞ると順位を1から振り直すので、全体の順位との差を並べると嘘になる。
+  $('#mvkey').innerHTML = orgFilter || !list.some(r => r.mv) ? '' :
+    '前の24時間と比べて ' +
+    '<span class="rkmv up">↑3</span> 上がった ' +
+    '<span class="rkmv down">↓3</span> 下がった ' +
+    '<span class="rkmv up">↑</span> 30位より下から ' +
+    '<span class="rkmv new">NEW</span> 初登場';
+
   // 上位3件はカード
   $('#cards').innerHTML = list.slice(0, 3).map((r, i) => {
     const th = thumb(r);
     return `<button type="button" class="gcard" data-g="${esc(r.game)}">
       <span class="th">${th ? `<img src="${esc(th)}" alt="" loading="lazy">`
         : '<span style="display:block;aspect-ratio:16/9"></span>'}
-        <span class="rank">${i + 1}</span>
+        <span class="rank">${i + 1}</span>${rkmv(r) ? `<span class="mvc">${rkmv(r)}</span>` : ''}
         <span class="open">${PLUS}配信一覧</span></span>
       <span class="gm"><b>${esc(r.game)}</b>
         <span class="nums"><i>${r.videos}</i>件 <i>${r.channels}</i>ch <i>${man(r.views)}</i>回</span>
@@ -863,7 +919,7 @@ function render(){
   $('#rows').innerHTML = list.slice(3).map((r, i) => {
     const th = thumb(r);
     return `<button type="button" class="lrow" data-g="${esc(r.game)}">
-      <span class="rk2">${i + 4}</span>
+      <span class="rkw"><span class="rk2">${i + 4}</span>${rkmv(r)}</span>
       ${th ? `<img src="${esc(th)}" alt="" loading="lazy">` : '<img alt="">'}
       <span class="nm2"><b>${esc(r.game)}</b><span>${r.videos}件 ・ ${r.channels}ch ・ ${man(r.views)}回</span></span>
       <span class="bar2"><i style="width:${Math.max(6,(r.score||0)/top*100)}%"></i></span>

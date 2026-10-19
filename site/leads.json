@@ -1,6 +1,6 @@
 {
  "date": "2026-10-20",
- "generated": "2026-10-20 01:56",
+ "generated": "2026-10-20 08:45",
  "leads": {
   "events": [
    {
@@ -27,16 +27,6 @@
     ]
    },
    {
-    "tag": "#ホロ鯖ARK",
-    "channels": [
-     "Choco Ch. 癒月ちょこ",
-     "Pekora Ch. 兎田ぺこら",
-     "Towa Ch. 常闇トワ",
-     "Watame Ch. 角巻わため",
-     "アキロゼCh。Vtuber/ホロライブ所属"
-    ]
-   },
-   {
     "tag": "#ゲーム実況",
     "channels": [
      "M家の休日マサ",
@@ -47,30 +37,12 @@
     ]
    },
    {
-    "tag": "#ぶいきゃす",
+    "tag": "#ホロ鯖ARK",
     "channels": [
-     "こてつちゃんねる",
-     "孵卵リリス / Furan Lilith",
-     "汐ゴマ【鳴潮】",
-     "白樺るるは"
-    ]
-   },
-   {
-    "tag": "#SURGECity",
-    "channels": [
-     "Mimoza Ch. 華咲みもざ",
-     "marunnn【まるーんチャンネル】",
-     "史門 / Shimon ",
-     "碧輝りお /Aoki Rio"
-    ]
-   },
-   {
-    "tag": "#ストグラ",
-    "channels": [
-     "Tenten Ch. / 鳳玲天々",
-     "ノビーの遊び部屋",
-     "切嘛 / Kiruma",
-     "影。/かげまる"
+     "Choco Ch. 癒月ちょこ",
+     "Pekora Ch. 兎田ぺこら",
+     "Towa Ch. 常闇トワ",
+     "アキロゼCh。Vtuber/ホロライブ所属"
     ]
    },
    {
@@ -81,49 +53,73 @@
      "小花衣 ももみ / Momomi Kohanai",
      "扇名いだ"
     ]
+   },
+   {
+    "tag": "#SURGECity",
+    "channels": [
+     "Mimoza Ch. 華咲みもざ",
+     "marunnn【まるーんチャンネル】",
+     "碧輝りお /Aoki Rio"
+    ]
+   },
+   {
+    "tag": "#スト犬カスタム",
+    "channels": [
+     "TIE Ru",
+     "はちぴ",
+     "小鈴りあん / Lian Channel【ミクスト】"
+    ]
+   },
+   {
+    "tag": "#フォートナイト",
+    "channels": [
+     "mogすけちゃんネル",
+     "くろのす",
+     "めるとくん"
+    ]
    }
   ],
   "newcomers": [],
   "wide": [
    {
     "game": "Apex Legends",
-    "channels": 39,
-    "videos": 44
-   },
-   {
-    "game": "ストリートファイター6",
     "channels": 35,
     "videos": 38
    },
    {
-    "game": "VALORANT",
-    "channels": 22,
-    "videos": 24
-   },
-   {
-    "game": "Grand Theft Auto V",
-    "channels": 22,
-    "videos": 24
+    "game": "ストリートファイター6",
+    "channels": 29,
+    "videos": 32
    },
    {
     "game": "Minecraft",
-    "channels": 20,
-    "videos": 21
+    "channels": 18,
+    "videos": 18
    },
    {
     "game": "League of Legends",
     "channels": 16,
-    "videos": 19
-   },
-   {
-    "game": "オーバーウォッチ2",
-    "channels": 15,
     "videos": 16
    },
    {
-    "game": "スプラトゥーン3",
-    "channels": 16,
+    "game": "VALORANT",
+    "channels": 17,
+    "videos": 17
+   },
+   {
+    "game": "hololive Dreams",
+    "channels": 13,
+    "videos": 13
+   },
+   {
+    "game": "Grand Theft Auto V",
+    "channels": 14,
     "videos": 16
+   },
+   {
+    "game": "フォートナイト",
+    "channels": 13,
+    "videos": 15
    }
   ]
  },
@@ -132,8 +128,8 @@
   {
    "tag": "わちゃサバ",
    "game": "Minecraft",
-   "evidence": 4,
-   "added": 2,
+   "evidence": 3,
+   "added": 1,
    "channels": 4
   }
  ],
@@ -203,22 +199,6 @@
    ]
   },
   {
-   "word": "DinoBones",
-   "channels": 1,
-   "n": 1,
-   "examples": [
-    {
-     "t": "【DinoBones】　2000個の恐竜の骨を組み立てて化石を復元するぞ！！　【八神ツクモ／ネオポルテ】",
-     "c": "八神ツクモ / Yagami Tsukumo",
-     "u": "https://www.youtube.com/watch?v=NZotbrJ1ewI"
-    }
-   ],
-   "kind": "near",
-   "suggest": [
-    "DinoBones: Tidy Up the Museum"
-   ]
-  },
-  {
    "word": "16Personalities",
    "channels": 1,
    "n": 1,
@@ -251,22 +231,6 @@
    ]
   },
   {
-   "word": "SYNDUALITY",
-   "channels": 1,
-   "n": 1,
-   "examples": [
-    {
-     "t": "【SYN】オーバーホール情報！discordラジオ視聴しながらプレイ！【SYNDUALITY】 #公式アンバサダー",
-     "c": "ゆっきー",
-     "u": "https://www.youtube.com/watch?v=p7pla_MAsAM"
-    }
-   ],
-   "kind": "near",
-   "suggest": [
-    "Synduality: Echo of Ada"
-   ]
-  },
-  {
    "word": "pop'n music",
    "channels": 1,
    "n": 1,
@@ -280,6 +244,22 @@
    "kind": "near",
    "suggest": [
     "Pop'n Music 13 Carnival"
+   ]
+  },
+  {
+   "word": "SYNDUALITY",
+   "channels": 1,
+   "n": 1,
+   "examples": [
+    {
+     "t": "【SYN】オーバーホール情報！discordラジオ視聴しながらプレイ！【SYNDUALITY】 #公式アンバサダー",
+     "c": "ゆっきー",
+     "u": "https://www.youtube.com/watch?v=p7pla_MAsAM"
+    }
+   ],
+   "kind": "near",
+   "suggest": [
+    "Synduality: Echo of Ada"
    ]
   },
   {
@@ -349,13 +329,8 @@
   {
    "word": "プロスピA",
    "channels": 3,
-   "n": 13,
+   "n": 12,
    "examples": [
-    {
-     "t": "【プロスピA】雑談しながらランク戦",
-     "c": "ねこマンちゃんねる",
-     "u": "https://www.youtube.com/watch?v=erGAKxoN450"
-    },
     {
      "t": "【プロスピA】2026OB第2弾ランキングボーダー予想5日目！！ついに最終予想発表！！上振れ下振れに応じて3種類で対応可能！！",
      "c": "ねこマンちゃんねる",
@@ -365,6 +340,11 @@
      "t": "【プロスピA】2026OB第2弾ランキングボーダー予想最終日！！大荒れランキングもついに佳境！最後まで走り抜こう！！！",
      "c": "ねこマンちゃんねる",
      "u": "https://www.youtube.com/watch?v=-JOjTbLKSgE"
+    },
+    {
+     "t": "【プロスピA】ランキングの心配しながらタイブレーク杯",
+     "c": "ねこマンちゃんねる",
+     "u": "https://www.youtube.com/watch?v=3Zg7HS886qo"
     }
    ],
    "kind": "wide",
@@ -373,13 +353,8 @@
   {
    "word": "ぷにぷに",
    "channels": 3,
-   "n": 8,
+   "n": 7,
    "examples": [
-    {
-     "t": "「ぷにぷに」ファンミ振り返りとラスチャン確認【Vtuber】",
-     "c": "かぐch",
-     "u": "https://www.youtube.com/watch?v=07o0VwYBPWM"
-    },
     {
      "t": "「ぷにぷに」炎炎ノ新イベ予告を一緒に確認！【Vtuber】",
      "c": "かぐch",
@@ -389,6 +364,11 @@
      "t": "「ぷにぷに」炎炎ノ消防隊・ガシャ＆最速LIVE！【Vtuber】",
      "c": "かぐch",
      "u": "https://www.youtube.com/watch?v=ydn-l0lG9Uc"
+    },
+    {
+     "t": "神回：奇跡すぎる”初日ガチャ 単発”がヤバい。『ぷにぷに百物語』【ぷにぷに / 妖怪ウォッチぷにぷに】",
+     "c": "S極N極GAMES",
+     "u": "https://www.youtube.com/watch?v=gzVoY-h2yvg"
     }
    ],
    "kind": "wide",
@@ -400,19 +380,19 @@
    "n": 6,
    "examples": [
     {
-     "t": "〖 #秋を奏でる歌枠リレー 〗うたうにょ～🎤の巻〖 ぶいすぽっ！ / 夜乃くろむ 〗",
-     "c": "夜乃くろむ / Yano Kuromu",
-     "u": "https://www.youtube.com/watch?v=ydeWvwe8_0U"
-    },
-    {
-     "t": "〖 #秋を奏でる歌枠リレー 〗うたうにょ～🎤の巻〖 ぶいすぽっ！ / 夜乃くろむ 〗",
-     "c": "夜乃くろむ / Yano Kuromu",
-     "u": "https://www.youtube.com/watch?v=ydeWvwe8_0U"
+     "t": "【#秋を奏でる歌枠リレー】ラストを務めます！最後まで楽しむぞ🍂【緋月ゆい/ネオポルテ】",
+     "c": "緋月ゆい / Hizuki Yui",
+     "u": "https://www.youtube.com/watch?v=I4mbGy9r18c"
     },
     {
      "t": "【#秋を奏でる歌枠リレー】ラストを務めます！最後まで楽しむぞ🍂【緋月ゆい/ネオポルテ】",
      "c": "緋月ゆい / Hizuki Yui",
      "u": "https://www.youtube.com/watch?v=I4mbGy9r18c"
+    },
+    {
+     "t": "〖 #秋を奏でる歌枠リレー 〗うたうにょ～🎤の巻〖 ぶいすぽっ！ / 夜乃くろむ 〗",
+     "c": "夜乃くろむ / Yano Kuromu",
+     "u": "https://www.youtube.com/watch?v=ydeWvwe8_0U"
     }
    ],
    "kind": "wide",
@@ -539,30 +519,6 @@
    "suggest": []
   },
   {
-   "word": "プラネット ズー 2",
-   "channels": 3,
-   "n": 3,
-   "examples": [
-    {
-     "t": "【プラネット ズー 2】水族館も作れるようになった！発売直後の新作・動物園経営シムを完全初見【ちむぎ｜Vtuber】",
-     "c": "ちむぎ / Chimugi",
-     "u": "https://www.youtube.com/watch?v=CUab2bdgZ1U"
-    },
-    {
-     "t": "動物園経営シミュレーションゲームを触ってみた～い │『プラネット ズー 2』",
-     "c": "鉄塔",
-     "u": "https://www.youtube.com/watch?v=xsYOKnWwNwU"
-    },
-    {
-     "t": "本物の動物園と錯覚するほどリアルな人気動物園経営シム最新作【プラネット ズー 2】",
-     "c": "コーマ",
-     "u": "https://www.youtube.com/watch?v=emboFivPBpw"
-    }
-   ],
-   "kind": "wide",
-   "suggest": []
-  },
-  {
    "word": "GCG",
    "channels": 3,
    "n": 3,
@@ -635,28 +591,28 @@
    "genres": [],
    "year": null,
    "platforms": [],
-   "days_seen": 3,
-   "last_seen": "2026-10-10",
+   "days_seen": 4,
+   "last_seen": "2026-10-19",
    "first_here": false
   },
   {
    "game": "Tenebris Somnia",
-   "growth": 6.25,
-   "videos": 5,
-   "base": 0.4,
-   "channels": 5,
-   "views": 38183,
+   "growth": 5.0,
+   "videos": 4,
+   "base": 0.8,
+   "channels": 4,
+   "views": 10927,
    "who": [
     "人生 つみこ (ホラーゲーム専門Vtuber)",
-    "キャシーさんはホラーゲームで遊びたい",
-    "人生 つみこ (ホラーゲーム専門Vtuber)",
     "スーピー / Soopy【JP】",
-    "たまチャンネル"
+    "たまチャンネル",
+    "スーピー / Soopy【JP】",
+    "朱羽美寧 / ビビリ探偵のホラーゲーム調査ch"
    ],
    "titles": [
-    "【 Tenebris Somnia 】まるで映画！実写とレトロホラーの融合が面白いサバイバルホラーゲーム遂にリリース！#01【 人生つみこ】",
-    "【ホラー】全エンディング4種達成！不気味な物語の奥底を暴く実写と2Dを融合した狂気のホラーゲーム『 Tenebris Somnia 』【Vキャシー/Vtuber】実況",
-    "【 Tenebris Somnia 】実写×レトロサバイバルホラーゲーム！クリアまでいきたい！#02【 人生つみこ】"
+    "【 Tenebris Somnia 】実写×レトロサバイバルホラーゲーム！クリアまでいきたい！#02【 人生つみこ】",
+    "【Tenebris Somnia】実写ありのサイレントヒル風な新作2Dドットホラゲー⁉️※閲覧注意【ホラーゲーム実況 / Vtuber】",
+    "【Tenebris Somnia】実写とドット絵２つが切り替わるサバイバルサイコホラー：物語のヒントはどちらかにある、サイレントヒルファンメイド映像作品制作者による新境地"
    ],
    "genres": [
     "Adventure",
@@ -698,11 +654,11 @@
   },
   {
    "game": "Wardogs",
-   "growth": 2.97,
-   "videos": 11,
-   "base": 3.7,
-   "channels": 10,
-   "views": 237688,
+   "growth": 2.2,
+   "videos": 9,
+   "base": 4.1,
+   "channels": 9,
+   "views": 224938,
    "who": [
     "花芽なずな / Nazuna Kaga",
     "TIE Ru",
@@ -730,36 +686,39 @@
    "first_here": false
   },
   {
-   "game": "オーバーウォッチ2",
-   "growth": 2.62,
-   "videos": 16,
-   "base": 6.1,
-   "channels": 15,
-   "views": 892628,
+   "game": "マリオカート",
+   "growth": 1.88,
+   "videos": 3,
+   "base": 1.6,
+   "channels": 3,
+   "views": 146662,
    "who": [
-    "御子神琴音 / Mikogami Kotone【にじさんじ】",
-    "Rei7【にじさんじ】",
-    "Kuzuha Channel",
-    "小柳ロウ / Koyanagi Rou【にじさんじ】",
-    "イブラヒム【にじさんじ】"
+    "SHINGO(しんご)",
+    "あっさりしょこ",
+    "スウィントと上田さん"
    ],
    "titles": [
-    "【Overwatch】チーム1熱血練習。タンクに磨きを。【御子神琴音 / にじさんじ】",
-    "【 Overwatch 】#にじEX_OW 今日も自主練 with 塚原大地【 Rei7 / にじさんじ 】",
-    "【OW】二足の【チーム練】"
+    "マリオカートがサービス終了した件について",
+    "マリオカート1位三回とるまでオレはやる/10/19",
+    "スタートダッシュなしで『世界1位』を取る天才が現れました。【マリオカート8DX】"
    ],
-   "genres": [],
+   "genres": [
+    "Racing",
+    "Arcade"
+   ],
    "year": null,
-   "platforms": [],
-   "days_seen": 31,
+   "platforms": [
+    "console"
+   ],
+   "days_seen": 33,
    "last_seen": "2026-10-19",
    "first_here": false
   },
   {
    "game": "ゼンレスゾーンゼロ",
-   "growth": 1.82,
+   "growth": 1.74,
    "videos": 4,
-   "base": 2.2,
+   "base": 2.3,
    "channels": 4,
    "views": 24461,
    "who": [

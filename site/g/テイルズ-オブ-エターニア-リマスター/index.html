@@ -307,6 +307,7 @@ tr.detail td{background:var(--card-2);padding:14px 18px}
 .lrow:hover{background:var(--card-2)}
 .lrow .rk2{font-family:"Roboto Mono",monospace;font-weight:700;font-size:14px;color:var(--ink-3);
  width:26px;text-align:right;flex:none}
+.lrow .rkw .rk2{width:auto}
 .lrow img{width:62px;height:35px;object-fit:cover;border-radius:6px;flex:none;background:var(--line-soft)}
 .lrow .nm2{flex:1;min-width:0}
 .lrow .nm2 b{display:block;font-family:"Zen Kaku Gothic New",sans-serif;font-size:14px;font-weight:700;
@@ -315,6 +316,35 @@ tr.detail td{background:var(--card-2);padding:14px 18px}
 .lrow .bar2{flex:none;width:120px;height:7px;background:var(--line-soft);border-radius:4px;overflow:hidden}
 .lrow .bar2 i{display:block;height:100%;border-radius:4px;
  background:linear-gradient(90deg,var(--accent),var(--accent-2))}
+/* ---- 順位の上下（2026-10-19 たろちんさん） ----
+   色は「後押し」でしかない。**矢印の向きと数字だけで読める**ようにしてある
+   （赤と青が見分けにくい人にも同じ情報が届く）。色は新しく足していない。
+   --hot（上）と --down（下）は、このサイトがもともと持っている印。 */
+.rkw{flex:none;width:36px;display:flex;flex-direction:column;align-items:center;gap:3px}
+/* 地のまま置く（下地を敷かない）。白の上なら --hot も --down も
+   コントラストが 4.9:1 / 5.3:1 あって読めるが、薄い下地を敷くと
+   3.9:1 まで落ちてしまう。**読みやすさのほうを取る。** */
+.rkmv{font-family:"Roboto Mono",monospace;font-weight:700;font-size:11.5px;line-height:1.1;
+ letter-spacing:-.3px;white-space:nowrap}
+.rkmv.up{color:var(--hot)}
+.rkmv.down{color:var(--down)}
+.rkmv.same{color:var(--ink-3)}
+/* 大きく上がったものと初登場だけ、色を塗って目を留める。
+   1日あたり「10以上上がった」1.8件＋「初登場」1.1件で、30行のうち3行ほど。
+   これ以上塗ると、一覧がうるさくなって印の意味が薄れる。 */
+.rkmv.hot,.rkmv.new{color:#fff;background:var(--hot);border-radius:5px;padding:1.5px 4px;
+ letter-spacing:0;font-size:10.5px}
+.rkmv.new{font-size:9.5px}
+/* 凡例。印そのものを並べて見せる（言葉で説明するより短い） */
+.mvkey{display:flex;align-items:center;gap:5px;flex-wrap:wrap}
+.mvkey .rkmv{font-size:9.5px}
+/* カードの側。サムネイルの上に乗るので、下地を敷いて読めるようにする */
+.gcard .mvc{position:absolute;left:9px;top:42px;display:flex}
+.gcard .mvc .rkmv{background:rgba(11,27,29,.72);color:#fff;border-radius:6px;padding:2px 5px;
+ font-size:10.5px}
+.gcard .mvc .rkmv.up{color:#FFD2AE}
+.gcard .mvc .rkmv.down{color:#CFE2EA}
+.gcard .mvc .rkmv.hot,.gcard .mvc .rkmv.new{background:var(--hot);color:#fff}
 .chev{flex:none;width:22px;height:22px;color:var(--ink-3);transition:transform .18s}
 .open-x .chev{transform:rotate(180deg);color:var(--accent)}
 /* 開いている急上昇カードを分かるようにする */
@@ -527,6 +557,7 @@ footer{font-size:11.5px;color:var(--ink-3);text-align:center;border-top:1px soli
     <div class="head">
       <h2>みんなが遊んでるゲーム</h2>
       <span class="note">カードや行を押すと、そのゲームの配信一覧が開きます</span>
+      <span class="note mvkey" id="mvkey"></span>
     </div>
     <div class="filters" id="filters"></div>
     <div class="cards" id="cards"></div>
@@ -534,7 +565,7 @@ footer{font-size:11.5px;color:var(--ink-3);text-align:center;border-top:1px soli
   </section>
 
   <section id="page-sec" style="">
-    <article class="doc" id="page-body"><div class="ghero"><figure><img src="https://i.ytimg.com/vi/lzo91VRM-E0/mqdefault.jpg" alt="" loading="lazy"><figcaption>YouTube ／ Keroru ch. 矢毒けろる</figcaption></figure><div class="gchart-wrap"><div class="gchart-t">1日ごとの配信チャンネル数<b class="own">当サイト独自集計</b></div><svg class="gchart" viewBox="0 0 680 120" role="img" aria-label="1日ごとの配信チャンネル数の推移。いちばん多かったのは2026-10-16の9チャンネル"><defs><linearGradient id="gcg" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="var(--accent)" stop-opacity=".22"/><stop offset="1" stop-color="var(--accent)" stop-opacity="0"/></linearGradient></defs><line x1="6" y1="102.0" x2="636" y2="102.0" stroke="var(--line)" stroke-width="1"/><path d="M6.0,82.9 L111.0,35.1 L216.0,16.0 L321.0,44.7 L426.0,35.1 L531.0,54.2 L636.0,54.2 L636.0,102.0 L6.0,102.0 Z" fill="url(#gcg)"/><path d="M6.0,82.9 L111.0,35.1 L216.0,16.0 L321.0,44.7 L426.0,35.1 L531.0,54.2 L636.0,54.2" fill="none" stroke="var(--accent)" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/><rect x="6.0" y="16" width="105.0" height="86.0" fill="transparent"><title>2026-09-23　2チャンネル</title></rect><rect x="58.5" y="16" width="105.0" height="86.0" fill="transparent"><title>2026-10-15　7チャンネル</title></rect><rect x="163.5" y="16" width="105.0" height="86.0" fill="transparent"><title>2026-10-16　9チャンネル</title></rect><rect x="268.5" y="16" width="105.0" height="86.0" fill="transparent"><title>2026-10-17　6チャンネル</title></rect><rect x="373.5" y="16" width="105.0" height="86.0" fill="transparent"><title>2026-10-18　7チャンネル</title></rect><rect x="478.5" y="16" width="105.0" height="86.0" fill="transparent"><title>2026-10-19　5チャンネル</title></rect><rect x="583.5" y="16" width="105.0" height="86.0" fill="transparent"><title>2026-10-20　5チャンネル</title></rect><circle cx="216.0" cy="16.0" r="3.4" fill="var(--accent)" stroke="var(--card)" stroke-width="2"/><circle cx="636.0" cy="54.2" r="3.4" fill="var(--accent)" stroke="var(--card)" stroke-width="2"/><text x="216.0" y="11.0" text-anchor="middle" font-size="11" font-weight="700" fill="var(--ink-2)">9ch</text><text x="642.0" y="58.2" font-size="11" font-weight="700" fill="var(--ink-2)">5ch</text><text x="6" y="116" font-size="10.5" fill="var(--ink-3)">2026-09-23</text><text x="636.0" y="116" text-anchor="end" font-size="10.5" fill="var(--ink-3)">2026-10-20</text></svg><p class="gchart-n">この折れ線は、当サイトが公開中の配信タイトルを読んで数えた独自の集計です。<b>YouTubeが提供する数値・指標ではありません。</b></p></div></div><p class="gbuy"><a class="st" href="https://store.steampowered.com/search/?term=%E3%83%86%E3%82%A4%E3%83%AB%E3%82%BA%20%E3%82%AA%E3%83%96%20%E3%82%A8%E3%82%BF%E3%83%BC%E3%83%8B%E3%82%A2%20%E3%83%AA%E3%83%9E%E3%82%B9%E3%82%BF%E3%83%BC" target="_blank" rel="noopener sponsored">Steamで探す</a><a class="az" href="https://www.amazon.co.jp/s?k=%E3%83%86%E3%82%A4%E3%83%AB%E3%82%BA+%E3%82%AA%E3%83%96+%E3%82%A8%E3%82%BF%E3%83%BC%E3%83%8B%E3%82%A2+%E3%83%AA%E3%83%9E%E3%82%B9%E3%82%BF%E3%83%BC&amp;tag=tarochin-22" target="_blank" rel="noopener sponsored nofollow">Amazonで探す</a><span class="gbuy-n">店の検索結果に飛びます。商品ページではありません</span></p><h2>『テイルズ オブ エターニア リマスター』はどれだけ配信されているか</h2><p class="lead">当サイトの集計では、9月23日から10月20日までの間に<b>7日</b>、『テイルズ オブ エターニア リマスター』の配信が見つかりました。のべ<b>44本</b>・のべ<b>41チャンネル</b>です。いちばん多かったのは10月16日で、9チャンネルが配信していました。</p><p>このうち<b>3日</b>は、その日のランキング（上位30件）に入っています。</p><h2>コラムで取り上げた日</h2><ul><li><a href="../../d/2026-10-17/">2026-10-17</a>　26年たってから「初見」が増えるRPGってある？</li></ul><h2>日ごとの配信数（直近21日）</h2><table><tr><th>日</th><th>配信</th><th>チャンネル</th><th style="width:38%">　</th></tr><tr><td><a href="../../d/2026-10-20/">2026-10-20</a></td><td>6本</td><td>5ch</td><td><span style="display:block;height:8px;border-radius:4px;background:var(--accent);width:56%"></span></td></tr><tr><td><a href="../../d/2026-10-19/">2026-10-19</a></td><td>6本</td><td>5ch</td><td><span style="display:block;height:8px;border-radius:4px;background:var(--accent);width:56%"></span></td></tr><tr><td><a href="../../d/2026-10-18/">2026-10-18</a></td><td>8本</td><td>7ch</td><td><span style="display:block;height:8px;border-radius:4px;background:var(--accent);width:78%"></span></td></tr><tr><td><a href="../../d/2026-10-17/">2026-10-17</a></td><td>6本</td><td>6ch</td><td><span style="display:block;height:8px;border-radius:4px;background:var(--accent);width:67%"></span></td></tr><tr><td><a href="../../d/2026-10-16/">2026-10-16</a></td><td>9本</td><td>9ch</td><td><span style="display:block;height:8px;border-radius:4px;background:var(--accent);width:100%"></span></td></tr><tr><td><a href="../../d/2026-10-15/">2026-10-15</a></td><td>7本</td><td>7ch</td><td><span style="display:block;height:8px;border-radius:4px;background:var(--accent);width:78%"></span></td></tr><tr><td><a href="../../d/2026-09-23/">2026-09-23</a></td><td>2本</td><td>2ch</td><td><span style="display:block;height:8px;border-radius:4px;background:var(--accent);width:22%"></span></td></tr></table><h2>最近の配信</h2><p>直近30日ぶんだけを出しています。それより前の配信タイトルは残していません。</p><ul><li><a href="https://www.youtube.com/watch?v=lzo91VRM-E0" rel="nofollow">【テイルズ オブ エターニア】初見！いざ王都インフェリアへ！【リマスター】※ネタバレ注意※</a>　<span class="muted">Keroru ch. 矢毒けろる</span></li><li><a href="https://www.youtube.com/watch?v=jkSMGpVekkE" rel="nofollow">#4【テイルズオブエターニア/完全初見】氷の洞窟いく！セレスティアの大晶霊と契約するぞ！【水上クオン】</a>　<span class="muted">水上クオン</span></li><li><a href="https://www.youtube.com/watch?v=BnArH33qMoA" rel="nofollow">#2【テイルズオブエターニア リマスター】完全初見！レイス さんと一緒に風晶霊の空洞へいくところから！【兎桃みみこ】</a>　<span class="muted">兎桃みみこ /Mimiko Tomomo</span></li><li><a href="https://www.youtube.com/watch?v=sX85lrIFgOo" rel="nofollow">【クリアレビュー】ここまで遊びやすくなるとは！「テイルズ オブ エターニア リマスター」を徹底レビュー【Switch2】</a>　<span class="muted">KENT for 任天堂ゲームレビュー</span></li><li><a href="https://www.youtube.com/watch?v=KsEd7e6oLfI" rel="nofollow">【テイルズオブエターニア リマスター #1】あの名作が復活！永遠と絆のRPG「テイルズ オブ エターニア リマスター」実況プレイ！！【スイッチ2版】</a>　<span class="muted">つわはす</span></li><li><a href="https://www.youtube.com/watch?v=HBYZXEstsNc" rel="nofollow">#2【テイルズオブエターニア/完全初見】大晶霊探しの旅するぞ！名作RPG遊ぶ！【水上クオン】</a>　<span class="muted">水上クオン</span></li><li><a href="https://www.youtube.com/watch?v=SZP2Gtef3FU" rel="nofollow">【テイルズ オブ エターニア】初見！本日発売！「永遠と絆のRPG」の世界へ【リマスター】※ネタバレ注意※</a>　<span class="muted">Keroru ch. 矢毒けろる</span></li><li><a href="https://www.youtube.com/watch?v=sdqpwYzlRGg" rel="nofollow">#1【テイルズオブエターニア リマスター】完全初見！本日発売！名作と噂の『エターニア』を初プレイ！一体どんな物語なの…！？【兎桃みみこ】</a>　<span class="muted">兎桃みみこ /Mimiko Tomomo</span></li></ul><h2>同じ日に、一緒に配信されていたゲーム</h2><p>このゲームが出ていた日に、どれだけ重なって出ていたかの順です。毎日出ている定番より、<b>同じ時期に現れて同じ時期に消えたもの</b>が上に来ます。</p><ul class="grel"><li><a href="../../g/castlevania-belmont-s-curse/">Castlevania: Belmont&#x27;s Curse</a><span class="muted">同じ日に6日</span></li><li><a href="../../g/80%E5%84%84%E5%88%86%E3%81%AE1/">80億分の1</a><span class="muted">同じ日に6日</span></li><li><a href="../../g/%E3%83%89%E3%83%A9%E3%82%B4%E3%83%B3%E3%82%AF%E3%82%A8%E3%82%B9%E3%83%88iv/">ドラゴンクエストIV</a><span class="muted">同じ日に5日</span></li><li><a href="../../g/%E3%83%97%E3%83%81%E3%83%97%E3%83%A9%E3%83%8D%E3%83%83%E3%83%88/">プチプラネット</a><span class="muted">同じ日に4日</span></li><li><a href="../../g/arc-raiders/">ARC Raiders</a><span class="muted">同じ日に6日</span></li><li><a href="../../g/%E3%83%89%E3%83%A9%E3%82%B4%E3%83%B3%E3%82%BA%E3%83%89%E3%82%B0%E3%83%9E-2-%E3%83%80%E3%83%BC%E3%82%AF%E3%82%A2%E3%83%AA%E3%82%BA%E3%83%B3/">ドラゴンズドグマ 2:ダークアリズン</a><span class="muted">同じ日に6日</span></li></ul><p class="lead"><a href="../../search/">ほかのゲームを探す</a>　<a href="../../g/">ゲーム別のページ一覧</a>　<a href="../../">今日のランキングへ</a></p></article>
+    <article class="doc" id="page-body"><div class="ghero"><figure><img src="https://i.ytimg.com/vi/lzo91VRM-E0/mqdefault.jpg" alt="" loading="lazy"><figcaption>YouTube ／ Keroru ch. 矢毒けろる</figcaption></figure><div class="gchart-wrap"><div class="gchart-t">1日ごとの配信チャンネル数<b class="own">当サイト独自集計</b></div><svg class="gchart" viewBox="0 0 680 120" role="img" aria-label="1日ごとの配信チャンネル数の推移。いちばん多かったのは2026-10-16の9チャンネル"><defs><linearGradient id="gcg" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="var(--accent)" stop-opacity=".22"/><stop offset="1" stop-color="var(--accent)" stop-opacity="0"/></linearGradient></defs><line x1="6" y1="102.0" x2="636" y2="102.0" stroke="var(--line)" stroke-width="1"/><path d="M6.0,82.9 L111.0,35.1 L216.0,16.0 L321.0,44.7 L426.0,35.1 L531.0,54.2 L636.0,54.2 L636.0,102.0 L6.0,102.0 Z" fill="url(#gcg)"/><path d="M6.0,82.9 L111.0,35.1 L216.0,16.0 L321.0,44.7 L426.0,35.1 L531.0,54.2 L636.0,54.2" fill="none" stroke="var(--accent)" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/><rect x="6.0" y="16" width="105.0" height="86.0" fill="transparent"><title>2026-09-23　2チャンネル</title></rect><rect x="58.5" y="16" width="105.0" height="86.0" fill="transparent"><title>2026-10-15　7チャンネル</title></rect><rect x="163.5" y="16" width="105.0" height="86.0" fill="transparent"><title>2026-10-16　9チャンネル</title></rect><rect x="268.5" y="16" width="105.0" height="86.0" fill="transparent"><title>2026-10-17　6チャンネル</title></rect><rect x="373.5" y="16" width="105.0" height="86.0" fill="transparent"><title>2026-10-18　7チャンネル</title></rect><rect x="478.5" y="16" width="105.0" height="86.0" fill="transparent"><title>2026-10-19　5チャンネル</title></rect><rect x="583.5" y="16" width="105.0" height="86.0" fill="transparent"><title>2026-10-20　5チャンネル</title></rect><circle cx="216.0" cy="16.0" r="3.4" fill="var(--accent)" stroke="var(--card)" stroke-width="2"/><circle cx="636.0" cy="54.2" r="3.4" fill="var(--accent)" stroke="var(--card)" stroke-width="2"/><text x="216.0" y="11.0" text-anchor="middle" font-size="11" font-weight="700" fill="var(--ink-2)">9ch</text><text x="642.0" y="58.2" font-size="11" font-weight="700" fill="var(--ink-2)">5ch</text><text x="6" y="116" font-size="10.5" fill="var(--ink-3)">2026-09-23</text><text x="636.0" y="116" text-anchor="end" font-size="10.5" fill="var(--ink-3)">2026-10-20</text></svg><p class="gchart-n">この折れ線は、当サイトが公開中の配信タイトルを読んで数えた独自の集計です。<b>YouTubeが提供する数値・指標ではありません。</b></p></div></div><p class="gbuy"><a class="st" href="https://store.steampowered.com/search/?term=%E3%83%86%E3%82%A4%E3%83%AB%E3%82%BA%20%E3%82%AA%E3%83%96%20%E3%82%A8%E3%82%BF%E3%83%BC%E3%83%8B%E3%82%A2%20%E3%83%AA%E3%83%9E%E3%82%B9%E3%82%BF%E3%83%BC" target="_blank" rel="noopener sponsored">Steamで探す</a><a class="az" href="https://www.amazon.co.jp/s?k=%E3%83%86%E3%82%A4%E3%83%AB%E3%82%BA+%E3%82%AA%E3%83%96+%E3%82%A8%E3%82%BF%E3%83%BC%E3%83%8B%E3%82%A2+%E3%83%AA%E3%83%9E%E3%82%B9%E3%82%BF%E3%83%BC&amp;tag=tarochin-22" target="_blank" rel="noopener sponsored nofollow">Amazonで探す</a><span class="gbuy-n">店の検索結果に飛びます。商品ページではありません</span></p><h2>『テイルズ オブ エターニア リマスター』はどれだけ配信されているか</h2><p class="lead">当サイトの集計では、9月23日から10月20日までの間に<b>7日</b>、『テイルズ オブ エターニア リマスター』の配信が見つかりました。のべ<b>44本</b>・のべ<b>41チャンネル</b>です。いちばん多かったのは10月16日で、9チャンネルが配信していました。</p><p>このうち<b>3日</b>は、その日のランキング（上位30件）に入っています。</p><h2>コラムで取り上げた日</h2><ul><li><a href="../../d/2026-10-17/">2026-10-17</a>　26年たってから「初見」が増えるRPGってある？</li></ul><h2>日ごとの配信数（直近21日）</h2><table><tr><th>日</th><th>配信</th><th>チャンネル</th><th style="width:38%">　</th></tr><tr><td><a href="../../d/2026-10-20/">2026-10-20</a></td><td>6本</td><td>5ch</td><td><span style="display:block;height:8px;border-radius:4px;background:var(--accent);width:56%"></span></td></tr><tr><td><a href="../../d/2026-10-19/">2026-10-19</a></td><td>6本</td><td>5ch</td><td><span style="display:block;height:8px;border-radius:4px;background:var(--accent);width:56%"></span></td></tr><tr><td><a href="../../d/2026-10-18/">2026-10-18</a></td><td>8本</td><td>7ch</td><td><span style="display:block;height:8px;border-radius:4px;background:var(--accent);width:78%"></span></td></tr><tr><td><a href="../../d/2026-10-17/">2026-10-17</a></td><td>6本</td><td>6ch</td><td><span style="display:block;height:8px;border-radius:4px;background:var(--accent);width:67%"></span></td></tr><tr><td><a href="../../d/2026-10-16/">2026-10-16</a></td><td>9本</td><td>9ch</td><td><span style="display:block;height:8px;border-radius:4px;background:var(--accent);width:100%"></span></td></tr><tr><td><a href="../../d/2026-10-15/">2026-10-15</a></td><td>7本</td><td>7ch</td><td><span style="display:block;height:8px;border-radius:4px;background:var(--accent);width:78%"></span></td></tr><tr><td><a href="../../d/2026-09-23/">2026-09-23</a></td><td>2本</td><td>2ch</td><td><span style="display:block;height:8px;border-radius:4px;background:var(--accent);width:22%"></span></td></tr></table><h2>最近の配信</h2><p>直近30日ぶんだけを出しています。それより前の配信タイトルは残していません。</p><ul><li><a href="https://www.youtube.com/watch?v=lzo91VRM-E0" rel="nofollow">【テイルズ オブ エターニア】初見！いざ王都インフェリアへ！【リマスター】※ネタバレ注意※</a>　<span class="muted">Keroru ch. 矢毒けろる</span></li><li><a href="https://www.youtube.com/watch?v=jkSMGpVekkE" rel="nofollow">#4【テイルズオブエターニア/完全初見】氷の洞窟いく！セレスティアの大晶霊と契約するぞ！【水上クオン】</a>　<span class="muted">水上クオン</span></li><li><a href="https://www.youtube.com/watch?v=BnArH33qMoA" rel="nofollow">#2【テイルズオブエターニア リマスター】完全初見！レイス さんと一緒に風晶霊の空洞へいくところから！【兎桃みみこ】</a>　<span class="muted">兎桃みみこ /Mimiko Tomomo</span></li><li><a href="https://www.youtube.com/watch?v=sX85lrIFgOo" rel="nofollow">【クリアレビュー】ここまで遊びやすくなるとは！「テイルズ オブ エターニア リマスター」を徹底レビュー【Switch2】</a>　<span class="muted">KENT for 任天堂ゲームレビュー</span></li><li><a href="https://www.youtube.com/watch?v=KsEd7e6oLfI" rel="nofollow">【テイルズオブエターニア リマスター #1】あの名作が復活！永遠と絆のRPG「テイルズ オブ エターニア リマスター」実況プレイ！！【スイッチ2版】</a>　<span class="muted">つわはす</span></li><li><a href="https://www.youtube.com/watch?v=HBYZXEstsNc" rel="nofollow">#2【テイルズオブエターニア/完全初見】大晶霊探しの旅するぞ！名作RPG遊ぶ！【水上クオン】</a>　<span class="muted">水上クオン</span></li><li><a href="https://www.youtube.com/watch?v=SZP2Gtef3FU" rel="nofollow">【テイルズ オブ エターニア】初見！本日発売！「永遠と絆のRPG」の世界へ【リマスター】※ネタバレ注意※</a>　<span class="muted">Keroru ch. 矢毒けろる</span></li><li><a href="https://www.youtube.com/watch?v=sdqpwYzlRGg" rel="nofollow">#1【テイルズオブエターニア リマスター】完全初見！本日発売！名作と噂の『エターニア』を初プレイ！一体どんな物語なの…！？【兎桃みみこ】</a>　<span class="muted">兎桃みみこ /Mimiko Tomomo</span></li></ul><h2>同じ日に、一緒に配信されていたゲーム</h2><p>このゲームが出ていた日に、どれだけ重なって出ていたかの順です。毎日出ている定番より、<b>同じ時期に現れて同じ時期に消えたもの</b>が上に来ます。</p><ul class="grel"><li><a href="../../g/castlevania-belmont-s-curse/">Castlevania: Belmont&#x27;s Curse</a><span class="muted">同じ日に6日</span></li><li><a href="../../g/80%E5%84%84%E5%88%86%E3%81%AE1/">80億分の1</a><span class="muted">同じ日に6日</span></li><li><a href="../../g/planet-zoo-2/">プラネット ズー 2</a><span class="muted">同じ日に4日</span></li><li><a href="../../g/arc-raiders/">ARC Raiders</a><span class="muted">同じ日に6日</span></li><li><a href="../../g/%E3%83%89%E3%83%A9%E3%82%B4%E3%83%B3%E3%82%AF%E3%82%A8%E3%82%B9%E3%83%88iv/">ドラゴンクエストIV</a><span class="muted">同じ日に4日</span></li><li><a href="../../g/%E3%83%89%E3%83%A9%E3%82%B4%E3%83%B3%E3%82%BA%E3%83%89%E3%82%B0%E3%83%9E-2-%E3%83%80%E3%83%BC%E3%82%AF%E3%82%A2%E3%83%AA%E3%82%BA%E3%83%B3/">ドラゴンズドグマ 2:ダークアリズン</a><span class="muted">同じ日に6日</span></li></ul><p class="lead"><a href="../../search/">ほかのゲームを探す</a>　<a href="../../g/">ゲーム別のページ一覧</a>　<a href="../../">今日のランキングへ</a></p></article>
   </section>
 
   <section id="arch-sec" style="display:none">
@@ -573,9 +604,25 @@ footer{font-size:11.5px;color:var(--ink-3);text-align:center;border-top:1px soli
 </div>
 
 <script>
-const DATA = {"mode": "page", "date": "2026-10-20", "subtitle": "『テイルズ オブ エターニア リマスター』の配信", "generated": "2026-10-20 01:56", "paths": {"home": "../../", "archive": "../../archive/"}};
+const DATA = {"mode": "page", "date": "2026-10-20", "subtitle": "『テイルズ オブ エターニア リマスター』の配信", "generated": "2026-10-20 08:45", "paths": {"home": "../../", "archive": "../../archive/"}};
 const $ = s => document.querySelector(s);
 const esc = s => String(s ?? '').replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+
+// 順位の上下の印。build_site.py の rank_moves() が r.mv を入れている。
+// 入っていない日（クォータ切れ・比べる窓が無い）は**何も出さない**。
+// 事務所で絞っているときも出さない（順位を振り直すので差が嘘になる）。
+function rkmv(r){
+  const m = r && r.mv;
+  if (!m || orgFilter) return '';
+  if (m.t === 'new')
+    return '<span class="rkmv new" title="当サイトの集計に入ったのは今回が初めてです">NEW</span>';
+  const was = m.p ? `前の24時間は${m.p}位` : '前の24時間は30位より下';
+  if (m.t === 'in')  return `<span class="rkmv up" title="${was}でした">↑</span>`;
+  if (m.t === 'same') return `<span class="rkmv same" title="${was}。同じ順位です">−</span>`;
+  const up = m.t === 'up';
+  return `<span class="rkmv ${up ? 'up' : 'down'}${m.hot ? ' hot' : ''}"`
+    + ` title="${was}でした">${up ? '↑' : '↓'}${m.d}</span>`;
+}
 const cssv = n => getComputedStyle(document.documentElement).getPropertyValue(n).trim();
 const fmt1 = n => n == null ? '?' : String(Math.round(n * 10) / 10);
 const man = n => n >= 10000 ? (n/10000).toFixed(n >= 100000 ? 0 : 1) + '万' : (n||0).toLocaleString();
@@ -846,13 +893,22 @@ function render(){
       hot.map(r => panel(r, 'hot:' + r.game)).join(''));
   }
 
+  // 順位の上下の印。**事務所で絞っているときは出さない。**
+  // 絞ると順位を1から振り直すので、全体の順位との差を並べると嘘になる。
+  $('#mvkey').innerHTML = orgFilter || !list.some(r => r.mv) ? '' :
+    '前の24時間と比べて ' +
+    '<span class="rkmv up">↑3</span> 上がった ' +
+    '<span class="rkmv down">↓3</span> 下がった ' +
+    '<span class="rkmv up">↑</span> 30位より下から ' +
+    '<span class="rkmv new">NEW</span> 初登場';
+
   // 上位3件はカード
   $('#cards').innerHTML = list.slice(0, 3).map((r, i) => {
     const th = thumb(r);
     return `<button type="button" class="gcard" data-g="${esc(r.game)}">
       <span class="th">${th ? `<img src="${esc(th)}" alt="" loading="lazy">`
         : '<span style="display:block;aspect-ratio:16/9"></span>'}
-        <span class="rank">${i + 1}</span>
+        <span class="rank">${i + 1}</span>${rkmv(r) ? `<span class="mvc">${rkmv(r)}</span>` : ''}
         <span class="open">${PLUS}配信一覧</span></span>
       <span class="gm"><b>${esc(r.game)}</b>
         <span class="nums"><i>${r.videos}</i>件 <i>${r.channels}</i>ch <i>${man(r.views)}</i>回</span>
@@ -863,7 +919,7 @@ function render(){
   $('#rows').innerHTML = list.slice(3).map((r, i) => {
     const th = thumb(r);
     return `<button type="button" class="lrow" data-g="${esc(r.game)}">
-      <span class="rk2">${i + 4}</span>
+      <span class="rkw"><span class="rk2">${i + 4}</span>${rkmv(r)}</span>
       ${th ? `<img src="${esc(th)}" alt="" loading="lazy">` : '<img alt="">'}
       <span class="nm2"><b>${esc(r.game)}</b><span>${r.videos}件 ・ ${r.channels}ch ・ ${man(r.views)}回</span></span>
       <span class="bar2"><i style="width:${Math.max(6,(r.score||0)/top*100)}%"></i></span>
