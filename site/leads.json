@@ -1,6 +1,6 @@
 {
  "date": "2026-10-19",
- "generated": "2026-10-19 19:18",
+ "generated": "2026-10-19 19:44",
  "leads": {
   "events": [
    {
@@ -26,17 +26,6 @@
     ]
    },
    {
-    "tag": "#ストグラ",
-    "channels": [
-     "Tenten Ch. / 鳳玲天々",
-     "たけぉ",
-     "ましゃかりさん",
-     "ノビーの遊び部屋",
-     "影。/かげまる",
-     "闇乃あびす / Abyss"
-    ]
-   },
-   {
     "tag": "#ホロ鯖ARK",
     "channels": [
      "Pekora Ch. 兎田ぺこら",
@@ -44,6 +33,16 @@
      "Watame Ch. 角巻わため",
      "アキロゼCh。Vtuber/ホロライブ所属",
      "フブキCh。白上フブキ"
+    ]
+   },
+   {
+    "tag": "#ストグラ",
+    "channels": [
+     "Tenten Ch. / 鳳玲天々",
+     "たけぉ",
+     "ましゃかりさん",
+     "ノビーの遊び部屋",
+     "影。/かげまる"
     ]
    },
    {
@@ -84,14 +83,14 @@
   "newcomers": [],
   "wide": [
    {
-    "game": "Grand Theft Auto V",
-    "channels": 19,
-    "videos": 19
-   },
-   {
     "game": "ストリートファイター6",
     "channels": 17,
     "videos": 19
+   },
+   {
+    "game": "Grand Theft Auto V",
+    "channels": 18,
+    "videos": 18
    },
    {
     "game": "Apex Legends",
@@ -105,8 +104,8 @@
    },
    {
     "game": "League of Legends",
-    "channels": 13,
-    "videos": 14
+    "channels": 12,
+    "videos": 12
    },
    {
     "game": "オーバーウォッチ2",
@@ -120,8 +119,8 @@
    },
    {
     "game": "Minecraft",
-    "channels": 12,
-    "videos": 12
+    "channels": 11,
+    "videos": 11
    }
   ]
  },
@@ -593,37 +592,6 @@
    "first_here": false
   },
   {
-   "game": "Bombanana!",
-   "growth": 3.18,
-   "videos": 7,
-   "base": 2.2,
-   "channels": 7,
-   "views": 133993,
-   "who": [
-    "星川サラ / Sara Hoshikawa",
-    "天羽よつは",
-    "影。/かげまる",
-    "フミ/にじさんじ",
-    "Roberu Ch. 夕刻ロベル"
-   ],
-   "titles": [
-    "【BOMBANANA!】告知あり！織姫星7周年✨爆弾解除するぞおおおおおおおおおおお！【星川サラ/にじさんじ】",
-    "【BOMBANANA!】見ざる聞かざる言わざる!? ハチャメチャな爆弾解除！",
-    "見ざる聞かざる言わざるで爆弾解除するにょ～ w/天羽よつは,おらんじ～な【BOMBANANA!】"
-   ],
-   "genres": [
-    "Puzzle",
-    "Indie"
-   ],
-   "year": null,
-   "platforms": [
-    "pc"
-   ],
-   "days_seen": 36,
-   "last_seen": "2026-10-18",
-   "first_here": false
-  },
-  {
    "game": "バイオハザード2",
    "growth": 2.5,
    "videos": 3,
@@ -677,6 +645,37 @@
    "year": null,
    "platforms": [],
    "days_seen": 30,
+   "last_seen": "2026-10-18",
+   "first_here": false
+  },
+  {
+   "game": "Bombanana!",
+   "growth": 2.0,
+   "videos": 5,
+   "base": 2.5,
+   "channels": 5,
+   "views": 80395,
+   "who": [
+    "星川サラ / Sara Hoshikawa",
+    "フミ/にじさんじ",
+    "Roberu Ch. 夕刻ロベル",
+    "藍沢エマ / Aizawa Ema",
+    "緋月ゆい / Hizuki Yui"
+   ],
+   "titles": [
+    "【BOMBANANA!】告知あり！織姫星7周年✨爆弾解除するぞおおおおおおおおおおお！【星川サラ/にじさんじ】",
+    "【bombanana】織姫星デビュー７周年に３人の息をあわせる【 にじさんじフミ/星川サラ/山神カルタ 】#織姫星7周年",
+    "【BOMBANANA!】見ざる・聞かざる・言わざる・ちる【夕刻ロベル/ホロスターズ】"
+   ],
+   "genres": [
+    "Puzzle",
+    "Indie"
+   ],
+   "year": null,
+   "platforms": [
+    "pc"
+   ],
+   "days_seen": 36,
    "last_seen": "2026-10-18",
    "first_here": false
   }
