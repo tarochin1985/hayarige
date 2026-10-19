@@ -80,6 +80,7 @@ JSONに足す欄
 それも無ければ週まとめと同じ形で出る（落ちはしない）。
 """
 import argparse
+import hashlib
 import json
 import re
 import sys
@@ -855,6 +856,38 @@ def all_columns():
     return out
 
 
+def digest(f):
+    """まとめのJSONの中身の指紋（先頭12字）。
+
+    ★**作り直すかどうかを「ファイルの更新時刻」で決めてはいけない**
+      （2026-10-19 たろちんさんの報告で見つけた）。
+
+    たろちんさんの報告:
+
+        https://hayarige.com/card_w.png のカードが出ない。
+        サイトへのコラムの更新は反映されているのに
+
+    GitHub Actions は毎回 clone するので、**全ファイルの更新時刻が
+    clone した瞬間になる。** しかも git はパス順に書き出すので、
+    `data/` が `site/` より先。つまり
+
+        site/card_w.png の時刻  >  data/columns/weekly/*.json の時刻
+
+    が**毎回必ず成り立つ。** 更新時刻で比べていたせいで、
+    `card_w.png` は一度できたあと**二度と作り直されなくなっていた。**
+    実際に clone して測った差は +0.18 秒（データが先、画像が後）。
+
+    2026-10-15に card_w.png ができて、10-19に新しい週まとめ
+    （2026-10-12）が上がったのに、カードは10-05のままだった。
+    `site/w/2026-10-12/card.png` のほうは**新しい置き場所で
+    ファイルが無かったから**作られていて、それで気づきにくかった。
+
+    だから中身の指紋で比べる。指紋は data/matome_card.json に残す。
+    リポジトリに入るので、clone しても失われない。
+    """
+    return hashlib.sha1(f.read_bytes()).hexdigest()[:12]
+
+
 def for_site(theme, force=False):
     """まとめのページに置く画像を site/w/<key>/card.png などに作る。
 
@@ -879,6 +912,9 @@ def for_site(theme, force=False):
     logo = site / "logo.svg"
     if logo.is_file():
         (tmp / "logo.svg").write_bytes(logo.read_bytes())
+    ledger = read_json(DATA / "matome_card.json", {}) or {}
+    marks = dict(ledger.get("頁") or {})
+    seen_pages, seeded = set(), []
     pages, made = [], []
     for kind, slug, f in all_columns():
         key = f.stem
@@ -892,9 +928,20 @@ def for_site(theme, force=False):
             log(f"title が無いので飛ばします: {f.name}")
             continue
         png = site / slug / key / "card.png"
-        if (not force and png.is_file()
-                and png.stat().st_mtime >= f.stat().st_mtime):
-            continue
+        tag = f"{slug}/{key}"
+        now = digest(f)
+        seen_pages.add(tag)
+        if not force and png.is_file():
+            if marks.get(tag) == now:
+                continue
+            if tag not in marks:
+                # 指紋を残す前にできていた画像。**撮り直さずに指紋だけ覚える。**
+                # ここで撮り直すと、仕組みを入れた日に古いカード全部が
+                # 作り直されてしまう（中身は合っているのに）。
+                marks[tag] = now
+                seeded.append(tag)
+                continue
+        marks[tag] = now
         html_path = tmp / f"{slug}-{key}.html"
         html_path.write_text(build(col, key, theme), encoding="utf-8")
         pages.append((html_path, png))
@@ -912,7 +959,6 @@ def for_site(theme, force=False):
     # ★**期間の終わりから30日を過ぎたものは作らない。** これが30日の約束を
     #   守る仕掛けで、build_site.py が消したあと二度と戻らないようにしている。
     #   「古いのが消えたから作り直そう」としてはいけない（時計が戻る）。
-    ledger = read_json(DATA / "matome_card.json", {}) or {}
     today_d = datetime.now(JST).date()
     latest = {}
     for _kind, slug, f in all_columns():
@@ -936,16 +982,32 @@ def for_site(theme, force=False):
                 "YouTubeの動画URLと、誰の配信かを入れてください）")
             continue
         png = site / f"card_{slug}.png"
-        if (not force and png.is_file()
-                and png.stat().st_mtime >= f.stat().st_mtime):
-            continue
+        was = ledger.get(slug) or {}
+        now = digest(f)
+        if not force and png.is_file() and was.get("key") == f.stem:
+            if was.get("指紋") == now:
+                continue
+            if "指紋" not in was:
+                # 指紋を残す前にできていた画像。鍵（どのまとめか）は
+                # 合っているので、撮り直さずに指紋だけ覚える。
+                ledger[slug] = {**was, "指紋": now}
+                seeded.append(f"card_{slug}.png")
+                continue
         hp = tmp / f"post-{slug}.html"
         hp.write_text(build(col, f.stem, theme, pics=True), encoding="utf-8")
         pages.append((hp, png))
         made.append(f"card_{slug}.png（{f.stem}／サムネイル{len(pics)}枚）")
-        ledger[slug] = {"key": f.stem, "made": str(today_d)}
+        ledger[slug] = {"key": f.stem, "made": str(today_d), "指紋": now}
 
+    # JSONが無くなった頁の指紋は持たない。画像が撮れなかった頁の指紋は
+    # 残るが、次の回に `png.is_file()` が False になって作り直されるので
+    # 取りこぼさない。
+    ledger["頁"] = {k: v for k, v in sorted(marks.items()) if k in seen_pages}
+    if seeded:
+        log("指紋だけ覚えました（中身は合っているので撮り直しません）: "
+            + "・".join(seeded))
     if not pages:
+        write_json(DATA / "matome_card.json", ledger)
         log("まとめの画像は全部そろっています（作り直しは --force-png）")
         return 0
     miss = shoot(pages, theme)
