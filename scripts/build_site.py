@@ -874,6 +874,29 @@ def ssr_arch(archive, home):
     return "".join(out)
 
 
+def ssr_mv(r):
+    """順位の上下の印（JavaScriptが動かなくても出る形）。
+
+    型紙の mv() と**同じ見た目**にする。片方だけ直すと、JSが動く前と
+    動いた後で印が変わってしまう。
+    """
+    m = r.get("mv") or None
+    if not m:
+        return ""
+    if m["t"] == "new":
+        return ('<span class="rkmv new" title="当サイトの集計に入ったのは'
+                '今回が初めてです">NEW</span>')
+    was = (f'前の24時間は{m["p"]}位' if m.get("p") else "前の24時間は30位より下")
+    if m["t"] == "in":
+        return f'<span class="rkmv up" title="{was}でした">↑</span>'
+    if m["t"] == "same":
+        return f'<span class="rkmv same" title="{was}。同じ順位です">−</span>'
+    up = m["t"] == "up"
+    cls = ("up" if up else "down") + (" hot" if m.get("hot") else "")
+    return (f'<span class="rkmv {cls}" title="{was}でした">'
+            f'{"↑" if up else "↓"}{m["d"]}</span>')
+
+
 def ssr_cards(rows):
     """上位3件のカード。"""
     out = []
@@ -883,7 +906,9 @@ def ssr_cards(rows):
         out.append(
             f'<div class="gcard"><span class="th">'
             + (f'<img src="{e(th)}" alt="" loading="lazy">' if th else "")
-            + f'<span class="rank">{r["rank"]}</span></span>'
+            + f'<span class="rank">{r["rank"]}</span>'
+            + (f'<span class="mvc">{mvh}</span>' if (mvh := ssr_mv(r)) else "")
+            + "</span>"
             f'<span class="gm"><b>{e(r["game"])}</b>'
             f'<span class="nums"><i>{r["videos"]}</i>件 <i>{r["channels"]}</i>ch '
             f'<i>{man(r["views"])}</i>回</span>'
@@ -899,7 +924,8 @@ def ssr_rows(rows):
         st = (r.get("streams") or [{}])[0]
         th = st.get("th") or ""
         out.append(
-            f'<div class="lrow"><span class="rk2">{r["rank"]}</span>'
+            f'<div class="lrow"><span class="rkw">'
+            f'<span class="rk2">{r["rank"]}</span>{ssr_mv(r)}</span>'
             + (f'<img src="{e(th)}" alt="" loading="lazy">' if th else "")
             + f'<span class="nm2"><b>{e(r["game"])}</b>'
               f'<span>{r["videos"]}件 ・ {r["channels"]}ch ・ {man(r["views"])}回</span></span>'
@@ -3359,6 +3385,125 @@ def compute_rows(videos, idx, disp, override, hist, day_names, momentum_ready,
     return rows, unknown
 
 
+MOVE_DEPTH = 30        # 公開している順位表の深さ。これより下は「圏外」あつかい
+MOVE_HOT = 10          # これだけ上がったら目立たせる（1日1.8件。下に数えた）
+MOVE_MIN_SHARE = 0.6   # 窓の本数が中央値のこれを割る日は、矢印を出さない
+
+
+def rank_moves(rows, days, idx, disp, override, hist, day_names,
+               momentum_ready, plats, cfg):
+    """1〜30位に「前の24時間と比べてどう動いたか」を持たせる。
+
+    なぜ要るか（2026-10-19 たろちんさん）
+    ------------------------------------
+
+        > 1～30位までのランキングに順位アップやダウンがわかる
+        > 「↑（赤い矢印）」「↓（青い矢印）」みたいな表示をつけられないだろうか？
+        > （…）急上昇スコアを示す「▲ ×2.6」はその役割に近いけど、
+        > タブを押さないと見えない
+
+    ★**比べる相手は「前日の記録ページ」ではなく「前の24時間の窓」。**
+      トップの順位表は `windows()` が切る**24時間ずつの窓**で作っていて、
+      記録ページ（site/d/…）は**暦の1日**で作っている。作り方が違うものを
+      引き算すると、動いていないゲームまで動いたように出る。
+      だから前の窓を `compute_rows()` に通し直して、**同じ作り方の順位**と比べる。
+
+    ★**鍵は表示名ではなく `canonical`。** 表示名は `display_names.json` で
+      変わる（2026-10-18に Brawl Stars → ブロスタ など5件変わった）。
+      表示名で引くと、名前を変えた翌日に全部「圏外から」になる。
+
+    ★**クォータ切れの日は、矢印を出さない。** 2026-08-29に、朝は242本しか
+      取れず『みんなのGOLF』が6位、夜に876本で作り直したら圏外だった。
+      あの日の矢印は全部でたらめになる。実際の日ごとの本数は中央値2,653本で、
+      ふだんの前日比は最小0.68。クォータ切れの日は0.3を割る。
+      **中央値の6割**を線にすれば、ふだんのゆれ（0.68）は通って事故は止まる。
+
+    「初登場」の数え方
+    ------------------
+
+    **「30位に入っていない」は「無かった」ではない。** だから初登場は
+    `game_days.json`（全期間・全ゲーム）で見る。それでも足りないので3つ重ねる。
+
+      1. `game_days.json` の**今日より前**の日に、表示名か canonical があるか
+      2. 7日ぶんの `spark` に、今日より前の本数があるか
+         （`game_days.json` は2チャンネル以上しか残していないので、その穴埋め）
+      3. どちらにも無ければ「初登場」
+
+    **出す印は5つだけ。** 1日あたりの件数は56日ぶんの記録ページで数えた。
+
+      ↑n   30位の中で上がった      9.5件/日
+      ↓n   30位の中で下がった      9.6件/日
+      −    同じ順位               2.8件/日
+      ↑    30位より下から入った    6.5件/日（数は出さない。読者が見ていない順位なので）
+      NEW  当サイトで初登場         1.1件/日
+
+    `↑n` が10以上のときだけ色を塗る（1.8件/日）。たろちんさんの言う
+    「hot（大きく順位を上げたゲーム）」を、別の言葉を増やさずに同じ印で出す。
+    """
+    top = rows[:MOVE_DEPTH]
+    if not top:
+        return
+    ok_days = [(d, v) for d, v, ok in days if ok]
+    if len(ok_days) < 2:
+        log("順位の上下は出しません（比べられる窓が足りません）")
+        return
+    sizes = sorted(len(v) for _, v in ok_days)
+    med = sizes[len(sizes) // 2] or 1
+    now_n = len(days[-1][1])
+    prev_label, prev_vids = ok_days[-2]
+    if not days[-2][2]:
+        log("順位の上下は出しません（前の24時間にデータがありません）")
+        return
+    for who, n in (("今日", now_n), (f"前の窓（{prev_label}）", len(prev_vids))):
+        if n < med * MOVE_MIN_SHARE:
+            log(f"順位の上下は出しません（{who}の本数 {n} 本が、"
+                f"ふだんの中央値 {med} 本の{MOVE_MIN_SHARE:.0%}を下回っています。"
+                "クォータ切れの日に矢印を出すと全部でたらめになります）")
+            return
+
+    prev_rows, _ = compute_rows(prev_vids, idx, disp, override, hist,
+                                day_names, momentum_ready, plats, cfg)
+    was = {r["canonical"]: r["rank"] for r in prev_rows if r.get("canonical")}
+
+    # 「前に見たことがあるか」── 今日より前の日だけを数える。
+    # 1日2回まわるので、朝の回が今日ぶんを書いたあとに夜の回が走る。
+    # 今日を入れてしまうと、朝だけ NEW が出て夜は出ない、という形になる。
+    gd = read_json(DATA / "game_days.json", {}) or {}
+    t0 = today()
+    seen = set()
+    for d, games in gd.items():
+        if d < t0:
+            seen |= set(games)
+
+    up = hot = 0
+    for r in top:
+        prev = was.get(r.get("canonical"))
+        if prev is not None and prev <= MOVE_DEPTH:
+            d = prev - r["rank"]
+            r["mv"] = {"t": "up" if d > 0 else ("down" if d < 0 else "same"),
+                       "d": abs(d), "p": prev}
+            if d >= MOVE_HOT:
+                r["mv"]["hot"] = 1
+                hot += 1
+            if d > 0:
+                up += 1
+            continue
+        before = [v for v in (r.get("spark") or [])[:-1] if v]
+        if r["game"] in seen or r.get("canonical") in seen or before:
+            # 前の順位は**吹き出しにだけ**出す。順位表に出しているのは30位
+            # までなので、「47位から」と数字で並べても読者は見ていない。
+            # でも知りたい人のために、持ってはおく。
+            r["mv"] = {"t": "in"}
+            if prev is not None:
+                r["mv"]["p"] = prev
+        else:
+            r["mv"] = {"t": "new"}
+    kinds = Counter(r["mv"]["t"] for r in top if r.get("mv"))
+    log("順位の上下: " + " ".join(
+        f"{k}={kinds.get(k, 0)}" for k in ("up", "down", "same", "in", "new"))
+        + f"（{prev_label} の窓と比べました／大きく上がった {hot} 件）")
+
+
 def main():
     idx = M.build_index()
     disp = M.load_display()
@@ -3394,6 +3539,8 @@ def main():
                                  hist, day_names, momentum_ready, plats, cfg)
     if not rows:
         log("今日のデータからゲームを検出できませんでした。処理を続けます。")
+    rank_moves(rows, days, idx, disp, override, hist, day_names,
+               momentum_ready, plats, cfg)
 
     # 急上昇は「倍率の大きい順」。小さくて誰も知らないゲームが出るようにする。
     #
