@@ -34,6 +34,29 @@ jobs:
         with:
           python-version: "3.11"
 
+      # ★スクリプトの「名前の誤り」を先に見る（2026-10-20 に足した）
+      #
+      # 2026-09-26から10-20まで、`igdb_sync.py` が UnboundLocalError で
+      # **毎回こけていた**のに気づけなかった。発売年（"y"）を足したとき、
+      # それを使う行より**下**に `from datetime import ...` が残っていて、
+      # 関数の中で import すると、その名前は関数ぜんぶでローカル変数になる。
+      #
+      # 性質が悪いのは、**50,000本を取り終えてから落ちる**こと。
+      # 10分ぶんの取得が毎回むだになっていた。ここなら2秒で止まる。
+      #
+      # 止めるのは `undefined name`（＝実行したら必ず落ちる）だけ。
+      # 使っていない import のような小言で止めると、読まれなくなる。
+      - name: スクリプトの下見（名前の誤りだけ）
+        run: |
+          pip install --quiet pyflakes
+          out=$(python -m pyflakes scripts/*.py | grep "undefined name" || true)
+          if [ -n "$out" ]; then
+            echo "::error::スクリプトに未定義の名前があります。直してから回してください"
+            echo "$out"
+            exit 1
+          fi
+          echo "名前の誤りはありませんでした"
+
       - name: ゲーム辞書をIGDBから作る
         if: ${{ inputs.igdb == 'yes' }}
         env:
