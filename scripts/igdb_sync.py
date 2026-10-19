@@ -6,7 +6,8 @@
 「バイオハザード」と「Resident Evil」が同じゲームだと分かるのはこの情報のおかげ。
 """
 import re, time
-from common import IGDB, DATA, log, die, write_json
+from datetime import datetime, timezone
+from common import IGDB, DATA, JST, log, die, write_json
 
 # 上位から何本取るか。5万本もあれば配信されるゲームはほぼ網羅できる。
 CAP = 50000
@@ -127,8 +128,13 @@ def main():
     write_json(DATA / "igdb_games.json", out)
     # いつ作った辞書かを残す。新作の取りこぼしは辞書の古さで起きるので、
     # 「そろそろ作り直す時期か」を後から judge できるようにしておく。
-    from datetime import datetime, timezone
-    from common import JST
+    #
+    # ★**ここで import しない。** 2026-09-26に発売年（"y"）を足したとき、
+    #   上の 107 行目が datetime を使うようになったのに、import はこの
+    #   下のままだった。**関数の中で import すると、その名前は関数ぜんぶで
+    #   「ローカル変数」になる。** だから先に使った 107 行目が
+    #   UnboundLocalError で落ちて、**辞書の作り直しが毎回こけていた**
+    #   （2026-10-20 たろちんさんの報告で気づいた）。import は頭に置く。
     write_json(DATA / "igdb_meta.json",
                {"built": datetime.now(JST).strftime("%Y-%m-%d"), "games": len(out)})
     log(f"IGDB辞書を作成しました: {len(out)} タイトル → data/igdb_games.json")
