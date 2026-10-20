@@ -36,7 +36,7 @@
   --ground:#F3F5F4;--card:#FFF;--card-2:#F8FAF9;--line:#DBE4E2;--line-soft:#EAF0EE;
   --ink:#111B1D;--ink-2:#3E5457;--ink-3:#6F8688;
   --accent:#0B6B70;--accent-2:#0E8B90;--wash:#DFEFEE;
-  --hot:#B4551C;--hot-wash:#FAEBDD;--down:#5C7683;
+  --hot:#B4551C;--hot-wash:#FAEBDD;--down:#5C7683;--on-hot:#FFFFFF;
   --tipbg:#1D2C2E;--tipfg:#EFF5F4;--steam:#1B2838;--r:12px;
   --sh:0 1px 2px rgba(17,27,29,.05),0 10px 30px -22px rgba(17,27,29,.4);
 }
@@ -44,14 +44,14 @@
   --ground:#0D1415;--card:#141E1F;--card-2:#182324;--line:#27383A;--line-soft:#1E2B2C;
   --ink:#E8EFEE;--ink-2:#A2B7B8;--ink-3:#7C9294;
   --accent:#48BEC2;--accent-2:#6BD2D5;--wash:#102C2E;
-  --hot:#E8975C;--hot-wash:#2C2017;--down:#7E9DAA;
+  --hot:#E8975C;--hot-wash:#2C2017;--down:#7E9DAA;--on-hot:#141E1F;
   --tipbg:#E8EFEE;--tipfg:#101A1B;--steam:#2A475E;
   --sh:0 1px 2px rgba(0,0,0,.45),0 12px 34px -24px #000;}}
 :root[data-theme="dark"]{
   --ground:#0D1415;--card:#141E1F;--card-2:#182324;--line:#27383A;--line-soft:#1E2B2C;
   --ink:#E8EFEE;--ink-2:#A2B7B8;--ink-3:#7C9294;
   --accent:#48BEC2;--accent-2:#6BD2D5;--wash:#102C2E;
-  --hot:#E8975C;--hot-wash:#2C2017;--down:#7E9DAA;
+  --hot:#E8975C;--hot-wash:#2C2017;--down:#7E9DAA;--on-hot:#141E1F;
   --tipbg:#E8EFEE;--tipfg:#101A1B;--steam:#2A475E;
   --sh:0 1px 2px rgba(0,0,0,.45),0 12px 34px -24px #000;}
 *{box-sizing:border-box}
@@ -286,7 +286,10 @@ tr.detail td{background:var(--card-2);padding:14px 18px}
 .gcard .rank{position:absolute;left:9px;top:9px;width:29px;height:29px;border-radius:9px;display:grid;
  place-items:center;font-family:"Roboto Mono",monospace;font-weight:700;font-size:15px;color:#fff;
  background:rgba(11,27,29,.72)}
-.gcard:first-child .rank{background:var(--hot)}
+/* ★1位の札は --hot で塗っている。白い字だとダークで **2.33:1** しか無く、
+   数字が沈んで読めなかった（2026-10-20に測って気づいた。前からの不具合）。
+   --on-hot はライトで白、ダークで濃い字。ダークは 7.30:1 になる。 */
+.gcard:first-child .rank{background:var(--hot);color:var(--on-hot)}
 .gcard .open{position:absolute;right:9px;bottom:9px;display:flex;align-items:center;gap:4px;
  font-size:11px;font-weight:700;color:#fff;background:rgba(11,27,29,.72);border-radius:20px;padding:4px 10px}
 .gcard .gm{padding:11px 13px 13px;display:flex;flex-direction:column;gap:5px}
@@ -307,7 +310,9 @@ tr.detail td{background:var(--card-2);padding:14px 18px}
 .lrow:hover{background:var(--card-2)}
 .lrow .rk2{font-family:"Roboto Mono",monospace;font-weight:700;font-size:14px;color:var(--ink-3);
  width:26px;text-align:right;flex:none}
-.lrow .rkw .rk2{width:auto}
+.lrow .rkw .rk2{width:auto;font-size:17px;color:var(--ink);line-height:1.05}
+/* Roboto Mono は 400/500/700 しか読み込んでいない。800 を指定すると
+   ブラウザが太らせた偽の太字になってぼやけるので、700 のままにする。 */
 .lrow img{width:62px;height:35px;object-fit:cover;border-radius:6px;flex:none;background:var(--line-soft)}
 .lrow .nm2{flex:1;min-width:0}
 .lrow .nm2 b{display:block;font-family:"Zen Kaku Gothic New",sans-serif;font-size:14px;font-weight:700;
@@ -320,21 +325,30 @@ tr.detail td{background:var(--card-2);padding:14px 18px}
    色は「後押し」でしかない。**矢印の向きと数字だけで読める**ようにしてある
    （赤と青が見分けにくい人にも同じ情報が届く）。色は新しく足していない。
    --hot（上）と --down（下）は、このサイトがもともと持っている印。 */
-.rkw{flex:none;width:36px;display:flex;flex-direction:column;align-items:center;gap:3px}
-/* 地のまま置く（下地を敷かない）。白の上なら --hot も --down も
-   コントラストが 4.9:1 / 5.3:1 あって読めるが、薄い下地を敷くと
-   3.9:1 まで落ちてしまう。**読みやすさのほうを取る。** */
-.rkmv{font-family:"Roboto Mono",monospace;font-weight:700;font-size:11.5px;line-height:1.1;
- letter-spacing:-.3px;white-space:nowrap}
+.rkw{flex:none;width:42px;display:flex;flex-direction:column;align-items:center;
+ justify-content:center;gap:2px}
+/* ★**順位のほうを主役にする**（2026-10-20 たろちんさん）。
+   「順位の数字と上昇した数字が並ぶと、同じような数字が2つ並んでごちゃごちゃする」。
+   原因は**主従が逆**だったこと。順位が --ink-3（薄い灰）で、変動が --hot（鮮やかな朱）。
+   補足のほうが先に目に入って、順位が背景に沈んでいた。
+   順位を濃く・大きく、変動を小さく・細くして、縦に並んでも別のものに見えるようにする。
+   ついでに、いまの順位の色は白地で **3.86:1** しか無く、小さい字の線（4.5:1）を
+   割っていた。--ink にすると 17.5:1。**読みやすさの不具合でもあった。**
+
+   ★**下地は敷かない。** 下地を敷いてバッジにする案もあったが、実際に測ると
+   ライトで ↑ が 4.93→4.23、↓ が 4.80→4.16 と、どちらも 4.5 を割る。
+   主従の差は「大きさと太さ」で付けて、色のコントラストは落とさない。 */
+.rkmv{font-family:"Roboto Mono",monospace;font-weight:500;font-size:10px;line-height:1;
+ letter-spacing:0;white-space:nowrap}
 .rkmv.up{color:var(--hot)}
 .rkmv.down{color:var(--down)}
 .rkmv.same{color:var(--ink-3)}
 /* 大きく上がったものと初登場だけ、色を塗って目を留める。
    1日あたり「10以上上がった」1.8件＋「初登場」1.1件で、30行のうち3行ほど。
    これ以上塗ると、一覧がうるさくなって印の意味が薄れる。 */
-.rkmv.hot,.rkmv.new{color:#fff;background:var(--hot);border-radius:5px;padding:1.5px 4px;
- letter-spacing:0;font-size:10.5px}
-.rkmv.new{font-size:9.5px}
+.rkmv.hot,.rkmv.new{color:var(--on-hot);background:var(--hot);border-radius:5px;
+ padding:1.5px 4px;letter-spacing:0;font-size:9.5px;font-weight:700}
+.rkmv.new{font-size:9px}
 /* 凡例。印そのものを並べて見せる（言葉で説明するより短い） */
 .mvkey{display:flex;align-items:center;gap:5px;flex-wrap:wrap}
 .mvkey .rkmv{font-size:9.5px}
@@ -344,7 +358,7 @@ tr.detail td{background:var(--card-2);padding:14px 18px}
  font-size:10.5px}
 .gcard .mvc .rkmv.up{color:#FFD2AE}
 .gcard .mvc .rkmv.down{color:#CFE2EA}
-.gcard .mvc .rkmv.hot,.gcard .mvc .rkmv.new{background:var(--hot);color:#fff}
+.gcard .mvc .rkmv.hot,.gcard .mvc .rkmv.new{background:var(--hot);color:var(--on-hot)}
 .chev{flex:none;width:22px;height:22px;color:var(--ink-3);transition:transform .18s}
 .open-x .chev{transform:rotate(180deg);color:var(--accent)}
 /* 開いている急上昇カードを分かるようにする */
@@ -604,7 +618,7 @@ footer{font-size:11.5px;color:var(--ink-3);text-align:center;border-top:1px soli
 </div>
 
 <script>
-const DATA = {"mode": "page", "date": "2026-10-20", "subtitle": "『バイオハザード レクイエム』の配信", "generated": "2026-10-20 09:58", "paths": {"home": "../../", "archive": "../../archive/"}};
+const DATA = {"mode": "page", "date": "2026-10-20", "subtitle": "『バイオハザード レクイエム』の配信", "generated": "2026-10-20 23:02", "paths": {"home": "../../", "archive": "../../archive/"}};
 const $ = s => document.querySelector(s);
 const esc = s => String(s ?? '').replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
 

@@ -1,67 +1,8 @@
 {
  "date": "2026-10-20",
- "generated": "2026-10-20 09:58",
+ "generated": "2026-10-20 23:02",
  "leads": {
   "events": [
-   {
-    "tag": "#ホロドリ",
-    "channels": [
-     "AZKi Channel",
-     "Choco Ch. 癒月ちょこ",
-     "Iroha ch. 風真いろは - holoX -",
-     "Koyori ch. 博衣こより - holoX -",
-     "Towa Ch. 常闇トワ",
-     "Vivi Ch. 綺々羅々ヴィヴィ - FLOW GLOW",
-     "アキロゼCh。Vtuber/ホロライブ所属",
-     "宵吸あけル / Yokyu Akeru"
-    ]
-   },
-   {
-    "tag": "#歌うまスンギ歌枠リレー",
-    "channels": [
-     "Kanade Ch. 音乃瀬奏 ‐ ReGLOSS",
-     "星導ショウ / Hoshirube Sho【にじさんじ】",
-     "町田ちま【にじさんじ】",
-     "緋月ゆい / Hizuki Yui",
-     "音ノ乃のの / NononoNono"
-    ]
-   },
-   {
-    "tag": "#ゲーム実況",
-    "channels": [
-     "M家の休日マサ",
-     "Usagi Ch. 因幡兎",
-     "えりんぎ Games",
-     "恋因ロス KoinRosu",
-     "運天りらん"
-    ]
-   },
-   {
-    "tag": "#ホロ鯖ARK",
-    "channels": [
-     "Choco Ch. 癒月ちょこ",
-     "Pekora Ch. 兎田ぺこら",
-     "Towa Ch. 常闇トワ",
-     "アキロゼCh。Vtuber/ホロライブ所属"
-    ]
-   },
-   {
-    "tag": "#わちゃサバ",
-    "channels": [
-     "ノビーの遊び部屋",
-     "天羽よつは",
-     "小花衣 ももみ / Momomi Kohanai",
-     "扇名いだ"
-    ]
-   },
-   {
-    "tag": "#SURGECity",
-    "channels": [
-     "Mimoza Ch. 華咲みもざ",
-     "marunnn【まるーんチャンネル】",
-     "碧輝りお /Aoki Rio"
-    ]
-   },
    {
     "tag": "#スト犬カスタム",
     "channels": [
@@ -71,11 +12,11 @@
     ]
    },
    {
-    "tag": "#フォートナイト",
+    "tag": "#ホロドリ",
     "channels": [
-     "mogすけちゃんネル",
-     "くろのす",
-     "めるとくん"
+     "AZKi Channel",
+     "Choco Ch. 癒月ちょこ",
+     "アキロゼCh。Vtuber/ホロライブ所属"
     ]
    }
   ],
@@ -83,88 +24,54 @@
   "wide": [
    {
     "game": "Apex Legends",
-    "channels": 34,
-    "videos": 36
+    "channels": 9,
+    "videos": 9
    },
    {
     "game": "ストリートファイター6",
-    "channels": 29,
-    "videos": 32
+    "channels": 9,
+    "videos": 9
    },
    {
-    "game": "Minecraft",
-    "channels": 18,
-    "videos": 18
+    "game": "Wardogs",
+    "channels": 8,
+    "videos": 8
+   },
+   {
+    "game": "Among Us",
+    "channels": 8,
+    "videos": 8
    },
    {
     "game": "VALORANT",
-    "channels": 17,
-    "videos": 17
+    "channels": 7,
+    "videos": 7
+   },
+   {
+    "game": "マリオカート ワールド",
+    "channels": 6,
+    "videos": 6
    },
    {
     "game": "League of Legends",
-    "channels": 16,
-    "videos": 16
+    "channels": 5,
+    "videos": 5
    },
    {
-    "game": "hololive Dreams",
-    "channels": 13,
-    "videos": 13
-   },
-   {
-    "game": "フォートナイト",
-    "channels": 13,
-    "videos": 15
-   },
-   {
-    "game": "実況パワフルプロ野球2026",
-    "channels": 13,
-    "videos": 16
+    "game": "Japanese Ramen Simulator",
+    "channels": 6,
+    "videos": 6
    }
   ]
  },
  "drift": [],
- "tags": [
-  {
-   "tag": "わちゃサバ",
-   "game": "Minecraft",
-   "evidence": 3,
-   "added": 1,
-   "channels": 4
-  }
- ],
+ "tags": [],
  "misses": [
-  {
-   "word": "#splitbrain",
-   "channels": 1,
-   "n": 2,
-   "examples": [
-    {
-     "t": "【#splitbrain】視覚と操作が分かれた世界で飲酒協力プレイ【#ちゃみたこ】",
-     "c": "朝ノ夜",
-     "u": "https://www.youtube.com/watch?v=5j__Rgs8Wxs"
-    },
-    {
-     "t": "【#splitbrain】視覚と操作が分かれた世界で飲酒協力プレイ【#ちゃみたこ】",
-     "c": "朝ノ夜",
-     "u": "https://www.youtube.com/watch?v=5j__Rgs8Wxs"
-    }
-   ],
-   "kind": "near",
-   "suggest": [
-    "Split Brain Samsara"
-   ]
-  },
   {
    "word": "Starward",
    "channels": 1,
-   "n": 2,
+   "n": 1,
    "examples": [
-    {
-     "t": "【星の翼】第1回初日最強杯ーミスリル編ー ※エントリー募集中【星之翼/Starward】【東和正】",
-     "c": "東和正 / AzumaKazumasa",
-     "u": "https://www.youtube.com/watch?v=QyF5KlHdY58"
-    },
     {
      "t": "【星の翼】ミスリル実装のアップデート詳細来た！みんなでレシート見ていこ～～【星之翼/Starward】【東和正】!surfshark",
      "c": "東和正 / AzumaKazumasa",
@@ -174,44 +81,6 @@
    "kind": "near",
    "suggest": [
     "Starward Rogue"
-   ]
-  },
-  {
-   "word": "#birthday",
-   "channels": 1,
-   "n": 2,
-   "examples": [
-    {
-     "t": "【#birthday 】10/24㊏20:00-🎉戸鎖くくり生誕祭&新衣装お披露目🎉告知もｱﾙﾖ📢【#戸鎖くくり生誕祭2026 /個人勢Vtuber】",
-     "c": "kukuri ch * 戸鎖 くくり *",
-     "u": "https://www.youtube.com/watch?v=4Df_S-AfQ24"
-    },
-    {
-     "t": "【#birthday 】10/24㊏20:00-🎉戸鎖くくり生誕祭&新衣装お披露目🎉告知もｱﾙﾖ📢【#戸鎖くくり生誕祭2026 /個人勢Vtuber】",
-     "c": "kukuri ch * 戸鎖 くくり *",
-     "u": "https://www.youtube.com/watch?v=4Df_S-AfQ24"
-    }
-   ],
-   "kind": "near",
-   "suggest": [
-    "Birthday Boy and Benny",
-    "Birthday Visit"
-   ]
-  },
-  {
-   "word": "pop'n music",
-   "channels": 1,
-   "n": 1,
-   "examples": [
-    {
-     "t": "【夢と魔法がテーマ】CSポップン10を初体験！！！グランヂや禅ジャズなどいよいよ知ってる曲が増えてきた！解禁イベントが大変らしいので\"電撃PS2\"のデータ使うよ【音ゲー / pop'n music】",
-     "c": "DOLCE. / dolce_iwate Channel",
-     "u": "https://www.youtube.com/watch?v=ELKPn5B21qY"
-    }
-   ],
-   "kind": "near",
-   "suggest": [
-    "Pop'n Music 13 Carnival"
    ]
   },
   {
@@ -228,6 +97,22 @@
    "kind": "near",
    "suggest": [
     "Synduality: Echo of Ada"
+   ]
+  },
+  {
+   "word": "pop'n music",
+   "channels": 1,
+   "n": 1,
+   "examples": [
+    {
+     "t": "【夢と魔法がテーマ】CSポップン10を初体験！！！グランヂや禅ジャズなどいよいよ知ってる曲が増えてきた！解禁イベントが大変らしいので\"電撃PS2\"のデータ使うよ【音ゲー / pop'n music】",
+     "c": "DOLCE. / dolce_iwate Channel",
+     "u": "https://www.youtube.com/watch?v=ELKPn5B21qY"
+    }
+   ],
+   "kind": "near",
+   "suggest": [
+    "Pop'n Music 13 Carnival"
    ]
   },
   {
@@ -262,9 +147,9 @@
      "u": "https://www.youtube.com/watch?v=c9ZiLsVG4mU"
     },
     {
-     "t": "【歌枠】主催、ド、緊張の模様┊#音ノ乃のの #歌うまスンギ歌枠リレー",
-     "c": "音ノ乃のの / NononoNono",
-     "u": "https://www.youtube.com/watch?v=Gv52cL0bmTk"
+     "t": "【#歌うまスンギ歌枠リレー】楽しく歌わせていただきます【星導ショウ/にじさんじ】",
+     "c": "星導ショウ / Hoshirube Sho【にじさんじ】",
+     "u": "https://www.youtube.com/watch?v=kn3xwLDwQ-0"
     }
    ],
    "kind": "wide",
@@ -286,9 +171,9 @@
      "u": "https://www.youtube.com/watch?v=ZQnW0egDBk8"
     },
     {
-     "t": "【初見さん歓迎】白狛のえって何なの！？ #白狛のえ",
-     "c": "白狛のえ",
-     "u": "https://www.youtube.com/watch?v=HFqksRvhakY"
+     "t": "【新作】あのサイゲームズが送るドラマチック崩落アクションアドベンチャー「崩落の国」体験版が出ていたので攻略配信！【面白いのか！？】【初見さん歓迎！】",
+     "c": "ほーだん×ゲーマーズ / ほぼ毎日更新ゲーム総合情報ch",
+     "u": "https://www.youtube.com/watch?v=2zYPdXAEE6Y"
     }
    ],
    "kind": "wide",
@@ -297,13 +182,8 @@
   {
    "word": "プロスピA",
    "channels": 3,
-   "n": 12,
+   "n": 11,
    "examples": [
-    {
-     "t": "【プロスピA】2026OB第2弾ランキングボーダー予想5日目！！ついに最終予想発表！！上振れ下振れに応じて3種類で対応可能！！",
-     "c": "ねこマンちゃんねる",
-     "u": "https://www.youtube.com/watch?v=sOpPC6n05NY"
-    },
     {
      "t": "【プロスピA】2026OB第2弾ランキングボーダー予想最終日！！大荒れランキングもついに佳境！最後まで走り抜こう！！！",
      "c": "ねこマンちゃんねる",
@@ -313,6 +193,11 @@
      "t": "【プロスピA】ランキングの心配しながらタイブレーク杯",
      "c": "ねこマンちゃんねる",
      "u": "https://www.youtube.com/watch?v=3Zg7HS886qo"
+    },
+    {
+     "t": "【初見さん歓迎】GWも最終日…雑談しながらランク戦【プロスピA】",
+     "c": "ねこマンちゃんねる",
+     "u": "https://www.youtube.com/watch?v=ZQnW0egDBk8"
     }
    ],
    "kind": "wide",
@@ -348,43 +233,19 @@
    "n": 6,
    "examples": [
     {
-     "t": "【#秋を奏でる歌枠リレー】ラストを務めます！最後まで楽しむぞ🍂【緋月ゆい/ネオポルテ】",
-     "c": "緋月ゆい / Hizuki Yui",
-     "u": "https://www.youtube.com/watch?v=I4mbGy9r18c"
-    },
-    {
-     "t": "【#秋を奏でる歌枠リレー】ラストを務めます！最後まで楽しむぞ🍂【緋月ゆい/ネオポルテ】",
-     "c": "緋月ゆい / Hizuki Yui",
-     "u": "https://www.youtube.com/watch?v=I4mbGy9r18c"
+     "t": "〖 #秋を奏でる歌枠リレー 〗うたうにょ～🎤の巻〖 ぶいすぽっ！ / 夜乃くろむ 〗",
+     "c": "夜乃くろむ / Yano Kuromu",
+     "u": "https://www.youtube.com/watch?v=ydeWvwe8_0U"
     },
     {
      "t": "〖 #秋を奏でる歌枠リレー 〗うたうにょ～🎤の巻〖 ぶいすぽっ！ / 夜乃くろむ 〗",
      "c": "夜乃くろむ / Yano Kuromu",
      "u": "https://www.youtube.com/watch?v=ydeWvwe8_0U"
-    }
-   ],
-   "kind": "wide",
-   "suggest": []
-  },
-  {
-   "word": "バイオハザード",
-   "channels": 3,
-   "n": 4,
-   "examples": [
-    {
-     "t": "実はホラーじゃない説!?映画『バイオハザード』（2026）を語りつくす！：#505 しゃべりすぎGAMER",
-     "c": "IGN Japan",
-     "u": "https://www.youtube.com/watch?v=K9LSgmAgC5c"
     },
     {
-     "t": "ネタバレあり感想「バイオハザード実写映画」揃いも揃ってみんなダメな人しかいないｗｗｗ#バイオハザード #反応集",
-     "c": "アニゲー部「ゲームアニメ反応集」",
-     "u": "https://www.youtube.com/watch?v=HKS8uT9stYU"
-    },
-    {
-     "t": "【朗報】駄作だらけのバイオ、遂にまともな実写映画が作られる『バイオハザード』",
-     "c": "ホッカイロレン",
-     "u": "https://www.youtube.com/watch?v=Ysjt0Hx07Qg"
+     "t": "【#秋を奏でる歌枠リレー】ラストを務めます！最後まで楽しむぞ🍂【緋月ゆい/ネオポルテ】",
+     "c": "緋月ゆい / Hizuki Yui",
+     "u": "https://www.youtube.com/watch?v=I4mbGy9r18c"
     }
    ],
    "kind": "wide",
@@ -433,54 +294,6 @@
      "t": "【浮気判定】ライブありがとう浮気判定シート雑談【柚原いづみ / ななしいんく】",
      "c": "柚原いづみ / Izumi Channel 【ななしいんく】",
      "u": "https://www.youtube.com/watch?v=vhkP1R5F29M"
-    }
-   ],
-   "kind": "wide",
-   "suggest": []
-  },
-  {
-   "word": "振り返り",
-   "channels": 3,
-   "n": 3,
-   "examples": [
-    {
-     "t": "【ふりかけ】振り向きAIM【振り返り】",
-     "c": "Kuzuha Channel",
-     "u": "https://www.youtube.com/watch?v=plc0Cz_y3rQ"
-    },
-    {
-     "t": "【振り返り】すぺしゃりて加入1周年！【安心院みさ/すぺしゃりて】",
-     "c": "安心院みさ / ANSHININ MISA",
-     "u": "https://www.youtube.com/watch?v=KLz2-JBDrhQ"
-    },
-    {
-     "t": "【振り返り】ライブ楽しかった！！振り返りしていきたいと思います！　#シャルのひつじ【島村シャルロット / ななしいんく】",
-     "c": "島村シャルロット / Charlotte Channel【ななしいんく】",
-     "u": "https://www.youtube.com/watch?v=UcHyrmVg9Lg"
-    }
-   ],
-   "kind": "wide",
-   "suggest": []
-  },
-  {
-   "word": "回転寿司シミュレーター",
-   "channels": 3,
-   "n": 3,
-   "examples": [
-    {
-     "t": "【回転寿司シミュレーター】この道40年【轟はじめ/ホロライブReGLOSS】",
-     "c": "Hajime Ch. 轟はじめ ‐ ReGLOSS",
-     "u": "https://www.youtube.com/watch?v=C0ncS8lUF5U"
-    },
-    {
-     "t": "【回転寿司シミュレーター】深夜のchillはやっぱ寿司なんだよ。🍣【海月雲ろあ/ #ろあるーむ】",
-     "c": "Roa Ch. 海月雲ろあ",
-     "u": "https://www.youtube.com/watch?v=d0pB9iECaC8"
-    },
-    {
-     "t": "【回転寿司シミュレーター】寿司職人爆誕【うるか】",
-     "c": "Uruca ch /うるか",
-     "u": "https://www.youtube.com/watch?v=90HyjidaKCQ"
     }
    ],
    "kind": "wide",
@@ -539,11 +352,11 @@
  "hot_facts": [
   {
    "game": "えかきうた大合戦",
-   "growth": 7.5,
-   "videos": 6,
+   "growth": 6.25,
+   "videos": 5,
    "base": 0.7,
-   "channels": 6,
-   "views": 325724,
+   "channels": 5,
+   "views": 325520,
    "who": [
     "一ノ瀬うるは",
     "甘結もか / Amayui Moka",
@@ -564,78 +377,23 @@
    "first_here": false
   },
   {
-   "game": "学園アイドルマスター",
-   "growth": 5.0,
-   "videos": 4,
-   "base": 0.5,
-   "channels": 3,
-   "views": 5795,
-   "who": [
-    "愛幸Pプロデュースch. / aisachiP",
-    "Mimoza Ch. 華咲みもざ",
-    "かぐch",
-    "Mimoza Ch. 華咲みもざ"
-   ],
-   "titles": [
-    "【学マス速報】『Roar』星南の性能解禁！再行動固有は偉いが動きはどうなる？",
-    "【#学園アイドルマスター】「Agitato」咲季ガシャ引く＆イベコミュ読み！＃７【 #華咲みもざ / ネタバレ注意 】",
-    "「学マス」アドリブ・背伸び・かが君狙い【Vtuber】"
-   ],
-   "genres": [],
-   "year": null,
-   "platforms": [],
-   "days_seen": 6,
-   "last_seen": "2026-10-19",
-   "first_here": false
-  },
-  {
-   "game": "Tenebris Somnia",
-   "growth": 2.5,
-   "videos": 3,
-   "base": 1.2,
-   "channels": 3,
-   "views": 8293,
-   "who": [
-    "人生 つみこ (ホラーゲーム専門Vtuber)",
-    "たまチャンネル",
-    "スーピー / Soopy【JP】"
-   ],
-   "titles": [
-    "【 Tenebris Somnia 】実写×レトロサバイバルホラーゲーム！クリアまでいきたい！#02【 人生つみこ】",
-    "【Tenebris Somnia】実写とドット絵２つが切り替わるサバイバルサイコホラー：物語のヒントはどちらかにある、サイレントヒルファンメイド映像作品制作者による新境地",
-    "【Tenebris Somnia】エンド回収！実写ありの新作2Dドットホラゲー⁉️Vamos a recogida al final！【ホラーゲーム実況 / Vtuber】"
-   ],
-   "genres": [
-    "Adventure",
-    "Indie"
-   ],
-   "year": 2026,
-   "platforms": [
-    "pc",
-    "console"
-   ],
-   "days_seen": 2,
-   "last_seen": "2026-10-19",
-   "first_here": false
-  },
-  {
    "game": "Wardogs",
-   "growth": 2.2,
-   "videos": 9,
-   "base": 4.1,
-   "channels": 9,
-   "views": 224938,
+   "growth": 2.0,
+   "videos": 8,
+   "base": 4.0,
+   "channels": 8,
+   "views": 199326,
    "who": [
     "花芽なずな / Nazuna Kaga",
     "TIE Ru",
-    "ソバルト / SoVault",
     "Syusetu kohaku/秋雪こはく",
-    "SANNINSHOW"
+    "SANNINSHOW",
+    "Ao WuWu Ch.【V4Mirai】"
    ],
    "titles": [
     "【Wardogs】ストリーマーカスタムだって！【ぶいすぽ/花芽なずな】",
     "配信者100人のWARDOGSカスタム！！本気スナイパーでチームを勝たせます | #スト犬カスタム",
-    "初心者でも簡単\"超効率輸送トラック\"経験値＆金策攻略がヤバすぎる件-WARDOGSシーズン2実況解説 -【ソバルト】"
+    "【WARDOGS】WARDOGS STREAMER CUSTOM 参加するー！【REJECT/秋雪こはく】"
    ],
    "genres": [
     "Shooter",
@@ -648,60 +406,6 @@
     "console"
    ],
    "days_seen": 41,
-   "last_seen": "2026-10-19",
-   "first_here": false
-  },
-  {
-   "game": "マリオカート",
-   "growth": 1.88,
-   "videos": 3,
-   "base": 1.6,
-   "channels": 3,
-   "views": 146662,
-   "who": [
-    "SHINGO(しんご)",
-    "あっさりしょこ",
-    "スウィントと上田さん"
-   ],
-   "titles": [
-    "マリオカートがサービス終了した件について",
-    "マリオカート1位三回とるまでオレはやる/10/19",
-    "スタートダッシュなしで『世界1位』を取る天才が現れました。【マリオカート8DX】"
-   ],
-   "genres": [
-    "Racing",
-    "Arcade"
-   ],
-   "year": 1992,
-   "platforms": [
-    "console"
-   ],
-   "days_seen": 33,
-   "last_seen": "2026-10-19",
-   "first_here": false
-  },
-  {
-   "game": "ゼンレスゾーンゼロ",
-   "growth": 1.74,
-   "videos": 4,
-   "base": 2.3,
-   "channels": 4,
-   "views": 24461,
-   "who": [
-    "うおうおちゃんねる さかなじょうゆ",
-    "フクー",
-    "ボビー",
-    "夢見ルビィ / YUMEMI RUBY"
-   ],
-   "titles": [
-    "【ゼンゼロ】「フィオニー」編成のスコア比較！危局実戦映像も紹介！【ゼンレスゾーンゼロ】【ZZZ・攻略・考察・検証・創作体験】#ZZZ  #レミエール #ヴェリナ",
-    "【#ゼンゼロ #309】ver切り替わり前なので流石にマシュマロは消化しておこう枠  【ZZZ/ゼンレスゾーンゼロ】",
-    "【ゼンゼロ】V2.0後半？ふーふーが可愛い担当すぎる"
-   ],
-   "genres": [],
-   "year": null,
-   "platforms": [],
-   "days_seen": 26,
    "last_seen": "2026-10-19",
    "first_here": false
   }
