@@ -1,15 +1,28 @@
 {
- "date": "2026-10-21",
- "generated": "2026-10-21 10:02",
+ "date": "2026-10-22",
+ "generated": "2026-10-22 00:02",
  "leads": {
   "events": [
+   {
+    "tag": "#ストグラ",
+    "channels": [
+     "Tenten Ch. / 鳳玲天々",
+     "marunnn【まるーんチャンネル】",
+     "たけぉ",
+     "にーとちゃん",
+     "まお",
+     "みつき",
+     "クラウン【探検家の記録】",
+     "ノビーの遊び部屋",
+     "闇乃あびす / Abyss"
+    ]
+   },
    {
     "tag": "#ホロドリ",
     "channels": [
      "Choco Ch. 癒月ちょこ",
      "Flare Ch. 不知火フレア",
      "Iroha ch. 風真いろは - holoX -",
-     "Riona Ch. 響咲リオナ - FLOW GLOW",
      "Roboco Ch. - ロボ子",
      "Vivi Ch. 綺々羅々ヴィヴィ - FLOW GLOW",
      "ここっとスクエア【ここスク】",
@@ -18,25 +31,12 @@
     ]
    },
    {
-    "tag": "#ゲーム実況",
+    "tag": "#SURGECity",
     "channels": [
-     "M家の休日マサ",
-     "Usagi Ch. 因幡兎",
-     "あまね星歌",
-     "ジョアだよ",
-     "ルベルフゲームチャンネル",
-     "恋因ロス KoinRosu",
-     "豚咲あおい_TomisakiAoi"
-    ]
-   },
-   {
-    "tag": "#秋を奏でる歌枠リレー",
-    "channels": [
-     "夜乃くろむ / Yano Kuromu",
-     "小廻こま / Komawari Koma",
-     "心白てと / Kohaku Teto",
-     "猫汰つな / Nekota Tsuna",
-     "緋月ゆい / Hizuki Yui"
+     "Mimoza Ch. 華咲みもざ",
+     "おなつのにびたし / Onatsu no Nibitashi",
+     "史門 / Shimon ",
+     "銀灰まお Mao Ch."
     ]
    },
    {
@@ -44,18 +44,8 @@
     "channels": [
      "Rei7【にじさんじ】",
      "Yuhi Riri Official",
-     "ラトナ・プティ -Ratna Petit -にじさんじ所属",
      "御子神琴音 / Mikogami Kotone【にじさんじ】",
      "椎名唯華 / Shiina Yuika"
-    ]
-   },
-   {
-    "tag": "#ホロ鯖ARK",
-    "channels": [
-     "Nene Ch.桃鈴ねね",
-     "Pekora Ch. 兎田ぺこら",
-     "Towa Ch. 常闇トワ",
-     "アキロゼCh。Vtuber/ホロライブ所属"
     ]
    },
    {
@@ -68,12 +58,20 @@
     ]
    },
    {
-    "tag": "#ぶいきゃす",
+    "tag": "#ゲーム実況",
     "channels": [
-     "ちゃい・ふにえる",
-     "孵卵リリス / Furan Lilith",
-     "浅葱なぎ",
-     "羅々華セーラ-Raraka Sera-"
+     "Usagi Ch. 因幡兎",
+     "ぱんちき🥖🦃",
+     "ジョアだよ",
+     "里城はな"
+    ]
+   },
+   {
+    "tag": "#minecraft",
+    "channels": [
+     "まりも",
+     "ゆるふわまったり勢のゆかりさん",
+     "ズズちゃんねる!!!"
     ]
    },
    {
@@ -88,72 +86,64 @@
   "newcomers": [],
   "wide": [
    {
-    "game": "ストリートファイター6",
-    "channels": 38,
-    "videos": 42
-   },
-   {
     "game": "Apex Legends",
-    "channels": 31,
-    "videos": 36
+    "channels": 43,
+    "videos": 49
    },
    {
-    "game": "オーバーウォッチ2",
-    "channels": 22,
-    "videos": 22
+    "game": "ストリートファイター6",
+    "channels": 33,
+    "videos": 40
    },
    {
     "game": "Minecraft",
-    "channels": 22,
-    "videos": 22
+    "channels": 30,
+    "videos": 31
+   },
+   {
+    "game": "Grand Theft Auto V",
+    "channels": 25,
+    "videos": 28
    },
    {
     "game": "Dead by Daylight",
-    "channels": 18,
+    "channels": 22,
+    "videos": 26
+   },
+   {
+    "game": "オーバーウォッチ2",
+    "channels": 17,
     "videos": 20
    },
    {
     "game": "スプラトゥーン3",
-    "channels": 15,
-    "videos": 16
+    "channels": 19,
+    "videos": 21
    },
    {
-    "game": "モンスターハンターワイルズ",
-    "channels": 14,
-    "videos": 15
-   },
-   {
-    "game": "League of Legends",
-    "channels": 12,
-    "videos": 12
+    "game": "Japanese Ramen Simulator",
+    "channels": 17,
+    "videos": 17
    }
   ]
  },
  "drift": [],
- "tags": [
-  {
-   "tag": "ぶいきゃす",
-   "game": "Arknights: Endfield",
-   "evidence": 4,
-   "added": 1,
-   "channels": 4
-  }
- ],
+ "tags": [],
  "misses": [
   {
-   "word": "Starward",
+   "word": "SYNDUALITY",
    "channels": 1,
    "n": 1,
    "examples": [
     {
-     "t": "【星の翼】ミスリル実装のアップデート詳細来た！みんなでレシート見ていこ～～【星之翼/Starward】【東和正】!surfshark",
-     "c": "東和正 / AzumaKazumasa",
-     "u": "https://www.youtube.com/watch?v=M2mcmBKA-hY"
+     "t": "【SYN】オーバーホール情報！discordラジオ視聴しながらプレイ！【SYNDUALITY】 #公式アンバサダー",
+     "c": "ゆっきー",
+     "u": "https://www.youtube.com/watch?v=p7pla_MAsAM"
     }
    ],
    "kind": "near",
    "suggest": [
-    "Starward Rogue"
+    "Synduality: Echo of Ada"
    ]
   },
   {
@@ -173,22 +163,6 @@
    ]
   },
   {
-   "word": "SYNDUALITY",
-   "channels": 1,
-   "n": 1,
-   "examples": [
-    {
-     "t": "【SYN】オーバーホール情報！discordラジオ視聴しながらプレイ！【SYNDUALITY】 #公式アンバサダー",
-     "c": "ゆっきー",
-     "u": "https://www.youtube.com/watch?v=p7pla_MAsAM"
-    }
-   ],
-   "kind": "near",
-   "suggest": [
-    "Synduality: Echo of Ada"
-   ]
-  },
-  {
    "word": "ShadowCorridor",
    "channels": 1,
    "n": 1,
@@ -202,6 +176,22 @@
    "kind": "near",
    "suggest": [
     "Shadow Corridor Zero"
+   ]
+  },
+  {
+   "word": "The Cat in the Hat",
+   "channels": 1,
+   "n": 1,
+   "examples": [
+    {
+     "t": "もしもピングー（？）が「The Cat in the Hat」に追いかけまわされたら多分こうなる",
+     "c": "DINGU",
+     "u": "https://www.youtube.com/watch?v=9ClRfqJyR4M"
+    }
+   ],
+   "kind": "near",
+   "suggest": [
+    "The Cat in the Hat: Rainy Day Mayhem"
    ]
   },
   {
@@ -220,9 +210,9 @@
      "u": "https://www.youtube.com/watch?v=c9ZiLsVG4mU"
     },
     {
-     "t": "【歌枠】音ズレの訪れ┊#音ノ乃のの #歌うまスンギ歌枠リレー",
-     "c": "音ノ乃のの / NononoNono",
-     "u": "https://www.youtube.com/watch?v=Gv52cL0bmTk"
+     "t": "【#歌うまスンギ歌枠リレー】楽しく歌わせていただきます【星導ショウ/にじさんじ】",
+     "c": "星導ショウ / Hoshirube Sho【にじさんじ】",
+     "u": "https://www.youtube.com/watch?v=kn3xwLDwQ-0"
     }
    ],
    "kind": "wide",
@@ -277,24 +267,120 @@
    "suggest": []
   },
   {
-   "word": "プロスピA",
-   "channels": 3,
-   "n": 12,
+   "word": "あ。あ。あ。",
+   "channels": 5,
+   "n": 5,
    "examples": [
     {
-     "t": "【プロスピA】2026OB第2弾ランキングボーダー予想最終日！！大荒れランキングもついに佳境！最後まで走り抜こう！！！",
-     "c": "ねこマンちゃんねる",
-     "u": "https://www.youtube.com/watch?v=-JOjTbLKSgE"
+     "t": "【 朝活 / 飲酒雑談 】朝から飲むぞっ🍺酔っぱらったら・・・健全なゲームもしよ♡【 あ。あ。あ。 / 朝比奈めいこ 】",
+     "c": "朝比奈めいこ /  Asahina Meiko Ch",
+     "u": "https://www.youtube.com/watch?v=VayamHAVA8E"
     },
     {
-     "t": "【プロスピA】ランキングの心配しながらタイブレーク杯",
+     "t": "【あ。あ。あ。】声で操作するゲームにお母さん誘ってみたｗｗｗ もう一度だけVTuber",
+     "c": "もう一度だけVTuberやってもいい? 🅥",
+     "u": "https://www.youtube.com/watch?v=MrLvamRKGX4"
+    },
+    {
+     "t": "【あ。あ。あ。】一部の人は大喜び！？朝は\"ド健全\"なゲームに限る！【黒咲あおい】 #Vtuber準備中",
+     "c": "黒咲あおい",
+     "u": "https://www.youtube.com/watch?v=vArT_4j5By0"
+    }
+   ],
+   "kind": "wide",
+   "suggest": []
+  },
+  {
+   "word": "ドラゴンボール ゼノバース 3",
+   "channels": 5,
+   "n": 5,
+   "examples": [
+    {
+     "t": "『ドラゴンボール ゼノバース 3』先行プレイ！強化変身するはずが、なぜかミスター・サタンになった。自由度が高すぎる変身機能からジレン＆トッポ戦までたっぷり紹介",
+     "c": "電ファミ公式チャンネル",
+     "u": "https://www.youtube.com/watch?v=stky3ZSAhzc"
+    },
+    {
+     "t": "【先行プレイ】『ドラゴンボール ゼノバース3』ソウルチェンジで好きなDBキャラクターに変身できる爽快アクション",
+     "c": "ファミ通TUBE",
+     "u": "https://www.youtube.com/watch?v=opo6_Qdu8lo"
+    },
+    {
+     "t": "『ドラゴンボール ゼノバース３』先行プレイ動画。自分だけの超戦士で挑むマルチプレイ！ ソウルチェンジやアバターカスタマイズなど最新要素を先行体験",
+     "c": "電撃オンライン",
+     "u": "https://www.youtube.com/watch?v=YYxPrXt-ScA"
+    }
+   ],
+   "kind": "wide",
+   "suggest": []
+  },
+  {
+   "word": "超大発掘",
+   "channels": 4,
+   "n": 5,
+   "examples": [
+    {
+     "t": "【超大発掘】本日発売した大陸横断道路を掘る途中に出てくるお宝を飾って大儲けする放置系インクリメンタルゲーム【Steam】",
+     "c": "Hultutigamer",
+     "u": "https://www.youtube.com/watch?v=ez8mbsYoIEI"
+    },
+    {
+     "t": "【超大発掘】本日発売の採掘×インクリメンタル×博物館が面白すぎ...！？お宝を発掘→設備強化→爆稼ぎ→政治の闇に触れる。新作放置系クリッカー攻略が面白いw今だけ25%セール！【steam】",
+     "c": " なぎせいな / 凪世薙",
+     "u": "https://www.youtube.com/watch?v=v1Q5N8-ocXU"
+    },
+    {
+     "t": "柴犬と一緒に掘りまくって大金持ちになるしんじｗｗ【超大発掘】",
+     "c": "しんじさん",
+     "u": "https://www.youtube.com/watch?v=qSJe7lGrcHU"
+    }
+   ],
+   "kind": "wide",
+   "suggest": []
+  },
+  {
+   "word": "プロスピA",
+   "channels": 3,
+   "n": 11,
+   "examples": [
+    {
+     "t": "【初見さん歓迎】GWも最終日…雑談しながらランク戦【プロスピA】",
      "c": "ねこマンちゃんねる",
-     "u": "https://www.youtube.com/watch?v=3Zg7HS886qo"
+     "u": "https://www.youtube.com/watch?v=ZQnW0egDBk8"
     },
     {
      "t": "【プロスピA】ランキングの心配しながらタイブレーク杯",
      "c": "ねこマンちゃんねる",
      "u": "https://www.youtube.com/watch?v=lZWvPk-xThg"
+    },
+    {
+     "t": "【プロスピA】スプラの心配しながらタイブレーク杯",
+     "c": "ねこマンちゃんねる",
+     "u": "https://www.youtube.com/watch?v=40C6Rey3kD0"
+    }
+   ],
+   "kind": "wide",
+   "suggest": []
+  },
+  {
+   "word": "デュエットナイトアビス",
+   "channels": 3,
+   "n": 9,
+   "examples": [
+    {
+     "t": "【デナアビ1.7】金の楔が直接ドロップへ!?デイリー自動受け取り追加など神修正大量か！【デュエットナイトアビス】フォルス/1周年/アプデ",
+     "c": "ネタ勢のトリュウ",
+     "u": "https://www.youtube.com/watch?v=uhYAhL-x-Pw"
+    },
+    {
+     "t": "【デナアビ1.7】実質「ブルース」強化!?「魔の楔」追加情報判明！【デュエットナイトアビス】フォルス/1周年/アプデ",
+     "c": "ネタ勢のトリュウ",
+     "u": "https://www.youtube.com/watch?v=hk5iR2h8qsY"
+    },
+    {
+     "t": "【デナアビ1.7】○○が神！シリュウ＆ユーミン7凸解禁、日課改善、ジェネモン解放などアプデ変更点まとめ【デュエットナイトアビス】リズム/ユーミン/７凸/シリュウ",
+     "c": "ネタ勢のトリュウ",
+     "u": "https://www.youtube.com/watch?v=qD3-6A46TGg"
     }
    ],
    "kind": "wide",
@@ -325,24 +411,72 @@
    "suggest": []
   },
   {
-   "word": "デュエットナイトアビス",
+   "word": "バウンティラッシュ",
    "channels": 3,
    "n": 7,
    "examples": [
     {
-     "t": "【デナアビ1.7】金の楔が直接ドロップへ!?デイリー自動受け取り追加など神修正大量か！【デュエットナイトアビス】フォルス/1周年/アプデ",
-     "c": "ネタ勢のトリュウ",
-     "u": "https://www.youtube.com/watch?v=uhYAhL-x-Pw"
+     "t": "【神ガチャ】星４キャラ80確定の神ガチャ引くべき？ダイヤも大量配布‼2.7億DL記念キャンペーン第3弾完全解説【バウンティラッシュ】",
+     "c": "アル&ルッキー 【aru&rukki-】",
+     "u": "https://www.youtube.com/watch?v=uedoMhc0ZMk"
     },
     {
-     "t": "【デナアビ1.7】実質「ブルース」強化!?「魔の楔」追加情報判明！【デュエットナイトアビス】フォルス/1周年/アプデ",
-     "c": "ネタ勢のトリュウ",
-     "u": "https://www.youtube.com/watch?v=hk5iR2h8qsY"
+     "t": "【衝撃の結果】ガチ勢が本当に使っているキャラはこれ‼上位ランカー500人の使用率ランキングTOP10【バウンティラッシュ】",
+     "c": "アル&ルッキー 【aru&rukki-】",
+     "u": "https://www.youtube.com/watch?v=7p_DOtdXNrM"
     },
     {
-     "t": "【デナアビ1.7】○○が神！シリュウ＆ユーミン7凸解禁、日課改善、ジェネモン解放などアプデ変更点まとめ【デュエットナイトアビス】リズム/ユーミン/７凸/シリュウ",
+     "t": "ワンピース【バウンティラッシュ】参加型ライブ配信　初心者歓迎",
+     "c": "てくのGTちゃんねる",
+     "u": "https://www.youtube.com/watch?v=is8ljBZhe0A"
+    }
+   ],
+   "kind": "wide",
+   "suggest": []
+  },
+  {
+   "word": "デナアビ",
+   "channels": 3,
+   "n": 4,
+   "examples": [
+    {
+     "t": "【デナアビ】超火力スナイパー\"暁を歩む\"アプデ新キャラ「リズム・焔を纏う者」完凸育成レビュー🔥FPSモードが新鮮で面白く激強！壁貫通,空中狙撃,近距離バースト射撃と隙がない【デュエットナイトアビス】",
+     "c": "ゆーだい【HIHITI-GAMERS】",
+     "u": "https://www.youtube.com/watch?v=R8IwS_IE0LQ"
+    },
+    {
+     "t": "リズムが新たな姿に進化！？「リズム・焔を纏う者」引くぜ！！【デュエットナイトアビス/デナアビ】",
+     "c": "あまくだり",
+     "u": "https://www.youtube.com/watch?v=7qXRPsmYHsQ"
+    },
+    {
+     "t": "【デナアビ】「シリュウ」7凸で超強化！最新火力コンボと放置周回ビルド徹底解説【武器・魔の楔・編成】【デュエットナイトアビス】ユーミン/リズム",
      "c": "ネタ勢のトリュウ",
-     "u": "https://www.youtube.com/watch?v=qD3-6A46TGg"
+     "u": "https://www.youtube.com/watch?v=ag7TDDAGOSg"
+    }
+   ],
+   "kind": "wide",
+   "suggest": []
+  },
+  {
+   "word": "ONE PIECE 海のごちそうレストラン",
+   "channels": 3,
+   "n": 3,
+   "examples": [
+    {
+     "t": "サンジと海上レストランを経営するゲーム『ONE PIECE 海のごちそうレストラン』",
+     "c": "レトルト",
+     "u": "https://www.youtube.com/watch?v=cFAEvaioDfI"
+    },
+    {
+     "t": "【 ONE PIECE 海のごちそうレストラン 】　食ってみな飛ぶぞ！！【 激チル 】",
+     "c": "みんも / 奈良のVTuber【セシんもーZ】",
+     "u": "https://www.youtube.com/watch?v=LxSZqNbnZAU"
+    },
+    {
+     "t": "【カイロソフト新作】サンジとレストランを経営してみるぞ！！！！！【ONE PIECE海のごちそうレストラン】",
+     "c": "あまみちゃんねる",
+     "u": "https://www.youtube.com/watch?v=SG2kPHiTzrg"
     }
    ],
    "kind": "wide",
@@ -351,13 +485,8 @@
   {
    "word": "バイオハザード",
    "channels": 3,
-   "n": 4,
+   "n": 3,
    "examples": [
-    {
-     "t": "ネタバレあり感想「バイオハザード実写映画」揃いも揃ってみんなダメな人しかいないｗｗｗ#バイオハザード #反応集",
-     "c": "アニゲー部「ゲームアニメ反応集」",
-     "u": "https://www.youtube.com/watch?v=HKS8uT9stYU"
-    },
     {
      "t": "【朗報】駄作だらけのバイオ、遂にまともな実写映画が作られる『バイオハザード』",
      "c": "ホッカイロレン",
@@ -367,6 +496,11 @@
      "t": "ネタバレあり感想「バイオハザード実写映画」これ原作より凶悪じゃない！？ｗｗｗ#バイオハザード #反応集",
      "c": "アニゲー部「ゲームアニメ反応集」",
      "u": "https://www.youtube.com/watch?v=LZd3yWmBdFA"
+    },
+    {
+     "t": "【バイオハザード】レオン28年の軌跡を総まとめ！新人警官から最新作の結末まで完全解説　#switchおすすめ　#switch2",
+     "c": "らいちろゲームズ",
+     "u": "https://www.youtube.com/watch?v=kndsEB3DabA"
     }
    ],
    "kind": "wide",
@@ -443,193 +577,28 @@
    ],
    "kind": "wide",
    "suggest": []
-  },
-  {
-   "word": "あ。あ。あ。",
-   "channels": 3,
-   "n": 3,
-   "examples": [
-    {
-     "t": "【 朝活 / 飲酒雑談 】朝から飲むぞっ🍺酔っぱらったら・・・健全なゲームもしよ♡【 あ。あ。あ。 / 朝比奈めいこ 】",
-     "c": "朝比奈めいこ /  Asahina Meiko Ch",
-     "u": "https://www.youtube.com/watch?v=VayamHAVA8E"
-    },
-    {
-     "t": "【あ。あ。あ。】声で操作するゲームにお母さん誘ってみたｗｗｗ もう一度だけVTuber",
-     "c": "もう一度だけVTuberやってもいい? 🅥",
-     "u": "https://www.youtube.com/watch?v=MrLvamRKGX4"
-    },
-    {
-     "t": "【あ。あ。あ。】一部の人は大喜び！？朝は\"ド健全\"なゲームに限る！【黒咲あおい】 #Vtuber準備中",
-     "c": "黒咲あおい",
-     "u": "https://www.youtube.com/watch?v=vArT_4j5By0"
-    }
-   ],
-   "kind": "wide",
-   "suggest": []
   }
  ],
  "miss_days": 7,
  "hot_facts": [
   {
-   "game": "インボキア-呪いのダイスゲーム-",
-   "growth": 7.5,
-   "videos": 6,
-   "base": 0.5,
-   "channels": 6,
-   "views": 775082,
-   "who": [
-    "Pekora Ch. 兎田ぺこら",
-    "Watame Ch. 角巻わため",
-    "Su Ch. 水宮枢 - FLOW GLOW",
-    "フルコンチャンネル",
-    "Tomari Mari channel / 兎鞠まりちゃんねる"
-   ],
-   "titles": [
-    "【コラボ】可愛すぎる4人で呪いのゲーム『インボキア』に挑戦！！！！！！！！！！！！！ぺこ！【ホロライブ/兎田ぺこら】",
-    "【 インボキア 】呪いのボードゲームのお時間です..............【角巻わため/ホロライブ４期生】",
-    "【インボキア】呪いのボードゲーム⁉️こ、こわくねーし✋【水宮枢／ホロライブ】"
-   ],
-   "genres": [
-    "Adventure",
-    "Indie"
-   ],
-   "year": 2026,
-   "platforms": [
-    "pc"
-   ],
-   "days_seen": 3,
-   "last_seen": "2026-10-20",
-   "first_here": false
-  },
-  {
-   "game": "学園アイドルマスター",
-   "growth": 4.44,
-   "videos": 4,
-   "base": 0.9,
-   "channels": 3,
-   "views": 10703,
-   "who": [
-    "愛幸Pプロデュースch. / aisachiP",
-    "愛幸Pプロデュースch. / aisachiP",
-    "かぐch",
-    "あずぅきぃ"
-   ],
-   "titles": [
-    "【ぶっ壊れ⁉︎】ガラロ燕・美鈴・千奈の性能が一気に開示！今後のスケジュールも来たぞ！【学マス情報まとめ】",
-    "【学マス】Roarガシャみんなは回す？強化月間どんな感じ？【アプデ確認】",
-    "「学マス」アドリブ・背伸び・かが君狙い【Vtuber】"
-   ],
-   "genres": [],
-   "year": null,
-   "platforms": [],
-   "days_seen": 7,
-   "last_seen": "2026-10-20",
-   "first_here": false
-  },
-  {
-   "game": "How to Fish",
-   "growth": 3.75,
-   "videos": 3,
-   "base": 0.7,
-   "channels": 3,
-   "views": 77440,
-   "who": [
-    "魁星 / Kaisei【にじさんじ】",
-    "榊ネス / Sakaki Ness【にじさんじ】",
-    "北見遊征 / Kitami Yusei【にじさんじ】"
-   ],
-   "titles": [
-    "【 How to Fish 】釣りバカゲーで伝説になる w/遊征、ネス【魁星/にじさんじ】",
-    "【How to Fish】3SKMで狂った魚釣り！魚ぉぉぉぉぉ！【榊ネス/にじさんじ】",
-    "【How to Fish】激しめの魚釣りリターンズWith3SKM【北見遊征/にじさんじ】"
-   ],
-   "genres": [
-    "Shooter",
-    "Simulator",
-    "Indie"
-   ],
-   "year": 2026,
-   "platforms": [
-    "pc"
-   ],
-   "days_seen": 23,
-   "last_seen": "2026-10-17",
-   "first_here": false
-  },
-  {
-   "game": "Never Be Alone",
-   "growth": 3.75,
-   "videos": 3,
-   "base": 0.0,
-   "channels": 3,
-   "views": 21439,
-   "who": [
-    "アフロマスク",
-    "シムパパ",
-    "ぱっちょ【ゲームします】Paccio games"
-   ],
-   "titles": [
-    "ゾンビ発生から10年後の世紀末世界をサバイバルする最新オープンワールドゲーム【 Never Be Alone 】",
-    "デモ版【Never Be Alone】ゾンビに支配された世界で生き残れ！オープンワールドサバイバルが始まる【ゲーム実況】",
-    "【Never be alone】人数無制限協力マルチでゾンビ世界を生き抜く新作ゾンビゲーやります"
-   ],
-   "genres": [],
-   "year": null,
-   "platforms": [],
-   "days_seen": 1,
-   "last_seen": "2026-10-20",
-   "first_here": false
-  },
-  {
-   "game": "Rust",
-   "growth": 3.75,
-   "videos": 3,
-   "base": 0.7,
-   "channels": 3,
-   "views": 14470,
-   "who": [
-    "標準野郎",
-    "貴様まさか🦈",
-    "即死ちゃん "
-   ],
-   "titles": [
-    "爆散したペーさんのヘリを見て爆笑する標準、呪いにかかって自分のヘリも墜落する【RUST/標準/ドンピシャ/ぺちゃんこ】",
-    "【 #TABRUST 】Day1｜RUSTって何するゲームなんや！【貴様まさか】",
-    "【RUST】平和なご近所生活、隣人の拠点を爆破して終了。"
-   ],
-   "genres": [
-    "Shooter",
-    "Role-playing (RPG)",
-    "Adventure",
-    "Indie"
-   ],
-   "year": 2018,
-   "platforms": [
-    "pc"
-   ],
-   "days_seen": 36,
-   "last_seen": "2026-10-20",
-   "first_here": false
-  },
-  {
    "game": "ファイナルファンタジー レゾナンス",
-   "growth": 3.53,
-   "videos": 6,
-   "base": 1.7,
-   "channels": 6,
-   "views": 81147,
+   "growth": 5.45,
+   "videos": 12,
+   "base": 2.2,
+   "channels": 12,
+   "views": 66545,
    "who": [
-    "ファミ通TUBE",
     "アオイゲーム【ドラクエ】",
-    "たろわん。",
-    "いたとはチャンネル",
-    "ジョーカーのゲーム攻略チャンネル"
+    "ジョーカーのゲーム攻略チャンネル",
+    "ジョーカーのゲーム攻略チャンネル",
+    "アオイゲーム【話題のゲーム紹介】",
+    "しゅがーはうす"
    ],
    "titles": [
-    "【FFレゾナンス】『ファイナルファンタジー レゾナンス』先行プレイ。クリアーするほど熱中した作品を魅力を紹介。セフィロスやアルテマウェポンとのバトルも公開！【やり込み要素のネタバレ注意】",
-    "【速報】FFレゾナンス発売前やるべき事3選！トルネコアプデで超快適！Switch2キングダムハーツパッケージ版がヤバい…",
-    "【FFRS】発売前にやっておくべき事！取り返しのつかない要素・全魔石及び石板の欠片の入手場所紹介！序盤の進め方完全ガイド！【ファイナルファンタジー レゾナンス】【FFBE】"
+    "【緊急】FFレゾナンス海外の評価がヤバい…FF7リメイクXbox Game Pass追加！スクエニ不正アクセスで注意喚起！【Switch2】",
+    "【FFレゾナンス】発売直前！デメリット無し！リミット技ダメージ倍化フィーナが強い！",
+    "【FFレゾナンス】50時間プレイ更に新情報！やり込み&新プレイアブルビジョン遂に！"
    ],
    "genres": [
     "Role-playing (RPG)",
@@ -640,8 +609,152 @@
     "pc",
     "console"
    ],
-   "days_seen": 4,
-   "last_seen": "2026-10-20",
+   "days_seen": 5,
+   "last_seen": "2026-10-21",
+   "first_here": false
+  },
+  {
+   "game": "How to Fish",
+   "growth": 5.0,
+   "videos": 4,
+   "base": 0.5,
+   "channels": 4,
+   "views": 99687,
+   "who": [
+    "魁星 / Kaisei【にじさんじ】",
+    "北見遊征 / Kitami Yusei【にじさんじ】",
+    "榊ネス / Sakaki Ness【にじさんじ】",
+    "けっけさんのありがちなゲーム実況ちゃんねる"
+   ],
+   "titles": [
+    "【 How to Fish 】釣りバカゲーで伝説になる w/遊征、ネス【魁星/にじさんじ】",
+    "【How to Fish】激しめの魚釣りリターンズWith3SKM【北見遊征/にじさんじ】",
+    "【How to Fish】3SKMで狂った魚釣り！魚ぉぉぉぉぉ！【榊ネス/にじさんじ】"
+   ],
+   "genres": [
+    "Shooter",
+    "Simulator",
+    "Indie"
+   ],
+   "year": 2026,
+   "platforms": [
+    "pc"
+   ],
+   "days_seen": 24,
+   "last_seen": "2026-10-21",
+   "first_here": false
+  },
+  {
+   "game": "ゼンレスゾーンゼロ",
+   "growth": 3.75,
+   "videos": 12,
+   "base": 3.2,
+   "channels": 11,
+   "views": 193137,
+   "who": [
+    "Somen Channel",
+    "フクー",
+    "汰鳥ヨシダ",
+    "フクー",
+    "Somen Channel"
+   ],
+   "titles": [
+    "【ゼンゼロ】状態異常が会心!? フィオニー完全解説｜音動機・編成・使い方【ゼンレスゾーンゼロ】",
+    "【ゼンゼロ】クソ雑　復刻 ヴェリナ　解説 【ZZZ/ゼンレスゾーンゼロ】",
+    "フィオニー実装！ガチャ＆実践やるぞー！【質問歓迎/ゼンレスゾーンゼロ】【ネタバレ注意】"
+   ],
+   "genres": [],
+   "year": null,
+   "platforms": [],
+   "days_seen": 28,
+   "last_seen": "2026-10-21",
+   "first_here": false
+  },
+  {
+   "game": "ブルーアーカイブ",
+   "growth": 3.75,
+   "videos": 3,
+   "base": 0.3,
+   "channels": 3,
+   "views": 10903,
+   "who": [
+    "比宮じょーず",
+    "エミリーのゲームちゃんねる Emily Game Ch.",
+    "20ムギテサ"
+   ],
+   "titles": [
+    "【比宮のブルアカLIVE🔴】Ex.「ロア追跡」編.第3章「夢の中の列車」初見実況【BlueArchive】",
+    "【ブルアカ】初見実況🔰第2部 メインストーリーEx. 「ロア追跡」編 第3章「夢の中の列車」鑑賞【ブルーアーカイブ/블루 아카이브】",
+    "【ブルアカ】まるで8番乗り場に来たみたいだ、テンション上がるなぁ～【初見大歓迎】"
+   ],
+   "genres": [],
+   "year": null,
+   "platforms": [],
+   "days_seen": 7,
+   "last_seen": "2026-10-10",
+   "first_here": false
+  },
+  {
+   "game": "Enshrouded",
+   "growth": 3.64,
+   "videos": 4,
+   "base": 1.1,
+   "channels": 4,
+   "views": 6338,
+   "who": [
+    "おかまつゲーム実況",
+    "ぜんざい助教授",
+    "おかまつゲーム実況",
+    "ジェイユ⚔️Jeyou",
+    "ああくGAMEチャンネル"
+   ],
+   "titles": [
+    "#3【PS5】Enshrouded~霧の王国~ 実況【プレイヤーの自由と創造性が最も重要となるサバイバルアクションRPG】",
+    "#3 Enshrouded　実況　フェルのサンダーブルートと対決",
+    "#4【PS5】Enshrouded~霧の王国~ 実況【プレイヤーの自由と創造性が最も重要となるサバイバルアクションRPG】"
+   ],
+   "genres": [
+    "Role-playing (RPG)",
+    "Adventure"
+   ],
+   "year": 2026,
+   "platforms": [
+    "pc",
+    "console"
+   ],
+   "days_seen": 1,
+   "last_seen": "2026-10-17",
+   "first_here": false
+  },
+  {
+   "game": "Call of Duty: Modern Warfare 4",
+   "growth": 3.12,
+   "videos": 5,
+   "base": 1.6,
+   "channels": 5,
+   "views": 71861,
+   "who": [
+    "実況者ジャンヌ",
+    "KH / Killin9Hit",
+    "寝恋　しらす",
+    "寝恋　しらす",
+    "ディーン"
+   ],
+   "titles": [
+    "【CoD:MW4】遂に!タルコフモード\"DMZ\"が解禁!!『ボリューム満点でやり込み要素だらけ!!』【実況者ジャンヌ】",
+    "韓国がやばいのに隠れようとする兵士にガチギレするKH【CoD:MW4】",
+    "【CoD:MW4】新作MW4！DMZ最速プレイ！『念願のタルコフモード遊び尽くしたい‼』【CallofDutyModernWarfare4】【女性VTuber】"
+   ],
+   "genres": [
+    "Shooter"
+   ],
+   "year": 2026,
+   "platforms": [
+    "pc",
+    "console"
+   ],
+   "days_seen": 6,
+   "last_seen": "2026-10-21",
    "first_here": false
   }
  ],
