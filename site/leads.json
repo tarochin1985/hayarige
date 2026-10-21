@@ -1,6 +1,6 @@
 {
  "date": "2026-10-21",
- "generated": "2026-10-21 09:04",
+ "generated": "2026-10-21 09:27",
  "leads": {
   "events": [
    {
@@ -8,12 +8,25 @@
     "channels": [
      "Choco Ch. 癒月ちょこ",
      "Flare Ch. 不知火フレア",
+     "Iroha ch. 風真いろは - holoX -",
      "Riona Ch. 響咲リオナ - FLOW GLOW",
      "Roboco Ch. - ロボ子",
      "Vivi Ch. 綺々羅々ヴィヴィ - FLOW GLOW",
      "ここっとスクエア【ここスク】",
      "アキロゼCh。Vtuber/ホロライブ所属",
      "飯田ぽち。【Iida Pochi.】"
+    ]
+   },
+   {
+    "tag": "#ゲーム実況",
+    "channels": [
+     "M家の休日マサ",
+     "Usagi Ch. 因幡兎",
+     "あまね星歌",
+     "ジョアだよ",
+     "ルベルフゲームチャンネル",
+     "恋因ロス KoinRosu",
+     "豚咲あおい_TomisakiAoi"
     ]
    },
    {
@@ -37,13 +50,12 @@
     ]
    },
    {
-    "tag": "#ゲーム実況",
+    "tag": "#ホロ鯖ARK",
     "channels": [
-     "M家の休日マサ",
-     "Usagi Ch. 因幡兎",
-     "ジョアだよ",
-     "恋因ロス KoinRosu",
-     "豚咲あおい_TomisakiAoi"
+     "Nene Ch.桃鈴ねね",
+     "Pekora Ch. 兎田ぺこら",
+     "Towa Ch. 常闇トワ",
+     "アキロゼCh。Vtuber/ホロライブ所属"
     ]
    },
    {
@@ -56,11 +68,12 @@
     ]
    },
    {
-    "tag": "#ホロ鯖ARK",
+    "tag": "#ぶいきゃす",
     "channels": [
-     "Nene Ch.桃鈴ねね",
-     "Pekora Ch. 兎田ぺこら",
-     "Towa Ch. 常闇トワ"
+     "ちゃい・ふにえる",
+     "孵卵リリス / Furan Lilith",
+     "浅葱なぎ",
+     "羅々華セーラ-Raraka Sera-"
     ]
    },
    {
@@ -70,62 +83,62 @@
      "小花衣 ももみ / Momomi Kohanai",
      "扇名いだ"
     ]
-   },
-   {
-    "tag": "#ぶいきゃす",
-    "channels": [
-     "ちゃい・ふにえる",
-     "孵卵リリス / Furan Lilith",
-     "羅々華セーラ-Raraka Sera-"
-    ]
    }
   ],
   "newcomers": [],
   "wide": [
    {
     "game": "ストリートファイター6",
-    "channels": 32,
-    "videos": 36
+    "channels": 38,
+    "videos": 42
    },
    {
     "game": "Apex Legends",
-    "channels": 25,
-    "videos": 28
-   },
-   {
-    "game": "Minecraft",
-    "channels": 21,
-    "videos": 21
+    "channels": 31,
+    "videos": 36
    },
    {
     "game": "オーバーウォッチ2",
-    "channels": 21,
-    "videos": 21
+    "channels": 22,
+    "videos": 22
+   },
+   {
+    "game": "Minecraft",
+    "channels": 22,
+    "videos": 22
    },
    {
     "game": "Dead by Daylight",
-    "channels": 15,
-    "videos": 17
-   },
-   {
-    "game": "League of Legends",
-    "channels": 12,
-    "videos": 12
+    "channels": 18,
+    "videos": 20
    },
    {
     "game": "スプラトゥーン3",
-    "channels": 14,
-    "videos": 14
+    "channels": 15,
+    "videos": 16
    },
    {
     "game": "モンスターハンターワイルズ",
+    "channels": 14,
+    "videos": 15
+   },
+   {
+    "game": "League of Legends",
     "channels": 12,
     "videos": 12
    }
   ]
  },
  "drift": [],
- "tags": [],
+ "tags": [
+  {
+   "tag": "ぶいきゃす",
+   "game": "Arknights: Endfield",
+   "evidence": 4,
+   "added": 1,
+   "channels": 4
+  }
+ ],
  "misses": [
   {
    "word": "Starward",
@@ -173,6 +186,22 @@
    "kind": "near",
    "suggest": [
     "Synduality: Echo of Ada"
+   ]
+  },
+  {
+   "word": "ShadowCorridor",
+   "channels": 1,
+   "n": 1,
+   "examples": [
+    {
+     "t": "外縁の視察に行くぞ🥴【ShadowCorridor】",
+     "c": "ちむらい",
+     "u": "https://www.youtube.com/watch?v=p5ROjglL6MA"
+    }
+   ],
+   "kind": "near",
+   "suggest": [
+    "Shadow Corridor Zero"
    ]
   },
   {
@@ -225,8 +254,8 @@
   },
   {
    "word": "初見さん歓迎",
-   "channels": 4,
-   "n": 4,
+   "channels": 5,
+   "n": 5,
    "examples": [
     {
      "t": "【初見さん歓迎】リスナーさんのためにサモラン猛特訓！",
@@ -290,6 +319,30 @@
      "t": "神回：奇跡すぎる”初日ガチャ 単発”がヤバい。『ぷにぷに百物語』【ぷにぷに / 妖怪ウォッチぷにぷに】",
      "c": "S極N極GAMES",
      "u": "https://www.youtube.com/watch?v=gzVoY-h2yvg"
+    }
+   ],
+   "kind": "wide",
+   "suggest": []
+  },
+  {
+   "word": "デュエットナイトアビス",
+   "channels": 3,
+   "n": 7,
+   "examples": [
+    {
+     "t": "【デナアビ1.7】金の楔が直接ドロップへ!?デイリー自動受け取り追加など神修正大量か！【デュエットナイトアビス】フォルス/1周年/アプデ",
+     "c": "ネタ勢のトリュウ",
+     "u": "https://www.youtube.com/watch?v=uhYAhL-x-Pw"
+    },
+    {
+     "t": "【デナアビ1.7】実質「ブルース」強化!?「魔の楔」追加情報判明！【デュエットナイトアビス】フォルス/1周年/アプデ",
+     "c": "ネタ勢のトリュウ",
+     "u": "https://www.youtube.com/watch?v=hk5iR2h8qsY"
+    },
+    {
+     "t": "【デナアビ1.7】○○が神！シリュウ＆ユーミン7凸解禁、日課改善、ジェネモン解放などアプデ変更点まとめ【デュエットナイトアビス】リズム/ユーミン/７凸/シリュウ",
+     "c": "ネタ勢のトリュウ",
+     "u": "https://www.youtube.com/watch?v=qD3-6A46TGg"
     }
    ],
    "kind": "wide",
@@ -420,21 +473,22 @@
  "hot_facts": [
   {
    "game": "インボキア-呪いのダイスゲーム-",
-   "growth": 5.0,
-   "videos": 4,
-   "base": 0.8,
-   "channels": 4,
-   "views": 110382,
+   "growth": 7.5,
+   "videos": 6,
+   "base": 0.5,
+   "channels": 6,
+   "views": 775082,
    "who": [
     "Pekora Ch. 兎田ぺこら",
+    "Watame Ch. 角巻わため",
+    "Su Ch. 水宮枢 - FLOW GLOW",
     "フルコンチャンネル",
-    "Tomari Mari channel / 兎鞠まりちゃんねる",
-    "人生 つみこ (ホラーゲーム専門Vtuber)"
+    "Tomari Mari channel / 兎鞠まりちゃんねる"
    ],
    "titles": [
     "【コラボ】可愛すぎる4人で呪いのゲーム『インボキア』に挑戦！！！！！！！！！！！！！ぺこ！【ホロライブ/兎田ぺこら】",
-    "ジュマンジみたいなゲームやるぞ～ホラゲ４人組にて【インボキア-呪いのダイスゲーム-】",
-    "【インボキア-呪いのダイスゲーム-】今日はみんなで呪われたボドゲやるよ！✌【#とまライブ】"
+    "【 インボキア 】呪いのボードゲームのお時間です..............【角巻わため/ホロライブ４期生】",
+    "【インボキア】呪いのボードゲーム⁉️こ、こわくねーし✋【水宮枢／ホロライブ】"
    ],
    "genres": [
     "Adventure",
@@ -449,20 +503,45 @@
    "first_here": false
   },
   {
+   "game": "学園アイドルマスター",
+   "growth": 4.44,
+   "videos": 4,
+   "base": 0.9,
+   "channels": 3,
+   "views": 10703,
+   "who": [
+    "愛幸Pプロデュースch. / aisachiP",
+    "愛幸Pプロデュースch. / aisachiP",
+    "かぐch",
+    "あずぅきぃ"
+   ],
+   "titles": [
+    "【ぶっ壊れ⁉︎】ガラロ燕・美鈴・千奈の性能が一気に開示！今後のスケジュールも来たぞ！【学マス情報まとめ】",
+    "【学マス】Roarガシャみんなは回す？強化月間どんな感じ？【アプデ確認】",
+    "「学マス」アドリブ・背伸び・かが君狙い【Vtuber】"
+   ],
+   "genres": [],
+   "year": null,
+   "platforms": [],
+   "days_seen": 7,
+   "last_seen": "2026-10-20",
+   "first_here": false
+  },
+  {
    "game": "How to Fish",
    "growth": 3.75,
    "videos": 3,
    "base": 0.7,
    "channels": 3,
-   "views": 26191,
+   "views": 77440,
    "who": [
-    "榊ネス / Sakaki Ness【にじさんじ】",
     "魁星 / Kaisei【にじさんじ】",
+    "榊ネス / Sakaki Ness【にじさんじ】",
     "北見遊征 / Kitami Yusei【にじさんじ】"
    ],
    "titles": [
-    "【How to Fish】3SKMで狂った魚釣り！魚ぉぉぉぉぉ！【榊ネス/にじさんじ】",
     "【 How to Fish 】釣りバカゲーで伝説になる w/遊征、ネス【魁星/にじさんじ】",
+    "【How to Fish】3SKMで狂った魚釣り！魚ぉぉぉぉぉ！【榊ネス/にじさんじ】",
     "【How to Fish】激しめの魚釣りリターンズWith3SKM【北見遊征/にじさんじ】"
    ],
    "genres": [
@@ -479,43 +558,12 @@
    "first_here": false
   },
   {
-   "game": "Rust",
-   "growth": 3.75,
-   "videos": 3,
-   "base": 0.7,
-   "channels": 3,
-   "views": 8597,
-   "who": [
-    "標準野郎",
-    "貴様まさか🦈",
-    "即死ちゃん "
-   ],
-   "titles": [
-    "爆散したペーさんのヘリを見て爆笑する標準、呪いにかかって自分のヘリも墜落する【RUST/標準/ドンピシャ/ぺちゃんこ】",
-    "【 #TABRUST 】Day1｜RUSTって何するゲームなんや！【貴様まさか】",
-    "【RUST】平和なご近所生活、隣人の拠点を爆破して終了。"
-   ],
-   "genres": [
-    "Shooter",
-    "Role-playing (RPG)",
-    "Adventure",
-    "Indie"
-   ],
-   "year": 2018,
-   "platforms": [
-    "pc"
-   ],
-   "days_seen": 36,
-   "last_seen": "2026-10-20",
-   "first_here": false
-  },
-  {
    "game": "Alone",
    "growth": 3.75,
    "videos": 3,
    "base": 0.0,
    "channels": 3,
-   "views": 4570,
+   "views": 21439,
    "who": [
     "アフロマスク",
     "シムパパ",
@@ -541,56 +589,65 @@
    "first_here": false
   },
   {
-   "game": "デス桃太郎",
-   "growth": 3.0,
+   "game": "Rust",
+   "growth": 3.75,
    "videos": 3,
-   "base": 1.0,
+   "base": 0.7,
    "channels": 3,
-   "views": 22393,
+   "views": 14470,
    "who": [
-    "フレン・E・ルスタリオ",
-    "えおちゃんねる！",
-    "まるたにあやの"
+    "標準野郎",
+    "貴様まさか🦈",
+    "即死ちゃん "
    ],
    "titles": [
-    "【デス桃太郎】猿犬キジの中なら犬かなって思います【にじさんじ】",
-    "銃を使い始める桃太郎のホラーゲーム？【デス桃太郎】",
-    "【デス桃太郎】ホラー…？？？【VTuber/まるたにあやの 】"
+    "爆散したペーさんのヘリを見て爆笑する標準、呪いにかかって自分のヘリも墜落する【RUST/標準/ドンピシャ/ぺちゃんこ】",
+    "【 #TABRUST 】Day1｜RUSTって何するゲームなんや！【貴様まさか】",
+    "【RUST】平和なご近所生活、隣人の拠点を爆破して終了。"
    ],
    "genres": [
+    "Shooter",
+    "Role-playing (RPG)",
+    "Adventure",
     "Indie"
    ],
-   "year": 2026,
+   "year": 2018,
    "platforms": [
     "pc"
    ],
-   "days_seen": 13,
+   "days_seen": 36,
    "last_seen": "2026-10-20",
    "first_here": false
   },
   {
-   "game": "オーバーウォッチ2",
-   "growth": 2.73,
-   "videos": 21,
-   "base": 7.7,
-   "channels": 21,
-   "views": 424233,
+   "game": "ファイナルファンタジー レゾナンス",
+   "growth": 3.53,
+   "videos": 6,
+   "base": 1.7,
+   "channels": 6,
+   "views": 81147,
    "who": [
-    "ローレン・イロアス / Lauren Iroas【にじさんじ】",
-    "イブラヒム【にじさんじ】",
-    "ラトナ・プティ -Ratna Petit -にじさんじ所属",
-    "小柳ロウ / Koyanagi Rou【にじさんじ】",
-    "Kuzuha Channel"
+    "ファミ通TUBE",
+    "アオイゲーム【ドラクエ】",
+    "たろわん。",
+    "いたとはチャンネル",
+    "ジョーカーのゲーム攻略チャンネル"
    ],
    "titles": [
-    "【Overwatch】イブラヒム灼熱コーチング【ローレン・イロアス/にじさんじ】",
-    "【OVERWATCH】チーマー練習待機/まずは特別講師にリプレイを見ていただく【にじさんじ/イブラヒム】",
-    "【OW】スクリム助っ人  #にじEX_OW【ラトナ・プティ/にじさんじ】"
+    "【FFレゾナンス】『ファイナルファンタジー レゾナンス』先行プレイ。クリアーするほど熱中した作品を魅力を紹介。セフィロスやアルテマウェポンとのバトルも公開！【やり込み要素のネタバレ注意】",
+    "【速報】FFレゾナンス発売前やるべき事3選！トルネコアプデで超快適！Switch2キングダムハーツパッケージ版がヤバい…",
+    "【FFRS】発売前にやっておくべき事！取り返しのつかない要素・全魔石及び石板の欠片の入手場所紹介！序盤の進め方完全ガイド！【ファイナルファンタジー レゾナンス】【FFBE】"
    ],
-   "genres": [],
-   "year": null,
-   "platforms": [],
-   "days_seen": 32,
+   "genres": [
+    "Role-playing (RPG)",
+    "Adventure"
+   ],
+   "year": 2026,
+   "platforms": [
+    "pc",
+    "console"
+   ],
+   "days_seen": 4,
    "last_seen": "2026-10-20",
    "first_here": false
   }
