@@ -1,63 +1,19 @@
 {
- "date": "2026-10-20",
- "generated": "2026-10-20 23:48",
+ "date": "2026-10-21",
+ "generated": "2026-10-21 09:04",
  "leads": {
   "events": [
    {
     "tag": "#ホロドリ",
     "channels": [
-     "AZKi Channel",
      "Choco Ch. 癒月ちょこ",
      "Flare Ch. 不知火フレア",
-     "Iroha ch. 風真いろは - holoX -",
      "Riona Ch. 響咲リオナ - FLOW GLOW",
      "Roboco Ch. - ロボ子",
      "Vivi Ch. 綺々羅々ヴィヴィ - FLOW GLOW",
      "ここっとスクエア【ここスク】",
      "アキロゼCh。Vtuber/ホロライブ所属",
      "飯田ぽち。【Iida Pochi.】"
-    ]
-   },
-   {
-    "tag": "#エンドフィールド",
-    "channels": [
-     "あかどらん",
-     "ちゃい・ふにえる",
-     "孵卵リリス / Furan Lilith",
-     "汐ゴマ【鳴潮】",
-     "猫咲あんじ Nekosaki anji",
-     "羅々華セーラ-Raraka Sera-"
-    ]
-   },
-   {
-    "tag": "#ゲーム実況",
-    "channels": [
-     "M家の休日マサ",
-     "Usagi Ch. 因幡兎",
-     "ジョアだよ",
-     "恋因ロス KoinRosu",
-     "星埜きぃ -Key Hoshino-",
-     "豚咲あおい_TomisakiAoi"
-    ]
-   },
-   {
-    "tag": "#ホロ鯖ARK",
-    "channels": [
-     "Nene Ch.桃鈴ねね",
-     "Pekora Ch. 兎田ぺこら",
-     "Towa Ch. 常闇トワ",
-     "Watame Ch. 角巻わため",
-     "アキロゼCh。Vtuber/ホロライブ所属"
-    ]
-   },
-   {
-    "tag": "#にじEX_OW",
-    "channels": [
-     "Rei7【にじさんじ】",
-     "Yuhi Riri Official",
-     "ラトナ・プティ -Ratna Petit -にじさんじ所属",
-     "御子神琴音 / Mikogami Kotone【にじさんじ】",
-     "椎名唯華 / Shiina Yuika"
     ]
    },
    {
@@ -71,21 +27,56 @@
     ]
    },
    {
-    "tag": "#ぶいきゃす",
+    "tag": "#にじEX_OW",
     "channels": [
+     "Rei7【にじさんじ】",
+     "Yuhi Riri Official",
+     "ラトナ・プティ -Ratna Petit -にじさんじ所属",
+     "御子神琴音 / Mikogami Kotone【にじさんじ】",
+     "椎名唯華 / Shiina Yuika"
+    ]
+   },
+   {
+    "tag": "#ゲーム実況",
+    "channels": [
+     "M家の休日マサ",
+     "Usagi Ch. 因幡兎",
+     "ジョアだよ",
+     "恋因ロス KoinRosu",
+     "豚咲あおい_TomisakiAoi"
+    ]
+   },
+   {
+    "tag": "#エンドフィールド",
+    "channels": [
+     "あかどらん",
      "ちゃい・ふにえる",
-     "孵卵リリス / Furan Lilith",
-     "汐ゴマ【鳴潮】",
+     "猫咲あんじ Nekosaki anji",
      "羅々華セーラ-Raraka Sera-"
+    ]
+   },
+   {
+    "tag": "#ホロ鯖ARK",
+    "channels": [
+     "Nene Ch.桃鈴ねね",
+     "Pekora Ch. 兎田ぺこら",
+     "Towa Ch. 常闇トワ"
     ]
    },
    {
     "tag": "#わちゃサバ",
     "channels": [
      "ノビーの遊び部屋",
-     "天羽よつは",
      "小花衣 ももみ / Momomi Kohanai",
      "扇名いだ"
+    ]
+   },
+   {
+    "tag": "#ぶいきゃす",
+    "channels": [
+     "ちゃい・ふにえる",
+     "孵卵リリス / Furan Lilith",
+     "羅々華セーラ-Raraka Sera-"
     ]
    }
   ],
@@ -93,63 +84,48 @@
   "wide": [
    {
     "game": "ストリートファイター6",
-    "channels": 39,
-    "videos": 45
+    "channels": 32,
+    "videos": 36
    },
    {
     "game": "Apex Legends",
-    "channels": 31,
-    "videos": 39
+    "channels": 25,
+    "videos": 28
    },
    {
     "game": "Minecraft",
-    "channels": 26,
-    "videos": 28
+    "channels": 21,
+    "videos": 21
    },
    {
     "game": "オーバーウォッチ2",
     "channels": 21,
-    "videos": 24
-   },
-   {
-    "game": "League of Legends",
-    "channels": 18,
-    "videos": 20
-   },
-   {
-    "game": "スプラトゥーン3",
-    "channels": 19,
-    "videos": 20
+    "videos": 21
    },
    {
     "game": "Dead by Daylight",
-    "channels": 16,
-    "videos": 20
+    "channels": 15,
+    "videos": 17
    },
    {
-    "game": "モンスターストライク",
-    "channels": 15,
-    "videos": 16
+    "game": "League of Legends",
+    "channels": 12,
+    "videos": 12
+   },
+   {
+    "game": "スプラトゥーン3",
+    "channels": 14,
+    "videos": 14
+   },
+   {
+    "game": "モンスターハンターワイルズ",
+    "channels": 12,
+    "videos": 12
    }
   ]
  },
  "drift": [],
- "tags": [
-  {
-   "tag": "わちゃサバ",
-   "game": "Minecraft",
-   "evidence": 5,
-   "added": 2,
-   "channels": 4
-  },
-  {
-   "tag": "ぶいきゃす",
-   "game": "Arknights: Endfield",
-   "evidence": 4,
-   "added": 1,
-   "channels": 4
-  }
- ],
+ "tags": [],
  "misses": [
   {
    "word": "Starward",
@@ -165,22 +141,6 @@
    "kind": "near",
    "suggest": [
     "Starward Rogue"
-   ]
-  },
-  {
-   "word": "SYNDUALITY",
-   "channels": 1,
-   "n": 1,
-   "examples": [
-    {
-     "t": "【SYN】オーバーホール情報！discordラジオ視聴しながらプレイ！【SYNDUALITY】 #公式アンバサダー",
-     "c": "ゆっきー",
-     "u": "https://www.youtube.com/watch?v=p7pla_MAsAM"
-    }
-   ],
-   "kind": "near",
-   "suggest": [
-    "Synduality: Echo of Ada"
    ]
   },
   {
@@ -200,6 +160,22 @@
    ]
   },
   {
+   "word": "SYNDUALITY",
+   "channels": 1,
+   "n": 1,
+   "examples": [
+    {
+     "t": "【SYN】オーバーホール情報！discordラジオ視聴しながらプレイ！【SYNDUALITY】 #公式アンバサダー",
+     "c": "ゆっきー",
+     "u": "https://www.youtube.com/watch?v=p7pla_MAsAM"
+    }
+   ],
+   "kind": "near",
+   "suggest": [
+    "Synduality: Echo of Ada"
+   ]
+  },
+  {
    "word": "#歌うまスンギ歌枠リレー",
    "channels": 5,
    "n": 9,
@@ -215,9 +191,9 @@
      "u": "https://www.youtube.com/watch?v=c9ZiLsVG4mU"
     },
     {
-     "t": "【#歌うまスンギ歌枠リレー】楽しく歌わせていただきます【星導ショウ/にじさんじ】",
-     "c": "星導ショウ / Hoshirube Sho【にじさんじ】",
-     "u": "https://www.youtube.com/watch?v=kn3xwLDwQ-0"
+     "t": "【歌枠】音ズレの訪れ┊#音ノ乃のの #歌うまスンギ歌枠リレー",
+     "c": "音ノ乃のの / NononoNono",
+     "u": "https://www.youtube.com/watch?v=Gv52cL0bmTk"
     }
    ],
    "kind": "wide",
@@ -242,54 +218,6 @@
      "t": "【 #秋を奏でる歌枠リレー 】秋だーいすき！オシャレに歌うぞ🍂【小廻こま/ミリプロ】",
      "c": "小廻こま / Komawari Koma",
      "u": "https://www.youtube.com/watch?v=YH-WDfhQbwc"
-    }
-   ],
-   "kind": "wide",
-   "suggest": []
-  },
-  {
-   "word": "FFレゾナンス",
-   "channels": 4,
-   "n": 6,
-   "examples": [
-    {
-     "t": "【FFレゾナンス】発売前最新情報！やり込み要素&判明してるビジョンや購入特典など！",
-     "c": "ジョーカーのゲーム攻略チャンネル",
-     "u": "https://www.youtube.com/watch?v=6o5RKJTgxoQ"
-    },
-    {
-     "t": "【FFレゾナンス】クリア時間目安判明&レビュー高得点！！製品版前にやるべき事！",
-     "c": "ジョーカーのゲーム攻略チャンネル",
-     "u": "https://www.youtube.com/watch?v=WzIAwmMmVRo"
-    },
-    {
-     "t": "【FFレゾナンス】序盤最強スキル構成&抑えるべきゲーム性まとめ！",
-     "c": "ジョーカーのゲーム攻略チャンネル",
-     "u": "https://www.youtube.com/watch?v=3AieW-53tF8"
-    }
-   ],
-   "kind": "wide",
-   "suggest": []
-  },
-  {
-   "word": "#絶対遵守",
-   "channels": 4,
-   "n": 5,
-   "examples": [
-    {
-     "t": "【 #絶対遵守 / 先行プレイ 】規則は絶対遵守！デスゲームから脱出せよ！【 個人Vtuber / #小波ながれ 】",
-     "c": "小波ながれ / Sazanami Nagare",
-     "u": "https://www.youtube.com/watch?v=aKWaOJpjw2M"
-    },
-    {
-     "t": "【 #絶対遵守 / 先行プレイ 】規則は絶対遵守！デスゲームから脱出せよ！【 個人Vtuber / #小波ながれ 】",
-     "c": "小波ながれ / Sazanami Nagare",
-     "u": "https://www.youtube.com/watch?v=aKWaOJpjw2M"
-    },
-    {
-     "t": "【絶対遵守】ルールを守ってください【 #バ美肉 / Vtuber / 朱羽美寧 】",
-     "c": "朱羽美寧 / ビビリ探偵のホラーゲーム調査ch",
-     "u": "https://www.youtube.com/watch?v=A2zCuAKaI8w"
     }
    ],
    "kind": "wide",
@@ -335,9 +263,9 @@
      "u": "https://www.youtube.com/watch?v=3Zg7HS886qo"
     },
     {
-     "t": "【初見さん歓迎】GWも最終日…雑談しながらランク戦【プロスピA】",
+     "t": "【プロスピA】ランキングの心配しながらタイブレーク杯",
      "c": "ねこマンちゃんねる",
-     "u": "https://www.youtube.com/watch?v=ZQnW0egDBk8"
+     "u": "https://www.youtube.com/watch?v=lZWvPk-xThg"
     }
    ],
    "kind": "wide",
@@ -386,78 +314,6 @@
      "t": "ネタバレあり感想「バイオハザード実写映画」これ原作より凶悪じゃない！？ｗｗｗ#バイオハザード #反応集",
      "c": "アニゲー部「ゲームアニメ反応集」",
      "u": "https://www.youtube.com/watch?v=LZd3yWmBdFA"
-    }
-   ],
-   "kind": "wide",
-   "suggest": []
-  },
-  {
-   "word": "FFRS",
-   "channels": 3,
-   "n": 4,
-   "examples": [
-    {
-     "t": "【FFRS】FFBEガチ勢だったからこそお勧め出来る！期待大のFFRSを買うべき理由/魅力3選！特に初見の方にぜひやって欲しい！【ファイナルファンタジー レゾナンス】【FFBE】※ネタバレ厳禁・禁止",
-     "c": "たろわん。",
-     "u": "https://www.youtube.com/watch?v=bG8XChWTpi0"
-    },
-    {
-     "t": "【FFRS】02発売までついにあと３日！！名作ソシャゲFFBEとはまた違う面白さ！！／#りりナンス配信 ファイナルファンタジレゾナンス ブレイブエクスヴィアス 初見新規大歓迎！",
-     "c": "LiLy💠りりねこゲーム中",
-     "u": "https://www.youtube.com/watch?v=y5a_qg4wLLE"
-    },
-    {
-     "t": "【FFレゾナンス】まだ間に合う！序盤攻略＆体験版でやっておくべく要素15選！【FFRS】おすすめ狩場/ビジョン強化/MRP稼ぎ/石板全位置",
-     "c": "いたとはチャンネル",
-     "u": "https://www.youtube.com/watch?v=B-SLxCboNCM"
-    }
-   ],
-   "kind": "wide",
-   "suggest": []
-  },
-  {
-   "word": "ファイナルファンタジー レゾナンス",
-   "channels": 3,
-   "n": 4,
-   "examples": [
-    {
-     "t": "【FFRS】FFBEガチ勢だったからこそお勧め出来る！期待大のFFRSを買うべき理由/魅力3選！特に初見の方にぜひやって欲しい！【ファイナルファンタジー レゾナンス】【FFBE】※ネタバレ厳禁・禁止",
-     "c": "たろわん。",
-     "u": "https://www.youtube.com/watch?v=bG8XChWTpi0"
-    },
-    {
-     "t": "〖ファイナルファンタジーレゾナンス〗FF最新作はじめるぞおお！！〖日向りま〗",
-     "c": "日向りま / Hinata Lima",
-     "u": "https://www.youtube.com/watch?v=Zu6Ptxcy0G8"
-    },
-    {
-     "t": "【FFレゾナンス】『ファイナルファンタジー レゾナンス』先行プレイ。クリアーするほど熱中した作品を魅力を紹介。セフィロスやアルテマウェポンとのバトルも公開！【やり込み要素のネタバレ注意】",
-     "c": "ファミ通TUBE",
-     "u": "https://www.youtube.com/watch?v=1HaIcK1xirM"
-    }
-   ],
-   "kind": "wide",
-   "suggest": []
-  },
-  {
-   "word": "品行崩壊",
-   "channels": 3,
-   "n": 3,
-   "examples": [
-    {
-     "t": "【KALDI】秋と言えば栗！美味しい栗商品を食べ比べてみたぞ！　#品行崩壊",
-     "c": "たけぉ",
-     "u": "https://www.youtube.com/watch?v=HMuhGEXxcyQ"
-    },
-    {
-     "t": "【品行崩壊】これは誰の『私を構成する9つのゲーム』か当てるクイズが楽しすぎるwwww【とりっぴぃ/フルコン/スナザメ/むつー/なな湖】",
-     "c": "とりっぴぃ",
-     "u": "https://www.youtube.com/watch?v=G4VxJFipMGs"
-    },
-    {
-     "t": "一流ゲーム実況者なら『本物』のダイヤを見破るなんて、簡単だよね！？【ミスターダイヤモンド】#品行崩壊 たけぉむつーヒラまお",
-     "c": "まお",
-     "u": "https://www.youtube.com/watch?v=SXWaoc_ZLcU"
     }
    ],
    "kind": "wide",
@@ -564,22 +420,21 @@
  "hot_facts": [
   {
    "game": "インボキア-呪いのダイスゲーム-",
-   "growth": 7.5,
-   "videos": 6,
-   "base": 0.5,
-   "channels": 6,
-   "views": 147948,
+   "growth": 5.0,
+   "videos": 4,
+   "base": 0.8,
+   "channels": 4,
+   "views": 110382,
    "who": [
     "Pekora Ch. 兎田ぺこら",
-    "Watame Ch. 角巻わため",
-    "Su Ch. 水宮枢 - FLOW GLOW",
     "フルコンチャンネル",
-    "Tomari Mari channel / 兎鞠まりちゃんねる"
+    "Tomari Mari channel / 兎鞠まりちゃんねる",
+    "人生 つみこ (ホラーゲーム専門Vtuber)"
    ],
    "titles": [
     "【コラボ】可愛すぎる4人で呪いのゲーム『インボキア』に挑戦！！！！！！！！！！！！！ぺこ！【ホロライブ/兎田ぺこら】",
-    "【 インボキア 】呪いのボードゲームのお時間です..............【角巻わため/ホロライブ４期生】",
-    "【インボキア】呪いのボードゲーム⁉️こ、こわくねーし✋【水宮枢／ホロライブ】"
+    "ジュマンジみたいなゲームやるぞ～ホラゲ４人組にて【インボキア-呪いのダイスゲーム-】",
+    "【インボキア-呪いのダイスゲーム-】今日はみんなで呪われたボドゲやるよ！✌【#とまライブ】"
    ],
    "genres": [
     "Adventure",
@@ -589,94 +444,8 @@
    "platforms": [
     "pc"
    ],
-   "days_seen": 2,
-   "last_seen": "2026-10-12",
-   "first_here": false
-  },
-  {
-   "game": "デス桃太郎",
-   "growth": 5.0,
-   "videos": 4,
-   "base": 0.8,
-   "channels": 4,
-   "views": 60139,
-   "who": [
-    "叢雲カゲツ / Murakumo Kagetsu【にじさんじ】",
-    "フレン・E・ルスタリオ",
-    "えおちゃんねる！",
-    "まるたにあやの"
-   ],
-   "titles": [
-    "【デス桃太郎】こんばんわ、自認桃太郎です 【叢雲カゲツ/にじさんじ】",
-    "【デス桃太郎】猿犬キジの中なら犬かなって思います【にじさんじ】",
-    "銃を使い始める桃太郎のホラーゲーム？【デス桃太郎】"
-   ],
-   "genres": [
-    "Indie"
-   ],
-   "year": 2026,
-   "platforms": [
-    "pc"
-   ],
-   "days_seen": 12,
-   "last_seen": "2026-10-18",
-   "first_here": false
-  },
-  {
-   "game": "Dressmaker",
-   "growth": 4.0,
-   "videos": 4,
-   "base": 1.0,
-   "channels": 4,
-   "views": 62430,
-   "who": [
-    "ドーラ",
-    "ゆらぎゆら / YuragiYura🌙🫧",
-    "バーチャルおばあちゃんねる",
-    "ぽみ / Pomi",
-    "ぽみ / Pomi"
-   ],
-   "titles": [
-    "【Dressmaker】服に無頓着な生き物でも素敵なドレスが作れる…？！【にじさんじ/ドーラ】",
-    "【 Dressmaker 】着たいドレスがないなら、作ればいいじゃない。【 ゆらぎゆら/ミリプロ 】",
-    "一生ドレスを作り続けれるゲーム！【Dressmaker/ドレスメーカー】#4"
-   ],
-   "genres": [
-    "Simulator",
-    "Indie"
-   ],
-   "year": 2026,
-   "platforms": [
-    "pc"
-   ],
-   "days_seen": 10,
-   "last_seen": "2026-10-15",
-   "first_here": false
-  },
-  {
-   "game": "オーバーウォッチ2",
-   "growth": 3.75,
-   "videos": 24,
-   "base": 6.4,
-   "channels": 21,
-   "views": 1141446,
-   "who": [
-    "Kuzuha Channel",
-    "イブラヒム【にじさんじ】",
-    "小柳ロウ / Koyanagi Rou【にじさんじ】",
-    "ローレン・イロアス / Lauren Iroas【にじさんじ】",
-    "イブラヒム【にじさんじ】"
-   ],
-   "titles": [
-    "【OW】二足の【チーム練】",
-    "【OVERWATCH】顔は出そろった【にじさんじ/イブラヒム】",
-    "【OW】にじOW練習【小柳ロウ/にじさんじ】"
-   ],
-   "genres": [],
-   "year": null,
-   "platforms": [],
-   "days_seen": 31,
-   "last_seen": "2026-10-19",
+   "days_seen": 3,
+   "last_seen": "2026-10-20",
    "first_here": false
   },
   {
@@ -705,32 +474,124 @@
    "platforms": [
     "pc"
    ],
-   "days_seen": 23,
-   "last_seen": "2026-10-17",
+   "days_seen": 24,
+   "last_seen": "2026-10-20",
    "first_here": false
   },
   {
-   "game": "学園アイドルマスター",
+   "game": "Rust",
    "growth": 3.75,
    "videos": 3,
-   "base": 0.8,
+   "base": 0.7,
    "channels": 3,
-   "views": 8637,
+   "views": 8597,
    "who": [
-    "愛幸Pプロデュースch. / aisachiP",
-    "かぐch",
-    "Mimoza Ch. 華咲みもざ"
+    "標準野郎",
+    "貴様まさか🦈",
+    "即死ちゃん "
    ],
    "titles": [
-    "【学マス】Roarガシャみんなは回す？強化月間どんな感じ？【アプデ確認】",
-    "「学マス」アドリブ・背伸び・かが君狙い【Vtuber】",
-    "【#学園アイドルマスター】「Agitato」咲季ガシャ引く＆イベコミュ読み！＃７【 #華咲みもざ / ネタバレ注意 】"
+    "爆散したペーさんのヘリを見て爆笑する標準、呪いにかかって自分のヘリも墜落する【RUST/標準/ドンピシャ/ぺちゃんこ】",
+    "【 #TABRUST 】Day1｜RUSTって何するゲームなんや！【貴様まさか】",
+    "【RUST】平和なご近所生活、隣人の拠点を爆破して終了。"
+   ],
+   "genres": [
+    "Shooter",
+    "Role-playing (RPG)",
+    "Adventure",
+    "Indie"
+   ],
+   "year": 2018,
+   "platforms": [
+    "pc"
+   ],
+   "days_seen": 36,
+   "last_seen": "2026-10-20",
+   "first_here": false
+  },
+  {
+   "game": "Alone",
+   "growth": 3.75,
+   "videos": 3,
+   "base": 0.0,
+   "channels": 3,
+   "views": 4570,
+   "who": [
+    "アフロマスク",
+    "シムパパ",
+    "ぱっちょ【ゲームします】Paccio games"
+   ],
+   "titles": [
+    "ゾンビ発生から10年後の世紀末世界をサバイバルする最新オープンワールドゲーム【 Never Be Alone 】",
+    "デモ版【Never Be Alone】ゾンビに支配された世界で生き残れ！オープンワールドサバイバルが始まる【ゲーム実況】",
+    "【Never be alone】人数無制限協力マルチでゾンビ世界を生き抜く新作ゾンビゲーやります"
+   ],
+   "genres": [
+    "Simulator",
+    "Strategy",
+    "Adventure",
+    "Indie"
+   ],
+   "year": 2018,
+   "platforms": [
+    "pc"
+   ],
+   "days_seen": 1,
+   "last_seen": "2026-10-20",
+   "first_here": false
+  },
+  {
+   "game": "デス桃太郎",
+   "growth": 3.0,
+   "videos": 3,
+   "base": 1.0,
+   "channels": 3,
+   "views": 22393,
+   "who": [
+    "フレン・E・ルスタリオ",
+    "えおちゃんねる！",
+    "まるたにあやの"
+   ],
+   "titles": [
+    "【デス桃太郎】猿犬キジの中なら犬かなって思います【にじさんじ】",
+    "銃を使い始める桃太郎のホラーゲーム？【デス桃太郎】",
+    "【デス桃太郎】ホラー…？？？【VTuber/まるたにあやの 】"
+   ],
+   "genres": [
+    "Indie"
+   ],
+   "year": 2026,
+   "platforms": [
+    "pc"
+   ],
+   "days_seen": 13,
+   "last_seen": "2026-10-20",
+   "first_here": false
+  },
+  {
+   "game": "オーバーウォッチ2",
+   "growth": 2.73,
+   "videos": 21,
+   "base": 7.7,
+   "channels": 21,
+   "views": 424233,
+   "who": [
+    "ローレン・イロアス / Lauren Iroas【にじさんじ】",
+    "イブラヒム【にじさんじ】",
+    "ラトナ・プティ -Ratna Petit -にじさんじ所属",
+    "小柳ロウ / Koyanagi Rou【にじさんじ】",
+    "Kuzuha Channel"
+   ],
+   "titles": [
+    "【Overwatch】イブラヒム灼熱コーチング【ローレン・イロアス/にじさんじ】",
+    "【OVERWATCH】チーマー練習待機/まずは特別講師にリプレイを見ていただく【にじさんじ/イブラヒム】",
+    "【OW】スクリム助っ人  #にじEX_OW【ラトナ・プティ/にじさんじ】"
    ],
    "genres": [],
    "year": null,
    "platforms": [],
-   "days_seen": 6,
-   "last_seen": "2026-10-19",
+   "days_seen": 32,
+   "last_seen": "2026-10-20",
    "first_here": false
   }
  ],
