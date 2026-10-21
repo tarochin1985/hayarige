@@ -1,0 +1,12 @@
+{
+ "メモ": "2026-10-21 急ぎ1件。たろちんさんの報告: 『ほかに伸びたゲーム』に出ている `Alone` ×3.8 は誤検出で、中身は『Never Be Alone』3本。★確かめた: site/data.json の rising に `Alone ×3.75 3本/3ch` が**いま公開中**。条件1（公開中のカードに違うゲーム名が出ている）にそのまま当てはまる。3本はアフロマスクさん・ぱっちょさん・シムパパさんの10-20の回で、題はすべて『Never Be Alone』。2018年の `Alone`（pop:1）に吸われていた。★裏取り: AUTOMATON『Never Be Alone』12月8日早期アクセス、Game*Sparkも同名でゾンビアポカリプス後のオープンワールドサバイバルと紹介。Steam app 3012110。日本語の題名は無く、両媒体とも英語のまま『Never Be Alone』と書いているので、表示名は英語のまま（辞書の直し方2章の『日本語の表示名も足す』は、日本語名が存在する場合の話）。10-20の3本はデモ版（シムパパさんの題に『デモ版』と明記）。★あわせて `Alone` を alias_blocklist に入れた。理由は2章『一般名詞を別名にしない』。カタログには `Alone`(2018)×2・`Alone?`(2016)・`\"Alone\"`(2011) の4行があり、compact すると全部 `alone` になる。全期間で `alone` を含む題は10本あるが、**正しくこの4行のどれかだった回は0本**（ほかは Leaf It Alone 5本・Home Alone 1本・Crusader Kings III の By God Alone DLC 1本で、どれも自分の長い名前で当たっている）。ブロックリストには既に Dark / Souls / Home / Away / Dead / Evil / Blood / Town / Walk など同じ形の語が並んでいる。`Destiny`（ガンプラの回）と同じ判断。★`Leaf It Alone` と `Home Alone` は別の行で、compact が `leafitalone` `homealone` なので影響しない（`Home` が既にブロックされていても `Home Alone` が生きているのが、その証拠）。",
+ "別名": {
+  "Never Be Alone": [
+   "Never Be Alone"
+  ]
+ },
+ "機種": {
+  "Never Be Alone": ["pc"]
+ },
+ "別名を止める": ["Alone"]
+}
