@@ -1,6 +1,6 @@
 {
  "date": "2026-10-22",
- "generated": "2026-10-22 11:01",
+ "generated": "2026-10-22 11:48",
  "leads": {
   "events": [
    {
@@ -92,8 +92,8 @@
    },
    {
     "game": "Minecraft",
-    "channels": 27,
-    "videos": 27
+    "channels": 26,
+    "videos": 26
    },
    {
     "game": "Grand Theft Auto V",
@@ -102,7 +102,7 @@
    },
    {
     "game": "スプラトゥーン3",
-    "channels": 19,
+    "channels": 18,
     "videos": 20
    },
    {
@@ -259,30 +259,6 @@
    "suggest": []
   },
   {
-   "word": "初見さん歓迎",
-   "channels": 5,
-   "n": 5,
-   "examples": [
-    {
-     "t": "【初見さん歓迎】リスナーさんのためにサモラン猛特訓！",
-     "c": "虹夢メゼフィル👑😈 -Mezefiru-",
-     "u": "https://www.youtube.com/watch?v=SEDGt0b3KbQ"
-    },
-    {
-     "t": "【初見さん歓迎】GWも最終日…雑談しながらランク戦【プロスピA】",
-     "c": "ねこマンちゃんねる",
-     "u": "https://www.youtube.com/watch?v=ZQnW0egDBk8"
-    },
-    {
-     "t": "【初見さん歓迎】白狛のえって何なの！？ #白狛のえ",
-     "c": "白狛のえ",
-     "u": "https://www.youtube.com/watch?v=HFqksRvhakY"
-    }
-   ],
-   "kind": "wide",
-   "suggest": []
-  },
-  {
    "word": "あ。あ。あ。",
    "channels": 5,
    "n": 5,
@@ -309,7 +285,7 @@
   {
    "word": "プロスピA",
    "channels": 3,
-   "n": 11,
+   "n": 10,
    "examples": [
     {
      "t": "【プロスピA】ランキングの心配しながらタイブレーク杯",
@@ -317,14 +293,14 @@
      "u": "https://www.youtube.com/watch?v=lZWvPk-xThg"
     },
     {
-     "t": "【初見さん歓迎】GWも最終日…雑談しながらランク戦【プロスピA】",
-     "c": "ねこマンちゃんねる",
-     "u": "https://www.youtube.com/watch?v=ZQnW0egDBk8"
-    },
-    {
      "t": "【プロスピA】スプラの心配しながらタイブレーク杯",
      "c": "ねこマンちゃんねる",
      "u": "https://www.youtube.com/watch?v=40C6Rey3kD0"
+    },
+    {
+     "t": "【プロスピA】地震の誤報の心配しながらタイブレーク杯",
+     "c": "ねこマンちゃんねる",
+     "u": "https://www.youtube.com/watch?v=s2d0xRXHC4U"
     }
    ],
    "kind": "wide",
@@ -523,6 +499,30 @@
    "suggest": []
   },
   {
+   "word": "初見さん歓迎",
+   "channels": 3,
+   "n": 3,
+   "examples": [
+    {
+     "t": "【初見さん歓迎】白狛のえって何なの！？ #白狛のえ",
+     "c": "白狛のえ",
+     "u": "https://www.youtube.com/watch?v=HFqksRvhakY"
+    },
+    {
+     "t": "【新作】あのサイゲームズが送るドラマチック崩落アクションアドベンチャー「崩落の国」体験版が出ていたので攻略配信！【面白いのか！？】【初見さん歓迎！】",
+     "c": "ほーだん×ゲーマーズ / ほぼ毎日更新ゲーム総合情報ch",
+     "u": "https://www.youtube.com/watch?v=2zYPdXAEE6Y"
+    },
+    {
+     "t": "【初見さん歓迎】アカペラ歌枠",
+     "c": "依yori【人生立て直し系VTuber】",
+     "u": "https://www.youtube.com/watch?v=v7yJKbhc44k"
+    }
+   ],
+   "kind": "wide",
+   "suggest": []
+  },
+  {
    "word": "ステューピッド・ネバー・ダイズ",
    "channels": 3,
    "n": 3,
@@ -571,9 +571,9 @@
    "genres": [],
    "year": null,
    "platforms": [],
-   "days_seen": 0,
-   "last_seen": null,
-   "first_here": true
+   "days_seen": 1,
+   "last_seen": "2026-10-21",
+   "first_here": false
   },
   {
    "game": "ファイナルファンタジー レゾナンス",
@@ -658,9 +658,9 @@
    "platforms": [
     "pc"
    ],
-   "days_seen": 0,
-   "last_seen": null,
-   "first_here": true
+   "days_seen": 1,
+   "last_seen": "2026-10-21",
+   "first_here": false
   },
   {
    "game": "ブルーアーカイブ",
@@ -688,11 +688,11 @@
   },
   {
    "game": "ゼンレスゾーンゼロ",
-   "growth": 3.64,
-   "videos": 12,
-   "base": 3.3,
-   "channels": 11,
-   "views": 233313,
+   "growth": 2.86,
+   "videos": 10,
+   "base": 3.5,
+   "channels": 10,
+   "views": 231439,
    "who": [
     "フクー",
     "こへー / 古兵",
@@ -715,6 +715,11 @@
  ],
  "notes_written": true,
  "recent_columns": [
+  {
+   "date": "2026-10-22",
+   "game": "ドラゴンボール ゼノバース3",
+   "headline": "強い奴に会いに行くんじゃない その体を借りるんだ"
+  },
   {
    "date": "2026-10-21",
    "game": "インボキア-呪いのダイスゲーム-",
@@ -779,11 +784,6 @@
    "date": "2026-10-09",
    "game": "Valheim",
    "headline": "5年半かけて増えた最後の土地へ"
-  },
-  {
-   "date": "2026-10-08",
-   "game": "PUBG",
-   "headline": "「#ぶいすぽGG」まだ誰も勝っていないのに、夕飯の話"
   }
  ]
 }

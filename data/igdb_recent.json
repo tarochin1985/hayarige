@@ -4362,18 +4362,6 @@
   ]
  },
  {
-  "name": "Astra Sentinel",
-  "alias": [],
-  "pop": 0,
-  "y": 2026,
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Strategy"
-  ]
- },
- {
   "name": "Astral Ascent: Expedition 33 - For Those Who Come After",
   "alias": [],
   "pop": 0,
@@ -16669,7 +16657,9 @@
  },
  {
   "name": "Dino Crisis 2",
-  "alias": [],
+  "alias": [
+   "DINO CRISIS 2"
+  ],
   "pop": 0,
   "y": 2026,
   "p": [
@@ -39214,6 +39204,20 @@
   ]
  },
  {
+  "name": "MyDear.exe",
+  "alias": [],
+  "pop": 0,
+  "y": 2026,
+  "p": [
+   "pc"
+  ],
+  "g": [
+   "Puzzle",
+   "Simulator",
+   "Indie"
+  ]
+ },
+ {
   "name": "Mycopsychosys: Project Jupiter",
   "alias": [
    "Mycopsychosys: PCD"
@@ -41372,21 +41376,6 @@
   ],
   "g": [
    "Shooter"
-  ]
- },
- {
-  "name": "Novel Simulator",
-  "alias": [
-   "Cultivation Novel"
-  ],
-  "pop": 0,
-  "y": 2026,
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Simulator",
-   "Indie"
   ]
  },
  {
@@ -44802,23 +44791,6 @@
   ]
  },
  {
-  "name": "Pitchside Empire",
-  "alias": [
-   "Pitchside Empire.exe"
-  ],
-  "pop": 0,
-  "y": 2026,
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Simulator",
-   "Sport",
-   "Strategy",
-   "Indie"
-  ]
- },
- {
   "name": "Pith",
   "alias": [
    "PITH"
@@ -45513,6 +45485,18 @@
   "y": 2026,
   "p": [
    "console"
+  ],
+  "g": [
+   "Role-playing (RPG)"
+  ]
+ },
+ {
+  "name": "Pokémon World Frontier",
+  "alias": [],
+  "pop": 0,
+  "y": 2026,
+  "p": [
+   "pc"
   ],
   "g": [
    "Role-playing (RPG)"
@@ -56579,19 +56563,6 @@
   ]
  },
  {
-  "name": "Stranger Tavern: Brawl",
-  "alias": [],
-  "pop": 0,
-  "y": 2026,
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Strategy",
-   "Indie"
-  ]
- },
- {
   "name": "Stratagem Lost",
   "alias": [],
   "pop": 0,
@@ -56970,6 +56941,7 @@
    "console"
   ],
   "g": [
+   "Point-and-click",
    "Visual Novel"
   ]
  },
@@ -59971,6 +59943,16 @@
    "Adventure",
    "Indie",
    "Visual Novel"
+  ]
+ },
+ {
+  "name": "The Finals: Season 12 - Prime Time",
+  "alias": [],
+  "pop": 0,
+  "y": 2026,
+  "p": [
+   "pc",
+   "console"
   ]
  },
  {
@@ -65322,6 +65304,21 @@
   ],
   "g": [
    "Strategy",
+   "Indie"
+  ]
+ },
+ {
+  "name": "Underkeep",
+  "alias": [],
+  "pop": 0,
+  "y": 2026,
+  "p": [
+   "pc"
+  ],
+  "g": [
+   "Puzzle",
+   "Role-playing (RPG)",
+   "Adventure",
    "Indie"
   ]
  },
