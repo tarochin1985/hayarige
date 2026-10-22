@@ -1,6 +1,6 @@
 {
  "date": "2026-10-22",
- "generated": "2026-10-22 00:02",
+ "generated": "2026-10-22 09:33",
  "leads": {
   "events": [
    {
@@ -9,77 +9,72 @@
      "Tenten Ch. / 鳳玲天々",
      "marunnn【まるーんチャンネル】",
      "たけぉ",
-     "にーとちゃん",
      "まお",
      "みつき",
      "クラウン【探検家の記録】",
      "ノビーの遊び部屋",
+     "柚原いづみ / Izumi Channel 【ななしいんく】",
      "闇乃あびす / Abyss"
+    ]
+   },
+   {
+    "tag": "#ストグラSeason2",
+    "channels": [
+     "たけぉ",
+     "クラウン【探検家の記録】",
+     "暁月ホタル AKATSUKI HOTARU",
+     "柚原いづみ / Izumi Channel 【ななしいんく】"
     ]
    },
    {
     "tag": "#ホロドリ",
     "channels": [
      "Choco Ch. 癒月ちょこ",
-     "Flare Ch. 不知火フレア",
      "Iroha ch. 風真いろは - holoX -",
      "Roboco Ch. - ロボ子",
-     "Vivi Ch. 綺々羅々ヴィヴィ - FLOW GLOW",
-     "ここっとスクエア【ここスク】",
-     "アキロゼCh。Vtuber/ホロライブ所属",
-     "飯田ぽち。【Iida Pochi.】"
+     "アキロゼCh。Vtuber/ホロライブ所属"
     ]
    },
    {
-    "tag": "#SURGECity",
+    "tag": "#縦型配信",
     "channels": [
-     "Mimoza Ch. 華咲みもざ",
-     "おなつのにびたし / Onatsu no Nibitashi",
-     "史門 / Shimon ",
-     "銀灰まお Mao Ch."
-    ]
-   },
-   {
-    "tag": "#にじEX_OW",
-    "channels": [
-     "Rei7【にじさんじ】",
-     "Yuhi Riri Official",
-     "御子神琴音 / Mikogami Kotone【にじさんじ】",
-     "椎名唯華 / Shiina Yuika"
-    ]
-   },
-   {
-    "tag": "#エンドフィールド",
-    "channels": [
-     "あかどらん",
-     "ちゃい・ふにえる",
-     "猫咲あんじ Nekosaki anji",
-     "羅々華セーラ-Raraka Sera-"
+     "MiD0Ri / みどり",
+     "vii / ビー",
+     "かおりんご(44歳児)",
+     "くにくんOfficial"
     ]
    },
    {
     "tag": "#ゲーム実況",
     "channels": [
+     "M家の休日マサ",
      "Usagi Ch. 因幡兎",
-     "ぱんちき🥖🦃",
      "ジョアだよ",
-     "里城はな"
+     "運天りらん"
+    ]
+   },
+   {
+    "tag": "#ぶいきゃす",
+    "channels": [
+     "こてつちゃんねる",
+     "孵卵リリス / Furan Lilith",
+     "羅々華セーラ-Raraka Sera-"
     ]
    },
    {
     "tag": "#minecraft",
     "channels": [
      "まりも",
-     "ゆるふわまったり勢のゆかりさん",
-     "ズズちゃんねる!!!"
+     "やっぱりじぇいさん【マイクラ】",
+     "ゆるふわまったり勢のゆかりさん"
     ]
    },
    {
-    "tag": "#わちゃサバ",
+    "tag": "#SURGECity",
     "channels": [
-     "ノビーの遊び部屋",
-     "小花衣 ももみ / Momomi Kohanai",
-     "扇名いだ"
+     "おなつのにびたし / Onatsu no Nibitashi",
+     "やよい",
+     "史門 / Shimon "
     ]
    }
   ],
@@ -87,43 +82,43 @@
   "wide": [
    {
     "game": "Apex Legends",
-    "channels": 43,
-    "videos": 49
+    "channels": 32,
+    "videos": 36
    },
    {
     "game": "ストリートファイター6",
-    "channels": 33,
-    "videos": 40
+    "channels": 28,
+    "videos": 34
    },
    {
     "game": "Minecraft",
-    "channels": 30,
-    "videos": 31
-   },
-   {
-    "game": "Grand Theft Auto V",
-    "channels": 25,
+    "channels": 28,
     "videos": 28
    },
    {
-    "game": "Dead by Daylight",
-    "channels": 22,
-    "videos": 26
-   },
-   {
-    "game": "オーバーウォッチ2",
-    "channels": 17,
-    "videos": 20
+    "game": "Grand Theft Auto V",
+    "channels": 26,
+    "videos": 28
    },
    {
     "game": "スプラトゥーン3",
     "channels": 19,
+    "videos": 20
+   },
+   {
+    "game": "Dead by Daylight",
+    "channels": 18,
     "videos": 21
    },
    {
-    "game": "Japanese Ramen Simulator",
-    "channels": 17,
-    "videos": 17
+    "game": "オーバーウォッチ2",
+    "channels": 15,
+    "videos": 16
+   },
+   {
+    "game": "League of Legends",
+    "channels": 14,
+    "videos": 14
    }
   ]
  },
@@ -131,19 +126,24 @@
  "tags": [],
  "misses": [
   {
-   "word": "SYNDUALITY",
+   "word": "#splitbrain",
    "channels": 1,
-   "n": 1,
+   "n": 2,
    "examples": [
     {
-     "t": "【SYN】オーバーホール情報！discordラジオ視聴しながらプレイ！【SYNDUALITY】 #公式アンバサダー",
-     "c": "ゆっきー",
-     "u": "https://www.youtube.com/watch?v=p7pla_MAsAM"
+     "t": "【#splitbrain】お酒を持ってリベンジマッチ！【#ちゃみたこ】",
+     "c": "朝ノ夜",
+     "u": "https://www.youtube.com/watch?v=WBppwepGRuA"
+    },
+    {
+     "t": "【#splitbrain】お酒を持ってリベンジマッチ！【#ちゃみたこ】",
+     "c": "朝ノ夜",
+     "u": "https://www.youtube.com/watch?v=WBppwepGRuA"
     }
    ],
    "kind": "near",
    "suggest": [
-    "Synduality: Echo of Ada"
+    "Split Brain Samsara"
    ]
   },
   {
@@ -160,6 +160,22 @@
    "kind": "near",
    "suggest": [
     "Pop'n Music 13 Carnival"
+   ]
+  },
+  {
+   "word": "SYNDUALITY",
+   "channels": 1,
+   "n": 1,
+   "examples": [
+    {
+     "t": "【SYN】オーバーホール情報！discordラジオ視聴しながらプレイ！【SYNDUALITY】 #公式アンバサダー",
+     "c": "ゆっきー",
+     "u": "https://www.youtube.com/watch?v=p7pla_MAsAM"
+    }
+   ],
+   "kind": "near",
+   "suggest": [
+    "Synduality: Echo of Ada"
    ]
   },
   {
@@ -210,9 +226,9 @@
      "u": "https://www.youtube.com/watch?v=c9ZiLsVG4mU"
     },
     {
-     "t": "【#歌うまスンギ歌枠リレー】楽しく歌わせていただきます【星導ショウ/にじさんじ】",
-     "c": "星導ショウ / Hoshirube Sho【にじさんじ】",
-     "u": "https://www.youtube.com/watch?v=kn3xwLDwQ-0"
+     "t": "【歌枠】音ズレの訪れ┊#音ノ乃のの #歌うまスンギ歌枠リレー",
+     "c": "音ノ乃のの / NononoNono",
+     "u": "https://www.youtube.com/watch?v=Gv52cL0bmTk"
     }
    ],
    "kind": "wide",
@@ -344,14 +360,14 @@
    "n": 11,
    "examples": [
     {
-     "t": "【初見さん歓迎】GWも最終日…雑談しながらランク戦【プロスピA】",
-     "c": "ねこマンちゃんねる",
-     "u": "https://www.youtube.com/watch?v=ZQnW0egDBk8"
-    },
-    {
      "t": "【プロスピA】ランキングの心配しながらタイブレーク杯",
      "c": "ねこマンちゃんねる",
      "u": "https://www.youtube.com/watch?v=lZWvPk-xThg"
+    },
+    {
+     "t": "【初見さん歓迎】GWも最終日…雑談しながらランク戦【プロスピA】",
+     "c": "ねこマンちゃんねる",
+     "u": "https://www.youtube.com/watch?v=ZQnW0egDBk8"
     },
     {
      "t": "【プロスピA】スプラの心配しながらタイブレーク杯",
@@ -577,28 +593,52 @@
    ],
    "kind": "wide",
    "suggest": []
+  },
+  {
+   "word": "ステューピッド・ネバー・ダイズ",
+   "channels": 3,
+   "n": 3,
+   "examples": [
+    {
+     "t": "【 ステューピッド・ネバー・ダイズ 】▷1 あのDMCスタッフが携わるファンキーゾンビアクション!?をアーリーアクセスでプレイ【 夢咲刻夜Vlvier 】",
+     "c": "夢咲 刻夜-Tokiya Yumesaki",
+     "u": "https://www.youtube.com/watch?v=KP85Kc7yHNU"
+    },
+    {
+     "t": "開発者による最新ゲームプレイ ゾンビが爆速でレベルアップするアクションRPG『ステューピッド・ネバー・ダイズ』実況＆解説",
+     "c": "IGN Japan",
+     "u": "https://www.youtube.com/watch?v=wZDjCpsgjNI"
+    },
+    {
+     "t": "ヘタレゾンビが一目ぼれした女の子を蘇らせる物語【ステューピッド・ネバー・ダイズ】#01",
+     "c": "みっつーちゃんねる",
+     "u": "https://www.youtube.com/watch?v=EpGgkgohGrE"
+    }
+   ],
+   "kind": "wide",
+   "suggest": []
   }
  ],
  "miss_days": 7,
  "hot_facts": [
   {
    "game": "ファイナルファンタジー レゾナンス",
-   "growth": 5.45,
-   "videos": 12,
-   "base": 2.2,
-   "channels": 12,
-   "views": 66545,
+   "growth": 5.6,
+   "videos": 14,
+   "base": 2.5,
+   "channels": 13,
+   "views": 464092,
    "who": [
+    "葉山舞鈴 / Ohayama Ch.",
+    "胡桃沢りりか",
+    "GAMEゆうなch",
     "アオイゲーム【ドラクエ】",
-    "ジョーカーのゲーム攻略チャンネル",
-    "ジョーカーのゲーム攻略チャンネル",
-    "アオイゲーム【話題のゲーム紹介】",
     "しゅがーはうす"
    ],
    "titles": [
-    "【緊急】FFレゾナンス海外の評価がヤバい…FF7リメイクXbox Game Pass追加！スクエニ不正アクセスで注意喚起！【Switch2】",
-    "【FFレゾナンス】発売直前！デメリット無し！リミット技ダメージ倍化フィーナが強い！",
-    "【FFレゾナンス】50時間プレイ更に新情報！やり込み&新プレイアブルビジョン遂に！"
+    "【 FINAL FANTASY RESONANCE 】本日発売！シリーズ最新作💎王覇山、旅立ち。（ クリスタルを巡る、復讐と絆の物語。 ）【 にじさんじ┊︎葉山舞鈴┊︎※ネタバレ注意 】",
+    "【FINAL FANTASY RESONANCE ファイナルファンタジーレゾナンス】過去作キャラも出てくる！？FFレゾナンスやるぞ！！※ネタバレ注意【胡桃沢りりか】",
+    "#2【FFレゾナンス】FF 最新作 本日発売 2章トラウマ!!ガーディアン！『FINAL FANTASY RESONANCE』初見プレイ ネタバレあり【ファイナルファンタジー レゾナンス / PS5】"
    ],
    "genres": [
     "Role-playing (RPG)",
@@ -614,33 +654,28 @@
    "first_here": false
   },
   {
-   "game": "How to Fish",
-   "growth": 5.0,
+   "game": "マビノギモバイル",
+   "growth": 4.0,
    "videos": 4,
-   "base": 0.5,
+   "base": 1.0,
    "channels": 4,
-   "views": 99687,
+   "views": 119317,
    "who": [
-    "魁星 / Kaisei【にじさんじ】",
-    "北見遊征 / Kitami Yusei【にじさんじ】",
-    "榊ネス / Sakaki Ness【にじさんじ】",
-    "けっけさんのありがちなゲーム実況ちゃんねる"
+    "樋口楓【にじさんじ所属】",
+    "ゲームさんぽ /ライブドアニュース",
+    "びりQ",
+    "Amoko Ch. 甘乃あもこ",
+    "Amoko Ch. 甘乃あもこ"
    ],
    "titles": [
-    "【 How to Fish 】釣りバカゲーで伝説になる w/遊征、ネス【魁星/にじさんじ】",
-    "【How to Fish】激しめの魚釣りリターンズWith3SKM【北見遊征/にじさんじ】",
-    "【How to Fish】3SKMで狂った魚釣り！魚ぉぉぉぉぉ！【榊ネス/にじさんじ】"
+    "【マビノギモバイル】レイド実装！エンブレム強化させてくれ～😭💰【にじさんじ / 樋口楓】",
+    "【変わるわよ！】婚活アドバイザーがコーディネート！マリーミーと一緒にオンラインRPGの世界でモテキャラ作りに挑戦【マビノギモバイル／ゲームさんぽ】",
+    "【マビノギ】グラスギブネンレイドとまさかの推しの子コラボ発表「マビノギモバイル」攻略配信【NEXON】【マビモバ】"
    ],
-   "genres": [
-    "Shooter",
-    "Simulator",
-    "Indie"
-   ],
-   "year": 2026,
-   "platforms": [
-    "pc"
-   ],
-   "days_seen": 24,
+   "genres": [],
+   "year": null,
+   "platforms": [],
+   "days_seen": 10,
    "last_seen": "2026-10-21",
    "first_here": false
   },
@@ -650,18 +685,18 @@
    "videos": 12,
    "base": 3.2,
    "channels": 11,
-   "views": 193137,
+   "views": 297954,
    "who": [
     "Somen Channel",
     "フクー",
+    "こへー / 古兵",
     "汰鳥ヨシダ",
-    "フクー",
-    "Somen Channel"
+    "白亜リラ / Hakua Lira"
    ],
    "titles": [
     "【ゼンゼロ】状態異常が会心!? フィオニー完全解説｜音動機・編成・使い方【ゼンレスゾーンゼロ】",
     "【ゼンゼロ】クソ雑　復刻 ヴェリナ　解説 【ZZZ/ゼンレスゾーンゼロ】",
-    "フィオニー実装！ガチャ＆実践やるぞー！【質問歓迎/ゼンレスゾーンゼロ】【ネタバレ注意】"
+    "【ゼンゼロ】流石に強いフィオニーの基本まとめ解説・オススメ編成～ステータス・無凸逆境実戦【ゼンレスゾーンゼロ・攻略・考察・検証・解説】ZZZ"
    ],
    "genres": [],
    "year": null,
@@ -676,7 +711,7 @@
    "videos": 3,
    "base": 0.3,
    "channels": 3,
-   "views": 10903,
+   "views": 16664,
    "who": [
     "比宮じょーず",
     "エミリーのゲームちゃんねる Emily Game Ch.",
@@ -690,70 +725,62 @@
    "genres": [],
    "year": null,
    "platforms": [],
-   "days_seen": 7,
-   "last_seen": "2026-10-10",
+   "days_seen": 8,
+   "last_seen": "2026-10-21",
    "first_here": false
   },
   {
-   "game": "Enshrouded",
-   "growth": 3.64,
-   "videos": 4,
-   "base": 1.1,
-   "channels": 4,
-   "views": 6338,
+   "game": "タンポポは耐える。",
+   "growth": 2.5,
+   "videos": 7,
+   "base": 2.8,
+   "channels": 7,
+   "views": 146141,
    "who": [
-    "おかまつゲーム実況",
-    "ぜんざい助教授",
-    "おかまつゲーム実況",
-    "ジェイユ⚔️Jeyou",
-    "ああくGAMEチャンネル"
+    "栞葉るり / Shioriha Ruri【にじさんじ】",
+    "ACHRORA - mekPark",
+    "長尾 景 / Nagao Kei【にじさんじ】",
+    "メイカちゃんねる",
+    "汐鳴みりね / Mirine Shionari【ななしいんく】"
    ],
    "titles": [
-    "#3【PS5】Enshrouded~霧の王国~ 実況【プレイヤーの自由と創造性が最も重要となるサバイバルアクションRPG】",
-    "#3 Enshrouded　実況　フェルのサンダーブルートと対決",
-    "#4【PS5】Enshrouded~霧の王国~ 実況【プレイヤーの自由と創造性が最も重要となるサバイバルアクションRPG】"
+    "【タンポポは耐える。】　根　性　【栞葉るり/にじさんじ】",
+    "【タンポポは耐える。】飲酒しながら🍻どちらの酔っ払いが強いと思いますか？【#琉海垣りらら #りららだいびんぐ】",
+    "【 タンポポは耐える。 】忍　耐【 長尾景/にじさんじ 】"
    ],
    "genres": [
-    "Role-playing (RPG)",
-    "Adventure"
+    "Simulator",
+    "Indie"
    ],
    "year": 2026,
    "platforms": [
-    "pc",
-    "console"
+    "pc"
    ],
-   "days_seen": 1,
-   "last_seen": "2026-10-17",
+   "days_seen": 23,
+   "last_seen": "2026-10-21",
    "first_here": false
   },
   {
-   "game": "Call of Duty: Modern Warfare 4",
-   "growth": 3.12,
-   "videos": 5,
-   "base": 1.6,
-   "channels": 5,
-   "views": 71861,
+   "game": "ゼルダの伝説 ティアーズ オブ ザ キングダム",
+   "growth": 2.5,
+   "videos": 3,
+   "base": 1.2,
+   "channels": 3,
+   "views": 50341,
    "who": [
-    "実況者ジャンヌ",
-    "KH / Killin9Hit",
-    "寝恋　しらす",
-    "寝恋　しらす",
-    "ディーン"
+    "桜ころみん coromin Ch",
+    "おまつり",
+    "ゲーム実況シス"
    ],
    "titles": [
-    "【CoD:MW4】遂に!タルコフモード\"DMZ\"が解禁!!『ボリューム満点でやり込み要素だらけ!!』【実況者ジャンヌ】",
-    "韓国がやばいのに隠れようとする兵士にガチギレするKH【CoD:MW4】",
-    "【CoD:MW4】新作MW4！DMZ最速プレイ！『念願のタルコフモード遊び尽くしたい‼』【CallofDutyModernWarfare4】【女性VTuber】"
+    "コログの森へ行くぞ！完全初見で『ゼルダの伝説 ティアーズ オブ ザ キングダム』の世界へ！【Switch2版 #19】",
+    "ついにハイラル城に突撃するぞー！！(2回目)『ゼルダの伝説 ティアーズ オブ ザ キングダム』#24",
+    "【ティアキン 実況】イチカラ村が凄いことに！ワープマーカーを入手するぞ【ゼルダの伝説 ティアーズ オブ ザ キングダム】#6"
    ],
-   "genres": [
-    "Shooter"
-   ],
-   "year": 2026,
-   "platforms": [
-    "pc",
-    "console"
-   ],
-   "days_seen": 6,
+   "genres": [],
+   "year": null,
+   "platforms": [],
+   "days_seen": 27,
    "last_seen": "2026-10-21",
    "first_here": false
   }
