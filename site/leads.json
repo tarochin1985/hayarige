@@ -1,20 +1,17 @@
 {
  "date": "2026-10-22",
- "generated": "2026-10-22 11:48",
+ "generated": "2026-10-22 23:47",
  "leads": {
   "events": [
    {
     "tag": "#ストグラ",
     "channels": [
      "Tenten Ch. / 鳳玲天々",
-     "marunnn【まるーんチャンネル】",
      "たけぉ",
      "まお",
-     "みつき",
      "クラウン【探検家の記録】",
      "ノビーの遊び部屋",
-     "柚原いづみ / Izumi Channel 【ななしいんく】",
-     "闇乃あびす / Abyss"
+     "柚原いづみ / Izumi Channel 【ななしいんく】"
     ]
    },
    {
@@ -27,15 +24,6 @@
     ]
    },
    {
-    "tag": "#ホロドリ",
-    "channels": [
-     "Choco Ch. 癒月ちょこ",
-     "Iroha ch. 風真いろは - holoX -",
-     "Roboco Ch. - ロボ子",
-     "アキロゼCh。Vtuber/ホロライブ所属"
-    ]
-   },
-   {
     "tag": "#縦型配信",
     "channels": [
      "MiD0Ri / みどり",
@@ -45,80 +33,55 @@
     ]
    },
    {
-    "tag": "#ゲーム実況",
+    "tag": "#にじEX_OW",
     "channels": [
-     "M家の休日マサ",
-     "Usagi Ch. 因幡兎",
-     "ジョアだよ",
-     "運天りらん"
-    ]
-   },
-   {
-    "tag": "#ぶいきゃす",
-    "channels": [
-     "こてつちゃんねる",
-     "孵卵リリス / Furan Lilith",
-     "羅々華セーラ-Raraka Sera-"
-    ]
-   },
-   {
-    "tag": "#minecraft",
-    "channels": [
-     "まりも",
-     "やっぱりじぇいさん【マイクラ】",
-     "ゆるふわまったり勢のゆかりさん"
-    ]
-   },
-   {
-    "tag": "#SURGECity",
-    "channels": [
-     "おなつのにびたし / Onatsu no Nibitashi",
-     "やよい",
-     "史門 / Shimon "
+     "Rei7【にじさんじ】",
+     "Yuhi Riri Official",
+     "御子神琴音 / Mikogami Kotone【にじさんじ】"
     ]
    }
   ],
   "newcomers": [],
   "wide": [
    {
+    "game": "オーバーウォッチ2",
+    "channels": 14,
+    "videos": 14
+   },
+   {
     "game": "Apex Legends",
-    "channels": 32,
-    "videos": 36
-   },
-   {
-    "game": "ストリートファイター6",
-    "channels": 27,
-    "videos": 32
-   },
-   {
-    "game": "Minecraft",
-    "channels": 26,
-    "videos": 26
+    "channels": 13,
+    "videos": 14
    },
    {
     "game": "Grand Theft Auto V",
-    "channels": 25,
-    "videos": 27
+    "channels": 13,
+    "videos": 13
    },
    {
-    "game": "スプラトゥーン3",
-    "channels": 18,
-    "videos": 20
-   },
-   {
-    "game": "Dead by Daylight",
-    "channels": 17,
-    "videos": 20
-   },
-   {
-    "game": "オーバーウォッチ2",
-    "channels": 15,
-    "videos": 16
+    "game": "ストリートファイター6",
+    "channels": 11,
+    "videos": 12
    },
    {
     "game": "Japanese Ramen Simulator",
-    "channels": 14,
-    "videos": 14
+    "channels": 10,
+    "videos": 10
+   },
+   {
+    "game": "スプラトゥーン3",
+    "channels": 7,
+    "videos": 7
+   },
+   {
+    "game": "League of Legends",
+    "channels": 6,
+    "videos": 6
+   },
+   {
+    "game": "ファイナルファンタジー レゾナンス",
+    "channels": 6,
+    "videos": 6
    }
   ]
  },
@@ -147,22 +110,6 @@
    ]
   },
   {
-   "word": "pop'n music",
-   "channels": 1,
-   "n": 1,
-   "examples": [
-    {
-     "t": "【夢と魔法がテーマ】CSポップン10を初体験！！！グランヂや禅ジャズなどいよいよ知ってる曲が増えてきた！解禁イベントが大変らしいので\"電撃PS2\"のデータ使うよ【音ゲー / pop'n music】",
-     "c": "DOLCE. / dolce_iwate Channel",
-     "u": "https://www.youtube.com/watch?v=ELKPn5B21qY"
-    }
-   ],
-   "kind": "near",
-   "suggest": [
-    "Pop'n Music 13 Carnival"
-   ]
-  },
-  {
    "word": "SYNDUALITY",
    "channels": 1,
    "n": 1,
@@ -176,6 +123,22 @@
    "kind": "near",
    "suggest": [
     "Synduality: Echo of Ada"
+   ]
+  },
+  {
+   "word": "pop'n music",
+   "channels": 1,
+   "n": 1,
+   "examples": [
+    {
+     "t": "【夢と魔法がテーマ】CSポップン10を初体験！！！グランヂや禅ジャズなどいよいよ知ってる曲が増えてきた！解禁イベントが大変らしいので\"電撃PS2\"のデータ使うよ【音ゲー / pop'n music】",
+     "c": "DOLCE. / dolce_iwate Channel",
+     "u": "https://www.youtube.com/watch?v=ELKPn5B21qY"
+    }
+   ],
+   "kind": "near",
+   "suggest": [
+    "Pop'n Music 13 Carnival"
    ]
   },
   {
@@ -226,9 +189,9 @@
      "u": "https://www.youtube.com/watch?v=c9ZiLsVG4mU"
     },
     {
-     "t": "【歌枠】音ズレの訪れ┊#音ノ乃のの #歌うまスンギ歌枠リレー",
-     "c": "音ノ乃のの / NononoNono",
-     "u": "https://www.youtube.com/watch?v=Gv52cL0bmTk"
+     "t": "【#歌うまスンギ歌枠リレー】楽しく歌わせていただきます【星導ショウ/にじさんじ】",
+     "c": "星導ショウ / Hoshirube Sho【にじさんじ】",
+     "u": "https://www.youtube.com/watch?v=kn3xwLDwQ-0"
     }
    ],
    "kind": "wide",
@@ -309,13 +272,8 @@
   {
    "word": "デュエットナイトアビス",
    "channels": 3,
-   "n": 9,
+   "n": 8,
    "examples": [
-    {
-     "t": "【デナアビ1.7】金の楔が直接ドロップへ!?デイリー自動受け取り追加など神修正大量か！【デュエットナイトアビス】フォルス/1周年/アプデ",
-     "c": "ネタ勢のトリュウ",
-     "u": "https://www.youtube.com/watch?v=uhYAhL-x-Pw"
-    },
     {
      "t": "【デナアビ1.7】実質「ブルース」強化!?「魔の楔」追加情報判明！【デュエットナイトアビス】フォルス/1周年/アプデ",
      "c": "ネタ勢のトリュウ",
@@ -325,6 +283,11 @@
      "t": "【デナアビ1.7】○○が神！シリュウ＆ユーミン7凸解禁、日課改善、ジェネモン解放などアプデ変更点まとめ【デュエットナイトアビス】リズム/ユーミン/７凸/シリュウ",
      "c": "ネタ勢のトリュウ",
      "u": "https://www.youtube.com/watch?v=qD3-6A46TGg"
+    },
+    {
+     "t": "【デナアビコード】1.7アプデ＆調整内容まとめ！新マルチコンテンツや日課改善、キャラ調整の意図を徹底解説【デュエットナイトアビス】リズム/ユーミン/７凸/シリュウ",
+     "c": "ネタ勢のトリュウ",
+     "u": "https://www.youtube.com/watch?v=c5kGADv6PnA"
     }
    ],
    "kind": "wide",
@@ -550,49 +513,71 @@
  "miss_days": 7,
  "hot_facts": [
   {
-   "game": "ドラゴンボール ゼノバース3",
-   "growth": 6.25,
-   "videos": 5,
-   "base": 0.0,
-   "channels": 5,
-   "views": 15125,
+   "game": "ゼルダの伝説 ティアーズ オブ ザ キングダム",
+   "growth": 2.5,
+   "videos": 3,
+   "base": 1.2,
+   "channels": 3,
+   "views": 50341,
    "who": [
-    "電撃オンライン",
-    "ファミ通TUBE",
-    "Ｖジャンプチャンネル",
-    "電ファミ公式チャンネル",
-    "Gamerチャンネル【ゲーム・エンタメ情報】"
+    "桜ころみん coromin Ch",
+    "おまつり",
+    "ゲーム実況シス"
    ],
    "titles": [
-    "『ドラゴンボール ゼノバース３』先行プレイ動画。自分だけの超戦士で挑むマルチプレイ！ ソウルチェンジやアバターカスタマイズなど最新要素を先行体験",
-    "【先行プレイ】『ドラゴンボール ゼノバース3』ソウルチェンジで好きなDBキャラクターに変身できる爽快アクション",
-    "『ドラゴンボール ゼノバース３』先行プレイ：3つの協力型クエストを体験"
+    "コログの森へ行くぞ！完全初見で『ゼルダの伝説 ティアーズ オブ ザ キングダム』の世界へ！【Switch2版 #19】",
+    "ついにハイラル城に突撃するぞー！！(2回目)『ゼルダの伝説 ティアーズ オブ ザ キングダム』#24",
+    "【ティアキン 実況】イチカラ村が凄いことに！ワープマーカーを入手するぞ【ゼルダの伝説 ティアーズ オブ ザ キングダム】#6"
    ],
    "genres": [],
    "year": null,
    "platforms": [],
-   "days_seen": 1,
+   "days_seen": 26,
+   "last_seen": "2026-10-20",
+   "first_here": false
+  },
+  {
+   "game": "マビノギモバイル",
+   "growth": 2.31,
+   "videos": 3,
+   "base": 1.3,
+   "channels": 3,
+   "views": 105876,
+   "who": [
+    "樋口楓【にじさんじ所属】",
+    "びりQ",
+    "Amoko Ch. 甘乃あもこ"
+   ],
+   "titles": [
+    "【マビノギモバイル】レイド実装！エンブレム強化させてくれ～😭💰【にじさんじ / 樋口楓】",
+    "【マビノギ】グラスギブネンレイドとまさかの推しの子コラボ発表「マビノギモバイル」攻略配信【NEXON】【マビモバ】",
+    "【マビノギモバイル】レイド戦グラスギブネン！とかアビスいったり日課消化したり！（ダンバートン鯖・ヒーラー）【NEXON】【マビモバ】"
+   ],
+   "genres": [],
+   "year": null,
+   "platforms": [],
+   "days_seen": 10,
    "last_seen": "2026-10-21",
    "first_here": false
   },
   {
    "game": "ファイナルファンタジー レゾナンス",
-   "growth": 5.6,
-   "videos": 14,
-   "base": 2.5,
-   "channels": 13,
-   "views": 464092,
+   "growth": 1.67,
+   "videos": 6,
+   "base": 3.6,
+   "channels": 6,
+   "views": 267768,
    "who": [
     "葉山舞鈴 / Ohayama Ch.",
-    "胡桃沢りりか",
     "GAMEゆうなch",
-    "アオイゲーム【ドラクエ】",
-    "しゅがーはうす"
+    "GAMEゆうなch",
+    "ねぇね。",
+    "ジョーカーのゲーム攻略チャンネル"
    ],
    "titles": [
     "【 FINAL FANTASY RESONANCE 】本日発売！シリーズ最新作💎王覇山、旅立ち。（ クリスタルを巡る、復讐と絆の物語。 ）【 にじさんじ┊︎葉山舞鈴┊︎※ネタバレ注意 】",
-    "【FINAL FANTASY RESONANCE ファイナルファンタジーレゾナンス】過去作キャラも出てくる！？FFレゾナンスやるぞ！！※ネタバレ注意【胡桃沢りりか】",
-    "#2【FFレゾナンス】FF 最新作 本日発売 2章トラウマ!!ガーディアン！『FINAL FANTASY RESONANCE』初見プレイ ネタバレあり【ファイナルファンタジー レゾナンス / PS5】"
+    "#2【FFレゾナンス】FF 最新作 本日発売 2章トラウマ!!ガーディアン！『FINAL FANTASY RESONANCE』初見プレイ ネタバレあり【ファイナルファンタジー レゾナンス / PS5】",
+    "#3【FFレゾナンス】FF 最新作 本日発売 3章から『FINAL FANTASY RESONANCE』初見プレイ ネタバレあり ファイナル【ファイナルファンタジー レゾナンス / PS5】"
    ],
    "genres": [
     "Role-playing (RPG)",
@@ -608,108 +593,90 @@
    "first_here": false
   },
   {
-   "game": "マビノギモバイル",
-   "growth": 4.0,
-   "videos": 4,
-   "base": 1.0,
-   "channels": 4,
-   "views": 119317,
+   "game": "ドラゴンクエストV",
+   "growth": 1.43,
+   "videos": 3,
+   "base": 2.1,
+   "channels": 3,
+   "views": 229678,
    "who": [
-    "樋口楓【にじさんじ所属】",
-    "ゲームさんぽ /ライブドアニュース",
-    "びりQ",
-    "Amoko Ch. 甘乃あもこ",
-    "Amoko Ch. 甘乃あもこ"
+    "Patra Channel / 周防パトラ",
+    "バーチャル債務者youtuber天開司",
+    "アキコ@うさぎ島"
    ],
    "titles": [
-    "【マビノギモバイル】レイド実装！エンブレム強化させてくれ～😭💰【にじさんじ / 樋口楓】",
-    "【変わるわよ！】婚活アドバイザーがコーディネート！マリーミーと一緒にオンラインRPGの世界でモテキャラ作りに挑戦【マビノギモバイル／ゲームさんぽ】",
-    "【マビノギ】グラスギブネンレイドとまさかの推しの子コラボ発表「マビノギモバイル」攻略配信【NEXON】【マビモバ】"
+    "【ドラクエV】すごろく耐久！＆裏ボス討伐！はじめてのドラゴンクエストV 天空の花嫁をやってみる！DragonQuestⅤ【周防パトラ】",
+    "【ドラゴンクエストⅤ/完全初見】超絶名作RPGを完全初見でやる喜び【天開司/Vtuber】",
+    "【ドラクエ５】アキコの攻略実況・第１４話　ROM／雑談歓迎"
+   ],
+   "genres": [
+    "Racing",
+    "Role-playing (RPG)",
+    "Turn-based strategy (TBS)",
+    "Adventure"
+   ],
+   "year": 1992,
+   "platforms": [
+    "console"
+   ],
+   "days_seen": 23,
+   "last_seen": "2026-10-20",
+   "first_here": false
+  },
+  {
+   "game": "オーバーウォッチ2",
+   "growth": 1.37,
+   "videos": 14,
+   "base": 10.2,
+   "channels": 14,
+   "views": 881898,
+   "who": [
+    "小柳ロウ / Koyanagi Rou【にじさんじ】",
+    "イブラヒム【にじさんじ】",
+    "星導ショウ / Hoshirube Sho【にじさんじ】",
+    "御子神琴音 / Mikogami Kotone【にじさんじ】",
+    "Rei7【にじさんじ】"
+   ],
+   "titles": [
+    "【OW】視聴者カスタム試行回数【小柳ロウ/にじさんじ】",
+    "【OVERWATCH】お兄ちゃんちょっと待ってよ【にじさんじ/イブラヒム】",
+    "【オーバーウォッチ】NIJISANJI Extreme Match 今日からゼニヤッタしか使いません【星導ショウ/にじさんじ】"
    ],
    "genres": [],
    "year": null,
    "platforms": [],
-   "days_seen": 10,
+   "days_seen": 33,
    "last_seen": "2026-10-21",
    "first_here": false
   },
   {
-   "game": "超大発掘",
-   "growth": 3.75,
+   "game": "Silent Hill: Townfall",
+   "growth": 1.3,
    "videos": 3,
-   "base": 0.5,
+   "base": 2.3,
    "channels": 3,
-   "views": 30396,
+   "views": 67122,
    "who": [
-    "しんじさん",
-    "つばさま(ゲーム実況)",
-    " なぎせいな / 凪世薙"
+    "える / Elu【にじさんじ】",
+    "アズリ / Azri【ななしいんく】",
+    "ひろのあの屋敷 #ホラーゲームなのに大はしゃぎする人たち"
    ],
    "titles": [
-    "柴犬と一緒に掘りまくって大金持ちになるしんじｗｗ【超大発掘】",
-    "【超大発掘】永遠に採掘してスキルツリーで無限に強化する掘りゲームが面白過ぎた！！",
-    "【超大発掘】採掘×インクリメンタル×博物館が面白すぎ...！？お宝を発掘→設備強化→爆稼ぎ→政治の闇に触れる。新作放置系クリッカー攻略が面白いw今だけ25%セール！最終回【steam】"
+    "【 SILENT HILL: Townfall 】#1 シリーズ最新作！不気味な世界に迷い込みました。※ネタバレ注意【にじさんじ/える】",
+    "正しいものを選べ。　-SILENT HILL: Townfall【ななしいんく/アズリ】",
+    "【 SILENT HILL: Townfall 】孤島「セントアメリア」を舞台に始まる物語 ※ネタバレ注意【 サイレントヒル：タウンフォール | 話題の新作ホラゲをエンディングまで実況プレイ】"
    ],
    "genres": [
-    "Strategy",
-    "Indie"
+    "Puzzle",
+    "Adventure"
    ],
    "year": 2026,
    "platforms": [
-    "pc"
+    "pc",
+    "console"
    ],
-   "days_seen": 1,
-   "last_seen": "2026-10-21",
-   "first_here": false
-  },
-  {
-   "game": "ブルーアーカイブ",
-   "growth": 3.75,
-   "videos": 3,
-   "base": 0.3,
-   "channels": 3,
-   "views": 16664,
-   "who": [
-    "比宮じょーず",
-    "エミリーのゲームちゃんねる Emily Game Ch.",
-    "20ムギテサ"
-   ],
-   "titles": [
-    "【比宮のブルアカLIVE🔴】Ex.「ロア追跡」編.第3章「夢の中の列車」初見実況【BlueArchive】",
-    "【ブルアカ】初見実況🔰第2部 メインストーリーEx. 「ロア追跡」編 第3章「夢の中の列車」鑑賞【ブルーアーカイブ/블루 아카이브】",
-    "【ブルアカ】まるで8番乗り場に来たみたいだ、テンション上がるなぁ～【初見大歓迎】"
-   ],
-   "genres": [],
-   "year": null,
-   "platforms": [],
-   "days_seen": 8,
-   "last_seen": "2026-10-21",
-   "first_here": false
-  },
-  {
-   "game": "ゼンレスゾーンゼロ",
-   "growth": 2.86,
-   "videos": 10,
-   "base": 3.5,
-   "channels": 10,
-   "views": 231439,
-   "who": [
-    "フクー",
-    "こへー / 古兵",
-    "うおうおちゃんねる さかなじょうゆ",
-    "汰鳥ヨシダ",
-    "白亜リラ / Hakua Lira"
-   ],
-   "titles": [
-    "【ゼンゼロ】クソ雑　復刻 ヴェリナ　解説 【ZZZ/ゼンレスゾーンゼロ】",
-    "【ゼンゼロ】流石に強いフィオニーの基本まとめ解説・オススメ編成～ステータス・無凸逆境実戦【ゼンレスゾーンゼロ・攻略・考察・検証・解説】ZZZ",
-    "【ゼンゼロ】フィオニー餅は強いのか？危局スコアで音動機を比較検証！【ゼンレスゾーンゼロ】【ZZZ・攻略・考察・検証・創作体験】#ZZZ  #レミエール #ヴェリナ"
-   ],
-   "genres": [],
-   "year": null,
-   "platforms": [],
-   "days_seen": 28,
-   "last_seen": "2026-10-21",
+   "days_seen": 27,
+   "last_seen": "2026-10-20",
    "first_here": false
   }
  ],
