@@ -65,7 +65,8 @@ POINT = ('<svg class="pt" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.
 
 # 判定の結果を変えうるファイル。どれかが変わったら、過去のページも作り直す。
 MATCH_INPUTS = ("aliases.json", "display_names.json", "blocklist.json",
-                "alias_blocklist.json", "game_blocklist.json", "platforms.json",
+                "alias_blocklist.json", "alias_exact_only.json",
+                "game_blocklist.json", "platforms.json",
                 "channels_manual.json", "igdb_meta.json", "site_config.json")
 
 

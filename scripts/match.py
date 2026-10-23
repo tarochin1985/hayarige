@@ -78,7 +78,35 @@ class Index:
         self.bucket = {}     # 先頭2文字 → [(alias, game, pop)]
         self.ng = []
 
-    def add(self, alias, game, pop=0):
+    def add(self, alias, game, pop=0, exact_only=False):
+        """エイリアスを1つ登録する。
+
+        exact_only=True のときは**括弧の中身まるごと（または題名まるごと）が
+        その字と一致したときだけ**当たるようにする。途中に含まれているだけでは
+        当たらない（下の bucket に入れない）。
+
+        なぜ要るか（2026-10-23 たろちんさんの報告）
+        ------------------------------------------
+        『あ。あ。あ。』という、声で操作するゲームが落ちていた。
+        **compact() が「。」を落とすので、詰めると `あああ` になる。**
+        これを普通の別名として足すと、
+
+            「しゅばあああああああ」「きたああああ」「だあああ」
+
+        のような題を全部さらってしまう。手元の記録で数えたら
+        **`あああ` を含む題は138本・67チャンネル**あり、その100本は
+        7 Days to Die・Apex・ドラゴンボールZカカロットなどに正しく
+        入っている。足した瞬間にそれを全部奪う。
+
+        かといって最低文字数を3→4に上げる手は使えない。3文字の非ラテン別名は
+        262件あり、手で登録したものだけでも `ヴァロ` `デドバ` `スト6` `あつ森`
+        `ウマ娘` `学マス` `パルワ` など24件が効いている。
+
+        **「括弧まるごとのときだけ当てる」なら、どちらも壊さずに済む。**
+        【あ。あ。あ。】は当たり、「しゅばあああ」は当たらない。
+        2026-10-12に「条件付きで弾く仕掛けは、守るものが無いうちは作らない。
+        ただし必要になる日は来る」と書いた、その日が来たということ。
+        """
         c = compact(alias)
         if len(c) < 2:
             return
@@ -87,7 +115,7 @@ class Index:
         cur = self.exact.get(c)
         if cur is None or pop > cur[1]:
             self.exact[c] = (game, pop)
-        if len(c) >= 3:
+        if len(c) >= 3 and not exact_only:
             # 単語の区切りを残した形も持っておく。詰めた形だけだと
             # 「ARK Survival Ascended」のような複数語の名前を探せない。
             self.bucket.setdefault(c[:2], []).append((c, spaced(alias), game, pop))
@@ -203,11 +231,15 @@ def build_index() -> Index:
             if compact(a) in bad_alias:
                 continue
             idx.add(a, g["name"], g.get("pop", 0))
+    # 「まるごと一致のときだけ当てる」別名（2026-10-23）。
+    # 詰めるとありふれた字になってしまう題名のためのもの。add() の説明を読むこと。
+    only = {compact(a) for a in
+            (read_json(DATA / "alias_exact_only.json", []) or [])}
     # 手で足したエイリアス（略称・愛称）は人気度を最大にして優先する
     for game, aliases in (read_json(DATA / "aliases.json", {}) or {}).items():
-        idx.add(game, game, 10 ** 9)
+        idx.add(game, game, 10 ** 9, exact_only=compact(game) in only)
         for a in aliases:
-            idx.add(a, game, 10 ** 9)
+            idx.add(a, game, 10 ** 9, exact_only=compact(a) in only)
     idx.ng = [compact(t) for t in (read_json(DATA / "blocklist.json", []) or [])]
     return idx
 
