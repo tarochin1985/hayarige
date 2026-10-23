@@ -1,93 +1,153 @@
 {
- "date": "2026-10-22",
- "generated": "2026-10-22 23:47",
+ "date": "2026-10-23",
+ "generated": "2026-10-23 09:33",
  "leads": {
   "events": [
    {
-    "tag": "#ストグラ",
+    "tag": "#ホロ鯖かくれんぼ",
     "channels": [
-     "Tenten Ch. / 鳳玲天々",
-     "たけぉ",
-     "まお",
-     "クラウン【探検家の記録】",
-     "ノビーの遊び部屋",
-     "柚原いづみ / Izumi Channel 【ななしいんく】"
+     "Chihaya Ch. 輪堂 千速 - FLOW GLOW",
+     "Matsuri Channel 夏色まつり",
+     "Riona Ch. 響咲リオナ - FLOW GLOW",
+     "Su Ch. 水宮枢 - FLOW GLOW",
+     "Tsuzuri Ch. 鈴鳴つづり ‐ アソビ★まわり隊!",
+     "Vivi Ch. 綺々羅々ヴィヴィ - FLOW GLOW"
+    ]
+   },
+   {
+    "tag": "#ホロドリ",
+    "channels": [
+     "AZKi Channel",
+     "Choco Ch. 癒月ちょこ",
+     "Iroha ch. 風真いろは - holoX -",
+     "Polka Ch. 尾丸ポルカ",
+     "Roboco Ch. - ロボ子",
+     "Vivi Ch. 綺々羅々ヴィヴィ - FLOW GLOW"
     ]
    },
    {
     "tag": "#ストグラSeason2",
     "channels": [
-     "たけぉ",
-     "クラウン【探検家の記録】",
+     "neon",
+     "天羽よつは",
      "暁月ホタル AKATSUKI HOTARU",
-     "柚原いづみ / Izumi Channel 【ななしいんく】"
+     "柚原いづみ / Izumi Channel 【ななしいんく】",
+     "稲荷いろはInari Iroha"
     ]
    },
    {
-    "tag": "#縦型配信",
+    "tag": "#ゲーム実況",
     "channels": [
-     "MiD0Ri / みどり",
-     "vii / ビー",
-     "かおりんご(44歳児)",
-     "くにくんOfficial"
+     "zakimiya / ザキミヤ",
+     "おしたらあたるCh.　Oshitara ataru",
+     "恋因ロス KoinRosu",
+     "豚咲あおい_TomisakiAoi",
+     "運天りらん"
     ]
    },
    {
-    "tag": "#にじEX_OW",
+    "tag": "#ストグラ",
     "channels": [
-     "Rei7【にじさんじ】",
-     "Yuhi Riri Official",
-     "御子神琴音 / Mikogami Kotone【にじさんじ】"
+     "Tenten Ch. / 鳳玲天々",
+     "ノビーの遊び部屋",
+     "柚原いづみ / Izumi Channel 【ななしいんく】",
+     "闇乃あびす / Abyss"
+    ]
+   },
+   {
+    "tag": "#ぶいきゃす",
+    "channels": [
+     "こてつちゃんねる",
+     "ちゃい・ふにえる",
+     "孵卵リリス / Furan Lilith",
+     "浅葱なぎ"
+    ]
+   },
+   {
+    "tag": "#マイクラ",
+    "channels": [
+     "へびりょく",
+     "まりも",
+     "リベル"
+    ]
+   },
+   {
+    "tag": "#エンドフィールド",
+    "channels": [
+     "おしたらあたるCh.　Oshitara ataru",
+     "ちゃい・ふにえる",
+     "孵卵リリス / Furan Lilith"
     ]
    }
   ],
   "newcomers": [],
   "wide": [
    {
-    "game": "オーバーウォッチ2",
-    "channels": 14,
-    "videos": 14
+    "game": "ストリートファイター6",
+    "channels": 30,
+    "videos": 32
    },
    {
     "game": "Apex Legends",
-    "channels": 13,
-    "videos": 14
-   },
-   {
-    "game": "Grand Theft Auto V",
-    "channels": 13,
-    "videos": 13
-   },
-   {
-    "game": "ストリートファイター6",
-    "channels": 11,
-    "videos": 12
-   },
-   {
-    "game": "Japanese Ramen Simulator",
-    "channels": 10,
-    "videos": 10
-   },
-   {
-    "game": "スプラトゥーン3",
-    "channels": 7,
-    "videos": 7
-   },
-   {
-    "game": "League of Legends",
-    "channels": 6,
-    "videos": 6
+    "channels": 29,
+    "videos": 31
    },
    {
     "game": "ファイナルファンタジー レゾナンス",
-    "channels": 6,
-    "videos": 6
+    "channels": 23,
+    "videos": 25
+   },
+   {
+    "game": "Minecraft",
+    "channels": 20,
+    "videos": 20
+   },
+   {
+    "game": "Grand Theft Auto V",
+    "channels": 21,
+    "videos": 22
+   },
+   {
+    "game": "Dead by Daylight",
+    "channels": 19,
+    "videos": 20
+   },
+   {
+    "game": "オーバーウォッチ2",
+    "channels": 16,
+    "videos": 16
+   },
+   {
+    "game": "スプラトゥーン3",
+    "channels": 15,
+    "videos": 15
    }
   ]
  },
  "drift": [],
  "tags": [],
  "misses": [
+  {
+   "word": "SYNDUALITY",
+   "channels": 1,
+   "n": 2,
+   "examples": [
+    {
+     "t": "【SYN】オーバーホール情報！discordラジオ視聴しながらプレイ！【SYNDUALITY】 #公式アンバサダー",
+     "c": "ゆっきー",
+     "u": "https://www.youtube.com/watch?v=p7pla_MAsAM"
+    },
+    {
+     "t": "【SYN】アプデきたああ！オーバーホール見に行く！【SYNDUALITY】 #公式アンバサダー",
+     "c": "ゆっきー",
+     "u": "https://www.youtube.com/watch?v=IWtQEFG_tKw"
+    }
+   ],
+   "kind": "near",
+   "suggest": [
+    "Synduality: Echo of Ada"
+   ]
+  },
   {
    "word": "#splitbrain",
    "channels": 1,
@@ -107,22 +167,6 @@
    "kind": "near",
    "suggest": [
     "Split Brain Samsara"
-   ]
-  },
-  {
-   "word": "SYNDUALITY",
-   "channels": 1,
-   "n": 1,
-   "examples": [
-    {
-     "t": "【SYN】オーバーホール情報！discordラジオ視聴しながらプレイ！【SYNDUALITY】 #公式アンバサダー",
-     "c": "ゆっきー",
-     "u": "https://www.youtube.com/watch?v=p7pla_MAsAM"
-    }
-   ],
-   "kind": "near",
-   "suggest": [
-    "Synduality: Echo of Ada"
    ]
   },
   {
@@ -174,6 +218,54 @@
    ]
   },
   {
+   "word": "あ。あ。あ。",
+   "channels": 8,
+   "n": 8,
+   "examples": [
+    {
+     "t": "【 朝活 / 飲酒雑談 】朝から飲むぞっ🍺酔っぱらったら・・・健全なゲームもしよ♡【 あ。あ。あ。 / 朝比奈めいこ 】",
+     "c": "朝比奈めいこ /  Asahina Meiko Ch",
+     "u": "https://www.youtube.com/watch?v=VayamHAVA8E"
+    },
+    {
+     "t": "【あ。あ。あ。】声で操作するゲームにお母さん誘ってみたｗｗｗ もう一度だけVTuber",
+     "c": "もう一度だけVTuberやってもいい? 🅥",
+     "u": "https://www.youtube.com/watch?v=MrLvamRKGX4"
+    },
+    {
+     "t": "【あ。あ。あ。】一部の人は大喜び！？朝は\"ド健全\"なゲームに限る！【黒咲あおい】 #Vtuber準備中",
+     "c": "黒咲あおい",
+     "u": "https://www.youtube.com/watch?v=vArT_4j5By0"
+    }
+   ],
+   "kind": "wide",
+   "suggest": []
+  },
+  {
+   "word": "#ホロ鯖かくれんぼ",
+   "channels": 6,
+   "n": 12,
+   "examples": [
+    {
+     "t": "【#ホロ鯖かくれんぼ】遂に上陸!?　先輩と会いたいけど...【鈴鳴つづり/ホロライブ/アソビ★まわり隊！】 #ホロライブ #アソビまわり隊  #つづり配達中",
+     "c": "Tsuzuri Ch. 鈴鳴つづり ‐ アソビ★まわり隊!",
+     "u": "https://www.youtube.com/watch?v=mOeNtn8bn3A"
+    },
+    {
+     "t": "【#ホロ鯖かくれんぼ】遂に上陸!?　先輩と会いたいけど...【鈴鳴つづり/ホロライブ/アソビ★まわり隊！】 #ホロライブ #アソビまわり隊  #つづり配達中",
+     "c": "Tsuzuri Ch. 鈴鳴つづり ‐ アソビ★まわり隊!",
+     "u": "https://www.youtube.com/watch?v=mOeNtn8bn3A"
+    },
+    {
+     "t": "【 #ホロ鯖かくれんぼ 】新人ちゃんを見つける❕🎁素材集め冒険 【水宮枢／ホロライブ】",
+     "c": "Su Ch. 水宮枢 - FLOW GLOW",
+     "u": "https://www.youtube.com/watch?v=89kUA14-sCc"
+    }
+   ],
+   "kind": "wide",
+   "suggest": []
+  },
+  {
    "word": "#歌うまスンギ歌枠リレー",
    "channels": 5,
    "n": 9,
@@ -189,9 +281,9 @@
      "u": "https://www.youtube.com/watch?v=c9ZiLsVG4mU"
     },
     {
-     "t": "【#歌うまスンギ歌枠リレー】楽しく歌わせていただきます【星導ショウ/にじさんじ】",
-     "c": "星導ショウ / Hoshirube Sho【にじさんじ】",
-     "u": "https://www.youtube.com/watch?v=kn3xwLDwQ-0"
+     "t": "【歌枠】音ズレの訪れ┊#音ノ乃のの #歌うまスンギ歌枠リレー",
+     "c": "音ノ乃のの / NononoNono",
+     "u": "https://www.youtube.com/watch?v=Gv52cL0bmTk"
     }
    ],
    "kind": "wide",
@@ -222,39 +314,10 @@
    "suggest": []
   },
   {
-   "word": "あ。あ。あ。",
-   "channels": 5,
-   "n": 5,
-   "examples": [
-    {
-     "t": "【 朝活 / 飲酒雑談 】朝から飲むぞっ🍺酔っぱらったら・・・健全なゲームもしよ♡【 あ。あ。あ。 / 朝比奈めいこ 】",
-     "c": "朝比奈めいこ /  Asahina Meiko Ch",
-     "u": "https://www.youtube.com/watch?v=VayamHAVA8E"
-    },
-    {
-     "t": "【あ。あ。あ。】声で操作するゲームにお母さん誘ってみたｗｗｗ もう一度だけVTuber",
-     "c": "もう一度だけVTuberやってもいい? 🅥",
-     "u": "https://www.youtube.com/watch?v=MrLvamRKGX4"
-    },
-    {
-     "t": "【あ。あ。あ。】一部の人は大喜び！？朝は\"ド健全\"なゲームに限る！【黒咲あおい】 #Vtuber準備中",
-     "c": "黒咲あおい",
-     "u": "https://www.youtube.com/watch?v=vArT_4j5By0"
-    }
-   ],
-   "kind": "wide",
-   "suggest": []
-  },
-  {
    "word": "プロスピA",
    "channels": 3,
-   "n": 10,
+   "n": 12,
    "examples": [
-    {
-     "t": "【プロスピA】ランキングの心配しながらタイブレーク杯",
-     "c": "ねこマンちゃんねる",
-     "u": "https://www.youtube.com/watch?v=lZWvPk-xThg"
-    },
     {
      "t": "【プロスピA】スプラの心配しながらタイブレーク杯",
      "c": "ねこマンちゃんねる",
@@ -264,6 +327,59 @@
      "t": "【プロスピA】地震の誤報の心配しながらタイブレーク杯",
      "c": "ねこマンちゃんねる",
      "u": "https://www.youtube.com/watch?v=s2d0xRXHC4U"
+    },
+    {
+     "t": "大沼りのパリーグ杯… #ゆっくり実況　#プロスピ　#プロスピa #大会",
+     "c": "ゆうハル",
+     "u": "https://www.youtube.com/watch?v=ElZX7v1vlIk"
+    }
+   ],
+   "kind": "wide",
+   "suggest": []
+  },
+  {
+   "word": "#カオスゼロナイトメア",
+   "channels": 3,
+   "n": 10,
+   "examples": [
+    {
+     "t": "【#カオスゼロナイトメア】完全初見｜１周年から飛び込む「絶望(カオス)」溢れる世界。【カオゼロ】 #ゲーム実況 #vtuber",
+     "c": "星埜きぃ -Key Hoshino-",
+     "u": "https://www.youtube.com/watch?v=441TnOmvpSA"
+    },
+    {
+     "t": "【#カオスゼロナイトメア】完全初見｜１周年から飛び込む「絶望(カオス)」溢れる世界。【カオゼロ】 #ゲーム実況 #vtuber",
+     "c": "星埜きぃ -Key Hoshino-",
+     "u": "https://www.youtube.com/watch?v=441TnOmvpSA"
+    },
+    {
+     "t": "【#カオスゼロナイトメア】限定シーズンキャラ『ロスヴァイセ』完凸ガチャしてカオス！ #カオゼロ",
+     "c": "星園ゆい Hoshizono Yui",
+     "u": "https://www.youtube.com/watch?v=k9vFxP0fDN4"
+    }
+   ],
+   "kind": "wide",
+   "suggest": []
+  },
+  {
+   "word": "ぷにぷに",
+   "channels": 3,
+   "n": 8,
+   "examples": [
+    {
+     "t": "「ぷにぷに」炎炎ノ消防隊・ガシャ＆最速LIVE！【Vtuber】",
+     "c": "かぐch",
+     "u": "https://www.youtube.com/watch?v=ydn-l0lG9Uc"
+    },
+    {
+     "t": "神回：奇跡すぎる”初日ガチャ 単発”がヤバい。『ぷにぷに百物語』【ぷにぷに / 妖怪ウォッチぷにぷに】",
+     "c": "S極N極GAMES",
+     "u": "https://www.youtube.com/watch?v=gzVoY-h2yvg"
+    },
+    {
+     "t": "ウォッチ&課金キャラ禁止：”初心者向け”取り巻きステージ無特効攻略【ぷにぷに / 妖怪ウォッチぷにぷに】",
+     "c": "S極N極GAMES",
+     "u": "https://www.youtube.com/watch?v=ssJohUPNso4"
     }
    ],
    "kind": "wide",
@@ -288,30 +404,6 @@
      "t": "【デナアビコード】1.7アプデ＆調整内容まとめ！新マルチコンテンツや日課改善、キャラ調整の意図を徹底解説【デュエットナイトアビス】リズム/ユーミン/７凸/シリュウ",
      "c": "ネタ勢のトリュウ",
      "u": "https://www.youtube.com/watch?v=c5kGADv6PnA"
-    }
-   ],
-   "kind": "wide",
-   "suggest": []
-  },
-  {
-   "word": "ぷにぷに",
-   "channels": 3,
-   "n": 7,
-   "examples": [
-    {
-     "t": "「ぷにぷに」炎炎ノ新イベ予告を一緒に確認！【Vtuber】",
-     "c": "かぐch",
-     "u": "https://www.youtube.com/watch?v=DlDLcUlkui0"
-    },
-    {
-     "t": "「ぷにぷに」炎炎ノ消防隊・ガシャ＆最速LIVE！【Vtuber】",
-     "c": "かぐch",
-     "u": "https://www.youtube.com/watch?v=ydn-l0lG9Uc"
-    },
-    {
-     "t": "神回：奇跡すぎる”初日ガチャ 単発”がヤバい。『ぷにぷに百物語』【ぷにぷに / 妖怪ウォッチぷにぷに】",
-     "c": "S極N極GAMES",
-     "u": "https://www.youtube.com/watch?v=gzVoY-h2yvg"
     }
    ],
    "kind": "wide",
@@ -438,6 +530,30 @@
    "suggest": []
   },
   {
+   "word": "品行崩壊",
+   "channels": 3,
+   "n": 3,
+   "examples": [
+    {
+     "t": "【品行崩壊】これは誰の『私を構成する9つのゲーム』か当てるクイズが楽しすぎるwwww【とりっぴぃ/フルコン/スナザメ/むつー/なな湖】",
+     "c": "とりっぴぃ",
+     "u": "https://www.youtube.com/watch?v=G4VxJFipMGs"
+    },
+    {
+     "t": "一流ゲーム実況者なら『本物』のダイヤを見破るなんて、簡単だよね！？【ミスターダイヤモンド】#品行崩壊 たけぉむつーヒラまお",
+     "c": "まお",
+     "u": "https://www.youtube.com/watch?v=SXWaoc_ZLcU"
+    },
+    {
+     "t": "SNSでバズってるファミマのグルメを食べよう！【ファミリーマート】#品行崩壊",
+     "c": "たけぉ",
+     "u": "https://www.youtube.com/watch?v=LsaiRcAi7ys"
+    }
+   ],
+   "kind": "wide",
+   "suggest": []
+  },
+  {
    "word": "秋華賞",
    "channels": 3,
    "n": 3,
@@ -456,6 +572,54 @@
      "t": "#秋華賞 　今日はみゃすTシャツ　ネットで買わずに京都競馬場行きたいんゴ…　　#アモーレ競馬ラッシュ",
      "c": "用心BΩY",
      "u": "https://www.youtube.com/watch?v=v9DgSx_1bYs"
+    }
+   ],
+   "kind": "wide",
+   "suggest": []
+  },
+  {
+   "word": "食レポ",
+   "channels": 3,
+   "n": 3,
+   "examples": [
+    {
+     "t": "【みそきん】おいキッズ！カレーみそきん食うぞ🍛ONICHAも飲む！！【にじさんじ / 樋口楓 / みそきんゴ】#縦型配信 #食レポ 【雑談 / A/S/M/R】",
+     "c": "樋口楓【にじさんじ所属】",
+     "u": "https://www.youtube.com/watch?v=sx9kc9QrXbM"
+    },
+    {
+     "t": "【KFCに対抗!?】もも一枚肉を使用した3種類の新作バーガーを忖度なしでガチレビューする男【食レポ/ボドカ】",
+     "c": "ボドカ / Riddle - ゲーム実況",
+     "u": "https://www.youtube.com/watch?v=RGv3Z6evAV4"
+    },
+    {
+     "t": "【食レポ】マクドナルドの新作\"ジューシーチキン\"を食べ比べしてみた【marunnn】",
+     "c": "marunnn【まるーんチャンネル】",
+     "u": "https://www.youtube.com/watch?v=g3XnxfA0mfw"
+    }
+   ],
+   "kind": "wide",
+   "suggest": []
+  },
+  {
+   "word": "振り返り",
+   "channels": 3,
+   "n": 3,
+   "examples": [
+    {
+     "t": "【振り返り】すぺしゃりて加入1周年！【安心院みさ/すぺしゃりて】",
+     "c": "安心院みさ / ANSHININ MISA",
+     "u": "https://www.youtube.com/watch?v=KLz2-JBDrhQ"
+    },
+    {
+     "t": "【振り返り】ライブ楽しかった！！振り返りしていきたいと思います！　#シャルのひつじ【島村シャルロット / ななしいんく】",
+     "c": "島村シャルロット / Charlotte Channel【ななしいんく】",
+     "u": "https://www.youtube.com/watch?v=UcHyrmVg9Lg"
+    },
+    {
+     "t": "【雑】まさかの後半戦【振り返り】",
+     "c": "Kuzuha Channel",
+     "u": "https://www.youtube.com/watch?v=U_BdDSrCQCQ"
     }
    ],
    "kind": "wide",
@@ -513,71 +677,23 @@
  "miss_days": 7,
  "hot_facts": [
   {
-   "game": "ゼルダの伝説 ティアーズ オブ ザ キングダム",
-   "growth": 2.5,
-   "videos": 3,
-   "base": 1.2,
-   "channels": 3,
-   "views": 50341,
-   "who": [
-    "桜ころみん coromin Ch",
-    "おまつり",
-    "ゲーム実況シス"
-   ],
-   "titles": [
-    "コログの森へ行くぞ！完全初見で『ゼルダの伝説 ティアーズ オブ ザ キングダム』の世界へ！【Switch2版 #19】",
-    "ついにハイラル城に突撃するぞー！！(2回目)『ゼルダの伝説 ティアーズ オブ ザ キングダム』#24",
-    "【ティアキン 実況】イチカラ村が凄いことに！ワープマーカーを入手するぞ【ゼルダの伝説 ティアーズ オブ ザ キングダム】#6"
-   ],
-   "genres": [],
-   "year": null,
-   "platforms": [],
-   "days_seen": 26,
-   "last_seen": "2026-10-20",
-   "first_here": false
-  },
-  {
-   "game": "マビノギモバイル",
-   "growth": 2.31,
-   "videos": 3,
-   "base": 1.3,
-   "channels": 3,
-   "views": 105876,
-   "who": [
-    "樋口楓【にじさんじ所属】",
-    "びりQ",
-    "Amoko Ch. 甘乃あもこ"
-   ],
-   "titles": [
-    "【マビノギモバイル】レイド実装！エンブレム強化させてくれ～😭💰【にじさんじ / 樋口楓】",
-    "【マビノギ】グラスギブネンレイドとまさかの推しの子コラボ発表「マビノギモバイル」攻略配信【NEXON】【マビモバ】",
-    "【マビノギモバイル】レイド戦グラスギブネン！とかアビスいったり日課消化したり！（ダンバートン鯖・ヒーラー）【NEXON】【マビモバ】"
-   ],
-   "genres": [],
-   "year": null,
-   "platforms": [],
-   "days_seen": 10,
-   "last_seen": "2026-10-21",
-   "first_here": false
-  },
-  {
    "game": "ファイナルファンタジー レゾナンス",
-   "growth": 1.67,
-   "videos": 6,
+   "growth": 6.94,
+   "videos": 25,
    "base": 3.6,
-   "channels": 6,
-   "views": 267768,
+   "channels": 23,
+   "views": 911937,
    "who": [
+    "しゅがーはうす",
     "葉山舞鈴 / Ohayama Ch.",
-    "GAMEゆうなch",
-    "GAMEゆうなch",
-    "ねぇね。",
-    "ジョーカーのゲーム攻略チャンネル"
+    "胡桃沢りりか",
+    "いちごうのゲームビート",
+    "GAMEゆうなch"
    ],
    "titles": [
-    "【 FINAL FANTASY RESONANCE 】本日発売！シリーズ最新作💎王覇山、旅立ち。（ クリスタルを巡る、復讐と絆の物語。 ）【 にじさんじ┊︎葉山舞鈴┊︎※ネタバレ注意 】",
-    "#2【FFレゾナンス】FF 最新作 本日発売 2章トラウマ!!ガーディアン！『FINAL FANTASY RESONANCE』初見プレイ ネタバレあり【ファイナルファンタジー レゾナンス / PS5】",
-    "#3【FFレゾナンス】FF 最新作 本日発売 3章から『FINAL FANTASY RESONANCE』初見プレイ ネタバレあり ファイナル【ファイナルファンタジー レゾナンス / PS5】"
+    "【FFレゾナンス】結局買いなのか？10時間やったら一旦充分だったので序盤レビュー！【ドット世代狙い撃ちのFF新作】",
+    "#02【 FINAL FANTASY RESONANCE 】ついに発売！シリーズ最新作💎王覇山、旅立ち。（ クリスタルを巡る、復讐と絆の物語。 ）【 にじさんじ┊︎葉山舞鈴┊︎※ネタバレ注意 】",
+    "【FINAL FANTASY RESONANCE ファイナルファンタジーレゾナンス】過去作キャラも出てくる！？FFレゾナンスやるぞ！！※ネタバレ注意【胡桃沢りりか】"
    ],
    "genres": [
     "Role-playing (RPG)",
@@ -588,96 +704,161 @@
     "pc",
     "console"
    ],
-   "days_seen": 5,
-   "last_seen": "2026-10-21",
+   "days_seen": 6,
+   "last_seen": "2026-10-22",
    "first_here": false
   },
   {
-   "game": "ドラゴンクエストV",
-   "growth": 1.43,
-   "videos": 3,
-   "base": 2.1,
-   "channels": 3,
-   "views": 229678,
+   "game": "R.E.P.O.",
+   "growth": 5.0,
+   "videos": 5,
+   "base": 1.0,
+   "channels": 5,
+   "views": 973972,
    "who": [
-    "Patra Channel / 周防パトラ",
-    "バーチャル債務者youtuber天開司",
+    "フブキCh。白上フブキ",
+    "Watame Ch. 角巻わため",
+    "Flare Ch. 不知火フレア",
+    "Polka Ch. 尾丸ポルカ",
+    "Chihaya Ch. 輪堂 千速 - FLOW GLOW"
+   ],
+   "titles": [
+    "【R.E.P.O.】REPOはいつも突発に・・・。#突発ホロREPO【ホロライブ/白上フブキ】",
+    "【 R.E.P.O. 】仕事帰りにはやっぱりREPOだよな～～🥂✨【角巻わため/ホロライブ４期生】",
+    "【REPO】お！久々にREPO会開催だってお【不知火フレア/ホロライブ】"
+   ],
+   "genres": [
+    "Strategy",
+    "Indie"
+   ],
+   "year": 2025,
+   "platforms": [
+    "pc"
+   ],
+   "days_seen": 18,
+   "last_seen": "2026-10-18",
+   "first_here": false
+  },
+  {
+   "game": "Nintendo Switch Sports Resort",
+   "growth": 5.0,
+   "videos": 4,
+   "base": 0.2,
+   "channels": 4,
+   "views": 446434,
+   "who": [
+    "Koyori ch. 博衣こより - holoX -",
+    "エクス・アルビオ -Ex Albio-",
+    "笹木咲 / Sasaki Saku",
+    "じんむ"
+   ],
+   "titles": [
+    "【Nintendo Switch Sports Resort】本日発売！3DでholoXがガチバトル！？ #SSholoX 【ラプラス・ダークネス/鷹嶺ルイ/博衣こより/風真いろは／ホロライブ】",
+    "あの神ゲーの最新作、12種類のスポーツが遊べる面白すぎるゲーム『 Nintendo Switch Sports Resort 』【 エビオ/にじさんじ 】",
+    "Nintendo Switch Sports Resort 最新作やるやよおおおっ！！！！"
+   ],
+   "genres": [
+    "Sport"
+   ],
+   "year": 2026,
+   "platforms": [
+    "console"
+   ],
+   "days_seen": 0,
+   "last_seen": null,
+   "first_here": true
+  },
+  {
+   "game": "Nintendo Switch Sports",
+   "growth": 5.0,
+   "videos": 4,
+   "base": 0.3,
+   "channels": 4,
+   "views": 160621,
+   "who": [
+    "P-Pチャンネル",
+    "スウィントと上田さん",
+    "タイヤキ_taiyaki_",
+    "ぼた餅"
+   ],
+   "titles": [
+    "今日発売の新作『Switch Sports Resort』で遊ぶぞ！｜Nintendo Switch Sports Resort",
+    "新作Switchスポーツにありえない競技が追加された件について。【Switch Sports Resort】",
+    "今日発売された新作ソフト「Switch Sports resort」を遊んでみる"
+   ],
+   "genres": [
+    "Simulator",
+    "Sport"
+   ],
+   "year": 2022,
+   "platforms": [
+    "console"
+   ],
+   "days_seen": 0,
+   "last_seen": null,
+   "first_here": true
+  },
+  {
+   "game": "Fatal Fury: City of the Wolves",
+   "growth": 5.0,
+   "videos": 4,
+   "base": 0.8,
+   "channels": 4,
+   "views": 28141,
+   "who": [
+    "SCOREの格ゲー人生",
+    "はるミーのゲーム部屋",
+    "よひらぱん@女子大生Vtuber",
     "アキコ@うさぎ島"
    ],
    "titles": [
-    "【ドラクエV】すごろく耐久！＆裏ボス討伐！はじめてのドラゴンクエストV 天空の花嫁をやってみる！DragonQuestⅤ【周防パトラ】",
-    "【ドラゴンクエストⅤ/完全初見】超絶名作RPGを完全初見でやる喜び【天開司/Vtuber】",
-    "【ドラクエ５】アキコの攻略実況・第１４話　ROM／雑談歓迎"
+    "【餓狼CotW】DLC「マイキー＆ドラケン」実装記念！",
+    "【餓狼伝説CotW】マイキ―＆ドラケン正座待機",
+    "【餓狼伝説cotw】アーケード後に参加型対戦会(リングアウト有)します🌟お気軽にご参加ください／女子大生vtuberの格ゲー実況 ／アーケードはネタバレを含みます【vtuber個人勢】"
    ],
    "genres": [
-    "Racing",
-    "Role-playing (RPG)",
-    "Turn-based strategy (TBS)",
-    "Adventure"
+    "Fighting"
    ],
-   "year": 1992,
-   "platforms": [
-    "console"
-   ],
-   "days_seen": 23,
-   "last_seen": "2026-10-20",
-   "first_here": false
-  },
-  {
-   "game": "オーバーウォッチ2",
-   "growth": 1.37,
-   "videos": 14,
-   "base": 10.2,
-   "channels": 14,
-   "views": 881898,
-   "who": [
-    "小柳ロウ / Koyanagi Rou【にじさんじ】",
-    "イブラヒム【にじさんじ】",
-    "星導ショウ / Hoshirube Sho【にじさんじ】",
-    "御子神琴音 / Mikogami Kotone【にじさんじ】",
-    "Rei7【にじさんじ】"
-   ],
-   "titles": [
-    "【OW】視聴者カスタム試行回数【小柳ロウ/にじさんじ】",
-    "【OVERWATCH】お兄ちゃんちょっと待ってよ【にじさんじ/イブラヒム】",
-    "【オーバーウォッチ】NIJISANJI Extreme Match 今日からゼニヤッタしか使いません【星導ショウ/にじさんじ】"
-   ],
-   "genres": [],
-   "year": null,
-   "platforms": [],
-   "days_seen": 33,
-   "last_seen": "2026-10-21",
-   "first_here": false
-  },
-  {
-   "game": "Silent Hill: Townfall",
-   "growth": 1.3,
-   "videos": 3,
-   "base": 2.3,
-   "channels": 3,
-   "views": 67122,
-   "who": [
-    "える / Elu【にじさんじ】",
-    "アズリ / Azri【ななしいんく】",
-    "ひろのあの屋敷 #ホラーゲームなのに大はしゃぎする人たち"
-   ],
-   "titles": [
-    "【 SILENT HILL: Townfall 】#1 シリーズ最新作！不気味な世界に迷い込みました。※ネタバレ注意【にじさんじ/える】",
-    "正しいものを選べ。　-SILENT HILL: Townfall【ななしいんく/アズリ】",
-    "【 SILENT HILL: Townfall 】孤島「セントアメリア」を舞台に始まる物語 ※ネタバレ注意【 サイレントヒル：タウンフォール | 話題の新作ホラゲをエンディングまで実況プレイ】"
-   ],
-   "genres": [
-    "Puzzle",
-    "Adventure"
-   ],
-   "year": 2026,
+   "year": 2025,
    "platforms": [
     "pc",
     "console"
    ],
-   "days_seen": 27,
-   "last_seen": "2026-10-20",
+   "days_seen": 7,
+   "last_seen": "2026-10-22",
    "first_here": false
+  },
+  {
+   "game": "Once Human",
+   "growth": 3.75,
+   "videos": 3,
+   "base": 0.2,
+   "channels": 3,
+   "views": 35601,
+   "who": [
+    "bintroll",
+    "若魔藤あんず",
+    "花束 ゆいは / Hanataba Yuiha"
+   ],
+   "titles": [
+    "荒廃した世界で限界サバイバル～！【Once Human】#戯れ処",
+    "【新マップ登場】終末世界で武器を作りハウジングもできるサバイバルゲームのスト鯖 #戯れ処 【 #若魔藤あんず / #にゃんたじあ！ 】#oncehuman",
+    "【 #OnceHuman 】#1🔰完全初見🔰まったりのんびり頑張ります！【 VTuber / 花束ゆいは 】"
+   ],
+   "genres": [
+    "Shooter",
+    "Role-playing (RPG)",
+    "Strategy",
+    "Adventure"
+   ],
+   "year": 2024,
+   "platforms": [
+    "pc",
+    "console"
+   ],
+   "days_seen": 0,
+   "last_seen": null,
+   "first_here": true
   }
  ],
  "notes_written": true,
