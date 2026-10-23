@@ -3476,19 +3476,6 @@
   ]
  },
  {
-  "name": "Aquarium Anomaly",
-  "alias": [],
-  "pop": 0,
-  "y": 2026,
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Simulator",
-   "Indie"
-  ]
- },
- {
   "name": "Arc Salvo",
   "alias": [],
   "pop": 0,
@@ -12908,22 +12895,6 @@
   ]
  },
  {
-  "name": "Crazy Pocket",
-  "alias": [
-   "CrazyPocket.exe"
-  ],
-  "pop": 0,
-  "y": 2026,
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Strategy",
-   "Indie",
-   "Arcade"
-  ]
- },
- {
   "name": "CrazyFood",
   "alias": [],
   "pop": 0,
@@ -13661,6 +13632,22 @@
    "Adventure",
    "Indie",
    "Visual Novel"
+  ]
+ },
+ {
+  "name": "Cursed Profit",
+  "alias": [
+   "Shadows of Despair"
+  ],
+  "pop": 0,
+  "y": 2026,
+  "p": [
+   "pc"
+  ],
+  "g": [
+   "Strategy",
+   "Adventure",
+   "Indie"
   ]
  },
  {
@@ -14756,22 +14743,6 @@
   "g": [
    "Puzzle",
    "Adventure",
-   "Indie"
-  ]
- },
- {
-  "name": "Dealer's Dice",
-  "alias": [
-   "Dealer's Dice.exe"
-  ],
-  "pop": 0,
-  "y": 2026,
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Simulator",
-   "Strategy",
    "Indie"
   ]
  },
@@ -18151,7 +18122,9 @@
  },
  {
   "name": "Dreamy Sakura's Graduation Ceremony",
-  "alias": [],
+  "alias": [
+   "YumemiruSakura.exe"
+  ],
   "pop": 0,
   "y": 2026,
   "p": [
@@ -35618,6 +35591,22 @@
   ]
  },
  {
+  "name": "Magehold Fairwinds",
+  "alias": [],
+  "pop": 0,
+  "y": 2026,
+  "p": [
+   "pc"
+  ],
+  "g": [
+   "Role-playing (RPG)",
+   "Simulator",
+   "Strategy",
+   "Tactical",
+   "Indie"
+  ]
+ },
+ {
   "name": "Magic Kingdom",
   "alias": [
    "魔法王国"
@@ -44527,19 +44516,6 @@
   ]
  },
  {
-  "name": "Pierline",
-  "alias": [],
-  "pop": 0,
-  "y": 2026,
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Adventure",
-   "Indie"
-  ]
- },
- {
   "name": "PigPonyPocalypse",
   "alias": [
    "PigPonyPocalypse.exe"
@@ -44743,7 +44719,9 @@
  },
  {
   "name": "Pindemonium",
-  "alias": [],
+  "alias": [
+   "Pindemonium.exe"
+  ],
   "pop": 0,
   "y": 2026,
   "p": [
@@ -60898,6 +60876,21 @@
   ]
  },
  {
+  "name": "The Lighthouse Restaurant",
+  "alias": [
+   "The Lighthouse Restaurant.exe"
+  ],
+  "pop": 0,
+  "y": 2026,
+  "p": [
+   "pc"
+  ],
+  "g": [
+   "Simulator",
+   "Indie"
+  ]
+ },
+ {
   "name": "The Lightkeeper is Gone",
   "alias": [],
   "pop": 0,
@@ -61470,6 +61463,18 @@
   ],
   "g": [
    "Simulator",
+   "Indie"
+  ]
+ },
+ {
+  "name": "The Reflection",
+  "alias": [],
+  "pop": 0,
+  "y": 2026,
+  "p": [
+   "pc"
+  ],
+  "g": [
    "Indie"
   ]
  },
