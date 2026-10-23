@@ -885,6 +885,19 @@
   ]
  },
  {
+  "name": "A Sector Darkly",
+  "alias": [],
+  "pop": 0,
+  "y": 2026,
+  "p": [
+   "pc"
+  ],
+  "g": [
+   "Role-playing (RPG)",
+   "Simulator"
+  ]
+ },
+ {
   "name": "A Simple Expurriment",
   "alias": [],
   "pop": 0,
@@ -2072,20 +2085,6 @@
    "Adventure",
    "Indie",
    "Visual Novel"
-  ]
- },
- {
-  "name": "Akegarasu: Journey to the Underworld",
-  "alias": [
-   "AKEGARASU: Journey to the Underworld"
-  ],
-  "pop": 0,
-  "y": 2026,
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Indie"
   ]
  },
  {
@@ -3476,6 +3475,19 @@
   ]
  },
  {
+  "name": "Aquarium Anomaly",
+  "alias": [],
+  "pop": 0,
+  "y": 2026,
+  "p": [
+   "pc"
+  ],
+  "g": [
+   "Simulator",
+   "Indie"
+  ]
+ },
+ {
   "name": "Arc Salvo",
   "alias": [],
   "pop": 0,
@@ -4330,18 +4342,6 @@
    "Role-playing (RPG)",
    "Simulator",
    "Adventure"
-  ]
- },
- {
-  "name": "Astra Sentinel",
-  "alias": [],
-  "pop": 0,
-  "y": 2026,
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Strategy"
   ]
  },
  {
@@ -9013,7 +9013,7 @@
    "MW4",
    "Call of Duty: MW4"
   ],
-  "pop": 0,
+  "pop": 5,
   "y": 2026,
   "p": [
    "pc",
@@ -10409,9 +10409,7 @@
  },
  {
   "name": "Channel13: Rest Stop",
-  "alias": [
-   "CH13: Rest Stop"
-  ],
+  "alias": [],
   "pop": 0,
   "y": 2026,
   "p": [
@@ -11396,7 +11394,7 @@
   "alias": [
    "Hellraiser.exe"
   ],
-  "pop": 9,
+  "pop": 11,
   "y": 2026,
   "p": [
    "pc",
@@ -15719,7 +15717,7 @@
  {
   "name": "Demons' Night Fever",
   "alias": [],
-  "pop": 0,
+  "pop": 1,
   "y": 2026,
   "p": [
    "pc",
@@ -20203,7 +20201,7 @@
    "雾锁王国 (Enshrouded)",
    "Enshrouded~霧の王国~"
   ],
-  "pop": 71,
+  "pop": 72,
   "y": 2026,
   "jp": "Enshrouded~霧の王国~",
   "p": [
@@ -24978,7 +24976,7 @@
   "alias": [
    "start_protected_game.exe"
   ],
-  "pop": 10,
+  "pop": 11,
   "y": 2026,
   "p": [
    "pc",
@@ -29065,18 +29063,6 @@
   ]
  },
  {
-  "name": "Horus: Desert Survivor",
-  "alias": [],
-  "pop": 0,
-  "y": 2026,
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Strategy"
-  ]
- },
- {
   "name": "Hospital Rhapsody",
   "alias": [],
   "pop": 0,
@@ -32012,7 +31998,9 @@
  },
  {
   "name": "Just One More Fly",
-  "alias": [],
+  "alias": [
+   "Just One More Fly.exe"
+  ],
   "pop": 0,
   "y": 2026,
   "p": [
@@ -36752,6 +36740,20 @@
   ]
  },
  {
+  "name": "Mega Tag Panic",
+  "alias": [
+   "MEGA TAG PANIC"
+  ],
+  "pop": 0,
+  "y": 2026,
+  "p": [
+   "pc"
+  ],
+  "g": [
+   "Indie"
+  ]
+ },
+ {
   "name": "Megashootsplosion",
   "alias": [],
   "pop": 0,
@@ -38016,19 +38018,6 @@
   ],
   "g": [
    "Fighting"
-  ]
- },
- {
-  "name": "Mojo Is Loved",
-  "alias": [],
-  "pop": 0,
-  "y": 2026,
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Adventure",
-   "Indie"
   ]
  },
  {
@@ -40716,6 +40705,19 @@
   ]
  },
  {
+  "name": "No Death No Life",
+  "alias": [],
+  "pop": 0,
+  "y": 2026,
+  "p": [
+   "pc"
+  ],
+  "g": [
+   "Indie",
+   "Visual Novel"
+  ]
+ },
+ {
   "name": "No ESC",
   "alias": [],
   "pop": 0,
@@ -41390,21 +41392,6 @@
   ],
   "g": [
    "Shooter"
-  ]
- },
- {
-  "name": "Novel Simulator",
-  "alias": [
-   "Cultivation Novel"
-  ],
-  "pop": 0,
-  "y": 2026,
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Simulator",
-   "Indie"
   ]
  },
  {
@@ -47941,7 +47928,9 @@
  },
  {
   "name": "Raw Egg Peeling",
-  "alias": [],
+  "alias": [
+   "Raw Egg Peeling.exe"
+  ],
   "pop": 0,
   "y": 2026,
   "p": [
@@ -48819,6 +48808,20 @@
   ],
   "g": [
    "Point-and-click"
+  ]
+ },
+ {
+  "name": "Return to Planet Zoveka",
+  "alias": [],
+  "pop": 0,
+  "y": 2026,
+  "p": [
+   "pc"
+  ],
+  "g": [
+   "Simulator",
+   "Strategy",
+   "Indie"
   ]
  },
  {
@@ -51599,7 +51602,7 @@
    "Sesame Street: Ferajna i frajda",
    "Sesame Street: Веселые друзья"
   ],
-  "pop": 0,
+  "pop": 1,
   "y": 2026,
   "p": [
    "pc",
@@ -52257,6 +52260,23 @@
   "g": [
    "Puzzle",
    "Adventure",
+   "Indie"
+  ]
+ },
+ {
+  "name": "Shoot & jump",
+  "alias": [
+   "ShootAndJump"
+  ],
+  "pop": 0,
+  "y": 2026,
+  "p": [
+   "pc"
+  ],
+  "g": [
+   "Puzzle",
+   "Simulator",
+   "Strategy",
    "Indie"
   ]
  },
@@ -54811,18 +54831,6 @@
   ]
  },
  {
-  "name": "Spaceborne Fighters",
-  "alias": [],
-  "pop": 0,
-  "y": 2026,
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Indie"
-  ]
- },
- {
   "name": "Spaceman Memories",
   "alias": [],
   "pop": 0,
@@ -56507,19 +56515,6 @@
   ]
  },
  {
-  "name": "Stranger Tavern: Brawl",
-  "alias": [],
-  "pop": 0,
-  "y": 2026,
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Strategy",
-   "Indie"
-  ]
- },
- {
   "name": "Stratagem Lost",
   "alias": [],
   "pop": 0,
@@ -56662,7 +56657,9 @@
  },
  {
   "name": "Strikem",
-  "alias": [],
+  "alias": [
+   "STRIKEM.exe"
+  ],
   "pop": 0,
   "y": 2026,
   "p": [
@@ -60501,7 +60498,7 @@
  {
   "name": "The Jackbox Party Pack 12",
   "alias": [],
-  "pop": 0,
+  "pop": 1,
   "y": 2026,
   "p": [
    "pc",
@@ -62669,6 +62666,7 @@
  {
   "name": "Tidy Up the Backrooms",
   "alias": [
+   "TidyUp.exe",
    "Let's Tidy Up! Backrooms",
    "Let's Tidy Up! Liminal"
   ],
@@ -63506,6 +63504,20 @@
    "Platform",
    "Adventure",
    "Indie"
+  ]
+ },
+ {
+  "name": "Tomorrow Never Comes",
+  "alias": [],
+  "pop": 0,
+  "y": 2026,
+  "p": [
+   "pc"
+  ],
+  "g": [
+   "Adventure",
+   "Indie",
+   "Visual Novel"
   ]
  },
  {
@@ -67659,7 +67671,7 @@
  {
   "name": "Well Dweller",
   "alias": [],
-  "pop": 9,
+  "pop": 10,
   "y": 2026,
   "p": [
    "pc",
@@ -68673,6 +68685,7 @@
    "pc"
   ],
   "g": [
+   "Puzzle",
    "Adventure",
    "Indie"
   ]
