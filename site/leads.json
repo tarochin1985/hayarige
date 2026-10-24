@@ -1,12 +1,11 @@
 {
- "date": "2026-10-23",
- "generated": "2026-10-23 23:46",
+ "date": "2026-10-24",
+ "generated": "2026-10-24 09:21",
  "leads": {
   "events": [
    {
     "tag": "#ホロドリ",
     "channels": [
-     "AZKi Channel",
      "Choco Ch. 癒月ちょこ",
      "Flare Ch. 不知火フレア",
      "Iroha ch. 風真いろは - holoX -",
@@ -40,42 +39,30 @@
     ]
    },
    {
-    "tag": "#ストグラSeason2",
-    "channels": [
-     "天羽よつは",
-     "影。/かげまる",
-     "暁月ホタル AKATSUKI HOTARU",
-     "柚原いづみ / Izumi Channel 【ななしいんく】",
-     "稲荷いろはInari Iroha"
-    ]
-   },
-   {
-    "tag": "#ぶいきゃす",
-    "channels": [
-     "えういん ∕ euin Ch.",
-     "こてつちゃんねる",
-     "ちゃい・ふにえる",
-     "孵卵リリス / Furan Lilith",
-     "浅葱なぎ"
-    ]
-   },
-   {
     "tag": "#ゲーム実況",
     "channels": [
      "おしたらあたるCh.　Oshitara ataru",
      "カヤハナタ〈脱出系ゲーム実況者〉",
+     "ジョアだよ",
      "儚視まちこVTuber Hakanashi Matiko",
-     "恋因ロス KoinRosu",
-     "運天りらん"
+     "雛乃ぴぴ / Hinano pipi"
     ]
    },
    {
     "tag": "#ホロ鯖ARK",
     "channels": [
      "Choco Ch. 癒月ちょこ",
-     "Koyori ch. 博衣こより - holoX -",
      "Pekora Ch. 兎田ぺこら",
-     "Towa Ch. 常闇トワ"
+     "Towa Ch. 常闇トワ",
+     "Watame Ch. 角巻わため"
+    ]
+   },
+   {
+    "tag": "#ホロARK",
+    "channels": [
+     "Riona Ch. 響咲リオナ - FLOW GLOW",
+     "Su Ch. 水宮枢 - FLOW GLOW",
+     "Vivi Ch. 綺々羅々ヴィヴィ - FLOW GLOW"
     ]
    },
    {
@@ -85,49 +72,57 @@
      "樹つつき -Itsuki Tsutsuki Ch-",
      "狐森ろべ / Komori Ch."
     ]
+   },
+   {
+    "tag": "#エムホールデム",
+    "channels": [
+     "Met Channel / 小森めと ",
+     "八雲べに",
+     "花芽すみれ / Kaga Sumire"
+    ]
    }
   ],
   "newcomers": [],
   "wide": [
    {
     "game": "Apex Legends",
-    "channels": 32,
-    "videos": 38
-   },
-   {
-    "game": "ストリートファイター6",
-    "channels": 28,
+    "channels": 30,
     "videos": 32
    },
    {
+    "game": "ストリートファイター6",
+    "channels": 26,
+    "videos": 28
+   },
+   {
     "game": "ファイナルファンタジー レゾナンス",
-    "channels": 23,
-    "videos": 27
-   },
-   {
-    "game": "Grand Theft Auto V",
-    "channels": 22,
-    "videos": 26
-   },
-   {
-    "game": "スプラトゥーン3",
-    "channels": 22,
-    "videos": 24
+    "channels": 24,
+    "videos": 28
    },
    {
     "game": "Minecraft",
-    "channels": 21,
+    "channels": 24,
+    "videos": 24
+   },
+   {
+    "game": "スプラトゥーン3",
+    "channels": 20,
     "videos": 22
    },
    {
-    "game": "オーバーウォッチ2",
-    "channels": 19,
-    "videos": 23
+    "game": "モンスターストライク",
+    "channels": 16,
+    "videos": 20
+   },
+   {
+    "game": "Grand Theft Auto V",
+    "channels": 18,
+    "videos": 19
    },
    {
     "game": "League of Legends",
     "channels": 16,
-    "videos": 20
+    "videos": 16
    }
   ]
  },
@@ -153,6 +148,27 @@
    "kind": "near",
    "suggest": [
     "Synduality: Echo of Ada"
+   ]
+  },
+  {
+   "word": "ShadowCorridor",
+   "channels": 1,
+   "n": 2,
+   "examples": [
+    {
+     "t": "外縁の視察に行くぞ🥴【ShadowCorridor】",
+     "c": "ちむらい",
+     "u": "https://www.youtube.com/watch?v=p5ROjglL6MA"
+    },
+    {
+     "t": "外縁の挑戦者に挑戦するで候【ShadowCorridor】",
+     "c": "ちむらい",
+     "u": "https://www.youtube.com/watch?v=eTvAkoFtbSg"
+    }
+   ],
+   "kind": "near",
+   "suggest": [
+    "Shadow Corridor Zero"
    ]
   },
   {
@@ -190,22 +206,6 @@
    "kind": "near",
    "suggest": [
     "Pop'n Music 13 Carnival"
-   ]
-  },
-  {
-   "word": "ShadowCorridor",
-   "channels": 1,
-   "n": 1,
-   "examples": [
-    {
-     "t": "外縁の視察に行くぞ🥴【ShadowCorridor】",
-     "c": "ちむらい",
-     "u": "https://www.youtube.com/watch?v=p5ROjglL6MA"
-    }
-   ],
-   "kind": "near",
-   "suggest": [
-    "Shadow Corridor Zero"
    ]
   },
   {
@@ -331,46 +331,22 @@
   {
    "word": "プロスピA",
    "channels": 3,
-   "n": 13,
+   "n": 12,
    "examples": [
-    {
-     "t": "【プロスピA】スプラの心配しながらタイブレーク杯",
-     "c": "ねこマンちゃんねる",
-     "u": "https://www.youtube.com/watch?v=40C6Rey3kD0"
-    },
     {
      "t": "【プロスピA】地震の誤報の心配しながらタイブレーク杯",
      "c": "ねこマンちゃんねる",
      "u": "https://www.youtube.com/watch?v=s2d0xRXHC4U"
     },
     {
+     "t": "大沼りのパリーグ杯… #ゆっくり実況　#プロスピ　#プロスピa #大会",
+     "c": "ゆうハル",
+     "u": "https://www.youtube.com/watch?v=ElZX7v1vlIk"
+    },
+    {
      "t": "【プロスピA】7800目指すタイブレーク杯",
      "c": "ねこマンちゃんねる",
      "u": "https://www.youtube.com/watch?v=RsUIFxfkvtE"
-    }
-   ],
-   "kind": "wide",
-   "suggest": []
-  },
-  {
-   "word": "ぷにぷに",
-   "channels": 3,
-   "n": 8,
-   "examples": [
-    {
-     "t": "「ぷにぷに」炎炎ノ消防隊・ガシャ＆最速LIVE！【Vtuber】",
-     "c": "かぐch",
-     "u": "https://www.youtube.com/watch?v=ydn-l0lG9Uc"
-    },
-    {
-     "t": "神回：奇跡すぎる”初日ガチャ 単発”がヤバい。『ぷにぷに百物語』【ぷにぷに / 妖怪ウォッチぷにぷに】",
-     "c": "S極N極GAMES",
-     "u": "https://www.youtube.com/watch?v=gzVoY-h2yvg"
-    },
-    {
-     "t": "ウォッチ&課金キャラ禁止：”初心者向け”取り巻きステージ無特効攻略【ぷにぷに / 妖怪ウォッチぷにぷに】",
-     "c": "S極N極GAMES",
-     "u": "https://www.youtube.com/watch?v=ssJohUPNso4"
     }
    ],
    "kind": "wide",
@@ -401,6 +377,30 @@
    "suggest": []
   },
   {
+   "word": "ぷにぷに",
+   "channels": 3,
+   "n": 7,
+   "examples": [
+    {
+     "t": "神回：奇跡すぎる”初日ガチャ 単発”がヤバい。『ぷにぷに百物語』【ぷにぷに / 妖怪ウォッチぷにぷに】",
+     "c": "S極N極GAMES",
+     "u": "https://www.youtube.com/watch?v=gzVoY-h2yvg"
+    },
+    {
+     "t": "ウォッチ&課金キャラ禁止：”初心者向け”取り巻きステージ無特効攻略【ぷにぷに / 妖怪ウォッチぷにぷに】",
+     "c": "S極N極GAMES",
+     "u": "https://www.youtube.com/watch?v=ssJohUPNso4"
+    },
+    {
+     "t": "[ぷにぷに]グーフィが初日ガチャでジャッキーランタン狙ってガチャ回すそうです（？）",
+     "c": "リゼ",
+     "u": "https://www.youtube.com/watch?v=6paTofYX_Jo"
+    }
+   ],
+   "kind": "wide",
+   "suggest": []
+  },
+  {
    "word": "バウンティラッシュ",
    "channels": 3,
    "n": 5,
@@ -419,6 +419,30 @@
      "t": "【検証】新キャラ\"ウォーキュリー聖\"で環境キャラ全員とタイマンしてみた【バウンティラッシュ】",
      "c": "アル&ルッキー 【aru&rukki-】",
      "u": "https://www.youtube.com/watch?v=cj-nlcCBHEg"
+    }
+   ],
+   "kind": "wide",
+   "suggest": []
+  },
+  {
+   "word": "ダダエース",
+   "channels": 3,
+   "n": 4,
+   "examples": [
+    {
+     "t": "【ダダエース】新作ゲームをプレイ！",
+     "c": "俺のつくねちゃんねる",
+     "u": "https://www.youtube.com/watch?v=fbgkPexEQnE"
+    },
+    {
+     "t": "【ダダエース】究極神ゲー降臨!!!ダダサバイバーの次世代型きました!!!15分あっという間!!!",
+     "c": "Altana Games  アルタナ",
+     "u": "https://www.youtube.com/watch?v=X2_FF6z0io0"
+    },
+    {
+     "t": "ローグライク×シューティング最新作「ダダエース」で20年ぶりのシューティングに挑むぜ【ダダエース】",
+     "c": "あまくだり",
+     "u": "https://www.youtube.com/watch?v=5IdpHdRGO7o"
     }
    ],
    "kind": "wide",
@@ -591,28 +615,52 @@
    ],
    "kind": "wide",
    "suggest": []
+  },
+  {
+   "word": "Steam Nextフェス",
+   "channels": 3,
+   "n": 3,
+   "examples": [
+    {
+     "t": "【Steam Nextフェス】次に来るインディーゲームを探す！新作無料体験版祭り【2026年10月】",
+     "c": "フェイチャンネル【ゲーム実況】2000本クリアした男の軌跡",
+     "u": "https://www.youtube.com/watch?v=gd0g1DqdZZw"
+    },
+    {
+     "t": "【Steam Nextフェス】体験版を遊びまくるお祭り【インディーゲーム/ Vtuber】",
+     "c": "野々熊びこり / nonokuma bicori",
+     "u": "https://www.youtube.com/watch?v=VPn4P-aNxIM"
+    },
+    {
+     "t": "【Steam Nextフェス】隠れた神ゲーは見つかるか！？新作ゲームの無料体験版を遊びまくる！【Steam】",
+     "c": "フリー素材おじさん段田【カプサイシンマン】",
+     "u": "https://www.youtube.com/watch?v=14BQMbnxArA"
+    }
+   ],
+   "kind": "wide",
+   "suggest": []
   }
  ],
  "miss_days": 7,
  "hot_facts": [
   {
    "game": "ONE PIECE 海のごちそうレストラン",
-   "growth": 8.75,
-   "videos": 7,
-   "base": 0.3,
-   "channels": 7,
-   "views": 338494,
+   "growth": 6.25,
+   "videos": 5,
+   "base": 0.7,
+   "channels": 5,
+   "views": 483517,
    "who": [
-    "ドコムスチャンネル",
-    "宇佐美リト / Usami Rito【にじさんじ】",
     "加賀美 ハヤト/Hayato Kagami",
-    "みんも / 奈良のVTuber【セシんもーZ】",
+    "宇佐美リト / Usami Rito【にじさんじ】",
+    "夜見れな/yorumi rena【にじさんじ所属】",
+    "葉加瀬 冬雪 / Hakase Fuyuki",
     "まお"
    ],
    "titles": [
-    "【生放送】カイロソフト×ワンピース「ONE PIECE 海のごちそうレストラン」実況プレイ",
+    "【ONE PIECE 海のごちそうレストラン】バラティエ2号店、開店。　＃１【にじさんじ/加賀美ハヤト】",
     "【ONEPIECE 海のごちそうレストラン】いつもクソお世話になっております。 #1【宇佐美リト/にじさんじ】",
-    "【ONE PIECE 海のごちそうレストラン】バラティエ2号店、開店。　＃１【にじさんじ/加賀美ハヤト】"
+    "【 ONEPIECE海のごちそうレストラン 】新米としてやらせていただきます 【 にじさんじ / 夜見れな 】"
    ],
    "genres": [
     "Simulator"
@@ -622,130 +670,39 @@
     "pc",
     "console"
    ],
-   "days_seen": 0,
-   "last_seen": null,
-   "first_here": true
-  },
-  {
-   "game": "R.E.P.O.",
-   "growth": 7.5,
-   "videos": 6,
-   "base": 0.8,
-   "channels": 6,
-   "views": 1066431,
-   "who": [
-    "フブキCh。白上フブキ",
-    "Watame Ch. 角巻わため",
-    "Chihaya Ch. 輪堂 千速 - FLOW GLOW",
-    "Flare Ch. 不知火フレア",
-    "Polka Ch. 尾丸ポルカ"
-   ],
-   "titles": [
-    "【R.E.P.O.】REPOはいつも突発に・・・。#突発ホロREPO【ホロライブ/白上フブキ】",
-    "【 R.E.P.O. 】仕事帰りにはやっぱりREPOだよな～～🥂✨【角巻わため/ホロライブ４期生】",
-    "【#突発ホロREPO】ひさびされーーーーーぽ！！！！！！！！【#輪堂千速 / #hololivedev_is  #FLOWGLOW 】"
-   ],
-   "genres": [
-    "Strategy",
-    "Indie"
-   ],
-   "year": 2025,
-   "platforms": [
-    "pc"
-   ],
-   "days_seen": 18,
-   "last_seen": "2026-10-18",
+   "days_seen": 2,
+   "last_seen": "2026-10-23",
    "first_here": false
   },
   {
-   "game": "Nintendo Switch Sports Resort",
-   "growth": 6.25,
-   "videos": 5,
-   "base": 0.5,
-   "channels": 5,
-   "views": 221611,
-   "who": [
-    "エクス・アルビオ -Ex Albio-",
-    "笹木咲 / Sasaki Saku",
-    "じんむ",
-    "KENT for 任天堂ゲームレビュー",
-    "青ハリ伍長そのもの"
-   ],
-   "titles": [
-    "あの神ゲーの最新作、12種類のスポーツが遊べる面白すぎるゲーム『 Nintendo Switch Sports Resort 』【 エビオ/にじさんじ 】",
-    "Nintendo Switch Sports Resort 最新作やるやよおおおっ！！！！",
-    "【本日発売】『Nintendo Switch Sports Resort』実況プレイ👍"
-   ],
-   "genres": [
-    "Sport"
-   ],
-   "year": 2026,
-   "platforms": [
-    "console"
-   ],
-   "days_seen": 0,
-   "last_seen": null,
-   "first_here": true
-  },
-  {
-   "game": "Fatal Fury: City of the Wolves",
-   "growth": 6.25,
-   "videos": 5,
-   "base": 0.8,
-   "channels": 5,
-   "views": 23472,
-   "who": [
-    "SCOREの格ゲー人生",
-    "ウラさんハタくんゲーム実況",
-    "よひらぱん@女子大生Vtuber",
-    "アキコ@うさぎ島",
-    "はるミーのゲーム部屋"
-   ],
-   "titles": [
-    "【餓狼CotW】DLC「マイキー＆ドラケン」実装記念！",
-    "【東リベコラボ】無敵のマイキーが餓狼に参戦！ジェノサイドもストーリーもヤバすぎたｗｗ【餓狼CotW】",
-    "【餓狼伝説cotw】アーケード後に参加型対戦会(リングアウト有)します🌟お気軽にご参加ください／女子大生vtuberの格ゲー実況 ／アーケードはネタバレを含みます【vtuber個人勢】"
-   ],
-   "genres": [
-    "Fighting"
-   ],
-   "year": 2025,
-   "platforms": [
-    "pc",
-    "console"
-   ],
-   "days_seen": 7,
-   "last_seen": "2026-10-22",
-   "first_here": false
-  },
-  {
-   "game": "Nintendo Switch Sports",
+   "game": "Dressmaker",
    "growth": 5.0,
-   "videos": 4,
-   "base": 0.5,
-   "channels": 4,
-   "views": 188749,
+   "videos": 5,
+   "base": 1.0,
+   "channels": 5,
+   "views": 119721,
    "who": [
-    "P-Pチャンネル",
-    "しゅうゲームズ",
-    "ミタ",
-    "ぼた餅"
+    "ルンルン / Lunlun【にじさんじ】",
+    "バーチャルおばあちゃんねる",
+    "ゆらぎゆら / YuragiYura🌙🫧",
+    "ソフィア・ヴァレンタイン / Sophia Valentine【にじさんじ】",
+    "ぽみ / Pomi"
    ],
    "titles": [
-    "今日発売の新作『Switch Sports Resort』で遊ぶぞ！｜Nintendo Switch Sports Resort",
-    "隠された的を全て射抜く 【switch sports resort】アーチェリー",
-    "世界最悪のモラルで対戦相手を破壊していく“Switch Sports Resort”"
+    "【Dressmaker】獣、ドレスで稼ぐ【ルンルン/にじさんじ】",
+    "本当に一生ドレスを作り続けれるゲーム！【Dressmaker/ドレスメーカー】#5",
+    "【 Dressmaker 】ミリプロメンバーのドレス勝手に考える！【 ゆらぎゆら/ミリプロ 】"
    ],
    "genres": [
     "Simulator",
-    "Sport"
+    "Indie"
    ],
-   "year": 2022,
+   "year": 2026,
    "platforms": [
-    "console"
+    "pc"
    ],
-   "days_seen": 1,
-   "last_seen": "2026-10-22",
+   "days_seen": 13,
+   "last_seen": "2026-10-23",
    "first_here": false
   },
   {
@@ -754,7 +711,7 @@
    "videos": 4,
    "base": 0.0,
    "channels": 4,
-   "views": 141381,
+   "views": 161441,
    "who": [
     "橘ひなの / Hinano Tachibana",
     "八雲べに",
@@ -769,8 +726,91 @@
    "genres": [],
    "year": null,
    "platforms": [],
-   "days_seen": 1,
-   "last_seen": "2026-10-02",
+   "days_seen": 2,
+   "last_seen": "2026-10-23",
+   "first_here": false
+  },
+  {
+   "game": "トモダチコレクション わくわく生活",
+   "growth": 5.0,
+   "videos": 4,
+   "base": 0.5,
+   "channels": 3,
+   "views": 56046,
+   "who": [
+    "なつめさんちのゲーム実況",
+    "タナカノナカ",
+    "るんば",
+    "るんば"
+   ],
+   "titles": [
+    "【最終回ではない】俺たちの「生活」はまだまだ続く！「トモダチコレクション わくわく生活」",
+    "【ゆっくり実況】愛と青春の東方島【トモダチコレクションわくわく生活】",
+    "【食材たちとのわくわく生活】目指せ！三ツ星ミシュランド【トモダチコレクション わくわく生活】#44"
+   ],
+   "genres": [
+    "Simulator"
+   ],
+   "year": 2026,
+   "platforms": [
+    "console"
+   ],
+   "days_seen": 10,
+   "last_seen": "2026-10-23",
+   "first_here": false
+  },
+  {
+   "game": "Nintendo Switch Sports Resort",
+   "growth": 5.0,
+   "videos": 4,
+   "base": 0.8,
+   "channels": 4,
+   "views": 23659,
+   "who": [
+    "KENT for 任天堂ゲームレビュー",
+    "青ハリ伍長そのもの",
+    "こいおばけ",
+    "もるあ"
+   ],
+   "titles": [
+    "【視聴者参加型】誰でも参加OK！みんなでスポーツ大会！初見さん大歓迎！【Nintendo Switch Sports Resort】",
+    "【Nintendo Switch Sports Resort】バレーボールいくぞー！",
+    "【Nintendo Switch Sports Resort】世界No.1を目指して遊び尽くす"
+   ],
+   "genres": [
+    "Sport"
+   ],
+   "year": 2026,
+   "platforms": [
+    "console"
+   ],
+   "days_seen": 2,
+   "last_seen": "2026-10-23",
+   "first_here": false
+  },
+  {
+   "game": "サイバーパンク2077",
+   "growth": 5.0,
+   "videos": 4,
+   "base": 0.5,
+   "channels": 3,
+   "views": 29476,
+   "who": [
+    "たまチャンネル",
+    "ぴろちゃん -ゲーム攻略・情報ch-",
+    "らいふ",
+    "らいふ"
+   ],
+   "titles": [
+    "【Cyberpunk 2077】四度目の最終大型アプデ突如配信！二丁拳銃でハクスラがより捗り、家庭用版もmodで遊べるように：エッジランナーズコラボで新コンテンツ山盛り＆評価もうなぎのぼり中",
+    "【Cyberpunk 2077】最新アプデ2.5の新要素まとめ、最強二丁拳銃ビルド、キング装備、ウィッチャー３装備、ジャッキー銃が超強化【サイバーパンク2077】",
+    "３【 サイバーパンク2077 アルティメットエディション / Cyberpunk 2077 Ultimate Edition 】初見実況配信！【STEAM】"
+   ],
+   "genres": [],
+   "year": null,
+   "platforms": [],
+   "days_seen": 2,
+   "last_seen": "2026-10-23",
    "first_here": false
   }
  ],
