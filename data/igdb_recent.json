@@ -54,6 +54,22 @@
   ]
  },
  {
+  "name": "10 Million Pixels",
+  "alias": [],
+  "pop": 0,
+  "y": 2026,
+  "p": [
+   "pc"
+  ],
+  "g": [
+   "Simulator",
+   "Strategy",
+   "Adventure",
+   "Indie",
+   "Arcade"
+  ]
+ },
+ {
   "name": "100 Amsterdam Cats",
   "alias": [],
   "pop": 0,
@@ -1564,7 +1580,9 @@
  },
  {
   "name": "Aenoic Abyss",
-  "alias": [],
+  "alias": [
+   "AeonicAbyss.exe"
+  ],
   "pop": 0,
   "y": 2026,
   "p": [
@@ -3629,21 +3647,6 @@
   ]
  },
  {
-  "name": "Arcade Galaxy",
-  "alias": [],
-  "pop": 0,
-  "y": 2026,
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Platform",
-   "Racing",
-   "Indie",
-   "Arcade"
-  ]
- },
- {
   "name": "Arcane Eats",
   "alias": [],
   "pop": 0,
@@ -4125,6 +4128,22 @@
   ],
   "g": [
    "Role-playing (RPG)",
+   "Adventure",
+   "Indie"
+  ]
+ },
+ {
+  "name": "Ashen Legacy",
+  "alias": [],
+  "pop": 0,
+  "y": 2026,
+  "p": [
+   "pc"
+  ],
+  "g": [
+   "Platform",
+   "Role-playing (RPG)",
+   "Hack and slash/Beat 'em up",
    "Adventure",
    "Indie"
   ]
@@ -5826,6 +5845,20 @@
    "pc"
   ],
   "g": [
+   "Indie"
+  ]
+ },
+ {
+  "name": "Beast Hunt",
+  "alias": [],
+  "pop": 0,
+  "y": 2026,
+  "p": [
+   "pc"
+  ],
+  "g": [
+   "Puzzle",
+   "Adventure",
    "Indie"
   ]
  },
@@ -7600,7 +7633,9 @@
  },
  {
   "name": "Bonki D Bonk",
-  "alias": [],
+  "alias": [
+   "Bonki D Bonk.exe"
+  ],
   "pop": 0,
   "y": 2026,
   "p": [
@@ -9036,7 +9071,7 @@
    "MW4",
    "Call of Duty: MW4"
   ],
-  "pop": 7,
+  "pop": 8,
   "y": 2026,
   "p": [
    "pc",
@@ -9142,6 +9177,7 @@
   ],
   "g": [
    "Simulator",
+   "Strategy",
    "Indie"
   ]
  },
@@ -11335,7 +11371,7 @@
   "alias": [
    "Hellraiser.exe"
   ],
-  "pop": 12,
+  "pop": 13,
   "y": 2026,
   "p": [
    "pc",
@@ -22963,19 +22999,6 @@
   ]
  },
  {
-  "name": "Flipper of Eridanus",
-  "alias": [],
-  "pop": 0,
-  "y": 2026,
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Pinball",
-   "Arcade"
-  ]
- },
- {
   "name": "Flipper on Recoil",
   "alias": [],
   "pop": 0,
@@ -25023,6 +25046,19 @@
   "g": [
    "Shooter",
    "Simulator",
+   "Indie"
+  ]
+ },
+ {
+  "name": "Gem Beasts",
+  "alias": [],
+  "pop": 0,
+  "y": 2026,
+  "p": [
+   "pc"
+  ],
+  "g": [
+   "Adventure",
    "Indie"
   ]
  },
@@ -33436,6 +33472,20 @@
   ]
  },
  {
+  "name": "Laser Lightshow",
+  "alias": [],
+  "pop": 0,
+  "y": 2026,
+  "p": [
+   "pc"
+  ],
+  "g": [
+   "Puzzle",
+   "Strategy",
+   "Indie"
+  ]
+ },
+ {
   "name": "Last Chance: Birth",
   "alias": [],
   "pop": 0,
@@ -40530,7 +40580,9 @@
  },
  {
   "name": "Night of the Living Bubble",
-  "alias": [],
+  "alias": [
+   "Night of The Living Bubble.exe"
+  ],
   "pop": 0,
   "y": 2026,
   "p": [
@@ -47362,7 +47414,9 @@
  },
  {
   "name": "QuestAway",
-  "alias": [],
+  "alias": [
+   "QuestAway.exe"
+  ],
   "pop": 0,
   "y": 2026,
   "p": [
@@ -48198,6 +48252,17 @@
   ]
  },
  {
+  "name": "Recharged",
+  "alias": [
+   "mscharged"
+  ],
+  "pop": 0,
+  "y": 2026,
+  "p": [
+   "pc"
+  ]
+ },
+ {
   "name": "Recital of the Heart",
   "alias": [],
   "pop": 0,
@@ -48566,19 +48631,6 @@
   ],
   "g": [
    "Shooter",
-   "Indie"
-  ]
- },
- {
-  "name": "Rentcthulhu",
-  "alias": [],
-  "pop": 0,
-  "y": 2026,
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Strategy",
    "Indie"
   ]
  },
@@ -51218,21 +51270,6 @@
   ],
   "g": [
    "Simulator",
-   "Indie"
-  ]
- },
- {
-  "name": "Scrybe",
-  "alias": [
-   "SCRYBE"
-  ],
-  "pop": 0,
-  "y": 2026,
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Puzzle",
    "Indie"
   ]
  },
@@ -61350,19 +61387,6 @@
   ]
  },
  {
-  "name": "The Postman Cometh",
-  "alias": [],
-  "pop": 0,
-  "y": 2026,
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Adventure",
-   "Indie"
-  ]
- },
- {
   "name": "The Previous Owner",
   "alias": [],
   "pop": 0,
@@ -61388,19 +61412,6 @@
    "Role-playing (RPG)",
    "Tactical",
    "Indie"
-  ]
- },
- {
-  "name": "The Quiet Days of Dorothy",
-  "alias": [],
-  "pop": 0,
-  "y": 2026,
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Indie",
-   "Visual Novel"
   ]
  },
  {
@@ -62549,6 +62560,7 @@
    "pc"
   ],
   "g": [
+   "Puzzle",
    "Indie"
   ]
  },
@@ -69452,6 +69464,8 @@
    "pc"
   ],
   "g": [
+   "Point-and-click",
+   "Puzzle",
    "Indie"
   ]
  },
