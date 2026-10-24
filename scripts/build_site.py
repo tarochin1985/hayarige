@@ -3391,8 +3391,75 @@ MOVE_HOT = 10          # これだけ上がったら目立たせる（1日1.8件
 MOVE_MIN_SHARE = 0.6   # 窓の本数が中央値のこれを割る日は、矢印を出さない
 
 
+def top30_ledger(rows):
+    """「30位に入ったことがあるゲーム」の台帳を読み、今日のぶんを足して返す。
+
+    返すのは**今日より前に30位へ入ったことがあるゲームの正式名**の集合。
+
+    なぜ要るか（2026-10-24 たろちんさん）
+    ------------------------------------
+
+        > 初めて30位以内のランキングに登場したときに🆕マークがつく形にして、
+        > 一度30位以下に落ちてまた30位以内に復帰した場合は↑の矢印で表記する
+        > 形になってる？（…）最初のPVなどをゲーム名として拾って100位とかに
+        > 実は初登場していて、発売日に盛り上がったときは再登場、みたいな
+        > 判定だと本質とちょっとズレる
+
+    **そのとおりだった。** それまでは `game_days.json`（2チャンネル以上あった
+    全ゲーム。順位は見ない）と7日ぶんの推移で「前に見たか」を決めていた。
+    読者が見ているのは**公開している30位**なので、ここがズレていた。
+
+    実際にズレていた例:
+
+        ARC Raiders        game_days 10-09 から / 初めて30位 10-11
+        ファイナルファンタジー レゾナンス  game_days 10-13 から / 初めて30位 **10-20（発売日）**
+
+    FFレゾナンスは、体験版やPVが1〜2チャンネルに拾われていたせいで、
+    **いちばん大事な発売日に「🆕」ではなく「↑（圏外から）」**が出ていた。
+
+    記録ページ（site/d/*/index.html）は全期間ぶん残っていて、各日の30位を
+    `canonical` 付きで持っている。**それが「30位に入った履歴」そのもの**なので、
+    初回だけそこから台帳を作り、以降は毎日1行ずつ足していく。
+    毎回61ファイル読み直すより軽く、clone しても失われない。
+
+    ★**鍵は `canonical`。** 表示名は `display_names.json` で変わるので、
+      表示名で持つと名前を変えた翌日に全部「初登場」になる。
+
+    ★**今日のぶんは「前」に数えない。** 1日2回まわるので、朝の回が書いたあと
+      夜の回が走る。日付を持たせて `< 今日` で切らないと、朝だけ🆕が出て
+      夜は消える、という形になる。
+    """
+    path = DATA / "top30.json"
+    led = read_json(path, {}) or {}
+    if not led and (SITE / "d").is_dir():
+        # 初回だけ、記録ページから作る
+        for d in sorted(x.name for x in (SITE / "d").iterdir() if x.is_dir()):
+            f = SITE / "d" / d / "index.html"
+            if not f.is_file():
+                continue
+            try:
+                h = f.read_text(encoding="utf-8")
+                i = h.index("const DATA = ") + len("const DATA = ")
+                obj, _ = json.JSONDecoder().raw_decode(h[i:])
+            except Exception:
+                continue
+            for r in (obj.get("ranking") or [])[:MOVE_DEPTH]:
+                k = r.get("canonical") or r.get("game")
+                if k and k not in led:
+                    led[k] = d
+        log(f"30位の台帳を記録ページから作りました: {len(led)} ゲーム")
+    t0 = today()
+    before = {k for k, d in led.items() if str(d) < t0}
+    for r in rows[:MOVE_DEPTH]:
+        k = r.get("canonical") or r.get("game")
+        if k:
+            led.setdefault(k, t0)
+    write_json(path, dict(sorted(led.items())))
+    return before
+
+
 def rank_moves(rows, days, idx, disp, override, hist, day_names,
-               momentum_ready, plats, cfg):
+               momentum_ready, plats, cfg, seen30):
     """1〜30位に「前の24時間と比べてどう動いたか」を持たせる。
 
     なぜ要るか（2026-10-19 たろちんさん）
@@ -3419,16 +3486,20 @@ def rank_moves(rows, days, idx, disp, override, hist, day_names,
       ふだんの前日比は最小0.68。クォータ切れの日は0.3を割る。
       **中央値の6割**を線にすれば、ふだんのゆれ（0.68）は通って事故は止まる。
 
-    「初登場」の数え方
-    ------------------
+    「初登場」の数え方（2026-10-24に入れ替えた）
+    -------------------------------------------
 
-    **「30位に入っていない」は「無かった」ではない。** だから初登場は
-    `game_days.json`（全期間・全ゲーム）で見る。それでも足りないので3つ重ねる。
+    **「30位に入るのが初めて」かどうかだけで決める。** 台帳は
+    `top30_ledger()` が持っている（そちらに経緯を書いた）。
 
-      1. `game_days.json` の**今日より前**の日に、表示名か canonical があるか
-      2. 7日ぶんの `spark` に、今日より前の本数があるか
-         （`game_days.json` は2チャンネル以上しか残していないので、その穴埋め）
-      3. どちらにも無ければ「初登場」
+    入れ替える前は `game_days.json`（順位を見ない。2チャンネル以上の全ゲーム）と
+    7日ぶんの推移で「前に見たか」を決めていた。そのせいで、体験版やPVが
+    1〜2チャンネルに拾われていたゲームは、**初めて30位に入った日**＝
+    いちばん大事な日に「🆕」ではなく「↑（圏外から）」が出ていた。
+    『ファイナルファンタジー レゾナンス』の発売日がちょうどこれだった。
+
+    入れ替えても**🆕は増えすぎない。** 61日ぶんの記録ページで数えると
+    1日あたり1.9件（前のやり方では1.6件）。印として特別なままでいられる。
 
     **出す印は5つだけ。** 1日あたりの件数は56日ぶんの記録ページで数えた。
 
@@ -3466,16 +3537,6 @@ def rank_moves(rows, days, idx, disp, override, hist, day_names,
                                 day_names, momentum_ready, plats, cfg)
     was = {r["canonical"]: r["rank"] for r in prev_rows if r.get("canonical")}
 
-    # 「前に見たことがあるか」── 今日より前の日だけを数える。
-    # 1日2回まわるので、朝の回が今日ぶんを書いたあとに夜の回が走る。
-    # 今日を入れてしまうと、朝だけ NEW が出て夜は出ない、という形になる。
-    gd = read_json(DATA / "game_days.json", {}) or {}
-    t0 = today()
-    seen = set()
-    for d, games in gd.items():
-        if d < t0:
-            seen |= set(games)
-
     up = hot = 0
     for r in top:
         prev = was.get(r.get("canonical"))
@@ -3489,8 +3550,10 @@ def rank_moves(rows, days, idx, disp, override, hist, day_names,
             if d > 0:
                 up += 1
             continue
-        before = [v for v in (r.get("spark") or [])[:-1] if v]
-        if r["game"] in seen or r.get("canonical") in seen or before:
+        # ★「🆕」は**30位に入るのが初めて**という意味（2026-10-24）。
+        #   2チャンネルに拾われただけの日があっても、30位に入っていなければ
+        #   初登場のまま。読者が見ているのは公開している30位なので。
+        if (r.get("canonical") or r["game"]) in seen30:
             # 前の順位は**吹き出しにだけ**出す。順位表に出しているのは30位
             # までなので、「47位から」と数字で並べても読者は見ていない。
             # でも知りたい人のために、持ってはおく。
@@ -3540,8 +3603,11 @@ def main():
                                  hist, day_names, momentum_ready, plats, cfg)
     if not rows:
         log("今日のデータからゲームを検出できませんでした。処理を続けます。")
+    # ★台帳は**矢印を出さない日でも必ず更新する**。クォータ切れの日に
+    #   飛ばすと、その日30位に入ったゲームが翌日「初登場」に戻ってしまう。
+    seen30 = top30_ledger(rows)
     rank_moves(rows, days, idx, disp, override, hist, day_names,
-               momentum_ready, plats, cfg)
+               momentum_ready, plats, cfg, seen30)
 
     # 急上昇は「倍率の大きい順」。小さくて誰も知らないゲームが出るようにする。
     #
