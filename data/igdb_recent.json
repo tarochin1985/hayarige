@@ -9795,7 +9795,7 @@
  {
   "name": "Castlevania: Belmont's Curse",
   "alias": [],
-  "pop": 3,
+  "pop": 8,
   "y": 2026,
   "p": [
    "pc",
@@ -12110,7 +12110,7 @@
    "Control 2",
    "CONTROL RESONANT"
   ],
-  "pop": 37,
+  "pop": 38,
   "y": 2026,
   "p": [
    "pc",
@@ -44217,7 +44217,7 @@
   "alias": [
    "Penguin Colony.exe"
   ],
-  "pop": 0,
+  "pop": 1,
   "y": 2026,
   "p": [
    "pc",
@@ -46217,20 +46217,6 @@
  {
   "name": "Pozionista",
   "alias": [],
-  "pop": 0,
-  "y": 2026,
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Simulator"
-  ]
- },
- {
-  "name": "Pragma Twice",
-  "alias": [
-   "pragma_twice.exe"
-  ],
   "pop": 0,
   "y": 2026,
   "p": [
@@ -49085,6 +49071,19 @@
  },
  {
   "name": "Rich Dad Simulator",
+  "alias": [],
+  "pop": 0,
+  "y": 2026,
+  "p": [
+   "pc"
+  ],
+  "g": [
+   "Simulator",
+   "Indie"
+  ]
+ },
+ {
+  "name": "Rich River",
   "alias": [],
   "pop": 0,
   "y": 2026,
@@ -52772,7 +52771,7 @@
    "SILENT HILL: townfall",
    "Cannula"
   ],
-  "pop": 28,
+  "pop": 29,
   "y": 2026,
   "p": [
    "pc",

@@ -1,6 +1,6 @@
 {
  "date": "2026-10-25",
- "generated": "2026-10-25 09:02",
+ "generated": "2026-10-25 13:34",
  "leads": {
   "events": [
    {
@@ -9,24 +9,11 @@
      "Chihaya Ch. 輪堂 千速 - FLOW GLOW",
      "Choco Ch. 癒月ちょこ",
      "Flare Ch. 不知火フレア",
-     "Iroha ch. 風真いろは - holoX -",
      "Ririka Ch. 一条莉々華 ‐ ReGLOSS",
      "Roboco Ch. - ロボ子",
      "SoraCh. ときのそらチャンネル",
      "Tsuzuri Ch. 鈴鳴つづり ‐ アソビ★まわり隊!",
-     "Vivi Ch. 綺々羅々ヴィヴィ - FLOW GLOW",
-     "隅川かど"
-    ]
-   },
-   {
-    "tag": "#ゲーム実況",
-    "channels": [
-     "KORIN.鈴ノ音コリン",
-     "くものち ふれすch.☁️🫧",
-     "ジョアだよ",
-     "恋因ロス KoinRosu",
-     "豚咲あおい_TomisakiAoi",
-     "雛乃ぴぴ / Hinano pipi"
+     "Vivi Ch. 綺々羅々ヴィヴィ - FLOW GLOW"
     ]
    },
    {
@@ -51,10 +38,19 @@
     ]
    },
    {
+    "tag": "#ゲーム実況",
+    "channels": [
+     "KORIN.鈴ノ音コリン",
+     "くものち ふれすch.☁️🫧",
+     "ジョアだよ",
+     "恋因ロス KoinRosu",
+     "雛乃ぴぴ / Hinano pipi"
+    ]
+   },
+   {
     "tag": "#ストグラ",
     "channels": [
      "Tenten Ch. / 鳳玲天々",
-     "marunnn【まるーんチャンネル】",
      "ましゃかりさん",
      "みつき",
      "闇乃あびす / Abyss"
@@ -80,43 +76,43 @@
   "newcomers": [],
   "wide": [
    {
-    "game": "Minecraft",
-    "channels": 37,
-    "videos": 37
-   },
-   {
     "game": "Apex Legends",
     "channels": 33,
-    "videos": 38
+    "videos": 36
+   },
+   {
+    "game": "Minecraft",
+    "channels": 34,
+    "videos": 34
    },
    {
     "game": "ファイナルファンタジー レゾナンス",
-    "channels": 26,
-    "videos": 30
+    "channels": 24,
+    "videos": 27
    },
    {
     "game": "ストリートファイター6",
-    "channels": 26,
-    "videos": 28
-   },
-   {
-    "game": "フォートナイト",
-    "channels": 19,
+    "channels": 23,
     "videos": 24
    },
    {
-    "game": "Grand Theft Auto V",
-    "channels": 18,
-    "videos": 20
-   },
-   {
     "game": "オーバーウォッチ2",
-    "channels": 17,
-    "videos": 17
+    "channels": 16,
+    "videos": 16
    },
    {
     "game": "Dead by Daylight",
     "channels": 15,
+    "videos": 16
+   },
+   {
+    "game": "Grand Theft Auto V",
+    "channels": 15,
+    "videos": 16
+   },
+   {
+    "game": "フォートナイト",
+    "channels": 13,
     "videos": 16
    }
   ]
@@ -253,14 +249,14 @@
    "n": 6,
    "examples": [
     {
-     "t": "【ダダエース】新作ゲームをプレイ！",
-     "c": "俺のつくねちゃんねる",
-     "u": "https://www.youtube.com/watch?v=fbgkPexEQnE"
-    },
-    {
      "t": "【ダダエース】究極神ゲー降臨!!!ダダサバイバーの次世代型きました!!!15分あっという間!!!",
      "c": "Altana Games  アルタナ",
      "u": "https://www.youtube.com/watch?v=X2_FF6z0io0"
+    },
+    {
+     "t": "【ダダエース】新作ゲームをプレイ！",
+     "c": "俺のつくねちゃんねる",
+     "u": "https://www.youtube.com/watch?v=fbgkPexEQnE"
     },
     {
      "t": "ローグライク×シューティング最新作「ダダエース」で20年ぶりのシューティングに挑むぜ【ダダエース】",
@@ -320,198 +316,6 @@
    "suggest": []
   },
   {
-   "word": "ぷにぷに",
-   "channels": 3,
-   "n": 8,
-   "examples": [
-    {
-     "t": "ウォッチ&課金キャラ禁止：”初心者向け”取り巻きステージ無特効攻略【ぷにぷに / 妖怪ウォッチぷにぷに】",
-     "c": "S極N極GAMES",
-     "u": "https://www.youtube.com/watch?v=ssJohUPNso4"
-    },
-    {
-     "t": "[ぷにぷに]グーフィが初日ガチャでジャッキーランタン狙ってガチャ回すそうです（？）",
-     "c": "リゼ",
-     "u": "https://www.youtube.com/watch?v=6paTofYX_Jo"
-    },
-    {
-     "t": "ワイメタルSRが落ちるまで周回したら◯時間かかりました。『ぷにぷに百物語』【ぷにぷに / 妖怪ウォッチぷにぷに】",
-     "c": "S極N極GAMES",
-     "u": "https://www.youtube.com/watch?v=4oOxNM4hMk8"
-    }
-   ],
-   "kind": "wide",
-   "suggest": []
-  },
-  {
-   "word": "バウンティラッシュ",
-   "channels": 3,
-   "n": 6,
-   "examples": [
-    {
-     "t": "ワンピース【バウンティラッシュ】参加型ライブ配信　初心者歓迎",
-     "c": "てくのGTちゃんねる",
-     "u": "https://www.youtube.com/watch?v=is8ljBZhe0A"
-    },
-    {
-     "t": "【検証】新キャラ\"ピーター聖\"で環境キャラ全員とタイマンしてみた【バウンティラッシュ】",
-     "c": "アル&ルッキー 【aru&rukki-】",
-     "u": "https://www.youtube.com/watch?v=uqJAp_dUBUk"
-    },
-    {
-     "t": "【検証】新キャラ\"ウォーキュリー聖\"で環境キャラ全員とタイマンしてみた【バウンティラッシュ】",
-     "c": "アル&ルッキー 【aru&rukki-】",
-     "u": "https://www.youtube.com/watch?v=cj-nlcCBHEg"
-    }
-   ],
-   "kind": "wide",
-   "suggest": []
-  },
-  {
-   "word": "Steam Nextフェス",
-   "channels": 3,
-   "n": 4,
-   "examples": [
-    {
-     "t": "【Steam Nextフェス】次に来るインディーゲームを探す！新作無料体験版祭り【2026年10月】",
-     "c": "フェイチャンネル【ゲーム実況】2000本クリアした男の軌跡",
-     "u": "https://www.youtube.com/watch?v=gd0g1DqdZZw"
-    },
-    {
-     "t": "【Steam Nextフェス】体験版を遊びまくるお祭り【インディーゲーム/ Vtuber】",
-     "c": "野々熊びこり / nonokuma bicori",
-     "u": "https://www.youtube.com/watch?v=VPn4P-aNxIM"
-    },
-    {
-     "t": "【Steam Nextフェス】隠れた神ゲーは見つかるか！？新作ゲームの無料体験版を遊びまくる！【Steam】",
-     "c": "フリー素材おじさん段田【カプサイシンマン】",
-     "u": "https://www.youtube.com/watch?v=14BQMbnxArA"
-    }
-   ],
-   "kind": "wide",
-   "suggest": []
-  },
-  {
-   "word": "秋華賞",
-   "channels": 3,
-   "n": 3,
-   "examples": [
-    {
-     "t": "【 秋華賞 】牝馬三冠最終戦！！この秋の女王はどの馬に・・・！？【鷹嶺ルイ/ホロライブ】",
-     "c": "Lui ch. 鷹嶺ルイ - holoX -",
-     "u": "https://www.youtube.com/watch?v=3Czc-bPlFR8"
-    },
-    {
-     "t": "【競馬/秋華賞】ひさびさのG1です！！！！！！！！！【#輪堂千速 / #hololivedev_is  #FLOWGLOW 】",
-     "c": "Chihaya Ch. 輪堂 千速 - FLOW GLOW",
-     "u": "https://www.youtube.com/watch?v=mC-881pDOgw"
-    },
-    {
-     "t": "#秋華賞 　今日はみゃすTシャツ　ネットで買わずに京都競馬場行きたいんゴ…　　#アモーレ競馬ラッシュ",
-     "c": "用心BΩY",
-     "u": "https://www.youtube.com/watch?v=v9DgSx_1bYs"
-    }
-   ],
-   "kind": "wide",
-   "suggest": []
-  },
-  {
-   "word": "食レポ",
-   "channels": 3,
-   "n": 3,
-   "examples": [
-    {
-     "t": "【みそきん】おいキッズ！カレーみそきん食うぞ🍛ONICHAも飲む！！【にじさんじ / 樋口楓 / みそきんゴ】#縦型配信 #食レポ 【雑談 / A/S/M/R】",
-     "c": "樋口楓【にじさんじ所属】",
-     "u": "https://www.youtube.com/watch?v=sx9kc9QrXbM"
-    },
-    {
-     "t": "【KFCに対抗!?】もも一枚肉を使用した3種類の新作バーガーを忖度なしでガチレビューする男【食レポ/ボドカ】",
-     "c": "ボドカ / Riddle - ゲーム実況",
-     "u": "https://www.youtube.com/watch?v=RGv3Z6evAV4"
-    },
-    {
-     "t": "【食レポ】マクドナルドの新作\"ジューシーチキン\"を食べ比べしてみた【marunnn】",
-     "c": "marunnn【まるーんチャンネル】",
-     "u": "https://www.youtube.com/watch?v=g3XnxfA0mfw"
-    }
-   ],
-   "kind": "wide",
-   "suggest": []
-  },
-  {
-   "word": "第9期 #V名人戦",
-   "channels": 3,
-   "n": 3,
-   "examples": [
-    {
-     "t": "【第9期 #V名人戦】V-S級獅子組7局目 磊々舘カンナ VS 凪森なつき【中継配信】",
-     "c": "龍馬うたよる",
-     "u": "https://www.youtube.com/watch?v=35KtF5SiL7Q"
-    },
-    {
-     "t": "【第9期 #V名人戦】V-C級花組5局目 凪なぎさ VS アイシアソリッド【中継配信】",
-     "c": "たんぽぽちゃん / 将棋アイドル",
-     "u": "https://www.youtube.com/watch?v=CCUFnsSZbiA"
-    },
-    {
-     "t": "【第9期 #V名人戦】V-S級獅子組8局目 かくきりこ VS 御剣マリア【きりこ視点】",
-     "c": "かくきりこちゃんねる",
-     "u": "https://www.youtube.com/watch?v=uGFmsbA0xfE"
-    }
-   ],
-   "kind": "wide",
-   "suggest": []
-  },
-  {
-   "word": "V名人戦",
-   "channels": 3,
-   "n": 3,
-   "examples": [
-    {
-     "t": "【第9期 #V名人戦】V-S級獅子組7局目 磊々舘カンナ VS 凪森なつき【中継配信】",
-     "c": "龍馬うたよる",
-     "u": "https://www.youtube.com/watch?v=35KtF5SiL7Q"
-    },
-    {
-     "t": "【第9期 #V名人戦】V-C級花組5局目 凪なぎさ VS アイシアソリッド【中継配信】",
-     "c": "たんぽぽちゃん / 将棋アイドル",
-     "u": "https://www.youtube.com/watch?v=CCUFnsSZbiA"
-    },
-    {
-     "t": "【第9期 #V名人戦】V-S級獅子組8局目 かくきりこ VS 御剣マリア【きりこ視点】",
-     "c": "かくきりこちゃんねる",
-     "u": "https://www.youtube.com/watch?v=uGFmsbA0xfE"
-    }
-   ],
-   "kind": "wide",
-   "suggest": []
-  },
-  {
-   "word": "振り返り",
-   "channels": 3,
-   "n": 3,
-   "examples": [
-    {
-     "t": "【振り返り】すぺしゃりて加入1周年！【安心院みさ/すぺしゃりて】",
-     "c": "安心院みさ / ANSHININ MISA",
-     "u": "https://www.youtube.com/watch?v=KLz2-JBDrhQ"
-    },
-    {
-     "t": "【振り返り】ライブ楽しかった！！振り返りしていきたいと思います！　#シャルのひつじ【島村シャルロット / ななしいんく】",
-     "c": "島村シャルロット / Charlotte Channel【ななしいんく】",
-     "u": "https://www.youtube.com/watch?v=UcHyrmVg9Lg"
-    },
-    {
-     "t": "【雑】まさかの後半戦【振り返り】",
-     "c": "Kuzuha Channel",
-     "u": "https://www.youtube.com/watch?v=U_BdDSrCQCQ"
-    }
-   ],
-   "kind": "wide",
-   "suggest": []
-  },
-  {
    "word": "くねくね",
    "channels": 3,
    "n": 3,
@@ -530,30 +334,6 @@
      "t": "都市伝説の「くねくね」を探すと「イカれた不審者」しかいないホラーゲーム【くねくねorくねくね？】",
      "c": "ニコ",
      "u": "https://www.youtube.com/watch?v=3WC0yru2zMk"
-    }
-   ],
-   "kind": "wide",
-   "suggest": []
-  },
-  {
-   "word": "第4回",
-   "channels": 3,
-   "n": 3,
-   "examples": [
-    {
-     "t": "【第4回】ガチ狼S6 代打マンで楽しむ【10/20】",
-     "c": "さかな",
-     "u": "https://www.youtube.com/watch?v=LDvZzRGjEVI"
-    },
-    {
-     "t": "【ラジオ】私の数字より大きいか小さいか当ててみてください【おまぬけチキン】【第4回】",
-     "c": "うささのゲーム実況ch-ノベルゲームetc.-",
-     "u": "https://www.youtube.com/watch?v=-cJxXTAlPXo"
-    },
-    {
-     "t": "☀️【朝活】これを見れば今日彼女ができます👀【雑談/第４回】",
-     "c": "ゲッコウのゲーム実況チャンネル🔥",
-     "u": "https://www.youtube.com/watch?v=FqoGus1vYLE"
     }
    ],
    "kind": "wide",
@@ -593,34 +373,27 @@
    "first_here": false
   },
   {
-   "game": "Elden Ring Nightreign",
+   "game": "プロジェクトセカイ",
    "growth": 4.0,
    "videos": 4,
    "base": 1.0,
    "channels": 4,
-   "views": 120050,
+   "views": 102124,
    "who": [
-    "GAMEアダチ",
-    "ドチタオ",
-    "GAMEアダチ",
-    "らっこ侍",
-    "星奈きら / Hoshina Kila"
+    "翡翠はくあ【すごい自己肯定感高い奴】",
+    "てくのGTちゃんねる",
+    "しょこらぁ。-chocolaa.ch-",
+    "まてぃ / M4texi"
    ],
    "titles": [
-    "【未プレイ勢も見て】ナイトレイン人気ボスランキング ※視聴者投票【エルデンリングナイトレイン/ELDENRING NIGHTREIGN】",
-    "苦手武器を使う苦手キャラでカンストして私は次のステップへ【ナイトレイン/ELDEN RING NIGHTREIGN】",
-    "リハビリに付き合ってくれ。気が向いたら石学者が出、出る※PS版【エルデンリングナイトレイン/ELDEN RING NIGHTREIGN】【GAMEアダチ】"
+    "【#プロセカ】寝起きやけど消しゴムと彗惺MASTERのFC詰める！視聴者参加型配信！【#翡翠はくあ】",
+    "【参加型】みんなでプロセカライブ /創作譜面/超絶大募集配信　新規さん大歓迎ですねん【projectsekai 】",
+    "【衝撃コラボ】プロセカ公式大会CS準優勝「ひまだゎ〜」にインタビューした結果意味がわからなかった件 #プロセカ #pjsk"
    ],
-   "genres": [
-    "Role-playing (RPG)",
-    "Hack and slash/Beat 'em up"
-   ],
-   "year": 2025,
-   "platforms": [
-    "pc",
-    "console"
-   ],
-   "days_seen": 11,
+   "genres": [],
+   "year": null,
+   "platforms": [],
+   "days_seen": 24,
    "last_seen": "2026-10-24",
    "first_here": false
   },
@@ -644,8 +417,8 @@
    "genres": [],
    "year": null,
    "platforms": [],
-   "days_seen": 10,
-   "last_seen": "2026-10-24",
+   "days_seen": 9,
+   "last_seen": "2026-10-11",
    "first_here": false
   },
   {
@@ -696,32 +469,39 @@
    "genres": [],
    "year": null,
    "platforms": [],
-   "days_seen": 40,
+   "days_seen": 39,
    "last_seen": "2026-10-24",
    "first_here": false
   },
   {
-   "game": "プロジェクトセカイ",
+   "game": "Elden Ring Nightreign",
    "growth": 3.33,
    "videos": 4,
    "base": 1.2,
    "channels": 4,
-   "views": 102124,
+   "views": 113654,
    "who": [
-    "翡翠はくあ【すごい自己肯定感高い奴】",
-    "てくのGTちゃんねる",
-    "しょこらぁ。-chocolaa.ch-",
-    "まてぃ / M4texi"
+    "GAMEアダチ",
+    "ドチタオ",
+    "GAMEアダチ",
+    "らっこ侍",
+    "星奈きら / Hoshina Kila"
    ],
    "titles": [
-    "【#プロセカ】寝起きやけど消しゴムと彗惺MASTERのFC詰める！視聴者参加型配信！【#翡翠はくあ】",
-    "【参加型】みんなでプロセカライブ /創作譜面/超絶大募集配信　新規さん大歓迎ですねん【projectsekai 】",
-    "【衝撃コラボ】プロセカ公式大会CS準優勝「ひまだゎ〜」にインタビューした結果意味がわからなかった件 #プロセカ #pjsk"
+    "【未プレイ勢も見て】ナイトレイン人気ボスランキング ※視聴者投票【エルデンリングナイトレイン/ELDENRING NIGHTREIGN】",
+    "苦手武器を使う苦手キャラでカンストして私は次のステップへ【ナイトレイン/ELDEN RING NIGHTREIGN】",
+    "リハビリに付き合ってくれ。気が向いたら石学者が出、出る※PS版【エルデンリングナイトレイン/ELDEN RING NIGHTREIGN】【GAMEアダチ】"
    ],
-   "genres": [],
-   "year": null,
-   "platforms": [],
-   "days_seen": 24,
+   "genres": [
+    "Role-playing (RPG)",
+    "Hack and slash/Beat 'em up"
+   ],
+   "year": 2025,
+   "platforms": [
+    "pc",
+    "console"
+   ],
+   "days_seen": 11,
    "last_seen": "2026-10-24",
    "first_here": false
   }
