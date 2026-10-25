@@ -32,8 +32,31 @@ on:
     # 7時は、朝のリマインドが8時に見に来るので必須。
     # もう片方は12時間あけて19時にした。7時と23時にすると日中ずっと
     # 朝のままになってしまい、いちばん人が見る時間帯が古くなる。
-    - cron: "0 22 * * *"      # UTC 22:00 = 日本時間 翌 7:00
-    - cron: "0 10 * * *"      # UTC 10:00 = 日本時間    19:00
+    #
+    # ---- ★2026-10-25：0分をやめて、1つの枠に6回ずつ声をかける形に変えた ----
+    #
+    # たろちんさん「自動更新が最近数時間レベルでズレている」。
+    # **コミットの時刻で実際に数えた**（10-15〜10-25の10〜11回ぶん）。
+    #
+    #   予定 22:00 UTC（日本時間 7:00）… 中央値 134分おくれ / 最大 156分
+    #   予定 10:00 UTC（日本時間 19:00）… 中央値 260分おくれ / 最大 305分
+    #
+    # 朝の更新が日本時間9時すぎに終わっていた。**8時の朝のリマインドは、
+    # その前の晩のデータを見ていたということ。** 夜は23時すぎだった。
+    #
+    # GitHubの定期実行は「混雑時に遅れることがある」と公式に書かれていて、
+    # **いちばん混むのは毎時0分**。1日2回・どちらも0分に置いていたので、
+    # まるごと行列の後ろに並んでいた。
+    #
+    # そこで「0分を避けて、1つの枠に30分おきに6回声をかける」形にした。
+    # **先に届いたものが仕事をして、残りは関所（下の gate）で止まる。**
+    # 止まるぶんは数十秒で終わり、YouTubeのクォータは1ポイントも使わない。
+    # 公開リポジトリなのでActionsの実行時間は無料。
+    #
+    # ※ GitHubは定期実行の時刻を保証していない。これでも駄目なら、
+    #   外から `workflow_dispatch` を叩く形にするしかない（そちらは遅れない）。
+    - cron: "11,41 21,22,23 * * *"   # 日本時間 6:11 / 6:41 / 7:11 / 7:41 / 8:11 / 8:41
+    - cron: "11,41 9,10,11 * * *"    # 日本時間 18:11 / 18:41 / 19:11 / 19:41 / 20:11 / 20:41
   workflow_dispatch:
     inputs:
       fetch:
@@ -55,17 +78,53 @@ on:
         type: choice
         options: ["yes", "no"]
 
-# 前の実行が詰まっていたら、新しい実行が引き継いで打ち切る
-concurrency:
-  group: daily
-  cancel-in-progress: true
-
 jobs:
+  # ---------------------------------------------------------------- 関所
+  # **YouTubeのクォータを使う前に、走るかどうかだけを決める。**
+  # 中身は scripts/should_run.py に書いてある（止める条件は2つだけ）。
+  #
+  #   ・同じ枠（朝＝日本時間4〜16時 / 夜＝16〜翌4時）でもう取り込んでいる
+  #   ・前の取り込みから6時間たっていない
+  #
+  # たろちんさんが言っていた「気づいて手で回したあと、遅れて届いた
+  # 定期実行がもう一度取りに行く」のは1つ目で止まる。手で回したときは必ず走る。
+  #
+  # ★ここが失敗したら更新が全部止まる、というのがいちばん悪いので、
+  #   **壊れたときは「走る」側に倒してある**（下の if も go == 'no' のときだけ止める）。
+  gate:
+    name: 走るかどうかを決める
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    outputs:
+      go: ${{ steps.judge.outputs.go }}
+    steps:
+      # 判断に要るのは2つのファイルだけなので、そこだけ取り出す（数秒で終わる）
+      - uses: actions/checkout@v4
+        with:
+          sparse-checkout: |
+            data/last_fetch.json
+            scripts/should_run.py
+          sparse-checkout-cone-mode: false
+      - id: judge
+        run: python3 scripts/should_run.py
+
   update:
+    name: 集めてサイトを作る
+    needs: gate
+    # ★ go が 'no' のときだけ止める。関所が失敗して空になったときは走る。
+    if: ${{ !cancelled() && needs.gate.outputs.go != 'no' }}
     runs-on: ubuntu-latest
     timeout-minutes: 25      # これを超えたら自動で止まる
     permissions:
       contents: write
+    # 前の実行が走っている間は待つ。**打ち切らない。**
+    # 以前は cancel-in-progress: true で打ち切っていたが、1つの枠に6回
+    # 声をかける形にしたので、**走っている最中の実行を後ろの声が
+    # 打ち切ってしまう**（push の途中だと中途半端になる）。
+    # 詰まったものは timeout-minutes の25分で勝手に終わる。
+    concurrency:
+      group: daily-update
+      cancel-in-progress: false
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
@@ -84,16 +143,35 @@ jobs:
           TWITCH_CLIENT_SECRET: ${{ secrets.TWITCH_CLIENT_SECRET }}
         run: python scripts/igdb_recent.py
 
+      # ★ 取りに行く直前に、もう一度関所を通す（2026-10-25）。
+      #
+      # 関所（gate）は行列に並ばないので、**前の実行がまだ push していない
+      # 間に次の関所が通ってしまう**ことがある。そのまま行列を抜けると
+      # 2回取りに行って、クォータを2,600ぶん無駄にする。
+      # この job の checkout は行列を抜けたあとに走るので、
+      # ここで見れば前の実行の記録がもう入っている。
+      - name: 取りに行く直前に、もう一度関所を通す
+        id: gate2
+        run: python scripts/should_run.py
+
       # 定期実行（schedule）のときは inputs が空になるので、この条件は必ず真。
       # 手で「no」を選んだときだけ飛ばす。
       - name: 新着の配信を集める
-        if: ${{ inputs.fetch != 'no' }}
+        if: ${{ inputs.fetch != 'no' && steps.gate2.outputs.go != 'no' }}
         env:
           YOUTUBE_API_KEY: ${{ secrets.YOUTUBE_API_KEY }}
         run: python scripts/fetch_daily.py
 
+      # 取り込んだ時刻を残す。**次の関所がこれを読む。**
+      # クォータが足りなくて fetch_daily が取りに行かなかった場合も記録する
+      # （「この枠はもう当たった」という意味なので、同じ枠で何度も
+      # サイトを作り直さずに済む）。
+      - name: 取り込んだ時刻を記録する
+        if: ${{ inputs.fetch != 'no' && steps.gate2.outputs.go != 'no' }}
+        run: python scripts/should_run.py --mark
+
       - name: 収集を飛ばしました
-        if: ${{ inputs.fetch == 'no' }}
+        if: ${{ inputs.fetch == 'no' || steps.gate2.outputs.go == 'no' }}
         run: echo "配信の取り直しは飛ばしました。YouTubeのクォータは使っていません。手元のデータでサイトだけ作り直します。"
 
       # 週・月のまとめのページに置く画像（site/w/<日付>/card.png）。
