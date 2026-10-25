@@ -835,6 +835,19 @@
   ]
  },
  {
+  "name": "A Little Faraway",
+  "alias": [],
+  "pop": 0,
+  "y": 2026,
+  "p": [
+   "pc"
+  ],
+  "g": [
+   "Adventure",
+   "Indie"
+  ]
+ },
+ {
   "name": "A Maze in Labyrinth",
   "alias": [],
   "pop": 0,
@@ -6325,21 +6338,6 @@
   ]
  },
  {
-  "name": "Bhangarh: The Untold Story",
-  "alias": [],
-  "pop": 0,
-  "y": 2026,
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Puzzle",
-   "Strategy",
-   "Adventure",
-   "Indie"
-  ]
- },
- {
   "name": "Bher",
   "alias": [],
   "pop": 0,
@@ -9737,6 +9735,19 @@
   ]
  },
  {
+  "name": "Carry On Together",
+  "alias": [],
+  "pop": 0,
+  "y": 2026,
+  "p": [
+   "pc"
+  ],
+  "g": [
+   "Simulator",
+   "Indie"
+  ]
+ },
+ {
   "name": "Carry the Count",
   "alias": [],
   "pop": 0,
@@ -11374,7 +11385,7 @@
   "alias": [
    "Hellraiser.exe"
   ],
-  "pop": 13,
+  "pop": 14,
   "y": 2026,
   "p": [
    "pc",
@@ -27417,6 +27428,20 @@
   ]
  },
  {
+  "name": "Halls of Torment: The Lost Archives",
+  "alias": [],
+  "pop": 0,
+  "y": 2026,
+  "p": [
+   "pc",
+   "console"
+  ],
+  "g": [
+   "Role-playing (RPG)",
+   "Indie"
+  ]
+ },
+ {
   "name": "Hallucination",
   "alias": [],
   "pop": 0,
@@ -27708,6 +27733,20 @@
    "Tactical",
    "Indie",
    "Card & Board Game"
+  ]
+ },
+ {
+  "name": "Hatsune Miku Connecting Puzzle Tamagotori: Deluxe",
+  "alias": [],
+  "pop": 0,
+  "y": 2026,
+  "p": [
+   "pc",
+   "console"
+  ],
+  "g": [
+   "Music",
+   "Puzzle"
   ]
  },
  {
@@ -29143,7 +29182,9 @@
  },
  {
   "name": "Horse Magic",
-  "alias": [],
+  "alias": [
+   "HorseMagicPC.exe"
+  ],
   "pop": 0,
   "y": 2026,
   "p": [
@@ -35276,18 +35317,6 @@
   ]
  },
  {
-  "name": "Low Earth Orbit Adventures",
-  "alias": [],
-  "pop": 0,
-  "y": 2026,
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Simulator"
-  ]
- },
- {
   "name": "Lucent",
   "alias": [
    "Lucent.exe"
@@ -39412,6 +39441,7 @@
  {
   "name": "Mycopsychosys: Project Jupiter",
   "alias": [
+   "ProjectJupiter_1.0.exe",
    "Mycopsychosys: PCD"
   ],
   "pop": 0,
@@ -49084,19 +49114,6 @@
   ]
  },
  {
-  "name": "Rich River",
-  "alias": [],
-  "pop": 0,
-  "y": 2026,
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Simulator",
-   "Indie"
-  ]
- },
- {
   "name": "Ride Up Together",
   "alias": [],
   "pop": 0,
@@ -52772,7 +52789,7 @@
    "SILENT HILL: townfall",
    "Cannula"
   ],
-  "pop": 29,
+  "pop": 30,
   "y": 2026,
   "p": [
    "pc",
@@ -62165,7 +62182,7 @@
   "alias": [
    "The Witcher 3 Remastered"
   ],
-  "pop": 19,
+  "pop": 20,
   "y": 2026,
   "p": [
    "pc",
@@ -66826,21 +66843,6 @@
   "g": [
    "Puzzle",
    "Simulator",
-   "Indie"
-  ]
- },
- {
-  "name": "Wanderburg",
-  "alias": [],
-  "pop": 0,
-  "y": 2026,
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Role-playing (RPG)",
-   "Simulator",
-   "Strategy",
    "Indie"
   ]
  },
