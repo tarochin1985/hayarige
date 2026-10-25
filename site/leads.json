@@ -1,6 +1,6 @@
 {
  "date": "2026-10-25",
- "generated": "2026-10-25 13:34",
+ "generated": "2026-10-25 14:08",
  "leads": {
   "events": [
    {
@@ -25,16 +25,6 @@
      "ローレン・イロアス / Lauren Iroas【にじさんじ】",
      "御子神琴音 / Mikogami Kotone【にじさんじ】",
      "椎名唯華 / Shiina Yuika"
-    ]
-   },
-   {
-    "tag": "#ホロ鯖ARK",
-    "channels": [
-     "Choco Ch. 癒月ちょこ",
-     "Koyori ch. 博衣こより - holoX -",
-     "Pekora Ch. 兎田ぺこら",
-     "Towa Ch. 常闇トワ",
-     "フブキCh。白上フブキ"
     ]
    },
    {
@@ -65,6 +55,14 @@
     ]
    },
    {
+    "tag": "#ホロ鯖ARK",
+    "channels": [
+     "Choco Ch. 癒月ちょこ",
+     "Pekora Ch. 兎田ぺこら",
+     "フブキCh。白上フブキ"
+    ]
+   },
+   {
     "tag": "#わちゃサバ",
     "channels": [
      "ノビーの遊び部屋",
@@ -76,14 +74,14 @@
   "newcomers": [],
   "wide": [
    {
+    "game": "Minecraft",
+    "channels": 35,
+    "videos": 35
+   },
+   {
     "game": "Apex Legends",
     "channels": 33,
     "videos": 36
-   },
-   {
-    "game": "Minecraft",
-    "channels": 34,
-    "videos": 34
    },
    {
     "game": "ファイナルファンタジー レゾナンス",
@@ -120,27 +118,6 @@
  "drift": [],
  "tags": [],
  "misses": [
-  {
-   "word": "ShadowCorridor",
-   "channels": 1,
-   "n": 2,
-   "examples": [
-    {
-     "t": "外縁の視察に行くぞ🥴【ShadowCorridor】",
-     "c": "ちむらい",
-     "u": "https://www.youtube.com/watch?v=p5ROjglL6MA"
-    },
-    {
-     "t": "外縁の挑戦者に挑戦するで候【ShadowCorridor】",
-     "c": "ちむらい",
-     "u": "https://www.youtube.com/watch?v=eTvAkoFtbSg"
-    }
-   ],
-   "kind": "near",
-   "suggest": [
-    "Shadow Corridor Zero"
-   ]
-  },
   {
    "word": "#splitbrain",
    "channels": 1,
@@ -242,102 +219,6 @@
     "Indie Game Battle",
     "Indie Game Sim"
    ]
-  },
-  {
-   "word": "ダダエース",
-   "channels": 5,
-   "n": 6,
-   "examples": [
-    {
-     "t": "【ダダエース】究極神ゲー降臨!!!ダダサバイバーの次世代型きました!!!15分あっという間!!!",
-     "c": "Altana Games  アルタナ",
-     "u": "https://www.youtube.com/watch?v=X2_FF6z0io0"
-    },
-    {
-     "t": "【ダダエース】新作ゲームをプレイ！",
-     "c": "俺のつくねちゃんねる",
-     "u": "https://www.youtube.com/watch?v=fbgkPexEQnE"
-    },
-    {
-     "t": "ローグライク×シューティング最新作「ダダエース」で20年ぶりのシューティングに挑むぜ【ダダエース】",
-     "c": "あまくだり",
-     "u": "https://www.youtube.com/watch?v=5IdpHdRGO7o"
-    }
-   ],
-   "kind": "wide",
-   "suggest": []
-  },
-  {
-   "word": "プロスピA",
-   "channels": 3,
-   "n": 11,
-   "examples": [
-    {
-     "t": "【プロスピA】7800目指すタイブレーク杯",
-     "c": "ねこマンちゃんねる",
-     "u": "https://www.youtube.com/watch?v=RsUIFxfkvtE"
-    },
-    {
-     "t": "それでもリボンを諦めない　#ゆっくり実況　#プロスピ　#プロスピa",
-     "c": "ゆうハル",
-     "u": "https://www.youtube.com/watch?v=2JMZ1VMhJlk"
-    },
-    {
-     "t": "【ブチギレ祭り】無凸の高木豊で地獄のホームランチャレンジに挑んだ結果。【プロスピA】",
-     "c": "SAWAYAN GAMES / サワヤン ゲームズ",
-     "u": "https://www.youtube.com/watch?v=vsCD6GbHOTw"
-    }
-   ],
-   "kind": "wide",
-   "suggest": []
-  },
-  {
-   "word": "homeクラ合衆国",
-   "channels": 3,
-   "n": 10,
-   "examples": [
-    {
-     "t": "新ワールド始まるよ！｜DAY 1【homeクラ合衆国】",
-     "c": "うが / マイクラ建築",
-     "u": "https://www.youtube.com/watch?v=qC7q9hSst_c"
-    },
-    {
-     "t": "【#homeクラ】homeクラ合衆国に入国だ～～！！ #1  【珍珠花こまり/りーさるぷらん】#homeクラ合衆国",
-     "c": "珍珠花こまり / Yukiyanagi Komari",
-     "u": "https://www.youtube.com/watch?v=CHbT447nQro"
-    },
-    {
-     "t": "さてどうやって稼ごうか。｜DAY 2【homeクラ合衆国】",
-     "c": "うが / マイクラ建築",
-     "u": "https://www.youtube.com/watch?v=9q8xApNESJg"
-    }
-   ],
-   "kind": "wide",
-   "suggest": []
-  },
-  {
-   "word": "くねくね",
-   "channels": 3,
-   "n": 3,
-   "examples": [
-    {
-     "t": "都市伝説「くねくね」か「ヤバい奴」かを見分けるホラーゲーム【くねくねorくねくね？】",
-     "c": "ジェスター(うるさい実況者)",
-     "u": "https://www.youtube.com/watch?v=kEOfpgYpsC0"
-    },
-    {
-     "t": "都市伝説の「くねくね」を見分ける斬新なホラーゲーム",
-     "c": "ぱんお。",
-     "u": "https://www.youtube.com/watch?v=4Xl7H9OA-Rs"
-    },
-    {
-     "t": "都市伝説の「くねくね」を探すと「イカれた不審者」しかいないホラーゲーム【くねくねorくねくね？】",
-     "c": "ニコ",
-     "u": "https://www.youtube.com/watch?v=3WC0yru2zMk"
-    }
-   ],
-   "kind": "wide",
-   "suggest": []
   }
  ],
  "miss_days": 7,
