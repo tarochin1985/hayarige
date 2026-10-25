@@ -1,6 +1,6 @@
 {
- "date": "2026-10-25",
- "generated": "2026-10-25 23:17",
+ "date": "2026-10-26",
+ "generated": "2026-10-26 08:56",
  "leads": {
   "events": [
    {
@@ -34,6 +34,7 @@
     "tag": "#ゲーム実況",
     "channels": [
      "KORIN.鈴ノ音コリン",
+     "M家の休日マサ",
      "ジョアだよ",
      "恋因ロス KoinRosu",
      "豚咲あおい_TomisakiAoi",
@@ -48,19 +49,7 @@
      "Nene Ch.桃鈴ねね",
      "Pekora Ch. 兎田ぺこら",
      "Towa Ch. 常闇トワ",
-     "Watame Ch. 角巻わため",
-     "フブキCh。白上フブキ"
-    ]
-   },
-   {
-    "tag": "#ホロドリ",
-    "channels": [
-     "Choco Ch. 癒月ちょこ",
-     "Flare Ch. 不知火フレア",
-     "Roboco Ch. - ロボ子",
-     "SoraCh. ときのそらチャンネル",
-     "Tsuzuri Ch. 鈴鳴つづり ‐ アソビ★まわり隊!",
-     "Vivi Ch. 綺々羅々ヴィヴィ - FLOW GLOW"
+     "Watame Ch. 角巻わため"
     ]
    },
    {
@@ -74,21 +63,28 @@
     ]
    },
    {
+    "tag": "#ホロARK",
+    "channels": [
+     "Iroha ch. 風真いろは - holoX -",
+     "Riona Ch. 響咲リオナ - FLOW GLOW",
+     "Su Ch. 水宮枢 - FLOW GLOW",
+     "Vivi Ch. 綺々羅々ヴィヴィ - FLOW GLOW"
+    ]
+   },
+   {
     "tag": "#ぶいきゃす",
     "channels": [
-     "こてつちゃんねる",
      "式神やしろ",
      "樹つつき -Itsuki Tsutsuki Ch-",
      "浅葱なぎ"
     ]
    },
    {
-    "tag": "#ゼンゼロ",
+    "tag": "#マインクラフト",
     "channels": [
-     "みらす",
-     "フクー",
-     "白亜リラ / Hakua Lira",
-     "麻酔 Masui"
+     "やっぱりじぇいさん【マイクラ】",
+     "よし6【ゲーム実況者】",
+     "ミロ"
     ]
    }
   ],
@@ -96,43 +92,43 @@
   "wide": [
    {
     "game": "Apex Legends",
-    "channels": 37,
-    "videos": 46
+    "channels": 31,
+    "videos": 36
    },
    {
     "game": "ストリートファイター6",
-    "channels": 27,
-    "videos": 30
+    "channels": 24,
+    "videos": 27
    },
    {
     "game": "Grand Theft Auto V",
-    "channels": 25,
-    "videos": 30
+    "channels": 23,
+    "videos": 25
    },
    {
     "game": "Minecraft",
-    "channels": 26,
-    "videos": 26
+    "channels": 23,
+    "videos": 23
    },
    {
     "game": "ファイナルファンタジー レゾナンス",
-    "channels": 23,
-    "videos": 29
+    "channels": 20,
+    "videos": 22
    },
    {
     "game": "フォートナイト",
-    "channels": 18,
-    "videos": 24
-   },
-   {
-    "game": "スプラトゥーン3",
-    "channels": 20,
-    "videos": 20
+    "channels": 15,
+    "videos": 19
    },
    {
     "game": "オーバーウォッチ2",
     "channels": 15,
-    "videos": 18
+    "videos": 15
+   },
+   {
+    "game": "VALORANT",
+    "channels": 14,
+    "videos": 14
    }
   ]
  },
@@ -141,14 +137,14 @@
   {
    "tag": "にじexow",
    "game": "Overwatch 2",
-   "evidence": 10,
+   "evidence": 6,
    "added": 3,
    "channels": 9
   },
   {
    "tag": "わんおぺwin",
    "game": "Overwatch 2",
-   "evidence": 6,
+   "evidence": 4,
    "added": 1,
    "channels": 5
   }
@@ -273,19 +269,19 @@
    ]
   },
   {
-   "word": "CoD:DMZ",
+   "word": "COD:DMZ",
    "channels": 3,
    "n": 5,
    "examples": [
     {
-     "t": "目指せ3億ベリーの懸賞首!!初の対人戦と司令官デスストーカーに挑むSasatikk【CoD:DMZ】",
-     "c": "sasatikk",
-     "u": "https://www.youtube.com/watch?v=grj5MPZJ8fU"
-    },
-    {
      "t": "【COD:DMZ】なんかおもろいらしい　初見【ぶいすぽ/花芽なずな】",
      "c": "花芽なずな / Nazuna Kaga",
      "u": "https://www.youtube.com/watch?v=sjkz72lih6M"
+    },
+    {
+     "t": "目指せ3億ベリーの懸賞首!!初の対人戦と司令官デスストーカーに挑むSasatikk【CoD:DMZ】",
+     "c": "sasatikk",
+     "u": "https://www.youtube.com/watch?v=grj5MPZJ8fU"
     },
     {
      "t": "【COD:DMZ】２日目！いっぱい倒す！！　ハセシン、カルミア【ぶいすぽ/花芽なずな】",
@@ -348,49 +344,23 @@
  "miss_days": 7,
  "hot_facts": [
   {
-   "game": "あ。あ。あ。",
-   "growth": 6.25,
-   "videos": 5,
-   "base": 0.8,
-   "channels": 5,
-   "views": 7143,
-   "who": [
-    "夜絆ニウ / yozuna niu",
-    "Kira Ch. 月百合鬼ら",
-    "KORIN.鈴ノ音コリン",
-    "尾幡りあん / Obata Lian お絵描き",
-    "おおえのたかゆき録画保管庫"
-   ],
-   "titles": [
-    "【あ。あ。あ。】この配信大丈夫ですか？→マネージャーに許可を取りました【夜絆ニウ / NeoPorte (ネオポルテ) 】",
-    "【あ。あ。あ。】百合女子が「あ」と「ん」を連呼して君たちを元気にさせる  #vtuber #百合",
-    "【あ。あ。あ。】ふざけずに！！真面目に！！声だけで操作する健全ゲーム挑戦（電流もあるよ♡）【#vtuber  #ゲーム実況   】"
-   ],
-   "genres": [],
-   "year": null,
-   "platforms": [],
-   "days_seen": 2,
-   "last_seen": "2026-10-24",
-   "first_here": false
-  },
-  {
    "game": "Fall Guys",
-   "growth": 6.25,
-   "videos": 5,
+   "growth": 5.0,
+   "videos": 4,
    "base": 0.8,
    "channels": 4,
-   "views": 4162,
+   "views": 4266,
    "who": [
-    "gallope-ぎゃろっぺ-",
     "gallope-ぎゃろっぺ-",
     "gallope-ぎゃろっぺ-",
     "まるたにあやの",
+    "あらかなチャンネル",
     "銀灰まお Mao Ch."
    ],
    "titles": [
     "【スナイプ参加型】突然始まるランクノックアウト！初見さん初心者さん参加歓迎！【Fall guys/フォールガイズ】",
     "【スナイプ参加型】突然始まるランクノックアウト！初見さん初心者さん参加歓迎！【Fall guys/フォールガイズ】",
-    "祝！10月お誕生日おめでとう会＆ハロウィン撮影会！【参加型】【Fall guys/フォールガイズ】"
+    "【フォールガイズ】参加型✨🎨なるちゃんと一緒に遊ぼー！！！【まるたにあやの視点】"
    ],
    "genres": [
     "Platform",
@@ -403,116 +373,144 @@
     "console"
    ],
    "days_seen": 19,
-   "last_seen": "2026-10-24",
+   "last_seen": "2026-10-25",
+   "first_here": false
+  },
+  {
+   "game": "ファイナルファンタジーX",
+   "growth": 4.44,
+   "videos": 4,
+   "base": 0.9,
+   "channels": 4,
+   "views": 37476,
+   "who": [
+    "安藤咲良ちゃんねる",
+    "レヴィ・エリファ-Levi Elipha-",
+    "アイリナ・ゼファリオ【StellArt.】",
+    "たまひめちゃん / Tamahime Ch"
+   ],
+   "titles": [
+    "【ファイナルファンタジーⅩ】#12 人生初のファイナルファンタジーシリーズ！完全初見！ネタバレ禁止　【FINALFANTASY　Ⅹ　HD　Remaster 】",
+    "#03【FINAL FANTASY X | X-2 HD Remaster】ミヘンセッションは成功すル‼‼‼【にじさんじ/レヴィ・エリファ】",
+    "【 FF10 】#最終回  ついにシンの中へ...物語の最後を一緒に見届けよう※号泣【アイリナ・ゼファリオ / StellArt.】#vtuber"
+   ],
+   "genres": [
+    "Role-playing (RPG)",
+    "Adventure"
+   ],
+   "year": 2001,
+   "platforms": [
+    "console"
+   ],
+   "days_seen": 12,
+   "last_seen": "2026-10-25",
+   "first_here": false
+  },
+  {
+   "game": "あ。あ。あ。",
+   "growth": 4.0,
+   "videos": 4,
+   "base": 1.0,
+   "channels": 4,
+   "views": 55390,
+   "who": [
+    "夜絆ニウ / yozuna niu",
+    "おおえのたかゆき録画保管庫",
+    "KORIN.鈴ノ音コリン",
+    "尾幡りあん / Obata Lian お絵描き"
+   ],
+   "titles": [
+    "【あ。あ。あ。】この配信大丈夫ですか？→マネージャーに許可を取りました【夜絆ニウ / NeoPorte (ネオポルテ) 】",
+    "自分の声でキャラクターをゴールに導くゲームがすごい！【あ。あ。あ。】 【おおえのたかゆき】【2026/10/24】",
+    "【あ。あ。あ。】ふざけずに！！真面目に！！声だけで操作する健全ゲーム挑戦（電流もあるよ♡）【#vtuber  #ゲーム実況   】"
+   ],
+   "genres": [],
+   "year": null,
+   "platforms": [],
+   "days_seen": 2,
+   "last_seen": "2026-10-25",
    "first_here": false
   },
   {
    "game": "DARK SOULS III",
-   "growth": 5.0,
+   "growth": 4.0,
    "videos": 4,
-   "base": 0.7,
-   "channels": 4,
-   "views": 72785,
+   "base": 1.0,
+   "channels": 3,
+   "views": 81247,
    "who": [
-    "鷹宮リオン / Rion Takamiya",
     "鷹宮リオン / Rion Takamiya",
     "鷹宮リオン / Rion Takamiya",
     "ごまっぷ_GameCh",
     "ﾀﾋノ咲　ﾀﾋ亡"
    ],
    "titles": [
-    "【DARK SOULS III】死んだら即終了～42デス目～ #たかみや即終了ダクソ3【にじさんじ/鷹宮リオン】",
     "【ダクソ3】IQ500万垓の人のダクソ【にじさんじ/鷹宮リオン】",
-    "【DARK SOULS III】死んだら即終了～43デス目～ #たかみや即終了ダクソ3【にじさんじ/鷹宮リオン】"
+    "【DARK SOULS III】死んだら即終了～43デス目～ #たかみや即終了ダクソ3【にじさんじ/鷹宮リオン】",
+    "ダクソ3の世界にどっぷり1日漬かりたい配信　【ダクソ3】"
    ],
    "genres": [],
    "year": null,
    "platforms": [],
-   "days_seen": 9,
-   "last_seen": "2026-10-11",
+   "days_seen": 10,
+   "last_seen": "2026-10-25",
    "first_here": false
   },
   {
-   "game": "ゼルダの伝説 ブレス オブ ザ ワイルド",
-   "growth": 3.75,
-   "videos": 6,
-   "base": 1.6,
-   "channels": 5,
-   "views": 140254,
-   "who": [
-    "UNIT B (Pre-Debut) - mekPark",
-    "UNIT B (Pre-Debut) - mekPark",
-    "いかぼうず",
-    "シャオメイ【ゲーム実況】",
-    "シャオメイ【ゲーム実況】"
-   ],
-   "titles": [
-    "【最終章】ついに厄災ガノン討伐へ。全身全霊を掛けて闘います！！！ゼルダの伝説「ブレス オブ ザ ワイルド」【 #UNIT_B / #清澄ライラ】",
-    "【ゼルダの伝説】真のエンドを求め、ガノン再討伐！DLCに突入します。ゼルダの伝説ブレス オブ ザ ワイルド【 #UNIT_B / #清澄ライラ】",
-    "【自己べ26分32秒＆世界2位達成✨】古代兵装矢6000本＆料理無限の無双新ルートで世界2位記録を目指す#5【Any％RTA】【ゼルダの伝説ブレスオブザワイルド】【Switch2】"
-   ],
-   "genres": [],
-   "year": null,
-   "platforms": [],
-   "days_seen": 39,
-   "last_seen": "2026-10-24",
-   "first_here": false
-  },
-  {
-   "game": "Big Walk",
+   "game": "クロノ・トリガー",
    "growth": 3.75,
    "videos": 3,
-   "base": 0.5,
+   "base": 0.8,
    "channels": 3,
-   "views": 23338,
+   "views": 6798,
    "who": [
-    "とりっぴぃ",
-    "綾見ユラ / YuraAyami",
-    "ロウひなんゲーミング"
+    "雛守つづり",
+    "おしたらあたるCh.　Oshitara ataru",
+    "Marona Ch. 水鞠まろな"
    ],
    "titles": [
-    "【Big Walk】広大なマップを探索して謎解きをする圧倒的高評価の不思議なゲームが面白いｗｗ 【とりっぴぃ/フルコン/スナザメ/むつー】",
-    "【Big Walk】健康謎解き散歩 w/メンバー【綾見ユラ/YUMENOS】",
-    "#3 【Big Walk】8人でわちゃわちゃオープンワールド探索！【#エンスト配信】｜ロウ視点"
+    "【クロノ・トリガー】初見実況！帰ってくるって信じてる🎮朝のゆったり名作レトロゲーム配信 #6 ( 雛守つづり/ #個人vtuber )",
+    "【 クロノ・トリガー】完全初見！名作RPG #2 し、しにたくない～～～！！！｜ 初見さんも歓迎【#おしたらいぶ 】#Vtuber #クロノトリガー",
+    "【クロノ・トリガー】完全初見！人生初のクロノ・トリガーに挑戦！｜プチラヴォス撃破後から！【水鞠まろな/VTuber】"
    ],
    "genres": [
-    "Platform",
-    "Puzzle",
+    "Role-playing (RPG)"
+   ],
+   "year": 1995,
+   "platforms": [
+    "console"
+   ],
+   "days_seen": 8,
+   "last_seen": "2026-10-06",
+   "first_here": false
+  },
+  {
+   "game": "インボキア-呪いのダイスゲーム-",
+   "growth": 2.5,
+   "videos": 3,
+   "base": 1.2,
+   "channels": 3,
+   "views": 259991,
+   "who": [
+    "石神のぞみ / Ishigami Nozomi【にじさんじ】",
+    "花畑チャイカ",
+    "珠乃井ナナ / Tamanoi Nana【にじさんじ】"
+   ],
+   "titles": [
+    "【 インボキア 】ジュマンジらしいゲームいくぞ！！！！！！！！！！！！【花畑チャイカと珠乃井ナナと十河ののは】",
+    "花畑チャイカと石神のぞみと珠乃井ナナと十河ののはのインボキア ジュマンジみたいなやつですか？",
+    "【 インボキア-呪いのダイスゲーム- 】懸けるのは命！？呪いのボードゲーム開幕！！！！！！！【にじさんじ/珠乃井ナナ】"
+   ],
+   "genres": [
     "Adventure",
     "Indie"
    ],
    "year": 2026,
    "platforms": [
-    "pc",
-    "console"
+    "pc"
    ],
-   "days_seen": 22,
-   "last_seen": "2026-10-22",
-   "first_here": false
-  },
-  {
-   "game": "プロジェクトセカイ",
-   "growth": 3.64,
-   "videos": 4,
-   "base": 1.1,
-   "channels": 3,
-   "views": 116542,
-   "who": [
-    "翡翠はくあ【すごい自己肯定感高い奴】",
-    "翡翠はくあ【すごい自己肯定感高い奴】",
-    "てくのGTちゃんねる",
-    "るわらんch."
-   ],
-   "titles": [
-    "【#プロセカ】寝起きやけど消しゴムと彗惺MASTERのFC詰める！視聴者参加型配信！【#翡翠はくあ】",
-    "【#プロセカ】サボってる未FCや未APマルチとかで詰めます！視聴者参加型配信！【#翡翠はくあ】",
-    "【参加型】みんなでプロセカライブ /創作譜面/超絶大募集配信　新規さん大歓迎ですねん【projectsekai 】"
-   ],
-   "genres": [],
-   "year": null,
-   "platforms": [],
-   "days_seen": 24,
-   "last_seen": "2026-10-24",
+   "days_seen": 5,
+   "last_seen": "2026-10-25",
    "first_here": false
   }
  ],
