@@ -714,7 +714,7 @@ def tweet_text(col, key):
 
         GTA5の街「SURGE Town」が9月20日に最終日。17日間で18チャンネル173本
 
-        こんなこともありました
+        💡こんなこともありました
         ・…
         ・…
 
@@ -768,7 +768,7 @@ def tweet_text(col, key):
         also = []
 
     def put(sub_, also_):
-        tail = ("\n\nこんなこともありました\n"
+        tail = ("\n\n💡こんなこともありました\n"
                 + "\n".join("・" + x for x in also_)) if also_ else ""
         return (f"{top}\n\n{sub_}{tail}\n\n{url}" if sub_
                 else f"{top}{tail}\n\n{url}")
