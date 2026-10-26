@@ -1175,6 +1175,20 @@
   ]
  },
  {
+  "name": "Abandoned Hospital Patrol",
+  "alias": [],
+  "pop": 0,
+  "y": 2026,
+  "p": [
+   "pc"
+  ],
+  "g": [
+   "Simulator",
+   "Adventure",
+   "Indie"
+  ]
+ },
+ {
   "name": "Abductables",
   "alias": [],
   "pop": 0,
@@ -9082,7 +9096,7 @@
    "MW4",
    "Call of Duty: MW4"
   ],
-  "pop": 8,
+  "pop": 10,
   "y": 2026,
   "p": [
    "pc",
@@ -10076,21 +10090,6 @@
   ],
   "g": [
    "Puzzle",
-   "Adventure",
-   "Indie"
-  ]
- },
- {
-  "name": "Caten Village",
-  "alias": [],
-  "pop": 0,
-  "y": 2026,
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Role-playing (RPG)",
-   "Strategy",
    "Adventure",
    "Indie"
   ]
@@ -11987,6 +11986,24 @@
   "y": 2026,
   "p": [
    "pc"
+  ]
+ },
+ {
+  "name": "Conquer the Labyrinth",
+  "alias": [
+   "Conquer the Labyrinth.exe",
+   "Labyrinth"
+  ],
+  "pop": 0,
+  "y": 2026,
+  "p": [
+   "pc"
+  ],
+  "g": [
+   "Role-playing (RPG)",
+   "Strategy",
+   "Adventure",
+   "Indie"
   ]
  },
  {
@@ -14256,6 +14273,7 @@
    "pc"
   ],
   "g": [
+   "Role-playing (RPG)",
    "Adventure",
    "Indie"
   ]
@@ -16053,22 +16071,6 @@
   ]
  },
  {
-  "name": "Destiny Spire",
-  "alias": [
-   "destiny_spire.exe"
-  ],
-  "pop": 0,
-  "y": 2026,
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Role-playing (RPG)",
-   "Adventure",
-   "Indie"
-  ]
- },
- {
   "name": "Detective Fantasia: Excalimurder",
   "alias": [
    "Detective Fantasia: EXCALIMURDER"
@@ -16390,6 +16392,23 @@
   ],
   "g": [
    "Strategy",
+   "Indie"
+  ]
+ },
+ {
+  "name": "Dig",
+  "alias": [
+   "Dig A Hole Multiplayer",
+   "Dig A Hole"
+  ],
+  "pop": 0,
+  "y": 2026,
+  "p": [
+   "pc"
+  ],
+  "g": [
+   "Simulator",
+   "Adventure",
    "Indie"
   ]
  },
@@ -18200,6 +18219,24 @@
    "Simulator",
    "Strategy",
    "Indie"
+  ]
+ },
+ {
+  "name": "Drive With Friends",
+  "alias": [
+   "Friendslop Drive",
+   "RV Still Friends",
+   "Drive Bros"
+  ],
+  "pop": 0,
+  "y": 2026,
+  "p": [
+   "pc"
+  ],
+  "g": [
+   "Racing",
+   "Adventure",
+   "Arcade"
   ]
  },
  {
@@ -20322,19 +20359,6 @@
   ]
  },
  {
-  "name": "Escape Toon Kingdom",
-  "alias": [],
-  "pop": 0,
-  "y": 2026,
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Adventure",
-   "Indie"
-  ]
- },
- {
   "name": "Escape Tsunami: Take Brainrots!",
   "alias": [],
   "pop": 0,
@@ -20640,7 +20664,9 @@
  },
  {
   "name": "Eternity Lost: Mystery of Aurum - Collector's Edition",
-  "alias": [],
+  "alias": [
+   "aurum.exe"
+  ],
   "pop": 0,
   "y": 2026,
   "p": [
@@ -20761,6 +20787,21 @@
   ]
  },
  {
+  "name": "Everburning Dark",
+  "alias": [],
+  "pop": 0,
+  "y": 2026,
+  "p": [
+   "pc"
+  ],
+  "g": [
+   "Role-playing (RPG)",
+   "Strategy",
+   "Adventure",
+   "Indie"
+  ]
+ },
+ {
   "name": "Evercursed: Act I",
   "alias": [],
   "pop": 0,
@@ -20857,20 +20898,6 @@
   "g": [
    "Strategy",
    "Indie"
-  ]
- },
- {
-  "name": "Ex Sanguis",
-  "alias": [
-   "Ex Sanguis.exe"
-  ],
-  "pop": 0,
-  "y": 2026,
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Strategy"
   ]
  },
  {
@@ -23636,24 +23663,6 @@
   ]
  },
  {
-  "name": "Forsworn",
-  "alias": [
-   "Forsworn.exe"
-  ],
-  "pop": 0,
-  "y": 2026,
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Role-playing (RPG)",
-   "Strategy",
-   "Tactical",
-   "Adventure",
-   "Indie"
-  ]
- },
- {
   "name": "Fortune Avenue",
   "alias": [],
   "pop": 0,
@@ -24497,6 +24506,19 @@
   ],
   "g": [
    "Role-playing (RPG)",
+   "Simulator",
+   "Indie"
+  ]
+ },
+ {
+  "name": "Gacha Chaos: Tidy Up Together",
+  "alias": [],
+  "pop": 0,
+  "y": 2026,
+  "p": [
+   "pc"
+  ],
+  "g": [
    "Simulator",
    "Indie"
   ]
@@ -26304,7 +26326,9 @@
  },
  {
   "name": "Gravebound",
-  "alias": [],
+  "alias": [
+   "Gravebound.exe"
+  ],
   "pop": 0,
   "y": 2026,
   "p": [
@@ -27345,7 +27369,10 @@
    "pc"
   ],
   "g": [
+   "Racing",
    "Role-playing (RPG)",
+   "Sport",
+   "Adventure",
    "Indie"
   ]
  },
@@ -28304,6 +28331,19 @@
   ]
  },
  {
+  "name": "Hexwell",
+  "alias": [],
+  "pop": 0,
+  "y": 2026,
+  "p": [
+   "pc"
+  ],
+  "g": [
+   "Indie",
+   "Arcade"
+  ]
+ },
+ {
   "name": "Hidden Cat Islands",
   "alias": [],
   "pop": 0,
@@ -28997,21 +29037,6 @@
    "Simulator",
    "Adventure",
    "Indie"
-  ]
- },
- {
-  "name": "Horrors Glade",
-  "alias": [
-   "Horror's Glade"
-  ],
-  "pop": 0,
-  "y": 2026,
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Simulator",
-   "Adventure"
   ]
  },
  {
@@ -31648,7 +31673,9 @@
  },
  {
   "name": "Joker's Knock",
-  "alias": [],
+  "alias": [
+   "JokersKnock.exe"
+  ],
   "pop": 0,
   "y": 2026,
   "p": [
@@ -32844,22 +32871,6 @@
   ]
  },
  {
-  "name": "Kollectomaniac",
-  "alias": [
-   "kollectomaniac.exe"
-  ],
-  "pop": 0,
-  "y": 2026,
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Point-and-click",
-   "Strategy",
-   "Indie"
-  ]
- },
- {
   "name": "Kosmocean: The Endless Sea",
   "alias": [
    "The Logbook, a submarine adventure"
@@ -33660,21 +33671,6 @@
   ],
   "g": [
    "Indie"
-  ]
- },
- {
-  "name": "Legends of Aria Eternal",
-  "alias": [
-   "Legends of Aria.exe"
-  ],
-  "pop": 0,
-  "y": 2026,
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Role-playing (RPG)",
-   "Adventure"
   ]
  },
  {
@@ -37383,6 +37379,19 @@
   ]
  },
  {
+  "name": "Mik",
+  "alias": [],
+  "pop": 0,
+  "y": 2026,
+  "p": [
+   "pc"
+  ],
+  "g": [
+   "Adventure",
+   "Indie"
+  ]
+ },
+ {
   "name": "Mikene's Aspects",
   "alias": [],
   "pop": 0,
@@ -39163,6 +39172,19 @@
   ]
  },
  {
+  "name": "My Snake Likes Apples",
+  "alias": [],
+  "pop": 0,
+  "y": 2026,
+  "p": [
+   "pc"
+  ],
+  "g": [
+   "Strategy",
+   "Indie"
+  ]
+ },
+ {
   "name": "My Zombies Are Hungry",
   "alias": [],
   "pop": 0,
@@ -39953,7 +39975,9 @@
  },
  {
   "name": "Neural Maze",
-  "alias": [],
+  "alias": [
+   "Neural_Maze_PC.exe"
+  ],
   "pop": 0,
   "y": 2026,
   "p": [
@@ -42713,19 +42737,6 @@
   ]
  },
  {
-  "name": "Orebits",
-  "alias": [],
-  "pop": 0,
-  "y": 2026,
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Simulator",
-   "Strategy"
-  ]
- },
- {
   "name": "Oremus",
   "alias": [],
   "pop": 0,
@@ -42811,20 +42822,6 @@
   "g": [
    "Role-playing (RPG)",
    "Adventure"
-  ]
- },
- {
-  "name": "Our Life: Now & Forever",
-  "alias": [],
-  "pop": 0,
-  "y": 2026,
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Simulator",
-   "Indie",
-   "Visual Novel"
   ]
  },
  {
@@ -43802,7 +43799,9 @@
  },
  {
   "name": "Paver: Tidy Up Together",
-  "alias": [],
+  "alias": [
+   "PaverTogether.exe"
+  ],
   "pop": 0,
   "y": 2026,
   "p": [
@@ -45068,21 +45067,6 @@
   ],
   "g": [
    "Strategy"
-  ]
- },
- {
-  "name": "Platina: Lab",
-  "alias": [
-   "PLATiNA :: LAB"
-  ],
-  "pop": 0,
-  "y": 2026,
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Music",
-   "Simulator"
   ]
  },
  {
@@ -47240,21 +47224,6 @@
   ]
  },
  {
-  "name": "Quest for Choices: Ivan's Tale - Chapter 0+1",
-  "alias": [
-   "Quest for Choices: Ivan's Tale｜Chapter 0+1"
-  ],
-  "pop": 0,
-  "y": 2026,
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Indie",
-   "Visual Novel"
-  ]
- },
- {
   "name": "QuestAway",
   "alias": [
    "QuestAway.exe"
@@ -48407,6 +48376,23 @@
   ]
  },
  {
+  "name": "Reka",
+  "alias": [
+   "REKA",
+   "Reka.exe"
+  ],
+  "pop": 0,
+  "y": 2026,
+  "p": [
+   "pc"
+  ],
+  "g": [
+   "Role-playing (RPG)",
+   "Adventure",
+   "Indie"
+  ]
+ },
+ {
   "name": "Rematch: Season 5 - Blue Lock",
   "alias": [],
   "pop": 0,
@@ -48811,6 +48797,20 @@
   ]
  },
  {
+  "name": "Reunion Fate",
+  "alias": [
+   "Reunion Fate.exe"
+  ],
+  "pop": 0,
+  "y": 2026,
+  "p": [
+   "pc"
+  ],
+  "g": [
+   "Indie"
+  ]
+ },
+ {
   "name": "Revelation of Decay",
   "alias": [
    "腐朽默示"
@@ -48973,7 +48973,9 @@
  },
  {
   "name": "Ridge Hold",
-  "alias": [],
+  "alias": [
+   "RidgeHold.exe"
+  ],
   "pop": 0,
   "y": 2026,
   "p": [
@@ -50857,6 +50859,20 @@
   ]
  },
  {
+  "name": "Scentkeeper: Tidy Up the Perfume Archive!",
+  "alias": [],
+  "pop": 0,
+  "y": 2026,
+  "p": [
+   "pc"
+  ],
+  "g": [
+   "Puzzle",
+   "Simulator",
+   "Indie"
+  ]
+ },
+ {
   "name": "Schedule Store Simulator",
   "alias": [],
   "pop": 0,
@@ -52451,24 +52467,6 @@
   ]
  },
  {
-  "name": "Shroom and Gloom",
-  "alias": [
-   "Shroom and Gloom.exe"
-  ],
-  "pop": 0,
-  "y": 2026,
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Role-playing (RPG)",
-   "Turn-based strategy (TBS)",
-   "Adventure",
-   "Indie",
-   "Card & Board Game"
-  ]
- },
- {
   "name": "Shroomwood",
   "alias": [
    "Shroomwood.exe"
@@ -52637,7 +52635,8 @@
  {
   "name": "Sign: Broken Kether",
   "alias": [
-   "Sign: 碎冠篇"
+   "Sign: 碎冠篇",
+   "SignI.exe"
   ],
   "pop": 0,
   "y": 2026,
@@ -52889,7 +52888,7 @@
   "alias": [
    "Carpenter.exe"
   ],
-  "pop": 6,
+  "pop": 7,
   "y": 2026,
   "p": [
    "pc",
@@ -56938,21 +56937,6 @@
   ]
  },
  {
-  "name": "Sunken Engine",
-  "alias": [
-   "Sunken Engine.exe"
-  ],
-  "pop": 0,
-  "y": 2026,
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Simulator",
-   "Indie"
-  ]
- },
- {
   "name": "Sunken Realms",
   "alias": [],
   "pop": 0,
@@ -57770,6 +57754,19 @@
   ]
  },
  {
+  "name": "TV Station Tycoon",
+  "alias": [],
+  "pop": 0,
+  "y": 2026,
+  "p": [
+   "pc"
+  ],
+  "g": [
+   "Simulator",
+   "Strategy"
+  ]
+ },
+ {
   "name": "Table for None",
   "alias": [],
   "pop": 0,
@@ -58014,19 +58011,12 @@
   ]
  },
  {
-  "name": "Tangles 2",
-  "alias": [
-   "تشابك"
-  ],
+  "name": "Tank Battle Classic",
+  "alias": [],
   "pop": 0,
   "y": 2026,
   "p": [
-   "pc",
-   "console"
-  ],
-  "g": [
-   "Adventure",
-   "Indie"
+   "pc"
   ]
  },
  {
@@ -62610,6 +62600,19 @@
   ]
  },
  {
+  "name": "Tidy Town",
+  "alias": [],
+  "pop": 0,
+  "y": 2026,
+  "p": [
+   "pc"
+  ],
+  "g": [
+   "Simulator",
+   "Indie"
+  ]
+ },
+ {
   "name": "Tidy Up History",
   "alias": [
    "TidyUpHistory.exe"
@@ -66188,6 +66191,20 @@
   ]
  },
  {
+  "name": "Vibe Train",
+  "alias": [],
+  "pop": 0,
+  "y": 2026,
+  "p": [
+   "pc"
+  ],
+  "g": [
+   "Simulator",
+   "Strategy",
+   "Indie"
+  ]
+ },
+ {
   "name": "Vicarius",
   "alias": [
    "Vicarius.exe"
@@ -67684,21 +67701,6 @@
   ]
  },
  {
-  "name": "When I’m Not Drawing",
-  "alias": [],
-  "pop": 0,
-  "y": 2026,
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Role-playing (RPG)",
-   "Simulator",
-   "Strategy",
-   "Indie"
-  ]
- },
- {
   "name": "When Voices Died",
   "alias": [],
   "pop": 0,
@@ -68152,6 +68154,20 @@
   "g": [
    "Simulator",
    "Strategy"
+  ]
+ },
+ {
+  "name": "Wild Heroes: Fight Together",
+  "alias": [],
+  "pop": 0,
+  "y": 2026,
+  "p": [
+   "pc"
+  ],
+  "g": [
+   "Role-playing (RPG)",
+   "Adventure",
+   "Indie"
   ]
  },
  {
@@ -69083,18 +69099,6 @@
    "Adventure",
    "Indie",
    "Visual Novel"
-  ]
- },
- {
-  "name": "Wrong Treatment",
-  "alias": [],
-  "pop": 0,
-  "y": 2026,
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Adventure"
   ]
  },
  {
