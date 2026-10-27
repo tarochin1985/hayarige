@@ -3060,6 +3060,19 @@
   ]
  },
  {
+  "name": "Ann's Parlor",
+  "alias": [],
+  "pop": 0,
+  "y": 2026,
+  "p": [
+   "pc"
+  ],
+  "g": [
+   "Role-playing (RPG)",
+   "Indie"
+  ]
+ },
+ {
   "name": "Anna: The Series Test",
   "alias": [],
   "pop": 0,
@@ -8404,11 +8417,16 @@
  },
  {
   "name": "Buitopia DVD",
-  "alias": [],
+  "alias": [
+   "BuitopiaDVD.exe"
+  ],
   "pop": 0,
   "y": 2026,
   "p": [
    "pc"
+  ],
+  "g": [
+   "Indie"
   ]
  },
  {
@@ -8868,7 +8886,7 @@
    "MW4",
    "Call of Duty: MW4"
   ],
-  "pop": 10,
+  "pop": 11,
   "y": 2026,
   "p": [
    "pc",
@@ -9547,6 +9565,20 @@
   ],
   "g": [
    "Simulator",
+   "Indie"
+  ]
+ },
+ {
+  "name": "Carrot Count Sheep",
+  "alias": [],
+  "pop": 0,
+  "y": 2026,
+  "p": [
+   "pc"
+  ],
+  "g": [
+   "Puzzle",
+   "Adventure",
    "Indie"
   ]
  },
@@ -10812,20 +10844,6 @@
   ]
  },
  {
-  "name": "Chud Logic's: Gockbound",
-  "alias": [],
-  "pop": 0,
-  "y": 2026,
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Role-playing (RPG)",
-   "Adventure",
-   "Indie"
-  ]
- },
- {
   "name": "Chumaky",
   "alias": [],
   "pop": 0,
@@ -11931,19 +11949,6 @@
   "y": 2026,
   "p": [
    "pc"
-  ],
-  "g": [
-   "Simulator"
-  ]
- },
- {
-  "name": "Construction Simulator: Evolution",
-  "alias": [],
-  "pop": 0,
-  "y": 2026,
-  "p": [
-   "pc",
-   "console"
   ],
   "g": [
    "Simulator"
@@ -13797,21 +13802,6 @@
   ]
  },
  {
-  "name": "Cyborg Earthworm",
-  "alias": [
-   "earthworm.exe"
-  ],
-  "pop": 0,
-  "y": 2026,
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Simulator",
-   "Indie"
-  ]
- },
- {
   "name": "Cyte",
   "alias": [
    "CYTE"
@@ -14332,6 +14322,20 @@
    "Role-playing (RPG)",
    "Adventure",
    "Indie"
+  ]
+ },
+ {
+  "name": "Date for Dead",
+  "alias": [],
+  "pop": 0,
+  "y": 2026,
+  "p": [
+   "pc"
+  ],
+  "g": [
+   "Simulator",
+   "Indie",
+   "Visual Novel"
   ]
  },
  {
@@ -17154,21 +17158,6 @@
   ]
  },
  {
-  "name": "Doom ChessMaster",
-  "alias": [],
-  "pop": 0,
-  "y": 2026,
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Role-playing (RPG)",
-   "Strategy",
-   "Adventure",
-   "Indie"
-  ]
- },
- {
   "name": "Doomed Crew",
   "alias": [],
   "pop": 0,
@@ -17527,7 +17516,7 @@
   "alias": [
    "Dragon's Dogma 2: Dark Arisen"
   ],
-  "pop": 3,
+  "pop": 4,
   "y": 2026,
   "p": [
    "pc",
@@ -22084,7 +22073,7 @@
  {
   "name": "Final Fantasy Resonance",
   "alias": [],
-  "pop": 4,
+  "pop": 5,
   "y": 2026,
   "p": [
    "pc",
@@ -26182,6 +26171,19 @@
   ]
  },
  {
+  "name": "Graveyard Shift: A Sage's Last Stand",
+  "alias": [],
+  "pop": 0,
+  "y": 2026,
+  "p": [
+   "pc"
+  ],
+  "g": [
+   "Strategy",
+   "Indie"
+  ]
+ },
+ {
   "name": "GraviTech",
   "alias": [],
   "pop": 0,
@@ -26879,6 +26881,20 @@
   ]
  },
  {
+  "name": "Habitat: The Endless Terrarium",
+  "alias": [],
+  "pop": 0,
+  "y": 2026,
+  "p": [
+   "pc"
+  ],
+  "g": [
+   "Puzzle",
+   "Strategy",
+   "Indie"
+  ]
+ },
+ {
   "name": "Hachikoma: Underground Stadium No. 8",
   "alias": [
    "HACHIKOMA: Underground Stadium No. 8"
@@ -27364,7 +27380,9 @@
  },
  {
   "name": "Harvest Scream",
-  "alias": [],
+  "alias": [
+   "HarvestScream.exe"
+  ],
   "pop": 0,
   "y": 2026,
   "p": [
@@ -30471,6 +30489,23 @@
    "Simulator",
    "Strategy",
    "Indie"
+  ]
+ },
+ {
+  "name": "Infinity Bounce",
+  "alias": [],
+  "pop": 0,
+  "y": 2026,
+  "p": [
+   "pc"
+  ],
+  "g": [
+   "Music",
+   "Simulator",
+   "Strategy",
+   "Pinball",
+   "Indie",
+   "Arcade"
   ]
  },
  {
@@ -34180,6 +34215,7 @@
    "pc"
   ],
   "g": [
+   "Platform",
    "Indie"
   ]
  },
@@ -36020,19 +36056,6 @@
    "Strategy",
    "Turn-based strategy (TBS)",
    "Tactical"
-  ]
- },
- {
-  "name": "MarsCity3026",
-  "alias": [],
-  "pop": 0,
-  "y": 2026,
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Adventure",
-   "Indie"
   ]
  },
  {
@@ -40396,21 +40419,6 @@
   ],
   "g": [
    "Adventure"
-  ]
- },
- {
-  "name": "NightClub Simulator",
-  "alias": [
-   "NightClubSimulater.exe"
-  ],
-  "pop": 0,
-  "y": 2026,
-  "p": [
-   "console"
-  ],
-  "g": [
-   "Simulator",
-   "Indie"
   ]
  },
  {
@@ -45656,20 +45664,6 @@
   ]
  },
  {
-  "name": "Pool Ball Battle Royale",
-  "alias": [
-   "Pool Ball Battle Royale.exe"
-  ],
-  "pop": 0,
-  "y": 2026,
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Simulator"
-  ]
- },
- {
   "name": "Pool Loop",
   "alias": [
    "POOL LOOP",
@@ -46288,7 +46282,9 @@
  },
  {
   "name": "Pro Wrestling Tycoon",
-  "alias": [],
+  "alias": [
+   "pwtycoon.exe"
+  ],
   "pop": 0,
   "y": 2026,
   "p": [
@@ -51076,6 +51072,7 @@
  {
   "name": "Screenside Fisher",
   "alias": [
+   "ScreensideFisher.exe",
    "SCREENSIDE FISHER"
   ],
   "pop": 0,
@@ -51277,7 +51274,8 @@
  {
   "name": "Secrets of Temple Isle",
   "alias": [
-   "Wacambria Island"
+   "Wacambria Island",
+   "SecretsOfTempleIsle.exe"
   ],
   "pop": 0,
   "y": 2026,
@@ -55977,7 +55975,9 @@
  },
  {
   "name": "Station Command",
-  "alias": [],
+  "alias": [
+   "Command.exe"
+  ],
   "pop": 0,
   "y": 2026,
   "p": [
@@ -57147,7 +57147,9 @@
  },
  {
   "name": "Suqare: Hired Gun",
-  "alias": [],
+  "alias": [
+   "Suqare.exe"
+  ],
   "pop": 0,
   "y": 2026,
   "p": [
@@ -66726,6 +66728,21 @@
  {
   "name": "Wail of Despair",
   "alias": [],
+  "pop": 0,
+  "y": 2026,
+  "p": [
+   "pc"
+  ],
+  "g": [
+   "Adventure",
+   "Indie"
+  ]
+ },
+ {
+  "name": "Wake Inside",
+  "alias": [
+   "HorrorRoom.exe"
+  ],
   "pop": 0,
   "y": 2026,
   "p": [

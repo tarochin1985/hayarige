@@ -1,13 +1,14 @@
 {
  "date": "2026-10-27",
- "generated": "2026-10-27 10:26",
+ "generated": "2026-10-27 23:46",
  "leads": {
   "events": [
    {
     "tag": "#ホロ鯖ARK",
     "channels": [
      "Choco Ch. 癒月ちょこ",
-     "Luna Ch. 姫森ルーナ",
+     "Flare Ch. 不知火フレア",
+     "Nene Ch.桃鈴ねね",
      "Pekora Ch. 兎田ぺこら",
      "Polka Ch. 尾丸ポルカ",
      "Vivi Ch. 綺々羅々ヴィヴィ - FLOW GLOW",
@@ -24,19 +25,36 @@
     ]
    },
    {
-    "tag": "#ゲーム実況",
+    "tag": "#ストグラ",
     "channels": [
-     "ジョアだよ",
-     "恋因ロス KoinRosu",
-     "豚咲あおい_TomisakiAoi"
+     "Middleeetv",
+     "Tenten Ch. / 鳳玲天々",
+     "marunnn【まるーんチャンネル】",
+     "みつき"
     ]
    },
    {
-    "tag": "#minecraft",
+    "tag": "#ゲーム実況",
     "channels": [
-     "やっぱりじぇいさん【マイクラ】",
-     "よし6【ゲーム実況者】",
-     "中野テリー"
+     "CHECHE GAME【顔出し初見ゲーム実況】",
+     "ジョアだよ",
+     "恋因ロス KoinRosu"
+    ]
+   },
+   {
+    "tag": "#マイクラ",
+    "channels": [
+     "いのちくん",
+     "まこりんとゲーム",
+     "やっぱりじぇいさん【マイクラ】"
+    ]
+   },
+   {
+    "tag": "#ホロドリ",
+    "channels": [
+     "Chihaya Ch. 輪堂 千速 - FLOW GLOW",
+     "Raden Ch. 儒烏風亭らでん ‐ ReGLOSS",
+     "hololive Dreams ホロライブドリームス"
     ]
    },
    {
@@ -48,68 +66,60 @@
     ]
    },
    {
-    "tag": "#黄泉ハル村",
+    "tag": "#エンドフィールド",
     "channels": [
-     "ゾンちゅう〜ゾンビJKはゲーム配信中〜",
-     "家入ポポ / Popo Channel【ななしいんく】",
-     "蛇宵ティア / Tier Channel【ななしいんく】"
+     "ちゃい・ふにえる",
+     "猫咲あんじ Nekosaki anji",
+     "羅々華セーラ-Raraka Sera-"
     ]
    }
   ],
   "newcomers": [],
   "wide": [
    {
-    "game": "ストリートファイター6",
-    "channels": 36,
-    "videos": 38
-   },
-   {
     "game": "Apex Legends",
-    "channels": 30,
-    "videos": 34
+    "channels": 34,
+    "videos": 40
    },
    {
-    "game": "Minecraft",
-    "channels": 27,
-    "videos": 28
-   },
-   {
-    "game": "ファイナルファンタジー レゾナンス",
+    "game": "ストリートファイター6",
     "channels": 26,
     "videos": 29
    },
    {
+    "game": "Minecraft",
+    "channels": 28,
+    "videos": 30
+   },
+   {
+    "game": "ファイナルファンタジー レゾナンス",
+    "channels": 22,
+    "videos": 24
+   },
+   {
     "game": "VALORANT",
-    "channels": 18,
-    "videos": 18
+    "channels": 22,
+    "videos": 23
    },
    {
     "game": "League of Legends",
-    "channels": 17,
-    "videos": 18
+    "channels": 19,
+    "videos": 22
+   },
+   {
+    "game": "スプラトゥーン3",
+    "channels": 19,
+    "videos": 20
    },
    {
     "game": "Dead by Daylight",
-    "channels": 16,
-    "videos": 18
-   },
-   {
-    "game": "Call of Duty: Modern Warfare 4",
-    "channels": 13,
-    "videos": 14
+    "channels": 18,
+    "videos": 20
    }
   ]
  },
  "drift": [],
- "tags": [
-  {
-   "tag": "わちゃサバ",
-   "game": "Minecraft",
-   "evidence": 3,
-   "added": 1,
-   "channels": 3
-  }
- ],
+ "tags": [],
  "misses": [
   {
    "word": "#splitbrain",
@@ -232,7 +242,7 @@
   {
    "word": "#にゃにゃ鯖ARK",
    "channels": 3,
-   "n": 6,
+   "n": 12,
    "examples": [
     {
      "t": "【#にゃにゃ鯖ARK 】すきなことだけして生きたい【姫崎クト / のなめぷろだくしょん】",
@@ -248,6 +258,30 @@
      "t": "【#にゃにゃ鯖ARK】衣食住を整え、まだ見ぬ恐竜たちに会いに行く🫲🙂🫱✨｜にゃにゃ鯖ARK 1日目【 空跳つもり / re;BON1期生 】",
      "c": "空跳つもり / Soratobu Tsumori 【 re;BON 】",
      "u": "https://www.youtube.com/watch?v=Xh-IqOo9Cno"
+    }
+   ],
+   "kind": "wide",
+   "suggest": []
+  },
+  {
+   "word": "お悩み相談",
+   "channels": 3,
+   "n": 4,
+   "examples": [
+    {
+     "t": "【お悩み相談】同棲してた彼女に別れを告げられた22歳男性リスナー",
+     "c": "石川典行サブチャンネル",
+     "u": "https://www.youtube.com/watch?v=fHQgR0k6fYE"
+    },
+    {
+     "t": "【 #お悩み相談  】リスナーのお悩み相談室✉ 解決するかはさておき、吐き出したら楽になるかも❣【DELUTAYA(でるたや)】",
+     "c": "DELUTAYA Δ.",
+     "u": "https://www.youtube.com/watch?v=cm2oJ-Vqamc"
+    },
+    {
+     "t": "【 #お悩み相談  】リスナーのお悩み相談室✉ 解決するかはさておき、吐き出したら楽になるかも❣【DELUTAYA(でるたや)】",
+     "c": "DELUTAYA Δ.",
+     "u": "https://www.youtube.com/watch?v=cm2oJ-Vqamc"
     }
    ],
    "kind": "wide",
@@ -305,17 +339,161 @@
  "miss_days": 7,
  "hot_facts": [
   {
-   "game": "都市伝説解体センター",
+   "game": "デュエル・マスターズ プレイス",
+   "growth": 6.25,
+   "videos": 5,
+   "base": 0.7,
+   "channels": 5,
+   "views": 687202,
+   "who": [
+    "石神のぞみ / Ishigami Nozomi【にじさんじ】",
+    "加賀美 ハヤト/Hayato Kagami",
+    "栞葉るり / Shioriha Ruri【にじさんじ】",
+    "鈴原るる【にじさんじ所属】",
+    "札絵れあ【カードゲーマーV】"
+   ],
+   "titles": [
+    "【 デュエプレ 】にじさんじさんがコラボしてるみたいなのでストーリーを読んでみましょう。って、なんで俺くんが！？【 にじさんじ所属 ／ 石神のぞみ 】",
+    "【 #デュエプレ 】にじさんじコラボ「仮想の決闘者 第7弾」をプレイ！【にじさんじ/加賀美ハヤト】",
+    "【デュエプレ】栞葉るりが栞葉るり（CV 栞葉るり）を手に入れる配信【栞葉るり/にじさんじ】"
+   ],
+   "genres": [],
+   "year": null,
+   "platforms": [],
+   "days_seen": 2,
+   "last_seen": "2026-10-25",
+   "first_here": false
+  },
+  {
+   "game": "Moon Sweepers",
    "growth": 5.0,
    "videos": 4,
-   "base": 0.7,
+   "base": 0.2,
    "channels": 4,
-   "views": 60529,
+   "views": 32805,
+   "who": [
+    "ちむぎ / Chimugi",
+    "ファミ通TUBE",
+    "たろちんDB",
+    "蛇宵ティア / Tier Channel【ななしいんく】"
+   ],
+   "titles": [
+    "【Moon Sweepers】歯ブラシ1本から月を大掃除。新作・月面清掃シミュレーターを完全初見【ちむぎ｜Vtuber】",
+    "歯ブラシ1本で月掃除。砂ぼこりを売って稼ぐ予算不足の清掃ミッション【Moon Sweepers】#ヘイ昇平 #ファミラボ",
+    "【Moon Sweepers】歯ブラシで月の砂を掃除したい夜もある"
+   ],
+   "genres": [
+    "Simulator",
+    "Strategy",
+    "Adventure",
+    "Indie"
+   ],
+   "year": 2026,
+   "platforms": [
+    "pc"
+   ],
+   "days_seen": 0,
+   "last_seen": null,
+   "first_here": true
+  },
+  {
+   "game": "ShredDead",
+   "growth": 5.0,
+   "videos": 4,
+   "base": 0.0,
+   "channels": 3,
+   "views": 17370,
+   "who": [
+    "Hultutigamer",
+    "78 moco",
+    "Hultutigamer",
+    "くろろじちゃんねる"
+   ],
+   "titles": [
+    "【ShredDead】遂に本日発売した自由にゾンビの大群を倒して拠点を無限強化する放置系インクリメンタルタワーディフェンスゲーム【Steam】",
+    "紲星あかりと無限に襲ってくるゾンビを無限に倒すゲーム【ShredDead】",
+    "【ShredDead】無限にゾンビの大群を倒して成長しまくる放置系インクリメンタルTDゲーム【Steam】"
+   ],
+   "genres": [
+    "Strategy",
+    "Indie"
+   ],
+   "year": 2026,
+   "platforms": [
+    "pc"
+   ],
+   "days_seen": 0,
+   "last_seen": null,
+   "first_here": true
+  },
+  {
+   "game": "ウマ娘 プリティーダービー",
+   "growth": 4.29,
+   "videos": 6,
+   "base": 1.4,
+   "channels": 5,
+   "views": 135637,
+   "who": [
+    "ニュイ・ソシエール //[Nui Sociere]",
+    "キャベツの人【ゲーム紹介】",
+    "れも / LemoCh.",
+    "空色るり -Sorairo Ruri-",
+    "メメ島channel"
+   ],
+   "titles": [
+    "【ウマ娘プリティーダービー】朋、史解き ―午式駿大祭― ～ガチャ&育成シナリオ～【ニュイ・ソシエール/にじさんじ】",
+    "炎上しかけたウマ娘ワールドツアー、サイゲの神対応で現地は盛り上がりプロポーズラッシュ＆国際交流まで発展してしまう/宮本茂さんゲーム界初の文化勲章受章へ/PSアカウント乗っ取り問題がかなり深刻",
+    "【ウマ娘】行くぞ！新シナリオガチャ！！！！生配信！【れも】"
+   ],
+   "genres": [],
+   "year": null,
+   "platforms": [],
+   "days_seen": 20,
+   "last_seen": "2026-10-26",
+   "first_here": false
+  },
+  {
+   "game": "Silent Hill: Townfall",
+   "growth": 3.89,
+   "videos": 7,
+   "base": 1.8,
+   "channels": 7,
+   "views": 49150,
+   "who": [
+    "ポッキー",
+    "SANNINSHOW",
+    "大関ゲーム",
+    "らっこ侍",
+    "アズリ / Azri【ななしいんく】"
+   ],
+   "titles": [
+    "深い霧に閉ざされた「孤島」が舞台のホラーゲーム【サイレントヒル: タウンフォール / SILENT HILL: Townfall】Part5 最終回",
+    "#6 今？ここで？私がやるんですか？【SILENT HILL: Townfall】※ネタバレあり",
+    "違法な治療に手を染め地獄に向かうゾーイ【SILENT HILL: Townfall】#5"
+   ],
+   "genres": [
+    "Puzzle",
+    "Adventure"
+   ],
+   "year": 2026,
+   "platforms": [
+    "pc",
+    "console"
+   ],
+   "days_seen": 29,
+   "last_seen": "2026-10-23",
+   "first_here": false
+  },
+  {
+   "game": "都市伝説解体センター",
+   "growth": 3.75,
+   "videos": 3,
+   "base": 0.8,
+   "channels": 3,
+   "views": 69080,
    "who": [
     "花畑チャイカ",
     "ゾンちゅう〜ゾンビJKはゲーム配信中〜",
-    "すねこしゅり",
-    "まーぼの大剣一閃-乙式-",
     "すねこしゅり"
    ],
    "titles": [
@@ -334,147 +512,6 @@
     "console"
    ],
    "days_seen": 15,
-   "last_seen": "2026-10-26",
-   "first_here": false
-  },
-  {
-   "game": "デュエル・マスターズ プレイス",
-   "growth": 3.75,
-   "videos": 3,
-   "base": 0.7,
-   "channels": 3,
-   "views": 633479,
-   "who": [
-    "石神のぞみ / Ishigami Nozomi【にじさんじ】",
-    "加賀美 ハヤト/Hayato Kagami",
-    "栞葉るり / Shioriha Ruri【にじさんじ】"
-   ],
-   "titles": [
-    "【 デュエプレ 】にじさんじさんがコラボしてるみたいなのでストーリーを読んでみましょう。って、なんで俺くんが！？【 にじさんじ所属 ／ 石神のぞみ 】",
-    "【 #デュエプレ 】にじさんじコラボ「仮想の決闘者 第7弾」をプレイ！【にじさんじ/加賀美ハヤト】",
-    "【デュエプレ】栞葉るりが栞葉るり（CV 栞葉るり）を手に入れる配信【栞葉るり/にじさんじ】"
-   ],
-   "genres": [],
-   "year": null,
-   "platforms": [],
-   "days_seen": 2,
-   "last_seen": "2026-10-25",
-   "first_here": false
-  },
-  {
-   "game": "Big Walk",
-   "growth": 3.75,
-   "videos": 3,
-   "base": 0.8,
-   "channels": 3,
-   "views": 365793,
-   "who": [
-    "らっだぁ",
-    "赤髪のとものゲーム実況チャンネル!!",
-    "ロウひなんゲーミング"
-   ],
-   "titles": [
-    "らっだぁのミスで完全に孤独にされた緑君がとった行動が哀しすぎる【BigWalk】",
-    "#ふんず 謎解きお散歩ゲーム｢BigWalk｣に挑戦！【赤髪のとも/リグゼ/日向まる/葉山翠】",
-    "#3 【Big Walk】8人でわちゃわちゃオープンワールド探索！【#エンスト配信】｜ロウ視点"
-   ],
-   "genres": [
-    "Platform",
-    "Puzzle",
-    "Adventure",
-    "Indie"
-   ],
-   "year": 2026,
-   "platforms": [
-    "pc",
-    "console"
-   ],
-   "days_seen": 23,
-   "last_seen": "2026-10-25",
-   "first_here": false
-  },
-  {
-   "game": "Moon Sweepers",
-   "growth": 3.75,
-   "videos": 3,
-   "base": 0.0,
-   "channels": 3,
-   "views": 34638,
-   "who": [
-    "ちむぎ / Chimugi",
-    "ファミ通TUBE",
-    "Hultutigamer"
-   ],
-   "titles": [
-    "【Moon Sweepers】歯ブラシ1本から月を大掃除。新作・月面清掃シミュレーターを完全初見【ちむぎ｜Vtuber】",
-    "歯ブラシ1本で月掃除。砂ぼこりを売って稼ぐ予算不足の清掃ミッション【Moon Sweepers】#ヘイ昇平 #ファミラボ",
-    "【Moon Sweepers】歯ブラシから始める月をまるごと掃除する壮大なお掃除ゲーム【Steam】"
-   ],
-   "genres": [
-    "Simulator",
-    "Strategy",
-    "Adventure",
-    "Indie"
-   ],
-   "year": 2026,
-   "platforms": [
-    "pc"
-   ],
-   "days_seen": 0,
-   "last_seen": null,
-   "first_here": true
-  },
-  {
-   "game": "Halloween: The Game",
-   "growth": 3.75,
-   "videos": 3,
-   "base": 0.3,
-   "channels": 3,
-   "views": 12293,
-   "who": [
-    "Otsuka Ray ch.乙夏れい",
-    "ドーラ",
-    "堰代ミコ / Mico Channel【ななしいんく】"
-   ],
-   "titles": [
-    "【料理/Cooking(カメラ有)】ママのハロウィンお菓子作りを生中継！｜Making Halloween Treats LIVE! 🎃【JP VTuber / 配信中】",
-    "【歌枠】Happy Halloween！妖しげな曲ONLY👻𓂃˚✦₊˚ KARAOKE🎤STREAM【にじさんじ/ドーラ】",
-    "【 #にこぷい 】HALLOWEENパーティするぞっ！👻💓【 堰代ミコ / 島村シャルロット 】"
-   ],
-   "genres": [
-    "Adventure"
-   ],
-   "year": 2026,
-   "platforms": [
-    "pc",
-    "console"
-   ],
-   "days_seen": 20,
-   "last_seen": "2026-10-26",
-   "first_here": false
-  },
-  {
-   "game": "ウマ娘 プリティーダービー",
-   "growth": 3.33,
-   "videos": 4,
-   "base": 1.2,
-   "channels": 3,
-   "views": 9259,
-   "who": [
-    "れも / LemoCh.",
-    "空色るり -Sorairo Ruri-",
-    "ニュイ・ソシエール //[Nui Sociere]",
-    "空色るり -Sorairo Ruri-"
-   ],
-   "titles": [
-    "【ウマ娘】行くぞ！新シナリオガチャ！！！！生配信！【れも】",
-    "【ウマ娘/駿大祭】完全初見！新シナリオ『 朋、史解き ー午式駿大祭ー 』で初育成！【ウマ娘プリティーダービー/vtuber/ライブ配信】",
-    "【ウマ娘プリティーダービー】朋、史解き ―午式駿大祭― ～ガチャ&育成シナリオ～【ニュイ・ソシエール/にじさんじ】"
-   ],
-   "genres": [],
-   "year": null,
-   "platforms": [],
-   "days_seen": 20,
    "last_seen": "2026-10-26",
    "first_here": false
   }
