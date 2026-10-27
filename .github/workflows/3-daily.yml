@@ -55,6 +55,24 @@ on:
     #
     # ※ GitHubは定期実行の時刻を保証していない。これでも駄目なら、
     #   外から `workflow_dispatch` を叩く形にするしかない（そちらは遅れない）。
+    #
+    # ---- ★2026-10-27：1日ようすを見た結果 --------------------------------
+    #
+    # **効かなかった。** Actionsタブで数えたら、
+    # **1つの枠から定期実行は1回しか作られていない**（6回ではない）。
+    #
+    #   #277  夜の枠（最後の声は 20:41）→ 実際に走ったのは **翌 01:05**（4時間24分）
+    #   #278  朝の枠（最後の声は  8:41）→ 実際に走ったのは     **9:24**（43分）
+    #
+    # GitHubは、同じワークフローの定期実行が1つ待っている間、
+    # **あとから来た定期実行を作らない**ように見える。だから
+    # **cronの行を増やしても回数は増えない。** 遅れもほぼ元のまま。
+    #
+    # ただし**害も無い**（増えないので実行時間も食わない）。
+    # 枠の頭が6:11・18:11と早くなるぶん、行列に並ぶのが早い。そのまま残す。
+    #
+    # **時刻をきっちり合わせたいなら、外から workflow_dispatch を叩くしかない。**
+    # それにはGitHubのトークンが要るので、たろちんさんが用意するものになる。
     - cron: "11,41 21,22,23 * * *"   # 日本時間 6:11 / 6:41 / 7:11 / 7:41 / 8:11 / 8:41
     - cron: "11,41 9,10,11 * * *"    # 日本時間 18:11 / 18:41 / 19:11 / 19:41 / 20:11 / 20:41
   workflow_dispatch:
@@ -114,14 +132,22 @@ jobs:
     # ★ go が 'no' のときだけ止める。関所が失敗して空になったときは走る。
     if: ${{ !cancelled() && needs.gate.outputs.go != 'no' }}
     runs-on: ubuntu-latest
-    timeout-minutes: 25      # これを超えたら自動で止まる
+    # ★25分 → 40分（2026-10-27）。**25分で枠がまるごと1つ飛んだ。**
+    # Actionsタブを見たら、10-26の夜の定期実行（#277）が
+    # **25分29秒で「取り消し」**になっていた。これは偶然ではなく、
+    # ここに書いてあった25分の上限に当たったということ。
+    # 1回の更新はいま19〜21分かかっている（#272 18分33秒 / #274 19分44秒 /
+    # #278 21分8秒）ので、上限とほとんど差が無かった。
+    # 対象チャンネルは毎週増えるので、ここは広めに取る。
+    # 本当に詰まったときの保険としては40分でも十分短い。
+    timeout-minutes: 40
     permissions:
       contents: write
     # 前の実行が走っている間は待つ。**打ち切らない。**
     # 以前は cancel-in-progress: true で打ち切っていたが、1つの枠に6回
     # 声をかける形にしたので、**走っている最中の実行を後ろの声が
     # 打ち切ってしまう**（push の途中だと中途半端になる）。
-    # 詰まったものは timeout-minutes の25分で勝手に終わる。
+    # 詰まったものは timeout-minutes（40分）で勝手に終わる。
     concurrency:
       group: daily-update
       cancel-in-progress: false
@@ -184,12 +210,21 @@ jobs:
       # すでにある画像は作り直さないので、ふだんは数秒で終わる。
       # YouTubeのクォータは1ポイントも使わない。
       # ここが失敗しても、その日の更新は止めない（画像が無いだけ）。
-      - name: まとめのページの画像を作る
+      # ★Playwrightの用意は1回だけにした（2026-10-27）。
+      # 以前は「まとめのページの画像」と「ツイート用の画像」の両方で
+      # `playwright install --with-deps chromium` を呼んでいて、
+      # **apt の取得を1回の更新で2回**していた。上のとおり25分の上限に
+      # 当たって枠が飛んだので、まず無駄をなくす。
+      # ここが失敗しても、その日の更新は止めない（画像が無いだけ）。
+      - name: 画像を作る道具を用意する
         continue-on-error: true
         run: |
           pip install --quiet playwright
           python -m playwright install --with-deps chromium
-          python scripts/make_week_card.py --site
+
+      - name: まとめのページの画像を作る
+        continue-on-error: true
+        run: python scripts/make_week_card.py --site
 
       - name: 集計してサイトを作る
         run: python scripts/build_site.py
@@ -202,10 +237,7 @@ jobs:
       # 失敗してもサイトの更新は止めない。
       - name: ツイート用の画像を作る
         continue-on-error: true
-        run: |
-          pip install --quiet playwright
-          python -m playwright install --with-deps chromium
-          python scripts/make_card.py --png
+        run: python scripts/make_card.py --png
 
       # Blueskyへの自動投稿。文と画像は上で作ったものをそのまま使う。
       # **鍵（アプリパスワード）が入っていなければ、何もせず終わる。**
