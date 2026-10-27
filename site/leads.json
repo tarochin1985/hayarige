@@ -1,6 +1,6 @@
 {
- "date": "2026-10-27",
- "generated": "2026-10-27 23:46",
+ "date": "2026-10-28",
+ "generated": "2026-10-28 08:11",
  "leads": {
   "events": [
    {
@@ -10,9 +10,16 @@
      "Flare Ch. 不知火フレア",
      "Nene Ch.桃鈴ねね",
      "Pekora Ch. 兎田ぺこら",
-     "Polka Ch. 尾丸ポルカ",
-     "Vivi Ch. 綺々羅々ヴィヴィ - FLOW GLOW",
-     "フブキCh。白上フブキ"
+     "Vivi Ch. 綺々羅々ヴィヴィ - FLOW GLOW"
+    ]
+   },
+   {
+    "tag": "#ホロドリ",
+    "channels": [
+     "Chihaya Ch. 輪堂 千速 - FLOW GLOW",
+     "Raden Ch. 儒烏風亭らでん ‐ ReGLOSS",
+     "Su Ch. 水宮枢 - FLOW GLOW",
+     "hololive Dreams ホロライブドリームス"
     ]
    },
    {
@@ -34,43 +41,28 @@
     ]
    },
    {
+    "tag": "#ぶいきゃす",
+    "channels": [
+     "こてつちゃんねる",
+     "ちゃい・ふにえる",
+     "浅葱なぎ",
+     "羅々華セーラ-Raraka Sera-"
+    ]
+   },
+   {
+    "tag": "#縦型配信",
+    "channels": [
+     "かおりんご(44歳児)",
+     "もみじビーム",
+     "ミロ"
+    ]
+   },
+   {
     "tag": "#ゲーム実況",
     "channels": [
      "CHECHE GAME【顔出し初見ゲーム実況】",
-     "ジョアだよ",
-     "恋因ロス KoinRosu"
-    ]
-   },
-   {
-    "tag": "#マイクラ",
-    "channels": [
-     "いのちくん",
-     "まこりんとゲーム",
-     "やっぱりじぇいさん【マイクラ】"
-    ]
-   },
-   {
-    "tag": "#ホロドリ",
-    "channels": [
-     "Chihaya Ch. 輪堂 千速 - FLOW GLOW",
-     "Raden Ch. 儒烏風亭らでん ‐ ReGLOSS",
-     "hololive Dreams ホロライブドリームス"
-    ]
-   },
-   {
-    "tag": "#わちゃサバ",
-    "channels": [
-     "ノビーの遊び部屋",
-     "小花衣 ももみ / Momomi Kohanai",
-     "扇名いだ"
-    ]
-   },
-   {
-    "tag": "#エンドフィールド",
-    "channels": [
-     "ちゃい・ふにえる",
-     "猫咲あんじ Nekosaki anji",
-     "羅々華セーラ-Raraka Sera-"
+     "恋因ロス KoinRosu",
+     "雛乃ぴぴ / Hinano pipi"
     ]
    }
   ],
@@ -78,43 +70,43 @@
   "wide": [
    {
     "game": "Apex Legends",
-    "channels": 34,
-    "videos": 40
-   },
-   {
-    "game": "ストリートファイター6",
     "channels": 26,
-    "videos": 29
+    "videos": 30
    },
    {
     "game": "Minecraft",
     "channels": 28,
-    "videos": 30
+    "videos": 28
+   },
+   {
+    "game": "ストリートファイター6",
+    "channels": 26,
+    "videos": 27
    },
    {
     "game": "ファイナルファンタジー レゾナンス",
-    "channels": 22,
-    "videos": 24
-   },
-   {
-    "game": "VALORANT",
-    "channels": 22,
-    "videos": 23
+    "channels": 21,
+    "videos": 22
    },
    {
     "game": "League of Legends",
-    "channels": 19,
-    "videos": 22
+    "channels": 20,
+    "videos": 20
    },
    {
     "game": "スプラトゥーン3",
     "channels": 19,
-    "videos": 20
+    "videos": 19
    },
    {
     "game": "Dead by Daylight",
     "channels": 18,
-    "videos": 20
+    "videos": 19
+   },
+   {
+    "game": "VALORANT",
+    "channels": 16,
+    "videos": 17
    }
   ]
  },
@@ -264,6 +256,30 @@
    "suggest": []
   },
   {
+   "word": "妖怪ウォッチ",
+   "channels": 3,
+   "n": 6,
+   "examples": [
+    {
+     "t": "敵が強すぎるので、Sランク妖怪をついに解禁します #8【妖怪ウォッチ】",
+     "c": "ボドカ / Riddle - ゲーム実況",
+     "u": "https://www.youtube.com/watch?v=jxD_Q8KWMdk"
+    },
+    {
+     "t": "ついに封印されし『最強の妖怪』を解放しました#9【妖怪ウォッチ】",
+     "c": "ボドカ / Riddle - ゲーム実況",
+     "u": "https://www.youtube.com/watch?v=67-evSMzJTc"
+    },
+    {
+     "t": "子供向けゲームの人気キャラ、絶対に言ってはいけない事を発言してしまう【妖怪ウォッチ】",
+     "c": "ルウ【ゲーム情報局】",
+     "u": "https://www.youtube.com/watch?v=jCsXOH_DIkc"
+    }
+   ],
+   "kind": "wide",
+   "suggest": []
+  },
+  {
    "word": "お悩み相談",
    "channels": 3,
    "n": 4,
@@ -312,6 +328,30 @@
    "suggest": []
   },
   {
+   "word": "Emberville",
+   "channels": 3,
+   "n": 4,
+   "examples": [
+    {
+     "t": "【Emberville】 戦って！集めて！街をつくる！「Emberville」#PR【ホロライブ/白上フブキ】",
+     "c": "フブキCh。白上フブキ",
+     "u": "https://www.youtube.com/watch?v=djNUaNbNh38"
+    },
+    {
+     "t": "【Emberville】 戦って！集めて！街をつくる！「Emberville」#PR【ホロライブ/白上フブキ】",
+     "c": "フブキCh。白上フブキ",
+     "u": "https://www.youtube.com/watch?v=djNUaNbNh38"
+    },
+    {
+     "t": "【Emberville】集めて戦って！街の再建していくRPG！【不知火フレア/ホロライブ】",
+     "c": "Flare Ch. 不知火フレア",
+     "u": "https://www.youtube.com/watch?v=Xfh5EZDGCrU"
+    }
+   ],
+   "kind": "wide",
+   "suggest": []
+  },
+  {
    "word": "菊花賞",
    "channels": 3,
    "n": 3,
@@ -339,79 +379,22 @@
  "miss_days": 7,
  "hot_facts": [
   {
-   "game": "デュエル・マスターズ プレイス",
-   "growth": 6.25,
-   "videos": 5,
-   "base": 0.7,
-   "channels": 5,
-   "views": 687202,
-   "who": [
-    "石神のぞみ / Ishigami Nozomi【にじさんじ】",
-    "加賀美 ハヤト/Hayato Kagami",
-    "栞葉るり / Shioriha Ruri【にじさんじ】",
-    "鈴原るる【にじさんじ所属】",
-    "札絵れあ【カードゲーマーV】"
-   ],
-   "titles": [
-    "【 デュエプレ 】にじさんじさんがコラボしてるみたいなのでストーリーを読んでみましょう。って、なんで俺くんが！？【 にじさんじ所属 ／ 石神のぞみ 】",
-    "【 #デュエプレ 】にじさんじコラボ「仮想の決闘者 第7弾」をプレイ！【にじさんじ/加賀美ハヤト】",
-    "【デュエプレ】栞葉るりが栞葉るり（CV 栞葉るり）を手に入れる配信【栞葉るり/にじさんじ】"
-   ],
-   "genres": [],
-   "year": null,
-   "platforms": [],
-   "days_seen": 2,
-   "last_seen": "2026-10-25",
-   "first_here": false
-  },
-  {
-   "game": "Moon Sweepers",
-   "growth": 5.0,
-   "videos": 4,
-   "base": 0.2,
-   "channels": 4,
-   "views": 32805,
-   "who": [
-    "ちむぎ / Chimugi",
-    "ファミ通TUBE",
-    "たろちんDB",
-    "蛇宵ティア / Tier Channel【ななしいんく】"
-   ],
-   "titles": [
-    "【Moon Sweepers】歯ブラシ1本から月を大掃除。新作・月面清掃シミュレーターを完全初見【ちむぎ｜Vtuber】",
-    "歯ブラシ1本で月掃除。砂ぼこりを売って稼ぐ予算不足の清掃ミッション【Moon Sweepers】#ヘイ昇平 #ファミラボ",
-    "【Moon Sweepers】歯ブラシで月の砂を掃除したい夜もある"
-   ],
-   "genres": [
-    "Simulator",
-    "Strategy",
-    "Adventure",
-    "Indie"
-   ],
-   "year": 2026,
-   "platforms": [
-    "pc"
-   ],
-   "days_seen": 0,
-   "last_seen": null,
-   "first_here": true
-  },
-  {
    "game": "ShredDead",
    "growth": 5.0,
    "videos": 4,
    "base": 0.0,
-   "channels": 3,
-   "views": 17370,
+   "channels": 4,
+   "views": 71074,
    "who": [
-    "Hultutigamer",
     "78 moco",
     "Hultutigamer",
-    "くろろじちゃんねる"
+    "Hultutigamer",
+    "くろろじちゃんねる",
+    " なぎせいな / 凪世薙"
    ],
    "titles": [
-    "【ShredDead】遂に本日発売した自由にゾンビの大群を倒して拠点を無限強化する放置系インクリメンタルタワーディフェンスゲーム【Steam】",
     "紲星あかりと無限に襲ってくるゾンビを無限に倒すゲーム【ShredDead】",
+    "【ShredDead】遂に本日発売した自由にゾンビの大群を倒して拠点を無限強化する放置系インクリメンタルタワーディフェンスゲーム【Steam】",
     "【ShredDead】無限にゾンビの大群を倒して成長しまくる放置系インクリメンタルTDゲーム【Steam】"
    ],
    "genres": [
@@ -422,43 +405,101 @@
    "platforms": [
     "pc"
    ],
-   "days_seen": 0,
-   "last_seen": null,
-   "first_here": true
+   "days_seen": 1,
+   "last_seen": "2026-10-27",
+   "first_here": false
   },
   {
-   "game": "ウマ娘 プリティーダービー",
-   "growth": 4.29,
-   "videos": 6,
-   "base": 1.4,
-   "channels": 5,
-   "views": 135637,
+   "game": "ステューピッド・ネバー・ダイズ",
+   "growth": 3.75,
+   "videos": 3,
+   "base": 0.8,
+   "channels": 3,
+   "views": 69350,
    "who": [
-    "ニュイ・ソシエール //[Nui Sociere]",
-    "キャベツの人【ゲーム紹介】",
-    "れも / LemoCh.",
-    "空色るり -Sorairo Ruri-",
-    "メメ島channel"
+    "SANNINSHOW",
+    "夢咲 刻夜-Tokiya Yumesaki",
+    "ホビドワ",
+    "ホビドワ"
    ],
    "titles": [
-    "【ウマ娘プリティーダービー】朋、史解き ―午式駿大祭― ～ガチャ&育成シナリオ～【ニュイ・ソシエール/にじさんじ】",
-    "炎上しかけたウマ娘ワールドツアー、サイゲの神対応で現地は盛り上がりプロポーズラッシュ＆国際交流まで発展してしまう/宮本茂さんゲーム界初の文化勲章受章へ/PSアカウント乗っ取り問題がかなり深刻",
-    "【ウマ娘】行くぞ！新シナリオガチャ！！！！生配信！【れも】"
+    "爆速成長アクションRPGとやらをやってみる【ストゥーピッドネバーダイズ/Stupid Never Dies】",
+    "【 ステューピッド・ネバー・ダイズ 】▷3 感動の最終回!?ゾンビの初恋は果たして成就するのか!?【 夢咲刻夜Vliver 】",
+    "【ライブ実況】デビルメイクライとドラゴンズドグマの元開発者が贈る！純愛ゾンビアクション【ステューピッド・ネバー・ダイズ（Stupid Never Dies）】【アクションRPG/Steam】"
+   ],
+   "genres": [
+    "Role-playing (RPG)",
+    "Adventure"
+   ],
+   "year": 2026,
+   "platforms": [
+    "pc",
+    "console"
+   ],
+   "days_seen": 3,
+   "last_seen": "2026-10-27",
+   "first_here": false
+  },
+  {
+   "game": "トモダチコレクション わくわく生活",
+   "growth": 3.75,
+   "videos": 3,
+   "base": 0.8,
+   "channels": 3,
+   "views": 33162,
+   "who": [
+    "るんば",
+    "ちささこ",
+    "ジョアだよ"
+   ],
+   "titles": [
+    "【食材たちとのわくわく生活】目指せ！三ツ星ミシュランド【トモダチコレクション わくわく生活】#45",
+    "【生配信】#43｜その人、デイサービスの人ちゃうよ！【トモダチコレクションわくわく生活】",
+    "【トモコレわくわく生活 #11】今大人気キャラがやってくる!!!｜#トモコレ  #トモダチコレクション"
+   ],
+   "genres": [
+    "Simulator"
+   ],
+   "year": 2026,
+   "platforms": [
+    "console"
+   ],
+   "days_seen": 11,
+   "last_seen": "2026-10-25",
+   "first_here": false
+  },
+  {
+   "game": "ペルソナ5 ザ・ロイヤル",
+   "growth": 3.08,
+   "videos": 4,
+   "base": 1.3,
+   "channels": 4,
+   "views": 14989,
+   "who": [
+    "くまのりんご Kumano Ringo",
+    "漆瀬レイ / Ray Nanase【ななしいんく】",
+    "羽渦ミウネル -Miuneru Haneuzu-",
+    "Sorbet Ch. 桃乃ソルベ"
+   ],
+   "titles": [
+    "【ペルソナ5 ザ・ロイヤル】完全初見！最終回Part2！1/2～まさかの激アツ共闘！どうなる！？「P5R」を初見プレイ！【くまのりんご/女性実況】※ネタバレ注意",
+    "【 P5R/ペルソナ5 ザ・ロイヤル 】完全初見🔰人生初のペルソナ！！✨※ネタバレ注意 #09【漆瀬レイ / ななしいんく】",
+    "【ペルソナ5ザ・ロイヤル】シドウ編【羽渦ミウネル】"
    ],
    "genres": [],
    "year": null,
    "platforms": [],
-   "days_seen": 20,
-   "last_seen": "2026-10-26",
+   "days_seen": 29,
+   "last_seen": "2026-10-27",
    "first_here": false
   },
   {
    "game": "Silent Hill: Townfall",
-   "growth": 3.89,
-   "videos": 7,
-   "base": 1.8,
-   "channels": 7,
-   "views": 49150,
+   "growth": 3.0,
+   "videos": 6,
+   "base": 2.0,
+   "channels": 6,
+   "views": 99140,
    "who": [
     "ポッキー",
     "SANNINSHOW",
@@ -480,39 +521,32 @@
     "pc",
     "console"
    ],
-   "days_seen": 29,
-   "last_seen": "2026-10-23",
+   "days_seen": 30,
+   "last_seen": "2026-10-27",
    "first_here": false
   },
   {
-   "game": "都市伝説解体センター",
-   "growth": 3.75,
+   "game": "ポケモンユナイト",
+   "growth": 3.0,
    "videos": 3,
-   "base": 0.8,
+   "base": 1.0,
    "channels": 3,
-   "views": 69080,
+   "views": 10080,
    "who": [
-    "花畑チャイカ",
-    "ゾンちゅう〜ゾンビJKはゲーム配信中〜",
-    "すねこしゅり"
+    "くますけ【ゆっくりユナイト解説】",
+    "かぐch",
+    "ここっとスクエア【ここスク】"
    ],
    "titles": [
-    "花畑チャイカと都市伝説解体センター第六話 え～ 実に面白い この謎は既に お前のやった事は全部 簡単なことだよ もう一つだけ じっちゃんの いろはの 見えたこれが 長袖を 犯人はお前だ！ ネタバレ注意",
-    "【 都市伝説解体センター 】私、天才\"\"\"考察系\"\"\"ゾンビJKになります！～第５話～【 黄泉ハルカ / コロコロコミック公式VTuber】#ゾンちゅう #放課後もんすたーず",
-    "都市伝説解体センター 第4回 都市伝説の裏側を暴く怪異調査、続きを解体するのだ"
+    "【サービス終了】今後の活動について【ポケモンユナイト】",
+    "「ポケモンユナイト」サービス終了するらしい…【Vtuber】",
+    "ポケモンユナイトがサービス終了についてお話。【雑談】 #茜猫こるに"
    ],
-   "genres": [
-    "Puzzle",
-    "Adventure",
-    "Visual Novel"
-   ],
-   "year": 2025,
-   "platforms": [
-    "pc",
-    "console"
-   ],
-   "days_seen": 15,
-   "last_seen": "2026-10-26",
+   "genres": [],
+   "year": null,
+   "platforms": [],
+   "days_seen": 11,
+   "last_seen": "2026-10-27",
    "first_here": false
   }
  ],
