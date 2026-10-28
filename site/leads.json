@@ -1,21 +1,8 @@
 {
  "date": "2026-10-29",
- "generated": "2026-10-29 00:19",
+ "generated": "2026-10-29 07:46",
  "leads": {
   "events": [
-   {
-    "tag": "#ホロ鯖ARK",
-    "channels": [
-     "Choco Ch. 癒月ちょこ",
-     "Flare Ch. 不知火フレア",
-     "Nene Ch.桃鈴ねね",
-     "Pekora Ch. 兎田ぺこら",
-     "Towa Ch. 常闇トワ",
-     "Vivi Ch. 綺々羅々ヴィヴィ - FLOW GLOW",
-     "Watame Ch. 角巻わため",
-     "フブキCh。白上フブキ"
-    ]
-   },
    {
     "tag": "#ストグラ",
     "channels": [
@@ -25,17 +12,31 @@
      "ましゃかりさん",
      "みつき",
      "クラウン【探検家の記録】",
-     "ノビーの遊び部屋"
+     "ノビーの遊び部屋",
+     "柚原いづみ / Izumi Channel 【ななしいんく】"
     ]
    },
    {
-    "tag": "#ゲーム実況",
+    "tag": "#ストグラSeason2",
     "channels": [
-     "のんびり猫のゆっくりゲーム実況",
-     "ジョアだよ",
-     "恋因ロス KoinRosu",
-     "豚咲あおい_TomisakiAoi",
-     "雛乃ぴぴ / Hinano pipi"
+     "たけぉ",
+     "はたさこ / hatasako_flag",
+     "クラウン【探検家の記録】",
+     "天羽よつは",
+     "影。/かげまる",
+     "暁月ホタル AKATSUKI HOTARU",
+     "柚原いづみ / Izumi Channel 【ななしいんく】"
+    ]
+   },
+   {
+    "tag": "#ホロ鯖ARK",
+    "channels": [
+     "Choco Ch. 癒月ちょこ",
+     "Pekora Ch. 兎田ぺこら",
+     "Towa Ch. 常闇トワ",
+     "Vivi Ch. 綺々羅々ヴィヴィ - FLOW GLOW",
+     "Watame Ch. 角巻わため",
+     "フブキCh。白上フブキ"
     ]
    },
    {
@@ -49,22 +50,11 @@
     ]
    },
    {
-    "tag": "#ストグラSeason2",
+    "tag": "#ゲーム実況",
     "channels": [
-     "たけぉ",
-     "はたさこ / hatasako_flag",
-     "クラウン【探検家の記録】",
-     "天羽よつは",
-     "影。/かげまる"
-    ]
-   },
-   {
-    "tag": "#にゃにゃ鯖ARK",
-    "channels": [
-     "なるる / naruru",
-     "史門 / Shimon ",
-     "姫崎クト -himesaki kuto-",
-     "空跳つもり / Soratobu Tsumori 【 re;BON 】"
+     "のんびり猫のゆっくりゲーム実況",
+     "ジョアだよ",
+     "豚咲あおい_TomisakiAoi"
     ]
    },
    {
@@ -72,16 +62,15 @@
     "channels": [
      "孵卵リリス / Furan Lilith",
      "汐ゴマ【鳴潮】",
-     "浅葱なぎ",
-     "羅々華セーラ-Raraka Sera-"
+     "浅葱なぎ"
     ]
    },
    {
-    "tag": "#ホロドリ",
+    "tag": "#ストグラseason2",
     "channels": [
-     "Chihaya Ch. 輪堂 千速 - FLOW GLOW",
-     "Raden Ch. 儒烏風亭らでん ‐ ReGLOSS",
-     "Su Ch. 水宮枢 - FLOW GLOW"
+     "HYBRID SENSE",
+     "Mio Ch. 猫月みお【あみゅどる】",
+     "碧輝りお /Aoki Rio"
     ]
    }
   ],
@@ -89,43 +78,43 @@
   "wide": [
    {
     "game": "Minecraft",
-    "channels": 41,
-    "videos": 46
+    "channels": 39,
+    "videos": 42
    },
    {
     "game": "Apex Legends",
-    "channels": 33,
-    "videos": 38
+    "channels": 29,
+    "videos": 33
    },
    {
     "game": "ストリートファイター6",
-    "channels": 27,
-    "videos": 34
+    "channels": 26,
+    "videos": 29
    },
    {
-    "game": "ファイナルファンタジー レゾナンス",
-    "channels": 23,
-    "videos": 26
-   },
-   {
-    "game": "スプラトゥーン3",
+    "game": "Grand Theft Auto V",
     "channels": 23,
     "videos": 25
    },
    {
-    "game": "League of Legends",
+    "game": "スプラトゥーン3",
+    "channels": 21,
+    "videos": 22
+   },
+   {
+    "game": "ファイナルファンタジー レゾナンス",
     "channels": 19,
     "videos": 21
    },
    {
-    "game": "VALORANT",
-    "channels": 18,
-    "videos": 20
+    "game": "League of Legends",
+    "channels": 17,
+    "videos": 17
    },
    {
-    "game": "Grand Theft Auto V",
-    "channels": 20,
-    "videos": 22
+    "game": "フォートナイト",
+    "channels": 17,
+    "videos": 19
    }
   ]
  },
@@ -248,17 +237,17 @@
   {
    "word": "ポケチャン",
    "channels": 3,
-   "n": 10,
+   "n": 11,
    "examples": [
-    {
-     "t": "【レート2001～】メガユキメノコ ～レギュM-C 最強メガシンカ研修生～【ポケチャン】",
-     "c": "あいまる",
-     "u": "https://www.youtube.com/watch?v=axmknmjAyho"
-    },
     {
      "t": "【決まれば即勝ち】どんな相手も倒せる凶悪コンボで環境を終わらせる『ニョロトノ』最高の性能してるわ。【ポケチャン】",
      "c": "くろこ",
      "u": "https://www.youtube.com/watch?v=w2GTPMmiKBA"
+    },
+    {
+     "t": "【レート2001～】メガユキメノコ ～レギュM-C 最強メガシンカ研修生～【ポケチャン】",
+     "c": "あいまる",
+     "u": "https://www.youtube.com/watch?v=axmknmjAyho"
     },
     {
      "t": "【レート2032～】メガセグレイブだって強いだろ！！#技構成ミス【ポケチャン】",
@@ -309,9 +298,9 @@
      "u": "https://www.youtube.com/watch?v=zoO_dvnbWtQ"
     },
     {
-     "t": "【ロマンシングサガ2リベンジオブザセブン】完全初見！新たなロマンシングに挑む！【てちび/すたすぺ所属】",
-     "c": "てちび",
-     "u": "https://www.youtube.com/watch?v=EDipNCMI06A"
+     "t": "【ロマサガ2R】ラストダンジョン！七英雄ワグナス討伐！完全初見攻略 【ロマンシング サガ2 リベンジオブザセブン】＃リベサガ！＃新人VTUBER",
+     "c": "豚咲あおい_TomisakiAoi",
+     "u": "https://www.youtube.com/watch?v=xzhBattXRiI"
     }
    ],
    "kind": "wide",
@@ -370,11 +359,11 @@
  "hot_facts": [
   {
    "game": "モンスターハンターアウトランダーズ",
-   "growth": 10.0,
-   "videos": 8,
-   "base": 0.2,
-   "channels": 7,
-   "views": 29462,
+   "growth": 16.25,
+   "videos": 13,
+   "base": 0.3,
+   "channels": 11,
+   "views": 64256,
    "who": [
     "ガンサーの抹茶",
     "ララ9hJQr3//3o",
@@ -390,28 +379,59 @@
    "genres": [],
    "year": null,
    "platforms": [],
+   "days_seen": 3,
+   "last_seen": "2026-10-28",
+   "first_here": false
+  },
+  {
+   "game": "Moon Sweepers",
+   "growth": 5.0,
+   "videos": 4,
+   "base": 0.5,
+   "channels": 4,
+   "views": 78520,
+   "who": [
+    "しんじさん",
+    "おぼ。",
+    "蛇宵ティア / Tier Channel【ななしいんく】",
+    "たろちんDB"
+   ],
+   "titles": [
+    "月の面積である38,000,000 km²を掃除させられるゲームがやばいｗｗ【Moon Sweepers】",
+    "歯ブラシから始まる果てしない月面掃除！？おぼは綺麗にすることができるのか【Moon Sweepers】",
+    "【MoonSweepers】歯ブラシで月って磨けるんだ【 蛇宵ティア / ななしいんく 】"
+   ],
+   "genres": [
+    "Simulator",
+    "Strategy",
+    "Adventure",
+    "Indie"
+   ],
+   "year": 2026,
+   "platforms": [
+    "pc"
+   ],
    "days_seen": 2,
-   "last_seen": "2026-09-30",
+   "last_seen": "2026-10-28",
    "first_here": false
   },
   {
    "game": "Phantom Blade Zero",
-   "growth": 7.5,
-   "videos": 6,
-   "base": 0.5,
-   "channels": 6,
-   "views": 11783,
+   "growth": 5.0,
+   "videos": 4,
+   "base": 0.8,
+   "channels": 4,
+   "views": 17573,
    "who": [
     "ぴろちゃん -ゲーム攻略・情報ch-",
-    "夢咲 刻夜-Tokiya Yumesaki",
-    "ホビドワ",
     "ゆーだい【HIHITI-GAMERS】",
-    "ゆいめろ🎀🐶 / yuimelo"
+    "ゆいめろ🎀🐶 / yuimelo",
+    "マコジョコ"
    ],
    "titles": [
     "【Phantom Blade Zero】先行レビューまとめ！圧倒的な完成度でやばい！？敵AIの進化や66日モードが凄すぎる【発売前情報まとめ】",
-    "【 Phantom Blade Zero 】▷1 遂に出た、これは究極の武侠アクションゲーム。発売日最速耐久【 夢咲刻夜Vliver 】",
-    "【ライブ実況】武侠×ダークファンタジーパンク！高速バトルを繰り広げる暗黒武侠アクションアドベンチャー【Phantom Blade Zero】【アクションアドベンチャー/Steam】"
+    "【ファントムブレードゼロ】㊗発売🎉今年最高のアクションゲームになるか！？序盤攻略,強武器,強スキル,強ビルドなどあれば探していく！『ダーク武侠アクションRPG』【Phantom Blade Zero】",
+    "#1【 Phantom Blade Zero 】ずっと待ってたゲームがついに発売されたぞ～！🔥【 ファントムブレードゼロ / Vtuber / ゆいめろ】"
    ],
    "genres": [
     "Role-playing (RPG)",
@@ -433,7 +453,7 @@
    "videos": 4,
    "base": 0.8,
    "channels": 4,
-   "views": 6460,
+   "views": 10162,
    "who": [
     "スナパイ",
     "スナパイ",
@@ -449,100 +469,62 @@
    "genres": [],
    "year": null,
    "platforms": [],
-   "days_seen": 18,
-   "last_seen": "2026-10-16",
-   "first_here": false
-  },
-  {
-   "game": "ドラゴンボールZ KAKAROT",
-   "growth": 3.75,
-   "videos": 3,
-   "base": 0.2,
-   "channels": 3,
-   "views": 83180,
-   "who": [
-    "える / Elu【にじさんじ】",
-    "UNIT B (Pre-Debut) - mekPark",
-    "みみぴ"
-   ],
-   "titles": [
-    "【 ドラゴンボールZ:KAKAROT 】#09 完全初見！DLC：BARDOCK -たったひとりの最終決戦- 【にじさんじ/える】",
-    "【ドラゴンボール Z KAKAROT】ミリしらギャルと行くドラゴンボール【 #UNIT_B / #宵凪ネオン】",
-    "【🔴#ドラゴンボールZカカロット ⑨】グレートサイヤマンがなんでも解決！【初見実況】"
-   ],
-   "genres": [
-    "Role-playing (RPG)",
-    "Hack and slash/Beat 'em up",
-    "Adventure"
-   ],
-   "year": 2020,
-   "platforms": [
-    "pc",
-    "console"
-   ],
-   "days_seen": 8,
-   "last_seen": "2026-10-20",
-   "first_here": false
-  },
-  {
-   "game": "Moon Sweepers",
-   "growth": 3.75,
-   "videos": 3,
-   "base": 0.7,
-   "channels": 3,
-   "views": 42184,
-   "who": [
-    "しんじさん",
-    "おぼ。",
-    "たろちんDB"
-   ],
-   "titles": [
-    "月の面積である38,000,000 km²を掃除させられるゲームがやばいｗｗ【Moon Sweepers】",
-    "歯ブラシから始まる果てしない月面掃除！？おぼは綺麗にすることができるのか【Moon Sweepers】",
-    "【Moon Sweepers】歯ブラシで月の砂を掃除したい夜もある"
-   ],
-   "genres": [
-    "Simulator",
-    "Strategy",
-    "Adventure",
-    "Indie"
-   ],
-   "year": 2026,
-   "platforms": [
-    "pc"
-   ],
-   "days_seen": 2,
+   "days_seen": 19,
    "last_seen": "2026-10-28",
    "first_here": false
   },
   {
-   "game": "妖怪ウォッチ1",
-   "growth": 3.64,
-   "videos": 4,
-   "base": 1.1,
-   "channels": 4,
-   "views": 51587,
+   "game": "Don't Drop The Cake",
+   "growth": 3.75,
+   "videos": 3,
+   "base": 0.5,
+   "channels": 3,
+   "views": 43858,
    "who": [
-    "エクス・アルビオ -Ex Albio-",
-    "ポポそら",
-    "砂利ボーイ",
-    "ポポそら",
-    "砂利ボーイ"
+    "ゆっくりクウカイと言う名の生命体",
+    "稲荷いろはInari Iroha",
+    "【男装アイドルVtuber】橘花るい / Tachibana Rui"
    ],
    "titles": [
-    "目隠しして出会った最初の6体でラスボスは討伐できるのかチャレンジ！！『 妖怪ウォッチ1 』【 エビオ/にじさんじ 】",
-    "ぷにぷに『こんなのあんまりだ！ラストチャンスまで我慢した結果が地獄すぎた…』Yo-kai Watch",
-    "【妖怪ウォッチ1】\"鬼畜縛り\"で妖怪ウォッチを全クリしたい。＃２１"
+    "【＃ホラゲー】ケーキを落としたら燃やされます……青鬼が！？【Don't Drop The Cake】※雑音注意",
+    "【Don't Drop The Cake】何が起こっても絶対にケーキを落としてはならない…【#稲荷いろは/のりプロ所属】",
+    "【🟡大絶叫ホラゲー‼️💥︙感動系ストーリー👻】低音中性ボイス🎂ケーキ運び屋さん🎂『Don't Drop The Cake』【#橘花るい/男装アイドルVtuber】#ホラゲー実況 #ホラーゲーム"
+   ],
+   "genres": [],
+   "year": null,
+   "platforms": [],
+   "days_seen": 31,
+   "last_seen": "2026-10-28",
+   "first_here": false
+  },
+  {
+   "game": "Rust",
+   "growth": 3.33,
+   "videos": 3,
+   "base": 0.9,
+   "channels": 3,
+   "views": 10864,
+   "who": [
+    "めーや",
+    "プテラたかはし",
+    "即死ちゃん "
+   ],
+   "titles": [
+    "【RUST】ベッドウォォォォォォズ！！！",
+    "【RUST BEDWARS】オレビバ主催！配信者で戦うぜ！",
+    "【RUST season7-6】海人生活/気狂いロケット100個作る"
    ],
    "genres": [
-    "Puzzle",
-    "Role-playing (RPG)"
+    "Shooter",
+    "Role-playing (RPG)",
+    "Adventure",
+    "Indie"
    ],
-   "year": 2013,
+   "year": 2018,
    "platforms": [
-    "console"
+    "pc"
    ],
-   "days_seen": 14,
+   "days_seen": 37,
    "last_seen": "2026-10-28",
    "first_here": false
   }
