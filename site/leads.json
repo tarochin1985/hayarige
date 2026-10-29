@@ -1,6 +1,6 @@
 {
  "date": "2026-10-30",
- "generated": "2026-10-30 00:28",
+ "generated": "2026-10-30 07:58",
  "leads": {
   "events": [
    {
@@ -13,8 +13,17 @@
      "クラウン【探検家の記録】",
      "ノビーの遊び部屋",
      "切嘛 / Kiruma",
-     "柚原いづみ / Izumi Channel 【ななしいんく】",
      "闇乃あびす / Abyss"
+    ]
+   },
+   {
+    "tag": "#ホロ鯖ARK",
+    "channels": [
+     "Koyori ch. 博衣こより - holoX -",
+     "Nene Ch.桃鈴ねね",
+     "Pekora Ch. 兎田ぺこら",
+     "Towa Ch. 常闇トワ",
+     "Vivi Ch. 綺々羅々ヴィヴィ - FLOW GLOW"
     ]
    },
    {
@@ -22,36 +31,18 @@
     "channels": [
      "neon",
      "たけぉ",
-     "はたさこ / hatasako_flag",
      "クラウン【探検家の記録】",
-     "天羽よつは",
-     "影。/かげまる",
      "暁月ホタル AKATSUKI HOTARU",
-     "柚原いづみ / Izumi Channel 【ななしいんく】",
      "稲荷いろはInari Iroha"
     ]
    },
    {
-    "tag": "#ホロ鯖ARK",
+    "tag": "#WeeDWARSハロウィンケイドロ",
     "channels": [
-     "Choco Ch. 癒月ちょこ",
-     "Koyori ch. 博衣こより - holoX -",
-     "Nene Ch.桃鈴ねね",
-     "Pekora Ch. 兎田ぺこら",
-     "Towa Ch. 常闇トワ",
-     "Vivi Ch. 綺々羅々ヴィヴィ - FLOW GLOW",
-     "Watame Ch. 角巻わため",
-     "フブキCh。白上フブキ"
-    ]
-   },
-   {
-    "tag": "#ぶいきゃす",
-    "channels": [
-     "えういん ∕ euin Ch.",
-     "孵卵リリス / Furan Lilith",
-     "樹つつき -Itsuki Tsutsuki Ch-",
-     "汐ゴマ【鳴潮】",
-     "浅葱なぎ"
+     "なかお",
+     "家入ポポ / Popo Channel【ななしいんく】",
+     "島村シャルロット / Charlotte Channel【ななしいんく】",
+     "蛇宵ティア / Tier Channel【ななしいんく】"
     ]
    },
    {
@@ -64,27 +55,27 @@
     ]
    },
    {
+    "tag": "#あおぎり高校",
+    "channels": [
+     "うらめちゃんねる /あおぎり高校",
+     "ちよみch. 千代浦蝶美 /あおぎり高校",
+     "萌実ちゃんねる / あおぎり高校"
+    ]
+   },
+   {
+    "tag": "#ドゥームズデイ",
+    "channels": [
+     "えむちゃんねる",
+     "実況したいよまちょすさん!",
+     "鷺原鈴音【SagiharaRinne】"
+    ]
+   },
+   {
     "tag": "#ホロドリ",
     "channels": [
      "Matsuri Channel 夏色まつり",
      "Su Ch. 水宮枢 - FLOW GLOW",
      "ここっとスクエア【ここスク】"
-    ]
-   },
-   {
-    "tag": "#女性実況",
-    "channels": [
-     "Amoko Ch. 甘乃あもこ",
-     "なみゆゲーム三昧",
-     "桃之もれん Momono Moren Ch"
-    ]
-   },
-   {
-    "tag": "#ぺぇいん青年会",
-    "channels": [
-     "HYBRID SENSE",
-     "もるてん",
-     "スナパイ"
     ]
    }
   ],
@@ -92,13 +83,18 @@
   "wide": [
    {
     "game": "ストリートファイター6",
-    "channels": 31,
-    "videos": 36
+    "channels": 29,
+    "videos": 34
    },
    {
     "game": "Minecraft",
     "channels": 29,
-    "videos": 31
+    "videos": 30
+   },
+   {
+    "game": "モンスターハンターアウトランダーズ",
+    "channels": 25,
+    "videos": 34
    },
    {
     "game": "Apex Legends",
@@ -106,51 +102,50 @@
     "videos": 30
    },
    {
-    "game": "モンスターハンターアウトランダーズ",
-    "channels": 24,
-    "videos": 32
-   },
-   {
-    "game": "Dead by Daylight",
-    "channels": 21,
-    "videos": 28
-   },
-   {
-    "game": "Grand Theft Auto V",
-    "channels": 23,
-    "videos": 27
-   },
-   {
     "game": "スプラトゥーン3",
-    "channels": 24,
+    "channels": 23,
     "videos": 24
    },
    {
+    "game": "Grand Theft Auto V",
+    "channels": 19,
+    "videos": 21
+   },
+   {
+    "game": "VALORANT",
+    "channels": 18,
+    "videos": 20
+   },
+   {
     "game": "ファイナルファンタジー レゾナンス",
-    "channels": 22,
-    "videos": 23
+    "channels": 18,
+    "videos": 19
    }
   ]
  },
- "drift": [],
- "tags": [],
- "misses": [
+ "drift": [
   {
-   "word": "SYNDUALITY",
-   "channels": 1,
-   "n": 1,
-   "examples": [
-    {
-     "t": "【SYN】アプデきたああ！オーバーホール見に行く！【SYNDUALITY】 #公式アンバサダー",
-     "c": "ゆっきー",
-     "u": "https://www.youtube.com/watch?v=IWtQEFG_tKw"
-    }
-   ],
-   "kind": "near",
-   "suggest": [
-    "Synduality: Echo of Ada"
+   "game": "Arknights: Endfield",
+   "written": "アークナイツ:エンドフィールド the k4sen",
+   "channels": 4,
+   "of": 12,
+   "example": [
+    "ドーラ",
+    "伊波ライ / Inami Rai【にじさんじ】",
+    "天月のやりたい放題ちゃんねる。"
    ]
-  },
+  }
+ ],
+ "tags": [
+  {
+   "tag": "weedwarsハロウィンケイドロ",
+   "game": "Minecraft",
+   "evidence": 3,
+   "added": 1,
+   "channels": 4
+  }
+ ],
+ "misses": [
   {
    "word": "THE DEAD WE KNEW",
    "channels": 1,
@@ -299,6 +294,30 @@
      "t": "『ファントムブレードゼロ』どんなゲームか遊んでみた！【PS5･PC新作ゲーム】",
      "c": "けいじチャンネル",
      "u": "https://www.youtube.com/watch?v=ayoDoXlQs6g"
+    }
+   ],
+   "kind": "wide",
+   "suggest": []
+  },
+  {
+   "word": "#ありうむハロウィン歌枠リレー",
+   "channels": 3,
+   "n": 8,
+   "examples": [
+    {
+     "t": "【 #ありうむハロウィン歌枠リレー 】とりっく or とりーと？or しんぎんぐ！！🎃🕸️【海汐もるふ/Varium】",
+     "c": "Molf Ch. 海汐もるふ",
+     "u": "https://www.youtube.com/watch?v=qzECnNoWFiI"
+    },
+    {
+     "t": "【 #ありうむハロウィン歌枠リレー 】とりっく or とりーと？or しんぎんぐ！！🎃🕸️【海汐もるふ/Varium】",
+     "c": "Molf Ch. 海汐もるふ",
+     "u": "https://www.youtube.com/watch?v=qzECnNoWFiI"
+    },
+    {
+     "t": "【 #ありうむハロウィン歌枠リレー 】開会式会場はこちらです🎃🕸️【海汐もるふ/Varium】",
+     "c": "Molf Ch. 海汐もるふ",
+     "u": "https://www.youtube.com/watch?v=qDpKwE6BqLY"
     }
    ],
    "kind": "wide",
@@ -525,22 +544,22 @@
  "hot_facts": [
   {
    "game": "モンスターハンターアウトランダーズ",
-   "growth": 26.67,
-   "videos": 32,
+   "growth": 28.33,
+   "videos": 34,
    "base": 1.2,
-   "channels": 24,
-   "views": 901829,
+   "channels": 25,
+   "views": 1235306,
    "who": [
     "茶々茶(chachacha)",
+    "よしなま",
     "びりQ",
-    "ガンサーの抹茶",
-    "桜ころみん coromin Ch",
-    "ガンサーの抹茶"
+    "あまみちゃんねる",
+    "桜ころみん coromin Ch"
    ],
    "titles": [
     "モンハン最新作が本日リリース！エンディング＆ラスボスあるかな？攻略するよ！課金要素もチェック【モンハン アウトランダーズ MHO】",
-    "【モンハンアウトランダーズ】\"本日の最強は？\"新作覇権スマホゲー「モンスターハンターアウトランダーズ」リセマラ攻略配信【Monster Hunter Outlanders】",
-    "【新作モンハン】アウトランダーズ狩猟解禁！！！コントローラーでガッツリ楽しむぞ！！！【MHO/モンハンアウトランダーズ】"
+    "【200連ガチャ】製品版リリース！専用重ね着すげぇｗｗｗ【モンハンアウトランダーズ】",
+    "【モンハンアウトランダーズ】\"本日の最強は？\"新作覇権スマホゲー「モンスターハンターアウトランダーズ」リセマラ攻略配信【Monster Hunter Outlanders】"
    ],
    "genres": [],
    "year": null,
@@ -551,21 +570,21 @@
   },
   {
    "game": "Phantom Blade Zero",
-   "growth": 8.0,
-   "videos": 8,
-   "base": 1.0,
-   "channels": 8,
-   "views": 126672,
+   "growth": 12.5,
+   "videos": 10,
+   "base": 0.7,
+   "channels": 9,
+   "views": 158564,
    "who": [
     "GAMEゆうなch",
     "GAMEゆうなch",
     "ぴろちゃん -ゲーム攻略・情報ch-",
-    "夢咲 刻夜-Tokiya Yumesaki",
-    "ゆーだい【HIHITI-GAMERS】"
+    "ゆいめろ🎀🐶 / yuimelo",
+    "夢咲 刻夜-Tokiya Yumesaki"
    ],
    "titles": [
-    "『Phantom Blade Zero』本日発売!!ファントム ブレイド ゼロ 新作死にゲー ！？300死で水着!? 【PS5pro】",
-    "『Phantom Blade Zero』本日発売!!ファントム ブレイド ゼロ 新作死にゲー ！？300死で水着!? 【PS5pro】",
+    "#2『Phantom Blade Zero』本日発売!!ファントム ブレイド ゼロ 新作死にゲー ！？300死で水着!? 【PS5pro】",
+    "#1『Phantom Blade Zero』本日発売!!ファントム ブレイド ゼロ 新作死にゲー ！？300死で水着!? 【PS5pro】",
     "【Phantom Blade Zero】新作死にゲーRPGはおもしろいのか？実際に遊んで確かめてみるぞ！PC/PS5/XBX"
    ],
    "genres": [
@@ -583,69 +602,76 @@
    "first_here": false
   },
   {
-   "game": "Feign",
-   "growth": 5.45,
-   "videos": 6,
-   "base": 1.1,
-   "channels": 4,
-   "views": 7432,
+   "game": "Anomalith",
+   "growth": 6.25,
+   "videos": 5,
+   "base": 0.0,
+   "channels": 5,
+   "views": 50342,
    "who": [
-    "仙人のGEN",
-    "スナパイ",
-    "仙人のGEN",
-    "HYBRID SENSE",
-    "HYBRID SENSE"
+    "ほとんどホラーゲーム実況ですが何か?",
+    "ほーだん×ゲーマーズ / ほぼ毎日更新ゲーム総合情報ch",
+    "amiami Hobby Channel",
+    "野々熊びこり / nonokuma bicori",
+    "まーぼの大剣一閃-乙式-"
    ],
    "titles": [
-    "お見事ファインプレー【feign】",
-    "てのひら高速回転ドリル【FEIGN】",
-    "【feign】水曜日のぺえいん青年会"
+    "#1【アノマリス／ANOMALITH】昭和の街に潜む異形の怪物たち…！日常が狂い始めた世界で生き残るサバイバルホラー【ホラーゲーム】",
+    "【初見さん歓迎！】アニメ調美少女×異常現象×サバイバルTPSで期待の新作ゲームが遂に発売！『アノマリス（ANOMALITH）』遊んでみる配信！これはマジで期待【Part.1】【新作検証】※ネタバレあり",
+    "《アノマリス／ANOMALITH》【発売当日プレイ/ネタバレあり】長月あおいのStreaming Club（第101回配信）"
    ],
-   "genres": [],
-   "year": null,
-   "platforms": [],
-   "days_seen": 20,
+   "genres": [
+    "Shooter",
+    "Role-playing (RPG)",
+    "Adventure"
+   ],
+   "year": 2026,
+   "platforms": [
+    "pc",
+    "console"
+   ],
+   "days_seen": 1,
    "last_seen": "2026-10-29",
    "first_here": false
   },
   {
-   "game": "インボキア-呪いのダイスゲーム-",
-   "growth": 5.0,
-   "videos": 5,
-   "base": 1.0,
-   "channels": 5,
-   "views": 240626,
+   "game": "勝利の女神：NIKKE",
+   "growth": 5.28,
+   "videos": 19,
+   "base": 3.6,
+   "channels": 16,
+   "views": 392961,
    "who": [
-    "赤髪のとものゲーム実況チャンネル!!",
-    "花畑チャイカ",
-    "夜見れな/yorumi rena【にじさんじ所属】",
-    "樋口楓【にじさんじ所属】",
-    "緋綺月ルキ / 異変探しに熱心な新人Vtuber"
+    "マフィア梶田と中村悠一の「わしゃがなTV」",
+    "あまり驚かないガッチマンはホラーゲームばかりやっている",
+    "たこすけ",
+    "たこすけ",
+    "猫咲あんじ Nekosaki anji"
    ],
    "titles": [
-    "謎解き×呪いのダイスゲーム！？の巻【赤髪のとも/甘葛すもあ/ネギまぐろ/インボキア】",
-    "花畑チャイカとちゃりーんのインボキア 呪いのゲームまさにデスゲーム",
-    "【 インボキア-呪いのダイスゲーム- 】ちゃりーんで　呪いのダイスゲーム 【 にじさんじ / 夜見れな 】"
+    "【勝利の女神：NIKKE】祝4周年！タフティングガンでニケのキャラ絨毯を作ってみた！【PR】",
+    "【NIKKE】ニケ4周年でマリアン完凸させたい",
+    "【メガニケ】”ガチ育成解説”マリアン：クイーンさすがに最強性能でしたｗｗｗｗｗｗｗｗｗ【勝利の女神：NIKKE】"
    ],
    "genres": [
-    "Adventure",
-    "Indie"
+    "Shooter",
+    "Role-playing (RPG)"
    ],
-   "year": 2026,
+   "year": 2022,
    "platforms": [
     "pc"
    ],
-   "days_seen": 6,
-   "last_seen": "2026-10-26",
+   "days_seen": 36,
+   "last_seen": "2026-10-29",
    "first_here": false
   },
   {
    "game": "えかきうた大合戦",
    "growth": 5.0,
    "videos": 4,
-   "base": 0.7,
+   "base": 0.5,
    "channels": 4,
-   "views": 489670,
+   "views": 676499,
    "who": [
     "レトルト",
     "小清水 透 / Koshimizu Toru【にじさんじ】",
@@ -665,36 +691,30 @@
    "first_here": false
   },
   {
-   "game": "Anomalith",
-   "growth": 5.0,
-   "videos": 4,
-   "base": 0.0,
+   "game": "Feign",
+   "growth": 4.17,
+   "videos": 5,
+   "base": 1.2,
    "channels": 4,
-   "views": 23324,
+   "views": 10170,
    "who": [
-    "ほとんどホラーゲーム実況ですが何か?",
-    "ほーだん×ゲーマーズ / ほぼ毎日更新ゲーム総合情報ch",
-    "野々熊びこり / nonokuma bicori",
-    "まーぼの大剣一閃-乙式-"
+    "スナパイ",
+    "仙人のGEN",
+    "スナパイ",
+    "HYBRID SENSE",
+    "HYBRID SENSE"
    ],
    "titles": [
-    "#1【アノマリス／ANOMALITH】昭和の街に潜む異形の怪物たち…！日常が狂い始めた世界で生き残るサバイバルホラー【ホラーゲーム】",
-    "【初見さん歓迎！】アニメ調美少女×異常現象×サバイバルTPSで期待の新作ゲームが遂に発売！『アノマリス（ANOMALITH）』遊んでみる配信！これはマジで期待【Part.1】【新作検証】※ネタバレあり",
-    "【アノマリス／ANOMALITH #1】形（いのち）ある限り生き続ける。【サバイバルTPS/ Vtuber】※ネタバレあり"
+    "みんなでFEIGNやるよ！ #ぺぇいん青年会　26.10.29",
+    "お見事ファインプレー【feign】",
+    "てのひら高速回転ドリル【FEIGN】"
    ],
-   "genres": [
-    "Shooter",
-    "Role-playing (RPG)",
-    "Adventure"
-   ],
-   "year": 2026,
-   "platforms": [
-    "pc",
-    "console"
-   ],
-   "days_seen": 0,
-   "last_seen": null,
-   "first_here": true
+   "genres": [],
+   "year": null,
+   "platforms": [],
+   "days_seen": 20,
+   "last_seen": "2026-10-29",
+   "first_here": false
   }
  ],
  "notes_written": true,
