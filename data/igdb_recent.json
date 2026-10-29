@@ -55703,7 +55703,9 @@
  },
  {
   "name": "Starbloom Ranch",
-  "alias": [],
+  "alias": [
+   "Starbloom Ranch.exe"
+  ],
   "pop": 0,
   "y": 2026,
   "p": [
@@ -55711,7 +55713,10 @@
   ],
   "g": [
    "Role-playing (RPG)",
-   "Simulator"
+   "Simulator",
+   "Strategy",
+   "Adventure",
+   "Indie"
   ]
  },
  {
@@ -57608,10 +57613,14 @@
   ]
  },
  {
-  "name": "Table Game World CCFOLIA",
-  "alias": [],
+  "name": "Table Game World CCFolia",
+  "alias": [
+   "Table Game World CCFOLIA",
+   "テーブルゲームワールド CCFOLIA"
+  ],
   "pop": 0,
   "y": 2026,
+  "jp": "テーブルゲームワールド CCFOLIA",
   "p": [
    "console"
   ],

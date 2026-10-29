@@ -1,7 +1,7 @@
 {
  "mode": "admin",
  "date": "2026-10-29",
- "generated": "2026-10-29 09:55",
+ "generated": "2026-10-29 10:34",
  "unknown": [
   {
    "guess": "ウイコレ",
@@ -193,18 +193,6 @@
      "t": "【引退】Vunnyにならない、そんな俺の未来があったのかもしれない",
      "c": "Vunny Ch",
      "u": "https://www.youtube.com/watch?v=9aiEKpD-w-U"
-    }
-   ]
-  },
-  {
-   "guess": "将棋",
-   "channels": 1,
-   "n": 1,
-   "examples": [
-    {
-     "t": "【将棋】「きのあ将棋」が今熱いらしい #PR",
-     "c": "たんぽぽちゃん / 将棋アイドル",
-     "u": "https://www.youtube.com/watch?v=XxL5dgp8Nlw"
     }
    ]
   },
@@ -1157,18 +1145,6 @@
    ]
   },
   {
-   "guess": "これって浮気?判定シート",
-   "channels": 1,
-   "n": 1,
-   "examples": [
-    {
-     "t": "【これって浮気？判定シート】SURGE警察女子二人による本気（ガチ）浮気判定シート対談【【 温々ねむみ / 針山ロン】",
-     "c": "温々ねむみ / NukunukuNemumi",
-     "u": "https://www.youtube.com/watch?v=dCSKLdv1zoI"
-    }
-   ]
-  },
-  {
    "guess": "お絵描き",
    "channels": 1,
    "n": 1,
@@ -1469,18 +1445,6 @@
    ]
   },
   {
-   "guess": "アナザーエデン配信",
-   "channels": 1,
-   "n": 1,
-   "examples": [
-    {
-     "t": "【アナザーエデン配信】幻霊の剣と神隠しの館/外史「望郷の魂と逆星の旅人」　※ネタバレ注意",
-     "c": "惡羽けいch.",
-     "u": "https://www.youtube.com/watch?v=ur77DJFMLVM"
-    }
-   ]
-  },
-  {
    "guess": "作業配信20261028",
    "channels": 1,
    "n": 1,
@@ -1772,15 +1736,6 @@
     ]
    },
    {
-    "tag": "#minecraft",
-    "channels": [
-     "ここっとスクエア【ここスク】",
-     "やっぱりじぇいさん【マイクラ】",
-     "ズズちゃんねる!!!",
-     "監獄 ミハル - Miharu Kangoku -"
-    ]
-   },
-   {
     "tag": "#ゲーム実況",
     "channels": [
      "のんびり猫のゆっくりゲーム実況",
@@ -1797,6 +1752,14 @@
     ]
    },
    {
+    "tag": "#minecraft",
+    "channels": [
+     "ここっとスクエア【ここスク】",
+     "やっぱりじぇいさん【マイクラ】",
+     "ズズちゃんねる!!!"
+    ]
+   },
+   {
     "tag": "#ストグラseason2",
     "channels": [
      "HYBRID SENSE",
@@ -1809,7 +1772,7 @@
   "wide": [
    {
     "game": "Minecraft",
-    "channels": 36,
+    "channels": 35,
     "videos": 38
    },
    {
@@ -1845,7 +1808,7 @@
    {
     "game": "フォートナイト",
     "channels": 17,
-    "videos": 19
+    "videos": 18
    }
   ]
  },
@@ -2068,6 +2031,11 @@
  "meta_desc": "判定できなかった配信と、コラムの種。公開ページではありません。",
  "recent_columns": [
   {
+   "date": "2026-10-29",
+   "game": "モンスターハンターアウトランダーズ",
+   "headline": "通勤電車でモンスターを狩ってる人もいるかも？"
+  },
+  {
    "date": "2026-10-28",
    "game": "ポケモンユナイト",
    "headline": "サービス終了のお知らせが、最後の大型アップデートになった"
@@ -2131,11 +2099,6 @@
    "date": "2026-10-16",
    "game": "Castlevania: Belmont's Curse",
    "headline": "「悪魔城ドラキュラ」シリーズ40周年の完全新作"
-  },
-  {
-   "date": "2026-10-15",
-   "game": "80億分の1",
-   "headline": "141か国の実際の統計から生まれる「人生シミュレーション」 ブラウザで無料"
   }
  ]
 }
