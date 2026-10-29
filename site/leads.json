@@ -1,37 +1,42 @@
 {
- "date": "2026-10-29",
- "generated": "2026-10-29 10:34",
+ "date": "2026-10-30",
+ "generated": "2026-10-30 00:28",
  "leads": {
   "events": [
    {
     "tag": "#ストグラ",
     "channels": [
-     "Middleeetv",
      "Tenten Ch. / 鳳玲天々",
+     "marunnn【まるーんチャンネル】",
      "たけぉ",
-     "ましゃかりさん",
      "みつき",
      "クラウン【探検家の記録】",
      "ノビーの遊び部屋",
-     "柚原いづみ / Izumi Channel 【ななしいんく】"
+     "切嘛 / Kiruma",
+     "柚原いづみ / Izumi Channel 【ななしいんく】",
+     "闇乃あびす / Abyss"
     ]
    },
    {
     "tag": "#ストグラSeason2",
     "channels": [
+     "neon",
      "たけぉ",
      "はたさこ / hatasako_flag",
      "クラウン【探検家の記録】",
      "天羽よつは",
      "影。/かげまる",
      "暁月ホタル AKATSUKI HOTARU",
-     "柚原いづみ / Izumi Channel 【ななしいんく】"
+     "柚原いづみ / Izumi Channel 【ななしいんく】",
+     "稲荷いろはInari Iroha"
     ]
    },
    {
     "tag": "#ホロ鯖ARK",
     "channels": [
      "Choco Ch. 癒月ちょこ",
+     "Koyori ch. 博衣こより - holoX -",
+     "Nene Ch.桃鈴ねね",
      "Pekora Ch. 兎田ぺこら",
      "Towa Ch. 常闇トワ",
      "Vivi Ch. 綺々羅々ヴィヴィ - FLOW GLOW",
@@ -40,79 +45,90 @@
     ]
    },
    {
-    "tag": "#ゲーム実況",
-    "channels": [
-     "のんびり猫のゆっくりゲーム実況",
-     "ジョアだよ",
-     "豚咲あおい_TomisakiAoi"
-    ]
-   },
-   {
     "tag": "#ぶいきゃす",
     "channels": [
+     "えういん ∕ euin Ch.",
      "孵卵リリス / Furan Lilith",
+     "樹つつき -Itsuki Tsutsuki Ch-",
      "汐ゴマ【鳴潮】",
      "浅葱なぎ"
     ]
    },
    {
-    "tag": "#minecraft",
+    "tag": "#NIKKE",
     "channels": [
-     "ここっとスクエア【ここスク】",
-     "やっぱりじぇいさん【マイクラ】",
-     "ズズちゃんねる!!!"
+     "エミリーのゲームちゃんねる Emily Game Ch.",
+     "マバタキ",
+     "樹つつき -Itsuki Tsutsuki Ch-",
+     "猫咲あんじ Nekosaki anji"
     ]
    },
    {
-    "tag": "#ストグラseason2",
+    "tag": "#ホロドリ",
+    "channels": [
+     "Matsuri Channel 夏色まつり",
+     "Su Ch. 水宮枢 - FLOW GLOW",
+     "ここっとスクエア【ここスク】"
+    ]
+   },
+   {
+    "tag": "#女性実況",
+    "channels": [
+     "Amoko Ch. 甘乃あもこ",
+     "なみゆゲーム三昧",
+     "桃之もれん Momono Moren Ch"
+    ]
+   },
+   {
+    "tag": "#ぺぇいん青年会",
     "channels": [
      "HYBRID SENSE",
-     "Mio Ch. 猫月みお【あみゅどる】",
-     "碧輝りお /Aoki Rio"
+     "もるてん",
+     "スナパイ"
     ]
    }
   ],
   "newcomers": [],
   "wide": [
    {
+    "game": "ストリートファイター6",
+    "channels": 31,
+    "videos": 36
+   },
+   {
     "game": "Minecraft",
-    "channels": 35,
-    "videos": 38
+    "channels": 29,
+    "videos": 31
    },
    {
     "game": "Apex Legends",
-    "channels": 29,
+    "channels": 25,
+    "videos": 30
+   },
+   {
+    "game": "モンスターハンターアウトランダーズ",
+    "channels": 24,
     "videos": 32
    },
    {
-    "game": "ストリートファイター6",
-    "channels": 26,
-    "videos": 29
+    "game": "Dead by Daylight",
+    "channels": 21,
+    "videos": 28
    },
    {
     "game": "Grand Theft Auto V",
     "channels": 23,
-    "videos": 25
+    "videos": 27
    },
    {
     "game": "スプラトゥーン3",
-    "channels": 20,
-    "videos": 20
+    "channels": 24,
+    "videos": 24
    },
    {
     "game": "ファイナルファンタジー レゾナンス",
-    "channels": 19,
-    "videos": 20
-   },
-   {
-    "game": "League of Legends",
-    "channels": 17,
-    "videos": 17
-   },
-   {
-    "game": "フォートナイト",
-    "channels": 17,
-    "videos": 18
+    "channels": 22,
+    "videos": 23
    }
   ]
  },
@@ -233,9 +249,65 @@
    ]
   },
   {
+   "word": "Pedals",
+   "channels": 1,
+   "n": 1,
+   "examples": [
+    {
+     "t": "【Logicool G 最上位機】プレステこれで決定？あえて欠点を徹底的に探してみた結果ｗｗｗ [PRO Racing Wheel / Pedals]【プレステ用ハンコンレビュー】",
+     "c": "[GFnR] ギョフノリ eMotorsports Club - WRC世界5位が選ぶレースゲーム",
+     "u": "https://www.youtube.com/watch?v=ZTgTpfoVPys"
+    }
+   ],
+   "kind": "near",
+   "suggest": [
+    "Pedals in Panic"
+   ]
+  },
+  {
+   "word": "BIRTHDAY BOY",
+   "channels": 1,
+   "n": 1,
+   "examples": [
+    {
+     "t": "【ホラーゲーム】子供の「誕生日」に現れる謎の化け物がヤバすぎた【ゆっくり実況】【BIRTHDAY BOY】",
+     "c": "スケアド",
+     "u": "https://www.youtube.com/watch?v=HuRusE18_GE"
+    }
+   ],
+   "kind": "near",
+   "suggest": [
+    "Birthday Boy and Benny"
+   ]
+  },
+  {
+   "word": "ファントムブレードゼロ",
+   "channels": 4,
+   "n": 6,
+   "examples": [
+    {
+     "t": "【発売直前】るろ剣アクションで話題の『ファントムブレードゼロ』、想像以上の仕上がりになってるかも？購入前に知りたいこと総まとめ。",
+     "c": "けんたたZ【熱血ゲーム界隈代表】",
+     "u": "https://www.youtube.com/watch?v=yHZVSBfKQDs"
+    },
+    {
+     "t": "買う前に知ってほしいるろ剣アクションゲー『ファントムブレードゼロ』の最終結論まとめ。ゲーム内容・海外評価・気になる点まとめ",
+     "c": "けんたたZ【熱血ゲーム界隈代表】",
+     "u": "https://www.youtube.com/watch?v=y_Gx5WreRyI"
+    },
+    {
+     "t": "『ファントムブレードゼロ』どんなゲームか遊んでみた！【PS5･PC新作ゲーム】",
+     "c": "けいじチャンネル",
+     "u": "https://www.youtube.com/watch?v=ayoDoXlQs6g"
+    }
+   ],
+   "kind": "wide",
+   "suggest": []
+  },
+  {
    "word": "妖怪ウォッチ",
    "channels": 3,
-   "n": 6,
+   "n": 7,
    "examples": [
     {
      "t": "敵が強すぎるので、Sランク妖怪をついに解禁します #8【妖怪ウォッチ】",
@@ -259,7 +331,7 @@
   {
    "word": "ロマンシング サガ2 リベンジオブザセブン",
    "channels": 3,
-   "n": 4,
+   "n": 6,
    "examples": [
     {
      "t": "【ロマサガ2】難易度ロマンシング！ロックブーケ再戦！!『ロマンシング サガ2 リベンジオブザセブン』Switch版 実況 Part19⚠️ネタバレ注意【 VTuber/まるたにあやの 】",
@@ -305,6 +377,54 @@
    "suggest": []
   },
   {
+   "word": "アウトランダーズ",
+   "channels": 3,
+   "n": 4,
+   "examples": [
+    {
+     "t": "【アウトランダーズ】実際どうなの？ゲーム内容・評価・感想を本音で語る【MHO】【体験版】【モンハン】",
+     "c": "トレマニ",
+     "u": "https://www.youtube.com/watch?v=PSCV3S1uUwM"
+    },
+    {
+     "t": "【アウトランダーズ】序盤の重要な進め方11選！冒険ランク上げや序盤の日課とオススメキャラ等について【モンハン】",
+     "c": "もやし - ゲーム実況",
+     "u": "https://www.youtube.com/watch?v=LwVnodgjofA"
+    },
+    {
+     "t": "【アウトランダーズ】新しいモンハン、まだまだ遊ぶぞ！【初日夜の部】",
+     "c": "ゲームするメイド男子 越山嘉祈",
+     "u": "https://www.youtube.com/watch?v=8fppKHFE9H4"
+    }
+   ],
+   "kind": "wide",
+   "suggest": []
+  },
+  {
+   "word": "モンハン",
+   "channels": 3,
+   "n": 4,
+   "examples": [
+    {
+     "t": "【アウトランダーズ】実際どうなの？ゲーム内容・評価・感想を本音で語る【MHO】【体験版】【モンハン】",
+     "c": "トレマニ",
+     "u": "https://www.youtube.com/watch?v=PSCV3S1uUwM"
+    },
+    {
+     "t": "”ミラボレアス”が伝説の黒龍なのに全モンスター相手だと勝てるか怪しすぎた真実に気付いてしまったみんなの反応集【モンハン】",
+     "c": "燻銀チャイルド",
+     "u": "https://www.youtube.com/watch?v=0v-t-fapIhE"
+    },
+    {
+     "t": "【アウトランダーズ】序盤の重要な進め方11選！冒険ランク上げや序盤の日課とオススメキャラ等について【モンハン】",
+     "c": "もやし - ゲーム実況",
+     "u": "https://www.youtube.com/watch?v=LwVnodgjofA"
+    }
+   ],
+   "kind": "wide",
+   "suggest": []
+  },
+  {
    "word": "菊花賞",
    "channels": 3,
    "n": 3,
@@ -327,85 +447,126 @@
    ],
    "kind": "wide",
    "suggest": []
+  },
+  {
+   "word": "キングマイン：ジオフロント",
+   "channels": 3,
+   "n": 3,
+   "examples": [
+    {
+     "t": "【無料デモ】ドワーフが掘りまくる！採掘インクリメンタル『キングマイン：ジオフロント』【Steam】",
+     "c": "しろこりGames / インディーゲーム専門Vtuber",
+     "u": "https://www.youtube.com/watch?v=5o8p0aqU5as"
+    },
+    {
+     "t": "【キングマイン：ジオフロント】無限に放置とスキルツリー強化を繰り返す採掘ゲームが面白すぎた！！",
+     "c": "つばさま(ゲーム実況)",
+     "u": "https://www.youtube.com/watch?v=ZDS5DGsc-Jk"
+    },
+    {
+     "t": "【キングマイン：ジオフロント】採掘×経営×街作り×インクリメンタルってなんだ...！？王になってドワーフ鉱夫に掘らせて地下王国を建立。新作放置系クリッカー攻略面白いwデモ版！無料【steam】",
+     "c": " なぎせいな / 凪世薙",
+     "u": "https://www.youtube.com/watch?v=Ipvzwl-ZcYw"
+    }
+   ],
+   "kind": "wide",
+   "suggest": []
+  },
+  {
+   "word": "どうぶつの町の食堂物語",
+   "channels": 3,
+   "n": 3,
+   "examples": [
+    {
+     "t": "【どうぶつの町の食堂物語】本日発売の料理×釣り×スローライフがチルすぎる...！？動物が暮らす街でレストラン経営。新作シミュレーション攻略が面白いw今だけ40%セール【steam】",
+     "c": " なぎせいな / 凪世薙",
+     "u": "https://www.youtube.com/watch?v=CYlG4F5bYjc"
+    },
+    {
+     "t": "どうぶつの町で食堂を営む【どうぶつの町の食堂物語】",
+     "c": "天海あくと-Amagai akuto- ch",
+     "u": "https://www.youtube.com/watch?v=kr2rKiPJ0B4"
+    },
+    {
+     "t": "動物達に癒されるワンオペレストランを始めた店長、食材切れで店を飛び出す【どうぶつの町の食堂物語/標準】",
+     "c": "標準野郎",
+     "u": "https://www.youtube.com/watch?v=mHRDGYMHFDI"
+    }
+   ],
+   "kind": "wide",
+   "suggest": []
+  },
+  {
+   "word": "新・都道府県ゲーム",
+   "channels": 3,
+   "n": 3,
+   "examples": [
+    {
+     "t": "【新・都道府県ゲーム】日本列島、完成させる―――！【ホロライブ / AZKi】",
+     "c": "AZKi Channel",
+     "u": "https://www.youtube.com/watch?v=M4utnSkzW-U"
+    },
+    {
+     "t": "【新・都道府県ゲーム】絶望的な状況からなぜか日本列島を創造してしまうあずきちw【ホロライブ/AZKi/あずきち】",
+     "c": "開拓者-ホロメガネ 【Hololive_clip】",
+     "u": "https://www.youtube.com/watch?v=mKTMdRTwduQ"
+    },
+    {
+     "t": "『新・都道府県ゲーム』というゲームで遊んでみる！｜新・都道府県ゲーム",
+     "c": "P-Pチャンネル",
+     "u": "https://www.youtube.com/watch?v=GrgGIVtTXj4"
+    }
+   ],
+   "kind": "wide",
+   "suggest": []
   }
  ],
  "miss_days": 7,
  "hot_facts": [
   {
    "game": "モンスターハンターアウトランダーズ",
-   "growth": 16.25,
-   "videos": 13,
-   "base": 0.3,
-   "channels": 11,
-   "views": 64256,
+   "growth": 26.67,
+   "videos": 32,
+   "base": 1.2,
+   "channels": 24,
+   "views": 901829,
    "who": [
-    "ガンサーの抹茶",
-    "ララ9hJQr3//3o",
-    "まーこ/Mahco.",
     "茶々茶(chachacha)",
+    "びりQ",
+    "ガンサーの抹茶",
+    "桜ころみん coromin Ch",
     "ガンサーの抹茶"
    ],
    "titles": [
-    "【MHO】『サービス開始直前番組』をみんなと見させていただく枠【MHO/モンハンアウトランダーズ】",
-    "新実装のチャアクの動きがやばい！アウトランダーズ正式リリース前の新情報を徹底解説【モンハンアウトランダーズ】",
-    "【MHO】SSRは3キャラ無料入手可、エンドコンテンツは鋭精チャレンジ??サービス開始前、最新＆情報まとめ【モンハンアウトランダーズ】"
+    "モンハン最新作が本日リリース！エンディング＆ラスボスあるかな？攻略するよ！課金要素もチェック【モンハン アウトランダーズ MHO】",
+    "【モンハンアウトランダーズ】\"本日の最強は？\"新作覇権スマホゲー「モンスターハンターアウトランダーズ」リセマラ攻略配信【Monster Hunter Outlanders】",
+    "【新作モンハン】アウトランダーズ狩猟解禁！！！コントローラーでガッツリ楽しむぞ！！！【MHO/モンハンアウトランダーズ】"
    ],
    "genres": [],
    "year": null,
    "platforms": [],
-   "days_seen": 3,
-   "last_seen": "2026-10-28",
-   "first_here": false
-  },
-  {
-   "game": "Moon Sweepers",
-   "growth": 5.0,
-   "videos": 4,
-   "base": 0.5,
-   "channels": 4,
-   "views": 78520,
-   "who": [
-    "しんじさん",
-    "おぼ。",
-    "蛇宵ティア / Tier Channel【ななしいんく】",
-    "たろちんDB"
-   ],
-   "titles": [
-    "月の面積である38,000,000 km²を掃除させられるゲームがやばいｗｗ【Moon Sweepers】",
-    "歯ブラシから始まる果てしない月面掃除！？おぼは綺麗にすることができるのか【Moon Sweepers】",
-    "【MoonSweepers】歯ブラシで月って磨けるんだ【 蛇宵ティア / ななしいんく 】"
-   ],
-   "genres": [
-    "Simulator",
-    "Strategy",
-    "Adventure",
-    "Indie"
-   ],
-   "year": 2026,
-   "platforms": [
-    "pc"
-   ],
-   "days_seen": 2,
-   "last_seen": "2026-10-28",
+   "days_seen": 4,
+   "last_seen": "2026-10-29",
    "first_here": false
   },
   {
    "game": "Phantom Blade Zero",
-   "growth": 5.0,
-   "videos": 4,
-   "base": 0.8,
-   "channels": 4,
-   "views": 17573,
+   "growth": 8.0,
+   "videos": 8,
+   "base": 1.0,
+   "channels": 8,
+   "views": 126672,
    "who": [
+    "GAMEゆうなch",
+    "GAMEゆうなch",
     "ぴろちゃん -ゲーム攻略・情報ch-",
-    "ゆーだい【HIHITI-GAMERS】",
-    "ゆいめろ🎀🐶 / yuimelo",
-    "マコジョコ"
+    "夢咲 刻夜-Tokiya Yumesaki",
+    "ゆーだい【HIHITI-GAMERS】"
    ],
    "titles": [
-    "【Phantom Blade Zero】先行レビューまとめ！圧倒的な完成度でやばい！？敵AIの進化や66日モードが凄すぎる【発売前情報まとめ】",
-    "【ファントムブレードゼロ】㊗発売🎉今年最高のアクションゲームになるか！？序盤攻略,強武器,強スキル,強ビルドなどあれば探していく！『ダーク武侠アクションRPG』【Phantom Blade Zero】",
-    "#1【 Phantom Blade Zero 】ずっと待ってたゲームがついに発売されたぞ～！🔥【 ファントムブレードゼロ / Vtuber / ゆいめろ】"
+    "『Phantom Blade Zero』本日発売!!ファントム ブレイド ゼロ 新作死にゲー ！？300死で水着!? 【PS5pro】",
+    "『Phantom Blade Zero』本日発売!!ファントム ブレイド ゼロ 新作死にゲー ！？300死で水着!? 【PS5pro】",
+    "【Phantom Blade Zero】新作死にゲーRPGはおもしろいのか？実際に遊んで確かめてみるぞ！PC/PS5/XBX"
    ],
    "genres": [
     "Role-playing (RPG)",
@@ -417,90 +578,123 @@
     "pc",
     "console"
    ],
-   "days_seen": 2,
-   "last_seen": "2026-10-28",
+   "days_seen": 3,
+   "last_seen": "2026-10-29",
    "first_here": false
   },
   {
    "game": "Feign",
-   "growth": 5.0,
-   "videos": 4,
-   "base": 0.8,
+   "growth": 5.45,
+   "videos": 6,
+   "base": 1.1,
    "channels": 4,
-   "views": 10162,
+   "views": 7432,
    "who": [
-    "スナパイ",
-    "スナパイ",
-    "怪傑がみちゃんねる",
     "仙人のGEN",
+    "スナパイ",
+    "仙人のGEN",
+    "HYBRID SENSE",
     "HYBRID SENSE"
    ],
    "titles": [
-    "「わな」【FEIGN】",
-    "みんなでFEIGNやるよ！ #ぺぇいん青年会　26.10.28",
-    "【Feign】ぺぇいん青年会 2026/10/28"
+    "お見事ファインプレー【feign】",
+    "てのひら高速回転ドリル【FEIGN】",
+    "【feign】水曜日のぺえいん青年会"
    ],
    "genres": [],
    "year": null,
    "platforms": [],
-   "days_seen": 19,
-   "last_seen": "2026-10-28",
+   "days_seen": 20,
+   "last_seen": "2026-10-29",
    "first_here": false
   },
   {
-   "game": "Don't Drop The Cake",
-   "growth": 3.75,
-   "videos": 3,
-   "base": 0.5,
-   "channels": 3,
-   "views": 43858,
+   "game": "インボキア-呪いのダイスゲーム-",
+   "growth": 5.0,
+   "videos": 5,
+   "base": 1.0,
+   "channels": 5,
+   "views": 240626,
    "who": [
-    "ゆっくりクウカイと言う名の生命体",
-    "稲荷いろはInari Iroha",
-    "【男装アイドルVtuber】橘花るい / Tachibana Rui"
+    "赤髪のとものゲーム実況チャンネル!!",
+    "花畑チャイカ",
+    "夜見れな/yorumi rena【にじさんじ所属】",
+    "樋口楓【にじさんじ所属】",
+    "緋綺月ルキ / 異変探しに熱心な新人Vtuber"
    ],
    "titles": [
-    "【＃ホラゲー】ケーキを落としたら燃やされます……青鬼が！？【Don't Drop The Cake】※雑音注意",
-    "【Don't Drop The Cake】何が起こっても絶対にケーキを落としてはならない…【#稲荷いろは/のりプロ所属】",
-    "【🟡大絶叫ホラゲー‼️💥︙感動系ストーリー👻】低音中性ボイス🎂ケーキ運び屋さん🎂『Don't Drop The Cake』【#橘花るい/男装アイドルVtuber】#ホラゲー実況 #ホラーゲーム"
+    "謎解き×呪いのダイスゲーム！？の巻【赤髪のとも/甘葛すもあ/ネギまぐろ/インボキア】",
+    "花畑チャイカとちゃりーんのインボキア 呪いのゲームまさにデスゲーム",
+    "【 インボキア-呪いのダイスゲーム- 】ちゃりーんで　呪いのダイスゲーム 【 にじさんじ / 夜見れな 】"
+   ],
+   "genres": [
+    "Adventure",
+    "Indie"
+   ],
+   "year": 2026,
+   "platforms": [
+    "pc"
+   ],
+   "days_seen": 6,
+   "last_seen": "2026-10-26",
+   "first_here": false
+  },
+  {
+   "game": "えかきうた大合戦",
+   "growth": 5.0,
+   "videos": 4,
+   "base": 0.7,
+   "channels": 4,
+   "views": 489670,
+   "who": [
+    "レトルト",
+    "小清水 透 / Koshimizu Toru【にじさんじ】",
+    "鏑木ろこ / Kaburaki Roco【にじさんじ】",
+    "ソフィア・ヴァレンタイン / Sophia Valentine【にじさんじ】"
+   ],
+   "titles": [
+    "【4人実況】絵描き歌を同時に描いて化け物を生むゲーム『えかきうた大合戦』",
+    "【 えかきうた大合戦 】ソフィとろこてやと絵描き歌…🎨？！【小清水 透 / にじさんじ】",
+    "【 えかきうた大合戦 】絵描き歌で対決？！負けるわけないんだよな・・・ 【 小清水透￤ソフィア・ヴァレンタイン￤鏑木ろこ￤にじさんじ 】"
    ],
    "genres": [],
    "year": null,
    "platforms": [],
-   "days_seen": 29,
-   "last_seen": "2026-10-13",
+   "days_seen": 8,
+   "last_seen": "2026-10-29",
    "first_here": false
   },
   {
-   "game": "Rust",
-   "growth": 3.33,
-   "videos": 3,
-   "base": 0.9,
-   "channels": 3,
-   "views": 10864,
+   "game": "Anomalith",
+   "growth": 5.0,
+   "videos": 4,
+   "base": 0.0,
+   "channels": 4,
+   "views": 23324,
    "who": [
-    "めーや",
-    "プテラたかはし",
-    "即死ちゃん "
+    "ほとんどホラーゲーム実況ですが何か?",
+    "ほーだん×ゲーマーズ / ほぼ毎日更新ゲーム総合情報ch",
+    "野々熊びこり / nonokuma bicori",
+    "まーぼの大剣一閃-乙式-"
    ],
    "titles": [
-    "【RUST】ベッドウォォォォォォズ！！！",
-    "【RUST BEDWARS】オレビバ主催！配信者で戦うぜ！",
-    "【RUST season7-6】海人生活/気狂いロケット100個作る"
+    "#1【アノマリス／ANOMALITH】昭和の街に潜む異形の怪物たち…！日常が狂い始めた世界で生き残るサバイバルホラー【ホラーゲーム】",
+    "【初見さん歓迎！】アニメ調美少女×異常現象×サバイバルTPSで期待の新作ゲームが遂に発売！『アノマリス（ANOMALITH）』遊んでみる配信！これはマジで期待【Part.1】【新作検証】※ネタバレあり",
+    "【アノマリス／ANOMALITH #1】形（いのち）ある限り生き続ける。【サバイバルTPS/ Vtuber】※ネタバレあり"
    ],
    "genres": [
     "Shooter",
     "Role-playing (RPG)",
-    "Adventure",
-    "Indie"
+    "Adventure"
    ],
-   "year": 2018,
+   "year": 2026,
    "platforms": [
-    "pc"
+    "pc",
+    "console"
    ],
-   "days_seen": 36,
-   "last_seen": "2026-10-20",
-   "first_here": false
+   "days_seen": 0,
+   "last_seen": null,
+   "first_here": true
   }
  ],
  "notes_written": true,
