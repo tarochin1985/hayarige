@@ -1575,22 +1575,6 @@
   ]
  },
  {
-  "name": "Aenoic Abyss",
-  "alias": [
-   "AeonicAbyss.exe"
-  ],
-  "pop": 0,
-  "y": 2026,
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Role-playing (RPG)",
-   "Adventure",
-   "Indie"
-  ]
- },
- {
   "name": "Aeonfall",
   "alias": [],
   "pop": 0,
@@ -2182,6 +2166,7 @@
  {
   "name": "Alembix TCG",
   "alias": [
+   "AlembixTCG.exe",
    "Perodia TCG"
   ],
   "pop": 0,
@@ -7145,7 +7130,8 @@
  {
   "name": "Bloom Above: Wanderisles",
   "alias": [
-   "Bloom Above"
+   "Bloom Above",
+   "Wanderisles.exe"
   ],
   "pop": 0,
   "y": 2026,
@@ -10972,22 +10958,6 @@
   ]
  },
  {
-  "name": "Citadel",
-  "alias": [
-   "CITADEL.exe"
-  ],
-  "pop": 0,
-  "y": 2026,
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Adventure",
-   "Indie",
-   "Visual Novel"
-  ]
- },
- {
   "name": "Cities: Skylines - Expanded Edition",
   "alias": [],
   "pop": 0,
@@ -11133,6 +11103,19 @@
   ],
   "g": [
    "Puzzle",
+   "Indie"
+  ]
+ },
+ {
+  "name": "Clawstral",
+  "alias": [],
+  "pop": 0,
+  "y": 2026,
+  "p": [
+   "pc"
+  ],
+  "g": [
+   "Strategy",
    "Indie"
   ]
  },
@@ -13298,22 +13281,6 @@
   ]
  },
  {
-  "name": "Crystant",
-  "alias": [
-   "Crystant.exe"
-  ],
-  "pop": 0,
-  "y": 2026,
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Role-playing (RPG)",
-   "Strategy",
-   "Indie"
-  ]
- },
- {
   "name": "Cube Guy",
   "alias": [],
   "pop": 0,
@@ -14504,6 +14471,22 @@
   ]
  },
  {
+  "name": "Deadly Days: Roadtrip",
+  "alias": [
+   "DDSurvivors.exe"
+  ],
+  "pop": 0,
+  "y": 2026,
+  "p": [
+   "pc",
+   "console"
+  ],
+  "g": [
+   "Hack and slash/Beat 'em up",
+   "Indie"
+  ]
+ },
+ {
   "name": "Deadly Deals",
   "alias": [],
   "pop": 0,
@@ -15081,21 +15064,6 @@
   "g": [
    "Indie",
    "Visual Novel"
-  ]
- },
- {
-  "name": "Deified",
-  "alias": [
-   "Deified.exe"
-  ],
-  "pop": 0,
-  "y": 2026,
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Strategy",
-   "Tactical"
   ]
  },
  {
@@ -17744,6 +17712,21 @@
   "g": [
    "Indie",
    "Arcade"
+  ]
+ },
+ {
+  "name": "DriftyLands",
+  "alias": [],
+  "pop": 0,
+  "y": 2026,
+  "p": [
+   "pc"
+  ],
+  "g": [
+   "Simulator",
+   "Strategy",
+   "Adventure",
+   "Indie"
   ]
  },
  {
@@ -20908,7 +20891,9 @@
  },
  {
   "name": "Facrobry",
-  "alias": [],
+  "alias": [
+   "Facrobry.exe"
+  ],
   "pop": 0,
   "y": 2026,
   "p": [
@@ -22932,19 +22917,6 @@
   ]
  },
  {
-  "name": "Food for Frog",
-  "alias": [],
-  "pop": 0,
-  "y": 2026,
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Puzzle",
-   "Indie"
-  ]
- },
- {
   "name": "Fool's Trigger",
   "alias": [],
   "pop": 0,
@@ -23280,20 +23252,6 @@
   ],
   "g": [
    "Role-playing (RPG)",
-   "Indie"
-  ]
- },
- {
-  "name": "Formula 2.5",
-  "alias": [],
-  "pop": 0,
-  "y": 2026,
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Racing",
-   "Sport",
    "Indie"
   ]
  },
@@ -23889,20 +23847,6 @@
    "pc"
   ],
   "g": [
-   "Indie"
-  ]
- },
- {
-  "name": "Fruitbearer",
-  "alias": [],
-  "pop": 0,
-  "y": 2026,
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Puzzle",
-   "Strategy",
    "Indie"
   ]
  },
@@ -25061,6 +25005,20 @@
   ]
  },
  {
+  "name": "Gildoria: Organize a Dragon's Hoard",
+  "alias": [],
+  "pop": 0,
+  "y": 2026,
+  "p": [
+   "pc"
+  ],
+  "g": [
+   "Simulator",
+   "Adventure",
+   "Indie"
+  ]
+ },
+ {
   "name": "Gimbap Heaven",
   "alias": [],
   "pop": 0,
@@ -25899,7 +25857,9 @@
  },
  {
   "name": "Grave Shift",
-  "alias": [],
+  "alias": [
+   "GraveShift.exe"
+  ],
   "pop": 0,
   "y": 2026,
   "p": [
@@ -26367,6 +26327,20 @@
   ]
  },
  {
+  "name": "Grimhold",
+  "alias": [],
+  "pop": 0,
+  "y": 2026,
+  "p": [
+   "pc"
+  ],
+  "g": [
+   "Role-playing (RPG)",
+   "Strategy",
+   "Indie"
+  ]
+ },
+ {
   "name": "Grimmlins Tale",
   "alias": [],
   "pop": 0,
@@ -26699,22 +26673,6 @@
   ],
   "g": [
    "Strategy",
-   "Indie"
-  ]
- },
- {
-  "name": "Guys with Magnets",
-  "alias": [
-   "Golden Magnet",
-   "Guys with Magnets.exe"
-  ],
-  "pop": 0,
-  "y": 2026,
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Adventure",
    "Indie"
   ]
  },
@@ -27287,6 +27245,19 @@
   ]
  },
  {
+  "name": "Harvest Exit Plan",
+  "alias": [],
+  "pop": 0,
+  "y": 2026,
+  "p": [
+   "pc"
+  ],
+  "g": [
+   "Simulator",
+   "Indie"
+  ]
+ },
+ {
   "name": "Harvest Moon: Echoes of Teradea",
   "alias": [],
   "pop": 1,
@@ -27318,6 +27289,7 @@
  {
   "name": "Hatch'n'wall",
   "alias": [
+   "HatchnWall_1.0.exe",
    "Hatch'n'Wall"
   ],
   "pop": 0,
@@ -27413,6 +27385,20 @@
   "g": [
    "Simulator",
    "Visual Novel"
+  ]
+ },
+ {
+  "name": "Hauntworks",
+  "alias": [],
+  "pop": 0,
+  "y": 2026,
+  "p": [
+   "pc"
+  ],
+  "g": [
+   "Simulator",
+   "Strategy",
+   "Indie"
   ]
  },
  {
@@ -28709,6 +28695,22 @@
   ]
  },
  {
+  "name": "Honkai: Star Rail - Now, Lay Laughter to All Stars",
+  "alias": [
+   "Honkai: Star Rail: 4.7"
+  ],
+  "pop": 0,
+  "y": 2026,
+  "p": [
+   "pc",
+   "console"
+  ],
+  "g": [
+   "Turn-based strategy (TBS)",
+   "Adventure"
+  ]
+ },
+ {
   "name": "Hood Warfare 2",
   "alias": [
    "HW2.exe"
@@ -29422,6 +29424,21 @@
   ]
  },
  {
+  "name": "Hunted",
+  "alias": [
+   "HUNTED"
+  ],
+  "pop": 0,
+  "y": 2026,
+  "p": [
+   "pc"
+  ],
+  "g": [
+   "Puzzle",
+   "Indie"
+  ]
+ },
+ {
   "name": "Hunter From Hell",
   "alias": [],
   "pop": 0,
@@ -29589,6 +29606,18 @@
   "g": [
    "Platform",
    "Indie"
+  ]
+ },
+ {
+  "name": "Hyperfrag",
+  "alias": [],
+  "pop": 0,
+  "y": 2026,
+  "p": [
+   "pc"
+  ],
+  "g": [
+   "Shooter"
   ]
  },
  {
@@ -29794,20 +29823,6 @@
    "pc"
   ],
   "g": [
-   "Indie"
-  ]
- },
- {
-  "name": "IGTAP: An Incremental Game That's Also a Platformer",
-  "alias": [],
-  "pop": 0,
-  "y": 2026,
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Platform",
-   "Simulator",
    "Indie"
   ]
  },
@@ -30265,7 +30280,9 @@
  },
  {
   "name": "In Your Dreams",
-  "alias": [],
+  "alias": [
+   "InYourDreams.exe"
+  ],
   "pop": 0,
   "y": 2026,
   "p": [
@@ -34990,7 +35007,9 @@
  },
  {
   "name": "Lost Soul",
-  "alias": [],
+  "alias": [
+   "LostSoul.exe"
+  ],
   "pop": 0,
   "y": 2026,
   "p": [
@@ -35925,7 +35944,9 @@
  },
  {
   "name": "Making Room?",
-  "alias": [],
+  "alias": [
+   "MakingRoom.exe"
+  ],
   "pop": 0,
   "y": 2026,
   "p": [
@@ -36986,6 +37007,18 @@
   "g": [
    "Simulator",
    "Indie"
+  ]
+ },
+ {
+  "name": "Meow Sudoku",
+  "alias": [],
+  "pop": 0,
+  "y": 2026,
+  "p": [
+   "console"
+  ],
+  "g": [
+   "Puzzle"
   ]
  },
  {
@@ -38385,7 +38418,8 @@
   "pop": 0,
   "y": 2026,
   "p": [
-   "pc"
+   "pc",
+   "console"
   ],
   "g": [
    "Platform",
@@ -39128,7 +39162,9 @@
  },
  {
   "name": "My Gaming Shop",
-  "alias": [],
+  "alias": [
+   "My Gaming Shop.exe"
+  ],
   "pop": 0,
   "y": 2026,
   "p": [
@@ -41648,19 +41684,6 @@
   ]
  },
  {
-  "name": "Nullbreak Protocol",
-  "alias": [],
-  "pop": 0,
-  "y": 2026,
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Indie",
-   "Arcade"
-  ]
- },
- {
   "name": "Number Machine",
   "alias": [],
   "pop": 0,
@@ -41994,7 +42017,9 @@
  },
  {
   "name": "Oddments & Offerings",
-  "alias": [],
+  "alias": [
+   "Oddments&OfferingsWin.exe"
+  ],
   "pop": 0,
   "y": 2026,
   "p": [
@@ -42140,7 +42165,8 @@
  {
   "name": "Oh!Ware",
   "alias": [
-   "OhWare"
+   "OhWare",
+   "Oh!Ware.exe"
   ],
   "pop": 0,
   "y": 2026,
@@ -42188,6 +42214,23 @@
   ],
   "g": [
    "Adventure",
+   "Indie"
+  ]
+ },
+ {
+  "name": "Oktoraid",
+  "alias": [
+   "OKTORAID.exe",
+   "OKTORAID"
+  ],
+  "pop": 0,
+  "y": 2026,
+  "p": [
+   "pc"
+  ],
+  "g": [
+   "Shooter",
+   "Strategy",
    "Indie"
   ]
  },
@@ -43291,6 +43334,19 @@
   ]
  },
  {
+  "name": "PC Cafe Simulator",
+  "alias": [],
+  "pop": 0,
+  "y": 2026,
+  "p": [
+   "pc"
+  ],
+  "g": [
+   "Simulator",
+   "Indie"
+  ]
+ },
+ {
   "name": "PGA Tour 2K25: Clubhouse Pass Premium Season 8",
   "alias": [],
   "pop": 0,
@@ -43937,18 +43993,6 @@
   "g": [
    "Simulator",
    "Indie"
-  ]
- },
- {
-  "name": "Pawns Survival",
-  "alias": [],
-  "pop": 0,
-  "y": 2026,
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Strategy"
   ]
  },
  {
@@ -45354,7 +45398,9 @@
  },
  {
   "name": "Plunder Bay",
-  "alias": [],
+  "alias": [
+   "OceanBoard.exe"
+  ],
   "pop": 0,
   "y": 2026,
   "p": [
@@ -47836,7 +47882,7 @@
  {
   "name": "Rainbow Islands CS",
   "alias": [],
-  "pop": 0,
+  "pop": 1,
   "y": 2026,
   "p": [
    "console"
@@ -47869,7 +47915,9 @@
  },
  {
   "name": "Rat Game",
-  "alias": [],
+  "alias": [
+   "Rat Game.exe"
+  ],
   "pop": 0,
   "y": 2026,
   "p": [
@@ -48801,6 +48849,23 @@
   ]
  },
  {
+  "name": "Resonance of Fate Enhanced Remaster",
+  "alias": [
+   "RESONANCE OF FATE ENHANCED REMASTER",
+   "RESONANCE OF FATE™/END OF ETERNITY™ ENHANCED REMASTER",
+   "End of Eternity Enhanced Remaster"
+  ],
+  "pop": 0,
+  "y": 2026,
+  "p": [
+   "console"
+  ],
+  "g": [
+   "Role-playing (RPG)",
+   "Strategy"
+  ]
+ },
+ {
   "name": "Resonurgy",
   "alias": [
    "Resonurgy.exe"
@@ -48974,7 +49039,9 @@
  },
  {
   "name": "Return to Planet Zoveka",
-  "alias": [],
+  "alias": [
+   "Return to Planet Zoveka.exe"
+  ],
   "pop": 0,
   "y": 2026,
   "p": [
@@ -49439,21 +49506,6 @@
   "g": [
    "Role-playing (RPG)",
    "Adventure",
-   "Indie"
-  ]
- },
- {
-  "name": "Roadhouse Simulator",
-  "alias": [
-   "RoadHouse.exe"
-  ],
-  "pop": 0,
-  "y": 2026,
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Simulator",
    "Indie"
   ]
  },
@@ -52979,7 +53031,7 @@
   "alias": [
    "Carpenter.exe"
   ],
-  "pop": 10,
+  "pop": 11,
   "y": 2026,
   "p": [
    "pc",
@@ -53423,7 +53475,9 @@
  },
  {
   "name": "Sleepytime Village",
-  "alias": [],
+  "alias": [
+   "Sleepytime Village.exe"
+  ],
   "pop": 0,
   "y": 2026,
   "p": [
@@ -54047,7 +54101,9 @@
  },
  {
   "name": "Solar Voltage",
-  "alias": [],
+  "alias": [
+   "SolarVoltage.exe"
+  ],
   "pop": 0,
   "y": 2026,
   "p": [
@@ -56465,7 +56521,9 @@
  },
  {
   "name": "Stillwake",
-  "alias": [],
+  "alias": [
+   "Stillwake.exe"
+  ],
   "pop": 0,
   "y": 2026,
   "p": [
@@ -56912,7 +56970,9 @@
  },
  {
   "name": "Sudokiller",
-  "alias": [],
+  "alias": [
+   "Sudokiller.exe"
+  ],
   "pop": 0,
   "y": 2026,
   "p": [
@@ -57192,7 +57252,9 @@
  },
  {
   "name": "Super Froppings",
-  "alias": [],
+  "alias": [
+   "superfroppings.exe"
+  ],
   "pop": 0,
   "y": 2026,
   "p": [
@@ -57347,7 +57409,9 @@
  },
  {
   "name": "Suri: The Seventh Note",
-  "alias": [],
+  "alias": [
+   "Suri The Seventh Note.exe"
+  ],
   "pop": 0,
   "y": 2026,
   "p": [
@@ -58543,6 +58607,20 @@
   ]
  },
  {
+  "name": "Television Dynasty Manager",
+  "alias": [],
+  "pop": 0,
+  "y": 2026,
+  "p": [
+   "pc"
+  ],
+  "g": [
+   "Simulator",
+   "Strategy",
+   "Indie"
+  ]
+ },
+ {
   "name": "Telluria",
   "alias": [
    "Telluria: Forebodings"
@@ -58794,7 +58872,9 @@
  },
  {
   "name": "Terran Dawn",
-  "alias": [],
+  "alias": [
+   "TerranDawn_Game.exe"
+  ],
   "pop": 0,
   "y": 2026,
   "p": [
@@ -59693,7 +59773,9 @@
  },
  {
   "name": "The Doi",
-  "alias": [],
+  "alias": [
+   "The Doi.exe"
+  ],
   "pop": 0,
   "y": 2026,
   "p": [
@@ -60112,7 +60194,9 @@
  },
  {
   "name": "The Golden Caravan",
-  "alias": [],
+  "alias": [
+   "The Golden Caravan.exe"
+  ],
   "pop": 0,
   "y": 2026,
   "p": [
@@ -60140,7 +60224,9 @@
  },
  {
   "name": "The Graves Vigil",
-  "alias": [],
+  "alias": [
+   "The Graves Vigil.exe"
+  ],
   "pop": 0,
   "y": 2026,
   "p": [
@@ -60699,6 +60785,21 @@
   "g": [
    "Simulator",
    "Adventure"
+  ]
+ },
+ {
+  "name": "The Last Admiral",
+  "alias": [],
+  "pop": 0,
+  "y": 2026,
+  "p": [
+   "pc"
+  ],
+  "g": [
+   "Role-playing (RPG)",
+   "Strategy",
+   "Turn-based strategy (TBS)",
+   "Indie"
   ]
  },
  {
@@ -62270,7 +62371,9 @@
  },
  {
   "name": "The Wizard's Assistants",
-  "alias": [],
+  "alias": [
+   "Keita.exe"
+  ],
   "pop": 0,
   "y": 2026,
   "p": [
@@ -62707,7 +62810,9 @@
  },
  {
   "name": "Tidy Tech",
-  "alias": [],
+  "alias": [
+   "Tidy Tech.exe"
+  ],
   "pop": 0,
   "y": 2026,
   "p": [
@@ -62716,19 +62821,6 @@
   "g": [
    "Puzzle",
    "Simulator",
-   "Indie"
-  ]
- },
- {
-  "name": "Tidy Tidy",
-  "alias": [],
-  "pop": 0,
-  "y": 2026,
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Puzzle",
    "Indie"
   ]
  },
@@ -63079,22 +63171,6 @@
    "pc"
   ],
   "g": [
-   "Simulator",
-   "Indie"
-  ]
- },
- {
-  "name": "Tiny Cat Fishing",
-  "alias": [
-   "TINY CAT FISHING"
-  ],
-  "pop": 0,
-  "y": 2026,
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Role-playing (RPG)",
    "Simulator",
    "Indie"
   ]
@@ -64353,6 +64429,7 @@
  {
   "name": "Trenchworms",
   "alias": [
+   "Trenchworms.exe",
    "TRENCHWORMS"
   ],
   "pop": 0,
@@ -64783,20 +64860,6 @@
   "g": [
    "Shooter",
    "Indie"
-  ]
- },
- {
-  "name": "Tung Tung Together: Online Deathrun Party",
-  "alias": [],
-  "pop": 0,
-  "y": 2026,
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Racing",
-   "Strategy",
-   "Adventure"
   ]
  },
  {
@@ -65318,6 +65381,7 @@
  {
   "name": "Underdeep",
   "alias": [
+   "UNDERDEEP.exe",
    "UNDERDEEP"
   ],
   "pop": 0,
@@ -65611,6 +65675,20 @@
   ]
  },
  {
+  "name": "Unrivaled",
+  "alias": [],
+  "pop": 0,
+  "y": 2026,
+  "p": [
+   "pc"
+  ],
+  "g": [
+   "Strategy",
+   "Indie",
+   "Card & Board Game"
+  ]
+ },
+ {
   "name": "Unshine Arcade",
   "alias": [
    "月光游戏厅"
@@ -65657,21 +65735,6 @@
   ]
  },
  {
-  "name": "Upload Aliens",
-  "alias": [
-   "Upload Aliens.exe"
-  ],
-  "pop": 0,
-  "y": 2026,
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Role-playing (RPG)",
-   "Indie"
-  ]
- },
- {
   "name": "Uppercute",
   "alias": [],
   "pop": 0,
@@ -65686,7 +65749,9 @@
  },
  {
   "name": "Urban Explorer: Baldwin",
-  "alias": [],
+  "alias": [
+   "UrbanExplorerBaldwin.exe"
+  ],
   "pop": 0,
   "y": 2026,
   "p": [
@@ -66116,7 +66181,9 @@
  },
  {
   "name": "Veinrider",
-  "alias": [],
+  "alias": [
+   "Veinrider.exe"
+  ],
   "pop": 0,
   "y": 2026,
   "p": [
@@ -66385,21 +66452,6 @@
   ]
  },
  {
-  "name": "Video Game Menu: The Game",
-  "alias": [
-   "Video Game Menu The Game.exe"
-  ],
-  "pop": 0,
-  "y": 2026,
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Simulator",
-   "Indie"
-  ]
- },
- {
   "name": "Video Store Chaos",
   "alias": [
    "VSC",
@@ -66478,6 +66530,21 @@
   "y": 2026,
   "p": [
    "console"
+  ]
+ },
+ {
+  "name": "Vindari",
+  "alias": [
+   "HorrorGame.exe"
+  ],
+  "pop": 0,
+  "y": 2026,
+  "p": [
+   "pc"
+  ],
+  "g": [
+   "Adventure",
+   "Indie"
   ]
  },
  {
@@ -69507,18 +69574,6 @@
   ]
  },
  {
-  "name": "Yandere Virus",
-  "alias": [],
-  "pop": 0,
-  "y": 2026,
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Indie"
-  ]
- },
- {
   "name": "Yatır Batır",
   "alias": [
    "Yatır Batır: Canlı Okey"
@@ -69815,7 +69870,9 @@
  },
  {
   "name": "Zenden",
-  "alias": [],
+  "alias": [
+   "Zenden.exe"
+  ],
   "pop": 0,
   "y": 2026,
   "p": [
@@ -69921,6 +69978,7 @@
    "pc"
   ],
   "g": [
+   "Shooter",
    "Role-playing (RPG)"
   ]
  },
