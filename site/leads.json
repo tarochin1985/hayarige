@@ -1,8 +1,23 @@
 {
  "date": "2026-10-31",
- "generated": "2026-10-31 00:18",
+ "generated": "2026-10-31 07:31",
  "leads": {
   "events": [
+   {
+    "tag": "#ぶいすぽハロウィン",
+    "channels": [
+     "Met Channel / 小森めと ",
+     "一ノ瀬うるは",
+     "小雀とと / Toto Kogara",
+     "猫汰つな / Nekota Tsuna",
+     "空澄セナ -Asumi Sena-",
+     "胡桃のあ",
+     "花芽すみれ / Kaga Sumire",
+     "花芽なずな / Nazuna Kaga",
+     "蝶屋はなび / Choya Hanabi",
+     "銀城サイネ / Ginjo Saine"
+    ]
+   },
    {
     "tag": "#ストグラ",
     "channels": [
@@ -11,64 +26,8 @@
      "たけぉ",
      "ましゃかりさん",
      "みつき",
-     "クラウン【探検家の記録】",
-     "ノビーの遊び部屋",
      "切嘛 / Kiruma",
      "柚原いづみ / Izumi Channel 【ななしいんく】"
-    ]
-   },
-   {
-    "tag": "#ぶいすぽハロウィン",
-    "channels": [
-     "一ノ瀬うるは",
-     "小雀とと / Toto Kogara",
-     "猫汰つな / Nekota Tsuna",
-     "空澄セナ -Asumi Sena-",
-     "花芽すみれ / Kaga Sumire",
-     "花芽なずな / Nazuna Kaga",
-     "蝶屋はなび / Choya Hanabi",
-     "銀城サイネ / Ginjo Saine"
-    ]
-   },
-   {
-    "tag": "#ストグラSeason2",
-    "channels": [
-     "neon",
-     "たけぉ",
-     "クラウン【探検家の記録】",
-     "暁月ホタル AKATSUKI HOTARU",
-     "柚原いづみ / Izumi Channel 【ななしいんく】",
-     "稲荷いろはInari Iroha"
-    ]
-   },
-   {
-    "tag": "#ホロ鯖ARK",
-    "channels": [
-     "Choco Ch. 癒月ちょこ",
-     "Koyori ch. 博衣こより - holoX -",
-     "Nene Ch.桃鈴ねね",
-     "Pekora Ch. 兎田ぺこら",
-     "Vivi Ch. 綺々羅々ヴィヴィ - FLOW GLOW"
-    ]
-   },
-   {
-    "tag": "#minecraft",
-    "channels": [
-     "HIKARU SHIDA @SHIDAtube",
-     "ここっとスクエア【ここスク】",
-     "へびりょく",
-     "やっぱりじぇいさん【マイクラ】",
-     "蛇宵ティア / Tier Channel【ななしいんく】"
-    ]
-   },
-   {
-    "tag": "#NIKKE",
-    "channels": [
-     "Kurena Ch. 愛音クレナ",
-     "ほこり。",
-     "マバタキ",
-     "樹つつき -Itsuki Tsutsuki Ch-",
-     "猫咲あんじ Nekosaki anji"
     ]
    },
    {
@@ -82,61 +41,108 @@
     ]
    },
    {
-    "tag": "#WeeDWARSハロウィンケイドロ",
+    "tag": "#マインクラフト",
     "channels": [
-     "なかお",
-     "堰代ミコ / Mico Channel【ななしいんく】",
-     "島村シャルロット / Charlotte Channel【ななしいんく】",
+     "いのちくん",
+     "すたんぶる",
+     "へびりょく",
+     "やっぱりじぇいさん【マイクラ】"
+    ]
+   },
+   {
+    "tag": "#ホロ鯖ARK",
+    "channels": [
+     "Choco Ch. 癒月ちょこ",
+     "Iroha ch. 風真いろは - holoX -",
+     "Pekora Ch. 兎田ぺこら",
+     "Vivi Ch. 綺々羅々ヴィヴィ - FLOW GLOW"
+    ]
+   },
+   {
+    "tag": "#minecraft",
+    "channels": [
+     "HIKARU SHIDA @SHIDAtube",
+     "へびりょく",
+     "やっぱりじぇいさん【マイクラ】",
      "蛇宵ティア / Tier Channel【ななしいんく】"
+    ]
+   },
+   {
+    "tag": "#ゲーム実況",
+    "channels": [
+     "おしたらあたるCh.　Oshitara ataru",
+     "カヤハナタ〈脱出系ゲーム実況者〉",
+     "遊楽木たいむ / yuuragi time ch"
+    ]
+   },
+   {
+    "tag": "#ストグラSeason2",
+    "channels": [
+     "たけぉ",
+     "暁月ホタル AKATSUKI HOTARU",
+     "柚原いづみ / Izumi Channel 【ななしいんく】"
     ]
    }
   ],
-  "newcomers": [],
+  "newcomers": [
+   {
+    "game": "Jump King",
+    "channels": 6,
+    "videos": 7
+   }
+  ],
   "wide": [
    {
     "game": "Minecraft",
-    "channels": 43,
-    "videos": 44
+    "channels": 40,
+    "videos": 41
    },
    {
     "game": "スプラトゥーン3",
-    "channels": 38,
-    "videos": 44
+    "channels": 35,
+    "videos": 40
    },
    {
     "game": "Apex Legends",
-    "channels": 31,
-    "videos": 39
+    "channels": 32,
+    "videos": 38
    },
    {
     "game": "ストリートファイター6",
-    "channels": 31,
-    "videos": 34
+    "channels": 28,
+    "videos": 30
    },
    {
     "game": "Grand Theft Auto V",
-    "channels": 25,
-    "videos": 28
+    "channels": 20,
+    "videos": 23
    },
    {
-    "game": "VALORANT",
-    "channels": 22,
+    "game": "Among Us",
+    "channels": 21,
     "videos": 24
    },
    {
     "game": "モンスターハンターアウトランダーズ",
     "channels": 17,
-    "videos": 25
+    "videos": 23
    },
    {
-    "game": "ファイナルファンタジー レゾナンス",
-    "channels": 20,
-    "videos": 22
+    "game": "Phantom Blade Zero",
+    "channels": 18,
+    "videos": 18
    }
   ]
  },
  "drift": [],
  "tags": [
+  {
+   "tag": "マインクラフト",
+   "game": "Minecraft",
+   "evidence": 4,
+   "added": 1,
+   "channels": 4
+  },
   {
    "tag": "にじイカ祭り2026",
    "game": "スプラトゥーン3",
@@ -228,22 +234,6 @@
    ]
   },
   {
-   "word": "BIRTHDAY BOY",
-   "channels": 1,
-   "n": 1,
-   "examples": [
-    {
-     "t": "【ホラーゲーム】子供の「誕生日」に現れる謎の化け物がヤバすぎた【ゆっくり実況】【BIRTHDAY BOY】",
-     "c": "スケアド",
-     "u": "https://www.youtube.com/watch?v=HuRusE18_GE"
-    }
-   ],
-   "kind": "near",
-   "suggest": [
-    "Birthday Boy and Benny"
-   ]
-  },
-  {
    "word": "THE DEAD WE KNEW",
    "channels": 1,
    "n": 1,
@@ -313,14 +303,14 @@
    "n": 7,
    "examples": [
     {
-     "t": "【霊、足しときました。】心霊写真を作る、簡単なお仕事って聞いて…【にうふぁ/StellArt.】",
-     "c": "にうふぁ【StellArt.】",
-     "u": "https://www.youtube.com/watch?v=3NgQWTwjJA8"
-    },
-    {
      "t": "【 vtuber 弾き語り】季節巡りながらピアノ弾き語りで歌います🌷【アイリナ・ゼファリオ / StellArt.】 #vsinger",
      "c": "アイリナ・ゼファリオ【StellArt.】",
      "u": "https://www.youtube.com/watch?v=Rfa7gExqGQE"
+    },
+    {
+     "t": "【霊、足しときました。】心霊写真を作る、簡単なお仕事って聞いて…【にうふぁ/StellArt.】",
+     "c": "にうふぁ【StellArt.】",
+     "u": "https://www.youtube.com/watch?v=3NgQWTwjJA8"
     },
     {
      "t": "【デカール作成 GT7】デカールづくりの準備を始めよう✊まったり雑談しながら🎨【にうふぁ/StellArt.】",
@@ -548,30 +538,6 @@
    "suggest": []
   },
   {
-   "word": "キングマイン：ジオフロント",
-   "channels": 3,
-   "n": 3,
-   "examples": [
-    {
-     "t": "【無料デモ】ドワーフが掘りまくる！採掘インクリメンタル『キングマイン：ジオフロント』【Steam】",
-     "c": "しろこりGames / インディーゲーム専門Vtuber",
-     "u": "https://www.youtube.com/watch?v=5o8p0aqU5as"
-    },
-    {
-     "t": "【キングマイン：ジオフロント】無限に放置とスキルツリー強化を繰り返す採掘ゲームが面白すぎた！！",
-     "c": "つばさま(ゲーム実況)",
-     "u": "https://www.youtube.com/watch?v=ZDS5DGsc-Jk"
-    },
-    {
-     "t": "【キングマイン：ジオフロント】採掘×経営×街作り×インクリメンタルってなんだ...！？王になってドワーフ鉱夫に掘らせて地下王国を建立。新作放置系クリッカー攻略面白いwデモ版！無料【steam】",
-     "c": " なぎせいな / 凪世薙",
-     "u": "https://www.youtube.com/watch?v=Ipvzwl-ZcYw"
-    }
-   ],
-   "kind": "wide",
-   "suggest": []
-  },
-  {
    "word": "どうぶつの町の食堂物語",
    "channels": 3,
    "n": 3,
@@ -614,6 +580,30 @@
      "t": "『新・都道府県ゲーム』というゲームで遊んでみる！｜新・都道府県ゲーム",
      "c": "P-Pチャンネル",
      "u": "https://www.youtube.com/watch?v=GrgGIVtTXj4"
+    }
+   ],
+   "kind": "wide",
+   "suggest": []
+  },
+  {
+   "word": "キングマイン：ジオフロント",
+   "channels": 3,
+   "n": 3,
+   "examples": [
+    {
+     "t": "【キングマイン：ジオフロント】無限に放置とスキルツリー強化を繰り返す採掘ゲームが面白すぎた！！",
+     "c": "つばさま(ゲーム実況)",
+     "u": "https://www.youtube.com/watch?v=ZDS5DGsc-Jk"
+    },
+    {
+     "t": "【キングマイン：ジオフロント】採掘×経営×街作り×インクリメンタルってなんだ...！？王になってドワーフ鉱夫に掘らせて地下王国を建立。新作放置系クリッカー攻略面白いwデモ版！無料【steam】",
+     "c": " なぎせいな / 凪世薙",
+     "u": "https://www.youtube.com/watch?v=Ipvzwl-ZcYw"
+    },
+    {
+     "t": "【無料デモ】ドワーフが掘りまくる！採掘インクリメンタル『キングマイン：ジオフロント』【Steam】",
+     "c": "しろこりGames / インディーゲーム専門Vtuber",
+     "u": "https://www.youtube.com/watch?v=5o8p0aqU5as"
     }
    ],
    "kind": "wide",
@@ -695,12 +685,43 @@
  "miss_days": 7,
  "hot_facts": [
   {
+   "game": "R.E.P.O.",
+   "growth": 10.83,
+   "videos": 13,
+   "base": 1.2,
+   "channels": 13,
+   "views": 763046,
+   "who": [
+    "フブキCh。白上フブキ",
+    "Tsuzuri Ch. 鈴鳴つづり ‐ アソビ★まわり隊!",
+    "Riona Ch. 響咲リオナ - FLOW GLOW",
+    "Matsuri Channel 夏色まつり",
+    "渋谷ハル"
+   ],
+   "titles": [
+    "【R.E.P.O.】REPOはいつも突発に・・・。#突発ホロREPO【ホロライブ/白上フブキ】",
+    "【R.E.P.O.】新MAPも来た！？先輩方と初めてのR.E.P.Oでワクワク！！【鈴鳴つづり/ホロライブ/アソビ★まわり隊！】 #ホロライブ #アソビまわり隊  #つづり配達中",
+    "【R.E.P.O. 】アプデきた！？久しぶりのホロメンレポ楽しみ♡【ホロライブ  響咲リオナ】"
+   ],
+   "genres": [
+    "Strategy",
+    "Indie"
+   ],
+   "year": 2025,
+   "platforms": [
+    "pc"
+   ],
+   "days_seen": 23,
+   "last_seen": "2026-10-30",
+   "first_here": false
+  },
+  {
    "game": "Jump King",
    "growth": 8.75,
    "videos": 7,
    "base": 0.0,
    "channels": 6,
-   "views": 825355,
+   "views": 862716,
    "who": [
     "Iroha ch. 風真いろは - holoX -",
     "Vivi Ch. 綺々羅々ヴィヴィ - FLOW GLOW",
@@ -723,59 +744,28 @@
     "pc",
     "console"
    ],
-   "days_seen": 2,
-   "last_seen": "2026-10-30",
-   "first_here": false
-  },
-  {
-   "game": "R.E.P.O.",
-   "growth": 8.67,
-   "videos": 13,
-   "base": 1.5,
-   "channels": 13,
-   "views": 217428,
-   "who": [
-    "Tsuzuri Ch. 鈴鳴つづり ‐ アソビ★まわり隊!",
-    "フブキCh。白上フブキ",
-    "渋谷ハル",
-    "Riona Ch. 響咲リオナ - FLOW GLOW",
-    "Matsuri Channel 夏色まつり"
-   ],
-   "titles": [
-    "【R.E.P.O.】新MAPも来た！？先輩方と初めてのR.E.P.Oでワクワク！！【鈴鳴つづり/ホロライブ/アソビ★まわり隊！】 #ホロライブ #アソビまわり隊  #つづり配達中",
-    "【R.E.P.O.】REPOはいつも突発に・・・。#突発ホロREPO【ホロライブ/白上フブキ】",
-    "【R.E.P.O】なんかアプデ来たらしいのでやってみる"
-   ],
-   "genres": [
-    "Strategy",
-    "Indie"
-   ],
-   "year": 2025,
-   "platforms": [
-    "pc"
-   ],
-   "days_seen": 23,
+   "days_seen": 1,
    "last_seen": "2026-10-30",
    "first_here": false
   },
   {
    "game": "Probably Stolen",
-   "growth": 7.5,
-   "videos": 6,
-   "base": 0.2,
-   "channels": 6,
-   "views": 229587,
+   "growth": 6.25,
+   "videos": 5,
+   "base": 0.7,
+   "channels": 5,
+   "views": 148175,
    "who": [
     "千燈ゆうひ",
-    "千燈ゆうひ",
-    "鉄塔",
     "しんじさん",
-    "ファミ通TUBE"
+    "えおちゃんねる！",
+    "たまチャンネル",
+    "しろこりGames / インディーゲーム専門Vtuber"
    ],
    "titles": [
-    "【Probably Stolen】Steam新作圧倒好（すご）アルストツカに亡命しそうなUI質屋ゲームきちゃーーーーーーーー！！！！！！【 ぶいすぽっ！ / 千燈ゆうひ 】",
     "【Probably Stolen】ちょっとやって寝る　ちょっとやって寝る【 ぶいすぽっ！ / 千燈ゆうひ 】",
-    "「サイバーパンク質屋」だから偽物だって平気で売っちゃう │『Probably Stolen』"
+    "ゲーム大賞級の新作がStardew Valley系だと気づき、大興奮するしんじｗｗ【Probably Stolen - Cyberpunk Shopkeeper Sim】",
+    "サイバーパンクな世界で怪しい商品を売りさばくお店屋さんゲーム【Probably Stolen - Cyberpunk Shopkeeper Sim】"
    ],
    "genres": [
     "Role-playing (RPG)",
@@ -792,55 +782,22 @@
    "first_here": false
   },
   {
-   "game": "Anomalith",
-   "growth": 7.5,
-   "videos": 6,
-   "base": 0.2,
-   "channels": 6,
-   "views": 58589,
-   "who": [
-    "家無しララ",
-    "ほーだん×ゲーマーズ / ほぼ毎日更新ゲーム総合情報ch",
-    "ほーだん×ゲーマーズ / ほぼ毎日更新ゲーム総合情報ch",
-    "amiami Hobby Channel",
-    "ほとんどホラーゲーム実況ですが何か?"
-   ],
-   "titles": [
-    "【強気の8,580円】アノマリスが合わなかった２つの理由【ANOMALITH Steam感想/評価/レビュー】",
-    "【初見さん歓迎！】アニメ調美少女×異常現象×サバイバルTPSで期待の新作ゲームが遂に発売！『アノマリス（ANOMALITH）』遊んでみる配信！これはマジで期待【Part.1】【新作検証】※ネタバレあり",
-    "【新作PvE】バイオ4好きにはガチで刺さる！美少女×サバイバルハクスラTPS『アノマリス／ANOMALITH』製品版序盤プレイ正直な感想【Steam/PS5/Switch】【H×GT vol.169】"
-   ],
-   "genres": [
-    "Shooter",
-    "Role-playing (RPG)",
-    "Adventure"
-   ],
-   "year": 2026,
-   "platforms": [
-    "pc",
-    "console"
-   ],
-   "days_seen": 1,
-   "last_seen": "2026-10-30",
-   "first_here": false
-  },
-  {
    "game": "Phantom Blade Zero",
-   "growth": 6.13,
-   "videos": 19,
-   "base": 3.1,
-   "channels": 19,
-   "views": 274615,
+   "growth": 5.62,
+   "videos": 18,
+   "base": 3.2,
+   "channels": 18,
+   "views": 480793,
    "who": [
-    "GAMEゆうなch",
     "キャベツの人【ゲーム紹介】",
+    "SANNINSHOW",
     "愛の戦士チャンネル",
     "GAMEゆうなch",
-    "ゆいめろ🎀🐶 / yuimelo"
+    "我が道を征くイカレタコ助"
    ],
    "titles": [
-    "#2『Phantom Blade Zero』本日発売!!ファントム ブレイド ゼロ 新作死にゲー ！？300死で水着!? 【PS5pro】",
     "新作アクションがバカ売れしてるけど評価は..キモ過ぎるモーション数で凄いけど何か突き抜けない＆ストーリーが意味不明..と思ったら中国人もわかってない模様..新作レビュー賛否【ファントムブレードゼロ】",
+    "【お試し/死にゲー】残りわずか66日の命の男が戦場を駆け抜く物語【PHANTOM BLADE ZERO】",
     "脳筋ゴリラでも息をするようにスタイリッシュ剣撃が出来るファントムブレードゼロで脳汁を出そう！#1"
    ],
    "genres": [
@@ -858,34 +815,62 @@
    "first_here": false
   },
   {
-   "game": "Tidy Up the Halloween Shop",
+   "game": "Anomalith",
    "growth": 5.0,
    "videos": 4,
-   "base": 0.2,
+   "base": 0.7,
    "channels": 4,
-   "views": 111,
+   "views": 56665,
    "who": [
-    "桃之もれん Momono Moren Ch",
-    "哲GACKTのゲーム実況チャンネル【ディアブロ・ハクスラ攻略】",
-    "ゆらぎゆら / YuragiYura🌙🫧",
-    "幽乃うつろ / Kasukano Utsuro"
+    "家無しララ",
+    "ほーだん×ゲーマーズ / ほぼ毎日更新ゲーム総合情報ch",
+    "ほとんどホラーゲーム実況ですが何か?",
+    "野々熊びこり / nonokuma bicori",
+    "ほーだん×ゲーマーズ / ほぼ毎日更新ゲーム総合情報ch"
    ],
    "titles": [
-    "「ハロウィン企画🎃壊滅したお店を整頓します！」【Tidy up the halloween shop】【 #女性実況 #vtuber #雑談 】",
-    "【Tidy up the Halloween Shop実況】ハローウィーンショップのお片付け Part.1【TidyUp PS5・Steamゲーム攻略】",
-    "【お片付け】ハロウィン当日なのにお店がめちゃくちゃ！？【Tidy Up the Halloween Shop】"
+    "【強気の8,580円】アノマリスが合わなかった２つの理由【ANOMALITH Steam感想/評価/レビュー】",
+    "【新作PvE】バイオ4好きにはガチで刺さる！美少女×サバイバルハクスラTPS『アノマリス／ANOMALITH』製品版序盤プレイ正直な感想【Steam/PS5/Switch】【H×GT vol.169】",
+    "#2【アノマリス／ANOMALITH】異界に呑まれた商店街…！かつての賑わいを失った街に広がる恐怖【サバイバルホラーゲーム】"
    ],
    "genres": [
-    "Simulator",
-    "Indie"
+    "Shooter",
+    "Role-playing (RPG)",
+    "Adventure"
    ],
    "year": 2026,
    "platforms": [
-    "pc"
+    "pc",
+    "console"
    ],
-   "days_seen": 0,
-   "last_seen": null,
-   "first_here": true
+   "days_seen": 1,
+   "last_seen": "2026-10-30",
+   "first_here": false
+  },
+  {
+   "game": "ポケットモンスター スカーレット・バイオレット",
+   "growth": 5.0,
+   "videos": 4,
+   "base": 0.3,
+   "channels": 3,
+   "views": 5875,
+   "who": [
+    "冒険の熊吉【ポケモン実況者】🐻🎁",
+    "カーキのゲーム実況",
+    "なか爺【NAKAJI】channel",
+    "なか爺【NAKAJI】channel"
+   ],
+   "titles": [
+    "【ポケモンSV】ソロでワンパン攻略！復刻した最強サザンドラレイド対策ポケモンのハピナスで安定＆ワンパンの2パターンの倒し方と努力値振りや細かい育成方法を解説！ポケモンスカーレットバイオレット",
+    "超簡単！ハピナスで楽勝ソロ攻略！【復刻最強サザンドラ】【ポケモンSV】",
+    "【ポケモンSV】まだゲットできてない方最優先！！『最強ガブリアスレイド』攻略参加型配信！part338（レベル100必須・攻略用ポケモンも配布中・概要欄必読）"
+   ],
+   "genres": [],
+   "year": null,
+   "platforms": [],
+   "days_seen": 16,
+   "last_seen": "2026-10-30",
+   "first_here": false
   }
  ],
  "notes_written": true,
