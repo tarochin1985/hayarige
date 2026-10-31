@@ -1,6 +1,6 @@
 {
- "date": "2026-10-31",
- "generated": "2026-10-31 23:44",
+ "date": "2026-11-01",
+ "generated": "2026-11-01 06:42",
  "leads": {
   "events": [
    {
@@ -11,12 +11,15 @@
      "兎咲ミミ / Tosaki Mimi",
      "八雲べに",
      "夜乃くろむ / Yano Kuromu",
+     "小雀とと / Toto Kogara",
      "猫汰つな / Nekota Tsuna",
      "甘結もか / Amayui Moka",
      "空澄セナ -Asumi Sena-",
+     "紡木こかげ",
      "紫宮るな /shinomiya runa",
      "胡桃のあ",
      "花芽すみれ / Kaga Sumire",
+     "花芽なずな / Nazuna Kaga",
      "英リサ.Hanabusa Lisa",
      "銀城サイネ / Ginjo Saine",
      "龍巻ちせ / Tatsumaki Chise"
@@ -27,11 +30,9 @@
     "channels": [
      "オリバー・エバンス / Oliver Evans 【にじさんじ】",
      "セラフ・ダズルガーデン / Seraph Dazzlegarden",
-     "ソフィア・ヴァレンタイン / Sophia Valentine【にじさんじ】",
      "レイン・パターソン／Lain Paterson【にじさんじ】",
      "叢雲カゲツ / Murakumo Kagetsu【にじさんじ】",
      "珠乃井ナナ / Tamanoi Nana【にじさんじ】",
-     "皇れお / Sumeragi Reo【にじさんじ】",
      "神永タイガ / Kaminaga Taiga【にじさんじ】",
      "葉加瀬 冬雪 / Hakase Fuyuki",
      "長尾 景 / Nagao Kei【にじさんじ】",
@@ -48,8 +49,18 @@
      "みつき",
      "クラウン【探検家の記録】",
      "ノビーの遊び部屋",
-     "影。/かげまる",
-     "柚原いづみ / Izumi Channel 【ななしいんく】"
+     "影。/かげまる"
+    ]
+   },
+   {
+    "tag": "#ホロ鯖ARK",
+    "channels": [
+     "Iroha ch. 風真いろは - holoX -",
+     "Luna Ch. 姫森ルーナ",
+     "Pekora Ch. 兎田ぺこら",
+     "Polka Ch. 尾丸ポルカ",
+     "Towa Ch. 常闇トワ",
+     "Vivi Ch. 綺々羅々ヴィヴィ - FLOW GLOW"
     ]
    },
    {
@@ -60,20 +71,7 @@
      "クラウン【探検家の記録】",
      "影。/かげまる",
      "暁月ホタル AKATSUKI HOTARU",
-     "柚原いづみ / Izumi Channel 【ななしいんく】",
      "桃＋（とーたす）'s チェンネル"
-    ]
-   },
-   {
-    "tag": "#ホロ鯖ARK",
-    "channels": [
-     "Choco Ch. 癒月ちょこ",
-     "Iroha ch. 風真いろは - holoX -",
-     "Luna Ch. 姫森ルーナ",
-     "Pekora Ch. 兎田ぺこら",
-     "Polka Ch. 尾丸ポルカ",
-     "Towa Ch. 常闇トワ",
-     "Vivi Ch. 綺々羅々ヴィヴィ - FLOW GLOW"
     ]
    },
    {
@@ -87,12 +85,12 @@
     ]
    },
    {
-    "tag": "#NIKKE",
+    "tag": "#ゲーム実況",
     "channels": [
-     "Kurena Ch. 愛音クレナ",
-     "ほこり。",
-     "エミリーのゲームちゃんねる Emily Game Ch.",
-     "華鉈イオ【StellArt.】"
+     "CHECHE GAME【顔出し初見ゲーム実況】",
+     "ジョアだよ",
+     "三雲ヒカリ",
+     "運天りらん"
     ]
    },
    {
@@ -108,43 +106,43 @@
   "wide": [
    {
     "game": "スプラトゥーン3",
-    "channels": 52,
-    "videos": 60
+    "channels": 47,
+    "videos": 50
    },
    {
     "game": "Apex Legends",
-    "channels": 37,
-    "videos": 44
+    "channels": 32,
+    "videos": 34
    },
    {
     "game": "Minecraft",
-    "channels": 36,
-    "videos": 38
+    "channels": 32,
+    "videos": 33
    },
    {
     "game": "ストリートファイター6",
-    "channels": 32,
-    "videos": 37
+    "channels": 29,
+    "videos": 32
    },
    {
     "game": "Grand Theft Auto V",
-    "channels": 26,
-    "videos": 28
+    "channels": 25,
+    "videos": 26
    },
    {
     "game": "フォートナイト",
     "channels": 20,
-    "videos": 26
+    "videos": 25
    },
    {
     "game": "モンスターハンターアウトランダーズ",
     "channels": 18,
-    "videos": 26
+    "videos": 24
    },
    {
-    "game": "R.E.P.O.",
-    "channels": 17,
-    "videos": 17
+    "game": "Among Us",
+    "channels": 20,
+    "videos": 22
    }
   ]
  },
@@ -153,9 +151,9 @@
   {
    "tag": "にじイカ祭り2026",
    "game": "スプラトゥーン3",
-   "evidence": 7,
-   "added": 6,
-   "channels": 11
+   "evidence": 5,
+   "added": 5,
+   "channels": 9
   }
  ],
  "misses": [
@@ -262,6 +260,30 @@
    ]
   },
   {
+   "word": "ハロウィン",
+   "channels": 5,
+   "n": 7,
+   "examples": [
+    {
+     "t": "【ハロウィン】あちゃぴがゾンビに食べられる～～～！ｗ",
+     "c": "Kan & Aki's CHANNELかんあきチャンネル",
+     "u": "https://www.youtube.com/watch?v=vqPw5TtyFgM"
+    },
+    {
+     "t": "【ハロウィン/企画】ハロウィンパーティ🎃🕯おかしくれなきゃイタズラするぞ！！【クイズ/FA紹介/Vtuber/個人Vtuber】",
+     "c": "キムチキャット",
+     "u": "https://www.youtube.com/watch?v=tjRx45ltWto"
+    },
+    {
+     "t": "【 #ハロウィン 】来てくれた人全員に“手作りクッキー”を作るまで終われない⁉#参加型【Bul's Wonder Labo】#新人Vtuber#耐久配信",
+     "c": "Dr.ぶる･V･ガトリング博士‐Bul's Wonder Labo",
+     "u": "https://www.youtube.com/watch?v=Fqt_d3W_ykk"
+    }
+   ],
+   "kind": "wide",
+   "suggest": []
+  },
+  {
    "word": "妖怪ウォッチ",
    "channels": 4,
    "n": 8,
@@ -339,19 +361,19 @@
    "n": 8,
    "examples": [
     {
-     "t": "【 #ありうむハロウィン歌枠リレー 】とりっく or とりーと？or しんぎんぐ！！🎃🕸️【海汐もるふ/Varium】",
+     "t": "【 #ありうむハロウィン歌枠リレー 】開会式会場はこちらです🎃🕸️【海汐もるふ/Varium】",
      "c": "Molf Ch. 海汐もるふ",
-     "u": "https://www.youtube.com/watch?v=qzECnNoWFiI"
-    },
-    {
-     "t": "【 #ありうむハロウィン歌枠リレー 】とりっく or とりーと？or しんぎんぐ！！🎃🕸️【海汐もるふ/Varium】",
-     "c": "Molf Ch. 海汐もるふ",
-     "u": "https://www.youtube.com/watch?v=qzECnNoWFiI"
+     "u": "https://www.youtube.com/watch?v=qDpKwE6BqLY"
     },
     {
      "t": "【 #ありうむハロウィン歌枠リレー 】開会式会場はこちらです🎃🕸️【海汐もるふ/Varium】",
      "c": "Molf Ch. 海汐もるふ",
      "u": "https://www.youtube.com/watch?v=qDpKwE6BqLY"
+    },
+    {
+     "t": "【 #ありうむハロウィン歌枠リレー 】とりっく or とりーと？or しんぎんぐ！！🎃🕸️【海汐もるふ/Varium】",
+     "c": "Molf Ch. 海汐もるふ",
+     "u": "https://www.youtube.com/watch?v=qzECnNoWFiI"
     }
    ],
    "kind": "wide",
@@ -360,7 +382,7 @@
   {
    "word": "StellArt.",
    "channels": 3,
-   "n": 7,
+   "n": 6,
    "examples": [
     {
      "t": "【霊、足しときました。】心霊写真を作る、簡単なお仕事って聞いて…【にうふぁ/StellArt.】",
@@ -368,38 +390,14 @@
      "u": "https://www.youtube.com/watch?v=3NgQWTwjJA8"
     },
     {
-     "t": "【 vtuber 弾き語り】季節巡りながらピアノ弾き語りで歌います🌷【アイリナ・ゼファリオ / StellArt.】 #vsinger",
-     "c": "アイリナ・ゼファリオ【StellArt.】",
-     "u": "https://www.youtube.com/watch?v=Rfa7gExqGQE"
-    },
-    {
      "t": "【デカール作成 GT7】デカールづくりの準備を始めよう✊まったり雑談しながら🎨【にうふぁ/StellArt.】",
      "c": "にうふぁ【StellArt.】",
      "u": "https://www.youtube.com/watch?v=n_QarOvxr9w"
-    }
-   ],
-   "kind": "wide",
-   "suggest": []
-  },
-  {
-   "word": "ロマンシング サガ2 リベンジオブザセブン",
-   "channels": 3,
-   "n": 5,
-   "examples": [
-    {
-     "t": "【ロマサガ2R】七英雄ノエル討伐！完全初見攻略 【ロマンシング サガ2 リベンジオブザセブン】＃リベサガ！＃新人VTUBER",
-     "c": "豚咲あおい_TomisakiAoi",
-     "u": "https://www.youtube.com/watch?v=zoO_dvnbWtQ"
     },
     {
-     "t": "【ロマサガ2R】ラストダンジョン！七英雄ワグナス討伐！完全初見攻略 【ロマンシング サガ2 リベンジオブザセブン】＃リベサガ！＃新人VTUBER",
-     "c": "豚咲あおい_TomisakiAoi",
-     "u": "https://www.youtube.com/watch?v=xzhBattXRiI"
-    },
-    {
-     "t": "【ロマンシングサガ2リベンジオブザセブン】完全初見！新たなロマンシングに挑む！【てちび/すたすぺ所属】",
-     "c": "てちび",
-     "u": "https://www.youtube.com/watch?v=EDipNCMI06A"
+     "t": "【イオモニ/朝活】🎃トリックオアトリート！お菓子なんていつ食べたってええですからね【華鉈イオ/StellArt.】#新人vtuber",
+     "c": "華鉈イオ【StellArt.】",
+     "u": "https://www.youtube.com/watch?v=In5G9EesWaU"
     }
    ],
    "kind": "wide",
@@ -478,6 +476,30 @@
    "suggest": []
   },
   {
+   "word": "ロマンシング サガ2 リベンジオブザセブン",
+   "channels": 3,
+   "n": 4,
+   "examples": [
+    {
+     "t": "【ロマサガ2R】ラストダンジョン！七英雄ワグナス討伐！完全初見攻略 【ロマンシング サガ2 リベンジオブザセブン】＃リベサガ！＃新人VTUBER",
+     "c": "豚咲あおい_TomisakiAoi",
+     "u": "https://www.youtube.com/watch?v=xzhBattXRiI"
+    },
+    {
+     "t": "【ロマンシングサガ2リベンジオブザセブン】完全初見！新たなロマンシングに挑む！【てちび/すたすぺ所属】",
+     "c": "てちび",
+     "u": "https://www.youtube.com/watch?v=EDipNCMI06A"
+    },
+    {
+     "t": "【ロマサガ2】難易度ロマンシング！地上戦艦に潜入！ボクオーン戦『ロマンシング サガ2 リベンジオブザセブン』Switch版 実況 Part20⚠️ネタバレ注意【 VTuber/まるたにあやの 】",
+     "c": "まるたにあやの",
+     "u": "https://www.youtube.com/watch?v=CTjJ7qGMv3w"
+    }
+   ],
+   "kind": "wide",
+   "suggest": []
+  },
+  {
    "word": "恋愛究極の2択",
    "channels": 3,
    "n": 4,
@@ -502,30 +524,6 @@
    "suggest": []
   },
   {
-   "word": "ハロウィン",
-   "channels": 3,
-   "n": 4,
-   "examples": [
-    {
-     "t": "【ハロウィン】あちゃぴがゾンビに食べられる～～～！ｗ",
-     "c": "Kan & Aki's CHANNELかんあきチャンネル",
-     "u": "https://www.youtube.com/watch?v=vqPw5TtyFgM"
-    },
-    {
-     "t": "【 #ハロウィン 】来てくれた人全員に“手作りクッキー”を作るまで終われない⁉#参加型【Bul's Wonder Labo】#新人Vtuber#耐久配信",
-     "c": "Dr.ぶる･V･ガトリング博士‐Bul's Wonder Labo",
-     "u": "https://www.youtube.com/watch?v=Fqt_d3W_ykk"
-    },
-    {
-     "t": "【 #ハロウィン 】来てくれた人全員に“手作りクッキー”を作るまで終われない⁉#参加型【Bul's Wonder Labo】#新人Vtuber#耐久配信",
-     "c": "Dr.ぶる･V･ガトリング博士‐Bul's Wonder Labo",
-     "u": "https://www.youtube.com/watch?v=Fqt_d3W_ykk"
-    }
-   ],
-   "kind": "wide",
-   "suggest": []
-  },
-  {
    "word": "#手元配信",
    "channels": 3,
    "n": 4,
@@ -544,6 +542,30 @@
      "t": "【ガンプラ】２体組むまで寝れない耐久？ ガンダムバエル＆グレイズアイン【手元配信】",
      "c": "アイリスゲームセンター",
      "u": "https://www.youtube.com/watch?v=8TnYtp8rE4c"
+    }
+   ],
+   "kind": "wide",
+   "suggest": []
+  },
+  {
+   "word": "ドラゴンクエスト",
+   "channels": 3,
+   "n": 3,
+   "examples": [
+    {
+     "t": "【ドラゴンクエスト】初めてのドラクエ大冒険！知識ほぼゼロの私でも勇者になれますか…！？【スライムしか知らない】※ネタバレ有り #由比河ひなみ",
+     "c": "ACHRORA - mekPark",
+     "u": "https://www.youtube.com/watch?v=i8Vp5H-HqwY"
+    },
+    {
+     "t": "【ドラゴンクエスト】パッケージイラスト ピンズ11種を買ってみた！【Vtuber / 猫実況】",
+     "c": "身勝手なゆうちゃん",
+     "u": "https://www.youtube.com/watch?v=qNDeU7rNE2w"
+    },
+    {
+     "t": "【HD-2D版 ドラクエ】やり込み報告 ＆ 小ネタ？ も 紹介！【ドラゴンクエスト】※ネタバレ？少しあり （おおごえ・名前変更！）",
+     "c": "【レトロゲームZT】-【ファミコンのネタ多め】",
+     "u": "https://www.youtube.com/watch?v=MOh4mVcjjmI"
     }
    ],
    "kind": "wide",
@@ -622,30 +644,6 @@
    "suggest": []
   },
   {
-   "word": "ドラゴンクエスト",
-   "channels": 3,
-   "n": 3,
-   "examples": [
-    {
-     "t": "【ドラゴンクエスト】初めてのドラクエ大冒険！知識ほぼゼロの私でも勇者になれますか…！？【スライムしか知らない】※ネタバレ有り #由比河ひなみ",
-     "c": "ACHRORA - mekPark",
-     "u": "https://www.youtube.com/watch?v=i8Vp5H-HqwY"
-    },
-    {
-     "t": "【ドラゴンクエスト】パッケージイラスト ピンズ11種を買ってみた！【Vtuber / 猫実況】",
-     "c": "身勝手なゆうちゃん",
-     "u": "https://www.youtube.com/watch?v=qNDeU7rNE2w"
-    },
-    {
-     "t": "【HD-2D版 ドラクエ】やり込み報告 ＆ 小ネタ？ も 紹介！【ドラゴンクエスト】※ネタバレ？少しあり （おおごえ・名前変更！）",
-     "c": "【レトロゲームZT】-【ファミコンのネタ多め】",
-     "u": "https://www.youtube.com/watch?v=MOh4mVcjjmI"
-    }
-   ],
-   "kind": "wide",
-   "suggest": []
-  },
-  {
    "word": "どうぶつの町の食堂物語",
    "channels": 3,
    "n": 3,
@@ -670,30 +668,6 @@
    "suggest": []
   },
   {
-   "word": "キングマイン：ジオフロント",
-   "channels": 3,
-   "n": 3,
-   "examples": [
-    {
-     "t": "【キングマイン：ジオフロント】無限に放置とスキルツリー強化を繰り返す採掘ゲームが面白すぎた！！",
-     "c": "つばさま(ゲーム実況)",
-     "u": "https://www.youtube.com/watch?v=ZDS5DGsc-Jk"
-    },
-    {
-     "t": "【キングマイン：ジオフロント】採掘×経営×街作り×インクリメンタルってなんだ...！？王になってドワーフ鉱夫に掘らせて地下王国を建立。新作放置系クリッカー攻略面白いwデモ版！無料【steam】",
-     "c": " なぎせいな / 凪世薙",
-     "u": "https://www.youtube.com/watch?v=Ipvzwl-ZcYw"
-    },
-    {
-     "t": "【無料デモ】ドワーフが掘りまくる！採掘インクリメンタル『キングマイン：ジオフロント』【Steam】",
-     "c": "しろこりGames / インディーゲーム専門Vtuber",
-     "u": "https://www.youtube.com/watch?v=5o8p0aqU5as"
-    }
-   ],
-   "kind": "wide",
-   "suggest": []
-  },
-  {
    "word": "新・都道府県ゲーム",
    "channels": 3,
    "n": 3,
@@ -712,6 +686,30 @@
      "t": "『新・都道府県ゲーム』というゲームで遊んでみる！｜新・都道府県ゲーム",
      "c": "P-Pチャンネル",
      "u": "https://www.youtube.com/watch?v=GrgGIVtTXj4"
+    }
+   ],
+   "kind": "wide",
+   "suggest": []
+  },
+  {
+   "word": "キングマイン：ジオフロント",
+   "channels": 3,
+   "n": 3,
+   "examples": [
+    {
+     "t": "【キングマイン：ジオフロント】無限に放置とスキルツリー強化を繰り返す採掘ゲームが面白すぎた！！",
+     "c": "つばさま(ゲーム実況)",
+     "u": "https://www.youtube.com/watch?v=ZDS5DGsc-Jk"
+    },
+    {
+     "t": "【キングマイン：ジオフロント】採掘×経営×街作り×インクリメンタルってなんだ...！？王になってドワーフ鉱夫に掘らせて地下王国を建立。新作放置系クリッカー攻略面白いwデモ版！無料【steam】",
+     "c": " なぎせいな / 凪世薙",
+     "u": "https://www.youtube.com/watch?v=Ipvzwl-ZcYw"
+    },
+    {
+     "t": "【無料デモ】ドワーフが掘りまくる！採掘インクリメンタル『キングマイン：ジオフロント』【Steam】",
+     "c": "しろこりGames / インディーゲーム専門Vtuber",
+     "u": "https://www.youtube.com/watch?v=5o8p0aqU5as"
     }
    ],
    "kind": "wide",
@@ -745,43 +743,12 @@
  "miss_days": 7,
  "hot_facts": [
   {
-   "game": "R.E.P.O.",
-   "growth": 10.62,
-   "videos": 17,
-   "base": 1.6,
-   "channels": 17,
-   "views": 1269185,
-   "who": [
-    "フブキCh。白上フブキ",
-    "Tsuzuri Ch. 鈴鳴つづり ‐ アソビ★まわり隊!",
-    "一ノ瀬うるは",
-    "Riona Ch. 響咲リオナ - FLOW GLOW",
-    "Matsuri Channel 夏色まつり"
-   ],
-   "titles": [
-    "【R.E.P.O.】REPOはいつも突発に・・・。#突発ホロREPO【ホロライブ/白上フブキ】",
-    "【R.E.P.O.】新MAPも来た！？先輩方と初めてのR.E.P.Oでワクワク！！【鈴鳴つづり/ホロライブ/アソビ★まわり隊！】 #ホロライブ #アソビまわり隊  #つづり配達中",
-    "【#ぶいすぽハロウィン】みんなでR.E.P.O.だあああああああああああ！！！！！！！！【ぶいすぽ/一ノ瀬うるは】"
-   ],
-   "genres": [
-    "Strategy",
-    "Indie"
-   ],
-   "year": 2025,
-   "platforms": [
-    "pc"
-   ],
-   "days_seen": 23,
-   "last_seen": "2026-10-30",
-   "first_here": false
-  },
-  {
    "game": "Liar's Bar",
    "growth": 5.0,
    "videos": 4,
    "base": 0.2,
    "channels": 4,
-   "views": 334109,
+   "views": 369528,
    "who": [
     "英リサ.Hanabusa Lisa",
     "猫汰つな / Nekota Tsuna",
@@ -804,60 +771,27 @@
    "platforms": [
     "pc"
    ],
-   "days_seen": 0,
-   "last_seen": null,
-   "first_here": true
-  },
-  {
-   "game": "Probably Stolen",
-   "growth": 5.0,
-   "videos": 4,
-   "base": 0.8,
-   "channels": 4,
-   "views": 69724,
-   "who": [
-    "渋谷ハル",
-    "えおちゃんねる！",
-    "鉄塔",
-    "しろこりGames / インディーゲーム専門Vtuber"
-   ],
-   "titles": [
-    "【Probably Stolen】サイバーパンクな質屋経営ゲームで盗品を売り捌いたりする",
-    "サイバーパンクな世界で怪しい商品を売りさばくお店屋さんゲーム【Probably Stolen - Cyberpunk Shopkeeper Sim】",
-    "#2 悪いことしてないのに警官が怖い質屋 │『Probably Stolen』"
-   ],
-   "genres": [
-    "Role-playing (RPG)",
-    "Simulator",
-    "Strategy",
-    "Indie"
-   ],
-   "year": 2026,
-   "platforms": [
-    "pc"
-   ],
    "days_seen": 1,
-   "last_seen": "2026-10-30",
+   "last_seen": "2026-10-31",
    "first_here": false
   },
   {
    "game": "紅の砂漠",
    "growth": 5.0,
    "videos": 4,
-   "base": 0.5,
+   "base": 0.7,
    "channels": 3,
-   "views": 36409,
+   "views": 23685,
    "who": [
-    "ちゃっぴーGames",
     "天使うと",
+    "よも木 / yomogi",
     "ちゃっぴーGames",
-    "ちゃっぴーGames",
-    "よも木 / yomogi"
+    "ちゃっぴーGames"
    ],
    "titles": [
-    "【紅の砂漠「未知なる旅路」DLC】本日発売！初見攻略していく！新たなストーリーそして！海中探索！船！恋愛！結婚！経営！ハウジングまで色々遊べる！#PR #紅の砂漠 #CrimsonDesert",
     "〖 紅の砂漠 〗#5 DLCもやってみます",
-    "【紅の砂漠「未知なる旅路」DLC】#2 本日発売！初見攻略していく！ストーリー、ウンカ編や結婚、水中探索する！クリフとデミアン編はクリア済み！#未知なる冒険  #紅の砂漠 #CrimsonDesert"
+    "【紅の砂漠】DLC「未知なる旅路」新たな物語を楽しむ！",
+    "【紅の砂漠「未知なる旅路」DLC】#3 いよいよ海へ！海中探索していく！金のサメやビームサーベルが欲しい！#未知なる冒険  #紅の砂漠 #CrimsonDesert"
    ],
    "genres": [
     "Adventure"
@@ -867,37 +801,39 @@
     "pc",
     "console"
    ],
-   "days_seen": 6,
-   "last_seen": "2026-10-30",
+   "days_seen": 7,
+   "last_seen": "2026-10-31",
    "first_here": false
   },
   {
-   "game": "Tidy Up the Halloween Shop",
-   "growth": 3.75,
-   "videos": 3,
-   "base": 0.5,
-   "channels": 3,
-   "views": 25938,
+   "game": "R.E.P.O.",
+   "growth": 4.14,
+   "videos": 12,
+   "base": 2.9,
+   "channels": 12,
+   "views": 457073,
    "who": [
-    "ゆらぎゆら / YuragiYura🌙🫧",
-    "桃之もれん Momono Moren Ch",
-    "哲GACKTのゲーム実況チャンネル【ディアブロ・ハクスラ攻略】"
+    "一ノ瀬うるは",
+    "八雲べに",
+    "英リサ.Hanabusa Lisa",
+    "猫汰つな / Nekota Tsuna",
+    "紫宮るな /shinomiya runa"
    ],
    "titles": [
-    "【耐久】ハロウィン当日なのにお店がめちゃくちゃ！？【Tidy Up the Halloween Shop】",
-    "「ハロウィン企画🎃壊滅したお店を整頓します！」【Tidy up the halloween shop】【 #女性実況 #vtuber #雑談 】",
-    "【Tidy up the Halloween Shop実況】ハローウィーンショップのお片付け Part.2【TidyUp PS5・Steamゲーム攻略】"
+    "【#ぶいすぽハロウィン】みんなでR.E.P.O.だあああああああああああ！！！！！！！！【ぶいすぽ/一ノ瀬うるは】",
+    "【 #ぶいすぽハロウィン 】まずは皆でR.E.P.O.パーティー🎃【ぶいすぽ/八雲べに】",
+    "【R.E.P.O./#ぶいすぽハロウィン】久しぶりのド稼ぎrepo【ぶいすぽっ！/英リサ】"
    ],
    "genres": [
-    "Simulator",
+    "Strategy",
     "Indie"
    ],
-   "year": 2026,
+   "year": 2025,
    "platforms": [
     "pc"
    ],
-   "days_seen": 1,
-   "last_seen": "2026-10-30",
+   "days_seen": 24,
+   "last_seen": "2026-10-31",
    "first_here": false
   },
   {
@@ -906,7 +842,7 @@
    "videos": 3,
    "base": 0.3,
    "channels": 3,
-   "views": 19866,
+   "views": 47330,
    "who": [
     "緋八マナ / Hibachi Mana【にじさんじ】",
     "ユノ・ミハナダ / Yuno Mihanada",
@@ -927,8 +863,61 @@
     "pc",
     "console"
    ],
+   "days_seen": 8,
+   "last_seen": "2026-10-31",
+   "first_here": false
+  },
+  {
+   "game": "妖怪ウォッチ ぷにぷに",
+   "growth": 3.33,
+   "videos": 4,
+   "base": 1.2,
+   "channels": 3,
+   "views": 51607,
+   "who": [
+    "かぐch",
+    "S極N極GAMES",
+    "かぐch",
+    "ゆうハル"
+   ],
+   "titles": [
+    "「ぷにぷに」11周年イベント一緒に盛りあがろう！【Vtuber】",
+    "”赤魔寝鬼ゴールド・妖怪獣ガメゴス超え”の最強キャラを紹介！！『ぷにぷに百物語』【ぷにぷに / 妖怪ウォッチぷにぷに】",
+    "ぷにぷに「衝撃」ブロックスキル解説＆最速で使ってみた！"
+   ],
+   "genres": [],
+   "year": null,
+   "platforms": [],
    "days_seen": 7,
-   "last_seen": "2026-10-21",
+   "last_seen": "2026-10-31",
+   "first_here": false
+  },
+  {
+   "game": "クロノ・トリガー",
+   "growth": 3.0,
+   "videos": 3,
+   "base": 1.0,
+   "channels": 3,
+   "views": 628,
+   "who": [
+    "ゆうのレトロゲーム",
+    "只乃ハム Hamu Ch.",
+    "Apollo Ch. 矢筒あぽろ【Lv.77】"
+   ],
+   "titles": [
+    "【クロノトリガー】海底神殿突入時のレベルでラヴォス第2形態を攻略！",
+    "【クロノ・トリガー】完全初見で名作ゲームに挑戦‼〜時を越える旅に出よう〜 【只乃ハム🐹】#ChronoTrigger  #VTuber",
+    "【クロノ・トリガー/SFC版】#3 完全初見！決戦！魔王城！名作RPGを楽しむ！(ネタバレあり)【そちまる/矢筒あぽろ/レトロゲーム/CHRONO TRIGGER/vtuber】"
+   ],
+   "genres": [
+    "Role-playing (RPG)"
+   ],
+   "year": 1995,
+   "platforms": [
+    "console"
+   ],
+   "days_seen": 10,
+   "last_seen": "2026-10-31",
    "first_here": false
   }
  ],

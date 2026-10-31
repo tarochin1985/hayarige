@@ -6178,7 +6178,9 @@
  },
  {
   "name": "Beyond the Mist",
-  "alias": [],
+  "alias": [
+   "themist.exe"
+  ],
   "pop": 0,
   "y": 2026,
   "p": [
@@ -7525,19 +7527,6 @@
   ],
   "g": [
    "Adventure",
-   "Indie"
-  ]
- },
- {
-  "name": "Boom! Buster",
-  "alias": [],
-  "pop": 0,
-  "y": 2026,
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Strategy",
    "Indie"
   ]
  },
@@ -12399,6 +12388,21 @@
   ]
  },
  {
+  "name": "Covert Koalas: Phasco",
+  "alias": [],
+  "pop": 0,
+  "y": 2026,
+  "p": [
+   "pc"
+  ],
+  "g": [
+   "Point-and-click",
+   "Puzzle",
+   "Adventure",
+   "Indie"
+  ]
+ },
+ {
   "name": "Cow Abduction Frenzy",
   "alias": [],
   "pop": 0,
@@ -13723,7 +13727,8 @@
   "pop": 0,
   "y": 2026,
   "p": [
-   "pc"
+   "pc",
+   "console"
   ],
   "g": [
    "Shooter",
@@ -19569,7 +19574,7 @@
  {
   "name": "End of Abyss",
   "alias": [],
-  "pop": 6,
+  "pop": 7,
   "y": 2026,
   "p": [
    "pc",
@@ -19711,21 +19716,6 @@
   ],
   "g": [
    "Adventure"
-  ]
- },
- {
-  "name": "Eona",
-  "alias": [
-   "EONA"
-  ],
-  "pop": 0,
-  "y": 2026,
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Adventure",
-   "Indie"
   ]
  },
  {
@@ -24480,7 +24470,7 @@
   "alias": [
    "start_protected_game.exe"
   ],
-  "pop": 13,
+  "pop": 14,
   "y": 2026,
   "p": [
    "pc",
@@ -26112,19 +26102,6 @@
   ],
   "g": [
    "Strategy"
-  ]
- },
- {
-  "name": "Green Inferno",
-  "alias": [],
-  "pop": 0,
-  "y": 2026,
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Puzzle",
-   "Adventure"
   ]
  },
  {
@@ -29074,6 +29051,9 @@
   "p": [
    "pc",
    "console"
+  ],
+  "g": [
+   "Racing"
   ]
  },
  {
@@ -30977,7 +30957,9 @@
  },
  {
   "name": "Intus",
-  "alias": [],
+  "alias": [
+   "INTUS.exe"
+  ],
   "pop": 0,
   "y": 2026,
   "p": [
@@ -31569,7 +31551,9 @@
  },
  {
   "name": "Jarkeeper",
-  "alias": [],
+  "alias": [
+   "Jarkeeper.exe"
+  ],
   "pop": 0,
   "y": 2026,
   "p": [
@@ -35078,6 +35062,19 @@
   ]
  },
  {
+  "name": "Lost in Art",
+  "alias": [],
+  "pop": 0,
+  "y": 2026,
+  "p": [
+   "pc"
+  ],
+  "g": [
+   "Puzzle",
+   "Adventure"
+  ]
+ },
+ {
   "name": "Lost in the Roots",
   "alias": [],
   "pop": 0,
@@ -38503,20 +38500,6 @@
   ]
  },
  {
-  "name": "Moonlight Knight",
-  "alias": [],
-  "pop": 0,
-  "y": 2026,
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Hack and slash/Beat 'em up",
-   "Adventure",
-   "Indie"
-  ]
- },
- {
   "name": "Moonshire",
   "alias": [
    "MOONSHIRE"
@@ -39268,7 +39251,9 @@
  },
  {
   "name": "My Name Is...",
-  "alias": [],
+  "alias": [
+   "Mni.exe"
+  ],
   "pop": 0,
   "y": 2026,
   "p": [
@@ -42888,7 +42873,7 @@
  {
   "name": "Order of the Sinking Star",
   "alias": [],
-  "pop": 6,
+  "pop": 7,
   "y": 2026,
   "p": [
    "pc",
@@ -43925,6 +43910,20 @@
   ],
   "g": [
    "Simulator",
+   "Indie"
+  ]
+ },
+ {
+  "name": "Pawhold: Idle Desktop Cat Space Game",
+  "alias": [
+   "PAWHOLD: Idle Desktop Cat Space Game"
+  ],
+  "pop": 0,
+  "y": 2026,
+  "p": [
+   "pc"
+  ],
+  "g": [
    "Indie"
   ]
  },
@@ -46111,18 +46110,6 @@
   "g": [
    "Shooter",
    "Indie"
-  ]
- },
- {
-  "name": "Pozionista",
-  "alias": [],
-  "pop": 0,
-  "y": 2026,
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Simulator"
   ]
  },
  {
@@ -50499,6 +50486,20 @@
   ]
  },
  {
+  "name": "SWAT God",
+  "alias": [],
+  "pop": 0,
+  "y": 2026,
+  "p": [
+   "pc"
+  ],
+  "g": [
+   "Shooter",
+   "Tactical",
+   "Indie"
+  ]
+ },
+ {
   "name": "Sack Investigation",
   "alias": [],
   "pop": 0,
@@ -51526,6 +51527,7 @@
    "pc"
   ],
   "g": [
+   "Point-and-click",
    "Adventure"
   ]
  },
@@ -53019,7 +53021,7 @@
   "alias": [
    "Carpenter.exe"
   ],
-  "pop": 11,
+  "pop": 12,
   "y": 2026,
   "p": [
    "pc",
@@ -55944,7 +55946,7 @@
   "alias": [
    "STAR WARS: Galactic Racer"
   ],
-  "pop": 10,
+  "pop": 11,
   "y": 2026,
   "p": [
    "pc",
@@ -56904,6 +56906,24 @@
    "Racing",
    "Sport",
    "Indie"
+  ]
+ },
+ {
+  "name": "Stuntboost",
+  "alias": [
+   "STUNTBOOST.exe"
+  ],
+  "pop": 0,
+  "y": 2026,
+  "p": [
+   "pc"
+  ],
+  "g": [
+   "Platform",
+   "Racing",
+   "Adventure",
+   "Indie",
+   "Arcade"
   ]
  },
  {
@@ -58939,6 +58959,20 @@
   ]
  },
  {
+  "name": "Text Dungeon: The Ring of Life",
+  "alias": [],
+  "pop": 0,
+  "y": 2026,
+  "p": [
+   "pc"
+  ],
+  "g": [
+   "Role-playing (RPG)",
+   "Adventure",
+   "Indie"
+  ]
+ },
+ {
   "name": "Textorio",
   "alias": [
    "Textorio.exe"
@@ -59026,6 +59060,22 @@
   ],
   "g": [
    "Indie"
+  ]
+ },
+ {
+  "name": "The 4 Masked",
+  "alias": [],
+  "pop": 0,
+  "y": 2026,
+  "p": [
+   "pc"
+  ],
+  "g": [
+   "Platform",
+   "Puzzle",
+   "Adventure",
+   "Indie",
+   "Arcade"
   ]
  },
  {
@@ -66000,7 +66050,7 @@
  {
   "name": "Valor Mortis",
   "alias": [],
-  "pop": 9,
+  "pop": 10,
   "y": 2026,
   "p": [
    "pc",
@@ -67085,23 +67135,6 @@
   "g": [
    "Puzzle",
    "Simulator",
-   "Indie"
-  ]
- },
- {
-  "name": "Wanderdawn",
-  "alias": [
-   "朝はどこ"
-  ],
-  "pop": 0,
-  "y": 2026,
-  "jp": "朝はどこ",
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Hack and slash/Beat 'em up",
-   "Adventure",
    "Indie"
   ]
  },
@@ -69954,21 +69987,6 @@
    "pc"
   ],
   "g": [
-   "Indie"
-  ]
- },
- {
-  "name": "ZeroPrompt",
-  "alias": [],
-  "pop": 0,
-  "y": 2026,
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Point-and-click",
-   "Simulator",
-   "Strategy",
    "Indie"
   ]
  },
