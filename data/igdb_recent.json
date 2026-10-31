@@ -3786,6 +3786,22 @@
   ]
  },
  {
+  "name": "Archwizard",
+  "alias": [
+   "ARCHWIZARD",
+   "ARCH WIZARD",
+   "Archwizard.exe"
+  ],
+  "pop": 0,
+  "y": 2026,
+  "p": [
+   "pc"
+  ],
+  "g": [
+   "Shooter"
+  ]
+ },
+ {
   "name": "Arcs",
   "alias": [
    "ARCS"
@@ -7616,7 +7632,9 @@
  },
  {
   "name": "Bot Colony _redux",
-  "alias": [],
+  "alias": [
+   "MyProject.exe"
+  ],
   "pop": 0,
   "y": 2026,
   "p": [
@@ -9810,6 +9828,20 @@
   ]
  },
  {
+  "name": "Cat a Photo",
+  "alias": [],
+  "pop": 0,
+  "y": 2026,
+  "p": [
+   "pc"
+  ],
+  "g": [
+   "Simulator",
+   "Adventure",
+   "Indie"
+  ]
+ },
+ {
   "name": "Cat-Astrophy",
   "alias": [],
   "pop": 0,
@@ -11860,6 +11892,19 @@
   ]
  },
  {
+  "name": "Construction Store Simulator",
+  "alias": [],
+  "pop": 0,
+  "y": 2026,
+  "p": [
+   "pc"
+  ],
+  "g": [
+   "Simulator",
+   "Indie"
+  ]
+ },
+ {
   "name": "Container Terminal Simulator",
   "alias": [
    "CTS.exe"
@@ -13409,20 +13454,6 @@
   "g": [
    "Strategy",
    "Adventure",
-   "Indie"
-  ]
- },
- {
-  "name": "Curve Fever",
-  "alias": [
-   "CurveFever.exe"
-  ],
-  "pop": 0,
-  "y": 2026,
-  "p": [
-   "pc"
-  ],
-  "g": [
    "Indie"
   ]
  },
@@ -16857,6 +16888,20 @@
   ]
  },
  {
+  "name": "Don’t Return to Wonderland",
+  "alias": [],
+  "pop": 0,
+  "y": 2026,
+  "p": [
+   "pc"
+  ],
+  "g": [
+   "Puzzle",
+   "Adventure",
+   "Indie"
+  ]
+ },
+ {
   "name": "Doom ChessMaster",
   "alias": [],
   "pop": 0,
@@ -18866,19 +18911,6 @@
   ],
   "g": [
    "Shooter",
-   "Indie"
-  ]
- },
- {
-  "name": "EbiTapes",
-  "alias": [],
-  "pop": 0,
-  "y": 2026,
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Adventure",
    "Indie"
   ]
  },
@@ -21051,22 +21083,6 @@
   ]
  },
  {
-  "name": "False Hero",
-  "alias": [
-   "False Hero.exe"
-  ],
-  "pop": 0,
-  "y": 2026,
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Role-playing (RPG)",
-   "Adventure",
-   "Indie"
-  ]
- },
- {
   "name": "Fame or Folly",
   "alias": [],
   "pop": 0,
@@ -21952,6 +21968,7 @@
  {
   "name": "Find Me",
   "alias": [
+   "Find Me.exe",
    "FiND ME"
   ],
   "pop": 0,
@@ -22978,6 +22995,22 @@
   ]
  },
  {
+  "name": "Football Pitch Simulator",
+  "alias": [
+   "Football Pitch Simulator.exe"
+  ],
+  "pop": 0,
+  "y": 2026,
+  "p": [
+   "pc"
+  ],
+  "g": [
+   "Simulator",
+   "Sport",
+   "Indie"
+  ]
+ },
+ {
   "name": "Football Survivors",
   "alias": [],
   "pop": 0,
@@ -23289,20 +23322,6 @@
    "pc"
   ],
   "g": [
-   "Adventure"
-  ]
- },
- {
-  "name": "Foxhollow",
-  "alias": [],
-  "pop": 0,
-  "y": 2026,
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Puzzle",
-   "Role-playing (RPG)",
    "Adventure"
   ]
  },
@@ -25013,6 +25032,22 @@
   ]
  },
  {
+  "name": "Giri-Jump Star Rush",
+  "alias": [
+   "ギリJumpスターラッシュ"
+  ],
+  "pop": 0,
+  "y": 2026,
+  "jp": "ギリJumpスターラッシュ",
+  "p": [
+   "pc"
+  ],
+  "g": [
+   "Platform",
+   "Indie"
+  ]
+ },
+ {
   "name": "Girl & Scarecrow",
   "alias": [
    "Scarecrow.exe"
@@ -25439,6 +25474,20 @@
   "g": [
    "Simulator",
    "Adventure",
+   "Indie"
+  ]
+ },
+ {
+  "name": "Going My Way?",
+  "alias": [],
+  "pop": 0,
+  "y": 2026,
+  "p": [
+   "pc"
+  ],
+  "g": [
+   "Puzzle",
+   "Simulator",
    "Indie"
   ]
  },
@@ -27863,6 +27912,18 @@
   "g": [
    "Role-playing (RPG)",
    "Adventure"
+  ]
+ },
+ {
+  "name": "Here Comes the Horde",
+  "alias": [],
+  "pop": 0,
+  "y": 2026,
+  "p": [
+   "pc"
+  ],
+  "g": [
+   "Indie"
   ]
  },
  {
@@ -32512,7 +32573,9 @@
    "pc"
   ],
   "g": [
-   "Adventure"
+   "Strategy",
+   "Adventure",
+   "Indie"
   ]
  },
  {
@@ -34350,20 +34413,6 @@
   ],
   "g": [
    "Platform",
-   "Indie"
-  ]
- },
- {
-  "name": "Little Ghost",
-  "alias": [],
-  "pop": 0,
-  "y": 2026,
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Platform",
-   "Adventure",
    "Indie"
   ]
  },
@@ -38455,23 +38504,6 @@
   ]
  },
  {
-  "name": "Moonwakers",
-  "alias": [
-   "MW : The SEED Cycle",
-   "Moonwakers : EP01",
-   "Moonwakers: Episode 01"
-  ],
-  "pop": 0,
-  "y": 2026,
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Adventure",
-   "Indie"
-  ]
- },
- {
   "name": "Moony Mayhem: Cheeks Unleashed",
   "alias": [],
   "pop": 0,
@@ -40548,24 +40580,6 @@
   ]
  },
  {
-  "name": "Nighthawks",
-  "alias": [
-   "nighthawks.exe"
-  ],
-  "pop": 1,
-  "y": 2026,
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Role-playing (RPG)",
-   "Simulator",
-   "Adventure",
-   "Indie",
-   "Visual Novel"
-  ]
- },
- {
   "name": "Nightmare Circus",
   "alias": [],
   "pop": 0,
@@ -41089,23 +41103,6 @@
    "console"
   ],
   "g": [
-   "Adventure",
-   "Indie"
-  ]
- },
- {
-  "name": "Nocturne",
-  "alias": [
-   "Nocturne.exe"
-  ],
-  "pop": 0,
-  "y": 2026,
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Music",
-   "Role-playing (RPG)",
    "Adventure",
    "Indie"
   ]
@@ -41770,22 +41767,6 @@
   "g": [
    "Role-playing (RPG)",
    "Strategy",
-   "Indie"
-  ]
- },
- {
-  "name": "Obscurity: Unknown Threat",
-  "alias": [
-   "ObsUT",
-   "Unth.exe"
-  ],
-  "pop": 0,
-  "y": 2026,
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Shooter",
    "Indie"
   ]
  },
@@ -43639,22 +43620,6 @@
   "g": [
    "Role-playing (RPG)",
    "Strategy",
-   "Adventure",
-   "Indie"
-  ]
- },
- {
-  "name": "Parasited Will",
-  "alias": [
-   "Reinforced Hearts"
-  ],
-  "pop": 0,
-  "y": 2026,
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Role-playing (RPG)",
    "Adventure",
    "Indie"
   ]
@@ -45579,6 +45544,15 @@
   ]
  },
  {
+  "name": "Pokémon Pokopia: Part 2",
+  "alias": [],
+  "pop": 0,
+  "y": 2026,
+  "p": [
+   "console"
+  ]
+ },
+ {
   "name": "Pokémon World Frontier",
   "alias": [],
   "pop": 0,
@@ -46433,15 +46407,6 @@
   ]
  },
  {
-  "name": "Problems Jogo",
-  "alias": [],
-  "pop": 0,
-  "y": 2026,
-  "p": [
-   "console"
-  ]
- },
- {
   "name": "Procedure Zero",
   "alias": [],
   "pop": 0,
@@ -47022,6 +46987,19 @@
   ],
   "g": [
    "Simulator"
+  ]
+ },
+ {
+  "name": "PulseWave",
+  "alias": [],
+  "pop": 0,
+  "y": 2026,
+  "p": [
+   "pc"
+  ],
+  "g": [
+   "Indie",
+   "Arcade"
   ]
  },
  {
@@ -49132,7 +49110,9 @@
  },
  {
   "name": "Rhythm Hotel",
-  "alias": [],
+  "alias": [
+   "节奏旅社"
+  ],
   "pop": 0,
   "y": 2026,
   "p": [
@@ -50569,6 +50549,19 @@
   "g": [
    "Role-playing (RPG)",
    "Adventure"
+  ]
+ },
+ {
+  "name": "Saintless",
+  "alias": [],
+  "pop": 0,
+  "y": 2026,
+  "p": [
+   "pc"
+  ],
+  "g": [
+   "Adventure",
+   "Indie"
   ]
  },
  {
@@ -56897,24 +56890,6 @@
   ]
  },
  {
-  "name": "Stuntboost",
-  "alias": [
-   "STUNTBOOST.exe"
-  ],
-  "pop": 0,
-  "y": 2026,
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Platform",
-   "Racing",
-   "Adventure",
-   "Indie",
-   "Arcade"
-  ]
- },
- {
   "name": "Stunted Gravity",
   "alias": [],
   "pop": 0,
@@ -58309,6 +58284,20 @@
   ]
  },
  {
+  "name": "Tape Man",
+  "alias": [],
+  "pop": 0,
+  "y": 2026,
+  "p": [
+   "pc"
+  ],
+  "g": [
+   "Puzzle",
+   "Adventure",
+   "Indie"
+  ]
+ },
+ {
   "name": "Tape Us Out",
   "alias": [],
   "pop": 0,
@@ -58408,6 +58397,19 @@
   ],
   "g": [
    "Simulator"
+  ]
+ },
+ {
+  "name": "Tavern Clicker",
+  "alias": [],
+  "pop": 0,
+  "y": 2026,
+  "p": [
+   "pc"
+  ],
+  "g": [
+   "Simulator",
+   "Indie"
   ]
  },
  {
@@ -58639,7 +58641,9 @@
  },
  {
   "name": "Temple of Your Mom",
-  "alias": [],
+  "alias": [
+   "Game.exe"
+  ],
   "pop": 0,
   "y": 2026,
   "p": [
@@ -58707,15 +58711,6 @@
   "g": [
    "Adventure",
    "Indie"
-  ]
- },
- {
-  "name": "Tenfold: Number Puzzle",
-  "alias": [],
-  "pop": 0,
-  "y": 2026,
-  "g": [
-   "Puzzle"
   ]
  },
  {
@@ -62839,6 +62834,19 @@
   ]
  },
  {
+  "name": "Tidy Tidy",
+  "alias": [],
+  "pop": 0,
+  "y": 2026,
+  "p": [
+   "pc"
+  ],
+  "g": [
+   "Puzzle",
+   "Indie"
+  ]
+ },
+ {
   "name": "Tidy Town",
   "alias": [],
   "pop": 0,
@@ -64762,20 +64770,6 @@
   ]
  },
  {
-  "name": "True Vikings",
-  "alias": [],
-  "pop": 0,
-  "y": 2026,
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Role-playing (RPG)",
-   "Simulator",
-   "Adventure"
-  ]
- },
- {
   "name": "Try",
   "alias": [],
   "pop": 0,
@@ -64904,6 +64898,20 @@
   "g": [
    "Role-playing (RPG)",
    "Adventure"
+  ]
+ },
+ {
+  "name": "Turbo Loop",
+  "alias": [],
+  "pop": 0,
+  "y": 2026,
+  "p": [
+   "pc"
+  ],
+  "g": [
+   "Racing",
+   "Indie",
+   "Arcade"
   ]
  },
  {
@@ -65678,7 +65686,9 @@
  },
  {
   "name": "Unrivaled",
-  "alias": [],
+  "alias": [
+   "unrivaled.exe"
+  ],
   "pop": 0,
   "y": 2026,
   "p": [
@@ -66100,23 +66110,6 @@
    "Shooter",
    "Indie",
    "Arcade"
-  ]
- },
- {
-  "name": "Ved: Recure",
-  "alias": [
-   "Ved:疗愈所",
-   "Ved：療愈所"
-  ],
-  "pop": 0,
-  "y": 2026,
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Role-playing (RPG)",
-   "Adventure",
-   "Indie"
   ]
  },
  {
