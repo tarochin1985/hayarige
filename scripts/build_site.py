@@ -9,6 +9,7 @@ import json
 import urllib.parse
 import hashlib
 import math, re
+import shutil
 import unicodedata
 from collections import defaultdict, Counter
 from datetime import datetime, timedelta, timezone
@@ -2382,6 +2383,10 @@ def search_index():
         except (ValueError, OSError):
             continue
         rank = {r["game"] for r in obj.get("ranking", [])}
+        # ★その日の順位も控える（2026-10-31）。ゲーム別ページに
+        #   「最高順位は◯月◯日の◯位」と出すため。**全期間の記録を
+        #   持っているこのサイトにしか出せない数字**で、1枚ずつ中身が違う。
+        best_rank = {r["game"]: i for i, r in enumerate(obj.get("ranking", []), 1)}
         # ゲーム別ページの「最近の配信」用。30日を過ぎた記録ページからは
         # 配信タイトルが外してあるので、ここに入るのは30日以内のものだけ
         for r in obj.get("ranking", []):
@@ -2401,6 +2406,9 @@ def search_index():
             g["c"].append(c)
             if name in rank:
                 g["r"].append(at[day])          # ランキングに入った日
+                pos = best_rank.get(name)
+                if pos and (not g.get("bk") or pos < g["bk"][0]):
+                    g["bk"] = [pos, at[day]]    # 最高順位と、その日
 
     # コラムで取り上げた日。コラムはこちらが書いたものなので、全期間残っている。
     cd = DATA / "columns"
@@ -2459,6 +2467,41 @@ def search_index():
 GAME_PAGE_MIN = 3      # 何日以上出たゲームにページを作るか
 GAME_PAGE_DAYS = 21    # 表に出す直近の日数
 GAME_PAGE_STREAMS = 8  # 「最近の配信」に並べる本数
+
+# ★のべ何本以上のゲームにページを作るか（2026-10-31 たろちんさんと決めた）
+#
+# なぜ足したか
+# ------------
+# 2026-10-05にAdSenseが「有用性の低いコンテンツ」で不承認になった。
+# そのとき測った数字は「232ページ中184枚（79%）が /g/ のゲームページで、
+# その中に人が書いた文が1文字も無い」。10-31に測り直したら
+# **404ページ中317枚（79%）で、比率は1%も動かず、枚数だけ増えていた。**
+#
+# 中身も薄かった。追いかけている478本のうち
+#   のべ10本未満 … 258本（53%）
+#   出た日が3日以下 … 241本
+# 「のべ8本のゲームの、3行しかない表のページ」は、
+# **読者にとっても価値が無い。** 文字を足すのではなく、作るのをやめる。
+#
+#   のべ20本以上 → 162枚 残る
+#   のべ30本以上 → 136枚 残る  ← これにした
+#
+# 30本で切ると、**人が書いた文のあるページ（コラム74＋日別69＋説明4＝147枚）が
+# はじめて自動ページを上回る。**
+#
+# ★**消えたページは、日が経って30本を超えれば自動で戻る。**
+#   URLは `data/game_slugs.json` に残してあり、**一度決めた住所は変えない**ので、
+#   同じURLで戻る。新しいゲームも、30本たまった日から自動で作られる。
+#
+# ★数は `data/site_config.json` の `game_page_min_videos` で変えられる
+#   （コードを触らずに調整できるようにした）。0 にすると本数の線は無くなる。
+GAME_PAGE_MIN_VIDEOS = 30
+
+
+def page_worthy(g, min_videos=None):
+    """このゲームにページを作ってよいか。日数と、のべ本数の両方で見る。"""
+    mv = GAME_PAGE_MIN_VIDEOS if min_videos is None else min_videos
+    return len(g.get("d") or []) >= GAME_PAGE_MIN and sum(g.get("v") or []) >= mv
 
 
 def game_slug(name, slugs):
@@ -2786,8 +2829,14 @@ def game_page_html(name, g, dd, streams, home, plat=None, cfg=None,
            f"いちばん多かったのは{int(days[best][5:7])}月{int(days[best][8:10])}日で、"
            f"{cs[best]}チャンネルが配信していました。</p>"]
     if ranked:
+        bk = g.get("bk")
+        extra = ""
+        if bk:
+            bd = dd[bk[1]]
+            extra = (f"最高順位は{int(bd[5:7])}月{int(bd[8:10])}日の"
+                     f"<b>{bk[0]}位</b>です。")
         out.append(f"<p>このうち<b>{ranked}日</b>は、その日のランキング"
-                   f"（上位30件）に入っています。</p>")
+                   f"（上位30件）に入っています。{extra}</p>")
 
     # コラムで取り上げた日。こちらが書いた文章なので、全期間残っている
     cols = g.get("col") or []
@@ -3003,7 +3052,8 @@ def games_index_html(items, home):
     """ゲーム別ページの一覧。ここが無いと、作ったページへの入口が
     サイトマップしか無くなる。"""
     out = ["<h2>ゲーム別のページ</h2>",
-           f'<p class="lead">当サイトの集計に{GAME_PAGE_MIN}日以上出たゲームを、'
+           f'<p class="lead">当サイトの集計に{GAME_PAGE_MIN}日以上出て、'
+           f"のべ{GAME_PAGE_MIN_VIDEOS}本以上の配信が見つかったゲームを、"
            f"出た日数の多い順に並べています（{len(items)}種）。</p><ul>"]
     for name, slug, n in items:
         out.append(f'<li><a href="{home}g/{slug}/">{e(name)}</a>'
@@ -3569,10 +3619,22 @@ def rank_moves(rows, days, idx, disp, override, hist, day_names,
 
 
 def main():
+    global GAME_PAGE_MIN_VIDEOS
     idx = M.build_index()
     disp = M.load_display()
     plats = M.load_platforms()
     cfg = read_json(DATA / "site_config.json", {}) or {}
+    # ★ゲーム別ページを作る線は、コードを触らずに変えられるようにしてある。
+    #   data/site_config.json の `game_page_min_videos` に数を書くと、そちらが勝つ。
+    try:
+        _mv = cfg.get("game_page_min_videos")
+        if _mv is not None and str(_mv).strip() != "":
+            GAME_PAGE_MIN_VIDEOS = max(0, int(_mv))
+            log(f"ゲーム別ページの線を site_config で変えました: "
+                f"のべ{GAME_PAGE_MIN_VIDEOS}本以上")
+    except (TypeError, ValueError):
+        log("site_config の game_page_min_videos が数字ではありません。"
+            f"既定の {GAME_PAGE_MIN_VIDEOS} を使います")
     override = read_json(DATA / "display_names.json", {}) or {}
     if not cfg.get("amazon_tag"):
         log("AmazonアソシエイトIDが未設定です（data/site_config.json）。"
@@ -3697,14 +3759,18 @@ def main():
     # HTMLを読み直す必要がなく、**ページを書き出す前に分かる。**
     # 今日ちょうど3日目になったゲームは、住所がこの回で決まるので
     # 明日からリンクが出る（404を作らないほうを選んだ）。
+    # ★のべ本数の線も同じにそろえる（2026-10-31）。ここと下のページ作りで
+    #   条件が食い違うと、**ページが無いところへリンクして404になる。**
     _gd = read_json(DATA / "game_days.json", {}) or {}
-    _seen = Counter()
+    _seen, _vids = Counter(), Counter()
     for _games_of_day in _gd.values():
-        for _n in _games_of_day:
+        for _n, _row in _games_of_day.items():
             _seen[_n] += 1
+            _vids[_n] += (_row[0] if isinstance(_row, list) and _row else 0)
     _slugs_now = read_json(DATA / "game_slugs.json", {}) or {}
     gslug_all = {n: _slugs_now[n] for n, c in _seen.items()
-                 if c >= GAME_PAGE_MIN and n in _slugs_now}
+                 if c >= GAME_PAGE_MIN and _vids[n] >= GAME_PAGE_MIN_VIDEOS
+                 and n in _slugs_now}
     log(f"ゲーム別ページへのリンクを出せるゲーム: {len(gslug_all)}件")
 
     def render(path, data, depth):
@@ -4038,14 +4104,21 @@ def main():
     # 本当に違うものを増やす。
     slugs = read_json(DATA / "game_slugs.json", {}) or {}
     slugs.pop("_説明", None)
+    # 今回ページを作るゲームの住所だけを集めた台帳。「一緒に配信された
+    # ゲーム」のリンク先をここに限る（404を作らないため）。
+    _slugs_live = {g["n"]: slugs[g["n"]] for g in _games
+                   if page_worthy(g) and g["n"] in slugs}
     made, index_items = 0, []
     for g in _games:
-        if len(g["d"]) < GAME_PAGE_MIN:
+        # ★日数だけでなく、のべ本数も見る（2026-10-31）。定数のところに理由。
+        if not page_worthy(g):
             continue
         name = g["n"]
         slug = game_slug(name, slugs)
         st = sorted(_streams.get(name, []), key=lambda x: x["d"], reverse=True)
-        rel = related_games(g, _games, slugs)
+        # ★渡すのは**ページが在るゲームの台帳だけ。** 全部渡すと、
+        #   本数が足りなくてページを作らなかったゲームへリンクして404になる。
+        rel = related_games(g, _games, _slugs_live)
         # **機種は正式名で引く。** ゲーム別ページの name は画面に出している
         # 表示名なので、そのまま引くと空になり「機種が分からない」扱いで
         # PC専用でないゲームにSteamのリンクが出てしまう（2026-09-19に
@@ -4076,7 +4149,30 @@ def main():
             "meta_desc": "VTuber・ゲーム実況者がどのゲームを何日配信したか。"
                          "ゲームごとのページを一覧にしています。",
             "page_body": games_index_html(index_items, "../")}, 1)
-    log(f"ゲーム別のページを {made} 枚書き出しました（{GAME_PAGE_MIN}日以上出たゲーム）")
+    log(f"ゲーム別のページを {made} 枚書き出しました"
+        f"（{GAME_PAGE_MIN}日以上・のべ{GAME_PAGE_MIN_VIDEOS}本以上）")
+
+    # ---- ★使われなくなったゲームページを消す（2026-10-31）--------------
+    #
+    # 条件を厳しくしても、**前に作ったHTMLは site/g/ に残ったまま**で、
+    # 公開され続ける。それでは薄いページを減らしたことにならない。
+    #
+    # 消すのは site/g/ の直下のフォルダだけ。今回作った住所の一覧に
+    # 無いものを畳む。**`made` が 0 のときは何もしない**
+    # （作りそこねた回に全部消してしまわないための保険）。
+    #
+    # ※ URLの台帳（game_slugs.json）からは消さない。**一度決めた住所は
+    #   変えない**ので、本数が増えて線を越えた日に、同じURLで戻ってくる。
+    if made:
+        _live = {sl for _n, sl, _d in index_items}
+        _gone = []
+        for _d in sorted((SITE / "g").iterdir()) if (SITE / "g").is_dir() else []:
+            if _d.is_dir() and _d.name not in _live:
+                shutil.rmtree(_d, ignore_errors=True)
+                _gone.append(_d.name)
+        if _gone:
+            log(f"使われなくなったゲームページを {len(_gone)} 枚畳みました"
+                f"（本数が増えれば同じURLで戻ります）")
 
     # ---- /d/ と /w/ の入口 ----------------------------------------------
     # 記録は /d/2026-09-24/ に、まとめは /w/2026-09-14/ に置いてあるが、
