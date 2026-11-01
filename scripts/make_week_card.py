@@ -110,6 +110,7 @@ ALSO_N = 3            # 並べられる行数の上限。投稿文に収まる�
 BEST_NOTE_MAX = 30    # 月まとめの2位・3位につけるひとことの上限（字）。
                       # 2つ横並びなので、長いと2行になって札の下がつまる
 BEST_LABEL = "今月のハヤリゲー ベスト3"
+NEW_LABEL = "今月の新顔"   # 右の欄の札（2026-11-01 たろちんさん）
 CTA = "👇詳しくはサイトで"
 #   投稿文でURLの前に置く1行（2026-10-01 たろちんさん）。週も月も同じ。
 #   まとめは400〜700字あって、カードに載るのはそのうちの3行だけ。
@@ -195,6 +196,55 @@ header .c{font-size:13px;color:var(--ink2);margin-top:6px;font-weight:700}
    順番だけが勝ち負けを決める（入れ替えると真ん中寄せに戻って崩れる）。 */
 .card.best{justify-content:space-between;gap:20px}
 .card.best.solo{justify-content:center;gap:26px}   /* 2位・3位が無いとき */
+
+/* ───────── 2段組み（2026-11-01 たろちんさん） ─────────
+   > ベスト3はカードの左側に並べて、右側に「今月の新顔」の
+   > トップ10ランキングをゲームタイトルのみの形でいいので並べたい。
+   > トップ1の説明テキストはカードでは省いてしまってよい
+   札の中を縦に割って、左にベスト3とサムネイル、右に新顔の10行を置く。
+   `.card.best` 自身は flex-direction:column のままにしてある。
+   そうしないと `.eye`（ベスト3の札）の置き場所が無くなるので、
+   **1段目に札2つ、2段目に中身2つ**という形にした。
+   右の欄が無い月（card.new を書かなかった月）は `.wide` が付いて、
+   左が丸ごと横いっぱいになる。前の見た目にそのまま戻る。 */
+/* 1段目（札）と2段目（中身）で、左右の切れ目をそろえる。
+   同じ `flex:1 1 0` ＋ 同じ固定幅を両方に当てる。 */
+.heads{flex:none;display:flex;gap:38px;align-items:center}
+.heads .hl{flex:1 1 0;min-width:0;display:flex}
+.heads .hr{flex:none;width:490px;padding-left:34px;display:flex}
+.cols{flex:1 1 auto;min-height:0;display:flex;gap:38px}
+.colL{flex:1 1 0;min-width:0;min-height:0;overflow:hidden;
+  display:flex;flex-direction:column;justify-content:space-between}
+.colL.wide{flex:1 1 100%%}
+/* サムネイルの無い札（アーカイブに置くほう）。中身が2つしか無いので、
+   space-between のままだと真ん中に大きな穴が空く。余りを均等に配る
+   （`.card` が最初からそうしているのと同じ理由）。 */
+.colL.nopics{justify-content:space-evenly}
+/* 右の欄は幅を決め打ちにする。左は1位のゲーム名の長さで伸び縮みしてよいが、
+   右は10行が同じ幅で並んでいないと順位表に見えない。 */
+.colR{flex:none;width:490px;min-height:0;overflow:hidden;
+  border-left:1px solid var(--line);padding-left:34px}
+.eye.nwl{flex:none;background:transparent;color:var(--accent);
+  box-shadow:inset 0 0 0 3px var(--accent);font-size:22px;padding:8px 20px 8px 15px}
+.eye.nwl svg{width:19px;height:19px}
+/* 新顔の10行。**ゲーム名だけ。** 数字を添えると右の欄が二重の順位表になって、
+   左のベスト3とどちらを読めばよいか分からなくなる（たろちんさんの指示）。 */
+/* 行間は決め打ち。**上下いっぱいに散らさない。**
+   散らすと、5件しか無い月に1行ずつが画面の端まで離れて、順位表に見えなくなる。
+   23pxで10行なら 10×30 + 9×28 = 552px で、欄（約560px）がちょうど埋まる。 */
+.nw{list-style:none;display:flex;flex-direction:column;
+  gap:28px;overflow:hidden}
+.nw li{display:flex;gap:14px;align-items:baseline;min-width:0}
+.nw .i{flex:none;width:34px;text-align:right;
+  font-family:"Roboto Mono",monospace;font-weight:700;font-size:21px;color:var(--ink3)}
+/* **1行で止める。** 2行になる行とならない行が混ざると、10行が階段に見えて
+   順位表に読めなくなる。入らない名前は末尾を…にして、作るときに
+   「通称にしてください」と画面へ出す（長さの見張りは main のほう）。 */
+.nw .nm{font-weight:800;font-size:23px;line-height:1.3;color:var(--ink);
+  min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+/* 上位3つだけ色を変える。10行が同じ濃さだと、どこから読むのか迷う */
+.nw li:nth-child(-n+3) .nm{color:var(--sum)}
+
 .one{display:flex;gap:22px;align-items:flex-start;min-width:0;
   flex:0 1 auto;min-height:0;overflow:hidden}
 
@@ -223,6 +273,13 @@ header .c{font-size:13px;color:var(--ink2);margin-top:6px;font-weight:700}
 .g1.long{font-size:62px}
 .g1.xlong{font-size:52px}
 .g1.xxlong{font-size:44px}
+/* 2段組みにすると、1位のゲ名に使える幅が1400px → 840pxに減る（2026-11-01）。
+   同じ階級のままだと、入ると思って置いた名前が2行に割れる。
+   右の欄があるときだけ1段ずつ小さいほうを当てる（`g1_class` が決める）。 */
+.g1.n1{font-size:58px}
+.g1.n2{font-size:48px}
+.g1.n3{font-size:40px}
+.g1.n4{font-size:34px}
 
 /* コラムの見出し。1位のゲーム名の下に来るので、ここでは主役を譲る。
    色は accent にして、ゲーム名（hot）と要約（ink2）の間をつなぐ。 */
@@ -232,19 +289,38 @@ header .c{font-size:13px;color:var(--ink2);margin-top:6px;font-weight:700}
    行の終わりから次の行の頭まで目が戻れなくなって、ぱっと読めない。
    1行45字くらいで折り返すと3行になり、空いていた下の余白もここが埋める。 */
 .best .hd span{max-width:1200px}
-.best .sub{margin-top:15px;padding-left:0;font-size:28px;line-height:1.66;
-  max-width:1040px}
+.cols .best-hd{font-size:36px}
+.cols .best-hd span{max-width:100%%}
+/* 1位のゲーム名が小さく始まった月は、見出しも一緒に下げる。
+   そうしないと**見出しのほうが大きくなって**、どちらが主役か分からなくなる
+   （『トルネコの大冒険 ちょっとステキなリマスター』で起きた）。
+   FIT は「はみ出したら」しか効かないので、ここで先に当てておく。 */
+.g1.n2 ~ .best-hd{font-size:33px}
+.g1.n3 ~ .best-hd{font-size:30px}
+.g1.n4 ~ .best-hd{font-size:27px}
+/* 2026-11-01、月まとめの札から説明文（.sub）を外した。
+   **投稿文には今までどおり載る。** たろちんさんの指示。
+     > トップ1の説明テキストはツイート文にのみ入れる形にして
+     > カードでは省いてしまってよい
+   この決まりがそのまま、10-31に出た「説明が切れる」件の直しにもなっている
+   （置き場所が1行しか無いところに2行ぶん流し込んでいた）。
+   週まとめの `.sub` は今までどおり。 */
 
-.b23{flex:none;padding-top:24px;border-top:1px solid var(--line);
-  display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:28px}
+.b23{flex:none;padding-top:22px;border-top:1px solid var(--line);
+  display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:24px}
+/* 2段組みのときは**縦に積む**（2026-11-01）。横並びのままだと2位・3位に
+   使える幅が400pxまで落ちて、『ファイナルファンタジー レゾナンス』のような
+   名前が2行に割れ、ひとことの行がそろわなくなる。縦なら幅がまるごと使える。
+   1・2・3が上から順に並ぶので、ベスト3としてもこちらのほうが読みやすい。 */
+.cols .b23{grid-template-columns:minmax(0,1fr);gap:18px}
 .b23 .it{display:flex;gap:16px;align-items:flex-start;min-width:0}
 .b23 .tx{min-width:0}
 /* ゲーム名だが、毎日のカードの「ほかに伸びたゲーム」と同じ扱いにする
    （あちらも丸ゴシックの800）。Dela は1位のためにとっておく */
-.b23 .nm{font-weight:800;font-size:34px;
+.b23 .nm{font-weight:800;font-size:30px;
   line-height:1.22;color:var(--ink);min-width:0;overflow-wrap:anywhere;
   display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
-.b23 .nt{margin-top:10px;font-size:22px;font-weight:700;line-height:1.5;color:var(--ink2)}
+.b23 .nt{margin-top:8px;font-size:20px;font-weight:700;line-height:1.5;color:var(--ink2)}
 
 /* 配信のサムネイル（2026-10-14 たろちんさん）
    > 週まとめ、月まとめのツイート用カードにも毎日のコラムと同様に
@@ -312,8 +388,16 @@ FIT = """
     // なので、縮むのは隣の .hd と .sub のほう。あちらは overflow:hidden
     // なので**切れるだけで body は900pxのまま**で、(1) だけ見ていると
     // 「収まっている」と誤判定して、見出しの2行目が消えた画像ができる。
+    // ★ 2026-10-31、月まとめで**ここが足りなかった。**
+    //   `.sub` 自身の高さは正常なのに、**外側の箱が潰されて**字が切れていた。
+    //   `.hd` と `.sub` だけを見ていたので「収まっている」と判定し、
+    //   1段も縮めないまま、説明の2行目が切れた画像ができた。
+    //   欄そのもの（`.colL` `.colR` `.nw`）も見る。あちらは overflow:hidden で
+    //   行数の頭打ち（-webkit-line-clamp）が付いていないので、
+    //   scrollHeight がそのまま「入りきらなかった高さ」になる。
     function clipped(){
-      return [].slice.call(document.querySelectorAll('.hd, .sub'))
+      return [].slice.call(document.querySelectorAll(
+                '.hd, .sub, .colL, .colR, .nw'))
         .some(function(n){ return n.scrollHeight > n.clientHeight + 1; });
     }
     function over(){ return document.body.scrollHeight > 901 || clipped(); }
@@ -340,9 +424,11 @@ FIT = """
 
 STEPS_WEEK = [[".hd", [70, 62, 56, 53, 48, 44, 40, 36]],
               [".sub", [27, 25, 23, 21, 19, 18]]]
-STEPS_MONTH = [[".sub", [28, 26, 24, 22, 20, 18]],
-               [".b23 .nm", [34, 31, 28, 25, 23]],
-               [".best .hd", [39, 35, 32, 29, 26, 24]],
+# 月は2026-11-01に `.sub` が札から消えたので、代わりに右の「今月の新顔」が
+# いちばん先に縮む。守る順番は変えていない（最後に書いた1位の名前がいちばん強い）。
+STEPS_MONTH = [[".nw .nm", [23, 21, 19, 18, 17]],
+               [".b23 .nm", [30, 28, 25, 23, 21]],
+               [".best .hd", [39, 36, 33, 30, 27, 25, 23]],
                [".g1", [74, 66, 59, 53, 47, 42, 38]]]
 
 
@@ -619,21 +705,78 @@ def width(s):
     return sum(0.55 if ord(c) < 0x1100 else 1.0 for c in str(s or ""))
 
 
-def g1_class(name):
+def g1_class(name, narrow=False):
     """1位のゲーム名を、1行に収まる大きさから始める。
-    入る幅は全角で約18字ぶん（74px のとき）。そこから逆算している。"""
+    入る幅は全角で約18字ぶん（74px のとき）。そこから逆算している。
+
+    narrow … 右に「今月の新顔」の欄があるとき（2026-11-01）。
+             1位の名前に使える幅が 1400px → 約740px に減るので、
+             入る字数も半分になる。別の階級を当てる。
+    """
     w = width(name)
+    if narrow:
+        for lim, cls in ((9.5, ""), (11.5, " n1"), (14, " n2"), (17, " n3")):
+            if w <= lim:
+                return cls
+        return " n4"
     for lim, cls in ((18, ""), (21, " long"), (25, " xlong")):
         if w <= lim:
             return cls
     return " xxlong"
 
 
-def best_html(col, title, sub, pics=""):
-    """月まとめの札の中身。1位が取れなければ None（週と同じ形に戻る）。"""
+# ------------------------------------------------- 月まとめの「今月の新顔」
+NEW_N = 10            # 右の欄に並べる行数の上限
+
+
+def new_parts(col):
+    """月まとめの「今月の新顔」を [名前, …] で返す。無ければ空。
+
+        "card": {"new": ["ファイナルファンタジー レゾナンス", "ARC Raiders", …]}
+
+    ★**ここは自動では作らない。まとめの窓が数えて、見て、選んだものを書く。**
+      `scripts/period_stats.py --month YYYY-MM --rising` の
+      「今月の新顔（実人数順）」の表がそのまま材料になる。
+      台帳（game_days.json）だけで機械的に選ぶと、次の2つが混ざる。
+        ・前からあるが、ふだん配信が少ないゲーム
+          （10月なら『ポケモンユナイト』『トルネコの大冒険3』が並んだ）
+        ・**その月に辞書へ足したばかりの古いゲーム。**
+          台帳は30日ぶんしか作り直されないので、先月までの記録が付かず、
+          新顔と同じ顔をする（11月なら『ロマンシング サ・ガ2』がそうなる）
+      どちらも公開するカードに「今月の新顔」として出すと嘘になる。
+      だから**人が落としたものだけを載せる。**書かなければ右の欄は出ない。
+    """
+    out = []
+    for x in (col.get("card") or {}).get("new") or []:
+        g = str(x.get("g") or "").strip() if isinstance(x, dict) else str(x or "").strip()
+        if g and g not in out:
+            out.append(g)
+    return out[:NEW_N]
+
+
+def new_html(names):
+    """右の欄。名前が無ければ空文字（左が横いっぱいに戻る）。"""
+    if not names:
+        return ""
+    lis = "".join(f'<li><span class="i">{i}</span>'
+                  f'<span class="nm">{e(g)}</span></li>'
+                  for i, g in enumerate(names, start=1))
+    return f'<div class="colR"><ul class="nw">{lis}</ul></div>'
+
+
+def best_html(col, title, pics=""):
+    """月まとめの札の中身。1位が取れなければ None（週と同じ形に戻る）。
+
+    2026-11-01 から2段組み（たろちんさん）。
+      左 … ベスト3と、その配信のサムネイル3枚
+      右 … 「今月の新顔」トップ10（ゲーム名だけ）
+    `card.new` を書かなかった月は右の欄が出ず、左が横いっぱいになる。
+    **説明文（card.sub）は札には出さない。投稿文には今までどおり載る。**
+    """
     best = best_parts(col)
     if not best:
         return None
+    fresh = new_parts(col)
     g1, _ = best[0]
     hd = strip_lead_name(title, g1)
     rest = ""
@@ -645,13 +788,19 @@ def best_html(col, title, sub, pics=""):
             + "</div></div>"
             for i, (g, n) in enumerate(best[1:], start=2))
         rest = f'<div class="b23">{its}</div>'
-    return (f'<section class="card best{"" if rest else " solo"}">'
-            f'<span class="eye">{BOLT}{e(BEST_LABEL)}</span>'
+    left = (f'<div class="colL{"" if fresh else " wide"}{"" if pics else " nopics"}">'
             f'<div class="one"><span class="rk">1</span><div class="lead">'
-            f'<div class="g1{g1_class(g1)}">{e(g1)}</div>'
-            + (f'<div class="hd">{POINT}<span>{e(hd)}</span></div>' if hd else "")
-            + (f'<div class="sub">{e(sub)}</div>' if sub else "")
-            + f"</div></div>{rest}{pics}</section>")
+            f'<div class="g1{g1_class(g1, bool(fresh))}">{e(g1)}</div>'
+            + (f'<div class="hd best-hd">{POINT}<span>{e(hd)}</span></div>'
+               if hd else "")
+            + f"</div></div>{rest}{pics}</div>")
+    heads = (f'<div class="heads"><div class="hl">'
+             f'<span class="eye">{BOLT}{e(BEST_LABEL)}</span></div>'
+             + (f'<div class="hr"><span class="eye nwl">{PLUS}'
+                f'{e(NEW_LABEL)}</span></div>' if fresh else "")
+             + "</div>")
+    return (f'<section class="card best{"" if rest else " solo"}">'
+            f'{heads}<div class="cols">{left}{new_html(fresh)}</div></section>')
 
 
 def week_html(label, title, sub, also, pics=""):
@@ -687,7 +836,8 @@ def build(col, key, theme="dark", pics=False):
     css = CSS % {"bg": th["bg"], "titlefont": th["titlefont"],
                  "textfont": th["textfont"], "titleweight": th["titleweight"],
                  "gamestroke": th["gamestroke"]}
-    card = best_html(col, title, sub, ph) if label == "月まとめ" else None
+    # 月まとめの札に `sub` は渡さない（2026-11-01。投稿文のほうには載る）
+    card = best_html(col, title, ph) if label == "月まとめ" else None
     steps = STEPS_MONTH if card else STEPS_WEEK
     if card is None:
         card = week_html(label, title, sub, also, ph)
@@ -752,6 +902,14 @@ def tweet_text(col, key):
         return None
     a, b, label, slug = period(key)
     sub, also = card_parts(col)
+    # ★月まとめは説明を使わない（2026-11-01 たろちんさん）。
+    #   札から外したあと投稿文に回そうとしたが、**入る余地が無かった。**
+    #   見出し＋1〜3位＋URLだけで既に223文字ぶんあり、残りは約27字。
+    #   50〜100字の説明はどうやっても入らない。見出しの★行が「何が起きたか」を
+    #   受け持っているので、無くても投稿文は成立している。
+    #     > 投稿文からも省く
+    if label == "月まとめ":
+        sub = ""
     head = title if title.startswith("★") else "★" + title
     url = f"{CTA}\nhttps://{site_url()}/{slug}/{key}/"
     best = best_parts(col) if label == "月まとめ" else []
@@ -784,11 +942,13 @@ def tweet_text(col, key):
         plans.append(("", also))
     for k in range(len(also) - 1, 0, -1):
         plans.append(("", also[:k]))
+    # 月まとめはここに来ない（上で sub を空にしている）
+    drop_msg = "投稿文に入りきらないので、説明は画像だけに載せました。"
     for sub_, also_ in plans:
         full = put(sub_, also_)
         if x_weight(full) <= 280:
             if not sub_ and sub:
-                log("投稿文に入りきらないので、説明は画像だけに載せました。")
+                log(drop_msg)
             if len(also_) < len(also):
                 over = x_weight(put("", also)) - 280
                 log("投稿文に入りきらないので、「こんなこともありました」の"
@@ -798,7 +958,7 @@ def tweet_text(col, key):
                     "詰めてください（画像のほうは今のままで入ります）。")
             return full
     if sub:
-        log("投稿文に入りきらないので、説明は画像だけに載せました。")
+        log(drop_msg)
     return put("", also[:1] if also else [])
 
 
@@ -1101,13 +1261,20 @@ def main():
     sub, also = card_parts(col)
     title = str(col.get("title") or "")
     log(f"見出し: {title}（{len(title)}字）")
-    log(f"説明: {sub}（{len(sub)}字）")
-    if len(sub) > SUB_MAX:
-        log(f"⚠️ 説明が長すぎます（目安は50〜100字、{SUB_MAX}字まで）。"
-            "下の2行が押し出されます")
-    elif len(sub) < SUB_MIN:
-        log(f"※ 説明が短めです（目安は50〜100字）。"
-            "何が起きたのかがここだけで分かる長さにしてください")
+    # 月まとめは2026-11-01から、説明をどこにも使わない（札からも投稿文からも
+    # 外した。理由は tweet_text のコメント）。字数の見張りも月では出さない。
+    if kind == "月まとめ":
+        if (col.get("card") or {}).get("sub"):
+            log("※ 月まとめでは card.sub を使っていません"
+                "（札にも投稿文にも出ません）。書かなくて構いません")
+    else:
+        log(f"説明: {sub}（{len(sub)}字）")
+        if len(sub) > SUB_MAX:
+            log(f"⚠️ 説明が長すぎます（目安は50〜100字、{SUB_MAX}字まで）。"
+                "下の2行が押し出されます")
+        elif len(sub) < SUB_MIN:
+            log("※ 説明が短めです（目安は50〜100字）。"
+                "何が起きたのかがここだけで分かる長さにしてください")
 
     best = best_parts(col) if kind == "月まとめ" else []
     if kind == "月まとめ":
@@ -1116,7 +1283,7 @@ def main():
                 "「1位 ◯◯」もありません）。週まとめと同じ形で出します")
         for i, (g, n) in enumerate(best, start=1):
             log(f"  {i}位 {g}" + (f" ── {n}（{len(n)}字）" if n else ""))
-            if i == 1 and g1_class(g):
+            if i == 1 and g1_class(g, bool(new_parts(col))):
                 log("      ※ 1位の名前が長いので、札では小さく出ます。"
                     "card.best に通称を書くと大きく出せます"
                     "（『トルネコの大冒険 ちょっとステキなリマスター』→『トルネコの大冒険』）。")
@@ -1137,6 +1304,23 @@ def main():
                     "2位・3位は横並びなので、長いと札の下がつまります")
         if best and len(best) < 3:
             log(f"※ 順位が{len(best)}つしかありません。3つ並ぶ形で作ってあります")
+        # 右の欄（2026-11-01）
+        fresh = new_parts(col)
+        if not fresh:
+            log(f"※ 「{NEW_LABEL}」の欄が空です（card.new がありません）。"
+                "右の欄を出さずに、ベスト3を横いっぱいで出します")
+            log("   出すときは card.new に、period_stats.py の"
+                "「今月の新顔（実人数順）」から**人が選んだ**ゲーム名を"
+                f"{NEW_N}件まで並べてください（README_まとめ.txt）")
+        else:
+            log(f"{NEW_LABEL}: {len(fresh)}件")
+            for i, g in enumerate(fresh, start=1):
+                mark = ""
+                if width(g) > 17:
+                    mark = "  ← 長いので末尾が…になります。通称にしてください"
+                log(f"  {i:2} {g}{mark}")
+            if len(fresh) < NEW_N:
+                log(f"   ※ {NEW_N}件そろうと、右の欄の高さがぴったり埋まります")
     else:
         if not also:
             log("こんなこともありました: なし（card.also が空です）")
