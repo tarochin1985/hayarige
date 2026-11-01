@@ -1367,7 +1367,7 @@
   "alias": [
    "ACE COMBAT 8: WINGS OF THEVE"
   ],
-  "pop": 12,
+  "pop": 13,
   "y": 2026,
   "p": [
    "pc",
@@ -4899,22 +4899,6 @@
    "Simulator",
    "Strategy",
    "Indie"
-  ]
- },
- {
-  "name": "Babelomania",
-  "alias": [
-   "BABELOMANIA",
-   "BABELOMANIA.exe"
-  ],
-  "pop": 0,
-  "y": 2026,
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Adventure",
-   "Visual Novel"
   ]
  },
  {
@@ -8836,7 +8820,7 @@
    "MW4",
    "Call of Duty: MW4"
   ],
-  "pop": 22,
+  "pop": 23,
   "y": 2026,
   "p": [
    "pc",
@@ -18009,6 +17993,21 @@
   ],
   "g": [
    "Simulator",
+   "Indie"
+  ]
+ },
+ {
+  "name": "Dry Meadow",
+  "alias": [
+   "Dry Meadow.exe"
+  ],
+  "pop": 0,
+  "y": 2026,
+  "p": [
+   "pc"
+  ],
+  "g": [
+   "Shooter",
    "Indie"
   ]
  },
@@ -28042,25 +28041,6 @@
   ]
  },
  {
-  "name": "Heroes' Vow: Three Kingdoms",
-  "alias": [
-   "Legend of Heroes: Three Kingdoms",
-   "英雄立志传：三国志",
-   "ThreeKingdom.exe"
-  ],
-  "pop": 0,
-  "y": 2026,
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Role-playing (RPG)",
-   "Simulator",
-   "Strategy",
-   "Indie"
-  ]
- },
- {
   "name": "Heroic Musical Chairs",
   "alias": [
    "Epic Musical Chairs"
@@ -33560,6 +33540,15 @@
   ]
  },
  {
+  "name": "Late 2 Escape: Chapter One",
+  "alias": [],
+  "pop": 0,
+  "y": 2026,
+  "p": [
+   "pc"
+  ]
+ },
+ {
   "name": "Late Amusement",
   "alias": [],
   "pop": 0,
@@ -37543,6 +37532,19 @@
   ],
   "g": [
    "Quiz/Trivia",
+   "Indie"
+  ]
+ },
+ {
+  "name": "Minato Shokudo: Mirage of the Great Clam",
+  "alias": [],
+  "pop": 0,
+  "y": 2026,
+  "p": [
+   "pc"
+  ],
+  "g": [
+   "Simulator",
    "Indie"
   ]
  },
@@ -42673,22 +42675,6 @@
   ],
   "g": [
    "Adventure",
-   "Indie"
-  ]
- },
- {
-  "name": "Oomi's Nook",
-  "alias": [
-   "白日梦想屋"
-  ],
-  "pop": 0,
-  "y": 2026,
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Point-and-click",
-   "Puzzle",
    "Indie"
   ]
  },
