@@ -1,13 +1,12 @@
 {
  "date": "2026-11-01",
- "generated": "2026-11-01 12:46",
+ "generated": "2026-11-01 19:02",
  "leads": {
   "events": [
    {
     "tag": "#ぶいすぽハロウィン",
     "channels": [
      "Met Channel / 小森めと ",
-     "一ノ瀬うるは",
      "兎咲ミミ / Tosaki Mimi",
      "八雲べに",
      "夜乃くろむ / Yano Kuromu",
@@ -16,12 +15,10 @@
      "甘結もか / Amayui Moka",
      "空澄セナ -Asumi Sena-",
      "紡木こかげ",
-     "紫宮るな /shinomiya runa",
      "胡桃のあ",
      "花芽すみれ / Kaga Sumire",
      "花芽なずな / Nazuna Kaga",
      "英リサ.Hanabusa Lisa",
-     "銀城サイネ / Ginjo Saine",
      "龍巻ちせ / Tatsumaki Chise"
     ]
    },
@@ -38,64 +35,47 @@
     ]
    },
    {
-    "tag": "#ストグラ",
+    "tag": "#ストグラSeason2",
     "channels": [
-     "Tenten Ch. / 鳳玲天々",
      "たけぉ",
-     "ましゃかりさん",
-     "みつき",
+     "はたさこ / hatasako_flag",
      "クラウン【探検家の記録】",
-     "ノビーの遊び部屋",
-     "影。/かげまる"
+     "暁月ホタル AKATSUKI HOTARU",
+     "桃＋（とーたす）'s チェンネル"
     ]
    },
    {
     "tag": "#ホロ鯖ARK",
     "channels": [
      "Iroha ch. 風真いろは - holoX -",
-     "Luna Ch. 姫森ルーナ",
      "Pekora Ch. 兎田ぺこら",
      "Polka Ch. 尾丸ポルカ",
-     "Towa Ch. 常闇トワ",
      "Vivi Ch. 綺々羅々ヴィヴィ - FLOW GLOW"
     ]
    },
    {
-    "tag": "#ストグラSeason2",
+    "tag": "#ストグラ",
     "channels": [
+     "Tenten Ch. / 鳳玲天々",
      "たけぉ",
-     "はたさこ / hatasako_flag",
      "クラウン【探検家の記録】",
-     "影。/かげまる",
-     "暁月ホタル AKATSUKI HOTARU",
-     "桃＋（とーたす）'s チェンネル"
+     "ノビーの遊び部屋"
+    ]
+   },
+   {
+    "tag": "#ありうむハロウィン歌枠リレー",
+    "channels": [
+     "Molf Ch. 海汐もるふ",
+     "Monica Ch. モニカ・メロディア",
+     "Pota Ch. 向日守ぽた"
     ]
    },
    {
     "tag": "#すぺしゃりて歌枠リレー",
     "channels": [
-     "あいうらら / Urara Ai",
-     "ロロ・オリフィス / Lolo Orifice",
      "星屑ぷらね / Planei Hoshikuzu",
      "本阿弥あずさ / Azusa Honami",
      "領国つかさ / Tsukasa Ryogoku"
-    ]
-   },
-   {
-    "tag": "#ゲーム実況",
-    "channels": [
-     "CHECHE GAME【顔出し初見ゲーム実況】",
-     "ジョアだよ",
-     "三雲ヒカリ",
-     "運天りらん"
-    ]
-   },
-   {
-    "tag": "#カオスゼロナイトメア",
-    "channels": [
-     "星園ゆい Hoshizono Yui",
-     "月乃きの / Tsukino Kino Ch",
-     "狐森ろべ / Komori Ch."
     ]
    }
   ],
@@ -103,43 +83,43 @@
   "wide": [
    {
     "game": "スプラトゥーン3",
-    "channels": 41,
-    "videos": 43
-   },
-   {
-    "game": "Minecraft",
-    "channels": 28,
-    "videos": 29
-   },
-   {
-    "game": "ストリートファイター6",
-    "channels": 26,
-    "videos": 28
+    "channels": 31,
+    "videos": 32
    },
    {
     "game": "Apex Legends",
-    "channels": 24,
-    "videos": 26
-   },
-   {
-    "game": "Grand Theft Auto V",
-    "channels": 22,
-    "videos": 23
-   },
-   {
-    "game": "モンスターハンターアウトランダーズ",
-    "channels": 18,
-    "videos": 23
-   },
-   {
-    "game": "Dead by Daylight",
-    "channels": 18,
+    "channels": 19,
     "videos": 20
    },
    {
     "game": "Among Us",
-    "channels": 19,
-    "videos": 19
+    "channels": 18,
+    "videos": 18
+   },
+   {
+    "game": "ストリートファイター6",
+    "channels": 15,
+    "videos": 15
+   },
+   {
+    "game": "Dead by Daylight",
+    "channels": 13,
+    "videos": 13
+   },
+   {
+    "game": "Grand Theft Auto V",
+    "channels": 14,
+    "videos": 14
+   },
+   {
+    "game": "Minecraft",
+    "channels": 15,
+    "videos": 15
+   },
+   {
+    "game": "モンスターハンターアウトランダーズ",
+    "channels": 12,
+    "videos": 14
    }
   ]
  },
@@ -192,22 +172,6 @@
    ]
   },
   {
-   "word": "Restory",
-   "channels": 1,
-   "n": 1,
-   "examples": [
-    {
-     "t": "大切な思い出も直します！町の修理屋さんになりました【Restory】",
-     "c": "ぼんじゅうる / ドズル社",
-     "u": "https://www.youtube.com/watch?v=J-zKOWxc7qA"
-    }
-   ],
-   "kind": "near",
-   "suggest": [
-    "ReStory: Chill Electronics Repairs"
-   ]
-  },
-  {
    "word": "Pedals",
    "channels": 1,
    "n": 1,
@@ -221,6 +185,22 @@
    "kind": "near",
    "suggest": [
     "Pedals in Panic"
+   ]
+  },
+  {
+   "word": "Restory",
+   "channels": 1,
+   "n": 1,
+   "examples": [
+    {
+     "t": "大切な思い出も直します！町の修理屋さんになりました【Restory】",
+     "c": "ぼんじゅうる / ドズル社",
+     "u": "https://www.youtube.com/watch?v=J-zKOWxc7qA"
+    }
+   ],
+   "kind": "near",
+   "suggest": [
+    "ReStory: Chill Electronics Repairs"
    ]
   },
   {
@@ -250,14 +230,14 @@
      "u": "https://www.youtube.com/watch?v=PSCV3S1uUwM"
     },
     {
+     "t": "【アウトランダーズ】新作モンハン、さっそく狩りに行くぞ！【初日昼の部】",
+     "c": "ゲームするメイド男子 越山嘉祈",
+     "u": "https://www.youtube.com/watch?v=DZHginiTjjk"
+    },
+    {
      "t": "【アウトランダーズ】序盤の重要な進め方11選！効率の良い冒険ランク上げや序盤の日課とオススメキャラ等について【モンハン】",
      "c": "もやし - ゲーム実況",
      "u": "https://www.youtube.com/watch?v=LwVnodgjofA"
-    },
-    {
-     "t": "【アウトランダーズ】新しいモンハン、まだまだ遊ぶぞ！【初日夜の部】",
-     "c": "ゲームするメイド男子 越山嘉祈",
-     "u": "https://www.youtube.com/watch?v=8fppKHFE9H4"
     }
    ],
    "kind": "wide",
@@ -279,9 +259,9 @@
      "u": "https://www.youtube.com/watch?v=0v-t-fapIhE"
     },
     {
-     "t": "【アウトランダーズ】序盤の重要な進め方11選！効率の良い冒険ランク上げや序盤の日課とオススメキャラ等について【モンハン】",
-     "c": "もやし - ゲーム実況",
-     "u": "https://www.youtube.com/watch?v=LwVnodgjofA"
+     "t": "”リオレウス”が空の王者なのに生物としては環境の変化に弱すぎる飛竜だった真実に気付いてしまったみんなの反応集【モンハン】",
+     "c": "燻銀チャイルド",
+     "u": "https://www.youtube.com/watch?v=tMyfG7PbfdE"
     }
    ],
    "kind": "wide",
@@ -346,14 +326,14 @@
      "u": "https://www.youtube.com/watch?v=ijREmGRSfYI"
     },
     {
-     "t": "『100種類の二郎系ラーメンを食い切るまで終われない』狂気のホラゲーに挑む【ニンニクマシマシ】",
-     "c": "SAWAYAN GAMES / サワヤン ゲームズ",
-     "u": "https://www.youtube.com/watch?v=89DidDP__s8"
-    },
-    {
      "t": "【閲覧注意】なんでもトッピングできるラーメン屋がヤバすぎる【ニンニクマシマシ】",
      "c": "ジェスター(うるさい実況者)",
      "u": "https://www.youtube.com/watch?v=wh-UU-7xWwA"
+    },
+    {
+     "t": "『100種類の二郎系ラーメンを食い切るまで終われない』狂気のホラゲーに挑む【ニンニクマシマシ】",
+     "c": "SAWAYAN GAMES / サワヤン ゲームズ",
+     "u": "https://www.youtube.com/watch?v=89DidDP__s8"
     }
    ],
    "kind": "wide",
@@ -420,36 +400,6 @@
    "first_here": false
   },
   {
-   "game": "紅の砂漠",
-   "growth": 5.0,
-   "videos": 4,
-   "base": 0.7,
-   "channels": 3,
-   "views": 23685,
-   "who": [
-    "天使うと",
-    "よも木 / yomogi",
-    "ちゃっぴーGames",
-    "ちゃっぴーGames"
-   ],
-   "titles": [
-    "〖 紅の砂漠 〗#5 DLCもやってみます",
-    "【紅の砂漠】DLC「未知なる旅路」新たな物語を楽しむ！",
-    "【紅の砂漠「未知なる旅路」DLC】#3 いよいよ海へ！海中探索していく！金のサメやビームサーベルが欲しい！#未知なる冒険  #紅の砂漠 #CrimsonDesert"
-   ],
-   "genres": [
-    "Adventure"
-   ],
-   "year": 2026,
-   "platforms": [
-    "pc",
-    "console"
-   ],
-   "days_seen": 7,
-   "last_seen": "2026-10-31",
-   "first_here": false
-  },
-  {
    "game": "Phasmophobia",
    "growth": 3.75,
    "videos": 3,
@@ -481,86 +431,122 @@
    "first_here": false
   },
   {
-   "game": "R.E.P.O.",
-   "growth": 3.55,
-   "videos": 11,
-   "base": 3.1,
-   "channels": 11,
-   "views": 454970,
+   "game": "紅の砂漠",
+   "growth": 3.75,
+   "videos": 3,
+   "base": 0.8,
+   "channels": 3,
+   "views": 21989,
    "who": [
-    "一ノ瀬うるは",
-    "八雲べに",
-    "英リサ.Hanabusa Lisa",
-    "猫汰つな / Nekota Tsuna",
-    "紫宮るな /shinomiya runa"
+    "天使うと",
+    "よも木 / yomogi",
+    "ちゃっぴーGames"
    ],
    "titles": [
-    "【#ぶいすぽハロウィン】みんなでR.E.P.O.だあああああああああああ！！！！！！！！【ぶいすぽ/一ノ瀬うるは】",
-    "【 #ぶいすぽハロウィン 】まずは皆でR.E.P.O.パーティー🎃【ぶいすぽ/八雲べに】",
-    "【R.E.P.O./#ぶいすぽハロウィン】久しぶりのド稼ぎrepo【ぶいすぽっ！/英リサ】"
+    "〖 紅の砂漠 〗#5 DLCもやってみます",
+    "【紅の砂漠】DLC「未知なる旅路」新たな物語を楽しむ！",
+    "【紅の砂漠「未知なる旅路」DLC】#3 いよいよ海へ！海中探索していく！金のサメやビームサーベルが欲しい！#未知なる冒険  #紅の砂漠 #CrimsonDesert"
    ],
    "genres": [
-    "Strategy",
-    "Indie"
+    "Adventure"
    ],
-   "year": 2025,
+   "year": 2026,
    "platforms": [
-    "pc"
+    "pc",
+    "console"
    ],
-   "days_seen": 24,
-   "last_seen": "2026-10-31",
-   "first_here": false
-  },
-  {
-   "game": "妖怪ウォッチ ぷにぷに",
-   "growth": 3.33,
-   "videos": 4,
-   "base": 1.2,
-   "channels": 3,
-   "views": 51607,
-   "who": [
-    "かぐch",
-    "S極N極GAMES",
-    "かぐch",
-    "ゆうハル"
-   ],
-   "titles": [
-    "「ぷにぷに」11周年イベント一緒に盛りあがろう！【Vtuber】",
-    "”赤魔寝鬼ゴールド・妖怪獣ガメゴス超え”の最強キャラを紹介！！『ぷにぷに百物語』【ぷにぷに / 妖怪ウォッチぷにぷに】",
-    "ぷにぷに「衝撃」ブロックスキル解説＆最速で使ってみた！"
-   ],
-   "genres": [],
-   "year": null,
-   "platforms": [],
    "days_seen": 7,
    "last_seen": "2026-10-31",
    "first_here": false
   },
   {
-   "game": "クロノ・トリガー",
-   "growth": 2.5,
+   "game": "インボキア-呪いのダイスゲーム-",
+   "growth": 1.67,
    "videos": 3,
-   "base": 1.2,
+   "base": 1.8,
    "channels": 3,
-   "views": 628,
+   "views": 46613,
    "who": [
-    "ゆうのレトロゲーム",
-    "只乃ハム Hamu Ch.",
-    "Apollo Ch. 矢筒あぽろ【Lv.77】"
+    "ACHRORA - mekPark",
+    "伏見ガク【にじさんじ所属】",
+    "Kazaki Ch. ‐ 森中花咲 ‐"
    ],
    "titles": [
-    "【クロノトリガー】海底神殿突入時のレベルでラヴォス第2形態を攻略！",
-    "【クロノ・トリガー】完全初見で名作ゲームに挑戦‼〜時を越える旅に出よう〜 【只乃ハム🐹】#ChronoTrigger  #VTuber",
-    "【クロノ・トリガー/SFC版】#3 完全初見！決戦！魔王城！名作RPGを楽しむ！(ネタバレあり)【そちまる/矢筒あぽろ/レトロゲーム/CHRONO TRIGGER/vtuber】"
+    "【#インボキア】ハロウィンの夜に、呪いのダイスゲーム⁉️🎃　#ACHRORA #ACHRORAコラボ",
+    "【インボキア-呪いのダイスゲーム-】ハロウィンオカ研デスボドゲ【ネタバレあり / にじさんじ / 伏見ガク】",
+    "【Invokyr】Happy Halloween...な夜は、にじさんじオカルト研究部で部活動。【にじさんじオカルト研究部】"
    ],
    "genres": [
-    "Role-playing (RPG)"
+    "Adventure",
+    "Indie"
    ],
-   "year": 1995,
+   "year": 2026,
    "platforms": [
+    "pc"
+   ],
+   "days_seen": 7,
+   "last_seen": "2026-10-29",
+   "first_here": false
+  },
+  {
+   "game": "Among Us",
+   "growth": 1.64,
+   "videos": 18,
+   "base": 11.0,
+   "channels": 18,
+   "views": 436199,
+   "who": [
+    "英リサ.Hanabusa Lisa",
+    "Met Channel / 小森めと ",
+    "胡桃のあ",
+    "花芽なずな / Nazuna Kaga",
+    "兎咲ミミ / Tosaki Mimi"
+   ],
+   "titles": [
+    "【AmongUs/#ぶいすぽハロウィン】噓つきは泥棒のはじまり【ぶいすぽっ！/英リサ】",
+    "【 AmongUs 】とりっくあおとりーと！🎃👻💜  #ぶいすぽハロウィン【 ぶいすぽっ！ / 小森めと 】",
+    "【 #ぶいすぽハロウィン 】あまり仲間のことは疑いたくないですよね、Among Us【 ぶいすぽっ！胡桃のあ 】"
+   ],
+   "genres": [
+    "Strategy",
+    "Indie"
+   ],
+   "year": 2018,
+   "platforms": [
+    "pc",
     "console"
    ],
-   "days_seen": 10,
+   "days_seen": 67,
+   "last_seen": "2026-10-31",
+   "first_here": false
+  },
+  {
+   "game": "Fate/Grand Order",
+   "growth": 1.48,
+   "videos": 8,
+   "base": 5.4,
+   "channels": 6,
+   "views": 272560,
+   "who": [
+    "こやはん",
+    "FGO攻略班 - AppMedia",
+    "白銀のハト",
+    "白銀のハト",
+    "白銀のハト"
+   ],
+   "titles": [
+    "【FGO】1億ダウンロード記念が来週来る！流石に聖杯もらえるか！？",
+    "【FGO】1億ダウンロード記念やばすぎｗｗｗ星5配布来る？？聖杯あるよね？？【注意点あり】",
+    "【#FGO】オルガマリーは現環境最強だけど〇〇が大前提？！【FGO THE DREAMLOGUE】"
+   ],
+   "genres": [
+    "Role-playing (RPG)",
+    "Adventure",
+    "Visual Novel"
+   ],
+   "year": 2015,
+   "platforms": [],
+   "days_seen": 65,
    "last_seen": "2026-10-31",
    "first_here": false
   }

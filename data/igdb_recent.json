@@ -2442,6 +2442,22 @@
   ]
  },
  {
+  "name": "Alphadia F",
+  "alias": [],
+  "pop": 0,
+  "y": 2026,
+  "p": [
+   "pc",
+   "console"
+  ],
+  "g": [
+   "Role-playing (RPG)",
+   "Simulator",
+   "Adventure",
+   "Indie"
+  ]
+ },
+ {
   "name": "Alpine Lake",
   "alias": [],
   "pop": 0,
@@ -8820,7 +8836,7 @@
    "MW4",
    "Call of Duty: MW4"
   ],
-  "pop": 20,
+  "pop": 21,
   "y": 2026,
   "p": [
    "pc",
@@ -12638,6 +12654,7 @@
  {
   "name": "Cradle of Ash",
   "alias": [
+   "CradleOfAsh.exe",
    "CradleOfAsh.exe"
   ],
   "pop": 0,
@@ -20915,7 +20932,9 @@
  },
  {
   "name": "Factorized",
-  "alias": [],
+  "alias": [
+   "Factorized.exe"
+  ],
   "pop": 0,
   "y": 2026,
   "p": [
@@ -21061,24 +21080,6 @@
    "Adventure",
    "Indie",
    "Visual Novel"
-  ]
- },
- {
-  "name": "Fallen Tear: The Ascension",
-  "alias": [
-   "FallenTear.exe"
-  ],
-  "pop": 0,
-  "y": 2026,
-  "p": [
-   "pc",
-   "console"
-  ],
-  "g": [
-   "Platform",
-   "Role-playing (RPG)",
-   "Adventure",
-   "Indie"
   ]
  },
  {
@@ -34149,19 +34150,6 @@
   ]
  },
  {
-  "name": "Light Odyssey",
-  "alias": [],
-  "pop": 0,
-  "y": 2026,
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Adventure",
-   "Indie"
-  ]
- },
- {
   "name": "Light Source",
   "alias": [],
   "pop": 0,
@@ -36262,20 +36250,6 @@
   "g": [
    "Simulator",
    "Indie"
-  ]
- },
- {
-  "name": "Mars Tactics",
-  "alias": [],
-  "pop": 0,
-  "y": 2026,
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Strategy",
-   "Turn-based strategy (TBS)",
-   "Tactical"
   ]
  },
  {
@@ -40712,22 +40686,6 @@
   ]
  },
  {
-  "name": "Nios",
-  "alias": [
-   "NIOS"
-  ],
-  "pop": 0,
-  "y": 2026,
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Racing",
-   "Simulator",
-   "Sport"
-  ]
- },
- {
   "name": "Nitro Nonsense",
   "alias": [],
   "pop": 0,
@@ -41001,6 +40959,23 @@
  {
   "name": "No Such Place",
   "alias": [],
+  "pop": 0,
+  "y": 2026,
+  "p": [
+   "pc"
+  ],
+  "g": [
+   "Shooter",
+   "Adventure",
+   "Indie"
+  ]
+ },
+ {
+  "name": "No Sunrise",
+  "alias": [
+   "NO SUNRISE",
+   "NO SUNRISE.exe"
+  ],
   "pop": 0,
   "y": 2026,
   "p": [
@@ -42714,6 +42689,22 @@
   ],
   "g": [
    "Adventure",
+   "Indie"
+  ]
+ },
+ {
+  "name": "Oomi's Nook",
+  "alias": [
+   "白日梦想屋"
+  ],
+  "pop": 0,
+  "y": 2026,
+  "p": [
+   "pc"
+  ],
+  "g": [
+   "Point-and-click",
+   "Puzzle",
    "Indie"
   ]
  },
@@ -57942,6 +57933,22 @@
   "g": [
    "Platform",
    "Role-playing (RPG)",
+   "Indie"
+  ]
+ },
+ {
+  "name": "Tale of Specters: Joseon 1592",
+  "alias": [],
+  "pop": 0,
+  "y": 2026,
+  "p": [
+   "pc"
+  ],
+  "g": [
+   "Role-playing (RPG)",
+   "Strategy",
+   "Turn-based strategy (TBS)",
+   "Tactical",
    "Indie"
   ]
  },
