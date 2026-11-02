@@ -1,6 +1,6 @@
 {
  "date": "2026-11-02",
- "generated": "2026-11-02 10:30",
+ "generated": "2026-11-02 11:16",
  "leads": {
   "events": [
    {
@@ -26,16 +26,6 @@
      "空星きらめ/Sorahoshi Kirame【にじさんじ】",
      "長尾 景 / Nagao Kei【にじさんじ】",
      "魁星 / Kaisei【にじさんじ】"
-    ]
-   },
-   {
-    "tag": "#ゲーム実況",
-    "channels": [
-     "くものち ふれすch.☁️🫧",
-     "みほち",
-     "ルベルフゲームチャンネル",
-     "遊楽木たいむ / yuuragi time ch",
-     "雛乃ぴぴ / Hinano pipi"
     ]
    },
    {
@@ -79,6 +69,15 @@
     ]
    },
    {
+    "tag": "#ゲーム実況",
+    "channels": [
+     "くものち ふれすch.☁️🫧",
+     "みほち",
+     "遊楽木たいむ / yuuragi time ch",
+     "雛乃ぴぴ / Hinano pipi"
+    ]
+   },
+   {
     "tag": "#ホロドリ",
     "channels": [
      "もう一度だけVTuberやってもいい? 🅥",
@@ -99,43 +98,43 @@
   "wide": [
    {
     "game": "スプラトゥーン3",
-    "channels": 58,
-    "videos": 63
+    "channels": 57,
+    "videos": 62
    },
    {
     "game": "Apex Legends",
     "channels": 28,
-    "videos": 32
+    "videos": 31
    },
    {
     "game": "ストリートファイター6",
-    "channels": 22,
-    "videos": 24
-   },
-   {
-    "game": "Grand Theft Auto V",
-    "channels": 20,
-    "videos": 22
-   },
-   {
-    "game": "モンスターハンターアウトランダーズ",
-    "channels": 18,
-    "videos": 22
+    "channels": 21,
+    "videos": 23
    },
    {
     "game": "フォートナイト",
     "channels": 17,
-    "videos": 22
+    "videos": 21
+   },
+   {
+    "game": "Grand Theft Auto V",
+    "channels": 20,
+    "videos": 21
+   },
+   {
+    "game": "モンスターハンターアウトランダーズ",
+    "channels": 16,
+    "videos": 20
    },
    {
     "game": "Minecraft",
-    "channels": 17,
+    "channels": 16,
     "videos": 18
    },
    {
     "game": "League of Legends",
-    "channels": 15,
-    "videos": 15
+    "channels": 14,
+    "videos": 14
    }
   ]
  },
@@ -447,9 +446,9 @@
    "genres": [],
    "year": null,
    "platforms": [],
-   "days_seen": 0,
-   "last_seen": null,
-   "first_here": true
+   "days_seen": 1,
+   "last_seen": "2026-11-01",
+   "first_here": false
   },
   {
    "game": "Bleach Mirrors High",
@@ -594,13 +593,18 @@
    "platforms": [
     "console"
    ],
-   "days_seen": 0,
-   "last_seen": null,
-   "first_here": true
+   "days_seen": 1,
+   "last_seen": "2026-11-01",
+   "first_here": false
   }
  ],
  "notes_written": true,
  "recent_columns": [
+  {
+   "date": "2026-11-02",
+   "game": "古今東西ダービー",
+   "headline": "いい名前が浮かばない馬は 出走すらさせてもらえない"
+  },
   {
    "date": "2026-11-01",
    "game": "Among Us",
@@ -665,11 +669,6 @@
    "date": "2026-10-20",
    "game": "えかきうた大合戦",
    "headline": "「ゆるキャラグランプリ状態」になる絵描き歌ゲーム"
-  },
-  {
-   "date": "2026-10-19",
-   "game": "Tenebris Somnia",
-   "headline": "「レトロ風かと思ったら実写映像」 本物の役者が画面に出てくる"
   }
  ]
 }
