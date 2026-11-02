@@ -1378,7 +1378,9 @@
  },
  {
   "name": "Abyssal Moonlight: Chapter 1",
-  "alias": [],
+  "alias": [
+   "chapter1.exe"
+  ],
   "pop": 0,
   "y": 2026,
   "p": [
@@ -3745,19 +3747,6 @@
   ]
  },
  {
-  "name": "Arcade Archives 2: Xevious 3D/G",
-  "alias": [],
-  "pop": 0,
-  "y": 2026,
-  "p": [
-   "console"
-  ],
-  "g": [
-   "Shooter",
-   "Arcade"
-  ]
- },
- {
   "name": "Arcane Eats",
   "alias": [],
   "pop": 0,
@@ -4410,23 +4399,6 @@
   ]
  },
  {
-  "name": "Astrolander",
-  "alias": [
-   "《星际登陆者》"
-  ],
-  "pop": 0,
-  "y": 2026,
-  "p": [
-   "pc",
-   "console"
-  ],
-  "g": [
-   "Platform",
-   "Adventure",
-   "Indie"
-  ]
- },
- {
   "name": "Astrolite",
   "alias": [
    "AstroLite.exe"
@@ -4902,19 +4874,6 @@
    "Shooter",
    "Role-playing (RPG)",
    "Adventure"
-  ]
- },
- {
-  "name": "BROMS: Battle Royale Management Simulator",
-  "alias": [],
-  "pop": 0,
-  "y": 2026,
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Simulator",
-   "Indie"
   ]
  },
  {
@@ -5457,7 +5416,9 @@
  },
  {
   "name": "Barely Alive",
-  "alias": [],
+  "alias": [
+   "Barely Alive.exe"
+  ],
   "pop": 0,
   "y": 2026,
   "p": [
@@ -6439,20 +6400,6 @@
   ]
  },
  {
-  "name": "Birthday",
-  "alias": [
-   "Birthday.exe"
-  ],
-  "pop": 0,
-  "y": 2026,
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Indie"
-  ]
- },
- {
   "name": "Biryado",
   "alias": [],
   "pop": 0,
@@ -6708,7 +6655,9 @@
  },
  {
   "name": "Blastlane Racers",
-  "alias": [],
+  "alias": [
+   "Blastlane Racers.exe"
+  ],
   "pop": 0,
   "y": 2026,
   "p": [
@@ -6719,6 +6668,12 @@
    "Indie",
    "Arcade"
   ]
+ },
+ {
+  "name": "Bleach Mirrors High",
+  "alias": [],
+  "pop": 0,
+  "y": 2026
  },
  {
   "name": "Bleak Remastered",
@@ -7873,6 +7828,24 @@
   ]
  },
  {
+  "name": "Break Order",
+  "alias": [
+   "Break Order.exe"
+  ],
+  "pop": 0,
+  "y": 2026,
+  "p": [
+   "pc"
+  ],
+  "g": [
+   "Puzzle",
+   "Strategy",
+   "Tactical",
+   "Indie",
+   "Arcade"
+  ]
+ },
+ {
   "name": "Break Point: Brace & Breach",
   "alias": [],
   "pop": 0,
@@ -8486,6 +8459,19 @@
   ]
  },
  {
+  "name": "Buried Inside Me",
+  "alias": [],
+  "pop": 0,
+  "y": 2026,
+  "p": [
+   "pc"
+  ],
+  "g": [
+   "Puzzle",
+   "Adventure"
+  ]
+ },
+ {
   "name": "Burn With Me",
   "alias": [
    "Burn with me.exe"
@@ -8755,6 +8741,20 @@
    "Role-playing (RPG)",
    "Strategy",
    "Tactical"
+  ]
+ },
+ {
+  "name": "Caleria",
+  "alias": [],
+  "pop": 0,
+  "y": 2026,
+  "p": [
+   "pc"
+  ],
+  "g": [
+   "Role-playing (RPG)",
+   "Adventure",
+   "Indie"
   ]
  },
  {
@@ -9042,19 +9042,6 @@
   "y": 2026,
   "p": [
    "pc"
-  ]
- },
- {
-  "name": "CapoeiRogue: Dandara Cordão de Ouro",
-  "alias": [],
-  "pop": 0,
-  "y": 2026,
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Fighting",
-   "Indie"
   ]
  },
  {
@@ -10525,6 +10512,22 @@
   ]
  },
  {
+  "name": "Chigusa's Diary",
+  "alias": [
+   "小千草的少女生活紀錄簿",
+   "小千草的少女生活纪录簿"
+  ],
+  "pop": 0,
+  "y": 2026,
+  "p": [
+   "pc"
+  ],
+  "g": [
+   "Role-playing (RPG)",
+   "Indie"
+  ]
+ },
+ {
   "name": "Children of the Spring",
   "alias": [],
   "pop": 0,
@@ -11154,6 +11157,19 @@
    "Music",
    "Indie",
    "Arcade"
+  ]
+ },
+ {
+  "name": "Click&Fix",
+  "alias": [],
+  "pop": 0,
+  "y": 2026,
+  "p": [
+   "pc"
+  ],
+  "g": [
+   "Simulator",
+   "Indie"
   ]
  },
  {
@@ -14215,6 +14231,18 @@
   ]
  },
  {
+  "name": "Dashems",
+  "alias": [],
+  "pop": 0,
+  "y": 2026,
+  "p": [
+   "pc"
+  ],
+  "g": [
+   "Fighting"
+  ]
+ },
+ {
   "name": "Dashoot: Abya's Adventure",
   "alias": [
    "ABYA:Paint Ball",
@@ -15631,6 +15659,15 @@
   ]
  },
  {
+  "name": "Deskpot",
+  "alias": [],
+  "pop": 0,
+  "y": 2026,
+  "p": [
+   "pc"
+  ]
+ },
+ {
   "name": "Deskrawl: Idle ARPG",
   "alias": [
    "Deskrawl.exe"
@@ -15798,7 +15835,9 @@
  },
  {
   "name": "Deus Mantle",
-  "alias": [],
+  "alias": [
+   "Deus Mantle.exe"
+  ],
   "pop": 0,
   "y": 2026,
   "p": [
@@ -24380,20 +24419,6 @@
   ]
  },
  {
-  "name": "Gassed Up!",
-  "alias": [
-   "gassedup.exe"
-  ],
-  "pop": 0,
-  "y": 2026,
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Indie"
-  ]
- },
- {
   "name": "Gata Guressi",
   "alias": [],
   "pop": 0,
@@ -25554,21 +25579,6 @@
   ]
  },
  {
-  "name": "Goofy Dungeon",
-  "alias": [
-   "GoofyDungeon.exe"
-  ],
-  "pop": 0,
-  "y": 2026,
-  "p": [
-   "console"
-  ],
-  "g": [
-   "Puzzle",
-   "Adventure"
-  ]
- },
- {
   "name": "Gore Grind",
   "alias": [],
   "pop": 0,
@@ -26639,7 +26649,9 @@
  },
  {
   "name": "Habet",
-  "alias": [],
+  "alias": [
+   "habet.exe"
+  ],
   "pop": 0,
   "y": 2026,
   "p": [
@@ -27919,21 +27931,6 @@
   "g": [
    "Role-playing (RPG)",
    "Adventure"
-  ]
- },
- {
-  "name": "Here Again",
-  "alias": [
-   "HERE AGAIN"
-  ],
-  "pop": 0,
-  "y": 2026,
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Puzzle",
-   "Indie"
   ]
  },
  {
@@ -30269,6 +30266,18 @@
   ]
  },
  {
+  "name": "In the Pumpkin Light",
+  "alias": [],
+  "pop": 0,
+  "y": 2026,
+  "p": [
+   "console"
+  ],
+  "g": [
+   "Adventure"
+  ]
+ },
+ {
   "name": "In:Dark Recall",
   "alias": [],
   "pop": 0,
@@ -32453,6 +32462,7 @@
  {
   "name": "Killer Aces Volleyball",
   "alias": [
+   "ace.exe",
    "Killer Aces",
    "Killer Aces - VB-"
   ],
@@ -32539,6 +32549,21 @@
   ],
   "g": [
    "Adventure",
+   "Indie"
+  ]
+ },
+ {
+  "name": "King 4 a Day",
+  "alias": [
+   "KING 4 A DAY.exe"
+  ],
+  "pop": 0,
+  "y": 2026,
+  "p": [
+   "pc"
+  ],
+  "g": [
+   "Strategy",
    "Indie"
   ]
  },
@@ -33784,23 +33809,6 @@
   "g": [
    "Simulator",
    "Strategy",
-   "Indie"
-  ]
- },
- {
-  "name": "Legend of St. Stephen: St. Stephen Preaching / St. Stephen before the High Priest and Elders of the Sanhedrin",
-  "alias": [
-   "Legend of St. Stephen",
-   "St. Stephen Preaching",
-   "St. Stephen before the High Priest and Elders of the Sanhedrin"
-  ],
-  "pop": 0,
-  "y": 2026,
-  "p": [
-   "pc",
-   "console"
-  ],
-  "g": [
    "Indie"
   ]
  },
@@ -39068,6 +39076,16 @@
   ]
  },
  {
+  "name": "My First Day as an Ethically Sourced Lab-Grown Serial Killer Didn't Go So Well (Now It's My Last)",
+  "alias": [],
+  "pop": 0,
+  "y": 2026,
+  "p": [
+   "pc",
+   "console"
+  ]
+ },
+ {
   "name": "My Friend Is Blind",
   "alias": [
    "MyFriendIsBlind.exe"
@@ -39869,6 +39887,23 @@
   ]
  },
  {
+  "name": "Neon & Bones",
+  "alias": [
+   "Neon and Bones"
+  ],
+  "pop": 0,
+  "y": 2026,
+  "p": [
+   "pc"
+  ],
+  "g": [
+   "Simulator",
+   "Strategy",
+   "Adventure",
+   "Indie"
+  ]
+ },
+ {
   "name": "Neon Abyss 2",
   "alias": [
    "NeonAbyss2.exe"
@@ -39912,6 +39947,19 @@
   "g": [
    "Shooter",
    "Indie",
+   "Arcade"
+  ]
+ },
+ {
+  "name": "Neon Rhythm Plus",
+  "alias": [],
+  "pop": 0,
+  "y": 2026,
+  "p": [
+   "pc"
+  ],
+  "g": [
+   "Music",
    "Arcade"
   ]
  },
@@ -41102,21 +41150,6 @@
   "g": [
    "Simulator",
    "Strategy",
-   "Indie"
-  ]
- },
- {
-  "name": "Noir",
-  "alias": [
-   "Noir.exe"
-  ],
-  "pop": 0,
-  "y": 2026,
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Platform",
    "Indie"
   ]
  },
@@ -42692,22 +42725,6 @@
   ]
  },
  {
-  "name": "Oomi's Nook",
-  "alias": [
-   "白日梦想屋"
-  ],
-  "pop": 0,
-  "y": 2026,
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Point-and-click",
-   "Puzzle",
-   "Indie"
-  ]
- },
- {
   "name": "Oops Unit",
   "alias": [],
   "pop": 0,
@@ -44224,6 +44241,15 @@
   ]
  },
  {
+  "name": "PetWith",
+  "alias": [],
+  "pop": 0,
+  "y": 2026,
+  "g": [
+   "Simulator"
+  ]
+ },
+ {
   "name": "Petal Crash 2",
   "alias": [
    "Petal Crash 2.exe"
@@ -45565,7 +45591,8 @@
    "pc"
   ],
   "g": [
-   "Role-playing (RPG)"
+   "Role-playing (RPG)",
+   "Indie"
   ]
  },
  {
@@ -46405,6 +46432,19 @@
   ]
  },
  {
+  "name": "Procession Engine",
+  "alias": [],
+  "pop": 0,
+  "y": 2026,
+  "p": [
+   "pc"
+  ],
+  "g": [
+   "Strategy",
+   "Indie"
+  ]
+ },
+ {
   "name": "Professor Layton and the New World of Steam",
   "alias": [],
   "pop": 0,
@@ -46886,26 +46926,6 @@
    "Point-and-click",
    "Indie",
    "Visual Novel"
-  ]
- },
- {
-  "name": "PuPu's Adventure Park",
-  "alias": [
-   "噗噗的冒險樂園",
-   "pupu.exe"
-  ],
-  "pop": 0,
-  "y": 2026,
-  "p": [
-   "pc",
-   "console"
-  ],
-  "g": [
-   "Role-playing (RPG)",
-   "Simulator",
-   "Strategy",
-   "Adventure",
-   "Indie"
   ]
  },
  {
@@ -48643,7 +48663,9 @@
  },
  {
   "name": "Replay Value: Second Hand Games",
-  "alias": [],
+  "alias": [
+   "Replay Value.exe"
+  ],
   "pop": 0,
   "y": 2026,
   "p": [
@@ -50711,7 +50733,9 @@
  },
  {
   "name": "Sapu: Reborn",
-  "alias": [],
+  "alias": [
+   "SAPU Reborn.exe"
+  ],
   "pop": 0,
   "y": 2026,
   "p": [
@@ -52724,23 +52748,6 @@
   ]
  },
  {
-  "name": "Silent Hill: Townfall",
-  "alias": [
-   "SILENT HILL: townfall",
-   "Cannula"
-  ],
-  "pop": 32,
-  "y": 2026,
-  "p": [
-   "pc",
-   "console"
-  ],
-  "g": [
-   "Puzzle",
-   "Adventure"
-  ]
- },
- {
   "name": "Silent Hill: Townfall - Day One Edition",
   "alias": [
    "Silent Hill: Townfall Édition « Day One »"
@@ -52944,23 +52951,6 @@
    "Puzzle",
    "Adventure",
    "Card & Board Game"
-  ]
- },
- {
-  "name": "Sin: Reloaded",
-  "alias": [
-   "SiN Remastered",
-   "SiN: Reloaded",
-   "SiNReloaded.exe"
-  ],
-  "pop": 1,
-  "y": 2026,
-  "p": [
-   "pc",
-   "console"
-  ],
-  "g": [
-   "Shooter"
   ]
  },
  {
@@ -54416,7 +54406,9 @@
  },
  {
   "name": "Sortilège",
-  "alias": [],
+  "alias": [
+   "Sortilege.exe"
+  ],
   "pop": 0,
   "y": 2026,
   "p": [
@@ -54678,7 +54670,9 @@
  },
  {
   "name": "Southern Lights: Broken Frequency",
-  "alias": [],
+  "alias": [
+   "Southern Lights.exe"
+  ],
   "pop": 0,
   "y": 2026,
   "p": [
@@ -57101,18 +57095,6 @@
   ]
  },
  {
-  "name": "Super Blood Hockey: Rogue Manager",
-  "alias": [],
-  "pop": 0,
-  "y": 2026,
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Sport"
-  ]
- },
- {
   "name": "Super Chillers: The Chat Room",
   "alias": [],
   "pop": 0,
@@ -58048,19 +58030,6 @@
    "Role-playing (RPG)",
    "Simulator",
    "Strategy"
-  ]
- },
- {
-  "name": "Tales of Tuscany",
-  "alias": [],
-  "pop": 0,
-  "y": 2026,
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Role-playing (RPG)",
-   "Adventure"
   ]
  },
  {
@@ -59092,7 +59061,9 @@
  },
  {
   "name": "The Arcane Archive",
-  "alias": [],
+  "alias": [
+   "MagicArchive.exe"
+  ],
   "pop": 0,
   "y": 2026,
   "p": [
@@ -62918,6 +62889,19 @@
   ]
  },
  {
+  "name": "Tidy Mall Together",
+  "alias": [],
+  "pop": 0,
+  "y": 2026,
+  "p": [
+   "pc"
+  ],
+  "g": [
+   "Simulator",
+   "Indie"
+  ]
+ },
+ {
   "name": "Tidy Slot Cars",
   "alias": [],
   "pop": 0,
@@ -64080,6 +64064,20 @@
   "g": [
    "Strategy",
    "Indie"
+  ]
+ },
+ {
+  "name": "Tower of Gold",
+  "alias": [],
+  "pop": 0,
+  "y": 2026,
+  "p": [
+   "pc"
+  ],
+  "g": [
+   "Platform",
+   "Puzzle",
+   "Adventure"
   ]
  },
  {
@@ -67075,6 +67073,20 @@
   ]
  },
  {
+  "name": "Vs. Sonic.Exe (Unofficial)",
+  "alias": [
+   "Friday Night Funkin': Vs. Sonic.Exe (Unofficial)"
+  ],
+  "pop": 0,
+  "y": 2026,
+  "p": [
+   "pc"
+  ],
+  "g": [
+   "Music"
+  ]
+ },
+ {
   "name": "WAZATO: Sabotage or Mistake?",
   "alias": [
    "WAZATO.exe"
@@ -68955,21 +68967,6 @@
    "Role-playing (RPG)",
    "Adventure",
    "Indie"
-  ]
- },
- {
-  "name": "Withering State",
-  "alias": [],
-  "pop": 0,
-  "y": 2026,
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Role-playing (RPG)",
-   "Strategy",
-   "Indie",
-   "Visual Novel"
   ]
  },
  {
