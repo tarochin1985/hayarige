@@ -19743,7 +19743,7 @@
    "雾锁王国 (Enshrouded)",
    "Enshrouded~霧の王国~"
   ],
-  "pop": 72,
+  "pop": 73,
   "y": 2026,
   "jp": "Enshrouded~霧の王国~",
   "p": [
@@ -45945,21 +45945,6 @@
   ]
  },
  {
-  "name": "Potions Tidy",
-  "alias": [
-   "PotionsTidy.exe"
-  ],
-  "pop": 0,
-  "y": 2026,
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Simulator",
-   "Indie"
-  ]
- },
- {
   "name": "Power Line Rider",
   "alias": [],
   "pop": 0,
@@ -51185,6 +51170,18 @@
   ],
   "g": [
    "Puzzle",
+   "Indie"
+  ]
+ },
+ {
+  "name": "Scribble Tanks",
+  "alias": [],
+  "pop": 0,
+  "y": 2026,
+  "p": [
+   "pc"
+  ],
+  "g": [
    "Indie"
   ]
  },
