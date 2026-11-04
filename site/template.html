@@ -882,7 +882,7 @@ function render(){
         <span class="badge">PICK UP</span>
         <div class="g">${esc(col.game)}</div>
         <div class="hl">${POINT}${esc(col.headline)}</div>
-        <p>${esc(col.body)}</p>
+        ${String(col.body || '').split('\n').filter(x => x.trim()).map(x => `<p>${esc(x)}</p>`).join('')}
         ${cbuy}
         ${(col.people || []).length ? `<div class="who">${col.people.map(p => `<span>${esc(p)}</span>`).join('')}</div>` : ''}
         ${(col.sources || []).length ? `<div class="src">${col.sources.map(x => `<a href="${esc(x.u)}" target="_blank" rel="noopener">${esc(x.t)}</a>`).join('')}</div>` : ''}

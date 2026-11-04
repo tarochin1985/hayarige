@@ -787,10 +787,27 @@ def ssr_pick(col):
     parts = []
     if col.get("hero"):
         parts.append(f'<img class="heroimg" src="{e(col["hero"])}" alt="" loading="lazy">')
+    # ★本文に改行があれば段落に割る（2026-11-04 たろちんさん）。
+    #   それまでは1つの <p> に流し込んでいたので、改行を書いても空白に
+    #   潰れて**何も起きていなかった**（9-22から10-27までに6本、改行入りが
+    #   書かれていたが、どれも1かたまりで出ていた）。
+    #
+    # ★**カードのほう（make_card.py）はわざと1かたまりのままにしてある。**
+    #   実測したら、段落を入れると文字が1段小さくなり、
+    #   350字＋3段落＋サムネイル3枚で本文が切れた。
+    #
+    #       段落なし 359字 → 21px  入る
+    #       3段落   359字 → 15px  **切れる**
+    #       2段落   253字 → 21px  入る
+    #       段落なし 253字 → 24px  入る
+    #
+    #   カードは読むものではなく見るものなので、300字が1かたまりでも困らない。
+    #   **読みやすさが要るのはサイトのページのほう**なので、そちらだけ割る。
     body = ['<div class="ptxt">', '<span class="badge">PICK UP</span>',
             f'<div class="g">{e(col.get("game"))}</div>',
             f'<div class="hl">{POINT}{e(col.get("headline"))}</div>',
-            f'<p>{e(col.get("body"))}</p>']
+            *[f'<p>{e(x)}</p>'
+              for x in str(col.get("body") or "").split("\n") if x.strip()]]
     people = col.get("people") or []
     if people:
         body.append('<div class="who">'
