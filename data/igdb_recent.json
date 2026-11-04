@@ -704,7 +704,9 @@
  },
  {
   "name": "A Game About Picking Fruits",
-  "alias": [],
+  "alias": [
+   "PickingFruits.exe"
+  ],
   "pop": 0,
   "y": 2026,
   "p": [
@@ -914,11 +916,17 @@
  },
  {
   "name": "A Tale Amidst Memories",
-  "alias": [],
+  "alias": [
+   "Memories.exe"
+  ],
   "pop": 0,
   "y": 2026,
   "p": [
    "pc"
+  ],
+  "g": [
+   "Adventure",
+   "Indie"
   ]
  },
  {
@@ -2537,23 +2545,6 @@
   "g": [
    "Role-playing (RPG)",
    "Adventure",
-   "Indie"
-  ]
- },
- {
-  "name": "Alteredblood+",
-  "alias": [
-   "ALTEREDBLOOD+",
-   "AB+"
-  ],
-  "pop": 0,
-  "y": 2026,
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Shooter",
-   "Platform",
    "Indie"
   ]
  },
@@ -9953,6 +9944,21 @@
   "g": [
    "Adventure",
    "Indie"
+  ]
+ },
+ {
+  "name": "Cats in Wonderland",
+  "alias": [
+   "Cats in Wonderland.exe"
+  ],
+  "pop": 0,
+  "y": 2026,
+  "p": [
+   "pc"
+  ],
+  "g": [
+   "Point-and-click",
+   "Adventure"
   ]
  },
  {
@@ -23771,7 +23777,8 @@
   "pop": 0,
   "y": 2026,
   "p": [
-   "pc"
+   "pc",
+   "console"
   ],
   "g": [
    "Simulator",
@@ -28253,6 +28260,11 @@
   "p": [
    "pc",
    "console"
+  ],
+  "g": [
+   "Shooter",
+   "Tactical",
+   "Adventure"
   ]
  },
  {
@@ -34903,7 +34915,9 @@
  },
  {
   "name": "Lost Liminal",
-  "alias": [],
+  "alias": [
+   "Lost_Liminal.exe"
+  ],
   "pop": 0,
   "y": 2026,
   "p": [
@@ -37851,7 +37865,9 @@
  },
  {
   "name": "Missi",
-  "alias": [],
+  "alias": [
+   "Missi.exe"
+  ],
   "pop": 0,
   "y": 2026,
   "p": [
@@ -42203,7 +42219,9 @@
  },
  {
   "name": "Old Man's Sushi",
-  "alias": [],
+  "alias": [
+   "Old Man's Sushi.exe"
+  ],
   "pop": 0,
   "y": 2026,
   "p": [
@@ -44807,7 +44825,9 @@
  },
  {
   "name": "Pionero Capital",
-  "alias": [],
+  "alias": [
+   "PioneroCapital.exe"
+  ],
   "pop": 0,
   "y": 2026,
   "p": [
@@ -45244,7 +45264,9 @@
  },
  {
   "name": "Playrooms",
-  "alias": [],
+  "alias": [
+   "Playrooms.exe"
+  ],
   "pop": 0,
   "y": 2026,
   "p": [
@@ -46222,7 +46244,9 @@
  },
  {
   "name": "Prigod Idle",
-  "alias": [],
+  "alias": [
+   "PrigodIdle.exe"
+  ],
   "pop": 0,
   "y": 2026,
   "p": [
@@ -51154,7 +51178,9 @@
  },
  {
   "name": "Scraplings",
-  "alias": [],
+  "alias": [
+   "Scraplings.exe"
+  ],
   "pop": 0,
   "y": 2026,
   "p": [
