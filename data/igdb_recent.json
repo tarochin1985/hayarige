@@ -8758,7 +8758,7 @@
    "MW4",
    "Call of Duty: MW4"
   ],
-  "pop": 26,
+  "pop": 27,
   "y": 2026,
   "p": [
    "pc",
@@ -12051,18 +12051,6 @@
   ]
  },
  {
-  "name": "Corrida: Chega De Intocavéis",
-  "alias": [],
-  "pop": 0,
-  "y": 2026,
-  "p": [
-   "console"
-  ],
-  "g": [
-   "Racing"
-  ]
- },
- {
   "name": "Corridor 13",
   "alias": [],
   "pop": 0,
@@ -12987,7 +12975,9 @@
  },
  {
   "name": "Crown & Coin: The Hundred Years",
-  "alias": [],
+  "alias": [
+   "Crown & Coin.exe"
+  ],
   "pop": 0,
   "y": 2026,
   "p": [
@@ -17259,6 +17249,21 @@
   ]
  },
  {
+  "name": "Dragon Up! Together",
+  "alias": [],
+  "pop": 0,
+  "y": 2026,
+  "p": [
+   "pc"
+  ],
+  "g": [
+   "Platform",
+   "Puzzle",
+   "Adventure",
+   "Indie"
+  ]
+ },
+ {
   "name": "Dragon and Mahjong",
   "alias": [
    "龙与麻雀"
@@ -18626,21 +18631,6 @@
   ]
  },
  {
-  "name": "Dying Land",
-  "alias": [],
-  "pop": 0,
-  "y": 2026,
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Role-playing (RPG)",
-   "Strategy",
-   "Adventure",
-   "Indie"
-  ]
- },
- {
   "name": "Dying Patience",
   "alias": [],
   "pop": 0,
@@ -19959,6 +19949,15 @@
   "g": [
    "Adventure",
    "Indie"
+  ]
+ },
+ {
+  "name": "Escape from Socialism",
+  "alias": [],
+  "pop": 0,
+  "y": 2026,
+  "p": [
+   "console"
   ]
  },
  {
@@ -21549,7 +21548,9 @@
  },
  {
   "name": "Fatespun",
-  "alias": [],
+  "alias": [
+   "Fatespun.exe"
+  ],
   "pop": 0,
   "y": 2026,
   "p": [
@@ -22424,7 +22425,9 @@
  },
  {
   "name": "Fjordal",
-  "alias": [],
+  "alias": [
+   "Fjordal.exe"
+  ],
   "pop": 0,
   "y": 2026,
   "p": [
@@ -22684,7 +22687,9 @@
  },
  {
   "name": "Flippy the Spider",
-  "alias": [],
+  "alias": [
+   "flippy.exe"
+  ],
   "pop": 0,
   "y": 2026,
   "p": [
@@ -23416,20 +23421,6 @@
   "g": [
    "Strategy",
    "Indie"
-  ]
- },
- {
-  "name": "Fragile Existence",
-  "alias": [],
-  "pop": 0,
-  "y": 2026,
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Simulator",
-   "Strategy",
-   "Tactical"
   ]
  },
  {
@@ -25915,7 +25906,9 @@
  },
  {
   "name": "Greedy Little Kingdoms",
-  "alias": [],
+  "alias": [
+   "Greedy Little Kingdoms.exe"
+  ],
   "pop": 0,
   "y": 2026,
   "p": [
@@ -27903,22 +27896,6 @@
   ]
  },
  {
-  "name": "Heroic Musical Chairs",
-  "alias": [
-   "Epic Musical Chairs"
-  ],
-  "pop": 0,
-  "y": 2026,
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Sport",
-   "Indie",
-   "Arcade"
-  ]
- },
- {
   "name": "Hex Pipe",
   "alias": [],
   "pop": 0,
@@ -28375,19 +28352,6 @@
   ]
  },
  {
-  "name": "Hold Your Breath",
-  "alias": [],
-  "pop": 0,
-  "y": 2026,
-  "p": [
-   "console"
-  ],
-  "g": [
-   "Adventure",
-   "Indie"
-  ]
- },
- {
   "name": "Hold the Dawn",
   "alias": [],
   "pop": 0,
@@ -28560,6 +28524,20 @@
    "pc"
   ],
   "g": [
+   "Indie"
+  ]
+ },
+ {
+  "name": "Honey Route",
+  "alias": [],
+  "pop": 0,
+  "y": 2026,
+  "p": [
+   "pc",
+   "console"
+  ],
+  "g": [
+   "Puzzle",
    "Indie"
   ]
  },
@@ -28952,6 +28930,21 @@
   ]
  },
  {
+  "name": "Hotar",
+  "alias": [
+   "HOTAR.TV"
+  ],
+  "pop": 0,
+  "y": 2026,
+  "p": [
+   "console"
+  ],
+  "g": [
+   "Strategy",
+   "Quiz/Trivia"
+  ]
+ },
+ {
   "name": "Houm",
   "alias": [],
   "pop": 0,
@@ -29182,7 +29175,9 @@
  },
  {
   "name": "Hull Rupture",
-  "alias": [],
+  "alias": [
+   "HullRupture.exe"
+  ],
   "pop": 0,
   "y": 2026,
   "p": [
@@ -33678,7 +33673,9 @@
  },
  {
   "name": "Leftovers: Last Fridge Standing",
-  "alias": [],
+  "alias": [
+   "Leftovers.exe"
+  ],
   "pop": 0,
   "y": 2026,
   "p": [
@@ -37080,15 +37077,6 @@
   ]
  },
  {
-  "name": "Mercenaries: Recompiled",
-  "alias": [],
-  "pop": 0,
-  "y": 2026,
-  "p": [
-   "pc"
-  ]
- },
- {
   "name": "Mercenary Brotherhood",
   "alias": [
    "MercenaryBrotherhood.exe"
@@ -38442,7 +38430,9 @@
  },
  {
   "name": "MoonDoku: Sudoku Nights",
-  "alias": [],
+  "alias": [
+   "MoonDoku.exe"
+  ],
   "pop": 0,
   "y": 2026,
   "p": [
@@ -38842,6 +38832,23 @@
   "g": [
    "Shooter",
    "Arcade"
+  ]
+ },
+ {
+  "name": "Mucked",
+  "alias": [
+   "Mucked Poker",
+   "MUCKED",
+   "RIGGED",
+   "Rigged Poker"
+  ],
+  "pop": 0,
+  "y": 2026,
+  "p": [
+   "console"
+  ],
+  "g": [
+   "Card & Board Game"
   ]
  },
  {
@@ -39379,6 +39386,19 @@
    "Puzzle",
    "Simulator",
    "Indie"
+  ]
+ },
+ {
+  "name": "Mycelarium",
+  "alias": [],
+  "pop": 0,
+  "y": 2026,
+  "p": [
+   "pc"
+  ],
+  "g": [
+   "Simulator",
+   "Strategy"
   ]
  },
  {
@@ -44586,6 +44606,8 @@
    "pc"
   ],
   "g": [
+   "Music",
+   "Puzzle",
    "Simulator",
    "Adventure",
    "Indie"
@@ -48393,6 +48415,17 @@
   ]
  },
  {
+  "name": "Red Scare: Midnight Run",
+  "alias": [
+   "Red Scare"
+  ],
+  "pop": 0,
+  "y": 2026,
+  "p": [
+   "console"
+  ]
+ },
+ {
   "name": "Red Snow",
   "alias": [],
   "pop": 0,
@@ -49180,21 +49213,6 @@
    "Shooter",
    "Indie",
    "Arcade"
-  ]
- },
- {
-  "name": "Rigged",
-  "alias": [
-   "Rigged Poker",
-   "RIGGED"
-  ],
-  "pop": 0,
-  "y": 2026,
-  "p": [
-   "console"
-  ],
-  "g": [
-   "Card & Board Game"
   ]
  },
  {
@@ -53450,7 +53468,9 @@
  },
  {
   "name": "Slots & Skulls",
-  "alias": [],
+  "alias": [
+   "Slots & Anvil.exe"
+  ],
   "pop": 0,
   "y": 2026,
   "p": [
@@ -55887,7 +55907,7 @@
   "alias": [
    "STAR WARS: Galactic Racer"
   ],
-  "pop": 11,
+  "pop": 12,
   "y": 2026,
   "p": [
    "pc",
@@ -57991,6 +58011,19 @@
   ]
  },
  {
+  "name": "Table of Truth",
+  "alias": [],
+  "pop": 0,
+  "y": 2026,
+  "p": [
+   "pc"
+  ],
+  "g": [
+   "Strategy",
+   "Indie"
+  ]
+ },
+ {
   "name": "Tails of Fate",
   "alias": [],
   "pop": 0,
@@ -59663,21 +59696,6 @@
    "pc"
   ],
   "g": [
-   "Indie"
-  ]
- },
- {
-  "name": "The Cradle: Episode 01",
-  "alias": [
-   "Колыбель: Эпизод 01"
-  ],
-  "pop": 0,
-  "y": 2026,
-  "p": [
-   "console"
-  ],
-  "g": [
-   "Adventure",
    "Indie"
   ]
  },
@@ -68729,7 +68747,9 @@
  },
  {
   "name": "Wildixir",
-  "alias": [],
+  "alias": [
+   "Wildixir.exe"
+  ],
   "pop": 0,
   "y": 2026,
   "p": [
