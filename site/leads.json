@@ -1,6 +1,6 @@
 {
  "date": "2026-11-04",
- "generated": "2026-11-04 08:31",
+ "generated": "2026-11-04 10:59",
  "leads": {
   "events": [
    {
@@ -32,15 +32,6 @@
     ]
    },
    {
-    "tag": "#ゲーム実況",
-    "channels": [
-     "ジョアだよ",
-     "恋因ロス KoinRosu",
-     "豚咲あおい_TomisakiAoi",
-     "運天りらん"
-    ]
-   },
-   {
     "tag": "#ホロ鯖ARK",
     "channels": [
      "Choco Ch. 癒月ちょこ",
@@ -67,6 +58,14 @@
     ]
    },
    {
+    "tag": "#ゲーム実況",
+    "channels": [
+     "恋因ロス KoinRosu",
+     "豚咲あおい_TomisakiAoi",
+     "運天りらん"
+    ]
+   },
+   {
     "tag": "#フォートナイト",
     "channels": [
      "くろのす",
@@ -75,37 +74,26 @@
     ]
    }
   ],
-  "newcomers": [
-   {
-    "game": "Gone Fishing",
-    "channels": 5,
-    "videos": 5
-   }
-  ],
+  "newcomers": [],
   "wide": [
    {
     "game": "スプラトゥーン3",
-    "channels": 54,
-    "videos": 62
+    "channels": 53,
+    "videos": 61
    },
    {
     "game": "Apex Legends",
     "channels": 30,
-    "videos": 35
+    "videos": 34
    },
    {
     "game": "Minecraft",
-    "channels": 30,
-    "videos": 31
+    "channels": 28,
+    "videos": 29
    },
    {
     "game": "ストリートファイター6",
-    "channels": 25,
-    "videos": 27
-   },
-   {
-    "game": "フォートナイト",
-    "channels": 22,
+    "channels": 24,
     "videos": 26
    },
    {
@@ -114,9 +102,14 @@
     "videos": 28
    },
    {
+    "game": "フォートナイト",
+    "channels": 20,
+    "videos": 24
+   },
+   {
     "game": "League of Legends",
-    "channels": 19,
-    "videos": 20
+    "channels": 18,
+    "videos": 18
    },
    {
     "game": "モンスターストライク",
@@ -235,30 +228,6 @@
      "t": "【アウトランダーズ】新作モンハン、さっそく狩りに行くぞ！【初日昼の部】",
      "c": "ゲームするメイド男子 越山嘉祈",
      "u": "https://www.youtube.com/watch?v=DZHginiTjjk"
-    }
-   ],
-   "kind": "wide",
-   "suggest": []
-  },
-  {
-   "word": "#ドゥームズデイ",
-   "channels": 5,
-   "n": 10,
-   "examples": [
-    {
-     "t": "【#ドゥームズデイ 】みんなと協力して対決する参加型ゲームだよ～！Rosenkreuzer再始動！？【 #PR 】",
-     "c": "鷺原鈴音【SagiharaRinne】",
-     "u": "https://www.youtube.com/watch?v=IPuRYphJhbg"
-    },
-    {
-     "t": "【#ドゥームズデイ 】みんなと協力して対決する参加型ゲームだよ～！Rosenkreuzer再始動！？【 #PR 】",
-     "c": "鷺原鈴音【SagiharaRinne】",
-     "u": "https://www.youtube.com/watch?v=IPuRYphJhbg"
-    },
-    {
-     "t": "【 視聴者参加型 】ゾンビ世界に村をつくりました。まだ村長しかいません。【 #ドゥームズデイ #PR 】",
-     "c": "実況したいよまちょすさん!",
-     "u": "https://www.youtube.com/watch?v=3HVdmnXq5c4"
     }
    ],
    "kind": "wide",
@@ -409,30 +378,6 @@
    "suggest": []
   },
   {
-   "word": "要塞英雄伝",
-   "channels": 3,
-   "n": 4,
-   "examples": [
-    {
-     "t": "【要塞英雄伝】遂に本日発売した放置で要塞を強化して無限に防衛するインクリメンタル系タワーディフェンスゲーム【Steam】",
-     "c": "Hultutigamer",
-     "u": "https://www.youtube.com/watch?v=30pdELZulUA"
-    },
-    {
-     "t": "#02【本日発売】カスタマイズして最強の要塞を作れ！【要塞英雄伝｜Legend of Defenders】",
-     "c": "モロトフカクテル ゲーミング",
-     "u": "https://www.youtube.com/watch?v=2xEIhV4lRd8"
-    },
-    {
-     "t": "【要塞英雄伝】本日発売のドーパミン出まくりタワーディフェンス×インクリメンタル...！？正式リリースで新キャラ大量追加。時間が溶けまくる新作放置系デッキビルダー攻略が面白いw30%セール【steam】",
-     "c": " なぎせいな / 凪世薙",
-     "u": "https://www.youtube.com/watch?v=pabotIs0yrc"
-    }
-   ],
-   "kind": "wide",
-   "suggest": []
-  },
-  {
    "word": "究極の2択",
    "channels": 3,
    "n": 3,
@@ -503,30 +448,6 @@
    ],
    "kind": "wide",
    "suggest": []
-  },
-  {
-   "word": "ドゥームズデイ：ラストサバイバー",
-   "channels": 3,
-   "n": 3,
-   "examples": [
-    {
-     "t": "【ドゥームズデイ：ラストサバイバー】少し話をしてアンペーデやるぞ！！！！#PR #ドゥームズデイ",
-     "c": "うくちゃんねる",
-     "u": "https://www.youtube.com/watch?v=XxLztoNoQfM"
-    },
-    {
-     "t": "【PR】視聴者と同盟を組んで1位を目指す！みんな参加してくれ！！【ドゥームズデイ：ラストサバイバー】",
-     "c": "グリンカッツ",
-     "u": "https://www.youtube.com/watch?v=ptc5AOL-E-4"
-    },
-    {
-     "t": "【あと19人】ガチで助けてください…！配信者対抗戦で大ピンチです、どうか私の力になってください！【ドゥームズデイ：ラストサバイバー / 初心者大歓迎】#ドゥームズデイ #PR",
-     "c": "えむちゃんねる",
-     "u": "https://www.youtube.com/watch?v=qYkkksM57ok"
-    }
-   ],
-   "kind": "wide",
-   "suggest": []
   }
  ],
  "miss_days": 7,
@@ -590,8 +511,8 @@
    "platforms": [
     "console"
    ],
-   "days_seen": 2,
-   "last_seen": "2026-11-03",
+   "days_seen": 1,
+   "last_seen": "2026-10-22",
    "first_here": false
   },
   {
@@ -629,7 +550,7 @@
    "first_here": false
   },
   {
-   "game": "Cursed",
+   "game": "Cursed Companions",
    "growth": 5.0,
    "videos": 4,
    "base": 0.0,
@@ -646,25 +567,18 @@
     "【Cursed Companions】呪文を唱えるだけ？【ぶいすぽっ！/英リサ】",
     "【 Cursed Companions 】てぇてぇ【 ぶいすぽっ！胡桃のあ 】"
    ],
-   "genres": [
-    "Point-and-click",
-    "Puzzle",
-    "Adventure",
-    "Indie"
-   ],
-   "year": 2016,
-   "platforms": [
-    "pc"
-   ],
-   "days_seen": 2,
-   "last_seen": "2026-11-03",
-   "first_here": false
+   "genres": [],
+   "year": null,
+   "platforms": [],
+   "days_seen": 0,
+   "last_seen": null,
+   "first_here": true
   },
   {
    "game": "Bleach: Rebirth of Souls",
    "growth": 5.0,
    "videos": 4,
-   "base": 0.7,
+   "base": 0.5,
    "channels": 3,
    "views": 34146,
    "who": [
