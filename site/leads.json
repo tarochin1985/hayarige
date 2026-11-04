@@ -1,6 +1,6 @@
 {
  "date": "2026-11-05",
- "generated": "2026-11-05 01:35",
+ "generated": "2026-11-05 05:18",
  "leads": {
   "events": [
    {
@@ -12,12 +12,10 @@
      "セラフ・ダズルガーデン / Seraph Dazzlegarden",
      "ソフィア・ヴァレンタイン / Sophia Valentine【にじさんじ】",
      "ドーラ",
-     "フミ/にじさんじ",
      "フレン・E・ルスタリオ",
      "ヤン・ナリ / Yang Nari 【にじさんじ】",
      "レイン・パターソン／Lain Paterson【にじさんじ】",
      "レヴィ・エリファ-Levi Elipha-",
-     "七瀬 すず菜 / Nanase Suzuna【にじさんじ】",
      "九里詠太 / Kuri Eita【にじさんじ】",
      "健屋花那【にじさんじ】KanaSukoya",
      "北小路ヒスイ / Kitakoji Hisui 【にじさんじ】",
@@ -31,7 +29,6 @@
      "御子神琴音 / Mikogami Kotone【にじさんじ】",
      "早乙女 ベリー / Saotome Berry【にじさんじ】",
      "椎名唯華 / Shiina Yuika",
-     "樋口楓【にじさんじ所属】",
      "獅子堂 あかり / Shishido Akari【にじさんじ】",
      "珠乃井ナナ / Tamanoi Nana【にじさんじ】",
      "男虎 / Ono Tora【にじさんじ】",
@@ -51,15 +48,13 @@
     "tag": "#ホロ鯖ARK",
     "channels": [
      "AZKi Channel",
-     "Choco Ch. 癒月ちょこ",
      "Iroha ch. 風真いろは - holoX -",
      "Koyori ch. 博衣こより - holoX -",
      "Luna Ch. 姫森ルーナ",
      "Pekora Ch. 兎田ぺこら",
      "Polka Ch. 尾丸ポルカ",
      "Towa Ch. 常闇トワ",
-     "Vivi Ch. 綺々羅々ヴィヴィ - FLOW GLOW",
-     "フブキCh。白上フブキ"
+     "Vivi Ch. 綺々羅々ヴィヴィ - FLOW GLOW"
     ]
    },
    {
@@ -82,15 +77,6 @@
     ]
    },
    {
-    "tag": "#ゲーム実況",
-    "channels": [
-     "わら",
-     "ジョアだよ",
-     "星埜きぃ -Key Hoshino-",
-     "豚咲あおい_TomisakiAoi"
-    ]
-   },
-   {
     "tag": "#ストグラSeason2",
     "channels": [
      "はたさこ / hatasako_flag",
@@ -108,50 +94,64 @@
     ]
    },
    {
-    "tag": "#崩壊スターレイル",
+    "tag": "#モンスト",
     "channels": [
-     "あかどらん",
-     "白亜リラ / Hakua Lira",
-     "麻酔 Masui"
+     "アメユリGMチャンネル",
+     "ズズちゃんねる!!!",
+     "空友ちあ / ゆるちあちゃんねる"
+    ]
+   },
+   {
+    "tag": "#パレットタウン",
+    "channels": [
+     "せんと / Cent",
+     "花束 ゆいは / Hanataba Yuiha",
+     "蒲田凡 / かまぼん"
     ]
    }
   ],
-  "newcomers": [],
+  "newcomers": [
+   {
+    "game": "Potato Please",
+    "channels": 5,
+    "videos": 5
+   }
+  ],
   "wide": [
    {
     "game": "スプラトゥーン3",
-    "channels": 62,
-    "videos": 80
+    "channels": 59,
+    "videos": 68
    },
    {
     "game": "Apex Legends",
-    "channels": 48,
-    "videos": 54
+    "channels": 47,
+    "videos": 51
    },
    {
     "game": "Minecraft",
-    "channels": 33,
-    "videos": 35
+    "channels": 30,
+    "videos": 31
    },
    {
     "game": "ゼルダの伝説 時のオカリナ",
-    "channels": 36,
-    "videos": 38
-   },
-   {
-    "game": "ストリートファイター6",
-    "channels": 23,
-    "videos": 27
+    "channels": 34,
+    "videos": 35
    },
    {
     "game": "モンスターハンターアウトランダーズ",
-    "channels": 22,
-    "videos": 32
+    "channels": 21,
+    "videos": 29
+   },
+   {
+    "game": "ストリートファイター6",
+    "channels": 19,
+    "videos": 22
    },
    {
     "game": "Grand Theft Auto V",
-    "channels": 24,
-    "videos": 26
+    "channels": 22,
+    "videos": 24
    },
    {
     "game": "モンスターストライク",
@@ -165,9 +165,9 @@
   {
    "tag": "にじイカ祭り2026",
    "game": "スプラトゥーン3",
-   "evidence": 36,
-   "added": 25,
-   "channels": 39
+   "evidence": 30,
+   "added": 20,
+   "channels": 36
   }
  ],
  "misses": [
@@ -581,22 +581,22 @@
  "hot_facts": [
   {
    "game": "ゼルダの伝説 時のオカリナ",
-   "growth": 8.64,
-   "videos": 38,
-   "base": 4.4,
-   "channels": 36,
-   "views": 184568,
+   "growth": 7.14,
+   "videos": 35,
+   "base": 4.9,
+   "channels": 34,
+   "views": 130449,
    "who": [
-    "KENT for 任天堂ゲームレビュー",
     "兄者弟者",
     "いかぼうず",
-    "じんむ",
-    "葉山舞鈴 / Ohayama Ch."
+    "あまくだり",
+    "葉山舞鈴 / Ohayama Ch.",
+    "桜ころみん coromin Ch"
    ],
    "titles": [
-    "みんなのトラウマを聞かせて！N64版「時のオカリナ」を懐かしみながらプレイ！【ゼルダの伝説】",
     "【ゼルダの伝説 時のオカリナ】リメイク版をおためしプレイ！【弟者】",
-    "ローソン×ゼルダキャンペーンが沼過ぎる...ゼルダガチ勢が新グッズを徹底レビュー解説【ゼルダの伝説】【時のオカリナリメイク】"
+    "ローソン×ゼルダキャンペーンが沼過ぎる...ゼルダガチ勢が新グッズを徹底レビュー解説【ゼルダの伝説】【時のオカリナリメイク】",
+    "時のオカリナやりながら時のオカリナリメイク待機だぜ"
    ],
    "genres": [],
    "year": null,
@@ -632,32 +632,56 @@
    "platforms": [
     "pc"
    ],
-   "days_seen": 0,
-   "last_seen": null,
-   "first_here": true
+   "days_seen": 1,
+   "last_seen": "2026-11-04",
+   "first_here": false
   },
   {
-   "game": "Ratatan",
-   "growth": 5.0,
+   "game": "ファイナルファンタジーVII リバース",
+   "growth": 4.44,
    "videos": 4,
-   "base": 0.5,
+   "base": 0.9,
    "channels": 4,
-   "views": 474433,
+   "views": 186013,
    "who": [
-    "Watame Ch. 角巻わため",
-    "Flare Ch. 不知火フレア",
-    "Anya Melfissa Ch. hololive",
-    "ああくGAMEチャンネル"
+    "いちごうのゲームビート",
+    "ポカオスのUZAちゃんねる【ゲーム情報紹介】",
+    "けまいチャンネル 【ゲーム紹介・攻略】",
+    "Ayato🍙ツムツムとご飯"
    ],
    "titles": [
-    "【 RATATAN  】フレわたーニャで初めてのラタタン🎺🎶【角巻わため/ホロライブ４期生】※ネタバレ注意",
-    "【RATATAN】今日は初見二人とうきうき遠足気分♪【不知火フレア/ホロライブ】※ネタバレ注意",
-    "【SPOILER WARNING | Ratatan ラタタン】FIRST TIME PLAYING!! 初見プレイ！フレわたーニャ！【hololive holoro | Anya Melfissa】"
+    "【緊急セール】まさかの986円！！『ファイナルファンタジー7 リバース』が安すぎる【Nintendo Switch 2 / セール / オススメ10選 / FINAL FANTASY VII 】",
+    "【大荒れ🔥】スクエニの後悔、Switch2版投げ売り開始！今年発売した『FF7リバース』超絶破格で販売中！！さらにリメイク！発売日に購入したユーザーブチギレか【PS5 vs ゲームハード戦争】",
+    "【安すぎて意味不明】PSストア ブラックフライデーセールが本気すぎる！FF7リバース986円ほか絶対見逃せない神ゲー12選【PS5・PS4】"
+   ],
+   "genres": [],
+   "year": null,
+   "platforms": [],
+   "days_seen": 8,
+   "last_seen": "2026-11-04",
+   "first_here": false
+  },
+  {
+   "game": "Queen's Domain",
+   "growth": 4.17,
+   "videos": 5,
+   "base": 1.2,
+   "channels": 5,
+   "views": 16475,
+   "who": [
+    "LamNot",
+    "ゲームライターなんでもゆうこch",
+    "ゲームライターなんでもゆうこch",
+    "ホビドワ",
+    "電撃オンライン"
+   ],
+   "titles": [
+    "迷子の果てに奈落の底へ、地下都市世界を発見【RPG】フロムソフトの原点作品オマージュ！世界観最高の新作インディーRPGを遊ぶ｜Queen's Domain #4",
+    "【Queen's Domain】フロムゲーリスペクト作！女性ゲームライターが高難度のレトロファンタジー・アクションRPGを攻略！",
+    "【Queen's Domain】フロムゲーリスペクト作！女性ゲームライターが高難度のレトロファンタジー・アクションRPGを攻略！"
    ],
    "genres": [
-    "Music",
     "Role-playing (RPG)",
-    "Strategy",
     "Adventure",
     "Indie"
    ],
@@ -666,93 +690,69 @@
     "pc",
     "console"
    ],
-   "days_seen": 5,
+   "days_seen": 3,
    "last_seen": "2026-11-04",
    "first_here": false
   },
   {
-   "game": "Gone Fishing",
-   "growth": 5.0,
-   "videos": 4,
-   "base": 0.2,
-   "channels": 4,
-   "views": 183881,
-   "who": [
-    "SANNINSHOW",
-    "兄者のゲーム事務所",
-    "人生 つみこ (ホラーゲーム専門Vtuber)",
-    "キャシーさんはホラーゲームで遊びたい"
-   ],
-   "titles": [
-    "釣り x ホラー？何言ってんだ？【GONE Fishing】w/弟者,兄者,ちん",
-    "【魚釣り×ホラーサバイバル】兄者の「GONE Fishing」【2BRO.】",
-    "【 GONE Fishing 】湖の底にいったい何がいる…？話題の釣りサバイバルホラーゲーム！！【 人生つみこ視点】"
-   ],
-   "genres": [
-    "Simulator"
-   ],
-   "year": 1979,
-   "platforms": [
-    "console"
-   ],
-   "days_seen": 2,
-   "last_seen": "2026-11-04",
-   "first_here": false
-  },
-  {
-   "game": "Bleach: Rebirth of Souls",
-   "growth": 5.0,
-   "videos": 4,
-   "base": 0.5,
+   "game": "ソニックレーシング クロスワールド",
+   "growth": 3.75,
+   "videos": 3,
+   "base": 0.0,
    "channels": 3,
-   "views": 252943,
+   "views": 227243,
    "who": [
-    "加藤純一ロードショー",
-    "ちくのぼチャレンジ",
-    "Kuu Ch. 朱舞くぅ",
-    "Kuu Ch. 朱舞くぅ",
-    "Kuu Ch. 朱舞くぅ"
+    "Korone Ch. 戌神ころね",
+    "Okayu Ch. 猫又おかゆ",
+    "あかほし"
    ],
    "titles": [
-    "加藤純一のBLEACH Rebirth of Souls ダイジェスト【2026/10/31】(ネタバレあり)",
-    "【BLEACH Rebirth of Souls】お久ブリーチ破面篇#5 ※ネタバレ注意",
-    "【完全初見】#03 死神代行編クライマックス！BLEACH Rebirth of Soulsを初見攻略プレイ！ネタバレ注意！【ゲーム配信/#vtuber】"
+    "【案件】おかころで『ソニックレーシング クロスワールド』遊ぶよ！！！【戌神ころね/猫又おかゆ/ホロライブ】",
+    "【 ソニックレーシング クロスワールド 】おかころきちゃああ!! 🍙🥐✦ 思いっきり遊んじゃお!! #おかころ【 猫又おかゆ/戌神ころね/ホロライブ 】",
+    "『ソニックレーシングクロスワールド シーズン２』シーズン２開催！！新ガジェットやデュエルモードを遊んでいく！！【ゆっくり実況】Sonic Racing: Crossworlds"
    ],
    "genres": [
-    "Fighting"
+    "Racing",
+    "Sport",
+    "Adventure"
    ],
    "year": 2025,
    "platforms": [
     "pc",
     "console"
    ],
-   "days_seen": 4,
+   "days_seen": 1,
    "last_seen": "2026-11-04",
    "first_here": false
   },
   {
-   "game": "オーバーウォッチ2",
-   "growth": 4.71,
-   "videos": 8,
-   "base": 1.7,
-   "channels": 7,
-   "views": 168133,
+   "game": "バイオハザード2",
+   "growth": 3.75,
+   "videos": 3,
+   "base": 0.3,
+   "channels": 3,
+   "views": 199330,
    "who": [
-    "TQQ999",
-    "Nico",
-    "朔メ -Sakume-",
-    "すももチャンネル",
-    "なおひろ21"
+    "チョコレートプラネット チャンネル",
+    "コジマ店員のホラーは恐くない",
+    "y-r_t-r"
    ],
    "titles": [
-    "【最新アプデ】20名に新調整実装！ミッドパッチまとめ解説【オーバーウォッチ】",
-    "度重なる強化パッチの末、そろそろ全盛期クイーンの強さを取り戻したんじゃないか説。【オーバーウォッチ/OW】",
-    "ドクトリン環境でもアナで破壊します【オーバーウォッチ】"
+    "【21時から生配信】松尾がバイオハザード#5【RE:2】",
+    "【バイオ２】強烈パンチで全てを粉砕！タイラントが味方なら簡単にラクーンシティ脱出できる説【Resident Evil 2  Playable Mr. X MOD】",
+    "【バイオハザードRE:2 Z Version】バイオシリーズ屈指の難易度の作品 PART1"
    ],
-   "genres": [],
-   "year": null,
-   "platforms": [],
-   "days_seen": 44,
+   "genres": [
+    "Shooter",
+    "Puzzle",
+    "Adventure"
+   ],
+   "year": 1998,
+   "platforms": [
+    "pc",
+    "console"
+   ],
+   "days_seen": 19,
    "last_seen": "2026-11-04",
    "first_here": false
   }

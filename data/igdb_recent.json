@@ -913,6 +913,15 @@
   ]
  },
  {
+  "name": "A Tale Amidst Memories",
+  "alias": [],
+  "pop": 0,
+  "y": 2026,
+  "p": [
+   "pc"
+  ]
+ },
+ {
   "name": "A Tiny Ghost Game",
   "alias": [
    "A Tiny Ghost Game.exe",
@@ -9340,7 +9349,8 @@
  {
   "name": "Cardsharp",
   "alias": [
-   "Card Sharp"
+   "Card Sharp",
+   "Cardsharp.exe"
   ],
   "pop": 0,
   "y": 2026,
@@ -9943,21 +9953,6 @@
   "g": [
    "Adventure",
    "Indie"
-  ]
- },
- {
-  "name": "Cats in Wonderland",
-  "alias": [
-   "Cats in Wonderland.exe"
-  ],
-  "pop": 0,
-  "y": 2026,
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Point-and-click",
-   "Adventure"
   ]
  },
  {
@@ -12087,6 +12082,16 @@
   ],
   "g": [
    "Strategy",
+   "Indie"
+  ]
+ },
+ {
+  "name": "Corto",
+  "alias": [],
+  "pop": 0,
+  "y": 2026,
+  "g": [
+   "Quiz/Trivia",
    "Indie"
   ]
  },
@@ -16600,7 +16605,9 @@
  },
  {
   "name": "DoDoon",
-  "alias": [],
+  "alias": [
+   "DoDoon.exe"
+  ],
   "pop": 0,
   "y": 2026,
   "p": [
@@ -17150,20 +17157,6 @@
   ],
   "g": [
    "Adventure",
-   "Indie"
-  ]
- },
- {
-  "name": "Dr. Mancell and Mr. Flame",
-  "alias": [],
-  "pop": 0,
-  "y": 2026,
-  "p": [
-   "pc",
-   "console"
-  ],
-  "g": [
-   "Platform",
    "Indie"
   ]
  },
@@ -20099,7 +20092,9 @@
  },
  {
   "name": "Eternal Palace Sakura",
-  "alias": [],
+  "alias": [
+   "SakuraTower.exe"
+  ],
   "pop": 0,
   "y": 2026,
   "p": [
@@ -27298,6 +27293,7 @@
    "pc"
   ],
   "g": [
+   "Platform",
    "Strategy",
    "Hack and slash/Beat 'em up",
    "Adventure",
@@ -28970,6 +28966,15 @@
    "Simulator",
    "Adventure",
    "Indie"
+  ]
+ },
+ {
+  "name": "House Builder: Plumbing DLC",
+  "alias": [],
+  "pop": 0,
+  "y": 2026,
+  "p": [
+   "pc"
   ]
  },
  {
@@ -33341,7 +33346,9 @@
  },
  {
   "name": "Laser Lightshow",
-  "alias": [],
+  "alias": [
+   "LaserLightshow.exe"
+  ],
   "pop": 0,
   "y": 2026,
   "p": [
@@ -33992,23 +33999,6 @@
   ],
   "g": [
    "Simulator",
-   "Indie"
-  ]
- },
- {
-  "name": "Lexicon",
-  "alias": [
-   "LEXICON",
-   "Lexicon"
-  ],
-  "pop": 0,
-  "y": 2026,
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Puzzle",
-   "Strategy",
    "Indie"
   ]
  },
@@ -35557,20 +35547,6 @@
    "Turn-based strategy (TBS)",
    "Indie",
    "Card & Board Game"
-  ]
- },
- {
-  "name": "MadHouse for Toys",
-  "alias": [],
-  "pop": 0,
-  "y": 2026,
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Puzzle",
-   "Adventure",
-   "Indie"
   ]
  },
  {
@@ -41210,7 +41186,9 @@
  },
  {
   "name": "Node Crown",
-  "alias": [],
+  "alias": [
+   "NodeCrown.exe"
+  ],
   "pop": 0,
   "y": 2026,
   "p": [
@@ -45874,6 +45852,9 @@
   "y": 2026,
   "p": [
    "pc"
+  ],
+  "g": [
+   "Role-playing (RPG)"
   ]
  },
  {
@@ -48934,7 +48915,7 @@
  {
   "name": "Retro Survival",
   "alias": [],
-  "pop": 0,
+  "pop": 5,
   "y": 2026,
   "p": [
    "console"
@@ -51144,6 +51125,31 @@
   "g": [
    "Adventure",
    "Indie"
+  ]
+ },
+ {
+  "name": "Scrapborne",
+  "alias": [],
+  "pop": 0,
+  "y": 2026,
+  "p": [
+   "pc"
+  ],
+  "g": [
+   "Indie"
+  ]
+ },
+ {
+  "name": "Scrapbot Arena",
+  "alias": [],
+  "pop": 0,
+  "y": 2026,
+  "p": [
+   "console"
+  ],
+  "g": [
+   "Shooter",
+   "Arcade"
   ]
  },
  {
@@ -53941,6 +53947,17 @@
   ]
  },
  {
+  "name": "Soccerwarz",
+  "alias": [],
+  "pop": 0,
+  "y": 2026,
+  "g": [
+   "Sport",
+   "Strategy",
+   "Tactical"
+  ]
+ },
+ {
   "name": "Society Chess 3D",
   "alias": [],
   "pop": 0,
@@ -55735,7 +55752,11 @@
  },
  {
   "name": "Stack & Brew",
-  "alias": [],
+  "alias": [
+   "StackAndBrew.exe",
+   "炼金大亨",
+   "煉金大亨"
+  ],
   "pop": 0,
   "y": 2026,
   "p": [
@@ -56095,7 +56116,9 @@
  },
  {
   "name": "Starshapes",
-  "alias": [],
+  "alias": [
+   "Starshapes.exe"
+  ],
   "pop": 0,
   "y": 2026,
   "p": [
@@ -57391,6 +57414,19 @@
   ]
  },
  {
+  "name": "Supermarket: Tidy Up!",
+  "alias": [],
+  "pop": 0,
+  "y": 2026,
+  "p": [
+   "pc",
+   "console"
+  ],
+  "g": [
+   "Simulator"
+  ]
+ },
+ {
   "name": "Surface",
   "alias": [],
   "pop": 0,
@@ -57827,19 +57863,6 @@
   ],
   "g": [
    "Racing",
-   "Indie"
-  ]
- },
- {
-  "name": "Syncline",
-  "alias": [],
-  "pop": 0,
-  "y": 2026,
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Puzzle",
    "Indie"
   ]
  },
@@ -59589,18 +59612,6 @@
   ],
   "g": [
    "Adventure",
-   "Indie"
-  ]
- },
- {
-  "name": "The Clinic of Thorns",
-  "alias": [],
-  "pop": 0,
-  "y": 2026,
-  "p": [
-   "pc"
-  ],
-  "g": [
    "Indie"
   ]
  },
@@ -65154,7 +65165,9 @@
  },
  {
   "name": "Turning Manor",
-  "alias": [],
+  "alias": [
+   "turningmanor.exe"
+  ],
   "pop": 0,
   "y": 2026,
   "p": [
@@ -66134,22 +66147,6 @@
   ],
   "g": [
    "Point-and-click",
-   "Indie"
-  ]
- },
- {
-  "name": "VR Realms",
-  "alias": [
-   "VRRealms.exe"
-  ],
-  "pop": 0,
-  "y": 2026,
-  "p": [
-   "pc",
-   "console"
-  ],
-  "g": [
-   "Simulator",
    "Indie"
   ]
  },
@@ -69913,7 +69910,9 @@
  },
  {
   "name": "Yukizuki no Seisou",
-  "alias": [],
+  "alias": [
+   "Yukizuki.exe"
+  ],
   "pop": 0,
   "y": 2026,
   "p": [
