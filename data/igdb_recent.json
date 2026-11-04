@@ -392,7 +392,9 @@
  },
  {
   "name": "4:12 AM",
-  "alias": [],
+  "alias": [
+   "4-12AM.exe"
+  ],
   "pop": 0,
   "y": 2026,
   "p": [
@@ -1630,6 +1632,20 @@
    "Simulator",
    "Adventure",
    "Arcade"
+  ]
+ },
+ {
+  "name": "Aery: Four Seasons",
+  "alias": [],
+  "pop": 0,
+  "y": 2026,
+  "p": [
+   "console"
+  ],
+  "g": [
+   "Racing",
+   "Simulator",
+   "Indie"
   ]
  },
  {
@@ -4162,6 +4178,21 @@
   ]
  },
  {
+  "name": "Ashnar's Lair",
+  "alias": [
+   "Ashnar's Lair.exe"
+  ],
+  "pop": 0,
+  "y": 2026,
+  "p": [
+   "pc"
+  ],
+  "g": [
+   "Role-playing (RPG)",
+   "Indie"
+  ]
+ },
+ {
   "name": "Ask Gear Re:Boost",
   "alias": [],
   "pop": 0,
@@ -4559,7 +4590,9 @@
  },
  {
   "name": "Austin Lost in Maze",
-  "alias": [],
+  "alias": [
+   "AustinLostInMaze.exe"
+  ],
   "pop": 0,
   "y": 2026,
   "p": [
@@ -4695,7 +4728,10 @@
  },
  {
   "name": "Ayako's Endeavors",
-  "alias": [],
+  "alias": [
+   "奔波的绫子小姐",
+   "奔波的綾子小姐"
+  ],
   "pop": 0,
   "y": 2026,
   "p": [
@@ -5854,6 +5890,20 @@
   "g": [
    "Adventure",
    "Visual Novel"
+  ]
+ },
+ {
+  "name": "Before I Turn: Survival Auto Battler",
+  "alias": [],
+  "pop": 0,
+  "y": 2026,
+  "p": [
+   "pc"
+  ],
+  "g": [
+   "Simulator",
+   "Strategy",
+   "Indie"
   ]
  },
  {
@@ -11325,6 +11375,15 @@
   ]
  },
  {
+  "name": "Coffee Keeper",
+  "alias": [],
+  "pop": 0,
+  "y": 2026,
+  "p": [
+   "pc"
+  ]
+ },
+ {
   "name": "Coffee Shop \"Keyhole\"",
   "alias": [],
   "pop": 0,
@@ -11719,6 +11778,7 @@
    "console"
   ],
   "g": [
+   "Puzzle",
    "Card & Board Game"
   ]
  },
@@ -12911,6 +12971,36 @@
   ]
  },
  {
+  "name": "CrowdPit",
+  "alias": [],
+  "pop": 0,
+  "y": 2026,
+  "p": [
+   "console"
+  ],
+  "g": [
+   "Shooter",
+   "Platform",
+   "Adventure",
+   "Indie"
+  ]
+ },
+ {
+  "name": "Crown & Coin: The Hundred Years",
+  "alias": [],
+  "pop": 0,
+  "y": 2026,
+  "p": [
+   "pc"
+  ],
+  "g": [
+   "Role-playing (RPG)",
+   "Simulator",
+   "Strategy",
+   "Indie"
+  ]
+ },
+ {
   "name": "Crown Control",
   "alias": [],
   "pop": 0,
@@ -12993,6 +13083,8 @@
   ],
   "g": [
    "Real Time Strategy (RTS)",
+   "Role-playing (RPG)",
+   "Simulator",
    "Strategy"
   ]
  },
@@ -13000,7 +13092,8 @@
   "name": "Crying Booth",
   "alias": [
    "CRYING BOOTH",
-   "Premonition"
+   "Premonition",
+   "CRYINGBOOTH.exe"
   ],
   "pop": 0,
   "y": 2026,
@@ -15050,20 +15143,6 @@
   ]
  },
  {
-  "name": "Delivery Survivors",
-  "alias": [],
-  "pop": 0,
-  "y": 2026,
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Role-playing (RPG)",
-   "Strategy",
-   "Indie"
-  ]
- },
- {
   "name": "Delta",
   "alias": [],
   "pop": 0,
@@ -15314,18 +15393,6 @@
   ]
  },
  {
-  "name": "Demonology: Incubus - Chapter 9",
-  "alias": [],
-  "pop": 0,
-  "y": 2026,
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Indie"
-  ]
- },
- {
   "name": "Demons' Night Fever",
   "alias": [],
   "pop": 1,
@@ -15395,18 +15462,6 @@
   ],
   "g": [
    "Adventure",
-   "Indie"
-  ]
- },
- {
-  "name": "Depth Diver",
-  "alias": [],
-  "pop": 0,
-  "y": 2026,
-  "p": [
-   "pc"
-  ],
-  "g": [
    "Indie"
   ]
  },
@@ -15761,7 +15816,9 @@
  },
  {
   "name": "Dialshift",
-  "alias": [],
+  "alias": [
+   "Dialshift.exe"
+  ],
   "pop": 0,
   "y": 2026,
   "p": [
@@ -19447,7 +19504,9 @@
  },
  {
   "name": "Emberglade",
-  "alias": [],
+  "alias": [
+   "Emberglade.exe"
+  ],
   "pop": 0,
   "y": 2026,
   "p": [
@@ -19803,7 +19862,7 @@
  {
   "name": "Escape Academy 2: Back 2 School",
   "alias": [],
-  "pop": 0,
+  "pop": 1,
   "y": 2026,
   "p": [
    "pc",
@@ -21489,6 +21548,21 @@
   ]
  },
  {
+  "name": "Fatespun",
+  "alias": [],
+  "pop": 0,
+  "y": 2026,
+  "p": [
+   "pc"
+  ],
+  "g": [
+   "Role-playing (RPG)",
+   "Strategy",
+   "Adventure",
+   "Card & Board Game"
+  ]
+ },
+ {
   "name": "Fate’s Loop",
   "alias": [],
   "pop": 0,
@@ -21555,21 +21629,6 @@
   "g": [
    "Simulator",
    "Adventure"
-  ]
- },
- {
-  "name": "Fechtbucher",
-  "alias": [],
-  "pop": 0,
-  "y": 2026,
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Simulator",
-   "Sport",
-   "Adventure",
-   "Indie"
   ]
  },
  {
@@ -22152,6 +22211,23 @@
    "pc"
   ],
   "g": [
+   "Simulator",
+   "Strategy",
+   "Indie"
+  ]
+ },
+ {
+  "name": "Fish Wrangler",
+  "alias": [
+   "FishWrangler.exe"
+  ],
+  "pop": 0,
+  "y": 2026,
+  "p": [
+   "pc"
+  ],
+  "g": [
+   "Role-playing (RPG)",
    "Simulator",
    "Strategy",
    "Indie"
@@ -23151,6 +23227,18 @@
   ]
  },
  {
+  "name": "Fortnite: Chapter 7 - Mini Season: Treasure Hunters",
+  "alias": [
+   "Fortnite C7MS"
+  ],
+  "pop": 0,
+  "y": 2026,
+  "p": [
+   "pc",
+   "console"
+  ]
+ },
+ {
   "name": "Fortune Teller Simulator",
   "alias": [],
   "pop": 0,
@@ -23756,21 +23844,6 @@
   "g": [
    "Shooter",
    "Arcade"
-  ]
- },
- {
-  "name": "Fuel Sort",
-  "alias": [
-   "fuel-sort.exe"
-  ],
-  "pop": 0,
-  "y": 2026,
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Puzzle",
-   "Indie"
   ]
  },
  {
@@ -25053,6 +25126,22 @@
   "g": [
    "Real Time Strategy (RTS)",
    "Strategy",
+   "Indie"
+  ]
+ },
+ {
+  "name": "Gnome Dome",
+  "alias": [
+   "GnomeDome.exe"
+  ],
+  "pop": 0,
+  "y": 2026,
+  "p": [
+   "pc"
+  ],
+  "g": [
+   "Strategy",
+   "Adventure",
    "Indie"
   ]
  },
@@ -26532,18 +26621,6 @@
   "g": [
    "Strategy",
    "Card & Board Game"
-  ]
- },
- {
-  "name": "Hair Removal Salon Simulator",
-  "alias": [],
-  "pop": 0,
-  "y": 2026,
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Simulator"
   ]
  },
  {
@@ -28648,22 +28725,6 @@
   ]
  },
  {
-  "name": "Horde Slayer",
-  "alias": [
-   "Horde Slayer.exe"
-  ],
-  "pop": 0,
-  "y": 2026,
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Role-playing (RPG)",
-   "Adventure",
-   "Indie"
-  ]
- },
- {
   "name": "Hordestomp",
   "alias": [
    "Hell Yeah: Gunslinger"
@@ -29387,19 +29448,6 @@
    "pc"
   ],
   "g": [
-   "Indie"
-  ]
- },
- {
-  "name": "Hyperboard Extreme",
-  "alias": [],
-  "pop": 0,
-  "y": 2026,
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Racing",
    "Indie"
   ]
  },
@@ -31138,21 +31186,6 @@
   ],
   "g": [
    "Role-playing (RPG)",
-   "Adventure",
-   "Indie"
-  ]
- },
- {
-  "name": "Isolated Island: After the Flood",
-  "alias": [],
-  "pop": 0,
-  "y": 2026,
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Role-playing (RPG)",
-   "Strategy",
    "Adventure",
    "Indie"
   ]
@@ -33644,6 +33677,20 @@
   ]
  },
  {
+  "name": "Leftovers: Last Fridge Standing",
+  "alias": [],
+  "pop": 0,
+  "y": 2026,
+  "p": [
+   "pc"
+  ],
+  "g": [
+   "Shooter",
+   "Indie",
+   "Arcade"
+  ]
+ },
+ {
   "name": "Leg Day",
   "alias": [
    "LegDay.exe"
@@ -33875,7 +33922,9 @@
  },
  {
   "name": "Let's Tidy Up!: Treasure",
-  "alias": [],
+  "alias": [
+   "TidyUp.exe"
+  ],
   "pop": 0,
   "y": 2026,
   "p": [
@@ -37837,19 +37886,6 @@
   ]
  },
  {
-  "name": "Missed Class: Horror",
-  "alias": [],
-  "pop": 0,
-  "y": 2026,
-  "p": [
-   "console"
-  ],
-  "g": [
-   "Adventure",
-   "Arcade"
-  ]
- },
- {
   "name": "Missi",
   "alias": [],
   "pop": 0,
@@ -39488,20 +39524,6 @@
   ]
  },
  {
-  "name": "Mystic Land: The search for Maphaldo",
-  "alias": [],
-  "pop": 0,
-  "y": 2026,
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Role-playing (RPG)",
-   "Turn-based strategy (TBS)",
-   "Indie"
-  ]
- },
- {
   "name": "Mystic Tavern",
   "alias": [],
   "pop": 0,
@@ -40663,6 +40685,19 @@
   ],
   "g": [
    "Hack and slash/Beat 'em up"
+  ]
+ },
+ {
+  "name": "Ninja Gaiden II Master Edition",
+  "alias": [],
+  "pop": 0,
+  "y": 2026,
+  "p": [
+   "pc"
+  ],
+  "g": [
+   "Hack and slash/Beat 'em up",
+   "Adventure"
   ]
  },
  {
@@ -42793,6 +42828,19 @@
   ]
  },
  {
+  "name": "OpenNG2",
+  "alias": [],
+  "pop": 0,
+  "y": 2026,
+  "p": [
+   "pc"
+  ],
+  "g": [
+   "Hack and slash/Beat 'em up",
+   "Adventure"
+  ]
+ },
+ {
   "name": "OpenZ",
   "alias": [],
   "pop": 0,
@@ -43680,19 +43728,6 @@
    "Platform",
    "Adventure",
    "Indie"
-  ]
- },
- {
-  "name": "Parkour Obby: Ice Escape",
-  "alias": [],
-  "pop": 0,
-  "y": 2026,
-  "p": [
-   "console"
-  ],
-  "g": [
-   "Platform",
-   "Arcade"
   ]
  },
  {
@@ -46365,22 +46400,6 @@
   ]
  },
  {
-  "name": "Pro Wrestling Tycoon",
-  "alias": [
-   "pwtycoon.exe"
-  ],
-  "pop": 0,
-  "y": 2026,
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Simulator",
-   "Sport",
-   "Strategy"
-  ]
- },
- {
   "name": "ProTax 98",
   "alias": [],
   "pop": 0,
@@ -47732,6 +47751,19 @@
   "g": [
    "Racing",
    "Sport"
+  ]
+ },
+ {
+  "name": "RaidCast",
+  "alias": [],
+  "pop": 0,
+  "y": 2026,
+  "p": [
+   "console"
+  ],
+  "g": [
+   "Role-playing (RPG)",
+   "Strategy"
   ]
  },
  {
@@ -49469,6 +49501,21 @@
   ]
  },
  {
+  "name": "Rock Core",
+  "alias": [
+   "ROCK CORE",
+   "RockCore.exe"
+  ],
+  "pop": 0,
+  "y": 2026,
+  "p": [
+   "pc"
+  ],
+  "g": [
+   "Indie"
+  ]
+ },
+ {
   "name": "Rock and Found",
   "alias": [
    "Rock & Found"
@@ -49890,6 +49937,20 @@
   "g": [
    "Shooter",
    "Indie"
+  ]
+ },
+ {
+  "name": "Rouge Process",
+  "alias": [],
+  "pop": 0,
+  "y": 2026,
+  "p": [
+   "pc"
+  ],
+  "g": [
+   "Strategy",
+   "Indie",
+   "Arcade"
   ]
  },
  {
@@ -51372,22 +51433,6 @@
   ]
  },
  {
-  "name": "Sector 13: Haunted Woods",
-  "alias": [],
-  "pop": 0,
-  "y": 2026,
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Puzzle",
-   "Role-playing (RPG)",
-   "Simulator",
-   "Adventure",
-   "Indie"
-  ]
- },
- {
   "name": "Sectron",
   "alias": [],
   "pop": 0,
@@ -52829,7 +52874,7 @@
   "alias": [
    "Carpenter.exe"
   ],
-  "pop": 14,
+  "pop": 15,
   "y": 2026,
   "p": [
    "pc",
@@ -52931,6 +52976,20 @@
   ],
   "g": [
    "Role-playing (RPG)",
+   "Adventure",
+   "Indie",
+   "Visual Novel"
+  ]
+ },
+ {
+  "name": "Sisterhood",
+  "alias": [],
+  "pop": 0,
+  "y": 2026,
+  "p": [
+   "pc"
+  ],
+  "g": [
    "Adventure",
    "Indie",
    "Visual Novel"
@@ -53091,6 +53150,21 @@
   "g": [
    "Puzzle",
    "Sport",
+   "Indie"
+  ]
+ },
+ {
+  "name": "Skulls and Sweets",
+  "alias": [
+   "SkullsAndSweets.exe"
+  ],
+  "pop": 0,
+  "y": 2026,
+  "p": [
+   "pc"
+  ],
+  "g": [
+   "Puzzle",
    "Indie"
   ]
  },
@@ -54522,22 +54596,6 @@
   ]
  },
  {
-  "name": "Souls Runner",
-  "alias": [
-   "SoulsRunner.exe"
-  ],
-  "pop": 0,
-  "y": 2026,
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Strategy",
-   "Adventure",
-   "Indie"
-  ]
- },
- {
   "name": "Soulscape 2: Fragments of the Present",
   "alias": [
    "Soulscape 2 Fragments of The Present"
@@ -55118,19 +55176,6 @@
    "Adventure",
    "Indie",
    "Arcade"
-  ]
- },
- {
-  "name": "Spellcaster University: Gears and Gobelins",
-  "alias": [],
-  "pop": 0,
-  "y": 2026,
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Simulator",
-   "Strategy"
   ]
  },
  {
@@ -56581,24 +56626,6 @@
   ]
  },
  {
-  "name": "Stranded With You",
-  "alias": [
-   "与你流落荒岛",
-   "與你流落荒島"
-  ],
-  "pop": 0,
-  "y": 2026,
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Role-playing (RPG)",
-   "Simulator",
-   "Adventure",
-   "Visual Novel"
-  ]
- },
- {
   "name": "Stranger Tavern: Brawl",
   "alias": [],
   "pop": 0,
@@ -57628,6 +57655,26 @@
   ],
   "g": [
    "Adventure",
+   "Indie"
+  ]
+ },
+ {
+  "name": "Swish and Flick: Tidy Up Together",
+  "alias": [
+   "Swish and Flick",
+   "On tourne et on abaisse: Tidy Up Together",
+   "一挥一抖: 一起收拾",
+   "一揮一抖: 一起收拾",
+   "Взмах и щелчок: Наведём порядок"
+  ],
+  "pop": 0,
+  "y": 2026,
+  "p": [
+   "pc"
+  ],
+  "g": [
+   "Puzzle",
+   "Simulator",
    "Indie"
   ]
  },
@@ -63638,6 +63685,15 @@
   ]
  },
  {
+  "name": "To the Hilt",
+  "alias": [],
+  "pop": 0,
+  "y": 2026,
+  "p": [
+   "pc"
+  ]
+ },
+ {
   "name": "ToMyX",
   "alias": [],
   "pop": 0,
@@ -64875,21 +64931,6 @@
   ]
  },
  {
-  "name": "Truck Titans",
-  "alias": [],
-  "pop": 0,
-  "y": 2026,
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Racing",
-   "Simulator",
-   "Sport",
-   "Indie"
-  ]
- },
- {
   "name": "Truckful",
   "alias": [
    "Truckful.exe"
@@ -65838,23 +65879,6 @@
   ]
  },
  {
-  "name": "Unknown Passenger 47",
-  "alias": [
-   "UNKNOWN PASSENGER 47"
-  ],
-  "pop": 0,
-  "y": 2026,
-  "p": [
-   "pc",
-   "console"
-  ],
-  "g": [
-   "Puzzle",
-   "Adventure",
-   "Indie"
-  ]
- },
- {
   "name": "Unmixable Syrup",
   "alias": [],
   "pop": 0,
@@ -66295,6 +66319,20 @@
   ]
  },
  {
+  "name": "Vector Parallax: Convergence of the Vast",
+  "alias": [],
+  "pop": 0,
+  "y": 2026,
+  "p": [
+   "console"
+  ],
+  "g": [
+   "Turn-based strategy (TBS)",
+   "Tactical",
+   "Card & Board Game"
+  ]
+ },
+ {
   "name": "Veil of Madness",
   "alias": [],
   "pop": 0,
@@ -66493,15 +66531,6 @@
   "g": [
    "Strategy",
    "Indie"
-  ]
- },
- {
-  "name": "Versus One",
-  "alias": [],
-  "pop": 0,
-  "y": 2026,
-  "p": [
-   "console"
   ]
  },
  {
@@ -67019,21 +67048,6 @@
   ],
   "g": [
    "Sport"
-  ]
- },
- {
-  "name": "Voltus' Neon Nightmare - Colossal Cure",
-  "alias": [
-   "Voltus' Neon Nightmare 2"
-  ],
-  "pop": 0,
-  "y": 2026,
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Puzzle",
-   "Indie"
   ]
  },
  {
@@ -67856,7 +67870,9 @@
  },
  {
   "name": "WendyQuest: Legend of the Four Corner Stones",
-  "alias": [],
+  "alias": [
+   "WendyQuest.exe"
+  ],
   "pop": 0,
   "y": 2026,
   "p": [

@@ -1,6 +1,6 @@
 {
  "date": "2026-11-04",
- "generated": "2026-11-04 10:59",
+ "generated": "2026-11-04 16:59",
  "leads": {
   "events": [
    {
@@ -25,7 +25,6 @@
      "皇れお / Sumeragi Reo【にじさんじ】",
      "神永タイガ / Kaminaga Taiga【にじさんじ】",
      "空星きらめ/Sorahoshi Kirame【にじさんじ】",
-     "赤城ウェン / Akagi Wen【にじさんじ】",
      "長尾 景 / Nagao Kei【にじさんじ】",
      "風楽奏斗 / Fura Kanato ",
      "鷹宮リオン / Rion Takamiya"
@@ -38,15 +37,6 @@
      "Luna Ch. 姫森ルーナ",
      "Vivi Ch. 綺々羅々ヴィヴィ - FLOW GLOW",
      "フブキCh。白上フブキ"
-    ]
-   },
-   {
-    "tag": "#ストグラ",
-    "channels": [
-     "Amoko Ch. 甘乃あもこ",
-     "marunnn【まるーんチャンネル】",
-     "みつき",
-     "切嘛 / Kiruma"
     ]
    },
    {
@@ -64,47 +54,35 @@
      "豚咲あおい_TomisakiAoi",
      "運天りらん"
     ]
-   },
-   {
-    "tag": "#フォートナイト",
-    "channels": [
-     "くろのす",
-     "めるとくん",
-     "ドパじんちゅーぶ"
-    ]
    }
   ],
-  "newcomers": [],
+  "newcomers": [
+   {
+    "game": "Gone Fishing",
+    "channels": 5,
+    "videos": 5
+   }
+  ],
   "wide": [
    {
     "game": "スプラトゥーン3",
-    "channels": 53,
-    "videos": 61
+    "channels": 50,
+    "videos": 55
    },
    {
     "game": "Apex Legends",
-    "channels": 30,
-    "videos": 34
+    "channels": 29,
+    "videos": 32
    },
    {
     "game": "Minecraft",
-    "channels": 28,
-    "videos": 29
-   },
-   {
-    "game": "ストリートファイター6",
-    "channels": 24,
+    "channels": 25,
     "videos": 26
    },
    {
-    "game": "モンスターハンターアウトランダーズ",
-    "channels": 20,
-    "videos": 28
-   },
-   {
-    "game": "フォートナイト",
-    "channels": 20,
-    "videos": 24
+    "game": "ストリートファイター6",
+    "channels": 19,
+    "videos": 20
    },
    {
     "game": "League of Legends",
@@ -112,9 +90,19 @@
     "videos": 18
    },
    {
-    "game": "モンスターストライク",
+    "game": "モンスターハンターアウトランダーズ",
+    "channels": 18,
+    "videos": 22
+   },
+   {
+    "game": "Japanese Ramen Simulator",
     "channels": 15,
-    "videos": 16
+    "videos": 15
+   },
+   {
+    "game": "モンスターストライク",
+    "channels": 13,
+    "videos": 14
    }
   ]
  },
@@ -123,9 +111,9 @@
   {
    "tag": "にじイカ祭り2026",
    "game": "スプラトゥーン3",
-   "evidence": 17,
+   "evidence": 15,
    "added": 9,
-   "channels": 23
+   "channels": 22
   }
  ],
  "misses": [
@@ -215,6 +203,11 @@
    "n": 10,
    "examples": [
     {
+     "t": "【アウトランダーズ】新作モンハン、さっそく狩りに行くぞ！【初日昼の部】",
+     "c": "ゲームするメイド男子 越山嘉祈",
+     "u": "https://www.youtube.com/watch?v=DZHginiTjjk"
+    },
+    {
      "t": "【アウトランダーズ】序盤の重要な進め方11選！効率の良い冒険ランク上げや序盤の日課とオススメキャラ等について【モンハン】",
      "c": "もやし - ゲーム実況",
      "u": "https://www.youtube.com/watch?v=LwVnodgjofA"
@@ -223,11 +216,6 @@
      "t": "【アウトランダーズ】新しいモンハン、まだまだ遊ぶぞ！【初日夜の部】",
      "c": "ゲームするメイド男子 越山嘉祈",
      "u": "https://www.youtube.com/watch?v=8fppKHFE9H4"
-    },
-    {
-     "t": "【アウトランダーズ】新作モンハン、さっそく狩りに行くぞ！【初日昼の部】",
-     "c": "ゲームするメイド男子 越山嘉祈",
-     "u": "https://www.youtube.com/watch?v=DZHginiTjjk"
     }
    ],
    "kind": "wide",
@@ -263,14 +251,14 @@
    "n": 6,
    "examples": [
     {
-     "t": "【生放送】ひとりで「サンリオパーティランド」実況プレイ",
-     "c": "ドコムスチャンネル",
-     "u": "https://www.youtube.com/watch?v=dAvV76TFiUI"
-    },
-    {
      "t": "【実況】競わないやさしいパーティゲーム「サンリオパーティランド」でボッチパーティPart1！【Switch2】",
      "c": "しゅーや",
      "u": "https://www.youtube.com/watch?v=SoZbBfhaITY"
+    },
+    {
+     "t": "【生放送】ひとりで「サンリオパーティランド」実況プレイ",
+     "c": "ドコムスチャンネル",
+     "u": "https://www.youtube.com/watch?v=dAvV76TFiUI"
     },
     {
      "t": "【実況】競わないやさしいパーティゲーム「サンリオパーティランド」でボッチパーティPart2！【Switch2】",
@@ -453,39 +441,6 @@
  "miss_days": 7,
  "hot_facts": [
   {
-   "game": "Queen's Domain",
-   "growth": 7.5,
-   "videos": 6,
-   "base": 0.6,
-   "channels": 5,
-   "views": 51636,
-   "who": [
-    "たまチャンネル",
-    "LamNot",
-    "LamNot",
-    "ゲームライターなんでもゆうこch",
-    "ホビドワ"
-   ],
-   "titles": [
-    "【Queen's Domain】 武器熟練度育成式のKINGS FIELD系DRPG：初期武器ですら育てて進化する、クリアまで数十時間の圧倒的好評ダンジョンクロウラー",
-    "たぶん何か間違えてるけど鬼畜過ぎて無理！【RPG】フロムソフトの原点作品オマージュ！世界観最高の新作インディーRPGを遊ぶ｜Queen's Domain #3",
-    "迷子の果てに奈落の底へ、地下都市世界を発見【RPG】フロムソフトの原点作品オマージュ！世界観最高の新作インディーRPGを遊ぶ｜Queen's Domain #4"
-   ],
-   "genres": [
-    "Role-playing (RPG)",
-    "Adventure",
-    "Indie"
-   ],
-   "year": 2026,
-   "platforms": [
-    "pc",
-    "console"
-   ],
-   "days_seen": 2,
-   "last_seen": "2026-11-03",
-   "first_here": false
-  },
-  {
    "game": "Gone Fishing",
    "growth": 6.25,
    "videos": 5,
@@ -519,7 +474,7 @@
    "game": "Ratatan",
    "growth": 5.0,
    "videos": 4,
-   "base": 0.7,
+   "base": 0.5,
    "channels": 4,
    "views": 431363,
    "who": [
@@ -570,9 +525,9 @@
    "genres": [],
    "year": null,
    "platforms": [],
-   "days_seen": 0,
-   "last_seen": null,
-   "first_here": true
+   "days_seen": 2,
+   "last_seen": "2026-11-03",
+   "first_here": false
   },
   {
    "game": "Bleach: Rebirth of Souls",
@@ -603,6 +558,38 @@
    ],
    "days_seen": 3,
    "last_seen": "2026-10-29",
+   "first_here": false
+  },
+  {
+   "game": "Queen's Domain",
+   "growth": 4.44,
+   "videos": 4,
+   "base": 0.9,
+   "channels": 4,
+   "views": 40211,
+   "who": [
+    "たまチャンネル",
+    "LamNot",
+    "ホビドワ",
+    "雨垂れ石を穿つ"
+   ],
+   "titles": [
+    "【Queen's Domain】 武器熟練度育成式のKINGS FIELD系DRPG：初期武器ですら育てて進化する、クリアまで数十時間の圧倒的好評ダンジョンクロウラー",
+    "迷子の果てに奈落の底へ、地下都市世界を発見【RPG】フロムソフトの原点作品オマージュ！世界観最高の新作インディーRPGを遊ぶ｜Queen's Domain #4",
+    "【ライブ実況】『キングスフィールド』好きに捧げる！硬派な一人称アクションRPG【Queen's Domain - 女王の領域 -】【KF系/アクションRPG/インディーゲーム/Steam】"
+   ],
+   "genres": [
+    "Role-playing (RPG)",
+    "Adventure",
+    "Indie"
+   ],
+   "year": 2026,
+   "platforms": [
+    "pc",
+    "console"
+   ],
+   "days_seen": 2,
+   "last_seen": "2026-11-03",
    "first_here": false
   },
   {
@@ -638,6 +625,11 @@
  ],
  "notes_written": true,
  "recent_columns": [
+  {
+   "date": "2026-11-04",
+   "game": "Queen's Domain",
+   "headline": "「キングスフィールド令和版」にフロム好きも注目？"
+  },
   {
    "date": "2026-11-03",
    "game": "ゼルダの伝説 時のオカリナ",
@@ -702,11 +694,6 @@
    "date": "2026-10-22",
    "game": "ドラゴンボール ゼノバース3",
    "headline": "強い奴に会いに行くんじゃない その体を借りるんだ"
-  },
-  {
-   "date": "2026-10-21",
-   "game": "インボキア-呪いのダイスゲーム-",
-   "headline": "「ジュマンジみたいなゲームやるぞ～」 4人そろえば呪いの盤は開く"
   }
  ]
 }
