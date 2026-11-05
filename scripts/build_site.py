@@ -1759,12 +1759,78 @@ def special_html(item):
         for para in str(sec.get("body", "")).split("\n"):
             if para.strip():
                 out.append(f"<p>{rich(para.strip())}</p>")
+    out.append(records_html(c.get("records")))
     srcs = c.get("sources") or []
     if srcs:
         out.append("<h2>出典</h2><ul>")
         out += [f'<li><a href="{e(s.get("u"))}" target="_blank" '
                 f'rel="noopener">{e(s.get("t") or s.get("u"))}</a></li>' for s in srcs]
         out.append("</ul>")
+    return "\n".join(x for x in out if x)
+
+
+def records_html(rec):
+    """まとめの終わりに置く「記録」の表（2026-11-05 たろちんさん）。
+
+        「① 10月に多くの人が配信したゲーム」「② 今月の新顔」
+        「③ 前からあるゲームが跳ねた日」の3つをみんなが見れるように
+        残しておきたい。こんなこともありました、と出典の間に表として入れたい
+
+    ★**ここは自動では作らない。まとめのJSONに書いたものをそのまま出す。**
+      理由は2つある。
+
+      1. **数字を作り直せない。** `data/daily/*.json` は30日で消えるので、
+         先月の実人数はもう数え直せない。**記事を書いた日の数字**でなければ、
+         同じページの中で本文と表が食い違う
+      2. **②の新顔は、機械で選ぶと嘘になる。**（`make_week_card.py` の
+         `new_parts` と同じ話）台帳は30日ぶんしか作り直されないので、
+         その月に辞書へ足した古いゲームが新顔の顔をする。2026-10を機械で
+         選んだら、2019年の『エーペックスレジェンズ』が185人で1位に出た
+
+      だから材料は `period_stats.py --month YYYY-MM --rising --md` の表で、
+      **人が見て落としたものをJSONに書く。** 書かなければ何も出ない。
+
+    形（表の数も列の数も自由。そのまま出すだけ）:
+
+        "records": {
+          "h": "記録",                        ← 見出し（省略可）
+          "note": "10月6日〜31日の26日分です",  ← 表の下の断り書き（省略可）
+          "tables": [
+            {"h": "① …（実人数の多い順・上位10）",
+             "cols": ["ゲーム", "実人数", "本数", "出た日数"],
+             "rows": [["Minecraft", "251人", "708本", "30日"], …],
+             "note": "この表だけの断り書き（省略可）"}
+          ]
+        }
+    """
+    if not isinstance(rec, dict):
+        return ""
+    tables = [t for t in (rec.get("tables") or []) if isinstance(t, dict)
+              and (t.get("rows") or [])]
+    if not tables:
+        return ""
+    out = [f'<h2>{e(str(rec.get("h") or "記録"))}</h2>']
+    for t in tables:
+        if str(t.get("h") or "").strip():
+            out.append(f'<h3 class="rech">{e(plain(t["h"]))}</h3>')
+        # 横に長い表は、せまい画面で枠ごと横に送る（本文は送らない）
+        out.append('<div class="recwrap"><table class="rec">')
+        cols = [str(x) for x in (t.get("cols") or [])]
+        if cols:
+            out.append("<thead><tr>"
+                       + "".join(f"<th>{e(x)}</th>" for x in cols)
+                       + "</tr></thead>")
+        out.append("<tbody>")
+        for row in t.get("rows") or []:
+            cells = row if isinstance(row, (list, tuple)) else [row]
+            out.append("<tr>" + "".join(
+                f'<td>{e(str("" if x is None else x))}</td>' for x in cells)
+                + "</tr>")
+        out.append("</tbody></table></div>")
+        if str(t.get("note") or "").strip():
+            out.append(f'<p class="recnote">{rich(str(t["note"]))}</p>')
+    if str(rec.get("note") or "").strip():
+        out.append(f'<p class="recnote">{rich(str(rec["note"]))}</p>')
     return "\n".join(out)
 
 
