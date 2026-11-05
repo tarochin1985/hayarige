@@ -84,13 +84,19 @@ def matcher_fingerprint():
     記録のページへ急上昇を残す直しを入れたとき、**型紙も一緒に直したから
     作り直された**だけだと気づいた。中身の組み立て方だけを変えた日は、
     同じ穴にはまる。作り直しは2分ほどかかるが、直したのに直らないほうが悪い。
+
+    ★**判定そのものをやっている match.py が、ここに入っていなかった**
+      （2026-11-05に気づいた）。いちばん結果を変えるファイルなのに、
+      辞書か型紙を同じ日に触らないと過去のページが古いまま残る。
+      2026-09-24・09-26とまったく同じ穴。足した。
     """
     h = hashlib.sha1()
     for name in MATCH_INPUTS:
         f = DATA / name
         h.update(name.encode())
         h.update(f.read_bytes() if f.is_file() else b"")
-    for p in (SITE / "template.html", Path(__file__).resolve()):
+    here = Path(__file__).resolve()
+    for p in (SITE / "template.html", here, here.parent / "match.py"):
         h.update(p.name.encode())
         h.update(p.read_bytes() if p.is_file() else b"")
     return h.hexdigest()[:16]

@@ -120,18 +120,25 @@ class Index:
             # 「ARK Survival Ascended」のような複数語の名前を探せない。
             self.bucket.setdefault(c[:2], []).append((c, spaced(alias), game, pop))
 
-    def find(self, text, strict=False):
+    def find(self, text, strict=False, curated_only=False):
         """textの中から最も長いエイリアスを探す。同点なら人気の高いゲーム。
 
         strict=True は「括弧の外」で照合するとき。タイトル全文から拾うと
         『hololive』の中の live のような誤爆が起きるので条件を厳しくする。
+
+        curated_only=True は「括弧の中を区切りで割ったぶん」で照合するとき
+        （2026-11-05）。**手で登録した別名にしか当てない。**
+        理由は `segments` の上のコメント（カタログ由来の短い名前を割って
+        当てると、BW・PS2・ROM・PS・PE・WoW・TA が全部ゲーム名に化ける）。
         """
         c, sep = compact_map(text)
         if not c:
             return None
         if c in self.exact:
             g, p = self.exact[c]
-            return (g, len(c), True)
+            if not (curated_only and p < 10 ** 8):
+                return (g, len(c), True)
+            return None
         best = None
         for i in range(len(c) - 1):
             for alias, alias_sp, game, pop in self.bucket.get(c[i:i + 2], ()):
@@ -140,6 +147,8 @@ class Index:
                 if not c.startswith(alias, i):
                     continue
                 curated = pop >= 10 ** 8      # 手で登録したエイリアスは信用する
+                if curated_only and not curated:
+                    continue
                 if is_latin(alias):
                     # 前後が「単語の切れ目」であることを必ず求める。
                     # ここを素通りさせていたため surviv → ARK Survival、
@@ -304,16 +313,74 @@ def load_display():
 LEAD_RE = re.compile(r"^[\s　#＃0-9]*[【『〖「《≪]")
 
 
+# 括弧の中を、さらに「本物の区切り」で割るための字（2026-11-05 たろちんさん）
+#
+# なぜ要るか。**2字のゲーム名は、括弧まるごとのときしか当たらない。**
+# `Index.add` は `len(c) >= 3` の別名しか部分一致の棚に入れないので、
+# 『雀魂』は `exact`（括弧の中身と丸ごと一致）でしか拾えない。
+# ところが実際の題は、括弧の中に別の字が混ざっているほうが多かった。
+#
+#     【#雀魂 #段位戦 】玉の間段位戦…       ← 淡雪花奏さん（連続配信790日台）
+#     【 麻雀 / 雀魂 】雀魂杯で戦った4人で…  ← 緑青くれはさん
+#     昇段戦、聖に戻る！【麻雀/雀魂 /ルイス・キャミー/にじさんじ】
+#
+# 2026-11-05に数えたら、**『雀魂』を含む題445本のうち176本（4割）が
+# 落ちていた。** 毎日打っている常連ほど題の形が決まっているので、
+# 同じ形で何十本も落ち続けていたことになる。
+#
+# ★**割るのは `#` `/` `｜` `、` `,` だけ。空白では割らない。**
+#   空白で割ると【Dead by Daylight】が「Dead」「by」「Daylight」に、
+#   【Among Us】が「Among」「Us」になって、短い英単語が
+#   別のゲームの名前と丸ごと一致しうる。**そこまでやる必要はない。**
+#
+# ★**`・` でも割らない。** 『ロマンシング サ・ガ2』『ルイス・キャミー』の
+#   ように、名前の中に入っている字なので。
+#
+# ★**元の括弧はそのまま残す。** 割ったほうだけにすると
+#   【Dead by Daylight】のような「区切りを含まない長い名前」が消える。
+#
+# ★★★**割ったぶんで当たってよいのは、手で登録した別名だけ**（下の `sub` 印）。
+#   最初に区切りだけ入れて全43,166本で測ったら、**新262本・失0本・移26本**で、
+#   数だけ見れば大当たりだった。**中を読んだら、移った26本の大半が間違い。**
+#
+#     BW   → Black & White     『ポケットモンスターブラック/BW』が9本（ポケモンBW）
+#     PS2  → PlanetSide 2      『悪代官3／PS2』（プレイステーション2）
+#     ROM  → Runes of Magic    『ROM/初見コメント歓迎』（事務所の名前）
+#     PS   → Paper Strike      『Steam/PS/Switch/Xbox』（売り場の名前）
+#     PE   → Parasite Eve      『PE/Xbox/Win10/PS 対応』（Pocket Edition）
+#     WoW  → World of Warcraft 『World of Warshipsみんなで遊ぼう【WoW/…】』
+#     TA   → Total Annihilation『1時間本気でTA練習』（タイムアタック）
+#     BIOHAZARD → バイオハザード 『BIOHAZARD/バイオハザード6』が10本（無印に化けた）
+#     ソラ  → Sora             『バステン/ソーラ/クミ』（配信者の名前）
+#
+#   **どれもカタログ由来の名前。**そしてこちらが拾いたい『雀魂』は、
+#   `aliases.json` に手で書いた行（pop 10^9）だった。線はここで引ける。
+#
+#   **割ったぶんは、手で登録した名前にだけ当てる。**
+#   カタログ由来の名前は、これまでどおり**括弧まるごとのとき**だけ当たる。
+SEG_SEP = re.compile(r"[#＃/／｜|、,]+")
+
+
 def segments(title: str):
-    """(中身, 括弧の強さ, 冒頭の括弧か) を返す。"""
+    """(中身, 括弧の強さ, 冒頭の括弧か, 割ったぶんか) を返す。
+
+    括弧ひとつにつき、**中身まるごと**と、**区切りで割ったぶん**を返す。
+    割ったぶんも同じ強さ・同じ「冒頭か」を持つ（中身は同じ括弧なので）。
+    4つめが True のものは、**手で登録した別名にしか当たらない。**
+    """
     m0 = LEAD_RE.match(title)
     lead_at = m0.end() - 1 if m0 else -1
     out = []
     for op, cl, pri in BRACKETS:
         pat = re.escape(op) + r"([^" + re.escape(op + cl) + r"]{1,60})" + re.escape(cl)
         for m in re.finditer(pat, title):
-            out.append((m.group(1).strip(), pri, m.start() == lead_at))
-    out.append((title, 0, False))
+            inner = m.group(1).strip()
+            lead = m.start() == lead_at
+            out.append((inner, pri, lead, False))
+            parts = [x.strip() for x in SEG_SEP.split(inner) if x.strip()]
+            if len(parts) >= 2:
+                out += [(x, pri, lead, True) for x in parts]
+    out.append((title, 0, False, False))
     return out
 
 
@@ -350,11 +417,11 @@ def leading_bracket(title: str, ng):
 def extract(title: str, idx: Index, fallback=False):
     """(ゲーム名, 判定方法) を返す。判定できなければ (None, 'none')。"""
     cands = []
-    for seg, pri, lead in segments(title):
+    for seg, pri, lead, sub in segments(title):
         c = compact(seg)
         if pri > 0 and looks_like_noise(c, idx.ng):
             continue
-        hit = idx.find(seg, strict=(pri == 0))
+        hit = idx.find(seg, strict=(pri == 0), curated_only=sub)
         if hit:
             g, ln, exact = hit
             # 冒頭の括弧を最優先にする。ゲーム名でない冒頭括弧（【ホロライブ】等）は
