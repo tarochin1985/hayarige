@@ -1167,19 +1167,6 @@
   ]
  },
  {
-  "name": "Abort Sequence",
-  "alias": [],
-  "pop": 0,
-  "y": 2026,
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Puzzle",
-   "Indie"
-  ]
- },
- {
   "name": "About Fishing",
   "alias": [],
   "pop": 0,
@@ -4752,6 +4739,19 @@
   ]
  },
  {
+  "name": "Ayakashi Profile",
+  "alias": [],
+  "pop": 0,
+  "y": 2026,
+  "p": [
+   "pc"
+  ],
+  "g": [
+   "Role-playing (RPG)",
+   "Indie"
+  ]
+ },
+ {
   "name": "Ayako's Endeavors",
   "alias": [
    "奔波的绫子小姐",
@@ -4935,19 +4935,6 @@
   "g": [
    "Simulator",
    "Strategy",
-   "Indie"
-  ]
- },
- {
-  "name": "Baby Lemonade",
-  "alias": [],
-  "pop": 0,
-  "y": 2026,
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Adventure",
    "Indie"
   ]
  },
@@ -6790,18 +6777,6 @@
   "g": [
    "Adventure",
    "Indie"
-  ]
- },
- {
-  "name": "Blitz",
-  "alias": [],
-  "pop": 0,
-  "y": 2026,
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Adventure"
   ]
  },
  {
@@ -9612,7 +9587,7 @@
  {
   "name": "Castlevania: Belmont's Curse",
   "alias": [],
-  "pop": 12,
+  "pop": 13,
   "y": 2026,
   "p": [
    "pc",
@@ -11211,21 +11186,6 @@
   ],
   "g": [
    "Platform",
-   "Indie"
-  ]
- },
- {
-  "name": "Clinical Memory",
-  "alias": [],
-  "pop": 0,
-  "y": 2026,
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Simulator",
-   "Strategy",
-   "Adventure",
    "Indie"
   ]
  },
@@ -14184,6 +14144,20 @@
   ]
  },
  {
+  "name": "Dark Spawn: Infestation",
+  "alias": [],
+  "pop": 0,
+  "y": 2026,
+  "p": [
+   "pc"
+  ],
+  "g": [
+   "Puzzle",
+   "Adventure",
+   "Indie"
+  ]
+ },
+ {
   "name": "Dark Thoughts",
   "alias": [],
   "pop": 0,
@@ -14226,6 +14200,20 @@
   ],
   "g": [
    "Adventure",
+   "Indie"
+  ]
+ },
+ {
+  "name": "Dark Workshop Simulator",
+  "alias": [],
+  "pop": 0,
+  "y": 2026,
+  "p": [
+   "pc"
+  ],
+  "g": [
+   "Simulator",
+   "Strategy",
    "Indie"
   ]
  },
@@ -15682,6 +15670,18 @@
   ]
  },
  {
+  "name": "Desktop: Null",
+  "alias": [],
+  "pop": 0,
+  "y": 2026,
+  "p": [
+   "pc"
+  ],
+  "g": [
+   "Indie"
+  ]
+ },
+ {
   "name": "Desolus",
   "alias": [
    "DESOLUS",
@@ -15977,22 +15977,6 @@
   "g": [
    "Strategy",
    "Card & Board Game"
-  ]
- },
- {
-  "name": "Dicevaders",
-  "alias": [
-   "DiceVaders.exe"
-  ],
-  "pop": 0,
-  "y": 2026,
-  "p": [
-   "pc",
-   "console"
-  ],
-  "g": [
-   "Strategy",
-   "Indie"
   ]
  },
  {
@@ -16393,20 +16377,6 @@
   ]
  },
  {
-  "name": "Discharge Pending",
-  "alias": [],
-  "pop": 0,
-  "y": 2026,
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Simulator",
-   "Adventure",
-   "Indie"
-  ]
- },
- {
   "name": "Disco Ball Simulator 2000",
   "alias": [],
   "pop": 0,
@@ -16720,23 +16690,6 @@
   ]
  },
  {
-  "name": "Dog in the Machine",
-  "alias": [
-   "Dog in the Machine.exe"
-  ],
-  "pop": 6,
-  "y": 2026,
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Puzzle",
-   "Strategy",
-   "Turn-based strategy (TBS)",
-   "Indie"
-  ]
- },
- {
   "name": "Doinaka Girls Utopia",
   "alias": [],
   "pop": 0,
@@ -16788,7 +16741,9 @@
  },
  {
   "name": "Don Bradman Cricket Jr",
-  "alias": [],
+  "alias": [
+   "Don Bradman Cricket Jr.exe"
+  ],
   "pop": 0,
   "y": 2026,
   "p": [
@@ -19395,6 +19350,20 @@
   ]
  },
  {
+  "name": "Eldwyn's Dungeon Academy",
+  "alias": [],
+  "pop": 0,
+  "y": 2026,
+  "p": [
+   "pc"
+  ],
+  "g": [
+   "Puzzle",
+   "Adventure",
+   "Indie"
+  ]
+ },
+ {
   "name": "Elecade",
   "alias": [],
   "pop": 0,
@@ -19958,21 +19927,6 @@
    "Platform",
    "Hack and slash/Beat 'em up",
    "Indie"
-  ]
- },
- {
-  "name": "Escape from 8-Bit High",
-  "alias": [
-   "8bithigh.exe"
-  ],
-  "pop": 0,
-  "y": 2026,
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Point-and-click",
-   "Adventure"
   ]
  },
  {
@@ -22103,6 +22057,22 @@
   "y": 2026,
   "p": [
    "console"
+  ]
+ },
+ {
+  "name": "Find the Box",
+  "alias": [
+   "FINDIT.exe"
+  ],
+  "pop": 0,
+  "y": 2026,
+  "p": [
+   "pc"
+  ],
+  "g": [
+   "Puzzle",
+   "Simulator",
+   "Indie"
   ]
  },
  {
@@ -25299,22 +25269,6 @@
   ]
  },
  {
-  "name": "Golf With Your Friends 2",
-  "alias": [
-   "Golf With Your Friends Two"
-  ],
-  "pop": 0,
-  "y": 2026,
-  "p": [
-   "pc",
-   "console"
-  ],
-  "g": [
-   "Sport",
-   "Indie"
-  ]
- },
- {
   "name": "Goliath Rogue",
   "alias": [
    "GoliathRogue.exe"
@@ -25620,19 +25574,6 @@
   "g": [
    "Strategy",
    "Indie"
-  ]
- },
- {
-  "name": "Grass Cutter 9000: Director's Cut",
-  "alias": [],
-  "pop": 0,
-  "y": 2026,
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Simulator",
-   "Adventure"
   ]
  },
  {
@@ -32973,7 +32914,10 @@
  },
  {
   "name": "Kokuhaku Confessional",
-  "alias": [],
+  "alias": [
+   "喜欢你",
+   "喜歡你"
+  ],
   "pop": 0,
   "y": 2026,
   "p": [
@@ -34318,6 +34262,23 @@
   ]
  },
  {
+  "name": "Lightyear Frontier",
+  "alias": [
+   "LightyearFrontier.exe"
+  ],
+  "pop": 12,
+  "y": 2026,
+  "p": [
+   "pc",
+   "console"
+  ],
+  "g": [
+   "Simulator",
+   "Adventure",
+   "Indie"
+  ]
+ },
+ {
   "name": "Lilifel",
   "alias": [],
   "pop": 0,
@@ -34485,23 +34446,6 @@
   "g": [
    "Hack and slash/Beat 'em up",
    "Indie"
-  ]
- },
- {
-  "name": "Little Nightmares III: The Shores",
-  "alias": [
-   "Little Nightmares III: Second Additional Chapter"
-  ],
-  "pop": 0,
-  "y": 2026,
-  "p": [
-   "pc",
-   "console"
-  ],
-  "g": [
-   "Platform",
-   "Puzzle",
-   "Adventure"
   ]
  },
  {
@@ -36209,19 +36153,6 @@
   ]
  },
  {
-  "name": "Marble Mill",
-  "alias": [],
-  "pop": 0,
-  "y": 2026,
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Simulator",
-   "Indie"
-  ]
- },
- {
   "name": "Marble Run Maker",
   "alias": [],
   "pop": 0,
@@ -36636,6 +36567,19 @@
   ],
   "g": [
    "Simulator"
+  ]
+ },
+ {
+  "name": "Maze Of Tenfon:Chapter 2",
+  "alias": [],
+  "pop": 0,
+  "y": 2026,
+  "p": [
+   "pc"
+  ],
+  "g": [
+   "Puzzle",
+   "Adventure"
   ]
  },
  {
@@ -37750,25 +37694,6 @@
   ]
  },
  {
-  "name": "Minecraft Dungeons II",
-  "alias": [
-   "Dungeons.exe",
-   "Minecraft Dungeons 2",
-   "Spicewood"
-  ],
-  "pop": 15,
-  "y": 2026,
-  "p": [
-   "pc",
-   "console"
-  ],
-  "g": [
-   "Role-playing (RPG)",
-   "Hack and slash/Beat 'em up",
-   "Adventure"
-  ]
- },
- {
   "name": "Minecraft Dungeons II - Deluxe DLC",
   "alias": [],
   "pop": 0,
@@ -38463,6 +38388,22 @@
    "Puzzle",
    "Simulator",
    "Indie"
+  ]
+ },
+ {
+  "name": "Monster: Crónicas De La Sangre",
+  "alias": [
+   "MONSTER: CHRONICLES OF BLOOD"
+  ],
+  "pop": 0,
+  "y": 2026,
+  "p": [
+   "pc",
+   "console"
+  ],
+  "g": [
+   "Role-playing (RPG)",
+   "Simulator"
   ]
  },
  {
@@ -41205,6 +41146,22 @@
   "g": [
    "Role-playing (RPG)",
    "Strategy",
+   "Indie"
+  ]
+ },
+ {
+  "name": "Noa and the Bandits' Den",
+  "alias": [
+   "诺亚与盗贼的洞窟",
+   "諾亞與盜賊的洞窟"
+  ],
+  "pop": 0,
+  "y": 2026,
+  "p": [
+   "pc"
+  ],
+  "g": [
+   "Role-playing (RPG)",
    "Indie"
   ]
  },
@@ -44343,7 +44300,8 @@
   "pop": 0,
   "y": 2026,
   "p": [
-   "pc"
+   "pc",
+   "console"
   ],
   "g": [
    "Role-playing (RPG)",
@@ -45375,6 +45333,20 @@
   "g": [
    "Shooter",
    "Sport",
+   "Arcade"
+  ]
+ },
+ {
+  "name": "Plucked",
+  "alias": [],
+  "pop": 0,
+  "y": 2026,
+  "p": [
+   "pc"
+  ],
+  "g": [
+   "Strategy",
+   "Indie",
    "Arcade"
   ]
  },
@@ -46521,20 +46493,6 @@
   "g": [
    "Simulator",
    "Indie"
-  ]
- },
- {
-  "name": "Project - Labyrinth",
-  "alias": [],
-  "pop": 0,
-  "y": 2026,
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Role-playing (RPG)",
-   "Strategy",
-   "Adventure"
   ]
  },
  {
@@ -47887,19 +47845,6 @@
   ]
  },
  {
-  "name": "Ramen Haven",
-  "alias": [],
-  "pop": 0,
-  "y": 2026,
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Simulator",
-   "Indie"
-  ]
- },
- {
   "name": "Ramen://Protocol",
   "alias": [],
   "pop": 0,
@@ -49240,6 +49185,19 @@
   ],
   "g": [
    "Puzzle",
+   "Indie"
+  ]
+ },
+ {
+  "name": "Rinha de Waifus",
+  "alias": [],
+  "pop": 0,
+  "y": 2026,
+  "p": [
+   "pc"
+  ],
+  "g": [
+   "Strategy",
    "Indie"
   ]
  },
@@ -51649,7 +51607,9 @@
  },
  {
   "name": "Senti Metrica",
-  "alias": [],
+  "alias": [
+   "森蒂·梅特里卡"
+  ],
   "pop": 0,
   "y": 2026,
   "p": [
@@ -53796,6 +53756,20 @@
   ]
  },
  {
+  "name": "Sneaklings: Paint Hide & Seek",
+  "alias": [
+   "Sneaklings"
+  ],
+  "pop": 0,
+  "y": 2026,
+  "p": [
+   "pc"
+  ],
+  "g": [
+   "Indie"
+  ]
+ },
+ {
   "name": "Sneaky Purr",
   "alias": [],
   "pop": 0,
@@ -54190,6 +54164,15 @@
   ]
  },
  {
+  "name": "Sonic Dream Team",
+  "alias": [],
+  "pop": 0,
+  "y": 2026,
+  "g": [
+   "Platform"
+  ]
+ },
+ {
   "name": "Sonic Panic",
   "alias": [],
   "pop": 0,
@@ -54426,6 +54409,20 @@
   ],
   "g": [
    "Simulator",
+   "Indie"
+  ]
+ },
+ {
+  "name": "Sort Them Dogs",
+  "alias": [
+   "SortThemDogs.exe"
+  ],
+  "pop": 0,
+  "y": 2026,
+  "p": [
+   "pc"
+  ],
+  "g": [
    "Indie"
   ]
  },
@@ -55276,6 +55273,19 @@
  },
  {
   "name": "Spinbot",
+  "alias": [],
+  "pop": 0,
+  "y": 2026,
+  "p": [
+   "pc"
+  ],
+  "g": [
+   "Shooter",
+   "Indie"
+  ]
+ },
+ {
+  "name": "Spineless",
   "alias": [],
   "pop": 0,
   "y": 2026,
@@ -56750,15 +56760,6 @@
   ],
   "g": [
    "Quiz/Trivia"
-  ]
- },
- {
-  "name": "Streamer vs. Chat",
-  "alias": [],
-  "pop": 0,
-  "y": 2026,
-  "p": [
-   "pc"
   ]
  },
  {
@@ -60231,7 +60232,9 @@
  },
  {
   "name": "The Gassal",
-  "alias": [],
+  "alias": [
+   "The Gassal.exe"
+  ],
   "pop": 0,
   "y": 2026,
   "p": [
@@ -62184,20 +62187,6 @@
   ]
  },
  {
-  "name": "The Starfallen Prince",
-  "alias": [
-   "The_Starfallen_Prince.exe"
-  ],
-  "pop": 0,
-  "y": 2026,
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Role-playing (RPG)"
-  ]
- },
- {
   "name": "The Streamer's Alt Account Labyrinth",
   "alias": [
    "Haishin Shoujo no Uraaka Meikyuu",
@@ -62916,7 +62905,9 @@
  },
  {
   "name": "Thunder Hoop Collection",
-  "alias": [],
+  "alias": [
+   "ThunderHoop.exe"
+  ],
   "pop": 0,
   "y": 2026,
   "p": [
@@ -66839,7 +66830,9 @@
   ],
   "g": [
    "Role-playing (RPG)",
-   "Adventure"
+   "Strategy",
+   "Adventure",
+   "Indie"
   ]
  },
  {
@@ -67685,24 +67678,6 @@
   ]
  },
  {
-  "name": "Way of the Hunter 2",
-  "alias": [
-   "Next Hunting Adventure",
-   "WOTH2.exe"
-  ],
-  "pop": 0,
-  "y": 2026,
-  "p": [
-   "pc",
-   "console"
-  ],
-  "g": [
-   "Shooter",
-   "Simulator",
-   "Adventure"
-  ]
- },
- {
   "name": "Way of the Hunter 2: Heirloom Pack",
   "alias": [],
   "pop": 0,
@@ -68214,7 +68189,9 @@
  },
  {
   "name": "Where the Seeds Fall",
-  "alias": [],
+  "alias": [
+   "WheretheSeedsFall.exe"
+  ],
   "pop": 0,
   "y": 2026,
   "p": [
@@ -69898,6 +69875,20 @@
   ]
  },
  {
+  "name": "Yule Dads",
+  "alias": [],
+  "pop": 0,
+  "y": 2026,
+  "p": [
+   "pc"
+  ],
+  "g": [
+   "Racing",
+   "Simulator",
+   "Indie"
+  ]
+ },
+ {
   "name": "Yumezame no Kasetsu",
   "alias": [],
   "pop": 0,
@@ -70028,6 +70019,20 @@
    "Role-playing (RPG)",
    "Hack and slash/Beat 'em up",
    "Adventure"
+  ]
+ },
+ {
+  "name": "Zero Mass",
+  "alias": [],
+  "pop": 0,
+  "y": 2026,
+  "p": [
+   "pc"
+  ],
+  "g": [
+   "Simulator",
+   "Indie",
+   "Arcade"
   ]
  },
  {
