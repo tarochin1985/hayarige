@@ -12815,6 +12815,18 @@
   ]
  },
  {
+  "name": "Critical Corruption Error",
+  "alias": [
+   "[critical corruption error]",
+   "corrupted file"
+  ],
+  "pop": 0,
+  "y": 2026,
+  "p": [
+   "console"
+  ]
+ },
+ {
   "name": "Critical Upload",
   "alias": [],
   "pop": 0,
@@ -28958,19 +28970,6 @@
   ]
  },
  {
-  "name": "House Rules",
-  "alias": [],
-  "pop": 0,
-  "y": 2026,
-  "p": [
-   "console"
-  ],
-  "g": [
-   "Adventure",
-   "Indie"
-  ]
- },
- {
   "name": "House Zero",
   "alias": [],
   "pop": 0,
@@ -44439,7 +44438,7 @@
    "PBZ.exe",
    "影之刃零"
   ],
-  "pop": 1,
+  "pop": 6,
   "y": 2026,
   "p": [
    "pc",

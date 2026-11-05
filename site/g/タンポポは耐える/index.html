@@ -153,6 +153,24 @@ footer .flink:hover{text-decoration:underline}
 .doc dd{margin:0}
 @media (max-width:560px){.doc{padding:20px 18px 24px}.doc dl{grid-template-columns:1fr;gap:2px 0}}
 
+/* まとめの終わりに置く「記録」の表（2026-11-05 たろちんさん）。
+   本文より一段おとなしくする。読みものの付録なので、順位表のように
+   主張させない。せまい画面では枠ごと横に送る（本文は送らない）。 */
+.doc .rech{font-family:"Zen Kaku Gothic New",sans-serif;font-size:14px;font-weight:900;
+ color:var(--ink-2);margin:18px 0 8px}
+.doc .recwrap{overflow-x:auto;-webkit-overflow-scrolling:touch;margin:0 0 12px;
+ border:1px solid var(--line);border-radius:10px;background:var(--bg)}
+.doc table.rec{border-collapse:collapse;width:100%;min-width:320px;font-size:13px;
+ line-height:1.7;color:var(--ink-2)}
+.doc table.rec th,.doc table.rec td{padding:7px 12px;text-align:left;white-space:nowrap;
+ border-bottom:1px solid var(--line)}
+.doc table.rec th{font-size:11.5px;font-weight:700;color:var(--ink-3);
+ background:var(--line-soft);white-space:nowrap}
+.doc table.rec td:first-child{white-space:normal;min-width:11em;color:var(--ink);font-weight:700}
+.doc table.rec td:not(:first-child){font-family:"Roboto Mono",monospace;font-size:12.5px}
+.doc table.rec tbody tr:last-child td{border-bottom:0}
+.doc .recnote{font-size:12px;color:var(--ink-3);line-height:1.8;margin:-4px 0 14px}
+
 .filters{display:flex;flex-wrap:wrap;gap:7px;margin-bottom:12px}
 .filters button{font:inherit;font-size:12px;font-weight:700;padding:5px 13px;border-radius:20px;cursor:pointer;
  background:var(--card);color:var(--ink-2);border:1px solid var(--line)}
@@ -618,7 +636,7 @@ footer{font-size:11.5px;color:var(--ink-3);text-align:center;border-top:1px soli
 </div>
 
 <script>
-const DATA = {"mode": "page", "date": "2026-11-06", "subtitle": "『タンポポは耐える。』の配信", "generated": "2026-11-06 01:44", "paths": {"home": "../../", "archive": "../../archive/"}};
+const DATA = {"mode": "page", "date": "2026-11-06", "subtitle": "『タンポポは耐える。』の配信", "generated": "2026-11-06 02:07", "paths": {"home": "../../", "archive": "../../archive/"}};
 const $ = s => document.querySelector(s);
 const esc = s => String(s ?? '').replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
 

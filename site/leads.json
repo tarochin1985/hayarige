@@ -1,6 +1,6 @@
 {
  "date": "2026-11-06",
- "generated": "2026-11-06 01:44",
+ "generated": "2026-11-06 02:07",
  "leads": {
   "events": [
    {
@@ -49,20 +49,7 @@
      "赤城ウェン / Akagi Wen【にじさんじ】",
      "長尾 景 / Nagao Kei【にじさんじ】",
      "魁星 / Kaisei【にじさんじ】",
-     "魔界ノりりむ",
-     "鷹宮リオン / Rion Takamiya"
-    ]
-   },
-   {
-    "tag": "#ストグラ",
-    "channels": [
-     "Tenten Ch. / 鳳玲天々",
-     "marunnn【まるーんチャンネル】",
-     "みつき",
-     "ノビーの遊び部屋",
-     "リオ / Rio Channel",
-     "影。/かげまる",
-     "柚原いづみ / Izumi Channel 【ななしいんく】"
+     "魔界ノりりむ"
     ]
    },
    {
@@ -73,8 +60,18 @@
      "ギルくん",
      "影。/かげまる",
      "暁月ホタル AKATSUKI HOTARU",
-     "柚原いづみ / Izumi Channel 【ななしいんく】",
      "稲荷いろはInari Iroha"
+    ]
+   },
+   {
+    "tag": "#ストグラ",
+    "channels": [
+     "Tenten Ch. / 鳳玲天々",
+     "marunnn【まるーんチャンネル】",
+     "みつき",
+     "ノビーの遊び部屋",
+     "リオ / Rio Channel",
+     "影。/かげまる"
     ]
    },
    {
@@ -92,7 +89,6 @@
     "channels": [
      "AZKi Channel",
      "Choco Ch. 癒月ちょこ",
-     "Iroha ch. 風真いろは - holoX -",
      "Towa Ch. 常闇トワ",
      "Vivi Ch. 綺々羅々ヴィヴィ - FLOW GLOW"
     ]
@@ -104,27 +100,19 @@
      "せんと / Cent",
      "花束 ゆいは / Hanataba Yuiha"
     ]
-   },
-   {
-    "tag": "#ゲーム実況",
-    "channels": [
-     "ジョアだよ",
-     "星埜きぃ -Key Hoshino-",
-     "遊楽木たいむ / yuuragi time ch"
-    ]
    }
   ],
   "newcomers": [],
   "wide": [
    {
     "game": "ゼルダの伝説 時のオカリナ",
-    "channels": 83,
-    "videos": 92
+    "channels": 82,
+    "videos": 90
    },
    {
     "game": "スプラトゥーン3",
-    "channels": 74,
-    "videos": 90
+    "channels": 72,
+    "videos": 88
    },
    {
     "game": "Apex Legends",
@@ -138,7 +126,7 @@
    },
    {
     "game": "Grand Theft Auto V",
-    "channels": 22,
+    "channels": 21,
     "videos": 26
    },
    {
@@ -164,8 +152,8 @@
    "tag": "にじイカ祭り2026",
    "game": "スプラトゥーン3",
    "evidence": 42,
-   "added": 33,
-   "channels": 45
+   "added": 31,
+   "channels": 44
   }
  ],
  "misses": [
@@ -396,30 +384,6 @@
    "suggest": []
   },
   {
-   "word": "sobosuba",
-   "channels": 3,
-   "n": 4,
-   "examples": [
-    {
-     "t": "【sobosuba/縦型配信】初プレイ！爽快感が半端ないと噂のパズルゲーに挑戦！【染谷レイナ】",
-     "c": "染谷レイナ",
-     "u": "https://www.youtube.com/watch?v=_FOFlLuxcis"
-    },
-    {
-     "t": "超柔らかい玉を合体して巨大化させる気持ち良すぎるパズルゲーム『 sobosuba 』【 エビオ/にじさんじ 】",
-     "c": "エクス・アルビオ -Ex Albio-",
-     "u": "https://www.youtube.com/watch?v=eTCMkfcaqas"
-    },
-    {
-     "t": "【sobosuba】ドパドパゲームで16384と上位を目指す【vtuber/りくけん】",
-     "c": "りくけん Rikuken ch.",
-     "u": "https://www.youtube.com/watch?v=0wBtJhdzdAY"
-    }
-   ],
-   "kind": "wide",
-   "suggest": []
-  },
-  {
    "word": "DrainSim",
    "channels": 3,
    "n": 4,
@@ -438,6 +402,30 @@
      "t": "【DrainSim】遊園地の水を今日こそ排水していく！！！【#vtuber / トムヤム】",
      "c": "トムヤム ch / TOMUYAMU ch",
      "u": "https://www.youtube.com/watch?v=9zPK6yZSSws"
+    }
+   ],
+   "kind": "wide",
+   "suggest": []
+  },
+  {
+   "word": "sobosuba",
+   "channels": 3,
+   "n": 4,
+   "examples": [
+    {
+     "t": "【sobosuba/縦型配信】初プレイ！爽快感が半端ないと噂のパズルゲーに挑戦！【染谷レイナ】",
+     "c": "染谷レイナ",
+     "u": "https://www.youtube.com/watch?v=_FOFlLuxcis"
+    },
+    {
+     "t": "超柔らかい玉を合体して巨大化させる気持ち良すぎるパズルゲーム『 sobosuba 』【 エビオ/にじさんじ 】",
+     "c": "エクス・アルビオ -Ex Albio-",
+     "u": "https://www.youtube.com/watch?v=eTCMkfcaqas"
+    },
+    {
+     "t": "【sobosuba】ドパドパゲームで16384と上位を目指す【vtuber/りくけん】",
+     "c": "りくけん Rikuken ch.",
+     "u": "https://www.youtube.com/watch?v=0wBtJhdzdAY"
     }
    ],
    "kind": "wide",
@@ -472,11 +460,11 @@
  "hot_facts": [
   {
    "game": "ゼルダの伝説 時のオカリナ",
-   "growth": 14.84,
-   "videos": 92,
-   "base": 6.2,
-   "channels": 83,
-   "views": 3255681,
+   "growth": 13.24,
+   "videos": 90,
+   "base": 6.8,
+   "channels": 82,
+   "views": 3226885,
    "who": [
     "兄者弟者",
     "いかぼうず",
@@ -523,8 +511,8 @@
    "platforms": [
     "pc"
    ],
-   "days_seen": 24,
-   "last_seen": "2026-10-21",
+   "days_seen": 25,
+   "last_seen": "2026-11-05",
    "first_here": false
   },
   {
@@ -579,36 +567,7 @@
    "genres": [],
    "year": null,
    "platforms": [],
-   "days_seen": 2,
-   "last_seen": "2026-11-05",
-   "first_here": false
-  },
-  {
-   "game": "インボキア-呪いのダイスゲーム-",
-   "growth": 3.75,
-   "videos": 3,
-   "base": 0.5,
-   "channels": 3,
-   "views": 52253,
-   "who": [
-    "赤髪のとものゲーム実況チャンネル!!",
-    "おなつのにびたし / Onatsu no Nibitashi",
-    "史門 / Shimon "
-   ],
-   "titles": [
-    "【クリアまで!!】リベンジ謎解き×呪いのダイスゲーム！？の巻【赤髪のとも/甘葛すもあ/ネギまぐろ/マコジョコ/インボキア】",
-    "【インボキア-呪いのダイスゲーム-】呪いのボドゲを攻略する💀 w/悪喰、奏手イヅル、史門【おなつのにびたし/個人勢Vtuber/#おなつのなま】",
-    "【 インボキア-呪いのダイスゲーム-  】呪われてるボードゲームらしい / おなつのにびたし 、悪喰、奏手イヅル、【個人勢Vtuber / 史門 】"
-   ],
-   "genres": [
-    "Adventure",
-    "Indie"
-   ],
-   "year": 2026,
-   "platforms": [
-    "pc"
-   ],
-   "days_seen": 9,
+   "days_seen": 1,
    "last_seen": "2026-11-05",
    "first_here": false
   },
@@ -640,6 +599,38 @@
     "console"
    ],
    "days_seen": 14,
+   "last_seen": "2026-11-05",
+   "first_here": false
+  },
+  {
+   "game": "Moon Sweepers",
+   "growth": 3.08,
+   "videos": 4,
+   "base": 1.3,
+   "channels": 4,
+   "views": 328993,
+   "who": [
+    "兄者弟者",
+    "SANNINSHOW",
+    "兄者のゲーム事務所",
+    "勉強ばっかりしてないでゲームしなさいっ!クエストはやったの?たまにはオープンワールドで遊んできたら?"
+   ],
+   "titles": [
+    "【Moon Sweepers】みんなで月面掃除！！【弟者,兄者,ちん,ドンピシャ,標準】",
+    "みんなで月面をツルツルにお掃除しようの会【Moon Sweepers】w/弟者、兄者、ちん、標準",
+    "【月面掃除】兄者の「Moon Sweepers」【2BRO.】"
+   ],
+   "genres": [
+    "Simulator",
+    "Strategy",
+    "Adventure",
+    "Indie"
+   ],
+   "year": 2026,
+   "platforms": [
+    "pc"
+   ],
+   "days_seen": 7,
    "last_seen": "2026-11-05",
    "first_here": false
   }

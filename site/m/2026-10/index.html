@@ -153,6 +153,24 @@ footer .flink:hover{text-decoration:underline}
 .doc dd{margin:0}
 @media (max-width:560px){.doc{padding:20px 18px 24px}.doc dl{grid-template-columns:1fr;gap:2px 0}}
 
+/* まとめの終わりに置く「記録」の表（2026-11-05 たろちんさん）。
+   本文より一段おとなしくする。読みものの付録なので、順位表のように
+   主張させない。せまい画面では枠ごと横に送る（本文は送らない）。 */
+.doc .rech{font-family:"Zen Kaku Gothic New",sans-serif;font-size:14px;font-weight:900;
+ color:var(--ink-2);margin:18px 0 8px}
+.doc .recwrap{overflow-x:auto;-webkit-overflow-scrolling:touch;margin:0 0 12px;
+ border:1px solid var(--line);border-radius:10px;background:var(--bg)}
+.doc table.rec{border-collapse:collapse;width:100%;min-width:320px;font-size:13px;
+ line-height:1.7;color:var(--ink-2)}
+.doc table.rec th,.doc table.rec td{padding:7px 12px;text-align:left;white-space:nowrap;
+ border-bottom:1px solid var(--line)}
+.doc table.rec th{font-size:11.5px;font-weight:700;color:var(--ink-3);
+ background:var(--line-soft);white-space:nowrap}
+.doc table.rec td:first-child{white-space:normal;min-width:11em;color:var(--ink);font-weight:700}
+.doc table.rec td:not(:first-child){font-family:"Roboto Mono",monospace;font-size:12.5px}
+.doc table.rec tbody tr:last-child td{border-bottom:0}
+.doc .recnote{font-size:12px;color:var(--ink-3);line-height:1.8;margin:-4px 0 14px}
+
 .filters{display:flex;flex-wrap:wrap;gap:7px;margin-bottom:12px}
 .filters button{font:inherit;font-size:12px;font-weight:700;padding:5px 13px;border-radius:20px;cursor:pointer;
  background:var(--card);color:var(--ink-2);border:1px solid var(--line)}
@@ -609,6 +627,56 @@ footer{font-size:11.5px;color:var(--ink-3);text-align:center;border-top:1px soli
 <p>・<strong>ポケモンユナイト</strong> ── 2027年3月23日でのサービス終了が10月27日に発表された。2021年7月21日にNintendo Switchで始まり、世界で2億ダウンロードを超えたポケモンのMOBA。理由は書かれていない。最後の大会<strong>『Pokémon UNITE Aeos Crown 2027』</strong>は予定どおり3月に東京で開かれる。</p>
 <p>・<strong>R.E.P.O.</strong> ── 最大6人で廃墟から貴重品を運び出す協力ホラー。10月29日の大型アップデートで日本語を含む21言語に正式対応し、31日の18チャンネルは当サイトの集計で過去いちばん多い1日になった。</p>
 <p>・<strong>スプラトゥーン3</strong> ── 10月31日に44チャンネル。10月のうち、その日いちばん多いゲームになったのはこの日だけだった。にじさんじの<strong>#にじイカ祭り2026</strong>の説明会と抽選会が29日にあり、そこから練習と顔合わせの配信が並んでいる。</p>
+<h2>記録（おまけ）</h2>
+<h3 class="rech">① 10月に多くの人が配信したゲーム（実人数の多い順・上位10）</h3>
+<div class="recwrap"><table class="rec">
+<thead><tr><th>ゲーム</th><th>実人数</th><th>本数</th><th>1人あたり</th><th>3本以上</th><th>出た日数</th></tr></thead>
+<tbody>
+<tr><td>Minecraft</td><td>251人</td><td>1,003本</td><td>4.00本</td><td>110人（43.8%）</td><td>31日</td></tr>
+<tr><td>Apex Legends</td><td>182人</td><td>1,438本</td><td>7.90本</td><td>104人（57.1%）</td><td>31日</td></tr>
+<tr><td>Japanese Ramen Simulator</td><td>156人</td><td>268本</td><td>1.72本</td><td>27人（17.3%）</td><td>30日</td></tr>
+<tr><td>ストリートファイター6</td><td>148人</td><td>1,146本</td><td>7.74本</td><td>86人（58.1%）</td><td>31日</td></tr>
+<tr><td>妹に運転を教える</td><td>132人</td><td>149本</td><td>1.13本</td><td>2人（1.5%）</td><td>27日</td></tr>
+<tr><td>スプラトゥーン3</td><td>116人</td><td>573本</td><td>4.94本</td><td>58人（50.0%）</td><td>31日</td></tr>
+<tr><td>タンポポは耐える。</td><td>89人</td><td>91本</td><td>1.02本</td><td>0人（0.0%）</td><td>26日</td></tr>
+<tr><td>Grand Theft Auto V</td><td>77人</td><td>778本</td><td>10.10本</td><td>61人（79.2%）</td><td>31日</td></tr>
+<tr><td>VALORANT</td><td>73人</td><td>464本</td><td>6.36本</td><td>46人（63.0%）</td><td>31日</td></tr>
+<tr><td>Bombanana!</td><td>72人</td><td>82本</td><td>1.14本</td><td>1人（1.4%）</td><td>27日</td></tr>
+</tbody></table></div>
+<p class="recnote">「実人数」は、その月に1本以上出した<strong>別々の</strong>チャンネルの数です。のべ人数（毎日の人数を足したもの）ではありません。「1人あたり」が1.0に近いほど、1人が1本出して終わるゲームです。</p>
+<h3 class="rech">② 今月の新顔（10月より前に3日以上出ていないゲーム・実人数順）</h3>
+<div class="recwrap"><table class="rec">
+<thead><tr><th>ゲーム</th><th>実人数</th><th>本数</th><th>1人あたり</th><th>出た日数</th><th>初登場</th></tr></thead>
+<tbody>
+<tr><td>ファイナルファンタジー レゾナンス</td><td>55人</td><td>281本</td><td>5.11本</td><td>23日</td><td>10/04（1人）</td></tr>
+<tr><td>80億分の1</td><td>40人</td><td>45本</td><td>1.12本</td><td>15日</td><td>10/13（1人）</td></tr>
+<tr><td>モンスターハンターアウトランダーズ</td><td>34人</td><td>110本</td><td>3.24本</td><td>7日</td><td>10/02（1人）</td></tr>
+<tr><td>ドラゴンズドグマ 2:ダークアリズン</td><td>32人</td><td>180本</td><td>5.62本</td><td>25日</td><td>10/03（1人）</td></tr>
+<tr><td>えかきうた大合戦</td><td>30人</td><td>33本</td><td>1.10本</td><td>18日</td><td>10/02（1人）</td></tr>
+<tr><td>インボキア-呪いのダイスゲーム-</td><td>28人</td><td>32本</td><td>1.14本</td><td>12日</td><td>10/09（3人）</td></tr>
+<tr><td>Phantom Blade Zero</td><td>26人</td><td>59本</td><td>2.27本</td><td>9日</td><td>10/09（1人）</td></tr>
+<tr><td>Nintendo Switch Sports Resort</td><td>24人</td><td>32本</td><td>1.33本</td><td>11日</td><td>10/14（1人）</td></tr>
+<tr><td>Find The Needle</td><td>23人</td><td>29本</td><td>1.26本</td><td>20日</td><td>10/03（1人）</td></tr>
+<tr><td>この家には4人しか住んでいません</td><td>22人</td><td>22本</td><td>1.00本</td><td>16日</td><td>10/06（1人）</td></tr>
+</tbody></table></div>
+<p class="recnote">元データのいちばん古い日に初登場しているものは、その前から出ていたのが見えていないだけの可能性が高いので外してあります。</p>
+<h3 class="rech">③ 前からあるゲームが跳ねた日（山の高さ順・上位10）</h3>
+<div class="recwrap"><table class="rec">
+<thead><tr><th>ゲーム</th><th>ピーク</th><th>その日</th><th>ふだん</th><th>増えた人数</th></tr></thead>
+<tbody>
+<tr><td>Apex Legends</td><td>67人</td><td>10/01</td><td>31.3人</td><td>+40人</td></tr>
+<tr><td>PUBG</td><td>30人</td><td>10/07</td><td>0.0人</td><td>+31人</td></tr>
+<tr><td>スプラトゥーン3</td><td>52人</td><td>10/31</td><td>14.9人</td><td>+27人</td></tr>
+<tr><td>Call of Duty: Modern Warfare 4</td><td>17人</td><td>10/26</td><td>1.1人</td><td>+17人</td></tr>
+<tr><td>Grand Theft Auto V</td><td>37人</td><td>10/15</td><td>21.3人</td><td>+17人</td></tr>
+<tr><td>Minecraft</td><td>47人</td><td>10/03</td><td>29.4人</td><td>+17人</td></tr>
+<tr><td>勝利の女神：NIKKE</td><td>22人</td><td>10/30</td><td>2.8人</td><td>+16人</td></tr>
+<tr><td>R.E.P.O.</td><td>18人</td><td>10/31</td><td>1.0人</td><td>+14人</td></tr>
+<tr><td>オーバーウォッチ2</td><td>17人</td><td>10/21</td><td>4.3人</td><td>+13人</td></tr>
+<tr><td>鳴潮</td><td>17人</td><td>10/01</td><td>5.5人</td><td>+13人</td></tr>
+</tbody></table></div>
+<p class="recnote">「ふだん」は31日の中央値です（出ていない日は0として数えています）。日ごとに、その日配信した人の総数で割ってから比べています。当サイトが見ているチャンネルは増え続けているので（9月の分母1,893人→10月2,577人）、生の人数のままでは日をまたいで比べられないためです。</p>
+<p class="recnote">集計したのは2026年10月1日〜31日です。日ごとの記録ページは31日分そろっていますが、人数を数える日別ファイルは10月1日ぶんが残っておらず、30日分からの集計になっています。<strong>この表は本文より後に数え直したもの</strong>なので、そのあいだに辞書へ足した名前のぶんだけ、本文の数字より少し大きくなっている箇所があります。件数・チャンネル数はすべて当サイトが独自に数えたもので、日本のゲーム配信の全部ではありません。</p>
 <h2>出典</h2><ul>
 <li><a href="https://www.4gamer.net/games/035/G103503/20261009027/index_2.html" target="_blank" rel="noopener">4Gamer — 「Japanese Ramen Simulator」，早期アクセス版がついにリリース。最大6人で協力して，こだわりのラーメン店を経営しよう</a></li>
 <li><a href="https://store.steampowered.com/app/4968640/Japanese_Ramen_Simulator/?l=japanese" target="_blank" rel="noopener">Steam — Japanese Ramen Simulator ストアページ</a></li>
@@ -673,7 +741,7 @@ footer{font-size:11.5px;color:var(--ink-3);text-align:center;border-top:1px soli
 </div>
 
 <script>
-const DATA = {"mode": "page", "date": "2026-11-06", "subtitle": "2026年10月のまとめ", "generated": "2026-11-06 01:44", "paths": {"home": "../../", "archive": "../../archive/"}};
+const DATA = {"mode": "page", "date": "2026-11-06", "subtitle": "2026年10月のまとめ", "generated": "2026-11-06 02:07", "paths": {"home": "../../", "archive": "../../archive/"}};
 const $ = s => document.querySelector(s);
 const esc = s => String(s ?? '').replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
 
