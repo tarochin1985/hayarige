@@ -2730,19 +2730,6 @@
   ]
  },
  {
-  "name": "American Truck Simulator: Ford Car Pack",
-  "alias": [],
-  "pop": 0,
-  "y": 2026,
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Simulator",
-   "Indie"
-  ]
- },
- {
   "name": "Ammo Dump",
   "alias": [
    "AMMO DUMP"
@@ -3597,6 +3584,32 @@
   ]
  },
  {
+  "name": "Arcade Archives 2: Elevator Action",
+  "alias": [],
+  "pop": 0,
+  "y": 2026,
+  "p": [
+   "pc",
+   "console"
+  ],
+  "g": [
+   "Arcade"
+  ]
+ },
+ {
+  "name": "Arcade Archives 2: Exzisus",
+  "alias": [],
+  "pop": 0,
+  "y": 2026,
+  "p": [
+   "console"
+  ],
+  "g": [
+   "Shooter",
+   "Arcade"
+  ]
+ },
+ {
   "name": "Arcade Archives 2: Fighting Golf",
   "alias": [],
   "pop": 0,
@@ -3967,6 +3980,19 @@
   "y": 2026,
   "p": [
    "pc"
+  ]
+ },
+ {
+  "name": "Artificial Ambition",
+  "alias": [],
+  "pop": 0,
+  "y": 2026,
+  "p": [
+   "pc"
+  ],
+  "g": [
+   "Simulator",
+   "Strategy"
   ]
  },
  {
@@ -14406,6 +14432,19 @@
   ]
  },
  {
+  "name": "Dead Sector",
+  "alias": [],
+  "pop": 0,
+  "y": 2026,
+  "p": [
+   "pc"
+  ],
+  "g": [
+   "Simulator",
+   "Strategy"
+  ]
+ },
+ {
   "name": "Dead Stadium: The Extinction Protocol",
   "alias": [],
   "pop": 0,
@@ -23801,21 +23840,6 @@
   ]
  },
  {
-  "name": "Frutiger Home",
-  "alias": [
-   "FrutigerHome.exe"
-  ],
-  "pop": 0,
-  "y": 2026,
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Simulator",
-   "Indie"
-  ]
- },
- {
   "name": "Fuck This Job",
   "alias": [],
   "pop": 0,
@@ -24175,19 +24199,6 @@
   ],
   "g": [
    "Adventure",
-   "Indie"
-  ]
- },
- {
-  "name": "Gamer Stop Simulator",
-  "alias": [],
-  "pop": 0,
-  "y": 2026,
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Simulator",
    "Indie"
   ]
  },
@@ -32587,20 +32598,6 @@
   "g": [
    "Simulator",
    "Card & Board Game"
-  ]
- },
- {
-  "name": "King's Guard",
-  "alias": [],
-  "pop": 0,
-  "y": 2026,
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Strategy",
-   "Turn-based strategy (TBS)",
-   "Indie"
   ]
  },
  {
@@ -41461,19 +41458,6 @@
    "Puzzle",
    "Simulator",
    "Strategy",
-   "Indie"
-  ]
- },
- {
-  "name": "Nostalgia Game Shop: Tidy Up",
-  "alias": [],
-  "pop": 0,
-  "y": 2026,
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Simulator",
    "Indie"
   ]
  },
@@ -57910,23 +57894,6 @@
   ]
  },
  {
-  "name": "System Clues",
-  "alias": [],
-  "pop": 0,
-  "y": 2026,
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Puzzle",
-   "Role-playing (RPG)",
-   "Simulator",
-   "Strategy",
-   "Turn-based strategy (TBS)",
-   "Indie"
-  ]
- },
- {
   "name": "System Purge: Hollow Point",
   "alias": [],
   "pop": 0,
@@ -57951,6 +57918,22 @@
   ],
   "g": [
    "Indie"
+  ]
+ },
+ {
+  "name": "System_Reboot",
+  "alias": [
+   "SYSTEM_REBOOT.exe"
+  ],
+  "pop": 0,
+  "y": 2026,
+  "p": [
+   "pc"
+  ],
+  "g": [
+   "Shooter",
+   "Indie",
+   "Arcade"
   ]
  },
  {
@@ -61414,6 +61397,19 @@
   ]
  },
  {
+  "name": "The Maze: In Dark",
+  "alias": [],
+  "pop": 0,
+  "y": 2026,
+  "p": [
+   "pc"
+  ],
+  "g": [
+   "Adventure",
+   "Indie"
+  ]
+ },
+ {
   "name": "The Membrane",
   "alias": [],
   "pop": 0,
@@ -62931,6 +62927,21 @@
    "Shooter",
    "Platform",
    "Arcade"
+  ]
+ },
+ {
+  "name": "Thập Tuyệt Trận",
+  "alias": [
+   "Thap Tuyet Tran",
+   "Thập Tuyệt Trận Mobile và PC"
+  ],
+  "pop": 0,
+  "y": 2026,
+  "p": [
+   "pc"
+  ],
+  "g": [
+   "Role-playing (RPG)"
   ]
  },
  {
@@ -64567,22 +64578,6 @@
   ]
  },
  {
-  "name": "Transport Fever 3",
-  "alias": [
-   "TransportFever3.exe"
-  ],
-  "pop": 0,
-  "y": 2026,
-  "p": [
-   "pc",
-   "console"
-  ],
-  "g": [
-   "Simulator",
-   "Strategy"
-  ]
- },
- {
   "name": "Trap Testers",
   "alias": [],
   "pop": 0,
@@ -65348,6 +65343,18 @@
   "g": [
    "Platform",
    "Adventure",
+   "Indie"
+  ]
+ },
+ {
+  "name": "Type To Report - Paradox",
+  "alias": [],
+  "pop": 0,
+  "y": 2026,
+  "p": [
+   "pc"
+  ],
+  "g": [
    "Indie"
   ]
  },
@@ -69101,20 +69108,6 @@
    "Fighting",
    "Role-playing (RPG)",
    "Adventure"
-  ]
- },
- {
-  "name": "Wizzo PopOut",
-  "alias": [
-   "Wizzo PopOut.exe"
-  ],
-  "pop": 0,
-  "y": 2026,
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Indie"
   ]
  },
  {
