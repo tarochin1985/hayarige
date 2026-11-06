@@ -1,6 +1,6 @@
 {
  "date": "2026-11-06",
- "generated": "2026-11-06 02:07",
+ "generated": "2026-11-06 11:02",
  "leads": {
   "events": [
    {
@@ -18,7 +18,6 @@
      "フレン・E・ルスタリオ",
      "ベルモンド・バンデラス",
      "ヤン・ナリ / Yang Nari 【にじさんじ】",
-     "レイン・パターソン／Lain Paterson【にじさんじ】",
      "レヴィ・エリファ-Levi Elipha-",
      "七瀬 すず菜 / Nanase Suzuna【にじさんじ】",
      "九里詠太 / Kuri Eita【にじさんじ】",
@@ -35,14 +34,11 @@
      "椎名唯華 / Shiina Yuika",
      "樋口楓【にじさんじ所属】",
      "渡会雲雀 / Watarai Hibari",
-     "獅子堂 あかり / Shishido Akari【にじさんじ】",
      "珠乃井ナナ / Tamanoi Nana【にじさんじ】",
      "男虎 / Ono Tora【にじさんじ】",
-     "白雪 巴/Shirayuki Tomoe",
      "皇れお / Sumeragi Reo【にじさんじ】",
      "神永タイガ / Kaminaga Taiga【にじさんじ】",
      "空星きらめ/Sorahoshi Kirame【にじさんじ】",
-     "笹木咲 / Sasaki Saku",
      "舞元啓介",
      "花畑チャイカ",
      "葉加瀬 冬雪 / Hakase Fuyuki",
@@ -53,17 +49,6 @@
     ]
    },
    {
-    "tag": "#ストグラSeason2",
-    "channels": [
-     "neon",
-     "はたさこ / hatasako_flag",
-     "ギルくん",
-     "影。/かげまる",
-     "暁月ホタル AKATSUKI HOTARU",
-     "稲荷いろはInari Iroha"
-    ]
-   },
-   {
     "tag": "#ストグラ",
     "channels": [
      "Tenten Ch. / 鳳玲天々",
@@ -71,7 +56,19 @@
      "みつき",
      "ノビーの遊び部屋",
      "リオ / Rio Channel",
-     "影。/かげまる"
+     "影。/かげまる",
+     "柚原いづみ / Izumi Channel 【ななしいんく】"
+    ]
+   },
+   {
+    "tag": "#ストグラSeason2",
+    "channels": [
+     "neon",
+     "はたさこ / hatasako_flag",
+     "ギルくん",
+     "影。/かげまる",
+     "暁月ホタル AKATSUKI HOTARU",
+     "柚原いづみ / Izumi Channel 【ななしいんく】"
     ]
    },
    {
@@ -79,7 +76,6 @@
     "channels": [
      "ほこり。",
      "星園ゆい Hoshizono Yui",
-     "星埜きぃ -Key Hoshino-",
      "月乃きの / Tsukino Kino Ch",
      "狐森ろべ / Komori Ch."
     ]
@@ -89,16 +85,8 @@
     "channels": [
      "AZKi Channel",
      "Choco Ch. 癒月ちょこ",
-     "Towa Ch. 常闇トワ",
+     "Koyori ch. 博衣こより - holoX -",
      "Vivi Ch. 綺々羅々ヴィヴィ - FLOW GLOW"
-    ]
-   },
-   {
-    "tag": "#パレットタウン",
-    "channels": [
-     "あかるん / Akarun Ch.",
-     "せんと / Cent",
-     "花束 ゆいは / Hanataba Yuiha"
     ]
    }
   ],
@@ -106,43 +94,43 @@
   "wide": [
    {
     "game": "ゼルダの伝説 時のオカリナ",
-    "channels": 82,
-    "videos": 90
+    "channels": 76,
+    "videos": 82
    },
    {
     "game": "スプラトゥーン3",
-    "channels": 72,
-    "videos": 88
+    "channels": 68,
+    "videos": 74
    },
    {
     "game": "Apex Legends",
-    "channels": 44,
-    "videos": 52
+    "channels": 38,
+    "videos": 42
    },
    {
     "game": "モンスターハンターアウトランダーズ",
     "channels": 24,
-    "videos": 30
-   },
-   {
-    "game": "Grand Theft Auto V",
-    "channels": 21,
-    "videos": 26
-   },
-   {
-    "game": "League of Legends",
-    "channels": 19,
-    "videos": 21
+    "videos": 28
    },
    {
     "game": "Minecraft",
-    "channels": 19,
-    "videos": 22
+    "channels": 23,
+    "videos": 26
+   },
+   {
+    "game": "Grand Theft Auto V",
+    "channels": 23,
+    "videos": 24
+   },
+   {
+    "game": "League of Legends",
+    "channels": 18,
+    "videos": 20
    },
    {
     "game": "フォートナイト",
     "channels": 17,
-    "videos": 22
+    "videos": 20
    }
   ]
  },
@@ -151,9 +139,9 @@
   {
    "tag": "にじイカ祭り2026",
    "game": "スプラトゥーン3",
-   "evidence": 42,
-   "added": 31,
-   "channels": 44
+   "evidence": 27,
+   "added": 23,
+   "channels": 40
   }
  ],
  "misses": [
@@ -317,11 +305,6 @@
    "n": 5,
    "examples": [
     {
-     "t": "うのらびとしゃべろっか【 ゆにれいど! 】",
-     "c": "卯埜らび / Rabi Uno",
-     "u": "https://www.youtube.com/watch?v=n7zQ1877aCg"
-    },
-    {
      "t": "うのらびがマック食べまくるところ見てて【 ゆにれいど! 】",
      "c": "卯埜らび / Rabi Uno",
      "u": "https://www.youtube.com/watch?v=OdKJ5zELgDo"
@@ -330,30 +313,11 @@
      "t": "【振り返り】みんなの『ありがとう』の声に涙...【時羽しう/ゆにれいど！】",
      "c": "時羽しう / tokiha shiu",
      "u": "https://www.youtube.com/watch?v=SsL3fWbbl24"
-    }
-   ],
-   "kind": "wide",
-   "suggest": []
-  },
-  {
-   "word": "キングダムハーツ",
-   "channels": 3,
-   "n": 5,
-   "examples": [
-    {
-     "t": "【キングダムハーツ】遅くなってすまん！キングダムハーツの続きです",
-     "c": "あかほのゲームチャンネル",
-     "u": "https://www.youtube.com/watch?v=y4ZVgnMlrSE"
     },
     {
-     "t": "【 #キングダムハーツ 】はじめてのバースバイスリープやるぞ！！その６【 #新人vtuber ￤#夢見ルビィ 】",
-     "c": "夢見ルビィ / YUMEMI RUBY",
-     "u": "https://www.youtube.com/watch?v=k8BnqbDFJo4"
-    },
-    {
-     "t": "【 #キングダムハーツ 】はじめてのバースバイスリープやるぞ！！その６【 #新人vtuber ￤#夢見ルビィ 】",
-     "c": "夢見ルビィ / YUMEMI RUBY",
-     "u": "https://www.youtube.com/watch?v=k8BnqbDFJo4"
+     "t": "眠すぎなんですけど？【扇名いだ/ゆにれいど！】",
+     "c": "扇名いだ",
+     "u": "https://www.youtube.com/watch?v=Ofg75nWtoOk"
     }
    ],
    "kind": "wide",
@@ -365,14 +329,14 @@
    "n": 5,
    "examples": [
     {
-     "t": "【ガンダムカードゲーム】最強の一角！？赤緑学園vs緑紫ハマーン【GCG】",
-     "c": "K.C.P -Kansai Climax Party- 関西頂同好会",
-     "u": "https://www.youtube.com/watch?v=Y_73FVUnRyY"
-    },
-    {
      "t": "【 GCG/ガンダムカードゲーム】GD06の発売前日！！！！一緒に見ながら評価しよ【 VTuber #猫本にゃこ 】",
      "c": "猫本にゃこちゃんねる / Nekomoto Nyako channel",
      "u": "https://www.youtube.com/watch?v=nge2flx4paw"
+    },
+    {
+     "t": "【ガンダムカードゲーム】最強の一角！？赤緑学園vs緑紫ハマーン【GCG】",
+     "c": "K.C.P -Kansai Climax Party- 関西頂同好会",
+     "u": "https://www.youtube.com/watch?v=Y_73FVUnRyY"
     },
     {
      "t": "【 GCG/ガンダムカードゲーム】GD062ボックス手に入ったからゆっくり開けたい【 VTuber #猫本にゃこ 】",
@@ -460,22 +424,22 @@
  "hot_facts": [
   {
    "game": "ゼルダの伝説 時のオカリナ",
-   "growth": 13.24,
-   "videos": 90,
-   "base": 6.8,
-   "channels": 82,
-   "views": 3226885,
+   "growth": 8.72,
+   "videos": 82,
+   "base": 9.4,
+   "channels": 76,
+   "views": 2757347,
    "who": [
-    "兄者弟者",
-    "いかぼうず",
-    "葉山舞鈴 / Ohayama Ch.",
-    "ブリとカワウソ",
-    "GAMEゆうなch"
+    "Luna Ch. 姫森ルーナ",
+    "UNIT B (Pre-Debut) - mekPark",
+    "千凛あゆむ / Senri Ayumu【にじさんじ】",
+    "ACHRORA - mekPark",
+    "Keroru ch. 矢毒けろる"
    ],
    "titles": [
-    "【ゼルダの伝説 時のオカリナ】リメイク版をおためしプレイ！【弟者】",
-    "【最速プレイ】ゼルダガチ勢がSwitch2時オカを全力で楽しむ配信【ゼルダの伝説時のオカリナリメイク】",
-    "#01【 ゼルダの伝説 時のオカリナ 】本日発売🐴あの名作がフルリメイク！王覇山、はじめての時オカ。（ 時を超え、少年は勇者に。 ）【 にじさんじ┊︎葉山舞鈴 】"
+    "【 ゼルダの伝説 時のオカリナ 】本日発売！！時オカリメイク版で遊ぶのら！！！The Legend of Zelda ＃１【姫森ルーナ/ホロライブ】",
+    "【時のオカリナ】城下町の音楽好きすぎる！！！ゼルダの子守唄も楽しみです。ゼルダの伝説 時のオカリナ リメイク【 #UNIT_B / #清澄ライラ】",
+    "【 ゼルダの伝説 時のオカリナ 】#01 完全初見 ✦︎ 待望のリメイク！このために我慢してた！ゼルダ脳やどすぞ🧠【にじさんじ / 千凛あゆむ】"
    ],
    "genres": [],
    "year": null,
@@ -490,7 +454,7 @@
    "videos": 4,
    "base": 0.2,
    "channels": 4,
-   "views": 251288,
+   "views": 394978,
    "who": [
     "一ノ瀬うるは",
     "藍沢エマ / Aizawa Ema",
@@ -516,22 +480,54 @@
    "first_here": false
   },
   {
-   "game": "Potato Please",
-   "growth": 5.0,
-   "videos": 4,
-   "base": 0.7,
-   "channels": 4,
-   "views": 28503,
+   "game": "アークナイツ：エンドフィールド",
+   "growth": 4.29,
+   "videos": 18,
+   "base": 4.2,
+   "channels": 14,
+   "views": 223887,
    "who": [
-    "えおちゃんねる！",
+    "マグロヘッド",
+    "伊波ライ / Inami Rai【にじさんじ】",
+    "Somen Channel",
+    "すりっぷらーゼツ",
+    "伊波ライ / Inami Rai【にじさんじ】"
+   ],
+   "titles": [
+    "【エンフィ】限定★６「ミンホ」は強いのか？無凸で解説します。性能/武器/防具/PT編成…全てが分かる！【アークナイツ：エンドフィールド】",
+    "【 アークナイツ：エンドフィールド 】ミンホ、参戦 Ver.2【 伊波ライ / にじさんじ 】",
+    "【エンドフィールド】物理編成が激変！ミンホ完全解説｜武器・防具・編成"
+   ],
+   "genres": [
+    "Role-playing (RPG)",
+    "Strategy",
+    "Adventure"
+   ],
+   "year": 2026,
+   "platforms": [
+    "pc",
+    "console"
+   ],
+   "days_seen": 54,
+   "last_seen": "2026-11-05",
+   "first_here": false
+  },
+  {
+   "game": "Potato Please",
+   "growth": 3.75,
+   "videos": 3,
+   "base": 0.8,
+   "channels": 3,
+   "views": 14553,
+   "who": [
     "Hultutigamer",
     "ファミ通TUBE",
     "電・A・ルーエ"
    ],
    "titles": [
-    "じゃがいもの皮をひたすら剥くゲーム【Potato Please】",
     "【Potato Please】最初の自動化がまさかの子犬だったジャガイモを無限に剥くインクリメンタルゲーム【Steam】",
-    "国家任務は「ジャガイモの皮むき」であります！。ひたすらジャガイモと向き合う【Potato Please】#ヘイ昇平 #ファミラボ"
+    "国家任務は「ジャガイモの皮むき」であります！。ひたすらジャガイモと向き合う【Potato Please】#ヘイ昇平 #ファミラボ",
+    "【Potato Please】皮を剥いて我が国に勝利を！！【電・A・ルーエ】"
    ],
    "genres": [
     "Simulator",
@@ -546,69 +542,12 @@
    "first_here": false
   },
   {
-   "game": "地獄怨根",
-   "growth": 5.0,
-   "videos": 4,
-   "base": 0.2,
-   "channels": 4,
-   "views": 27926,
-   "who": [
-    "キャシーさんはホラーゲームで遊びたい",
-    "初雪セツナ | ホラー声優Vtuber",
-    "Ritorun Ch.りとるん",
-    "ゆいぽて",
-    "Ritorun Ch.りとるん"
-   ],
-   "titles": [
-    "【ホラー】とある日本の住宅街…夜になると現れる謎の八百屋「エンコン屋台」を題材にしたホラーゲーム『 地獄怨根 』【Vキャシー/Vtuber】実況",
-    "【都市伝説ホラー】全END回収！一度食べたら最後。深夜の住宅街に現れる謎の八百屋『地獄怨根』【ホラー声優VTuber／初雪セツナ】",
-    "【 地獄怨根 】食べたら最後。この街で噂の謎の「エンコン」がヤバすぎる。※ホラゲー【方言Vtuber/りとるん】"
-   ],
-   "genres": [],
-   "year": null,
-   "platforms": [],
-   "days_seen": 1,
-   "last_seen": "2026-11-05",
-   "first_here": false
-  },
-  {
-   "game": "Fatal Fury: City of the Wolves",
-   "growth": 3.33,
-   "videos": 6,
-   "base": 1.8,
-   "channels": 6,
-   "views": 134592,
-   "who": [
-    "なるおのひとりでできるもん",
-    "Vtuber Showdown【Vtuber格ゲーch】",
-    "SCOREの格ゲー人生",
-    "こくじんTV",
-    "ぷげら pugera"
-   ],
-   "titles": [
-    "【餓狼CotW】餓狼ストリーマーカップに向けてチーム顔合わせ＆使用キャラを決める【GO1/べてぃ/天鬼ぷるる/柊ツルギ/金デヴ/なるお・餓狼伝説City of the Wolves】",
-    "【餓狼伝説cotw】チーム顔合わせ SNK格ゲーに挑戦するねるちゃん！！ダックキングに実家のような安心感を感じ即決めする【因幡はねる/SCORE/立川/こく兄/布団ちゃん/ななしいんく】",
-    "【餓狼CotW】STREAMER CUP TEAM Bの皆さんと顔合わせ！"
-   ],
-   "genres": [
-    "Fighting"
-   ],
-   "year": 2025,
-   "platforms": [
-    "pc",
-    "console"
-   ],
-   "days_seen": 14,
-   "last_seen": "2026-11-05",
-   "first_here": false
-  },
-  {
    "game": "Moon Sweepers",
    "growth": 3.08,
    "videos": 4,
    "base": 1.3,
    "channels": 4,
-   "views": 328993,
+   "views": 449767,
    "who": [
     "兄者弟者",
     "SANNINSHOW",
@@ -631,6 +570,38 @@
     "pc"
    ],
    "days_seen": 7,
+   "last_seen": "2026-11-05",
+   "first_here": false
+  },
+  {
+   "game": "バイオハザード レクイエム",
+   "growth": 3.08,
+   "videos": 4,
+   "base": 1.3,
+   "channels": 4,
+   "views": 30305,
+   "who": [
+    "つなまぐろ",
+    "猫ヶ谷なすび / Nekogaya Nasubi",
+    "甘屑あまえ - Amakuzu Amae -",
+    "HatoMune"
+   ],
+   "titles": [
+    "【バイオ9 レクイエム】何が起こるかわからない!?究極のランダムmodに挑戦！PART4",
+    "【バイオ × USJ 】『バイオハザード レクイエム』 ザ・ダイブが怖すぎた!!グッズ＆フードも堪能💜【 #猫ヶ谷なすび / #VTuber 】#CCJP",
+    "【USJ / 2026】怖すぎる(泣)ビビりが『バイオハザード レクイエム』 ザ・ダイブ先行体験してきた！🧟#PR #USJ #バイオハザード #ハロウィーンホラーナイト #CCJP"
+   ],
+   "genres": [
+    "Shooter",
+    "Puzzle",
+    "Adventure"
+   ],
+   "year": 2026,
+   "platforms": [
+    "pc",
+    "console"
+   ],
+   "days_seen": 8,
    "last_seen": "2026-11-05",
    "first_here": false
   }
