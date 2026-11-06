@@ -301,7 +301,9 @@
  },
  {
   "name": "20 Floors Down",
-  "alias": [],
+  "alias": [
+   "20 Floors Down.exe"
+  ],
   "pop": 0,
   "y": 2026,
   "p": [
@@ -3705,6 +3707,21 @@
   ]
  },
  {
+  "name": "Arcanum Idle",
+  "alias": [
+   "arcanum.exe"
+  ],
+  "pop": 0,
+  "y": 2026,
+  "p": [
+   "pc"
+  ],
+  "g": [
+   "Simulator",
+   "Indie"
+  ]
+ },
+ {
   "name": "ArcheAge Chronicles",
   "alias": [
    "上古世纪编年史",
@@ -3958,7 +3975,9 @@
  },
  {
   "name": "Artificial Ambition",
-  "alias": [],
+  "alias": [
+   "ArtificialAmbition.exe"
+  ],
   "pop": 0,
   "y": 2026,
   "p": [
@@ -7062,17 +7081,6 @@
   ]
  },
  {
-  "name": "Bloons Blitz",
-  "alias": [],
-  "pop": 0,
-  "y": 2026,
-  "g": [
-   "Role-playing (RPG)",
-   "Indie",
-   "Arcade"
-  ]
- },
- {
   "name": "Blowhole",
   "alias": [],
   "pop": 0,
@@ -7338,7 +7346,8 @@
  {
   "name": "Boneyard Bounce!",
   "alias": [
-   "BONEYARD BOUNCE!"
+   "BONEYARD BOUNCE!",
+   "BoneyardBounce.exe"
   ],
   "pop": 0,
   "y": 2026,
@@ -11246,7 +11255,7 @@
   "alias": [
    "Hellraiser.exe"
   ],
-  "pop": 18,
+  "pop": 19,
   "y": 2026,
   "p": [
    "pc",
@@ -13962,6 +13971,8 @@
  {
   "name": "Danchi Days",
   "alias": [
+   "团地日和",
+   "團地日和",
    "Danchi Days.exe"
   ],
   "pop": 0,
@@ -14387,6 +14398,19 @@
   ],
   "g": [
    "Strategy",
+   "Indie"
+  ]
+ },
+ {
+  "name": "DeCube",
+  "alias": [],
+  "pop": 0,
+  "y": 2026,
+  "p": [
+   "pc"
+  ],
+  "g": [
+   "Simulator",
    "Indie"
   ]
  },
@@ -16067,19 +16091,6 @@
   ]
  },
  {
-  "name": "Diffusion",
-  "alias": [],
-  "pop": 0,
-  "y": 2026,
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Strategy",
-   "Indie"
-  ]
- },
- {
   "name": "Dig",
   "alias": [
    "Dig A Hole Multiplayer",
@@ -16440,6 +16451,7 @@
  {
   "name": "Disk-Y",
   "alias": [
+   "DISK-Y.exe",
    "DISK-Y"
   ],
   "pop": 0,
@@ -20808,6 +20820,7 @@
   "pop": 0,
   "y": 2026,
   "p": [
+   "pc",
    "console"
   ],
   "g": [
@@ -26329,7 +26342,9 @@
  },
  {
   "name": "Gun Restoration Shop Simulator",
-  "alias": [],
+  "alias": [
+   "Gun Restoration Shop Simulator.exe"
+  ],
   "pop": 0,
   "y": 2026,
   "p": [
@@ -27009,7 +27024,9 @@
  },
  {
   "name": "Hasbro Games Junior Collection",
-  "alias": [],
+  "alias": [
+   "HBGC.exe"
+  ],
   "pop": 0,
   "y": 2026,
   "p": [
@@ -27978,7 +27995,9 @@
  },
  {
   "name": "Hidden Cat Islands",
-  "alias": [],
+  "alias": [
+   "Hidden Cat Islands.exe"
+  ],
   "pop": 0,
   "y": 2026,
   "p": [
@@ -31585,7 +31604,7 @@
   "alias": [
    "Joe & Mac.exe"
   ],
-  "pop": 1,
+  "pop": 2,
   "y": 2026,
   "p": [
    "pc",
@@ -35237,7 +35256,9 @@
  },
  {
   "name": "Low Earth Orbit Adventures",
-  "alias": [],
+  "alias": [
+   "LEOAdventures.exe"
+  ],
   "pop": 0,
   "y": 2026,
   "p": [
@@ -35311,6 +35332,20 @@
   "g": [
    "Role-playing (RPG)",
    "Hack and slash/Beat 'em up"
+  ]
+ },
+ {
+  "name": "Luminleaf Chronicles",
+  "alias": [],
+  "pop": 0,
+  "y": 2026,
+  "p": [
+   "pc"
+  ],
+  "g": [
+   "Role-playing (RPG)",
+   "Strategy",
+   "Adventure"
   ]
  },
  {
@@ -37205,20 +37240,6 @@
   ]
  },
  {
-  "name": "Merge Day: Office Girls",
-  "alias": [],
-  "pop": 0,
-  "y": 2026,
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Puzzle",
-   "Simulator",
-   "Indie"
-  ]
- },
- {
   "name": "Meritaton",
   "alias": [
    "Meritator"
@@ -38849,6 +38870,7 @@
  {
   "name": "Mr. \"Bargain Expert\"",
   "alias": [
+   "Mr. Bargain Expert.exe",
    "捡漏王"
   ],
   "pop": 0,
@@ -39628,7 +39650,9 @@
  },
  {
   "name": "Mystic Fog Maze",
-  "alias": [],
+  "alias": [
+   "mystic-fog-maze.exe"
+  ],
   "pop": 0,
   "y": 2026,
   "p": [
@@ -40243,7 +40267,9 @@
  },
  {
   "name": "Neuroflip",
-  "alias": [],
+  "alias": [
+   "NeuroFlip.exe"
+  ],
   "pop": 0,
   "y": 2026,
   "p": [
@@ -40839,19 +40865,6 @@
   ],
   "g": [
    "Sport"
-  ]
- },
- {
-  "name": "Nion Forge",
-  "alias": [],
-  "pop": 0,
-  "y": 2026,
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Indie",
-   "Arcade"
   ]
  },
  {
@@ -41581,7 +41594,8 @@
  {
   "name": "Not in My House",
   "alias": [
-   "NIMH"
+   "NIMH",
+   "NIMH.exe"
   ],
   "pop": 0,
   "y": 2026,
@@ -43067,6 +43081,18 @@
   ]
  },
  {
+  "name": "Orcthal",
+  "alias": [],
+  "pop": 0,
+  "y": 2026,
+  "p": [
+   "pc"
+  ],
+  "g": [
+   "Indie"
+  ]
+ },
+ {
   "name": "Order 13 VR",
   "alias": [],
   "pop": 0,
@@ -44246,6 +44272,22 @@
   ]
  },
  {
+  "name": "Performance Review: Survivor",
+  "alias": [
+   "PerformanceReviewSurvivor.exe"
+  ],
+  "pop": 0,
+  "y": 2026,
+  "p": [
+   "pc"
+  ],
+  "g": [
+   "Shooter",
+   "Strategy",
+   "Indie"
+  ]
+ },
+ {
   "name": "Permafrost",
   "alias": [
    "Permafrost.exe"
@@ -44950,7 +44992,8 @@
  {
   "name": "Pith",
   "alias": [
-   "PITH"
+   "PITH",
+   "PITH.exe"
   ],
   "pop": 0,
   "y": 2026,
@@ -46308,7 +46351,7 @@
   "alias": [
    "Project Name: Prinny Sugoroku"
   ],
-  "pop": 0,
+  "pop": 1,
   "y": 2026,
   "p": [
    "pc",
@@ -47020,22 +47063,6 @@
   ],
   "g": [
    "Simulator"
-  ]
- },
- {
-  "name": "Pulse Drive",
-  "alias": [
-   "脉冲驱动",
-   "PulseDrive.exe"
-  ],
-  "pop": 0,
-  "y": 2026,
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Racing",
-   "Indie"
   ]
  },
  {
@@ -54079,18 +54106,6 @@
   ]
  },
  {
-  "name": "Solaria",
-  "alias": [],
-  "pop": 0,
-  "y": 2026,
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Role-playing (RPG)"
-  ]
- },
- {
   "name": "Soldier Offensive",
   "alias": [],
   "pop": 0,
@@ -54719,6 +54734,20 @@
   ],
   "g": [
    "Simulator",
+   "Indie"
+  ]
+ },
+ {
+  "name": "Sourcebound",
+  "alias": [
+   "Sourcebound.exe"
+  ],
+  "pop": 0,
+  "y": 2026,
+  "p": [
+   "pc"
+  ],
+  "g": [
    "Indie"
   ]
  },
@@ -60220,6 +60249,7 @@
  {
   "name": "The Fame Game II: L.A. Heartbreaker",
   "alias": [
+   "FameGame2.exe",
    "The Fame Game 2"
   ],
   "pop": 0,
@@ -62020,7 +62050,8 @@
  {
   "name": "The Rusted",
   "alias": [
-   "THE RUSTED"
+   "THE RUSTED",
+   "The Rusted.exe"
   ],
   "pop": 0,
   "y": 2026,
@@ -68100,7 +68131,9 @@
  },
  {
   "name": "Wheel Estate",
-  "alias": [],
+  "alias": [
+   "The Wheel Estate.exe"
+  ],
   "pop": 0,
   "y": 2026,
   "p": [
@@ -68934,6 +68967,7 @@
    "pc"
   ],
   "g": [
+   "Shooter",
    "Simulator"
   ]
  },
@@ -68948,6 +68982,7 @@
    "pc"
   ],
   "g": [
+   "Shooter",
    "Simulator"
   ]
  },
@@ -69418,6 +69453,7 @@
  {
   "name": "Worjong",
   "alias": [
+   "Worjong.exe",
    "WORJONG"
   ],
   "pop": 0,
