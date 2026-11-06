@@ -2157,19 +2157,6 @@
   ]
  },
  {
-  "name": "Alchemortis",
-  "alias": [],
-  "pop": 0,
-  "y": 2026,
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Strategy",
-   "Indie"
-  ]
- },
- {
   "name": "Alea",
   "alias": [],
   "pop": 0,
@@ -3261,19 +3248,6 @@
   ]
  },
  {
-  "name": "Another's Memories",
-  "alias": [],
-  "pop": 0,
-  "y": 2026,
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Adventure",
-   "Indie"
-  ]
- },
- {
   "name": "Antarctic Grave",
   "alias": [],
   "pop": 0,
@@ -3925,19 +3899,6 @@
   ],
   "g": [
    "Sport"
-  ]
- },
- {
-  "name": "Armada Pet Wars",
-  "alias": [],
-  "pop": 0,
-  "y": 2026,
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Strategy",
-   "Indie"
   ]
  },
  {
@@ -11531,7 +11492,9 @@
  },
  {
   "name": "Coins Must Be Made",
-  "alias": [],
+  "alias": [
+   "Coins Must Be Made.exe"
+  ],
   "pop": 0,
   "y": 2026,
   "p": [
@@ -14665,20 +14628,6 @@
   ]
  },
  {
-  "name": "Dear Poe",
-  "alias": [],
-  "pop": 0,
-  "y": 2026,
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Role-playing (RPG)",
-   "Adventure",
-   "Indie"
-  ]
- },
- {
   "name": "DearMyFriend",
   "alias": [],
   "pop": 0,
@@ -15405,24 +15354,6 @@
  },
  {
   "name": "Demon Slayer: Kimetsu no Yaiba - The Hinokami Chronicles: Giyu Tomioka (Infinity Castle) Character Pack",
-  "alias": [],
-  "pop": 0,
-  "y": 2026,
-  "p": [
-   "console"
-  ]
- },
- {
-  "name": "Demon Slayer: Kimetsu no Yaiba - The Hinokami Chronicles: Shinobu Kocho (Infinity Castle) Character Pack",
-  "alias": [],
-  "pop": 0,
-  "y": 2026,
-  "p": [
-   "console"
-  ]
- },
- {
-  "name": "Demon Slayer: Kimetsu no Yaiba - The Hinokami Chronicles: Tanjiro Kamado (Infinity Castle) Character Pack",
   "alias": [],
   "pop": 0,
   "y": 2026,
@@ -21241,6 +21172,22 @@
   ]
  },
  {
+  "name": "False Myth 2",
+  "alias": [
+   "Game.exe"
+  ],
+  "pop": 0,
+  "y": 2026,
+  "p": [
+   "pc"
+  ],
+  "g": [
+   "Role-playing (RPG)",
+   "Adventure",
+   "Indie"
+  ]
+ },
+ {
   "name": "Fame or Folly",
   "alias": [],
   "pop": 0,
@@ -21798,7 +21745,9 @@
  },
  {
   "name": "Feeding Gooble",
-  "alias": [],
+  "alias": [
+   "FeedingGooble.exe"
+  ],
   "pop": 0,
   "y": 2026,
   "p": [
@@ -26835,6 +26784,18 @@
   ]
  },
  {
+  "name": "Hammer these nails!",
+  "alias": [],
+  "pop": 0,
+  "y": 2026,
+  "p": [
+   "pc"
+  ],
+  "g": [
+   "Simulator"
+  ]
+ },
+ {
   "name": "Hamster Wheel Isekai",
   "alias": [],
   "pop": 0,
@@ -29456,6 +29417,19 @@
   ]
  },
  {
+  "name": "HyperCross",
+  "alias": [],
+  "pop": 0,
+  "y": 2026,
+  "p": [
+   "console"
+  ],
+  "g": [
+   "Racing",
+   "Sport"
+  ]
+ },
+ {
   "name": "HyperFatal",
   "alias": [
    "HYPERFATAL"
@@ -29469,6 +29443,31 @@
    "Racing",
    "Adventure",
    "Indie"
+  ]
+ },
+ {
+  "name": "HyperLean",
+  "alias": [],
+  "pop": 0,
+  "y": 2026,
+  "p": [
+   "console"
+  ],
+  "g": [
+   "Racing",
+   "Sport"
+  ]
+ },
+ {
+  "name": "HyperMoto",
+  "alias": [],
+  "pop": 0,
+  "y": 2026,
+  "p": [
+   "console"
+  ],
+  "g": [
+   "Racing"
   ]
  },
  {
@@ -40268,6 +40267,21 @@
   ],
   "g": [
    "Indie"
+  ]
+ },
+ {
+  "name": "Neuroflip",
+  "alias": [],
+  "pop": 0,
+  "y": 2026,
+  "p": [
+   "pc"
+  ],
+  "g": [
+   "Puzzle",
+   "Strategy",
+   "Indie",
+   "Card & Board Game"
   ]
  },
  {
@@ -64471,6 +64485,20 @@
   ]
  },
  {
+  "name": "Toñita",
+  "alias": [],
+  "pop": 0,
+  "y": 2026,
+  "p": [
+   "pc"
+  ],
+  "g": [
+   "Racing",
+   "Indie",
+   "Arcade"
+  ]
+ },
+ {
   "name": "Trade Tales",
   "alias": [],
   "pop": 0,
@@ -69672,7 +69700,9 @@
  },
  {
   "name": "Wrong Mine",
-  "alias": [],
+  "alias": [
+   "wrongmine.exe"
+  ],
   "pop": 0,
   "y": 2026,
   "p": [
@@ -69720,21 +69750,6 @@
   "g": [
    "Shooter",
    "Arcade"
-  ]
- },
- {
-  "name": "Wurst and Glory",
-  "alias": [
-   "Wurst & Glory",
-   "Wurst & Glory.exe"
-  ],
-  "pop": 0,
-  "y": 2026,
-  "p": [
-   "console"
-  ],
-  "g": [
-   "Indie"
   ]
  },
  {
