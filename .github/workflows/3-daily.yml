@@ -299,6 +299,25 @@ jobs:
           BLUESKY_APP_PASSWORD: ${{ secrets.BLUESKY_APP_PASSWORD }}
         run: python scripts/post_bluesky.py
 
+      # ★ push は必ず何度かやり直す（2026-11-06）
+      #
+      # 2026-11-06の朝、GitHub側のエラーで最後の push だけが弾かれた。
+      #
+      #     remote: fatal error in commit_refs_rules
+      #     ! [remote rejected] main -> main
+      #
+      # **こちらのリポジトリの設定ではなく、GitHubの一時的な不調。**
+      # 同じ日に世界中で同じエラーが出ていて、GitHubの障害履歴にも
+      # 11月3日・4日に Git Operations の障害が記録されている。
+      #
+      # ★困るのは、**ここで落ちると走ったぶんが丸ごと捨てられる**こと。
+      #   runner は使い捨てなので、取り込んだ配信データもサイトも消える。
+      #   **YouTubeのクォータだけ約2,400ポイント使って、何も残らない。**
+      #   一時的な不調なら、数十秒おいてやり直すだけで通る。
+      #
+      # やり直すたびに `git pull --rebase` を挟むのは、相手が
+      # 「GitHubの不調」でも「その間に誰かが push した」でも、
+      # どちらでも同じ手で直るため。**force は絶対に使わない。**
       - name: 保存して公開
         run: |
           git config user.name "hayarige-bot"
@@ -307,4 +326,16 @@ jobs:
           git pull --rebase --autostash origin main || true
           git add data/ site/
           git diff --staged --quiet || git commit -m "更新 $(date -u +%Y-%m-%d)"
-          git push
+          for i in 1 2 3 4 5; do
+            if git push; then
+              echo "push できました（${i}回目）"
+              exit 0
+            fi
+            sec=$((i * 20))
+            echo "push が弾かれました（${i}回目）。${sec}秒おいてやり直します"
+            sleep $sec
+            git pull --rebase --autostash origin main || true
+          done
+          echo "5回やり直しても push できませんでした。"
+          echo "GitHubの障害かもしれません: https://www.githubstatus.com/"
+          exit 1
