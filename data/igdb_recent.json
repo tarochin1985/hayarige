@@ -952,6 +952,15 @@
   ]
  },
  {
+  "name": "A.N.S.I.A.",
+  "alias": [],
+  "pop": 0,
+  "y": 2026,
+  "p": [
+   "pc"
+  ]
+ },
+ {
   "name": "AI Empire Tycoon",
   "alias": [],
   "pop": 0,
@@ -5283,7 +5292,9 @@
  },
  {
   "name": "Ballshit 2D",
-  "alias": [],
+  "alias": [
+   "WJZT_2D.exe"
+  ],
   "pop": 0,
   "y": 2026,
   "p": [
@@ -6740,7 +6751,9 @@
  },
  {
   "name": "Blobby and the Milkshake",
-  "alias": [],
+  "alias": [
+   "blobby-and-the-milkshake-steam.exe"
+  ],
   "pop": 0,
   "y": 2026,
   "p": [
@@ -49078,20 +49091,6 @@
   "g": [
    "Puzzle",
    "Strategy",
-   "Indie"
-  ]
- },
- {
-  "name": "Revertices",
-  "alias": [],
-  "pop": 0,
-  "y": 2026,
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Platform",
-   "Adventure",
    "Indie"
   ]
  },
