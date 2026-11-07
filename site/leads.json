@@ -1,6 +1,6 @@
 {
  "date": "2026-11-07",
- "generated": "2026-11-07 08:18",
+ "generated": "2026-11-07 10:08",
  "leads": {
   "events": [
    {
@@ -89,7 +89,6 @@
     "tag": "#ゲーム実況",
     "channels": [
      "Usagi Ch. 因幡兎",
-     "のんびり猫のゆっくりゲーム実況",
      "カヤハナタ〈脱出系ゲーム実況者〉",
      "太刀ひろし　【Uncle gamer】 "
     ]
@@ -99,18 +98,18 @@
   "wide": [
    {
     "game": "ゼルダの伝説 時のオカリナ",
-    "channels": 75,
-    "videos": 84
+    "channels": 74,
+    "videos": 80
    },
    {
     "game": "スプラトゥーン3",
-    "channels": 70,
-    "videos": 81
+    "channels": 69,
+    "videos": 79
    },
    {
     "game": "Apex Legends",
-    "channels": 37,
-    "videos": 42
+    "channels": 35,
+    "videos": 40
    },
    {
     "game": "Minecraft",
@@ -119,8 +118,8 @@
    },
    {
     "game": "モンスターハンターアウトランダーズ",
-    "channels": 27,
-    "videos": 34
+    "channels": 29,
+    "videos": 36
    },
    {
     "game": "League of Legends",
@@ -144,49 +143,12 @@
   {
    "tag": "にじイカ祭り2026",
    "game": "スプラトゥーン3",
-   "evidence": 34,
+   "evidence": 33,
    "added": 25,
    "channels": 42
   }
  ],
  "misses": [
-  {
-   "word": "#splitbrain",
-   "channels": 1,
-   "n": 2,
-   "examples": [
-    {
-     "t": "【#splitbrain】いよいよ最終回、クリアなるか【#ちゃみたこ】",
-     "c": "朝ノ夜",
-     "u": "https://www.youtube.com/watch?v=flIGy_medNw"
-    },
-    {
-     "t": "【#splitbrain】いよいよ最終回、クリアなるか【#ちゃみたこ】",
-     "c": "朝ノ夜",
-     "u": "https://www.youtube.com/watch?v=flIGy_medNw"
-    }
-   ],
-   "kind": "near",
-   "suggest": [
-    "Split Brain Samsara"
-   ]
-  },
-  {
-   "word": "pop'n music",
-   "channels": 1,
-   "n": 1,
-   "examples": [
-    {
-     "t": "【テーマは和】CSポップン12「いろは」を初体験！！！今ではお馴染みとなったサブタイもここから！ギリACでも一瞬だけ触った経験ありのいろはをじっくり遊ぶ【音ゲー / pop'n music】",
-     "c": "DOLCE. / dolce_iwate Channel",
-     "u": "https://www.youtube.com/watch?v=c-T2LDcwuHw"
-    }
-   ],
-   "kind": "near",
-   "suggest": [
-    "Pop'n Music 13 Carnival"
-   ]
-  },
   {
    "word": "THE DEAD WE KNEW",
    "channels": 1,
@@ -202,276 +164,10 @@
    "suggest": [
     "The Dead We Knew: Open World Survival"
    ]
-  },
-  {
-   "word": "アウトランダーズ",
-   "channels": 5,
-   "n": 12,
-   "examples": [
-    {
-     "t": "【MHO】今話題『火属性ヘヴィボウガン装備』がガチで強すぎる【最強装備】【アウトランダーズ】【無課金】",
-     "c": "トレマニ",
-     "u": "https://www.youtube.com/watch?v=hKxvmXVOOtI"
-    },
-    {
-     "t": "【MHO】今話題『水属性ヘヴィボウガン装備』簡単に作れて無双出来ます【アウトランダーズ】【装備紹介】【最強装備】【モンハン】",
-     "c": "トレマニ",
-     "u": "https://www.youtube.com/watch?v=z0Yxe-EU1vk"
-    },
-    {
-     "t": "【アウトランダーズ】全レビューを徹底分析！セルラン1位なのに評価が真っ二つに割れる本当の理由　＃スマホゲー",
-     "c": "らいちろゲームズ",
-     "u": "https://www.youtube.com/watch?v=whbXUf3u1QU"
-    }
-   ],
-   "kind": "wide",
-   "suggest": []
-  },
-  {
-   "word": "サンリオパーティランド",
-   "channels": 5,
-   "n": 10,
-   "examples": [
-    {
-     "t": "【実況】競わないやさしいパーティゲーム「サンリオパーティランド」でボッチパーティPart2！【Switch2】",
-     "c": "しゅーや",
-     "u": "https://www.youtube.com/watch?v=1TzeEbZCGpo"
-    },
-    {
-     "t": "【実況】競わないやさしいパーティゲーム「サンリオパーティランド」でボッチパーティPart3！【Switch2】",
-     "c": "しゅーや",
-     "u": "https://www.youtube.com/watch?v=lQboyycb4H0"
-    },
-    {
-     "t": "今話題の「争わない、順位もない、誰も傷つかない」平和で優しいゲーム『 サンリオ パーティランド 』",
-     "c": "キヨ。",
-     "u": "https://www.youtube.com/watch?v=tqxaj0NK2Po"
-    }
-   ],
-   "kind": "wide",
-   "suggest": []
-  },
-  {
-   "word": "浮気した夫に全部吐かせる",
-   "channels": 5,
-   "n": 5,
-   "examples": [
-    {
-     "t": "浮気した夫に何が何でも浮気した人数を白状させるゲーム【 浮気した夫に全部吐かせる 】",
-     "c": "ピロ",
-     "u": "https://www.youtube.com/watch?v=DdDmRE75WMM"
-    },
-    {
-     "t": "夫に尋問して浮気を白状させるゲームがヤバすぎる【浮気した夫に全部吐かせる】",
-     "c": "ジェスター(うるさい実況者)",
-     "u": "https://www.youtube.com/watch?v=opT16WOQl2M"
-    },
-    {
-     "t": "浮気した夫を問い詰めたら逮捕されました『浮気した夫に全部吐かせる』",
-     "c": "赫-アカ-",
-     "u": "https://www.youtube.com/watch?v=_Y3URcljltI"
-    }
-   ],
-   "kind": "wide",
-   "suggest": []
-  },
-  {
-   "word": "GCG",
-   "channels": 4,
-   "n": 6,
-   "examples": [
-    {
-     "t": "【 GCG/ガンダムカードゲーム】GD062ボックス手に入ったからゆっくり開けたい【 VTuber #猫本にゃこ 】",
-     "c": "猫本にゃこちゃんねる / Nekomoto Nyako channel",
-     "u": "https://www.youtube.com/watch?v=fFCdwUA6efI"
-    },
-    {
-     "t": "【 GCG/ガンダムカードゲーム 対戦参加型 】対戦相手おまちしてます。6弾環境キタああああ！【 VTuber #猫本にゃこ 】",
-     "c": "猫本にゃこちゃんねる / Nekomoto Nyako channel",
-     "u": "https://www.youtube.com/watch?v=SQ6ZPBFFQ40"
-    },
-    {
-     "t": "【ガンダムカードゲーム】GD06 Stardust Trails発売！青緑試作1号機vs紫緑ハマーン【GCG】",
-     "c": "K.C.P -Kansai Climax Party- 関西頂同好会",
-     "u": "https://www.youtube.com/watch?v=ChDpQbRV6MM"
-    }
-   ],
-   "kind": "wide",
-   "suggest": []
-  },
-  {
-   "word": "DrainSim",
-   "channels": 3,
-   "n": 4,
-   "examples": [
-    {
-     "t": "【DrainSim】新マップが来てしまった！遊園地の水を全部抜く！！！！【#とまライブ】",
-     "c": "Tomari Mari channel / 兎鞠まりちゃんねる",
-     "u": "https://www.youtube.com/watch?v=AiArNBvnYLg"
-    },
-    {
-     "t": "【DrainSim】まさかのハロウィン大型アプデ！遊園地の水を排水していく！！！【#vtuber / トムヤム】",
-     "c": "トムヤム ch / TOMUYAMU ch",
-     "u": "https://www.youtube.com/watch?v=6QhmsIO7fQc"
-    },
-    {
-     "t": "【DrainSim】遊園地の水を今日こそ排水していく！！！【#vtuber / トムヤム】",
-     "c": "トムヤム ch / TOMUYAMU ch",
-     "u": "https://www.youtube.com/watch?v=9zPK6yZSSws"
-    }
-   ],
-   "kind": "wide",
-   "suggest": []
-  },
-  {
-   "word": "ガンダムカードゲーム",
-   "channels": 3,
-   "n": 4,
-   "examples": [
-    {
-     "t": "【 GCG/ガンダムカードゲーム】GD062ボックス手に入ったからゆっくり開けたい【 VTuber #猫本にゃこ 】",
-     "c": "猫本にゃこちゃんねる / Nekomoto Nyako channel",
-     "u": "https://www.youtube.com/watch?v=fFCdwUA6efI"
-    },
-    {
-     "t": "【ガンダムカードゲーム】GD06 Stardust Trails発売！青緑試作1号機vs紫緑ハマーン【GCG】",
-     "c": "K.C.P -Kansai Climax Party- 関西頂同好会",
-     "u": "https://www.youtube.com/watch?v=ChDpQbRV6MM"
-    },
-    {
-     "t": "【長田小隊GCG部】レオシグと5.5弾構築済みスタートデッキそのままでバトルするぞ！【ガンダムカードゲーム】",
-     "c": "長田ザク",
-     "u": "https://www.youtube.com/watch?v=l0bZcPheeF4"
-    }
-   ],
-   "kind": "wide",
-   "suggest": []
-  },
-  {
-   "word": "sobosuba",
-   "channels": 3,
-   "n": 4,
-   "examples": [
-    {
-     "t": "【sobosuba/縦型配信】初プレイ！爽快感が半端ないと噂のパズルゲーに挑戦！【染谷レイナ】",
-     "c": "染谷レイナ",
-     "u": "https://www.youtube.com/watch?v=_FOFlLuxcis"
-    },
-    {
-     "t": "超柔らかい玉を合体して巨大化させる気持ち良すぎるパズルゲーム『 sobosuba 』【 エビオ/にじさんじ 】",
-     "c": "エクス・アルビオ -Ex Albio-",
-     "u": "https://www.youtube.com/watch?v=eTCMkfcaqas"
-    },
-    {
-     "t": "【sobosuba】ドパドパゲームで16384と上位を目指す【vtuber/りくけん】",
-     "c": "りくけん Rikuken ch.",
-     "u": "https://www.youtube.com/watch?v=0wBtJhdzdAY"
-    }
-   ],
-   "kind": "wide",
-   "suggest": []
-  },
-  {
-   "word": "フレミング邸の殺人事件",
-   "channels": 3,
-   "n": 4,
-   "examples": [
-    {
-     "t": "【本日発売】『Obra Dinn』好き必見！死亡診断書を書く推理ゲーム『フレミング邸の殺人事件』【Steam】",
-     "c": "しろこりGames / インディーゲーム専門Vtuber",
-     "u": "https://www.youtube.com/watch?v=eXh7zem0T9c"
-    },
-    {
-     "t": "【フレミング邸の殺人事件】遺体を検死して“死亡診断書”を書くオブラディンライクの推理ゲーム【双子Vtuber / ラヴィリア】＃１",
-     "c": "Lavi☆An Ch.ラビ☆アン / 双子Vtuber",
-     "u": "https://www.youtube.com/watch?v=XBzE5FSz7xg"
-    },
-    {
-     "t": "【フレミング邸の殺人事件】４章～遺体を検死して“死亡診断書”を書くミステリーゲーム【双子Vtuber / ラヴィリア】＃２",
-     "c": "Lavi☆An Ch.ラビ☆アン / 双子Vtuber",
-     "u": "https://www.youtube.com/watch?v=Jaa8J9dzMQc"
-    }
-   ],
-   "kind": "wide",
-   "suggest": []
-  },
-  {
-   "word": "ゴジラ-0.0",
-   "channels": 3,
-   "n": 4,
-   "examples": [
-    {
-     "t": "【ゴジラ-0.0】ラストシーンの意味｜ネタバレありゴジラマイナスゼロ解説・考察",
-     "c": "Japan Sci-Fi 【SF解説・創作】",
-     "u": "https://www.youtube.com/watch?v=von2e4PSlDU"
-    },
-    {
-     "t": "『ゴジラ-0.0』ネタバレありで語ろう#ゴジラ",
-     "c": "アニゲー部「ゲームアニメ反応集」",
-     "u": "https://www.youtube.com/watch?v=3hLCrbCY5Sc"
-    },
-    {
-     "t": "映画『ゴジラ-0.0』村上教授とかいう凄すぎる演技で人気爆発ｗｗｗｗネタバレ注意",
-     "c": "アニゲー部「ゲームアニメ反応集」",
-     "u": "https://www.youtube.com/watch?v=mfOP_-0FDoE"
-    }
-   ],
-   "kind": "wide",
-   "suggest": []
-  },
-  {
-   "word": "プリンコアイドル",
-   "channels": 3,
-   "n": 3,
-   "examples": [
-    {
-     "t": "【プリンコアイドル】本日発売したボールを無限に落として気持ちよく稼ぐ放置系インクリメンタルゲーム【Steam】",
-     "c": "Hultutigamer",
-     "u": "https://www.youtube.com/watch?v=pZ-qmvR7rzs"
-    },
-    {
-     "t": "【プリンコアイドル】本日発売のプリンコ×ローグライト×インクリメンタルが時間泥棒...！？玉増殖や倍率増加で永遠に稼ぐ。時間が溶けまくる新作放置系クリッカー攻略面白いw今だけ15%セール【steam】",
-     "c": " なぎせいな / 凪世薙",
-     "u": "https://www.youtube.com/watch?v=ohIj-pEU9gw"
-    },
-    {
-     "t": "【新作発売】チルく心地よい！まったり放置インクリメンタル『プリンコアイドル』【Steam】",
-     "c": "しろこりGames / インディーゲーム専門Vtuber",
-     "u": "https://www.youtube.com/watch?v=AMDa7KlfT0U"
-    }
-   ],
-   "kind": "wide",
-   "suggest": []
   }
  ],
  "miss_days": 7,
  "hot_facts": [
-  {
-   "game": "ゼルダの伝説 時のオカリナ",
-   "growth": 4.04,
-   "videos": 84,
-   "base": 20.8,
-   "channels": 75,
-   "views": 2321976,
-   "who": [
-    "Ririka Ch. 一条莉々華 ‐ ReGLOSS",
-    "Luna Ch. 姫森ルーナ",
-    "葉山舞鈴 / Ohayama Ch.",
-    "いかぼうず",
-    "GAMEゆうなch"
-   ],
-   "titles": [
-    "【完全初見】私たちの青春を取り戻そう。With ゼルダの伝説 時のオカリナ【一条莉々華/hololive ReGLOSS】",
-    "【 ゼルダの伝説 時のオカリナ 】本日発売！！時オカリメイク版で遊ぶのら！！！The Legend of Zelda ＃１.５【姫森ルーナ/ホロライブ】",
-    "#02【 ゼルダの伝説 時のオカリナ 】ついに発売🐴あの名作がフルリメイク！王覇山、はじめての時オカ。（ 時を超え、少年は勇者に。 ）【 にじさんじ┊︎葉山舞鈴 】"
-   ],
-   "genres": [],
-   "year": null,
-   "platforms": [],
-   "days_seen": 30,
-   "last_seen": "2026-11-06",
-   "first_here": false
-  },
   {
    "game": "Potato Please",
    "growth": 3.85,
@@ -504,6 +200,60 @@
    "first_here": false
   },
   {
+   "game": "ゼルダの伝説 時のオカリナ",
+   "growth": 3.76,
+   "videos": 80,
+   "base": 21.3,
+   "channels": 74,
+   "views": 2045695,
+   "who": [
+    "Ririka Ch. 一条莉々華 ‐ ReGLOSS",
+    "いかぼうず",
+    "GAMEゆうなch",
+    "桜ころみん coromin Ch",
+    "千凛あゆむ / Senri Ayumu【にじさんじ】"
+   ],
+   "titles": [
+    "【完全初見】私たちの青春を取り戻そう。With ゼルダの伝説 時のオカリナ【一条莉々華/hololive ReGLOSS】",
+    "【大人編】ゼルダガチ勢がSwitch2時オカを全力で楽しむ配信#3【ゼルダの伝説時のオカリナリメイク】",
+    "#3【時のオカリナ リメイク】大人編〜炎の神殿クリアまで！本日発売 マスターソードきたー！ゼルダの伝説 時のオカリナ フルリメイク!! ネタバレあり【Switch2/時オカ リメイク 】"
+   ],
+   "genres": [],
+   "year": null,
+   "platforms": [],
+   "days_seen": 30,
+   "last_seen": "2026-11-06",
+   "first_here": false
+  },
+  {
+   "game": "サンリオ パーティランド",
+   "growth": 3.0,
+   "videos": 3,
+   "base": 1.0,
+   "channels": 3,
+   "views": 135991,
+   "who": [
+    "ドコムスチャンネル",
+    "しゅーや",
+    "Raden Ch. 儒烏風亭らでん ‐ ReGLOSS"
+   ],
+   "titles": [
+    "突然現れた神ゲーと話題の「サンリオ パーティランド」が面白すぎる",
+    "【実況】競わないやさしいパーティゲーム「サンリオパーティランド」でボッチパーティPart6！【Switch2】【キラキラネオンナイト】",
+    "【#サンリオパーティランド】みんななかよく！○○○○○○○結成!?【夏色まつり/儒烏風亭らでん/水宮枢】"
+   ],
+   "genres": [
+    "Music"
+   ],
+   "year": 2026,
+   "platforms": [
+    "console"
+   ],
+   "days_seen": 0,
+   "last_seen": null,
+   "first_here": true
+  },
+  {
    "game": "Moon Sweepers",
    "growth": 2.35,
    "videos": 4,
@@ -533,36 +283,6 @@
     "pc"
    ],
    "days_seen": 7,
-   "last_seen": "2026-11-06",
-   "first_here": false
-  },
-  {
-   "game": "ドラゴンクエストIII",
-   "growth": 2.22,
-   "videos": 4,
-   "base": 1.8,
-   "channels": 4,
-   "views": 25176,
-   "who": [
-    "あの頃ゲームズ【ゆっくり】レトロゲーム風",
-    "うにか",
-    "みぃちゃんのゲーム実況ちゃんねる。",
-    "Subaru Ch. 大空スバル"
-   ],
-   "titles": [
-    "【ゆっくりボイスLive】ここは地獄か？モンスターメダル集め　GBC版ドラゴンクエスト3｜ゆっくり実況｜作業用/睡眠導入｜高画質｜大画面推奨",
-    "【ドラゴンクエストIII】さとりのしょドロップマラソン　Vol.1【マルチゲーム系Vtuber/うにか】【レトロゲーム】【ファミコン】",
-    "90【ドラゴンクエストI＆II HD 2D】ドラクエ2をやっていきます♪"
-   ],
-   "genres": [
-    "Role-playing (RPG)",
-    "Adventure"
-   ],
-   "year": 1988,
-   "platforms": [
-    "console"
-   ],
-   "days_seen": 44,
    "last_seen": "2026-11-06",
    "first_here": false
   },
