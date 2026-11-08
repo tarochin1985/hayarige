@@ -1,6 +1,6 @@
 {
  "date": "2026-11-08",
- "generated": "2026-11-08 13:19",
+ "generated": "2026-11-08 13:58",
  "leads": {
   "events": [
    {
@@ -30,7 +30,6 @@
      "北見遊征 / Kitami Yusei【にじさんじ】",
      "叢雲カゲツ / Murakumo Kagetsu【にじさんじ】",
      "城瀬いすみ / Shirose Isumi【にじさんじ】",
-     "夢追翔のJUKE BOX",
      "天宮 こころ / Amamya Ch.",
      "小々波いるか / Kokonami Iruka【にじさんじ】",
      "小柳ロウ / Koyanagi Rou【にじさんじ】",
@@ -59,7 +58,6 @@
      "葉加瀬 冬雪 / Hakase Fuyuki",
      "赤城ウェン / Akagi Wen【にじさんじ】",
      "鏑木ろこ / Kaburaki Roco【にじさんじ】",
-     "長尾 景 / Nagao Kei【にじさんじ】",
      "風楽奏斗 / Fura Kanato ",
      "魁星 / Kaisei【にじさんじ】",
      "魔界ノりりむ",
@@ -101,15 +99,6 @@
     ]
    },
    {
-    "tag": "#ガチグラ2",
-    "channels": [
-     "きさらぎ【下手ゲーム実況】",
-     "姫崎クト -himesaki kuto-",
-     "羽渦ミウネル -Miuneru Haneuzu-",
-     "銀灰まお Mao Ch."
-    ]
-   },
-   {
     "tag": "#NIKKE",
     "channels": [
      "Kurena Ch. 愛音クレナ",
@@ -124,14 +113,22 @@
      "はたさこ / hatasako_flag",
      "暁月ホタル AKATSUKI HOTARU"
     ]
+   },
+   {
+    "tag": "#ガチグラ2",
+    "channels": [
+     "きさらぎ【下手ゲーム実況】",
+     "姫崎クト -himesaki kuto-",
+     "銀灰まお Mao Ch."
+    ]
    }
   ],
   "newcomers": [],
   "wide": [
    {
     "game": "スプラトゥーン3",
-    "channels": 72,
-    "videos": 74
+    "channels": 70,
+    "videos": 72
    },
    {
     "game": "ゼルダの伝説 時のオカリナ",
@@ -150,18 +147,18 @@
    },
    {
     "game": "Grand Theft Auto V",
-    "channels": 28,
-    "videos": 30
+    "channels": 27,
+    "videos": 28
    },
    {
     "game": "フォートナイト",
-    "channels": 18,
-    "videos": 22
+    "channels": 17,
+    "videos": 20
    },
    {
     "game": "モンスターハンターアウトランダーズ",
     "channels": 17,
-    "videos": 21
+    "videos": 20
    },
    {
     "game": "ストリートファイター6",
@@ -175,9 +172,9 @@
   {
    "tag": "にじイカ祭り2026",
    "game": "スプラトゥーン3",
-   "evidence": 26,
+   "evidence": 24,
    "added": 36,
-   "channels": 59
+   "channels": 57
   }
  ],
  "misses": [
@@ -403,6 +400,11 @@
  "notes_written": true,
  "recent_columns": [
   {
+   "date": "2026-11-08",
+   "game": "Crack",
+   "headline": "「いったい中に何が....？」のためにひたすら巨大な卵を割るゲーム"
+  },
+  {
    "date": "2026-11-07",
    "game": "スプラトゥーン3",
    "headline": "「#にじイカ祭り2026」予選リーグは今日15時 決勝トーナメントは明日14時"
@@ -466,11 +468,6 @@
    "date": "2026-10-26",
    "game": "鳴潮",
    "headline": "前の週はガチャの話ばかり。ひと晩でPVの話に変わった"
-  },
-  {
-   "date": "2026-10-25",
-   "game": "Nintendo Switch Sports Resort",
-   "headline": "スポーツが12種目。配信が増えたのは「ひみつ」探しのほう"
   }
  ]
 }
