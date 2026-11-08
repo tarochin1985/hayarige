@@ -1,6 +1,6 @@
 {
  "date": "2026-11-09",
- "generated": "2026-11-09 00:26",
+ "generated": "2026-11-09 07:12",
  "leads": {
   "events": [
    {
@@ -27,7 +27,6 @@
      "小清水 透 / Koshimizu Toru【にじさんじ】",
      "山田龍一郎 / Yamada Ryuichiro【にじさんじ】",
      "早乙女 ベリー / Saotome Berry【にじさんじ】",
-     "本間ひまわり - Himawari Honma -",
      "椎名唯華 / Shiina Yuika",
      "榊ネス / Sakaki Ness【にじさんじ】",
      "珠乃井ナナ / Tamanoi Nana【にじさんじ】",
@@ -62,25 +61,10 @@
     ]
    },
    {
-    "tag": "#ホロ鯖ARK",
-    "channels": [
-     "AZKi Channel",
-     "Choco Ch. 癒月ちょこ",
-     "Iroha ch. 風真いろは - holoX -",
-     "Koyori ch. 博衣こより - holoX -",
-     "Pekora Ch. 兎田ぺこら",
-     "Towa Ch. 常闇トワ",
-     "Vivi Ch. 綺々羅々ヴィヴィ - FLOW GLOW",
-     "Watame Ch. 角巻わため",
-     "フブキCh。白上フブキ"
-    ]
-   },
-   {
     "tag": "#ストグラ",
     "channels": [
      "Middleeetv",
      "Tenten Ch. / 鳳玲天々",
-     "【琵琶ちゃぷ】なな湖なな湖",
      "たけぉ",
      "ましゃかりさん",
      "みつき",
@@ -101,25 +85,35 @@
     ]
    },
    {
+    "tag": "#ガチグラ2",
+    "channels": [
+     "きさらぎ【下手ゲーム実況】",
+     "姫崎クト -himesaki kuto-",
+     "朱雀ジュン - Suzaku Jun -",
+     "羽渦ミウネル -Miuneru Haneuzu-",
+     "蛇宵ティア / Tier Channel【ななしいんく】",
+     "銀灰まお Mao Ch."
+    ]
+   },
+   {
+    "tag": "#ホロ鯖ARK",
+    "channels": [
+     "AZKi Channel",
+     "Choco Ch. 癒月ちょこ",
+     "Iroha ch. 風真いろは - holoX -",
+     "Pekora Ch. 兎田ぺこら",
+     "Towa Ch. 常闇トワ",
+     "Vivi Ch. 綺々羅々ヴィヴィ - FLOW GLOW"
+    ]
+   },
+   {
     "tag": "#ストグラSeason2",
     "channels": [
      "neon",
      "たけぉ",
      "はたさこ / hatasako_flag",
      "天羽よつは",
-     "暁月ホタル AKATSUKI HOTARU",
      "柚原いづみ / Izumi Channel 【ななしいんく】"
-    ]
-   },
-   {
-    "tag": "#ガチグラ2",
-    "channels": [
-     "きさらぎ【下手ゲーム実況】",
-     "姫崎クト -himesaki kuto-",
-     "家入ポポ / Popo Channel【ななしいんく】",
-     "朱雀ジュン - Suzaku Jun -",
-     "羽渦ミウネル -Miuneru Haneuzu-",
-     "銀灰まお Mao Ch."
     ]
    },
    {
@@ -137,43 +131,43 @@
   "wide": [
    {
     "game": "ゼルダの伝説 時のオカリナ",
-    "channels": 70,
-    "videos": 77
+    "channels": 62,
+    "videos": 64
    },
    {
     "game": "Minecraft",
-    "channels": 55,
-    "videos": 56
+    "channels": 52,
+    "videos": 52
    },
    {
     "game": "スプラトゥーン3",
-    "channels": 52,
-    "videos": 60
+    "channels": 48,
+    "videos": 52
    },
    {
     "game": "Apex Legends",
-    "channels": 40,
-    "videos": 46
+    "channels": 35,
+    "videos": 39
    },
    {
     "game": "Grand Theft Auto V",
-    "channels": 37,
-    "videos": 44
-   },
-   {
-    "game": "ARK: Survival Ascended",
-    "channels": 19,
-    "videos": 22
+    "channels": 33,
+    "videos": 36
    },
    {
     "game": "モンスターハンターアウトランダーズ",
-    "channels": 21,
-    "videos": 28
+    "channels": 19,
+    "videos": 24
+   },
+   {
+    "game": "フォートナイト",
+    "channels": 20,
+    "videos": 22
    },
    {
     "game": "ストリートファイター6",
-    "channels": 21,
-    "videos": 24
+    "channels": 19,
+    "videos": 20
    }
   ]
  },
@@ -182,9 +176,9 @@
   {
    "tag": "にじイカ祭り2026",
    "game": "スプラトゥーン3",
-   "evidence": 20,
-   "added": 27,
-   "channels": 34
+   "evidence": 16,
+   "added": 22,
+   "channels": 32
   },
   {
    "tag": "ホロ1gp",
@@ -196,9 +190,16 @@
   {
    "tag": "ブイクラファンタジ",
    "game": "Minecraft",
-   "evidence": 4,
+   "evidence": 5,
    "added": 3,
    "channels": 7
+  },
+  {
+   "tag": "nikke",
+   "game": "Goddess of Victory: Nikke",
+   "evidence": 3,
+   "added": 1,
+   "channels": 4
   }
  ],
  "misses": [
@@ -258,13 +259,8 @@
   {
    "word": "カルドセプト ビギンズ",
    "channels": 3,
-   "n": 7,
+   "n": 6,
    "examples": [
-    {
-     "t": "【カルドセプト ビギンズ】完全初見！ダイスとカードで領地を奪え！セプター・ヨミ参戦🐺🎴【深淵ヨミ】",
-     "c": "深淵ヨミ",
-     "u": "https://www.youtube.com/watch?v=F3Fze5nj7Zo"
-    },
     {
      "t": "【カルドセプト ビギンズ】遂に！遂に我が家に『カルドセプト』がやってきた！(CeVIO,ゆっくり音声)",
      "c": "Nogi's - のぎーず",
@@ -274,6 +270,11 @@
      "t": "【カルドセプト ビギンズ】お金をガンガン徴収！？面白いカードを見つけたのでこのカードでデッキを作ってみたぞー(CeVIO,ゆっくり音声)",
      "c": "Nogi's - のぎーず",
      "u": "https://www.youtube.com/watch?v=PDlcYJ1mEZs"
+    },
+    {
+     "t": "【カルドセプト ビギンズ】完全初見！ダイスとカードで領地を奪え！セプター・ヨミ参戦🐺🎴【深淵ヨミ】",
+     "c": "深淵ヨミ",
+     "u": "https://www.youtube.com/watch?v=YQpp6zRyOnE"
     }
    ],
    "kind": "wide",
@@ -285,14 +286,14 @@
    "n": 4,
    "examples": [
     {
-     "t": "【 時オカリメイク 】遂に来た！！！新たな伝説を見に行こう！！【 にじさんじ所属 ／ 石神のぞみ 】",
-     "c": "石神のぞみ / Ishigami Nozomi【にじさんじ】",
-     "u": "https://www.youtube.com/watch?v=Ex083i86R9o"
-    },
-    {
      "t": "【 時オカリメイク 】立て直し枠！！遂に来た！！！新たな伝説を見に行こう！！【 にじさんじ所属 ／ 石神のぞみ 】",
      "c": "石神のぞみ / Ishigami Nozomi【にじさんじ】",
      "u": "https://www.youtube.com/watch?v=nJ23jQm4-NQ"
+    },
+    {
+     "t": "【 時オカリメイク 】遂に来た！！！新たな伝説を見に行こう！！【 にじさんじ所属 ／ 石神のぞみ 】",
+     "c": "石神のぞみ / Ishigami Nozomi【にじさんじ】",
+     "u": "https://www.youtube.com/watch?v=Ex083i86R9o"
     },
     {
      "t": "【時オカ リメイク】#3 ゴロンの里でごろごろ！デスマウンテン頂上を目指すZE！【個人勢/兎３/時オカ】",
@@ -355,85 +356,23 @@
  "miss_days": 7,
  "hot_facts": [
   {
-   "game": "diffiCULT",
-   "growth": 6.25,
-   "videos": 5,
-   "base": 0.3,
-   "channels": 5,
-   "views": 35870,
-   "who": [
-    "たけぉ",
-    "羊飼いK",
-    "プテラたかはし",
-    "サントスch",
-    "くどう丸"
-   ],
-   "titles": [
-    "【11/7】diffiCULT→高田村ほんとに死んだら即終了7DAYS",
-    "【ライブ配信】diffiCULTを高田村で遊ぶ！【羊飼いK視点】",
-    "11/07【diffiCULT】新しい人狼系→DbD 初めてのジャッジメントやってみる"
-   ],
-   "genres": [],
-   "year": null,
-   "platforms": [],
-   "days_seen": 2,
-   "last_seen": "2026-11-08",
-   "first_here": false
-  },
-  {
-   "game": "7 Days to Die",
-   "growth": 5.62,
-   "videos": 9,
-   "base": 1.6,
-   "channels": 9,
-   "views": 142477,
-   "who": [
-    "渋谷ハル",
-    "フルコンチャンネル",
-    "Tomari Mari channel / 兎鞠まりちゃんねる",
-    "中野あるま / Alma Nakano",
-    "人生 つみこ (ホラーゲーム専門Vtuber)"
-   ],
-   "titles": [
-    "【7 Days to Die】死んだら即終了7DTD！ハードコアモードいきます",
-    "7 Days to Dieをホラゲ４人組にてやるようであるぞ",
-    "【7 Days to Die】終末世界で4人のサバイバル生活、はじまります。【#とまライブ】"
-   ],
-   "genres": [
-    "Shooter",
-    "Role-playing (RPG)",
-    "Simulator",
-    "Strategy",
-    "Adventure",
-    "Indie"
-   ],
-   "year": 2024,
-   "platforms": [
-    "pc",
-    "console"
-   ],
-   "days_seen": 68,
-   "last_seen": "2026-11-08",
-   "first_here": false
-  },
-  {
    "game": "ドラゴンクエストVI",
    "growth": 5.0,
    "videos": 4,
    "base": 0.8,
    "channels": 4,
-   "views": 153176,
+   "views": 168327,
    "who": [
     "Patra Channel / 周防パトラ",
-    "マスターT",
-    "マスターT",
+    "ねぇね。",
     "【レトロゲームZT】-【ファミコンのネタ多め】",
-    "ねぇね。"
+    "マスターT",
+    "マスターT"
    ],
    "titles": [
     "【ドラゴンクエストVI  】クラウド城へ！初見！SFC ドラゴンクエストVI 幻の大地 をやってみる【周防パトラ】",
-    "【この思い伝えたいこのAIを】スーパーファミコン版ドラゴンクエスト6RTA　2026/11/8【縦型配信】",
-    "【この思い伝えたいこのAIを】スーパーファミコン版ドラゴンクエスト6RTA　2026/11/8"
+    "【ドラクエ６】#1 レトロなドットのSFC版ドラクエいかがですか。 【幻の大地】※ネタバレ注意",
+    "【ドラクエ6】 やり込みデータをチェック！【ドラゴンクエストⅥ】 マダンテ・レベル99・カダブウ！"
    ],
    "genres": [
     "Role-playing (RPG)",
@@ -444,8 +383,8 @@
    "platforms": [
     "console"
    ],
-   "days_seen": 7,
-   "last_seen": "2026-10-30",
+   "days_seen": 9,
+   "last_seen": "2026-11-08",
    "first_here": false
   },
   {
@@ -454,7 +393,7 @@
    "videos": 5,
    "base": 1.2,
    "channels": 5,
-   "views": 84311,
+   "views": 181377,
    "who": [
     "エクス・アルビオ -Ex Albio-",
     "リモーネ先生",
@@ -480,23 +419,111 @@
    "first_here": false
   },
   {
-   "game": "鬼武者 Way of the Sword",
-   "growth": 4.17,
-   "videos": 5,
-   "base": 1.2,
-   "channels": 5,
-   "views": 32334,
+   "game": "Bleach: Rebirth of Souls",
+   "growth": 4.0,
+   "videos": 4,
+   "base": 1.0,
+   "channels": 3,
+   "views": 157614,
    "who": [
-    "みきケロ🐸🍒",
-    "ドチタオ",
-    "よも木 / yomogi",
-    "よも木 / yomogi",
-    "あやめっち"
+    "加藤純一ロードショー",
+    "加藤純一ロードショー",
+    "Kuu Ch. 朱舞くぅ",
+    "ちくのぼチャレンジ",
+    "Kuu Ch. 朱舞くぅ"
    ],
    "titles": [
-    "【鬼武者 Way of the Sword 】 #7 鬼武者 シリーズ初見プレイ！みきケロ、ぶった斬る！！⚔️🔥 【女性実況/みきケロ生配信 】",
+    "加藤純一のBLEACH Rebirth of Souls ダイジェスト【2026/11/04】(ネタバレあり)",
+    "加藤純一 雑談ダイジェスト【2026/11/04,06】「ちょっと話してブリーチの続き/２０時からBLEACH Rebirth of Souls 実況５日目」",
+    "【完全初見】#03 藍染ことネットミーム製造機の名言炸裂！尸魂界・救出篇BLEACH Rebirth of Soulsを初見攻略プレイ！ソウルソサエティ編ネタバレ注意！【ゲーム配信/#vtuber】"
+   ],
+   "genres": [
+    "Fighting"
+   ],
+   "year": 2025,
+   "platforms": [
+    "pc",
+    "console"
+   ],
+   "days_seen": 6,
+   "last_seen": "2026-11-08",
+   "first_here": false
+  },
+  {
+   "game": "鳴潮",
+   "growth": 3.08,
+   "videos": 12,
+   "base": 3.9,
+   "channels": 9,
+   "views": 360113,
+   "who": [
+    "西園チグサ / Nishizono Chigusa",
+    "サブチぴょんぴょん",
+    "すりっぷらーゼツ",
+    "ネタ勢のトリュウ",
+    "ネタ勢のトリュウ"
+   ],
+   "titles": [
+    "【 鳴潮 】第3章3幕「旅立つ星」良い旅を、【 にじさんじ / 西園チグサ 】",
+    "【鳴潮】同奏＆音骸特化!?「リリー」性能判明!★大量の攻撃バフや音骸率ダメバフ!?使い方やビルド/パーティー編成まで徹底考察! 既存編成の火力はどれだけ伸びる?【WuWa/めいちょう】",
+    "【鳴潮】新限定ヒーラー「リリー」の性能判明か！？【Wuthering Waves】"
+   ],
+   "genres": [],
+   "year": null,
+   "platforms": [],
+   "days_seen": 73,
+   "last_seen": "2026-11-08",
+   "first_here": false
+  },
+  {
+   "game": "Fatal Fury: City of the Wolves",
+   "growth": 3.08,
+   "videos": 8,
+   "base": 2.6,
+   "channels": 7,
+   "views": 268109,
+   "who": [
+    "なるおのひとりでできるもん",
+    "SCOREの格ゲー人生",
+    "おぼ。",
+    "ぷげら pugera",
+    "Vtuber Showdown【Vtuber格ゲーch】"
+   ],
+   "titles": [
+    "【餓狼CotW】「最ッ高のゲーム」4日目なるおケンシロウ、レート戦参加資格であるレジェンダリーウルフに成る【なるお・餓狼伝説City of the Wolves】",
+    "【餓狼CotW】STREAMER CUP TeamB「初老伝説SP」",
+    "ストリーマー大会で相棒のグリフォンマスクのことを、「スマートフォン」と呼ばれてしまい爆笑するおぼ【餓狼伝説 City of the Wolves】"
+   ],
+   "genres": [
+    "Fighting"
+   ],
+   "year": 2025,
+   "platforms": [
+    "pc",
+    "console"
+   ],
+   "days_seen": 17,
+   "last_seen": "2026-11-08",
+   "first_here": false
+  },
+  {
+   "game": "鬼武者 Way of the Sword",
+   "growth": 3.08,
+   "videos": 4,
+   "base": 1.3,
+   "channels": 4,
+   "views": 16649,
+   "who": [
+    "ドチタオ",
+    "よも木 / yomogi",
+    "あやめっち",
+    "棺 美凪‹Mina Hitsuki›",
+    "棺 美凪‹Mina Hitsuki›"
+   ],
+   "titles": [
     "【初見】メチャ気持ちよくなれると評判の鬼武者新作【鬼武者 Way of the Sword】",
-    "#4【鬼武者 Way of the Sword】シリーズ初見！剣戟モードでどこまでいける？鬼武者初プレイ！！"
+    "#5【鬼武者 Way of the Sword】シリーズ初見！剣戟モードでどこまでいける？鬼武者初プレイ！！",
+    "【鬼武者WS】鬼殺モード #4【顔出し配信】"
    ],
    "genres": [
     "Role-playing (RPG)",
@@ -509,36 +536,6 @@
     "console"
    ],
    "days_seen": 60,
-   "last_seen": "2026-11-06",
-   "first_here": false
-  },
-  {
-   "game": "Order of the Sinking Star",
-   "growth": 3.75,
-   "videos": 3,
-   "base": 0.8,
-   "channels": 3,
-   "views": 1653,
-   "who": [
-    "ごえもぉん",
-    "狐森ろべ / Komori Ch.",
-    "オレオレオレオ"
-   ],
-   "titles": [
-    "【Order of the Sinking Star】PLAYISMさんからキーをいただいたので初見で遊んでみる！土曜夜のゆるっと雑談プレイ！【PS5 / ゲーム実況】",
-    "【Order of the Sinking Star】朝活🌞おはよ！1000ステージ収録の脳トレパズル【狐森ろべ／VTuber】PR",
-    "大規模倉庫番パズルアドベンチャー『Order of the Sinking Star』実況プレイpart30"
-   ],
-   "genres": [
-    "Puzzle",
-    "Adventure"
-   ],
-   "year": 2026,
-   "platforms": [
-    "pc",
-    "console"
-   ],
-   "days_seen": 3,
    "last_seen": "2026-11-08",
    "first_here": false
   }
