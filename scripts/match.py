@@ -253,6 +253,21 @@ def build_index() -> Index:
     return idx
 
 
+_PREFER = None
+
+
+def prefer_long():
+    """「この行が勝ったとき、同じ題にこちらも出ていればそちらを採る」組。
+
+    data/長いほうを採る.json の `組` を {勝った行: 採りたい行} で読む。
+    **両方が同じ題に出ているときしか効かない**ので、ここに書いた組以外は何も変わらない。
+    """
+    global _PREFER
+    if _PREFER is None:
+        _PREFER = dict((read_json(DATA / "長いほうを採る.json", {}) or {}).get("組") or {})
+    return _PREFER
+
+
 def load_platforms():
     """ゲーム名 → 対応機種のざっくり分類（pc / console）。
     どの店へのリンクを出すかを決めるのに使う。辞書が古い場合は空になる。
@@ -430,7 +445,23 @@ def extract(title: str, idx: Index, fallback=False):
                           + ln + (50 if exact else 0), g))
     if cands:
         cands.sort(reverse=True)
-        return cands[0][1], "dict"
+        win = cands[0][1]
+        # ★題の中に「もっと長い正式名」も書いてあるとき、そちらを採る（2026-11-09）。
+        #
+        #   【ロマサガ2】難易度ロマンシング！…『ロマンシング サガ2 リベンジオブザセブン』Switch版
+        #
+        # 冒頭の括弧が +150 点もらうので、**題にはっきり書いてある長いほうが負ける。**
+        # 11-01に決めた「裸の `ロマサガ2` は原作」はそのまま正しい。
+        # これは**裸ではないのに負けている**ときの話で、別の問題。
+        #
+        # 点の付け方そのものは触らない。**手で書いた組のときだけ**入れ替える。
+        # 組は data/長いほうを採る.json にあり、**両方が同じ題に出ているときしか効かない。**
+        # check_series.py の「題の中に、入り先より長い別のゲーム名が書いてある」が
+        # 候補を出してくれるので、人が見て決めた組だけをそこに足す。
+        other = prefer_long().get(win)
+        if other and any(g == other for _s, g in cands):
+            win = other
+        return win, "dict"
     if fallback:
         seg = leading_bracket(title, idx.ng)
         if seg:
