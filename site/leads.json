@@ -1,19 +1,8 @@
 {
  "date": "2026-11-10",
- "generated": "2026-11-10 04:02",
+ "generated": "2026-11-10 13:35",
  "leads": {
   "events": [
-   {
-    "tag": "#ガチグラ2",
-    "channels": [
-     "きさらぎ【下手ゲーム実況】",
-     "姫崎クト -himesaki kuto-",
-     "家入ポポ / Popo Channel【ななしいんく】",
-     "朱雀ジュン - Suzaku Jun -",
-     "羽渦ミウネル -Miuneru Haneuzu-",
-     "銀灰まお Mao Ch."
-    ]
-   },
    {
     "tag": "#パレットタウン",
     "channels": [
@@ -25,20 +14,13 @@
     ]
    },
    {
-    "tag": "#NIKKE",
+    "tag": "#ガチグラ2",
     "channels": [
-     "Kurena Ch. 愛音クレナ",
-     "樹つつき -Itsuki Tsutsuki Ch-",
-     "猫咲あんじ Nekosaki anji",
-     "華鉈イオ【StellArt.】"
-    ]
-   },
-   {
-    "tag": "#ぶいきゃす",
-    "channels": [
-     "Kurena Ch. 愛音クレナ",
-     "樹つつき -Itsuki Tsutsuki Ch-",
-     "華鉈イオ【StellArt.】"
+     "きさらぎ【下手ゲーム実況】",
+     "姫崎クト -himesaki kuto-",
+     "家入ポポ / Popo Channel【ななしいんく】",
+     "羽渦ミウネル -Miuneru Haneuzu-",
+     "銀灰まお Mao Ch."
     ]
    }
   ],
@@ -46,43 +28,43 @@
   "wide": [
    {
     "game": "ゼルダの伝説 時のオカリナ",
-    "channels": 56,
-    "videos": 58
+    "channels": 50,
+    "videos": 52
    },
    {
     "game": "Apex Legends",
-    "channels": 39,
-    "videos": 45
+    "channels": 36,
+    "videos": 38
    },
    {
     "game": "Grand Theft Auto V",
-    "channels": 29,
-    "videos": 32
+    "channels": 25,
+    "videos": 27
    },
    {
     "game": "Minecraft",
-    "channels": 22,
-    "videos": 24
+    "channels": 19,
+    "videos": 20
    },
    {
     "game": "モンスターハンターアウトランダーズ",
-    "channels": 19,
-    "videos": 22
-   },
-   {
-    "game": "ストリートファイター6",
-    "channels": 18,
+    "channels": 16,
     "videos": 18
    },
    {
-    "game": "Dead by Daylight",
-    "channels": 16,
-    "videos": 17
-   },
-   {
-    "game": "League of Legends",
+    "game": "VALORANT",
     "channels": 13,
     "videos": 13
+   },
+   {
+    "game": "スプラトゥーン3",
+    "channels": 13,
+    "videos": 13
+   },
+   {
+    "game": "フォートナイト",
+    "channels": 11,
+    "videos": 14
    }
   ]
  },
@@ -106,23 +88,6 @@
    ]
   },
   {
-   "word": "GOHOME",
-   "channels": 1,
-   "n": 1,
-   "examples": [
-    {
-     "t": "幽霊が10倍速で追いかけてくるホラーゲームが笑える【GOHOME】",
-     "c": "ジェスター(うるさい実況者)",
-     "u": "https://www.youtube.com/watch?v=G7F9V7ggVsM"
-    }
-   ],
-   "kind": "near",
-   "suggest": [
-    "Go Home Annie: An SCP Game",
-    "Go Home Dinosaurs!"
-   ]
-  },
-  {
    "word": "pokemon",
    "channels": 1,
    "n": 1,
@@ -138,152 +103,10 @@
     "Pokemon Classic",
     "Pokemon II"
    ]
-  },
-  {
-   "word": "Crime Simulator",
-   "channels": 1,
-   "n": 1,
-   "examples": [
-    {
-     "t": "【Crime Simulator】盗む！盗賊 #狐狼竜神 コラボ【狐森ろべ視点／VTuber】",
-     "c": "狐森ろべ / Komori Ch.",
-     "u": "https://www.youtube.com/watch?v=P8NTAniR4jo"
-    }
-   ],
-   "kind": "near",
-   "suggest": [
-    "Crime Simulator: Playgrounds"
-   ]
-  },
-  {
-   "word": "MHO",
-   "channels": 3,
-   "n": 9,
-   "examples": [
-    {
-     "t": "【MHO】みんな100万ゼニー受け取った？最速攻略最前線！！",
-     "c": "うましか男",
-     "u": "https://www.youtube.com/watch?v=d4sdI6kJuhw"
-    },
-    {
-     "t": "【MHO】ストーリー進めるよー！！ 最速攻略最前線！！",
-     "c": "うましか男",
-     "u": "https://www.youtube.com/watch?v=siYPSGpZgtk"
-    },
-    {
-     "t": "【MHO】ヘブンベリー採取作戦を実行する　最速攻略最前線！！",
-     "c": "うましか男",
-     "u": "https://www.youtube.com/watch?v=KXj7wQLVhKs"
-    }
-   ],
-   "kind": "wide",
-   "suggest": []
-  },
-  {
-   "word": "餓狼伝説",
-   "channels": 3,
-   "n": 7,
-   "examples": [
-    {
-     "t": "【餓狼伝説】なんかこのチームだけ濃ゆすぎない？STREAMER CUP顔合わせ！SCORE/立川/こく兄/布団ちゃん【因幡はねる / ななしいんく】",
-     "c": "因幡はねる / Haneru Channel【ななしいんく】",
-     "u": "https://www.youtube.com/watch?v=BcEaUcxlAiI"
-    },
-    {
-     "t": "【餓狼伝説】STREAMER CUP練習！魂のキャラ見つけたよ【因幡はねる / ななしいんく】",
-     "c": "因幡はねる / Haneru Channel【ななしいんく】",
-     "u": "https://www.youtube.com/watch?v=QtnthyRZtfo"
-    },
-    {
-     "t": "【餓狼伝説】STREAMER CUP練習！お前もひよこにならないか！？【因幡はねる / ななしいんく】",
-     "c": "因幡はねる / Haneru Channel【ななしいんく】",
-     "u": "https://www.youtube.com/watch?v=Yq2rqPrb4RE"
-    }
-   ],
-   "kind": "wide",
-   "suggest": []
-  },
-  {
-   "word": "やれ！整備工場ブラザーズ",
-   "channels": 3,
-   "n": 4,
-   "examples": [
-    {
-     "t": "【25%OFF】車をバラして直して稼ぐ整備工場経営シム『やれ！整備工場ブラザーズ』【Steam】",
-     "c": "しろこりGames / インディーゲーム専門Vtuber",
-     "u": "https://www.youtube.com/watch?v=qUf1UEc-5Ck"
-    },
-    {
-     "t": "【 やれ！整備工場ブラザーズ 】整備！本格シミュで車の勉強🔧🦀",
-     "c": "カニ🦀",
-     "u": "https://www.youtube.com/watch?v=FncD3oNReig"
-    },
-    {
-     "t": "【やれ！整備工場ブラザーズ】顧客から預かった車を修理！整備工場を運営するシミュレーターゲーム『やれ！整備工場ブラザーズ』を遊ぶ！(CeVIO,ゆっくり音声)",
-     "c": "Nogi's - のぎーず",
-     "u": "https://www.youtube.com/watch?v=fsn-LbsknBs"
-    }
-   ],
-   "kind": "wide",
-   "suggest": []
-  },
-  {
-   "word": "異変車道",
-   "channels": 3,
-   "n": 3,
-   "examples": [
-    {
-     "t": "【ホラー】全異変＆全エンド 超有名なあの峠でハチロクに乗って異変を探すホラー【異変車道】",
-     "c": "サンキュームービー",
-     "u": "https://www.youtube.com/watch?v=7pHu3l0FCfc"
-    },
-    {
-     "t": "【ホラー】全異変61種＆真エンド回収達成！日本のとある峠の道路を舞台にした異変探しホラーゲーム『 異変車道 』【Vキャシー/Vtuber】実況",
-     "c": "キャシーさんはホラーゲームで遊びたい",
-     "u": "https://www.youtube.com/watch?v=aaykPer7XoI"
-    },
-    {
-     "t": "【ゆっくり実況】不可思議な異変に追い詰められていく「呪われた山道」が舞台のホラゲー【異変車道】",
-     "c": "田中あずまろ",
-     "u": "https://www.youtube.com/watch?v=QIksb4z-XCQ"
-    }
-   ],
-   "kind": "wide",
-   "suggest": []
   }
  ],
  "miss_days": 7,
  "hot_facts": [
-  {
-   "game": "ブループロトコル：スターレゾナンス",
-   "growth": 5.0,
-   "videos": 4,
-   "base": 0.8,
-   "channels": 3,
-   "views": 1649,
-   "who": [
-    "狐森ろべ / Komori Ch.",
-    "月乃きの / Tsukino Kino Ch",
-    "狐森ろべ / Komori Ch.",
-    "slipP(スリップP)"
-   ],
-   "titles": [
-    "【#スタレゾ】月曜のレイド消化ツアー！【狐森ろべ／VTuber】 2026,11 #05",
-    "スタレゾライブ🔴シーズン4は11月19日から🛡️S4は光盾になる剛守型ヘヴィーガーディアン🌙【ブループロトコル：スターレゾナンス】",
-    "【#スタレゾ】朝活🌞おはよ！月曜日の週始まり【狐森ろべ／VTuber】 2026,11 #04"
-   ],
-   "genres": [
-    "Role-playing (RPG)",
-    "Adventure"
-   ],
-   "year": 2025,
-   "platforms": [
-    "pc"
-   ],
-   "days_seen": 36,
-   "last_seen": "2026-11-07",
-   "first_here": false
-  },
   {
    "game": "ドラゴンクエストモンスターズ",
    "growth": 3.75,
@@ -310,7 +133,7 @@
    "platforms": [
     "console"
    ],
-   "days_seen": 30,
+   "days_seen": 29,
    "last_seen": "2026-11-09",
    "first_here": false
   },
@@ -339,93 +162,124 @@
    "first_here": false
   },
   {
-   "game": "マリオワールド",
-   "growth": 3.75,
-   "videos": 3,
-   "base": 0.7,
-   "channels": 3,
-   "views": 43791,
+   "game": "R.E.P.O.",
+   "growth": 2.62,
+   "videos": 11,
+   "base": 4.2,
+   "channels": 11,
+   "views": 104377,
    "who": [
-    "でいすいのゲームちゃんねる/DeisuiGames",
-    "アキコ@うさぎ島",
-    "Rei Ch. 悠針れい"
+    "花芽なずな / Nazuna Kaga",
+    "慈悲の極み。",
+    "標準野郎",
+    "中野あるま / Alma Nakano",
+    "怪傑がみちゃんねる"
    ],
    "titles": [
-    "【マリオワールド全城RTA】リハビリ練習→元気があれば21時くらいに本走で目指せ世界1位🍣【Super Mario World All Castles Speedrun】",
-    "【マリオワールド】マリオを２万人増やす（3周目・マリオ＋4325人）",
-    "【急募】オカンプレイに結構耐えられる人【スーパーマリオワールド】新人VTuber悠針れい #ゆうばりタイム"
+    "【REPO】アプデ後のれぽがやりたいんだよオオオオ（ダミ声）さぶちゃんと【ぶいすぽ/花芽なずな】",
+    "新マップが本当にヤバいので、慣れるためにソロで攻略していきます！！！【R.E.P.O.】",
+    "初心者を免罪符に暴走する標準、道連れにされるぺちゃんこ、標準の頭を撃ち抜く弟者【R.E.P.O./標準,ぺちゃんこ,弟者,兄者,メロ】"
    ],
    "genres": [
-    "Platform",
-    "Adventure"
-   ],
-   "year": 1990,
-   "platforms": [
-    "console"
-   ],
-   "days_seen": 6,
-   "last_seen": "2026-10-11",
-   "first_here": false
-  },
-  {
-   "game": "マビノギモバイル",
-   "growth": 3.08,
-   "videos": 4,
-   "base": 1.3,
-   "channels": 3,
-   "views": 49453,
-   "who": [
-    "樋口楓【にじさんじ所属】",
-    "Amoko Ch. 甘乃あもこ",
-    "たてもちどうじろう",
-    "たてもちどうじろう"
-   ],
-   "titles": [
-    "【マビノギモバイル】推しの子コラボ⁉ \"千本剣\" の \"刻印強化\" します😡😡【にじさんじ / 樋口楓】",
-    "【マビノギモバイル】また月曜がめぐってくるんだ！日課アビスレイド消化（ダンバートン鯖・ヒーラー）【#NEXON #マビモバ #Vtuber #女性実況】",
-    "【マビノギモバイル】週末のアルバイト地獄！31【たてもちどうじろう】"
-   ],
-   "genres": [],
-   "year": null,
-   "platforms": [],
-   "days_seen": 20,
-   "last_seen": "2026-11-07",
-   "first_here": false
-  },
-  {
-   "game": "Aion 2",
-   "growth": 2.86,
-   "videos": 4,
-   "base": 1.4,
-   "channels": 3,
-   "views": 79871,
-   "who": [
-    "関優太",
-    "関優太",
-    "祢子丸きりや",
-    "祢子丸きりや",
-    "emma / えま"
-   ],
-   "titles": [
-    "AION2最強の男Mondoに喧嘩を売り、完全に分からされてしまう関優太【AION2】",
-    "関設立のレギオン『DarkGamers』に続々と集う隠れた猛者達に驚く関優太【AION2】",
-    "今日こそルドラを倒したい!!CP195kまで上げてきた！！🌸IL3000クレリック/魔族ジケル🌸【 #AION2 】"
-   ],
-   "genres": [
-    "Role-playing (RPG)",
-    "Adventure"
+    "Strategy",
+    "Indie"
    ],
    "year": 2025,
    "platforms": [
     "pc"
    ],
-   "days_seen": 34,
+   "days_seen": 32,
+   "last_seen": "2026-11-09",
+   "first_here": false
+  },
+  {
+   "game": "マビノギモバイル",
+   "growth": 2.5,
+   "videos": 3,
+   "base": 1.2,
+   "channels": 3,
+   "views": 48583,
+   "who": [
+    "樋口楓【にじさんじ所属】",
+    "Amoko Ch. 甘乃あもこ",
+    "たてもちどうじろう"
+   ],
+   "titles": [
+    "【マビノギモバイル】推しの子コラボ⁉ \"千本剣\" の \"刻印強化\" します😡😡【にじさんじ / 樋口楓】",
+    "【マビノギモバイル】また月曜がめぐってくるんだ！日課アビスレイド消化（ダンバートン鯖・ヒーラー）【#NEXON #マビモバ #Vtuber #女性実況】",
+    "【マビノギモバイル】朝まで参加型 週始めアビス＆レイド！32【たてもちどうじろう】"
+   ],
+   "genres": [],
+   "year": null,
+   "platforms": [],
+   "days_seen": 21,
+   "last_seen": "2026-11-09",
+   "first_here": false
+  },
+  {
+   "game": "肝試しオンライン",
+   "growth": 2.5,
+   "videos": 3,
+   "base": 1.2,
+   "channels": 3,
+   "views": 16750,
+   "who": [
+    "エトラ / étraチャンネル",
+    "萌実ちゃんねる / あおぎり高校",
+    "華鉈イオ【StellArt.】"
+   ],
+   "titles": [
+    "【肝試しオンライン】どうも、肝試しワクワクさんです【 あおぎり高校 / #エト生放送 】",
+    "【肝試しオンライン】撮れ高目指して突撃じゃああ！！【#肝試しお茶会 #萌実game】",
+    "【肝試しオンライン】話題の新作👻肝試しで取れ高をつくる！！！【華鉈イオ/StellArt.】#vtuber"
+   ],
+   "genres": [],
+   "year": null,
+   "platforms": [],
+   "days_seen": 4,
+   "last_seen": "2026-11-09",
+   "first_here": false
+  },
+  {
+   "game": "ドラゴンボールZ KAKAROT",
+   "growth": 2.22,
+   "videos": 4,
+   "base": 1.8,
+   "channels": 4,
+   "views": 106206,
+   "who": [
+    "UNIT B (Pre-Debut) - mekPark",
+    "ACHRORA - mekPark",
+    "Usagi Ch. 因幡兎",
+    "える / Elu【にじさんじ】"
+   ],
+   "titles": [
+    "【ドラゴンボール Z KAKAROT】行くぞ！！魔人ブウ編！！！！！【 #UNIT_B / #宵凪ネオン】",
+    "【 ドラゴンボールZ:KAKAROT 】#４ え！フリーザ様生きてるんですか！？悟空早く帰ってきて・・・※ネタバレあり　#墨汐さやな ＃さやな時間",
+    "#4 【ドラゴンボールZ カカロット】皆を生き返らす方法を探すミリも知らない完全初見プレイ【因幡兎/Vtuber】 #女性実況 #ゲーム実況"
+   ],
+   "genres": [
+    "Role-playing (RPG)",
+    "Hack and slash/Beat 'em up",
+    "Adventure"
+   ],
+   "year": 2020,
+   "platforms": [
+    "pc",
+    "console"
+   ],
+   "days_seen": 14,
    "last_seen": "2026-11-09",
    "first_here": false
   }
  ],
  "notes_written": true,
  "recent_columns": [
+  {
+   "date": "2026-11-10",
+   "game": "呪ショッピング",
+   "headline": "ポチるたびに 品ぞろえがおかしくなっていく"
+  },
   {
    "date": "2026-11-09",
    "game": "餓狼伝説 City of the Wolves",
@@ -490,11 +344,6 @@
    "date": "2026-10-28",
    "game": "ポケモンユナイト",
    "headline": "サービス終了のお知らせが、最後の大型アップデートになった"
-  },
-  {
-   "date": "2026-10-27",
-   "game": "Moon Sweepers",
-   "headline": "「歯ブラシ1本から月を大掃除」最大16人で月を掃く協力シム"
   }
  ]
 }
