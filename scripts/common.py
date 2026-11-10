@@ -15,7 +15,16 @@ SITE = ROOT / "site"
 JST = timezone(timedelta(hours=9))
 
 # YouTube APIの1日の無料枠。使い切る前に止めるための上限。
-QUOTA_LIMIT = int(os.environ.get("QUOTA_LIMIT", "9000"))
+# 1回の実行（と、fetch_daily では1日ぶん）で使ってよいポイントの自主規制。
+# **YouTube側の本当の上限ではなく、暴走したときに早く止めるための線。**
+#
+# 2026-11-11にクォータの引き上げが通った（6か月間）。
+#   全体        10,000 → 50,000 ／日
+#   search.list    100 → 10,100 ／日
+# 毎日の更新の見込みは、全チャンネル（約3,100件）を1日2回で **約8,700**。
+# 20,000 はその2.5倍で、**本当の上限50,000までまだ30,000残る**線。
+# ここを50,000ぎりぎりにしないのは、暴走を早く止めるため。
+QUOTA_LIMIT = int(os.environ.get("QUOTA_LIMIT", "20000"))
 
 
 def today() -> str:
