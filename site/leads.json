@@ -1,8 +1,29 @@
 {
- "date": "2026-11-10",
- "generated": "2026-11-10 13:35",
+ "date": "2026-11-11",
+ "generated": "2026-11-11 01:38",
  "leads": {
   "events": [
+   {
+    "tag": "#ガチグラ2",
+    "channels": [
+     "きさらぎ【下手ゲーム実況】",
+     "姫崎クト -himesaki kuto-",
+     "家入ポポ / Popo Channel【ななしいんく】",
+     "羽渦ミウネル -Miuneru Haneuzu-",
+     "蛇宵ティア / Tier Channel【ななしいんく】",
+     "銀灰まお Mao Ch."
+    ]
+   },
+   {
+    "tag": "#ゲーム実況",
+    "channels": [
+     "SignDuck / サインダック",
+     "Usagi Ch. 因幡兎",
+     "のんびり猫のゆっくりゲーム実況",
+     "エラch",
+     "ジョアだよ"
+    ]
+   },
    {
     "tag": "#パレットタウン",
     "channels": [
@@ -14,13 +35,27 @@
     ]
    },
    {
-    "tag": "#ガチグラ2",
+    "tag": "#ホロドリ",
     "channels": [
-     "きさらぎ【下手ゲーム実況】",
-     "姫崎クト -himesaki kuto-",
-     "家入ポポ / Popo Channel【ななしいんく】",
-     "羽渦ミウネル -Miuneru Haneuzu-",
-     "銀灰まお Mao Ch."
+     "Sopia Ch. 宙科そぴあ ‐ アソビ★まわり隊!",
+     "テトとホロドリ【解説・攻略】",
+     "花束 ゆいは / Hanataba Yuiha"
+    ]
+   },
+   {
+    "tag": "#minecraft",
+    "channels": [
+     "ここっとスクエア【ここスク】",
+     "やっぱりじぇいさん【マイクラ】",
+     "宇宙真央 / Uchu Mao"
+    ]
+   },
+   {
+    "tag": "#崩壊スターレイル",
+    "channels": [
+     "天月のやりたい放題ちゃんねる。",
+     "白亜リラ / Hakua Lira",
+     "麻酔 Masui"
     ]
    }
   ],
@@ -28,43 +63,43 @@
   "wide": [
    {
     "game": "ゼルダの伝説 時のオカリナ",
-    "channels": 50,
-    "videos": 52
+    "channels": 54,
+    "videos": 56
    },
    {
     "game": "Apex Legends",
-    "channels": 36,
-    "videos": 38
-   },
-   {
-    "game": "Grand Theft Auto V",
-    "channels": 25,
-    "videos": 27
+    "channels": 39,
+    "videos": 44
    },
    {
     "game": "Minecraft",
+    "channels": 35,
+    "videos": 37
+   },
+   {
+    "game": "Grand Theft Auto V",
+    "channels": 26,
+    "videos": 34
+   },
+   {
+    "game": "VALORANT",
     "channels": 19,
     "videos": 20
    },
    {
+    "game": "ストリートファイター6",
+    "channels": 19,
+    "videos": 21
+   },
+   {
+    "game": "League of Legends",
+    "channels": 18,
+    "videos": 20
+   },
+   {
     "game": "モンスターハンターアウトランダーズ",
-    "channels": 16,
-    "videos": 18
-   },
-   {
-    "game": "VALORANT",
-    "channels": 13,
-    "videos": 13
-   },
-   {
-    "game": "スプラトゥーン3",
-    "channels": 13,
-    "videos": 13
-   },
-   {
-    "game": "フォートナイト",
-    "channels": 11,
-    "videos": 14
+    "channels": 18,
+    "videos": 20
    }
   ]
  },
@@ -103,173 +138,284 @@
     "Pokemon Classic",
     "Pokemon II"
    ]
+  },
+  {
+   "word": "人狼バーガー",
+   "channels": 4,
+   "n": 4,
+   "examples": [
+    {
+     "t": "【人狼バーガー】先行プレイ！デカくて美味いバーガーを本気で作ってみせるぜ！【まじめにヤバシティ】",
+     "c": "まじめにヤバシティ",
+     "u": "https://www.youtube.com/watch?v=oIRIKPw_2R4"
+    },
+    {
+     "t": "【人狼バーガー】バーガーショップにひそむスパイを見つけろ！！ 【にじさんじ / 赤城ウェン】",
+     "c": "赤城ウェン / Akagi Wen【にじさんじ】",
+     "u": "https://www.youtube.com/watch?v=9Q62zCKuha0"
+    },
+    {
+     "t": "【人狼バーガー】バーガーショップにひそむスパイを見つけろ～！【早乙女ベリー/にじさんじ】",
+     "c": "早乙女 ベリー / Saotome Berry【にじさんじ】",
+     "u": "https://www.youtube.com/watch?v=fX-7aJoki_U"
+    }
+   ],
+   "kind": "wide",
+   "suggest": []
+  },
+  {
+   "word": "ポケモン",
+   "channels": 3,
+   "n": 10,
+   "examples": [
+    {
+     "t": "【ゆびをふる縛り旅】カスミのスターミーなんて余裕なんだからね。part1【ポケモン／ファイアレッド】",
+     "c": "ろこぼうず / 独身実家暮らし身長180cmP",
+     "u": "https://www.youtube.com/watch?v=Gy-1bSyTyDs"
+    },
+    {
+     "t": "【ゆびをふる縛り旅】イワヤマトンネルとか怖くねーし、エリカ撃破。part2【ポケモン／ファイアレッド】",
+     "c": "ろこぼうず / 独身実家暮らし身長180cmP",
+     "u": "https://www.youtube.com/watch?v=H6pvIlFaXdI"
+    },
+    {
+     "t": "【チャンピオンズ/初見歓迎】初見プレイ！初心者だけどどこまでもいけるかな？【ポケモン】",
+     "c": "凛堂すずか / Suzuka Rindo",
+     "u": "https://www.youtube.com/watch?v=QYn1lN2h3m4"
+    }
+   ],
+   "kind": "wide",
+   "suggest": []
+  },
+  {
+   "word": "#パニシング：グレイレイヴン",
+   "channels": 3,
+   "n": 4,
+   "examples": [
+    {
+     "t": "【#パニシング：グレイレイヴン】【#初見】#37 ナナミ...?🦋メインクエスト第18章「綺羅星の誓い」🦋【個人勢Vtuber】",
+     "c": "紫翠アヤメ ShisuiAyame",
+     "u": "https://www.youtube.com/watch?v=Z7JBcnXgnZM"
+    },
+    {
+     "t": "【#パニシング：グレイレイヴン】【#初見】#37 ナナミ...?🦋メインクエスト第18章「綺羅星の誓い」🦋【個人勢Vtuber】",
+     "c": "紫翠アヤメ ShisuiAyame",
+     "u": "https://www.youtube.com/watch?v=Z7JBcnXgnZM"
+    },
+    {
+     "t": "【完全初見】パニグレの全Sキャラ、第一印象で語って分類してみるよ！【パニシング:グレイレイヴン】",
+     "c": "羅々華セーラ-Raraka Sera-",
+     "u": "https://www.youtube.com/watch?v=Vb8SpEMUSi4"
+    }
+   ],
+   "kind": "wide",
+   "suggest": []
+  },
+  {
+   "word": "ドラゴンクエストRPG　魔界樹と導かれし島",
+   "channels": 3,
+   "n": 4,
+   "examples": [
+    {
+     "t": "ドラクエの新作『ドラゴンクエストRPG　魔界樹と導かれし島』突如として発表！ソシャゲだが期待していいの！？ゲーム内容・ガチャ要素など予想雑談！ #DQRPG　 #ドラクエRPG",
+     "c": "たろわん。",
+     "u": "https://www.youtube.com/watch?v=jblsfQJDngI"
+    },
+    {
+     "t": "【大荒れ🔥】なぜSwitch2に出さない！？ドラクエ最新作がまさかの大好評！！【ドラゴンクエストRPG　魔界樹と導かれし島】スクエニ",
+     "c": "ポカオスのUZAちゃんねる【ゲーム情報紹介】",
+     "u": "https://www.youtube.com/watch?v=PxbJhnPH7Uw"
+    },
+    {
+     "t": "ドラクエ新作が神ゲーな予感！『ドラゴンクエストRPG　魔界樹と導かれし島』アナウンストレーラー公開！じっくりと考察していく！ #DQRPG　 #ドラクエRPG",
+     "c": "たろわん。",
+     "u": "https://www.youtube.com/watch?v=CHikoLHW55M"
+    }
+   ],
+   "kind": "wide",
+   "suggest": []
   }
  ],
  "miss_days": 7,
  "hot_facts": [
   {
-   "game": "ドラゴンクエストモンスターズ",
-   "growth": 3.75,
-   "videos": 3,
-   "base": 0.7,
-   "channels": 3,
-   "views": 95989,
+   "game": "MidZone",
+   "growth": 7.5,
+   "videos": 6,
+   "base": 0.4,
+   "channels": 5,
+   "views": 252214,
    "who": [
-    "Rei7【にじさんじ】",
-    "西鍋ん家【にしなべんち】",
-    "Marona Ch. 水鞠まろな",
-    "西鍋ん家【にしなべんち】"
-   ],
-   "titles": [
-    "#6【 ドラゴンクエストモンスターズ　テリーのワンダーランドRETRO 】Sクラス後、その後の私【 Rei7 / にじさんじ 】",
-    "PS1【ドラゴンクエストモンスターズ1・2】鏡の扉～物語クリア目指す!!",
-    "【テリーのワンダーランドRETRO】完全初見！人生初のテリワンに挑戦！｜1998年の名作ドラクエモンスターズ！【水鞠まろな/VTuber】"
-   ],
-   "genres": [
-    "Role-playing (RPG)",
-    "Adventure"
-   ],
-   "year": 1998,
-   "platforms": [
-    "console"
-   ],
-   "days_seen": 29,
-   "last_seen": "2026-11-09",
-   "first_here": false
-  },
-  {
-   "game": "呪ショッピング",
-   "growth": 3.75,
-   "videos": 3,
-   "base": 0.7,
-   "channels": 3,
-   "views": 85336,
-   "who": [
-    "星導ショウ / Hoshirube Sho【にじさんじ】",
-    "マキトch",
-    "【男装アイドルVtuber】橘花るい / Tachibana Rui"
-   ],
-   "titles": [
-    "【呪ショッピング】通販でお買い物をします【星導ショウ/にじさんじ】",
-    "呪われたネットショップで購入した物がヤバすぎた件【呪ショッピング】/ホラー",
-    "【🔴ホラゲー︙低音中性ボイス👻】あーー‼️それ橘花がなくした姿勢矯正コルセット‼️😩💥『呪ショッピング』【#橘花るい/男装アイドルVtuber】#ホラゲー実況 #ホラーゲーム"
-   ],
-   "genres": [],
-   "year": null,
-   "platforms": [],
-   "days_seen": 1,
-   "last_seen": "2026-11-09",
-   "first_here": false
-  },
-  {
-   "game": "R.E.P.O.",
-   "growth": 2.62,
-   "videos": 11,
-   "base": 4.2,
-   "channels": 11,
-   "views": 104377,
-   "who": [
+    "ハセシン / HASESHIN",
+    "ハセシン / HASESHIN",
     "花芽なずな / Nazuna Kaga",
-    "慈悲の極み。",
-    "標準野郎",
-    "中野あるま / Alma Nakano",
-    "怪傑がみちゃんねる"
+    "小雀とと / Toto Kogara",
+    "ぐっぴー"
    ],
    "titles": [
-    "【REPO】アプデ後のれぽがやりたいんだよオオオオ（ダミ声）さぶちゃんと【ぶいすぽ/花芽なずな】",
-    "新マップが本当にヤバいので、慣れるためにソロで攻略していきます！！！【R.E.P.O.】",
-    "初心者を免罪符に暴走する標準、道連れにされるぺちゃんこ、標準の頭を撃ち抜く弟者【R.E.P.O./標準,ぺちゃんこ,弟者,兄者,メロ】"
+    "【新作CoD:WARZONE】本気で行きますゾ！ガチPTでプレイしたら何連勝できるのか？ WinRed, カルミア, はんてぃ→ ホンマッチ【ハセシン】Call of Duty: Warzone",
+    "【新作CoD:WARZONE】二次会WZ ← 始めるで！授業開始でございます！何勝できるのか全力挑戦!!!! 編！ 花芽なずな, 小雀とと, ぐっぴー【ハセシン】",
+    "【WARZONE】久々にうぉーぞーんやるぞおおお　ハセシン、GP、ととち【ぶいすぽ/花芽なずな】"
    ],
    "genres": [
-    "Strategy",
     "Indie"
    ],
-   "year": 2025,
+   "year": 2016,
    "platforms": [
     "pc"
    ],
-   "days_seen": 32,
-   "last_seen": "2026-11-09",
-   "first_here": false
+   "days_seen": 0,
+   "last_seen": null,
+   "first_here": true
   },
   {
-   "game": "マビノギモバイル",
-   "growth": 2.5,
-   "videos": 3,
-   "base": 1.2,
-   "channels": 3,
-   "views": 48583,
+   "game": "Cursed Companions",
+   "growth": 6.25,
+   "videos": 5,
+   "base": 0.3,
+   "channels": 5,
+   "views": 225262,
    "who": [
-    "樋口楓【にじさんじ所属】",
-    "Amoko Ch. 甘乃あもこ",
-    "たてもちどうじろう"
+    "御子神琴音 / Mikogami Kotone【にじさんじ】",
+    "星導ショウ / Hoshirube Sho【にじさんじ】",
+    "風楽奏斗 / Fura Kanato ",
+    "男虎 / Ono Tora【にじさんじ】",
+    "Yuhi Riri Official"
    ],
    "titles": [
-    "【マビノギモバイル】推しの子コラボ⁉ \"千本剣\" の \"刻印強化\" します😡😡【にじさんじ / 樋口楓】",
-    "【マビノギモバイル】また月曜がめぐってくるんだ！日課アビスレイド消化（ダンバートン鯖・ヒーラー）【#NEXON #マビモバ #Vtuber #女性実況】",
-    "【マビノギモバイル】朝まで参加型 週始めアビス＆レイド！32【たてもちどうじろう】"
+    "【Cursed Companions】わんおぺの皆様と！NGワードを口にしてはいけない協力型ホラーゲーム！？【御子神琴音 / にじさんじ】",
+    "【Cursed Companions】わんおぺ二次会【星導ショウ/にじさんじ】",
+    "【 Cursed companions 】 #わんおぺWIN 二次会【にじさんじ/風楽奏斗】"
    ],
    "genres": [],
    "year": null,
    "platforms": [],
-   "days_seen": 21,
-   "last_seen": "2026-11-09",
+   "days_seen": 3,
+   "last_seen": "2026-11-04",
    "first_here": false
   },
   {
-   "game": "肝試しオンライン",
-   "growth": 2.5,
-   "videos": 3,
-   "base": 1.2,
-   "channels": 3,
-   "views": 16750,
+   "game": "Dreadmoor",
+   "growth": 6.25,
+   "videos": 5,
+   "base": 0.0,
+   "channels": 5,
+   "views": 186744,
    "who": [
-    "エトラ / étraチャンネル",
-    "萌実ちゃんねる / あおぎり高校",
-    "華鉈イオ【StellArt.】"
+    "あまり驚かないガッチマンはホラーゲームばかりやっている",
+    "キャシーさんはホラーゲームで遊びたい",
+    "アフロマスク",
+    "アフロマスク",
+    "みょうがのちゃんねる"
    ],
    "titles": [
-    "【肝試しオンライン】どうも、肝試しワクワクさんです【 あおぎり高校 / #エト生放送 】",
-    "【肝試しオンライン】撮れ高目指して突撃じゃああ！！【#肝試しお茶会 #萌実game】",
-    "【肝試しオンライン】話題の新作👻肝試しで取れ高をつくる！！！【華鉈イオ/StellArt.】#vtuber"
-   ],
-   "genres": [],
-   "year": null,
-   "platforms": [],
-   "days_seen": 4,
-   "last_seen": "2026-11-09",
-   "first_here": false
-  },
-  {
-   "game": "ドラゴンボールZ KAKAROT",
-   "growth": 2.22,
-   "videos": 4,
-   "base": 1.8,
-   "channels": 4,
-   "views": 106206,
-   "who": [
-    "UNIT B (Pre-Debut) - mekPark",
-    "ACHRORA - mekPark",
-    "Usagi Ch. 因幡兎",
-    "える / Elu【にじさんじ】"
-   ],
-   "titles": [
-    "【ドラゴンボール Z KAKAROT】行くぞ！！魔人ブウ編！！！！！【 #UNIT_B / #宵凪ネオン】",
-    "【 ドラゴンボールZ:KAKAROT 】#４ え！フリーザ様生きてるんですか！？悟空早く帰ってきて・・・※ネタバレあり　#墨汐さやな ＃さやな時間",
-    "#4 【ドラゴンボールZ カカロット】皆を生き返らす方法を探すミリも知らない完全初見プレイ【因幡兎/Vtuber】 #女性実況 #ゲーム実況"
+    "#1【DREADMOOR 】腐敗と水没した世界で釣りして稼ぐ",
+    "【ホラー】注目作！かつての大災害で水没し腐敗が進む世界を舞台にしたサバイバルホラーゲーム『 DREADMOOR (ドレッドムア) 』【Vキャシー/Vtuber】実況",
+    "漁船を改造しながら水没した世紀末世界で魚釣りサバイバルができる最新オープンワールドゲーム【 DREADMOOR 】"
    ],
    "genres": [
     "Role-playing (RPG)",
-    "Hack and slash/Beat 'em up",
-    "Adventure"
+    "Simulator",
+    "Adventure",
+    "Indie"
    ],
-   "year": 2020,
+   "year": 2026,
+   "platforms": [
+    "pc"
+   ],
+   "days_seen": 1,
+   "last_seen": "2026-11-10",
+   "first_here": false
+  },
+  {
+   "game": "Rec:Rewind",
+   "growth": 6.25,
+   "videos": 5,
+   "base": 0.0,
+   "channels": 5,
+   "views": 15151,
+   "who": [
+    "えおちゃんねる！",
+    "キャシーさんはホラーゲームで遊びたい",
+    "サンキュームービー",
+    "人生 つみこ (ホラーゲーム専門Vtuber)",
+    "初雪セツナ | ホラー声優Vtuber"
+   ],
+   "titles": [
+    "ビデオテープを使って過去に戻るホラーゲーム【REC:REWIND】",
+    "【ホラー】実写級の恐怖！行方不明となった夫とその夫を探す妻…過去へと遡る「ビデオテープ」を通して真実に迫る逆ループホラーゲーム『 REC:REWIND 』【Vキャシー/Vtuber】実況",
+    "【ホラー】ビデオを遡って夫を探す\"逆ループホラー\"の衝撃の真相がヤバ過ぎた…【REC:REWIND】"
+   ],
+   "genres": [
+    "Adventure",
+    "Indie"
+   ],
+   "year": 2026,
+   "platforms": [
+    "pc"
+   ],
+   "days_seen": 0,
+   "last_seen": null,
+   "first_here": true
+  },
+  {
+   "game": "グランツーリスモ7",
+   "growth": 3.75,
+   "videos": 3,
+   "base": 0.8,
+   "channels": 3,
+   "views": 4698,
+   "who": [
+    "ぽみ / Pomi",
+    "あかねのゲーム実況",
+    "パポさん【なんとかなるってぇ〜配信】"
+   ],
+   "titles": [
+    "🌈💙# 347【 グランツーリスモ 7 】　今日は寒かった　デイリー更新ですね～　今日も楽しく走るよ～GOGO！　 #GT7　＃グランツーリスモ7　＃車",
+    "【GT7】🎂ハッピーバースデーロビー参加歓迎🥰【T300RS】#雑談 #livestream #gt7 #racing #グランツーリスモ7",
+    "【GT7】【グランツーリスモ7】「パッド勢の走り #36」　デイリーレースC練習ですよ"
+   ],
+   "genres": [
+    "Racing",
+    "Simulator",
+    "Sport"
+   ],
+   "year": 2022,
+   "platforms": [
+    "console"
+   ],
+   "days_seen": 26,
+   "last_seen": "2026-11-04",
+   "first_here": false
+  },
+  {
+   "game": "GeoGuessr",
+   "growth": 3.75,
+   "videos": 3,
+   "base": 0.2,
+   "channels": 3,
+   "views": 300,
+   "who": [
+    "桃＋（とーたす）'s チェンネル",
+    "amiami Hobby Channel",
+    "ガ口ガ口リ"
+   ],
+   "titles": [
+    "【Geoguessr】11/10 おまとホラーゲッサーとかやろ言うよ",
+    "《GeoGuessr》湊みやのStreaming Club（第103回配信）",
+    "【GeoGuessr】文鳥が居場所を当てるの手伝って！／ガロガロリ"
+   ],
+   "genres": [
+    "Strategy",
+    "Quiz/Trivia"
+   ],
+   "year": 2013,
    "platforms": [
     "pc",
     "console"
    ],
-   "days_seen": 14,
-   "last_seen": "2026-11-09",
+   "days_seen": 2,
+   "last_seen": "2026-10-27",
    "first_here": false
   }
  ],
