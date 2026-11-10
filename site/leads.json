@@ -1,8 +1,29 @@
 {
  "date": "2026-11-11",
- "generated": "2026-11-11 01:38",
+ "generated": "2026-11-11 04:53",
  "leads": {
   "events": [
+   {
+    "tag": "#ゲーム実況",
+    "channels": [
+     "Ika&Ninon Games",
+     "M家の休日マサ",
+     "SignDuck / サインダック",
+     "Usagi Ch. 因幡兎",
+     "くものち ふれすch.☁️🫧",
+     "てぃーけぇー",
+     "のんびり猫のゆっくりゲーム実況",
+     "ゆにるユニ",
+     "エラch",
+     "ジョアだよ",
+     "太刀ひろし　【Uncle gamer】 ",
+     "恋因ロス KoinRosu",
+     "豚咲あおい_TomisakiAoi",
+     "遊楽木たいむ / yuuragi time ch",
+     "運天りらん",
+     "里城はな"
+    ]
+   },
    {
     "tag": "#ガチグラ2",
     "channels": [
@@ -15,31 +36,32 @@
     ]
    },
    {
-    "tag": "#ゲーム実況",
-    "channels": [
-     "SignDuck / サインダック",
-     "Usagi Ch. 因幡兎",
-     "のんびり猫のゆっくりゲーム実況",
-     "エラch",
-     "ジョアだよ"
-    ]
-   },
-   {
     "tag": "#パレットタウン",
     "channels": [
      "あかるん / Akarun Ch.",
      "せんと / Cent",
      "塩田いお",
      "小鈴りあん / Lian Channel【ミクスト】",
-     "葛ノ葉鈴撫　-Kuzunoha suzunade- Ch"
+     "葛ノ葉鈴撫　-Kuzunoha suzunade- Ch",
+     "蒲田凡 / かまぼん"
     ]
    },
    {
-    "tag": "#ホロドリ",
+    "tag": "#レトロゲーム",
     "channels": [
-     "Sopia Ch. 宙科そぴあ ‐ アソビ★まわり隊!",
-     "テトとホロドリ【解説・攻略】",
-     "花束 ゆいは / Hanataba Yuiha"
+     "どえむげーまーらうる",
+     "草蔦みかん / Kusatsuta Mikan",
+     "里城はな",
+     "魔法少女めめ"
+    ]
+   },
+   {
+    "tag": "#NIKKE",
+    "channels": [
+     "Kurena Ch. 愛音クレナ",
+     "花宮ゆりね",
+     "華鉈イオ【StellArt.】",
+     "雪平エリナ"
     ]
    },
    {
@@ -47,15 +69,26 @@
     "channels": [
      "ここっとスクエア【ここスク】",
      "やっぱりじぇいさん【マイクラ】",
+     "ウルフムーン",
      "宇宙真央 / Uchu Mao"
     ]
    },
    {
     "tag": "#崩壊スターレイル",
     "channels": [
+     "あかどらん",
      "天月のやりたい放題ちゃんねる。",
      "白亜リラ / Hakua Lira",
      "麻酔 Masui"
+    ]
+   },
+   {
+    "tag": "#初見さん大歓迎",
+    "channels": [
+     "mogすけちゃんネル",
+     "たべるうみゃ",
+     "ちくびの脅威",
+     "鈴ノ時みぃ@新人Vtuber"
     ]
    }
   ],
@@ -63,49 +96,70 @@
   "wide": [
    {
     "game": "ゼルダの伝説 時のオカリナ",
-    "channels": 54,
-    "videos": 56
+    "channels": 70,
+    "videos": 73
    },
    {
     "game": "Apex Legends",
-    "channels": 39,
+    "channels": 47,
+    "videos": 52
+   },
+   {
+    "game": "ストリートファイター6",
+    "channels": 41,
     "videos": 44
    },
    {
     "game": "Minecraft",
-    "channels": 35,
-    "videos": 37
+    "channels": 40,
+    "videos": 43
    },
    {
     "game": "Grand Theft Auto V",
-    "channels": 26,
-    "videos": 34
+    "channels": 31,
+    "videos": 38
    },
    {
     "game": "VALORANT",
-    "channels": 19,
-    "videos": 20
-   },
-   {
-    "game": "ストリートファイター6",
-    "channels": 19,
-    "videos": 21
+    "channels": 21,
+    "videos": 22
    },
    {
     "game": "League of Legends",
     "channels": 18,
-    "videos": 20
+    "videos": 19
    },
    {
     "game": "モンスターハンターアウトランダーズ",
-    "channels": 18,
-    "videos": 20
+    "channels": 20,
+    "videos": 22
    }
   ]
  },
  "drift": [],
  "tags": [],
  "misses": [
+  {
+   "word": "Mega Man2",
+   "channels": 1,
+   "n": 2,
+   "examples": [
+    {
+     "t": "【ロックマン2 Dr.ワイリーの謎】#3 ついにワイリーステージ突入！完全初見！！【Mega Man2/Vtuber】※ネタバレ注意 #レトロゲーム",
+     "c": "魔法少女めめ",
+     "u": "https://www.youtube.com/watch?v=euqxF7JchHQ"
+    },
+    {
+     "t": "【ロックマン2 Dr.ワイリーの謎】#2 完全初見！！【Mega Man2/Vtuber】※ネタバレ注意 #レトロゲーム",
+     "c": "魔法少女めめ",
+     "u": "https://www.youtube.com/watch?v=3GMZmPyjUAU"
+    }
+   ],
+   "kind": "near",
+   "suggest": [
+    "Mega Man 2: The Power Fighters"
+   ]
+  },
   {
    "word": "Unfinished",
    "channels": 1,
@@ -140,6 +194,46 @@
    ]
   },
   {
+   "word": "ENDER MAGNOLIA",
+   "channels": 1,
+   "n": 1,
+   "examples": [
+    {
+     "t": "【ENDER MAGNOLIA】 マップ広げていくぞ！！＃２【Vtuberしまゆま】",
+     "c": "しまゆま",
+     "u": "https://www.youtube.com/watch?v=w45ItOSfyO8"
+    }
+   ],
+   "kind": "near",
+   "suggest": [
+    "Ender Magnolia: Bloom in the Mist"
+   ]
+  },
+  {
+   "word": "勇者パーティはぜんめつしました",
+   "channels": 5,
+   "n": 5,
+   "examples": [
+    {
+     "t": "『勇者パーティはぜんめつしました』先行プレイ！全滅した勇者パーティから\"1人だけ\"を選んで救うダンジョン探索RPG。武器を奪って壊して進む戦闘から、最初のボス「追放者」との死闘までたっぷり紹介",
+     "c": "電ファミ公式チャンネル",
+     "u": "https://www.youtube.com/watch?v=0nXySs2dZmc"
+    },
+    {
+     "t": "【今日発売】体験版が「圧倒的に好評」全滅した勇者PTから1人だけ選ぶ…ストーリー激重なJRPG【勇者パーティはぜんめつしました。】",
+     "c": "しゃかもと け。",
+     "u": "https://www.youtube.com/watch?v=gESpXLoqugE"
+    },
+    {
+     "t": "【ゆうめつ】\"新作神ゲー\"高湿度・激重感情RPG「勇者パーティはぜんめつしました。」攻略配信※ネタバレ注意",
+     "c": "びりQ",
+     "u": "https://www.youtube.com/watch?v=z3NspYYxxz0"
+    }
+   ],
+   "kind": "wide",
+   "suggest": []
+  },
+  {
    "word": "人狼バーガー",
    "channels": 4,
    "n": 4,
@@ -164,48 +258,24 @@
    "suggest": []
   },
   {
-   "word": "ポケモン",
+   "word": "パニシング:グレイレイヴン",
    "channels": 3,
-   "n": 10,
+   "n": 6,
    "examples": [
-    {
-     "t": "【ゆびをふる縛り旅】カスミのスターミーなんて余裕なんだからね。part1【ポケモン／ファイアレッド】",
-     "c": "ろこぼうず / 独身実家暮らし身長180cmP",
-     "u": "https://www.youtube.com/watch?v=Gy-1bSyTyDs"
-    },
-    {
-     "t": "【ゆびをふる縛り旅】イワヤマトンネルとか怖くねーし、エリカ撃破。part2【ポケモン／ファイアレッド】",
-     "c": "ろこぼうず / 独身実家暮らし身長180cmP",
-     "u": "https://www.youtube.com/watch?v=H6pvIlFaXdI"
-    },
-    {
-     "t": "【チャンピオンズ/初見歓迎】初見プレイ！初心者だけどどこまでもいけるかな？【ポケモン】",
-     "c": "凛堂すずか / Suzuka Rindo",
-     "u": "https://www.youtube.com/watch?v=QYn1lN2h3m4"
-    }
-   ],
-   "kind": "wide",
-   "suggest": []
-  },
-  {
-   "word": "#パニシング：グレイレイヴン",
-   "channels": 3,
-   "n": 4,
-   "examples": [
-    {
-     "t": "【#パニシング：グレイレイヴン】【#初見】#37 ナナミ...?🦋メインクエスト第18章「綺羅星の誓い」🦋【個人勢Vtuber】",
-     "c": "紫翠アヤメ ShisuiAyame",
-     "u": "https://www.youtube.com/watch?v=Z7JBcnXgnZM"
-    },
-    {
-     "t": "【#パニシング：グレイレイヴン】【#初見】#37 ナナミ...?🦋メインクエスト第18章「綺羅星の誓い」🦋【個人勢Vtuber】",
-     "c": "紫翠アヤメ ShisuiAyame",
-     "u": "https://www.youtube.com/watch?v=Z7JBcnXgnZM"
-    },
     {
      "t": "【完全初見】パニグレの全Sキャラ、第一印象で語って分類してみるよ！【パニシング:グレイレイヴン】",
      "c": "羅々華セーラ-Raraka Sera-",
      "u": "https://www.youtube.com/watch?v=Vb8SpEMUSi4"
+    },
+    {
+     "t": "【#パニシング：グレイレイヴン】【#初見】#37 ナナミ...?🦋メインクエスト第18章「綺羅星の誓い」🦋【個人勢Vtuber】",
+     "c": "紫翠アヤメ ShisuiAyame",
+     "u": "https://www.youtube.com/watch?v=Z7JBcnXgnZM"
+    },
+    {
+     "t": "【#パニシング：グレイレイヴン】【#初見】#37 ナナミ...?🦋メインクエスト第18章「綺羅星の誓い」🦋【個人勢Vtuber】",
+     "c": "紫翠アヤメ ShisuiAyame",
+     "u": "https://www.youtube.com/watch?v=Z7JBcnXgnZM"
     }
    ],
    "kind": "wide",
@@ -234,6 +304,54 @@
    ],
    "kind": "wide",
    "suggest": []
+  },
+  {
+   "word": "ブースターパックヒーロー",
+   "channels": 3,
+   "n": 3,
+   "examples": [
+    {
+     "t": "【新作発売】激レアを引けば一気に最強！？パック開封インクリメンタル『ブースターパックヒーロー』【Steam】",
+     "c": "しろこりGames / インディーゲーム専門Vtuber",
+     "u": "https://www.youtube.com/watch?v=y0pqHXmB59Y"
+    },
+    {
+     "t": "【ブースターパックヒーロー】遂に本日発売したカードパックから召喚したキャラで拠点を守るインクリメンタルタワーディフェンスゲーム【Steam】",
+     "c": "Hultutigamer",
+     "u": "https://www.youtube.com/watch?v=ODwsufDLJh4"
+    },
+    {
+     "t": "【ブースターパックヒーロー】本日発売のパック×タワーディフェンス×インクリメンタルが楽しすぎ...！？980円新作オートバトラークリッカー攻略が面白いw今だけ30%セール【steam,android】",
+     "c": " なぎせいな / 凪世薙",
+     "u": "https://www.youtube.com/watch?v=NExrmbT5xzE"
+    }
+   ],
+   "kind": "wide",
+   "suggest": []
+  },
+  {
+   "word": "ポケモン剣盾",
+   "channels": 3,
+   "n": 3,
+   "examples": [
+    {
+     "t": "#4【ポケモン剣盾】完全初見プレイ！ほぼメンバー入れ替えで５つ目のバッチへ挑戦【#稲荷いろは/のりプロ所属】",
+     "c": "稲荷いろはInari Iroha",
+     "u": "https://www.youtube.com/watch?v=QBErsxe-Hyo"
+    },
+    {
+     "t": "【ポケモン剣盾】勝手に縛りプレイして自滅 #4【完全初見実況】",
+     "c": "sakuraのゲーム実況チャンネル",
+     "u": "https://www.youtube.com/watch?v=fRASP4YjzJk"
+    },
+    {
+     "t": "【ポケモンソード】ポケモン知識ゼロのミリしら初見実況！雑談しながら冒険＆レベリング！#22【ポケモン剣盾/女性VTuber】",
+     "c": "こてつちゃんねる",
+     "u": "https://www.youtube.com/watch?v=1k2_Ux1j3w4"
+    }
+   ],
+   "kind": "wide",
+   "suggest": []
   }
  ],
  "miss_days": 7,
@@ -244,7 +362,7 @@
    "videos": 6,
    "base": 0.4,
    "channels": 5,
-   "views": 252214,
+   "views": 310362,
    "who": [
     "ハセシン / HASESHIN",
     "ハセシン / HASESHIN",
@@ -254,7 +372,7 @@
    ],
    "titles": [
     "【新作CoD:WARZONE】本気で行きますゾ！ガチPTでプレイしたら何連勝できるのか？ WinRed, カルミア, はんてぃ→ ホンマッチ【ハセシン】Call of Duty: Warzone",
-    "【新作CoD:WARZONE】二次会WZ ← 始めるで！授業開始でございます！何勝できるのか全力挑戦!!!! 編！ 花芽なずな, 小雀とと, ぐっぴー【ハセシン】",
+    "【新作CoD:WARZONE】始めるで！授業開始でございます！何勝できるのか全力挑戦!!!! 編！ 花芽なずな, 小雀とと, ぐっぴー → 二次会WARZONE！【ハセシン】",
     "【WARZONE】久々にうぉーぞーんやるぞおおお　ハセシン、GP、ととち【ぶいすぽ/花芽なずな】"
    ],
    "genres": [
@@ -264,17 +382,49 @@
    "platforms": [
     "pc"
    ],
-   "days_seen": 0,
-   "last_seen": null,
-   "first_here": true
+   "days_seen": 1,
+   "last_seen": "2026-11-10",
+   "first_here": false
+  },
+  {
+   "game": "Delta Force",
+   "growth": 7.5,
+   "videos": 6,
+   "base": 0.8,
+   "channels": 4,
+   "views": 9939,
+   "who": [
+    "KAMIU / かみゆう : 脱出シューター",
+    "KAMIU / かみゆう : 脱出シューター",
+    "KAMIU / かみゆう : 脱出シューター",
+    "一攫千金TV【DeltaForce】",
+    "KAMIU / かみゆう : 脱出シューター"
+   ],
+   "titles": [
+    "【デルタ】S12新近接武器”剣”遂に登場！コラボで追加された最強近接がやばすぎるｗｗｗｗ[ #deltaforce #デルタフォース #デルタフォースモバイル ]",
+    "【デルタ】S12新要素全解説！射撃訓練場2.0や新マップ・アタッチメント等多数過ぎてやばいｗｗ[ #deltaforce #デルタフォース #デルタフォースモバイル ]",
+    "【デルタ】新ブラケッシュがかなり戦いやすくなってて最高！バベルの塔リワークに修正大量！[ #deltaforce #デルタフォース #デルタフォースモバイル ]"
+   ],
+   "genres": [
+    "Shooter",
+    "Tactical"
+   ],
+   "year": 2024,
+   "platforms": [
+    "pc",
+    "console"
+   ],
+   "days_seen": 24,
+   "last_seen": "2026-11-10",
+   "first_here": false
   },
   {
    "game": "Cursed Companions",
    "growth": 6.25,
    "videos": 5,
-   "base": 0.3,
+   "base": 0.0,
    "channels": 5,
-   "views": 225262,
+   "views": 302371,
    "who": [
     "御子神琴音 / Mikogami Kotone【にじさんじ】",
     "星導ショウ / Hoshirube Sho【にじさんじ】",
@@ -295,27 +445,25 @@
    "first_here": false
   },
   {
-   "game": "Dreadmoor",
+   "game": "Rec:Rewind",
    "growth": 6.25,
    "videos": 5,
    "base": 0.0,
    "channels": 5,
-   "views": 186744,
+   "views": 26678,
    "who": [
-    "あまり驚かないガッチマンはホラーゲームばかりやっている",
     "キャシーさんはホラーゲームで遊びたい",
-    "アフロマスク",
-    "アフロマスク",
-    "みょうがのちゃんねる"
+    "えおちゃんねる！",
+    "人生 つみこ (ホラーゲーム専門Vtuber)",
+    "サンキュームービー",
+    "初雪セツナ | ホラー声優Vtuber"
    ],
    "titles": [
-    "#1【DREADMOOR 】腐敗と水没した世界で釣りして稼ぐ",
-    "【ホラー】注目作！かつての大災害で水没し腐敗が進む世界を舞台にしたサバイバルホラーゲーム『 DREADMOOR (ドレッドムア) 』【Vキャシー/Vtuber】実況",
-    "漁船を改造しながら水没した世紀末世界で魚釣りサバイバルができる最新オープンワールドゲーム【 DREADMOOR 】"
+    "【ホラー】全隠し要素回収達成！行方不明となった夫とその夫を探す妻…過去へと遡る「ビデオテープ」を通して真実に迫る逆ループホラーゲーム『 REC:REWIND 』【Vキャシー/Vtuber】実況",
+    "ビデオテープを使って過去に戻るホラーゲーム【REC:REWIND】",
+    "【 REC:REWIND 】逆ループホラーゲーム！？行方不明になった夫を探す妻のお話【 人生つみこ】"
    ],
    "genres": [
-    "Role-playing (RPG)",
-    "Simulator",
     "Adventure",
     "Indie"
    ],
@@ -328,94 +476,60 @@
    "first_here": false
   },
   {
-   "game": "Rec:Rewind",
-   "growth": 6.25,
-   "videos": 5,
-   "base": 0.0,
-   "channels": 5,
-   "views": 15151,
-   "who": [
-    "えおちゃんねる！",
-    "キャシーさんはホラーゲームで遊びたい",
-    "サンキュームービー",
-    "人生 つみこ (ホラーゲーム専門Vtuber)",
-    "初雪セツナ | ホラー声優Vtuber"
-   ],
-   "titles": [
-    "ビデオテープを使って過去に戻るホラーゲーム【REC:REWIND】",
-    "【ホラー】実写級の恐怖！行方不明となった夫とその夫を探す妻…過去へと遡る「ビデオテープ」を通して真実に迫る逆ループホラーゲーム『 REC:REWIND 』【Vキャシー/Vtuber】実況",
-    "【ホラー】ビデオを遡って夫を探す\"逆ループホラー\"の衝撃の真相がヤバ過ぎた…【REC:REWIND】"
-   ],
-   "genres": [
-    "Adventure",
-    "Indie"
-   ],
-   "year": 2026,
-   "platforms": [
-    "pc"
-   ],
-   "days_seen": 0,
-   "last_seen": null,
-   "first_here": true
-  },
-  {
-   "game": "グランツーリスモ7",
-   "growth": 3.75,
-   "videos": 3,
-   "base": 0.8,
+   "game": "ドラゴンクエストウォーク",
+   "growth": 5.0,
+   "videos": 4,
+   "base": 0.5,
    "channels": 3,
-   "views": 4698,
+   "views": 7096,
    "who": [
-    "ぽみ / Pomi",
-    "あかねのゲーム実況",
-    "パポさん【なんとかなるってぇ〜配信】"
+    "HEP GoGoGo (へっぷ)",
+    "まそしんチャンネル",
+    "まそしんチャンネル",
+    "ワンキル / WKT Games"
    ],
    "titles": [
-    "🌈💙# 347【 グランツーリスモ 7 】　今日は寒かった　デイリー更新ですね～　今日も楽しく走るよ～GOGO！　 #GT7　＃グランツーリスモ7　＃車",
-    "【GT7】🎂ハッピーバースデーロビー参加歓迎🥰【T300RS】#雑談 #livestream #gt7 #racing #グランツーリスモ7",
-    "【GT7】【グランツーリスモ7】「パッド勢の走り #36」　デイリーレースC練習ですよ"
+    "【ドラクエウォーク】ペルセリアのつえで経験値稼ぎまくれる超快適狩場を発見しました！コレはイイぞ！【MP回復セットでMP消費も問題なし】【1パン】【魔弾の剣士レベリング】",
+    "#3【ドラクエウォーク】「ペルセリアの杖がほしい！」#dqw  ＃ドラクエ #FFコラボ #10連ガチャ #７周年　まそしんチャンネルがライブ配信中！",
+    "#2【ドラクエウォーク】「エオルゼアとは？？」#dqw  ＃ドラクエ #FFコラボ #10連ガチャ #７周年　まそしんチャンネルがライブ配信中！"
    ],
-   "genres": [
-    "Racing",
-    "Simulator",
-    "Sport"
-   ],
-   "year": 2022,
-   "platforms": [
-    "console"
-   ],
-   "days_seen": 26,
-   "last_seen": "2026-11-04",
+   "genres": [],
+   "year": null,
+   "platforms": [],
+   "days_seen": 4,
+   "last_seen": "2026-11-03",
    "first_here": false
   },
   {
-   "game": "GeoGuessr",
-   "growth": 3.75,
-   "videos": 3,
-   "base": 0.2,
-   "channels": 3,
-   "views": 300,
+   "game": "Silent Hill: Townfall",
+   "growth": 4.67,
+   "videos": 7,
+   "base": 1.5,
+   "channels": 7,
+   "views": 56938,
    "who": [
-    "桃＋（とーたす）'s チェンネル",
-    "amiami Hobby Channel",
-    "ガ口ガ口リ"
+    "関優太",
+    "SANNINSHOW",
+    "大関ゲーム",
+    "聖帝タイチのゲーム実況チャンネル",
+    "白猫課長🎮GAME"
    ],
    "titles": [
-    "【Geoguessr】11/10 おまとホラーゲッサーとかやろ言うよ",
-    "《GeoGuessr》湊みやのStreaming Club（第103回配信）",
-    "【GeoGuessr】文鳥が居場所を当てるの手伝って！／ガロガロリ"
+    "難解な謎解きを解き無事にエンディングを迎える関優太Part3【SILENT HILL:Townfall】",
+    "#10 再生するなは再生するじゃん【SILENT HILL: Townfall】※ネタバレあり",
+    "徐々に明かされるこの街の真相とリチャードの秘密【SILENT HILL: Townfall】#9"
    ],
    "genres": [
-    "Strategy",
-    "Quiz/Trivia"
+    "Puzzle",
+    "Adventure"
    ],
-   "year": 2013,
+   "year": 2026,
    "platforms": [
     "pc",
     "console"
    ],
-   "days_seen": 2,
-   "last_seen": "2026-10-27",
+   "days_seen": 36,
+   "last_seen": "2026-11-10",
    "first_here": false
   }
  ],

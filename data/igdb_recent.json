@@ -4479,7 +4479,9 @@
  },
  {
   "name": "Astrobarian",
-  "alias": [],
+  "alias": [
+   "Astrobarian.exe"
+  ],
   "pop": 0,
   "y": 2026,
   "p": [
@@ -9687,7 +9689,9 @@
  },
  {
   "name": "Carve The Cave Together",
-  "alias": [],
+  "alias": [
+   "CarveTheCave.exe"
+  ],
   "pop": 0,
   "y": 2026,
   "p": [
@@ -9710,6 +9714,19 @@
   "g": [
    "Simulator",
    "Strategy",
+   "Indie"
+  ]
+ },
+ {
+  "name": "Cash & Stash: A Vaultkeeper Story",
+  "alias": [],
+  "pop": 0,
+  "y": 2026,
+  "p": [
+   "pc"
+  ],
+  "g": [
+   "Simulator",
    "Indie"
   ]
  },
@@ -11453,21 +11470,6 @@
   ]
  },
  {
-  "name": "Clive Barker's Hellraiser: Revival",
-  "alias": [
-   "Hellraiser.exe"
-  ],
-  "pop": 20,
-  "y": 2026,
-  "p": [
-   "pc",
-   "console"
-  ],
-  "g": [
-   "Adventure"
-  ]
- },
- {
   "name": "Clobbo",
   "alias": [],
   "pop": 0,
@@ -12397,7 +12399,8 @@
  {
   "name": "Cosmic Holes Junior",
   "alias": [
-   "COSMIC HOLES Junior"
+   "COSMIC HOLES Junior",
+   "COSMIC_HOLES_Junior.exe"
   ],
   "pop": 0,
   "y": 2026,
@@ -13475,7 +13478,9 @@
  },
  {
   "name": "Cubic Color Confusion",
-  "alias": [],
+  "alias": [
+   "CubicColorConfusion.exe"
+  ],
   "pop": 0,
   "y": 2026,
   "p": [
@@ -18810,7 +18815,9 @@
  },
  {
   "name": "Dying Patience",
-  "alias": [],
+  "alias": [
+   "DyingPatience.exe"
+  ],
   "pop": 0,
   "y": 2026,
   "p": [
@@ -20347,12 +20354,17 @@
  {
   "name": "Eventlocation Simulator",
   "alias": [
-   "EventlocationSimulator.exe"
+   "EventlocationSimulator.exe",
+   "EVENTLOCATION SIMULATOR"
   ],
   "pop": 0,
   "y": 2026,
   "p": [
    "pc"
+  ],
+  "g": [
+   "Simulator",
+   "Indie"
   ]
  },
  {
@@ -21374,6 +21386,7 @@
    "console"
   ],
   "g": [
+   "Puzzle",
    "Indie",
    "Arcade"
   ]
@@ -22318,6 +22331,7 @@
  {
   "name": "First Line",
   "alias": [
+   "FIRST LINE",
    "FIRSTLINE.exe"
   ],
   "pop": 0,
@@ -22341,6 +22355,18 @@
   "g": [
    "Simulator",
    "Strategy",
+   "Indie"
+  ]
+ },
+ {
+  "name": "Fish With Friends",
+  "alias": [],
+  "pop": 0,
+  "y": 2026,
+  "p": [
+   "pc"
+  ],
+  "g": [
    "Indie"
   ]
  },
@@ -22871,7 +22897,9 @@
  },
  {
   "name": "Flopball",
-  "alias": [],
+  "alias": [
+   "Flopball.exe"
+  ],
   "pop": 0,
   "y": 2026,
   "p": [
@@ -23076,7 +23104,8 @@
   "name": "Football Manager 27",
   "alias": [
    "FM27",
-   "Football Manager 2027"
+   "Football Manager 2027",
+   "fm.exe"
   ],
   "pop": 0,
   "y": 2026,
@@ -24170,6 +24199,18 @@
   ]
  },
  {
+  "name": "Gambapets",
+  "alias": [],
+  "pop": 0,
+  "y": 2026,
+  "p": [
+   "pc"
+  ],
+  "g": [
+   "Strategy"
+  ]
+ },
+ {
   "name": "Game Company Simulator",
   "alias": [],
   "pop": 0,
@@ -25187,6 +25228,23 @@
    "pc"
   ],
   "g": [
+   "Adventure",
+   "Indie"
+  ]
+ },
+ {
+  "name": "GoGeez",
+  "alias": [
+   "GoGeez.exe"
+  ],
+  "pop": 0,
+  "y": 2026,
+  "p": [
+   "pc"
+  ],
+  "g": [
+   "Simulator",
+   "Strategy",
    "Adventure",
    "Indie"
   ]
@@ -26710,7 +26768,8 @@
    "pc"
   ],
   "g": [
-   "Simulator"
+   "Simulator",
+   "Indie"
   ]
  },
  {
@@ -28215,6 +28274,7 @@
    "pc"
   ],
   "g": [
+   "Puzzle",
    "Indie"
   ]
  },
@@ -31067,19 +31127,6 @@
  },
  {
   "name": "Invisum Piscium",
-  "alias": [],
-  "pop": 0,
-  "y": 2026,
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Adventure",
-   "Indie"
-  ]
- },
- {
-  "name": "Invokyr",
   "alias": [],
   "pop": 0,
   "y": 2026,
@@ -39032,6 +39079,20 @@
   ]
  },
  {
+  "name": "MultiScope Air Traffic Control",
+  "alias": [],
+  "pop": 0,
+  "y": 2026,
+  "p": [
+   "pc"
+  ],
+  "g": [
+   "Simulator",
+   "Strategy",
+   "Indie"
+  ]
+ },
+ {
   "name": "Munshi Meadows",
   "alias": [
    "MunshiMeadow.exe"
@@ -39336,7 +39397,8 @@
    "Role-playing (RPG)",
    "Simulator",
    "Adventure",
-   "Indie"
+   "Indie",
+   "Visual Novel"
   ]
  },
  {
@@ -40022,23 +40084,6 @@
   ]
  },
  {
-  "name": "Neon Abyss 2",
-  "alias": [
-   "NeonAbyss2.exe"
-  ],
-  "pop": 0,
-  "y": 2026,
-  "p": [
-   "pc",
-   "console"
-  ],
-  "g": [
-   "Role-playing (RPG)",
-   "Adventure",
-   "Indie"
-  ]
- },
- {
   "name": "Neon Auto Party",
   "alias": [],
   "pop": 0,
@@ -40293,7 +40338,9 @@
  },
  {
   "name": "Never Sort By Color",
-  "alias": [],
+  "alias": [
+   "Never Sort By Color.exe"
+  ],
   "pop": 0,
   "y": 2026,
   "p": [
@@ -46650,7 +46697,9 @@
  },
  {
   "name": "Procession Engine",
-  "alias": [],
+  "alias": [
+   "Procession Engine.exe"
+  ],
   "pop": 0,
   "y": 2026,
   "p": [
@@ -46915,7 +46964,9 @@
  },
  {
   "name": "Project: Autumn",
-  "alias": [],
+  "alias": [
+   "projectautumn.exe"
+  ],
   "pop": 0,
   "y": 2026,
   "p": [
@@ -48393,7 +48444,9 @@
  },
  {
   "name": "Rec:Rewind",
-  "alias": [],
+  "alias": [
+   "REC:REWIND"
+  ],
   "pop": 0,
   "y": 2026,
   "p": [
@@ -49883,19 +49936,6 @@
   ],
   "g": [
    "Simulator",
-   "Indie"
-  ]
- },
- {
-  "name": "Roll of Chaos",
-  "alias": [],
-  "pop": 0,
-  "y": 2026,
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Strategy",
    "Indie"
   ]
  },
@@ -51999,7 +52039,9 @@
  },
  {
   "name": "Shadey's Quest",
-  "alias": [],
+  "alias": [
+   "Shadey's Quest.exe"
+  ],
   "pop": 0,
   "y": 2026,
   "p": [
@@ -53058,6 +53100,7 @@
    "pc"
   ],
   "g": [
+   "Puzzle",
    "Simulator",
    "Indie"
   ]
@@ -53677,19 +53720,6 @@
   ],
   "g": [
    "Simulator"
-  ]
- },
- {
-  "name": "Slotbound",
-  "alias": [],
-  "pop": 0,
-  "y": 2026,
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Strategy",
-   "Indie"
   ]
  },
  {
@@ -55929,6 +55959,7 @@
  {
   "name": "Stack & Brew",
   "alias": [
+   "Stack and Brew",
    "StackAndBrew.exe",
    "炼金大亨",
    "煉金大亨"
@@ -58594,7 +58625,9 @@
  },
  {
   "name": "TaskFall",
-  "alias": [],
+  "alias": [
+   "TaskFall.exe"
+  ],
   "pop": 0,
   "y": 2026,
   "p": [
@@ -61395,7 +61428,7 @@
   "alias": [
    "Zelda no Densetsu Toki no Ocarina"
   ],
-  "pop": 11,
+  "pop": 14,
   "y": 2026,
   "p": [
    "console"
@@ -61641,7 +61674,9 @@
  },
  {
   "name": "The Mannequin Forest",
-  "alias": [],
+  "alias": [
+   "The Mannequin Forest.exe"
+  ],
   "pop": 0,
   "y": 2026,
   "p": [
@@ -63005,7 +63040,9 @@
  },
  {
   "name": "Thieves and Gold",
-  "alias": [],
+  "alias": [
+   "Thieves & Gold.exe"
+  ],
   "pop": 0,
   "y": 2026,
   "p": [
@@ -66587,7 +66624,9 @@
  },
  {
   "name": "Vampire: The Masquerade - Oaths and Ashes",
-  "alias": [],
+  "alias": [
+   "Vampire the Masquerade Oaths & Ashes.exe"
+  ],
   "pop": 0,
   "y": 2026,
   "p": [
@@ -69028,23 +69067,6 @@
   ]
  },
  {
-  "name": "Wildaria",
-  "alias": [
-   "PixelWorld",
-   "Wildaria.exe"
-  ],
-  "pop": 0,
-  "y": 2026,
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Role-playing (RPG)",
-   "Adventure",
-   "Indie"
-  ]
- },
- {
   "name": "Wildekin",
   "alias": [],
   "pop": 0,
@@ -69689,6 +69711,7 @@
    "pc"
   ],
   "g": [
+   "Strategy",
    "Adventure",
    "Indie"
   ]
@@ -70226,7 +70249,9 @@
  },
  {
   "name": "Your Suffering is Important To Us",
-  "alias": [],
+  "alias": [
+   "Your Suffering Is Important to Us"
+  ],
   "pop": 0,
   "y": 2026,
   "p": [
@@ -70281,7 +70306,10 @@
  },
  {
   "name": "Yuha's Nightmares",
-  "alias": [],
+  "alias": [
+   "YuhasNightmares.exe",
+   "Yuha's Nightmares. Episode One: Catastrophe"
+  ],
   "pop": 0,
   "y": 2026,
   "p": [
@@ -70336,6 +70364,19 @@
    "Adventure",
    "Indie",
    "Visual Novel"
+  ]
+ },
+ {
+  "name": "Yuna World",
+  "alias": [],
+  "pop": 0,
+  "y": 2026,
+  "p": [
+   "pc",
+   "console"
+  ],
+  "g": [
+   "Adventure"
   ]
  },
  {

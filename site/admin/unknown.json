@@ -1,7 +1,7 @@
 {
  "mode": "admin",
  "date": "2026-11-11",
- "generated": "2026-11-11 01:38",
+ "generated": "2026-11-11 04:53",
  "unknown": [
   {
    "guess": "人狼バーガー",
@@ -48,19 +48,58 @@
    ]
   },
   {
-   "guess": "これって浮気?判定シート",
+   "guess": "縦型配信",
+   "channels": 2,
+   "n": 3,
+   "examples": [
+    {
+     "t": "【縦型配信】×を3つ出さずにチャンピオン取れたら超豪華プレゼント！",
+     "c": "とち丸ちゃん【毎日19時配信】",
+     "u": "https://www.youtube.com/watch?v=GDTGUz8RVrY"
+    },
+    {
+     "t": "【縦型配信】ファイトザブレインロッド",
+     "c": "とち丸ちゃん【毎日19時配信】",
+     "u": "https://www.youtube.com/watch?v=rtXfsdCEts4"
+    },
+    {
+     "t": "【縦型配信】ルーレットで使うポケモン決め🌟#28 #零羅 #新人vtuber #れいライブ #vtuber #参加型 #ユナイト",
+     "c": "零羅-reira-🦋🌒",
+     "u": "https://www.youtube.com/watch?v=uMIq3t0dZJ4"
+    }
+   ]
+  },
+  {
+   "guess": "作業配信",
    "channels": 2,
    "n": 2,
    "examples": [
     {
-     "t": "【 これって浮気？判定シート 】みんな気になるらしいね？しょ～～～がないな～～～やるか～～【茜音カンナ / ななしいんく】",
-     "c": "茜音カンナ / Canna Channel【ななしいんく】",
-     "u": "https://www.youtube.com/watch?v=Af5HSALBg24"
+     "t": "【作業配信】紅茶を飲みながらリモートワーク☕【白雪巴/にじさんじ】",
+     "c": "白雪 巴/Shirayuki Tomoe",
+     "u": "https://www.youtube.com/watch?v=36uK6ziNaas"
     },
     {
-     "t": "【これって浮気？判定シート】やりますか【にじさんじ/町田ちま】",
-     "c": "町田ちま【にじさんじ】",
-     "u": "https://www.youtube.com/watch?v=oiUR-7wbfAs"
+     "t": "【作業配信】ホラーBLゲームのタイトル画像描く！！【男性Vtuber】",
+     "c": "虚無人-創作者Vtuber-",
+     "u": "https://www.youtube.com/watch?v=Ul0rBIuNw08"
+    }
+   ]
+  },
+  {
+   "guess": "検証",
+   "channels": 2,
+   "n": 2,
+   "examples": [
+    {
+     "t": "【検証】ラッパー・マッチョ・山ちゃんの目の前で事件が起きたらどうする？",
+     "c": "MY 宮本悠弥",
+     "u": "https://www.youtube.com/watch?v=QJ7M3VFpPsY"
+    },
+    {
+     "t": "【検証】音ゲーマーなら『作曲』できるんじゃね～？？？【Vtuber／陽雛野】",
+     "c": "陽 雛野 / Hinata Hinano",
+     "u": "https://www.youtube.com/watch?v=9ZBOlTuGgEM"
     }
    ]
   },
@@ -78,6 +117,40 @@
      "t": "【PARALLEL CASE: 2434『ソフィア・ヴァレンタインの記録』】謎解き大好きです！【にじさんじ / 山田龍一郎】",
      "c": "山田龍一郎 / Yamada Ryuichiro【にじさんじ】",
      "u": "https://www.youtube.com/watch?v=zY4dInCZS-o"
+    }
+   ]
+  },
+  {
+   "guess": "勇者パーティはぜんめつしました",
+   "channels": 2,
+   "n": 2,
+   "examples": [
+    {
+     "t": "『勇者パーティはぜんめつしました』先行プレイ！全滅した勇者パーティから\"1人だけ\"を選んで救うダンジョン探索RPG。武器を奪って壊して進む戦闘から、最初のボス「追放者」との死闘までたっぷり紹介",
+     "c": "電ファミ公式チャンネル",
+     "u": "https://www.youtube.com/watch?v=0nXySs2dZmc"
+    },
+    {
+     "t": "【勇者パーティはぜんめつしました。】本日発売！話題の激重ローグライク×RPGが最高すぎた...！？全滅した勇者パーティから一人だけ救う新作デッキビルダー攻略面白いw今だけ10%セール【steam】",
+     "c": " なぎせいな / 凪世薙",
+     "u": "https://www.youtube.com/watch?v=CNRYBNACyAM"
+    }
+   ]
+  },
+  {
+   "guess": "ブースターパックヒーロー",
+   "channels": 2,
+   "n": 2,
+   "examples": [
+    {
+     "t": "【ブースターパックヒーロー】遂に本日発売したカードパックから召喚したキャラで拠点を守るインクリメンタルタワーディフェンスゲーム【Steam】",
+     "c": "Hultutigamer",
+     "u": "https://www.youtube.com/watch?v=ODwsufDLJh4"
+    },
+    {
+     "t": "【ブースターパックヒーロー】本日発売のパック×タワーディフェンス×インクリメンタルが楽しすぎ...！？980円新作オートバトラークリッカー攻略が面白いw今だけ30%セール【steam,android】",
+     "c": " なぎせいな / 凪世薙",
+     "u": "https://www.youtube.com/watch?v=NExrmbT5xzE"
     }
    ]
   },
@@ -138,40 +211,6 @@
    ]
   },
   {
-   "guess": "うたわれるもの 散りゆく者への子守唄",
-   "channels": 1,
-   "n": 2,
-   "examples": [
-    {
-     "t": "#07【 うたわれるもの 散りゆく者への子守唄 】完全初見.ᐟ 泣ける名作SRPGとうたわれる作品!? ※ネタバレ注意.ᐟ 【向日守ぽた/ Varium】",
-     "c": "Pota Ch. 向日守ぽた",
-     "u": "https://www.youtube.com/watch?v=ovkyZKQCuSs"
-    },
-    {
-     "t": "#08【 うたわれるもの 散りゆく者への子守唄 】完全初見.ᐟ 泣ける名作SRPGとうたわれる作品!? ※ネタバレ注意.ᐟ 【向日守ぽた/ Varium】",
-     "c": "Pota Ch. 向日守ぽた",
-     "u": "https://www.youtube.com/watch?v=MSyDxNQivrY"
-    }
-   ]
-  },
-  {
-   "guess": "ツムツム",
-   "channels": 1,
-   "n": 2,
-   "examples": [
-    {
-     "t": "【ツムツム】初見さん大歓迎♡深夜のツム活します",
-     "c": "Ayato🍙ツムツムとご飯",
-     "u": "https://www.youtube.com/watch?v=gQPTumyTyfo"
-    },
-    {
-     "t": "【ツムツム】午後のツム活！初見さん大歓迎♡",
-     "c": "Ayato🍙ツムツムとご飯",
-     "u": "https://www.youtube.com/watch?v=VUOy2CP6n7E"
-    }
-   ]
-  },
-  {
    "guess": "ドラゴンクエストvii エデンの戦士たち",
    "channels": 1,
    "n": 2,
@@ -189,19 +228,19 @@
    ]
   },
   {
-   "guess": "縦型配信",
+   "guess": "白蛇島99fを目指す",
    "channels": 1,
    "n": 2,
    "examples": [
     {
-     "t": "【縦型配信】×を3つ出さずにチャンピオン取れたら超豪華プレゼント！",
-     "c": "とち丸ちゃん【毎日19時配信】",
-     "u": "https://www.youtube.com/watch?v=GDTGUz8RVrY"
+     "t": "【白蛇島99Fを目指す】【風来のシレン 女剣士アスカ見参】　今日はまったりと遊びます",
+     "c": "スミカのゲームちゃんねる",
+     "u": "https://www.youtube.com/watch?v=w4A4cIKCKXE"
     },
     {
-     "t": "【縦型配信】ファイトザブレインロッド",
-     "c": "とち丸ちゃん【毎日19時配信】",
-     "u": "https://www.youtube.com/watch?v=rtXfsdCEts4"
+     "t": "【白蛇島99Fを目指す】【風来のシレン 女剣士アスカ見参】　昨夜のリベンジを果たす！",
+     "c": "スミカのゲームちゃんねる",
+     "u": "https://www.youtube.com/watch?v=Ss2dI-IeyWA"
     }
    ]
   },
@@ -228,7 +267,7 @@
    "n": 2,
    "examples": [
     {
-     "t": "【FC】初代ダービースタリオン｜日本ダービーを勝つまで終われない！【レトロゲーム】",
+     "t": "【FC】初代ダービースタリオン｜日本ダービーを勝つまで終われない！１枠目【レトロゲーム】",
      "c": "シロー",
      "u": "https://www.youtube.com/watch?v=qHLLH0K5yAI"
     },
@@ -240,26 +279,140 @@
    ]
   },
   {
-   "guess": "おつかれ",
+   "guess": "ファミコン",
    "channels": 1,
-   "n": 1,
+   "n": 2,
    "examples": [
     {
-     "t": "【おつかれ】jubeatスペシャルマッチ振り返りと、プシやる(両取り)【nanofLive2026】",
-     "c": "なのふらわー / nanoflower",
-     "u": "https://www.youtube.com/watch?v=k0_emJYnjY4"
+     "t": "【ファミコン】キングコング2 怒りのメガトンパンチ 実況プレイ配信【レトロゲーム/vtuber】",
+     "c": "ごじゃるレトロゲームVtuber",
+     "u": "https://www.youtube.com/watch?v=J09NnixEE7w"
+    },
+    {
+     "t": "【ファミコン】グーニーズ 実況プレイ配信【レトロゲーム/vtuber】",
+     "c": "ごじゃるレトロゲームVtuber",
+     "u": "https://www.youtube.com/watch?v=hUs6TKRfnHY"
     }
    ]
   },
   {
-   "guess": "振り返り",
+   "guess": "テイルズ オブ ヴェスペリア リマスター",
+   "channels": 1,
+   "n": 2,
+   "examples": [
+    {
+     "t": "【テイルズ オブ ヴェスペリア リマスター】#5 ついに明かされるエステルの正体！！完全初見で正義を貫くRPGをやるぞ！！【TOV】※ネタバレ注意",
+     "c": "魔法少女めめ",
+     "u": "https://www.youtube.com/watch?v=lvXvwgF7tZQ"
+    },
+    {
+     "t": "【テイルズ オブ ヴェスペリア リマスター】#6 新たな仲間と旅立ちへ！完全初見で正義を貫くRPGをやるぞ！！【TOV】※ネタバレ注意",
+     "c": "魔法少女めめ",
+     "u": "https://www.youtube.com/watch?v=13UYObI2htM"
+    }
+   ]
+  },
+  {
+   "guess": "ロックマン2 dr.ワイリーの謎",
+   "channels": 1,
+   "n": 2,
+   "examples": [
+    {
+     "t": "【ロックマン2 Dr.ワイリーの謎】#3 ついにワイリーステージ突入！完全初見！！【Mega Man2/Vtuber】※ネタバレ注意 #レトロゲーム",
+     "c": "魔法少女めめ",
+     "u": "https://www.youtube.com/watch?v=euqxF7JchHQ"
+    },
+    {
+     "t": "【ロックマン2 Dr.ワイリーの謎】#2 完全初見！！【Mega Man2/Vtuber】※ネタバレ注意 #レトロゲーム",
+     "c": "魔法少女めめ",
+     "u": "https://www.youtube.com/watch?v=3GMZmPyjUAU"
+    }
+   ]
+  },
+  {
+   "guess": "ブレイク・ザ・アニマル・プリズン",
+   "channels": 1,
+   "n": 2,
+   "examples": [
+    {
+     "t": "【ブレイク・ザ・アニマル・プリズン】黒ヒョウ潜入捜査官ボブ編！ボクシングで刑務所を制したい【初見プレイ#7】",
+     "c": "平成ヒッピーGAMEチャンネル",
+     "u": "https://www.youtube.com/watch?v=4-Bj9iouGxE"
+    },
+    {
+     "t": "【ブレイク・ザ・アニマル・プリズン】黒ヒョウ潜入捜査官ボブ編！喧嘩でのし上がる【初見プレイ#6】",
+     "c": "平成ヒッピーGAMEチャンネル",
+     "u": "https://www.youtube.com/watch?v=E6qvFMt3oOw"
+    }
+   ]
+  },
+  {
+   "guess": "ネタバレ注意  #sfc",
+   "channels": 1,
+   "n": 2,
+   "examples": [
+    {
+     "t": "【ネタバレ注意  #sfc 】 ＃７ ペルシアから！ #ヘラクレスの栄光 Ⅳ #初見プレイ ☆˖°【 #個人vtuber  遊楽木たいむ】 #rpg  #ゲーム実況",
+     "c": "遊楽木たいむ / yuuragi time ch",
+     "u": "https://www.youtube.com/watch?v=PoGOfMGIUSw"
+    },
+    {
+     "t": "【ネタバレ注意  #sfc 】 ＃８ タルタロスから！ #ヘラクレスの栄光 Ⅳ #初見プレイ ☆˖°【 #個人vtuber  遊楽木たいむ】 #rpg  #ゲーム実況",
+     "c": "遊楽木たいむ / yuuragi time ch",
+     "u": "https://www.youtube.com/watch?v=be2D42E_CwM"
+    }
+   ]
+  },
+  {
+   "guess": "rdo",
+   "channels": 1,
+   "n": 2,
+   "examples": [
+    {
+     "t": "【RDO】ルマットリボルバーを馬っとリボルバーと言い間違えた男性【ワイスト】",
+     "c": "ポギーNoppogi",
+     "u": "https://www.youtube.com/watch?v=MezC-b-Rt2M"
+    },
+    {
+     "t": "【RDO】就職成功して親孝行できる30代【ワイスト】",
+     "c": "ポギーNoppogi",
+     "u": "https://www.youtube.com/watch?v=1xcaolKPkKE"
+    }
+   ]
+  },
+  {
+   "guess": "推し土地語りjapan",
    "channels": 1,
    "n": 1,
    "examples": [
     {
-     "t": "【振り返り】昨日の企画の個人スコアを見たり、ボス原案や裏設定のお話など！ #ブイクラファンタジー!! 【 #若魔藤あんず / #にゃんたじあ！ 】",
-     "c": "若魔藤あんず",
-     "u": "https://www.youtube.com/watch?v=U2Fpc07zk8k"
+     "t": "【推し土地語りJAPAN】日本全国47都道府県制覇記念SP🗾振り返り＆ゲストさん凸待ち！ #推し土地語り 【乙奈りの】",
+     "c": "乙奈りの / Rino Otona",
+     "u": "https://www.youtube.com/watch?v=-b5LJA1x7EI"
+    }
+   ]
+  },
+  {
+   "guess": "第07回",
+   "channels": 1,
+   "n": 1,
+   "examples": [
+    {
+     "t": "【第07回】#ガチ狼 Season6／GM 髙橋ヨスガ視点 【ZOOM人狼 高田健志さん主催】",
+     "c": "人狼・マダミスGM【ガッちゃん】",
+     "u": "https://www.youtube.com/watch?v=cCzk7HoLIXc"
+    }
+   ]
+  },
+  {
+   "guess": "病能探偵 第5章後編",
+   "channels": 1,
+   "n": 1,
+   "examples": [
+    {
+     "t": "【病能探偵 第５章後編】ミステリ好きほど騙される⁉『病能者』たちがプレイヤーの”認知”を歪ませてくるデスゲームADV【ミステリーゲーム】",
+     "c": "丑刻ころすけ【ホラー専門だけど超ビビり】",
+     "u": "https://www.youtube.com/watch?v=SfT7gOCdbqw"
     }
    ]
   },
@@ -288,26 +441,14 @@
    ]
   },
   {
-   "guess": "ペアマーダーミステリー",
+   "guess": "ローリングサンダー2",
    "channels": 1,
    "n": 1,
    "examples": [
     {
-     "t": "【ペアマーダーミステリー】イバラのクニ【テオの姉 レオナ視点 / ラヴィリア・イノセンテ】※ネタバレ注意",
-     "c": "Lavi☆An Ch.ラビ☆アン / 双子Vtuber",
-     "u": "https://www.youtube.com/watch?v=NVPL2GjitFo"
-    }
-   ]
-  },
-  {
-   "guess": "あまあまasmr",
-   "channels": 1,
-   "n": 1,
-   "examples": [
-    {
-     "t": "【あまあまASMR】今日は お姉さんのおうちでまったりお話しませんか？♡【雑談】#ひなみ通信 #由比河ひなみ",
-     "c": "ACHRORA - mekPark",
-     "u": "https://www.youtube.com/watch?v=T9A1-YeiAlw"
+     "t": "【ローリングサンダー２】初見プレイ［VTuber/里城はな］#レトロゲーム #vtuber #ゲーム実況 #namco",
+     "c": "里城はな",
+     "u": "https://www.youtube.com/watch?v=CWGmbbuirRE"
     }
    ]
   },
@@ -324,62 +465,26 @@
    ]
   },
   {
-   "guess": "ウル4",
+   "guess": "忍者龍剣伝",
    "channels": 1,
    "n": 1,
    "examples": [
     {
-     "t": "【ウル４】月曜日のラリケン",
-     "c": "KGS Phoenix",
-     "u": "https://www.youtube.com/watch?v=T5ONRGBedzE"
+     "t": "【忍者龍剣伝】刀一本で攻略!?アイテム入手禁止縛りに挑戦！実況配信【レトロゲーム/Vtuber】",
+     "c": "鈴乃音ベルch.",
+     "u": "https://www.youtube.com/watch?v=k_3gP6n6-ik"
     }
    ]
   },
   {
-   "guess": "初見プレイ",
+   "guess": "逆転裁判3",
    "channels": 1,
    "n": 1,
    "examples": [
     {
-     "t": "【初見プレイ】いちいち新鮮に反応する初見の枠です【 NTE ネバーネス トゥ エバーネス 】",
-     "c": "河崎 翆 ch / Kawasaki Sui ch.",
-     "u": "https://www.youtube.com/watch?v=twAFdGR5D64"
-    }
-   ]
-  },
-  {
-   "guess": "ゼルダの伝説スカイウォードソード",
-   "channels": 1,
-   "n": 1,
-   "examples": [
-    {
-     "t": "【ゼルダの伝説スカイウォードソード】ゼルダ「来すぎだろ」⑦涙の最終回【にじさんじ/イブラヒム】",
-     "c": "イブラヒム【にじさんじ】",
-     "u": "https://www.youtube.com/watch?v=Tlpp5gVgKZk"
-    }
-   ]
-  },
-  {
-   "guess": "おつかれさんご",
-   "channels": 1,
-   "n": 1,
-   "examples": [
-    {
-     "t": "【おつかれさんご】ゆるゆる定期雑談！第193回！USJのサンクチュアリ【周央サンゴ】",
-     "c": "周央 サンゴ / Suo Sango【にじさんじ】",
-     "u": "https://www.youtube.com/watch?v=8GtbuaL0y_8"
-    }
-   ]
-  },
-  {
-   "guess": "ゴジラ怪獣大乱闘 リマスター版",
-   "channels": 1,
-   "n": 1,
-   "examples": [
-    {
-     "t": "【ゴジラ怪獣大乱闘 リマスター版】配信 熱帯で怪獣を倒す",
-     "c": "かずのこチャンネル",
-     "u": "https://www.youtube.com/watch?v=yu89AXv6dJc"
+     "t": "【逆転裁判３】 #5 第2話 怪人☆仮面マスク事件の真相！ ※ネタバレ注意！【ベルモンド・バンデラス/にじさんじ】",
+     "c": "ベルモンド・バンデラス",
+     "u": "https://www.youtube.com/watch?v=Z2M_rZhG8HY"
     }
    ]
   },
@@ -444,18 +549,6 @@
    ]
   },
   {
-   "guess": "夢物語の街",
-   "channels": 1,
-   "n": 1,
-   "examples": [
-    {
-     "t": "【 夢物語の街 】まったりchillなお片付け＆お部屋作り📦【 幽乃うつろ / ネオポルテ 】",
-     "c": "幽乃うつろ / Kasukano Utsuro",
-     "u": "https://www.youtube.com/watch?v=NOsFO16KCbk"
-    }
-   ]
-  },
-  {
    "guess": "ライブ配信/朝活雑談",
    "channels": 1,
    "n": 1,
@@ -464,42 +557,6 @@
      "t": "【ライブ配信／朝活雑談】11/10火曜日おはちゃう！！！元気に「おはよう」と「いってらっしゃい」を言う配信！【雪兎ちゃう／VTuber／配信中】",
      "c": "Chau Ch.雪兎ちゃう",
      "u": "https://www.youtube.com/watch?v=9ybVSBGYsIc"
-    }
-   ]
-  },
-  {
-   "guess": "ゲリラ雑談",
-   "channels": 1,
-   "n": 1,
-   "examples": [
-    {
-     "t": "【 ゲリラ雑談 】あ、のぞきみしたな～～～～～～！  ♨ 🔎【 天絆ささは￤ななしいんく 】",
-     "c": "天絆ささは / Sasaha Channel【ななしいんく】",
-     "u": "https://www.youtube.com/watch?v=SypjtrDOJBE"
-    }
-   ]
-  },
-  {
-   "guess": "創世の魔法",
-   "channels": 1,
-   "n": 1,
-   "examples": [
-    {
-     "t": "【 創世の魔法 】- ウィッチクラフト - #マスターデュエル",
-     "c": "たすく",
-     "u": "https://www.youtube.com/watch?v=2xOolowEggk"
-    }
-   ]
-  },
-  {
-   "guess": "メン限 / 黒dio",
-   "channels": 1,
-   "n": 1,
-   "examples": [
-    {
-     "t": "【 メン限 / 黒dio 】今日は君の彼女です💗【向日守ぽた/ Varium】",
-     "c": "Pota Ch. 向日守ぽた",
-     "u": "https://www.youtube.com/watch?v=YqmEAgLXBZM"
     }
    ]
   },
@@ -576,18 +633,6 @@
    ]
   },
   {
-   "guess": "逆転裁判5",
-   "channels": 1,
-   "n": 1,
-   "examples": [
-    {
-     "t": "【逆転裁判5】#03 初見プレイ🔰 第２話後編「逆転の百鬼夜行」セリフ読みます！ 初見さんROMさん大歓迎です🎀【#夢咲ゆん / Vtuber / ネタバレあり / Dual Destinies】",
-     "c": "- yun -  夢咲ゆん",
-     "u": "https://www.youtube.com/watch?v=H3nTVBGzUY4"
-    }
-   ]
-  },
-  {
    "guess": "棋桜",
    "channels": 1,
    "n": 1,
@@ -596,18 +641,6 @@
      "t": "【棋桜】ど深夜のチル将棋配信【Vtuber/かくきりこ】",
      "c": "かくきりこちゃんねる",
      "u": "https://www.youtube.com/watch?v=ZKrvbnvxbDY"
-    }
-   ]
-  },
-  {
-   "guess": "ごきんじょ冒険隊 #5",
-   "channels": 1,
-   "n": 1,
-   "examples": [
-    {
-     "t": "【ごきんじょ冒険隊 ＃５】成長するには「幼稚園」でお勉強すること！【LIVE配信】",
-     "c": "ALTO",
-     "u": "https://www.youtube.com/watch?v=ZuKmi7zNDeY"
     }
    ]
   },
@@ -636,26 +669,26 @@
    ]
   },
   {
-   "guess": "バトオペps版",
+   "guess": "刀剣乱舞online",
    "channels": 1,
    "n": 1,
    "examples": [
     {
-     "t": "【バトオペPS版】ガンダムカードやってたらバトオペしたくなった件について【VTuber #猫本にゃこ 】",
-     "c": "猫本にゃこちゃんねる / Nekomoto Nyako channel",
-     "u": "https://www.youtube.com/watch?v=23s3nPD48PE"
+     "t": "【刀剣乱舞ONLINE】完全初見！口から生まれた男、刀剣男士に出会う【#新人VTuber / #諸越とも  】",
+     "c": "諸越とも〜とうもろこし収穫祭〜",
+     "u": "https://www.youtube.com/watch?v=BXtNO_7Jyv0"
     }
    ]
   },
   {
-   "guess": "雑談/free talk",
+   "guess": "スパロボf完結編",
    "channels": 1,
    "n": 1,
    "examples": [
     {
-     "t": "【雑談/free talk】昼夜逆転になって終わっちゃった！！！【見留ふぃーゆ/#新人vtuber 】",
-     "c": "見留ふぃーゆ / Mitodome Fiyu",
-     "u": "https://www.youtube.com/watch?v=nfGxgXLtQfg"
+     "t": "【スパロボF完結編】#14／エースはキース✨エルガイム大好き💛／初見🔰／ノーリセット継続中／女子大生vtuberのスパロボ配信！【セガサターン実機／スーパーロボット大戦 F】",
+     "c": "よひらぱん@女子大生Vtuber",
+     "u": "https://www.youtube.com/watch?v=eLRkQiA5x9s"
     }
    ]
   },
@@ -696,6 +729,18 @@
    ]
   },
   {
+   "guess": "これって浮気?判定シート",
+   "channels": 1,
+   "n": 1,
+   "examples": [
+    {
+     "t": "【これって浮気？判定シート】やりますか【にじさんじ/町田ちま】",
+     "c": "町田ちま【にじさんじ】",
+     "u": "https://www.youtube.com/watch?v=oiUR-7wbfAs"
+    }
+   ]
+  },
+  {
    "guess": "祭り",
    "channels": 1,
    "n": 1,
@@ -704,6 +749,18 @@
      "t": "【祭り】ポケモン最強男達で1番うまい\"ポケモン×ミスドドーナツ\"を決めよう！",
      "c": "今日ポケch.",
      "u": "https://www.youtube.com/watch?v=XJSVFSWcQcc"
+    }
+   ]
+  },
+  {
+   "guess": "asmr/2時間",
+   "channels": 1,
+   "n": 1,
+   "examples": [
+    {
+     "t": "【ASMR/2時間】音圧強め✦ほっと暖まるゼロ距離♡3種の耳かき/ｶﾘｶﾘ囁き/綿棒/ 耳ふぅRelax.whisper,Deep EarCleaning【KU100】",
+     "c": "Rica Ch. / 花宮莉歌",
+     "u": "https://www.youtube.com/watch?v=AOl7TEDUEgs"
     }
    ]
   },
@@ -768,18 +825,6 @@
    ]
   },
   {
-   "guess": "作業配信",
-   "channels": 1,
-   "n": 1,
-   "examples": [
-    {
-     "t": "【作業配信】紅茶を飲みながらリモートワーク☕【白雪巴/にじさんじ】",
-     "c": "白雪 巴/Shirayuki Tomoe",
-     "u": "https://www.youtube.com/watch?v=36uK6ziNaas"
-    }
-   ]
-  },
-  {
    "guess": "ご報告",
    "channels": 1,
    "n": 1,
@@ -788,18 +833,6 @@
      "t": "【ご報告】ましゅが店長になります",
      "c": "ましゅるむ",
      "u": "https://www.youtube.com/watch?v=z6T6MUeAzZU"
-    }
-   ]
-  },
-  {
-   "guess": "検証",
-   "channels": 1,
-   "n": 1,
-   "examples": [
-    {
-     "t": "【検証】ラッパー・マッチョ・山ちゃんの目の前で事件が起きたらどうする？",
-     "c": "MY 宮本悠弥",
-     "u": "https://www.youtube.com/watch?v=QJ7M3VFpPsY"
     }
    ]
   },
@@ -920,18 +953,6 @@
      "t": "【 おはろこ！】模様替えや断捨離で整う感じ、良いですよね～～～【 鏑木ろこ￤にじさんじ 】",
      "c": "鏑木ろこ / Kaburaki Roco【にじさんじ】",
      "u": "https://www.youtube.com/watch?v=qy2f8aSE6g4"
-    }
-   ]
-  },
-  {
-   "guess": "勇者パーティはぜんめつしました",
-   "channels": 1,
-   "n": 1,
-   "examples": [
-    {
-     "t": "『勇者パーティはぜんめつしました』先行プレイ！全滅した勇者パーティから\"1人だけ\"を選んで救うダンジョン探索RPG。武器を奪って壊して進む戦闘から、最初のボス「追放者」との死闘までたっぷり紹介",
-     "c": "電ファミ公式チャンネル",
-     "u": "https://www.youtube.com/watch?v=0nXySs2dZmc"
     }
    ]
   },
@@ -1248,18 +1269,6 @@
    ]
   },
   {
-   "guess": "ブースターパックヒーロー",
-   "channels": 1,
-   "n": 1,
-   "examples": [
-    {
-     "t": "【ブースターパックヒーロー】遂に本日発売したカードパックから召喚したキャラで拠点を守るインクリメンタルタワーディフェンスゲーム【Steam】",
-     "c": "Hultutigamer",
-     "u": "https://www.youtube.com/watch?v=ODwsufDLJh4"
-    }
-   ]
-  },
-  {
    "guess": "日本勢かなり厳しい",
    "channels": 1,
    "n": 1,
@@ -1268,6 +1277,18 @@
      "t": "【日本勢かなり厳しい】GTA6の無規制版を日本語で遊べない可能性…海外版を買えば解決、が今回は通用しないかも…？なんで俺らはいつもハブられるんだぁぁあ！",
      "c": "けまいチャンネル 【ゲーム紹介・攻略】",
      "u": "https://www.youtube.com/watch?v=-wymNyME8DI"
+    }
+   ]
+  },
+  {
+   "guess": "うたわれるもの 散りゆく者への子守唄",
+   "channels": 1,
+   "n": 1,
+   "examples": [
+    {
+     "t": "#08【 うたわれるもの 散りゆく者への子守唄 】完全初見.ᐟ 泣ける名作SRPGとうたわれる作品!? ※ネタバレ注意.ᐟ 【向日守ぽた/ Varium】",
+     "c": "Pota Ch. 向日守ぽた",
+     "u": "https://www.youtube.com/watch?v=MSyDxNQivrY"
     }
    ]
   },
@@ -1328,6 +1349,18 @@
      "t": "【バトオペ2】めっちゃゲリラ!!!レーティング行くよ～!!!【星屑ぷらね/すぺしゃりて】#すぺしゃりて #すぺしゃりて #バトオペ2",
      "c": "星屑ぷらね / Planei Hoshikuzu",
      "u": "https://www.youtube.com/watch?v=euRD2TFAvNA"
+    }
+   ]
+  },
+  {
+   "guess": "ツムツム",
+   "channels": 1,
+   "n": 1,
+   "examples": [
+    {
+     "t": "【ツムツム】午後のツム活！初見さん大歓迎♡",
+     "c": "Ayato🍙ツムツムとご飯",
+     "u": "https://www.youtube.com/watch?v=VUOy2CP6n7E"
     }
    ]
   },
@@ -1692,18 +1725,6 @@
    ]
   },
   {
-   "guess": "イケ勘 イケメンになるかどうか勘で付き合うゲーム",
-   "channels": 1,
-   "n": 1,
-   "examples": [
-    {
-     "t": "【イケ勘 イケメンになるかどうか勘で付き合うゲーム】イケメンにしてやんよ！／ガロガロリ",
-     "c": "ガ口ガ口リ",
-     "u": "https://www.youtube.com/watch?v=hUEdVcLvBLE"
-    }
-   ]
-  },
-  {
    "guess": "攻略と開発秘話",
    "channels": 1,
    "n": 1,
@@ -1872,18 +1893,6 @@
    ]
   },
   {
-   "guess": "ロックマンx アニバーサリー コレクション",
-   "channels": 1,
-   "n": 1,
-   "examples": [
-    {
-     "t": "#3【ロックマンX アニバーサリー コレクション】X2残り2ステージ、サブタンクとライフアップも全部取りたい！【ゲーム実況】",
-     "c": "SignDuck / サインダック",
-     "u": "https://www.youtube.com/watch?v=CTYalXj7o1c"
-    }
-   ]
-  },
-  {
    "guess": "作業配信20261110",
    "channels": 1,
    "n": 1,
@@ -1906,10 +1915,739 @@
      "u": "https://www.youtube.com/watch?v=fqVptuieOaY"
     }
    ]
+  },
+  {
+   "guess": "君色パトラif",
+   "channels": 1,
+   "n": 1,
+   "examples": [
+    {
+     "t": "【君色パトラIF】大変健全な君色パトラIF、体験版をやってみる！【周防パトラ】",
+     "c": "Patra Channel / 周防パトラ",
+     "u": "https://www.youtube.com/watch?v=FCCcUWrEPZs"
+    }
+   ]
+  },
+  {
+   "guess": "定期配信#50",
+   "channels": 1,
+   "n": 1,
+   "examples": [
+    {
+     "t": "【定期配信＃50】水曜(木曜)のお昼の１２時はリオナとランチ❤【ホロライブ  響咲リオナ】#リオナとランチ",
+     "c": "Riona Ch. 響咲リオナ - FLOW GLOW",
+     "u": "https://www.youtube.com/watch?v=U-Epanxn7IA"
+    }
+   ]
+  },
+  {
+   "guess": "ポッキーの日",
+   "channels": 1,
+   "n": 1,
+   "examples": [
+    {
+     "t": "【ポッキーの日】第〇回ポッキーなめなめ大会🎊 一緒にポッキーをなめよう【 にじさんじフミ 】#ポッキーなめなめ大会",
+     "c": "フミ/にじさんじ",
+     "u": "https://www.youtube.com/watch?v=uI6ZaYcxa0U"
+    }
+   ]
+  },
+  {
+   "guess": "朝ラジ",
+   "channels": 1,
+   "n": 1,
+   "examples": [
+    {
+     "t": "【 朝ラジ 】わんもに！～第161回～【茜音カンナ / ななしいんく】",
+     "c": "茜音カンナ / Canna Channel【ななしいんく】",
+     "u": "https://www.youtube.com/watch?v=PTZMIDjm7kQ"
+    }
+   ]
+  },
+  {
+   "guess": "ゆうめつ",
+   "channels": 1,
+   "n": 1,
+   "examples": [
+    {
+     "t": "【ゆうめつ】\"新作神ゲー\"高湿度・激重感情RPG「勇者パーティはぜんめつしました。」攻略配信※ネタバレ注意",
+     "c": "びりQ",
+     "u": "https://www.youtube.com/watch?v=z3NspYYxxz0"
+    }
+   ]
+  },
+  {
+   "guess": "風来のシレン外伝",
+   "channels": 1,
+   "n": 1,
+   "examples": [
+    {
+     "t": "【風来のシレン外伝】アスカ見参 白蛇島 1日目【#しらたきch】",
+     "c": "しらたきch",
+     "u": "https://www.youtube.com/watch?v=bD0zTbUls8c"
+    }
+   ]
+  },
+  {
+   "guess": "チケット先行抽選受付中!",
+   "channels": 1,
+   "n": 1,
+   "examples": [
+    {
+     "t": "【チケット先行抽選受付中！ 】2ndワンマンLIVE「ときめきレボリューション2027」2027年3月20日(土) at 池袋harevutai〘 #ときレボ2027 #ベルプロ 〙",
+     "c": "心恋音むいる / Kokone Muiru【ベルプロ】",
+     "u": "https://www.youtube.com/watch?v=biRJZkH5opI"
+    }
+   ]
+  },
+  {
+   "guess": "第08回",
+   "channels": 1,
+   "n": 1,
+   "examples": [
+    {
+     "t": "【第08回】#ガチ狼 Season6／GM 髙橋ヨスガ視点 【ZOOM人狼 高田健志さん主催】",
+     "c": "人狼・マダミスGM【ガッちゃん】",
+     "u": "https://www.youtube.com/watch?v=_2RtIxHNKnE"
+    }
+   ]
+  },
+  {
+   "guess": "活俠傳",
+   "channels": 1,
+   "n": 1,
+   "examples": [
+    {
+     "t": "【活俠傳】放送事故【鵺本ねむ】",
+     "c": "鵺本ねむ / Nuemoto Nemu",
+     "u": "https://www.youtube.com/watch?v=Iulref9h8Ss"
+    }
+   ]
+  },
+  {
+   "guess": "路上ライブ炎上",
+   "channels": 1,
+   "n": 1,
+   "examples": [
+    {
+     "t": "【路上ライブ炎上】謝罪文出したけど…そもそも何が問題だったのか？",
+     "c": "つばさちゃんねる",
+     "u": "https://www.youtube.com/watch?v=YkqwM1Y594o"
+    }
+   ]
+  },
+  {
+   "guess": "オラドラ",
+   "channels": 1,
+   "n": 1,
+   "examples": [
+    {
+     "t": "【オラドラ】トライアドバトル、本当に回るべき？ダンベル効率を育成クエストと実測比較！",
+     "c": "つばさちゃんねる",
+     "u": "https://www.youtube.com/watch?v=H4gOEohjtNk"
+    }
+   ]
+  },
+  {
+   "guess": "sandustry #6",
+   "channels": 1,
+   "n": 1,
+   "examples": [
+    {
+     "t": "【 Sandustry #6 】今日も元気に錬金だ！集え！金を操りしモノたち！今日こそすべて自動化して究極の錬金生活を実現する！！いざ夢の錬金生活！【 #ゲーム実況 #新人vtuber #恋因ロス 】",
+     "c": "恋因ロス KoinRosu",
+     "u": "https://www.youtube.com/watch?v=hMrHNqb9ZnE"
+    }
+   ]
+  },
+  {
+   "guess": "神会社",
+   "channels": 1,
+   "n": 1,
+   "examples": [
+    {
+     "t": "【神会社】モノリスソフト働きすぎｗ 2026年だけで5作品、『時オカ』『スプラ』にも参加  #ゆっくり解説",
+     "c": "スイッチ通【ゲームニュース深掘り】",
+     "u": "https://www.youtube.com/watch?v=w7O6yieXLdQ"
+    }
+   ]
+  },
+  {
+   "guess": "超探偵事件簿レインコード",
+   "channels": 1,
+   "n": 1,
+   "examples": [
+    {
+     "t": "【超探偵事件簿レインコード】女子高に潜入だ！超能力で激ムズ事件を解決する！ 完全初見プレイ #5",
+     "c": "こいおばけ",
+     "u": "https://www.youtube.com/watch?v=N_Df31fEPLg"
+    }
+   ]
+  },
+  {
+   "guess": "針探し鬼畜ゲー",
+   "channels": 1,
+   "n": 1,
+   "examples": [
+    {
+     "t": "【針探し鬼畜ゲー】早くお金を貯めたいのに、見慣れない機械に翻弄されるｗ #FindTheNeedle",
+     "c": "めももぐらし！！",
+     "u": "https://www.youtube.com/watch?v=AIVrmws8zbM"
+    }
+   ]
+  },
+  {
+   "guess": "ユナイト/初見歓迎",
+   "channels": 1,
+   "n": 1,
+   "examples": [
+    {
+     "t": "【ユナイト/初見歓迎】コラボカスタム☆練習したいの(*'▽')【カスタム/参加型】",
+     "c": "凛堂すずか / Suzuka Rindo",
+     "u": "https://www.youtube.com/watch?v=aqInF6mz79Y"
+    }
+   ]
+  },
+  {
+   "guess": "チャンピオンズ/初見歓迎",
+   "channels": 1,
+   "n": 1,
+   "examples": [
+    {
+     "t": "【チャンピオンズ/初見歓迎】初見プレイ！よわよわVはハイパーボールを目指すのだ…！【ポケモン】",
+     "c": "凛堂すずか / Suzuka Rindo",
+     "u": "https://www.youtube.com/watch?v=WTLig05KQCs"
+    }
+   ]
+  },
+  {
+   "guess": "祝️本日リリース #ヨミバト",
+   "channels": 1,
+   "n": 1,
+   "examples": [
+    {
+     "t": "【㊗️本日リリース #ヨミバト】現在２位なので緊急で配信しなきゃと思った￤PR【#漢検 】ゆるふわまったり勢のゆかりさん",
+     "c": "ゆるふわまったり勢のゆかりさん",
+     "u": "https://www.youtube.com/watch?v=K0DuK2gxXoU"
+    }
+   ]
+  },
+  {
+   "guess": "マリオ64",
+   "channels": 1,
+   "n": 1,
+   "examples": [
+    {
+     "t": "【マリオ64】伝説の神ゲー『スーパーマリオ64』を初見プレイ！初の3Dマリオだ！！！【初見実況/N64】",
+     "c": "モモツナ",
+     "u": "https://www.youtube.com/watch?v=pVdqwcW8ATU"
+    }
+   ]
+  },
+  {
+   "guess": "司書のお仕事",
+   "channels": 1,
+   "n": 1,
+   "examples": [
+    {
+     "t": "【司書のお仕事】おしゃべりしながら図書館のお片付け！【＃2】#vtuber #新人vtuber #司書のお仕事 #librarian #おかたづけ #雑談 #初見さん大歓迎 #朝活",
+     "c": "鈴ノ時みぃ@新人Vtuber",
+     "u": "https://www.youtube.com/watch?v=SHuBFUXhUXE"
+    }
+   ]
+  },
+  {
+   "guess": "ときめきメモリアル girl's side 1",
+   "channels": 1,
+   "n": 1,
+   "examples": [
+    {
+     "t": "【ときめきメモリアル Girl's Side 1】氷室先生、おれが恋とトークを教えてやるよ【#新人VTuber / #諸越とも  】",
+     "c": "諸越とも〜とうもろこし収穫祭〜",
+     "u": "https://www.youtube.com/watch?v=Io2WHdSS65M"
+    }
+   ]
+  },
+  {
+   "guess": "ender magnolia",
+   "channels": 1,
+   "n": 1,
+   "examples": [
+    {
+     "t": "【ENDER MAGNOLIA】 マップ広げていくぞ！！＃２【Vtuberしまゆま】",
+     "c": "しまゆま",
+     "u": "https://www.youtube.com/watch?v=w45ItOSfyO8"
+    }
+   ]
+  },
+  {
+   "guess": "なるほど!ザ・ワールド",
+   "channels": 1,
+   "n": 1,
+   "examples": [
+    {
+     "t": "【なるほど！ザ・ワールド】あの伝説のクイズ番組がゲームに!?みんな一緒にクイズやろう【レトロゲーム】",
+     "c": "藤白みけ",
+     "u": "https://www.youtube.com/watch?v=s_1S75WlK3o"
+    }
+   ]
+  },
+  {
+   "guess": "ムーミン谷の夏まつり",
+   "channels": 1,
+   "n": 1,
+   "examples": [
+    {
+     "t": "【ムーミン谷の夏まつり】まるで動く絵本！癒される手描きアート世界が舞台の新作アドベンチャー【抹茶のインディーゲーム実況】",
+     "c": "抹茶のゲーム実況チャンネル",
+     "u": "https://www.youtube.com/watch?v=qxUSa1RuYaM"
+    }
+   ]
+  },
+  {
+   "guess": "メタルマックスリターンズ",
+   "channels": 1,
+   "n": 1,
+   "examples": [
+    {
+     "t": "【メタルマックスリターンズ】#08 🔰初見プレイ🔰デビルズタワーの先へ行くぞ【ゲーム実況／草蔦みかん（Vtuber）】#レトロゲーム",
+     "c": "草蔦みかん / Kusatsuta Mikan",
+     "u": "https://www.youtube.com/watch?v=yVfmQuQmWUw"
+    }
+   ]
+  },
+  {
+   "guess": "ゼルダの伝説 神々のトライフォース",
+   "channels": 1,
+   "n": 1,
+   "examples": [
+    {
+     "t": "【ゼルダの伝説 神々のトライフォース】時オカ出たし神トラ遊ぶぞ②【ゲーム実況／草蔦みかん（Vtuber）】#レトロゲーム",
+     "c": "草蔦みかん / Kusatsuta Mikan",
+     "u": "https://www.youtube.com/watch?v=N6vO_iC_1aY"
+    }
+   ]
+  },
+  {
+   "guess": "歌枠/平成レトロ",
+   "channels": 1,
+   "n": 1,
+   "examples": [
+    {
+     "t": "【歌枠／平成レトロ】ひさしぶりの声出し‼️お昼すぎまで【月音ゆき】",
+     "c": "月音ゆき - つくねゆき",
+     "u": "https://www.youtube.com/watch?v=NBVKGSGeoos"
+    }
+   ]
+  },
+  {
+   "guess": "ラングリッサー1&2",
+   "channels": 1,
+   "n": 1,
+   "examples": [
+    {
+     "t": "【ラングリッサー1&2】セガサターン実機で完全初見プレイ🎮お試しからの＼継続決定！／うるし原智志先生キャラデザ😍名作SRPG✨ファイアーエムブレム・ジージェネ大好きVTuber💙【SS版 #06】",
+     "c": "ブリエル Ch.",
+     "u": "https://www.youtube.com/watch?v=L1CAwEY2IrQ"
+    }
+   ]
+  },
+  {
+   "guess": "すれすぱ2",
+   "channels": 1,
+   "n": 1,
+   "examples": [
+    {
+     "t": "【すれすぱ2】休憩すれすぱ2【質問・初見歓迎】",
+     "c": "ser【さー】",
+     "u": "https://www.youtube.com/watch?v=4qTYb0SrkEs"
+    }
+   ]
+  },
+  {
+   "guess": "デカール作成 gt7",
+   "channels": 1,
+   "n": 1,
+   "examples": [
+    {
+     "t": "【デカール作成 GT7】雑談しながらInkscapeぽちぽち🎨【にうふぁ/StellArt.】",
+     "c": "にうふぁ【StellArt.】",
+     "u": "https://www.youtube.com/watch?v=qjQnFefGWHM"
+    }
+   ]
+  },
+  {
+   "guess": "fe 紋章の謎",
+   "channels": 1,
+   "n": 1,
+   "examples": [
+    {
+     "t": "【FE 紋章の謎】2部 完全初見プレイ＃1 【#リリーパッド/#Vtuber】#ファイアーエムブレム #実況プレイ",
+     "c": "リリーパッドLilypad",
+     "u": "https://www.youtube.com/watch?v=Xjb67kshKQ8"
+    }
+   ]
+  },
+  {
+   "guess": "ウル4",
+   "channels": 1,
+   "n": 1,
+   "examples": [
+    {
+     "t": "【ウル４】月曜日のラリケン",
+     "c": "KGS Phoenix",
+     "u": "https://www.youtube.com/watch?v=JRGQNcPDMiM"
+    }
+   ]
+  },
+  {
+   "guess": "ときメモgs4",
+   "channels": 1,
+   "n": 1,
+   "examples": [
+    {
+     "t": "【ときメモGS4】彼氏にするためにまだ見ぬ攻略キャラを全員見たい！【ゲーム実況 / #Vtuber 】",
+     "c": "タマゴゲームズ -Tamago Games-",
+     "u": "https://www.youtube.com/watch?v=h5WX_SHiVi0"
+    }
+   ]
+  },
+  {
+   "guess": "プラトニカ・スペース #2",
+   "channels": 1,
+   "n": 1,
+   "examples": [
+    {
+     "t": "【プラトニカ・スペース #2】記憶を取り戻すために無数の部屋を探索するSFアドベンチャー！【#個人vtuber  / トムヤム】",
+     "c": "トムヤム ch / TOMUYAMU ch",
+     "u": "https://www.youtube.com/watch?v=PKXymC--bTQ"
+    }
+   ]
+  },
+  {
+   "guess": "津軽弁実況",
+   "channels": 1,
+   "n": 1,
+   "examples": [
+    {
+     "t": "#25【津軽弁実況】ついにカギ爪の男が登場する！ スーパーロボット大戦T【Switch】",
+     "c": "ICHIYOH-津軽弁ゲーム実況者-",
+     "u": "https://www.youtube.com/watch?v=IUpklM6iXY0"
+    }
+   ]
+  },
+  {
+   "guess": "18年目冬鉱石場",
+   "channels": 1,
+   "n": 1,
+   "examples": [
+    {
+     "t": "【18年目冬鉱石場】ゆるーくやりこむミネラルタウン#124",
+     "c": "いも畑ちゃんねる",
+     "u": "https://www.youtube.com/watch?v=lGialiFggf4"
+    }
+   ]
+  },
+  {
+   "guess": "幻想水滸伝1",
+   "channels": 1,
+   "n": 1,
+   "examples": [
+    {
+     "t": "【幻想水滸伝1】05 意外にサクサク集まる！？＜#りり幻水1配信 幻水1 攻略本お持ちの方大歓迎！＞",
+     "c": "LiLy💠りりねこにゃんねる",
+     "u": "https://www.youtube.com/watch?v=m4fFOlP56s4"
+    }
+   ]
+  },
+  {
+   "guess": "getbackers",
+   "channels": 1,
+   "n": 1,
+   "examples": [
+    {
+     "t": "【GetBackers】奪還屋リメイク示唆にネット狂喜！声優続投か一新か！原作ラスト完全再現の可能性！",
+     "c": "あにちゃん。",
+     "u": "https://www.youtube.com/watch?v=NZOyZvreJYE"
+    }
+   ]
+  },
+  {
+   "guess": "コードギアス",
+   "channels": 1,
+   "n": 1,
+   "examples": [
+    {
+     "t": "【コードギアス】20年経ってもアニメ史上最高傑作な理由…復活は蛇足だったのか？徹底議論",
+     "c": "あにちゃん。",
+     "u": "https://www.youtube.com/watch?v=45agK83Nob4"
+    }
+   ]
+  },
+  {
+   "guess": "ark asa アストレオス",
+   "channels": 1,
+   "n": 1,
+   "examples": [
+    {
+     "t": "【ARK ASA アストレオス】新アップデートされたギガノトサウルスをテイムせよ！",
+     "c": "ポギーNoppogi",
+     "u": "https://www.youtube.com/watch?v=B48A79MULMI"
+    }
+   ]
+  },
+  {
+   "guess": "ff8/part2",
+   "channels": 1,
+   "n": 1,
+   "examples": [
+    {
+     "t": "【FF8/Part2】ついにシード！スコールの物語、続きを歩むのだ【ゲーム実況】※ネタバレ注意",
+     "c": "すねこしゅり",
+     "u": "https://www.youtube.com/watch?v=RRbqGEUncks"
+    }
+   ]
+  },
+  {
+   "guess": "イルーナ戦記",
+   "channels": 1,
+   "n": 1,
+   "examples": [
+    {
+     "t": "【イルーナ戦記】新企画の準備配信！！！！",
+     "c": "美空ましろ　関西弁VTuber",
+     "u": "https://www.youtube.com/watch?v=MxHlU5rAxXA"
+    }
+   ]
+  },
+  {
+   "guess": "青鬼",
+   "channels": 1,
+   "n": 1,
+   "examples": [
+    {
+     "t": "【青鬼】ホラー耐性ゼロで完全初見実況！絶叫と笑いの4時間総集編 #vtuber",
+     "c": "レトロ・ホラー絶叫・奈良音花",
+     "u": "https://www.youtube.com/watch?v=xIkgkFTFdMo"
+    }
+   ]
+  },
+  {
+   "guess": "でこれいと・でこれいしょん",
+   "channels": 1,
+   "n": 1,
+   "examples": [
+    {
+     "t": "【でこれいと・でこれいしょん】サイドストーリーの続き見よ✨ ※ネタバレ注意【#02】【ゾンビ天使すみ】",
+     "c": "ゾンビ天使 すみ",
+     "u": "https://www.youtube.com/watch?v=-sfMyyZs4Ro"
+    }
+   ]
+  },
+  {
+   "guess": "2dxハンクラ動画",
+   "channels": 1,
+   "n": 1,
+   "examples": [
+    {
+     "t": "【2DXハンクラ動画】Shadow World(ANOTHER)【beatmaniaIIDX30 RESIDENT】#iidx",
+     "c": "大尉げーむちゃんねる",
+     "u": "https://www.youtube.com/watch?v=uRqEROddry4"
+    }
+   ]
+  },
+  {
+   "guess": "コメント大歓迎!!!",
+   "channels": 1,
+   "n": 1,
+   "examples": [
+    {
+     "t": "【コメント大歓迎!!!】自由すぎる雑談を縦型配信でやりたい 19回目",
+     "c": "はるまぎん",
+     "u": "https://www.youtube.com/watch?v=qoXliEUEFXM"
+    }
+   ]
+  },
+  {
+   "guess": "lushfoil photography sim",
+   "channels": 1,
+   "n": 1,
+   "examples": [
+    {
+     "t": "【Lushfoil Photography Sim】PS5の配信テストをしながらゆっくり写真を撮ろう #1【神谷みや/VtuberJP】",
+     "c": "神谷みや / Miya Kamiya",
+     "u": "https://www.youtube.com/watch?v=voaVItRkSjg"
+    }
+   ]
+  },
+  {
+   "guess": "sdvx",
+   "channels": 1,
+   "n": 1,
+   "examples": [
+    {
+     "t": "【SDVX】パワー系譜面もたくさん！18.7をS埋め！⟡.*",
+     "c": "なみゅ",
+     "u": "https://www.youtube.com/watch?v=lF6n5dD-ROM"
+    }
+   ]
+  },
+  {
+   "guess": "柊 ノア",
+   "channels": 1,
+   "n": 1,
+   "examples": [
+    {
+     "t": "【柊 ノア】コンビニの外からずっと男がこっちを見てる…【The Staring Man | 凝視男】",
+     "c": "柊 ノア",
+     "u": "https://www.youtube.com/watch?v=XAopgpK8ySY"
+    }
+   ]
+  },
+  {
+   "guess": "パタポン1+2",
+   "channels": 1,
+   "n": 1,
+   "examples": [
+    {
+     "t": "【パタポン1+2】私も最初は音げーだと思っていました　Part.6 【 #個人勢Vtuber 】",
+     "c": "コマテンダー",
+     "u": "https://www.youtube.com/watch?v=-JX5fCnjAC0"
+    }
+   ]
+  },
+  {
+   "guess": "新・鬼ヶ島",
+   "channels": 1,
+   "n": 1,
+   "examples": [
+    {
+     "t": "【新･鬼ヶ島】鬼ヶ島に突入！ディスクシステムの名作アドベンチャー #4 【初見】【ひとり姪っ子】",
+     "c": "姪っ子とおじさんたち / ゲーム実況Vtuber レトロゲーム等",
+     "u": "https://www.youtube.com/watch?v=ZJpcQjLEs5M"
+    }
+   ]
+  },
+  {
+   "guess": "第九期#v名人戦",
+   "channels": 1,
+   "n": 1,
+   "examples": [
+    {
+     "t": "【第九期#V名人戦】A級盾組 VS鹿角ほたるさん　龍馬うたよる視点配信！#81道場",
+     "c": "龍馬うたよる",
+     "u": "https://www.youtube.com/watch?v=50EqKdl8S8E"
+    }
+   ]
+  },
+  {
+   "guess": "ダブルバトル",
+   "channels": 1,
+   "n": 1,
+   "examples": [
+    {
+     "t": "【ダブルバトル】さっき起きた【見留ふぃーゆ/#新人vtuber 】#FRSTARS2nd",
+     "c": "見留ふぃーゆ / Mitodome Fiyu",
+     "u": "https://www.youtube.com/watch?v=m3pKxq-lrNE"
+    }
+   ]
+  },
+  {
+   "guess": "病能探偵",
+   "channels": 1,
+   "n": 1,
+   "examples": [
+    {
+     "t": "【病能探偵】あおの1人まったり配信～ぱぷおすすめゲーム！の巻～",
+     "c": "あお",
+     "u": "https://www.youtube.com/watch?v=Zsebd6_wOHA"
+    }
+   ]
+  },
+  {
+   "guess": "テイルズ オブ ゼスティリア #01",
+   "channels": 1,
+   "n": 1,
+   "examples": [
+    {
+     "t": "【テイルズ オブ ゼスティリア #01】評価が分かれるこの作品、本当に面白いのか！？【初見実況】",
+     "c": "アルカ・イーネウス",
+     "u": "https://www.youtube.com/watch?v=x0KRJDxDYL8"
+    }
+   ]
+  },
+  {
+   "guess": "月イチ雑談",
+   "channels": 1,
+   "n": 1,
+   "examples": [
+    {
+     "t": "【月イチ雑談】牙神兄妹で11月を振り返っていくぞ【マシュマロも読むよ】 #雑談配信 #マシュマロ #vtuber",
+     "c": "牙神大牙 & 小牙ちゃん | 兄妹Vtuber",
+     "u": "https://www.youtube.com/watch?v=UnoH5bbKpP0"
+    }
+   ]
+  },
+  {
+   "guess": "ネコパワー!やちよ",
+   "channels": 1,
+   "n": 1,
+   "examples": [
+    {
+     "t": "【ネコパワー！やちよ】【新作ゲームプレイ】ネコちゃんたちと力をあわせて悪いニンゲンをやっつけよう！",
+     "c": "コマツスタジオ ゲーム紹介 チャンネル",
+     "u": "https://www.youtube.com/watch?v=VTHXKDshPz8"
+    }
+   ]
+  },
+  {
+   "guess": "雑談/ゲーム",
+   "channels": 1,
+   "n": 1,
+   "examples": [
+    {
+     "t": "【雑談/ゲーム】まったり朝活の雑配信【個人勢VTuber】",
+     "c": "イレシア Tiresias",
+     "u": "https://www.youtube.com/watch?v=TA7H0a_yTO0"
+    }
+   ]
+  },
+  {
+   "guess": "勝利の女神:ニケ",
+   "channels": 1,
+   "n": 1,
+   "examples": [
+    {
+     "t": "【勝利の女神：ニケ】完全初見！何も知らない女がNIKKEやる 第３１回",
+     "c": "桃宮めあ",
+     "u": "https://www.youtube.com/watch?v=JTDiHBRkKiE"
+    }
+   ]
   }
  ],
  "leads": {
   "events": [
+   {
+    "tag": "#ゲーム実況",
+    "channels": [
+     "Ika&Ninon Games",
+     "M家の休日マサ",
+     "SignDuck / サインダック",
+     "Usagi Ch. 因幡兎",
+     "くものち ふれすch.☁️🫧",
+     "てぃーけぇー",
+     "のんびり猫のゆっくりゲーム実況",
+     "ゆにるユニ",
+     "エラch",
+     "ジョアだよ",
+     "太刀ひろし　【Uncle gamer】 ",
+     "恋因ロス KoinRosu",
+     "豚咲あおい_TomisakiAoi",
+     "遊楽木たいむ / yuuragi time ch",
+     "運天りらん",
+     "里城はな"
+    ]
+   },
    {
     "tag": "#ガチグラ2",
     "channels": [
@@ -1922,31 +2660,32 @@
     ]
    },
    {
-    "tag": "#ゲーム実況",
-    "channels": [
-     "SignDuck / サインダック",
-     "Usagi Ch. 因幡兎",
-     "のんびり猫のゆっくりゲーム実況",
-     "エラch",
-     "ジョアだよ"
-    ]
-   },
-   {
     "tag": "#パレットタウン",
     "channels": [
      "あかるん / Akarun Ch.",
      "せんと / Cent",
      "塩田いお",
      "小鈴りあん / Lian Channel【ミクスト】",
-     "葛ノ葉鈴撫　-Kuzunoha suzunade- Ch"
+     "葛ノ葉鈴撫　-Kuzunoha suzunade- Ch",
+     "蒲田凡 / かまぼん"
     ]
    },
    {
-    "tag": "#ホロドリ",
+    "tag": "#レトロゲーム",
     "channels": [
-     "Sopia Ch. 宙科そぴあ ‐ アソビ★まわり隊!",
-     "テトとホロドリ【解説・攻略】",
-     "花束 ゆいは / Hanataba Yuiha"
+     "どえむげーまーらうる",
+     "草蔦みかん / Kusatsuta Mikan",
+     "里城はな",
+     "魔法少女めめ"
+    ]
+   },
+   {
+    "tag": "#NIKKE",
+    "channels": [
+     "Kurena Ch. 愛音クレナ",
+     "花宮ゆりね",
+     "華鉈イオ【StellArt.】",
+     "雪平エリナ"
     ]
    },
    {
@@ -1954,15 +2693,26 @@
     "channels": [
      "ここっとスクエア【ここスク】",
      "やっぱりじぇいさん【マイクラ】",
+     "ウルフムーン",
      "宇宙真央 / Uchu Mao"
     ]
    },
    {
     "tag": "#崩壊スターレイル",
     "channels": [
+     "あかどらん",
      "天月のやりたい放題ちゃんねる。",
      "白亜リラ / Hakua Lira",
      "麻酔 Masui"
+    ]
+   },
+   {
+    "tag": "#初見さん大歓迎",
+    "channels": [
+     "mogすけちゃんネル",
+     "たべるうみゃ",
+     "ちくびの脅威",
+     "鈴ノ時みぃ@新人Vtuber"
     ]
    }
   ],
@@ -1970,49 +2720,70 @@
   "wide": [
    {
     "game": "ゼルダの伝説 時のオカリナ",
-    "channels": 54,
-    "videos": 56
+    "channels": 70,
+    "videos": 73
    },
    {
     "game": "Apex Legends",
-    "channels": 39,
+    "channels": 47,
+    "videos": 52
+   },
+   {
+    "game": "ストリートファイター6",
+    "channels": 41,
     "videos": 44
    },
    {
     "game": "Minecraft",
-    "channels": 35,
-    "videos": 37
+    "channels": 40,
+    "videos": 43
    },
    {
     "game": "Grand Theft Auto V",
-    "channels": 26,
-    "videos": 34
+    "channels": 31,
+    "videos": 38
    },
    {
     "game": "VALORANT",
-    "channels": 19,
-    "videos": 20
-   },
-   {
-    "game": "ストリートファイター6",
-    "channels": 19,
-    "videos": 21
+    "channels": 21,
+    "videos": 22
    },
    {
     "game": "League of Legends",
     "channels": 18,
-    "videos": 20
+    "videos": 19
    },
    {
     "game": "モンスターハンターアウトランダーズ",
-    "channels": 18,
-    "videos": 20
+    "channels": 20,
+    "videos": 22
    }
   ]
  },
  "drift": [],
  "tags": [],
  "misses": [
+  {
+   "word": "Mega Man2",
+   "channels": 1,
+   "n": 2,
+   "examples": [
+    {
+     "t": "【ロックマン2 Dr.ワイリーの謎】#3 ついにワイリーステージ突入！完全初見！！【Mega Man2/Vtuber】※ネタバレ注意 #レトロゲーム",
+     "c": "魔法少女めめ",
+     "u": "https://www.youtube.com/watch?v=euqxF7JchHQ"
+    },
+    {
+     "t": "【ロックマン2 Dr.ワイリーの謎】#2 完全初見！！【Mega Man2/Vtuber】※ネタバレ注意 #レトロゲーム",
+     "c": "魔法少女めめ",
+     "u": "https://www.youtube.com/watch?v=3GMZmPyjUAU"
+    }
+   ],
+   "kind": "near",
+   "suggest": [
+    "Mega Man 2: The Power Fighters"
+   ]
+  },
   {
    "word": "Unfinished",
    "channels": 1,
@@ -2047,6 +2818,46 @@
    ]
   },
   {
+   "word": "ENDER MAGNOLIA",
+   "channels": 1,
+   "n": 1,
+   "examples": [
+    {
+     "t": "【ENDER MAGNOLIA】 マップ広げていくぞ！！＃２【Vtuberしまゆま】",
+     "c": "しまゆま",
+     "u": "https://www.youtube.com/watch?v=w45ItOSfyO8"
+    }
+   ],
+   "kind": "near",
+   "suggest": [
+    "Ender Magnolia: Bloom in the Mist"
+   ]
+  },
+  {
+   "word": "勇者パーティはぜんめつしました",
+   "channels": 5,
+   "n": 5,
+   "examples": [
+    {
+     "t": "『勇者パーティはぜんめつしました』先行プレイ！全滅した勇者パーティから\"1人だけ\"を選んで救うダンジョン探索RPG。武器を奪って壊して進む戦闘から、最初のボス「追放者」との死闘までたっぷり紹介",
+     "c": "電ファミ公式チャンネル",
+     "u": "https://www.youtube.com/watch?v=0nXySs2dZmc"
+    },
+    {
+     "t": "【今日発売】体験版が「圧倒的に好評」全滅した勇者PTから1人だけ選ぶ…ストーリー激重なJRPG【勇者パーティはぜんめつしました。】",
+     "c": "しゃかもと け。",
+     "u": "https://www.youtube.com/watch?v=gESpXLoqugE"
+    },
+    {
+     "t": "【ゆうめつ】\"新作神ゲー\"高湿度・激重感情RPG「勇者パーティはぜんめつしました。」攻略配信※ネタバレ注意",
+     "c": "びりQ",
+     "u": "https://www.youtube.com/watch?v=z3NspYYxxz0"
+    }
+   ],
+   "kind": "wide",
+   "suggest": []
+  },
+  {
    "word": "人狼バーガー",
    "channels": 4,
    "n": 4,
@@ -2071,48 +2882,24 @@
    "suggest": []
   },
   {
-   "word": "ポケモン",
+   "word": "パニシング:グレイレイヴン",
    "channels": 3,
-   "n": 10,
+   "n": 6,
    "examples": [
-    {
-     "t": "【ゆびをふる縛り旅】カスミのスターミーなんて余裕なんだからね。part1【ポケモン／ファイアレッド】",
-     "c": "ろこぼうず / 独身実家暮らし身長180cmP",
-     "u": "https://www.youtube.com/watch?v=Gy-1bSyTyDs"
-    },
-    {
-     "t": "【ゆびをふる縛り旅】イワヤマトンネルとか怖くねーし、エリカ撃破。part2【ポケモン／ファイアレッド】",
-     "c": "ろこぼうず / 独身実家暮らし身長180cmP",
-     "u": "https://www.youtube.com/watch?v=H6pvIlFaXdI"
-    },
-    {
-     "t": "【チャンピオンズ/初見歓迎】初見プレイ！初心者だけどどこまでもいけるかな？【ポケモン】",
-     "c": "凛堂すずか / Suzuka Rindo",
-     "u": "https://www.youtube.com/watch?v=QYn1lN2h3m4"
-    }
-   ],
-   "kind": "wide",
-   "suggest": []
-  },
-  {
-   "word": "#パニシング：グレイレイヴン",
-   "channels": 3,
-   "n": 4,
-   "examples": [
-    {
-     "t": "【#パニシング：グレイレイヴン】【#初見】#37 ナナミ...?🦋メインクエスト第18章「綺羅星の誓い」🦋【個人勢Vtuber】",
-     "c": "紫翠アヤメ ShisuiAyame",
-     "u": "https://www.youtube.com/watch?v=Z7JBcnXgnZM"
-    },
-    {
-     "t": "【#パニシング：グレイレイヴン】【#初見】#37 ナナミ...?🦋メインクエスト第18章「綺羅星の誓い」🦋【個人勢Vtuber】",
-     "c": "紫翠アヤメ ShisuiAyame",
-     "u": "https://www.youtube.com/watch?v=Z7JBcnXgnZM"
-    },
     {
      "t": "【完全初見】パニグレの全Sキャラ、第一印象で語って分類してみるよ！【パニシング:グレイレイヴン】",
      "c": "羅々華セーラ-Raraka Sera-",
      "u": "https://www.youtube.com/watch?v=Vb8SpEMUSi4"
+    },
+    {
+     "t": "【#パニシング：グレイレイヴン】【#初見】#37 ナナミ...?🦋メインクエスト第18章「綺羅星の誓い」🦋【個人勢Vtuber】",
+     "c": "紫翠アヤメ ShisuiAyame",
+     "u": "https://www.youtube.com/watch?v=Z7JBcnXgnZM"
+    },
+    {
+     "t": "【#パニシング：グレイレイヴン】【#初見】#37 ナナミ...?🦋メインクエスト第18章「綺羅星の誓い」🦋【個人勢Vtuber】",
+     "c": "紫翠アヤメ ShisuiAyame",
+     "u": "https://www.youtube.com/watch?v=Z7JBcnXgnZM"
     }
    ],
    "kind": "wide",
@@ -2137,6 +2924,54 @@
      "t": "ドラクエ新作が神ゲーな予感！『ドラゴンクエストRPG　魔界樹と導かれし島』アナウンストレーラー公開！じっくりと考察していく！ #DQRPG　 #ドラクエRPG",
      "c": "たろわん。",
      "u": "https://www.youtube.com/watch?v=CHikoLHW55M"
+    }
+   ],
+   "kind": "wide",
+   "suggest": []
+  },
+  {
+   "word": "ブースターパックヒーロー",
+   "channels": 3,
+   "n": 3,
+   "examples": [
+    {
+     "t": "【新作発売】激レアを引けば一気に最強！？パック開封インクリメンタル『ブースターパックヒーロー』【Steam】",
+     "c": "しろこりGames / インディーゲーム専門Vtuber",
+     "u": "https://www.youtube.com/watch?v=y0pqHXmB59Y"
+    },
+    {
+     "t": "【ブースターパックヒーロー】遂に本日発売したカードパックから召喚したキャラで拠点を守るインクリメンタルタワーディフェンスゲーム【Steam】",
+     "c": "Hultutigamer",
+     "u": "https://www.youtube.com/watch?v=ODwsufDLJh4"
+    },
+    {
+     "t": "【ブースターパックヒーロー】本日発売のパック×タワーディフェンス×インクリメンタルが楽しすぎ...！？980円新作オートバトラークリッカー攻略が面白いw今だけ30%セール【steam,android】",
+     "c": " なぎせいな / 凪世薙",
+     "u": "https://www.youtube.com/watch?v=NExrmbT5xzE"
+    }
+   ],
+   "kind": "wide",
+   "suggest": []
+  },
+  {
+   "word": "ポケモン剣盾",
+   "channels": 3,
+   "n": 3,
+   "examples": [
+    {
+     "t": "#4【ポケモン剣盾】完全初見プレイ！ほぼメンバー入れ替えで５つ目のバッチへ挑戦【#稲荷いろは/のりプロ所属】",
+     "c": "稲荷いろはInari Iroha",
+     "u": "https://www.youtube.com/watch?v=QBErsxe-Hyo"
+    },
+    {
+     "t": "【ポケモン剣盾】勝手に縛りプレイして自滅 #4【完全初見実況】",
+     "c": "sakuraのゲーム実況チャンネル",
+     "u": "https://www.youtube.com/watch?v=fRASP4YjzJk"
+    },
+    {
+     "t": "【ポケモンソード】ポケモン知識ゼロのミリしら初見実況！雑談しながら冒険＆レベリング！#22【ポケモン剣盾/女性VTuber】",
+     "c": "こてつちゃんねる",
+     "u": "https://www.youtube.com/watch?v=1k2_Ux1j3w4"
     }
    ],
    "kind": "wide",
