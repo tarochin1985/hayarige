@@ -1,27 +1,48 @@
 {
- "date": "2026-11-11",
- "generated": "2026-11-11 10:59",
+ "date": "2026-11-12",
+ "generated": "2026-11-12 01:40",
  "leads": {
   "events": [
    {
     "tag": "#ゲーム実況",
     "channels": [
+     "CHECHE GAME【顔出し初見ゲーム実況】",
      "Ika&Ninon Games",
      "M家の休日マサ",
      "SignDuck / サインダック",
      "Usagi Ch. 因幡兎",
-     "くものち ふれすch.☁️🫧",
-     "てぃーけぇー",
      "のんびり猫のゆっくりゲーム実況",
-     "ゆにるユニ",
      "エラch",
-     "ジョアだよ",
-     "太刀ひろし　【Uncle gamer】 ",
-     "恋因ロス KoinRosu",
+     "儚視まちこVTuber Hakanashi Matiko",
+     "義理ブラザーズ",
      "豚咲あおい_TomisakiAoi",
      "遊楽木たいむ / yuuragi time ch",
      "運天りらん",
-     "里城はな"
+     "雛乃ぴぴ / Hinano pipi"
+    ]
+   },
+   {
+    "tag": "#ガチグラ2",
+    "channels": [
+     "きさらぎ【下手ゲーム実況】",
+     "姫崎クト -himesaki kuto-",
+     "家入ポポ / Popo Channel【ななしいんく】",
+     "朱雀ジュン - Suzaku Jun -",
+     "羽渦ミウネル -Miuneru Haneuzu-",
+     "貴様まさか🦈",
+     "銀灰まお Mao Ch."
+    ]
+   },
+   {
+    "tag": "#ストグラSeason2",
+    "channels": [
+     "neon",
+     "たけぉ",
+     "はたさこ / hatasako_flag",
+     "影。/かげまる",
+     "暁月ホタル AKATSUKI HOTARU",
+     "柚原いづみ / Izumi Channel 【ななしいんく】",
+     "稲荷いろはInari Iroha"
     ]
    },
    {
@@ -36,36 +57,31 @@
     ]
    },
    {
-    "tag": "#ガチグラ2",
-    "channels": [
-     "きさらぎ【下手ゲーム実況】",
-     "姫崎クト -himesaki kuto-",
-     "家入ポポ / Popo Channel【ななしいんく】",
-     "羽渦ミウネル -Miuneru Haneuzu-",
-     "銀灰まお Mao Ch."
-    ]
-   },
-   {
-    "tag": "#レトロゲーム",
-    "channels": [
-     "どえむげーまーらうる",
-     "草蔦みかん / Kusatsuta Mikan",
-     "里城はな",
-     "魔法少女めめ"
-    ]
-   },
-   {
     "tag": "#NIKKE",
     "channels": [
      "Kurena Ch. 愛音クレナ",
+     "erica / TOPPATSU!!",
+     "エミリーのゲームちゃんねる Emily Game Ch.",
      "花宮ゆりね",
      "華鉈イオ【StellArt.】",
      "雪平エリナ"
     ]
    },
    {
+    "tag": "#ストグラ",
+    "channels": [
+     "Middleeetv",
+     "たけぉ",
+     "ましゃかりさん",
+     "みつき",
+     "ノビーの遊び部屋",
+     "柚原いづみ / Izumi Channel 【ななしいんく】"
+    ]
+   },
+   {
     "tag": "#崩壊スターレイル",
     "channels": [
+     "Tsubaki Ch. 九娥つばき",
      "あかどらん",
      "天月のやりたい放題ちゃんねる。",
      "白亜リラ / Hakua Lira",
@@ -73,19 +89,13 @@
     ]
    },
    {
-    "tag": "#ホロドリ",
+    "tag": "#マイクラ",
     "channels": [
-     "Sopia Ch. 宙科そぴあ ‐ アソビ★まわり隊!",
-     "テトとホロドリ【解説・攻略】",
-     "花束 ゆいは / Hanataba Yuiha"
-    ]
-   },
-   {
-    "tag": "#ポケモン",
-    "channels": [
-     "でみあ@マイナーポケモン使い",
-     "りーふちゃんねる【ポケモンチャンピオンズ】",
-     "蛇目 欠番@Vtuber"
+     "へびりょく",
+     "やっぱりじぇいさん【マイクラ】",
+     "ウルフムーン",
+     "リベル",
+     "八樹めいら / Yatuki Meira"
     ]
    }
   ],
@@ -93,48 +103,56 @@
   "wide": [
    {
     "game": "ゼルダの伝説 時のオカリナ",
-    "channels": 62,
-    "videos": 64
+    "channels": 66,
+    "videos": 68
    },
    {
     "game": "Apex Legends",
-    "channels": 41,
-    "videos": 43
-   },
-   {
-    "game": "ストリートファイター6",
-    "channels": 39,
-    "videos": 42
-   },
-   {
-    "game": "Minecraft",
-    "channels": 35,
-    "videos": 38
+    "channels": 55,
+    "videos": 62
    },
    {
     "game": "Grand Theft Auto V",
+    "channels": 50,
+    "videos": 60
+   },
+   {
+    "game": "ストリートファイター6",
+    "channels": 47,
+    "videos": 56
+   },
+   {
+    "game": "Minecraft",
+    "channels": 44,
+    "videos": 47
+   },
+   {
+    "game": "崩壊：スターレイル",
     "channels": 28,
-    "videos": 30
+    "videos": 36
    },
    {
     "game": "VALORANT",
-    "channels": 21,
+    "channels": 20,
     "videos": 22
    },
    {
-    "game": "League of Legends",
-    "channels": 18,
-    "videos": 19
-   },
-   {
-    "game": "スプラトゥーン3",
-    "channels": 20,
-    "videos": 20
+    "game": "雀魂",
+    "channels": 21,
+    "videos": 22
    }
   ]
  },
  "drift": [],
- "tags": [],
+ "tags": [
+  {
+   "tag": "ぶいきゃす",
+   "game": "Goddess of Victory: Nikke",
+   "evidence": 7,
+   "added": 1,
+   "channels": 5
+  }
+ ],
  "misses": [
   {
    "word": "Mega Man2",
@@ -142,14 +160,14 @@
    "n": 2,
    "examples": [
     {
-     "t": "【ロックマン2 Dr.ワイリーの謎】#3 ついにワイリーステージ突入！完全初見！！【Mega Man2/Vtuber】※ネタバレ注意 #レトロゲーム",
-     "c": "魔法少女めめ",
-     "u": "https://www.youtube.com/watch?v=euqxF7JchHQ"
-    },
-    {
      "t": "【ロックマン2 Dr.ワイリーの謎】#2 完全初見！！【Mega Man2/Vtuber】※ネタバレ注意 #レトロゲーム",
      "c": "魔法少女めめ",
      "u": "https://www.youtube.com/watch?v=3GMZmPyjUAU"
+    },
+    {
+     "t": "【ロックマン2 Dr.ワイリーの謎】#3 ついにワイリーステージ突入！完全初見！！【Mega Man2/Vtuber】※ネタバレ注意 #レトロゲーム",
+     "c": "魔法少女めめ",
+     "u": "https://www.youtube.com/watch?v=euqxF7JchHQ"
     }
    ],
    "kind": "near",
@@ -189,28 +207,206 @@
     "Pokemon Classic",
     "Pokemon II"
    ]
+  },
+  {
+   "word": "気のせいすぎるRPG",
+   "channels": 4,
+   "n": 4,
+   "examples": [
+    {
+     "t": "【気のせいすぎるRPG】神ゲーの予感は気のせいではなさそう【ホロライブ/兎田ぺこら】",
+     "c": "Pekora Ch. 兎田ぺこら",
+     "u": "https://www.youtube.com/watch?v=kyMhlh8MGDE"
+    },
+    {
+     "t": "【気のせいすぎるＲＰＧ】神ゲーの気がしています【にじさんじ/加賀美ハヤト】",
+     "c": "加賀美 ハヤト/Hayato Kagami",
+     "u": "https://www.youtube.com/watch?v=sFg_RqKhmeM"
+    },
+    {
+     "t": "【気のせいすぎるＲＰＧ】ほな気のせいか。【にじさんじ / 葉加瀬冬雪】",
+     "c": "葉加瀬 冬雪 / Hakase Fuyuki",
+     "u": "https://www.youtube.com/watch?v=mVr7B_E3zSY"
+    }
+   ],
+   "kind": "wide",
+   "suggest": []
+  },
+  {
+   "word": "ポケモン",
+   "channels": 3,
+   "n": 9,
+   "examples": [
+    {
+     "t": "【ゆびをふる縛り旅】イワヤマトンネルとか怖くねーし、エリカ撃破。part2【ポケモン／ファイアレッド】",
+     "c": "ろこぼうず / 独身実家暮らし身長180cmP",
+     "u": "https://www.youtube.com/watch?v=H6pvIlFaXdI"
+    },
+    {
+     "t": "【チャンピオンズ/初見歓迎】初見プレイ！初心者だけどどこまでもいけるかな？【ポケモン】",
+     "c": "凛堂すずか / Suzuka Rindo",
+     "u": "https://www.youtube.com/watch?v=QYn1lN2h3m4"
+    },
+    {
+     "t": "【ゆびをふる縛り旅】エリカ？可愛いだけっしょ。part3【ポケモン／ファイアレッド】",
+     "c": "ろこぼうず / 独身実家暮らし身長180cmP",
+     "u": "https://www.youtube.com/watch?v=nahZzvTWdEA"
+    }
+   ],
+   "kind": "wide",
+   "suggest": []
+  },
+  {
+   "word": "アソビ★まわり隊！",
+   "channels": 3,
+   "n": 3,
+   "examples": [
+    {
+     "t": "【EN&JP】Chained + Soullike game!! 鎖に繋がれてソウルライクゲーム！ | Soul Chained【百灯キョーコ/ホロライブ/アソビ★まわり隊！】",
+     "c": "Kyoko Ch. 百灯キョーコ ‐ アソビ★まわり隊!",
+     "u": "https://www.youtube.com/watch?v=vK_G9vi58ok"
+    },
+    {
+     "t": "【のじゃEnglish】のじゃが「knoja」な理由のじゃ！【ホロライブ/アソビ★まわり隊！/熱千めら】",
+     "c": "Mela Ch. 熱千めら‐ アソビ★まわり隊!",
+     "u": "https://www.youtube.com/watch?v=q3gGvOxaJ7o"
+    },
+    {
+     "t": "【フリーチャット】そぴあのお知らせ掲示板【宙科そぴあ/ホロライブ/アソビ★まわり隊！】",
+     "c": "Sopia Ch. 宙科そぴあ ‐ アソビ★まわり隊!",
+     "u": "https://www.youtube.com/watch?v=XRJ-pUOo7gU"
+    }
+   ],
+   "kind": "wide",
+   "suggest": []
+  },
+  {
+   "word": "タケルのジンロー",
+   "channels": 3,
+   "n": 3,
+   "examples": [
+    {
+     "t": "謙虚な気持ちを忘れずに一生懸命行う人狼（まお視点）【タケルのジンロー】",
+     "c": "まお",
+     "u": "https://www.youtube.com/watch?v=E84B67ner_E"
+    },
+    {
+     "t": "ポテロング人狼【ZOOM人狼】#タケルのジンロー もるてん視点",
+     "c": "もるてん",
+     "u": "https://www.youtube.com/watch?v=Qbdv-2x4HDk"
+    },
+    {
+     "t": "【タケルのジンロー】うさぎ現る",
+     "c": "くどう丸",
+     "u": "https://www.youtube.com/watch?v=N0fUs6K-FDs"
+    }
+   ],
+   "kind": "wide",
+   "suggest": []
+  },
+  {
+   "word": "心臓人狼",
+   "channels": 3,
+   "n": 3,
+   "examples": [
+    {
+     "t": "11/11【心臓人狼】ついにお披露目！プテはし考案人狼カードゲーム　withがみ",
+     "c": "プテラたかはし",
+     "u": "https://www.youtube.com/watch?v=ZI7khp99Gzg"
+    },
+    {
+     "t": "【心臓人狼】プテちゃん開発ゲームをオレビバで遊ぶぞ！【オレビバ】",
+     "c": "めーや",
+     "u": "https://www.youtube.com/watch?v=V8xYCXP_r2Y"
+    },
+    {
+     "t": "【心臓人狼】プテはし自作カードゲーム 2026/11/11",
+     "c": "怪傑がみちゃんねる",
+     "u": "https://www.youtube.com/watch?v=0es8I82Bm0M"
+    }
+   ],
+   "kind": "wide",
+   "suggest": []
   }
  ],
  "miss_days": 7,
  "hot_facts": [
   {
-   "game": "勇者パーティはぜんめつしました。",
-   "growth": 7.5,
-   "videos": 6,
-   "base": 0.0,
-   "channels": 6,
-   "views": 4405,
+   "game": "ゼンレスゾーンゼロ",
+   "growth": 5.26,
+   "videos": 10,
+   "base": 1.9,
+   "channels": 8,
+   "views": 188685,
    "who": [
-    "電ファミ公式チャンネル",
-    "しゃかもと け。",
-    "ぼたぼた",
-    " なぎせいな / 凪世薙",
+    "西園チグサ / Nishizono Chigusa",
+    "緋月ゆい / Hizuki Yui",
+    "フクー",
+    "Somen Channel",
+    "フクー"
+   ],
+   "titles": [
+    "【 ゼンゼロ 】⚔️ＰＶだ！セヴェだ！ガチャを引くのだ～！！！🤩【 にじさんじ / 西園チグサ 】",
+    "【ゼンレスゾーンゼロ】#37 | 完全初見！真犯人はどこにいるのだ！？【緋月ゆい/ネオポルテ】",
+    "【ゼンゼロ】クソ雑　復刻 ノルムー　解説 【ZZZ/ゼンレスゾーンゼロ】"
+   ],
+   "genres": [],
+   "year": null,
+   "platforms": [],
+   "days_seen": 45,
+   "last_seen": "2026-11-11",
+   "first_here": false
+  },
+  {
+   "game": "崩壊：スターレイル",
+   "growth": 5.0,
+   "videos": 36,
+   "base": 7.2,
+   "channels": 28,
+   "views": 877152,
+   "who": [
+    "崩壊：スターレイル",
+    "マグロヘッド",
+    "麻酔 Masui",
+    "麻酔 Masui",
+    "白亜リラ / Hakua Lira"
+   ],
+   "titles": [
+    "【崩壊：スターレイル】ショートアニメ「月下の愉快なお葬式」",
+    "【スタレ】黄泉/飲月/景元が５倍強くなっててヤバい。誰を交換するべきか解説！！【崩壊スターレイル】",
+    "【#崩壊スターレイル】ついに実装！『星神★アッハ』愉悦最強になるか！？"
+   ],
+   "genres": [
+    "Role-playing (RPG)",
+    "Turn-based strategy (TBS)",
+    "Adventure"
+   ],
+   "year": 2023,
+   "platforms": [
+    "pc",
+    "console"
+   ],
+   "days_seen": 63,
+   "last_seen": "2026-11-11",
+   "first_here": false
+  },
+  {
+   "game": "勇者パーティはぜんめつしました。",
+   "growth": 5.0,
+   "videos": 4,
+   "base": 0.8,
+   "channels": 4,
+   "views": 10407,
+   "who": [
+    "くろろじちゃんねる",
+    "びりQ",
+    "小仔毬すう🐶 / OkomariSuu CH 。zzZ",
     "三丁目のぽち"
    ],
    "titles": [
-    "『勇者パーティはぜんめつしました』先行プレイ！全滅した勇者パーティから\"1人だけ\"を選んで救うダンジョン探索RPG。武器を奪って壊して進む戦闘から、最初のボス「追放者」との死闘までたっぷり紹介",
-    "【今日発売】体験版が「圧倒的に好評」全滅した勇者PTから1人だけ選ぶ…ストーリー激重なJRPG【勇者パーティはぜんめつしました。】",
-    "【ゆっくり実況】勇者パーティはぜんめつしました。｜武器を奪って進む！クセ強システムの高湿度・激重感情RPG"
+    "【最新作】Steam売上ランキング3位のダンジョン探索RPG『勇者パーティはぜんめつしました。』が面白すぎたｗ 【Steam】",
+    "【ゆうめつ】\"新作神ゲー\"高湿度・激重感情RPG「勇者パーティはぜんめつしました。」攻略配信※ネタバレ注意",
+    "【勇者パーティはぜんめつしました。】誰か『1人』しか救えない絶望RPGやってみます"
    ],
    "genres": [
     "Role-playing (RPG)",
@@ -221,152 +417,95 @@
    "platforms": [
     "pc"
    ],
-   "days_seen": 1,
-   "last_seen": "2026-11-10",
+   "days_seen": 2,
+   "last_seen": "2026-11-11",
    "first_here": false
   },
   {
-   "game": "Cursed Companions",
-   "growth": 6.25,
-   "videos": 5,
-   "base": 0.0,
-   "channels": 5,
-   "views": 302371,
+   "game": "妖怪ウォッチ1",
+   "growth": 4.67,
+   "videos": 7,
+   "base": 1.5,
+   "channels": 6,
+   "views": 18671,
    "who": [
-    "御子神琴音 / Mikogami Kotone【にじさんじ】",
-    "星導ショウ / Hoshirube Sho【にじさんじ】",
-    "風楽奏斗 / Fura Kanato ",
-    "男虎 / Ono Tora【にじさんじ】",
-    "Yuhi Riri Official"
+    "砂利ボーイ",
+    "ポポそら",
+    "ポポそら",
+    "テリア",
+    "砂利ボーイ"
    ],
    "titles": [
-    "【Cursed Companions】わんおぺの皆様と！NGワードを口にしてはいけない協力型ホラーゲーム！？【御子神琴音 / にじさんじ】",
-    "【Cursed Companions】わんおぺ二次会【星導ショウ/にじさんじ】",
-    "【 Cursed companions 】 #わんおぺWIN 二次会【にじさんじ/風楽奏斗】"
-   ],
-   "genres": [],
-   "year": null,
-   "platforms": [],
-   "days_seen": 3,
-   "last_seen": "2026-11-04",
-   "first_here": false
-  },
-  {
-   "game": "Call of Duty: Warzone",
-   "growth": 6.25,
-   "videos": 5,
-   "base": 0.6,
-   "channels": 5,
-   "views": 229778,
-   "who": [
-    "ハセシン / HASESHIN",
-    "花芽なずな / Nazuna Kaga",
-    "小雀とと / Toto Kogara",
-    "ぐっぴー",
-    "Alpha Azur - UltraLMTM"
-   ],
-   "titles": [
-    "【新作CoD:WARZONE】始めるで！授業開始でございます！何勝できるのか全力挑戦!!!! 編！ 花芽なずな, 小雀とと, ぐっぴー → 二次会WARZONE！【ハセシン】",
-    "【WARZONE】久々にうぉーぞーんやるぞおおお　ハセシン、GP、ととち【ぶいすぽ/花芽なずな】",
-    "【 CoD:WARZONE 】わーい！バトロワだー！【 ぶいすぽ / 小雀とと 】"
+    "【妖怪ウォッチ1】\"鬼畜縛り\"で妖怪ウォッチを全クリしたい。＃２７",
+    "ぷにぷに『この30％オフでジバニャンかエンマ当てたい！なけなしのＹポイントでやったるぞー！』Yo-kai Watch",
+    "ぷにぷに『お試しで炎上ｗニャロビン遺跡＆マイニャンが仮実装されるぞー！』Yo-kai Watch"
    ],
    "genres": [
-    "Shooter",
-    "Tactical"
+    "Puzzle",
+    "Role-playing (RPG)"
    ],
-   "year": 2022,
+   "year": 2013,
    "platforms": [
-    "pc",
     "console"
    ],
-   "days_seen": 1,
-   "last_seen": "2026-11-10",
+   "days_seen": 32,
+   "last_seen": "2026-11-11",
    "first_here": false
   },
   {
-   "game": "Rec:Rewind",
-   "growth": 6.25,
-   "videos": 5,
-   "base": 0.0,
-   "channels": 5,
-   "views": 26678,
-   "who": [
-    "キャシーさんはホラーゲームで遊びたい",
-    "えおちゃんねる！",
-    "人生 つみこ (ホラーゲーム専門Vtuber)",
-    "サンキュームービー",
-    "初雪セツナ | ホラー声優Vtuber"
-   ],
-   "titles": [
-    "【ホラー】全隠し要素回収達成！行方不明となった夫とその夫を探す妻…過去へと遡る「ビデオテープ」を通して真実に迫る逆ループホラーゲーム『 REC:REWIND 』【Vキャシー/Vtuber】実況",
-    "ビデオテープを使って過去に戻るホラーゲーム【REC:REWIND】",
-    "【 REC:REWIND 】逆ループホラーゲーム！？行方不明になった夫を探す妻のお話【 人生つみこ】"
-   ],
-   "genres": [
-    "Adventure",
-    "Indie"
-   ],
-   "year": 2026,
-   "platforms": [
-    "pc"
-   ],
-   "days_seen": 1,
-   "last_seen": "2026-11-10",
-   "first_here": false
-  },
-  {
-   "game": "Delta Force",
-   "growth": 5.56,
-   "videos": 5,
-   "base": 0.9,
-   "channels": 4,
-   "views": 8875,
-   "who": [
-    "KAMIU / かみゆう : 脱出シューター",
-    "KAMIU / かみゆう : 脱出シューター",
-    "一攫千金TV【DeltaForce】",
-    "KAMIU / かみゆう : 脱出シューター",
-    "まみゅみょ"
-   ],
-   "titles": [
-    "【デルタ】S12新近接武器”剣”遂に登場！コラボで追加された最強近接がやばすぎるｗｗｗｗ[ #deltaforce #デルタフォース #デルタフォースモバイル ]",
-    "【デルタ】S12新要素全解説！射撃訓練場2.0や新マップ・アタッチメント等多数過ぎてやばいｗｗ[ #deltaforce #デルタフォース #デルタフォースモバイル ]",
-    "【全プレイヤー、出撃せよ！】デムランモードがアツすぎるｗ【デルタフォース】"
-   ],
-   "genres": [
-    "Shooter",
-    "Tactical"
-   ],
-   "year": 2024,
-   "platforms": [
-    "pc",
-    "console"
-   ],
-   "days_seen": 24,
-   "last_seen": "2026-11-10",
-   "first_here": false
-  },
-  {
-   "game": "Enshrouded",
+   "game": "グランツーリスモ7",
    "growth": 4.17,
    "videos": 5,
    "base": 1.2,
    "channels": 5,
-   "views": 9632,
+   "views": 4370,
    "who": [
-    "陽葵凛咲 -ヒナリサ-",
-    "抹茶のゲーム実況チャンネル",
-    "ごえもぉん",
-    "ジェイユ⚔️Jeyou",
-    "ジェイユ⚔️Jeyou"
+    "白河水月 / Mitsuki Shirakawa",
+    "アイリナ・ゼファリオ【StellArt.】",
+    "パポさん【なんとかなるってぇ〜配信】",
+    "あかねのゲーム実況",
+    "キャサ夫のどんな感じ？"
    ],
    "titles": [
-    "【Enshrouded】初上陸のノマド高地を探索しながらメインクエスト消化！【霧の王国│ソロ攻略│Steam│女性実況】",
-    "【Enshrouded~霧の王国~#11】目覚めたら滅亡寸前!!?美しくも危険な世界で始まるソロサバイバル冒険記！エンシュラウデッド【抹茶のゲーム実況】",
-    "【エンシュラウド 正式版1.0】最初のホローダンジョン（虚ろの広間）＆ルツボ入手へ！スキルポイント集めながらゆるっと夜雑談！【Enshrouded 霧の王国 #8】"
+    "🔴【GT7】GTWS マニュファクチャラーズカップ 2026 EX3 Rd.3 TA🏎モンツァを久々の日産 GT-R で練習【グランツーリスモ7】 - VTuber Live Stream",
+    "【グランツーリスモ7】ハンコンに慣れたい！2日目🔥GT7【アイリナ・ゼファリオ  / StellArt.】#vtuber",
+    "【GT7】【グランツーリスモ7】「パッド勢の走り #36」　デイリーレースC練習ですよ"
+   ],
+   "genres": [
+    "Racing",
+    "Simulator",
+    "Sport"
+   ],
+   "year": 2022,
+   "platforms": [
+    "console"
+   ],
+   "days_seen": 27,
+   "last_seen": "2026-11-10",
+   "first_here": false
+  },
+  {
+   "game": "鬼武者 Way of the Sword",
+   "growth": 4.0,
+   "videos": 6,
+   "base": 1.5,
+   "channels": 5,
+   "views": 34765,
+   "who": [
+    "Kyoko Ch. 百灯キョーコ ‐ アソビ★まわり隊!",
+    "よも木 / yomogi",
+    "声優・嵩馬美歩のうまちゃんねる",
+    "声優・嵩馬美歩のうまちゃんねる",
+    "さくそら【天然女子のゲーム実況ch】"
+   ],
+   "titles": [
+    "#9 最強担当、いざ参る！！※ネタバレあり | 鬼武者 Way of the Sword 【百灯キョーコ/ホロライブ/アソビ★まわり隊！】",
+    "#7【鬼武者 Way of the Sword】一閃中毒になりそう…シリーズ初見！鬼武者初プレイ！！",
+    "【鬼武者WS】#9 初鬼武者！静御前推し声優の「鬼武者 Way of the Sword」初見実況【女性実況/PS5】"
    ],
    "genres": [
     "Role-playing (RPG)",
+    "Hack and slash/Beat 'em up",
     "Adventure"
    ],
    "year": 2026,
@@ -374,8 +513,8 @@
     "pc",
     "console"
    ],
-   "days_seen": 9,
-   "last_seen": "2026-11-10",
+   "days_seen": 62,
+   "last_seen": "2026-11-11",
    "first_here": false
   }
  ],
