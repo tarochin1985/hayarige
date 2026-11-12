@@ -30,6 +30,12 @@ MISS_ALERT = 3                # 「よく出る未知語」として知らせる
 MISS_NEAR = 12                # カタログ前方一致の候補を何件まで出すか
 MISS_WIDE = 20                # よく出る未知語を何件まで出すか
 NOTES_MAX = 4                 # 「今日の見どころ」に並べる行数の上限
+LEADS_TITLE_GAMES = 30        # コラムの窓に「題を全部」渡すゲームの数（上位何位まで）
+LEADS_TITLE_MAX = 150         # 1ゲームあたり、渡す題の本数の上限
+COMMENT_GAMES = 10            # コメントを取りにいく「急上昇率の高いゲーム」の数
+COMMENT_VIDEOS = 2            # 1ゲームあたり、コメントを取る動画の本数
+COMMENT_MAX_SECS = 3600       # この長さ以下の動画だけを選ぶ（切り抜き・編集動画）
+COMMENT_MIN_VIEWS = 500       # これに届かない動画は、そもそもコメントが付いていない
 W = {"videos": 0.30, "channels": 0.35, "views": 0.35}
 
 # 1人が同じゲームを1日に何本も出したときの数え方。
@@ -556,7 +562,7 @@ def tally(videos, idx, d=None):
     d = PER_CHANNEL[PER_CHANNEL_DEFAULT] if d is None else d
     games = defaultdict(lambda: {"raw": 0, "channels": set(),
                                  "by_ch": defaultdict(dict),
-                                 "streams": [], "titles": [],
+                                 "streams": [], "titles": [], "vids": [],
                                  "orgs": defaultdict(int)})
     unknown = []
     by_tag, _ = tag_games(videos, idx)
@@ -572,6 +578,7 @@ def tally(videos, idx, d=None):
             cur = e["by_ch"][v["channel_id"]]
             cur[sig] = max(cur.get(sig, 0), v.get("views", 0))
             e["titles"].append(v["title"])
+            e["vids"].append(v["id"])          # コメントを取る動画を選ぶのに使う
             e["orgs"][v.get("affiliation") or "個人・その他"] += 1
             if len(e["streams"]) < 12:
                 e["streams"].append({"t": v["title"], "c": v["channel"],
@@ -735,6 +742,10 @@ def enrich_column(column, rows):
     # 集めるのは scripts/column_fixes.py。元のJSONは書き換えないので、
     # ここで pop しても記録は消えない（読み込んだ辞書から外すだけ）。
     column.pop("直し", None)
+    # ★「声」も同じ（2026-11-12）。XやSteamのレビューから**何を読んで、
+    # どの言葉をそのまま使ったか**の覚え書き。Grokの答えの要約も入る。
+    # 読者に見せるものではないので、ここで外す。
+    column.pop("声", None)
 
     cr = next((r for r in rows if r["game"] == column.get("game")), None)
     if cr:
@@ -3454,7 +3465,7 @@ def hot_facts(rising, gdays):
     return out
 
 
-def pick_rising(rows, momentum_ready):
+def pick_rising(rows, momentum_ready, n=None):
     """急上昇に出す行を選ぶ。今日のページでも過去の記録ページでも同じ基準を使う。
 
     倍率の大きい順。小さくて誰も知らないゲームが上に来るようにする
@@ -3467,7 +3478,7 @@ def pick_rising(rows, momentum_ready):
          if r["videos"] >= MIN_FOR_MOMENTUM
          and r["channels"] >= RISING_MIN_CHANNELS
          and (r["growth"] or 0) > 1.25],
-        key=lambda r: -r["growth"])[:RISING_N]
+        key=lambda r: -r["growth"])[:(n or RISING_N)]
 
 
 ARCH_HOT_N = 3        # これまでの記録の一覧に、その日の急上昇を何本並べるか
@@ -3960,11 +3971,81 @@ def main():
     # 直下にも置く（トップからはリンクしない）。
     # 「今日の見どころ」を書くための材料。文章はここでは作らない（hot_facts の説明）
     hfacts = hot_facts(rising, read_json(DATA / "game_days.json", {}) or {})
+    # ★コラムの窓に、その日の題を**全部**渡す（2026-11-08 たろちんさん）。
+    #
+    # それまで渡していたのは hot_facts の3本と、data.json の8本だけだった。
+    # しかも data.json の8本は**再生数の多い順**なので、大きいチャンネルに
+    # 偏った標本になる。この材料で「どんな声が多いか」を書こうとすると、
+    # 必ず上澄みだけを見ることになる。
+    #
+    #   2026-11-07 のスプラトゥーン3 … 実際は 140本/64ch、渡っていたのは 8本
+    #   2026-11-05 の Potato Please … 実際は   5本/5ch、渡っていたのは 5本（足りていた）
+    #
+    # 「概ねの気持ちは、全部読んでから割合で書く」という決まり（EDITORIAL の E）を
+    # 入れたので、材料のほうを揃える。**判定は何も変わらない。**
+    # tally をもう一度通しているのは、compute_rows の中の集計に
+    # 手を入れずに済ませるため。今日のぶん（数千本）だけなので数秒で終わる。
+    _tal, _ = tally(today_videos, idx, per_channel(cfg))
+    all_titles = {}
+    for r in list(rows[:LEADS_TITLE_GAMES]) + list(rising or []):
+        if r["game"] in all_titles:
+            continue
+        t = (_tal.get(r.get("canonical") or r["game"]) or {}).get("titles") or []
+        if t:
+            all_titles[r["game"]] = t[:LEADS_TITLE_MAX]
+
+    # ★コメントを取りにいく動画を、ここで選んでおく（2026-11-08 たろちんさん）。
+    #
+    #   > 毎日のコラムはその日の**急上昇ゲーム**について書くことが多い。
+    #   > 上位30ゲームのコメントをとってもほとんど無駄になる。
+    #   > **急上昇率が高いゲーム上位10本**の中から「1時間以下・非ライブ」で
+    #   > 絞ったなかの**再生数上位2本**、にしてはどうか
+    #
+    # そのとおりで、この日の急上昇6件のうち**5件は30位の中に入っていなかった。**
+    # 30位を見ても、コラムが書く相手には当たらない。
+    #
+    # 「1時間以下・非ライブ」で絞るのは、**生配信のアーカイブより、
+    # 最初から動画の形で上がる切り抜き・編集動画のほうが、
+    # コメント欄に中身のある声が付きやすい**から（たろちんさん）。
+    # 2026-11-08のデータで数えたところ、全体の長さの中央値は118分、62%が生配信で、
+    # それでも**上位30ゲームの30件すべてで「1時間以下・非ライブ」が2本以上**取れた。
+    #
+    # ここでは選ぶだけ。取りに行くのは scripts/youtube_comments.py。
+    vmap = {v["id"]: v for v in today_videos}
+    ctargets = []
+    for r in pick_rising(rows, momentum_ready, COMMENT_GAMES):
+        vids = (_tal.get(r.get("canonical") or r["game"]) or {}).get("vids") or []
+        cand = [vmap[i] for i in vids if i in vmap]
+        cand = [v for v in cand
+                if not v.get("is_live")
+                and 0 < (v.get("secs") or 0) <= COMMENT_MAX_SECS]
+        # ★並べ替えは「コメント数 → 再生数」の順に見る。
+        #   コメント数は**動画どうしの人気の比較には使えない**
+        #   （「高評価してね」と言う人・コメント稼ぎがうまい人がいる。
+        #     2026-11-08 たろちんさん）。使うのは
+        #   **「どの動画にコメントが付いているか」を知るときだけ。**
+        #   付いていない動画に取りに行っても1ユニット捨てるだけなので、ここで弾く。
+        #   comments は 2026-11-08 に保存を始めた項目なので、
+        #   それ以前のデータでは入っていない。無ければ再生数で決める。
+        cand = [v for v in cand
+                if (v.get("comments") or 0) >= 5
+                or (v.get("views") or 0) >= COMMENT_MIN_VIEWS]
+        cand.sort(key=lambda v: (-(v.get("comments") or 0), -(v.get("views") or 0)))
+        if not cand:
+            continue
+        ctargets.append({
+            "game": r["game"],
+            "growth": r.get("growth"),
+            "videos": [{"id": v["id"], "t": v["title"], "c": v.get("channel"),
+                        "views": v.get("views"), "secs": v.get("secs"),
+                        "ncomments": v.get("comments")}
+                       for v in cand[:COMMENT_VIDEOS]]})
     write_json(SITE / "leads.json",
                {"date": today(), "generated": payload["generated"],
                 "leads": leads, "drift": drift, "tags": tagnotes,
                 "misses": misses, "miss_days": MISS_DAYS,
-                "hot_facts": hfacts,
+                "hot_facts": hfacts, "all_titles": all_titles,
+                "comment_targets": ctargets,
                 "notes_written": bool((column or {}).get("notes")),
                 "recent_columns": recent_cols[::-1]})
 

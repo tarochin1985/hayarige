@@ -217,6 +217,21 @@ def main():
                 "channel": v["snippet"]["channelTitle"],
                 "affiliation": c.get("affiliation", ""),
                 "views": int(v["statistics"].get("viewCount", 0) or 0),
+                # 高評価とコメントの数（2026-11-08）。**クォータは1ユニットも
+                # 増えない。**statistics はもともと取っていて、使っていなかっただけ。
+                #
+                # ★**これ単体を「ウケている度」として読んではいけない**
+                #   （2026-11-08 たろちんさん）。
+                #   「高評価してね」とお願いしている人は率が上がるし、
+                #   コメントを稼ぐのがうまいだけのこともある。**かなり人による。**
+                #   使えるのは「**どの動画からコメント本文を取るか**」を決めるとき。
+                #   コメントが付いていない動画から取りに行っても無駄なので、
+                #   そこの目印としてだけ持っておく。
+                # 配信者が数を隠している場合は入らないので、無いことがある。
+                "likes": (int(v["statistics"]["likeCount"])
+                          if "likeCount" in v["statistics"] else None),
+                "comments": (int(v["statistics"]["commentCount"])
+                             if "commentCount" in v["statistics"] else None),
                 "is_live": bool(live.get("actualStartTime")),
                 "thumb": (v["snippet"]["thumbnails"].get("medium") or {}).get("url", ""),
                 "secs": iso_seconds(dur),

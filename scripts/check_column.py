@@ -82,11 +82,39 @@ def seen_days(game, before):
 
 # 裏が取れていないことを、取れているように見せてしまう言い回し。
 # 「〜という事実」だけを書くルールを、言葉のレベルで縛る。
+#
+# ★2026-11-12に2つに割った。**ここに残したのは「不合格にする」ものだけ。**
+#
+#   それまでは `だろう` `かもしれない` `らしい。` `が話題` `という声も` まで
+#   ここに入っていて、**書いた瞬間にコラムがサイトに出なくなっていた。**
+#   ところが EDITORIAL.md のほうは
+#     11-04（5章C）「推測だと分かる形で書く ── 〜かもしれない／〜のだろう／〜らしい」
+#     11-08（5章E・F）「好評・不評・賛否両論は書いてよい」「〜が話題に、とぼかす」
+#     11-12（5章G）「ユーザーの声を軸に書く」
+#   と、たろちんさんが3回かけて広げていた。**決まりは広がったのに、
+#   機械のほうが10月29日のまま弾いていた。** 11月のコラムを数えたら、
+#   この言い回しを使った日は1日も無い。使えなかったから。
+#
+# 残したのは**伝聞の受け身**（誰が思っているのか分からない形）と、うわさ。
+# これは「書き手の推測だと分かる形」ではなく、**推測をよその誰かの見立てに
+# 見せる形**なので、いまも事実のふりになる。
 HEDGE = [
-    "と思われる", "と見られる", "とみられる", "だろう", "かもしれない",
-    "のようだ", "らしい。", "considered", "推測", "おそらく", "うわさ", "噂",
+    "と思われる", "と見られる", "とみられる", "considered", "推測",
+    "うわさ", "噂", "とされる",
+]
+
+# 書き手の推測だと分かる形（5章C）。**使ってよい。** ただし1本に2〜3文まで
+# という決まりなので、3つを超えたら知らせる（不合格にはしない）。
+GUESS_OK = [
+    "だろう", "かもしれない", "のようだ", "らしい。", "おそらく",
+    "ではないだろうか",
+]
+
+# 評判の言い回し（5章E・F・G）。**声を読んだうえでなら使ってよい。**
+# 読んだ印が JSON の `声` 欄。欄が無いのに使っていたら知らせる（不合格にはしない）。
+BUZZ = [
     "話題を呼んで", "が話題", "注目を集めて", "盛り上がりを見せて",
-    "人気が高まって", "とされる", "という声も", "ではないだろうか",
+    "人気が高まって", "という声も",
 ]
 
 # 出典に使ってはいけない場所。まとめサイトは話題の当たりをつけるためだけに使い、
@@ -226,8 +254,24 @@ def shape_check(head, day):
     return out
 
 
-def quote_check(head, day):
+def voice_words(col):
+    """JSON の `声` 欄に書き残した「そのまま使った言葉」を返す（5章G）。"""
+    v = (col or {}).get("声") if isinstance(col, dict) else None
+    if not isinstance(v, dict):
+        return {}
+    out = {}
+    for w in (v.get("そのまま使った言葉") or []):
+        if isinstance(w, dict) and str(w.get("言葉") or "").strip():
+            out[str(w["言葉"]).strip()] = str(w.get("出どころ") or "")
+    return out
+
+
+def quote_check(head, day, col=None):
     """見出しの鍵括弧の中が、その日の配信タイトルに実在するかを見る。
+
+    ★2026-11-12: 配信タイトルに無くても、**JSON の `声` 欄に書き残してあれば通す。**
+    Xの投稿やSteamのレビューから取った言葉は、配信タイトルには無くて当たり前なので。
+    見ているのは今までと同じ「その字が本当に誰かの言葉として在るか」だけ。
 
     **チャンネル数は条件にしない**（2026-10-08 たろちんさん）。
 
@@ -249,8 +293,13 @@ def quote_check(head, day):
     except (ValueError, OSError):
         return [], []
     warn, note = [], []
+    voices = voice_words(col)
     for q in qs:
         hit = [v for v in vids if q in str(v.get("title") or "")]
+        vhit = [(w, src) for w, src in voices.items() if q in w or w in q]
+        if not hit and vhit:
+            note.append(f"「{q}」は `声` 欄にあります（出どころ: {vhit[0][1] or '書いていません'}）")
+            continue
         if hit:
             chs = sorted({str(v.get("channel") or "") for v in hit})
             note.append(f"「{q}」は{chs[0]}さんの題にあります"
@@ -259,6 +308,8 @@ def quote_check(head, day):
         else:
             warn.append(f"見出しの「{q}」が、その日の配信タイトルに見つかりません。"
                         "引用のつもりなら綴りを確かめてください。"
+                        "Xの投稿やSteamのレビューから取った言葉なら、"
+                        "JSONの `声` 欄の「そのまま使った言葉」に書いてください（5章G）。"
                         "ネタ（ミーム）として使っているなら、"
                         "その土台になる事実が本文にあるか確かめてください")
     return warn, note
@@ -299,7 +350,7 @@ def style(col, day=""):
             out += tag_check(tag, day or str(col.get("date", "")) or _today())
         _day = day or str(col.get("date", "")) or _today()
         out += shape_check(head, _day)
-        out += quote_check(head, _day)[0]
+        out += quote_check(head, _day, col)[0]
 
     # 「初めて」と書いているなら、本当に初めてかを数えて確かめる。
     # 書いていない日は記録ページを読みに行かないので、普段の負担はない。
@@ -340,6 +391,40 @@ def style(col, day=""):
             "多くて2つまで。3つ以上要るなら、それは sources の仕事です"
             "（EDITORIAL.md 5章）")
 
+    # ---- 推測と評判の言い回し（2026-11-12。不合格にはしない）
+    _all = body + " " + str(col.get("headline", "")) + " " + \
+        " ".join(str(n) for n in (col.get("notes") or []))
+    g = [w for w in GUESS_OK if w in _all]
+    n_guess = sum(_all.count(w) for w in GUESS_OK)
+    if n_guess > 3:
+        out.append(
+            f"書き手の推測の言い回しが{n_guess}か所あります（{'・'.join(g)}）。"
+            "1本に2〜3文までが決まりです（EDITORIAL.md 5章C）。"
+            "言い切れるところは言い切ってください")
+    b = [w for w in BUZZ if w in _all]
+    if b and not isinstance(col.get("声"), dict):
+        out.append(
+            f"評判の言い回しがあります（{'・'.join(b)}）。"
+            "X・Steamのレビュー・コメント欄の声を読んだうえで書いたなら、"
+            "JSONに `声` 欄を足して、何を読んだかを残してください（EDITORIAL.md 5章G）。"
+            "読んでいないなら、この言い回しは使えません")
+
+    # ---- `声` の形（2026-11-12）
+    v = col.get("声")
+    if v is not None:
+        if not isinstance(v, dict):
+            out.append("`声` は {\"出どころ\": [...], \"そのまま使った言葉\": [...]} "
+                       "の形にしてください（EDITORIAL.md 7-1-2章）")
+        else:
+            if not v.get("出どころ"):
+                out.append("`声` に「出どころ」がありません。"
+                           "何を読んだか（X(Grok)・Steamレビュー・コメント欄）を書いてください")
+            for w in (v.get("そのまま使った言葉") or []):
+                if not isinstance(w, dict) or not str(w.get("言葉") or "").strip():
+                    out.append("`声` の「そのまま使った言葉」は "
+                               "{\"言葉\": \"…\", \"出どころ\": \"X\"} の形にしてください")
+                    break
+
     # 「直し」の形（2026-10-17 追加）。**警告であって不合格ではない。**
     # あれはリポジトリの中だけの覚え書きで、読者には出ない。
     # 形が崩れていてもコラムは出してよい（validate() ではなくこちら）。
@@ -369,7 +454,7 @@ def info(col, day=""):
     # 出ていなかった（2026-10-08）。
     tail = (past_columns(col.get("game"), _day)
             + tag_hint(col, _day)
-            + quote_check(str(col.get("headline") or ""), _day)[1]
+            + quote_check(str(col.get("headline") or ""), _day, col)[1]
             + head_history(_day))
     if not days:
         return [f"「{game}」が当サイトのランキングに入るのは今日が初めてです。"
