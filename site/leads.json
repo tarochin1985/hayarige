@@ -1,24 +1,38 @@
 {
  "date": "2026-11-12",
- "generated": "2026-11-12 01:40",
+ "generated": "2026-11-12 09:57",
  "leads": {
   "events": [
    {
     "tag": "#ゲーム実況",
     "channels": [
      "CHECHE GAME【顔出し初見ゲーム実況】",
-     "Ika&Ninon Games",
      "M家の休日マサ",
      "SignDuck / サインダック",
      "Usagi Ch. 因幡兎",
      "のんびり猫のゆっくりゲーム実況",
      "エラch",
+     "ジョアだよ",
      "儚視まちこVTuber Hakanashi Matiko",
+     "宇宙真央 / Uchu Mao",
      "義理ブラザーズ",
      "豚咲あおい_TomisakiAoi",
      "遊楽木たいむ / yuuragi time ch",
      "運天りらん",
      "雛乃ぴぴ / Hinano pipi"
+    ]
+   },
+   {
+    "tag": "#NIKKE",
+    "channels": [
+     "Kurena Ch. 愛音クレナ",
+     "erica / TOPPATSU!!",
+     "ほこり。",
+     "エミリーのゲームちゃんねる Emily Game Ch.",
+     "樹つつき -Itsuki Tsutsuki Ch-",
+     "花宮ゆりね",
+     "華鉈イオ【StellArt.】",
+     "雪平エリナ"
     ]
    },
    {
@@ -29,6 +43,7 @@
      "家入ポポ / Popo Channel【ななしいんく】",
      "朱雀ジュン - Suzaku Jun -",
      "羽渦ミウネル -Miuneru Haneuzu-",
+     "蛇宵ティア / Tier Channel【ななしいんく】",
      "貴様まさか🦈",
      "銀灰まお Mao Ch."
     ]
@@ -57,17 +72,6 @@
     ]
    },
    {
-    "tag": "#NIKKE",
-    "channels": [
-     "Kurena Ch. 愛音クレナ",
-     "erica / TOPPATSU!!",
-     "エミリーのゲームちゃんねる Emily Game Ch.",
-     "花宮ゆりね",
-     "華鉈イオ【StellArt.】",
-     "雪平エリナ"
-    ]
-   },
-   {
     "tag": "#ストグラ",
     "channels": [
      "Middleeetv",
@@ -79,6 +83,16 @@
     ]
    },
    {
+    "tag": "#ぶいきゃす",
+    "channels": [
+     "Kurena Ch. 愛音クレナ",
+     "ちゃい・ふにえる",
+     "樹つつき -Itsuki Tsutsuki Ch-",
+     "花宮ゆりね",
+     "華鉈イオ【StellArt.】"
+    ]
+   },
+   {
     "tag": "#崩壊スターレイル",
     "channels": [
      "Tsubaki Ch. 九娥つばき",
@@ -87,59 +101,49 @@
      "白亜リラ / Hakua Lira",
      "麻酔 Masui"
     ]
-   },
-   {
-    "tag": "#マイクラ",
-    "channels": [
-     "へびりょく",
-     "やっぱりじぇいさん【マイクラ】",
-     "ウルフムーン",
-     "リベル",
-     "八樹めいら / Yatuki Meira"
-    ]
    }
   ],
   "newcomers": [],
   "wide": [
    {
     "game": "ゼルダの伝説 時のオカリナ",
-    "channels": 66,
-    "videos": 68
-   },
-   {
-    "game": "Apex Legends",
-    "channels": 55,
+    "channels": 60,
     "videos": 62
    },
    {
-    "game": "Grand Theft Auto V",
+    "game": "Apex Legends",
     "channels": 50,
-    "videos": 60
+    "videos": 54
+   },
+   {
+    "game": "Grand Theft Auto V",
+    "channels": 47,
+    "videos": 50
    },
    {
     "game": "ストリートファイター6",
-    "channels": 47,
-    "videos": 56
+    "channels": 43,
+    "videos": 49
    },
    {
     "game": "Minecraft",
-    "channels": 44,
-    "videos": 47
+    "channels": 39,
+    "videos": 42
    },
    {
     "game": "崩壊：スターレイル",
-    "channels": 28,
-    "videos": 36
-   },
-   {
-    "game": "VALORANT",
-    "channels": 20,
-    "videos": 22
+    "channels": 29,
+    "videos": 40
    },
    {
     "game": "雀魂",
     "channels": 21,
     "videos": 22
+   },
+   {
+    "game": "VALORANT",
+    "channels": 18,
+    "videos": 20
    }
   ]
  },
@@ -150,7 +154,14 @@
    "game": "Goddess of Victory: Nikke",
    "evidence": 7,
    "added": 1,
-   "channels": 5
+   "channels": 6
+  },
+  {
+   "tag": "下剋上リグ極",
+   "game": "雀魂",
+   "evidence": 3,
+   "added": 1,
+   "channels": 4
   }
  ],
  "misses": [
@@ -160,14 +171,14 @@
    "n": 2,
    "examples": [
     {
-     "t": "【ロックマン2 Dr.ワイリーの謎】#2 完全初見！！【Mega Man2/Vtuber】※ネタバレ注意 #レトロゲーム",
-     "c": "魔法少女めめ",
-     "u": "https://www.youtube.com/watch?v=3GMZmPyjUAU"
-    },
-    {
      "t": "【ロックマン2 Dr.ワイリーの謎】#3 ついにワイリーステージ突入！完全初見！！【Mega Man2/Vtuber】※ネタバレ注意 #レトロゲーム",
      "c": "魔法少女めめ",
      "u": "https://www.youtube.com/watch?v=euqxF7JchHQ"
+    },
+    {
+     "t": "【ロックマン2 Dr.ワイリーの謎】#2 完全初見！！【Mega Man2/Vtuber】※ネタバレ注意 #レトロゲーム",
+     "c": "魔法少女めめ",
+     "u": "https://www.youtube.com/watch?v=3GMZmPyjUAU"
     }
    ],
    "kind": "near",
@@ -257,6 +268,30 @@
    "suggest": []
   },
   {
+   "word": "Deep Dish Dungeon",
+   "channels": 3,
+   "n": 3,
+   "examples": [
+    {
+     "t": "【 Deep Dish Dungeon 】 探索！地下道の奥を探索 #5 【 ダンジョンクロウル 】",
+     "c": "カニ🦀",
+     "u": "https://www.youtube.com/watch?v=iB-p0pUUlto"
+    },
+    {
+     "t": "【Deep Dish Dungeon】連戦連勝チャンネルさん、今日は謎解きダンジョンで勝利してしまう【斜落せつな/玉餅かずよ/カプラ・リブラス】",
+     "c": "斜落せつな / Sharaku Setsuna",
+     "u": "https://www.youtube.com/watch?v=JHoZXSqe7Z4"
+    },
+    {
+     "t": "自給自足で財宝を求めてダンジョンに潜るサバイバルゲーム「Deep Dish Dungeon」",
+     "c": "あきピヨ",
+     "u": "https://www.youtube.com/watch?v=NBC1fp9OxLU"
+    }
+   ],
+   "kind": "wide",
+   "suggest": []
+  },
+  {
    "word": "アソビ★まわり隊！",
    "channels": 3,
    "n": 3,
@@ -332,44 +367,18 @@
  "miss_days": 7,
  "hot_facts": [
   {
-   "game": "ゼンレスゾーンゼロ",
-   "growth": 5.26,
-   "videos": 10,
-   "base": 1.9,
-   "channels": 8,
-   "views": 188685,
-   "who": [
-    "西園チグサ / Nishizono Chigusa",
-    "緋月ゆい / Hizuki Yui",
-    "フクー",
-    "Somen Channel",
-    "フクー"
-   ],
-   "titles": [
-    "【 ゼンゼロ 】⚔️ＰＶだ！セヴェだ！ガチャを引くのだ～！！！🤩【 にじさんじ / 西園チグサ 】",
-    "【ゼンレスゾーンゼロ】#37 | 完全初見！真犯人はどこにいるのだ！？【緋月ゆい/ネオポルテ】",
-    "【ゼンゼロ】クソ雑　復刻 ノルムー　解説 【ZZZ/ゼンレスゾーンゼロ】"
-   ],
-   "genres": [],
-   "year": null,
-   "platforms": [],
-   "days_seen": 45,
-   "last_seen": "2026-11-11",
-   "first_here": false
-  },
-  {
    "game": "崩壊：スターレイル",
-   "growth": 5.0,
-   "videos": 36,
-   "base": 7.2,
-   "channels": 28,
-   "views": 877152,
+   "growth": 5.97,
+   "videos": 40,
+   "base": 6.7,
+   "channels": 29,
+   "views": 1265404,
    "who": [
     "崩壊：スターレイル",
     "マグロヘッド",
     "麻酔 Masui",
     "麻酔 Masui",
-    "白亜リラ / Hakua Lira"
+    "麻酔 Masui"
    ],
    "titles": [
     "【崩壊：スターレイル】ショートアニメ「月下の愉快なお葬式」",
@@ -391,21 +400,47 @@
    "first_here": false
   },
   {
+   "game": "ゼンレスゾーンゼロ",
+   "growth": 5.56,
+   "videos": 10,
+   "base": 1.8,
+   "channels": 9,
+   "views": 245789,
+   "who": [
+    "西園チグサ / Nishizono Chigusa",
+    "フクー",
+    "緋月ゆい / Hizuki Yui",
+    "フクー",
+    "すりっぷらーゼツ"
+   ],
+   "titles": [
+    "【 ゼンゼロ 】⚔️ＰＶだ！セヴェだ！ガチャを引くのだ～！！！🤩【 にじさんじ / 西園チグサ 】",
+    "【ゼンゼロ】クソ雑　復刻 ノルムー　解説 【ZZZ/ゼンレスゾーンゼロ】",
+    "【ゼンレスゾーンゼロ】#37 | 完全初見！真犯人はどこにいるのだ！？【緋月ゆい/ネオポルテ】"
+   ],
+   "genres": [],
+   "year": null,
+   "platforms": [],
+   "days_seen": 45,
+   "last_seen": "2026-11-11",
+   "first_here": false
+  },
+  {
    "game": "勇者パーティはぜんめつしました。",
    "growth": 5.0,
    "videos": 4,
    "base": 0.8,
    "channels": 4,
-   "views": 10407,
+   "views": 17292,
    "who": [
-    "くろろじちゃんねる",
     "びりQ",
+    "くろろじちゃんねる",
     "小仔毬すう🐶 / OkomariSuu CH 。zzZ",
     "三丁目のぽち"
    ],
    "titles": [
-    "【最新作】Steam売上ランキング3位のダンジョン探索RPG『勇者パーティはぜんめつしました。』が面白すぎたｗ 【Steam】",
     "【ゆうめつ】\"新作神ゲー\"高湿度・激重感情RPG「勇者パーティはぜんめつしました。」攻略配信※ネタバレ注意",
+    "【最新作】Steam売上ランキング3位のダンジョン探索RPG『勇者パーティはぜんめつしました。』が面白すぎたｗ 【Steam】",
     "【勇者パーティはぜんめつしました。】誰か『1人』しか救えない絶望RPGやってみます"
    ],
    "genres": [
@@ -422,98 +457,89 @@
    "first_here": false
   },
   {
-   "game": "妖怪ウォッチ1",
-   "growth": 4.67,
-   "videos": 7,
-   "base": 1.5,
-   "channels": 6,
-   "views": 18671,
+   "game": "Touhou Koumakyou: The Embodiment of Scarlet Devil",
+   "growth": 3.75,
+   "videos": 3,
+   "base": 0.7,
+   "channels": 3,
+   "views": 19036,
    "who": [
-    "砂利ボーイ",
-    "ポポそら",
-    "ポポそら",
-    "テリア",
-    "砂利ボーイ"
+    "RTA in Japan",
+    "チェーンバーン加藤",
+    "今さらちゃん ねる"
    ],
    "titles": [
-    "【妖怪ウォッチ1】\"鬼畜縛り\"で妖怪ウォッチを全クリしたい。＃２７",
-    "ぷにぷに『この30％オフでジバニャンかエンマ当てたい！なけなしのＹポイントでやったるぞー！』Yo-kai Watch",
-    "ぷにぷに『お試しで炎上ｗニャロビン遺跡＆マイニャンが仮実装されるぞー！』Yo-kai Watch"
+    "東方紅魔郷：New Classic ～ the Embodiment of Scarlet Devil.｜ Lunatic ノーボムノー低�",
+    "A.D.H.D.は東方紅魔郷をクリアできるのか？#３【東方紅魔郷：New Classic】",
+    "【東方紅魔郷:New Classic】妹がいるらしい！【今永さらら】"
    ],
    "genres": [
-    "Puzzle",
-    "Role-playing (RPG)"
+    "Shooter",
+    "Adventure",
+    "Indie",
+    "Arcade"
    ],
-   "year": 2013,
+   "year": 2002,
    "platforms": [
-    "console"
+    "pc"
    ],
-   "days_seen": 32,
+   "days_seen": 17,
    "last_seen": "2026-11-11",
    "first_here": false
   },
   {
-   "game": "グランツーリスモ7",
-   "growth": 4.17,
-   "videos": 5,
-   "base": 1.2,
-   "channels": 5,
-   "views": 4370,
+   "game": "えかきうた大合戦",
+   "growth": 3.75,
+   "videos": 3,
+   "base": 0.5,
+   "channels": 3,
+   "views": 5896,
    "who": [
-    "白河水月 / Mitsuki Shirakawa",
-    "アイリナ・ゼファリオ【StellArt.】",
-    "パポさん【なんとかなるってぇ〜配信】",
-    "あかねのゲーム実況",
-    "キャサ夫のどんな感じ？"
+    "ミラ",
+    "スナパイ",
+    "HYBRID SENSE",
+    "ミラ"
    ],
    "titles": [
-    "🔴【GT7】GTWS マニュファクチャラーズカップ 2026 EX3 Rd.3 TA🏎モンツァを久々の日産 GT-R で練習【グランツーリスモ7】 - VTuber Live Stream",
-    "【グランツーリスモ7】ハンコンに慣れたい！2日目🔥GT7【アイリナ・ゼファリオ  / StellArt.】#vtuber",
-    "【GT7】【グランツーリスモ7】「パッド勢の走り #36」　デイリーレースC練習ですよ"
+    "えかきうた大合戦withダチ",
+    "LIVE│えかきうた大合戦　#うぉんちゅー宮村",
+    "【#うぉんちゅー宮村 #121】バンドマンがわいわいやってみた『えかきうた大合戦』【HYBRID SENSE視点】"
    ],
-   "genres": [
-    "Racing",
-    "Simulator",
-    "Sport"
-   ],
-   "year": 2022,
-   "platforms": [
-    "console"
-   ],
-   "days_seen": 27,
-   "last_seen": "2026-11-10",
+   "genres": [],
+   "year": null,
+   "platforms": [],
+   "days_seen": 10,
+   "last_seen": "2026-11-11",
    "first_here": false
   },
   {
-   "game": "鬼武者 Way of the Sword",
-   "growth": 4.0,
-   "videos": 6,
-   "base": 1.5,
-   "channels": 5,
-   "views": 34765,
+   "game": "ダンガンロンパ 希望の学園と絶望の高校生",
+   "growth": 3.75,
+   "videos": 3,
+   "base": 0.5,
+   "channels": 3,
+   "views": 5437,
    "who": [
-    "Kyoko Ch. 百灯キョーコ ‐ アソビ★まわり隊!",
-    "よも木 / yomogi",
-    "声優・嵩馬美歩のうまちゃんねる",
-    "声優・嵩馬美歩のうまちゃんねる",
-    "さくそら【天然女子のゲーム実況ch】"
+    "まお",
+    "SUZUNE",
+    "梢桃音 / Kozue Mone【にじさんじ】"
    ],
    "titles": [
-    "#9 最強担当、いざ参る！！※ネタバレあり | 鬼武者 Way of the Sword 【百灯キョーコ/ホロライブ/アソビ★まわり隊！】",
-    "#7【鬼武者 Way of the Sword】一閃中毒になりそう…シリーズ初見！鬼武者初プレイ！！",
-    "【鬼武者WS】#9 初鬼武者！静御前推し声優の「鬼武者 Way of the Sword」初見実況【女性実況/PS5】"
+    "希望ヶ峰学園新入生スレからきますたｗｗｗｗ #02【ダンガンロンパ 希望の学園と絶望の高校生】",
+    "#6 【ダンガンロンパ】　俺だったら霧切さんにそんな思いさせないのにな～",
+    "【ダンガンロンパ希望の学園と絶望の高校生】#7 完全初見🏫第四章日常編から！【にじさんじ/梢桃音】"
    ],
    "genres": [
-    "Role-playing (RPG)",
-    "Hack and slash/Beat 'em up",
-    "Adventure"
+    "Point-and-click",
+    "Adventure",
+    "Visual Novel"
    ],
-   "year": 2026,
+   "year": 2010,
    "platforms": [
     "pc",
     "console"
    ],
-   "days_seen": 62,
+   "days_seen": 9,
    "last_seen": "2026-11-11",
    "first_here": false
   }
