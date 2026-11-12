@@ -280,6 +280,29 @@ jobs:
       - name: 集計してサイトを作る
         run: python scripts/build_site.py
 
+      # Steamのレビューを拾って leads.json に足す（2026-11-08 たろちんさん）。
+      # 「配信で流行っている」はハヤリゲーが数えられるが、
+      # 「**遊んだ人がどう思っているか**」はどこにも無かった。そこを埋める。
+      # **YouTubeのクォータは1ユニットも使わない。**APIキーも要らない。
+      # site/data.json の上位30を見るので、必ず build_site.py のあとに置くこと。
+      # 失敗してもサイトの更新は止めない（スクリプト側も必ず終了コード0で終わる）。
+      - name: Steamのレビューを拾う
+        continue-on-error: true
+        timeout-minutes: 8
+        run: python scripts/steam_reviews.py
+
+      # 急上昇ゲームの動画から、コメント欄の声を拾う（2026-11-08 たろちんさん）。
+      # 取りに行くのは「急上昇率の高い上位10ゲーム × 1時間以下・非ライブの再生数上位2本」。
+      # commentThreads は 1回1ユニットなので、多くても20ユニット（1日の使用量の0.4%）。
+      # どの動画から取るかは build_site.py が leads.json に書いている。
+      # 失敗してもサイトの更新は止めない（スクリプト側も必ず終了コード0で終わる）。
+      - name: コメント欄の声を拾う
+        continue-on-error: true
+        timeout-minutes: 8
+        env:
+          YOUTUBE_API_KEY: ${{ secrets.YOUTUBE_API_KEY }}
+        run: python scripts/youtube_comments.py
+
       # Xに貼る1枚画像。ここで作るのには理由がある。
       # この画像はGoogle Fontsの書体とYouTubeのサムネイルを読み込む。
       # 手元（Claudeの作業環境）からはどちらにもつながらないため、
