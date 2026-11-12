@@ -5100,6 +5100,19 @@
   ]
  },
  {
+  "name": "BAS: Instagib",
+  "alias": [],
+  "pop": 0,
+  "y": 2026,
+  "p": [
+   "console"
+  ],
+  "g": [
+   "Shooter",
+   "Indie"
+  ]
+ },
+ {
   "name": "BASED",
   "alias": [],
   "pop": 0,
@@ -27792,20 +27805,6 @@
   ]
  },
  {
-  "name": "Hell-A",
-  "alias": [
-   "HELL-A"
-  ],
-  "pop": 0,
-  "y": 2026,
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Indie"
-  ]
- },
- {
   "name": "HellPunk: Purgatorium",
   "alias": [],
   "pop": 0,
@@ -39991,6 +39990,19 @@
   ]
  },
  {
+  "name": "Neko-nin ExHeart Spin! 2",
+  "alias": [],
+  "pop": 0,
+  "y": 2026,
+  "p": [
+   "pc"
+  ],
+  "g": [
+   "Adventure",
+   "Visual Novel"
+  ]
+ },
+ {
   "name": "Neo Junk City",
   "alias": [],
   "pop": 0,
@@ -43303,6 +43315,22 @@
    "Strategy",
    "Indie",
    "Arcade"
+  ]
+ },
+ {
+  "name": "Overtype",
+  "alias": [
+   "OVERTYPE"
+  ],
+  "pop": 0,
+  "y": 2026,
+  "p": [
+   "pc"
+  ],
+  "g": [
+   "Puzzle",
+   "Adventure",
+   "Indie"
   ]
  },
  {
@@ -54232,19 +54260,6 @@
   ]
  },
  {
-  "name": "Something Is Wrong With the Library",
-  "alias": [],
-  "pop": 0,
-  "y": 2026,
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Puzzle",
-   "Simulator"
-  ]
- },
- {
   "name": "Something Something Spaceship",
   "alias": [],
   "pop": 0,
@@ -60811,7 +60826,9 @@
  },
  {
   "name": "The Hole",
-  "alias": [],
+  "alias": [
+   "Дыра"
+  ],
   "pop": 0,
   "y": 2026,
   "p": [
@@ -64322,24 +64339,6 @@
   ],
   "g": [
    "Visual Novel"
-  ]
- },
- {
-  "name": "Total War: Shogun 2 - Complete Edition",
-  "alias": [
-   "shogun2_complete_edition.exe",
-   "Total War: SHOGUN 2 - Complete Edition"
-  ],
-  "pop": 0,
-  "y": 2026,
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Real Time Strategy (RTS)",
-   "Simulator",
-   "Strategy",
-   "Tactical"
   ]
  },
  {
