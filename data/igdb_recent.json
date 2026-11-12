@@ -2456,6 +2456,7 @@
  {
   "name": "All Eyes on Me",
   "alias": [
+   "ALL EYES ON ME.exe",
    "ALL EYES ON ME"
   ],
   "pop": 0,
@@ -4886,7 +4887,9 @@
  },
  {
   "name": "Auto Battle Buddies",
-  "alias": [],
+  "alias": [
+   "Auto Battle Buddies.exe"
+  ],
   "pop": 0,
   "y": 2026,
   "p": [
@@ -6199,6 +6202,7 @@
  {
   "name": "Below The Blades",
   "alias": [
+   "Below The Blades.exe",
    "BTB"
   ],
   "pop": 0,
@@ -7196,7 +7200,9 @@
  },
  {
   "name": "Blood Sword",
-  "alias": [],
+  "alias": [
+   "Blood Sword.exe"
+  ],
   "pop": 0,
   "y": 2026,
   "p": [
@@ -7909,7 +7915,9 @@
  },
  {
   "name": "Bottled by Bears",
-  "alias": [],
+  "alias": [
+   "Bottled by bears.exe"
+  ],
   "pop": 0,
   "y": 2026,
   "p": [
@@ -8267,6 +8275,7 @@
  {
   "name": "Broken Horror Anthology",
   "alias": [
+   "Broken Horror Anthology.exe",
    "ADHD Horror Anthology"
   ],
   "pop": 0,
@@ -10385,7 +10394,9 @@
  },
  {
   "name": "Cats Don't Carry Car Parts",
-  "alias": [],
+  "alias": [
+   "Cats Don't Carry Car Parts.exe"
+  ],
   "pop": 0,
   "y": 2026,
   "p": [
@@ -15053,7 +15064,9 @@
  },
  {
   "name": "Death Dealer",
-  "alias": [],
+  "alias": [
+   "DeathDealer.exe"
+  ],
   "pop": 0,
   "y": 2026,
   "p": [
@@ -15588,7 +15601,9 @@
  },
  {
   "name": "Delve Survivors",
-  "alias": [],
+  "alias": [
+   "DelveSurvivors.exe"
+  ],
   "pop": 0,
   "y": 2026,
   "p": [
@@ -17773,7 +17788,9 @@
  },
  {
   "name": "Dreadmiles",
-  "alias": [],
+  "alias": [
+   "Dreadmiles.exe"
+  ],
   "pop": 0,
   "y": 2026,
   "p": [
@@ -19828,7 +19845,9 @@
  },
  {
   "name": "Epic Balls Smashing",
-  "alias": [],
+  "alias": [
+   "Epic Balls Smashing.exe"
+  ],
   "pop": 0,
   "y": 2026,
   "p": [
@@ -20743,7 +20762,9 @@
  },
  {
   "name": "Explosiovania",
-  "alias": [],
+  "alias": [
+   "Explosiovania.exe"
+  ],
   "pop": 0,
   "y": 2026,
   "p": [
@@ -20822,7 +20843,9 @@
  },
  {
   "name": "Eye of Syn",
-  "alias": [],
+  "alias": [
+   "Eye_Of_Syn.exe"
+  ],
   "pop": 0,
   "y": 2026,
   "p": [
@@ -23976,19 +23999,6 @@
   ]
  },
  {
-  "name": "Frog Garden",
-  "alias": [],
-  "pop": 0,
-  "y": 2026,
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Simulator",
-   "Indie"
-  ]
- },
- {
   "name": "Frog Up!",
   "alias": [],
   "pop": 0,
@@ -24928,7 +24938,9 @@
  },
  {
   "name": "Get Rammed",
-  "alias": [],
+  "alias": [
+   "GET RAMMED.exe"
+  ],
   "pop": 0,
   "y": 2026,
   "p": [
@@ -26256,7 +26268,9 @@
  },
  {
   "name": "Grazed: Incremental Arcade",
-  "alias": [],
+  "alias": [
+   "Grazed.exe"
+  ],
   "pop": 0,
   "y": 2026,
   "p": [
@@ -28704,7 +28718,9 @@
  },
  {
   "name": "Hit or Die",
-  "alias": [],
+  "alias": [
+   "Hit or Die.exe"
+  ],
   "pop": 0,
   "y": 2026,
   "p": [
@@ -30324,7 +30340,9 @@
  },
  {
   "name": "Idle of the Dead",
-  "alias": [],
+  "alias": [
+   "IdleOfTheDead.exe"
+  ],
   "pop": 0,
   "y": 2026,
   "p": [
@@ -40968,7 +40986,9 @@
  },
  {
   "name": "Nitro Nonsense",
-  "alias": [],
+  "alias": [
+   "NitroNonsense.exe"
+  ],
   "pop": 0,
   "y": 2026,
   "p": [
@@ -41698,18 +41718,6 @@
   "g": [
    "Simulator",
    "Indie"
-  ]
- },
- {
-  "name": "Not A Drone",
-  "alias": [
-   "Not A Drone: Pigeon Delivery"
-  ],
-  "pop": 0,
-  "y": 2026,
-  "g": [
-   "Indie",
-   "Arcade"
   ]
  },
  {
@@ -42598,7 +42606,9 @@
  },
  {
   "name": "On the Train",
-  "alias": [],
+  "alias": [
+   "On The Train.exe"
+  ],
   "pop": 0,
   "y": 2026,
   "p": [
@@ -43215,6 +43225,21 @@
   "g": [
    "Simulator",
    "Adventure",
+   "Indie"
+  ]
+ },
+ {
+  "name": "Order, My Lord! Tidy Up the Dungeon",
+  "alias": [
+   "OrderMyLord.exe"
+  ],
+  "pop": 0,
+  "y": 2026,
+  "p": [
+   "pc"
+  ],
+  "g": [
+   "Simulator",
    "Indie"
   ]
  },
@@ -44046,7 +44071,9 @@
  },
  {
   "name": "Patience Balls",
-  "alias": [],
+  "alias": [
+   "Patience Balls.exe"
+  ],
   "pop": 0,
   "y": 2026,
   "p": [
@@ -44486,6 +44513,21 @@
   ],
   "g": [
    "Simulator",
+   "Indie"
+  ]
+ },
+ {
+  "name": "Pet Store: Tidy Up Sorting Simulator",
+  "alias": [],
+  "pop": 0,
+  "y": 2026,
+  "p": [
+   "pc"
+  ],
+  "g": [
+   "Simulator",
+   "Strategy",
+   "Adventure",
    "Indie"
   ]
  },
@@ -47119,7 +47161,9 @@
  },
  {
   "name": "Protocell",
-  "alias": [],
+  "alias": [
+   "Protocell.exe"
+  ],
   "pop": 0,
   "y": 2026,
   "p": [
@@ -47893,6 +47937,7 @@
   ],
   "g": [
    "Simulator",
+   "Strategy",
    "Indie",
    "Arcade"
   ]
@@ -48800,7 +48845,9 @@
  },
  {
   "name": "Refund Me TD 2",
-  "alias": [],
+  "alias": [
+   "Refund Me TD 2.exe"
+  ],
   "pop": 0,
   "y": 2026,
   "p": [
@@ -51327,7 +51374,9 @@
  },
  {
   "name": "Scawy Game",
-  "alias": [],
+  "alias": [
+   "The_Scariest_Game_Ever.exe"
+  ],
   "pop": 0,
   "y": 2026,
   "p": [
@@ -52430,6 +52479,15 @@
   ]
  },
  {
+  "name": "Shelves and Sorcery: Too Many Potions!",
+  "alias": [],
+  "pop": 0,
+  "y": 2026,
+  "p": [
+   "pc"
+  ]
+ },
+ {
   "name": "Sherpa's Caravan",
   "alias": [],
   "pop": 0,
@@ -53434,7 +53492,9 @@
  },
  {
   "name": "Ski-E-O! Ski Resort Tycoon",
-  "alias": [],
+  "alias": [
+   "skieogame.exe"
+  ],
   "pop": 0,
   "y": 2026,
   "p": [
@@ -54161,7 +54221,9 @@
  },
  {
   "name": "Snow Worries!",
-  "alias": [],
+  "alias": [
+   "SnowWorries.exe"
+  ],
   "pop": 0,
   "y": 2026,
   "p": [
@@ -55533,7 +55595,9 @@
  },
  {
   "name": "Spin Tactics",
-  "alias": [],
+  "alias": [
+   "SpinTactics.exe"
+  ],
   "pop": 0,
   "y": 2026,
   "p": [
@@ -60074,7 +60138,9 @@
  },
  {
   "name": "The Cozy Board Game Shop: Tidy Up",
-  "alias": [],
+  "alias": [
+   "The Cozy Board Game Shop - Tidy Up.exe"
+  ],
   "pop": 0,
   "y": 2026,
   "p": [
@@ -62543,6 +62609,7 @@
   "pop": 0,
   "y": 2026,
   "p": [
+   "pc",
    "console"
   ],
   "g": [
@@ -63370,7 +63437,9 @@
  },
  {
   "name": "Tick & Tired",
-  "alias": [],
+  "alias": [
+   "tick&tired.exe"
+  ],
   "pop": 0,
   "y": 2026,
   "p": [
@@ -64266,7 +64335,9 @@
  },
  {
   "name": "Toll Idle",
-  "alias": [],
+  "alias": [
+   "Toll Idle.exe"
+  ],
   "pop": 0,
   "y": 2026,
   "p": [
@@ -65755,16 +65826,6 @@
   ]
  },
  {
-  "name": "Two Winds",
-  "alias": [],
-  "pop": 0,
-  "y": 2026,
-  "g": [
-   "Puzzle",
-   "Indie"
-  ]
- },
- {
   "name": "Two-Fifteen",
   "alias": [],
   "pop": 0,
@@ -66503,7 +66564,9 @@
  },
  {
   "name": "Upshot",
-  "alias": [],
+  "alias": [
+   "UPSHOT.exe"
+  ],
   "pop": 0,
   "y": 2026,
   "p": [
@@ -67290,7 +67353,9 @@
  },
  {
   "name": "Vitavania",
-  "alias": [],
+  "alias": [
+   "Vitavania.exe"
+  ],
   "pop": 0,
   "y": 2026,
   "p": [
