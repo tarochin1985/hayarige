@@ -3582,6 +3582,7 @@
   ],
   "g": [
    "Role-playing (RPG)",
+   "Simulator",
    "Adventure",
    "Indie"
   ]
@@ -5727,7 +5728,9 @@
  },
  {
   "name": "Bar Owner Simulator",
-  "alias": [],
+  "alias": [
+   "Bar Owner Simulator.exe"
+  ],
   "pop": 0,
   "y": 2026,
   "p": [
@@ -6163,7 +6166,9 @@
  },
  {
   "name": "Beekeeper Simulator",
-  "alias": [],
+  "alias": [
+   "BeekeeperSimulator.exe"
+  ],
   "pop": 0,
   "y": 2026,
   "p": [
@@ -9058,18 +9063,6 @@
   "g": [
    "Role-playing (RPG)",
    "Adventure",
-   "Indie"
-  ]
- },
- {
-  "name": "Calibration Sequence",
-  "alias": [],
-  "pop": 0,
-  "y": 2026,
-  "p": [
-   "pc"
-  ],
-  "g": [
    "Indie"
   ]
  },
@@ -15234,7 +15227,9 @@
  },
  {
   "name": "Deathly Delights",
-  "alias": [],
+  "alias": [
+   "DeathlyDelights.exe"
+  ],
   "pop": 0,
   "y": 2026,
   "p": [
@@ -15454,7 +15449,8 @@
  {
   "name": "Deeplanders",
   "alias": [
-   "DEEPLANDERS"
+   "DEEPLANDERS",
+   "Deeplanders.exe"
   ],
   "pop": 0,
   "y": 2026,
@@ -16179,7 +16175,9 @@
  },
  {
   "name": "Dice Hoarder",
-  "alias": [],
+  "alias": [
+   "DiceHoarder.exe"
+  ],
   "pop": 0,
   "y": 2026,
   "p": [
@@ -18835,7 +18833,9 @@
  },
  {
   "name": "Dusteroids",
-  "alias": [],
+  "alias": [
+   "Dusteroids.exe"
+  ],
   "pop": 0,
   "y": 2026,
   "p": [
@@ -19886,7 +19886,9 @@
  },
  {
   "name": "Epoch Vault",
-  "alias": [],
+  "alias": [
+   "epoch-vault.exe"
+  ],
   "pop": 0,
   "y": 2026,
   "p": [
@@ -26307,7 +26309,9 @@
  },
  {
   "name": "Green Again",
-  "alias": [],
+  "alias": [
+   "GreenAgain.exe"
+  ],
   "pop": 0,
   "y": 2026,
   "p": [
@@ -27427,21 +27431,6 @@
   ],
   "g": [
    "Indie"
-  ]
- },
- {
-  "name": "Harvest Moon: Echoes of Teradea",
-  "alias": [],
-  "pop": 1,
-  "y": 2026,
-  "p": [
-   "pc",
-   "console"
-  ],
-  "g": [
-   "Role-playing (RPG)",
-   "Simulator",
-   "Adventure"
   ]
  },
  {
@@ -30047,7 +30036,9 @@
  },
  {
   "name": "I Walk Among Zombies Vol. 1",
-  "alias": [],
+  "alias": [
+   "zombie.exe"
+  ],
   "pop": 0,
   "y": 2026,
   "p": [
@@ -33340,6 +33331,7 @@
  {
   "name": "Knurlworm",
   "alias": [
+   "KNURLWORM 1.0.0.exe",
    "KNURLWORM"
   ],
   "pop": 0,
@@ -36070,6 +36062,16 @@
   ]
  },
  {
+  "name": "Mageness",
+  "alias": [],
+  "pop": 0,
+  "y": 2026,
+  "g": [
+   "Indie",
+   "Arcade"
+  ]
+ },
+ {
   "name": "Magic Kingdom",
   "alias": [
    "魔法王国"
@@ -36398,20 +36400,6 @@
   ],
   "g": [
    "Adventure"
-  ]
- },
- {
-  "name": "Malignus",
-  "alias": [],
-  "pop": 0,
-  "y": 2026,
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Simulator",
-   "Strategy",
-   "Indie"
   ]
  },
  {
@@ -39592,7 +39580,9 @@
  },
  {
   "name": "My Little Empire: Cyber Lounge",
-  "alias": [],
+  "alias": [
+   "My Little Empire Cyber Lounge.exe"
+  ],
   "pop": 0,
   "y": 2026,
   "p": [
@@ -43940,7 +43930,9 @@
  },
  {
   "name": "Parcel Inspector Simulator",
-  "alias": [],
+  "alias": [
+   "ParcelInspectorSimulator.exe"
+  ],
   "pop": 0,
   "y": 2026,
   "p": [
@@ -44707,6 +44699,22 @@
   "g": [
    "Simulator",
    "Indie"
+  ]
+ },
+ {
+  "name": "Phosphor",
+  "alias": [
+   "PHOSPHOR.exe"
+  ],
+  "pop": 0,
+  "y": 2026,
+  "p": [
+   "pc"
+  ],
+  "g": [
+   "Shooter",
+   "Platform",
+   "Strategy"
   ]
  },
  {
@@ -46324,7 +46332,9 @@
  },
  {
   "name": "Potted Pets",
-  "alias": [],
+  "alias": [
+   "Potted Pets.exe"
+  ],
   "pop": 0,
   "y": 2026,
   "p": [
@@ -47159,7 +47169,9 @@
  },
  {
   "name": "Provinces",
-  "alias": [],
+  "alias": [
+   "Provinces.exe"
+  ],
   "pop": 0,
   "y": 2026,
   "p": [
@@ -48191,7 +48203,9 @@
  },
  {
   "name": "Rasen",
-  "alias": [],
+  "alias": [
+   "Rasen.exe"
+  ],
   "pop": 0,
   "y": 2026,
   "p": [
@@ -52510,6 +52524,19 @@
   ]
  },
  {
+  "name": "Shelves and Sorcery: Too Many Weapons!",
+  "alias": [],
+  "pop": 0,
+  "y": 2026,
+  "p": [
+   "pc"
+  ],
+  "g": [
+   "Simulator",
+   "Indie"
+  ]
+ },
+ {
   "name": "Sherpa's Caravan",
   "alias": [],
   "pop": 0,
@@ -53745,7 +53772,9 @@
  },
  {
   "name": "Slay the Q",
-  "alias": [],
+  "alias": [
+   "slay_the_q.exe"
+  ],
   "pop": 0,
   "y": 2026,
   "p": [
@@ -53868,7 +53897,9 @@
  },
  {
   "name": "Sloppy Forgeries",
-  "alias": [],
+  "alias": [
+   "SloppyForgeries.exe"
+  ],
   "pop": 0,
   "y": 2026,
   "p": [
@@ -54184,6 +54215,20 @@
   ],
   "g": [
    "Puzzle",
+   "Indie"
+  ]
+ },
+ {
+  "name": "Snip Snap",
+  "alias": [
+   "SnipSnap.exe"
+  ],
+  "pop": 0,
+  "y": 2026,
+  "p": [
+   "pc"
+  ],
+  "g": [
    "Indie"
   ]
  },
@@ -61084,7 +61129,9 @@
  },
  {
   "name": "The House Always Wins",
-  "alias": [],
+  "alias": [
+   "The House Always Wins.exe"
+  ],
   "pop": 0,
   "y": 2026,
   "p": [
@@ -61278,21 +61325,6 @@
   ],
   "g": [
    "Role-playing (RPG)",
-   "Indie"
-  ]
- },
- {
-  "name": "The Jackbox Party Pack 12",
-  "alias": [],
-  "pop": 1,
-  "y": 2026,
-  "p": [
-   "pc",
-   "console"
-  ],
-  "g": [
-   "Strategy",
-   "Quiz/Trivia",
    "Indie"
   ]
  },
@@ -61562,6 +61594,7 @@
  {
   "name": "The Last Station: Baku",
   "alias": [
+   "The Last Station - Baku.exe",
    "The Last Station - Baku"
   ],
   "pop": 0,
@@ -61985,7 +62018,9 @@
  },
  {
   "name": "The Miner's Routine",
-  "alias": [],
+  "alias": [
+   "TheMinersRoutine.exe"
+  ],
   "pop": 0,
   "y": 2026,
   "p": [
@@ -62124,6 +62159,19 @@
   "g": [
    "Simulator",
    "Adventure",
+   "Indie"
+  ]
+ },
+ {
+  "name": "The Nugget",
+  "alias": [],
+  "pop": 0,
+  "y": 2026,
+  "p": [
+   "pc"
+  ],
+  "g": [
+   "Simulator",
    "Indie"
   ]
  },
@@ -65341,21 +65389,6 @@
   ]
  },
  {
-  "name": "Trifolium: The Adventures of Gary Pretzelneck",
-  "alias": [],
-  "pop": 0,
-  "y": 2026,
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Puzzle",
-   "Strategy",
-   "Adventure",
-   "Indie"
-  ]
- },
- {
   "name": "Trigonometric Equations",
   "alias": [],
   "pop": 0,
@@ -68372,7 +68405,9 @@
  },
  {
   "name": "We March as One",
-  "alias": [],
+  "alias": [
+   "WeMarchAsOne.exe"
+  ],
   "pop": 0,
   "y": 2026,
   "p": [
@@ -70833,7 +70868,9 @@
  },
  {
   "name": "Zombies Aren't Real",
-  "alias": [],
+  "alias": [
+   "zombies-arent-real.exe"
+  ],
   "pop": 0,
   "y": 2026,
   "p": [
