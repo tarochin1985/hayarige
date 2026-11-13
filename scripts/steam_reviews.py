@@ -59,6 +59,11 @@ LEDGER_NOTE = [
 ]
 
 
+def _key(name):
+    """名前を突き合わせる形にする。™ ® © は Steam 側だけに付いていることが多いので落とす。"""
+    return M.compact(re.sub(r"[™®©]", "", name or ""))
+
+
 def search_appid(name):
     """Steamのストア検索で appid を引く。見つからなければ None。
 
@@ -72,28 +77,56 @@ def search_appid(name):
         # ★通信の失敗を台帳に書かない。書くと「調べ済み」になって
         #   二度と探しに行かなくなる。次の回でやり直せるように、何も返さない。
         return None, None
-    want = M.compact(name)
-    for it in (res.get("items") or [])[:5]:
-        if it.get("type") not in (None, "app", "game"):
-            continue
-        got = M.compact(it.get("name") or "")
-        if got == want or got.startswith(want) or want.startswith(got):
+    # ★**名前は「詰めた形がまるごと同じ」ときだけ採る**（2026-11-13に直した）。
+    #
+    #   11-08に書いたときは「片方がもう片方で始まっていれば同じ」としていた。
+    #   最初の回でこうなった。
+    #
+    #     Dead by Daylight   → Dead by Daylight: Terrifier（DLC）
+    #     Grand Theft Auto V → Grand Theft Auto: **Vice City** – The Definitive Edition
+    #     Minecraft          → Minecraft Dungeons II（別のゲーム）
+    #
+    #   **GTA V が『バイスシティ』になるのは、詰めると `grandtheftautov` の後ろに
+    #   `icecity` が続くから。** 辞書の照合でFF7がFF6になったのと同じ形
+    #   （match.py の「数字の途中で切らない」）。頭が合うだけでは同じゲームではない。
+    #   **間違ったゲームのレビューがコラムに入るのが、いちばん困る。**
+    #   取りこぼしは「?」で台帳に残り、人が直せる。
+    want = _key(name)
+    items = [it for it in (res.get("items") or [])[:10]
+             if it.get("type") in (None, "app", "game")]
+    for it in items:
+        if _key(it.get("name") or "") == want:
             return int(it["id"]), None
-    items = res.get("items") or []
-    if not items:
+    if not (res.get("items") or []):
         # Steamに1件も無い＝そのゲームはSteamで売っていない。
         # 「確かめた」として台帳に null を入れ、もう探しに行かない。
         return None, "なし"
-    return None, "? 名前が合いません（Steam側は「%s」）" % (items[0].get("name") or "")
+    first = (items or res.get("items") or [{}])[0]
+    return None, "? 名前が合いません（Steam側は「%s」）" % (first.get("name") or "")
 
 
 def fetch_reviews(appid):
-    """レビューのまとめと、直近の本文を取る。取れなければ None。"""
-    url = (f"https://store.steampowered.com/appreviews/{appid}?json=1"
-           "&language=japanese&purchase_type=all&filter=recent"
-           f"&num_per_page={REVIEWS}")
-    res = http_json(url, headers=UA, retries=2)
-    if not isinstance(res, dict) or res.get("success") != 1:
+    """レビューのまとめと、直近の本文を取る。取れなければ None。
+
+    ★2026-11-13: 最初の回で、appid は23件引けたのに**レビューが1件も取れず**、
+    しかも**なぜ取れなかったかがログに何も出ていなかった**（黙って None を返していた）。
+    取れなかったときは理由を1行出す。条件を減らした形でもう1回だけ試す。
+    """
+    urls = [f"https://store.steampowered.com/appreviews/{appid}?json=1"
+            "&language=japanese&purchase_type=all&filter=recent"
+            f"&num_per_page={REVIEWS}",
+            f"https://store.steampowered.com/appreviews/{appid}?json=1"
+            "&language=japanese"]
+    res, why = None, ""
+    for url in urls:
+        res = http_json(url, headers=UA, retries=2)
+        if isinstance(res, dict) and res.get("success") == 1:
+            break
+        why = (res or {}).get("__error__") if isinstance(res, dict) else type(res).__name__
+        why = why or f"success={(res or {}).get('success')!r}"
+        res = None
+    if res is None:
+        log(f"  レビュー {appid} … 取れませんでした: {str(why)[:160]}")
         return None
     q = res.get("query_summary") or {}
     pos, neg = int(q.get("total_positive") or 0), int(q.get("total_negative") or 0)
