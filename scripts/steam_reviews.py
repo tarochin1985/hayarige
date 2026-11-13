@@ -37,6 +37,7 @@ import json
 import re
 import sys
 import time
+from urllib import error, request
 from urllib.parse import quote
 
 sys.path.insert(0, str(__import__("pathlib").Path(__file__).resolve().parent))
@@ -105,28 +106,70 @@ def search_appid(name):
     return None, "? 名前が合いません（Steam側は「%s」）" % (first.get("name") or "")
 
 
+class _Stop(Exception):
+    """回数制限（429）に当たった。今回はここでやめる。"""
+
+
+def _get_json(url):
+    """(中身, 取れなかった理由) を返す。理由には**何が返ってきたか**を入れる。
+
+    common.http_json は「JSONでなかった」ときに理由を
+    `Expecting value: line 1 column 1 (char 0)` としか残さない。
+    11-13の最初の回がまさにそれで、**HTMLが返ったのか、空だったのか、
+    どこへ飛ばされたのか**が分からなかった。ここでは全部書く。
+    """
+    req = request.Request(url, headers=UA)
+    try:
+        with request.urlopen(req, timeout=30) as r:
+            body, status = r.read(), r.status
+            final, ctype = r.geturl(), r.headers.get("Content-Type", "")
+    except error.HTTPError as e:
+        if e.code == 429:
+            raise _Stop("HTTP 429（回数制限）")
+        return None, f"HTTP {e.code}: {e.read()[:100]!r}"
+    except Exception as e:                       # 通信断など
+        return None, f"{type(e).__name__}: {e}"
+    try:
+        return json.loads(body.decode("utf-8")), None
+    except ValueError:
+        return None, (f"JSONではない返事 status={status} 種類={ctype} "
+                      f"行き先={final[:80]} 先頭={body[:60]!r}")
+
+
 def fetch_reviews(appid):
     """レビューのまとめと、直近の本文を取る。取れなければ None。
 
-    ★2026-11-13: 最初の回で、appid は23件引けたのに**レビューが1件も取れず**、
-    しかも**なぜ取れなかったかがログに何も出ていなかった**（黙って None を返していた）。
-    取れなかったときは理由を1行出す。条件を減らした形でもう1回だけ試す。
+    ★★2026-11-13に取り先を替えた。**旧い取り先は、もう使えなかった。**
+
+      旧 https://store.steampowered.com/appreviews/<appid>?json=1
+      新 https://api.steampowered.com/IUserReviewsService/GetAppReviews/v1/
+
+    最初の回、appid は23件引けたのに**レビューは11件とも
+    「JSONではない返事」**だった。Steamの開発者向け資料
+    （partner.steamgames.com/doc/store/getreviews）を開いたら、
+    **旧い取り先は「非推奨」で、新しい取り先を使うように**と書いてあった。
+    同じ旧い取り先をこちらから開いても、Steamのトップページが返ってきた。
+    11-08に作ったとき、今の資料を確かめずに、昔からある書き方で書いていた。
+
+    新しい取り先は、**キー無しでも使える**（低い回数制限をみんなで分け合う。
+    超えると429）。1日2回・30件ほどなので足りる。キーは要らない。
+    パラメータは input_json に JSON で渡す。`success` の欄は無くなり、
+    成否は HTTP の状態で分かる。
     """
-    urls = [f"https://store.steampowered.com/appreviews/{appid}?json=1"
-            "&language=japanese&purchase_type=all&filter=recent"
-            f"&num_per_page={REVIEWS}",
-            f"https://store.steampowered.com/appreviews/{appid}?json=1"
-            "&language=japanese"]
-    res, why = None, ""
-    for url in urls:
-        res = http_json(url, headers=UA, retries=2)
-        if isinstance(res, dict) and res.get("success") == 1:
-            break
-        why = (res or {}).get("__error__") if isinstance(res, dict) else type(res).__name__
-        why = why or f"success={(res or {}).get('success')!r}"
-        res = None
-    if res is None:
-        log(f"  レビュー {appid} … 取れませんでした: {str(why)[:160]}")
+    body = {"appid": int(appid),
+            "filter": 1,                     # 1 = 新しい順（旧の filter=recent）
+            "languages": ["japanese"],
+            "purchase_type": 1,              # 1 = すべて（旧の purchase_type=all）
+            "num_per_page": REVIEWS,
+            "display_language": "japanese"}  # 「非常に好評」を日本語で
+    url = ("https://api.steampowered.com/IUserReviewsService/GetAppReviews/v1/"
+           "?input_json=" + quote(json.dumps(body, separators=(",", ":"))))
+    res, why = _get_json(url)
+    if isinstance(res, dict) and isinstance(res.get("response"), dict):
+        res = res["response"]                # Web API はたいてい response で包んで返す
+    if not isinstance(res, dict) or "query_summary" not in res:
+        log(f"  レビュー {appid} … 取れませんでした: "
+            f"{(why or ('中身の形が違います: ' + str(list((res or {}).keys()))[:80]))[:220]}")
         return None
     q = res.get("query_summary") or {}
     pos, neg = int(q.get("total_positive") or 0), int(q.get("total_negative") or 0)
@@ -195,7 +238,11 @@ def main():
         appid = ids.get(name)
         if not isinstance(appid, int):
             continue
-        rev = fetch_reviews(appid)
+        try:
+            rev = fetch_reviews(appid)
+        except _Stop as e:
+            log(f"  {e}。今回はここでやめます（次の回で続きから）")
+            break
         if rev:
             out[name] = rev
             log(f"  {name} … {rev['desc']}（{rev['pct']}% / {rev['total']}件）"
