@@ -156,32 +156,58 @@ def fetch_reviews(appid):
     パラメータは input_json に JSON で渡す。`success` の欄は無くなり、
     成否は HTTP の状態で分かる。
     """
-    body = {"appid": int(appid),
-            "filter": 1,                     # 1 = 新しい順（旧の filter=recent）
-            "languages": ["japanese"],
-            "purchase_type": 1,              # 1 = すべて（旧の purchase_type=all）
-            "num_per_page": REVIEWS,
-            "display_language": "japanese"}  # 「非常に好評」を日本語で
-    url = ("https://api.steampowered.com/IUserReviewsService/GetAppReviews/v1/"
-           "?input_json=" + quote(json.dumps(body, separators=(",", ":"))))
-    res, why = _get_json(url)
-    if isinstance(res, dict) and isinstance(res.get("response"), dict):
-        res = res["response"]                # Web API はたいてい response で包んで返す
-    if not isinstance(res, dict) or "query_summary" not in res:
-        log(f"  レビュー {appid} … 取れませんでした: "
-            f"{(why or ('中身の形が違います: ' + str(list((res or {}).keys()))[:80]))[:220]}")
+    def ask(langs, n):
+        body = {"appid": int(appid),
+                "filter": 1,                     # 1 = 新しい順（旧の filter=recent）
+                "languages": langs,
+                "purchase_type": 1,              # 1 = すべて（旧の purchase_type=all）
+                "num_per_page": n,
+                "display_language": "japanese"}  # 「非常に好評」を日本語で
+        url = ("https://api.steampowered.com/IUserReviewsService/GetAppReviews/v1/"
+               "?input_json=" + quote(json.dumps(body, separators=(",", ":"))))
+        res, why = _get_json(url)
+        if isinstance(res, dict) and isinstance(res.get("response"), dict):
+            res = res["response"]            # Web API はたいてい response で包んで返す
+        if not isinstance(res, dict) or "query_summary" not in res:
+            return None, (why or ("中身の形が違います: "
+                                  + str(list((res or {}).keys()))[:80]))
+        return res, None
+
+    def summary(res):
+        q = res.get("query_summary") or {}
+        pos, neg = int(q.get("total_positive") or 0), int(q.get("total_negative") or 0)
+        tot = pos + neg
+        return {"desc": q.get("review_score_desc") or "",
+                "positive": pos, "negative": neg, "total": tot,
+                "pct": round(100 * pos / tot) if tot else None}
+
+    # ★2026-11-13: **全言語の評価と、日本語の評価を分けて持つ。**
+    #
+    #   最初に取れた回、Dead by Daylight が「賛否両論（55% / 7,439件）」と出た。
+    #   これは**日本語で書かれたレビューだけ**の数字。Steamのストアページの
+    #   いちばん上に出る「すべてのレビュー」（全言語）とは別物で、食い違うことがある。
+    #   コラムに「Steamのレビューは賛否両論」と書くと、ストアを開いた読者には
+    #   違う評価が見える。**どちらの数字かを取り違えないよう、分けて持つ。**
+    #
+    #     desc / pct / total …… 全言語（ストアのいちばん上に出るもの）
+    #     ja.desc / ja.pct / ja.total …… 日本語のレビューだけ
+    #     recent …… 日本語のレビュー本文（新しい順）
+    ja, why = ask(["japanese"], REVIEWS)
+    if ja is None:
+        log(f"  レビュー {appid} … 取れませんでした: {str(why)[:220]}")
         return None
-    q = res.get("query_summary") or {}
-    pos, neg = int(q.get("total_positive") or 0), int(q.get("total_negative") or 0)
-    tot = pos + neg
-    out = {
-        "appid": appid,
-        "desc": q.get("review_score_desc") or "",
-        "positive": pos, "negative": neg, "total": tot,
-        "pct": round(100 * pos / tot) if tot else None,
-        "recent": [],
-    }
-    for r in (res.get("reviews") or [])[:REVIEWS]:
+    al, why_al = ask(["all"], 1)
+    out = {"appid": appid}
+    if al is not None:
+        out.update(summary(al))
+        out["scope"] = "全言語"
+    else:
+        out.update(summary(ja))
+        out["scope"] = "日本語のみ"           # 全言語が取れなかった日は、そうと分かるように
+        log(f"  レビュー {appid} … 全言語の評価は取れませんでした: {str(why_al)[:160]}")
+    out["ja"] = summary(ja)
+    out["recent"] = []
+    for r in (ja.get("reviews") or [])[:REVIEWS]:
         t = re.sub(r"\s+", " ", (r.get("review") or "")).strip()
         if not t:
             continue
@@ -245,7 +271,8 @@ def main():
             break
         if rev:
             out[name] = rev
-            log(f"  {name} … {rev['desc']}（{rev['pct']}% / {rev['total']}件）"
+            log(f"  {name} … {rev['scope']} {rev['desc']}（{rev['pct']}% / {rev['total']}件）"
+                f"／日本語 {rev['ja']['desc']}（{rev['ja']['pct']}% / {rev['ja']['total']}件）"
                 f" 本文 {len(rev['recent'])}本")
         time.sleep(1.2)
 
