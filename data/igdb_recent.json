@@ -10966,7 +10966,9 @@
  },
  {
   "name": "ChickenPlaguePolice",
-  "alias": [],
+  "alias": [
+   "ChickenPlaguePolice.exe"
+  ],
   "pop": 0,
   "y": 2026,
   "p": [
@@ -14980,7 +14982,9 @@
  },
  {
   "name": "Deadly Match",
-  "alias": [],
+  "alias": [
+   "DeadlyMatch.exe"
+  ],
   "pop": 0,
   "y": 2026,
   "p": [
@@ -21730,7 +21734,9 @@
  },
  {
   "name": "Fat Goblins",
-  "alias": [],
+  "alias": [
+   "main.exe"
+  ],
   "pop": 0,
   "y": 2026,
   "p": [
@@ -22035,18 +22041,6 @@
   "g": [
    "Adventure",
    "Indie"
-  ]
- },
- {
-  "name": "Felzi",
-  "alias": [],
-  "pop": 0,
-  "y": 2026,
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Adventure"
   ]
  },
  {
@@ -25791,6 +25785,21 @@
   ]
  },
  {
+  "name": "Good President Simulator",
+  "alias": [],
+  "pop": 0,
+  "y": 2026,
+  "p": [
+   "pc",
+   "console"
+  ],
+  "g": [
+   "Simulator",
+   "Strategy",
+   "Indie"
+  ]
+ },
+ {
   "name": "Goodbye Page",
   "alias": [],
   "pop": 0,
@@ -27091,6 +27100,20 @@
   ],
   "g": [
    "Shooter"
+  ]
+ },
+ {
+  "name": "Hallow Maze",
+  "alias": [],
+  "pop": 0,
+  "y": 2026,
+  "p": [
+   "pc"
+  ],
+  "g": [
+   "Role-playing (RPG)",
+   "Adventure",
+   "Indie"
   ]
  },
  {
@@ -44507,20 +44530,6 @@
   ]
  },
  {
-  "name": "Pestilence",
-  "alias": [
-   "Pestilence.exe"
-  ],
-  "pop": 0,
-  "y": 2026,
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Indie"
-  ]
- },
- {
   "name": "Pet Human",
   "alias": [
    "PET HUMAN.exe",
@@ -51192,7 +51201,9 @@
  },
  {
   "name": "Satelital",
-  "alias": [],
+  "alias": [
+   "Satelital.exe"
+  ],
   "pop": 0,
   "y": 2026,
   "p": [
@@ -67988,6 +67999,18 @@
   ]
  },
  {
+  "name": "Warcania",
+  "alias": [],
+  "pop": 0,
+  "y": 2026,
+  "p": [
+   "console"
+  ],
+  "g": [
+   "Role-playing (RPG)"
+  ]
+ },
+ {
   "name": "Warding Witches",
   "alias": [
    "wardingwitches.exe"
@@ -68868,19 +68891,6 @@
   ],
   "g": [
    "Adventure"
-  ]
- },
- {
-  "name": "Whispers of The Shadow",
-  "alias": [],
-  "pop": 0,
-  "y": 2026,
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Shooter",
-   "Indie"
   ]
  },
  {
