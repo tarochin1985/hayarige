@@ -1,7 +1,7 @@
 {
  "mode": "admin",
  "date": "2026-11-13",
- "generated": "2026-11-13 10:26",
+ "generated": "2026-11-13 11:12",
  "unknown": [
   {
    "guess": "縦型配信",
@@ -196,18 +196,6 @@
    ]
   },
   {
-   "guess": "段位戦",
-   "channels": 1,
-   "n": 1,
-   "examples": [
-    {
-     "t": "【段位戦】誕生日だよ！！パネル開けしながら段位戦！【VPL5期生/ゆんちゅる】 #初見歓迎 #雀魂 ＃vtuber #麻雀",
-     "c": "ゆんちゅる@宝石彫留職人・VPL5期生麻雀新人VTuber",
-     "u": "https://www.youtube.com/watch?v=b5Mv2q54vjM"
-    }
-   ]
-  },
-  {
    "guess": "ボドゲ",
    "channels": 1,
    "n": 1,
@@ -396,18 +384,6 @@
      "t": "【タケルのジンロー】うさぎ現る",
      "c": "くどう丸",
      "u": "https://www.youtube.com/watch?v=N0fUs6K-FDs"
-    }
-   ]
-  },
-  {
-   "guess": "銀星麻雀",
-   "channels": 1,
-   "n": 1,
-   "examples": [
-    {
-     "t": "【銀星麻雀】クソCPUキャラ「円堂竜也」をボコす。実況プレイ配信3",
-     "c": "Hiromi Ch. 白河ひろみ",
-     "u": "https://www.youtube.com/watch?v=gqyLtzt-VRI"
     }
    ]
   },
@@ -2215,7 +2191,6 @@
      "エラch",
      "ジョアだよ",
      "儚視まちこVTuber Hakanashi Matiko",
-     "恋因ロス KoinRosu",
      "豚咲あおい_TomisakiAoi",
      "遊楽木たいむ / yuuragi time ch",
      "運天りらん",
@@ -2333,7 +2308,7 @@
    {
     "game": "Grand Theft Auto V",
     "channels": 32,
-    "videos": 35
+    "videos": 34
    },
    {
     "game": "鳴潮",
@@ -2347,24 +2322,12 @@
    },
    {
     "game": "崩壊：スターレイル",
-    "channels": 20,
-    "videos": 22
+    "channels": 19,
+    "videos": 21
    }
   ]
  },
- "drift": [
-  {
-   "game": "Super Mario Kart",
-   "written": "マリオカート8dx",
-   "channels": 3,
-   "of": 7,
-   "example": [
-    "Su Ch. 水宮枢 - FLOW GLOW",
-    "フレン・E・ルスタリオ",
-    "伊波ライ / Inami Rai【にじさんじ】"
-   ]
-  }
- ],
+ "drift": [],
  "tags": [],
  "misses": [
   {
@@ -2422,6 +2385,11 @@
  "meta_og": "管理用",
  "meta_desc": "判定できなかった配信と、コラムの種。公開ページではありません。",
  "recent_columns": [
+  {
+   "date": "2026-11-13",
+   "game": "気のせいすぎるＲＰＧ",
+   "headline": "魔王が復活した気がするので倒してきます！"
+  },
   {
    "date": "2026-11-12",
    "game": "崩壊：スターレイル",
@@ -2486,11 +2454,6 @@
    "date": "2026-10-31",
    "game": "R.E.P.O.",
    "headline": "「アプデきた！？」最大6人の協力ホラーがついに日本語へ正式対応"
-  },
-  {
-   "date": "2026-10-30",
-   "game": "Phantom Blade Zero",
-   "headline": "余命66日の主人公が武林の陰謀を追う「カンフーパンク」"
   }
  ]
 }
