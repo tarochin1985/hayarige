@@ -1608,20 +1608,6 @@
   ]
  },
  {
-  "name": "Aegis Vanguard",
-  "alias": [],
-  "pop": 0,
-  "y": 2026,
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Role-playing (RPG)",
-   "Strategy",
-   "Indie"
-  ]
- },
- {
   "name": "Aelwater",
   "alias": [],
   "pop": 0,
@@ -4770,6 +4756,7 @@
    "pc"
   ],
   "g": [
+   "Puzzle",
    "Role-playing (RPG)",
    "Turn-based strategy (TBS)",
    "Indie"
@@ -7528,16 +7515,6 @@
   ]
  },
  {
-  "name": "Bluey's Happy Snaps: Deluxe Edition",
-  "alias": [],
-  "pop": 0,
-  "y": 2026,
-  "p": [
-   "pc",
-   "console"
-  ]
- },
- {
   "name": "Board of the Future",
   "alias": [],
   "pop": 0,
@@ -7738,15 +7715,6 @@
   "g": [
    "Indie",
    "Arcade"
-  ]
- },
- {
-  "name": "Bonkhope",
-  "alias": [],
-  "pop": 0,
-  "y": 2026,
-  "p": [
-   "console"
   ]
  },
  {
@@ -9158,7 +9126,7 @@
    "MW4",
    "Call of Duty: MW4"
   ],
-  "pop": 40,
+  "pop": 41,
   "y": 2026,
   "p": [
    "pc",
@@ -10130,32 +10098,6 @@
   "g": [
    "Adventure",
    "Indie"
-  ]
- },
- {
-  "name": "Castlevania: Belmont's Curse - Bonus Contents Pack",
-  "alias": [],
-  "pop": 0,
-  "y": 2026,
-  "p": [
-   "pc",
-   "console"
-  ]
- },
- {
-  "name": "Castlevania: Belmont's Curse - Midnight Edition",
-  "alias": [],
-  "pop": 0,
-  "y": 2026,
-  "p": [
-   "pc",
-   "console"
-  ],
-  "g": [
-   "Platform",
-   "Role-playing (RPG)",
-   "Hack and slash/Beat 'em up",
-   "Adventure"
   ]
  },
  {
@@ -11512,6 +11454,19 @@
   ]
  },
  {
+  "name": "Clamber",
+  "alias": [],
+  "pop": 0,
+  "y": 2026,
+  "p": [
+   "console"
+  ],
+  "g": [
+   "Puzzle",
+   "Quiz/Trivia"
+  ]
+ },
+ {
   "name": "Classic Sonic Collection",
   "alias": [],
   "pop": 0,
@@ -12387,6 +12342,18 @@
   ],
   "g": [
    "Simulator"
+  ]
+ },
+ {
+  "name": "Construction Site: Tidy Up Together",
+  "alias": [],
+  "pop": 0,
+  "y": 2026,
+  "p": [
+   "pc"
+  ],
+  "g": [
+   "Indie"
   ]
  },
  {
@@ -16747,6 +16714,7 @@
    "pc"
   ],
   "g": [
+   "Real Time Strategy (RTS)",
    "Simulator",
    "Strategy",
    "Adventure",
@@ -17583,6 +17551,18 @@
   "g": [
    "Shooter",
    "Indie"
+  ]
+ },
+ {
+  "name": "Down the Line",
+  "alias": [],
+  "pop": 0,
+  "y": 2026,
+  "p": [
+   "console"
+  ],
+  "g": [
+   "Quiz/Trivia"
   ]
  },
  {
@@ -19155,6 +19135,21 @@
   ]
  },
  {
+  "name": "E.S.D.E.",
+  "alias": [],
+  "pop": 0,
+  "y": 2026,
+  "p": [
+   "pc",
+   "console"
+  ],
+  "g": [
+   "Simulator",
+   "Adventure",
+   "Indie"
+  ]
+ },
+ {
   "name": "EVO Card",
   "alias": [
    "最狂進化",
@@ -19710,8 +19705,25 @@
   ]
  },
  {
-  "name": "Elementys",
+  "name": "Elements Destiny",
   "alias": [],
+  "pop": 0,
+  "y": 2026,
+  "p": [
+   "pc",
+   "console"
+  ],
+  "g": [
+   "Role-playing (RPG)",
+   "Adventure",
+   "Indie"
+  ]
+ },
+ {
+  "name": "Elementys",
+  "alias": [
+   "Elementys.exe"
+  ],
   "pop": 0,
   "y": 2026,
   "p": [
@@ -20795,21 +20807,6 @@
   "g": [
    "Puzzle",
    "Indie"
-  ]
- },
- {
-  "name": "Expedition of the Guild",
-  "alias": [
-   "Game.exe"
-  ],
-  "pop": 0,
-  "y": 2026,
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Role-playing (RPG)",
-   "Adventure"
   ]
  },
  {
@@ -21986,6 +21983,19 @@
   ]
  },
  {
+  "name": "Fear Night Tales: Camp Story",
+  "alias": [],
+  "pop": 0,
+  "y": 2026,
+  "p": [
+   "pc"
+  ],
+  "g": [
+   "Adventure",
+   "Indie"
+  ]
+ },
+ {
   "name": "Fearmates",
   "alias": [
    "FEARMATES"
@@ -22129,18 +22139,6 @@
   ]
  },
  {
-  "name": "Felzi",
-  "alias": [],
-  "pop": 0,
-  "y": 2026,
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Adventure"
-  ]
- },
- {
   "name": "Fendershot",
   "alias": [
    "FENDERSHOT"
@@ -22153,6 +22151,18 @@
   "g": [
    "Racing",
    "Sport"
+  ]
+ },
+ {
+  "name": "Fenrir's Ragnarök: Die Spiele der Götter - Drachenblut",
+  "alias": [],
+  "pop": 0,
+  "y": 2026,
+  "p": [
+   "pc"
+  ],
+  "g": [
+   "Indie"
   ]
  },
  {
@@ -22945,6 +22955,21 @@
   ]
  },
  {
+  "name": "FlatOut 4: Total Insanity VR",
+  "alias": [
+   "Flatout.exe"
+  ],
+  "pop": 0,
+  "y": 2026,
+  "p": [
+   "console"
+  ],
+  "g": [
+   "Racing",
+   "Simulator"
+  ]
+ },
+ {
   "name": "Flats Full of Cats: Potions & Masks",
   "alias": [],
   "pop": 0,
@@ -23496,6 +23521,24 @@
   ]
  },
  {
+  "name": "For Honor: Crimson Dragon Bundle",
+  "alias": [],
+  "pop": 0,
+  "y": 2026,
+  "p": [
+   "pc"
+  ]
+ },
+ {
+  "name": "For Honor: Dragon's Daughter Bundle",
+  "alias": [],
+  "pop": 0,
+  "y": 2026,
+  "p": [
+   "pc"
+  ]
+ },
+ {
   "name": "For Honor: Liana the Pale",
   "alias": [],
   "pop": 0,
@@ -23573,6 +23616,7 @@
   "g": [
    "Strategy",
    "Indie",
+   "Visual Novel",
    "Card & Board Game"
   ]
  },
@@ -24812,6 +24856,7 @@
    "pc"
   ],
   "g": [
+   "Puzzle",
    "Strategy",
    "Indie"
   ]
@@ -25764,7 +25809,8 @@
   "g": [
    "Simulator",
    "Sport",
-   "Indie"
+   "Indie",
+   "Arcade"
   ]
  },
  {
@@ -25824,19 +25870,6 @@
    "Point-and-click",
    "Puzzle",
    "Adventure",
-   "Indie"
-  ]
- },
- {
-  "name": "Good Job",
-  "alias": [],
-  "pop": 0,
-  "y": 2026,
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Simulator",
    "Indie"
   ]
  },
@@ -25972,15 +26005,6 @@
    "Sport",
    "Strategy",
    "Card & Board Game"
-  ]
- },
- {
-  "name": "Gran Turismo 7: Spec IV",
-  "alias": [],
-  "pop": 0,
-  "y": 2026,
-  "p": [
-   "console"
   ]
  },
  {
@@ -29465,6 +29489,9 @@
   "p": [
    "pc",
    "console"
+  ],
+  "g": [
+   "Racing"
   ]
  },
  {
@@ -29493,18 +29520,6 @@
   "g": [
    "Adventure",
    "Indie"
-  ]
- },
- {
-  "name": "Houm",
-  "alias": [],
-  "pop": 0,
-  "y": 2026,
-  "p": [
-   "console"
-  ],
-  "g": [
-   "Adventure"
   ]
  },
  {
@@ -34806,20 +34821,6 @@
   ]
  },
  {
-  "name": "Liminal Angel",
-  "alias": [],
-  "pop": 0,
-  "y": 2026,
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Role-playing (RPG)",
-   "Adventure",
-   "Indie"
-  ]
- },
- {
   "name": "Liminal Cage: Gin no Youkakutei",
   "alias": [],
   "pop": 0,
@@ -34857,24 +34858,6 @@
   "y": 2026,
   "p": [
    "pc"
-  ]
- },
- {
-  "name": "Limp Mode",
-  "alias": [
-   "LIMP-MODE.exe",
-   "LIMP MODE",
-   "LIMP-MODE"
-  ],
-  "pop": 0,
-  "y": 2026,
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Racing",
-   "Simulator",
-   "Indie"
   ]
  },
  {
@@ -38170,21 +38153,6 @@
   ]
  },
  {
-  "name": "Mimic Busters",
-  "alias": [
-   "MimicBusters.exe"
-  ],
-  "pop": 0,
-  "y": 2026,
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Tactical",
-   "Indie"
-  ]
- },
- {
   "name": "Minato",
   "alias": [],
   "pop": 0,
@@ -40156,6 +40124,19 @@
   ]
  },
  {
+  "name": "Natsuno-Kanata: Prologue",
+  "alias": [],
+  "pop": 0,
+  "y": 2026,
+  "p": [
+   "pc"
+  ],
+  "g": [
+   "Adventure",
+   "Visual Novel"
+  ]
+ },
+ {
   "name": "Near Mint",
   "alias": [
    "NearMint.exe"
@@ -41751,18 +41732,6 @@
   "g": [
    "Shooter",
    "Indie"
-  ]
- },
- {
-  "name": "Nonetbeat",
-  "alias": [],
-  "pop": 0,
-  "y": 2026,
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Shooter"
   ]
  },
  {
@@ -48361,23 +48330,6 @@
   ]
  },
  {
-  "name": "Ratatan: Digital Deluxe Edition",
-  "alias": [],
-  "pop": 0,
-  "y": 2026,
-  "p": [
-   "pc",
-   "console"
-  ],
-  "g": [
-   "Music",
-   "Role-playing (RPG)",
-   "Strategy",
-   "Adventure",
-   "Indie"
-  ]
- },
- {
   "name": "Ratchet & Clank",
   "alias": [],
   "pop": 0,
@@ -49542,6 +49494,18 @@
   ]
  },
  {
+  "name": "Revving: Engine Simulator - Every Engine",
+  "alias": [],
+  "pop": 0,
+  "y": 2026,
+  "p": [
+   "pc"
+  ],
+  "g": [
+   "Simulator"
+  ]
+ },
+ {
   "name": "Rewind And Reclaim",
   "alias": [
    "Final Girl"
@@ -49980,6 +49944,20 @@
    "Simulator",
    "Adventure",
    "Indie"
+  ]
+ },
+ {
+  "name": "Rock, Paper, Rumble",
+  "alias": [],
+  "pop": 0,
+  "y": 2026,
+  "p": [
+   "pc",
+   "console"
+  ],
+  "g": [
+   "Fighting",
+   "Card & Board Game"
   ]
  },
  {
@@ -51408,22 +51386,6 @@
   ],
   "g": [
    "Visual Novel"
-  ]
- },
- {
-  "name": "Scam With Your Friends",
-  "alias": [
-   "Scam With Your Friends.exe",
-   "$cam With Your Friends"
-  ],
-  "pop": 0,
-  "y": 2026,
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Simulator",
-   "Indie"
   ]
  },
  {
@@ -52960,6 +52922,19 @@
   ]
  },
  {
+  "name": "Shred a Billion",
+  "alias": [],
+  "pop": 0,
+  "y": 2026,
+  "p": [
+   "pc"
+  ],
+  "g": [
+   "Simulator",
+   "Indie"
+  ]
+ },
+ {
   "name": "Shred the Evidence",
   "alias": [],
   "pop": 0,
@@ -53339,21 +53314,6 @@
   ],
   "g": [
    "Adventure"
-  ]
- },
- {
-  "name": "Silent Wounds: The Doll",
-  "alias": [
-   "The Doll.exe"
-  ],
-  "pop": 0,
-  "y": 2026,
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Adventure",
-   "Indie"
   ]
  },
  {
@@ -53876,6 +53836,22 @@
   "name": "Slay the Q",
   "alias": [
    "slay_the_q.exe"
+  ],
+  "pop": 0,
+  "y": 2026,
+  "p": [
+   "pc"
+  ],
+  "g": [
+   "Strategy",
+   "Indie",
+   "Card & Board Game"
+  ]
+ },
+ {
+  "name": "Slay the Tire",
+  "alias": [
+   "SlayTheTire.exe"
   ],
   "pop": 0,
   "y": 2026,
@@ -63035,23 +63011,6 @@
   ]
  },
  {
-  "name": "The Way of Wrath",
-  "alias": [],
-  "pop": 0,
-  "y": 2026,
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Role-playing (RPG)",
-   "Strategy",
-   "Turn-based strategy (TBS)",
-   "Tactical",
-   "Adventure",
-   "Indie"
-  ]
- },
- {
   "name": "The Whispering Bones",
   "alias": [],
   "pop": 0,
@@ -64272,6 +64231,21 @@
   ]
  },
  {
+  "name": "Titanic Pinball Maiden Voyage",
+  "alias": [
+   "TITANIC PINBALL MAIDEN VOYAGE"
+  ],
+  "pop": 0,
+  "y": 2026,
+  "p": [
+   "pc"
+  ],
+  "g": [
+   "Adventure",
+   "Indie"
+  ]
+ },
+ {
   "name": "To Be Connected",
   "alias": [],
   "pop": 0,
@@ -64349,6 +64323,21 @@
    "Shooter",
    "Indie",
    "Arcade"
+  ]
+ },
+ {
+  "name": "Tobuuy",
+  "alias": [
+   "BuyOut"
+  ],
+  "pop": 0,
+  "y": 2026,
+  "p": [
+   "console"
+  ],
+  "g": [
+   "Indie",
+   "Card & Board Game"
   ]
  },
  {
@@ -64670,6 +64659,21 @@
    "Shooter",
    "Simulator",
    "Adventure"
+  ]
+ },
+ {
+  "name": "Toto's Journey",
+  "alias": [],
+  "pop": 0,
+  "y": 2026,
+  "p": [
+   "pc"
+  ],
+  "g": [
+   "Puzzle",
+   "Adventure",
+   "Indie",
+   "Arcade"
   ]
  },
  {
@@ -68501,22 +68505,6 @@
   ],
   "g": [
    "Simulator",
-   "Adventure",
-   "Indie"
-  ]
- },
- {
-  "name": "WendyQuest: Legend of the Four Corner Stones",
-  "alias": [
-   "WendyQuest.exe"
-  ],
-  "pop": 0,
-  "y": 2026,
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Role-playing (RPG)",
    "Adventure",
    "Indie"
   ]
