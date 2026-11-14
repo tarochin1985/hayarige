@@ -477,9 +477,14 @@ def extract(title: str, idx: Index, fallback=False):
         # 組は data/長いほうを採る.json にあり、**両方が同じ題に出ているときしか効かない。**
         # check_series.py の「題の中に、入り先より長い別のゲーム名が書いてある」が
         # 候補を出してくれるので、人が見て決めた組だけをそこに足す。
+        # 組の値は1つの行でも、行の並び（先に書いたほうを優先）でもよい（2026-11-14）。
+        # ピクミンのように「1作目の英語名に勝たれるが、4・3・2のどれもありうる」ときに並べる。
         other = prefer_long().get(win)
-        if other and any(g == other for _s, g in cands):
-            win = other
+        hit = {g for _s, g in cands}
+        for o in ([other] if isinstance(other, str) else (other or [])):
+            if o in hit:
+                win = o
+                break
         return win, "dict"
     if fallback:
         seg = leading_bracket(title, idx.ng)

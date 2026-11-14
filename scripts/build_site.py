@@ -364,6 +364,15 @@ def _miss_blocklist():
     words = (read_json(DATA / "miss_blocklist.json", {}) or {}).get("語", [])
     exact, part = set(), set()
     for w in words:
+        # 頭に `=` を付けた語は、字数に関係なく**完全一致だけ**で消す（2026-11-14）。
+        # 英字の `pokemon` は7字で部分一致になり、`pokemonlegendsza` のような
+        # 本当の穴の語まで消してしまうので入れられなかった。朝の窓が4回同じ提案を
+        # 上げてきたのは、仕組みのほうにこの手段が無かったから。
+        if str(w).startswith("="):
+            c = M.compact(str(w)[1:])
+            if c:
+                exact.add(c)
+            continue
         c = M.compact(w)
         if not c:
             continue
