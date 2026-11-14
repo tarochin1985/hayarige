@@ -1608,6 +1608,20 @@
   ]
  },
  {
+  "name": "Aegis Vanguard",
+  "alias": [],
+  "pop": 0,
+  "y": 2026,
+  "p": [
+   "pc"
+  ],
+  "g": [
+   "Role-playing (RPG)",
+   "Strategy",
+   "Indie"
+  ]
+ },
+ {
   "name": "Aelwater",
   "alias": [],
   "pop": 0,
@@ -5622,6 +5636,21 @@
   ]
  },
  {
+  "name": "Ballerspiel",
+  "alias": [
+   "Ballern.exe"
+  ],
+  "pop": 0,
+  "y": 2026,
+  "p": [
+   "pc"
+  ],
+  "g": [
+   "Shooter",
+   "Indie"
+  ]
+ },
+ {
   "name": "Ballshit 2D",
   "alias": [
    "WJZT_2D.exe"
@@ -7567,7 +7596,9 @@
  },
  {
   "name": "Body Kounts",
-  "alias": [],
+  "alias": [
+   "bodykounts.exe"
+  ],
   "pop": 0,
   "y": 2026,
   "p": [
@@ -9063,6 +9094,18 @@
   "g": [
    "Role-playing (RPG)",
    "Adventure",
+   "Indie"
+  ]
+ },
+ {
+  "name": "Calibration Sequence",
+  "alias": [],
+  "pop": 0,
+  "y": 2026,
+  "p": [
+   "pc"
+  ],
+  "g": [
    "Indie"
   ]
  },
@@ -20678,6 +20721,21 @@
   ]
  },
  {
+  "name": "Expedition of the Guild",
+  "alias": [
+   "Game.exe"
+  ],
+  "pop": 0,
+  "y": 2026,
+  "p": [
+   "pc"
+  ],
+  "g": [
+   "Role-playing (RPG)",
+   "Adventure"
+  ]
+ },
+ {
   "name": "Expedition: Into Darkness",
   "alias": [],
   "pop": 0,
@@ -21991,6 +22049,18 @@
   "g": [
    "Adventure",
    "Indie"
+  ]
+ },
+ {
+  "name": "Felzi",
+  "alias": [],
+  "pop": 0,
+  "y": 2026,
+  "p": [
+   "pc"
+  ],
+  "g": [
+   "Adventure"
   ]
  },
  {
@@ -34694,6 +34764,20 @@
   ]
  },
  {
+  "name": "Liminal Angel",
+  "alias": [],
+  "pop": 0,
+  "y": 2026,
+  "p": [
+   "pc"
+  ],
+  "g": [
+   "Role-playing (RPG)",
+   "Adventure",
+   "Indie"
+  ]
+ },
+ {
   "name": "Liminal Cage: Gin no Youkakutei",
   "alias": [],
   "pop": 0,
@@ -35175,20 +35259,6 @@
    "Role-playing (RPG)",
    "Strategy",
    "Adventure",
-   "Indie"
-  ]
- },
- {
-  "name": "Loot Goblins",
-  "alias": [],
-  "pop": 0,
-  "y": 2026,
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Role-playing (RPG)",
-   "Strategy",
    "Indie"
   ]
  },
@@ -41301,7 +41371,9 @@
  },
  {
   "name": "No One to See: Pinebark Camp",
-  "alias": [],
+  "alias": [
+   "No One to See - Pinebark Camp.exe"
+  ],
   "pop": 0,
   "y": 2026,
   "p": [
@@ -41810,21 +41882,6 @@
  {
   "name": "Not My Dad",
   "alias": [],
-  "pop": 0,
-  "y": 2026,
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Adventure",
-   "Indie"
-  ]
- },
- {
-  "name": "Not My Son",
-  "alias": [
-   "Not My Son.exe"
-  ],
   "pop": 0,
   "y": 2026,
   "p": [
@@ -46081,6 +46138,21 @@
   "y": 2026,
   "p": [
    "pc"
+  ]
+ },
+ {
+  "name": "Pool of Madness",
+  "alias": [],
+  "pop": 0,
+  "y": 2026,
+  "p": [
+   "pc"
+  ],
+  "g": [
+   "Sport",
+   "Strategy",
+   "Adventure",
+   "Indie"
   ]
  },
  {
@@ -51309,6 +51381,22 @@
   ]
  },
  {
+  "name": "Scale a Building",
+  "alias": [
+   "SAB",
+   "Scale-A-Building"
+  ],
+  "pop": 0,
+  "y": 2026,
+  "p": [
+   "pc"
+  ],
+  "g": [
+   "Platform",
+   "Puzzle"
+  ]
+ },
+ {
   "name": "Scam With Your Friends",
   "alias": [
    "Scam With Your Friends.exe",
@@ -54847,6 +54935,10 @@
   "y": 2026,
   "p": [
    "pc"
+  ],
+  "g": [
+   "Simulator",
+   "Indie"
   ]
  },
  {
@@ -58069,23 +58161,6 @@
   ]
  },
  {
-  "name": "Sword Flinger",
-  "alias": [
-   "ケンナゲェル -SWORD FLINGER-",
-   "SwordFlinger.exe"
-  ],
-  "pop": 0,
-  "y": 2026,
-  "jp": "ケンナゲェル -SWORD FLINGER-",
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Turn-based strategy (TBS)",
-   "Indie"
-  ]
- },
- {
   "name": "Sword of the Last Second",
   "alias": [
    "Sword of the Demiurge",
@@ -60431,19 +60506,6 @@
   ]
  },
  {
-  "name": "The Dreadthorn Therapist",
-  "alias": [],
-  "pop": 0,
-  "y": 2026,
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Simulator",
-   "Indie"
-  ]
- },
- {
   "name": "The Dropouts",
   "alias": [
    "Heist Schoolers"
@@ -61670,7 +61732,7 @@
   "alias": [
    "Zelda no Densetsu Toki no Ocarina"
   ],
-  "pop": 28,
+  "pop": 29,
   "y": 2026,
   "p": [
    "console"
@@ -61860,21 +61922,6 @@
   ],
   "g": [
    "Role-playing (RPG)"
-  ]
- },
- {
-  "name": "The Magician VR: The Cursed Wand",
-  "alias": [],
-  "pop": 0,
-  "y": 2026,
-  "p": [
-   "console"
-  ],
-  "g": [
-   "Fighting",
-   "Shooter",
-   "Adventure",
-   "Arcade"
   ]
  },
  {
@@ -64925,56 +64972,6 @@
   "g": [
    "Puzzle",
    "Simulator"
-  ]
- },
- {
-  "name": "Toy Story 3: Complete Edition",
-  "alias": [
-   "Toy Story 3 Complete Edition.exe"
-  ],
-  "pop": 0,
-  "y": 2026,
-  "p": [
-   "pc",
-   "console"
-  ],
-  "g": [
-   "Platform",
-   "Adventure"
-  ]
- },
- {
-  "name": "Toy Story: Retro Roundup!",
-  "alias": [
-   "Disney•Pixar Toy Story: Retro Roundup!"
-  ],
-  "pop": 1,
-  "y": 2026,
-  "p": [
-   "pc",
-   "console"
-  ],
-  "g": [
-   "Platform",
-   "Racing",
-   "Adventure"
-  ]
- },
- {
-  "name": "Toy Story: Retro Roundup! + Toy Story 3: Complete Edition Double Pack",
-  "alias": [
-   "Disney•Pixar Toy Story: Retro Roundup! + Toy Story 3 Complete Edition Double Pack"
-  ],
-  "pop": 1,
-  "y": 2026,
-  "p": [
-   "pc",
-   "console"
-  ],
-  "g": [
-   "Platform",
-   "Racing",
-   "Adventure"
   ]
  },
  {
