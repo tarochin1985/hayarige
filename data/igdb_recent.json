@@ -6899,7 +6899,9 @@
  },
  {
   "name": "Blade Dodger",
-  "alias": [],
+  "alias": [
+   "BladeDodger.exe"
+  ],
   "pop": 0,
   "y": 2026,
   "p": [
@@ -8024,6 +8026,19 @@
   ]
  },
  {
+  "name": "Bound by Fate: Cursed Soulmates",
+  "alias": [],
+  "pop": 0,
+  "y": 2026,
+  "p": [
+   "pc"
+  ],
+  "g": [
+   "Indie",
+   "Visual Novel"
+  ]
+ },
+ {
   "name": "Boundless Evil: Awakening",
   "alias": [],
   "pop": 0,
@@ -8785,6 +8800,18 @@
   ]
  },
  {
+  "name": "Burnout Dominator Reversed",
+  "alias": [],
+  "pop": 0,
+  "y": 2026,
+  "p": [
+   "pc"
+  ],
+  "g": [
+   "Racing"
+  ]
+ },
+ {
   "name": "Bus Terminal Simulator",
   "alias": [],
   "pop": 0,
@@ -9131,7 +9158,7 @@
    "MW4",
    "Call of Duty: MW4"
   ],
-  "pop": 39,
+  "pop": 40,
   "y": 2026,
   "p": [
    "pc",
@@ -12264,6 +12291,18 @@
    "Hack and slash/Beat 'em up",
    "Adventure",
    "Indie"
+  ]
+ },
+ {
+  "name": "Considerable Grandfather: It Followed Me Home",
+  "alias": [],
+  "pop": 0,
+  "y": 2026,
+  "p": [
+   "pc"
+  ],
+  "g": [
+   "Strategy"
   ]
  },
  {
@@ -17213,6 +17252,24 @@
   ]
  },
  {
+  "name": "Don't Fret",
+  "alias": [
+   "Don't! Fret: The Audition",
+   "Don't! Fret"
+  ],
+  "pop": 0,
+  "y": 2026,
+  "p": [
+   "pc",
+   "console"
+  ],
+  "g": [
+   "Music",
+   "Adventure",
+   "Indie"
+  ]
+ },
+ {
   "name": "Don't Get Caught",
   "alias": [],
   "pop": 0,
@@ -17575,7 +17632,9 @@
  },
  {
   "name": "Draemony",
-  "alias": [],
+  "alias": [
+   "Draemony.exe"
+  ],
   "pop": 0,
   "y": 2026,
   "p": [
@@ -17584,6 +17643,7 @@
   "g": [
    "Role-playing (RPG)",
    "Hack and slash/Beat 'em up",
+   "Adventure",
    "Indie"
   ]
  },
@@ -18442,6 +18502,20 @@
   ]
  },
  {
+  "name": "Dull Ache",
+  "alias": [
+   "DULL ACHE"
+  ],
+  "pop": 0,
+  "y": 2026,
+  "p": [
+   "pc"
+  ],
+  "g": [
+   "Adventure"
+  ]
+ },
+ {
   "name": "Dumb Dunks",
   "alias": [],
   "pop": 0,
@@ -18532,6 +18606,20 @@
    "pc"
   ],
   "g": [
+   "Strategy",
+   "Indie"
+  ]
+ },
+ {
+  "name": "Dungeon Defenders: Shaman Hero DLC",
+  "alias": [],
+  "pop": 0,
+  "y": 2026,
+  "p": [
+   "pc"
+  ],
+  "g": [
+   "Role-playing (RPG)",
    "Strategy",
    "Indie"
   ]
@@ -19690,19 +19778,6 @@
   ]
  },
  {
-  "name": "Elixir of Moonglow",
-  "alias": [],
-  "pop": 0,
-  "y": 2026,
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Adventure",
-   "Indie"
-  ]
- },
- {
   "name": "Ellsydia",
   "alias": [],
   "pop": 0,
@@ -20347,7 +20422,9 @@
  },
  {
   "name": "Euro Truck Simulator 2: Coaches",
-  "alias": [],
+  "alias": [
+   "Euro Truck Simulator 2 - Coaches"
+  ],
   "pop": 0,
   "y": 2026,
   "p": [
@@ -23975,20 +24052,6 @@
   ]
  },
  {
-  "name": "FreshWomen: Season 3",
-  "alias": [],
-  "pop": 0,
-  "y": 2026,
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Role-playing (RPG)",
-   "Adventure",
-   "Visual Novel"
-  ]
- },
- {
   "name": "Fri: The Unforgettable City",
   "alias": [],
   "pop": 0,
@@ -24429,19 +24492,6 @@
   "g": [
    "Shooter",
    "Indie"
-  ]
- },
- {
-  "name": "Galactic Economy",
-  "alias": [],
-  "pop": 0,
-  "y": 2026,
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Indie",
-   "Card & Board Game"
   ]
  },
  {
@@ -27547,7 +27597,9 @@
   ],
   "g": [
    "Music",
-   "Puzzle"
+   "Puzzle",
+   "Strategy",
+   "Adventure"
   ]
  },
  {
@@ -33304,7 +33356,9 @@
  },
  {
   "name": "Kleks Academy",
-  "alias": [],
+  "alias": [
+   "Kleks.exe"
+  ],
   "pop": 0,
   "y": 2026,
   "p": [
@@ -34408,18 +34462,6 @@
   "g": [
    "Adventure",
    "Indie"
-  ]
- },
- {
-  "name": "Less Miserables",
-  "alias": [],
-  "pop": 0,
-  "y": 2026,
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Adventure"
   ]
  },
  {
@@ -35939,20 +35981,6 @@
    "Adventure",
    "Indie",
    "Visual Novel"
-  ]
- },
- {
-  "name": "M.E.M.O",
-  "alias": [],
-  "pop": 0,
-  "y": 2026,
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Simulator",
-   "Adventure",
-   "Indie"
   ]
  },
  {
@@ -41290,7 +41318,9 @@
  },
  {
   "name": "No More Monsters",
-  "alias": [],
+  "alias": [
+   "NoMoreMonsters.exe"
+  ],
   "pop": 0,
   "y": 2026,
   "p": [
@@ -45088,6 +45118,20 @@
   ]
  },
  {
+  "name": "Pink Light",
+  "alias": [],
+  "pop": 0,
+  "y": 2026,
+  "p": [
+   "pc"
+  ],
+  "g": [
+   "Role-playing (RPG)",
+   "Adventure",
+   "Indie"
+  ]
+ },
+ {
   "name": "Pionero Capital",
   "alias": [
    "PioneroCapital.exe"
@@ -45707,20 +45751,6 @@
   ]
  },
  {
-  "name": "Pocket Dinos",
-  "alias": [],
-  "pop": 0,
-  "y": 2026,
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Point-and-click",
-   "Simulator",
-   "Indie"
-  ]
- },
- {
   "name": "Pocket Legend",
   "alias": [
    "PocketLegend.exe"
@@ -46208,6 +46238,18 @@
    "Puzzle",
    "Adventure",
    "Indie"
+  ]
+ },
+ {
+  "name": "Portas",
+  "alias": [],
+  "pop": 0,
+  "y": 2026,
+  "p": [
+   "pc"
+  ],
+  "g": [
+   "Puzzle"
   ]
  },
  {
@@ -49272,6 +49314,7 @@
   "pop": 0,
   "y": 2026,
   "p": [
+   "pc",
    "console"
   ],
   "g": [
@@ -50738,19 +50781,6 @@
   ]
  },
  {
-  "name": "SCP: Antimemetics Division",
-  "alias": [],
-  "pop": 0,
-  "y": 2026,
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Adventure",
-   "Indie"
-  ]
- },
- {
   "name": "SCP: Darkwater",
   "alias": [],
   "pop": 0,
@@ -51378,22 +51408,6 @@
   ],
   "g": [
    "Visual Novel"
-  ]
- },
- {
-  "name": "Scale a Building",
-  "alias": [
-   "SAB",
-   "Scale-A-Building"
-  ],
-  "pop": 0,
-  "y": 2026,
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Platform",
-   "Puzzle"
   ]
  },
  {
@@ -63100,7 +63114,8 @@
   "g": [
    "Point-and-click",
    "Role-playing (RPG)",
-   "Adventure"
+   "Adventure",
+   "Visual Novel"
   ]
  },
  {
@@ -64357,19 +64372,6 @@
   "y": 2026,
   "p": [
    "pc"
-  ]
- },
- {
-  "name": "Tokatonton: One-Armed Blacksmith",
-  "alias": [],
-  "pop": 0,
-  "y": 2026,
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Simulator",
-   "Indie"
   ]
  },
  {
@@ -68401,6 +68403,21 @@
   ]
  },
  {
+  "name": "We Have a Sheep Problem",
+  "alias": [
+   "WeHaveASheepProblem.exe"
+  ],
+  "pop": 0,
+  "y": 2026,
+  "p": [
+   "pc"
+  ],
+  "g": [
+   "Simulator",
+   "Indie"
+  ]
+ },
+ {
   "name": "We March as One",
   "alias": [
    "WeMarchAsOne.exe"
@@ -68989,6 +69006,10 @@
   "y": 2026,
   "p": [
    "pc"
+  ],
+  "g": [
+   "Role-playing (RPG)",
+   "Indie"
   ]
  },
  {
