@@ -1,0 +1,25 @@
+{
+ "メモ": "2026-11-15 急ぎ3件＋宿題1件（朝の窓のブロックから）。\n\n★①**【急ぎ・条件1】『ROB RUN』の3本が『Rust』に入っていた。**とち丸ちゃんさんの『【縦型配信】ROBRUN！GTAの強盗要素とRUSTのレイド要素を融合！』。報告の迷いは「直し方は別名の優先か exact_only か」。★**どちらでもなく、`Rob Run` を手で登録しただけで直る。**原因は2-7章の「発売したての新作は pop が 0 で、括弧の外では採用されない」。`Rob Run` はカタログに在るが pop 0 なので、**括弧の外に書かれた `ROBRUN` は候補にならず**、同じ題の `RUST`（手で登録済み＝括弧の外でも採用される）だけが残っていた。手で行に別名（`ROBRUN`）を足すと行が「手で登録した行」になり、括弧の外でも採用され、6字＋3点で `rust`（4字＋3点）に勝つ。裏取り: Steam app 4262460 で ROB RUN・開発販売 Kefir・2026年11月4日早期アクセス・Free To Play。\n★②**【急ぎ】『風燕伝』（11本/8ch・うち7本が落ちていた）。**カタログの `Where Winds Meet`（pop 119）に日本語題が無かっただけ。4-5章の形で**21件目**。AUTOMATON（where-winds-meet-20250820-354301）で日本語題『風燕伝：Where Winds Meet』・2025年11月15日配信。**つまり今日がちょうど1周年**（報告で確かめられなかった日付がこれで決まった）。表示名も正式名の『風燕伝：Where Winds Meet』にした（餓狼伝説 City of the Wolves と同じ形）。記録はまだ0日なので住所と記録の付け替えは要らない。\n★③**【急ぎ】『Time Takers』（4本/4ch・全部落ちていた）。**カタログに無いので手でキー。Steam app 3596040 で Mistil Games／NC・Free to Play・未発売（Coming soon）・プレイテストあり。**発売前でも数える**（11-11のドラクエ魔界樹・GTA VIと同じ線）。機種 `pc`。\n★④『Hubert』（1本/1ch）→ 手でキー。Steam app 764930 で Brocap Studio・2026年10月14日・牧羊犬のアドベンチャー（報告は10月12日だったが、ストアページは14日）。カタログの `Hubert Catching` は別物。★**`Hubert` は人の名前でもあるので `alias_exact_only` に入れた**（括弧まるごとのときだけ）。しろこりGamesさんの題は『Hubert』なので当たる。機種 `pc`。",
+ "別名": {
+  "Rob Run": [
+   "ROBRUN"
+  ],
+  "Where Winds Meet": [
+   "風燕伝",
+   "風燕伝：Where Winds Meet"
+  ],
+  "Time Takers": [],
+  "Hubert": []
+ },
+ "表示名": {
+  "Where Winds Meet": "風燕伝：Where Winds Meet"
+ },
+ "機種": {
+  "Time Takers": [
+   "pc"
+  ],
+  "Hubert": [
+   "pc"
+  ]
+ }
+}
