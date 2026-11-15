@@ -1,12 +1,12 @@
 {
  "mode": "admin",
  "date": "2026-11-15",
- "generated": "2026-11-15 10:43",
+ "generated": "2026-11-15 11:04",
  "unknown": [
   {
    "guess": "縦型配信",
    "channels": 2,
-   "n": 5,
+   "n": 4,
    "examples": [
     {
      "t": "【縦型配信】好きなRPGを再度プレイする🌟　#12 #新人vtuber #れいライブ #vtuber #ペーパーマリオ",
@@ -14,14 +14,14 @@
      "u": "https://www.youtube.com/watch?v=KHdnTKcxbBE"
     },
     {
-     "t": "【縦型配信】DLCストーリーを進めていく🌟　#21　#零羅 #新人vtuber #れいライブ #vtuber #バイオレット #ポケモン",
-     "c": "零羅-reira-🦋🌒",
-     "u": "https://www.youtube.com/watch?v=QxbVfBVtnOw"
-    },
-    {
      "t": "【縦型配信】色んなミニゲームやるよ【視聴者参加型】",
      "c": "りょうま【いつスタ】",
      "u": "https://www.youtube.com/watch?v=SySjU6NSC3c"
+    },
+    {
+     "t": "【縦型配信】色んなミニゲームやるよ -夜の部-【視聴者参加型】",
+     "c": "りょうま【いつスタ】",
+     "u": "https://www.youtube.com/watch?v=qZwN2XDNzbk"
     }
    ]
   },
@@ -502,18 +502,6 @@
    ]
   },
   {
-   "guess": "大会3日目",
-   "channels": 1,
-   "n": 1,
-   "examples": [
-    {
-     "t": "【大会3日目】⛳️2026 三井住友VISA太平洋マスターズ　練習場LIVE配信",
-     "c": "【公式】TBS スポーツ",
-     "u": "https://www.youtube.com/watch?v=necOwTg1Mu4"
-    }
-   ]
-  },
-  {
    "guess": "お誕生日前夜祭",
    "channels": 1,
    "n": 1,
@@ -798,18 +786,6 @@
      "t": "🔴【記念雑談】初見さんも歓迎！28ヶ月記念にみんなでおしゃべり【VTuber】",
      "c": "狐狛ぎん@新人Vtuberゲーム実況 ch / Gin Kohaku",
      "u": "https://www.youtube.com/watch?v=bySkbSs8qsM"
-    }
-   ]
-  },
-  {
-   "guess": "セトリネタバレあり",
-   "channels": 1,
-   "n": 1,
-   "examples": [
-    {
-     "t": "【セトリネタバレあり】米津玄師 2026 TOUR / GHOST 行ってきたぞ！！！！",
-     "c": "おもにぃちゃんネル",
-     "u": "https://www.youtube.com/watch?v=4ZqSgTTQ0kc"
     }
    ]
   },
@@ -2860,8 +2836,8 @@
   "wide": [
    {
     "game": "ゼルダの伝説 時のオカリナ",
-    "channels": 63,
-    "videos": 66
+    "channels": 62,
+    "videos": 64
    },
    {
     "game": "Apex Legends",
@@ -2895,8 +2871,8 @@
    },
    {
     "game": "Dead by Daylight",
-    "channels": 22,
-    "videos": 24
+    "channels": 21,
+    "videos": 23
    }
   ]
  },
@@ -2908,6 +2884,11 @@
  "meta_og": "管理用",
  "meta_desc": "判定できなかった配信と、コラムの種。公開ページではありません。",
  "recent_columns": [
+  {
+   "date": "2026-11-15",
+   "game": "ワロタ、俺の家のとなり魔王城www",
+   "headline": "「騒音トラブルに困っています」隣の魔王がライブを始めた"
+  },
   {
    "date": "2026-11-14",
    "game": "ホロライブ麻雀 -ホロじゃん-",
@@ -2972,11 +2953,6 @@
    "date": "2026-11-02",
    "game": "古今東西ダービー",
    "headline": "いい名前が浮かばない馬は 出走すらさせてもらえない"
-  },
-  {
-   "date": "2026-11-01",
-   "game": "Among Us",
-   "headline": "「#ぶいすぽハロウィン」ホラゲーで始まった11時間。締めは嘘つき探し"
   }
  ]
 }
