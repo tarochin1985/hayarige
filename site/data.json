@@ -91,7 +91,7 @@
    "own": false
   }
  ],
- "generated": "2026-11-15 07:43",
+ "generated": "2026-11-15 10:32",
  "range": "直近24時間",
  "days": [
   "11/09",
@@ -103,9 +103,9 @@
   "11/15"
  ],
  "totals": {
-  "videos": 2199,
-  "games": 388,
-  "channels": 1431
+  "videos": 2068,
+  "games": 379,
+  "channels": 1386
  },
  "rising": [
   {
@@ -176,7 +176,7 @@
    "growth": 6.25,
    "steam": "https://store.steampowered.com/search/?term=%E3%81%BF%E3%82%93%E3%81%AA%E3%81%A7%E3%83%86%E3%82%A3%E3%82%A2%E8%A1%A8%21",
    "amazon": null,
-   "rank": 49
+   "rank": 45
   },
   {
    "game": "ワロタ、俺の家のとなり魔王城www",
@@ -260,95 +260,6 @@
    "rank": 98
   },
   {
-   "game": "Rust",
-   "canonical": "Rust",
-   "videos": 8,
-   "n": 8.0,
-   "raw": 10,
-   "channels": 7,
-   "views": 55959,
-   "streams": [
-    {
-     "t": "【縦型配信】ROBRUN！GTAの強盗要素とRUSTのレイド要素を融合！",
-     "c": "とち丸ちゃん【毎日19時配信】",
-     "u": "https://www.youtube.com/watch?v=Pz2_y2CvCp8",
-     "th": "https://i.ytimg.com/vi/Pz2_y2CvCp8/mqdefault.jpg?v=6af8409a",
-     "v": 32787
-    },
-    {
-     "t": "【激バズ新作】ROBRUN！GTAの強盗要素とRUSTのレイド要素を融合！",
-     "c": "とち丸ちゃん【毎日19時配信】",
-     "u": "https://www.youtube.com/watch?v=Ydd7V8f41dU",
-     "th": "https://i.ytimg.com/vi/Ydd7V8f41dU/mqdefault.jpg",
-     "v": 28139
-    },
-    {
-     "t": "【Rust】待望のPVE鯖 #TJA4RUST Day1 2026/11/14",
-     "c": "怪傑がみちゃんねる",
-     "u": "https://www.youtube.com/watch?v=l_bdE03RE8E",
-     "th": "https://i.ytimg.com/vi/l_bdE03RE8E/mqdefault.jpg",
-     "v": 5809
-    },
-    {
-     "t": "【Rust】#TJA4RUST Day1 またまたやってきたぞ【11/14】",
-     "c": "さかな",
-     "u": "https://www.youtube.com/watch?v=wxxk2m4Vxjg",
-     "th": "https://i.ytimg.com/vi/wxxk2m4Vxjg/mqdefault.jpg",
-     "v": 1001
-    },
-    {
-     "t": "【RUST / スト鯖】３日目！まだまだ素材集めたいけど人にも声かけていきたいぷりんきゃん【 #スタラス 】",
-     "c": "ぷりんきゃん",
-     "u": "https://www.youtube.com/watch?v=HhsAjN5gU34",
-     "th": "https://i.ytimg.com/vi/HhsAjN5gU34/mqdefault.jpg",
-     "v": 792
-    },
-    {
-     "t": "【RUST】DAY1　激安の殿堂と酪農の二足の草鞋！【11/14】#TJA4RUST",
-     "c": "平十こうじは叫ばない【マイクラ】",
-     "u": "https://www.youtube.com/watch?v=jLLFWUejzZU",
-     "th": "https://i.ytimg.com/vi/jLLFWUejzZU/mqdefault.jpg",
-     "v": 600
-    },
-    {
-     "t": "【RUST】うおおおお！全力ワイプダッシュだあああああ！#1【 #TJA4RUST #TJA4 /式神ありす視点】",
-     "c": "式神ありす / Shikigami Alice",
-     "u": "https://www.youtube.com/watch?v=IS2_ZEKW_QQ",
-     "th": "https://i.ytimg.com/vi/IS2_ZEKW_QQ/mqdefault.jpg?v=6af83b71",
-     "v": 396
-    },
-    {
-     "t": "【RUST / スト鯖】４日目！人とたくさん話したいぷりんきゃん！【 #スタラス 】",
-     "c": "ぷりんきゃん",
-     "u": "https://www.youtube.com/watch?v=GNT99dghHMg",
-     "th": "https://i.ytimg.com/vi/GNT99dghHMg/mqdefault.jpg",
-     "v": 376
-    }
-   ],
-   "orgs": {
-    "個人・その他": 8,
-    "高田村": 2
-   },
-   "spark": [
-    2.0,
-    1.0,
-    1.0,
-    2.0,
-    1.0,
-    2.0,
-    8.0
-   ],
-   "p_videos": 12,
-   "p_channels": 11,
-   "p_views": 76,
-   "score": 34.0,
-   "base": 1.5,
-   "growth": 5.33,
-   "steam": "https://store.steampowered.com/search/?term=Rust",
-   "amazon": null,
-   "rank": 41
-  },
-  {
    "game": "hololive Dreams",
    "canonical": "hololive Dreams",
    "videos": 6,
@@ -412,7 +323,7 @@
     "ホロライブ": 2
    },
    "spark": [
-    2.0,
+    1.0,
     0,
     3.0,
     0,
@@ -424,11 +335,11 @@
    "p_channels": 8,
    "p_views": 84,
    "score": 34.9,
-   "base": 1.2,
-   "growth": 5.0,
+   "base": 1.0,
+   "growth": 6.0,
    "steam": "https://store.steampowered.com/search/?term=hololive%20Dreams",
    "amazon": "https://www.amazon.co.jp/s?k=hololive+Dreams&tag=tarochin-22",
-   "rank": 38
+   "rank": 36
   },
   {
    "game": "Slay the Spire II",
@@ -503,7 +414,67 @@
    "growth": 5.0,
    "steam": "https://store.steampowered.com/search/?term=Slay%20the%20Spire%20II",
    "amazon": null,
-   "rank": 71
+   "rank": 67
+  },
+  {
+   "game": "風燕伝：Where Winds Meet",
+   "canonical": "Where Winds Meet",
+   "videos": 4,
+   "n": 3.5,
+   "raw": 4,
+   "channels": 3,
+   "views": 62122,
+   "streams": [
+    {
+     "t": "昨年発売された謎の無料ゲーム、ついに１周年を迎えてしまうwww【風燕伝】",
+     "c": "速報",
+     "u": "https://www.youtube.com/watch?v=9AHUgQrRuqs",
+     "th": "https://i.ytimg.com/vi/9AHUgQrRuqs/mqdefault.jpg",
+     "v": 60655
+    },
+    {
+     "t": "【風燕伝】1周年記念アプデ滹沱到来！今から始める/復帰しても激熱な1周年記念Verの紹介＆序盤攻略まとめ！【限定ギフトコードあり！】",
+     "c": "いたとはチャンネル",
+     "u": "https://www.youtube.com/watch?v=gB7EMirNAE4",
+     "th": "https://i.ytimg.com/vi/gB7EMirNAE4/mqdefault.jpg",
+     "v": 1023
+    },
+    {
+     "t": "【＃風燕伝】PRイベント参加🔥作り込みがすごいのに何故か無料できるゲームをやっていくぜ【#モモツナ】",
+     "c": "モモツナ",
+     "u": "https://www.youtube.com/watch?v=H8VQDqQL5lQ",
+     "th": "https://i.ytimg.com/vi/H8VQDqQL5lQ/mqdefault.jpg?v=6af836bd",
+     "v": 444
+    },
+    {
+     "t": "【＃風燕伝】マップ広すぎて唖然とするケモノ【#モモツナ】",
+     "c": "モモツナ",
+     "u": "https://www.youtube.com/watch?v=8r4doKV2wuU",
+     "th": "https://i.ytimg.com/vi/8r4doKV2wuU/mqdefault.jpg?v=6af87367",
+     "v": 0
+    }
+   ],
+   "orgs": {
+    "個人・その他": 4
+   },
+   "spark": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    1.0,
+    3.5
+   ],
+   "p_videos": 5,
+   "p_channels": 5,
+   "p_views": 77,
+   "score": 30.2,
+   "base": 0.2,
+   "growth": 5.0,
+   "steam": "https://store.steampowered.com/search/?term=%E9%A2%A8%E7%87%95%E4%BC%9D%EF%BC%9AWhere%20Winds%20Meet",
+   "amazon": "https://www.amazon.co.jp/s?k=%E9%A2%A8%E7%87%95%E4%BC%9D%EF%BC%9AWhere+Winds+Meet&tag=tarochin-22",
+   "rank": 74
   },
   {
    "game": "龍が如く 極３",
@@ -579,9 +550,9 @@
    "canonical": "ゼルダの伝説 時のオカリナ",
    "videos": 66,
    "n": 65.5,
-   "raw": 81,
+   "raw": 79,
    "channels": 63,
-   "views": 1808365,
+   "views": 1808339,
    "streams": [
     {
      "t": "【 🟢時のオカリナリメイク 】ついに遊ぶぞｵｵｵｵｵｵ!!! #01【 猫又おかゆ/ホロライブ 】",
@@ -641,22 +612,22 @@
     }
    ],
    "orgs": {
-    "個人・その他": 61,
+    "個人・その他": 60,
     "にじさんじ": 8,
-    "実況者": 3,
     "ホロライブ": 2,
     "Neo-Porte": 2,
     "ななしいんく": 2,
+    "実況者": 2,
     "ナポリの男たち": 1,
     "実況グループ": 1,
     "ぶいすぽっ！": 1
    },
    "spark": [
-    66.5,
-    59.0,
-    59.0,
-    54.5,
     63.0,
+    62.0,
+    57.5,
+    55.0,
+    61.0,
     52.5,
     65.5
    ],
@@ -664,8 +635,8 @@
    "p_channels": 100,
    "p_views": 100,
    "score": 100.0,
-   "base": 59.1,
-   "growth": 1.12,
+   "base": 58.5,
+   "growth": 1.13,
    "steam": null,
    "amazon": "https://www.amazon.co.jp/s?k=%E3%82%BC%E3%83%AB%E3%83%80%E3%81%AE%E4%BC%9D%E8%AA%AC+%E6%99%82%E3%81%AE%E3%82%AA%E3%82%AB%E3%83%AA%E3%83%8A&tag=tarochin-22",
    "rank": 1,
@@ -676,123 +647,20 @@
    }
   },
   {
-   "game": "Minecraft",
-   "canonical": "Minecraft",
-   "videos": 54,
-   "n": 54.0,
-   "raw": 60,
-   "channels": 50,
-   "views": 1472395,
-   "streams": [
-    {
-     "t": "【借金地獄】100億円の借金をすべて返済するまで終われません【マイクラ】",
-     "c": "ドズル社",
-     "u": "https://www.youtube.com/watch?v=eQKgUlSTSQI",
-     "th": "https://i.ytimg.com/vi/eQKgUlSTSQI/mqdefault.jpg",
-     "v": 392641
-    },
-    {
-     "t": "【RTA】チーム対抗！エンドラ討伐リレー！！【ドズル社コラボ】【マイクラ】",
-     "c": "エンドラRTA軍団",
-     "u": "https://www.youtube.com/watch?v=TItTxEOdg7c",
-     "th": "https://i.ytimg.com/vi/TItTxEOdg7c/mqdefault.jpg",
-     "v": 127986
-    },
-    {
-     "t": "マイクラ脱獄の謎解きは関係なく、正門からいつでも出れるドッキリ😜",
-     "c": "メメントリ【青終高校遊戯部】",
-     "u": "https://www.youtube.com/watch?v=rnzno230FcU",
-     "th": "https://i.ytimg.com/vi/rnzno230FcU/mqdefault.jpg",
-     "v": 27687
-    },
-    {
-     "t": "ps5　マイクラ　 pvp初心者　hive　バタフライクリック練習 参加型　#参加型　#ロブロックス#黙示録　#roblox #minecraft #マイクラ#参加型　#hive　#pv",
-     "c": "ウルフムーン",
-     "u": "https://www.youtube.com/watch?v=rcHFVkjJRpQ",
-     "th": "https://i.ytimg.com/vi/rcHFVkjJRpQ/mqdefault.jpg",
-     "v": 13185
-    },
-    {
-     "t": "【#homeクラ3】海底神殿、埋め立て",
-     "c": "じゃじゃーん菊池 GAME",
-     "u": "https://www.youtube.com/watch?v=cdXaU2t36bM",
-     "th": "https://i.ytimg.com/vi/cdXaU2t36bM/mqdefault.jpg",
-     "v": 10480
-    },
-    {
-     "t": "天空城します→マイクラ",
-     "c": "害悪プレイヤー",
-     "u": "https://www.youtube.com/watch?v=-Gdg3RhHChg",
-     "th": "https://i.ytimg.com/vi/-Gdg3RhHChg/mqdefault.jpg",
-     "v": 5584
-    },
-    {
-     "t": "【ライブ配信】11月13日の金曜日!! 視聴者参加型！統合版マイクラ・ミニゲーム「１３日の金曜日」【Switch/Win10/PE/PS/Xbox】",
-     "c": "ドライトのゲーム実況ちゃんねるン.",
-     "u": "https://www.youtube.com/watch?v=XdXzbwteX1E",
-     "th": "https://i.ytimg.com/vi/XdXzbwteX1E/mqdefault.jpg",
-     "v": 1024
-    },
-    {
-     "t": "【 Minecraft 】⭐マイクラBINGO⭐第二弾！制限時間内にアイテムを集めまくれ！！！【華鉈イオ/StellArt.】#vtuber",
-     "c": "華鉈イオ【StellArt.】",
-     "u": "https://www.youtube.com/watch?v=wUUVz74fCiw",
-     "th": "https://i.ytimg.com/vi/wUUVz74fCiw/mqdefault.jpg",
-     "v": 848
-    }
-   ],
-   "orgs": {
-    "個人・その他": 56,
-    "ミリプロ": 2,
-    "実況グループ": 1,
-    "追加指定": 1
-   },
-   "spark": [
-    51.5,
-    33.0,
-    35.5,
-    38.5,
-    32.5,
-    41.5,
-    54.0
-   ],
-   "p_videos": 82,
-   "p_channels": 79,
-   "p_views": 99,
-   "score": 86.9,
-   "base": 38.8,
-   "growth": 1.39,
-   "steam": "https://store.steampowered.com/search/?term=Minecraft",
-   "amazon": "https://www.amazon.co.jp/s?k=Minecraft&tag=tarochin-22",
-   "rank": 3,
-   "mv": {
-    "t": "same",
-    "d": 0,
-    "p": 3
-   }
-  },
-  {
    "game": "Apex Legends",
    "canonical": "Apex Legends",
-   "videos": 55,
-   "n": 55.0,
-   "raw": 70,
-   "channels": 49,
-   "views": 1753896,
+   "videos": 52,
+   "n": 52.0,
+   "raw": 65,
+   "channels": 47,
+   "views": 1601235,
    "streams": [
     {
-     "t": "プレデターランク 【Apex Legends】",
-     "c": "tttcheekyttt",
-     "u": "https://www.youtube.com/watch?v=pE-IKtQA6M4",
-     "th": "https://i.ytimg.com/vi/pE-IKtQA6M4/mqdefault.jpg",
-     "v": 145386
-    },
-    {
-     "t": "【APEX】配信！開幕プレ、デュオランク？あと１【エーペックスレジェンズ】",
-     "c": "1tappy / わんたっぴー",
-     "u": "https://www.youtube.com/watch?v=weqa8Ow4H18",
-     "th": "https://i.ytimg.com/vi/weqa8Ow4H18/mqdefault.jpg",
-     "v": 63779
+     "t": "【エンドラRTA】雑談多めゆるふわ対戦→APEX【ドズル社】",
+     "c": "おんりー / ドズル社",
+     "u": "https://www.youtube.com/watch?v=DZxDvNtF3vw",
+     "th": "https://i.ytimg.com/vi/DZxDvNtF3vw/mqdefault.jpg",
+     "v": 77566
     },
     {
      "t": "🍎Live　44歳マスターへの道🍎女子パランク❤【APEX】No.202 #縦型配信",
@@ -835,10 +703,17 @@
      "u": "https://www.youtube.com/watch?v=HDs_sMORWOc",
      "th": "https://i.ytimg.com/vi/HDs_sMORWOc/mqdefault.jpg",
      "v": 871
+    },
+    {
+     "t": "【Apex配信🔴】ガチ寝起きtv 3日目系Vtuber『プラチナ帯突入💎』",
+     "c": "無名のおにぎり@Apex沼クリップ製造機",
+     "u": "https://www.youtube.com/watch?v=McIW0HvAdQ4",
+     "th": "https://i.ytimg.com/vi/McIW0HvAdQ4/mqdefault.jpg",
+     "v": 759
     }
    ],
    "orgs": {
-    "個人・その他": 62,
+    "個人・その他": 57,
     "ぶいすぽっ！": 2,
     "ストリーマー": 2,
     "Neo-Porte": 2,
@@ -846,20 +721,20 @@
     "個人勢": 1
    },
    "spark": [
-    38.0,
-    55.0,
-    41.5,
-    50.0,
-    49.0,
-    38.5,
-    55.0
+    39.5,
+    54.5,
+    43.0,
+    51.0,
+    48.5,
+    39.5,
+    52.0
    ],
-   "p_videos": 84,
-   "p_channels": 78,
-   "p_views": 100,
-   "score": 87.5,
-   "base": 45.3,
-   "growth": 1.21,
+   "p_videos": 79,
+   "p_channels": 75,
+   "p_views": 99,
+   "score": 84.6,
+   "base": 46.0,
+   "growth": 1.13,
    "steam": "https://store.steampowered.com/search/?term=Apex%20Legends",
    "amazon": "https://www.amazon.co.jp/s?k=Apex+Legends&tag=tarochin-22",
    "rank": 2,
@@ -867,6 +742,102 @@
     "t": "up",
     "d": 2,
     "p": 4
+   }
+  },
+  {
+   "game": "Minecraft",
+   "canonical": "Minecraft",
+   "videos": 50,
+   "n": 49.5,
+   "raw": 54,
+   "channels": 47,
+   "views": 1453392,
+   "streams": [
+    {
+     "t": "【借金地獄】100億円の借金をすべて返済するまで終われません【マイクラ】",
+     "c": "ドズル社",
+     "u": "https://www.youtube.com/watch?v=eQKgUlSTSQI",
+     "th": "https://i.ytimg.com/vi/eQKgUlSTSQI/mqdefault.jpg",
+     "v": 392641
+    },
+    {
+     "t": "夜のスーパーで〇体を隠しきれ！【 マイクラ 】",
+     "c": "ちろぴの",
+     "u": "https://www.youtube.com/watch?v=D5NzbLG12Wk",
+     "th": "https://i.ytimg.com/vi/D5NzbLG12Wk/mqdefault.jpg",
+     "v": 267054
+    },
+    {
+     "t": "【RTA】チーム対抗！エンドラ討伐リレー！！【ドズル社コラボ】【マイクラ】",
+     "c": "エンドラRTA軍団",
+     "u": "https://www.youtube.com/watch?v=TItTxEOdg7c",
+     "th": "https://i.ytimg.com/vi/TItTxEOdg7c/mqdefault.jpg",
+     "v": 127986
+    },
+    {
+     "t": "マイクラ脱獄の謎解きは関係なく、正門からいつでも出れるドッキリ😜",
+     "c": "メメントリ【青終高校遊戯部】",
+     "u": "https://www.youtube.com/watch?v=rnzno230FcU",
+     "th": "https://i.ytimg.com/vi/rnzno230FcU/mqdefault.jpg",
+     "v": 27687
+    },
+    {
+     "t": "うめ、ふー、ひなでマイクラ【MineCraft】",
+     "c": "YasTube",
+     "u": "https://www.youtube.com/watch?v=HnNJ00lb4oo",
+     "th": "https://i.ytimg.com/vi/HnNJ00lb4oo/mqdefault.jpg",
+     "v": 25610
+    },
+    {
+     "t": "ps5　マイクラ　 pvp初心者　hive　バタフライクリック練習 参加型　#参加型　#ロブロックス#黙示録　#roblox #minecraft #マイクラ#参加型　#hive　#pv",
+     "c": "ウルフムーン",
+     "u": "https://www.youtube.com/watch?v=rcHFVkjJRpQ",
+     "th": "https://i.ytimg.com/vi/rcHFVkjJRpQ/mqdefault.jpg",
+     "v": 13185
+    },
+    {
+     "t": "【#homeクラ3】海底神殿、埋め立て",
+     "c": "じゃじゃーん菊池 GAME",
+     "u": "https://www.youtube.com/watch?v=cdXaU2t36bM",
+     "th": "https://i.ytimg.com/vi/cdXaU2t36bM/mqdefault.jpg",
+     "v": 10480
+    },
+    {
+     "t": "天空城します→マイクラ",
+     "c": "害悪プレイヤー",
+     "u": "https://www.youtube.com/watch?v=-Gdg3RhHChg",
+     "th": "https://i.ytimg.com/vi/-Gdg3RhHChg/mqdefault.jpg",
+     "v": 5584
+    }
+   ],
+   "orgs": {
+    "個人・その他": 50,
+    "ミリプロ": 2,
+    "実況グループ": 1,
+    "追加指定": 1
+   },
+   "spark": [
+    50.5,
+    32.5,
+    35.5,
+    38.5,
+    31.5,
+    47.0,
+    49.5
+   ],
+   "p_videos": 76,
+   "p_channels": 75,
+   "p_views": 98,
+   "score": 83.3,
+   "base": 39.2,
+   "growth": 1.28,
+   "steam": "https://store.steampowered.com/search/?term=Minecraft",
+   "amazon": "https://www.amazon.co.jp/s?k=Minecraft&tag=tarochin-22",
+   "rank": 4,
+   "mv": {
+    "t": "down",
+    "d": 2,
+    "p": 2
    }
   }
  ],
@@ -881,9 +852,9 @@
    "canonical": "ゼルダの伝説 時のオカリナ",
    "videos": 66,
    "n": 65.5,
-   "raw": 81,
+   "raw": 79,
    "channels": 63,
-   "views": 1808365,
+   "views": 1808339,
    "streams": [
     {
      "t": "【 🟢時のオカリナリメイク 】ついに遊ぶぞｵｵｵｵｵｵ!!! #01【 猫又おかゆ/ホロライブ 】",
@@ -943,22 +914,22 @@
     }
    ],
    "orgs": {
-    "個人・その他": 61,
+    "個人・その他": 60,
     "にじさんじ": 8,
-    "実況者": 3,
     "ホロライブ": 2,
     "Neo-Porte": 2,
     "ななしいんく": 2,
+    "実況者": 2,
     "ナポリの男たち": 1,
     "実況グループ": 1,
     "ぶいすぽっ！": 1
    },
    "spark": [
-    66.5,
-    59.0,
-    59.0,
-    54.5,
     63.0,
+    62.0,
+    57.5,
+    55.0,
+    61.0,
     52.5,
     65.5
    ],
@@ -966,8 +937,8 @@
    "p_channels": 100,
    "p_views": 100,
    "score": 100.0,
-   "base": 59.1,
-   "growth": 1.12,
+   "base": 58.5,
+   "growth": 1.13,
    "steam": null,
    "amazon": "https://www.amazon.co.jp/s?k=%E3%82%BC%E3%83%AB%E3%83%80%E3%81%AE%E4%BC%9D%E8%AA%AC+%E6%99%82%E3%81%AE%E3%82%AA%E3%82%AB%E3%83%AA%E3%83%8A&tag=tarochin-22",
    "rank": 1,
@@ -980,25 +951,18 @@
   {
    "game": "Apex Legends",
    "canonical": "Apex Legends",
-   "videos": 55,
-   "n": 55.0,
-   "raw": 70,
-   "channels": 49,
-   "views": 1753896,
+   "videos": 52,
+   "n": 52.0,
+   "raw": 65,
+   "channels": 47,
+   "views": 1601235,
    "streams": [
     {
-     "t": "プレデターランク 【Apex Legends】",
-     "c": "tttcheekyttt",
-     "u": "https://www.youtube.com/watch?v=pE-IKtQA6M4",
-     "th": "https://i.ytimg.com/vi/pE-IKtQA6M4/mqdefault.jpg",
-     "v": 145386
-    },
-    {
-     "t": "【APEX】配信！開幕プレ、デュオランク？あと１【エーペックスレジェンズ】",
-     "c": "1tappy / わんたっぴー",
-     "u": "https://www.youtube.com/watch?v=weqa8Ow4H18",
-     "th": "https://i.ytimg.com/vi/weqa8Ow4H18/mqdefault.jpg",
-     "v": 63779
+     "t": "【エンドラRTA】雑談多めゆるふわ対戦→APEX【ドズル社】",
+     "c": "おんりー / ドズル社",
+     "u": "https://www.youtube.com/watch?v=DZxDvNtF3vw",
+     "th": "https://i.ytimg.com/vi/DZxDvNtF3vw/mqdefault.jpg",
+     "v": 77566
     },
     {
      "t": "🍎Live　44歳マスターへの道🍎女子パランク❤【APEX】No.202 #縦型配信",
@@ -1041,10 +1005,17 @@
      "u": "https://www.youtube.com/watch?v=HDs_sMORWOc",
      "th": "https://i.ytimg.com/vi/HDs_sMORWOc/mqdefault.jpg",
      "v": 871
+    },
+    {
+     "t": "【Apex配信🔴】ガチ寝起きtv 3日目系Vtuber『プラチナ帯突入💎』",
+     "c": "無名のおにぎり@Apex沼クリップ製造機",
+     "u": "https://www.youtube.com/watch?v=McIW0HvAdQ4",
+     "th": "https://i.ytimg.com/vi/McIW0HvAdQ4/mqdefault.jpg",
+     "v": 759
     }
    ],
    "orgs": {
-    "個人・その他": 62,
+    "個人・その他": 57,
     "ぶいすぽっ！": 2,
     "ストリーマー": 2,
     "Neo-Porte": 2,
@@ -1052,20 +1023,20 @@
     "個人勢": 1
    },
    "spark": [
-    38.0,
-    55.0,
-    41.5,
-    50.0,
-    49.0,
-    38.5,
-    55.0
+    39.5,
+    54.5,
+    43.0,
+    51.0,
+    48.5,
+    39.5,
+    52.0
    ],
-   "p_videos": 84,
-   "p_channels": 78,
-   "p_views": 100,
-   "score": 87.5,
-   "base": 45.3,
-   "growth": 1.21,
+   "p_videos": 79,
+   "p_channels": 75,
+   "p_views": 99,
+   "score": 84.6,
+   "base": 46.0,
+   "growth": 1.13,
    "steam": "https://store.steampowered.com/search/?term=Apex%20Legends",
    "amazon": "https://www.amazon.co.jp/s?k=Apex+Legends&tag=tarochin-22",
    "rank": 2,
@@ -1076,109 +1047,13 @@
    }
   },
   {
-   "game": "Minecraft",
-   "canonical": "Minecraft",
-   "videos": 54,
-   "n": 54.0,
-   "raw": 60,
-   "channels": 50,
-   "views": 1472395,
-   "streams": [
-    {
-     "t": "【借金地獄】100億円の借金をすべて返済するまで終われません【マイクラ】",
-     "c": "ドズル社",
-     "u": "https://www.youtube.com/watch?v=eQKgUlSTSQI",
-     "th": "https://i.ytimg.com/vi/eQKgUlSTSQI/mqdefault.jpg",
-     "v": 392641
-    },
-    {
-     "t": "【RTA】チーム対抗！エンドラ討伐リレー！！【ドズル社コラボ】【マイクラ】",
-     "c": "エンドラRTA軍団",
-     "u": "https://www.youtube.com/watch?v=TItTxEOdg7c",
-     "th": "https://i.ytimg.com/vi/TItTxEOdg7c/mqdefault.jpg",
-     "v": 127986
-    },
-    {
-     "t": "マイクラ脱獄の謎解きは関係なく、正門からいつでも出れるドッキリ😜",
-     "c": "メメントリ【青終高校遊戯部】",
-     "u": "https://www.youtube.com/watch?v=rnzno230FcU",
-     "th": "https://i.ytimg.com/vi/rnzno230FcU/mqdefault.jpg",
-     "v": 27687
-    },
-    {
-     "t": "ps5　マイクラ　 pvp初心者　hive　バタフライクリック練習 参加型　#参加型　#ロブロックス#黙示録　#roblox #minecraft #マイクラ#参加型　#hive　#pv",
-     "c": "ウルフムーン",
-     "u": "https://www.youtube.com/watch?v=rcHFVkjJRpQ",
-     "th": "https://i.ytimg.com/vi/rcHFVkjJRpQ/mqdefault.jpg",
-     "v": 13185
-    },
-    {
-     "t": "【#homeクラ3】海底神殿、埋め立て",
-     "c": "じゃじゃーん菊池 GAME",
-     "u": "https://www.youtube.com/watch?v=cdXaU2t36bM",
-     "th": "https://i.ytimg.com/vi/cdXaU2t36bM/mqdefault.jpg",
-     "v": 10480
-    },
-    {
-     "t": "天空城します→マイクラ",
-     "c": "害悪プレイヤー",
-     "u": "https://www.youtube.com/watch?v=-Gdg3RhHChg",
-     "th": "https://i.ytimg.com/vi/-Gdg3RhHChg/mqdefault.jpg",
-     "v": 5584
-    },
-    {
-     "t": "【ライブ配信】11月13日の金曜日!! 視聴者参加型！統合版マイクラ・ミニゲーム「１３日の金曜日」【Switch/Win10/PE/PS/Xbox】",
-     "c": "ドライトのゲーム実況ちゃんねるン.",
-     "u": "https://www.youtube.com/watch?v=XdXzbwteX1E",
-     "th": "https://i.ytimg.com/vi/XdXzbwteX1E/mqdefault.jpg",
-     "v": 1024
-    },
-    {
-     "t": "【 Minecraft 】⭐マイクラBINGO⭐第二弾！制限時間内にアイテムを集めまくれ！！！【華鉈イオ/StellArt.】#vtuber",
-     "c": "華鉈イオ【StellArt.】",
-     "u": "https://www.youtube.com/watch?v=wUUVz74fCiw",
-     "th": "https://i.ytimg.com/vi/wUUVz74fCiw/mqdefault.jpg",
-     "v": 848
-    }
-   ],
-   "orgs": {
-    "個人・その他": 56,
-    "ミリプロ": 2,
-    "実況グループ": 1,
-    "追加指定": 1
-   },
-   "spark": [
-    51.5,
-    33.0,
-    35.5,
-    38.5,
-    32.5,
-    41.5,
-    54.0
-   ],
-   "p_videos": 82,
-   "p_channels": 79,
-   "p_views": 99,
-   "score": 86.9,
-   "base": 38.8,
-   "growth": 1.39,
-   "steam": "https://store.steampowered.com/search/?term=Minecraft",
-   "amazon": "https://www.amazon.co.jp/s?k=Minecraft&tag=tarochin-22",
-   "rank": 3,
-   "mv": {
-    "t": "same",
-    "d": 0,
-    "p": 3
-   }
-  },
-  {
    "game": "ストリートファイター6",
    "canonical": "ストリートファイター6",
    "videos": 52,
    "n": 51.5,
-   "raw": 62,
+   "raw": 60,
    "channels": 45,
-   "views": 1724551,
+   "views": 1723300,
    "streams": [
     {
      "t": "【 STREET FIGHTER 6 】SCARZCUP TeamLeshar すくりむ～【常闇トワ/ホロライブ】",
@@ -1195,11 +1070,25 @@
      "v": 158992
     },
     {
+     "t": "【 スト６】今アクトは絶対とるぞー【 ぶいすぽっ！/紫宮るな 】",
+     "c": "紫宮るな /shinomiya runa",
+     "u": "https://www.youtube.com/watch?v=PTXj7WDkbgQ",
+     "th": "https://i.ytimg.com/vi/PTXj7WDkbgQ/mqdefault.jpg",
+     "v": 111442
+    },
+    {
      "t": "リアルジェイミー化計画194日目！【飲酒スト6】",
      "c": "キングカスマ",
      "u": "https://www.youtube.com/watch?v=D3fy4y6sXDQ",
      "th": "https://i.ytimg.com/vi/D3fy4y6sXDQ/mqdefault.jpg",
      "v": 55336
+    },
+    {
+     "t": "【スト6】 SCARZ CUP SF6 Vol.2 スクリム",
+     "c": "ぼんじゅうる / ドズル社",
+     "u": "https://www.youtube.com/watch?v=9rot9Qv06KU",
+     "th": "https://i.ytimg.com/vi/9rot9Qv06KU/mqdefault.jpg",
+     "v": 40178
     },
     {
      "t": "【スト6】SCARZ CUPスクリム！！家族みんなでがんばるぞ🫲🙂🫱🔥 w/りゅうせいさん、大須晶さん、べてぃさん【 空跳つもり / re;BON1期生 】",
@@ -1218,63 +1107,145 @@
     {
      "t": "【縦横同時配信スト6】最高MR2100豪鬼ランクマッチ",
      "c": "いっしー",
-     "u": "https://www.youtube.com/watch?v=OMamMiXm_Rs",
-     "th": "https://i.ytimg.com/vi/OMamMiXm_Rs/mqdefault.jpg",
-     "v": 16545
-    },
-    {
-     "t": "【縦横同時配信スト6】最高MR2100豪鬼ランクマッチ",
-     "c": "いっしー",
      "u": "https://www.youtube.com/watch?v=ylW1cGw5YfU",
      "th": "https://i.ytimg.com/vi/ylW1cGw5YfU/mqdefault.jpg",
      "v": 15294
-    },
-    {
-     "t": "絶好調【#スト6 #ランクマ】",
-     "c": "めぇえめぇ",
-     "u": "https://www.youtube.com/watch?v=Qk-a4w0xkm4",
-     "th": "https://i.ytimg.com/vi/Qk-a4w0xkm4/mqdefault.jpg",
-     "v": 8947
     }
    ],
    "orgs": {
-    "個人・その他": 58,
+    "個人・その他": 56,
     "ぶいすぽっ！": 2,
     "ホロライブ": 1,
     "Neo-Porte": 1
    },
    "spark": [
     23.5,
-    22.5,
-    38.5,
-    41.5,
-    36.0,
-    30.0,
+    24.0,
+    39.0,
+    42.0,
+    35.0,
+    28.0,
     51.5
    ],
    "p_videos": 79,
    "p_channels": 71,
    "p_views": 100,
    "score": 83.5,
-   "base": 32.0,
-   "growth": 1.62,
+   "base": 31.9,
+   "growth": 1.63,
    "steam": "https://store.steampowered.com/search/?term=%E3%82%B9%E3%83%88%E3%83%AA%E3%83%BC%E3%83%88%E3%83%95%E3%82%A1%E3%82%A4%E3%82%BF%E3%83%BC6",
    "amazon": "https://www.amazon.co.jp/s?k=%E3%82%B9%E3%83%88%E3%83%AA%E3%83%BC%E3%83%88%E3%83%95%E3%82%A1%E3%82%A4%E3%82%BF%E3%83%BC6&tag=tarochin-22",
-   "rank": 4,
+   "rank": 3,
    "mv": {
     "t": "up",
-    "d": 1,
-    "p": 5
+    "d": 3,
+    "p": 6
+   }
+  },
+  {
+   "game": "Minecraft",
+   "canonical": "Minecraft",
+   "videos": 50,
+   "n": 49.5,
+   "raw": 54,
+   "channels": 47,
+   "views": 1453392,
+   "streams": [
+    {
+     "t": "【借金地獄】100億円の借金をすべて返済するまで終われません【マイクラ】",
+     "c": "ドズル社",
+     "u": "https://www.youtube.com/watch?v=eQKgUlSTSQI",
+     "th": "https://i.ytimg.com/vi/eQKgUlSTSQI/mqdefault.jpg",
+     "v": 392641
+    },
+    {
+     "t": "夜のスーパーで〇体を隠しきれ！【 マイクラ 】",
+     "c": "ちろぴの",
+     "u": "https://www.youtube.com/watch?v=D5NzbLG12Wk",
+     "th": "https://i.ytimg.com/vi/D5NzbLG12Wk/mqdefault.jpg",
+     "v": 267054
+    },
+    {
+     "t": "【RTA】チーム対抗！エンドラ討伐リレー！！【ドズル社コラボ】【マイクラ】",
+     "c": "エンドラRTA軍団",
+     "u": "https://www.youtube.com/watch?v=TItTxEOdg7c",
+     "th": "https://i.ytimg.com/vi/TItTxEOdg7c/mqdefault.jpg",
+     "v": 127986
+    },
+    {
+     "t": "マイクラ脱獄の謎解きは関係なく、正門からいつでも出れるドッキリ😜",
+     "c": "メメントリ【青終高校遊戯部】",
+     "u": "https://www.youtube.com/watch?v=rnzno230FcU",
+     "th": "https://i.ytimg.com/vi/rnzno230FcU/mqdefault.jpg",
+     "v": 27687
+    },
+    {
+     "t": "うめ、ふー、ひなでマイクラ【MineCraft】",
+     "c": "YasTube",
+     "u": "https://www.youtube.com/watch?v=HnNJ00lb4oo",
+     "th": "https://i.ytimg.com/vi/HnNJ00lb4oo/mqdefault.jpg",
+     "v": 25610
+    },
+    {
+     "t": "ps5　マイクラ　 pvp初心者　hive　バタフライクリック練習 参加型　#参加型　#ロブロックス#黙示録　#roblox #minecraft #マイクラ#参加型　#hive　#pv",
+     "c": "ウルフムーン",
+     "u": "https://www.youtube.com/watch?v=rcHFVkjJRpQ",
+     "th": "https://i.ytimg.com/vi/rcHFVkjJRpQ/mqdefault.jpg",
+     "v": 13185
+    },
+    {
+     "t": "【#homeクラ3】海底神殿、埋め立て",
+     "c": "じゃじゃーん菊池 GAME",
+     "u": "https://www.youtube.com/watch?v=cdXaU2t36bM",
+     "th": "https://i.ytimg.com/vi/cdXaU2t36bM/mqdefault.jpg",
+     "v": 10480
+    },
+    {
+     "t": "天空城します→マイクラ",
+     "c": "害悪プレイヤー",
+     "u": "https://www.youtube.com/watch?v=-Gdg3RhHChg",
+     "th": "https://i.ytimg.com/vi/-Gdg3RhHChg/mqdefault.jpg",
+     "v": 5584
+    }
+   ],
+   "orgs": {
+    "個人・その他": 50,
+    "ミリプロ": 2,
+    "実況グループ": 1,
+    "追加指定": 1
+   },
+   "spark": [
+    50.5,
+    32.5,
+    35.5,
+    38.5,
+    31.5,
+    47.0,
+    49.5
+   ],
+   "p_videos": 76,
+   "p_channels": 75,
+   "p_views": 98,
+   "score": 83.3,
+   "base": 39.2,
+   "growth": 1.28,
+   "steam": "https://store.steampowered.com/search/?term=Minecraft",
+   "amazon": "https://www.amazon.co.jp/s?k=Minecraft&tag=tarochin-22",
+   "rank": 4,
+   "mv": {
+    "t": "down",
+    "d": 2,
+    "p": 2
    }
   },
   {
    "game": "Grand Theft Auto V",
    "canonical": "Grand Theft Auto V",
-   "videos": 45,
-   "n": 45.0,
-   "raw": 50,
-   "channels": 40,
-   "views": 565400,
+   "videos": 42,
+   "n": 42.5,
+   "raw": 46,
+   "channels": 39,
+   "views": 525183,
    "streams": [
     {
      "t": "【ガチグラ２】人命救助【小柳ロウ/にじさんじ】",
@@ -1291,11 +1262,18 @@
      "v": 42044
     },
     {
-     "t": "【GTA5】新しい地下鉄「南北線」が開業！空港から天文台まで全9駅を特急ラピートで乗りとおす！車内放送も駅も日本仕様！トレバーさんのお仕事【ほぅ】",
-     "c": "ほぅ（Housan）",
-     "u": "https://www.youtube.com/watch?v=oSDMTCXK_Uk",
-     "th": "https://i.ytimg.com/vi/oSDMTCXK_Uk/mqdefault.jpg",
-     "v": 38077
+     "t": "🎮 #ストグラSeason2┊#221 さむすんぎ 11/14【 #小花衣ももみ / #Vtuber 】",
+     "c": "小花衣 ももみ / Momomi Kohanai",
+     "u": "https://www.youtube.com/watch?v=BPAZpzpakH8",
+     "th": "https://i.ytimg.com/vi/BPAZpzpakH8/mqdefault.jpg",
+     "v": 31822
+    },
+    {
+     "t": "【#ストグラ】SWATー1　11/12【バーバリアン田中】#ストグラSeason2",
+     "c": "たけぉ",
+     "u": "https://www.youtube.com/watch?v=UTrJ7iSwIEU",
+     "th": "https://i.ytimg.com/vi/UTrJ7iSwIEU/mqdefault.jpg",
+     "v": 23417
     },
     {
      "t": "【#パレットタウン /DAY9】ワンワン狂犬ワンワン【#小鈴りあん / #ミクスト】",
@@ -1303,6 +1281,13 @@
      "u": "https://www.youtube.com/watch?v=RDGaAsDAGVM",
      "th": "https://i.ytimg.com/vi/RDGaAsDAGVM/mqdefault.jpg",
      "v": 17766
+    },
+    {
+     "t": "【#ストグラ】#ストグラSeason2 柚乃いずみの日常～188日目～【柚原いづみ / ななしいんく】",
+     "c": "柚原いづみ / Izumi Channel 【ななしいんく】",
+     "u": "https://www.youtube.com/watch?v=Dt1DQvAs7L4",
+     "th": "https://i.ytimg.com/vi/Dt1DQvAs7L4/mqdefault.jpg",
+     "v": 17431
     },
     {
      "t": "【#ガチグラ2 / 6日目】悪魔分隊副隊長、頑張っていますPP【家入ポポ / ななしいんく】",
@@ -1317,61 +1302,47 @@
      "u": "https://www.youtube.com/watch?v=r3nByYB5Ohc",
      "th": "https://i.ytimg.com/vi/r3nByYB5Ohc/mqdefault.jpg",
      "v": 12697
-    },
-    {
-     "t": "【 ガチグラ2 】# 07：コツコツコツコツ【 犬養 / 個人勢VTuber 】",
-     "c": "犬養　- INUKAI Ch. -",
-     "u": "https://www.youtube.com/watch?v=hiQajioMus0",
-     "th": "https://i.ytimg.com/vi/hiQajioMus0/mqdefault.jpg",
-     "v": 8550
-    },
-    {
-     "t": "【#ストグラSeason2】亀山事変～その後～満を持して復職？！当事者・タラちゃんと語るひろし烈伝【タラちゃん/柚乃いずみ/王城リレイ/大川/蟹雑炊/亀山Hero/星ノみこ/grow/帆立ほたる】",
-     "c": "暁月ホタル AKATSUKI HOTARU",
-     "u": "https://www.youtube.com/watch?v=Nebd_T9i-LQ",
-     "th": "https://i.ytimg.com/vi/Nebd_T9i-LQ/mqdefault.jpg",
-     "v": 2219
     }
    ],
    "orgs": {
-    "個人・その他": 42,
+    "個人・その他": 38,
     "ななしいんく": 4,
     "高田村": 2,
     "にじさんじ": 1,
     "Neo-Porte": 1
    },
    "spark": [
-    36.0,
+    35.5,
     33.0,
     27.0,
-    42.0,
-    30.5,
-    46.0,
-    45.0
+    45.0,
+    29.0,
+    47.0,
+    42.5
    ],
-   "p_videos": 69,
-   "p_channels": 63,
-   "p_views": 92,
-   "score": 74.9,
-   "base": 35.8,
-   "growth": 1.26,
+   "p_videos": 65,
+   "p_channels": 62,
+   "p_views": 91,
+   "score": 73.0,
+   "base": 36.1,
+   "growth": 1.16,
    "steam": "https://store.steampowered.com/search/?term=Grand%20Theft%20Auto%20V",
    "amazon": "https://www.amazon.co.jp/s?k=Grand+Theft+Auto+V&tag=tarochin-22",
    "rank": 5,
    "mv": {
     "t": "down",
-    "d": 3,
-    "p": 2
+    "d": 2,
+    "p": 3
    }
   },
   {
    "game": "スプラトゥーン3",
    "canonical": "スプラトゥーン3",
-   "videos": 30,
-   "n": 29.5,
-   "raw": 32,
-   "channels": 29,
-   "views": 422055,
+   "videos": 28,
+   "n": 27.5,
+   "raw": 30,
+   "channels": 27,
+   "views": 418741,
    "streams": [
     {
      "t": "【スプラトゥーン3】俺はS＋になりたいんじゃ！！【渡会雲雀/にじさんじ】",
@@ -1431,41 +1402,41 @@
     }
    ],
    "orgs": {
-    "個人・その他": 28,
+    "個人・その他": 26,
     "にじさんじ": 4
    },
    "spark": [
-    53.5,
+    52.5,
     13.0,
     20.0,
-    10.0,
-    14.0,
-    28.0,
-    29.5
+    11.0,
+    13.0,
+    30.0,
+    27.5
    ],
-   "p_videos": 45,
-   "p_channels": 46,
+   "p_videos": 42,
+   "p_channels": 43,
    "p_views": 90,
-   "score": 61.1,
-   "base": 23.1,
-   "growth": 1.3,
+   "score": 59.1,
+   "base": 23.2,
+   "growth": 1.21,
    "steam": null,
    "amazon": "https://www.amazon.co.jp/s?k=%E3%82%B9%E3%83%97%E3%83%A9%E3%83%88%E3%82%A5%E3%83%BC%E3%83%B33&tag=tarochin-22",
    "rank": 6,
    "mv": {
-    "t": "same",
-    "d": 0,
-    "p": 6
+    "t": "down",
+    "d": 1,
+    "p": 5
    }
   },
   {
    "game": "フォートナイト",
    "canonical": "Fortnite",
-   "videos": 26,
-   "n": 26.0,
-   "raw": 34,
-   "channels": 22,
-   "views": 453824,
+   "videos": 24,
+   "n": 24.0,
+   "raw": 31,
+   "channels": 20,
+   "views": 426523,
    "streams": [
     {
      "t": "【復活】「自販機限定」でビクロイできるのか！？【フォートナイト/Fortnite】",
@@ -1510,38 +1481,38 @@
      "v": 13929
     },
     {
+     "t": "トリオ大会きたあああああ【フォートナイト/Fortnite】",
+     "c": "まうふぃん / Riddle",
+     "u": "https://www.youtube.com/watch?v=ILlvjZc4F5g",
+     "th": "https://i.ytimg.com/vi/ILlvjZc4F5g/mqdefault.jpg",
+     "v": 11836
+    },
+    {
      "t": "トークンと精霊を全部あつめたい。【フォートナイト/Fortnite】",
      "c": "ちゃんナギ🍟",
      "u": "https://www.youtube.com/watch?v=2Te4TBVU5Uk",
      "th": "https://i.ytimg.com/vi/2Te4TBVU5Uk/mqdefault.jpg",
      "v": 11530
-    },
-    {
-     "t": "【配信】今日もグロウの管理者やるぜ！！！！【GROW THE BRAINROT】【フォートナイト/Fortnite】【めるとくん】#めるとくん #フォートナイト #fortnite",
-     "c": "めるとくん",
-     "u": "https://www.youtube.com/watch?v=sGVkNlzSGd8",
-     "th": "https://i.ytimg.com/vi/sGVkNlzSGd8/mqdefault.jpg",
-     "v": 3761
     }
    ],
    "orgs": {
-    "個人・その他": 34
+    "個人・その他": 31
    },
    "spark": [
-    22.0,
-    15.0,
-    17.5,
-    12.0,
-    18.0,
     21.0,
-    26.0
+    17.0,
+    15.5,
+    14.0,
+    17.0,
+    22.5,
+    24.0
    ],
-   "p_videos": 40,
-   "p_channels": 35,
+   "p_videos": 37,
+   "p_channels": 32,
    "p_views": 90,
-   "score": 55.8,
-   "base": 17.6,
-   "growth": 1.48,
+   "score": 53.8,
+   "base": 17.8,
+   "growth": 1.35,
    "steam": "https://store.steampowered.com/search/?term=%E3%83%95%E3%82%A9%E3%83%BC%E3%83%88%E3%83%8A%E3%82%A4%E3%83%88",
    "amazon": "https://www.amazon.co.jp/s?k=%E3%83%95%E3%82%A9%E3%83%BC%E3%83%88%E3%83%8A%E3%82%A4%E3%83%88&tag=tarochin-22",
    "rank": 7,
@@ -1621,20 +1592,20 @@
     "個人・その他": 30
    },
    "spark": [
-    12.0,
+    13.0,
+    17.0,
     18.0,
-    18.0,
-    18.0,
+    19.0,
     24.0,
-    17.5,
+    17.0,
     24.0
    ],
    "p_videos": 37,
    "p_channels": 35,
    "p_views": 87,
    "score": 53.8,
-   "base": 17.9,
-   "growth": 1.34,
+   "base": 18.0,
+   "growth": 1.33,
    "steam": "https://store.steampowered.com/search/?term=Dead%20by%20Daylight",
    "amazon": "https://www.amazon.co.jp/s?k=Dead+by+Daylight&tag=tarochin-22",
    "rank": 8,
@@ -1647,11 +1618,11 @@
   {
    "game": "実況パワフルプロ野球2026",
    "canonical": "実況パワフルプロ野球2026",
-   "videos": 22,
-   "n": 22.0,
-   "raw": 24,
-   "channels": 20,
-   "views": 308171,
+   "videos": 20,
+   "n": 20.5,
+   "raw": 22,
+   "channels": 19,
+   "views": 307671,
    "streams": [
     {
      "t": "【パワプロ2026】帰ってきた！！サクサクセスでにじさんじライバー作成！！！！23【 にじさんじ/舞元啓介 】",
@@ -1696,57 +1667,57 @@
      "v": 14432
     },
     {
+     "t": "今歴史に残る最強チームが使えるってご存じですか？今年のソフトバンク、マジで強すぎるから使っておけ！！！！！【パワプロ2026】",
+     "c": "ふなふな",
+     "u": "https://www.youtube.com/watch?v=6Asz_eX1bZ8",
+     "th": "https://i.ytimg.com/vi/6Asz_eX1bZ8/mqdefault.jpg",
+     "v": 8930
+    },
+    {
      "t": "【パワプロ2026】侍ジャパン監督『井口資仁』を日米2000本安打×最強二塁手スペックでガチ再現！【パワフェス】",
      "c": "dorami24/ドラミ",
      "u": "https://www.youtube.com/watch?v=QeSOAQSv1oE",
      "th": "https://i.ytimg.com/vi/QeSOAQSv1oE/mqdefault.jpg",
      "v": 5044
-    },
-    {
-     "t": "がんばる！スクーバル！～第2話～初の朝配信で甲子園は優勝できるんか？【栄冠ナイン】【パワプロ2026】",
-     "c": "こーくAちゃんねる",
-     "u": "https://www.youtube.com/watch?v=qWaA7mho8_s",
-     "th": "https://i.ytimg.com/vi/qWaA7mho8_s/mqdefault.jpg",
-     "v": 4813
     }
    ],
    "orgs": {
-    "個人・その他": 23,
+    "個人・その他": 21,
     "にじさんじ": 1
    },
    "spark": [
-    6.5,
-    17.5,
+    8.5,
+    15.5,
     16.5,
     13.5,
-    13.0,
+    15.0,
     14.0,
-    22.0
+    20.5
    ],
-   "p_videos": 34,
-   "p_channels": 32,
+   "p_videos": 31,
+   "p_channels": 30,
    "p_views": 88,
-   "score": 52.2,
-   "base": 13.5,
-   "growth": 1.63,
+   "score": 50.6,
+   "base": 13.8,
+   "growth": 1.45,
    "steam": null,
    "amazon": "https://www.amazon.co.jp/s?k=%E5%AE%9F%E6%B3%81%E3%83%91%E3%83%AF%E3%83%95%E3%83%AB%E3%83%97%E3%83%AD%E9%87%8E%E7%90%832026&tag=tarochin-22",
    "rank": 9,
    "mv": {
     "t": "up",
-    "d": 13,
-    "p": 22,
+    "d": 12,
+    "p": 21,
     "hot": 1
    }
   },
   {
    "game": "雀魂",
    "canonical": "雀魂",
-   "videos": 22,
-   "n": 21.5,
-   "raw": 23,
-   "channels": 21,
-   "views": 224625,
+   "videos": 20,
+   "n": 20.5,
+   "raw": 21,
+   "channels": 20,
+   "views": 222894,
    "streams": [
     {
      "t": "【 雀魂 】#にじさんじLリーグ に向けてたまとさんま練習する！【七瀬すず菜/にじさんじ】",
@@ -1791,39 +1762,39 @@
      "v": 6387
     },
     {
-     "t": "【#雀魂】王座の間段位戦生配信#712【魂天/Vtuber/勝立香/5分ディレイ】",
-     "c": "勝立香 KATSU RiTSUKA",
-     "u": "https://www.youtube.com/watch?v=TahHcPZMxI8",
-     "th": "https://i.ytimg.com/vi/TahHcPZMxI8/mqdefault.jpg",
-     "v": 1559
-    },
-    {
      "t": "【雀魂】6:30開始！毎日朝活🍋おはよう段位戦【藍坂れも】",
      "c": "藍坂れも🍋",
      "u": "https://www.youtube.com/watch?v=SLc4f1qHXjk",
      "th": "https://i.ytimg.com/vi/SLc4f1qHXjk/mqdefault.jpg",
      "v": 1400
+    },
+    {
+     "t": "※5分遅延【VPL】【雀魂】第8期第4節　お知らせもあります　#新人vtuber #かにみそ #段位戦",
+     "c": "かにみそ Kanimiso",
+     "u": "https://www.youtube.com/watch?v=ANpqhvSXN18",
+     "th": "https://i.ytimg.com/vi/ANpqhvSXN18/mqdefault.jpg",
+     "v": 1300
     }
    ],
    "orgs": {
-    "個人・その他": 22,
+    "個人・その他": 20,
     "個人勢": 1
    },
    "spark": [
     10.0,
-    13.5,
-    12.0,
-    15.5,
-    18.5,
-    21.0,
-    21.5
+    16.5,
+    10.0,
+    16.5,
+    17.0,
+    21.5,
+    20.5
    ],
-   "p_videos": 33,
-   "p_channels": 33,
-   "p_views": 86,
-   "score": 51.5,
-   "base": 15.1,
-   "growth": 1.46,
+   "p_videos": 31,
+   "p_channels": 32,
+   "p_views": 85,
+   "score": 50.2,
+   "base": 15.2,
+   "growth": 1.32,
    "steam": "https://store.steampowered.com/search/?term=%E9%9B%80%E9%AD%82",
    "amazon": "https://www.amazon.co.jp/s?k=%E9%9B%80%E9%AD%82&tag=tarochin-22",
    "rank": 10,
@@ -1831,100 +1802,6 @@
     "t": "same",
     "d": 0,
     "p": 10
-   }
-  },
-  {
-   "game": "勝利の女神：NIKKE",
-   "canonical": "Goddess of Victory: Nikke",
-   "videos": 21,
-   "n": 21.0,
-   "raw": 27,
-   "channels": 18,
-   "views": 278963,
-   "streams": [
-    {
-     "t": "【メガニケ】新キャラきたぁぁぁ!!公式が4年間も隠し続けた⚫︎⚫︎解放で超話題!!【勝利の女神NIKKE】",
-     "c": "ゆゆ / 新作ゲーム攻略",
-     "u": "https://www.youtube.com/watch?v=z9WcQNnQe6o",
-     "th": "https://i.ytimg.com/vi/z9WcQNnQe6o/mqdefault.jpg",
-     "v": 96547
-    },
-    {
-     "t": "ニケラジ Vol.14〜4周年スペシャル〜 - ゲスト：石川由依(ラピ役) ＆ 上坂すみれ(ドレイク＆エクシア役) │ 勝利の女神：NIKKE",
-     "c": "勝利の女神:NIKKE",
-     "u": "https://www.youtube.com/watch?v=XsZphvXqiEs",
-     "th": "https://i.ytimg.com/vi/XsZphvXqiEs/mqdefault.jpg",
-     "v": 52856
-    },
-    {
-     "t": "「復刻ナユタ」引くまで無限にガチャ回します【勝利の女神：NIKKE / メガニケ】",
-     "c": "猫元パト / Patoneko Ch.",
-     "u": "https://www.youtube.com/watch?v=SMRBennM86E",
-     "th": "https://i.ytimg.com/vi/SMRBennM86E/mqdefault.jpg",
-     "v": 23096
-    },
-    {
-     "t": "【#PR/#NIKKE】勝利の女神:NIKKE 【EDEN SPEAR】限界全部読み！ #ぶいきゃす #니케 #新人vtuber #花宮ゆりね",
-     "c": "花宮ゆりね",
-     "u": "https://www.youtube.com/watch?v=11ouLaKCgSs",
-     "th": "https://i.ytimg.com/vi/11ouLaKCgSs/mqdefault.jpg",
-     "v": 6113
-    },
-    {
-     "t": "【 勝利の女神:#NIKKE】4周年ガチャ勝負🔥『紅蓮：神殺』をGETする！！面談もやるよ！#188【華鉈イオ/StellArt.】#紅蓮 #PR #ぶいきゃす",
-     "c": "華鉈イオ【StellArt.】",
-     "u": "https://www.youtube.com/watch?v=03bXQDaDtzU",
-     "th": "https://i.ytimg.com/vi/03bXQDaDtzU/mqdefault.jpg",
-     "v": 3916
-    },
-    {
-     "t": "【#NIKKE】エピローグ MARIA-n￤4周年イベントストーリー【 愛音クレナ／メガニケ 】#マリアン #PR #ぶいきゃす",
-     "c": "Kurena Ch. 愛音クレナ",
-     "u": "https://www.youtube.com/watch?v=ePupgC7vdw0",
-     "th": "https://i.ytimg.com/vi/ePupgC7vdw0/mqdefault.jpg",
-     "v": 3395
-    },
-    {
-     "t": "【勝利の女神:NIKKE】41~42章 ”EDEN SPEAR” 初見プレイ ほか【#NIKKE #メガニケ 女性配信/erica】＃23",
-     "c": "erica / TOPPATSU!!",
-     "u": "https://www.youtube.com/watch?v=jXOBPxsWd78",
-     "th": "https://i.ytimg.com/vi/jXOBPxsWd78/mqdefault.jpg",
-     "v": 1829
-    },
-    {
-     "t": "【勝利の女神:NIKKE】39~40章 初見プレイ ほか【#NIKKE #メガニケ 女性配信/erica】＃22",
-     "c": "erica / TOPPATSU!!",
-     "u": "https://www.youtube.com/watch?v=2LCDj8B4hVw",
-     "th": "https://i.ytimg.com/vi/2LCDj8B4hVw/mqdefault.jpg",
-     "v": 1355
-    }
-   ],
-   "orgs": {
-    "個人・その他": 26,
-    "個人勢": 1
-   },
-   "spark": [
-    9.0,
-    5.5,
-    8.0,
-    14.0,
-    11.0,
-    13.5,
-    21.0
-   ],
-   "p_videos": 32,
-   "p_channels": 29,
-   "p_views": 87,
-   "score": 50.2,
-   "base": 10.2,
-   "growth": 2.06,
-   "steam": "https://store.steampowered.com/search/?term=%E5%8B%9D%E5%88%A9%E3%81%AE%E5%A5%B3%E7%A5%9E%EF%BC%9ANIKKE",
-   "amazon": null,
-   "rank": 11,
-   "mv": {
-    "t": "up",
-    "d": 9,
-    "p": 20
    }
   },
   {
@@ -2013,11 +1890,105 @@
    "growth": 2.04,
    "steam": null,
    "amazon": null,
-   "rank": 12,
+   "rank": 11,
    "mv": {
     "t": "up",
     "d": 9,
-    "p": 21
+    "p": 20
+   }
+  },
+  {
+   "game": "勝利の女神：NIKKE",
+   "canonical": "Goddess of Victory: Nikke",
+   "videos": 20,
+   "n": 20.0,
+   "raw": 26,
+   "channels": 17,
+   "views": 277893,
+   "streams": [
+    {
+     "t": "【メガニケ】新キャラきたぁぁぁ!!公式が4年間も隠し続けた⚫︎⚫︎解放で超話題!!【勝利の女神NIKKE】",
+     "c": "ゆゆ / 新作ゲーム攻略",
+     "u": "https://www.youtube.com/watch?v=z9WcQNnQe6o",
+     "th": "https://i.ytimg.com/vi/z9WcQNnQe6o/mqdefault.jpg",
+     "v": 96547
+    },
+    {
+     "t": "ニケラジ Vol.14〜4周年スペシャル〜 - ゲスト：石川由依(ラピ役) ＆ 上坂すみれ(ドレイク＆エクシア役) │ 勝利の女神：NIKKE",
+     "c": "勝利の女神:NIKKE",
+     "u": "https://www.youtube.com/watch?v=XsZphvXqiEs",
+     "th": "https://i.ytimg.com/vi/XsZphvXqiEs/mqdefault.jpg",
+     "v": 52856
+    },
+    {
+     "t": "【メガニケ】速報❗️周年後にとんでもないのぶっ込んでキター❗️【NIKKE】",
+     "c": "まるマカ",
+     "u": "https://www.youtube.com/watch?v=EUA--oo5tOE",
+     "th": "https://i.ytimg.com/vi/EUA--oo5tOE/mqdefault.jpg",
+     "v": 33445
+    },
+    {
+     "t": "「復刻ナユタ」引くまで無限にガチャ回します【勝利の女神：NIKKE / メガニケ】",
+     "c": "猫元パト / Patoneko Ch.",
+     "u": "https://www.youtube.com/watch?v=SMRBennM86E",
+     "th": "https://i.ytimg.com/vi/SMRBennM86E/mqdefault.jpg",
+     "v": 23096
+    },
+    {
+     "t": "【#PR/#NIKKE】勝利の女神:NIKKE 【EDEN SPEAR】限界全部読み！ #ぶいきゃす #니케 #新人vtuber #花宮ゆりね",
+     "c": "花宮ゆりね",
+     "u": "https://www.youtube.com/watch?v=11ouLaKCgSs",
+     "th": "https://i.ytimg.com/vi/11ouLaKCgSs/mqdefault.jpg",
+     "v": 6113
+    },
+    {
+     "t": "【 勝利の女神:#NIKKE】4周年ガチャ勝負🔥『紅蓮：神殺』をGETする！！面談もやるよ！#188【華鉈イオ/StellArt.】#紅蓮 #PR #ぶいきゃす",
+     "c": "華鉈イオ【StellArt.】",
+     "u": "https://www.youtube.com/watch?v=03bXQDaDtzU",
+     "th": "https://i.ytimg.com/vi/03bXQDaDtzU/mqdefault.jpg",
+     "v": 3916
+    },
+    {
+     "t": "【#NIKKE】エピローグ MARIA-n￤4周年イベントストーリー【 愛音クレナ／メガニケ 】#マリアン #PR #ぶいきゃす",
+     "c": "Kurena Ch. 愛音クレナ",
+     "u": "https://www.youtube.com/watch?v=ePupgC7vdw0",
+     "th": "https://i.ytimg.com/vi/ePupgC7vdw0/mqdefault.jpg",
+     "v": 3395
+    },
+    {
+     "t": "【勝利の女神:NIKKE】41~42章 ”EDEN SPEAR” 初見プレイ ほか【#NIKKE #メガニケ 女性配信/erica】＃23",
+     "c": "erica / TOPPATSU!!",
+     "u": "https://www.youtube.com/watch?v=jXOBPxsWd78",
+     "th": "https://i.ytimg.com/vi/jXOBPxsWd78/mqdefault.jpg",
+     "v": 1829
+    }
+   ],
+   "orgs": {
+    "個人・その他": 25,
+    "個人勢": 1
+   },
+   "spark": [
+    9.0,
+    5.5,
+    8.0,
+    14.0,
+    11.5,
+    13.5,
+    20.0
+   ],
+   "p_videos": 31,
+   "p_channels": 27,
+   "p_views": 87,
+   "score": 49.2,
+   "base": 10.2,
+   "growth": 1.96,
+   "steam": "https://store.steampowered.com/search/?term=%E5%8B%9D%E5%88%A9%E3%81%AE%E5%A5%B3%E7%A5%9E%EF%BC%9ANIKKE",
+   "amazon": null,
+   "rank": 12,
+   "mv": {
+    "t": "up",
+    "d": 7,
+    "p": 19
    }
   },
   {
@@ -2091,19 +2062,19 @@
    },
    "spark": [
     13.0,
-    11.0,
+    10.0,
     11.5,
     9.0,
     8.5,
-    15.5,
+    15.0,
     19.0
    ],
    "p_videos": 29,
    "p_channels": 29,
    "p_views": 85,
    "score": 48.6,
-   "base": 11.4,
-   "growth": 1.67,
+   "base": 11.2,
+   "growth": 1.7,
    "steam": null,
    "amazon": "https://www.amazon.co.jp/s?k=%E5%A4%A7%E4%B9%B1%E9%97%98%E3%82%B9%E3%83%9E%E3%83%83%E3%82%B7%E3%83%A5%E3%83%96%E3%83%A9%E3%82%B6%E3%83%BC%E3%82%BA+SPECIAL&tag=tarochin-22",
    "rank": 13,
@@ -2117,10 +2088,10 @@
    "game": "モンスターハンターアウトランダーズ",
    "canonical": "モンスターハンターアウトランダーズ",
    "videos": 18,
-   "n": 18.5,
-   "raw": 24,
+   "n": 18.0,
+   "raw": 21,
    "channels": 16,
-   "views": 302148,
+   "views": 294258,
    "streams": [
     {
      "t": "Mハシと『クシャルダオラ』を狩り尽くす配信【モンスターハンターアウトランダーズ】",
@@ -2135,6 +2106,13 @@
      "u": "https://www.youtube.com/watch?v=S1wp68xgd5w",
      "th": "https://i.ytimg.com/vi/S1wp68xgd5w/mqdefault.jpg",
      "v": 36083
+    },
+    {
+     "t": "クシャルダオラやりつつアウトランダーズ【MHO/ipad pro】",
+     "c": "ガンサーの抹茶",
+     "u": "https://www.youtube.com/watch?v=1CRJsnOMAtw",
+     "th": "https://i.ytimg.com/vi/1CRJsnOMAtw/mqdefault.jpg",
+     "v": 30400
     },
     {
      "t": "超強いと話題のクシャルダオラに挑戦するぞー！【モンスターハンターアウトランダーズ】",
@@ -2170,32 +2148,25 @@
      "u": "https://www.youtube.com/watch?v=He66K7jCJdY",
      "th": "https://i.ytimg.com/vi/He66K7jCJdY/mqdefault.jpg",
      "v": 12588
-    },
-    {
-     "t": "【MHO】最高難易度クシャルダオラ710討伐！！銀翼が落とす影！【モンハンアウトランダーズ】",
-     "c": " 時雨ミト / mito's game channel",
-     "u": "https://www.youtube.com/watch?v=KYYVdKa7xV0",
-     "th": "https://i.ytimg.com/vi/KYYVdKa7xV0/mqdefault.jpg",
-     "v": 12433
     }
    ],
    "orgs": {
-    "個人・その他": 19,
+    "個人・その他": 16,
     "個人勢": 5
    },
    "spark": [
-    24.5,
-    21.0,
+    23.5,
+    21.5,
     17.0,
-    16.5,
-    15.5,
-    29.0,
-    18.5
+    16.0,
+    17.5,
+    28.0,
+    18.0
    ],
-   "p_videos": 28,
+   "p_videos": 27,
    "p_channels": 25,
-   "p_views": 88,
-   "score": 47.9,
+   "p_views": 87,
+   "score": 47.3,
    "base": 20.6,
    "growth": 0.87,
    "steam": null,
@@ -2210,11 +2181,11 @@
   {
    "game": "VALORANT",
    "canonical": "VALORANT",
-   "videos": 16,
-   "n": 16.0,
-   "raw": 20,
-   "channels": 15,
-   "views": 414478,
+   "videos": 14,
+   "n": 14.5,
+   "raw": 18,
+   "channels": 14,
+   "views": 414366,
    "streams": [
     {
      "t": "【VALORANT】弱かったら解散ｯ❕【ぶいすぽっ！ / 紡木こかげ】",
@@ -2252,6 +2223,13 @@
      "v": 21710
     },
     {
+     "t": "【ダイヤアセ帯】VCはランクに必要なのか？検証したら予想外の結末... 【VALORANT】",
+     "c": "デスセイヤ",
+     "u": "https://www.youtube.com/watch?v=DS5q_4WQu1I",
+     "th": "https://i.ytimg.com/vi/DS5q_4WQu1I/mqdefault.jpg",
+     "v": 16203
+    },
+    {
      "t": "37キルして暴れるCLZと共に激闘を繰り広げるTENNN【VALORANT】",
      "c": "TENNN",
      "u": "https://www.youtube.com/watch?v=0nso4JxXM_U",
@@ -2264,35 +2242,28 @@
      "u": "https://www.youtube.com/watch?v=90Wwy7MEtCI",
      "th": "https://i.ytimg.com/vi/90Wwy7MEtCI/mqdefault.jpg",
      "v": 4805
-    },
-    {
-     "t": "VALORANT/雑談とVALO　 #初見さん歓迎【＃新人VTuber 🔰】#歌枠 #歌配信 #方言 #雑談配信 #valorant",
-     "c": "夢乃るあ🐾🎀 - Rua Yumeno -",
-     "u": "https://www.youtube.com/watch?v=RLG9NIdM1Rk",
-     "th": "https://i.ytimg.com/vi/RLG9NIdM1Rk/mqdefault.jpg",
-     "v": 2248
     }
    ],
    "orgs": {
-    "個人・その他": 16,
+    "個人・その他": 14,
     "Neo-Porte": 3,
     "ぶいすぽっ！": 1
    },
    "spark": [
     11.0,
     15.0,
-    21.5,
-    17.5,
-    17.5,
-    24.5,
-    16.0
+    22.5,
+    18.5,
+    19.5,
+    24.0,
+    14.5
    ],
-   "p_videos": 24,
-   "p_channels": 24,
+   "p_videos": 22,
+   "p_channels": 22,
    "p_views": 90,
-   "score": 47.1,
-   "base": 17.8,
-   "growth": 0.9,
+   "score": 45.8,
+   "base": 18.4,
+   "growth": 0.76,
    "steam": "https://store.steampowered.com/search/?term=VALORANT",
    "amazon": "https://www.amazon.co.jp/s?k=VALORANT&tag=tarochin-22",
    "rank": 15,
@@ -2373,11 +2344,11 @@
    },
    "spark": [
     17.0,
-    7.5,
-    13.0,
-    13.5,
-    15.5,
-    18.5,
+    8.5,
+    15.0,
+    11.0,
+    16.5,
+    17.0,
     14.5
    ],
    "p_videos": 22,
@@ -2399,10 +2370,10 @@
    "game": "鉄拳8",
    "canonical": "鉄拳8",
    "videos": 16,
-   "n": 16.5,
-   "raw": 19,
-   "channels": 15,
-   "views": 81682,
+   "n": 15.5,
+   "raw": 18,
+   "channels": 14,
+   "views": 78562,
    "streams": [
     {
      "t": "【TGU2026】鉄拳8部門Day1 公認ミラー配信",
@@ -2426,11 +2397,11 @@
      "v": 12905
     },
     {
-     "t": "連日ロジャーで敵を吹っ飛ばす鉄拳8",
-     "c": "最高コーラ / Moritaka Cola",
-     "u": "https://www.youtube.com/watch?v=LNx1_C__-qE",
-     "th": "https://i.ytimg.com/vi/LNx1_C__-qE/mqdefault.jpg",
-     "v": 3120
+     "t": "【鉄拳8】 世界ランク1位ロジャーJR とんでもな連勝数だ 🔥 破壊神陸 フェン vs 破壊神陸 ロジャーJR 🔥 ver3.03.01 Tekken8 HDR",
+     "c": "Tekken8 Kiwami",
+     "u": "https://www.youtube.com/watch?v=DK2mGJfKBsg",
+     "th": "https://i.ytimg.com/vi/DK2mGJfKBsg/mqdefault.jpg",
+     "v": 8152
     },
     {
      "t": "【初見・質問歓迎】12:30～TGU2026それまでロジャーJr.鉄拳8 シーズン3",
@@ -2462,23 +2433,23 @@
     }
    ],
    "orgs": {
-    "個人・その他": 19
+    "個人・その他": 18
    },
    "spark": [
-    3.5,
-    6.0,
-    12.0,
-    14.0,
-    21.0,
-    21.0,
-    16.5
+    4.5,
+    5.0,
+    15.0,
+    11.0,
+    24.0,
+    19.0,
+    15.5
    ],
-   "p_videos": 25,
-   "p_channels": 24,
-   "p_views": 79,
-   "score": 43.5,
-   "base": 12.9,
-   "growth": 1.24,
+   "p_videos": 24,
+   "p_channels": 22,
+   "p_views": 78,
+   "score": 42.2,
+   "base": 13.1,
+   "growth": 1.22,
    "steam": "https://store.steampowered.com/search/?term=%E9%89%84%E6%8B%B38",
    "amazon": "https://www.amazon.co.jp/s?k=%E9%89%84%E6%8B%B38&tag=tarochin-22",
    "rank": 17,
@@ -2486,99 +2457,6 @@
     "t": "down",
     "d": 4,
     "p": 13
-   }
-  },
-  {
-   "game": "ロブロックス",
-   "canonical": "Roblox",
-   "videos": 12,
-   "n": 11.5,
-   "raw": 13,
-   "channels": 11,
-   "views": 314662,
-   "streams": [
-    {
-     "t": "キーボードを踏むとスピードが速くなるロブロックス【ロブロックス/Roblox】",
-     "c": "ウォーターチャレンジ",
-     "u": "https://www.youtube.com/watch?v=uAZdgdltxXI",
-     "th": "https://i.ytimg.com/vi/uAZdgdltxXI/mqdefault.jpg",
-     "v": 153490
-    },
-    {
-     "t": "シール帳を盗みまくるロブロックスのゲームを作ってみた【ロブロックス】",
-     "c": "みそらくん",
-     "u": "https://www.youtube.com/watch?v=YhJkGHoddW8",
-     "th": "https://i.ytimg.com/vi/YhJkGHoddW8/mqdefault.jpg",
-     "v": 66912
-    },
-    {
-     "t": "ペケッツが作った鬼ごっこゲームがヤバすぎた【ヒロたま×ペケッツ】【ROBLOX/ロブロックス】",
-     "c": "ビットスターアニメゲームズ",
-     "u": "https://www.youtube.com/watch?v=iTFzXDEg_PA",
-     "th": "https://i.ytimg.com/vi/iTFzXDEg_PA/mqdefault.jpg",
-     "v": 51653
-    },
-    {
-     "t": "【世界ランカー対決】最強を決める「ツヨツヨ王選手権」で最後にとんでもない怪物が現れたｗｗ【ロブロックス｜卵を盗む】",
-     "c": "らいらい【RaiRai】",
-     "u": "https://www.youtube.com/watch?v=wPsWfTmFL7I",
-     "th": "https://i.ytimg.com/vi/wPsWfTmFL7I/mqdefault.jpg",
-     "v": 19880
-    },
-    {
-     "t": "【閲覧注意⚠️】ラグドール系ゲームに衝撃の変化、調査したら闇深すぎた🫨【 ロブロックス】Roblox",
-     "c": "マーチィゲーミング　Marchy Gaming",
-     "u": "https://www.youtube.com/watch?v=xt8f-rNUfv8",
-     "th": "https://i.ytimg.com/vi/xt8f-rNUfv8/mqdefault.jpg",
-     "v": 7820
-    },
-    {
-     "t": "【ロブロックス】うp主がヴェノムに乗っ取られるロブロックス！？ゆっくり達がヴェノムになって大暴れするロブロックスで人格を乗っ取られてしまった…！！【 ROBLOX 】【 ゆっくり実況 】",
-     "c": "たくっち",
-     "u": "https://www.youtube.com/watch?v=MzNDnUppuyg",
-     "th": "https://i.ytimg.com/vi/MzNDnUppuyg/mqdefault.jpg",
-     "v": 4372
-    },
-    {
-     "t": "【ROBLOX/ソルのRNG/参加型配信】ハロイベ限定ゼロ、恒常のみ、ハロイベPart2あり。",
-     "c": "ゲーム好きのみかん",
-     "u": "https://www.youtube.com/watch?v=XbYU5uB88fk",
-     "th": "https://i.ytimg.com/vi/XbYU5uB88fk/mqdefault.jpg",
-     "v": 2798
-    },
-    {
-     "t": "【ROBLOX/ソルのRNG/参加型配信】さらばネクロマンサー。ソル復活。",
-     "c": "ゲーム好きのみかん",
-     "u": "https://www.youtube.com/watch?v=v6Ywlz6epGw",
-     "th": "https://i.ytimg.com/vi/v6Ywlz6epGw/mqdefault.jpg",
-     "v": 1986
-    }
-   ],
-   "orgs": {
-    "個人・その他": 12,
-    "実況者": 1
-   },
-   "spark": [
-    6.0,
-    8.5,
-    4.0,
-    7.5,
-    7.0,
-    5.0,
-    11.5
-   ],
-   "p_videos": 18,
-   "p_channels": 17,
-   "p_views": 88,
-   "score": 42.1,
-   "base": 6.3,
-   "growth": 1.9,
-   "steam": "https://store.steampowered.com/search/?term=%E3%83%AD%E3%83%96%E3%83%AD%E3%83%83%E3%82%AF%E3%82%B9",
-   "amazon": "https://www.amazon.co.jp/s?k=%E3%83%AD%E3%83%96%E3%83%AD%E3%83%83%E3%82%AF%E3%82%B9&tag=tarochin-22",
-   "rank": 18,
-   "mv": {
-    "t": "in",
-    "p": 38
    }
   },
   {
@@ -2655,116 +2533,23 @@
     11.0,
     4.0,
     4.5,
-    5.0,
-    22.5,
-    13.0,
+    6.0,
+    24.0,
+    11.0,
     14.0
    ],
    "p_videos": 21,
    "p_channels": 19,
    "p_views": 83,
    "score": 42.0,
-   "base": 10.0,
-   "growth": 1.4,
+   "base": 10.1,
+   "growth": 1.39,
    "steam": "https://store.steampowered.com/search/?term=%E9%B3%B4%E6%BD%AE",
    "amazon": "https://www.amazon.co.jp/s?k=%E9%B3%B4%E6%BD%AE&tag=tarochin-22",
-   "rank": 19,
-   "mv": {
-    "t": "same",
-    "d": 0,
-    "p": 19
-   }
-  },
-  {
-   "game": "崩壊：スターレイル",
-   "canonical": "Honkai: Star Rail",
-   "videos": 12,
-   "n": 12.0,
-   "raw": 13,
-   "channels": 11,
-   "views": 160990,
-   "streams": [
-    {
-     "t": "【スタレ】誰でも真似できる☆３アッハの作り方【崩壊スターレイル】【ゆっくり実況】",
-     "c": "ありすた",
-     "u": "https://www.youtube.com/watch?v=TfAq9CLgmrY",
-     "th": "https://i.ytimg.com/vi/TfAq9CLgmrY/mqdefault.jpg",
-     "v": 46849
-    },
-    {
-     "t": "【崩壊スターレイル】銀狼最新育成解説！パール・アッハ加入で完全覚醒！無凸も強いけど2凸ヤバすぎ【スタレ】",
-     "c": "アサギゲームズ",
-     "u": "https://www.youtube.com/watch?v=GhF55ypGzFo",
-     "th": "https://i.ytimg.com/vi/GhF55ypGzFo/mqdefault.jpg",
-     "v": 36507
-    },
-    {
-     "t": "完全初見！「いま、群星は笑いに包まれる」 二相楽園編 崩壊スターレイル ＃47",
-     "c": "せーたろー",
-     "u": "https://www.youtube.com/watch?v=2hIq7pU2QZM",
-     "th": "https://i.ytimg.com/vi/2hIq7pU2QZM/mqdefault.jpg",
-     "v": 18909
-    },
-    {
-     "t": "【崩壊スターレイル】全員無凸/餅の銀狼PTで4.7キング0R解説 FULL E0S1 TEAM Silver Wolf 0-Cycle King in Check",
-     "c": "ボビー",
-     "u": "https://www.youtube.com/watch?v=uLqSVvZP7aI",
-     "th": "https://i.ytimg.com/vi/uLqSVvZP7aI/mqdefault.jpg",
-     "v": 18012
-    },
-    {
-     "t": "【崩壊スターレイル】Ver4.7異相の仲裁に挑戦！最後のボスはあの帰寂！？",
-     "c": "メロジカ",
-     "u": "https://www.youtube.com/watch?v=ge2JUiqfNBg",
-     "th": "https://i.ytimg.com/vi/ge2JUiqfNBg/mqdefault.jpg",
-     "v": 10091
-    },
-    {
-     "t": "【要確認】本当にそれで大丈夫？Ver4.7奇物宝庫トレジャー活用法について徹底解説【奇物宝庫トレジャー】【崩壊スターレイル】",
-     "c": "シューレン",
-     "u": "https://www.youtube.com/watch?v=bh63-2T6MIU",
-     "th": "https://i.ytimg.com/vi/bh63-2T6MIU/mqdefault.jpg",
-     "v": 9299
-    },
-    {
-     "t": "【崩壊スターレイル】新マネウォやりながら",
-     "c": "ボビー",
-     "u": "https://www.youtube.com/watch?v=0z0F_pY9f74",
-     "th": "https://i.ytimg.com/vi/0z0F_pY9f74/mqdefault.jpg",
-     "v": 9131
-    },
-    {
-     "t": "【崩壊スターレイル】ムメイカイの正体判明！終焉のエリオのカフカ死亡の脚本に挑む開拓の秘密｜飛霄（巡狩）と星嘯（壊滅）が参戦する虚数の樹（ムメイカイ）のストーリーを完全解説。",
-     "c": "ゆきの",
-     "u": "https://www.youtube.com/watch?v=Y_oNtLP9T6c",
-     "th": "https://i.ytimg.com/vi/Y_oNtLP9T6c/mqdefault.jpg",
-     "v": 8226
-    }
-   ],
-   "orgs": {
-    "個人・その他": 13
-   },
-   "spark": [
-    8.5,
-    5.0,
-    8.5,
-    36.0,
-    20.0,
-    12.5,
-    12.0
-   ],
-   "p_videos": 18,
-   "p_channels": 17,
-   "p_views": 83,
-   "score": 40.4,
-   "base": 15.1,
-   "growth": 0.79,
-   "steam": "https://store.steampowered.com/search/?term=%E5%B4%A9%E5%A3%8A%EF%BC%9A%E3%82%B9%E3%82%BF%E3%83%BC%E3%83%AC%E3%82%A4%E3%83%AB",
-   "amazon": "https://www.amazon.co.jp/s?k=%E5%B4%A9%E5%A3%8A%EF%BC%9A%E3%82%B9%E3%82%BF%E3%83%BC%E3%83%AC%E3%82%A4%E3%83%AB&tag=tarochin-22",
-   "rank": 20,
+   "rank": 18,
    "mv": {
     "t": "up",
-    "d": 4,
+    "d": 6,
     "p": 24
    }
   },
@@ -2839,9 +2624,9 @@
     "個人勢": 1
    },
    "spark": [
-    12.0,
-    10.0,
-    10.0,
+    13.0,
+    9.5,
+    9.0,
     7.5,
     5.0,
     7.5,
@@ -2851,14 +2636,14 @@
    "p_channels": 17,
    "p_views": 83,
    "score": 40.4,
-   "base": 8.7,
-   "growth": 1.38,
+   "base": 8.6,
+   "growth": 1.4,
    "steam": "https://store.steampowered.com/search/?term=%E5%8E%9F%E7%A5%9E",
    "amazon": "https://www.amazon.co.jp/s?k=%E5%8E%9F%E7%A5%9E&tag=tarochin-22",
-   "rank": 21,
+   "rank": 19,
    "mv": {
     "t": "up",
-    "d": 7,
+    "d": 9,
     "p": 28
    }
   },
@@ -2933,8 +2718,8 @@
     "実況者": 1
    },
    "spark": [
-    10.0,
-    5.5,
+    11.0,
+    5.0,
     9.0,
     15.0,
     9.0,
@@ -2945,14 +2730,14 @@
    "p_channels": 13,
    "p_views": 91,
    "score": 40.0,
-   "base": 10.3,
-   "growth": 0.78,
+   "base": 10.4,
+   "growth": 0.77,
    "steam": null,
    "amazon": "https://www.amazon.co.jp/s?k=%E3%83%9D%E3%82%B1%E3%83%A2%E3%83%B3%E3%83%81%E3%83%A3%E3%83%B3%E3%83%94%E3%82%AA%E3%83%B3%E3%82%BA&tag=tarochin-22",
-   "rank": 22,
+   "rank": 20,
    "mv": {
     "t": "down",
-    "d": 6,
+    "d": 4,
     "p": 16
    }
   },
@@ -3029,8 +2814,8 @@
    "spark": [
     2.0,
     7.0,
-    6.0,
-    10.0,
+    7.0,
+    9.0,
     5.0,
     9.5,
     12.0
@@ -3043,11 +2828,104 @@
    "growth": 1.82,
    "steam": "https://store.steampowered.com/search/?term=ELDEN%20RING",
    "amazon": "https://www.amazon.co.jp/s?k=ELDEN+RING&tag=tarochin-22",
-   "rank": 23,
+   "rank": 21,
    "mv": {
     "t": "up",
-    "d": 2,
+    "d": 4,
     "p": 25
+   }
+  },
+  {
+   "game": "崩壊：スターレイル",
+   "canonical": "Honkai: Star Rail",
+   "videos": 11,
+   "n": 11.0,
+   "raw": 12,
+   "channels": 10,
+   "views": 150899,
+   "streams": [
+    {
+     "t": "【スタレ】誰でも真似できる☆３アッハの作り方【崩壊スターレイル】【ゆっくり実況】",
+     "c": "ありすた",
+     "u": "https://www.youtube.com/watch?v=TfAq9CLgmrY",
+     "th": "https://i.ytimg.com/vi/TfAq9CLgmrY/mqdefault.jpg",
+     "v": 46849
+    },
+    {
+     "t": "【崩壊スターレイル】銀狼最新育成解説！パール・アッハ加入で完全覚醒！無凸も強いけど2凸ヤバすぎ【スタレ】",
+     "c": "アサギゲームズ",
+     "u": "https://www.youtube.com/watch?v=GhF55ypGzFo",
+     "th": "https://i.ytimg.com/vi/GhF55ypGzFo/mqdefault.jpg",
+     "v": 36507
+    },
+    {
+     "t": "完全初見！「いま、群星は笑いに包まれる」 二相楽園編 崩壊スターレイル ＃47",
+     "c": "せーたろー",
+     "u": "https://www.youtube.com/watch?v=2hIq7pU2QZM",
+     "th": "https://i.ytimg.com/vi/2hIq7pU2QZM/mqdefault.jpg",
+     "v": 18909
+    },
+    {
+     "t": "【崩壊スターレイル】全員無凸/餅の銀狼PTで4.7キング0R解説 FULL E0S1 TEAM Silver Wolf 0-Cycle King in Check",
+     "c": "ボビー",
+     "u": "https://www.youtube.com/watch?v=uLqSVvZP7aI",
+     "th": "https://i.ytimg.com/vi/uLqSVvZP7aI/mqdefault.jpg",
+     "v": 18012
+    },
+    {
+     "t": "【要確認】本当にそれで大丈夫？Ver4.7奇物宝庫トレジャー活用法について徹底解説【奇物宝庫トレジャー】【崩壊スターレイル】",
+     "c": "シューレン",
+     "u": "https://www.youtube.com/watch?v=bh63-2T6MIU",
+     "th": "https://i.ytimg.com/vi/bh63-2T6MIU/mqdefault.jpg",
+     "v": 9299
+    },
+    {
+     "t": "【崩壊スターレイル】新マネウォやりながら",
+     "c": "ボビー",
+     "u": "https://www.youtube.com/watch?v=0z0F_pY9f74",
+     "th": "https://i.ytimg.com/vi/0z0F_pY9f74/mqdefault.jpg",
+     "v": 9131
+    },
+    {
+     "t": "【崩壊スターレイル】ムメイカイの正体判明！終焉のエリオのカフカ死亡の脚本に挑む開拓の秘密｜飛霄（巡狩）と星嘯（壊滅）が参戦する虚数の樹（ムメイカイ）のストーリーを完全解説。",
+     "c": "ゆきの",
+     "u": "https://www.youtube.com/watch?v=Y_oNtLP9T6c",
+     "th": "https://i.ytimg.com/vi/Y_oNtLP9T6c/mqdefault.jpg",
+     "v": 8226
+    },
+    {
+     "t": "アッハと２凸周年キャラ達がやばいｗｗｗｗ【崩壊スターレイル】",
+     "c": "こうなあ ｰ ホヨバ",
+     "u": "https://www.youtube.com/watch?v=8gh7qIhx2m0",
+     "th": "https://i.ytimg.com/vi/8gh7qIhx2m0/mqdefault.jpg",
+     "v": 5281
+    }
+   ],
+   "orgs": {
+    "個人・その他": 12
+   },
+   "spark": [
+    7.5,
+    5.5,
+    8.0,
+    36.0,
+    21.5,
+    12.5,
+    11.0
+   ],
+   "p_videos": 17,
+   "p_channels": 16,
+   "p_views": 83,
+   "score": 39.8,
+   "base": 15.2,
+   "growth": 0.72,
+   "steam": "https://store.steampowered.com/search/?term=%E5%B4%A9%E5%A3%8A%EF%BC%9A%E3%82%B9%E3%82%BF%E3%83%BC%E3%83%AC%E3%82%A4%E3%83%AB",
+   "amazon": "https://www.amazon.co.jp/s?k=%E5%B4%A9%E5%A3%8A%EF%BC%9A%E3%82%B9%E3%82%BF%E3%83%BC%E3%83%AC%E3%82%A4%E3%83%AB&tag=tarochin-22",
+   "rank": 22,
+   "mv": {
+    "t": "up",
+    "d": 1,
+    "p": 23
    }
   },
   {
@@ -3122,8 +3000,8 @@
     "Neo-Porte": 1
    },
    "spark": [
-    10.0,
-    13.0,
+    12.0,
+    11.0,
     18.5,
     12.0,
     10.0,
@@ -3138,10 +3016,10 @@
    "growth": 0.59,
    "steam": "https://store.steampowered.com/search/?term=League%20of%20Legends",
    "amazon": null,
-   "rank": 24,
+   "rank": 23,
    "mv": {
     "t": "down",
-    "d": 13,
+    "d": 12,
     "p": 11
    }
   },
@@ -3216,8 +3094,8 @@
    },
    "spark": [
     9.0,
-    5.5,
-    10.0,
+    6.5,
+    9.0,
     8.5,
     6.5,
     9.5,
@@ -3231,10 +3109,10 @@
    "growth": 1.34,
    "steam": "https://store.steampowered.com/search/?term=%E5%83%95%E3%81%AE%E3%83%92%E3%83%BC%E3%83%AD%E3%83%BC%E3%82%A2%E3%82%AB%E3%83%87%E3%83%9F%E3%82%A2%20ULTRA%20RUMBLE",
    "amazon": "https://www.amazon.co.jp/s?k=%E5%83%95%E3%81%AE%E3%83%92%E3%83%BC%E3%83%AD%E3%83%BC%E3%82%A2%E3%82%AB%E3%83%87%E3%83%9F%E3%82%A2+ULTRA+RUMBLE&tag=tarochin-22",
-   "rank": 25,
+   "rank": 24,
    "mv": {
     "t": "up",
-    "d": 4,
+    "d": 5,
     "p": 29
    }
   },
@@ -3243,10 +3121,17 @@
    "canonical": "The Battle Cats",
    "videos": 12,
    "n": 11.5,
-   "raw": 16,
+   "raw": 14,
    "channels": 10,
-   "views": 53282,
+   "views": 53143,
    "streams": [
+    {
+     "t": "【にゃんこ大戦争】0から始める！にゃんこ大戦争！（14周年）　#ゆっくり実況　#にゃんこ大戦争",
+     "c": "ゆうハル",
+     "u": "https://www.youtube.com/watch?v=IqNm4xwogqY",
+     "th": "https://i.ytimg.com/vi/IqNm4xwogqY/mqdefault.jpg",
+     "v": 33112
+    },
     {
      "t": "【にゃんこ大戦争】無実の監獄 脱獄編！いよいよ最終ステージの光が差す方へ！誰が出るかと思ったらお前かーい！【本垢実況Re#2557】",
      "c": "こーた",
@@ -3262,6 +3147,13 @@
      "v": 4983
     },
     {
+     "t": "にゃんこ大戦争　監獄★２やってくぜ",
+     "c": "とあの3たん",
+     "u": "https://www.youtube.com/watch?v=_8NYJ459pjs",
+     "th": "https://i.ytimg.com/vi/_8NYJ459pjs/mqdefault.jpg?v=6af84220",
+     "v": 1124
+    },
+    {
      "t": "「にゃんこ大戦争」をゲーム実況 #118",
      "c": "かずみんゲームちゃんねる",
      "u": "https://www.youtube.com/watch?v=LwHBdVWKtIY",
@@ -3269,25 +3161,11 @@
      "v": 1049
     },
     {
-     "t": "「にゃんこ大戦争」をゲーム実況 #116",
-     "c": "かずみんゲームちゃんねる",
-     "u": "https://www.youtube.com/watch?v=gWKpJmCnGx0",
-     "th": "https://i.ytimg.com/vi/gWKpJmCnGx0/mqdefault.jpg",
-     "v": 832
-    },
-    {
      "t": "「にゃんこ大戦争」をゲーム実況 #117",
      "c": "かずみんゲームちゃんねる",
      "u": "https://www.youtube.com/watch?v=0vyHSfPIvbY",
      "th": "https://i.ytimg.com/vi/0vyHSfPIvbY/mqdefault.jpg",
      "v": 785
-    },
-    {
-     "t": "#277【三夜連続プラチケ開封☆第二夜☆にゃんこ14周年】 #にゃんこ大戦争  ＃レジェンドストーリー０　まそしんチャンネルがライブ配信中！",
-     "c": "まそしんチャンネル",
-     "u": "https://www.youtube.com/watch?v=Evcti9soBRs",
-     "th": "https://i.ytimg.com/vi/Evcti9soBRs/mqdefault.jpg",
-     "v": 517
     },
     {
      "t": "【#にゃんこ大戦争】新レジェ冠2-3クリアしていきます！＃15【#縦型配信】",
@@ -3305,14 +3183,14 @@
     }
    ],
    "orgs": {
-    "個人・その他": 16
+    "個人・その他": 14
    },
    "spark": [
-    5.0,
-    8.5,
+    6.0,
+    7.5,
     5.5,
     10.5,
-    10.0,
+    12.0,
     10.5,
     11.5
    ],
@@ -3320,108 +3198,15 @@
    "p_channels": 16,
    "p_views": 76,
    "score": 37.6,
-   "base": 8.3,
-   "growth": 1.45,
+   "base": 8.7,
+   "growth": 1.38,
    "steam": null,
    "amazon": "https://www.amazon.co.jp/s?k=%E3%81%AB%E3%82%83%E3%82%93%E3%81%93%E5%A4%A7%E6%88%A6%E4%BA%89&tag=tarochin-22",
-   "rank": 26,
+   "rank": 25,
    "mv": {
-    "t": "same",
-    "d": 0,
-    "p": 26
-   }
-  },
-  {
-   "game": "ほの暮しの庭",
-   "canonical": "ほの暮しの庭",
-   "videos": 10,
-   "n": 10.0,
-   "raw": 10,
-   "channels": 10,
-   "views": 74208,
-   "streams": [
-    {
-     "t": "【速報】Switch2に3DSゼルダ「神トラ2」配信か！？インディーワールドのゲーム大荒れ…ほの暮しの庭大ヒットした結果…【任天堂】",
-     "c": "アオイゲーム【話題のゲーム紹介】",
-     "u": "https://www.youtube.com/watch?v=jL1NqRE_JmI",
-     "th": "https://i.ytimg.com/vi/jL1NqRE_JmI/mqdefault.jpg",
-     "v": 45231
-    },
-    {
-     "t": "山から呼ぶ声の正体を確かめに行く田舎暮らし『 ほの暮しの庭 』#29",
-     "c": "ハヤトの隠れ家",
-     "u": "https://www.youtube.com/watch?v=8AY2MGRVtjU",
-     "th": "https://i.ytimg.com/vi/8AY2MGRVtjU/mqdefault.jpg",
-     "v": 22473
-    },
-    {
-     "t": "【売れすぎ】『ほの暮しの庭』が想定の3倍超、日本一ソフトウェア決算も黒字転換。尖った完全新作はなぜ売れた？  #ゆっくり解説",
-     "c": "スイッチ通【ゲームニュース深掘り】",
-     "u": "https://www.youtube.com/watch?v=AytbucxPn0g",
-     "th": "https://i.ytimg.com/vi/AytbucxPn0g/mqdefault.jpg",
-     "v": 5146
-    },
-    {
-     "t": "【実況】因習村でスローライフ！ほの暮しの庭をツッコミ実況Part138【PS5】",
-     "c": "しゅーや",
-     "u": "https://www.youtube.com/watch?v=PBsmbXjY5Hs",
-     "th": "https://i.ytimg.com/vi/PBsmbXjY5Hs/mqdefault.jpg",
-     "v": 537
-    },
-    {
-     "t": "【ほの暮しの庭｜ほの暮しモード】彼ヶ津村で\"スローライフ\"と\"ほの暗さ\"にどっぷりつかる配信 #52",
-     "c": "まーぼの大剣一閃-乙式-",
-     "u": "https://www.youtube.com/watch?v=iU3rzDwpJ_0",
-     "th": "https://i.ytimg.com/vi/iU3rzDwpJ_0/mqdefault.jpg?v=6af832d4",
-     "v": 514
-    },
-    {
-     "t": "2年目の秋、最新の土地を買う【ほの暮しの庭】",
-     "c": "Azuma-Ryu",
-     "u": "https://www.youtube.com/watch?v=GHNFaPmgL1w",
-     "th": "https://i.ytimg.com/vi/GHNFaPmgL1w/mqdefault.jpg",
-     "v": 99
-    },
-    {
-     "t": "【ほの暮らしの庭】#24　遂に最終章きたか？！？！？！",
-     "c": "古竜むん",
-     "u": "https://www.youtube.com/watch?v=UycIUMAoZOw",
-     "th": "https://i.ytimg.com/vi/UycIUMAoZOw/mqdefault.jpg",
-     "v": 83
-    },
-    {
-     "t": "【実況】あんしん暮しモードで ほの暮しの庭 を初見で遊ぶいも【#47】",
-     "c": "いも畑ちゃんねる",
-     "u": "https://www.youtube.com/watch?v=jJM-X4Urmm8",
-     "th": "https://i.ytimg.com/vi/jJM-X4Urmm8/mqdefault.jpg",
-     "v": 72
-    }
-   ],
-   "orgs": {
-    "個人・その他": 9,
-    "実況者": 1
-   },
-   "spark": [
-    2.0,
-    5.0,
-    5.5,
-    6.0,
-    6.0,
-    5.0,
-    10.0
-   ],
-   "p_videos": 15,
-   "p_channels": 16,
-   "p_views": 78,
-   "score": 37.4,
-   "base": 4.9,
-   "growth": 2.04,
-   "steam": "https://store.steampowered.com/search/?term=%E3%81%BB%E3%81%AE%E6%9A%AE%E3%81%97%E3%81%AE%E5%BA%AD",
-   "amazon": "https://www.amazon.co.jp/s?k=%E3%81%BB%E3%81%AE%E6%9A%AE%E3%81%97%E3%81%AE%E5%BA%AD&tag=tarochin-22",
-   "rank": 27,
-   "mv": {
-    "t": "in",
-    "p": 53
+    "t": "up",
+    "d": 5,
+    "p": 30
    }
   },
   {
@@ -3488,7 +3273,7 @@
     "にじさんじ": 1
    },
    "spark": [
-    8.0,
+    7.0,
     6.5,
     4.0,
     7.0,
@@ -3500,14 +3285,108 @@
    "p_channels": 11,
    "p_views": 85,
    "score": 36.9,
-   "base": 4.9,
-   "growth": 1.43,
+   "base": 4.8,
+   "growth": 1.46,
    "steam": "https://store.steampowered.com/search/?term=Potato%20Please",
    "amazon": null,
-   "rank": 28,
+   "rank": 26,
    "mv": {
     "t": "in",
-    "p": 69
+    "p": 68
+   }
+  },
+  {
+   "game": "ロブロックス",
+   "canonical": "Roblox",
+   "videos": 9,
+   "n": 9.0,
+   "raw": 10,
+   "channels": 9,
+   "views": 81798,
+   "streams": [
+    {
+     "t": "ペケッツが作った鬼ごっこゲームがヤバすぎた【ヒロたま×ペケッツ】【ROBLOX/ロブロックス】",
+     "c": "ビットスターアニメゲームズ",
+     "u": "https://www.youtube.com/watch?v=iTFzXDEg_PA",
+     "th": "https://i.ytimg.com/vi/iTFzXDEg_PA/mqdefault.jpg",
+     "v": 51653
+    },
+    {
+     "t": "【🥚管理者イベント】闇市ディーラーがくるらしい...意味分からんけどいくぞぉぉおおおお！！【ロブロックス | ROBLOX】【卵を盗む（UPD13）】",
+     "c": "らいらい【RaiRai】",
+     "u": "https://www.youtube.com/watch?v=Kj7rRajYlrk",
+     "th": "https://i.ytimg.com/vi/Kj7rRajYlrk/mqdefault.jpg",
+     "v": 14836
+    },
+    {
+     "t": "【閲覧注意⚠️】ラグドール系ゲームに衝撃の変化、調査したら闇深すぎた🫨【 ロブロックス】Roblox",
+     "c": "マーチィゲーミング　Marchy Gaming",
+     "u": "https://www.youtube.com/watch?v=xt8f-rNUfv8",
+     "th": "https://i.ytimg.com/vi/xt8f-rNUfv8/mqdefault.jpg",
+     "v": 7820
+    },
+    {
+     "t": "【ロブロックス】うp主がヴェノムに乗っ取られるロブロックス！？ゆっくり達がヴェノムになって大暴れするロブロックスで人格を乗っ取られてしまった…！！【 ROBLOX 】【 ゆっくり実況 】",
+     "c": "たくっち",
+     "u": "https://www.youtube.com/watch?v=MzNDnUppuyg",
+     "th": "https://i.ytimg.com/vi/MzNDnUppuyg/mqdefault.jpg",
+     "v": 4372
+    },
+    {
+     "t": "【ROBLOX/ソルのRNG/参加型配信】ハロイベ限定ゼロ、恒常のみ、ハロイベPart2あり。",
+     "c": "ゲーム好きのみかん",
+     "u": "https://www.youtube.com/watch?v=XbYU5uB88fk",
+     "th": "https://i.ytimg.com/vi/XbYU5uB88fk/mqdefault.jpg",
+     "v": 2798
+    },
+    {
+     "t": "【ROBLOX/ソルのRNG/参加型配信】さらばネクロマンサー。ソル復活。",
+     "c": "ゲーム好きのみかん",
+     "u": "https://www.youtube.com/watch?v=v6Ywlz6epGw",
+     "th": "https://i.ytimg.com/vi/v6Ywlz6epGw/mqdefault.jpg",
+     "v": 1986
+    },
+    {
+     "t": "【Roblox】卵を盗む・新エリアの超デカいシークレットGET！新しい儀式ができる隠し部屋発見？　#Roblox #zakimiya #ザキミヤ #ロブロックス #StealAnEgg #卵を盗む",
+     "c": "zakimiya / ザキミヤ",
+     "u": "https://www.youtube.com/watch?v=KYYaBKIfK8E",
+     "th": "https://i.ytimg.com/vi/KYYaBKIfK8E/mqdefault.jpg",
+     "v": 202
+    },
+    {
+     "t": "【Roblox】レースしたり色んなゲームで遊ぶ！リスナー参加型！／ガロガロリ",
+     "c": "ガ口ガ口リ",
+     "u": "https://www.youtube.com/watch?v=Cb4nWHt40oM",
+     "th": "https://i.ytimg.com/vi/Cb4nWHt40oM/mqdefault.jpg",
+     "v": 117
+    }
+   ],
+   "orgs": {
+    "個人・その他": 9,
+    "実況者": 1
+   },
+   "spark": [
+    5.0,
+    8.5,
+    5.5,
+    5.5,
+    7.5,
+    7.0,
+    9.0
+   ],
+   "p_videos": 14,
+   "p_channels": 14,
+   "p_views": 79,
+   "score": 36.8,
+   "base": 6.5,
+   "growth": 1.38,
+   "steam": "https://store.steampowered.com/search/?term=%E3%83%AD%E3%83%96%E3%83%AD%E3%83%83%E3%82%AF%E3%82%B9",
+   "amazon": "https://www.amazon.co.jp/s?k=%E3%83%AD%E3%83%96%E3%83%AD%E3%83%83%E3%82%AF%E3%82%B9&tag=tarochin-22",
+   "rank": 27,
+   "mv": {
+    "t": "down",
+    "d": 1,
+    "p": 26
    }
   },
   {
@@ -3596,11 +3475,11 @@
    "growth": 0.89,
    "steam": "https://store.steampowered.com/search/?term=eFootball",
    "amazon": "https://www.amazon.co.jp/s?k=eFootball&tag=tarochin-22",
-   "rank": 29,
+   "rank": 28,
    "mv": {
     "t": "down",
     "d": 6,
-    "p": 23
+    "p": 22
    }
   },
   {
@@ -3683,10 +3562,96 @@
    "growth": 3.89,
    "steam": "https://store.steampowered.com/search/?term=%E6%B0%97%E3%81%AE%E3%81%9B%E3%81%84%E3%81%99%E3%81%8E%E3%82%8B%EF%BC%B2%EF%BC%B0%EF%BC%A7",
    "amazon": null,
+   "rank": 29,
+   "mv": {
+    "t": "in",
+    "p": 102
+   }
+  },
+  {
+   "game": "ファイナルファンタジーXIV",
+   "canonical": "Final Fantasy XIV Online",
+   "videos": 6,
+   "n": 6.5,
+   "raw": 7,
+   "channels": 6,
+   "views": 223512,
+   "streams": [
+    {
+     "t": "【FINAL FANTASY XIV】ガンブレララ狐と黄金のレガシー patch7.56　※ネタバレあり※ 【ホロライブ/白上フブキ】",
+     "c": "フブキCh。白上フブキ",
+     "u": "https://www.youtube.com/watch?v=VoMKIHPR4WI",
+     "th": "https://i.ytimg.com/vi/VoMKIHPR4WI/mqdefault.jpg",
+     "v": 213482
+    },
+    {
+     "t": "完全初見！【FF14】17 さよなら新生！そして蒼天へ！！／#りりルゼア配信 ファイナルファンタジー14 ヒカセン 初見新規プロ大歓迎！",
+     "c": "LiLy💠りりねこにゃんねる",
+     "u": "https://www.youtube.com/watch?v=buJwdG8YE5g",
+     "th": "https://i.ytimg.com/vi/buJwdG8YE5g/mqdefault.jpg",
+     "v": 3862
+    },
+    {
+     "t": "【FF14】完全初見！暁月編！ part31！＃147【ゲーム実況】",
+     "c": "リア・アマリア",
+     "u": "https://www.youtube.com/watch?v=AHq_Uzt_bys",
+     "th": "https://i.ytimg.com/vi/AHq_Uzt_bys/mqdefault.jpg",
+     "v": 2802
+    },
+    {
+     "t": "【FF14】お手伝い求！アライアンスやります！！暁月編！ part32！＃148【ゲーム実況】",
+     "c": "リア・アマリア",
+     "u": "https://www.youtube.com/watch?v=8MNP4jNrq0g",
+     "th": "https://i.ytimg.com/vi/8MNP4jNrq0g/mqdefault.jpg",
+     "v": 2050
+    },
+    {
+     "t": "【FF14】朝活ギャザクラジョブクエ消化＆まったり雑談！たまにIDも 【作業お供BGMにどうぞ】 #ff14",
+     "c": "さんみつ",
+     "u": "https://www.youtube.com/watch?v=72I4yjjWgvs",
+     "th": "https://i.ytimg.com/vi/72I4yjjWgvs/mqdefault.jpg",
+     "v": 1265
+    },
+    {
+     "t": "【FF14】初見『パッチ7.0：黄金のレガシー』#10 白銀前に復帰勢がメインストーリーを見たい！ライブ配信｜ゲーム実況【FINAL FANTASY XIV/黄金のレガシー】※ネタバレ注意",
+     "c": "翠月むう / むーたん",
+     "u": "https://www.youtube.com/watch?v=zmWbXzAakyw",
+     "th": "https://i.ytimg.com/vi/zmWbXzAakyw/mqdefault.jpg?v=6af87a38",
+     "v": 992
+    },
+    {
+     "t": "【FF14】デミアートマ集め、人が集まるなら極ゾラージャ。【闇騎士物語】",
+     "c": "楪 しゆ。 / Yuzuriha Shiyu",
+     "u": "https://www.youtube.com/watch?v=mfQm-X8X-Sg",
+     "th": "https://i.ytimg.com/vi/mfQm-X8X-Sg/mqdefault.jpg",
+     "v": 84
+    }
+   ],
+   "orgs": {
+    "個人・その他": 6,
+    "ホロライブ": 1
+   },
+   "spark": [
+    1.0,
+    1.0,
+    6.0,
+    6.5,
+    5.0,
+    6.0,
+    6.5
+   ],
+   "p_videos": 10,
+   "p_channels": 10,
+   "p_views": 85,
+   "score": 36.2,
+   "base": 4.2,
+   "growth": 1.43,
+   "steam": "https://store.steampowered.com/search/?term=%E3%83%95%E3%82%A1%E3%82%A4%E3%83%8A%E3%83%AB%E3%83%95%E3%82%A1%E3%83%B3%E3%82%BF%E3%82%B8%E3%83%BCXIV",
+   "amazon": "https://www.amazon.co.jp/s?k=%E3%83%95%E3%82%A1%E3%82%A4%E3%83%8A%E3%83%AB%E3%83%95%E3%82%A1%E3%83%B3%E3%82%BF%E3%82%B8%E3%83%BCXIV&tag=tarochin-22",
    "rank": 30,
    "mv": {
     "t": "in",
-    "p": 104
+    "p": 32
    }
   }
  ]

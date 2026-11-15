@@ -1608,6 +1608,20 @@
   ]
  },
  {
+  "name": "Aegis Vanguard",
+  "alias": [],
+  "pop": 0,
+  "y": 2026,
+  "p": [
+   "pc"
+  ],
+  "g": [
+   "Role-playing (RPG)",
+   "Strategy",
+   "Indie"
+  ]
+ },
+ {
   "name": "Aelwater",
   "alias": [],
   "pop": 0,
@@ -5238,6 +5252,25 @@
   ]
  },
  {
+  "name": "Baby Peak",
+  "alias": [
+   "BABY_PEAK.exe"
+  ],
+  "pop": 0,
+  "y": 2026,
+  "p": [
+   "pc"
+  ],
+  "g": [
+   "Platform",
+   "Racing",
+   "Simulator",
+   "Strategy",
+   "Adventure",
+   "Indie"
+  ]
+ },
+ {
   "name": "Back Together",
   "alias": [
    "BACK TOGETHER"
@@ -5326,22 +5359,6 @@
    "pc"
   ],
   "g": [
-   "Adventure",
-   "Indie"
-  ]
- },
- {
-  "name": "Backrooms Adventure",
-  "alias": [
-   "BackroomsAdventure.exe"
-  ],
-  "pop": 0,
-  "y": 2026,
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Puzzle",
    "Adventure",
    "Indie"
   ]
@@ -8142,6 +8159,23 @@
   "g": [
    "Role-playing (RPG)",
    "Simulator",
+   "Indie"
+  ]
+ },
+ {
+  "name": "Breadventure",
+  "alias": [
+   "game.exe"
+  ],
+  "pop": 0,
+  "y": 2026,
+  "p": [
+   "pc"
+  ],
+  "g": [
+   "Role-playing (RPG)",
+   "Strategy",
+   "Adventure",
    "Indie"
   ]
  },
@@ -20693,23 +20727,6 @@
   ]
  },
  {
-  "name": "Exit_ComputerLab",
-  "alias": [
-   "Exit_ComputerLab.exe"
-  ],
-  "pop": 0,
-  "y": 2026,
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Puzzle",
-   "Simulator",
-   "Adventure",
-   "Indie"
-  ]
- },
- {
   "name": "Exitus",
   "alias": [],
   "pop": 0,
@@ -20807,6 +20824,21 @@
   "g": [
    "Puzzle",
    "Indie"
+  ]
+ },
+ {
+  "name": "Expedition of the Guild",
+  "alias": [
+   "Game.exe"
+  ],
+  "pop": 0,
+  "y": 2026,
+  "p": [
+   "pc"
+  ],
+  "g": [
+   "Role-playing (RPG)",
+   "Adventure"
   ]
  },
  {
@@ -22139,6 +22171,18 @@
   ]
  },
  {
+  "name": "Felzi",
+  "alias": [],
+  "pop": 0,
+  "y": 2026,
+  "p": [
+   "pc"
+  ],
+  "g": [
+   "Adventure"
+  ]
+ },
+ {
   "name": "Fendershot",
   "alias": [
    "FENDERSHOT"
@@ -23279,22 +23323,6 @@
    "pc"
   ],
   "g": [
-   "Simulator",
-   "Indie"
-  ]
- },
- {
-  "name": "Folded Fables: Tidy Up The Dragon Hoard",
-  "alias": [
-   "FoldedFables.exe"
-  ],
-  "pop": 0,
-  "y": 2026,
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Puzzle",
    "Simulator",
    "Indie"
   ]
@@ -34110,6 +34138,19 @@
   ]
  },
  {
+  "name": "Last Spin: Survive",
+  "alias": [],
+  "pop": 0,
+  "y": 2026,
+  "p": [
+   "pc"
+  ],
+  "g": [
+   "Strategy",
+   "Indie"
+  ]
+ },
+ {
   "name": "Last Train to Yotsuya",
   "alias": [],
   "pop": 0,
@@ -34817,6 +34858,20 @@
   ],
   "g": [
    "Simulator",
+   "Indie"
+  ]
+ },
+ {
+  "name": "Liminal Angel",
+  "alias": [],
+  "pop": 0,
+  "y": 2026,
+  "p": [
+   "pc"
+  ],
+  "g": [
+   "Role-playing (RPG)",
+   "Adventure",
    "Indie"
   ]
  },
@@ -37486,7 +37541,9 @@
  },
  {
   "name": "MemeticBox",
-  "alias": [],
+  "alias": [
+   "MemeticBox.exe"
+  ],
   "pop": 0,
   "y": 2026,
   "p": [
@@ -43606,6 +43663,21 @@
   ]
  },
  {
+  "name": "Overspray",
+  "alias": [
+   "OVERSPRAY"
+  ],
+  "pop": 0,
+  "y": 2026,
+  "p": [
+   "pc"
+  ],
+  "g": [
+   "Shooter",
+   "Tactical"
+  ]
+ },
+ {
   "name": "Overtype",
   "alias": [
    "OVERTYPE"
@@ -47752,16 +47824,6 @@
   ]
  },
  {
-  "name": "Quarantine Zone: Miami Zero",
-  "alias": [],
-  "pop": 0,
-  "y": 2026,
-  "p": [
-   "pc",
-   "console"
-  ]
- },
- {
   "name": "Quartermark",
   "alias": [
    "Quartermark.exe"
@@ -48563,22 +48625,6 @@
   "g": [
    "Puzzle",
    "Adventure"
-  ]
- },
- {
-  "name": "Reason & Rhyme",
-  "alias": [
-   "reason_and_rhyme.exe"
-  ],
-  "pop": 0,
-  "y": 2026,
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Puzzle",
-   "Adventure",
-   "Indie"
   ]
  },
  {
@@ -50549,7 +50595,9 @@
  },
  {
   "name": "Rules of the Inn",
-  "alias": [],
+  "alias": [
+   "yado-no-okite.exe"
+  ],
   "pop": 0,
   "y": 2026,
   "p": [
@@ -51386,6 +51434,22 @@
   ],
   "g": [
    "Visual Novel"
+  ]
+ },
+ {
+  "name": "Scale a Building",
+  "alias": [
+   "SAB",
+   "Scale-A-Building"
+  ],
+  "pop": 0,
+  "y": 2026,
+  "p": [
+   "pc"
+  ],
+  "g": [
+   "Platform",
+   "Puzzle"
   ]
  },
  {
@@ -53410,7 +53474,9 @@
  },
  {
   "name": "Silver Service",
-  "alias": [],
+  "alias": [
+   "SilverService.exe"
+  ],
   "pop": 0,
   "y": 2026,
   "p": [
@@ -54176,7 +54242,9 @@
  },
  {
   "name": "Snake Echos",
-  "alias": [],
+  "alias": [
+   "app.exe"
+  ],
   "pop": 0,
   "y": 2026,
   "p": [
@@ -54513,22 +54581,6 @@
   "g": [
    "Platform",
    "Adventure",
-   "Indie"
-  ]
- },
- {
-  "name": "Sole Mates: Tidy Up the Shoe Store",
-  "alias": [
-   "SoleMates.exe"
-  ],
-  "pop": 0,
-  "y": 2026,
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Puzzle",
-   "Simulator",
    "Indie"
   ]
  },
@@ -61722,7 +61774,7 @@
   "alias": [
    "Zelda no Densetsu Toki no Ocarina"
   ],
-  "pop": 29,
+  "pop": 31,
   "y": 2026,
   "p": [
    "console"
@@ -66942,18 +66994,6 @@
   ]
  },
  {
-  "name": "Vanirya Legends",
-  "alias": [],
-  "pop": 0,
-  "y": 2026,
-  "p": [
-   "console"
-  ],
-  "g": [
-   "Role-playing (RPG)"
-  ]
- },
- {
   "name": "Vanisha",
   "alias": [
    "Vanisha.exe"
@@ -68075,17 +68115,6 @@
   ],
   "g": [
    "Indie"
-  ]
- },
- {
-  "name": "Wardogs: Season 2",
-  "alias": [
-   "WARDOGS: Season 2"
-  ],
-  "pop": 0,
-  "y": 2026,
-  "p": [
-   "pc"
   ]
  },
  {
@@ -69741,21 +69770,6 @@
    "Strategy",
    "Adventure",
    "Indie"
-  ]
- },
- {
-  "name": "Wolfsschanze: Operation Götterdämmerung",
-  "alias": [
-   "WOLFSSCHANZE.exe"
-  ],
-  "pop": 0,
-  "y": 2026,
-  "p": [
-   "pc",
-   "console"
-  ],
-  "g": [
-   "Shooter"
   ]
  },
  {
