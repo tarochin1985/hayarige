@@ -286,6 +286,41 @@ def main():
     write_json(SITE / "leads.json", leads)
     log(f"Steamのレビューを {len(out)} ゲームぶん leads.json に入れました"
         f"（appidを新しく引いたのは {looked} 件）")
+    keep_history(out)
+
+
+HISTORY = DATA / "steam_reviews.json"
+HISTORY_DAYS = 40
+
+
+def keep_history(out):
+    """取れたレビューを、ゲームごとに最新の1回ぶんだけ40日残す（2026-11-16）。
+
+    leads.json の `steam` は**その日の**上位30と急上昇のぶんしか無い。
+    週まとめ・月まとめの窓は「先週」「先月」のゲームについて書くので、
+    **その日にはもう上位にいないゲームのレビューが要る。**
+    毎日取れたものをここに積んでおけば、まとめの窓はここを引くだけで済む。
+
+    ・鍵はゲームの表示名。中身は leads.json の `steam` と同じ形に `取得日` を足したもの
+    ・同じゲームは新しい日のぶんで上書き（評価は日々少し動くので、最新が正しい）
+    ・40日より古いものは消す（月まとめは前の月をまるごと見るので、31日より長く）
+    """
+    from datetime import datetime, timedelta, timezone
+    today = datetime.now(timezone(timedelta(hours=9))).strftime("%Y-%m-%d")
+    cut = (datetime.now(timezone(timedelta(hours=9)))
+           - timedelta(days=HISTORY_DAYS)).strftime("%Y-%m-%d")
+    hist = read_json(HISTORY, {}) or {}
+    games = {g: v for g, v in (hist.get("games") or {}).items()
+             if str(v.get("取得日", "")) >= cut}
+    for g, v in out.items():
+        games[g] = dict(v, **{"取得日": today})
+    write_json(HISTORY, {
+        "_説明": ["Steamのレビューを、ゲームごとに最新の1回ぶんだけ40日残したもの。",
+                 "scripts/steam_reviews.py が毎日書きます。週まとめ・月まとめの窓が読みます。",
+                 "形は site/leads.json の steam と同じ（desc/pct/total は全言語、ja は日本語のレビューだけ、"
+                 "recent は日本語の本文）。取得日 はそのゲームを最後に取った日。"],
+        "games": dict(sorted(games.items()))})
+    log(f"レビューの控え（data/steam_reviews.json）: {len(games)} ゲーム")
 
 
 if __name__ == "__main__":
