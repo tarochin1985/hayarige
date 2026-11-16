@@ -10872,16 +10872,6 @@
   ]
  },
  {
-  "name": "Chicken Terror",
-  "alias": [],
-  "pop": 0,
-  "y": 2026,
-  "p": [
-   "pc",
-   "console"
-  ]
- },
- {
   "name": "ChickenPlaguePolice",
   "alias": [
    "ChickenPlaguePolice.exe"
@@ -13636,6 +13626,16 @@
   ],
   "g": [
    "Adventure",
+   "Indie"
+  ]
+ },
+ {
+  "name": "Cube Sudoku",
+  "alias": [],
+  "pop": 0,
+  "y": 2026,
+  "g": [
+   "Puzzle",
    "Indie"
   ]
  },
@@ -42028,6 +42028,22 @@
   ]
  },
  {
+  "name": "Obey Me! Sinner's Choice: Lucifer",
+  "alias": [
+   "服從我！終擇晨星：路西法",
+   "服从我吧！最终抉择：路西法"
+  ],
+  "pop": 0,
+  "y": 2026,
+  "p": [
+   "pc"
+  ],
+  "g": [
+   "Adventure",
+   "Visual Novel"
+  ]
+ },
+ {
   "name": "Obitus",
   "alias": [],
   "pop": 0,
@@ -50942,7 +50958,9 @@
  },
  {
   "name": "SX Beyond",
-  "alias": [],
+  "alias": [
+   "SX_Beyond.exe"
+  ],
   "pop": 0,
   "y": 2026,
   "p": [
@@ -63411,23 +63429,6 @@
   ],
   "g": [
    "Simulator",
-   "Indie"
-  ]
- },
- {
-  "name": "Through the Void: Echoes",
-  "alias": [
-   "ThroughTheVoidEchoes.exe"
-  ],
-  "pop": 0,
-  "y": 2026,
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Role-playing (RPG)",
-   "Hack and slash/Beat 'em up",
-   "Adventure",
    "Indie"
   ]
  },

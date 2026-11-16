@@ -1,7 +1,7 @@
 {
  "mode": "admin",
  "date": "2026-11-16",
- "generated": "2026-11-16 11:07",
+ "generated": "2026-11-16 11:40",
  "unknown": [
   {
    "guess": "縦型配信",
@@ -206,23 +206,6 @@
    ]
   },
   {
-   "guess": "ライブ配信",
-   "channels": 1,
-   "n": 2,
-   "examples": [
-    {
-     "t": "【ライブ配信】祝5周年記念!! SkyNetwork 視聴者参加型ミニゲーム・サーバー",
-     "c": "ドライトのゲーム実況ちゃんねるン.",
-     "u": "https://www.youtube.com/watch?v=576COeXb4z0"
-    },
-    {
-     "t": "【ライブ配信】視聴者参加型ミニゲーム ～ボートレース舞倉～",
-     "c": "ドライトのゲーム実況ちゃんねるン.",
-     "u": "https://www.youtube.com/watch?v=ajpmIpPy7zQ"
-    }
-   ]
-  },
-  {
    "guess": "ファンタジーライフi",
    "channels": 1,
    "n": 2,
@@ -403,18 +386,6 @@
      "t": "【公式】遊☆戯☆王デュエルモンスターズGX 20th Remaster TURN-83「ヘルカイザー亮ＶＳマスター鮫島」",
      "c": "【公式】遊戯王OCGチャンネル",
      "u": "https://www.youtube.com/watch?v=JIewsLrReyQ"
-    }
-   ]
-  },
-  {
-   "guess": "開催記念",
-   "channels": 1,
-   "n": 1,
-   "examples": [
-    {
-     "t": "【開催記念】ゴーストライター＆ラブストーリー配信｜ゲスト：大井町クリームソーダ",
-     "c": "たにぐちちゃんねる",
-     "u": "https://www.youtube.com/watch?v=hyjlIuDZzmc"
     }
    ]
   },
@@ -1447,6 +1418,18 @@
      "t": "【Whiskerwood】 税金対策で木綿を植えよう #2【ゆっくり実況】",
      "c": "ザルワーク",
      "u": "https://www.youtube.com/watch?v=nr3Ktde1apA"
+    }
+   ]
+  },
+  {
+   "guess": "ライブ配信",
+   "channels": 1,
+   "n": 1,
+   "examples": [
+    {
+     "t": "【ライブ配信】視聴者参加型ミニゲーム ～ボートレース舞倉～",
+     "c": "ドライトのゲーム実況ちゃんねるン.",
+     "u": "https://www.youtube.com/watch?v=ajpmIpPy7zQ"
     }
    ]
   },
@@ -2796,18 +2779,6 @@
     ]
    },
    {
-    "tag": "#ストグラ",
-    "channels": [
-     "Tenten Ch. / 鳳玲天々",
-     "marunnn【まるーんチャンネル】",
-     "ましゃかりさん",
-     "みつき",
-     "切嘛 / Kiruma",
-     "影。/かげまる",
-     "柚原いづみ / Izumi Channel 【ななしいんく】"
-    ]
-   },
-   {
     "tag": "#レトロゲーム",
     "channels": [
      "FF8を極めしまよちゃんねる",
@@ -2863,6 +2834,17 @@
     ]
    },
    {
+    "tag": "#ストグラ",
+    "channels": [
+     "Tenten Ch. / 鳳玲天々",
+     "ましゃかりさん",
+     "みつき",
+     "切嘛 / Kiruma",
+     "影。/かげまる",
+     "柚原いづみ / Izumi Channel 【ななしいんく】"
+    ]
+   },
+   {
     "tag": "#初見さん大歓迎",
     "channels": [
      "aoiro / あおいろ",
@@ -2886,13 +2868,13 @@
     "videos": 42
    },
    {
-    "game": "Grand Theft Auto V",
-    "channels": 39,
-    "videos": 42
-   },
-   {
     "game": "ストリートファイター6",
     "channels": 36,
+    "videos": 40
+   },
+   {
+    "game": "Grand Theft Auto V",
+    "channels": 37,
     "videos": 40
    },
    {
@@ -2903,7 +2885,7 @@
    {
     "game": "雀魂",
     "channels": 29,
-    "videos": 32
+    "videos": 30
    },
    {
     "game": "モンスターハンターアウトランダーズ",
@@ -2913,7 +2895,7 @@
    {
     "game": "モンスターストライク",
     "channels": 21,
-    "videos": 26
+    "videos": 25
    }
   ]
  },
