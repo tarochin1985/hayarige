@@ -42,3 +42,15 @@
 
 /search.json
   X-Robots-Tag: noindex
+
+# ↓ 2026-11-16 追記（その2）
+#   Search Console の「重複しています。ユーザーにより、正規ページとして
+#   選択されていません」の1件は、実は http://hayarige.com/feed.xml だった。
+#   http（sなし）の住所でも同じ中身が返っていて、https 版と重複扱いになった。
+#   HTMLのページは中に canonical を書いてあるので「代替ページ」で済むが、
+#   feed.xml は XML なので canonical を書く場所が無い。
+#   そこで「本来の住所はこちら」を、返事の見出し（Link）で伝える。
+#   http で読まれても https で読まれても、同じく https 版を指す。
+#   根本の対策は Cloudflare 管理画面の「常に HTTPS を使用」をオンにすること。
+/feed.xml
+  Link: <https://hayarige.com/feed.xml>; rel="canonical"
