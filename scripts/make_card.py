@@ -239,8 +239,15 @@ footer{flex:none;display:flex;align-items:center;gap:20px}
   color:var(--on);background:var(--accent);border-radius:10px;padding:10px 19px;white-space:nowrap}
 """
 
+# noindex を本文にも書く理由（2026-11-16）
+#   Cloudflare Pages は /card.html を /card へ転送して中身を返す。
+#   site/_headers の「/card.html」の行は転送の返事にしか付かず、
+#   中身の /card には noindex が付いていなかった。canonical も無いので、
+#   Search Console に「重複・ユーザーが正規ページを選択していません」と出た。
+#   HTMLそのものに書いておけば、どの住所で読まれても効く。
 PAGE = """<!doctype html>
 <html lang="ja"><head><meta charset="utf-8">
+<meta name="robots" content="noindex">
 <link rel="stylesheet" href="%(fontlink)s">
 <style>:root{%(vars)s}
 %(css)s</style></head><body>

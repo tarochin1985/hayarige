@@ -22,6 +22,18 @@
 /card.html
   X-Robots-Tag: noindex
 
+# ↓ 2026-11-16 追記
+#   Cloudflare Pages は「.html」を外した住所（/card・/template）へ転送して
+#   そちらで中身を返す。上の「/card.html」の行は転送の返事にしか付かないので、
+#   外した住所のほうにも同じ指示を書く。
+#   （2026-11-13 に Search Console で「重複しています。ユーザーにより、
+#     正規ページとして選択されていません」が1件出たのはこれが原因とみています）
+/card
+  X-Robots-Tag: noindex
+
+/template
+  X-Robots-Tag: noindex
+
 /data.json
   X-Robots-Tag: noindex
 
