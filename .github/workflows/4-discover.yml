@@ -1,0 +1,94 @@
+name: 4. 新しいチャンネルを探す（毎日・自動）
+
+# 2026-11-17 に足した。
+#
+# YouTubeのクォータ引き上げ（2026-11-11）で、search.list が1日10,100
+# （＝101回）まで使えるようになった。申請のときに「チャンネル探索は
+# 毎日回す運用にする（リストを充実させたいため）」と書いて通っているので、
+# **その使い方どおりに毎日動かす。**
+#
+# やることは「2. チャンネル情報を集める」の探索部分だけ。
+#   1. 新しいチャンネルを探す（discover_channels.py）
+#   2. 見つけたチャンネルの登録者数などを調べて、残す／外すを自動で決める
+#      （enrich_channels.py。前回から変わっていないチャンネルは調べ直さないので、
+#        ふだんは数百ポイントで済む）
+# ゲーム辞書の作り直し（IGDB）はしない。そちらは今までどおり2番で月1回。
+#
+# 回数は data/site_config.json の discover_searches_daily で決める。
+#   100 … 実際は98回（9,800ポイント）。search.list の1日の上限 10,100 に収まる
+#   0   … 止める。**このファイルを触らずに止められる**
+#
+# ★同じ日に「2. チャンネル情報を集める」で「探す: yes」も回すと、
+#   search.list の上限に当たって途中で止まる（壊れはしない。続きは翌日）。
+#
+# ★「3. 毎日の更新」と同時に走らないようにしてある（下の concurrency）。
+#   どちらも data/channels_enriched.json を書き換えるので、
+#   同時に走ると最後の push がぶつかる。後から来たほうが待つ。
+on:
+  schedule:
+    # 日本時間 12:23。朝の更新（3時台〜）と夜の更新（17時台〜）のあいだ。
+    # GitHubの定期実行は1〜4時間おくれるので、遅れても夜の更新の前に
+    # 終わることが多い。重なったら concurrency で順番待ちになる。
+    - cron: "23 3 * * *"
+  workflow_dispatch:
+
+jobs:
+  discover:
+    runs-on: ubuntu-latest
+    timeout-minutes: 40
+    permissions:
+      contents: write
+    concurrency:
+      group: daily-update
+      cancel-in-progress: false
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: 回数を読む
+        id: n
+        run: |
+          n=$(python -c "import json;print(int(json.load(open('data/site_config.json',encoding='utf-8')).get('discover_searches_daily') or 0))")
+          echo "searches=$n" >> "$GITHUB_OUTPUT"
+          if [ "$n" = "0" ]; then
+            echo "discover_searches_daily が 0 なので、今日は探しません"
+          else
+            echo "今日は最大 $n 回検索します"
+          fi
+
+      - name: 新しいチャンネルを探す
+        if: ${{ steps.n.outputs.searches != '0' }}
+        env:
+          YOUTUBE_API_KEY: ${{ secrets.YOUTUBE_API_KEY }}
+          MAX_SEARCHES: ${{ steps.n.outputs.searches }}
+        run: python scripts/discover_channels.py
+
+      - name: 見つけたチャンネルを調べる
+        if: ${{ steps.n.outputs.searches != '0' }}
+        env:
+          YOUTUBE_API_KEY: ${{ secrets.YOUTUBE_API_KEY }}
+        run: python scripts/enrich_channels.py
+
+      - name: 結果を保存
+        if: ${{ steps.n.outputs.searches != '0' }}
+        run: |
+          git config user.name "hayarige-bot"
+          git config user.email "actions@github.com"
+          git pull --rebase --autostash origin main || true
+          git add data/
+          git diff --staged --quiet || git commit -m "チャンネル探索（自動）"
+          for i in 1 2 3 4 5; do
+            if git push; then
+              echo "push できました（${i}回目）"
+              exit 0
+            fi
+            sec=$((i * 20))
+            echo "push が弾かれました（${i}回目）。${sec}秒おいてやり直します"
+            sleep $sec
+            git pull --rebase --autostash origin main || true
+          done
+          echo "5回やり直しても push できませんでした。"
+          echo "GitHubの障害かもしれません: https://www.githubstatus.com/"
+          exit 1

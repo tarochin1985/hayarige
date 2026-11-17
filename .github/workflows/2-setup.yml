@@ -12,7 +12,7 @@ on:
         type: choice
         options: ["yes", "no"]
       discover:
-        description: "新しい配信チャンネルを探す（増やしたいときだけ yes）"
+        description: "新しい配信チャンネルを探す（毎日の探索は4番が自動でやるので、ふだんは no）"
         required: true
         default: "no"
         type: choice
