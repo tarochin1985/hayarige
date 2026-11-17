@@ -102,7 +102,9 @@
  },
  {
   "name": "10 Second Mixtape",
-  "alias": [],
+  "alias": [
+   "10SecondMixtape.exe"
+  ],
   "pop": 0,
   "y": 2026,
   "p": [
@@ -2798,7 +2800,9 @@
  },
  {
   "name": "American Gold Rush",
-  "alias": [],
+  "alias": [
+   "American Gold Rush.exe"
+  ],
   "pop": 0,
   "y": 2026,
   "p": [
@@ -2858,6 +2862,21 @@
   ],
   "g": [
    "Simulator"
+  ]
+ },
+ {
+  "name": "An Eggcelent Sorting Game",
+  "alias": [],
+  "pop": 0,
+  "y": 2026,
+  "p": [
+   "pc",
+   "console"
+  ],
+  "g": [
+   "Puzzle",
+   "Simulator",
+   "Indie"
   ]
  },
  {
@@ -6385,25 +6404,7 @@
   ]
  },
  {
-  "name": "Beyblade X Evobattle: Bey Coating Pattern & Color Add-on Kit Vol.2",
-  "alias": [],
-  "pop": 0,
-  "y": 2026,
-  "p": [
-   "console"
-  ]
- },
- {
   "name": "Beyblade X Evobattle: Digital Beybooster Vol.10",
-  "alias": [],
-  "pop": 0,
-  "y": 2026,
-  "p": [
-   "console"
-  ]
- },
- {
-  "name": "Beyblade X Evobattle: Digital Beybooster Vol.8",
   "alias": [],
   "pop": 0,
   "y": 2026,
@@ -6581,23 +6582,6 @@
    "pc"
   ],
   "g": [
-   "Indie"
-  ]
- },
- {
-  "name": "Big Dig",
-  "alias": [
-   "BigDig.exe",
-   "考古致富:挖出个博物馆",
-   "考古致富：挖出個博物館"
-  ],
-  "pop": 0,
-  "y": 2026,
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Strategy",
    "Indie"
   ]
  },
@@ -7612,7 +7596,8 @@
   "g": [
    "Simulator",
    "Strategy",
-   "Indie"
+   "Indie",
+   "Arcade"
   ]
  },
  {
@@ -8061,6 +8046,20 @@
   ]
  },
  {
+  "name": "Brainworm Befriend",
+  "alias": [],
+  "pop": 0,
+  "y": 2026,
+  "p": [
+   "pc"
+  ],
+  "g": [
+   "Adventure",
+   "Indie",
+   "Visual Novel"
+  ]
+ },
+ {
   "name": "Brass Rain",
   "alias": [],
   "pop": 0,
@@ -8192,7 +8191,9 @@
  },
  {
   "name": "Brick Buddies",
-  "alias": [],
+  "alias": [
+   "2026September.exe"
+  ],
   "pop": 0,
   "y": 2026,
   "p": [
@@ -11852,15 +11853,6 @@
   ]
  },
  {
-  "name": "Coin Harvest",
-  "alias": [],
-  "pop": 0,
-  "y": 2026,
-  "p": [
-   "pc"
-  ]
- },
- {
   "name": "Coin Operated Carnage",
   "alias": [
    "Coin Operated Carnage.exe"
@@ -14751,7 +14743,8 @@
   "name": "Dawn of Defense",
   "alias": [
    "军团塔防",
-   "軍團塔防"
+   "軍團塔防",
+   "Dawn Of Defense.exe"
   ],
   "pop": 0,
   "y": 2026,
@@ -15566,6 +15559,7 @@
  {
   "name": "Deiity (Under Ice)",
   "alias": [
+   "Deiity WINDOWS.exe",
    "Deiity"
   ],
   "pop": 0,
@@ -22443,6 +22437,20 @@
   ]
  },
  {
+  "name": "Fique de Pé",
+  "alias": [
+   "Fique de Pe"
+  ],
+  "pop": 0,
+  "y": 2026,
+  "p": [
+   "console"
+  ],
+  "g": [
+   "Quiz/Trivia"
+  ]
+ },
+ {
   "name": "Fire. Hold. Repeat.",
   "alias": [
    "FIRE. HOLD. REPEAT.",
@@ -22539,20 +22547,6 @@
   ],
   "g": [
    "Puzzle"
-  ]
- },
- {
-  "name": "FirstPlate",
-  "alias": [],
-  "pop": 0,
-  "y": 2026,
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Simulator",
-   "Strategy",
-   "Indie"
   ]
  },
  {
@@ -23170,6 +23164,20 @@
   "g": [
    "Puzzle",
    "Strategy"
+  ]
+ },
+ {
+  "name": "Flying Island Miner",
+  "alias": [
+   "Island Miner"
+  ],
+  "pop": 0,
+  "y": 2026,
+  "p": [
+   "pc"
+  ],
+  "g": [
+   "Indie"
   ]
  },
  {
@@ -24687,19 +24695,6 @@
   ]
  },
  {
-  "name": "Gay It Loud",
-  "alias": [],
-  "pop": 0,
-  "y": 2026,
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Indie",
-   "Visual Novel"
-  ]
- },
- {
   "name": "GeForce 8800 GTX: 20 Years of a Legend",
   "alias": [
    "TTA.exe"
@@ -25879,6 +25874,16 @@
   ]
  },
  {
+  "name": "Gorilla Rush",
+  "alias": [],
+  "pop": 0,
+  "y": 2026,
+  "g": [
+   "Indie",
+   "Arcade"
+  ]
+ },
+ {
   "name": "Gothic 3 Classic",
   "alias": [],
   "pop": 0,
@@ -26348,21 +26353,6 @@
   "g": [
    "Role-playing (RPG)",
    "Strategy",
-   "Indie",
-   "Card & Board Game"
-  ]
- },
- {
-  "name": "Greed for Glory",
-  "alias": [],
-  "pop": 0,
-  "y": 2026,
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Strategy",
-   "Turn-based strategy (TBS)",
    "Indie",
    "Card & Board Game"
   ]
@@ -27734,6 +27724,76 @@
   ]
  },
  {
+  "name": "Hazard Levels: Myths & Legends Dragon DLC",
+  "alias": [],
+  "pop": 0,
+  "y": 2026,
+  "p": [
+   "pc",
+   "console"
+  ],
+  "g": [
+   "Shooter",
+   "Adventure"
+  ]
+ },
+ {
+  "name": "Hazard Levels: Myths & Legends Kelpie DLC",
+  "alias": [],
+  "pop": 0,
+  "y": 2026,
+  "p": [
+   "pc",
+   "console"
+  ],
+  "g": [
+   "Shooter",
+   "Adventure"
+  ]
+ },
+ {
+  "name": "Hazard Levels: Myths & Legends Kitsune DLC",
+  "alias": [],
+  "pop": 0,
+  "y": 2026,
+  "p": [
+   "pc",
+   "console"
+  ],
+  "g": [
+   "Shooter",
+   "Adventure"
+  ]
+ },
+ {
+  "name": "Hazard Levels: Myths & Legends Minotaur DLC",
+  "alias": [],
+  "pop": 0,
+  "y": 2026,
+  "p": [
+   "pc",
+   "console"
+  ],
+  "g": [
+   "Shooter",
+   "Adventure"
+  ]
+ },
+ {
+  "name": "Hazard Levels: Myths & Legends Unicorn DLC",
+  "alias": [],
+  "pop": 0,
+  "y": 2026,
+  "p": [
+   "pc",
+   "console"
+  ],
+  "g": [
+   "Shooter",
+   "Adventure"
+  ]
+ },
+ {
   "name": "Headlice",
   "alias": [],
   "pop": 0,
@@ -27972,18 +28032,6 @@
    "Strategy",
    "Indie",
    "Card & Board Game"
-  ]
- },
- {
-  "name": "Hehehe Game",
-  "alias": [],
-  "pop": 0,
-  "y": 2026,
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Puzzle"
   ]
  },
  {
@@ -28298,22 +28346,6 @@
   ],
   "g": [
    "Adventure"
-  ]
- },
- {
-  "name": "Her Revenge",
-  "alias": [
-   "Grandma's Requiem"
-  ],
-  "pop": 0,
-  "y": 2026,
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Puzzle",
-   "Adventure",
-   "Indie"
   ]
  },
  {
@@ -29310,6 +29342,19 @@
   ]
  },
  {
+  "name": "Horror Game Creator",
+  "alias": [],
+  "pop": 0,
+  "y": 2026,
+  "p": [
+   "pc"
+  ],
+  "g": [
+   "Adventure",
+   "Indie"
+  ]
+ },
+ {
   "name": "Horror Tales Eats The World",
   "alias": [
    "Horror Tales Eats The World.exe"
@@ -29615,21 +29660,6 @@
    "pc"
   ],
   "g": [
-   "Indie"
-  ]
- },
- {
-  "name": "Howling Woods",
-  "alias": [
-   "Howling Woods.exe"
-  ],
-  "pop": 0,
-  "y": 2026,
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Simulator",
    "Indie"
   ]
  },
@@ -31996,6 +32026,11 @@
   "y": 2026,
   "p": [
    "pc"
+  ],
+  "g": [
+   "Simulator",
+   "Adventure",
+   "Indie"
   ]
  },
  {
@@ -32391,20 +32426,6 @@
   ]
  },
  {
-  "name": "Just One More Fly",
-  "alias": [
-   "Just One More Fly.exe"
-  ],
-  "pop": 0,
-  "y": 2026,
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Indie"
-  ]
- },
- {
   "name": "Just Pickin' Apples",
   "alias": [],
   "pop": 0,
@@ -32573,7 +32594,8 @@
  {
   "name": "Kafak",
   "alias": [
-   "KAFAK"
+   "KAFAK",
+   "kafak.exe"
   ],
   "pop": 0,
   "y": 2026,
@@ -33192,7 +33214,9 @@
  },
  {
   "name": "Kinsoku Ryokan",
-  "alias": [],
+  "alias": [
+   "Kinsoku-Ryokan.exe"
+  ],
   "pop": 0,
   "y": 2026,
   "p": [
@@ -33543,7 +33567,7 @@
   "alias": [
    "kritsana.exe"
   ],
-  "pop": 0,
+  "pop": 9,
   "y": 2026,
   "p": [
    "pc"
@@ -35996,7 +36020,9 @@
  },
  {
   "name": "Mad Dvizhuha: Benzovoz",
-  "alias": [],
+  "alias": [
+   "Mad Dvizhuha Benzovoz.exe"
+  ],
   "pop": 0,
   "y": 2026,
   "p": [
@@ -36973,6 +36999,20 @@
   ]
  },
  {
+  "name": "Mate, This Place Is a Mess!",
+  "alias": [],
+  "pop": 0,
+  "y": 2026,
+  "p": [
+   "pc"
+  ],
+  "g": [
+   "Simulator",
+   "Adventure",
+   "Indie"
+  ]
+ },
+ {
   "name": "Math Duck+",
   "alias": [],
   "pop": 0,
@@ -37369,6 +37409,21 @@
   ],
   "g": [
    "Adventure",
+   "Indie"
+  ]
+ },
+ {
+  "name": "Melvor Idle 2: A RuneScape Adventure",
+  "alias": [
+   "Melvor2.exe"
+  ],
+  "pop": 0,
+  "y": 2026,
+  "p": [
+   "pc"
+  ],
+  "g": [
+   "Role-playing (RPG)",
    "Indie"
   ]
  },
@@ -37988,7 +38043,9 @@
  },
  {
   "name": "Milki Delivery",
-  "alias": [],
+  "alias": [
+   "MilkiDelivery.exe"
+  ],
   "pop": 0,
   "y": 2026,
   "p": [
@@ -43529,19 +43586,6 @@
   ]
  },
  {
-  "name": "Outliers: Incrementum",
-  "alias": [],
-  "pop": 0,
-  "y": 2026,
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Role-playing (RPG)",
-   "Indie"
-  ]
- },
- {
   "name": "Outposters",
   "alias": [
    "Outposters.exe"
@@ -44776,7 +44820,7 @@
    "PBZ.exe",
    "影之刃零"
   ],
-  "pop": 14,
+  "pop": 15,
   "y": 2026,
   "p": [
    "pc",
@@ -45009,23 +45053,6 @@
   ],
   "g": [
    "Puzzle"
-  ]
- },
- {
-  "name": "Pidgeon Pocket",
-  "alias": [
-   "Pidgeon Pocket.exe",
-   "Pigeon Pocket"
-  ],
-  "pop": 0,
-  "y": 2026,
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Simulator",
-   "Strategy",
-   "Indie"
   ]
  },
  {
@@ -47929,22 +47956,6 @@
   ]
  },
  {
-  "name": "Quartermark",
-  "alias": [
-   "Quartermark.exe"
-  ],
-  "pop": 0,
-  "y": 2026,
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Role-playing (RPG)",
-   "Strategy",
-   "Indie"
-  ]
- },
- {
   "name": "Queen's Domain",
   "alias": [],
   "pop": 1,
@@ -48474,6 +48485,22 @@
   "g": [
    "Adventure",
    "Indie"
+  ]
+ },
+ {
+  "name": "Ranger’s Path: National Park Simulator",
+  "alias": [
+   "Bear.exe"
+  ],
+  "pop": 0,
+  "y": 2026,
+  "p": [
+   "pc",
+   "console"
+  ],
+  "g": [
+   "Simulator",
+   "Adventure"
   ]
  },
  {
@@ -50091,7 +50118,7 @@
    "ROB RUN",
    "start_protected_game.exe"
   ],
-  "pop": 8,
+  "pop": 10,
   "y": 2026,
   "p": [
    "pc"
@@ -50594,15 +50621,6 @@
    "Strategy",
    "Indie",
    "Arcade"
-  ]
- },
- {
-  "name": "Rouge: Space Pilot",
-  "alias": [],
-  "pop": 0,
-  "y": 2026,
-  "p": [
-   "pc"
   ]
  },
  {
@@ -51488,20 +51506,6 @@
   ]
  },
  {
-  "name": "Saros: Zenith",
-  "alias": [
-   "SAROS: Zenith"
-  ],
-  "pop": 0,
-  "y": 2026,
-  "p": [
-   "console"
-  ],
-  "g": [
-   "Shooter"
-  ]
- },
- {
   "name": "Satarichi: Heroes De Caelum",
   "alias": [
    "HEROES DE CAELUM.exe"
@@ -52324,19 +52328,6 @@
   ]
  },
  {
-  "name": "Sender Unknown",
-  "alias": [],
-  "pop": 0,
-  "y": 2026,
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Simulator",
-   "Indie"
-  ]
- },
- {
   "name": "Senior Survival Club",
   "alias": [
    "SeniorSurvivalClub.exe"
@@ -52656,6 +52647,22 @@
    "Strategy",
    "Turn-based strategy (TBS)",
    "Tactical"
+  ]
+ },
+ {
+  "name": "Shai & Shatta",
+  "alias": [
+   "شاي وشطة",
+   "ShaiAndShatta.exe"
+  ],
+  "pop": 0,
+  "y": 2026,
+  "p": [
+   "pc"
+  ],
+  "g": [
+   "Simulator",
+   "Indie"
   ]
  },
  {
@@ -54921,7 +54928,9 @@
  },
  {
   "name": "Sort A Lot",
-  "alias": [],
+  "alias": [
+   "SortALot.exe"
+  ],
   "pop": 0,
   "y": 2026,
   "p": [
@@ -55234,7 +55243,10 @@
    "pc"
   ],
   "g": [
-   "Adventure"
+   "Role-playing (RPG)",
+   "Simulator",
+   "Adventure",
+   "Indie"
   ]
  },
  {
@@ -56775,7 +56787,8 @@
  {
   "name": "Steel Gullet",
   "alias": [
-   "STEEL GULLET"
+   "STEEL GULLET",
+   "sg.exe"
   ],
   "pop": 0,
   "y": 2026,
@@ -58018,6 +58031,18 @@
    "Music",
    "Platform",
    "Adventure",
+   "Indie"
+  ]
+ },
+ {
+  "name": "Survival of Runt",
+  "alias": [],
+  "pop": 0,
+  "y": 2026,
+  "p": [
+   "pc"
+  ],
+  "g": [
    "Indie"
   ]
  },
@@ -61200,6 +61225,19 @@
   ]
  },
  {
+  "name": "The Hardest Game Ever",
+  "alias": [],
+  "pop": 0,
+  "y": 2026,
+  "p": [
+   "pc"
+  ],
+  "g": [
+   "Platform",
+   "Indie"
+  ]
+ },
+ {
   "name": "The Hearth and Harbour",
   "alias": [],
   "pop": 0,
@@ -61831,7 +61869,7 @@
   "alias": [
    "Zelda no Densetsu Toki no Ocarina"
   ],
-  "pop": 36,
+  "pop": 37,
   "y": 2026,
   "p": [
    "console"
@@ -65903,6 +65941,16 @@
   ]
  },
  {
+  "name": "Twistbloom",
+  "alias": [],
+  "pop": 0,
+  "y": 2026,
+  "g": [
+   "Puzzle",
+   "Indie"
+  ]
+ },
+ {
   "name": "Two Dollar Suits",
   "alias": [],
   "pop": 0,
@@ -66268,7 +66316,9 @@
  },
  {
   "name": "Uncosy",
-  "alias": [],
+  "alias": [
+   "Uncosy.exe"
+  ],
   "pop": 0,
   "y": 2026,
   "p": [
@@ -66594,20 +66644,6 @@
   "g": [
    "Role-playing (RPG)",
    "Adventure"
-  ]
- },
- {
-  "name": "Universal Tidy Up",
-  "alias": [
-   "Universal Tidy Up.exe"
-  ],
-  "pop": 0,
-  "y": 2026,
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Indie"
   ]
  },
  {
@@ -67860,16 +67896,6 @@
   ]
  },
  {
-  "name": "WWE 2K26: Ringside Pass Premium Season 5",
-  "alias": [],
-  "pop": 0,
-  "y": 2026,
-  "p": [
-   "pc",
-   "console"
-  ]
- },
- {
   "name": "WWE 2K26: Ringside Pass Premium Season 6",
   "alias": [],
   "pop": 0,
@@ -68477,6 +68503,15 @@
    "Puzzle",
    "Adventure",
    "Indie"
+  ]
+ },
+ {
+  "name": "We're Gonna Need More Fireballs",
+  "alias": [],
+  "pop": 0,
+  "y": 2026,
+  "p": [
+   "pc"
   ]
  },
  {
@@ -69139,20 +69174,10 @@
   ]
  },
  {
-  "name": "Wild Draw",
-  "alias": [],
-  "pop": 0,
-  "y": 2026,
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Indie"
-  ]
- },
- {
   "name": "Wild Haven",
-  "alias": [],
+  "alias": [
+   "Wild Haven.exe"
+  ],
   "pop": 0,
   "y": 2026,
   "p": [
@@ -70719,7 +70744,9 @@
  },
  {
   "name": "Zero Sum",
-  "alias": [],
+  "alias": [
+   "ZeroSum.exe"
+  ],
   "pop": 0,
   "y": 2026,
   "p": [
@@ -70772,6 +70799,21 @@
    "Turn-based strategy (TBS)",
    "Indie",
    "Visual Novel"
+  ]
+ },
+ {
+  "name": "Zolge Station: Huga Waiwai Academy",
+  "alias": [
+   "HUGA_WAIWAI.exe",
+   "ZOLGE STATION: HUGA Waiwai Academy"
+  ],
+  "pop": 0,
+  "y": 2026,
+  "p": [
+   "pc"
+  ],
+  "g": [
+   "Indie"
   ]
  },
  {
