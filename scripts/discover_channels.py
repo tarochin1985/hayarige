@@ -106,19 +106,36 @@ def main():
     log(f"登録済み: {len(ids)} チャンネル")
 
     # ジャンル中心。ランキング由来はごく少数に留める。
+    #
+    # ★並び順を2通りにした（2026-11-17）。
+    # ジャンルの検索語は46語しかない。前は「100回」と指定しても
+    # rotate() が46語で尽きて、**実際には52回しか検索していなかった。**
+    # 毎日回す（4番のワークフロー）と同じ46語を毎日引くことになり、
+    # 「再生数の多い順」の結果はほとんど変わらないので、新顔が出なくなる。
+    #
+    # そこで、46語を使い切ったぶんは同じ語を**「新しい順」（order=date）**で引く。
+    # 新しい順の結果は毎日入れ替わり、**まだ小さい・始めたばかりの配信者**が出る。
+    # このサイトが拾いたい「次に流行るゲームを先に遊んでいる層」に近い。
+    # 46語以下の指定（手で回す既定の40回など）は前とまったく同じ動き。
     n_rank = min(RANK_N, max(0, MAX_SEARCHES // 6))
-    queries = rotate(GENRE_QUERIES, MAX_SEARCHES - n_rank) \
-        + [f"{g} 実況" for g in recent_games()][:n_rank]
-    queries = list(dict.fromkeys(queries))[:MAX_SEARCHES]
+    n_genre = MAX_SEARCHES - n_rank
+    plan = [(q, "viewCount") for q in rotate(GENRE_QUERIES,
+                                             min(n_genre, len(GENRE_QUERIES)))]
+    if n_genre > len(plan):
+        plan += [(q, "date") for q in rotate(GENRE_QUERIES, n_genre - len(plan))]
+    plan += [(f"{g} 実況", "viewCount") for g in recent_games()][:n_rank]
+    queries = list(dict.fromkeys(plan))[:MAX_SEARCHES]
     if not queries:
         log("検索語が作れませんでした。")
         return
     after = (datetime.now(timezone.utc) - timedelta(days=DAYS_BACK)
              ).strftime("%Y-%m-%dT%H:%M:%SZ")
-    log(f"{len(queries)} 語で検索します（1語100ユニット / 上限 {MAX_SEARCHES} 語）")
+    n_date = sum(1 for _q, o in queries if o == "date")
+    log(f"{len(queries)} 回検索します（1回100ユニット / 上限 {MAX_SEARCHES} 回"
+        f"{f'／うち新しい順 {n_date} 回' if n_date else ''}）")
 
     hits, found, skipped_lang = Counter(), {}, set()
-    for i, q in enumerate(queries, 1):
+    for i, (q, order) in enumerate(queries, 1):
         # 1語ずつ間隔をあける（2026-09-27）。
         #
         # 検索は1回100ユニットと高い。間を置かずに投げると、40語でも
@@ -131,7 +148,7 @@ def main():
         if i > 1:
             time.sleep(SEARCH_INTERVAL)
         try:
-            r = yt.search_videos(q, published_after=after)
+            r = yt.search_videos(q, published_after=after, order=order)
         except QuotaExhausted as e:
             log(f"クォータ上限のため {i} 語目で打ち切ります: {e}")
             break
@@ -154,7 +171,7 @@ def main():
             hits[cid] += 1
             found[cid] = title
         if i % 10 == 0:
-            log(f"  {i}/{len(queries)} 語 ／ 新顔 {len(found)} 件 ／ 使用 {yt.used}")
+            log(f"  {i}/{len(queries)} 回 ／ 新顔 {len(found)} 件 ／ 使用 {yt.used}")
 
     cands = [(cid, found[cid], n) for cid, n in hits.most_common() if n >= MIN_HITS]
     log(f"見つかった新しいチャンネル: {len(cands)} 件 ／ 使用クォータ {yt.used}")
