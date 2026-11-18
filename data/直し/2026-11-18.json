@@ -1,0 +1,45 @@
+{
+ "メモ": "2026-11-18 朝の窓のブロックから（急ぎ3件・急ぎでない2件・対象外2件）。\n\n    新しく 46本 / 失った 0本 / 移った 6本（Midnight → Midnight Rest Stop | 深夜ドライブイン）\n\n★①『Midnight Rest Stop | 深夜ドライブイン』… カタログに無いので手でキー。Steam app 5472250 で TADAIMA WORKS／RAYBIS GAMES・2026年11月12日（4Gamerは13日と書いている。ストアの日付を採る）。6本がカタログの『Midnight』（2015年・pop 1）に入っていた。新しいキーのほうが長いので、別名を足しただけで移った。\n★『Midnight』は game_blocklist に入れた（`Night` `Morning` と同じ「英語のふつうの語がそのまま題名の行」）。手で足したキーではないので alias_exact_only は効かない（match.py は aliases.json の語にだけ exact_only を付ける）。残っていた6本は全部別物だった（オリジナル曲『Candy Candy Midnight』、雑談の『midnight talk』×4、ホラーゲーム『Fatal Midnight』）。★**『Fatal Midnight』はこれで見落としに出るはず。** カタログに無いので、朝の窓が拾ったら別に足す。\n★②『Apartment 3502 | 3502号室』… 手でキー。Steam app 5503640 で TADAIMA WORKS／RAYBIS GAMES・2026年11月16日。①と同じ開発元。\n★③『Jyoka -城下-』… 手でキー（`Jyoka`）。Steam app 5318580 で sfvsoft。ストアは11月15日、報道は16日。別名に空白なしの `Jyoka-城下-` も入れた。`城下` 単独は入れない（城下町の話を拾う）。\n④『ディシディア デュエルム ファイナルファンタジー』… 手でキー（日本語名をそのままキーに。英語の正式表記を一次情報で確かめていないため）。スマホ向け・基本無料、2026年3月配信（AUTOMATON 2026-02-26 の記事の住所が `ddff-…`）。★**`DDFF` は昔『ディシディア 012 ファイナルファンタジー』（2011年・PSP）の略称でもあった。** いま題に `DDFF` と書く配信は全部デュエルムだったので入れたが、012 の配信が出てきたら取り違える。26本（報告は23本）の差の3本も全部デュエルムの題だった。機種は空（スマホ）。\n⑤『Synduality: Echo of Ada』… `SYNDUALITY` を別名に。`SYN`（3字）は入れない。アニメ『SYNDUALITY Noir』の同時視聴が来たら取り違える可能性あり。\n⑥ 見落としから外した: `いばねもドロない`（マダミスの企画タグ）、`=VanilLa`（配信者名）。",
+ "別名": {
+  "Midnight Rest Stop": [
+   "深夜ドライブイン"
+  ],
+  "Apartment 3502": [
+   "3502号室"
+  ],
+  "Jyoka": [
+   "Jyoka -城下-",
+   "Jyoka-城下-"
+  ],
+  "ディシディア デュエルム ファイナルファンタジー": [
+   "DDFF",
+   "ディシディア デュエルム",
+   "デュエルム",
+   "ディシディア デュエルムFF"
+  ],
+  "Synduality: Echo of Ada": [
+   "SYNDUALITY"
+  ]
+ },
+ "表示名": {
+  "Midnight Rest Stop": "Midnight Rest Stop | 深夜ドライブイン",
+  "Apartment 3502": "Apartment 3502 | 3502号室",
+  "Jyoka": "Jyoka -城下-"
+ },
+ "機種": {
+  "Midnight Rest Stop": [
+   "pc"
+  ],
+  "Apartment 3502": [
+   "pc"
+  ],
+  "Jyoka": [
+   "pc"
+  ],
+  "ディシディア デュエルム ファイナルファンタジー": []
+ },
+ "見落としから消す語": [
+  "いばねもドロない",
+  "=VanilLa"
+ ]
+}
