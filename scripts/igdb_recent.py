@@ -99,6 +99,10 @@ def main():
         ts = g.get("first_release_date")
         if ts:
             rec["y"] = datetime.fromtimestamp(int(ts), timezone.utc).year
+            # 発売日そのもの（2026-11-19）。新作ウォッチ（new_watch.py）が
+            # 「発売から60日以内か」を決めるのに使う。IGDBの日付はUTCで、
+            # 世界でいちばん早い発売日。
+            rec["d"] = datetime.fromtimestamp(int(ts), timezone.utc).strftime("%Y-%m-%d")
         jp = S.japanese_title(alt, name)
         if jp:
             rec["jp"] = jp

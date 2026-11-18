@@ -27,6 +27,61 @@ JST = timezone(timedelta(hours=9))
 QUOTA_LIMIT = int(os.environ.get("QUOTA_LIMIT", "20000"))
 
 
+
+# ---------------------------------------------------------------- コラムの「枠」
+# 2026-11-19 たろちんさんと決めた。
+#
+#   > 小さなインディーなど「ハヤリゲーの注目ゲーム」という見せ方で出すのはありかなと思った。
+#   > ただなんとなく今日のゲームとして出されるのと、明確に「おすすめゲーム、注目ゲーム」として
+#   > コラム化されるのだと見え方が違う気がする。むしろそのやり方だと急上昇に上がっていない
+#   > ゲームもコラムなどで取り上げることができる。観測ではなくこちらから発信していくことで
+#   > メディア的価値や注目度も上がるかもしれない。
+#
+# ふだんのコラム（「今日の注目ゲーム」）は**数字が動いた理由を書く観測**。
+# こちらは**ハヤリゲーが推す1本**。コラムのJSONに `"枠": "推し"` と書くと、
+# サイト・カード画像・投稿文の呼び方がまとめて切り替わる。
+#
+# ★JSONに書く値（キー）は「推し」で固定。**画面に出す呼び方は下の表だけで変えられる**
+#   （呼び方を変えても、書きためたJSONを直さなくて済むように）。
+FRAMES = {
+    "推し": {
+        "title": "ハヤリゲーのイチオシ",          # サイトの見出し・カードの上の札
+        "title_past": "イチオシ",                # 「11月19日の◯◯」「この日の◯◯」の◯◯
+        "note": "ハヤリゲーが推す理由",            # 見出しの横の小さい説明
+        "badge": "イチオシ",                     # 本文の上の札（ふだんは PICK UP）
+        "tweet": "ハヤリゲーのイチオシは『{game}』👀",   # 投稿文の1行目
+    },
+}
+
+
+def column_frame(col):
+    """コラムの枠の表示用の言葉。ふだんのコラムなら None。"""
+    k = str((col or {}).get("枠") or "").strip() if isinstance(col, dict) else ""
+    return FRAMES.get(k)
+
+
+# ---------------------------------------------------------------- 公式アカウント
+# 2026-11-19 たろちんさん「インディー作品をとりあげるときはツイート文にアカウント名を入れる」。
+# コラムのJSONに `"公式X": "TADAIMA_WORKS"`（@なし。2つまでならリスト）と書くと、
+# 投稿文の最後（URLの前）に「公式: @TADAIMA_WORKS」の1行が入る。
+# ★Blueskyでは同じ名前が別人のことがあるので、Bluesky の投稿からはこの行を外す
+#   （post_bluesky.py の strip_x_mentions）。
+X_HANDLE_RE = re.compile(r"^[A-Za-z0-9_]{1,15}$")
+MENTION_HEAD = "公式: "
+
+
+def official_handles(col):
+    """コラムに書かれた公式Xのアカウント名（@なし）。形のおかしいものは捨てる。"""
+    v = (col or {}).get("公式X") if isinstance(col, dict) else None
+    vals = v if isinstance(v, list) else ([v] if v else [])
+    out = []
+    for x in vals:
+        h = str(x).strip().lstrip("@＠")
+        if X_HANDLE_RE.match(h) and h.lower() not in {o.lower() for o in out}:
+            out.append(h)
+    return out[:2]
+
+
 def today() -> str:
     return datetime.now(JST).strftime("%Y-%m-%d")
 

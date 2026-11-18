@@ -18,6 +18,9 @@ SITE_D = Path(__file__).resolve().parent.parent / "site" / "d"
 # 集めた配信そのもの。見出しに付けた企画のタグが実在するかを確かめるのに使う。
 DATA = Path(__file__).resolve().parent.parent / "data"
 
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+from common import FRAMES as _FRAMES, X_HANDLE_RE as _X_HANDLE_RE  # noqa: E402
+
 # 「当サイトの集計に入ったのは今日が初めて」と書いてよいのは、
 # 本当に過去1日も出ていないときだけ。
 # 2026-09-12に、直近3日ぶんしか見ずに How to Fish を「初めて」と書いて間違えた。
@@ -452,7 +455,19 @@ def info(col, day=""):
     # 見出しの手当て（直近の見出し・引用の裏取り）は、**初登場の日にも必ず出す。**
     # 初登場の日はいちばん形が固まりやすいのに、ここで早く返していたため
     # 出ていなかった（2026-10-08）。
-    tail = (past_columns(col.get("game"), _day)
+    # 公式Xは、公式サイトかストアのページから**リンクされているもの**だけ（2026-11-19）
+    remind = []
+    hs = [str(x).strip().lstrip("@＠") for x in
+          (col.get("公式X") if isinstance(col.get("公式X"), list) else [col.get("公式X")])
+          if x]
+    if hs:
+        remind.append("公式X: " + " ".join("@" + h for h in hs)
+                      + " … 公式サイトかSteamのページからリンクされているのを確かめましたか。"
+                      "名前の似た非公式アカウントに届くと、取り返しがつきません")
+    if str(col.get("枠") or "").strip() == "推し":
+        remind.append("枠「推し」… 推す理由は事実で書く。「流行る」「ヒット確実」と言い切らない"
+                      "（EDITORIAL.md 5章H）。配信者の動きの根拠を最低1つ本文に入れる")
+    tail = remind + (past_columns(col.get("game"), _day)
             + tag_hint(col, _day)
             + quote_check(str(col.get("headline") or ""), _day, col)[1]
             + head_history(_day))
@@ -672,6 +687,23 @@ def validate(col):
                 n = len(str(line))
                 if n < 8 or n > 42:
                     bad.append(f"summary の{i}行目が {n} 字です（8〜42字にしてください）")
+
+    # ---- 枠（2026-11-19）。JSONに書いてよい値は common.py の FRAMES のキーだけ
+    fr = col.get("枠")
+    if fr is not None and str(fr).strip() not in _FRAMES:
+        bad.append(f"枠 は {'／'.join(_FRAMES)} のどれかにしてください"
+                   f"（ふだんのコラムなら欄ごと書かない）: {fr!r}")
+
+    # ---- 公式X（2026-11-19）。@なしのアカウント名。2つまでならリスト
+    if col.get("公式X") is not None:
+        v = col.get("公式X")
+        vals = v if isinstance(v, list) else [v]
+        if len(vals) > 2:
+            bad.append("公式X は2つまでにしてください")
+        for x in vals:
+            h = str(x).strip().lstrip("@＠")
+            if not _X_HANDLE_RE.match(h):
+                bad.append(f"公式X のアカウント名の形が違います（英数字と _ で15字まで）: {x!r}")
 
     srcs = col.get("sources") or []
     if not srcs:

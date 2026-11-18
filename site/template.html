@@ -460,6 +460,12 @@ footer{font-size:11.5px;color:var(--ink-3);text-align:center;border-top:1px soli
 .pick::before{content:"";position:absolute;inset:0 auto 0 0;width:3px;background:var(--hot)}
 .pick .badge{align-self:flex-start;font-family:"Roboto Mono",monospace;font-size:10px;
  letter-spacing:.12em;font-weight:700;color:#fff;background:var(--hot);padding:4px 9px;border-radius:5px}
+/* 「推し」の枠の札（2026-11-19）。ふだんの PICK UP（橙）と色で見分けられるよう、
+   サイトの基本色（青緑）にする。日本語なので等幅の英字書体はやめる。
+   文字色は --card（明るい表示で白・暗い表示で濃い色）で、どちらでも札の上で読める */
+.pick .badge.oshi{background:var(--accent);color:var(--card);
+ font-family:"Zen Kaku Gothic New",sans-serif;letter-spacing:.06em;font-size:11px}
+.pick.oshi::before{background:var(--accent)}
 .pick .g{font-family:"Zen Kaku Gothic New",sans-serif;font-weight:900;font-size:21px;line-height:1.3}
 /* まとめのカード。週と月の2枚が並ぶ（2026-10-01 たろちんさん）。
    前は「期間の終わりが新しいほう1本だけ」だったので、月まとめが出た日に
@@ -720,6 +726,7 @@ function renderArchive(){
   $('#s-date').textContent = 'アーカイブ';
   $('#s-meta').textContent = `${(DATA.archive || []).length}日分の記録`;
   $('#nav').innerHTML = `<a href="${P.home}">今日のランキング</a>`
+    + `<a href="${P.home}new/">新作ウォッチ</a>`
     + `<a href="${P.home}matome/">週・月のまとめ</a>`
     + `<a href="${P.home}search/">ゲームを探す</a>`
     + `<a href="${P.home}about/">このサイトについて</a>`;
@@ -818,6 +825,7 @@ function renderPage(){
   });
   $('#page-sec').style.display = '';
   $('#nav').innerHTML = `<a href="${P.home}">今日のランキングへ</a>`
+    + `<a href="${P.home}new/">新作ウォッチ</a>`
     + `<a href="${P.home}matome/">週・月のまとめ</a>`
     + `<a href="${P.archive}">これまでの記録</a>`
     + `<a href="${P.home}g/">ゲーム別</a>`
@@ -841,6 +849,8 @@ function render(){
   $('#nav').innerHTML = (isArchive ? `<a href="${P.home}">今日のランキングへ</a>` : '')
     + (ad.prev ? `<a href="${P.home}d/${ad.prev}/">◀ ${md(ad.prev)}</a>` : '')
     + (ad.next ? `<a href="${P.home}d/${ad.next}/">${md(ad.next)} ▶</a>` : '')
+    // ★新作ウォッチ（2026-11-19）。毎日見に来てほしいページなので、まとめより前に置く
+    + `<a href="${P.home}new/">新作ウォッチ</a>`
     + `<a href="${P.home}matome/">週・月のまとめ</a>`
     + `<a href="${P.archive}">これまでの記録</a>`
     + `<a href="${P.home}g/">ゲーム別</a>`
@@ -874,9 +884,13 @@ function render(){
     const cd = col.date || DATA.date;
     const stale = cd && cd !== DATA.date;
     const md = cd ? `${+cd.slice(5,7)}月${+cd.slice(8,10)}日の` : '';
-    $('#pick-title').textContent = isArchive ? 'この日の注目ゲーム'
-                                 : stale ? md + '注目ゲーム' : '今日の注目ゲーム';
-    $('#pick-note').textContent = (isArchive || stale) ? 'この日、数字が動いた理由'
+    // 「推し」の枠の日は呼び方が変わる（2026-11-19。build_site が col.frame を入れる）
+    const fr = col.frame || null;
+    const past = fr ? fr.title_past : '注目ゲーム';
+    $('#pick-title').textContent = isArchive ? 'この日の' + past
+                                 : stale ? md + past : (fr ? fr.title : '今日の注目ゲーム');
+    $('#pick-note').textContent = fr ? fr.note
+                                : (isArchive || stale) ? 'この日、数字が動いた理由'
                                                        : 'なぜ今このゲームが伸びているのか';
     // 画像とSteamリンクはコラム自身が持っている（build_site が入れる）。
     // ランキング30位以内から探していた頃は、取り上げたゲームが順位を
@@ -894,10 +908,11 @@ function render(){
       ? `<div class="buy" style="margin-top:2px">${links.join('')}</div>` : '';
     const hero = colHero;
     $('#pick').classList.toggle('has-img', !!hero);
+    $('#pick').classList.toggle('oshi', !!fr);
     $('#pick').innerHTML = `
       ${hero ? `<img class="heroimg" src="${esc(hero)}" alt="" loading="lazy">` : ''}
       <div class="ptxt">
-        <span class="badge">PICK UP</span>
+        <span class="badge${fr ? ' oshi' : ''}">${fr ? esc(fr.badge) : 'PICK UP'}</span>
         <div class="g">${esc(col.game)}</div>
         <div class="hl">${POINT}${esc(col.headline)}</div>
         ${String(col.body || '').split('\n').filter(x => x.trim()).map(x => `<p>${esc(x)}</p>`).join('')}

@@ -51,7 +51,7 @@ from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 
-from common import DATA, SITE, log, read_json, write_json  # noqa: E402
+from common import DATA, SITE, log, read_json, write_json, MENTION_HEAD  # noqa: E402
 
 HOST = "https://bsky.social"
 BLOB_MAX = 1000000          # 画像の上限（1,000,000バイト）。Blueskyの仕様
@@ -89,6 +89,15 @@ def api(path, body=None, token=None, blob=None, ctype=None):
         detail = e.read().decode("utf-8", "replace")[:300]
         # 合言葉そのものは出さない。返ってきた説明文だけを出す
         raise RuntimeError(f"Blueskyが {e.code} を返しました: {detail}") from None
+
+
+def strip_x_mentions(text):
+    """投稿文から「公式: @…」の行を外す（2026-11-19）。
+
+    あれは **X のアカウント名**。Bluesky で同じ名前が同じ人とは限らず、
+    違う人に届いたり、ただの文字として残ったりする。前後の空行も1つにまとめる。"""
+    lines = [ln for ln in text.splitlines() if not ln.startswith(MENTION_HEAD + "@")]
+    return re.sub(r"\n{3,}", "\n\n", "\n".join(lines)).strip()
 
 
 def facets(text):
@@ -175,7 +184,7 @@ def main():
     if not text_path.is_file():
         log("site/tweet.txt がありません。先に make_card.py を回してください")
         return 1
-    text = text_path.read_text(encoding="utf-8").strip()
+    text = strip_x_mentions(text_path.read_text(encoding="utf-8").strip())
     if len(text) > POST_MAX:
         log(f"⚠️ 本文が長すぎます（{len(text)}字／上限 {POST_MAX}）。投稿しません")
         return 1

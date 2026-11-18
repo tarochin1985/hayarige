@@ -36,6 +36,7 @@
       "別名":   { "ゲームのキー": ["足す別名", ...] },
       "表示名": { "ゲームのキー": "画面に出す名前" },
       "機種":   { "ゲームのキー": ["pc", "console"] },
+      "発売日": { "ゲームのキー": "2026-11-19" または "未発売" },
       "別名をやめる": { "ゲームのキー": ["外す別名", ...] },
       "行をやめる": ["畳む行のキー", ...],
       "別名を止める": ["カタログの別名を無効にする語", ...],
@@ -190,6 +191,25 @@ def apply_patch(patch):
     for g, v in (patch.get("機種") or {}).items():
         pf[g] = v
     save("platforms.json", pf)
+
+    # 発売日（2026-11-19）。新作ウォッチ（new_watch.py）が使う。
+    # 値は "YYYY-MM-DD" か "未発売"。キーは辞書のキー（表示名ではない）。
+    # 確かめ先はSteamのストアページなどの一次情報。**分からなければ書かない。**
+    if patch.get("発売日"):
+        p_rd = DATA / "release_dates.json"
+        rd = json.load(open(p_rd, encoding="utf-8")) if p_rd.exists() else {
+            "_説明": "手で確かめた発売日。新作ウォッチ（scripts/new_watch.py）が使い、"
+                    "IGDBの日付より優先します。値は YYYY-MM-DD か 未発売。"
+                    "辞書の直し（fix_dict.py の「発売日」）で足します。"}
+        for g, v in patch["発売日"].items():
+            v = str(v).strip()
+            if v != "未発売" and not re.fullmatch(r"\d{4}-\d{2}-\d{2}", v):
+                raise SystemExit(f"発売日の形が違います（YYYY-MM-DD か 未発売）: {g} = {v!r}")
+            rd[g] = v
+        with open(p_rd, "w", encoding="utf-8") as f:
+            json.dump(rd, f, ensure_ascii=False, indent=1)
+            f.write("\n")
+        report.append(f"発売日 {len(patch['発売日'])}件")
 
     ab = load("alias_blocklist.json")
     for a in (patch.get("別名を止める") or []):

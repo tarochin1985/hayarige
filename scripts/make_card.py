@@ -21,7 +21,7 @@ import re
 import sys
 from pathlib import Path
 
-from common import DATA, SITE, log, read_json
+from common import DATA, SITE, log, read_json, column_frame, official_handles, MENTION_HEAD
 
 
 def site_url():
@@ -397,7 +397,8 @@ def lead_html(col, ranking):
     figs = "".join(f'<figure><img src="{e(x["th"])}" alt="">'
                    f'<figcaption>YouTube ／ {e(x.get("by"))}</figcaption></figure>'
                    for x in pics[:3])
-    return (f'<span class="eye">{BOLT}今日の注目ゲーム</span>'
+    fr = column_frame(col)
+    return (f'<span class="eye">{BOLT}{e(fr["title"]) if fr else "今日の注目ゲーム"}</span>'
             f'<div class="game{size_class(game, 13, 20)}">{e(game)}</div>'
             + (f'<div class="hl">{POINT}{e(head)}</div>' if head else "")
             + f'<p class="txt">{e(body)}</p>'
@@ -654,9 +655,17 @@ def tweet_text(data):
     if not head.startswith("★"):           # すでに付いていたら重ねない
         head = "★" + head
     summary = first_line(col.get("body"))
-    out = [f"今日の注目ゲームは『{game}』🎮", "", head]
+    # ★「推し」の枠の日は1行目が変わる（2026-11-19。呼び方は common.py の FRAMES）
+    fr = column_frame(col)
+    first = fr["tweet"].format(game=game) if fr else f"今日の注目ゲームは『{game}』🎮"
+    out = [first, "", head]
     if summary:
         out += ["", summary]
+    # ★インディーの日は公式アカウントを入れる（2026-11-19）。開発元に届くと
+    #   引用で広めてもらえることがある。URLの前に置く（URLのカードが最後に来るように）
+    hs = official_handles(col)
+    if hs:
+        out += ["", MENTION_HEAD + " ".join("@" + h for h in hs)]
     out += ["", f"https://{site_url()}/d/{d}/"]
     return "\n".join(out)
 

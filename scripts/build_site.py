@@ -15,7 +15,7 @@ from collections import defaultdict, Counter
 from datetime import datetime, timedelta, timezone
 from pathlib import Path
 from urllib.parse import quote, quote_plus
-from common import DATA, SITE, JST, log, read_json, write_json, today
+from common import DATA, SITE, JST, log, read_json, write_json, today, column_frame
 import match as M
 from check_column import load_valid, HEDGE, BAD_SOURCE
 
@@ -705,12 +705,14 @@ def nav_html(data, home):
     a = []
     if data.get("mode") == "page":
         a.append((home, "今日のランキングへ"))
+        a.append((home + "new/", "新作ウォッチ"))
         a.append((home + "matome/", "週・月のまとめ"))
         a.append((home + "archive/", "これまでの記録"))
         a.append((home + "g/", "ゲーム別"))
         a.append((home + "search/", "ゲームを探す"))
     elif data.get("mode") == "archive":
         a.append((home, "今日のランキング"))
+        a.append((home + "new/", "新作ウォッチ"))
         a.append((home + "matome/", "週・月のまとめ"))
         a.append((home + "search/", "ゲームを探す"))
         a.append((home + "about/", "このサイトについて"))
@@ -719,6 +721,8 @@ def nav_html(data, home):
     else:
         if data.get("view") == "archive":
             a.append((home, "今日のランキングへ"))
+        # ★新作ウォッチ（2026-11-19）。毎日見に来てほしいページなので先頭に置く
+        a.append((home + "new/", "新作ウォッチ"))
         a.append((home + "matome/", "週・月のまとめ"))
         a.append((home + "archive/", "これまでの記録"))
         a.append((home + "g/", "ゲーム別"))
@@ -739,6 +743,12 @@ def enrich_column(column, rows):
     """
     if not column:
         return column
+
+    # ★「推し」の枠の呼び方を持たせる（2026-11-19）。型紙のJSが読む。
+    #   呼び方そのものは common.py の FRAMES に1か所だけ置いてある。
+    fr = column_frame(column)
+    if fr:
+        column["frame"] = {k: fr[k] for k in ("title", "title_past", "note", "badge")}
 
     # ★「直し」は**サイトに出さない**（2026-10-17 たろちんさん）。
     #
@@ -792,15 +802,20 @@ def _pick_stale(col, data):
 
 
 def pick_title(col, data):
+    fr = column_frame(col)
+    past = fr["title_past"] if fr else "注目ゲーム"
     if data.get("view") == "archive":
-        return "この日の注目ゲーム"
+        return f"この日の{past}"
     if _pick_stale(col, data):
         d = col["date"]
-        return f"{int(d[5:7])}月{int(d[8:10])}日の注目ゲーム"
-    return "今日の注目ゲーム"
+        return f"{int(d[5:7])}月{int(d[8:10])}日の{past}"
+    return fr["title"] if fr else "今日の注目ゲーム"
 
 
 def pick_note(col, data):
+    fr = column_frame(col)
+    if fr:
+        return fr["note"]
     if data.get("view") == "archive" or _pick_stale(col, data):
         return "この日、数字が動いた理由"
     return "なぜ今このゲームが伸びているのか"
@@ -829,7 +844,9 @@ def ssr_pick(col):
     #
     #   カードは読むものではなく見るものなので、300字が1かたまりでも困らない。
     #   **読みやすさが要るのはサイトのページのほう**なので、そちらだけ割る。
-    body = ['<div class="ptxt">', '<span class="badge">PICK UP</span>',
+    fr = column_frame(col)
+    body = ['<div class="ptxt">',
+            f'<span class="badge{" oshi" if fr else ""}">{e(fr["badge"]) if fr else "PICK UP"}</span>',
             f'<div class="g">{e(col.get("game"))}</div>',
             f'<div class="hl">{POINT}{e(col.get("headline"))}</div>',
             *[f'<p>{e(x)}</p>'
@@ -1388,6 +1405,9 @@ def page_html(path, data, depth, site_url="", home=None):
                     .replace("__PICKTITLE__", pick_title(col_, data))
                     .replace("__PICKNOTE__", pick_note(col_, data))
                     .replace("__SSR_PICK__", ssr_pick(col_))
+                    .replace('class="pick" id="pick"',
+                             'class="pick oshi" id="pick"' if column_frame(col_)
+                             else 'class="pick" id="pick"')
                     .replace("__SSR_HOT__", ssr_hot(data.get("rising"),
                                                     data.get("view") == "archive"))
                     .replace("__SSR_NOTES__", ssr_notes(col_))
@@ -4188,6 +4208,21 @@ def main():
     write_json(DATA / "game_days.json", dict(sorted(gdays.items())))
     log(f"ゲームの日ごとの記録: {len(gdays)} 日分 "
         f"／ 今日は {len(gdays[today()])} 種（2チャンネル以上）")
+
+    # ★答え合わせの候補（2026-11-19）。今日の記録を書いたあとでないと
+    #   今日伸びたぶんが入らないので、ここで leads.json に足す。
+    #   判断の物差しは scripts/answer_check.py の頭に書いてある。
+    try:
+        import answer_check
+        _ans = answer_check.find(today())
+        _ld = read_json(SITE / "leads.json", {}) or {}
+        _ld["答え合わせ"] = _ans
+        write_json(SITE / "leads.json", _ld)
+        for _a in _ans:
+            log(f"答え合わせの候補: {_a['game']}（{_a['取り上げた日']}に"
+                f"{_a['その日のチャンネル数']}ch → {_a['伸びた日']}に{_a['伸びた日のチャンネル数']}ch）")
+    except Exception as ex:          # 候補が出なくても、サイトの更新は止めない
+        log(f"答え合わせの候補を出せませんでした: {ex}")
     write_json(DATA / "build_state.json",
                {"_説明": "辞書まわりのファイルが変わったかどうかを見るための印です。"
                          "変わっていれば、過去の記録ページも作り直します。"
@@ -4331,6 +4366,27 @@ def main():
     log(f"ゲーム別のページを {made} 枚書き出しました"
         f"（{GAME_PAGE_MIN}日以上・のべ{GAME_PAGE_MIN_VIDEOS}本以上）")
 
+    # ---- 新作ウォッチ（2026-11-19）---------------------------------------
+    # 発売から60日以内の新作だけのランキング。中身と「新作」の決め方は
+    # scripts/new_watch.py の頭に書いてある。
+    import new_watch
+    _gd_all = read_json(DATA / "game_days.json", {}) or {}
+    _first = {}
+    for _day in sorted(_gd_all):
+        for _gname in _gd_all[_day]:
+            _first.setdefault(_gname, _day)
+    _nw_html, _nw_new, _nw_soon = new_watch.page_html(
+        rows, today(), "../", _slugs_live, _first, payload.get("range") or "")
+    render("new/index.html",
+           {"mode": "page", "date": today(), "subtitle": "新作ウォッチ",
+            "generated": payload["generated"],
+            "meta_title": "新作ウォッチ ── 配信されている新作ゲームのランキング ｜ ハヤリゲー",
+            "meta_og": "新作ウォッチ ── いま配信されている新作ゲーム",
+            "meta_desc": "発売から60日以内の新作ゲームだけを、VTuber・ゲーム実況者の"
+                         "配信チャンネル数の多い順に並べています。毎日更新。",
+            "page_body": _nw_html}, 1)
+    log(f"新作ウォッチ: 発売後 {len(_nw_new)} 本 ／ 発売前 {len(_nw_soon)} 本")
+
     # ---- ★使われなくなったゲームページを消す（2026-10-31）--------------
     #
     # 条件を厳しくしても、**前に作ったHTMLは site/g/ に残ったまま**で、
@@ -4387,7 +4443,8 @@ def main():
                 (f"{site_url}/terms/", "yearly", "0.3"),
                 (f"{site_url}/archive/", "daily", "0.6"),
                 (f"{site_url}/search/", "weekly", "0.6"),
-                (f"{site_url}/matome/", "weekly", "0.8")]
+                (f"{site_url}/matome/", "weekly", "0.8"),
+                (f"{site_url}/new/", "daily", "0.8")]
         urls += [(f"{site_url}/{x['slug']}/{x['key']}/", "monthly", "0.7")
                  for x in specials]
         urls += [(f"{site_url}/d/{a['date']}/", "monthly", "0.4") for a in archive]
