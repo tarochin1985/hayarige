@@ -2,6 +2,7 @@ name: 3. 毎日の更新
 
 # 日本時間の 7時・19時ごろに自動で動きます。
 # 手動で動かしたいときは Actions タブから「Run workflow」。
+# たろちんさんが push したときも、配信を取り直さずにサイトだけ作り直します（2026-11-18〜）。
 on:
   schedule:
     # ---- 回数について ----------------------------------------------------
@@ -123,6 +124,26 @@ on:
     #   **朝の枠を3:00より前にしてはいけない**（前の晩の「夜」と同じ枠になって飛ばされる）。
     - cron: "11,51 18,19,20 * * *"   # 日本時間 3:11 / 3:51 / 4:11 / 4:51 / 5:11 / 5:51
     - cron: "11,51 8,9,10 * * *"     # 日本時間 17:11 / 17:51 / 18:11 / 18:51 / 19:11 / 19:51
+  # ★ たろちんさんが GitHub Desktop から push したときも走る（2026-11-18）。
+  #
+  # コラムや辞書を反映するたびに「Run workflow →配信を取り直す: no」を
+  # 押してもらっていた。push で走らせれば、それが要らなくなる。
+  # **push で走ったときは配信を取り直さない**（下の「新着の配信を集める」の条件）。
+  # YouTubeのクォータは、コメント欄の声の20ポイントくらいしか使わない。
+  #
+  # 自動の更新（hayarige-bot）の push では走らない。GitHub の決まりで、
+  # Actions の中から GITHUB_TOKEN で push したものは、次のワークフローを起こさない。
+  # だから「走る → push → また走る」の輪にはならない。
+  #
+  # サイトに関係ないファイル（説明の .md・直しの記録・ワークフロー自体）だけの
+  # push では走らない。1つでも関係あるファイルが混ざっていれば走る。
+  push:
+    branches: [main]
+    paths-ignore:
+      - "**/*.md"
+      - "**/*.txt"
+      - "data/直し/**"
+      - ".github/**"
   workflow_dispatch:
     inputs:
       fetch:
@@ -232,9 +253,9 @@ jobs:
         run: python scripts/should_run.py
 
       # 定期実行（schedule）のときは inputs が空になるので、この条件は必ず真。
-      # 手で「no」を選んだときだけ飛ばす。
+      # 手で「no」を選んだときと、push で走ったとき（2026-11-18〜）は飛ばす。
       - name: 新着の配信を集める
-        if: ${{ inputs.fetch != 'no' && steps.gate2.outputs.go != 'no' }}
+        if: ${{ github.event_name != 'push' && inputs.fetch != 'no' && steps.gate2.outputs.go != 'no' }}
         env:
           YOUTUBE_API_KEY: ${{ secrets.YOUTUBE_API_KEY }}
         run: python scripts/fetch_daily.py
@@ -244,11 +265,11 @@ jobs:
       # （「この枠はもう当たった」という意味なので、同じ枠で何度も
       # サイトを作り直さずに済む）。
       - name: 取り込んだ時刻を記録する
-        if: ${{ inputs.fetch != 'no' && steps.gate2.outputs.go != 'no' }}
+        if: ${{ github.event_name != 'push' && inputs.fetch != 'no' && steps.gate2.outputs.go != 'no' }}
         run: python scripts/should_run.py --mark
 
       - name: 収集を飛ばしました
-        if: ${{ inputs.fetch == 'no' || steps.gate2.outputs.go == 'no' }}
+        if: ${{ github.event_name == 'push' || inputs.fetch == 'no' || steps.gate2.outputs.go == 'no' }}
         run: echo "配信の取り直しは飛ばしました。YouTubeのクォータは使っていません。手元のデータでサイトだけ作り直します。"
 
       # 週・月のまとめのページに置く画像（site/w/<日付>/card.png）。
