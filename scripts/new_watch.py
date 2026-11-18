@@ -110,7 +110,9 @@ def _row(i, r, home, slugs, kind):
     nm = (f'<a href="{home}g/{e(sl)}/">{e(name)}</a>' if sl else e(name))
     if kind == "new":
         ago = r["_ago"]
-        when = "今日発売" if ago == 0 else f"発売{ago}日目" if ago < 7 else f"発売から{ago}日"
+        # ★「発売3日目」とは書かない（2026-11-19）。11/16発売を11/19に「3日目」と出していた。
+        #   数え方が人によって1日ずれる言い方なので、「発売から◯日」にそろえる
+        when = "今日発売" if ago == 0 else f"発売から{ago}日"
         rel = f'{r["_rel"].month}月{r["_rel"].day}日発売'
         tag = f'<span class="nw-rel">{e(rel)}<b>{e(when)}</b></span>'
     else:
