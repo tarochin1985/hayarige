@@ -4265,22 +4265,6 @@
   ]
  },
  {
-  "name": "Arcs",
-  "alias": [
-   "ARCS"
-  ],
-  "pop": 0,
-  "y": 2026,
-  "d": "2026-10-21",
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Shooter",
-   "Indie"
-  ]
- },
- {
   "name": "Arctic Roll",
   "alias": [
    "Arctic Roll.exe"
@@ -7239,6 +7223,21 @@
   ],
   "g": [
    "Adventure"
+  ]
+ },
+ {
+  "name": "Black Border 3",
+  "alias": [
+   "Black Border III"
+  ],
+  "pop": 0,
+  "y": 2026,
+  "d": "2026-11-19",
+  "p": [
+   "pc"
+  ],
+  "g": [
+   "Simulator"
   ]
  },
  {
@@ -16472,23 +16471,6 @@
   ]
  },
  {
-  "name": "Deckbound",
-  "alias": [
-   "Deckbound.exe"
-  ],
-  "pop": 0,
-  "y": 2026,
-  "d": "2026-10-21",
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Role-playing (RPG)",
-   "Indie",
-   "Card & Board Game"
-  ]
- },
- {
   "name": "Decksplorers: Into the Shell",
   "alias": [],
   "pop": 0,
@@ -23672,21 +23654,6 @@
   ]
  },
  {
-  "name": "Fenix",
-  "alias": [],
-  "pop": 0,
-  "y": 2026,
-  "d": "2026-12-31",
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Platform",
-   "Adventure",
-   "Indie"
-  ]
- },
- {
   "name": "Festered",
   "alias": [
    "FESTERED"
@@ -26634,6 +26601,21 @@
   ]
  },
  {
+  "name": "Gently Packed",
+  "alias": [],
+  "pop": 0,
+  "y": 2026,
+  "d": "2026-11-19",
+  "p": [
+   "pc"
+  ],
+  "g": [
+   "Puzzle",
+   "Simulator",
+   "Indie"
+  ]
+ },
+ {
   "name": "Geo Bobs",
   "alias": [
    "GeoBobs.exe"
@@ -27869,7 +27851,7 @@
    "GTA6",
    "GTAVI"
   ],
-  "pop": 2,
+  "pop": 19,
   "y": 2026,
   "d": "2026-11-19",
   "p": [
@@ -29164,22 +29146,6 @@
   ],
   "g": [
    "Simulator",
-   "Indie"
-  ]
- },
- {
-  "name": "Halloween on Goober Street",
-  "alias": [
-   "Halloween on Goober Street.exe",
-   "Halloween On Goober Street"
-  ],
-  "pop": 0,
-  "y": 2026,
-  "d": "2026-10-21",
-  "p": [
-   "pc"
-  ],
-  "g": [
    "Indie"
   ]
  },
@@ -36073,6 +36039,20 @@
   ]
  },
  {
+  "name": "Kurage no Gakkou",
+  "alias": [],
+  "pop": 0,
+  "y": 2026,
+  "d": "2026-12-31",
+  "p": [
+   "pc"
+  ],
+  "g": [
+   "Indie",
+   "Visual Novel"
+  ]
+ },
+ {
   "name": "Kuroshio: Neon Blood",
   "alias": [],
   "pop": 0,
@@ -37372,6 +37352,7 @@
  {
   "name": "Lingering Torment",
   "alias": [
+   "Game.exe",
    "Carpet Box"
   ],
   "pop": 0,
@@ -43250,7 +43231,9 @@
  },
  {
   "name": "Neo Light",
-  "alias": [],
+  "alias": [
+   "NeoLight.exe"
+  ],
   "pop": 0,
   "y": 2026,
   "d": "2026-11-19",
@@ -48002,6 +47985,23 @@
   ]
  },
  {
+  "name": "Phantom Streets",
+  "alias": [
+   "Phantom Vice Auto"
+  ],
+  "pop": 0,
+  "y": 2026,
+  "d": "2026-11-19",
+  "p": [
+   "pc"
+  ],
+  "g": [
+   "Racing",
+   "Role-playing (RPG)",
+   "Adventure"
+  ]
+ },
+ {
   "name": "PhantomZone Labyrinthos",
   "alias": [],
   "pop": 0,
@@ -48764,6 +48764,22 @@
   "g": [
    "Simulator",
    "Indie"
+  ]
+ },
+ {
+  "name": "Planks Wars",
+  "alias": [],
+  "pop": 0,
+  "y": 2026,
+  "d": "2026-12-01",
+  "p": [
+   "pc"
+  ],
+  "g": [
+   "Role-playing (RPG)",
+   "Strategy",
+   "Indie",
+   "Card & Board Game"
   ]
  },
  {
@@ -56528,20 +56544,6 @@
   "pop": 0,
   "y": 2026,
   "d": "2026-10-30",
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Simulator",
-   "Indie"
-  ]
- },
- {
-  "name": "She's Coming Over & My Place is a Dump!",
-  "alias": [],
-  "pop": 0,
-  "y": 2026,
-  "d": "2026-12-31",
   "p": [
    "pc"
   ],
@@ -67809,23 +67811,6 @@
   ]
  },
  {
-  "name": "The Wrong Way",
-  "alias": [
-   "THE WRONG WAY.exe"
-  ],
-  "pop": 0,
-  "y": 2026,
-  "d": "2026-10-21",
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Simulator",
-   "Adventure",
-   "Indie"
-  ]
- },
- {
   "name": "The Yard: Escape from Prison",
   "alias": [],
   "pop": 0,
@@ -71464,7 +71449,9 @@
  },
  {
   "name": "Untitled Shop Game",
-  "alias": [],
+  "alias": [
+   "Untitled Shop Game.exe"
+  ],
   "pop": 0,
   "y": 2026,
   "d": "2026-11-19",
@@ -74553,6 +74540,20 @@
   ],
   "g": [
    "Shooter",
+   "Indie"
+  ]
+ },
+ {
+  "name": "Witch the Showdown",
+  "alias": [],
+  "pop": 0,
+  "y": 2026,
+  "d": "2026-11-19",
+  "p": [
+   "pc",
+   "console"
+  ],
+  "g": [
    "Indie"
   ]
  },
