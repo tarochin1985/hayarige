@@ -1,7 +1,7 @@
 {
  "mode": "admin",
  "date": "2026-11-20",
- "generated": "2026-11-20 10:48",
+ "generated": "2026-11-20 11:33",
  "unknown": [
   {
    "guess": "縦型配信",
@@ -651,18 +651,6 @@
    ]
   },
   {
-   "guess": "ドラゴンボールz+新たなる覚醒#17",
-   "channels": 1,
-   "n": 1,
-   "examples": [
-    {
-     "t": "【ドラゴンボールZ＋新たなる覚醒#１７】セルゲーム開幕する配信♪　初見さん大歓迎🔥 　#カロット   　#ゲーム配信　＃ゲーム",
-     "c": "さいころや",
-     "u": "https://www.youtube.com/watch?v=cuMpex2FlkI"
-    }
-   ]
-  },
-  {
    "guess": "ドラクエビルダーズ#6",
    "channels": 1,
    "n": 1,
@@ -1151,18 +1139,6 @@
      "t": "【英雄】タイが誇る、規格外の天才エイマー。最強Primmie集【VCT2025-2026:TLN,FS Primmie】",
      "c": "E-Sports_GG【VALORANT 大会ハイライト】",
      "u": "https://www.youtube.com/watch?v=W_j92zpVToE"
-    }
-   ]
-  },
-  {
-   "guess": "スクエニ",
-   "channels": 1,
-   "n": 1,
-   "examples": [
-    {
-     "t": "【スクエニ】ドラクエ12で引退する話は本当なのか？全盛期を過ぎ去った名作はどうなる？【ドラクエ12/任天堂/SONY/攻略/実況/BGM/戦闘曲/switch2/PS5/ドラゴンクエスト/公式",
-     "c": "【ゲーム速報「攻略・ゆっくり実況・ゆっくり解説・Switch・PS5・XBOX・steam・実況】",
-     "u": "https://www.youtube.com/watch?v=HXUbvSavpnA"
     }
    ]
   },
@@ -2451,18 +2427,6 @@
    ]
   },
   {
-   "guess": "全国一般人常識チェック",
-   "channels": 1,
-   "n": 1,
-   "examples": [
-    {
-     "t": "【全国一般人常識チェック】ワニ、人間に擬態するため一般常識を学ぶ #常識クイズ #vtuber",
-     "c": "わにわにねるこ🐊💤",
-     "u": "https://www.youtube.com/watch?v=f0tjjM3dOyw"
-    }
-   ]
-  },
-  {
    "guess": "勝利の女神:ニケ",
    "channels": 1,
    "n": 1,
@@ -2710,13 +2674,13 @@
     ]
    },
    {
-    "tag": "#ゲーム配信",
+    "tag": "#縦型配信",
     "channels": [
-     "さいころや",
-     "ちぬる☻︎",
-     "ぽんぽこ母さんch🦆🍁",
-     "レイリス♔Rayliss",
-     "鈴ノ時みぃ@新人Vtuber"
+     "MiD0Ri / みどり",
+     "かおりんご(44歳児)",
+     "すぅきぃちゃんねる",
+     "ぺれ",
+     "ミロ"
     ]
    }
   ],
@@ -2724,8 +2688,8 @@
   "wide": [
    {
     "game": "Grand Theft Auto VI",
-    "channels": 92,
-    "videos": 103
+    "channels": 91,
+    "videos": 102
    },
    {
     "game": "Apex Legends",
@@ -2734,8 +2698,8 @@
    },
    {
     "game": "Minecraft",
-    "channels": 52,
-    "videos": 56
+    "channels": 51,
+    "videos": 54
    },
    {
     "game": "ゼルダの伝説 時のオカリナ",
@@ -2754,8 +2718,8 @@
    },
    {
     "game": "雀魂",
-    "channels": 33,
-    "videos": 36
+    "channels": 30,
+    "videos": 32
    },
    {
     "game": "League of Legends",
@@ -2776,9 +2740,9 @@
   {
    "tag": "ff14",
    "game": "Final Fantasy XIV Online",
-   "evidence": 5,
+   "evidence": 4,
    "added": 1,
-   "channels": 5
+   "channels": 4
   }
  ],
  "misses": [
@@ -2833,6 +2797,11 @@
  "meta_og": "管理用",
  "meta_desc": "判定できなかった配信と、コラムの種。公開ページではありません。",
  "recent_columns": [
+  {
+   "date": "2026-11-20",
+   "game": "Rob Run",
+   "headline": "誰も強盗しない強盗ゲーム いちばん強いのは「キモ待ち」"
+  },
   {
    "date": "2026-11-19",
    "game": "Grand Theft Auto VI",
@@ -2897,11 +2866,6 @@
    "date": "2026-11-07",
    "game": "スプラトゥーン3",
    "headline": "「#にじイカ祭り2026」予選リーグは今日15時 決勝トーナメントは明日14時"
-  },
-  {
-   "date": "2026-11-06",
-   "game": "ゼルダの伝説 時のオカリナ",
-   "headline": "28年前の名作のリメイクが レビューでも配信数でもトップに"
   }
  ]
 }

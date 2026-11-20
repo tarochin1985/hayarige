@@ -110,9 +110,9 @@
   "Among Us": {
    "appid": 945360,
    "desc": "非常に好評",
-   "positive": 693478,
-   "negative": 59999,
-   "total": 753477,
+   "positive": 693480,
+   "negative": 60000,
+   "total": 753480,
    "pct": 92,
    "scope": "全言語",
    "ja": {
@@ -161,9 +161,9 @@
   "BeamNG.drive": {
    "appid": 284160,
    "desc": "圧倒的に好評",
-   "positive": 419421,
-   "negative": 12216,
-   "total": 431637,
+   "positive": 419424,
+   "negative": 12217,
+   "total": 431641,
    "pct": 97,
    "scope": "全言語",
    "ja": {
@@ -263,8 +263,8 @@
   "Dead by Daylight": {
    "appid": 381210,
    "desc": "やや好評",
-   "positive": 735711,
-   "negative": 203651,
+   "positive": 735712,
+   "negative": 203650,
    "total": 939362,
    "pct": 78,
    "scope": "全言語",
@@ -467,9 +467,9 @@
   "Grand Theft Auto V": {
    "appid": 271590,
    "desc": "非常に好評",
-   "positive": 1830400,
-   "negative": 256053,
-   "total": 2086453,
+   "positive": 1830409,
+   "negative": 256054,
+   "total": 2086463,
    "pct": 88,
    "scope": "全言語",
    "ja": {
@@ -668,9 +668,9 @@
    "appid": 4018330,
    "desc": "やや好評",
    "positive": 66,
-   "negative": 21,
-   "total": 87,
-   "pct": 76,
+   "negative": 22,
+   "total": 88,
+   "pct": 75,
    "scope": "全言語",
    "ja": {
     "desc": "ユーザーレビューはありません",
@@ -787,19 +787,23 @@
   "R.E.P.O.": {
    "appid": 3241660,
    "desc": "圧倒的に好評",
-   "positive": 419660,
-   "negative": 17666,
-   "total": 437326,
+   "positive": 419666,
+   "negative": 17667,
+   "total": 437333,
    "pct": 96,
    "scope": "全言語",
    "ja": {
     "desc": "非常に好評",
     "positive": 1893,
-    "negative": 167,
-    "total": 2060,
+    "negative": 168,
+    "total": 2061,
     "pct": 92
    },
    "recent": [
+    {
+     "up": false,
+     "t": "アプデの影響もあるけどレベルが上がり嫌がらせが多くなった印象。これは前からだけどレベル１でも強敵が多く多勢に無勢、レベルに応じての敵が出てこない運引き、前ではさほど見なかったことが敵が多くなり母船前の出待ちされること、何よりアイテムすら出てこなかったのもバグなのかたまたま運引きでアイテムが出てこなかったのかもわからない"
+    },
     {
      "up": true,
      "t": "面白い 新マップつらい"
@@ -827,10 +831,6 @@
     {
      "up": true,
      "t": "ok"
-    },
-    {
-     "up": true,
-     "t": "楽しい以上"
     }
    ],
    "取得日": "2026-11-20"
@@ -838,9 +838,9 @@
   "Rob Run": {
    "appid": 4262460,
    "desc": "賛否両論",
-   "positive": 36643,
-   "negative": 33589,
-   "total": 70232,
+   "positive": 36668,
+   "negative": 33668,
+   "total": 70336,
    "pct": 52,
    "scope": "全言語",
    "ja": {
@@ -975,9 +975,9 @@
   "Zed Zone": {
    "appid": 1211600,
    "desc": "非常に好評",
-   "positive": 4110,
+   "positive": 4111,
    "negative": 915,
-   "total": 5025,
+   "total": 5026,
    "pct": 82,
    "scope": "全言語",
    "ja": {
@@ -1027,8 +1027,8 @@
    "appid": 1665460,
    "desc": "賛否両論",
    "positive": 63205,
-   "negative": 57855,
-   "total": 121060,
+   "negative": 57856,
+   "total": 121061,
    "pct": 52,
    "scope": "全言語",
    "ja": {
@@ -1412,9 +1412,9 @@
   "鉄拳8": {
    "appid": 1778820,
    "desc": "賛否両論",
-   "positive": 41947,
+   "positive": 41949,
    "negative": 31864,
-   "total": 73811,
+   "total": 73813,
    "pct": 57,
    "scope": "全言語",
    "ja": {
@@ -1514,9 +1514,9 @@
   "餓狼伝説 City of the Wolves": {
    "appid": 2492040,
    "desc": "非常に好評",
-   "positive": 3319,
+   "positive": 3321,
    "negative": 787,
-   "total": 4106,
+   "total": 4108,
    "pct": 81,
    "scope": "全言語",
    "ja": {
