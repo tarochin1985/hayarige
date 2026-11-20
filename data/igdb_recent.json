@@ -2019,7 +2019,9 @@
  },
  {
   "name": "Afterpub",
-  "alias": [],
+  "alias": [
+   "afterpub.exe"
+  ],
   "pop": 0,
   "y": 2026,
   "d": "2026-11-05",
@@ -2690,7 +2692,7 @@
   ],
   "pop": 0,
   "y": 2026,
-  "d": "2026-10-30",
+  "d": "2026-11-30",
   "p": [
    "pc"
   ],
@@ -2890,6 +2892,21 @@
   ],
   "g": [
    "Tactical",
+   "Indie"
+  ]
+ },
+ {
+  "name": "Altitude Zero",
+  "alias": [],
+  "pop": 0,
+  "y": 2026,
+  "d": "2026-11-30",
+  "p": [
+   "pc"
+  ],
+  "g": [
+   "Simulator",
+   "Adventure",
    "Indie"
   ]
  },
@@ -3755,21 +3772,6 @@
   ],
   "g": [
    "Puzzle",
-   "Indie"
-  ]
- },
- {
-  "name": "Antichrist",
-  "alias": [],
-  "pop": 0,
-  "y": 2026,
-  "d": "2026-12-31",
-  "p": [
-   "pc",
-   "console"
-  ],
-  "g": [
-   "Adventure",
    "Indie"
   ]
  },
@@ -6855,6 +6857,21 @@
    "Point-and-click",
    "Puzzle",
    "Indie"
+  ]
+ },
+ {
+  "name": "Best American Point-and-Click Adventury",
+  "alias": [
+   "Best American Point-And-Click Adventury"
+  ],
+  "pop": 0,
+  "y": 2026,
+  "d": "2026-11-30",
+  "p": [
+   "pc"
+  ],
+  "g": [
+   "Adventure"
   ]
  },
  {
@@ -10091,7 +10108,9 @@
  },
  {
   "name": "Car Flipper",
-  "alias": [],
+  "alias": [
+   "CarFlipping.exe"
+  ],
   "pop": 0,
   "y": 2026,
   "d": "2026-11-12",
@@ -11883,20 +11902,6 @@
   ]
  },
  {
-  "name": "Chroma: Tidy Up The Paint Store!",
-  "alias": [],
-  "pop": 0,
-  "y": 2026,
-  "d": "2026-12-31",
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Simulator",
-   "Indie"
-  ]
- },
- {
   "name": "ChromaFlow",
   "alias": [
    "ChromaFlow.exe"
@@ -12239,22 +12244,6 @@
   "g": [
    "Puzzle",
    "Quiz/Trivia"
-  ]
- },
- {
-  "name": "Clash Pandemic: Forest Hell",
-  "alias": [],
-  "pop": 0,
-  "y": 2026,
-  "d": "2026-12-31",
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Strategy",
-   "Hack and slash/Beat 'em up",
-   "Adventure",
-   "Indie"
   ]
  },
  {
@@ -13918,19 +13907,6 @@
   ]
  },
  {
-  "name": "Cozymancer: Wizard Tower Restoration",
-  "alias": [],
-  "pop": 0,
-  "y": 2026,
-  "d": "2026-12-31",
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Indie"
-  ]
- },
- {
   "name": "Cozywood Creek",
   "alias": [],
   "pop": 0,
@@ -14027,7 +14003,9 @@
  },
  {
   "name": "Crazy Chess",
-  "alias": [],
+  "alias": [
+   "CrazyChess.exe"
+  ],
   "pop": 0,
   "y": 2026,
   "d": "2026-11-20",
@@ -14054,6 +14032,20 @@
    "Simulator",
    "Indie",
    "Arcade"
+  ]
+ },
+ {
+  "name": "Cricket Manager 27",
+  "alias": [],
+  "pop": 0,
+  "y": 2026,
+  "d": "2026-10-29",
+  "p": [
+   "pc"
+  ],
+  "g": [
+   "Sport",
+   "Strategy"
   ]
  },
  {
@@ -14246,20 +14238,6 @@
   "g": [
    "Indie",
    "Arcade"
-  ]
- },
- {
-  "name": "Critter Cosmos",
-  "alias": [],
-  "pop": 0,
-  "y": 2026,
-  "d": "2026-12-31",
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Adventure",
-   "Indie"
   ]
  },
  {
@@ -16024,6 +16002,20 @@
   ]
  },
  {
+  "name": "Dead by Daylight: Terrifier",
+  "alias": [],
+  "pop": 0,
+  "y": 2026,
+  "d": "2026-11-24",
+  "p": [
+   "pc",
+   "console"
+  ],
+  "g": [
+   "Strategy"
+  ]
+ },
+ {
   "name": "Dead of the Brain",
   "alias": [
    "Dead of the Brain.exe"
@@ -17075,21 +17067,6 @@
   ]
  },
  {
-  "name": "Desert Echo",
-  "alias": [],
-  "pop": 0,
-  "y": 2026,
-  "d": "2026-11-03",
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Shooter",
-   "Strategy",
-   "Indie"
-  ]
- },
- {
   "name": "Desiderium",
   "alias": [],
   "pop": 0,
@@ -17328,6 +17305,20 @@
    "Tactical",
    "Indie",
    "Card & Board Game"
+  ]
+ },
+ {
+  "name": "Dice Have No Eyes",
+  "alias": [],
+  "pop": 0,
+  "y": 2026,
+  "d": "2026-11-20",
+  "p": [
+   "pc"
+  ],
+  "g": [
+   "Strategy",
+   "Indie"
   ]
  },
  {
@@ -18533,7 +18524,8 @@
   "name": "Dopamine",
   "alias": [
    "DOPAMINE",
-   "WE'RE ALL IN!"
+   "WE'RE ALL IN!",
+   "WereAllIn.exe"
   ],
   "pop": 0,
   "y": 2026,
@@ -21963,6 +21955,22 @@
   ]
  },
  {
+  "name": "Everlasting Curse",
+  "alias": [],
+  "pop": 0,
+  "y": 2026,
+  "d": "2026-11-30",
+  "p": [
+   "pc"
+  ],
+  "g": [
+   "Point-and-click",
+   "Puzzle",
+   "Adventure",
+   "Indie"
+  ]
+ },
+ {
   "name": "Everybody Loves a Good Hole",
   "alias": [],
   "pop": 0,
@@ -23551,21 +23559,6 @@
   ]
  },
  {
-  "name": "Fenix",
-  "alias": [],
-  "pop": 0,
-  "y": 2026,
-  "d": "2026-12-31",
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Platform",
-   "Adventure",
-   "Indie"
-  ]
- },
- {
   "name": "Feral Road",
   "alias": [],
   "pop": 0,
@@ -24745,22 +24738,6 @@
   ],
   "g": [
    "Role-playing (RPG)",
-   "Indie"
-  ]
- },
- {
-  "name": "Follyvale",
-  "alias": [],
-  "pop": 0,
-  "y": 2026,
-  "d": "2026-12-31",
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Point-and-click",
-   "Puzzle",
-   "Adventure",
    "Indie"
   ]
  },
@@ -26492,22 +26469,6 @@
   ]
  },
  {
-  "name": "Geometry Platforms",
-  "alias": [],
-  "pop": 0,
-  "y": 2026,
-  "d": "2026-12-31",
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Shooter",
-   "Role-playing (RPG)",
-   "Indie",
-   "Arcade"
-  ]
- },
- {
   "name": "Geoplanetical",
   "alias": [
    "Geoplanetical.exe"
@@ -27743,7 +27704,7 @@
    "GTA6",
    "GTAVI"
   ],
-  "pop": 142,
+  "pop": 159,
   "y": 2026,
   "d": "2026-11-19",
   "p": [
@@ -28925,6 +28886,23 @@
   ]
  },
  {
+  "name": "Hakoniwa Electric",
+  "alias": [
+   "ハコニワデンキ Hakoniwa Electric"
+  ],
+  "pop": 0,
+  "y": 2026,
+  "d": "2026-11-30",
+  "jp": "ハコニワデンキ Hakoniwa Electric",
+  "p": [
+   "pc"
+  ],
+  "g": [
+   "Puzzle",
+   "Indie"
+  ]
+ },
+ {
   "name": "Hakuoki Ibun: Berezinskii no Majo",
   "alias": [],
   "pop": 0,
@@ -30020,6 +29998,19 @@
   ]
  },
  {
+  "name": "Hell Worlds Reinvigorated",
+  "alias": [],
+  "pop": 0,
+  "y": 2026,
+  "d": "2026-11-30",
+  "p": [
+   "pc"
+  ],
+  "g": [
+   "Adventure"
+  ]
+ },
+ {
   "name": "Hell-A",
   "alias": [
    "HELL-A"
@@ -31108,20 +31099,6 @@
   ]
  },
  {
-  "name": "Honey, Tidy the Basement",
-  "alias": [],
-  "pop": 0,
-  "y": 2026,
-  "d": "2026-12-31",
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Simulator",
-   "Indie"
-  ]
- },
- {
   "name": "Honkai: Star Rail - Now, Lay Laughter to All Stars",
   "alias": [
    "Honkai: Star Rail: 4.7"
@@ -32097,6 +32074,20 @@
   ]
  },
  {
+  "name": "HypnoFish Inc.",
+  "alias": [],
+  "pop": 0,
+  "y": 2026,
+  "d": "2026-11-30",
+  "p": [
+   "pc"
+  ],
+  "g": [
+   "Simulator",
+   "Indie"
+  ]
+ },
+ {
   "name": "Hypnos",
   "alias": [
    "HYPNOS",
@@ -32496,6 +32487,20 @@
   ]
  },
  {
+  "name": "Idle Raiders: Second Run",
+  "alias": [],
+  "pop": 0,
+  "y": 2026,
+  "d": "2026-11-30",
+  "p": [
+   "pc"
+  ],
+  "g": [
+   "Role-playing (RPG)",
+   "Indie"
+  ]
+ },
+ {
   "name": "Idle Slots: Casino HQ",
   "alias": [
    "Idle Slots Casino HQ.exe"
@@ -32696,6 +32701,22 @@
   ]
  },
  {
+  "name": "Impersonal",
+  "alias": [],
+  "pop": 0,
+  "y": 2026,
+  "d": "2026-11-30",
+  "p": [
+   "pc"
+  ],
+  "g": [
+   "Platform",
+   "Puzzle",
+   "Adventure",
+   "Indie"
+  ]
+ },
+ {
   "name": "In Absentia",
   "alias": [],
   "pop": 0,
@@ -32773,6 +32794,20 @@
    "Strategy",
    "Indie",
    "Arcade"
+  ]
+ },
+ {
+  "name": "In Time",
+  "alias": [],
+  "pop": 0,
+  "y": 2026,
+  "d": "2026-11-30",
+  "p": [
+   "pc"
+  ],
+  "g": [
+   "Adventure",
+   "Indie"
   ]
  },
  {
@@ -35177,6 +35212,21 @@
   ]
  },
  {
+  "name": "Keycap: Tidy Up!",
+  "alias": [
+   "keycap-tidy-up.exe"
+  ],
+  "pop": 0,
+  "y": 2026,
+  "d": "2026-11-16",
+  "p": [
+   "pc"
+  ],
+  "g": [
+   "Indie"
+  ]
+ },
+ {
   "name": "Kick",
   "alias": [
    "Kick.exe"
@@ -35507,7 +35557,9 @@
  },
  {
   "name": "Kintsugi Cottage",
-  "alias": [],
+  "alias": [
+   "Kintsugi Cottage.exe"
+  ],
   "pop": 0,
   "y": 2026,
   "d": "2026-11-20",
@@ -35545,6 +35597,19 @@
   "g": [
    "Simulator",
    "Indie"
+  ]
+ },
+ {
+  "name": "Kitchen of Gods",
+  "alias": [],
+  "pop": 0,
+  "y": 2026,
+  "d": "2026-11-30",
+  "p": [
+   "pc"
+  ],
+  "g": [
+   "Strategy"
   ]
  },
  {
@@ -36316,7 +36381,9 @@
  },
  {
   "name": "Last Bake",
-  "alias": [],
+  "alias": [
+   "LastBake.exe"
+  ],
   "pop": 0,
   "y": 2026,
   "d": "2026-11-20",
@@ -37901,20 +37968,6 @@
   ]
  },
  {
-  "name": "Lost Camp",
-  "alias": [],
-  "pop": 0,
-  "y": 2026,
-  "d": "2026-12-31",
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Adventure",
-   "Indie"
-  ]
- },
- {
   "name": "Lost Entry",
   "alias": [],
   "pop": 0,
@@ -39423,6 +39476,16 @@
   ]
  },
  {
+  "name": "Mart: Tidy Up Together",
+  "alias": [],
+  "pop": 0,
+  "y": 2026,
+  "d": "2026-11-13",
+  "p": [
+   "pc"
+  ]
+ },
+ {
   "name": "Martyr",
   "alias": [],
   "pop": 0,
@@ -40896,19 +40959,6 @@
   "g": [
    "Adventure",
    "Indie"
-  ]
- },
- {
-  "name": "Minesweeper Survivors",
-  "alias": [],
-  "pop": 0,
-  "y": 2026,
-  "d": "2026-12-31",
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Arcade"
   ]
  },
  {
@@ -43414,7 +43464,9 @@
  },
  {
   "name": "Netherwake",
-  "alias": [],
+  "alias": [
+   "Netherwake.exe"
+  ],
   "pop": 0,
   "y": 2026,
   "d": "2026-11-13",
@@ -44363,6 +44415,7 @@
  {
   "name": "No Visitors Allowed",
   "alias": [
+   "NVA.exe",
    "NVA: No Visitors Allowed"
   ],
   "pop": 0,
@@ -45035,6 +45088,22 @@
    "Platform",
    "Puzzle",
    "Adventure",
+   "Indie"
+  ]
+ },
+ {
+  "name": "Null Vector",
+  "alias": [
+   "NULL VECTOR"
+  ],
+  "pop": 0,
+  "y": 2026,
+  "d": "2026-11-30",
+  "p": [
+   "pc"
+  ],
+  "g": [
+   "Strategy",
    "Indie"
   ]
  },
@@ -47350,7 +47419,7 @@
   "alias": [],
   "pop": 0,
   "y": 2026,
-  "d": "2026-12-31",
+  "d": "2026-11-30",
   "p": [
    "pc"
   ],
@@ -48210,6 +48279,19 @@
   ],
   "g": [
    "Puzzle"
+  ]
+ },
+ {
+  "name": "Piece and Quiet: A Stained Glass Restoration",
+  "alias": [],
+  "pop": 0,
+  "y": 2026,
+  "d": "2026-11-27",
+  "p": [
+   "pc"
+  ],
+  "g": [
+   "Simulator"
   ]
  },
  {
@@ -50888,24 +50970,6 @@
   ]
  },
  {
-  "name": "Psycho Dead",
-  "alias": [
-   "PSYCHO DEAD"
-  ],
-  "pop": 0,
-  "y": 2026,
-  "d": "2026-12-31",
-  "p": [
-   "pc",
-   "console"
-  ],
-  "g": [
-   "Puzzle",
-   "Adventure",
-   "Indie"
-  ]
- },
- {
   "name": "Psycho-Sleuth",
   "alias": [
    "异病侦探",
@@ -51126,7 +51190,8 @@
    "pc"
   ],
   "g": [
-   "Simulator"
+   "Simulator",
+   "Indie"
   ]
  },
  {
@@ -53712,7 +53777,7 @@
    "ROB RUN",
    "start_protected_game.exe"
   ],
-  "pop": 15,
+  "pop": 17,
   "y": 2026,
   "d": "2026-11-04",
   "p": [
@@ -55121,7 +55186,9 @@
  },
  {
   "name": "Sanctuaries",
-  "alias": [],
+  "alias": [
+   "SanctuariesSteamFull.exe"
+  ],
   "pop": 0,
   "y": 2026,
   "d": "2026-11-20",
@@ -55378,19 +55445,6 @@
   "g": [
    "Puzzle",
    "Indie"
-  ]
- },
- {
-  "name": "Sayaka: My Naughty Milf Neighbor",
-  "alias": [],
-  "pop": 0,
-  "y": 2026,
-  "d": "2026-10-22",
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Visual Novel"
   ]
  },
  {
@@ -56224,22 +56278,6 @@
   ]
  },
  {
-  "name": "Seven Days: Strange Locked-Room Life",
-  "alias": [],
-  "pop": 0,
-  "y": 2026,
-  "d": "2026-12-31",
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Role-playing (RPG)",
-   "Simulator",
-   "Indie",
-   "Visual Novel"
-  ]
- },
- {
   "name": "SeverSoul Xookeeper",
   "alias": [
    "SeverSoul XOOKEEPER"
@@ -56405,20 +56443,6 @@
   "g": [
    "Shooter",
    "Platform",
-   "Adventure"
-  ]
- },
- {
-  "name": "Shadow Sacrament: The Roots of Evil",
-  "alias": [],
-  "pop": 0,
-  "y": 2026,
-  "d": "2026-12-31",
-  "p": [
-   "pc",
-   "console"
-  ],
-  "g": [
    "Adventure"
   ]
  },
@@ -56595,20 +56619,6 @@
   "pop": 0,
   "y": 2026,
   "d": "2026-10-30",
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Simulator",
-   "Indie"
-  ]
- },
- {
-  "name": "She's Coming Over & My Place is a Dump!",
-  "alias": [],
-  "pop": 0,
-  "y": 2026,
-  "d": "2026-12-31",
   "p": [
    "pc"
   ],
@@ -56807,6 +56817,19 @@
   ],
   "g": [
    "Puzzle",
+   "Indie"
+  ]
+ },
+ {
+  "name": "Shmandala",
+  "alias": [],
+  "pop": 0,
+  "y": 2026,
+  "d": "2026-11-30",
+  "p": [
+   "pc"
+  ],
+  "g": [
    "Indie"
   ]
  },
@@ -59314,6 +59337,20 @@
   "g": [
    "Simulator",
    "Strategy"
+  ]
+ },
+ {
+  "name": "Soul of Slime",
+  "alias": [],
+  "pop": 0,
+  "y": 2026,
+  "d": "2026-11-30",
+  "p": [
+   "pc"
+  ],
+  "g": [
+   "Strategy",
+   "Indie"
   ]
  },
  {
@@ -62891,19 +62928,6 @@
   ]
  },
  {
-  "name": "TCG: Fantasy Card Collection",
-  "alias": [],
-  "pop": 0,
-  "y": 2026,
-  "d": "2026-10-22",
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Simulator"
-  ]
- },
- {
   "name": "TV Station Tycoon",
   "alias": [],
   "pop": 0,
@@ -63642,22 +63666,6 @@
   ],
   "g": [
    "Indie"
-  ]
- },
- {
-  "name": "Technologia",
-  "alias": [],
-  "pop": 0,
-  "y": 2026,
-  "d": "2026-12-31",
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Simulator",
-   "Strategy",
-   "Indie",
-   "Card & Board Game"
   ]
  },
  {
@@ -65717,22 +65725,6 @@
    "Role-playing (RPG)",
    "Adventure",
    "Indie"
-  ]
- },
- {
-  "name": "The Heroic Tale of Illumina: 0",
-  "alias": [
-   "勇者伊尔米娜英雄传0"
-  ],
-  "pop": 0,
-  "y": 2026,
-  "d": "2026-12-31",
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Role-playing (RPG)",
-   "Adventure"
   ]
  },
  {
@@ -68483,7 +68475,9 @@
  },
  {
   "name": "Tidy Up the Flower Shop: Christmas",
-  "alias": [],
+  "alias": [
+   "Tidy Up the Flower Shop Christmas.exe"
+  ],
   "pop": 0,
   "y": 2026,
   "d": "2026-11-20",
@@ -73296,7 +73290,9 @@
  },
  {
   "name": "We Have a Gnome Problem",
-  "alias": [],
+  "alias": [
+   "WeHaveAGnomeProblem.exe"
+  ],
   "pop": 0,
   "y": 2026,
   "d": "2026-11-02",
@@ -73360,7 +73356,9 @@
  },
  {
   "name": "We're Gonna Need More Fireballs",
-  "alias": [],
+  "alias": [
+   "MoreFireballs.exe"
+  ],
   "pop": 0,
   "y": 2026,
   "d": "2026-11-05",
@@ -75013,7 +75011,7 @@
   "alias": [],
   "pop": 0,
   "y": 2026,
-  "d": "2026-12-31",
+  "d": "2026-11-30",
   "p": [
    "pc"
   ],
@@ -75190,6 +75188,21 @@
   "g": [
    "Role-playing (RPG)",
    "Adventure"
+  ]
+ },
+ {
+  "name": "Xenotech Arena",
+  "alias": [
+   "XenoTechArena"
+  ],
+  "pop": 0,
+  "y": 2026,
+  "d": "2026-11-30",
+  "p": [
+   "pc"
+  ],
+  "g": [
+   "Indie"
   ]
  },
  {
