@@ -58,6 +58,110 @@ FONTS = {
 #   stroke     … ゲーム名と数字につけるフチの太さ。"" ならフチなし
 #   strokec    … フチの色。明るい地なら濃い色、白フチにしたいなら白
 THEMES = {
+    # ---- 2026-11-20 に足した4つ（文字を減らした形 card_layout: simple と合わせて見比べた）
+    # 「grokの色合いのバランス結構いい感じ」（たろちんさん）。紺の題字・青の差し色・白っぽい地
+    "navy": {
+        "title": "gothic", "text": "gothic",
+        "bg": "linear-gradient(135deg,#FFFFFF 0%,#F1F4F8 45%,#E3E9F1 100%)",
+        "ink": "#1B2436", "ink2": "#4E5A6E", "ink3": "#8A94A6",
+        "card": "#FFFFFF", "line": "#DDE2EA", "rail": "#E7ECF3",
+        "accent": "#2B78A8", "hot": "#3466A8", "game": "#14213D", "on": "#FFFFFF",
+        "sum": "#1B2436", "stroke": "", "strokec": "#14213D",
+    },
+    # 無彩色の地に、鮮やかな青を「ここぞ」だけ（2026-11-20。navy が青すぎたので、色味だけ直した版）
+    # 地・文字・帯は白〜グレー〜チャコール。青はタイトル下の線・見出し・1位の倍率と印・URLだけ
+    "clean": {
+        "title": "gothic", "text": "gothic",
+        "bg": "linear-gradient(135deg,#F8F9FA 0%,#F4F5F7 50%,#F1F3F5 100%)",
+        "ink": "#1A1D20", "ink2": "#495057", "ink3": "#868E96",
+        "card": "#FFFFFF", "line": "#DEE2E6", "rail": "#E9ECEF",
+        "accent": "#2563EB", "hot": "#2563EB", "game": "#1A1D20", "on": "#FFFFFF",
+        "band1": "#7A828A", "band2": "#8A9299", "rx": "#343A40",
+        "sum": "#1A1D20", "stroke": "", "strokec": "#1A1D20",
+    },
+    # 自然で落ち着いたトーン（2026-11-20。clean の青がきつかったので「色の引き算」をした版）
+    # 青（くすんだスレートブルー）は 3か所だけ: タイトル下の線の左半分・1位の棒グラフの印と「1」・1位の倍率
+    "calm": {
+        "title": "gothic", "text": "gothic",
+        "bg": "linear-gradient(135deg,#F9F9F8 0%,#F5F5F3 50%,#F2F2F0 100%)",
+        "ink": "#222528", "ink2": "#4A4F54", "ink3": "#878C91",
+        "card": "#FFFFFF", "line": "#E0E0DC", "rail": "#EAEAE6",
+        "accent": "#4E7D9B", "hot": "#4E7D9B", "game": "#222528", "on": "#FFFFFF",
+        "band1": "#7A7F84", "band2": "#878C90", "rx": "#3A3F44",
+        "hl": "#222528", "eye": "#495057", "date": "#5A6065", "ic2": "#9AA0A6",
+        "dot": "rgba(0,0,0,.07)",
+        "sum": "#222528", "stroke": "", "strokec": "#222528",
+    },
+    # ---- 「紺と青」（navy）と同じ組み立てで、色だけ変えたもの（2026-11-20 に見比べた）
+    "teal": {
+        "title": "gothic", "text": "gothic",
+        "bg": "linear-gradient(135deg,#FFFFFF 0%,#F2F6F6 45%,#E4EEEE 100%)",
+        "ink": "#17282B", "ink2": "#4A5E61", "ink3": "#859799",
+        "card": "#FFFFFF", "line": "#DAE5E5", "rail": "#E5EFEF",
+        "accent": "#1B8A8F", "hot": "#1B8A8F", "game": "#0F3438", "on": "#FFFFFF",
+        "sum": "#17282B", "stroke": "", "strokec": "#0F3438",
+    },
+    # B（teal）をもとに、急上昇の倍率（1位と2〜5位）だけ F（amber）のオレンジにしたもの（2026-11-20 たろちんさんが選んだ）
+    "teal_x": {
+        "title": "gothic", "text": "gothic",
+        "bg": "linear-gradient(135deg,#FFFFFF 0%,#F2F6F6 45%,#E4EEEE 100%)",
+        "ink": "#17282B", "ink2": "#4A5E61", "ink3": "#859799",
+        "card": "#FFFFFF", "line": "#DAE5E5", "rail": "#E5EFEF",
+        "accent": "#1B8A8F", "hot": "#1B8A8F", "game": "#0F3438", "on": "#FFFFFF",
+        "x1": "#D9792B", "rx": "#D9792B",
+        "sum": "#17282B", "stroke": "", "strokec": "#0F3438",
+    },
+    "plum": {
+        "title": "gothic", "text": "gothic",
+        "bg": "linear-gradient(135deg,#FFFFFF 0%,#F5F3F7 45%,#ECE7F1 100%)",
+        "ink": "#25202E", "ink2": "#5A5266", "ink3": "#958CA1",
+        "card": "#FFFFFF", "line": "#E4DEEA", "rail": "#EEE9F3",
+        "accent": "#6E56B0", "hot": "#6E56B0", "game": "#2A1F45", "on": "#FFFFFF",
+        "sum": "#25202E", "stroke": "", "strokec": "#2A1F45",
+    },
+    "wine": {
+        "title": "gothic", "text": "gothic",
+        "bg": "linear-gradient(135deg,#FFFFFF 0%,#F8F4F2 45%,#F1E8E5 100%)",
+        "ink": "#2B1E1E", "ink2": "#634F4F", "ink3": "#9E8B8B",
+        "card": "#FFFFFF", "line": "#EADFDC", "rail": "#F3EAE7",
+        "accent": "#A8384A", "hot": "#A8384A", "game": "#3E1620", "on": "#FFFFFF",
+        "sum": "#2B1E1E", "stroke": "", "strokec": "#3E1620",
+    },
+    "amber": {
+        "title": "gothic", "text": "gothic",
+        "bg": "linear-gradient(135deg,#FFFFFF 0%,#F7F5F1 45%,#EFEAE1 100%)",
+        "ink": "#22201C", "ink2": "#5B554C", "ink3": "#958E83",
+        "card": "#FFFFFF", "line": "#E7E1D6", "rail": "#F1ECE3",
+        "accent": "#D9792B", "hot": "#D9792B", "game": "#26231F", "on": "#FFFFFF",
+        "sum": "#22201C", "stroke": "", "strokec": "#26231F",
+    },
+    # 白地に墨と赤。いちばん静か
+    "ink": {
+        "title": "gothic", "text": "gothic",
+        "bg": "#FBFBFA",
+        "ink": "#151515", "ink2": "#4A4A4A", "ink3": "#8C8C8C",
+        "card": "#FFFFFF", "line": "#E2E2E0", "rail": "#EDEDEA",
+        "accent": "#C8323C", "hot": "#C8323C", "game": "#151515", "on": "#FFFFFF",
+        "sum": "#151515", "stroke": "", "strokec": "#151515",
+    },
+    # 深い緑と金茶。落ち着いた雑誌っぽさ
+    "forest": {
+        "title": "gothic", "text": "gothic",
+        "bg": ("radial-gradient(1000px 700px at 90% -20%,#FFFFFF 0%,rgba(255,255,255,0) 60%),#F2F4EE"),
+        "ink": "#18241D", "ink2": "#4C5C52", "ink3": "#8A978F",
+        "card": "#FFFFFF", "line": "#DCE3DA", "rail": "#E6ECE3",
+        "accent": "#2F6B4A", "hot": "#B7731F", "game": "#1E3A2B", "on": "#FFFFFF",
+        "sum": "#18241D", "stroke": "", "strokec": "#1E3A2B",
+    },
+    # 濃紺の地。夜のタイムラインで目立つ
+    "night": {
+        "title": "gothic", "text": "gothic",
+        "bg": ("radial-gradient(1100px 760px at 80% -20%,#1E3254 0%,rgba(30,50,84,0) 60%),#0E1626"),
+        "ink": "#E9EEF6", "ink2": "#A5B1C5", "ink3": "#6E7C93",
+        "card": "rgba(255,255,255,.06)", "line": "#26354F", "rail": "#1C2940",
+        "accent": "#7FB2FF", "hot": "#F2A33A", "game": "#FFFFFF", "on": "#0E1626",
+        "sum": "#E9EEF6", "stroke": "", "strokec": "#0E1626",
+    },
     # いまのダークを、書体だけポップに寄せたもの
     "dark": {
         "title": "dela", "text": "round",
@@ -509,12 +613,16 @@ def local_font_css(families):
             return None
     out = []
     for k in pkgs:
-        css = have / k / "index.css"
-        if not css.is_file():
+        # index.css は太さ400だけ。カードは500〜900を使うので、ある太さを全部読む
+        # （2026-11-20。400だけだと見本の題字が細く出て、本番と見え方が違った）
+        csss = [have / k / f"{w}.css" for w in ("400", "500", "700", "800", "900")
+                if (have / k / f"{w}.css").is_file()] or [have / k / "index.css"]
+        if not csss[0].is_file():
             log(f"書体の中身が見つかりません: {k}")
             return None
-        out.append(css.read_text(encoding="utf-8")
-                   .replace("url(./files/", f"url(file://{(have / k).resolve()}/files/"))
+        for css in csss:
+            out.append(css.read_text(encoding="utf-8")
+                       .replace("url(./files/", f"url(file://{(have / k).resolve()}/files/"))
     path = FONT_CACHE / "card-fonts.css"
     path.write_text("\n".join(out), encoding="utf-8")
     return path
@@ -551,6 +659,13 @@ def theme_css(name):
     vars_ = ";".join(f"--{k}:{th[k]}" for k in
                      ("ink", "ink2", "ink3", "card", "line", "rail",
                       "accent", "hot", "on", "sum", "strokec"))
+    # ゲーム名だけ別の色にしたいテーマ（2026-11-20 に足した「navy」など）。無ければ hot
+    if th.get("game"):
+        vars_ += f";--game:{th['game']}"
+    # 右のカードの帯の色（無ければ game → accent のグラデーション）、2〜5位の倍率の色（無ければ hot）
+    for k in ("band1", "band2", "rx", "hl", "eye", "date", "ic2", "dot", "x1"):
+        if th.get(k):
+            vars_ += f";--{k}:{th[k]}"
     return {"fontq": fontq, "vars": vars_, "titlefont": tf[1], "textfont": txf[1],
             "titleweight": titleweight,
             "bg": th["bg"], "gamestroke": ol, "numstroke": num}
@@ -574,6 +689,237 @@ def build(data, theme="dark"):
         "hot": hot_html(data),
         "note": note, "url": site_url(), "fit": FIT,
     }
+
+
+# ---------------------------------------------------------------- 文字を減らした形
+# 2026-11-20 たろちんさん。
+#
+#   > 現在は画像内の文字量が多すぎて読者の負担が大きいと思った。grokに説明文を短くし、
+#   > 右側にランキング情報を残したバージョンの画像を作ってもらった。配置や文字数の塩梅などは
+#   > これくらいがいいんじゃないかと思った。
+#
+# 本文をまるごと載せるのをやめて、**ゲーム名・見出し・1文だけ**にする。
+# 右は急上昇の上位5つ（1位だけ大きく。サムネイルの大きさでも読めるよう、字を大きめに）。下にサムネイル3枚を横いっぱいに。
+# data/site_config.json の card_layout が "simple" のとき、こちらを使う
+# （"classic" か空なら今までの形）。見比べたいときは --layout=simple。
+CSS_SIMPLE = """
+*{box-sizing:border-box;margin:0;padding:0}
+body{width:1600px;height:900px;overflow:hidden;color:var(--ink);background:%(bg)s;
+  font-family:%(textfont)s;padding:30px 44px 24px;display:flex;flex-direction:column;gap:16px;position:relative}
+/* 地の質感（2026-11-20）。ベタ塗りにしない。ごく薄い斜めの光と、目立たないドット */
+body::before{content:"";position:absolute;inset:0;pointer-events:none;z-index:0;
+  background:linear-gradient(135deg,rgba(255,255,255,.55) 0%%,rgba(255,255,255,0) 45%%),
+    radial-gradient(circle,var(--dot,var(--line)) 1.1px,transparent 1.6px) 0 0/22px 22px;opacity:.55}
+body>*{position:relative;z-index:1}
+header{display:flex;align-items:center;gap:14px;flex:none}
+header img{width:42px;height:42px;object-fit:contain}
+header .nm{font-family:%(titlefont)s;font-weight:%(titleweight)s;font-size:25px}
+header .tag{font-size:14px;color:var(--ink2);font-weight:700}
+header .meta{margin-left:auto;text-align:right}
+header .d{font-family:"Roboto Mono",monospace;font-size:24px;font-weight:700;color:var(--date,var(--accent));line-height:1}
+header .c{font-size:12px;color:var(--ink2);margin-top:5px;font-weight:700}
+.mid{flex:1;display:grid;grid-template-columns:minmax(0,1fr) 640px;gap:30px;min-height:0}
+.lead{display:flex;flex-direction:column;justify-content:center;min-width:0;min-height:0;overflow:hidden;padding-left:6px}
+.eye{align-self:flex-start;display:inline-flex;align-items:center;gap:8px;
+  font-family:%(titlefont)s;font-weight:%(titleweight)s;font-size:16px;color:var(--on);background:var(--eye,var(--hot));
+  padding:6px 14px 6px 12px;border-radius:8px;box-shadow:0 4px 10px -4px rgba(15,30,60,.35)}
+.eye svg{width:16px;height:16px}
+/* ゲーム名。前の1.4倍。字間を少し詰めて力強く。2行に入らなければ FIT が縮める */
+.game{font-family:%(titlefont)s;font-weight:%(titleweight)s;font-size:136px;line-height:1.04;
+  margin-top:14px;letter-spacing:-.035em;color:var(--game,var(--hot))%(gamestroke)s;
+  word-break:auto-phrase;text-wrap:balance}
+/* 2色の太い線。左が差し色、右が淡い色 */
+.rule{height:6px;width:58%%;margin:22px 0 0;border-radius:3px;
+  background:linear-gradient(90deg,var(--accent) 0 34%%,var(--rail) 34%% 100%%)}
+.hl{margin-top:20px;padding-bottom:18px;border-bottom:1.5px dashed var(--line);
+  font-size:34px;font-weight:900;line-height:1.38;color:var(--hl,var(--accent));
+  display:flex;gap:12px;align-items:flex-start}
+.hl .pt{flex:none;width:1em;height:1em;margin-top:.22em;fill:currentColor}
+/* 日本語を文節で折り返す（Chrome の auto-phrase）。balance だけだと単語の途中で割れる */
+.hl span{word-break:auto-phrase;text-wrap:balance}
+/* 1文目と、頭の印（2色使いのコントローラー。絵文字は書体で形が変わるので自前で描く） */
+.one{margin-top:18px;display:flex;gap:16px;align-items:center}
+.one .ic{flex:none;width:80px;height:80px;border-radius:20px;background:var(--card);
+  border:1px solid var(--line);box-shadow:0 8px 18px -10px rgba(15,30,60,.45);
+  display:flex;align-items:center;justify-content:center}
+.one .ic svg{width:56px;height:56px}
+.one .ic .c1{fill:var(--game,var(--accent))}
+.one .ic .c2{fill:var(--ic2,var(--accent))}
+.one .ic .c3{fill:var(--card)}
+.one p{font-size:23px;font-weight:700;line-height:1.55;color:var(--ink2);
+  max-height:3.2em;overflow:hidden;word-break:auto-phrase;text-wrap:pretty}
+/* 右のカード。天面いっぱいに帯を敷く */
+.rank{background:var(--card);border:1px solid var(--line);border-radius:18px;overflow:hidden;
+  display:flex;flex-direction:column;min-width:0;min-height:0;
+  box-shadow:0 22px 44px -26px rgba(15,30,60,.45),0 2px 6px -2px rgba(15,30,60,.12)}
+.band{flex:none;display:flex;align-items:center;gap:10px;padding:13px 26px;
+  background:linear-gradient(90deg,var(--band1,var(--game,var(--hot))),var(--band2,var(--accent)));
+  color:#fff;font-family:%(titlefont)s;font-weight:%(titleweight)s;font-size:21px;letter-spacing:.06em}
+.band svg{width:22px;height:22px;fill:#fff}
+.rbody{padding:4px 28px 10px;display:flex;flex-direction:column;justify-content:space-between;flex:1;min-height:0}
+.r1{display:grid;grid-template-columns:auto minmax(0,1fr) auto;align-items:center;gap:18px;
+  padding:16px 0 15px;border-bottom:1px solid var(--line)}
+.r1 .bi{position:relative;width:76px;height:76px;border-radius:50%%;background:var(--rail);display:flex;
+  align-items:center;justify-content:center}
+/* 2〜5位の数字とそろえる「1」の札 */
+.r1 .bi b{position:absolute;right:-4px;top:-4px;min-width:28px;height:28px;border-radius:14px;
+  background:var(--accent);color:#fff;font-family:"Roboto Mono",monospace;font-size:17px;font-weight:700;
+  display:flex;align-items:center;justify-content:center;border:2px solid var(--card)}
+.r1 .bi svg{width:40px;height:40px;fill:var(--accent)}
+.r1 .nm{font-size:40px;font-weight:900;line-height:1.15;overflow-wrap:anywhere}
+.r1 .nm small{display:block;font-size:17px;color:var(--ink2);font-weight:700;margin-top:7px}
+.r1 .x{font-family:"Roboto Mono",monospace;font-weight:700;font-size:84px;color:var(--x1,var(--hot));line-height:1;
+  letter-spacing:-.04em%(numstroke)s}
+.r{display:grid;grid-template-columns:34px minmax(0,1fr) auto auto;gap:14px;align-items:baseline;
+  padding:13px 0;border-bottom:1px solid var(--line)}
+.r:last-child{border-bottom:0}
+.r .k{font-family:"Roboto Mono",monospace;font-weight:700;font-size:24px;color:var(--ink3)}
+.r .nm{font-size:29px;font-weight:800;overflow:hidden;white-space:nowrap;text-overflow:ellipsis}
+.r .x{font-family:"Roboto Mono",monospace;font-weight:700;font-size:30px;color:var(--rx,var(--hot))}
+.r .ct{font-size:17px;color:var(--ink2);font-weight:700;min-width:52px;text-align:right}
+/* 下のサムネイル。上に文字は重ねない（サムネイルはそのまま見せる）。白いフチと深い影で写真のように */
+.pics{flex:none;display:grid;grid-template-columns:repeat(3,1fr);gap:28px;padding:0 4px}
+.pics figure{min-width:0}
+.pics figure img{width:100%%;height:200px;object-fit:cover;border-radius:12px;display:block;
+  background:var(--rail);border:3px solid #fff;
+  box-shadow:0 18px 34px -16px rgba(15,30,60,.55),0 3px 8px -3px rgba(15,30,60,.25)}
+.pics figcaption{display:flex;justify-content:space-between;align-items:center;gap:10px;margin-top:10px}
+.pics figcaption .ch{font-size:13px;font-weight:700;color:var(--ink2);background:var(--rail);
+  border-radius:99px;padding:4px 12px;
+  overflow:hidden;text-overflow:ellipsis;white-space:nowrap;max-width:80%%}
+.pics figcaption .url{font-size:14px;font-weight:700;color:var(--date,var(--accent));flex:none}
+"""
+
+PAGE_SIMPLE = """<!doctype html>
+<html lang="ja"><head><meta charset="utf-8">
+<meta name="robots" content="noindex">
+<link rel="stylesheet" href="%(fontlink)s">
+<style>:root{%(vars)s}
+%(css)s</style></head><body>
+<header>
+  <img src="logo.svg" alt="">
+  <span class="nm">ハヤリゲー</span>
+  <span class="tag">「次に流行るゲーム」がわかるサイト</span>
+  <div class="meta"><div class="d">%(date)s</div>
+    <div class="c">直近24時間 ／ 配信 %(videos)s本 ／ %(channels)sチャンネル</div></div>
+</header>
+<div class="mid">
+  <section class="lead">%(lead)s</section>
+  <section class="rank">%(rank)s</section>
+</div>
+%(pics)s
+<script>%(fit)s</script>
+</body></html>
+"""
+
+# ゲーム名が2行に入らなければ1段ずつ小さくする。左の列からはみ出すときも小さくする。
+FIT_SIMPLE = """
+(function(){
+  // 行数は「高さ ÷ 行の高さ」で数える
+  // （フチ付きの書体は scrollHeight がはみ出して見えるので、そちらでは測らない）
+  function lines(el){
+    var lh=parseFloat(getComputedStyle(el).lineHeight)||1;
+    return Math.round(el.getBoundingClientRect().height/lh);
+  }
+  function shrink(el, sizes, ok){
+    if(!el) return;
+    for(var i=0;i<sizes.length && !ok(el);i++)
+      el.style.fontSize=sizes[i]+'px';
+  }
+  function run(){
+    var lead=document.querySelector('.lead'), g=lead&&lead.querySelector('.game');
+    var two=function(el){ return lines(el)<=2; };
+    shrink(g,[124,112,100,90,80,72,64,56,50,46],function(el){
+      return two(el) && lead.scrollHeight<=lead.clientHeight+1; });
+    shrink(document.querySelector('.lead .hl span'),[32,30,28,26],two);
+    shrink(document.querySelector('.r1 .nm'),[36,33,30,27,24,22],two);
+    window.__fit=true;
+  }
+  var ready=(document.fonts&&document.fonts.ready)||Promise.resolve();
+  var giveup=new Promise(function(r){ setTimeout(r,6000); });
+  Promise.race([ready,giveup]).then(run);
+})();
+"""
+
+
+# コントローラーの印。2色使い（本体＝差し色、ボタン＝もう1色、十字キー＝地の色）。自前で描いたもの
+PAD = ('<svg viewBox="0 0 48 48" aria-hidden="true">'
+       '<path class="c1" d="M15 12h18a11 11 0 0 1 10.8 13l-1.9 9.6a5.4 5.4 0 0 1-9.4 2.6L28.6 32H19.4'
+       'l-3.9 5.2a5.4 5.4 0 0 1-9.4-2.6L4.2 25A11 11 0 0 1 15 12z"/>'
+       '<path class="c3" d="M13.6 18.5h3v4h4v3h-4v4h-3v-4h-4v-3h4z"/>'
+       '<circle class="c2" cx="33" cy="19.6" r="2.4"/><circle class="c2" cx="37.4" cy="24" r="2.4"/>'
+       '<circle class="c3" cx="28.6" cy="24" r="2.4"/><circle class="c3" cx="33" cy="28.4" r="2.4"/></svg>')
+# 1位の行の左に置く棒グラフの印（3本）
+BARS = ('<svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="13" width="4.6" height="8" rx="1.2"/>'
+        '<rect x="9.7" y="8" width="4.6" height="13" rx="1.2"/><rect x="16.4" y="3" width="4.6" height="18" rx="1.2"/></svg>')
+
+
+def lead_simple(col, ranking):
+    if not col:
+        top = (ranking or [{}])[0]
+        return (f'<span class="eye">{BOLT}今日いちばん配信されたゲーム</span>'
+                f'<div class="game">{e(top.get("game"))}</div><div class="rule"></div>'
+                f'<div class="hl">{POINT}<span>{top.get("channels", 0)}チャンネルが配信しました</span></div>')
+    fr = column_frame(col)
+    one = first_line(col.get("body"))
+    return (f'<span class="eye">{BOLT}{e(fr["title"]) if fr else "今日の注目ゲーム"}</span>'
+            f'<div class="game">{e(col.get("game"))}</div><div class="rule"></div>'
+            + (f'<div class="hl">{POINT}<span>{e(col.get("headline"))}</span></div>' if col.get("headline") else "")
+            + (f'<div class="one"><span class="ic">{PAD}</span><p>{e(one)}</p></div>' if one else ""))
+
+
+def rank_simple(data):
+    """右。天面に帯を敷き、急上昇の上位5つ。1位だけ大きく、倍率を主役にする。"""
+    rising = data.get("rising") or []
+    if not rising:
+        rows = (data.get("ranking") or [])[:5]
+        out = "".join(f'<div class="r"><span class="k">{i}</span><span class="nm">{e(r.get("game"))}</span>'
+                      f'<span class="x">{r.get("videos", 0)}件</span>'
+                      f'<span class="ct">{r.get("channels", 0)}ch</span></div>'
+                      for i, r in enumerate(rows, 1))
+        return f'<div class="band">{CROWN}今日のランキング</div><div class="rbody">{out}</div>'
+    r = rising[0]
+    base = r.get("base")
+    sub = (f'ふだん {base:g}件 → 今日 {r.get("videos", 0)}件 ／ {r.get("channels", 0)}ch'
+           if base is not None else f'{r.get("channels", 0)}チャンネルが配信')
+    out = [f'<div class="r1"><span class="bi">{BARS}<b>1</b></span>'
+           f'<div class="nm">{e(r.get("game"))}<small>{e(sub)}</small></div>'
+           f'<span class="x">×{(r.get("growth") or 1):.1f}</span></div>']
+    for i, x in enumerate(rising[1:5], 2):
+        g = f'×{x["growth"]:.1f}' if x.get("growth") else f'{x.get("videos", 0)}件'
+        out.append(f'<div class="r"><span class="k">{i}</span><span class="nm">{e(x.get("game"))}</span>'
+                   f'<span class="x">{g}</span><span class="ct">{x.get("channels", 0)}ch</span></div>')
+    return f'<div class="band">{UP}今日の急上昇</div><div class="rbody">{"".join(out)}</div>'
+
+
+def pics_simple(col):
+    pics = (col or {}).get("pics") or ([{"th": col["hero"], "by": col.get("hero_by", "")}]
+                                       if (col or {}).get("hero") else [])
+    if not pics:
+        return ""
+    figs = []
+    for i, x in enumerate(pics[:3]):
+        last = (i == min(len(pics), 3) - 1)
+        figs.append(f'<figure><img src="{e(x["th"])}" alt="">'
+                    f'<figcaption><span class="ch">YouTube ／ {e(x.get("by"))}</span>'
+                    + (f'<span class="url">{e(site_url())}</span>' if last else "")
+                    + '</figcaption></figure>')
+    return f'<div class="pics">{"".join(figs)}</div>'
+
+
+def build_simple(data, theme="cream"):
+    t = data.get("totals") or {}
+    th = theme_css(theme)
+    css = CSS_SIMPLE % {"bg": th["bg"], "titlefont": th["titlefont"],
+                        "textfont": th["textfont"], "titleweight": th["titleweight"],
+                        "gamestroke": th["gamestroke"], "numstroke": th["numstroke"]}
+    col = data.get("column")
+    return PAGE_SIMPLE % {
+        "css": css, "vars": th["vars"], "fontlink": font_link(th["fontq"]),
+        "date": e(str(data.get("date", "")).replace("-", ".")),
+        "videos": t.get("videos", 0), "channels": t.get("channels", 0),
+        "lead": lead_simple(col, data.get("ranking") or []),
+        "rank": rank_simple(data), "pics": pics_simple(col), "fit": FIT_SIMPLE}
 
 
 # ---------------------------------------------------------------- 投稿文
@@ -707,9 +1053,14 @@ def main():
     if theme not in THEMES:
         log(f"そんなテーマはありません: {theme}（{'・'.join(THEMES)}）")
         return 1
+    layout = cfg.get("card_layout") or "classic"
+    for a in sys.argv[1:]:
+        if a.startswith("--layout="):
+            layout = a.split("=", 1)[1]
     out = SITE / f"{out_name}.html"
-    out.write_text(build(data, theme), encoding="utf-8")
-    log(f"カードを書き出しました: {out}（テーマ {theme}）")
+    out.write_text(build_simple(data, theme) if layout == "simple" else build(data, theme),
+                   encoding="utf-8")
+    log(f"カードを書き出しました: {out}（テーマ {theme}・形 {layout}）")
 
     # 投稿文は画像より先に作る。画像は書体やサムネイルが取れないと失敗するが、
     # 文のほうは data.json だけで作れるので、失敗する日でも渡せる。
