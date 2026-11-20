@@ -225,6 +225,10 @@ jobs:
       cancel-in-progress: false
     steps:
       - uses: actions/checkout@v4
+        with:
+          # ★2026-11-21: 順番待ちしたあとでも、**その時点のいちばん新しい main** から始める。
+          #   付けないと、押された時点の古い版から始まって、先に終わった更新とぶつかる
+          ref: main
       - uses: actions/setup-python@v5
         with:
           python-version: "3.11"
@@ -369,11 +373,23 @@ jobs:
         run: |
           git config user.name "hayarige-bot"
           git config user.email "actions@github.com"
-          # 実行中にGitHub上でファイルを触ると push が弾かれるので、先に取り込む
-          git pull --rebase --autostash origin main || true
+          # ★2026-11-21 に作り直した。前は「git pull --rebase --autostash … || true」で、
+          #   ぶつかったときに <<<<<<< の印が入ったままのファイルを commit してしまった
+          #   （11-21 の朝、push が2回続いて更新が2つ重なり、data/ と site/ の205ファイルが壊れた）。
+          #   いまは **先に commit してから取り込む。ぶつかったら取り込みをやめて、失敗で止まる。**
+          #   壊れたものは絶対に push しない。止まっても前のサイトがそのまま残るだけ。
           git add data/ site/
           git diff --staged --quiet || git commit -m "更新 $(date -u +%Y-%m-%d)"
           for i in 1 2 3 4 5; do
+            if ! git pull --rebase origin main; then
+              git rebase --abort || true
+              echo "::error::ほかの更新とぶつかったので、保存をやめました（壊れたファイルは push していません）。もう一度動かせば直ります"
+              exit 1
+            fi
+            if git grep -l -e '^<<<<<<< ' -e '^>>>>>>> ' -- data site > /dev/null; then
+              echo "::error::ぶつかった印（<<<<<<<）が残っているので push しません"
+              exit 1
+            fi
             if git push; then
               echo "push できました（${i}回目）"
               exit 0
@@ -381,7 +397,6 @@ jobs:
             sec=$((i * 20))
             echo "push が弾かれました（${i}回目）。${sec}秒おいてやり直します"
             sleep $sec
-            git pull --rebase --autostash origin main || true
           done
           echo "5回やり直しても push できませんでした。"
           echo "GitHubの障害かもしれません: https://www.githubstatus.com/"
