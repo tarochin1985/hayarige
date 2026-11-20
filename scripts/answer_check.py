@@ -24,6 +24,7 @@
 1. **取り上げた日** … 次のどれか。
      ・毎日のコラムの主役（`"枠": "推し"` の日も含む。推しの日はそう書き添える）
      ・その日の急上昇の上位3つ（archive_index.json の hot）
+     ・「次に流行るかもしれないゲーム」として紹介ツイートした日（data/紹介ツイート.json）
 2. 取り上げた日の配信チャンネル数が **10 未満**（もう大きかったものは答え合わせにならない）
 3. 取り上げた日の **3〜21日後** のどこかで、
      ・配信チャンネル数が **8 以上**
@@ -89,7 +90,7 @@ def picks():
             return
         if game not in out or day < out[game][0]:
             out[game] = (day, kind)
-        elif day == out[game][0] and kind != "急上昇":
+        elif day == out[game][0] and kind in ("コラム", "推し"):
             out[game] = (day, kind)          # 同じ日ならコラムのほうを名乗る
 
     for f in sorted((DATA / "columns").glob("20??-??-??.json")):
@@ -102,6 +103,14 @@ def picks():
     for en in read_json(DATA / "archive_index.json", []) or []:
         for h in en.get("hot") or []:
             put(h.get("game"), str(en.get("date") or ""), "急上昇")
+    # 紹介ツイート（2026-11-19〜）。「次に流行るかもしれないゲーム」として
+    # たろちんさんがXに投稿したもの。朝の窓が data/紹介ツイート.json に書き残す。
+    intro = read_json(DATA / "紹介ツイート.json", {}) or {}
+    for day, games in intro.items():
+        if str(day).startswith("_"):
+            continue
+        for g in games or []:
+            put(g, str(day), "紹介ツイート")
     return out
 
 

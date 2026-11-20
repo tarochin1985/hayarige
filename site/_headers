@@ -54,3 +54,7 @@
 #   根本の対策は Cloudflare 管理画面の「常に HTTPS を使用」をオンにすること。
 /feed.xml
   Link: <https://hayarige.com/feed.xml>; rel="canonical"
+  X-Robots-Tag: noindex
+# ↑ 2026-11-19 追記。RSSは読み物ではないので、検索結果には出さない。
+#   Search Console の「クロール済み - インデックス未登録」に feed.xml が出ていた。
+#   noindex にしても、Googleがフィードを読みに来ることは止まらない（Disallow ではないので）。

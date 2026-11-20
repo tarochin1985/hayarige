@@ -276,6 +276,14 @@ def main():
                 f" 本文 {len(rev['recent'])}本")
         time.sleep(1.2)
 
+    # ★紹介ツイートの画像・動画の候補（2026-11-19）。同じ Steam に聞きに行くので、ここで続けて取る。
+    #   失敗してもレビューのほうは止めない
+    try:
+        import steam_media
+        steam_media.collect(ids, search_appid, _get_json, _Stop)
+    except Exception as ex:
+        log(f"画像の候補を集められませんでした: {ex}")
+
     led = {"_説明": LEDGER_NOTE, "id": dict(sorted(ids.items()))}
     write_json(LEDGER, led)
     if not out:

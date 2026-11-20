@@ -4386,6 +4386,16 @@ def main():
                          "配信チャンネル数の多い順に並べています。毎日更新。",
             "page_body": _nw_html}, 1)
     log(f"新作ウォッチ: 発売後 {len(_nw_new)} 本 ／ 発売前 {len(_nw_soon)} 本")
+    # 朝の窓と steam_media.py（紹介ツイートの画像の候補）が読む（2026-11-19）
+    _ld = read_json(SITE / "leads.json", {}) or {}
+    _ld["新作ウォッチ"] = {
+        "発売後": [{"game": r["game"], "channels": r.get("channels"),
+                    "発売日": r["_rel"].isoformat() if r.get("_rel") else None}
+                   for r in _nw_new[:15]],
+        "発売前": [{"game": r["game"], "channels": r.get("channels"),
+                    "発売日": r["_rel"].isoformat() if r.get("_rel") else "未発売"}
+                   for r in _nw_soon[:5]]}
+    write_json(SITE / "leads.json", _ld)
 
     # ---- ★使われなくなったゲームページを消す（2026-10-31）--------------
     #
