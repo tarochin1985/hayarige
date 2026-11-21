@@ -752,13 +752,13 @@ header .c{font-size:12px;color:var(--ink2);margin-top:5px;font-weight:700}
 .rank{background:var(--card);border:1px solid var(--line);border-radius:18px;overflow:hidden;
   display:flex;flex-direction:column;min-width:0;min-height:0;
   box-shadow:0 22px 44px -26px rgba(15,30,60,.45),0 2px 6px -2px rgba(15,30,60,.12)}
-.band{flex:none;display:flex;align-items:center;gap:10px;padding:13px 26px;
+.band{flex:none;display:flex;align-items:center;gap:10px;padding:11px 26px;
   background:linear-gradient(90deg,var(--band1,var(--game,var(--hot))),var(--band2,var(--accent)));
   color:#fff;font-family:%(titlefont)s;font-weight:%(titleweight)s;font-size:21px;letter-spacing:.06em}
 .band svg{width:22px;height:22px;fill:#fff}
 .rbody{padding:4px 28px 10px;display:flex;flex-direction:column;justify-content:space-between;flex:1;min-height:0}
 .r1{display:grid;grid-template-columns:auto minmax(0,1fr) auto;align-items:center;gap:18px;
-  padding:16px 0 15px;border-bottom:1px solid var(--line)}
+  padding:11px 0 10px;border-bottom:1px solid var(--line)}
 .r1 .bi{position:relative;width:76px;height:76px;border-radius:50%%;background:var(--rail);display:flex;
   align-items:center;justify-content:center}
 /* 2〜5位の数字とそろえる「1」の札 */
@@ -771,16 +771,19 @@ header .c{font-size:12px;color:var(--ink2);margin-top:5px;font-weight:700}
 .r1 .x{font-family:"Roboto Mono",monospace;font-weight:700;font-size:84px;color:var(--x1,var(--hot));line-height:1;
   letter-spacing:-.04em%(numstroke)s}
 .r{display:grid;grid-template-columns:34px minmax(0,1fr) auto auto;gap:14px;align-items:baseline;
-  padding:13px 0;border-bottom:1px solid var(--line)}
+  padding:8px 0;border-bottom:1px solid var(--line)}
 .r:last-child{border-bottom:0}
 .r .k{font-family:"Roboto Mono",monospace;font-weight:700;font-size:24px;color:var(--ink3)}
 .r .nm{font-size:29px;font-weight:800;overflow:hidden;white-space:nowrap;text-overflow:ellipsis}
 .r .x{font-family:"Roboto Mono",monospace;font-weight:700;font-size:30px;color:var(--rx,var(--hot))}
 .r .ct{font-size:17px;color:var(--ink2);font-weight:700;min-width:52px;text-align:right}
 /* 下のサムネイル。上に文字は重ねない（サムネイルはそのまま見せる）。白いフチと深い影で写真のように */
-.pics{flex:none;display:grid;grid-template-columns:repeat(3,1fr);gap:28px;padding:0 4px}
-.pics figure{min-width:0}
-.pics figure img{width:100%%;height:200px;object-fit:cover;border-radius:12px;display:block;
+/* ★サムネイルは YouTube と同じ 16:9 のまま見せる（2026-11-21）。前は高さ200pxの横長の枠に
+   object-fit:cover で入れていたので、上下が切れていた（たろちんさん「下側がちょっと切れている」。
+   サムネイルの下には大きな文字が入っていることが多い）。幅を決めて、高さは 16:9 で決まる */
+.pics{flex:none;display:flex;justify-content:space-between;padding:0 4px}
+.pics figure{width:440px;min-width:0}
+.pics figure img{width:100%%;aspect-ratio:16/9;height:auto;object-fit:cover;border-radius:12px;display:block;
   background:var(--rail);border:3px solid #fff;
   box-shadow:0 18px 34px -16px rgba(15,30,60,.55),0 3px 8px -3px rgba(15,30,60,.25)}
 .pics figcaption{display:flex;justify-content:space-between;align-items:center;gap:10px;margin-top:10px}
