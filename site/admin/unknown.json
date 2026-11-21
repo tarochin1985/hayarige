@@ -1,7 +1,7 @@
 {
  "mode": "admin",
  "date": "2026-11-21",
- "generated": "2026-11-21 09:26",
+ "generated": "2026-11-21 09:32",
  "unknown": [
   {
    "guess": "縦型配信",
@@ -423,18 +423,6 @@
      "t": "【初ゲスト：鈴代紗弓さん】春花らんのStreaming Club（第104回配信）",
      "c": "amiami Hobby Channel",
      "u": "https://www.youtube.com/watch?v=fi_T_S8YRps"
-    }
-   ]
-  },
-  {
-   "guess": "助けてください",
-   "channels": 1,
-   "n": 1,
-   "examples": [
-    {
-     "t": "【  助けてください 】初見さん来ないと24時間配信終われません！！たすけて！！【  耐久配信  】 #初見さん大歓迎",
-     "c": "紺月らぎ -Koduki ragi-",
-     "u": "https://www.youtube.com/watch?v=QcR5MBE1X6k"
     }
    ]
   },
@@ -1735,18 +1723,6 @@
    ]
   },
   {
-   "guess": "視聴者参加型いろいろな仕掛けあり",
-   "channels": 1,
-   "n": 1,
-   "examples": [
-    {
-     "t": "【視聴者参加型いろいろな仕掛けあり】#初見さん大歓迎  #おはようvtuber #作業用 昭和生まれの元祖ドパガキ（自称）推しを無料で応援可！#推し推され サイト登録しよう #おみくじ 回してね！",
-     "c": "神楽裂タニオ★推し推されサイト1位を目指すVtuber",
-     "u": "https://www.youtube.com/watch?v=BxTe9VrcbXY"
-    }
-   ]
-  },
-  {
    "guess": "ガチか?",
    "channels": 1,
    "n": 1,
@@ -2379,18 +2355,6 @@
      "t": "【界の軌跡(完結編) 】次回作のタイトル予想！！ どんな一文字になる？？【kai no kiseki  Farewell, O Zemuria  】",
      "c": "えふお Games",
      "u": "https://www.youtube.com/watch?v=QhQ2jKXQGnI"
-    }
-   ]
-  },
-  {
-   "guess": "前夜祭",
-   "channels": 1,
-   "n": 1,
-   "examples": [
-    {
-     "t": "【  前夜祭  】一緒にカウントダウンしよ～💙！！【  #紺月らぎ  】 #初見さん大歓迎",
-     "c": "紺月らぎ -Koduki ragi-",
-     "u": "https://www.youtube.com/watch?v=k699SRoFms8"
     }
    ]
   },
@@ -3303,7 +3267,6 @@
     "channels": [
      "mogすけちゃんネル",
      "もめﾀﾝ🏖️🥞",
-     "天使らら / Lara Ch.",
      "桔梗姫乃 / Himeno Ch.",
      "神楽裂タニオ★推し推されサイト1位を目指すVtuber",
      "紺月らぎ -Koduki ragi-",
@@ -3393,14 +3356,21 @@
     "videos": 36
    },
    {
-    "game": "モンスターハンターアウトランダーズ",
-    "channels": 30,
-    "videos": 38
+    "game": "フォートナイト",
+    "channels": 32,
+    "videos": 36
    }
   ]
  },
  "drift": [],
  "tags": [
+  {
+   "tag": "初見さん大歓迎",
+   "game": "Fortnite",
+   "evidence": 4,
+   "added": 7,
+   "channels": 6
+  },
   {
    "tag": "にじさんじlリグ",
    "game": "雀魂",
