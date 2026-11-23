@@ -327,20 +327,6 @@
   ]
  },
  {
-  "name": "1080° Snowboarding: Recompiled",
-  "alias": [],
-  "pop": 0,
-  "y": 2026,
-  "d": "2026-10-24",
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Racing",
-   "Sport"
-  ]
- },
- {
   "name": "10hit",
   "alias": [],
   "pop": 0,
@@ -1046,7 +1032,9 @@
  },
  {
   "name": "A Thousand Cloys",
-  "alias": [],
+  "alias": [
+   "AThousandCloys.exe"
+  ],
   "pop": 0,
   "y": 2026,
   "d": "2026-11-23",
@@ -1922,7 +1910,7 @@
   "alias": [],
   "pop": 0,
   "y": 2026,
-  "d": "2026-11-23",
+  "d": "2026-11-22",
   "p": [
    "pc"
   ],
@@ -3099,6 +3087,7 @@
    "pc"
   ],
   "g": [
+   "Shooter",
    "Adventure",
    "Indie"
   ]
@@ -4102,7 +4091,9 @@
  },
  {
   "name": "ArcaneBound",
-  "alias": [],
+  "alias": [
+   "ArcaneBound.exe"
+  ],
   "pop": 0,
   "y": 2026,
   "d": "2026-11-23",
@@ -4311,7 +4302,9 @@
  },
  {
   "name": "Armorer: Tidy Up the Armory Before Dawn",
-  "alias": [],
+  "alias": [
+   "Armored Ready by Dawn.exe"
+  ],
   "pop": 0,
   "y": 2026,
   "d": "2026-11-09",
@@ -7405,7 +7398,9 @@
  },
  {
   "name": "Blackout Route",
-  "alias": [],
+  "alias": [
+   "DL.exe"
+  ],
   "pop": 0,
   "y": 2026,
   "d": "2026-11-23",
@@ -7416,6 +7411,22 @@
    "Shooter",
    "Adventure",
    "Indie"
+  ]
+ },
+ {
+  "name": "Blacksmith Master",
+  "alias": [
+   "Blacksmith Master.exe"
+  ],
+  "pop": 0,
+  "y": 2026,
+  "d": "2026-11-19",
+  "p": [
+   "pc"
+  ],
+  "g": [
+   "Simulator",
+   "Strategy"
   ]
  },
  {
@@ -13056,7 +13067,8 @@
  {
   "name": "Command at Your Own Risk",
   "alias": [
-   "CAYOR"
+   "CAYOR",
+   "CommandAtYourOwnRisk.exe"
   ],
   "pop": 0,
   "y": 2026,
@@ -13980,6 +13992,20 @@
   ]
  },
  {
+  "name": "Cozy Escapes",
+  "alias": [],
+  "pop": 0,
+  "y": 2026,
+  "d": "2026-11-19",
+  "p": [
+   "pc"
+  ],
+  "g": [
+   "Puzzle",
+   "Indie"
+  ]
+ },
+ {
   "name": "Cozy Farm",
   "alias": [],
   "pop": 0,
@@ -14267,7 +14293,9 @@
  },
  {
   "name": "Criminal Archives: Symphony of Death - Collector's Edition",
-  "alias": [],
+  "alias": [
+   "Criminal_Archives_Symphony_of_Death_CE.exe"
+  ],
   "pop": 0,
   "y": 2026,
   "d": "2026-10-31",
@@ -15936,21 +15964,6 @@
   ]
  },
  {
-  "name": "Date for Dead",
-  "alias": [],
-  "pop": 0,
-  "y": 2026,
-  "d": "2026-10-25",
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Simulator",
-   "Indie",
-   "Visual Novel"
-  ]
- },
- {
   "name": "Date the Difference",
   "alias": [],
   "pop": 0,
@@ -16805,6 +16818,21 @@
   "g": [
    "Role-playing (RPG)",
    "Simulator",
+   "Indie"
+  ]
+ },
+ {
+  "name": "Defender Bros",
+  "alias": [],
+  "pop": 0,
+  "y": 2026,
+  "d": "2026-11-19",
+  "p": [
+   "pc"
+  ],
+  "g": [
+   "Shooter",
+   "Strategy",
    "Indie"
   ]
  },
@@ -22081,22 +22109,6 @@
   ]
  },
  {
-  "name": "Everburning Dark",
-  "alias": [],
-  "pop": 0,
-  "y": 2026,
-  "d": "2026-10-25",
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Role-playing (RPG)",
-   "Strategy",
-   "Adventure",
-   "Indie"
-  ]
- },
- {
   "name": "Everest: Survival Simulator",
   "alias": [
    "Everest Survival Simulator.exe"
@@ -24716,7 +24728,9 @@
  },
  {
   "name": "Flock Hunt",
-  "alias": [],
+  "alias": [
+   "Flock Hunt.exe"
+  ],
   "pop": 0,
   "y": 2026,
   "d": "2026-11-23",
@@ -24887,7 +24901,9 @@
  },
  {
   "name": "Follyvale",
-  "alias": [],
+  "alias": [
+   "Follyvale.exe"
+  ],
   "pop": 0,
   "y": 2026,
   "d": "2026-11-23",
@@ -26514,7 +26530,9 @@
  },
  {
   "name": "GemCremental",
-  "alias": [],
+  "alias": [
+   "GemCremental.exe"
+  ],
   "pop": 0,
   "y": 2026,
   "d": "2026-10-27",
@@ -27409,7 +27427,9 @@
  },
  {
   "name": "Goblin Island",
-  "alias": [],
+  "alias": [
+   "GoblinIsland.exe"
+  ],
   "pop": 0,
   "y": 2026,
   "d": "2026-11-23",
@@ -27898,7 +27918,7 @@
    "GTA6",
    "GTAVI"
   ],
-  "pop": 229,
+  "pop": 246,
   "y": 2026,
   "d": "2026-11-19",
   "p": [
@@ -31116,7 +31136,9 @@
  },
  {
   "name": "Hoard",
-  "alias": [],
+  "alias": [
+   "Hoard.exe"
+  ],
   "pop": 0,
   "y": 2026,
   "d": "2026-11-23",
@@ -31860,7 +31882,9 @@
  },
  {
   "name": "Huex",
-  "alias": [],
+  "alias": [
+   "huex.exe"
+  ],
   "pop": 0,
   "y": 2026,
   "d": "2026-11-23",
@@ -33617,7 +33641,9 @@
  },
  {
   "name": "Internet Cafe 98",
-  "alias": [],
+  "alias": [
+   "Internet Cafe 98.exe"
+  ],
   "pop": 0,
   "y": 2026,
   "d": "2026-11-23",
@@ -34345,6 +34371,7 @@
  {
   "name": "Jaden Industries",
   "alias": [
+   "Jaden Industries.exe",
    "Jaden Industries: Cozy Automation Puzzler"
   ],
   "pop": 0,
@@ -34816,22 +34843,6 @@
   ],
   "g": [
    "Adventure"
-  ]
- },
- {
-  "name": "Junxions",
-  "alias": [],
-  "pop": 0,
-  "y": 2026,
-  "d": "2026-12-31",
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Real Time Strategy (RTS)",
-   "Simulator",
-   "Strategy",
-   "Indie"
   ]
  },
  {
@@ -35435,7 +35446,7 @@
   ],
   "pop": 0,
   "y": 2026,
-  "d": "2026-11-12",
+  "d": "2026-11-19",
   "p": [
    "pc"
   ],
@@ -42231,6 +42242,22 @@
   ]
  },
  {
+  "name": "Mosquito Problem",
+  "alias": [
+   "Mosquito Problem.exe"
+  ],
+  "pop": 0,
+  "y": 2026,
+  "d": "2026-11-12",
+  "p": [
+   "pc"
+  ],
+  "g": [
+   "Simulator",
+   "Indie"
+  ]
+ },
+ {
   "name": "Motion Wulin",
   "alias": [],
   "pop": 0,
@@ -44962,7 +44989,9 @@
  },
  {
   "name": "Node: Protocol",
-  "alias": [],
+  "alias": [
+   "Node_Protocol_v_0.9.6.exe"
+  ],
   "pop": 0,
   "y": 2026,
   "d": "2026-11-01",
@@ -47976,6 +48005,20 @@
   ]
  },
  {
+  "name": "Paystreak",
+  "alias": [],
+  "pop": 0,
+  "y": 2026,
+  "d": "2026-11-12",
+  "p": [
+   "pc"
+  ],
+  "g": [
+   "Simulator",
+   "Indie"
+  ]
+ },
+ {
   "name": "Peace Dice",
   "alias": [
    "PeaceDice.exe"
@@ -48374,20 +48417,17 @@
   ]
  },
  {
-  "name": "Phantom Streets",
-  "alias": [
-   "Phantom Vice Auto"
-  ],
+  "name": "Phantom Shapes",
+  "alias": [],
   "pop": 0,
   "y": 2026,
-  "d": "2026-11-19",
+  "d": "2026-12-17",
   "p": [
    "pc"
   ],
   "g": [
-   "Racing",
-   "Role-playing (RPG)",
-   "Adventure"
+   "Adventure",
+   "Indie"
   ]
  },
  {
@@ -50831,8 +50871,10 @@
    "pc"
   ],
   "g": [
+   "Real Time Strategy (RTS)",
    "Strategy",
-   "Indie"
+   "Indie",
+   "Card & Board Game"
   ]
  },
  {
@@ -51684,6 +51726,7 @@
   "g": [
    "Simulator",
    "Indie",
+   "Arcade",
    "Card & Board Game"
   ]
  },
@@ -54020,7 +54063,7 @@
    "ROB RUN",
    "start_protected_game.exe"
   ],
-  "pop": 18,
+  "pop": 19,
   "y": 2026,
   "d": "2026-11-04",
   "p": [
@@ -58019,6 +58062,8 @@
   ],
   "g": [
    "Platform",
+   "Puzzle",
+   "Adventure",
    "Indie"
   ]
  },
@@ -66438,7 +66483,7 @@
   "alias": [
    "Zelda no Densetsu Toki no Ocarina"
   ],
-  "pop": 64,
+  "pop": 65,
   "y": 2026,
   "d": "2026-11-05",
   "p": [
@@ -69454,7 +69499,8 @@
  {
   "name": "Too Many Clankers",
   "alias": [
-   "TOO MANY CLANKERS"
+   "TOO MANY CLANKERS",
+   "VoxelTD.exe"
   ],
   "pop": 0,
   "y": 2026,
@@ -72128,6 +72174,7 @@
  {
   "name": "Very Very Rare",
   "alias": [
+   "Very Very RARE.exe",
    "Very Very RARE"
   ],
   "pop": 0,
@@ -72230,20 +72277,6 @@
   "g": [
    "Role-playing (RPG)",
    "Simulator",
-   "Adventure",
-   "Indie"
-  ]
- },
- {
-  "name": "Village of the Mirror",
-  "alias": [],
-  "pop": 0,
-  "y": 2026,
-  "d": "2026-10-25",
-  "p": [
-   "pc"
-  ],
-  "g": [
    "Adventure",
    "Indie"
   ]
@@ -74552,7 +74585,9 @@
  },
  {
   "name": "Wisp & Willow",
-  "alias": [],
+  "alias": [
+   "Wisp & Willow.exe"
+  ],
   "pop": 0,
   "y": 2026,
   "d": "2026-11-18",
