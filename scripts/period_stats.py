@@ -140,7 +140,7 @@ def tally_period(videos, idx, disp, override, a=None, b=None):
                  "byday": collections.defaultdict(set)})
     for v in videos:
         name, how = M.extract(v["title"], idx, fallback=True)
-        if how != "dict" and v["id"] in by_tag:
+        if how not in ("dict", "multi") and v["id"] in by_tag:   # まとめ動画は数えない（match.py）
             name, how = by_tag[v["id"]], "dict"
         if how != "dict":
             continue

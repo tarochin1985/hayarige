@@ -420,7 +420,7 @@ def find_misses(videos, idx, tagged=None):
     seen = defaultdict(lambda: {"word": "", "chs": set(), "n": 0, "ex": []})
     for v in videos:
         _g, how = M.extract(v["title"], idx, fallback=True)
-        if how == "dict" or v["id"] in tagged:
+        if how in ("dict", "multi") or v["id"] in tagged:
             continue
         for tk in miss_tokens(v["title"]):
             c = M.compact(tk)
@@ -513,6 +513,8 @@ def tag_games(videos, idx):
         if not found:
             continue
         g, how = M.extract(v["title"], idx, fallback=True)
+        if how == "multi":
+            continue                           # まとめ動画はタグの引き継ぎにも使わない
         for t in found:
             e = tags[t]
             e["ch"].add(v.get("channel_id"))
@@ -577,7 +579,7 @@ def tally(videos, idx, d=None):
     by_tag, _ = tag_games(videos, idx)
     for v in videos:
         g, how = M.extract(v["title"], idx, fallback=True)
-        if how != "dict" and v["id"] in by_tag:
+        if how not in ("dict", "multi") and v["id"] in by_tag:
             g, how = by_tag[v["id"]], "dict"
         if how == "dict":
             e = games[g]
