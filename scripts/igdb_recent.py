@@ -37,6 +37,13 @@ PAST_DAYS = 180        # 何日前までの発売作を入れるか
 FUTURE_DAYS = 120      # 何日先までの発売予定を入れるか（体験版・βが配信される）
 PAGE = 500
 CAP = 2500             # 過去・未来それぞれの上限
+# ★「数えているゲームを、取り直しのときに落とさない」（2026-11-25）。
+#   CAP があるので、IGDB に新作が多い時期は「過去180日」が実際には**直近1か月ほど**しか入らない。
+#   9/2発売の『Bombanana!』が 9/3〜10/23 の40日間ランキングに入っていたのに、
+#   入れ替えで外れて 10/24 から0本になった（題は全部『BOMBANANA!』で、上位5万本のカタログにも無い）。
+#   前の版にあって今回の取り直しで外れた行でも、**直近 KEEP_DAYS 日の game_days.json に名前がある**
+#   （＝ランキングに入っていた）なら残す。"keep": 1 を付ける。
+KEEP_DAYS = 60
 
 FIELDS = ("fields name,alternative_names.name,alternative_names.comment,"
           "first_release_date,total_rating_count,platforms,genres.name;")
@@ -59,6 +66,26 @@ def fetch(ig, where, sort):
         offset += PAGE
         time.sleep(0.28)          # 1秒4回までの制限を守る
     return out
+
+
+def keep_counted(before, have):
+    """前の版の行のうち、今回外れたが直近 KEEP_DAYS 日に数えていたもの（上の KEEP_DAYS）。"""
+    gd = read_json(DATA / "game_days.json", {}) or {}
+    dn = read_json(DATA / "display_names.json", {}) or {}
+    seen = set()
+    for d in sorted(gd)[-KEEP_DAYS:]:
+        seen |= set((gd.get(d) or {}).keys())
+    kept = []
+    for r in before:
+        n = r.get("name")
+        if not n or n in have:
+            continue
+        if n in seen or dn.get(n) in seen or r.get("jp") in seen:
+            kept.append(dict(r, keep=1))
+    if kept:
+        log(f"取り直しで外れたが、直近{KEEP_DAYS}日に数えていたので残す: {len(kept)} 本"
+            f"（{'・'.join(x['name'] for x in kept[:8])}{' ほか' if len(kept) > 8 else ''}）")
+    return kept
 
 
 def main():
@@ -124,6 +151,8 @@ def main():
     out.sort(key=lambda r: r["name"])
 
     before = read_json(DATA / "igdb_recent.json", []) or []
+    out += keep_counted(before, {r["name"] for r in out})
+    out.sort(key=lambda r: r["name"])
     write_json(DATA / "igdb_recent.json", out)
     add = len({r["name"] for r in out} - {r["name"] for r in before})
     log(f"新作の辞書を更新しました: {len(out)} 本（前回から新しく {add} 本）"
