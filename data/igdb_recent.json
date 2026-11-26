@@ -3768,21 +3768,6 @@
   ]
  },
  {
-  "name": "Anu: Tablets of Thoth",
-  "alias": [
-   "ANU: Tablets of Thoth"
-  ],
-  "pop": 0,
-  "y": 2026,
-  "d": "2026-10-28",
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Adventure"
-  ]
- },
- {
   "name": "Anvilia",
   "alias": [],
   "pop": 0,
@@ -17573,6 +17558,7 @@
    "pc"
   ],
   "g": [
+   "Strategy",
    "Indie",
    "Arcade"
   ]
@@ -23543,6 +23529,20 @@
   ],
   "g": [
    "Strategy"
+  ]
+ },
+ {
+  "name": "Farmer's Diary",
+  "alias": [],
+  "pop": 0,
+  "y": 2026,
+  "d": "2026-11-26",
+  "p": [
+   "pc"
+  ],
+  "g": [
+   "Simulator",
+   "Indie"
   ]
  },
  {
@@ -29706,7 +29706,7 @@
   "alias": [
    "HBGC.exe"
   ],
-  "pop": 0,
+  "pop": 1,
   "y": 2026,
   "d": "2026-11-06",
   "p": [
