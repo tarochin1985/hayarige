@@ -19,7 +19,7 @@ SITE_D = Path(__file__).resolve().parent.parent / "site" / "d"
 DATA = Path(__file__).resolve().parent.parent / "data"
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
-from common import FRAMES as _FRAMES, X_HANDLE_RE as _X_HANDLE_RE  # noqa: E402
+from common import FRAMES as _FRAMES, X_HANDLE_RE as _X_HANDLE_RE, tail_emoji as _tail_emoji  # noqa: E402
 
 # 「当サイトの集計に入ったのは今日が初めて」と書いてよいのは、
 # 本当に過去1日も出ていないときだけ。
@@ -462,8 +462,11 @@ def info(col, day=""):
           if x]
     if hs:
         remind.append("公式X: " + " ".join("@" + h for h in hs)
-                      + " … 公式サイトかSteamのページからリンクされているのを確かめましたか。"
-                      "名前の似た非公式アカウントに届くと、取り返しがつきません")
+                      + " … 公式サイト・Steamのページのリンクか、ニュース記事（開発元のアカウントとして紹介・"
+                      "告知ツイートの埋め込み）で確かめましたか。名前の似た非公式アカウントに届くと、取り返しがつきません")
+    if not _tail_emoji(col):
+        remind.append("絵文字 … 投稿文の本文の最後に1つ付けられます（\"絵文字\": \"🎨\" の形。ゲームに合うものが"
+                      "思いついたら。2026-11-25 たろちんさん）")
     if str(col.get("枠") or "").strip() == "推し":
         remind.append("枠「推し」… 推す理由は事実で書く。「流行る」「ヒット確実」と言い切らない"
                       "（EDITORIAL.md 5章H）。配信者の動きの根拠を最低1つ本文に入れる")
@@ -704,6 +707,10 @@ def validate(col):
             h = str(x).strip().lstrip("@＠")
             if not _X_HANDLE_RE.match(h):
                 bad.append(f"公式X のアカウント名の形が違います（英数字と _ で15字まで）: {x!r}")
+
+    # ---- 絵文字（2026-11-25）。投稿文の本文の最後に付く。1つだけ。body には書かない
+    if col.get("絵文字") is not None and not _tail_emoji(col):
+        bad.append(f"絵文字 は絵文字1つだけにしてください（字や数字は入れない）: {col.get('絵文字')!r}")
 
     srcs = col.get("sources") or []
     if not srcs:

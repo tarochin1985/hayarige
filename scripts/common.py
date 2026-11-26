@@ -82,6 +82,24 @@ def official_handles(col):
     return out[:2]
 
 
+# ★本文の最後に添える絵文字（2026-11-25 たろちんさん）。
+# > 2段目にも絵文字入れてよいよ。紹介ツイート、朝のコラムともに本文の最後に絵文字をひとつ
+# > 添えている。僕が手動でやっているけどあなたもゲームに合った絵文字が思いついたら入れてください
+# コラムの JSON に `"絵文字": "🎨"` と書くと、投稿文（X・Bluesky）の本文の最後に付く（make_card.py）。
+# body には書かない（サイトと画像に出てしまう）。1つだけ。字や数字の入ったものは捨てる。
+def tail_emoji(col):
+    import unicodedata as _u
+    v = str((col or {}).get("絵文字") or "").strip() if isinstance(col, dict) else ""
+    if not v or len(v) > 8:
+        return ""
+    for ch in v:
+        cat = _u.category(ch)
+        if ch in "\u200d\ufe0f\u20e3" or cat in ("So", "Sk", "Mn", "Cf") or 0x1F3FB <= ord(ch) <= 0x1F3FF:
+            continue
+        return ""                                  # 文字・数字・記号の入ったものは使わない
+    return v
+
+
 def today() -> str:
     return datetime.now(JST).strftime("%Y-%m-%d")
 

@@ -21,7 +21,7 @@ import re
 import sys
 from pathlib import Path
 
-from common import DATA, SITE, log, read_json, column_frame, official_handles, MENTION_HEAD
+from common import DATA, SITE, log, read_json, column_frame, official_handles, MENTION_HEAD, tail_emoji
 
 
 def site_url():
@@ -1008,8 +1008,13 @@ def tweet_text(data):
     fr = column_frame(col)
     first = fr["tweet"].format(game=game) if fr else f"今日の注目ゲームは『{game}』🎮"
     out = [first, "", head]
+    # ★本文の最後に絵文字を1つ（2026-11-25〜。コラムの "絵文字"。common.py の tail_emoji）。
+    #   1文目の句点を外してから付ける（「…ゲーム。🎨」より「…ゲーム🎨」のほうが収まる）
+    emo = tail_emoji(col)
     if summary:
-        out += ["", summary]
+        out += ["", (summary.rstrip("。") + emo) if emo else summary]
+    elif emo:
+        out[-1] = head + emo
     # ★インディーの日は公式アカウントを入れる（2026-11-19）。開発元に届くと
     #   引用で広めてもらえることがある。URLの前に置く（URLのカードが最後に来るように）
     hs = official_handles(col)
