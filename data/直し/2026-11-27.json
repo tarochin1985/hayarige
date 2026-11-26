@@ -1,0 +1,33 @@
+{
+ "メモ": "2026-11-27 朝の窓のブロックから（急ぎ2件・急ぎでない4件）。\n\n    新しく 40本 / 失った 0本 / 移った 30本\n      新 仁王3 16本/3ch ／ The Plant Shop 10本/9ch ／ DayZ 9本/8ch ／ デジモンアリシオン 5本/5ch\n      移 One Life → DayZ 30本\n    見張り: 問題なし\n\n①【急ぎ・条件1】『One Life』… ★`One Life` を止めた（alias_blocklist）。カタログの `One Life`（pop 0・発売年なし）は一般名詞の行で、\n  にじさんじの DayZ 50人企画「にじさんじDAYZ:ONE LIFE」「#にじONELIFE」を吸い、今日のランキング6位に『One Life』として出ていた。\n  あわせて『にじONELIFE』『にじさんじDAYZ』を DayZ の別名にした（題に DayZ と書いていない回も DayZ に入る）。30本が DayZ に移った。\n  10-27 の Alone／Corridor／Adventure／Halloween と同じ形。\n  ★game_days.json の過去2日に『One Life』の記録が残っているが、自動の更新が書き換えるファイルなので触っていない\n②【急ぎ・条件3】『デジモンアリシオン』… `Digimon Alysion` に日本語名・表示名。4Gamer 2026-11-25（スマートフォン向け・基本無料・バンダイ）。\n  『デジアリ』は3字の略称なので **alias_exact_only**（括弧まるごとのときだけ）。機種 []（スマホ専用）、発売日 2026-11-25\n③『The Plant Shop』… 手でキー（Steam app 4140530・2026-09-16・Tori）。機種 pc。10本/9ch がこれで入る\n④『仁王3』→ `Nioh 3`（全角の３も同じ字になる）。AUTOMATON の記事\n⑤ 何もしない: 『HER TREES』（2作のどちらか決まらない）、『drummania／GITADORA』（2ch・稼働日を確かめていない）",
+ "別名": {
+  "DayZ": [
+   "にじONELIFE",
+   "にじさんじDAYZ"
+  ],
+  "Digimon Alysion": [
+   "デジモンアリシオン",
+   "デジアリ"
+  ],
+  "The Plant Shop": [],
+  "Nioh 3": [
+   "仁王3"
+  ]
+ },
+ "表示名": {
+  "Digimon Alysion": "デジモンアリシオン"
+ },
+ "機種": {
+  "Digimon Alysion": [],
+  "The Plant Shop": [
+   "pc"
+  ]
+ },
+ "発売日": {
+  "Digimon Alysion": "2026-11-25",
+  "The Plant Shop": "2026-09-16"
+ },
+ "別名を止める": [
+  "One Life"
+ ]
+}
