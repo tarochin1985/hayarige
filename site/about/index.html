@@ -152,6 +152,12 @@ footer .flink:hover{text-decoration:underline}
  white-space:nowrap;padding-top:3px}
 .doc dd{margin:0}
 @media (max-width:560px){.doc{padding:20px 18px 24px}.doc dl{grid-template-columns:1fr;gap:2px 0}}
+/* 運営者のことば（2026-11-27）。このサイトについての頭に置く */
+.about-me{border-left:4px solid var(--accent);background:var(--wash);border-radius:0 var(--r) var(--r) 0;
+ padding:14px 18px;margin:0 0 22px}
+.about-me h2{margin:0 0 10px}
+.about-me p{margin:0 0 8px;line-height:1.85}
+.about-me .about-sig{text-align:right;font-weight:700;color:var(--ink-2);margin:4px 0 0}
 
 /* まとめの終わりに置く「記録」の表（2026-11-05 たろちんさん）。
    本文より一段おとなしくする。読みものの付録なので、順位表のように
@@ -473,6 +479,31 @@ footer{font-size:11.5px;color:var(--ink-3);text-align:center;border-top:1px soli
    auto-fit を使うと、1枚のときは横いっぱい、2枚のときだけ半分ずつになる
    （枚数を数えてクラスを足す必要がない）。 */
 .mtlist{display:grid;gap:12px;grid-template-columns:repeat(auto-fit,minmax(330px,1fr))}
+/* NEW の札・まとめの全文（折りたたみ）・最近のコラム（2026-11-27） */
+.new{display:inline-block;margin-left:6px;font-size:10.5px;font-weight:800;letter-spacing:.06em;color:#fff;
+ background:var(--hot);border-radius:4px;padding:1px 6px;vertical-align:1px}
+#mtfull-sec{display:flex;flex-direction:column;gap:8px;margin-top:-6px}
+.mtfull{background:var(--card);border:1px solid var(--line);border-radius:var(--r)}
+.mtfull summary{cursor:pointer;list-style:none;display:flex;flex-wrap:wrap;align-items:center;gap:6px 8px;padding:12px 16px;font-size:14.5px}
+.mtfull summary::-webkit-details-marker{display:none}
+.mtfull summary .kind{font-size:11.5px;font-weight:700;color:var(--accent);border:1px solid var(--line);border-radius:99px;padding:1px 9px}
+.mtfull summary .new{margin-left:0}
+.mtfull summary b{flex:1 1 220px;min-width:0}
+.mtfull summary .open{font-size:12.5px;color:var(--accent);font-weight:700}
+.mtfull summary .open::after{content:" ▾"}
+.mtfull[open] summary .open::after{content:" ▴"}
+.mtfull-in{padding:0 18px 14px;line-height:1.85;font-size:15px}
+.mtfull-in h3{font-size:15.5px;margin:16px 0 6px}
+.mtfull-in .lead{font-weight:700}
+.mtfull-go a{color:var(--accent);font-weight:700}
+.rclist{display:flex;flex-direction:column;gap:8px}
+.rc{display:grid;grid-template-columns:auto 1fr;gap:2px 12px;background:var(--card);border:1px solid var(--line);
+ border-radius:var(--r);padding:10px 14px;color:inherit;text-decoration:none}
+.rc-d{grid-row:1 / span 3;font-size:12.5px;color:var(--ink-3);font-weight:700;padding-top:2px;white-space:nowrap}
+.rc-g{font-size:12.5px;color:var(--accent);font-weight:700}
+.rc-h{font-weight:800;line-height:1.45}
+.rc-b{font-size:13px;color:var(--ink-2);line-height:1.6;overflow:hidden;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical}
+.doc.guide h2{margin-top:0}
 .mt{display:flex;gap:14px;align-items:center;background:var(--card);border:1px solid var(--line);
  border-radius:var(--r);box-shadow:var(--sh);padding:14px 16px;text-decoration:none;color:inherit;
  position:relative;overflow:hidden}
@@ -561,7 +592,7 @@ footer{font-size:11.5px;color:var(--ink-3);text-align:center;border-top:1px soli
          書く癖をつけると、置き場所が変わったときに全ページが一度に壊れる。 -->
     <a class="logo" href="../" aria-label="ハヤリゲーのトップページへ">
       <img class="mark" src="../logo.svg" alt="" width="46" height="46">
-      <div><h1>ハヤリゲー</h1><div class="tag">「次に流行るゲーム」がわかるサイト<span class="tag2">YouTubeのゲーム配信 3,993チャンネルを毎日数えています</span></div></div>
+      <div><h1>ハヤリゲー</h1><div class="tag">「次に流行るゲーム」がわかるサイト<span class="tag2">YouTubeのゲーム配信 4,060チャンネルを毎日数えています</span></div></div>
     </a>
     <div class="when"><b id="s-date">–</b><span id="s-meta">–</span></div>
   </header>
@@ -581,6 +612,9 @@ footer{font-size:11.5px;color:var(--ink-3);text-align:center;border-top:1px soli
     <article class="pick" id="pick"></article>
     
   </section>
+
+  <!-- 週・月のまとめの全文。トップだけ、折りたたんで置く（2026-11-27） -->
+  <section id="mtfull-sec" style="display:none"></section>
 
   <section id="hot-sec" style="display:none">
     <div class="head">
@@ -602,32 +636,27 @@ footer{font-size:11.5px;color:var(--ink-3);text-align:center;border-top:1px soli
     <div class="list" id="rows"></div>
   </section>
 
-  <section id="page-sec" style="">
-    <article class="doc" id="page-body">
-<h2>このサイトは何か</h2>
-<p class="lead">VTuber・ゲーム実況者がYouTubeに出している配信のタイトルを毎日集めて、
-いまどのゲームが配信されているかをランキングにしています。
-「次に流行るゲームを早く見つけたい」人のために作りました。
-配信する側にとっては次のネタ探しに、見る側にとっては「あのゲーム、急にみんなやってる」の答え合わせになります。</p>
-<p>再生数の多い<b>動画</b>を並べるサイトはすでにたくさんあります。このサイトが並べるのは
-<b>ゲーム</b>です。誰の動画が伸びたかではなく、どのゲームに人が集まっているかを見ます。</p>
+  <!-- 最近のコラムと、ランキングの見方。トップだけ（2026-11-27） -->
+  <section id="recent-sec" style="display:none">
+    <div class="head"><h2>最近のコラム</h2>
+      <span class="note">毎日1本、その日いちばん気になる動きを書いています。日付を押すとその日の記録に飛びます</span></div>
+    <div class="rclist"></div>
+  </section>
+  <section id="guide-sec" style="display:none">
+    <article class="doc guide"></article>
+  </section>
 
+  <section id="page-sec" style="">
+    <article class="doc" id="page-body"><div class="about-me"><h2>このサイトについて</h2><p>「ハヤリゲー」は、YouTubeのゲーム配信を毎日集計して、「いま流行っているゲーム」「次に流行りそうなゲーム」をランキングとコラムで紹介するサイトです。</p><p>僕自身も長年ゲーム実況をやってきて、他の人の配信を見て「面白そうだな」「自分もやりたいな」と思うことがよくあります。特に現在のゲーム配信界隈では、そんな風に誰かが配信で遊んだことをきっかけに、みんながそのゲームの配信を始めるということが少なくありません。そんな流行を素早くキャッチしてみんなが見られるようにできたら便利かな、と思って作ったのが「ハヤリゲー」です。</p><p>こだわりは、人気配信者のランキングではなく、あくまで「ゲーム」の人気に注目していること。注目のゲームは毎日のコラムで紹介するほか、人気のきっかけになった配信界隈の出来事なども、毎週・毎月のまとめコラムで紹介しています。その日の急上昇トレンドを追う「今このゲームがアツい！」、新作のみに特化して掘り出し物を見つけやすくした「新作ウォッチ」といったコーナーもあります。</p><p>情報の収集やコラムの下書きにはAIの助けを借りながら、毎日僕が全体をチェックして更新しています。そのほか、よりよい情報をお届けできるよう、日々細かい修正をしながらサイトを充実させていっています。みなさんが次に遊ぶゲームの参考にしていただけたら嬉しいです。</p><p class="about-sig">文責・たろちん（ゲーム実況者、ライター）</p></div>
 <h2>どこから集めているか</h2>
 <dl>
-  <dt>対象</dt><dd>日本語で配信しているVTuber・ゲーム実況者のYouTubeチャンネル、現在 3,993 件</dd>
+  <dt>対象</dt><dd>日本語で配信しているVTuber・ゲーム実況者のYouTubeチャンネル、現在 4,060 件</dd>
   <dt>範囲</dt><dd>直近24時間に公開された配信・動画</dd>
-  <dt>更新</dt><dd>1日2回（日本時間 7時ごろ / 19時ごろ）</dd>
+  <dt>更新</dt><dd>1日2回（朝と夕方）</dd>
   <dt>判定</dt><dd>配信タイトルの文字列から、約5万本のゲーム名辞書と照合しています</dd>
 </dl>
-<p>チャンネルは、登録者数 1,000 人以上・1年以内に投稿がある・ゲームの動画を出している、
-という条件で自動的に選んでいます。直近の動画タイトルにひらがな・カタカナが
-50% 以上出てくるかどうかも見ていて、これを下回るチャンネルは外しています。
-日本語圏の視聴者が見ている配信の流行を出すサイトなので、所属ではなく
-実際に使っている言語で判断しています。</p>
-<p>ゲームを作っている会社が運営する公式チャンネルは、数に入れていません。
-新キャラのPVや生放送は、配信者がそのゲームを選んだという話ではないためです。
-2026-09-18に調べたところ、あるゲームでは再生数の99%が会社の公式チャンネル1つから
-出ていました。そのままだと「宣伝を打った日に流行している」と出てしまいます。</p>
+<p>チャンネルは、登録者数 1,000 人以上・1年以内に投稿がある・ゲームの動画を出している、という条件で自動的に選んでいます。直近の動画タイトルにひらがな・カタカナが50% 以上出てくるかどうかも見ていて、これを下回るチャンネルは外しています。日本語圏の視聴者が見ている配信の流行を出すサイトなので、所属ではなく実際に使っている言語で判断しています。</p>
+<p>ゲーム会社の公式チャンネルや、新キャラのPVなどは数に入れず、なるべく純粋な「ゲーム配信」を数えるようにしています。</p>
 
 <h2>どう数えているか</h2>
 <p>順位は、次の3つを合わせた独自のスコアで決めています。</p>
@@ -636,78 +665,46 @@ footer{font-size:11.5px;color:var(--ink-3);text-align:center;border-top:1px soli
   <li><b>再生数</b> ── その合計</li>
   <li><b>配信数</b> ── 配信・動画が何本あったか</li>
 </ul>
-<p>ひとりがたくさん投稿しただけで上位に来ないよう、<b>何人が配信したか</b>をいちばん重く見ています。
-そのうえで、<b>同じ人が同じゲームを1日に何本も出した場合、2本目からは半分として数えています</b>
-（再生数も同じで、その人のいちばん伸びた1本を丸ごと、残りを半分として足します）。
-毎日おなじ顔ぶれが同じゲームを何本も上げると、その人ひとりで順位が積み上がってしまうためです。
-「◯件」として出している数は、この割引をしたあとの数です。</p>
-<p><b>「今このゲームがアツい」は、このサイトでいちばん見てほしい欄です。</b>
-直近数日の平均とくらべて配信が増えたタイトルを、<b>倍率の大きい順</b>に6つ出しています。
-倍率で並べると、ふだん誰も配信していない小さなゲームが上に来ます。それが狙いです。
-まだ名前の知られていないゲームを見つけて、自分の配信で試してほしくて作った欄だからです。
-大きな企画が立った日には、大きなゲームもここに入ってきます。
-<b>3チャンネル以上が同じ日に別々に配信していること</b>を条件にしているので、
-ひとりの思いつきは出てきません。倍率だけでは大きさが分からないので、
-実数（ふだん◯件 → 今日◯件）と、何人が配信したかも並べています。</p>
+<p>ひとりがたくさん投稿しただけで上位に来ないよう、<b>何人が配信したか</b>をいちばん重く見ています。そのうえで、<b>同じ人が同じゲームを1日に何本も出した場合、2本目からは半分として数えています</b>
+（再生数も同じで、その人のいちばん伸びた1本を丸ごと、残りを半分として足します）。毎日おなじ顔ぶれが同じゲームを何本も上げると、その人ひとりで順位が積み上がってしまうためです。「◯件」として出している数は、この割引をしたあとの数です。</p>
+<p><b>「今このゲームがアツい」</b>は、直近数日の平均とくらべて配信が増えたゲームを、<b>倍率の大きい順</b>に6つ出しています。倍率で並べると、ふだんあまり配信されていない小さなゲームが上に来るのがポイントで、このサイトの目的である「これから流行るゲーム」を見つけやすくなります。このサイトでいちばん見てほしい欄なので、ランキングより上に置いています。</p>
+<p>発売から60日以内の新作だけに絞ったランキング<a href="../new/">「新作ウォッチ」</a>のページもあります。新しいゲームを発掘したい方は、こちらもぜひのぞいてみてください。</p>
 
 <h2>この数字は誰が作ったものか</h2>
 <p><b>ゲーム名の判定も、件数も、倍率も、すべて当サイトが独自に作った数字です。</b>
 YouTubeが提供している数値や分類ではありません。</p>
 <ul>
-  <li><b>ゲーム名</b> ── 配信のタイトルを当サイトの辞書と照らし合わせて判定しています。
-      YouTubeが動画に付けている分類とは別のもので、置き換えるものでもありません</li>
-  <li><b>件数・チャンネル数・倍率</b> ── YouTubeのAPIから取れる公開情報を、
-      当サイトが数え上げたものです</li>
-  <li><b>再生数</b> ── これはYouTubeが返す数字そのものです。取得した時点の値なので、
-      いま見ている数と差があることがあります</li>
+  <li><b>ゲーム名</b> ── 配信のタイトルを当サイトの辞書と照らし合わせて判定しています。YouTubeが動画に付けている分類とは別のもので、置き換えるものでもありません</li>
+  <li><b>件数・チャンネル数・倍率</b> ── YouTubeのAPIから取れる公開情報を、当サイトが数え上げたものです</li>
+  <li><b>再生数</b> ── これはYouTubeが返す数字そのものです。取得した時点の値なので、いま見ている数と差があることがあります</li>
 </ul>
-<p>判定を間違えていることもあります。気づいたものは直しています。
-おかしな点を見つけたら<a href="../privacy/">お問い合わせ</a>からお知らせください。</p>
-
 <h2>数えていないもの</h2>
 <ul>
-  <li><b>Shorts</b>（3分以下の動画）── YouTubeは縦向きで3分以内の動画を
-      Shortsとして扱うため、それに合わせています</li>
-  <li><b>切り抜き</b>（タイトルや チャンネル名から判定）</li>
-  <li><b>同時視聴</b> ── アニメ・映画・発表会を視聴者と一緒に見る配信。
-      ゲームを遊んでいる配信ではないので数えません</li>
-  <li><b>同じ配信者が同じ日に出した続きもの</b> ── 1本の配信を分割した動画などは1件として数えます。
-      別の日に続くシリーズは、その日ごとに数えます</li>
+  <li><b>Shorts</b>（3分以下の動画）── YouTubeは縦向きで3分以内の動画をShortsとして扱うため、それに合わせています</li>
+  <li><b>切り抜き</b>（タイトルやチャンネル名から判定）</li>
+  <li><b>同時視聴</b> ── アニメ・映画・発表会を視聴者と一緒に見る配信。ゲームを遊んでいる配信ではないので数えません</li>
+  <li><b>同じ配信者が同じ日に出した続きもの</b> ── 1本の配信を分割した動画などは1件として数えます。別の日に続くシリーズは、その日ごとに数えます</li>
   <li><b>日本語以外で配信しているチャンネル</b> ── 事務所は問いません</li>
   <li><b>ゲーム名を判定できなかった配信</b> ── 推測では埋めません</li>
 </ul>
-<p>ただし、大会や企画の配信は題名がハッシュタグだけになりがちです
-（「【#にじ遊戯王祭2026】対抗戦」など）。そういう配信は、<b>同じタグを使っている
-ほかの人がゲーム名を書いていれば、そちらから判定しています</b>。
-3人以上が使っているタグで、ゲーム名の分かる配信が3本以上あり、
-その8割以上が同じゲームを指しているときだけです。
-推測ではなく、同じ企画の中に答えが書いてある場合にかぎります。</p>
+<p>配信タイトルにゲーム名が入っていなくても、大会や企画のハッシュタグ（「【#にじ遊戯王祭2026】対抗戦」など）からゲーム名が分かれば、そのゲームとして数えることがあります。同じタグを使っているほかの人が、ゲーム名を書いた配信を一定数以上出しているときなど、確かだと判断できる場合にかぎります。</p>
+
 
 <h2>コラムについて</h2>
-<p>「今日の注目ゲーム」は、数字が動いた理由を書いています。書くときのルールを決めていて、
-<b>裏が取れないことは書きません</b>。根拠には、公式の発表・ゲームメディア・実際の配信そのものを
-当たっています。説明できることが何も無い日は、その日は書きません。</p>
+<p>「今日の注目ゲーム」と「今日の見どころ」では、その日に特に注目したいゲームをくわしく紹介しています。その日の配信のタイトル・Steamのレビュー・Xの反応を読み比べ、公式の発表やゲームメディアで裏を取って書いています。内容はAIとたろちんの二重チェックを経て公開しています。手作業で更新しているので、ときどき更新をお休みする日もあります。</p>
+<p>週に1回の<b>「週まとめ」</b>では、その週にあったゲーム大会や配信イベント、ランキングの動きなどの流れを、月に1回の<b>「月まとめ」</b>では、その月にトレンドになったゲームのベスト3などを紹介しています。</p>
 
 <h2>間違いを見つけたら</h2>
-<p>ゲーム名の判定は自動なので、間違えることがあります。見つけしだい直しています。
-おかしなものを見つけたら、<a href="https://x.com/tarochinko" target="_blank" rel="noopener">X（@tarochinko）</a>
-のDMで教えてください。</p>
+<p>ゲーム名の判定は自動なので、間違えることがあります。見つけしだい直しています。おかしなものを見つけたら、<a href="https://x.com/hayarige" target="_blank" rel="noopener">X（@hayarige）</a>のDMか、<a href="../privacy/">お問い合わせ</a>から教えてください。</p>
 
-<h2>作っている人</h2>
-<p>ゲーム実況者の たろちん（<a href="https://x.com/tarochinko" target="_blank" rel="noopener">@tarochinko</a>）が
-個人で作っています。データはYouTube Data API、ゲーム名の辞書はIGDBを使っています。</p>
-<p>このサイトはAmazonアソシエイト・プログラムの参加者です。商品ページへのリンクから
-購入があった場合、紹介料を受け取ることがあります。ランキングの順位は
-配信の数字だけで決めていて、紹介料は関係しません。</p>
+<h2>運営者・使っているデータ</h2>
+<p>ゲーム実況者・ライターのたろちん（<a href="https://x.com/tarochinko" target="_blank" rel="noopener">@tarochinko</a>）が個人で運営しています。データはYouTube Data API、ゲーム名の辞書はIGDBを使っています。</p>
+<p>このサイトはAmazonアソシエイト・プログラムの参加者です。商品ページへのリンクから購入があった場合、紹介料を受け取ることがあります。ランキングの順位は配信の数字だけで決めていて、紹介料は関係しません。</p>
 
 <h2>アクセス解析について</h2>
-<p>どのページがどれくらい見られているかを知るために、Cloudflare Web Analytics を
-使っています。<b>この解析は</b>Cookieを置かず、閲覧者を個人として追いかけません。
-このサイトが名前・メールアドレスなどの個人情報を集めることはありません。</p>
+<p>どのページがどれくらい見られているかを知るために、Cloudflare Web Analytics を使っています。<b>この解析は</b>Cookieを置かず、閲覧者を個人として追いかけません。このサイトが名前・メールアドレスなどの個人情報を集めることはありません。</p>
 
-<p>集めた配信のデータ（タイトル・チャンネル名など）は、YouTubeの規約に従って
-30日を過ぎたら消しています。古い日の記録ページに配信の一覧が出ないのは
-そのためです。</p>
+<p>集めた配信のデータ（タイトル・チャンネル名など）は、YouTubeの規約に従って30日を過ぎたら消しています。古い日の記録ページに配信の一覧が出ないのはそのためです。</p>
 </article>
   </section>
 
@@ -747,7 +744,7 @@ YouTubeが提供している数値や分類ではありません。</p>
 </div>
 
 <script>
-const DATA = {"mode": "page", "date": "2026-11-27", "subtitle": "このサイトについて", "generated": "2026-11-27 09:32", "paths": {"home": "../", "archive": "../archive/"}};
+const DATA = {"mode": "page", "date": "2026-11-27", "subtitle": "このサイトについて", "generated": "2026-11-27 23:26", "paths": {"home": "../", "archive": "../archive/"}};
 const $ = s => document.querySelector(s);
 const esc = s => String(s ?? '').replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
 
@@ -893,7 +890,7 @@ function render(){
       const src = m.th && !/^https?:/.test(m.th) ? P.home + m.th : m.th;
       return `<a class="mt" href="${esc(P.home + m.href)}">`
         + (src ? `<img src="${esc(src)}" alt="" loading="lazy">` : '')
-        + `<div class="txt"><span class="kind">${esc(m.label)}</span>`
+        + `<div class="txt"><span class="kind">${esc(m.label)}</span>${m.new ? '<span class="new">NEW</span>' : ''}`
         + `<div class="tt">${esc(m.title)}</div>`
         + `<div class="sub">${esc(m.heading)}${m.by ? ' ／ 画像 YouTube ' + esc(m.by) : ''}</div></div></a>`;
     }).join('');
