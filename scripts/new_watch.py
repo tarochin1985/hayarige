@@ -100,11 +100,34 @@ def pick(rows, today_str, first_seen=None):
     return new[:LIST_MAX], soon[:SOON_MAX]
 
 
-def _row(i, r, home, slugs, kind):
+def _row(i, r, home, slugs, kind, links=None):
     st = (r.get("streams") or [{}])[0]
     th = st.get("th") or ""
     img = (f'<img src="{e(th)}" alt="" loading="lazy">' if th
            else '<span class="ph"></span>')
+    # ★サムネイルは元の配信へのリンクにし、下に引用元のチャンネルを出す（2026-11-27 たろちんさん）。
+    #   > 新作ウォッチのページにもSteamやAmazonページへのリンクとサムネ引用元チャンネルへのリンクを
+    #   > 出すようにしたほうがいいかと思った
+    #   ほかのページ（コラム・ゲーム別ページ）は前から「YouTube ／ チャンネル名」を添えている
+    if th and st.get("u"):
+        img = f'<a href="{e(st["u"])}" target="_blank" rel="noopener">{img}</a>'
+    src = ""
+    if th and st.get("c"):
+        ch = e(st["c"])
+        if st.get("ci"):
+            ch = (f'<a href="https://www.youtube.com/channel/{e(st["ci"])}" '
+                  f'target="_blank" rel="noopener">{ch}</a>')
+        src = f'<span class="nw-src">サムネイル: YouTube ／ {ch}</span>'
+    # 店へのリンク。ゲーム別ページと同じ store_links（機種で出し分け。スマホ専用は出さない）
+    shop = ""
+    st_url, az_url = links(r) if links else (None, None)
+    if st_url or az_url:
+        shop = ('<span class="nw-buy">'
+                + (f'<a class="st" href="{e(st_url)}" target="_blank" rel="noopener sponsored">Steamで探す</a>'
+                   if st_url else "")
+                + (f'<a class="az" href="{e(az_url)}" target="_blank" rel="noopener sponsored nofollow">Amazonで探す</a>'
+                   if az_url else "")
+                + "</span>")
     name = r.get("game") or ""
     sl = (slugs or {}).get(name)
     nm = (f'<a href="{home}g/{e(sl)}/">{e(name)}</a>' if sl else e(name))
@@ -126,7 +149,7 @@ def _row(i, r, home, slugs, kind):
             f'{int(first[5:7])}月{int(first[8:10])}日</span>') if first else ""
     return (f'<li class="nw-i"><span class="nw-n">{i}</span>'
             f'<span class="nw-th">{img}</span>'
-            f'<span class="nw-b"><span class="nw-g">{nm}</span>{tag}{seen}</span>'
+            f'<span class="nw-b"><span class="nw-g">{nm}</span>{tag}{seen}{src}{shop}</span>'
             f'<span class="nw-num"><b>{r.get("channels", 0)}</b><small>チャンネル</small>'
             f'<span class="nw-v">{r.get("videos", 0)}本</span>{_spark(r.get("spark"))}</span></li>')
 
@@ -145,6 +168,13 @@ CSS = """<style>
 .nw-rel b{margin-left:8px;color:var(--hot);font-weight:700}
 .nw-rel.soon{color:var(--accent)}
 .nw-seen{font-size:12px;color:var(--ink-3)}
+.nw-src{font-size:11.5px;color:var(--ink-3);overflow-wrap:anywhere}
+.nw-src a{color:inherit;text-decoration:underline;text-underline-offset:2px}
+.nw-buy{display:flex;flex-wrap:wrap;gap:6px;margin-top:3px}
+.nw-buy a{font-size:12px;font-weight:700;padding:2px 10px;border-radius:99px;border:1px solid var(--line);
+ color:var(--accent);background:var(--card);text-decoration:none}
+.nw-buy a.az{color:var(--hot)}
+.nw-th a{display:block}
 .nw-num{display:flex;flex-direction:column;align-items:flex-end;gap:1px;color:var(--accent);min-width:70px}
 .nw-num b{font-family:"Roboto Mono",monospace;font-size:20px;line-height:1;color:var(--ink)}
 .nw-num small{font-size:11px;color:var(--ink-3)}
@@ -158,7 +188,7 @@ CSS = """<style>
 </style>"""
 
 
-def page_html(rows, today_str, home, slugs, first_seen=None, range_label=""):
+def page_html(rows, today_str, home, slugs, first_seen=None, range_label="", links=None):
     new, soon = pick(rows, today_str, first_seen)
     out = [CSS, "<h2>新作ウォッチ</h2>",
            '<p class="lead">発売から<b>' + str(NEW_DAYS) + '日以内</b>の新作だけを、'
@@ -167,7 +197,7 @@ def page_html(rows, today_str, home, slugs, first_seen=None, range_label=""):
            "出たばかりのゲーム</b>が見つかります。</p>"]
     if new:
         out.append('<ol class="nw-l">')
-        out += [_row(i, r, home, slugs, "new") for i, r in enumerate(new, 1)]
+        out += [_row(i, r, home, slugs, "new", links) for i, r in enumerate(new, 1)]
         out.append("</ol>")
     else:
         out.append('<p class="muted">いまは並べられる新作がありません。</p>')
@@ -175,10 +205,11 @@ def page_html(rows, today_str, home, slugs, first_seen=None, range_label=""):
         out.append("<h2>発売前に配信されているゲーム</h2>"
                    '<p class="lead">体験版・ベータ・先行プレイなどで、発売前から配信されているゲームです。</p>'
                    '<ol class="nw-l">')
-        out += [_row(i, r, home, slugs, "soon") for i, r in enumerate(soon, 1)]
+        out += [_row(i, r, home, slugs, "soon", links) for i, r in enumerate(soon, 1)]
         out.append("</ol>")
     out.append('<p class="muted" style="font-size:12.5px">発売日は、手で確かめたもの（Steamのストアページなど）と、'
                "ゲームのデータベース IGDB のものを使っています。発売日が分からないゲームは載せていません。"
                "日本での発売が遅れたゲームは、実際より古く数えられることがあります。"
-               "チャンネル数・本数は当サイトが配信タイトルから独自に集計したものです。</p>")
+               "チャンネル数・本数は当サイトが配信タイトルから独自に集計したものです。"
+               "店へのリンクは店の検索結果に飛びます（商品ページではありません）。</p>")
     return "".join(out), new, soon

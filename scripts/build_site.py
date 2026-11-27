@@ -593,6 +593,7 @@ def tally(videos, idx, d=None):
             e["orgs"][v.get("affiliation") or "個人・その他"] += 1
             if len(e["streams"]) < 12:
                 e["streams"].append({"t": v["title"], "c": v["channel"],
+                                     "ci": v.get("channel_id") or "",   # 引用元チャンネルへのリンク（2026-11-27）
                                      "u": f"https://www.youtube.com/watch?v={v['id']}",
                                      "th": v.get("thumb", ""), "v": v.get("views", 0)})
         elif how == "unknown":
@@ -1325,6 +1326,10 @@ def page_html(path, data, depth, site_url="", home=None):
     d.pop("page_body", None)
     for k in ("meta_title", "meta_og", "meta_desc", "og_image"):
         d.pop(k, None)
+    # ★検索に出さないページ（2026-11-27）。読む人には見えるが、Googleの検索とAdSenseの審査の対象から外す。
+    #   いまはコラムの無いゲーム別ページだけ（下の「ゲーム別ページ」に理由）
+    if d.pop("noindex", None):
+        tpl = tpl.replace('<meta name="viewport"', '<meta name="robots" content="noindex,follow">\n<meta name="viewport"', 1)
     if home:
         # プレビュー用。本文のリンクもJS側の起点も、渡された住所に揃える
         d["paths"] = {"home": home, "archive": home + "archive/"}
@@ -1336,6 +1341,8 @@ def page_html(path, data, depth, site_url="", home=None):
     col_ = data.get("column")
     # まとめのカードはトップにだけ出す。過去の日のページには出さない
     mt = data.get("matome") if data.get("view") != "archive" else None
+    is_top = (path == "index.html" and data.get("mode") == "day"
+              and data.get("view") != "archive")
     title, ogtitle, desc = page_meta(data)
 
     # ---- 共有ボタン
@@ -1442,6 +1449,14 @@ def page_html(path, data, depth, site_url="", home=None):
                     .replace("__NCH__", f"{watched_channels():,}")
                     .replace("__MTDISP__", "" if mt else "display:none")
                     .replace("__SSR_MT__", ssr_matome(mt, home))
+                    # ★トップだけに置くもの（2026-11-27）: まとめの全文（折りたたみ）・最近のコラム・ランキングの見方
+                    .replace("__MTFULLDISP__", "" if (is_top and mt) else "display:none")
+                    .replace("__SSR_MTFULL__", ssr_mtfull(mt, home) if is_top else "")
+                    .replace("__RECENTDISP__", "" if is_top else "display:none")
+                    .replace("__SSR_RECENT__",
+                             ssr_recent_cols(home, skip=str((col_ or {}).get("date") or "")) if is_top else "")
+                    .replace("__GUIDEDISP__", "" if is_top else "display:none")
+                    .replace("__SSR_GUIDE__", GUIDE_HTML if is_top else "")
                     .replace("__SHARE_COL__", share_col)
                     .replace("__SHARE_SITE__", share_site)
                     .replace("__FOLLOW__", follow_html(read_json(
@@ -1732,6 +1747,13 @@ def special_period_end(item):
 # 月のほうが長いのは、1か月に1本しか出ないため。次が出るまで置いておきたい
 # （次が出れば、新しいほうが選ばれて自動的に入れ替わる）。
 SHOW_DAYS = {"weekly": 14, "monthly": 40}
+# ★更新から何日「NEW」を付けるか（2026-11-27 たろちんさん「週まとめ、月まとめが更新されたことも
+#   現状だとわかりにくいので更新から数日は『New』マークをつけるとか」）。期間の最終日の翌日に出るので、
+#   最終日から数える
+NEW_DAYS = 4
+# トップに折りたたんで置く、まとめの本文（href → HTML）。top_specials が詰め、page_html が読む。
+# data.json に入れると毎ページの DATA が太るので、ここに分けて持つ
+MT_FULL = {}
 
 
 def top_specials(items):
@@ -1749,9 +1771,12 @@ def top_specials(items):
             continue
         x = max(fresh, key=special_period_end)
         th = special_thumb(x["col"], x)
-        out.append({"href": f'{x["slug"]}/{x["key"]}/', "label": x["label"],
+        href = f'{x["slug"]}/{x["key"]}/'
+        MT_FULL[href] = special_body_html(x["col"])
+        out.append({"href": href, "label": x["label"],
                     "title": x["title"], "heading": x["heading"],
                     "th": th["th"], "by": th["by"], "own": th["own"],
+                    "new": (now - special_period_end(x)).days <= NEW_DAYS,
                     "_end": special_period_end(x)})
     # 扱っている期間が新しいほうを左（スマホでは上）に。
     # 10月1日なら、9月の月まとめが先で、先週の週まとめが後ろになる。
@@ -1772,11 +1797,85 @@ def ssr_matome(mts, home=""):
             src = home + src
         img = (f'<img src="{e(src)}" alt="" loading="lazy">' if src else "")
         by = f' ／ 画像 YouTube {e(mt["by"])}' if mt["by"] else ""
+        new = '<span class="new">NEW</span>' if mt.get("new") else ""
         out.append(f'<a class="mt" href="{e(home + mt["href"])}">{img}'
-                   f'<div class="txt"><span class="kind">{e(mt["label"])}</span>'
+                   f'<div class="txt"><span class="kind">{e(mt["label"])}</span>{new}'
                    f'<div class="tt">{e(mt["title"])}</div>'
                    f'<div class="sub">{e(mt["heading"])}{by}</div></div></a>')
     return "".join(out)
+
+
+def special_body_html(c):
+    """まとめの本文だけ（リード＋各段）。トップに折りたたんで置く用（2026-11-27）。"""
+    out = []
+    if str(c.get("lead", "")).strip():
+        out.append(f'<p class="lead">{rich(c["lead"])}</p>')
+    for sec in c.get("sections") or []:
+        if str(sec.get("h", "")).strip():
+            out.append(f'<h3>{e(plain(sec["h"]))}</h3>')
+        for para in str(sec.get("body", "")).split("\n"):
+            if para.strip():
+                out.append(f"<p>{rich(para.strip())}</p>")
+    return "\n".join(out)
+
+
+def ssr_mtfull(mts, home=""):
+    """★週・月のまとめの全文を、今日のコラムの下に折りたたんで置く（2026-11-27 たろちんさん）。
+
+    > 文字数の多いコラムは週まとめ、月まとめが既にあるのにトップに1回も出てないなと思った。
+    > これを一定期間トップにも表示させれば文字数問題は解決するのではないか？例えば毎日のコラムの下に
+    > 週まとめや月まとめコラムを折りたたんだ状態で置くとか（そのまま全文表示するとさすがに邪魔だし
+    > 急上昇などのメインコンテンツが下にいってしまうから）
+
+    <details> なので、読む人には1行に見え、開けば全文が読める。本文はHTMLに入っている
+    （検索エンジンとAdSenseの審査が読める）。出す期間は上のカードと同じ（SHOW_DAYS）。"""
+    out = []
+    for mt in mts or []:
+        body = MT_FULL.get(mt.get("href"))
+        if not body:
+            continue
+        new = '<span class="new">NEW</span>' if mt.get("new") else ""
+        out.append(f'<details class="mtfull"><summary><span class="kind">{e(mt["label"])}</span>{new}'
+                   f'<b>{e(mt["title"])}</b><span class="open">全文を読む</span></summary>'
+                   f'<div class="mtfull-in">{body}'
+                   f'<p class="mtfull-go"><a href="{e(home + mt["href"])}">記事のページで読む（記録の表・出典つき）</a></p>'
+                   f'</div></details>')
+    return "".join(out)
+
+
+def ssr_recent_cols(home, skip=None, n=6):
+    """★最近のコラム（2026-11-27）。トップから過去のコラムへの道が1本しかなかった。
+    日付・ゲーム名・見出し・本文の1文目を並べる。今日のぶん（skip）は除く。"""
+    rows = []
+    for f in sorted((DATA / "columns").glob("20??-??-??.json"), reverse=True):
+        if f.stem == skip:
+            continue
+        c = read_json(f, None) or {}
+        if not c.get("game") or not c.get("headline"):
+            continue
+        first = str(c.get("body") or "").strip().split("\n")[0]
+        first = (first.split("。")[0] + "。") if "。" in first else first
+        rows.append(f'<a class="rc" href="{home}d/{e(f.stem)}/">'
+                    f'<span class="rc-d">{int(f.stem[5:7])}月{int(f.stem[8:10])}日</span>'
+                    f'<span class="rc-g">{e(c["game"])}</span>'
+                    f'<span class="rc-h">{e(c["headline"])}</span>'
+                    f'<span class="rc-b">{e(first)}</span></a>')
+        if len(rows) >= n:
+            break
+    return "".join(rows)
+
+
+# ★ランキングの見方（2026-11-27）。トップのいちばん下に置く。数字の読み方を、このサイトの言葉で説明する
+GUIDE_HTML = """
+<h2>ランキングの見方</h2>
+<p><b>「みんなが遊んでるゲーム」</b>は、直近24時間にそのゲームを配信したチャンネルの数・配信の本数・再生数を合わせた独自のスコアで並べています。
+いちばん重く見ているのは<b>何チャンネルが配信したか</b>です。ひとりがたくさん投稿しても、それだけでは上に来ません。</p>
+<p><b>「急上昇」</b>は、今日の配信がふだん（それまでの日の平均）の何倍あったかで並べています。
+Apex やマインクラフトのように毎日たくさん配信されるゲームは倍率が上がりにくく、<b>まだ数は少ないのに急に増えたゲーム</b>が上に来ます。「次に流行るゲーム」の兆しは、たいていここに先に出ます。</p>
+<p><b>チャンネル数と本数の差</b>にも意味があります。チャンネル数が多ければ、いろいろな人に広がっているということ。本数のわりにチャンネル数が少なければ、少ない人数が何度も続けて遊んでいる（長く遊べるゲームや、シリーズで配信されている）ということです。</p>
+<p>数字はすべて、当サイトが配信のタイトルを読んで数えた独自の集計です。YouTubeが提供する数値ではありません。
+毎日のコラムでは、その日いちばん気になる動きを1つ選んで、配信やSteamのレビュー、公式の発表を読んで背景を書いています。</p>
+"""
 
 
 def special_html(item):
@@ -3290,24 +3389,35 @@ def search_html(home):
 """.replace("__H__", home)
 
 
+def _join_ja_lines(html_s):
+    """段落の中の改行を消す（2026-11-27）。日本語は改行が空白として出るので、
+    「運営しています。 ランキング」のように文のあいだに半角の隙間が空いていた。
+    タグの前後の改行はそのまま残す。"""
+    return re.sub(r"(?<=[^>\s])\n[ \t]*(?=[^<\s])", "", html_s)
+
+
 def about_html(cfg, n_channels):
-    """このサイトについて。数字の出どころと、数えていないものを書く。"""
+    """このサイトについて。いちばん上に運営者のことば、その下に数字の出どころと、数えていないもの。"""
     lo = int(cfg.get("min_subscribers") or 0)
     jp = float(cfg.get("min_japanese_ratio", 0.5))
-    return f"""
-<h2>このサイトは何か</h2>
-<p class="lead">VTuber・ゲーム実況者がYouTubeに出している配信のタイトルを毎日集めて、
-いまどのゲームが配信されているかをランキングにしています。
-「次に流行るゲームを早く見つけたい」人のために作りました。
-配信する側にとっては次のネタ探しに、見る側にとっては「あのゲーム、急にみんなやってる」の答え合わせになります。</p>
-<p>再生数の多い<b>動画</b>を並べるサイトはすでにたくさんあります。このサイトが並べるのは
-<b>ゲーム</b>です。誰の動画が伸びたかではなく、どのゲームに人が集まっているかを見ます。</p>
-
+    # ★運営者のことば（2026-11-27 たろちんさんが書いた文）。人が作っているサイトだと分かるように、いちばん上に置く。
+    #   文は data/site_config.json の about_title・about_statement（段落のリスト）・about_signature。書いていなければ出さない。
+    #   ★この下の段は、ことばと重ならないように 11-27 に整理した（「このサイトは何か」「誰が、どう作っているか」は
+    #     ことばのほうに入ったので消し、コラムの作り方の細かいところは「コラムについて」に移した）
+    st = [str(x).strip() for x in (cfg.get("about_statement") or []) if str(x).strip()]
+    sig = str(cfg.get("about_signature") or "").strip()
+    ttl = str(cfg.get("about_title") or "").strip()
+    head = ""
+    if st:
+        head = ('<div class="about-me">' + (f"<h2>{e(ttl)}</h2>" if ttl else "")
+                + "".join(f"<p>{e(x)}</p>" for x in st)
+                + (f'<p class="about-sig">{e(sig)}</p>' if sig else "") + "</div>")
+    return _join_ja_lines(head + f"""
 <h2>どこから集めているか</h2>
 <dl>
   <dt>対象</dt><dd>日本語で配信しているVTuber・ゲーム実況者のYouTubeチャンネル、現在 {n_channels:,} 件</dd>
   <dt>範囲</dt><dd>直近24時間に公開された配信・動画</dd>
-  <dt>更新</dt><dd>1日2回（日本時間 7時ごろ / 19時ごろ）</dd>
+  <dt>更新</dt><dd>1日2回（朝と夕方）</dd>
   <dt>判定</dt><dd>配信タイトルの文字列から、約5万本のゲーム名辞書と照合しています</dd>
 </dl>
 <p>チャンネルは、登録者数 {lo:,} 人以上・1年以内に投稿がある・ゲームの動画を出している、
@@ -3315,10 +3425,7 @@ def about_html(cfg, n_channels):
 {jp:.0%} 以上出てくるかどうかも見ていて、これを下回るチャンネルは外しています。
 日本語圏の視聴者が見ている配信の流行を出すサイトなので、所属ではなく
 実際に使っている言語で判断しています。</p>
-<p>ゲームを作っている会社が運営する公式チャンネルは、数に入れていません。
-新キャラのPVや生放送は、配信者がそのゲームを選んだという話ではないためです。
-2026-09-18に調べたところ、あるゲームでは再生数の99%が会社の公式チャンネル1つから
-出ていました。そのままだと「宣伝を打った日に流行している」と出てしまいます。</p>
+<p>ゲーム会社の公式チャンネルや、新キャラのPVなどは数に入れず、なるべく純粋な「ゲーム配信」を数えるようにしています。</p>
 
 <h2>どう数えているか</h2>
 <p>順位は、次の3つを合わせた独自のスコアで決めています。</p>
@@ -3332,14 +3439,12 @@ def about_html(cfg, n_channels):
 （再生数も同じで、その人のいちばん伸びた1本を丸ごと、残りを半分として足します）。
 毎日おなじ顔ぶれが同じゲームを何本も上げると、その人ひとりで順位が積み上がってしまうためです。
 「◯件」として出している数は、この割引をしたあとの数です。</p>
-<p><b>「今このゲームがアツい」は、このサイトでいちばん見てほしい欄です。</b>
-直近数日の平均とくらべて配信が増えたタイトルを、<b>倍率の大きい順</b>に6つ出しています。
-倍率で並べると、ふだん誰も配信していない小さなゲームが上に来ます。それが狙いです。
-まだ名前の知られていないゲームを見つけて、自分の配信で試してほしくて作った欄だからです。
-大きな企画が立った日には、大きなゲームもここに入ってきます。
-<b>3チャンネル以上が同じ日に別々に配信していること</b>を条件にしているので、
-ひとりの思いつきは出てきません。倍率だけでは大きさが分からないので、
-実数（ふだん◯件 → 今日◯件）と、何人が配信したかも並べています。</p>
+<p><b>「今このゲームがアツい」</b>は、直近数日の平均とくらべて配信が増えたゲームを、<b>倍率の大きい順</b>に6つ出しています。
+倍率で並べると、ふだんあまり配信されていない小さなゲームが上に来るのがポイントで、
+このサイトの目的である「これから流行るゲーム」を見つけやすくなります。
+このサイトでいちばん見てほしい欄なので、ランキングより上に置いています。</p>
+<p>発売から60日以内の新作だけに絞ったランキング<a href="../new/">「新作ウォッチ」</a>のページもあります。
+新しいゲームを発掘したい方は、こちらもぜひのぞいてみてください。</p>
 
 <h2>この数字は誰が作ったものか</h2>
 <p><b>ゲーム名の判定も、件数も、倍率も、すべて当サイトが独自に作った数字です。</b>
@@ -3352,14 +3457,11 @@ YouTubeが提供している数値や分類ではありません。</p>
   <li><b>再生数</b> ── これはYouTubeが返す数字そのものです。取得した時点の値なので、
       いま見ている数と差があることがあります</li>
 </ul>
-<p>判定を間違えていることもあります。気づいたものは直しています。
-おかしな点を見つけたら<a href="../privacy/">お問い合わせ</a>からお知らせください。</p>
-
 <h2>数えていないもの</h2>
 <ul>
   <li><b>Shorts</b>（3分以下の動画）── YouTubeは縦向きで3分以内の動画を
       Shortsとして扱うため、それに合わせています</li>
-  <li><b>切り抜き</b>（タイトルや チャンネル名から判定）</li>
+  <li><b>切り抜き</b>（タイトルやチャンネル名から判定）</li>
   <li><b>同時視聴</b> ── アニメ・映画・発表会を視聴者と一緒に見る配信。
       ゲームを遊んでいる配信ではないので数えません</li>
   <li><b>同じ配信者が同じ日に出した続きもの</b> ── 1本の配信を分割した動画などは1件として数えます。
@@ -3367,26 +3469,25 @@ YouTubeが提供している数値や分類ではありません。</p>
   <li><b>日本語以外で配信しているチャンネル</b> ── 事務所は問いません</li>
   <li><b>ゲーム名を判定できなかった配信</b> ── 推測では埋めません</li>
 </ul>
-<p>ただし、大会や企画の配信は題名がハッシュタグだけになりがちです
-（「【#にじ遊戯王祭2026】対抗戦」など）。そういう配信は、<b>同じタグを使っている
-ほかの人がゲーム名を書いていれば、そちらから判定しています</b>。
-3人以上が使っているタグで、ゲーム名の分かる配信が3本以上あり、
-その8割以上が同じゲームを指しているときだけです。
-推測ではなく、同じ企画の中に答えが書いてある場合にかぎります。</p>
+<p>配信タイトルにゲーム名が入っていなくても、大会や企画のハッシュタグ（「【#にじ遊戯王祭2026】対抗戦」など）からゲーム名が分かれば、
+そのゲームとして数えることがあります。同じタグを使っているほかの人が、ゲーム名を書いた配信を一定数以上出しているときなど、
+確かだと判断できる場合にかぎります。</p>
+
 
 <h2>コラムについて</h2>
-<p>「今日の注目ゲーム」は、数字が動いた理由を書いています。書くときのルールを決めていて、
-<b>裏が取れないことは書きません</b>。根拠には、公式の発表・ゲームメディア・実際の配信そのものを
-当たっています。説明できることが何も無い日は、その日は書きません。</p>
+<p>「今日の注目ゲーム」と「今日の見どころ」では、その日に特に注目したいゲームをくわしく紹介しています。
+その日の配信のタイトル・Steamのレビュー・Xの反応を読み比べ、公式の発表やゲームメディアで裏を取って書いています。
+内容はAIとたろちんの二重チェックを経て公開しています。手作業で更新しているので、ときどき更新をお休みする日もあります。</p>
+<p>週に1回の<b>「週まとめ」</b>では、その週にあったゲーム大会や配信イベント、ランキングの動きなどの流れを、
+月に1回の<b>「月まとめ」</b>では、その月にトレンドになったゲームのベスト3などを紹介しています。</p>
 
 <h2>間違いを見つけたら</h2>
 <p>ゲーム名の判定は自動なので、間違えることがあります。見つけしだい直しています。
-おかしなものを見つけたら、<a href="https://x.com/tarochinko" target="_blank" rel="noopener">X（@tarochinko）</a>
-のDMで教えてください。</p>
+おかしなものを見つけたら、<a href="https://x.com/hayarige" target="_blank" rel="noopener">X（@hayarige）</a>のDMか、<a href="../privacy/">お問い合わせ</a>から教えてください。</p>
 
-<h2>作っている人</h2>
-<p>ゲーム実況者の たろちん（<a href="https://x.com/tarochinko" target="_blank" rel="noopener">@tarochinko</a>）が
-個人で作っています。データはYouTube Data API、ゲーム名の辞書はIGDBを使っています。</p>
+<h2>運営者・使っているデータ</h2>
+<p>ゲーム実況者・ライターのたろちん（<a href="https://x.com/tarochinko" target="_blank" rel="noopener">@tarochinko</a>）が
+個人で運営しています。データはYouTube Data API、ゲーム名の辞書はIGDBを使っています。</p>
 <p>このサイトはAmazonアソシエイト・プログラムの参加者です。商品ページへのリンクから
 購入があった場合、紹介料を受け取ることがあります。ランキングの順位は
 配信の数字だけで決めていて、紹介料は関係しません。</p>
@@ -3403,7 +3504,7 @@ YouTubeが提供している数値や分類ではありません。</p>
 <p>集めた配信のデータ（タイトル・チャンネル名など）は、YouTubeの規約に従って
 30日を過ぎたら消しています。古い日の記録ページに配信の一覧が出ないのは
 そのためです。</p>
-"""
+""")
 
 
 def amazon_tagged(url, tag):
@@ -4196,7 +4297,9 @@ def main():
                 "totals": {"videos": entries[day]["videos"], "games": len(past_rows),
                            "channels": entries[day]["channels"]},
                 "adj": day_neighbors(day),
-                "ranking": past_rows[:30]}, 2)
+                "ranking": past_rows[:30],
+                # コラムの無い日は検索に出さない（2026-11-27。ゲーム別ページと同じ理由）
+                "noindex": not col}, 2)
         gdays[day] = day_games(past_rows)
         added += 1
     if added:
@@ -4311,7 +4414,9 @@ def main():
             "meta_og": "ゲームを探す",
             "meta_desc": "ゲーム名を入れると、そのゲームがいつランキングに入っていたか、"
                          "コラムで取り上げた日があるかが分かります。",
-            "page_body": search_html("../")}, 1)
+            "page_body": search_html("../"),
+            # 検索の道具だけのページなので検索に出さない（2026-11-27）
+            "noindex": True}, 1)
 
     # ---- ゲーム別ページ --------------------------------------------------
     # 「風来のシレン6 実況」のように、**ゲーム名で探している人**の受け皿。
@@ -4324,6 +4429,21 @@ def main():
     # ゲーム」のリンク先をここに限る（404を作らないため）。
     _slugs_live = {g["n"]: slugs[g["n"]] for g in _games
                    if page_worthy(g) and g["n"] in slugs}
+    # ★コラムで取り上げたゲームのページだけを検索に出す（2026-11-27 たろちんさんと決めた）。
+    #   2026-11-27 にAdSenseが3回目の「有用性の低いコンテンツ」。検索に出していた308ページのうち
+    #   191枚がゲーム別ページで、127枚は人が書いた文の無い自動のページだった。
+    #   10-31 の「のべ30本未満のゲームはページを作らない」は、消したページが404になり
+    #   （Search Console で167件）、30本の線を行き来するゲームのページが出たり消えたりした。
+    #   そこで **ページは全部作る（読む人には見える・404を作らない）が、コラムの無いものは
+    #   noindex にして、サイトマップにも載せない。** Googleに見せるのは、人が書いた文のあるページだけ。
+    _col_games = set()
+    for _f in (DATA / "columns").glob("20??-??-??.json"):
+        _c = read_json(_f, None) or {}
+        _gn = str(_c.get("game") or "").strip()
+        if _gn:
+            _col_games.add(_gn)
+            _col_games.add(str(disp.get(_gn) or override.get(_gn) or _gn))
+    indexed_slugs = set()
     made, index_items = 0, []
     for g in _games:
         # ★日数だけでなく、のべ本数も見る（2026-10-31）。定数のところに理由。
@@ -4350,7 +4470,10 @@ def main():
                              f"のべ{n_ch:,}チャンネル見つかっています。"
                              "日ごとの配信数と、取り上げたコラムをまとめています。",
                 "page_body": game_page_html(name, g, _dd, st, "../../",
-                                            _plat, cfg, rel)}, 2)
+                                            _plat, cfg, rel),
+                "noindex": name not in _col_games}, 2)
+        if name in _col_games:
+            indexed_slugs.add(slug)
         index_items.append((name, slug, n_days))
         made += 1
     write_json(DATA / "game_slugs.json",
@@ -4365,6 +4488,7 @@ def main():
             "meta_desc": "VTuber・ゲーム実況者がどのゲームを何日配信したか。"
                          "ゲームごとのページを一覧にしています。",
             "page_body": games_index_html(index_items, "../")}, 1)
+    log(f"ゲーム別のページのうち検索に出すもの（コラムあり）: {len(indexed_slugs)} 枚。ほかは noindex")
     log(f"ゲーム別のページを {made} 枚書き出しました"
         f"（{GAME_PAGE_MIN}日以上・のべ{GAME_PAGE_MIN_VIDEOS}本以上）")
 
@@ -4378,7 +4502,10 @@ def main():
         for _gname in _gd_all[_day]:
             _first.setdefault(_gname, _day)
     _nw_html, _nw_new, _nw_soon = new_watch.page_html(
-        rows, today(), "../", _slugs_live, _first, payload.get("range") or "")
+        rows, today(), "../", _slugs_live, _first, payload.get("range") or "",
+        # 店へのリンク（2026-11-27）。ゲーム別ページと同じく Amazon も出す（force_amazon）
+        links=lambda r: store_links(r.get("game"), plats.get(r.get("canonical") or r.get("game")),
+                                    cfg, force_amazon=True))
     render("new/index.html",
            {"mode": "page", "date": today(), "subtitle": "新作ウォッチ",
             "generated": payload["generated"],
@@ -4454,16 +4581,16 @@ def main():
                 (f"{site_url}/privacy/", "yearly", "0.3"),
                 (f"{site_url}/terms/", "yearly", "0.3"),
                 (f"{site_url}/archive/", "daily", "0.6"),
-                (f"{site_url}/search/", "weekly", "0.6"),
                 (f"{site_url}/matome/", "weekly", "0.8"),
                 (f"{site_url}/new/", "daily", "0.8")]
         urls += [(f"{site_url}/{x['slug']}/{x['key']}/", "monthly", "0.7")
                  for x in specials]
-        urls += [(f"{site_url}/d/{a['date']}/", "monthly", "0.4") for a in archive]
+        urls += [(f"{site_url}/d/{a['date']}/", "monthly", "0.4") for a in archive
+                 if a.get("column")]      # コラムの無い日は載せない（2026-11-27）
         # ゲーム別ページ。日本語のURLはそのままだと読めないので符号化する
         urls += [(f"{site_url}/g/", "weekly", "0.7")]
         urls += [(f"{site_url}/g/{quote(sl)}/", "weekly", "0.6")
-                 for _n, sl, _d in index_items]
+                 for _n, sl, _d in index_items if sl in indexed_slugs]   # noindex のページは載せない（2026-11-27）
         body = "".join(
             f"<url><loc>{u}</loc><changefreq>{f}</changefreq><priority>{pr}</priority></url>"
             for u, f, pr in urls)
