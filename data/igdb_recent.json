@@ -4335,7 +4335,9 @@
  },
  {
   "name": "Arkheron",
-  "alias": [],
+  "alias": [
+   "arkheron-launcher.exe"
+  ],
   "pop": 0,
   "y": 2026,
   "d": "2026-11-27",
@@ -5715,7 +5717,8 @@
  {
   "name": "BPM Boy",
   "alias": [
-   "BPM BOY"
+   "BPM BOY",
+   "BPM_Boy.exe"
   ],
   "pop": 0,
   "y": 2026,
@@ -9961,7 +9964,9 @@
  },
  {
   "name": "Campaign Forge",
-  "alias": [],
+  "alias": [
+   "CampaignForge.exe"
+  ],
   "pop": 0,
   "y": 2026,
   "d": "2026-11-27",
@@ -17600,7 +17605,9 @@
  },
  {
   "name": "Devils: The Boruta Revenge",
-  "alias": [],
+  "alias": [
+   "DEVILS.exe"
+  ],
   "pop": 0,
   "y": 2026,
   "d": "2026-11-27",
@@ -18530,7 +18537,8 @@
  {
   "name": "Dome RPG",
   "alias": [
-   "Dome"
+   "Dome",
+   "Game.exe"
   ],
   "pop": 0,
   "y": 2026,
@@ -20454,7 +20462,8 @@
  {
   "name": "Dwarrf: A Pinball Roguelike",
   "alias": [
-   "DWARRF: A Pinball Roguelike"
+   "DWARRF: A Pinball Roguelike",
+   "DWARRF A Pinball Roguelike.exe"
   ],
   "pop": 0,
   "y": 2026,
@@ -27757,7 +27766,8 @@
   "name": "Goobies 2",
   "alias": [
    "Goobies: Arrow Rain",
-   "Arrow Rain"
+   "Arrow Rain",
+   "Goobies2.exe"
   ],
   "pop": 0,
   "y": 2026,
@@ -31319,7 +31329,7 @@
   "alias": [],
   "pop": 0,
   "y": 2026,
-  "d": "2026-12-31",
+  "d": "2026-12-11",
   "p": [
    "pc",
    "console"
@@ -35520,6 +35530,22 @@
   ]
  },
  {
+  "name": "Kill the Thing",
+  "alias": [],
+  "pop": 0,
+  "y": 2027,
+  "d": "2027-01-01",
+  "p": [
+   "pc"
+  ],
+  "g": [
+   "Role-playing (RPG)",
+   "Strategy",
+   "Turn-based strategy (TBS)",
+   "Tactical"
+  ]
+ },
+ {
   "name": "Killbot General",
   "alias": [],
   "pop": 0,
@@ -39643,6 +39669,19 @@
    "Platform",
    "Role-playing (RPG)",
    "Indie"
+  ]
+ },
+ {
+  "name": "Marblebuilds",
+  "alias": [],
+  "pop": 0,
+  "y": 2026,
+  "d": "2026-11-03",
+  "p": [
+   "pc"
+  ],
+  "g": [
+   "Simulator"
   ]
  },
  {
@@ -47487,7 +47526,9 @@
  },
  {
   "name": "Paint the Town",
-  "alias": [],
+  "alias": [
+   "PaintTheTown.exe"
+  ],
   "pop": 0,
   "y": 2026,
   "d": "2026-11-27",
@@ -48725,7 +48766,9 @@
  },
  {
   "name": "Piece and Quiet: A Stained Glass Restoration",
-  "alias": [],
+  "alias": [
+   "PieceAndQuiet.exe"
+  ],
   "pop": 0,
   "y": 2026,
   "d": "2026-11-27",
@@ -49375,23 +49418,6 @@
    "Simulator",
    "Strategy",
    "Indie"
-  ]
- },
- {
-  "name": "Planted!",
-  "alias": [
-   "Planted.exe"
-  ],
-  "pop": 0,
-  "y": 2026,
-  "d": "2026-10-29",
-  "p": [
-   "pc",
-   "console"
-  ],
-  "g": [
-   "Indie",
-   "Arcade"
   ]
  },
  {
@@ -50580,20 +50606,6 @@
   ],
   "g": [
    "Simulator",
-   "Indie"
-  ]
- },
- {
-  "name": "Pray & Slay",
-  "alias": [],
-  "pop": 0,
-  "y": 2026,
-  "d": "2026-12-31",
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Strategy",
    "Indie"
   ]
  },
@@ -55017,6 +55029,21 @@
   ]
  },
  {
+  "name": "Rustwake",
+  "alias": [
+   "锈海巨像"
+  ],
+  "pop": 0,
+  "y": 2026,
+  "d": "2026-11-22",
+  "p": [
+   "pc"
+  ],
+  "g": [
+   "Simulator"
+  ]
+ },
+ {
   "name": "Rusty Robot Wants to Cry",
   "alias": [],
   "pop": 0,
@@ -57816,7 +57843,8 @@
  {
   "name": "Sincerely, Your Diary",
   "alias": [
-   "С уважением, твой Дневник"
+   "С уважением, твой Дневник",
+   "Sincerely, Your Diary.exe"
   ],
   "pop": 0,
   "y": 2026,
@@ -58580,7 +58608,9 @@
  },
  {
   "name": "Snake-Killer.io",
-  "alias": [],
+  "alias": [
+   "Snake-Killer.io: Team Snake Battle"
+  ],
   "pop": 0,
   "y": 2026,
   "d": "2026-11-04",
@@ -61602,7 +61632,8 @@
  {
   "name": "Story of the Needle in a Haystack",
   "alias": [
-   "Needle In a Haystack"
+   "Needle In a Haystack",
+   "StoryofTheNeedleInaHaystack.exe"
   ],
   "pop": 0,
   "y": 2026,
@@ -65354,7 +65385,9 @@
  },
  {
   "name": "The Eggsortist",
-  "alias": [],
+  "alias": [
+   "The_Eggsortist.exe"
+  ],
   "pop": 0,
   "y": 2026,
   "d": "2026-11-27",
@@ -66631,7 +66664,7 @@
   "alias": [
    "Zelda no Densetsu Toki no Ocarina"
   ],
-  "pop": 80,
+  "pop": 81,
   "y": 2026,
   "d": "2026-11-05",
   "p": [
@@ -73819,22 +73852,6 @@
   ],
   "g": [
    "Simulator",
-   "Adventure",
-   "Indie"
-  ]
- },
- {
-  "name": "Where Are the Fish?",
-  "alias": [
-   "polyester_snoot.exe"
-  ],
-  "pop": 0,
-  "y": 2026,
-  "d": "2026-10-29",
-  "p": [
-   "pc"
-  ],
-  "g": [
    "Adventure",
    "Indie"
   ]
