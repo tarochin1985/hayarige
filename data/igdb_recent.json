@@ -2094,20 +2094,6 @@
   ]
  },
  {
-  "name": "Age of Empires IV: Raiders of the North",
-  "alias": [],
-  "pop": 0,
-  "y": 2026,
-  "d": "2026-10-29",
-  "p": [
-   "pc",
-   "console"
-  ],
-  "g": [
-   "Strategy"
-  ]
- },
- {
   "name": "Age of Respair",
   "alias": [],
   "pop": 0,
@@ -2929,7 +2915,9 @@
  },
  {
   "name": "Am I Nima",
-  "alias": [],
+  "alias": [
+   "Am I Nima.exe"
+  ],
   "pop": 0,
   "y": 2026,
   "d": "2026-11-27",
@@ -7393,32 +7381,6 @@
   ]
  },
  {
-  "name": "Black Lily's Tale",
-  "alias": [],
-  "pop": 0,
-  "y": 2026,
-  "d": "2026-10-29",
-  "p": [
-   "console"
-  ],
-  "g": [
-   "Visual Novel"
-  ]
- },
- {
-  "name": "Black Lily's Tale: Famitsu Wedding DX Pack",
-  "alias": [],
-  "pop": 0,
-  "y": 2026,
-  "d": "2026-10-29",
-  "p": [
-   "console"
-  ],
-  "g": [
-   "Visual Novel"
-  ]
- },
- {
   "name": "Black Mesa: Classic",
   "alias": [],
   "pop": 0,
@@ -9394,22 +9356,6 @@
   ],
   "g": [
    "Indie"
-  ]
- },
- {
-  "name": "Bumper Bout",
-  "alias": [],
-  "pop": 0,
-  "y": 2026,
-  "d": "2026-10-29",
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Fighting",
-   "Pinball",
-   "Indie",
-   "Arcade"
   ]
  },
  {
@@ -12205,6 +12151,22 @@
   ]
  },
  {
+  "name": "Chunithm Mate Plus",
+  "alias": [
+   "CHUNITHM Mate PLUS"
+  ],
+  "pop": 0,
+  "y": 2026,
+  "d": "2026-12-10",
+  "p": [
+   "console"
+  ],
+  "g": [
+   "Music",
+   "Arcade"
+  ]
+ },
+ {
   "name": "Cielle Is Not Happy",
   "alias": [],
   "pop": 0,
@@ -14198,7 +14160,9 @@
  },
  {
   "name": "Crash Protocol: The Wrong Directive",
-  "alias": [],
+  "alias": [
+   "CrashProtocol.exe"
+  ],
   "pop": 0,
   "y": 2026,
   "d": "2026-11-27",
@@ -18259,7 +18223,9 @@
  },
  {
   "name": "Discharge Pending",
-  "alias": [],
+  "alias": [
+   "Discharge Pending.exe"
+  ],
   "pop": 0,
   "y": 2026,
   "d": "2026-12-31",
@@ -19382,6 +19348,20 @@
   ]
  },
  {
+  "name": "Dread Rune",
+  "alias": [],
+  "pop": 0,
+  "y": 2026,
+  "d": "2026-11-04",
+  "p": [
+   "pc"
+  ],
+  "g": [
+   "Role-playing (RPG)",
+   "Adventure"
+  ]
+ },
+ {
   "name": "Dreadgence",
   "alias": [],
   "pop": 0,
@@ -19435,7 +19415,9 @@
  },
  {
   "name": "Dreadwinter",
-  "alias": [],
+  "alias": [
+   "Dreadwinter.exe"
+  ],
   "pop": 0,
   "y": 2026,
   "d": "2026-11-27",
@@ -21255,7 +21237,9 @@
  },
  {
   "name": "Elecade",
-  "alias": [],
+  "alias": [
+   "Elecade.exe"
+  ],
   "pop": 0,
   "y": 2026,
   "d": "2026-12-31",
@@ -22683,6 +22667,22 @@
   ],
   "g": [
    "Puzzle",
+   "Indie"
+  ]
+ },
+ {
+  "name": "Exorcismus: Vade Retro Satana",
+  "alias": [
+   "EXORCISMUS.exe"
+  ],
+  "pop": 0,
+  "y": 2026,
+  "d": "2026-11-27",
+  "p": [
+   "pc"
+  ],
+  "g": [
+   "Adventure",
    "Indie"
   ]
  },
@@ -26299,6 +26299,24 @@
   ]
  },
  {
+  "name": "GNI: Ver sin ser visto",
+  "alias": [],
+  "pop": 0,
+  "y": 2026,
+  "d": "2026-11-24",
+  "p": [
+   "pc",
+   "console"
+  ],
+  "g": [
+   "Strategy",
+   "Turn-based strategy (TBS)",
+   "Tactical",
+   "Adventure",
+   "Indie"
+  ]
+ },
+ {
   "name": "GTL Schedule",
   "alias": [],
   "pop": 0,
@@ -27953,6 +27971,20 @@
   ]
  },
  {
+  "name": "Grand Opening: The Apothecary",
+  "alias": [],
+  "pop": 0,
+  "y": 2026,
+  "d": "2026-12-14",
+  "p": [
+   "pc"
+  ],
+  "g": [
+   "Simulator",
+   "Indie"
+  ]
+ },
+ {
   "name": "Grand Theft Auto VI",
   "alias": [
    "GTA 6",
@@ -27961,7 +27993,7 @@
    "GTA6",
    "GTAVI"
   ],
-  "pop": 308,
+  "pop": 311,
   "y": 2026,
   "d": "2026-11-19",
   "p": [
@@ -30489,7 +30521,8 @@
   ],
   "g": [
    "Music"
-  ]
+  ],
+  "keep": 1
  },
  {
   "name": "Hello Space",
@@ -31199,23 +31232,6 @@
   "d": "2026-11-23",
   "p": [
    "pc"
-  ],
-  "g": [
-   "Simulator",
-   "Indie"
-  ]
- },
- {
-  "name": "Hokko Spaces",
-  "alias": [
-   "HokkoSpaces.exe"
-  ],
-  "pop": 0,
-  "y": 2026,
-  "d": "2026-10-29",
-  "p": [
-   "pc",
-   "console"
   ],
   "g": [
    "Simulator",
@@ -33000,6 +33016,23 @@
    "Puzzle",
    "Adventure",
    "Indie"
+  ]
+ },
+ {
+  "name": "Improbable Soccer",
+  "alias": [
+   "Improbable Soccer.exe"
+  ],
+  "pop": 0,
+  "y": 2026,
+  "d": "2026-11-26",
+  "p": [
+   "pc"
+  ],
+  "g": [
+   "Sport",
+   "Indie",
+   "Arcade"
   ]
  },
  {
@@ -36015,21 +36048,6 @@
   ]
  },
  {
-  "name": "Knuckle Creek",
-  "alias": [
-   "KnuckleCreek.exe"
-  ],
-  "pop": 0,
-  "y": 2026,
-  "d": "2026-10-29",
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Indie"
-  ]
- },
- {
   "name": "Knurlworm",
   "alias": [
    "KNURLWORM 1.0.0.exe",
@@ -36135,21 +36153,6 @@
   "g": [
    "Adventure",
    "Indie"
-  ]
- },
- {
-  "name": "Kowloon's Gate Suzaku",
-  "alias": [
-   "KOWLOON'S GATE Suzaku"
-  ],
-  "pop": 0,
-  "y": 2026,
-  "d": "2026-10-29",
-  "p": [
-   "console"
-  ],
-  "g": [
-   "Adventure"
   ]
  },
  {
@@ -38319,7 +38322,9 @@
  },
  {
   "name": "Lost Camp",
-  "alias": [],
+  "alias": [
+   "LostCamp.exe"
+  ],
   "pop": 0,
   "y": 2026,
   "d": "2026-11-27",
@@ -41030,6 +41035,21 @@
   ]
  },
  {
+  "name": "Midnight Flare",
+  "alias": [],
+  "pop": 0,
+  "y": 2027,
+  "d": "2027-01-01",
+  "p": [
+   "pc"
+  ],
+  "g": [
+   "Point-and-click",
+   "Puzzle",
+   "Indie"
+  ]
+ },
+ {
   "name": "Midnight Horde",
   "alias": [],
   "pop": 0,
@@ -41229,7 +41249,9 @@
  },
  {
   "name": "Mind the Clown: Reborn",
-  "alias": [],
+  "alias": [
+   "Mind the Clown - Reborn.exe"
+  ],
   "pop": 0,
   "y": 2026,
   "d": "2026-11-27",
@@ -48433,19 +48455,6 @@
   ]
  },
  {
-  "name": "Phantasma Hotel",
-  "alias": [],
-  "pop": 0,
-  "y": 2026,
-  "d": "2026-10-29",
-  "p": [
-   "pc"
-  ],
-  "g": [
-   "Indie"
-  ]
- },
- {
   "name": "Phantom Blade Zero",
   "alias": [
    "影之刃零",
@@ -49550,6 +49559,20 @@
    "Simulator",
    "Adventure",
    "Indie"
+  ]
+ },
+ {
+  "name": "Please File Accurately",
+  "alias": [],
+  "pop": 0,
+  "y": 2027,
+  "d": "2027-01-01",
+  "p": [
+   "pc"
+  ],
+  "g": [
+   "Indie",
+   "Arcade"
   ]
  },
  {
@@ -54353,6 +54376,21 @@
   ]
  },
  {
+  "name": "RogueDiceR",
+  "alias": [],
+  "pop": 0,
+  "y": 2026,
+  "d": "2026-11-26",
+  "p": [
+   "pc"
+  ],
+  "g": [
+   "Strategy",
+   "Indie",
+   "Card & Board Game"
+  ]
+ },
+ {
   "name": "Roguebound Pirates",
   "alias": [],
   "pop": 0,
@@ -55938,7 +55976,9 @@
  },
  {
   "name": "Scentkeeper: Tidy Up the Perfume Archive!",
-  "alias": [],
+  "alias": [
+   "Scentkeeper.exe"
+  ],
   "pop": 0,
   "y": 2026,
   "d": "2026-11-27",
@@ -66011,7 +66051,7 @@
   ],
   "pop": 0,
   "y": 2026,
-  "d": "2026-12-31",
+  "d": "2026-12-04",
   "p": [
    "pc"
   ],
@@ -67830,6 +67870,16 @@
   ]
  },
  {
+  "name": "The Toy's House",
+  "alias": [],
+  "pop": 0,
+  "y": 2026,
+  "d": "2026-10-31",
+  "p": [
+   "pc"
+  ]
+ },
+ {
   "name": "The Trailer Incident",
   "alias": [],
   "pop": 0,
@@ -68040,23 +68090,6 @@
   ]
  },
  {
-  "name": "The Wolf Among Us Remastered",
-  "alias": [],
-  "pop": 2,
-  "y": 2026,
-  "d": "2026-10-29",
-  "p": [
-   "pc",
-   "console"
-  ],
-  "g": [
-   "Point-and-click",
-   "Role-playing (RPG)",
-   "Adventure",
-   "Visual Novel"
-  ]
- },
- {
   "name": "The Wrong Shift",
   "alias": [
    "WareHouse.exe"
@@ -68084,23 +68117,6 @@
   "g": [
    "Simulator",
    "Adventure",
-   "Indie"
-  ]
- },
- {
-  "name": "The Zibbo Show",
-  "alias": [
-   "TheZibboShow.exe"
-  ],
-  "pop": 0,
-  "y": 2026,
-  "d": "2026-10-29",
-  "p": [
-   "pc",
-   "console"
-  ],
-  "g": [
-   "Strategy",
    "Indie"
   ]
  },
@@ -72821,6 +72837,21 @@
   ]
  },
  {
+  "name": "Vox Populi II: 2026-2029",
+  "alias": [],
+  "pop": 0,
+  "y": 2026,
+  "d": "2026-11-26",
+  "p": [
+   "pc"
+  ],
+  "g": [
+   "Simulator",
+   "Strategy",
+   "Indie"
+  ]
+ },
+ {
   "name": "Voxel Breakers",
   "alias": [],
   "pop": 0,
@@ -73240,7 +73271,8 @@
  {
   "name": "Warhammer 40,000: Dawn of War IV",
   "alias": [
-   "Warhammer 40,000: Dawn of War 4"
+   "Warhammer 40,000: Dawn of War 4",
+   "DawnOfWar4.exe"
   ],
   "pop": 0,
   "y": 2026,
@@ -75822,7 +75854,9 @@
  },
  {
   "name": "Yule Dads",
-  "alias": [],
+  "alias": [
+   "YuleDads.exe"
+  ],
   "pop": 0,
   "y": 2026,
   "d": "2026-11-27",
